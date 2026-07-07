@@ -3,7 +3,8 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
-  site: 'https://getpasslab.site',
+  site: 'https://syjy813.github.io',
+  base: '/getpasslab',
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
