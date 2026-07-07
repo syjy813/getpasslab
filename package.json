@@ -1,0 +1,16 @@
+{
+  "name": "getpasslab",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "remark-math": "^6.0.0",
+    "rehype-katex": "^7.0.0",
+    "katex": "^0.16.0"
+  }
+}

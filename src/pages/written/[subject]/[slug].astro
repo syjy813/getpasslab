@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from 'astro:content';
+import ChapterLayout from '../../../layouts/ChapterLayout.astro';
+import QuestionHistory from '../../../components/QuestionHistory.astro';
+import RelatedChapters from '../../../components/RelatedChapters.astro';
+import { SUBJECTS, type SubjectId } from '../../../config/subjects';
+
+export async function getStaticPaths() {
+  const chapters = await getCollection('chapters');
+  return chapters.map(ch => ({
+    params: {
+      subject: SUBJECTS[ch.data.subject_id as SubjectId].slug,
+      slug: ch.data.slug,
+    },
+    props: { chapter: ch },
+  }));
+}
+
+const { chapter } = Astro.props;
+const { Content } = await render(chapter);
+
+const allQuestions = await getCollection('questions');
+const linked = chapter.data.questions
+  .map(id => allQuestions.find(q => q.data.id === id)?.data)
+  .filter(Boolean)
+  .sort((a, b) => b!.id.localeCompare(a!.id));
+
+const allChapters = await getCollection('chapters');
+const manual = chapter.data.related
+  .map(s => allChapters.find(c => c.data.slug === s)?.data)
+  .filter(Boolean);
+const sameGroup = allChapters
+  .filter(c => c.data.group === chapter.data.group && c.data.slug !== chapter.data.slug)
+  .map(c => c.data);
+---
+<ChapterLayout {...chapter.data}>
+  <Content />
+  <QuestionHistory questions={linked as any} examComment={chapter.data.examComment} />
+  <RelatedChapters manual={manual as any} sameGroup={sameGroup as any} />
+</ChapterLayout>

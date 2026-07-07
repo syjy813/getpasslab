@@ -1,0 +1,59 @@
+---
+// 섹션 4: 기출 출제 이력 — frontmatter questions 배열 기반 자동 렌더
+interface Q { id: string; label: string; number: number; body: string; choices: string[]; answer: number; }
+interface Props { questions: Q[]; examComment?: string; }
+const { questions, examComment } = Astro.props;
+const years = new Set(questions.map(q => q.id.slice(0, 4)));
+---
+<h2>기출 출제 이력</h2>
+<div class="exam-history">
+  {questions.length > 0 ? (
+    <>
+      <div class="freq-label">최근 5개년 {questions.length}회 출제 · {years.size}개 연도</div>
+      <div class="round-badges">
+        {questions.map(q => (
+          <button class="round-badge" data-open={q.id}>{q.label} {q.number}번</button>
+        ))}
+      </div>
+    </>
+  ) : (
+    <div class="freq-label">최근 5개년 직접 출제 이력 없음</div>
+  )}
+  {examComment && <p class="exam-comment"><strong>출제 경향</strong> — {examComment}</p>}
+</div>
+
+{questions.map(q => (
+  <dialog class="q-layer" id={`q-${q.id}`} data-revealed="false">
+    <div class="q-inner">
+      <div class="q-meta">{q.label} · {q.number}번 · {q.id}</div>
+      <div class="q-body">{q.body}</div>
+      <ol class="q-choices">
+        {q.choices.map((c, i) => (
+          <li class={i + 1 === q.answer ? 'is-answer' : ''}>{['①','②','③','④'][i]} {c}</li>
+        ))}
+      </ol>
+      <div class="q-reveal">
+        <button data-reveal={q.id}>정답 확인</button>
+        <button class="q-close" data-close={q.id}>닫기</button>
+      </div>
+    </div>
+  </dialog>
+))}
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-open]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const d = document.getElementById(`q-${btn.dataset.open}`) as HTMLDialogElement;
+      d.dataset.revealed = 'false';
+      d.showModal();
+    });
+  });
+  document.querySelectorAll<HTMLButtonElement>('[data-reveal]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      (btn.closest('dialog') as HTMLDialogElement).dataset.revealed = 'true';
+    });
+  });
+  document.querySelectorAll<HTMLButtonElement>('[data-close]').forEach(btn => {
+    btn.addEventListener('click', () => (btn.closest('dialog') as HTMLDialogElement).close());
+  });
+</script>

@@ -1,0 +1,91 @@
+:root {
+  --ink: #1a1d1f;
+  --ink-soft: #55605e;
+  --paper: #ffffff;
+  --line: #e4e8e6;
+  --safety: #00843d;        /* 안전표지 녹색 — 브랜드 악센트 */
+  --safety-bg: #eef7f1;
+  --warn: #b45309;
+  --warn-bg: #fef7ec;
+  --radius: 10px;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.7;
+  font-size: 16px;
+}
+main { max-width: 720px; margin: 0 auto; padding: 24px 20px 80px; }
+
+/* 챕터 헤더 */
+.chapter-eyebrow { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--ink-soft); }
+.chapter-eyebrow .group-badge {
+  background: var(--safety-bg); color: var(--safety);
+  padding: 2px 10px; border-radius: 99px; font-weight: 600;
+}
+h1 { font-size: 28px; margin: 10px 0 6px; letter-spacing: -0.02em; }
+.summary { color: var(--ink-soft); margin: 0 0 8px; font-size: 15px; }
+.tags { display: flex; gap: 6px; margin-bottom: 4px; }
+.tags span { font-size: 12px; color: var(--safety); font-weight: 600; }
+
+/* 본문 */
+article h2 { font-size: 19px; margin: 40px 0 12px; padding-top: 20px; border-top: 1px solid var(--line); letter-spacing: -0.01em; }
+article table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0; }
+article th, article td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; }
+article th { background: #f7f9f8; font-weight: 600; }
+article blockquote {
+  margin: 14px 0; padding: 12px 14px;
+  background: var(--warn-bg); border-left: 3px solid var(--warn);
+  border-radius: 0 var(--radius) var(--radius) 0; font-size: 14.5px;
+}
+article blockquote p { margin: 0; }
+.katex { font-size: 1.05em; }
+
+/* 섹션 4: 기출 이력 */
+.exam-history { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin: 12px 0; }
+.freq-label { font-size: 14px; font-weight: 700; color: var(--safety); margin-bottom: 10px; }
+.round-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.round-badge {
+  font: inherit; font-size: 13px; cursor: pointer;
+  border: 1px solid var(--safety); color: var(--safety); background: var(--paper);
+  padding: 5px 12px; border-radius: 99px; transition: background .15s;
+}
+.round-badge:hover, .round-badge:focus-visible { background: var(--safety-bg); }
+.exam-comment { margin-top: 12px; font-size: 14px; color: var(--ink-soft); }
+.exam-comment strong { color: var(--ink); }
+
+/* 문제 레이어 */
+dialog.q-layer {
+  border: none; border-radius: var(--radius); padding: 0;
+  width: min(92vw, 560px); box-shadow: 0 12px 40px rgba(0,0,0,.18);
+}
+dialog.q-layer::backdrop { background: rgba(20,25,23,.45); }
+.q-inner { padding: 20px; }
+.q-meta { font-size: 12.5px; color: var(--ink-soft); margin-bottom: 8px; }
+.q-body { font-size: 15px; font-weight: 600; margin-bottom: 14px; }
+.q-choices { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.q-choices li { border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px; font-size: 14px; }
+.q-choices li.is-answer { border-color: var(--safety); background: var(--safety-bg); font-weight: 600; }
+.q-reveal { margin-top: 14px; }
+.q-reveal button, .q-close {
+  font: inherit; font-size: 13.5px; cursor: pointer; border-radius: 8px; padding: 8px 14px;
+}
+.q-reveal button { border: none; background: var(--safety); color: #fff; font-weight: 600; }
+.q-close { border: 1px solid var(--line); background: var(--paper); margin-left: 8px; }
+.q-layer[data-revealed="false"] .q-choices li.is-answer { border-color: var(--line); background: none; font-weight: 400; }
+
+/* 섹션 5: 관련 챕터 */
+.related-list { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 8px; }
+.related-list a {
+  display: block; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 12px 14px; text-decoration: none; color: var(--ink); font-size: 14.5px;
+  transition: border-color .15s;
+}
+.related-list a:hover { border-color: var(--safety); }
+.related-list .rel-group { font-size: 12px; color: var(--ink-soft); display: block; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
