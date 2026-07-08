@@ -44,7 +44,7 @@ a{color:inherit}
 
 /* ═══ Layout ═══ */
 .container{max-width:var(--container-max);margin:0 auto;padding:0 var(--space-6)}
-.section{padding:var(--space-16) 0 0}
+.section{padding-top:var(--space-16)}
 .grid{display:grid;gap:var(--space-4)}
 .grid-2,.grid-3{grid-template-columns:1fr}
 @media (min-width:640px){.grid-2,.grid-3{grid-template-columns:repeat(2,1fr)}}
