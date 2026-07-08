@@ -1,17 +1,18 @@
 ---
 import { SUBJECTS, type SubjectId } from '../config/subjects';
+import { withBase } from '../config/url';
 interface Ch { slug: string; title: string; group: string; subject_id: number; }
 interface Props { manual: Ch[]; sameGroup: Ch[]; }
 const { manual, sameGroup } = Astro.props;
 const items = [...manual, ...sameGroup.filter(g => !manual.some(m => m.slug === g.slug))].slice(0, 6);
-const href = (c: Ch) => `/written/${SUBJECTS[c.subject_id as SubjectId].slug}/${c.slug}/`;
+const href = (c: Ch) => withBase(`/industrial-safety/written/${SUBJECTS[c.subject_id as SubjectId].slug}/${c.slug}/`);
 ---
 {items.length > 0 && (
   <>
     <h2>관련 챕터</h2>
     <ul class="related-list">
       {items.map(c => (
-        <li><a href={href(c)}><span class="rel-group">{c.group}</span>{c.title}</a></li>
+        <li><a href={href(c)}><span class="rel-group">{c.group}</span><span class="rel-title">{c.title}</span></a></li>
       ))}
     </ul>
   </>

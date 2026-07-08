@@ -1,30 +1,48 @@
 ---
-import '../styles/global.css';
+import BaseLayout from './BaseLayout.astro';
 import { SUBJECTS, type SubjectId } from '../config/subjects';
-interface Props { title: string; summary: string; subject_id: number; group: string; tags: string[]; }
-const { title, summary, subject_id, group, tags } = Astro.props;
+import { withBase } from '../config/url';
+interface SideCh { slug: string; title: string; group: string; }
+interface Props {
+  title: string; summary: string; subject_id: number; group: string; tags: string[];
+  sideChapters: SideCh[];
+}
+const { title, summary, subject_id, group, tags, sideChapters } = Astro.props;
 const subject = SUBJECTS[subject_id as SubjectId];
+const subjectUrl = withBase(`/industrial-safety/written/${subject.slug}/`);
+const groups = [...new Set(sideChapters.map(c => c.group))];
 ---
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} | 산업안전기사 핵심요약 - GetPassLab</title>
-    <meta name="description" content={summary} />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
-  </head>
-  <body>
-    <main>
-      <div class="chapter-eyebrow">
-        <span>{subject_id}과목 {subject.name}</span>
-        <span class="group-badge">{group}</span>
+<BaseLayout title={`${title} | 산업안전기사 핵심요약 - GetPassLab`} description={summary}>
+  <div class="chapter-wrap">
+    <aside class="chapter-side">
+      <div class="side-sticky">
+        <div class="gpl-caption" style="margin-bottom:var(--space-2)">{subject_id}과목 · 챕터 목록</div>
+        <nav class="side-nav">
+          {groups.map(g => (
+            <>
+              <div class="side-group">{g}</div>
+              {sideChapters.filter(c => c.group === g).map(c => (
+                <a href={withBase(`/industrial-safety/written/${subject.slug}/${c.slug}/`)} class={c.title === title ? 'active' : ''}>{c.title}</a>
+              ))}
+            </>
+          ))}
+        </nav>
       </div>
-      <h1>{title}</h1>
-      <p class="summary">{summary}</p>
-      <div class="tags">{tags.map(t => <span>#{t}</span>)}</div>
+    </aside>
+    <main style="min-width:0">
+      <nav class="breadcrumb">
+        <a href={withBase('/')}>홈</a><span class="sep">/</span>
+        <a href={withBase('/industrial-safety/')}>산업안전기사</a><span class="sep">/</span>
+        <a href={withBase('/industrial-safety/written/')}>필기</a><span class="sep">/</span>
+        <a href={subjectUrl}>{subject_id}과목</a><span class="sep">/</span>
+        <span class="current">{title}</span>
+      </nav>
+      <div style="display:flex;gap:var(--space-2);margin:var(--space-4) 0 var(--space-2)">
+        {tags.map(t => <span class={`tag${t === '빈출' ? ' hot' : ''}`}>#{t}</span>)}
+      </div>
+      <h1 class="gpl-display">{title}</h1>
+      <p class="gpl-body-lg" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">{summary}</p>
       <article><slot /></article>
     </main>
-  </body>
-</html>
+  </div>
+</BaseLayout>

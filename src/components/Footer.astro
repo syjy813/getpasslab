@@ -1,0 +1,26 @@
+---
+import { SUBJECTS } from '../config/subjects';
+import { withBase } from '../config/url';
+---
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">GetPassLab</div>
+      <p class="footer-desc">산업안전기사 합격을 위한 개념·공식·기출 학습 서비스. 핵심만 빠르게.</p>
+    </div>
+    <div class="footer-col">
+      <h4>학습</h4>
+      <ul>
+        <li><a href={withBase('/industrial-safety/written/')}>필기 과목</a></li>
+        <li><a href={withBase('/industrial-safety/')}>산업안전기사</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>서비스</h4>
+      <ul>
+        <li><a href={withBase('/')}>홈</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><div>© 2026 GetPassLab. 모든 권리 보유.</div></div>
+</footer>

@@ -1,0 +1,28 @@
+---
+import { SUBJECTS } from '../config/subjects';
+import { withBase } from '../config/url';
+const entries = Object.entries(SUBJECTS);
+---
+<header class="gnb">
+  <nav class="gnb-inner">
+    <a href={withBase('/')} class="gnb-logo">GetPassLab</a>
+    <div class="gnb-spacer"></div>
+    <details class="gnb-menu">
+      <summary>필기 과목
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </summary>
+      <div class="gnb-dropdown">
+        {entries.map(([id, s]) => (
+          <a href={withBase(`/industrial-safety/written/${s.slug}/`)}>{id}과목 · {s.name}</a>
+        ))}
+      </div>
+    </details>
+  </nav>
+</header>
+<script>
+  document.querySelectorAll('.gnb-menu').forEach(d => {
+    document.addEventListener('click', e => {
+      if (d instanceof HTMLDetailsElement && d.open && !d.contains(e.target as Node)) d.open = false;
+    });
+  });
+</script>

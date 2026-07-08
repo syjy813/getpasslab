@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { SUBJECTS, type SubjectId } from '../config/subjects';
+import { withBase } from '../config/url';
+const chapters = await getCollection('chapters');
+const countBy = (id: number) => chapters.filter(c => c.data.subject_id === id).length;
+const featured = [...chapters].sort((a, b) => b.data.questions.length - a.data.questions.length).slice(0, 4);
+const chHref = (c: any) => withBase(`/industrial-safety/written/${SUBJECTS[c.data.subject_id as SubjectId].slug}/${c.data.slug}/`);
+---
+<BaseLayout title="GetPassLab — 산업안전기사 핵심요약 & 기출" description="산업안전기사 필기 6과목의 공식·정의·빈출 포인트를 구조화한 핵심요약 학습 서비스. 5개년 기출 데이터 기반.">
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-badge">산업안전기사 · 필기 &amp; 실기</span>
+      <h1 class="gpl-display" style="max-width:680px;margin:0 auto">합격을 위한 가장 빠른 길,<br/>핵심 개념과 기출을 한 곳에서</h1>
+      <p class="gpl-body-lg" style="max-width:520px;margin:var(--space-4) auto 0;color:var(--gray-600)">6개 과목의 공식·정의·빈출 포인트를 5개년 기출 데이터 기반으로 구조화했습니다. 오늘 한 챕터부터 시작하세요.</p>
+      <div style="display:flex;gap:var(--space-3);justify-content:center;margin-top:var(--space-8);flex-wrap:wrap">
+        <a class="btn btn-primary" href={withBase('/industrial-safety/written/')}>필기 시작하기</a>
+        <a class="btn btn-secondary" href={withBase('/industrial-safety/')}>자격증 둘러보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div style="margin-bottom:var(--space-6)">
+      <h2 class="gpl-h1">필기 6과목</h2>
+      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">과목을 선택해 챕터별 학습을 시작하세요</p>
+    </div>
+    <div class="grid grid-3">
+      {Object.entries(SUBJECTS).map(([id, s]) => (
+        <a class="card" href={withBase(`/industrial-safety/written/${s.slug}/`)}>
+          <span class="card-label">{id}과목</span>
+          <div class="card-title">{s.name}</div>
+          <div class="card-meta">챕터 {countBy(Number(id))}개</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {featured.length > 0 && (
+    <section class="section container">
+      <div style="margin-bottom:var(--space-6)">
+        <h2 class="gpl-h1">빈출 챕터</h2>
+        <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">기출 출제 이력이 많은 핵심 개념</p>
+      </div>
+      <div class="grid grid-2">
+        {featured.map(c => (
+          <a class="card" href={chHref(c)}>
+            <div style="display:flex;gap:var(--space-2);margin-bottom:var(--space-3)">
+              {c.data.tags.map((t: string) => <span class={`tag${t === '빈출' ? ' hot' : ''}`}>#{t}</span>)}
+            </div>
+            <div class="card-title">{c.data.title}</div>
+            <div class="card-meta">{c.data.summary}</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

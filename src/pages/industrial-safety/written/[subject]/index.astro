@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { SUBJECTS, type SubjectId } from '../../../../config/subjects';
+import { withBase } from '../../../../config/url';
+
+export async function getStaticPaths() {
+  return Object.entries(SUBJECTS).map(([id, s]) => ({
+    params: { subject: s.slug },
+    props: { subjectId: Number(id) },
+  }));
+}
+const { subjectId } = Astro.props;
+const subject = SUBJECTS[subjectId as SubjectId];
+const chapters = (await getCollection('chapters')).filter(c => c.data.subject_id === subjectId);
+const groups = [...new Set(chapters.map(c => c.data.group))];
+---
+<BaseLayout title={`${subjectId}과목 ${subject.name} — GetPassLab`} description={`산업안전기사 필기 ${subjectId}과목 ${subject.name} 챕터별 핵심요약.`}>
+  <section class="section container" style="padding-top:var(--space-8)">
+    <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
+      <a href={withBase('/')}>홈</a><span class="sep">/</span>
+      <a href={withBase('/industrial-safety/')}>산업안전기사</a><span class="sep">/</span>
+      <a href={withBase('/industrial-safety/written/')}>필기</a><span class="sep">/</span>
+      <span class="current">{subjectId}과목</span>
+    </nav>
+    <span class="card-label">{subjectId}과목</span>
+    <h1 class="gpl-h1" style="margin-top:var(--space-2)">{subject.name}</h1>
+    <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-8)">챕터 {chapters.length}개</p>
+
+    {chapters.length === 0 && (
+      <div class="card" style="cursor:default"><div class="card-title">콘텐츠 준비 중</div><div class="card-meta">챕터가 순차적으로 공개됩니다.</div></div>
+    )}
+    {groups.map(g => (
+      <div style="margin-bottom:var(--space-8)">
+        <h2 class="gpl-h3" style="margin-bottom:var(--space-4)">{g}</h2>
+        <div class="grid grid-2">
+          {chapters.filter(c => c.data.group === g).map(c => (
+            <a class="card" href={withBase(`/industrial-safety/written/${subject.slug}/${c.data.slug}/`)}>
+              <div style="display:flex;gap:var(--space-2);margin-bottom:var(--space-3)">
+                {c.data.tags.map(t => <span class={`tag${t === '빈출' ? ' hot' : ''}`}>#{t}</span>)}
+              </div>
+              <div class="card-title">{c.data.title}</div>
+              <div class="card-meta">{c.data.summary}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { SUBJECTS } from '../../../config/subjects';
+import { withBase } from '../../../config/url';
+const chapters = await getCollection('chapters');
+const countBy = (id: number) => chapters.filter(c => c.data.subject_id === id).length;
+---
+<BaseLayout title="산업안전기사 필기 — GetPassLab" description="산업안전기사 필기 6과목 핵심요약. 과목별 챕터 학습.">
+  <section class="section container" style="padding-top:var(--space-8)">
+    <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
+      <a href={withBase('/')}>홈</a><span class="sep">/</span>
+      <a href={withBase('/industrial-safety/')}>산업안전기사</a><span class="sep">/</span>
+      <span class="current">필기</span>
+    </nav>
+    <h1 class="gpl-h1">필기 6과목</h1>
+    <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">과목당 20문항 · 총 120문항 · 과목별 40점 이상, 평균 60점 이상 합격</p>
+    <div class="grid grid-3">
+      {Object.entries(SUBJECTS).map(([id, s]) => (
+        <a class="card" href={withBase(`/industrial-safety/written/${s.slug}/`)}>
+          <span class="card-label">{id}과목</span>
+          <div class="card-title">{s.name}</div>
+          <div class="card-meta">챕터 {countBy(Number(id))}개</div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

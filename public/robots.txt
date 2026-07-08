@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://syjy813.github.io/getpasslab/sitemap-index.xml

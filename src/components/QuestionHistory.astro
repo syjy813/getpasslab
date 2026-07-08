@@ -1,5 +1,4 @@
 ---
-// 섹션 4: 기출 출제 이력 — frontmatter questions 배열 기반 자동 렌더
 interface Q { id: string; label: string; number: number; body: string; choices: string[]; answer: number; }
 interface Props { questions: Q[]; examComment?: string; }
 const { questions, examComment } = Astro.props;
@@ -33,8 +32,8 @@ const years = new Set(questions.map(q => q.id.slice(0, 4)));
         ))}
       </ol>
       <div class="q-reveal">
-        <button data-reveal={q.id}>정답 확인</button>
-        <button class="q-close" data-close={q.id}>닫기</button>
+        <button class="reveal" data-reveal={q.id}>정답 확인</button>
+        <button class="close" data-close={q.id}>닫기</button>
       </div>
     </div>
   </dialog>
