@@ -5,6 +5,7 @@
 import '../../styles/global.css';
 import { getCollection } from 'astro:content';
 import { SUBJECTS } from '../../config/subjects';
+import { withBase } from '../../config/url';
 import questions from '../../data/questions.json';
 
 const chapters = await getCollection('chapters');
@@ -116,6 +117,11 @@ const detail = [...rows].sort(
   </head>
   <body>
     <div class="adm-sub">GetPassLab · 내부 관리 · noindex</div>
+    <div style="font-size:var(--fs-caption);margin-bottom:14px">
+      <span class="muted">현황</span>
+      <span style="color:var(--gray-200);margin:0 8px">/</span>
+      <a href={withBase('/admin/questions/')} style="color:var(--primary-600);text-decoration:none">기출문제 DB →</a>
+    </div>
     <h1 class="adm-h1">챕터 · 기출 관리 현황</h1>
     <p class="adm-sub">
       노션 매핑 DB 이관 완료. 챕터 메타데이터 원본 = md frontmatter · 기출 원본 = questions.json

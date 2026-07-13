@@ -30,6 +30,7 @@ const questions = defineCollection({
     body: z.string(),
     choices: z.array(z.string()).length(4),
     answer: z.number().min(1).max(4),
+    review: z.string().default(''),  // 검수 상태 (노션 이관: 미검수 / jpg 확필). '' = 검수완료
   }),
 });
 

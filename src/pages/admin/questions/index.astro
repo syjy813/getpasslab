@@ -1,0 +1,138 @@
+---
+// TRACK 4-2 하위: 기출문제 DB 리스트 (조회 전용)
+// 원본: src/data/questions.json + 챕터 md questions[] 역인덱스
+// /admin/ 과 분리된 하위 페이지. 배포되나 noindex + sitemap 제외(기존 /admin 규칙).
+import '../../../styles/global.css';
+import { getCollection } from 'astro:content';
+import { SUBJECTS, type SubjectId } from '../../../config/subjects';
+import { withBase } from '../../../config/url';
+
+const questions = await getCollection('questions');
+const chapters = await getCollection('chapters');
+
+// 역인덱스: 문제 ID -> 참조하는 챕터 수
+const linkCount = new Map<string, number>();
+for (const c of chapters) {
+  for (const qid of c.data.questions ?? []) {
+    linkCount.set(qid, (linkCount.get(qid) ?? 0) + 1);
+  }
+}
+
+const rows = questions.map((q) => ({
+  id: q.data.id,
+  subject_id: q.data.subject_id,
+  label: q.data.label,
+  number: q.data.number,
+  body: q.data.body,
+  answer: q.data.answer,
+  review: q.data.review ?? '',
+  links: linkCount.get(q.data.id) ?? 0,
+}));
+
+const total = rows.length;
+// 검수 필요 = review 값 보유(검수 미완료). '' = 검수완료로 간주.
+const reviewNeeded = rows.filter((r) => r.review !== '').length;
+const jpgFlag = rows.filter((r) => r.review === 'jpg 확필').length;
+const unlinked = rows.filter((r) => r.links === 0).length;
+
+const ans = ['①', '②', '③', '④'];
+const truncate = (s: string, n = 80) => (s.length > n ? s.slice(0, n) + '…' : s);
+
+// 과목별 그룹 (문제 ID 정렬)
+const bySubject = Object.entries(SUBJECTS).map(([id, s]) => {
+  const sid = Number(id);
+  return {
+    id: sid,
+    name: s.name,
+    rows: rows.filter((r) => r.subject_id === sid).sort((a, b) => a.id.localeCompare(b.id)),
+  };
+});
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>기출문제 DB — GetPassLab Admin</title>
+    <style>
+      body { max-width: 1180px; margin: 0 auto; padding: 32px 20px 80px; }
+      .adm-h1 { font-size: var(--fs-h1); font-weight: var(--fw-bold); margin: 0 0 4px; }
+      .adm-sub { color: var(--gray-600); font-size: var(--fs-caption); margin: 0 0 6px; }
+      .adm-nav { font-size: var(--fs-caption); margin-bottom: 24px; }
+      .adm-nav a { color: var(--primary-600); text-decoration: none; }
+      .adm-nav .sep { color: var(--gray-200); margin: 0 8px; }
+      .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 28px; }
+      .kpi { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 16px; }
+      .kpi .n { font-size: 28px; font-weight: var(--fw-bold); line-height: 1.1; }
+      .kpi .l { font-size: var(--fs-caption); color: var(--gray-600); margin-top: 4px; }
+      .kpi .sub { font-size: 12px; color: var(--gray-600); margin-top: 2px; }
+      h2.adm { font-size: var(--fs-h3); font-weight: var(--fw-semibold); margin: 34px 0 10px; }
+      h2.adm .c { color: var(--gray-600); font-size: var(--fs-caption); font-weight: var(--fw-regular); }
+      table { width: 100%; border-collapse: collapse; font-size: 13px; }
+      th, td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--gray-100); vertical-align: top; }
+      th { color: var(--gray-600); font-weight: var(--fw-medium); background: var(--gray-50); position: sticky; top: 0; }
+      td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+      td.mono { font-family: ui-monospace, monospace; font-size: 12px; white-space: nowrap; }
+      td.body { color: var(--gray-800); max-width: 560px; }
+      .badge { display: inline-block; padding: 1px 7px; border-radius: var(--radius-full); font-size: 11px; font-weight: var(--fw-medium); white-space: nowrap; }
+      .b-review { background: var(--gray-100); color: var(--gray-600); }
+      .b-jpg { background: var(--warning-bg); color: var(--warning); }
+      .b-ans { background: var(--primary-50); color: var(--primary-700); font-weight: var(--fw-semibold); }
+      .dim { color: var(--gray-200); }
+      .muted { color: var(--gray-600); }
+    </style>
+  </head>
+  <body>
+    <div class="adm-sub">GetPassLab · 내부 관리 · noindex</div>
+    <div class="adm-nav">
+      <a href={withBase('/admin/')}>← 관리 현황</a><span class="sep">/</span>
+      <span class="muted">기출문제 DB</span>
+    </div>
+    <h1 class="adm-h1">기출문제 DB</h1>
+    <p class="adm-sub">원본: questions.json · 연결 챕터 수 = 전체 챕터 md의 questions[] 역인덱스</p>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="n">{total.toLocaleString()}</div><div class="l">총 문항</div></div>
+      <div class="kpi">
+        <div class="n">{reviewNeeded.toLocaleString()}</div>
+        <div class="l">검수 필요 (review 값 보유)</div>
+        <div class="sub">미검수 {(reviewNeeded - jpgFlag).toLocaleString()} · jpg 확필 {jpgFlag}</div>
+      </div>
+      <div class="kpi"><div class="n">{unlinked.toLocaleString()}</div><div class="l">챕터 미연결</div></div>
+    </div>
+
+    {bySubject.map((s) => (
+      <section>
+        <h2 class="adm">{s.id}. {s.name} <span class="c">({s.rows.length})</span></h2>
+        <table>
+          <thead>
+            <tr>
+              <th>문제 ID</th><th>과목</th><th>시행</th><th class="num">번호</th>
+              <th>본문</th><th>정답</th><th>검수 상태</th><th class="num">연결 챕터</th>
+            </tr>
+          </thead>
+          <tbody>
+            {s.rows.map((r) => (
+              <tr>
+                <td class="mono">{r.id}</td>
+                <td class="muted">{r.subject_id}과목</td>
+                <td class="muted" style="white-space:nowrap">{r.label}</td>
+                <td class="num">{r.number}</td>
+                <td class="body">{truncate(r.body)}</td>
+                <td><span class="badge b-ans">{ans[r.answer - 1] ?? '-'}</span></td>
+                <td>
+                  {r.review === 'jpg 확필' ? <span class="badge b-jpg">jpg 확필</span>
+                    : r.review ? <span class="badge b-review">{r.review}</span>
+                    : <span class="dim">—</span>}
+                </td>
+                <td class="num">{r.links === 0 ? <span class="dim">0</span> : r.links}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+    ))}
+  </body>
+</html>
