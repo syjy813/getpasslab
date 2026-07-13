@@ -2,6 +2,9 @@
 title: 반응기·증류탑·열교환기
 slug: reactor-distillation-equipment
 subject_id: 5
+order: 3
+priority: 출시 필수
+status: 완료
 group: 안전밸브·플랜지
 tags: [이론, 실무, 빈출]
 summary: 반응기 조작(회분·반회분·연속)·구조(탑·관·교반조·유동층) 분류, 열교환기 점검·능률

@@ -2,6 +2,9 @@
 title: 재해분석 도구 4종
 slug: accident-analysis-tools
 subject_id: 1
+order: 1
+priority: 출시 필수
+status: 완료
 group: 재해 분석·이론
 tags: [실무, 함정]
 summary: 파레토도·특성요인도(어골상)·클로즈분석·관리도(한계선)

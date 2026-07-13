@@ -2,6 +2,9 @@
 title: 산업안전보건관리비
 slug: safety-management-cost
 subject_id: 6
+order: 6
+priority: 출시 필수
+status: 완료
 group: 건설 법령·기준
 tags: [법령, 빈출]
 summary: 총공사금액 2천만원 이상 적용, 공정율별 최소 사용기준, 대상액 미구분 시 70%

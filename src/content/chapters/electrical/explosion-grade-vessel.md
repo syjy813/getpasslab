@@ -2,6 +2,9 @@
 title: 폭발등급 측정 표준용기
 slug: explosion-grade-vessel
 subject_id: 4
+order: 6
+priority: 출시 필수
+status: 완료
 group: 방폭 구조
 tags: [법령]
 summary: 내용적 8L·틈새 안길이 25mm 용기로 화염일주한계(MESG) 측정

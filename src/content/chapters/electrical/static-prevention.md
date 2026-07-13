@@ -2,6 +2,9 @@
 title: 정전기 재해 방지 대책
 slug: static-prevention
 subject_id: 4
+order: 2
+priority: 출시 필수
+status: 완료
 group: 정전기
 tags: [실무]
 summary: 접지·가습·도전성 재료·대전방지제·제전기·유속제한 6대 대책

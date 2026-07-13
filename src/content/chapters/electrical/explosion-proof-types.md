@@ -2,6 +2,9 @@
 title: 방폭구조 종류 6가지
 slug: explosion-proof-types
 subject_id: 4
+order: 2
+priority: 출시 필수
+status: 완료
 group: 방폭 구조
 tags: [이론, 빈출]
 summary: 내압 d·압력 p·유입 o·안전증 e·본질안전 ia/ib·비점화 n

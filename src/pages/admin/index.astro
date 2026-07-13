@@ -1,0 +1,232 @@
+---
+// TRACK 4-2: 내부 관리 현황 페이지 (조회 전용)
+// 원본: 챕터 md frontmatter + src/data/questions.json
+// 노션 매핑 DB 이관 후 유일한 조회 대시보드. 배포되나 noindex.
+import '../../styles/global.css';
+import { getCollection } from 'astro:content';
+import { SUBJECTS } from '../../config/subjects';
+import questions from '../../data/questions.json';
+
+const chapters = await getCollection('chapters');
+
+// 본문 작성 여부: '## ' 헤딩이 있으면 실제 콘텐츠, 없으면 스텁
+const isWritten = (c: any) => /(^|\n)##\s/.test(c.body ?? '');
+
+const rows = chapters.map((c) => ({
+  slug: c.data.slug,
+  title: c.data.title,
+  subject_id: c.data.subject_id,
+  group: c.data.group,
+  order: c.data.order,
+  priority: c.data.priority,
+  status: c.data.status,
+  qcount: c.data.questions?.length ?? 0,
+  written: isWritten(c),
+}));
+
+const total = rows.length;
+const doneStatus = rows.filter((r) => r.status === '완료').length;
+const notStarted = rows.filter((r) => r.status === '미시작').length;
+const writtenCount = rows.filter((r) => r.written).length;
+
+// Gap 1: 상태=완료 이나 본문 없음
+const gapDoneNoBody = rows.filter((r) => r.status === '완료' && !r.written)
+  .sort((a, b) => a.subject_id - b.subject_id);
+
+// Gap 2: 노션 정답 공란으로 questions.json 에서 제외된 기출 (이관 검토 필요)
+const excludedQuestions = [
+  { id: '20180304_078', subject: 4, reason: '노션 정답 공란' },
+  { id: '20180819_057', subject: 3, reason: '노션 정답 공란' },
+  { id: '20190804_090', subject: 5, reason: '노션 정답 공란' },
+  { id: '20200822_001', subject: 1, reason: '노션 정답 공란' },
+  { id: '20200822_025', subject: 2, reason: '노션 정답 공란' },
+];
+
+// 과목별 집계
+const bySubject = Object.entries(SUBJECTS).map(([id, s]) => {
+  const sid = Number(id);
+  const sr = rows.filter((r) => r.subject_id === sid);
+  return {
+    id: sid,
+    name: s.name,
+    total: sr.length,
+    done: sr.filter((r) => r.status === '완료').length,
+    written: sr.filter((r) => r.written).length,
+    notStarted: sr.filter((r) => r.status === '미시작').length,
+    questions: questions.filter((q: any) => q.subject_id === sid).length,
+  };
+});
+
+// 우선순위별 집계
+const priorities = ['출시 필수', '1차', '2차'];
+const byPriority = priorities.map((p) => {
+  const pr = rows.filter((r) => r.priority === p);
+  return {
+    p,
+    total: pr.length,
+    done: pr.filter((r) => r.status === '완료').length,
+    written: pr.filter((r) => r.written).length,
+  };
+});
+
+const pct = (n: number, d: number) => (d ? Math.round((n / d) * 100) : 0);
+
+// 챕터 상세 (과목→순서)
+const detail = [...rows].sort(
+  (a, b) => a.subject_id - b.subject_id || a.order - b.order
+);
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>관리 현황 — GetPassLab Admin</title>
+    <style>
+      body { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+      .adm-h1 { font-size: var(--fs-h1); font-weight: var(--fw-bold); margin: 0 0 4px; }
+      .adm-sub { color: var(--gray-600); font-size: var(--fs-caption); margin: 0 0 28px; }
+      .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 32px; }
+      .kpi { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 16px; }
+      .kpi .n { font-size: 28px; font-weight: var(--fw-bold); line-height: 1.1; }
+      .kpi .l { font-size: var(--fs-caption); color: var(--gray-600); margin-top: 4px; }
+      h2.adm { font-size: var(--fs-h3); font-weight: var(--fw-semibold); margin: 36px 0 12px; }
+      table { width: 100%; border-collapse: collapse; font-size: var(--fs-caption); }
+      th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--gray-100); }
+      th { color: var(--gray-600); font-weight: var(--fw-medium); background: var(--gray-50); }
+      td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+      .bar { position: relative; height: 8px; background: var(--gray-100); border-radius: var(--radius-full); overflow: hidden; min-width: 90px; }
+      .bar > span { position: absolute; inset: 0 auto 0 0; background: var(--primary-500); border-radius: var(--radius-full); }
+      .badge { display: inline-block; padding: 1px 8px; border-radius: var(--radius-full); font-size: 12px; font-weight: var(--fw-medium); }
+      .b-done { background: var(--success-bg); color: var(--success); }
+      .b-todo { background: var(--gray-100); color: var(--gray-600); }
+      .b-warn { background: var(--warning-bg); color: var(--warning); }
+      .b-p0 { background: var(--error-bg); color: var(--error); }
+      .b-p1 { background: var(--primary-50); color: var(--primary-700); }
+      .b-p2 { background: var(--gray-100); color: var(--gray-600); }
+      .gap { border: 1px solid var(--warning); background: var(--warning-bg); border-radius: var(--radius-lg); padding: 16px 18px; margin-bottom: 14px; }
+      .gap h3 { margin: 0 0 8px; font-size: var(--fs-body); font-weight: var(--fw-semibold); color: var(--warning); }
+      .gap code { background: rgba(0,0,0,.05); padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+      details { margin-top: 8px; }
+      summary { cursor: pointer; font-weight: var(--fw-medium); color: var(--primary-600); }
+      .muted { color: var(--gray-600); }
+    </style>
+  </head>
+  <body>
+    <div class="adm-sub">GetPassLab · 내부 관리 · noindex</div>
+    <h1 class="adm-h1">챕터 · 기출 관리 현황</h1>
+    <p class="adm-sub">
+      노션 매핑 DB 이관 완료. 챕터 메타데이터 원본 = md frontmatter · 기출 원본 = questions.json
+    </p>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="n">{total}</div><div class="l">전체 챕터</div></div>
+      <div class="kpi"><div class="n">{writtenCount}</div><div class="l">본문 작성 완료</div></div>
+      <div class="kpi"><div class="n">{doneStatus}</div><div class="l">상태=완료</div></div>
+      <div class="kpi"><div class="n">{notStarted}</div><div class="l">미시작</div></div>
+      <div class="kpi"><div class="n">{questions.length}</div><div class="l">기출문제</div></div>
+    </div>
+
+    {gapDoneNoBody.length > 0 && (
+      <div class="gap">
+        <h3>⚠ 상태=완료 이나 본문 없음 — {gapDoneNoBody.length}건</h3>
+        <p class="muted" style="margin:0 0 8px;font-size:var(--fs-caption)">
+          노션에서 완료 표시됐으나 git에 본문 md가 없어 스텁으로 이관됨. 본문 작성 또는 상태 정정 필요.
+        </p>
+        <div>{gapDoneNoBody.map((r) => (<code>{r.subject_id}과목 · {r.slug}</code>)).reduce((a, b) => (<>{a} {b}</>))}</div>
+      </div>
+    )}
+
+    <div class="gap">
+      <h3>⚠ 이관 제외 기출 — {excludedQuestions.length}건</h3>
+      <p class="muted" style="margin:0 0 8px;font-size:var(--fs-caption)">
+        노션 정답 공란으로 questions.json 에서 제외 (1,680 → {questions.length}). 정답 확정 후 추가 필요.
+      </p>
+      <div>{excludedQuestions.map((q) => (<code>{q.subject}과목 · {q.id}</code>)).reduce((a, b) => (<>{a} {b}</>))}</div>
+    </div>
+
+    <h2 class="adm">과목별 진행</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>과목</th><th class="num">챕터</th><th class="num">완료</th>
+          <th class="num">본문</th><th class="num">미시작</th><th class="num">기출</th>
+          <th style="width:150px">본문 진행률</th>
+        </tr>
+      </thead>
+      <tbody>
+        {bySubject.map((s) => (
+          <tr>
+            <td>{s.id}. {s.name}</td>
+            <td class="num">{s.total}</td>
+            <td class="num">{s.done}</td>
+            <td class="num">{s.written}</td>
+            <td class="num">{s.notStarted}</td>
+            <td class="num">{s.questions}</td>
+            <td>
+              <div style="display:flex;align-items:center;gap:8px">
+                <div class="bar"><span style={`width:${pct(s.written, s.total)}%`}></span></div>
+                <span class="muted">{pct(s.written, s.total)}%</span>
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2 class="adm">우선순위별 현황</h2>
+    <table>
+      <thead>
+        <tr><th>우선순위</th><th class="num">챕터</th><th class="num">완료</th><th class="num">본문</th><th style="width:150px">본문 진행률</th></tr>
+      </thead>
+      <tbody>
+        {byPriority.map((p) => (
+          <tr>
+            <td>{p.p}</td>
+            <td class="num">{p.total}</td>
+            <td class="num">{p.done}</td>
+            <td class="num">{p.written}</td>
+            <td>
+              <div style="display:flex;align-items:center;gap:8px">
+                <div class="bar"><span style={`width:${pct(p.written, p.total)}%`}></span></div>
+                <span class="muted">{pct(p.written, p.total)}%</span>
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2 class="adm">챕터 상세 <span class="muted" style="font-size:var(--fs-caption)">({total})</span></h2>
+    <details>
+      <summary>전체 챕터 테이블 펼치기</summary>
+      <table style="margin-top:12px">
+        <thead>
+          <tr>
+            <th>과목</th><th>그룹</th><th class="num">순서</th><th>챕터</th>
+            <th>slug</th><th>우선순위</th><th>상태</th><th>본문</th><th class="num">기출</th>
+          </tr>
+        </thead>
+        <tbody>
+          {detail.map((r) => (
+            <tr>
+              <td class="num">{r.subject_id}</td>
+              <td class="muted">{r.group}</td>
+              <td class="num">{r.order}</td>
+              <td>{r.title}</td>
+              <td class="muted"><code style="font-size:11px">{r.slug}</code></td>
+              <td>
+                <span class={`badge ${r.priority === '출시 필수' ? 'b-p0' : r.priority === '1차' ? 'b-p1' : 'b-p2'}`}>{r.priority}</span>
+              </td>
+              <td><span class={`badge ${r.status === '완료' ? 'b-done' : 'b-todo'}`}>{r.status}</span></td>
+              <td>{r.written ? <span class="badge b-done">작성</span> : <span class="badge b-warn">스텁</span>}</td>
+              <td class="num">{r.qcount}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </details>
+  </body>
+</html>

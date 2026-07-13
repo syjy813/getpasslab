@@ -2,6 +2,9 @@
 title: 프레스 방호장치 적용 조건
 slug: press-device-conditions
 subject_id: 3
+order: 2
+priority: 출시 필수
+status: 완료
 group: 프레스 안전
 tags: [실무]
 summary: 클러치 구조와 SPM·행정길이에 따른 장치 선택 기준

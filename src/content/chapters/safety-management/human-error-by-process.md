@@ -2,6 +2,9 @@
 title: 인간 동작특성 - 과정별 착오요인
 slug: human-error-by-process
 subject_id: 1
+order: 3
+priority: 출시 필수
+status: 완료
 group: 사회행동·인간관계
 tags: [이론, 실무]
 summary: 인지·판단·조작 3과정별 착오요인, 억측판단의 발생 배경

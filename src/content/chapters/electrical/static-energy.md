@@ -2,6 +2,9 @@
 title: 정전기 축적 에너지
 slug: static-energy
 subject_id: 4
+order: 3
+priority: 출시 필수
+status: 완료
 group: 정전기
 tags: [계산공식, 빈출]
 summary: E = ½CV², 최소착화에너지와 결합한 착화전압 역산

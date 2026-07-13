@@ -2,6 +2,9 @@
 title: 하인리히 도미노 이론
 slug: heinrich-domino-theory
 subject_id: 1
+order: 2
+priority: 출시 필수
+status: 완료
 group: 재해 분석·이론
 tags: [이론, 빈출]
 summary: 5단계 연쇄 — 3단계(불안전 행동·상태) 제거가 재해 예방의 핵심

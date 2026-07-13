@@ -2,6 +2,9 @@
 title: 작업장 배치 원칙
 slug: workplace-layout-principles
 subject_id: 2
+order: 4
+priority: 출시 필수
+status: 완료
 group: 시스템 설계
 tags: [이론, 실무]
 summary: 중요성·사용빈도(위치 결정) / 기능별·사용순서(배치 결정) 4원칙

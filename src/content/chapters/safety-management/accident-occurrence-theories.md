@@ -2,6 +2,9 @@
 title: 재해 발생 학설 4가지
 slug: accident-occurrence-theories
 subject_id: 1
+order: 6
+priority: 출시 필수
+status: 완료
 group: 재해 분석·이론
 tags: [이론]
 summary: 기회설·암시설·빈발경향자설·미숙설 — 재해 누발의 원인 해석

@@ -2,6 +2,9 @@
 title: 산재보험 보험급여 8종
 slug: industrial-accident-insurance
 subject_id: 1
+order: 1
+priority: 출시 필수
+status: 완료
 group: 법령·보상
 tags: [법령, 함정]
 summary: 요양·휴업·장해·간병·유족급여, 상병보상연금, 장례비, 직업재활급여 — 직접비=보험급여

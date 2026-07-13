@@ -6,7 +6,8 @@ import RelatedChapters from '../../../../components/RelatedChapters.astro';
 import { SUBJECTS, type SubjectId } from '../../../../config/subjects';
 
 export async function getStaticPaths() {
-  const chapters = await getCollection('chapters');
+  // 공개 대상: 작성 완료 챕터만. 미시작 스텁은 페이지 생성 안 함(빈 본문 비공개).
+  const chapters = (await getCollection('chapters')).filter(c => c.data.status === '완료');
   return chapters.map(ch => ({
     params: {
       subject: SUBJECTS[ch.data.subject_id as SubjectId].slug,
@@ -25,7 +26,7 @@ const linked = chapter.data.questions
   .filter(Boolean)
   .sort((a, b) => b!.id.localeCompare(a!.id));
 
-const allChapters = await getCollection('chapters');
+const allChapters = (await getCollection('chapters')).filter(c => c.data.status === '완료');
 const manual = chapter.data.related
   .map(s => allChapters.find(c => c.data.slug === s)?.data)
   .filter(Boolean);

@@ -2,6 +2,9 @@
 title: 금형 설치·해체 안전조치
 slug: mold-safety
 subject_id: 3
+order: 4
+priority: 출시 필수
+status: 완료
 group: 시험·가공·검사
 tags: [실무]
 summary: T홈 안길이 볼트 직경 2배 이상, 나사산 3~4개 남김, 안전블록 사용

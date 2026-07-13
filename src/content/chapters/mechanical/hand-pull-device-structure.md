@@ -2,6 +2,9 @@
 title: 수인식 방호장치 일반구조 기준
 slug: hand-pull-device-structure
 subject_id: 3
+order: 4
+priority: 출시 필수
+status: 완료
 group: 프레스 안전
 tags: [법령, 함정]
 summary: 수인끈 합성섬유 지름 4mm 이상, 길이는 작업자에 따라 조정 가능

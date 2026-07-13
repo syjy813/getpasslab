@@ -2,6 +2,9 @@
 title: 정전유도 분배 전압
 slug: electrostatic-induction
 subject_id: 4
+order: 4
+priority: 출시 필수
+status: 완료
 group: 정전기
 tags: [계산공식]
 summary: V = C₁E / (C₁+C₂), 직렬 용량의 전압 분배

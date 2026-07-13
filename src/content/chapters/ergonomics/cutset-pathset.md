@@ -2,6 +2,9 @@
 title: 컷셋·패스셋·미니멀
 slug: cutset-pathset
 subject_id: 2
+order: 3
+priority: 출시 필수
+status: 완료
 group: FTA·시스템 분석
 tags: [이론, 빈출]
 summary: 미니멀 컷셋 = 위험성 / 미니멀 패스셋 = 신뢰성, Fussell 알고리즘 계산

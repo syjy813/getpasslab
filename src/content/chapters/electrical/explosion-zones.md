@@ -2,6 +2,9 @@
 title: 폭발 위험 장소 0·1·2종
 slug: explosion-zones
 subject_id: 4
+order: 7
+priority: 출시 필수
+status: 완료
 group: 방폭 구조
 tags: [법령, 빈출]
 summary: 0종 지속(탱크 내부) / 1종 정상 시 주기적(맨홀 주변) / 2종 이상 시 단시간

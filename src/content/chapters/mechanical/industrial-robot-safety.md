@@ -2,6 +2,9 @@
 title: 산업용 로봇 안전 조치
 slug: industrial-robot-safety
 subject_id: 3
+order: 2
+priority: 출시 필수
+status: 완료
 group: 시험·가공·검사
 tags: [실무]
 summary: 울타리 높이 1.8m 이상, 교시 작업 전 점검 3항목

@@ -2,6 +2,9 @@
 title: 가설통로·계단 기준
 slug: temporary-passage-stairs
 subject_id: 6
+order: 7
+priority: 출시 필수
+status: 완료
 group: 건설 법령·기준
 tags: [법령, 빈출]
 summary: 경사 30도 이하·15도 초과 시 미끄럼 방지, 계단 강도 500kg/m², 계단참 규정

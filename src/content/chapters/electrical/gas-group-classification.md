@@ -2,6 +2,9 @@
 title: 가스 그룹 분류 (IIA/IIB/IIC)
 slug: gas-group-classification
 subject_id: 4
+order: 4
+priority: 출시 필수
+status: 완료
 group: 방폭 구조
 tags: [이론, 빈출, 함정]
 summary: IIA 프로판 / IIB 에틸렌 / IIC 수소·아세틸렌, C로 갈수록 위험

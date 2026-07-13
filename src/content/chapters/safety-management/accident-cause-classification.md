@@ -2,6 +2,9 @@
 title: 재해 원인 분류
 slug: accident-cause-classification
 subject_id: 1
+order: 5
+priority: 출시 필수
+status: 완료
 group: 재해 분석·이론
 tags: [이론]
 summary: 직접 원인 88%(불안전 행동)·10%(불안전 상태)·2%(불가항력) + 간접 원인 5종, 4M

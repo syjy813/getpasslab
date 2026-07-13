@@ -2,6 +2,9 @@
 title: 가스 그룹별 최소 이격거리
 slug: gas-group-distance
 subject_id: 4
+order: 5
+priority: 출시 필수
+status: 완료
 group: 방폭 구조
 tags: [법령]
 summary: 내압방폭 플랜지 개구부–장애물 거리, IIA 10 / IIB 30 / IIC 40 mm

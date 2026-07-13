@@ -2,6 +2,9 @@
 title: 콘베이어 안전
 slug: conveyor-safety
 subject_id: 3
+order: 7
+priority: 출시 필수
+status: 완료
 group: 시험·가공·검사
 tags: [법령, 실무]
 summary: 이탈·역주행 방지장치, 비상정지장치, 덮개·울, 건널다리

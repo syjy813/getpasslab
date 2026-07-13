@@ -2,6 +2,9 @@
 title: 합성저항 (직렬·병렬)
 slug: combined-resistance
 subject_id: 4
+order: 3
+priority: 출시 필수
+status: 완료
 group: 기초 전기 공식
 tags: [계산공식]
 summary: 직렬은 단순 덧셈·전류 동일, 병렬은 역수 합·전압 동일

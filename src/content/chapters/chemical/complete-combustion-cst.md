@@ -2,6 +2,9 @@
 title: 완전연소 조성 농도 (Cst)
 slug: complete-combustion-cst
 subject_id: 5
+order: 2
+priority: 출시 필수
+status: 완료
 group: 폭발 범위
 tags: [계산공식]
 summary: Cst = 100 / (1 + 4.773 × 산소양론계수), MOC 계산의 기반

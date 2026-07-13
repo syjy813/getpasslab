@@ -2,6 +2,9 @@
 title: 강관비계 설치 기준
 slug: steel-pipe-scaffold
 subject_id: 6
+order: 2
+priority: 출시 필수
+status: 완료
 group: 비계
 tags: [법령]
 summary: 기둥 간격 띠장방향 1.85m·장선방향 1.5m, 벽이음 수직·수평 5m

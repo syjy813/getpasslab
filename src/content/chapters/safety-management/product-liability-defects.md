@@ -2,6 +2,9 @@
 title: 제조물책임법 결함 유형
 slug: product-liability-defects
 subject_id: 1
+order: 2
+priority: 출시 필수
+status: 완료
 group: 법령·보상
 tags: [법령]
 summary: 제조상·설계상·표시상 결함 3유형

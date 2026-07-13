@@ -2,6 +2,9 @@
 title: 옴의 법칙
 slug: ohms-law
 subject_id: 4
+order: 1
+priority: 출시 필수
+status: 완료
 group: 기초 전기 공식
 tags: [계산공식, 빈출]
 summary: 전압·전류·저항의 관계식 V=IR. 4과목 감전·통전전류 계산의 출발점이 되는 기저 공식.

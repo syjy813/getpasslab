@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { SUBJECTS, type SubjectId } from '../config/subjects';
 import { withBase } from '../config/url';
-const chapters = await getCollection('chapters');
+const chapters = (await getCollection('chapters')).filter(c => c.data.status === '완료');
 const countBy = (id: number) => chapters.filter(c => c.data.subject_id === id).length;
 const featured = [...chapters].sort((a, b) => b.data.questions.length - a.data.questions.length).slice(0, 4);
 const chHref = (c: any) => withBase(`/industrial-safety/written/${SUBJECTS[c.data.subject_id as SubjectId].slug}/${c.data.slug}/`);

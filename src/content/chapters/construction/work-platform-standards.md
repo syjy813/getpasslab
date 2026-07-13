@@ -2,6 +2,9 @@
 title: 작업발판 기준
 slug: work-platform-standards
 subject_id: 6
+order: 2
+priority: 출시 필수
+status: 완료
 group: 추락 방지
 tags: [법령, 빈출]
 summary: 폭 40cm 이상·틈 3cm 이하, 설치 곤란 시 추락방호망 → 안전대

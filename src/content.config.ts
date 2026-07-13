@@ -13,6 +13,9 @@ const chapters = defineCollection({
     questions: z.array(z.string()).default([]),  // 기출 문제 ID 참조 (섹션 4 자동 렌더)
     related: z.array(z.string()).default([]),    // 관련 챕터 slug (섹션 5 수동 지정분)
     examComment: z.string().optional(),          // 섹션 4 출제 경향 코멘트 (챕터당 1줄)
+    order: z.number().default(0),                 // 그룹 내 정렬 순서 (노션 매핑 DB 이관)
+    priority: z.enum(['출시 필수', '1차', '2차']).default('1차'), // 작성 우선순위
+    status: z.enum(['미시작', '완료']).default('미시작'),          // 작성 상태
   }),
 });
 

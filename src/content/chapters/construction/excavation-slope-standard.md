@@ -2,6 +2,9 @@
 title: 굴착면 기울기 기준
 slug: excavation-slope-standard
 subject_id: 6
+order: 1
+priority: 출시 필수
+status: 완료
 group: 굴착·흙막이
 tags: [법령]
 summary: 모래 1:1.8 / 연암·풍화암 1:1.0 / 경암 1:0.5 / 그 밖의 흙 1:1.2

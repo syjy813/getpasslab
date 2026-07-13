@@ -2,6 +2,9 @@
 title: 전력 공식
 slug: power-formula
 subject_id: 4
+order: 2
+priority: 출시 필수
+status: 완료
 group: 기초 전기 공식
 tags: [계산공식]
 summary: P = VI = I²R = V²/R

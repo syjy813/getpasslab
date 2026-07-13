@@ -2,6 +2,9 @@
 title: 인간관계 메커니즘
 slug: human-relations-mechanism
 subject_id: 1
+order: 2
+priority: 출시 필수
+status: 완료
 group: 사회행동·인간관계
 tags: [이론, 함정]
 summary: 동일화·모방·암시·투사·커뮤니케이션 5가지 — 정의 문장 매칭

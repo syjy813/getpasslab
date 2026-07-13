@@ -2,6 +2,9 @@
 title: 지게차 안전
 slug: forklift-safety
 subject_id: 3
+order: 8
+priority: 출시 필수
+status: 완료
 group: 시험·가공·검사
 tags: [법령, 계산공식, 빈출]
 summary: 안정도 4·6·18·(15+1.1V)%, 헤드가드 최대하중 2배(4톤 한도), 백레스트

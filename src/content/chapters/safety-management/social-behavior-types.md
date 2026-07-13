@@ -2,6 +2,9 @@
 title: 사회행동 기본형태
 slug: social-behavior-types
 subject_id: 1
+order: 1
+priority: 출시 필수
+status: 완료
 group: 사회행동·인간관계
 tags: [이론, 함정]
 summary: 협력·대립·도피·융합 4형태 — 하위 유형까지 세트 암기

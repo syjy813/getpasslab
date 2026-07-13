@@ -2,6 +2,9 @@
 title: 침투탐상검사 순서 6단계
 slug: penetrant-test-procedure
 subject_id: 3
+order: 2
+priority: 출시 필수
+status: 완료
 group: 시험·가공·검사
 tags: [실무]
 summary: 전처리 → 침투 → 세척(제거) → 현상 → 관찰 → 후처리

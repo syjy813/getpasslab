@@ -2,6 +2,9 @@
 title: FTA 주요 기호
 slug: fta-symbols
 subject_id: 2
+order: 1
+priority: 출시 필수
+status: 완료
 group: FTA·시스템 분석
 tags: [이론, 빈출]
 summary: 결함사상(사각형)·기본사상(원)·통상사상(하우스)·생략사상(마름모) + AND/OR/수정게이트

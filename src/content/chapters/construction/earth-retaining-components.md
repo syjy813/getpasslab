@@ -2,6 +2,9 @@
 title: 흙막이 지보공 구성요소
 slug: earth-retaining-components
 subject_id: 6
+order: 2
+priority: 출시 필수
+status: 완료
 group: 굴착·흙막이
 tags: [실무]
 summary: 흙막이판·말뚝·버팀대·띠장 — 띠장은 흙막이판 변형 방지

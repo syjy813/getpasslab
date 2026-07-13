@@ -2,6 +2,9 @@
 title: 방폭기기 온도등급 (T1~T6)
 slug: explosion-temperature-class
 subject_id: 4
+order: 9
+priority: 출시 필수
+status: 완료
 group: 방폭 구조
 tags: [법령, 함정]
 summary: T1 450 ~ T6 85℃, T4=135℃ / 기기 표면온도는 가스 발화온도 미만

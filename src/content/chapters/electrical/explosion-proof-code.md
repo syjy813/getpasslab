@@ -2,6 +2,9 @@
 title: 방폭전기기기 표시코드
 slug: explosion-proof-code
 subject_id: 4
+order: 3
+priority: 출시 필수
+status: 완료
 group: 방폭 구조
 tags: [이론, 빈출]
 summary: Ex ia IIC T4 Ga — 구조·가스그룹·온도등급·EPL 순서 해독

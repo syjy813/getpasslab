@@ -2,6 +2,9 @@
 title: 공작기계 안전 (선반·밀링·드릴)
 slug: machine-tools-safety
 subject_id: 3
+order: 6
+priority: 출시 필수
+status: 완료
 group: 시험·가공·검사
 tags: [실무, 빈출]
 summary: 선반 칩브레이커·방진구, 밀링·드릴 공통 수칙 — 장갑 착용 금지

@@ -2,6 +2,9 @@
 title: FMEA
 slug: fmea
 subject_id: 2
+order: 6
+priority: 출시 필수
+status: 완료
 group: FTA·시스템 분석
 tags: [이론, 빈출]
 summary: 고장형태와 영향분석 — 귀납적·정성적, 고장평점 5요소

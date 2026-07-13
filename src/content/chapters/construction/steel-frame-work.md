@@ -2,6 +2,9 @@
 title: 철골작업 안전
 slug: steel-frame-work
 subject_id: 6
+order: 2
+priority: 출시 필수
+status: 완료
 group: 건설 강도·하중
 tags: [법령, 빈출]
 summary: 작업중지 기준 풍속 10m/s·강우 1mm/h·강설 1cm/h, 승강로 답단 30cm

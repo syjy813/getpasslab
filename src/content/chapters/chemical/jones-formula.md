@@ -2,6 +2,9 @@
 title: Jones 식 (폭발범위 추정)
 slug: jones-formula
 subject_id: 5
+order: 3
+priority: 출시 필수
+status: 완료
 group: 폭발 범위
 tags: [계산공식]
 summary: LFL = 0.55 × Cst, UFL = 3.5 × Cst

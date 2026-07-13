@@ -2,6 +2,9 @@
 title: FTA 수행 절차
 slug: fta-procedure
 subject_id: 2
+order: 2
+priority: 출시 필수
+status: 완료
 group: FTA·시스템 분석
 tags: [실무]
 summary: 톱사상 선정 → 재해원인 규명 → FT도 작성 → 개선계획 — 연역적·정량적 분석

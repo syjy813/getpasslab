@@ -2,6 +2,9 @@
 title: 프레스 작업시작 전 점검사항 7가지
 slug: press-pre-work-checklist
 subject_id: 3
+order: 3
+priority: 출시 필수
+status: 완료
 group: 프레스 안전
 tags: [법령]
 summary: 클러치·볼트 풀림·정지기구·위험방지 기구·금형·방호장치·전단기 칼날

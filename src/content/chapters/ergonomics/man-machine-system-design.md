@@ -2,6 +2,9 @@
 title: 인간-기계 시스템 설계 6단계
 slug: man-machine-system-design
 subject_id: 2
+order: 1
+priority: 출시 필수
+status: 완료
 group: 시스템 설계
 tags: [이론]
 summary: 목표·시스템 정의·기본설계(기능할당)·계면설계·촉진물설계·시험평가

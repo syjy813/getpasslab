@@ -2,6 +2,9 @@
 title: 전하량·정전용량
 slug: charge-capacitance
 subject_id: 4
+order: 5
+priority: 출시 필수
+status: 완료
 group: 기초 전기 공식
 tags: [계산공식, 함정]
 summary: Q = CV, 전하량(C)과 정전용량(F)의 단위 구분

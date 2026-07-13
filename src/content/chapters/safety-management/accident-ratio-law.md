@@ -2,6 +2,9 @@
 title: 재해 비율 법칙
 slug: accident-ratio-law
 subject_id: 1
+order: 4
+priority: 출시 필수
+status: 완료
 group: 재해 분석·이론
 tags: [이론, 빈출]
 summary: 하인리히 1:29:300, 버드 1:10:30:600 — 비례식 계산 필수

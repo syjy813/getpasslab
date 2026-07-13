@@ -2,6 +2,9 @@
 title: 형삭기 주요 구조부
 slug: shaper-structure
 subject_id: 3
+order: 5
+priority: 출시 필수
+status: 완료
 group: 시험·가공·검사
 tags: [이론, 함정]
 summary: 램·공구대·공작물 테이블 — 아버는 밀링의 구조부

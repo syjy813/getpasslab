@@ -2,6 +2,9 @@
 title: 방폭 3대 기본 개념
 slug: explosion-proof-basics
 subject_id: 4
+order: 1
+priority: 출시 필수
+status: 완료
 group: 방폭 구조
 tags: [이론]
 summary: 점화원의 방폭적 격리·안전도 증강·점화능력의 본질적 억제

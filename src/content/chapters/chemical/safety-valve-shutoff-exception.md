@@ -2,6 +2,9 @@
 title: 안전밸브 차단밸브 금지 예외
 slug: safety-valve-shutoff-exception
 subject_id: 5
+order: 2
+priority: 출시 필수
+status: 완료
 group: 안전밸브·플랜지
 tags: [법령]
 summary: 차단밸브 설치 금지 원칙과 자물쇠형 설치 가능 예외, 검사주기(현행 2·3·4년)

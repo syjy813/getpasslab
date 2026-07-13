@@ -2,6 +2,9 @@
 title: 전기화재 원인
 slug: electrical-fire-causes
 subject_id: 4
+order: 4
+priority: 출시 필수
+status: 완료
 group: 전선·전기 기본
 tags: [이론, 빈출]
 summary: 발화원 비중 1위 전기배선·배선기구, 출화 경과는 단락·누전·과전류·스파크·트래킹

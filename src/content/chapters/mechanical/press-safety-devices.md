@@ -2,6 +2,9 @@
 title: 프레스 방호장치 종류
 slug: press-safety-devices
 subject_id: 3
+order: 1
+priority: 출시 필수
+status: 완료
 group: 프레스 안전
 tags: [이론, 빈출]
 summary: 양수조작·양수기동·광전자·게이트가드·손쳐내기·수인식 6종과 방호 원리

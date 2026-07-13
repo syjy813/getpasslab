@@ -2,6 +2,9 @@
 title: 토사붕괴 원인·예방
 slug: soil-collapse-prevention
 subject_id: 6
+order: 5
+priority: 출시 필수
+status: 완료
 group: 사면 공법
 tags: [이론, 빈출]
 summary: 외적·내적 원인 구분, 전단응력 증대 요인, 압성토 등 예방 공법

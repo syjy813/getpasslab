@@ -3,7 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { SUBJECTS } from '../../../config/subjects';
 import { withBase } from '../../../config/url';
-const chapters = await getCollection('chapters');
+const chapters = (await getCollection('chapters')).filter(c => c.data.status === '완료');
 const countBy = (id: number) => chapters.filter(c => c.data.subject_id === id).length;
 ---
 <BaseLayout title="산업안전기사 필기 — GetPassLab" description="산업안전기사 필기 6과목 핵심요약. 과목별 챕터 학습.">

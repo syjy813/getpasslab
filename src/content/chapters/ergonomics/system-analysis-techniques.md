@@ -2,6 +2,9 @@
 title: 시스템 분석 기법 비교
 slug: system-analysis-techniques
 subject_id: 2
+order: 5
+priority: 출시 필수
+status: 완료
 group: FTA·시스템 분석
 tags: [이론, 빈출]
 summary: PHA·FMEA·FTA·ETA·HAZOP·THERP·MORT — 방향(귀납/연역)과 용도 매칭

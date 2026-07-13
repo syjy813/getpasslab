@@ -2,6 +2,9 @@
 title: 터널·발파 안전
 slug: tunnel-blasting
 subject_id: 6
+order: 3
+priority: 출시 필수
+status: 완료
 group: 굴착·흙막이
 tags: [법령, 실무, 빈출]
 summary: 발파 안전대책·허용진동치(문화재 0.2cm/s), 터널 지보공 조립·점검, 낙반 조치

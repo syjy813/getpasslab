@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 const { subjectId } = Astro.props;
 const subject = SUBJECTS[subjectId as SubjectId];
-const chapters = (await getCollection('chapters')).filter(c => c.data.subject_id === subjectId);
+const chapters = (await getCollection('chapters')).filter(c => c.data.subject_id === subjectId && c.data.status === '완료');
 const groups = [...new Set(chapters.map(c => c.data.group))];
 ---
 <BaseLayout title={`${subjectId}과목 ${subject.name} — GetPassLab`} description={`산업안전기사 필기 ${subjectId}과목 ${subject.name} 챕터별 핵심요약.`}>

@@ -2,6 +2,9 @@
 title: 강관틀비계 조립 준수사항
 slug: steel-frame-scaffold
 subject_id: 6
+order: 1
+priority: 출시 필수
+status: 완료
 group: 비계
 tags: [법령]
 summary: 주틀 간격 1.8m 이하, 벽이음 수직 6m·수평 8m, 버팀기둥 4m·10m

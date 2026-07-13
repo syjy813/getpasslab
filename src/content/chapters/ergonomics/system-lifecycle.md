@@ -2,6 +2,9 @@
 title: 시스템 수명주기 5단계
 slug: system-lifecycle
 subject_id: 2
+order: 2
+priority: 출시 필수
+status: 완료
 group: 시스템 설계
 tags: [이론]
 summary: 구상 → 정의 → 개발 → 생산 → 운전, PHA는 구상 단계
