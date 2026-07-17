@@ -5,7 +5,7 @@ subject_id: 3
 group: 법령·안전인증
 tags: [법령, 빈출]
 summary: 안전밸브·파열판·보일러·프레스·양중기 등
-questions: [20220424_048, 20220424_048]
+questions: [20220424_048]
 order: 1
 priority: 2차
 status: 미시작

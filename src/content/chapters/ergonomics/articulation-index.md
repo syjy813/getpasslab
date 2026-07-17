@@ -5,7 +5,7 @@ subject_id: 2
 group: 정보·청각
 tags: [계산공식]
 summary: Σ(log(S/N) × W) 가중치 합산
-questions: [20220305_028, 20220305_028]
+questions: [20220305_028]
 order: 1
 priority: 1차
 status: 미시작

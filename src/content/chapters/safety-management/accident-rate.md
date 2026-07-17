@@ -5,7 +5,7 @@ subject_id: 1
 group: 재해통계 공식
 tags: [계산공식]
 summary: "전체 근로자 중 재해자 비율(%)"
-questions: [20220424_002, 20220424_002]
+questions: [20220424_002]
 order: 4
 priority: 1차
 status: 미시작

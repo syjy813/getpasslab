@@ -5,7 +5,7 @@ subject_id: 4
 group: 정전작업
 tags: [실무]
 summary: 절연·접지·누전차단기·이격·보호구
-questions: [20220424_068, 20220424_068]
+questions: [20220424_068]
 order: 2
 priority: 1차
 status: 미시작

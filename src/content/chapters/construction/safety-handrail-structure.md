@@ -5,7 +5,7 @@ subject_id: 6
 group: 안전난간
 tags: [법령, 빈출]
 summary: 상부90cm·발끝막10cm·지름 2.7cm·100kg
-questions: [20210814_105, 20210814_105]
+questions: [20210814_105]
 order: 1
 priority: 2차
 status: 미시작

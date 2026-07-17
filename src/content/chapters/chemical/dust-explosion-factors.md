@@ -5,7 +5,7 @@ subject_id: 5
 group: 분진폭발
 tags: [빈출, 이론, 함정]
 summary: "화학: 연소열·산화속도 / 물리: 입도·열전도 (함정)"
-questions: [20220424_087, 20220424_087]
+questions: [20220424_087]
 order: 1
 priority: 1차
 status: 미시작

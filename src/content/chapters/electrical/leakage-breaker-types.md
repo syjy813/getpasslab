@@ -5,7 +5,7 @@ subject_id: 4
 group: 누전·누전차단기
 tags: [이론]
 summary: 전류동작형·전압동작형·중성선접지형
-questions: [20220424_065, 20220424_065]
+questions: [20220424_065]
 order: 1
 priority: 1차
 status: 미시작

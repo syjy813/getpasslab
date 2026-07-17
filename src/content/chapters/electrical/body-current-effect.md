@@ -5,7 +5,7 @@ subject_id: 4
 group: 감전·전류
 tags: [빈출, 이론]
 summary: 1·5·10·50·100 mA 단계별 영향
-questions: [20220305_065, 20220305_065]
+questions: [20220305_065]
 order: 6
 priority: 1차
 status: 미시작

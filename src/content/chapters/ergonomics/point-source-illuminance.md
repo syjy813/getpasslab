@@ -5,7 +5,7 @@ subject_id: 2
 group: 조명·시각
 tags: [계산공식, 빈출]
 summary: "E = Icosθ/d², 역제곱 법칙"
-questions: [20220305_031, 20220305_031]
+questions: [20220305_031]
 order: 4
 priority: 1차
 status: 미시작

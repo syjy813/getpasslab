@@ -5,7 +5,7 @@ subject_id: 5
 group: 기체·농도·상태
 tags: [계산공식, 빈출]
 summary: "PV = nRT, R=0.082"
-questions: [20220305_092, 20220305_092, 20220305_093, 20220305_093]
+questions: [20220305_092, 20220305_093]
 order: 5
 priority: 1차
 status: 미시작

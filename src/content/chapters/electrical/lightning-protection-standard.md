@@ -5,7 +5,7 @@ subject_id: 4
 group: 차단기·피뢰
 tags: [법령]
 summary: 20m 이상 건축물·25cm 이상 돌출
-questions: [20220424_069, 20220424_069]
+questions: [20220424_069]
 order: 4
 priority: 1차
 status: 미시작

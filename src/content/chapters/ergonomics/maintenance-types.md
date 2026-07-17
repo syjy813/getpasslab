@@ -5,7 +5,7 @@ subject_id: 2
 group: 보전
 tags: [이론]
 summary: MP · CM · BM · 일상보전 · PM
-questions: [20220424_056, 20220424_056]
+questions: []
 order: 1
 priority: 2차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 1
 group: 작업환경·소음
 tags: [실무, 함정]
 summary: 귀마개 1·2종·귀덮개 차음 특성
-questions: [20220424_040, 20220424_040, 20220424_050, 20220424_050]
+questions: []
 order: 3
 priority: 1차
 status: 미시작

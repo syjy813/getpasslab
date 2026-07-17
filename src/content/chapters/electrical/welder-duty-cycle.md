@@ -5,7 +5,7 @@ subject_id: 4
 group: 용접기
 tags: [계산공식]
 summary: Da = (I₁/I₂)²·D₁
-questions: [20220305_066, 20220305_066]
+questions: [20220305_066]
 order: 1
 priority: 1차
 status: 미시작

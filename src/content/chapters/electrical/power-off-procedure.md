@@ -5,7 +5,7 @@ subject_id: 4
 group: 정전작업
 tags: [빈출, 실무]
 summary: 확인·차단·잠금·검전·방전·단락접지
-questions: [20220424_079, 20220424_079]
+questions: [20220424_079]
 order: 1
 priority: 1차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 6
 group: 지게차·차량계
 tags: [빈출, 이론]
 summary: "하역 4%·6% / 주행 18%·(15+1.1V)%"
-questions: [20220424_044, 20220424_044]
+questions: []
 order: 2
 priority: 1차
 status: 미시작

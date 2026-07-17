@@ -5,7 +5,7 @@ subject_id: 6
 group: 건설 와이어로프
 tags: [법령]
 summary: 달기로프10·체인·훅 5·강재 2.5·목재 5
-questions: [20220424_041, 20220424_041, 20210814_107, 20210814_107]
+questions: [20210814_107]
 order: 2
 priority: 2차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 1
 group: 안전관리 기준·표지
 tags: [실무]
 summary: 격리·위치제한·안전거리·접촉방지·포집형
-questions: [20220424_059, 20220424_059]
+questions: []
 order: 2
 priority: 1차
 status: 미시작

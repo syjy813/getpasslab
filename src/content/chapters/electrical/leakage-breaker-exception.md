@@ -5,7 +5,7 @@ subject_id: 4
 group: 누전·누전차단기
 tags: [법령]
 summary: 이중절연·비접지식·절연대 위
-questions: [20220424_065, 20220424_065, 20220424_074, 20220424_074]
+questions: [20220424_065, 20220424_074]
 order: 2
 priority: 1차
 status: 미시작
