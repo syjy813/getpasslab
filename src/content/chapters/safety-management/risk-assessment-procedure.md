@@ -5,7 +5,7 @@ subject_id: 1
 group: 위험성평가
 tags: [빈출, 실무]
 summary: 준비·파악·추정·결정·대책 5단계
-questions: [20220305_010, 20220305_017]
+questions: []
 order: 1
 priority: 1차
 status: 미시작
