@@ -21,10 +21,41 @@ const { chapter } = Astro.props;
 const { Content } = await render(chapter);
 
 const allQuestions = await getCollection('questions');
-const linked = chapter.data.questions
-  .map(id => allQuestions.find(q => q.data.id === id)?.data)
-  .filter(Boolean)
-  .sort((a, b) => b!.id.localeCompare(a!.id));
+const questionsById = new Map(allQuestions.map((question) => [question.data.id, question.data]));
+const seenQuestionIds = new Set<string>();
+const linked = [];
+
+for (const questionId of chapter.data.questions ?? []) {
+  if (seenQuestionIds.has(questionId)) continue;
+  seenQuestionIds.add(questionId);
+
+  const question = questionsById.get(questionId);
+  if (!question) {
+    console.warn(
+      `[public-question-filter] chapter=${chapter.data.slug} question_id=${questionId} excluded: missing from questions.json`,
+    );
+    continue;
+  }
+
+  const exclusionReasons: string[] = [];
+  if (question.review === 'jpg 확필') exclusionReasons.push('review=jpg 확필');
+  if (!Array.isArray(question.choices) || question.choices.length !== 4) {
+    exclusionReasons.push(
+      `choices length is ${Array.isArray(question.choices) ? question.choices.length : 'not-an-array'}`,
+    );
+  } else if (question.choices.some((choice) => typeof choice !== 'string' || choice.trim() === '')) {
+    exclusionReasons.push('blank choice');
+  }
+
+  if (exclusionReasons.length > 0) {
+    console.warn(
+      `[public-question-filter] chapter=${chapter.data.slug} question_id=${questionId} excluded: ${exclusionReasons.join('; ')}`,
+    );
+    continue;
+  }
+
+  linked.push(question);
+}
 
 const allChapters = (await getCollection('chapters')).filter(c => c.data.status === '완료');
 const manual = chapter.data.related
