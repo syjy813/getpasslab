@@ -8,7 +8,7 @@ status: 완료
 group: 사회행동·인간관계
 tags: [이론, 함정]
 summary: 동일화·모방·암시·투사·커뮤니케이션 5가지 — 정의 문장 매칭
-questions: [20210515_004, 20180428_018, 20210307_019]
+questions: [20210515_004, 20180428_018, 20210307_019, 20180819_001]
 related: [social-behavior-types, human-error-by-process]
 examComment: 정의 문장을 주고 메커니즘 명칭을 고르는 유형 고정 — 동일화 정의("자기와 비슷한 것을 발견")가 최다 출제.
 ---

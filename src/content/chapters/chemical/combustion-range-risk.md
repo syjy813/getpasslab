@@ -5,7 +5,7 @@ subject_id: 5
 group: 폭발 이론
 tags: [이론]
 summary: LEL 낮고 범위 넓을수록 위험
-questions: [20220424_083, 20220424_091, 20220424_099, 20220305_091]
+questions: [20220424_091, 20220424_099, 20220305_091]
 order: 4
 priority: 1차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 4
 group: 감전·전류
 tags: [빈출, 이론]
 summary: 전류 크기·경로·시간·전원 종류
-questions: [20220424_061, 20220424_077, 20220305_070]
+questions: [20220305_070]
 order: 5
 priority: 1차
 status: 미시작

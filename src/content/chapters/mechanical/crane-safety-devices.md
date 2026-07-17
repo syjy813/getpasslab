@@ -5,7 +5,7 @@ subject_id: 3
 group: 크레인·양중기
 tags: [빈출, 이론]
 summary: 과부하·권과·비상정지·제동·훅해지
-questions: [20220424_054, 20220424_057, 20220305_042]
+questions: [20220424_054, 20220305_042]
 order: 1
 priority: 1차
 status: 미시작

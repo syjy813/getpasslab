@@ -5,7 +5,7 @@ subject_id: 6
 group: 해체 작업
 tags: [실무]
 summary: 계획서·출입금지·악천후·신호수
-questions: [20220424_104, 20220424_116]
+questions: []
 order: 2
 priority: 2차
 status: 미시작

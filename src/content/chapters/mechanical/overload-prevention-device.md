@@ -5,7 +5,7 @@ subject_id: 3
 group: 크레인·양중기
 tags: [법령]
 summary: 일반 1.1배·타워크레인 1.05배 정지
-questions: [20220424_057, 20220305_045]
+questions: [20220305_045]
 order: 2
 priority: 1차
 status: 미시작

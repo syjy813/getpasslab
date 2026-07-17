@@ -5,7 +5,7 @@ subject_id: 1
 group: 재해통계 공식
 tags: [계산공식, 빈출]
 summary: 1000 근로시간당 손실된 근로일수
-questions: []
+questions: [20220424_002]
 order: 2
 priority: 1차
 status: 미시작

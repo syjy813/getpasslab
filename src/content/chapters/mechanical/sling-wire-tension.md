@@ -5,7 +5,7 @@ subject_id: 3
 group: 기계 강도·하중
 tags: [계산공식, 빈출, 함정]
 summary: "T = W/(2cos(θ/2)), 각도 절반 주의"
-questions: []
+questions: [20220424_057]
 order: 2
 priority: 1차
 status: 미시작
