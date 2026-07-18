@@ -5,7 +5,7 @@ subject_id: 3
 group: 와이어 로프
 tags: [법령]
 summary: 와이어 4mm·합성섬유 6mm
-questions: []
+questions: [20190303_042]
 order: 2
 priority: 1차
 status: 미시작

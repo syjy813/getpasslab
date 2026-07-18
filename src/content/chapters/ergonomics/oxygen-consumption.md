@@ -5,7 +5,7 @@ subject_id: 2
 group: 에너지 소비
 tags: [계산공식, 빈출]
 summary: "흡기O₂ - 배기O₂, 1L=5kcal 환산"
-questions: []
+questions: [20210515_036, 20200926_040]
 order: 2
 priority: 1차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 3
 group: 가드·개구부
 tags: [계산공식]
 summary: "Y = 6 + 0.1X, X≥160mm 적용"
-questions: []
+questions: [20210814_043]
 order: 2
 priority: 1차
 status: 미시작

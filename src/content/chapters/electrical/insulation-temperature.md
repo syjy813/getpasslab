@@ -5,7 +5,7 @@ subject_id: 4
 group: 절연
 tags: [법령]
 summary: Y90·A105·E120·B130·F155·H180·C180초과
-questions: []
+questions: [20200606_071, 20210307_073]
 order: 3
 priority: 1차
 status: 미시작

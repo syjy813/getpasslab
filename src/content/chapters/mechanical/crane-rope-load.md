@@ -5,7 +5,7 @@ subject_id: 3
 group: 기계 강도·하중
 tags: [계산공식]
 summary: "P = m(g+a), 가속도 포함"
-questions: []
+questions: [20210307_050, 20180819_046]
 order: 3
 priority: 1차
 status: 미시작

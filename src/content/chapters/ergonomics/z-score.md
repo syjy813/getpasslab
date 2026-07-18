@@ -5,7 +5,7 @@ subject_id: 2
 group: 신뢰도·수명
 tags: [계산공식]
 summary: "Z = (t-μ)/σ, 정규분포 신뢰도 계산용"
-questions: []
+questions: [20190303_030, 20200926_032]
 order: 1
 priority: 1차
 status: 미시작

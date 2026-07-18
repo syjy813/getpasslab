@@ -5,7 +5,7 @@ subject_id: 2
 group: 정보·청각
 tags: [계산공식]
 summary: "S = K log(I/I₀), 감각의 로그 증가"
-questions: []
+questions: [20210307_032]
 order: 3
 priority: 1차
 status: 미시작

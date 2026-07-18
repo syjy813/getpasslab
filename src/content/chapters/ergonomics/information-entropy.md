@@ -5,7 +5,7 @@ subject_id: 2
 group: 정보·청각
 tags: [계산공식, 빈출]
 summary: H = -Σ(P log₂ P)
-questions: []
+questions: [20210814_026, 20180428_040, 20190427_028]
 order: 2
 priority: 1차
 status: 미시작

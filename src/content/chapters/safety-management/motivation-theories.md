@@ -5,7 +5,7 @@ subject_id: 1
 group: 사회행동·인간관계
 tags: []
 summary: ""
-questions: []
+questions: [20200822_015, 20200606_014, 20190427_016]
 order: 5
 priority: 1차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 5
 group: 화재·소화
 tags: [빈출, 이론, 함정]
 summary: CO₂=질식 / 할론·분말=억제 (함정)
-questions: []
+questions: [20200606_092, 20180428_093, 20180819_098, 20210515_087]
 order: 3
 priority: 1차
 status: 미시작

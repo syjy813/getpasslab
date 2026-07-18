@@ -5,7 +5,7 @@ subject_id: 2
 group: 화학설비 평가
 tags: [빈출, 실무]
 summary: 물질 · 용량 · 온도 · 압력 · 조작
-questions: []
+questions: [20200606_029, 20200822_021, 20190427_021, 20200926_025]
 order: 4
 priority: 1차
 status: 미시작

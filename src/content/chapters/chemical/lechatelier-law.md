@@ -5,7 +5,7 @@ subject_id: 5
 group: 폭발 범위
 tags: [계산공식, 빈출]
 summary: "L = 100 / Σ(V/L), 혼합가스 하한계"
-questions: []
+questions: [20180428_100]
 order: 1
 priority: 출시 필수
 status: 미시작

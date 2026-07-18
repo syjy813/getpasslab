@@ -5,7 +5,7 @@ subject_id: 5
 group: 열역학·용기
 tags: [계산공식, 함정]
 summary: "T₂ = T₁(P₂/P₁)^((k-1)/k), K변환"
-questions: []
+questions: [20190427_084, 20210814_091]
 order: 3
 priority: 1차
 status: 미시작

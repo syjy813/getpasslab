@@ -5,7 +5,7 @@ subject_id: 1
 group: 재해통계 공식
 tags: [계산공식, 빈출]
 summary: 도수율과 강도율의 기하평균
-questions: []
+questions: [20210307_020]
 order: 6
 priority: 1차
 status: 미시작

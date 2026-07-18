@@ -5,7 +5,7 @@ subject_id: 4
 group: 전선·전기 기본
 tags: [빈출, 이론]
 summary: 인화·착화·발화·순간용단 (전류밀도)
-questions: []
+questions: [20190804_071]
 order: 1
 priority: 1차
 status: 미시작

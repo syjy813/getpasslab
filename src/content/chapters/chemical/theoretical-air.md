@@ -5,7 +5,7 @@ subject_id: 5
 group: 기체·농도·상태
 tags: [계산공식]
 summary: Ao = Oo / 0.21
-questions: []
+questions: [20190804_100]
 order: 4
 priority: 1차
 status: 미시작

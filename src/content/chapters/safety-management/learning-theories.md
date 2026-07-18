@@ -5,7 +5,7 @@ subject_id: 1
 group: 안전보건교육 이론
 tags: []
 summary: ""
-questions: []
+questions: [20200822_010, 20180304_003]
 order: 4
 priority: 1차
 status: 미시작

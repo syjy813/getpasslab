@@ -5,7 +5,7 @@ subject_id: 1
 group: 재해통계 공식
 tags: [계산공식, 빈출]
 summary: 100만 근로시간당 발생한 재해 건수
-questions: []
+questions: [20190804_006]
 order: 1
 priority: 1차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 3
 group: 위험점·안전화
 tags: [이론]
 summary: 구조·기능·작업 안전화
-questions: []
+questions: [20200822_047, 20190427_051, 20210515_054]
 order: 2
 priority: 1차
 status: 미시작

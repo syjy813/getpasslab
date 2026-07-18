@@ -5,7 +5,7 @@ subject_id: 5
 group: 위험물 반응
 tags: [이론]
 summary: 질산암모늄 등
-questions: []
+questions: [20180304_099]
 order: 2
 priority: 1차
 status: 미시작

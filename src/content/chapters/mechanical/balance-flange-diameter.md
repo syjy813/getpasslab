@@ -5,7 +5,7 @@ subject_id: 3
 group: 회전체 속도
 tags: [실무]
 summary: 숙돌 지름의 1/3 이상
-questions: []
+questions: [20210307_056, 20180428_056, 20190804_041]
 order: 4
 priority: 1차
 status: 미시작
