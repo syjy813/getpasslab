@@ -5,7 +5,7 @@ subject_id: 4
 group: 용접기
 tags: [계산공식, 함정]
 summary: η = 아크출력/(아크출력+내부손실)
-questions: [20210814_066]
+questions: [20210814_066, 20220424_071]
 order: 2
 priority: 1차
 status: 미시작

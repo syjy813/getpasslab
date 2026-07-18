@@ -5,7 +5,7 @@ subject_id: 5
 group: 열역학·용기
 tags: []
 summary: ""
-questions: []
+questions: [20220305_096, 20220305_098]
 order: 5
 priority: 출시 필수
 status: 미시작
