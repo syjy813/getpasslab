@@ -5,7 +5,7 @@ subject_id: 5
 group: 기체·농도·상태
 tags: [계산공식]
 summary: "M×vol% / (22.4×T보정)"
-questions: []
+questions: [20210814_086, 20190804_090, 20190303_100]
 order: 2
 priority: 1차
 status: 미시작

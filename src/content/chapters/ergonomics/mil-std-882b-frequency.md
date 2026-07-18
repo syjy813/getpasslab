@@ -5,7 +5,7 @@ subject_id: 2
 group: 안전 계획서
 tags: [이론]
 summary: 자주 → 보통 → 가끔 → 거의 → 극히
-questions: []
+questions: [20200606_039]
 order: 3
 priority: 2차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 2
 group: 신뢰도·수명
 tags: [계산공식, 빈출]
 summary: A = MTBF/(MTBF+MTTR)
-questions: []
+questions: [20190303_036]
 order: 6
 priority: 1차
 status: 미시작

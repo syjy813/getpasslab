@@ -5,7 +5,7 @@ subject_id: 5
 group: 기체·농도·상태
 tags: []
 summary: ""
-questions: []
+questions: [20210307_095, 20180819_099]
 order: 7
 priority: 1차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 2
 group: 소음 분석
 tags: [계산공식, 빈출]
 summary: "ΣC/L, 1 이하 적합"
-questions: []
+questions: [20180819_032]
 order: 2
 priority: 1차
 status: 미시작

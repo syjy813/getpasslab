@@ -5,7 +5,7 @@ subject_id: 4
 group: 감전·전류
 tags: [계산공식]
 summary: Ik = V/R (옴의 법칙)
-questions: []
+questions: [20180819_070]
 order: 3
 priority: 1차
 status: 미시작

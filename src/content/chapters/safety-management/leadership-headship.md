@@ -5,7 +5,7 @@ subject_id: 1
 group: 사회행동·인간관계
 tags: []
 summary: ""
-questions: []
+questions: [20220424_020, 20200926_018]
 order: 4
 priority: 출시 필수
 status: 미시작

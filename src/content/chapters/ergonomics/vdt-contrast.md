@@ -5,7 +5,7 @@ subject_id: 2
 group: 조명·시각
 tags: [계산공식, 함정]
 summary: "C = -L글자/L배경, 음수는 네거티브 대비"
-questions: []
+questions: [20200606_028]
 order: 5
 priority: 1차
 status: 미시작

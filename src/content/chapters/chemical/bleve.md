@@ -5,7 +5,7 @@ subject_id: 5
 group: 폭발 이론
 tags: [빈출, 이론]
 summary: 가압 액화가스 용기 외부화재 → 화구 형성
-questions: []
+questions: [20180428_086]
 order: 2
 priority: 1차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 2
 group: 신뢰도·수명
 tags: [계산공식, 빈출]
 summary: "평균동작시간, 고장률 λ의 역수"
-questions: []
+questions: [20200926_039]
 order: 3
 priority: 1차
 status: 미시작

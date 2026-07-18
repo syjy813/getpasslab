@@ -5,7 +5,7 @@ subject_id: 2
 group: 시스템 설계
 tags: []
 summary: ""
-questions: []
+questions: [20180819_022]
 order: 5
 priority: 1차
 status: 미시작

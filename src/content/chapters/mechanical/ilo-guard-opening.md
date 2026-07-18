@@ -5,7 +5,7 @@ subject_id: 3
 group: 가드·개구부
 tags: [계산공식, 빈출]
 summary: "Y = 6 + 0.15X, X<160mm 적용"
-questions: []
+questions: [20200822_044]
 order: 1
 priority: 1차
 status: 미시작

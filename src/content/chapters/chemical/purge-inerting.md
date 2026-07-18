@@ -5,7 +5,7 @@ subject_id: 5
 group: 폭발 이론
 tags: []
 summary: ""
-questions: []
+questions: [20220424_082]
 order: 5
 priority: 1차
 status: 미시작

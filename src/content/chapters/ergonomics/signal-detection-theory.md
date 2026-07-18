@@ -5,7 +5,7 @@ subject_id: 2
 group: 신호·인간실수
 tags: [빈출, 이론]
 summary: Hit · Miss · False Alarm · Correct Rejection
-questions: []
+questions: [20200926_036]
 order: 1
 priority: 1차
 status: 미시작
