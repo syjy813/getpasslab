@@ -5,7 +5,7 @@ subject_id: 5
 group: 열역학·용기
 tags: [계산공식]
 summary: Q = kA(T₁-T₂)/L
-questions: []
+questions: [20220424_090]
 order: 1
 priority: 1차
 status: 미시작

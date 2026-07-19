@@ -5,7 +5,7 @@ subject_id: 2
 group: 소음 분석
 tags: [계산공식, 빈출]
 summary: "10log(Σ10^(L/10)), 동일 2개 +3dB"
-questions: []
+questions: [20210515_023]
 order: 1
 priority: 1차
 status: 미시작

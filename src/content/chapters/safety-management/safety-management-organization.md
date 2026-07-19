@@ -5,7 +5,7 @@ subject_id: 1
 group: 법령·보상
 tags: []
 summary: ""
-questions: []
+questions: [20190804_002, 20200926_001, 20210307_005, 20180428_020, 20190303_014]
 order: 4
 priority: 1차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 5
 group: 기체·농도·상태
 tags: [계산공식]
 summary: 물질수지 연립방정식
-questions: []
+questions: [20210515_098, 20180819_083]
 order: 3
 priority: 1차
 status: 미시작

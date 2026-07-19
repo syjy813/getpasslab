@@ -5,7 +5,7 @@ subject_id: 5
 group: 화재·소화
 tags: [빈출, 이론]
 summary: 냉각·질식·제거·억제(부촉매)
-questions: []
+questions: [20210307_093]
 order: 2
 priority: 1차
 status: 미시작

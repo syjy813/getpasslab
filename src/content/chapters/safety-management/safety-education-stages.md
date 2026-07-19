@@ -5,7 +5,7 @@ subject_id: 1
 group: 교육 방법론
 tags: []
 summary: ""
-questions: []
+questions: [20190427_010, 20190804_007]
 order: 2
 priority: 1차
 status: 미시작

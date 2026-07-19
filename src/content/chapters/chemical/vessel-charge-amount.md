@@ -5,7 +5,7 @@ subject_id: 5
 group: 열역학·용기
 tags: [계산공식]
 summary: W = V / C
-questions: []
+questions: [20200926_096]
 order: 4
 priority: 1차
 status: 미시작
