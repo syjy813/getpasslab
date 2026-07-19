@@ -5,7 +5,7 @@ subject_id: 4
 group: 감전·전류
 tags: []
 summary: ""
-questions: []
+questions: [20210515_073]
 order: 8
 priority: 1차
 status: 미시작

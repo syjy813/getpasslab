@@ -5,7 +5,7 @@ subject_id: 1
 group: 위험성평가
 tags: [빈출, 실무]
 summary: 본질·공학·관리·보호구 순서
-questions: []
+questions: [20190427_003]
 order: 2
 priority: 1차
 status: 미시작

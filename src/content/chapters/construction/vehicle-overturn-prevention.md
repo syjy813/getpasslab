@@ -5,7 +5,7 @@ subject_id: 6
 group: 지게차·차량계
 tags: [법령]
 summary: 유도자·지반침하·갓길붕괴·경사면
-questions: []
+questions: [20190427_103, 20180428_101, 20190804_102]
 order: 3
 priority: 1차
 status: 미시작

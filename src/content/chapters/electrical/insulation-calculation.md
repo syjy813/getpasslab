@@ -5,7 +5,7 @@ subject_id: 4
 group: 절연
 tags: [계산공식]
 summary: "R = V/Ileak, 누설 1/2000 이하"
-questions: []
+questions: [20210814_073, 20210515_069, 20180304_070]
 order: 2
 priority: 1차
 status: 미시작

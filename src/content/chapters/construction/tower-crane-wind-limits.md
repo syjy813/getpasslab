@@ -5,7 +5,7 @@ subject_id: 6
 group: 건설 장비
 tags: []
 summary: ""
-questions: []
+questions: [20180428_105]
 order: 3
 priority: 1차
 status: 미시작
