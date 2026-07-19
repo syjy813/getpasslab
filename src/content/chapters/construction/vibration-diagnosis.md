@@ -5,7 +5,7 @@ subject_id: 3
 group: 건설 시험·진단
 tags: [실무]
 summary: 상호·비교·절대 판단
-questions: []
+questions: [20190804_048]
 order: 2
 priority: 2차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 5
 group: 보일러·압축기
 tags: [빈출, 이론, 함정]
 summary: 압축기·송풍기 유량 감소 시 맥동·진동
-questions: []
+questions: [20200606_085]
 order: 2
 priority: 1차
 status: 미시작

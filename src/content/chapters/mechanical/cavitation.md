@@ -5,7 +5,7 @@ subject_id: 5
 group: 보일러·압축기
 tags: [빈출, 이론, 함정]
 summary: 펨프 흡입부 기화 → 날개 손상
-questions: []
+questions: [20190804_096, 20190303_097]
 order: 3
 priority: 1차
 status: 미시작
