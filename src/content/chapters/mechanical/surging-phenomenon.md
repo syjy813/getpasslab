@@ -1,7 +1,7 @@
 ---
 title: 서징(Surging) 현상
 slug: surging-phenomenon
-subject_id: 3
+subject_id: 5
 group: 보일러·압축기
 tags: [빈출, 이론, 함정]
 summary: 압축기·송풍기 유량 감소 시 맥동·진동

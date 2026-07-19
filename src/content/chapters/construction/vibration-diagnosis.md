@@ -1,7 +1,7 @@
 ---
 title: 진동 1차 설비진단법 3가지
 slug: vibration-diagnosis
-subject_id: 6
+subject_id: 3
 group: 건설 시험·진단
 tags: [실무]
 summary: 상호·비교·절대 판단

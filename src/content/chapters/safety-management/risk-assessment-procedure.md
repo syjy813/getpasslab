@@ -1,7 +1,7 @@
 ---
 title: 위험성평가 수행 절차
 slug: risk-assessment-procedure
-subject_id: 1
+subject_id: 2
 group: 위험성평가
 tags: [빈출, 실무]
 summary: 준비·파악·추정·결정·대책 5단계
