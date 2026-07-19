@@ -5,7 +5,7 @@ subject_id: 6
 group: 해체 작업
 tags: [이론]
 summary: 압쇄·전도·폭파·절단
-questions: [20220305_102]
+questions: []
 order: 1
 priority: 2차
 status: 미시작
