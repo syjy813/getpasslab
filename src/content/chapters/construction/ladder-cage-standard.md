@@ -5,7 +5,7 @@ subject_id: 6
 group: 건설 법령·기준
 tags: [법령]
 summary: 7m 이상·2.5m부터·1.5m 간격
-questions: [20220305_103, 20210814_109]
+questions: []
 order: 4
 priority: 1차
 status: 미시작
