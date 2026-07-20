@@ -5,7 +5,7 @@ subject_id: 2
 group: 조명·시각
 tags: [계산공식, 빈출]
 summary: "L = Eρ/π, 조도 × 반사율"
-questions: [20220305_033]
+questions: [20220305_033, 20180304_027]
 order: 1
 priority: 1차
 status: 완료
