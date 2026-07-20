@@ -1266,3 +1266,100 @@ READY 4개 작성 후 남은 미시작 55개의 최신 분류:
 - 이미지 정책.
 - 기출 사용 권리.
 - 광고·production 상태.
+
+## explosion-types 콘텐츠 및 관계 중복 방지 게이트 완료 (2026-07-20)
+
+이 절은 `explosion-types` 콘텐츠 구현과 관계 중복 방지 결정의 최신 검증 상태를 기록하며, 앞선 과거 게이트보다 현재 상태 판단에 우선한다.
+
+### 1. RELATION_REQUIRED 후보 검색
+
+- 미매핑 805개를 대상으로 `RELATION_REQUIRED` 16개 챕터의 후보를 읽기 전용으로 감사했다.
+- 즉시 추가 추천으로 `explosion-types`의 다음 3건을 확정했다.
+  - `20210814_089`
+  - `20200926_100`
+  - `20190427_087`
+- 세 문항은 모두 기존 미매핑이었으며 PDF·`questions.json` 의미가 일치했다.
+- 나머지 후보는 법령·구조·이미지 검토 대상으로 보류했다.
+
+### 2. 중복 관계 방지 결정
+
+- `20190427_084`는 이미 완료 챕터 `adiabatic-compression`에 연결되어 있음을 확인했다.
+- 기존 관계는 커밋 `93c91c2`에서 추가됐다.
+- `gas-state-change`에 추가하면 신규 다중 매핑이 발생하므로 추가하지 않았다.
+- 기존 `adiabatic-compression` 관계를 유지했다.
+- `gas-state-change`와 `ideal-gas-law`에는 이번 게이트에서 관계를 추가하지 않았다.
+- `gas-state-change`의 독립 유지·흡수·retire 여부는 후속 구조 감사 대상으로 남겼다.
+- 해당 상태는 `STRUCTURE_DECISION_REQUIRED`로 기록하되, 전체 위험 분류표는 이번 문서 작업에서 임의 재계산하지 않았다.
+
+### 3. `explosion-types` 구현
+
+- 변경 파일: `src/content/chapters/chemical/explosion-types.md`
+- 관계 3건 추가.
+- `status: 미시작 → 완료`.
+- 물리·화학 분류와 기상·응상 분류를 서로 다른 관점으로 설명.
+- 부정형 문제 판별과 세 기출의 정답 근거 추가.
+- summary는 구현 범위에 맞게 최소 보정하고, slug·subject_id·title·group·tags·order·priority는 유지.
+- 구현 커밋:
+  - `d909bb8c9b012a230123cac88d1ad3c1960a3db6`
+  - `content: complete explosion types chapter`
+
+### 4. ChatGPT 리뷰와 보정
+
+- 전체 diff와 현재 파일을 대상으로 표적 리뷰했다.
+- 관계·정답·기상·응상 사례를 승인했다.
+- 분해폭발 설명은 용어만으로 기상·응상 여부를 일반화할 위험이 있어 최소 보정했다.
+- `20200926_100`의 선택지 구성 범위에서만 정답 근거를 설명하도록 제한했다.
+- “분해폭발은 항상 기상폭발이다”와 같은 단정은 사용하지 않았다.
+- 보정 커밋:
+  - `f778ada2e1512d58180aa779797d6bb6c7c8d996`
+  - `content: clarify decomposition explosion scope`
+
+### 5. 최신 검증 수치
+
+| 항목 | 값 |
+|---|---:|
+| 전체 문제 | 1,680 |
+| 전체 챕터 | 251 |
+| 완료 챕터 | 197 |
+| 미시작 챕터 | 54 |
+| 전체 기출↔챕터 관계 | 890 |
+| 고유 매핑 문항 | 878 |
+| 미매핑 문항 | 802 |
+| 단일 매핑 문항 | 866 |
+| 다중 매핑 문항 | 12 |
+| 없는 question_id 참조 | 0 |
+| 챕터 내부 중복 관계 | 0 |
+| subject 불일치 관계 | 0 |
+| 빈 body | 0 |
+| 생성 페이지 | 208 |
+
+### 6. 검증 상태
+
+- 직전 콘텐츠 구현과 보정 작업 모두 `git diff --check` 통과.
+- 직전 보정 작업에서 전체 Build 성공.
+- 핵심 출력: `208 page(s) built`.
+- 신규 오류·경고 없음.
+- 기존 경고: Pretendard resolve 경고, KaTeX Unicode 경고 12건, `public-question-filter` 로그.
+- Production `UNVERIFIED`.
+- 이번 handover 갱신에서는 Build를 반복 실행하지 않는다. 문서 한 파일만 변경하며 직전 콘텐츠 보정 작업에서 전체 Build 성공을 확인했다.
+
+### 7. 남은 보류 사항
+
+- `drying-equipment` 후보 4건: 현행 법령·기준 확인 필요.
+- `gas-state-change`: 독립 유지·흡수·retire 구조 감사 필요.
+- `articulation-index → 20210814_036`: 그래프 이미지 확보 필요.
+- 관계 0건 챕터: 유지·retire 판단 필요.
+- Production 미검증.
+
+### 8. 다음 권장 작업
+
+1. 최우선으로 `gas-state-change` 구조 표적 감사를 읽기 전용으로 수행.
+2. 비교 대상:
+   - `gas-state-change`
+   - `ideal-gas-law`
+   - `adiabatic-compression`
+   - 같은 subject의 기체 법칙·상태변화 관련 기존 챕터
+3. 각 챕터의 학습 범위와 공식 소유권 구분.
+4. `gas-state-change`의 독립 유지·흡수·retire 결정안 작성.
+5. 미매핑 문항 후보 재검색.
+6. Owner 승인 전에는 관련 파일을 변경하지 않음.
