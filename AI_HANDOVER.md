@@ -1073,3 +1073,196 @@ READY 4개 작성 후 남은 미시작 55개의 최신 분류:
 - 신규 slug.
 - 기출 사용 권리.
 - 광고·production 상태.
+
+## 관계 의미 재검토 게이트 완료 (2026-07-20)
+
+이 절은 관계 의미 재검토 게이트의 최신 검증 상태를 기록하며, 앞선 과거 게이트보다 현재 상태 판단에 우선한다.
+
+### 현재 단계
+
+- `RELATION_REVIEW_REQUIRED` 4개 챕터, 총 10개 관계 검토 완료.
+- PDF·`questions.json` 의미 대조 완료.
+- 승인된 관계 수정 구현 완료.
+- `RELATION_REVIEW_REQUIRED` 잔여 0개.
+- 전체 완료 196개 / 미시작 55개 유지.
+- 다음 우선 작업은 `RELATION_REQUIRED` 16개 기출 후보 검색.
+- Production은 `UNVERIFIED`.
+
+### 관계 처리 결과
+
+#### KEEP 1건
+
+- `safety-education-hours → 20220305_007`
+- 근로자 교육시간 기준을 직접 묻는 문항이므로 유지.
+- 최신 교육시간 수치는 별도 법령 검증 대상.
+
+#### MOVE 2건
+
+- `20220305_092`
+  - `ideal-gas-law`에서 제거.
+  - `chemical-classification`에 추가.
+  - 위험물질 8대 분류 문항.
+- `20220305_093`
+  - `ideal-gas-law`에서 제거.
+  - `reactive-dangerous-gases`에 추가.
+  - 인화칼슘과 물의 반응으로 포스핀 발생 문항.
+
+#### REMOVE 7건
+
+`ladder-cage-standard`:
+
+- `20220305_103`
+- `20210814_109`
+
+`articulation-index`:
+
+- `20220305_028`
+
+`safety-education-hours`:
+
+- `20220424_004`
+- `20220424_013`
+- `20220424_015`
+- `20220305_005`
+
+공통 처리:
+
+- 대체 관계를 억지로 생성하지 않음.
+- 신규 slug·챕터 생성 없음.
+- 제거 문항은 미매핑 상태로 전환.
+- 신규 다중 매핑 없음.
+
+### `reactive-dangerous-gases` 보강
+
+- 기존 관계 `20220424_098` 유지.
+- 신규 관계 `20220305_093` 추가.
+- 알루미늄분 + 고온의 물 → 수소 설명 유지.
+- 인화칼슘 + 물 → 포스핀 설명 추가.
+- summary를 두 PDF 검증 사례 범위로 확장.
+- 과염소산·산소 등 미검증 사례는 추가하지 않음.
+- 법령 수치와 원문에 없는 반응식 계수는 추가하지 않음.
+
+### 챕터별 후속 분류
+
+- `ideal-gas-law`
+  - 관계 처리 후 questions 0건.
+  - `RELATION_REQUIRED`.
+  - 독립 챕터 유지.
+- `ladder-cage-standard`
+  - 관계 처리 후 questions 0건.
+  - `RELATION_REQUIRED`.
+  - 독립 챕터 유지 여부는 향후 근거 확보 후 판단.
+- `articulation-index`
+  - 관계 처리 후 questions 0건.
+  - `RELATION_REQUIRED`.
+  - 독립 챕터 유지 여부는 향후 근거 확보 후 판단.
+- `safety-education-hours`
+  - questions 1건 유지.
+  - `LEGAL_STANDARD_REQUIRED`.
+  - 현행 교육시간 기준 확인 전 작성 보류.
+
+### 최신 잔여 위험 분류
+
+| 분류 | 개수 |
+|---|---:|
+| RELATION_REQUIRED | 16 |
+| RELATION_REVIEW_REQUIRED | 0 |
+| LEGAL_STANDARD_REQUIRED | 24 |
+| STRUCTURE_DECISION_REQUIRED | 8 |
+| IMAGE_DEPENDENT | 2 |
+| RETIRE_ARCHIVE_CANDIDATE | 4 |
+| OWNER_DECISION_REQUIRED | 1 |
+| 합계 | 55 |
+
+분류 변화:
+
+- `ideal-gas-law`: 관계 재검토 → 관계 필요.
+- `ladder-cage-standard`: 관계 재검토 → 관계 필요.
+- `articulation-index`: 관계 재검토 → 관계 필요.
+- `safety-education-hours`: 관계 재검토 → 법령·기준 검증 필요.
+
+### 최신 검증 수치
+
+| 항목 | 값 |
+|---|---:|
+| 전체 문제 | 1,680 |
+| 전체 챕터 | 251 |
+| 완료 챕터 | 196 |
+| 미시작 챕터 | 55 |
+| 전체 기출↔챕터 관계 | 887 |
+| 고유 매핑 문항 | 875 |
+| 미매핑 문항 | 805 |
+| 단일 매핑 문항 | 863 |
+| 다중 매핑 문항 | 12 |
+| 없는 question_id 참조 | 0 |
+| 챕터 내부 중복 관계 | 0 |
+| subject 불일치 관계 | 0 |
+| 생성 페이지 | 207 |
+
+### 검증 결과
+
+- 대상 10개 문항 PDF·JSON 의미 대조 완료.
+- 이미지·표 의존 문항 없음.
+- `git diff --check` 통과.
+- Build 성공, `207 page(s) built`.
+- 신규 오류·경고 없음.
+- 기존 경고: Pretendard resolve 경고, KaTeX Unicode 경고 12건, `public-question-filter` 로그.
+- 작업 종료 시 working tree clean.
+- Push 미실행.
+- Production `UNVERIFIED`.
+
+이번 문서 갱신에서는 Build를 반복 실행하지 않는다. 기준 커밋의 검증 결과를 기록하고, 문서 변경 후 `git diff --check`만 다시 확인한다.
+
+### 커밋
+
+- `68096ea11111233f7ab4d1120ad56b4eeb38dc08`
+  - `fix: reconcile reviewed chapter relations`
+
+### 신규 콘텐츠 후보로 남은 개념
+
+삭제된 관계에서 다음 후보가 확인되었으나 신규 slug는 확정하지 않았다.
+
+- 일반 사다리식 통로 기준: `20220305_103`, `20210814_109`
+- 통화 간섭 수준: `20220305_028`
+- 역할연기 교육방법: `20220424_004`
+- 특별교육 내용: `20220424_013`
+- 학습정도 4단계: `20220424_015`
+- 안전보건 교육계획: `20220305_005`
+
+위 문항은 현재 미매핑이며, 신규 챕터 또는 기존 범위 확장은 Owner 승인 전 확정하지 않는다.
+
+### 다음 우선 작업
+
+1. `RELATION_REQUIRED` 16개 전체의 기출 후보 검색.
+2. 기존 805개 미매핑 문항에서 의미 후보 추출.
+3. 기존 챕터로 연결 가능한 관계와 신규 콘텐츠 후보를 분리.
+4. 관계 후보가 확보된 챕터의 다음 콘텐츠 배치 선정.
+5. `LEGAL_STANDARD_REQUIRED` 24개는 별도 Network 허용 검증.
+6. 구조·이미지·Owner 결정 항목 후속 처리.
+
+### 남은 위험
+
+- 직접 관계가 필요한 챕터 16개.
+- 현행 법령·표준 확인 24개.
+- 구조 결정 8개.
+- 이미지 의존 2개.
+- retire/archive 후보 4개.
+- `construction-illuminance` 과목·법령 경계.
+- 현재 미매핑 805문항.
+- `jpg 확필` 73문항.
+- 빈 choice 16문항.
+- 기출 공개·사용 권리.
+- 광고·분석·약관·개인정보·면책.
+- production 배포 및 최종 QA.
+- 기존 Pretendard·KaTeX 경고.
+
+확정하지 않은 사항:
+
+- 신규 콘텐츠 후보의 slug.
+- 삭제된 7개 문항의 새 관계.
+- `RELATION_REQUIRED` 16개 관계.
+- 법령·규격 최신성.
+- 구조 후보 삭제·병합.
+- 이미지 정책.
+- 기출 사용 권리.
+- 광고·production 상태.
