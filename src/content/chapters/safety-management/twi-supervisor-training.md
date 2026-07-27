@@ -4,7 +4,7 @@ slug: twi-supervisor-training
 subject_id: 1
 group: 교육 방법론
 tags: []
-summary: ""
+summary: "TWI의 목적과 작업지도·작업개선·인간관계·작업안전 과정별 핵심 역할을 정리합니다."
 questions: [20220424_016, 20220305_015, 20210515_009, 20200606_017, 20180304_001]
 order: 3
 priority: 1차

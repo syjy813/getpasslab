@@ -4,7 +4,7 @@ slug: therp-human-error
 subject_id: 2
 group: FTA·시스템 분석
 tags: []
-summary: ""
+summary: "THERP의 작업 분해 절차와 인간실수확률(HEP), 단계 의존성 및 다른 시스템 분석 기법과의 차이를 정리합니다."
 questions: [20200822_031, 20180428_026]
 order: 8
 priority: 1차

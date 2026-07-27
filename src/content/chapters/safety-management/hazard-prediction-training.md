@@ -4,7 +4,7 @@ slug: hazard-prediction-training
 subject_id: 1
 group: 무재해운동
 tags: []
-summary: ""
+summary: "위험예지훈련(KYT)의 목적과 현상파악·본질추구·대책수립·목표설정의 4라운드를 정리합니다."
 questions: [20220305_017, 20210814_011, 20190804_008, 20200606_018, 20190303_007]
 order: 2
 priority: 1차

@@ -1,11 +1,15 @@
 ---
 // TRACK 4-2 하위: 기출문제 DB 리스트 (조회 전용)
 // 원본: src/data/questions.json + 챕터 md questions[] 역인덱스
-// /admin/ 과 분리된 하위 페이지. 배포되나 noindex + sitemap 제외(기존 /admin 규칙).
+// /admin/ 과 분리된 하위 페이지. 개발 환경에서만 제공.
 import '../../../styles/global.css';
 import { getCollection } from 'astro:content';
 import { SUBJECTS, type SubjectId } from '../../../config/subjects';
 import { withBase } from '../../../config/url';
+
+export function getStaticPaths() {
+  return import.meta.env.DEV ? [{ params: { path: undefined } }] : [];
+}
 
 const questions = await getCollection('questions');
 const chapters = await getCollection('chapters');

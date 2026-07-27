@@ -3,12 +3,18 @@ interface Q { id: string; label: string; number: number; body: string; choices: 
 interface Props { questions: Q[]; examComment?: string; }
 const { questions, examComment } = Astro.props;
 const years = new Set(questions.map(q => q.id.slice(0, 4)));
+const sortedYears = [...years].sort();
+const yearRange = sortedYears.length === 0
+  ? ''
+  : sortedYears.length === 1
+    ? `${sortedYears[0]}년`
+    : `${sortedYears[0]}~${sortedYears.at(-1)}년`;
 ---
 <h2>기출 출제 이력</h2>
 <div class="exam-history">
   {questions.length > 0 ? (
     <>
-      <div class="freq-label">최근 5개년 {questions.length}회 출제 · {years.size}개 연도</div>
+      <div class="freq-label">{yearRange} 기출 {questions.length}회 · {years.size}개 연도</div>
       <div class="round-badges">
         {questions.map(q => (
           <button class="round-badge" data-open={q.id}>{q.label} {q.number}번</button>
@@ -16,7 +22,7 @@ const years = new Set(questions.map(q => q.id.slice(0, 4)));
       </div>
     </>
   ) : (
-    <div class="freq-label">최근 5개년 직접 출제 이력 없음</div>
+    <div class="freq-label">수록 기출에서 직접 출제 이력 없음</div>
   )}
   {examComment && <p class="exam-comment"><strong>출제 경향</strong> — {examComment}</p>}
 </div>

@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { withBase } from '../../config/url';
 ---
-<BaseLayout title="산업안전기사 — GetPassLab" description="산업안전기사 자격증 시험 정보와 필기·실기 학습 콘텐츠.">
+<BaseLayout title="산업안전기사 — GetPassLab" description="산업안전기사 자격증 시험 정보와 필기 학습 콘텐츠.">
   <section class="hero">
     <div class="hero-inner">
       <span class="hero-badge">국가기술자격 · 기사</span>
@@ -11,17 +11,12 @@ import { withBase } from '../../config/url';
     </div>
   </section>
   <section class="section container">
-    <div class="grid grid-2">
+    <div class="grid">
       <a class="card" href={withBase('/industrial-safety/written/')}>
         <span class="card-label">필기</span>
         <div class="card-title">필기 핵심요약</div>
         <div class="card-meta">6과목 · 챕터별 공식·정의·기출 이력</div>
       </a>
-      <div class="card" style="opacity:.55;cursor:default">
-        <span class="card-label" style="background:var(--gray-100);color:var(--gray-600)">실기</span>
-        <div class="card-title">실기 대비</div>
-        <div class="card-meta">준비 중</div>
-      </div>
     </div>
   </section>
 </BaseLayout>

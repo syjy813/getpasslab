@@ -1,12 +1,16 @@
 ---
 // TRACK 4-2: 내부 관리 현황 페이지 (조회 전용)
 // 원본: 챕터 md frontmatter + src/data/questions.json
-// 노션 매핑 DB 이관 후 유일한 조회 대시보드. 배포되나 noindex.
+// 노션 매핑 DB 이관 후 유일한 조회 대시보드. 개발 환경에서만 제공.
 import '../../styles/global.css';
 import { getCollection } from 'astro:content';
 import { SUBJECTS } from '../../config/subjects';
 import { withBase } from '../../config/url';
 import questions from '../../data/questions.json';
+
+export function getStaticPaths() {
+  return import.meta.env.DEV ? [{ params: { path: undefined } }] : [];
+}
 
 const chapters = await getCollection('chapters');
 
