@@ -1,7 +1,7 @@
 /* ═══ GetPassLab Design System — tokens ═══ */
 @font-face {
   font-family: 'Pretendard Variable';
-  src: url('/getpasslab/fonts/PretendardVariable.woff2') format('woff2-variations');
+  src: url('/fonts/PretendardVariable.woff2') format('woff2-variations');
   font-weight: 45 920; font-style: normal; font-display: swap;
 }
 :root {
