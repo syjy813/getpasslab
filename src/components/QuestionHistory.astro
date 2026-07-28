@@ -2,6 +2,7 @@
 interface Q { id: string; label: string; number: number; body: string; choices: string[]; answer: number; }
 interface Props { questions: Q[]; examComment?: string; }
 const { questions, examComment } = Astro.props;
+const examLabel = (label: string) => label.replace(/ 시행$/, ' 시험');
 const years = new Set(questions.map(q => q.id.slice(0, 4)));
 const sortedYears = [...years].sort();
 const yearRange = sortedYears.length === 0
@@ -17,7 +18,7 @@ const yearRange = sortedYears.length === 0
       <div class="freq-label">{yearRange} 기출 {questions.length}회 · {years.size}개 연도</div>
       <div class="round-badges">
         {questions.map(q => (
-          <button class="round-badge" data-open={q.id}>{q.label} {q.number}번</button>
+          <button class="round-badge" data-open={q.id}>{examLabel(q.label)} {q.number}번</button>
         ))}
       </div>
     </>
@@ -30,7 +31,7 @@ const yearRange = sortedYears.length === 0
 {questions.map(q => (
   <dialog class="q-layer" id={`q-${q.id}`} data-revealed="false">
     <div class="q-inner">
-      <div class="q-meta">{q.label} · {q.number}번 · {q.id}</div>
+      <div class="q-meta">{examLabel(q.label)} · {q.number}번</div>
       <div class="q-body">{q.body}</div>
       <ol class="q-choices">
         {q.choices.map((c, i) => (

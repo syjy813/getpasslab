@@ -115,8 +115,11 @@ article tr:last-child td{border-bottom:none}
 article th{background:var(--gray-100);font-weight:var(--fw-semibold);color:var(--gray-900)}
 article blockquote{margin:var(--space-4) 0;padding:var(--space-4);background:var(--warning-bg);border:none;border-radius:var(--radius-lg);font-size:var(--fs-caption);color:var(--gray-800)}
 article blockquote p{margin:0}
-.katex-display{background:var(--primary-50);border:1px solid var(--primary-100);border-radius:var(--radius-lg);padding:var(--space-6);color:var(--primary-800);margin:var(--space-4) 0}
+article code{font-family:var(--font-sans)}
+.katex-display,
+article p>.katex:only-child{display:block;background:var(--primary-50);border:1px solid var(--primary-100);border-radius:var(--radius-lg);padding:var(--space-6);color:var(--primary-800);margin:var(--space-4) 0;overflow-x:auto;overflow-y:hidden;text-align:center;-webkit-overflow-scrolling:touch}
 .katex{font-size:1.06em}
+.katex .hangul_fallback{font-family:var(--font-sans)}
 
 /* ═══ 기출 이력 (섹션 4) ═══ */
 .exam-history{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:var(--space-6);margin:var(--space-4) 0}

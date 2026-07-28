@@ -17,7 +17,7 @@ examComment: 표시코드 한 줄을 주고 각 요소 해석의 정오를 묻�
 
 방폭기기 명판의 표시 순서.
 
-$$\text{Ex} \;\; \underbrace{\text{ia}}_{방폭구조} \;\; \underbrace{\text{IIC}}_{가스그룹} \;\; \underbrace{\text{T4}}_{온도등급} \;\; \underbrace{\text{Ga}}_{EPL}$$
+$$\text{Ex} \;\; \underbrace{\text{ia}}_{\text{방폭구조}} \;\; \underbrace{\text{IIC}}_{\text{가스그룹}} \;\; \underbrace{\text{T4}}_{\text{온도등급}} \;\; \underbrace{\text{Ga}}_{\text{EPL}}$$
 
 EPL(Equipment Protection Level, 기기보호등급) — 점화원이 될 가능성에 따른 보호 수준.
 
