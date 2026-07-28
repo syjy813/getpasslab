@@ -4,8 +4,7 @@ import rehypeKatex from 'rehype-katex';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://syjy813.github.io',
-  base: '/getpasslab',
+  site: 'https://getpasslab.co.kr',
   integrations: [sitemap({ filter: (page) => !page.includes('/admin') })],
   markdown: {
     remarkPlugins: [remarkMath],
