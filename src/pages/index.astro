@@ -8,7 +8,7 @@ const countBy = (id: number) => chapters.filter(c => c.data.subject_id === id).l
 const featured = [...chapters].sort((a, b) => b.data.questions.length - a.data.questions.length).slice(0, 4);
 const chHref = (c: any) => withBase(`/industrial-safety/written/${SUBJECTS[c.data.subject_id as SubjectId].slug}/${c.data.slug}/`);
 ---
-<BaseLayout title="GetPassLab — 산업안전기사 핵심요약 & 기출" description="산업안전기사 필기 6과목의 공식·정의·빈출 포인트를 구조화한 핵심요약 학습 서비스. 2018~2022년 기출 데이터 기반.">
+<BaseLayout title="GetPassLab — 산업안전기사 핵심요약" description="산업안전기사 필기 6과목의 공식·정의·빈출 포인트를 구조화한 핵심요약 학습 서비스. 2018~2022년 기출 데이터 기반.">
   <section class="hero">
     <div class="hero-inner">
       <span class="hero-badge">산업안전기사 · 필기</span>

@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../config/site';
+import { withBase } from '../config/url';
+---
+
+<BaseLayout
+  title="개인정보처리방침 — GetPassLab"
+  description="GetPassLab의 개인정보 처리 항목, 목적, 보유 기간과 이용자 권리를 안내합니다."
+>
+  <main class="policy-page">
+    <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
+      <a href={withBase('/')}>홈</a><span class="sep">/</span>
+      <span class="current">개인정보처리방침</span>
+    </nav>
+
+    <header class="policy-header">
+      <h1 class="gpl-display">개인정보처리방침</h1>
+      <p class="gpl-caption">시행일: {SITE.policyEffectiveDate}</p>
+    </header>
+
+    <div class="policy-summary">
+      <p class="gpl-body">
+        GetPassLab은 현재 회원가입·로그인·문의 폼·접속 분석·맞춤형 광고 기능을 운영하지 않습니다.
+        이용자가 이메일로 문의하는 경우에만 답변에 필요한 최소한의 정보를 처리합니다.
+      </p>
+    </div>
+
+    <article class="policy-content">
+      <h2>1. 처리하는 개인정보와 목적</h2>
+      <h3>이메일 문의</h3>
+      <ul>
+        <li><strong>항목:</strong> 이메일 주소, 이용자가 직접 기재한 이름·문의 내용·첨부파일</li>
+        <li><strong>목적:</strong> 문의 확인, 답변, 오류 신고 처리와 후속 의사소통</li>
+        <li><strong>수집 방법:</strong> 이용자가 공개 문의 이메일로 직접 발송</li>
+      </ul>
+      <p>
+        서비스 화면에서는 이름, 연락처, 계정 정보, 결제 정보를 입력받지 않습니다. 이메일에 불필요한
+        민감정보나 주민등록번호 등 고유식별정보를 보내지 마시기 바랍니다.
+      </p>
+
+      <h2>2. 보유 및 이용 기간</h2>
+      <p>
+        이메일 문의 정보는 문의 처리 완료일부터 90일 동안 보관한 뒤 삭제합니다. 다만, 분쟁 대응이나 관계
+        법령에 따른 보관 의무가 있는 경우에는 해당 목적 달성 또는 법정 기간이 끝날 때까지 필요한 범위에서
+        보관할 수 있습니다.
+      </p>
+
+      <h2>3. 개인정보의 제3자 제공</h2>
+      <p>
+        운영자는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 법령에 근거한 요청이 있거나 이용자가
+        별도로 동의한 경우에는 예외로 합니다.
+      </p>
+
+      <h2>4. 외부 서비스 이용</h2>
+      <ol>
+        <li>
+          서비스는 정적 웹사이트 호스팅을 위해 GitHub Pages를 이용합니다. GitHub가 인프라 운영 과정에서
+          처리하는 정보에는 <a href="https://docs.github.com/ko/site-policy/privacy-policies/github-general-privacy-statement">GitHub 개인정보처리방침</a>이
+          적용됩니다. 운영자는 GitHub의 서버 접속 로그에 직접 접근하거나 이를 별도로 저장하지 않습니다.
+        </li>
+        <li>
+          문의 접수와 답변에는 네이버 메일을 이용합니다. 이용자가 보낸 이메일 정보는 메일 송수신과 보관을
+          위해 네이버의 시스템을 통해 처리될 수 있습니다.
+        </li>
+      </ol>
+
+      <h2>5. 쿠키와 자동 수집 장치</h2>
+      <p>
+        GetPassLab은 현재 자체 쿠키, Google Analytics, Google AdSense 또는 그 밖의 맞춤형 광고·접속 분석
+        도구를 설치하지 않습니다. 향후 이러한 기능을 도입하는 경우 실제 적용 전에 처리 항목, 목적, 제3자
+        제공 또는 국외 이전 여부, 쿠키 거부 방법 등을 이 방침에 반영하고 필요한 절차를 거칩니다.
+      </p>
+
+      <h2>6. 개인정보의 파기</h2>
+      <p>
+        보유 기간이 끝나거나 처리 목적이 달성된 개인정보는 복구하기 어렵도록 이메일과 첨부파일을 삭제합니다.
+        법령에 따라 분리 보관해야 하는 정보는 해당 기간 동안 다른 목적으로 이용하지 않습니다.
+      </p>
+
+      <h2>7. 이용자의 권리와 행사 방법</h2>
+      <ol>
+        <li>이용자는 자신의 개인정보에 대해 열람, 정정, 삭제 또는 처리 정지를 요청할 수 있습니다.</li>
+        <li>
+          요청은 <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>으로 접수할 수 있으며,
+          운영자는 본인 확인에 필요한 최소한의 정보를 요청할 수 있습니다.
+        </li>
+        <li>운영자는 관련 법령이 정한 범위와 기간에 따라 요청을 처리하고 그 결과를 안내합니다.</li>
+      </ol>
+
+      <h2>8. 안전성 확보 조치</h2>
+      <p>
+        운영자는 처리 정보의 최소화, 이메일 계정 접근 통제, 계정 보안 설정, 보유 기간 종료 후 삭제 등
+        개인정보 보호에 필요한 조치를 적용합니다.
+      </p>
+
+      <h2>9. 개인정보 보호 담당</h2>
+      <div class="policy-contact">
+        <p><strong>담당 부서:</strong> GetPassLab 개인정보 보호 담당</p>
+        <p><strong>이메일:</strong> <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a></p>
+      </div>
+      <p>
+        개인정보 침해에 대한 상담이 필요한 경우
+        <a href="https://privacy.kisa.or.kr/">개인정보침해신고센터</a>(국번 없이 118) 또는
+        <a href="https://www.kopico.go.kr/">개인정보분쟁조정위원회</a>를 이용할 수 있습니다.
+      </p>
+
+      <h2>10. 처리방침의 변경</h2>
+      <p>
+        이 방침은 서비스 기능이나 관련 법령의 변경에 따라 개정될 수 있습니다. 중요한 변경은 시행 전에
+        서비스 화면을 통해 안내하며, 최신 시행일은 방침 상단에서 확인할 수 있습니다.
+      </p>
+    </article>
+  </main>
+</BaseLayout>

@@ -156,7 +156,30 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .footer-col h4{font-size:var(--fs-caption);font-weight:var(--fw-semibold);color:var(--gray-900);margin:0 0 var(--space-3)}
 .footer-col ul{list-style:none;padding:0;margin:0;display:grid;gap:var(--space-2)}
 .footer-col a{font-size:var(--fs-caption);color:var(--gray-600);text-decoration:none}
+.footer-col a:hover{color:var(--primary-600)}
 .footer-bottom{border-top:1px solid var(--gray-200)}
-.footer-bottom div{max-width:var(--container-max);margin:0 auto;padding:var(--space-4) var(--space-6);font-size:var(--fs-label);color:var(--gray-600)}
+.footer-bottom div{max-width:var(--container-max);margin:0 auto;padding:var(--space-4) var(--space-6);display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-4);font-size:var(--fs-label);color:var(--gray-600)}
+.footer-bottom a{color:var(--gray-600);text-decoration:none}
+.footer-bottom a:hover{color:var(--primary-600)}
+
+/* ═══ Policy pages ═══ */
+.policy-page{max-width:840px;margin:0 auto;padding:var(--space-8) var(--space-6) 0}
+.policy-header{margin-bottom:var(--space-6)}
+.policy-header .gpl-caption{margin:var(--space-3) 0 0}
+.policy-summary{background:var(--primary-50);border:1px solid var(--primary-100);border-radius:var(--radius-xl);padding:var(--space-6);margin-bottom:var(--space-8)}
+.policy-summary p{margin:0}
+.policy-content{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:var(--space-6)}
+.policy-content>h2:first-child{margin-top:0}
+.policy-content h3{font-size:var(--fs-h4);font-weight:var(--fw-semibold);color:var(--gray-900);margin:var(--space-6) 0 var(--space-2)}
+.policy-content p,.policy-content li{word-break:keep-all}
+.policy-content ul,.policy-content ol{padding-left:1.25rem}
+.policy-content a{color:var(--primary-600);text-underline-offset:2px}
+.policy-content .policy-contact{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:var(--space-4)}
+.policy-content .policy-contact p{margin:0}
+.policy-content .policy-contact p+p{margin-top:var(--space-2)}
+@media (min-width:768px){
+  .policy-page{padding-top:var(--space-12)}
+  .policy-content{padding:var(--space-8)}
+}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}

@@ -1,6 +1,6 @@
 ---
-import { SUBJECTS } from '../config/subjects';
 import { withBase } from '../config/url';
+import { SITE } from '../config/site';
 ---
 <footer class="footer">
   <div class="footer-inner">
@@ -19,8 +19,16 @@ import { withBase } from '../config/url';
       <h4>서비스</h4>
       <ul>
         <li><a href={withBase('/')}>홈</a></li>
+        <li><a href={withBase('/terms/')}>이용약관</a></li>
+        <li><a href={withBase('/privacy/')}>개인정보처리방침</a></li>
+        <li><a href={`mailto:${SITE.contactEmail}`}>문의</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom"><div>© 2026 GetPassLab. 모든 권리 보유.</div></div>
+  <div class="footer-bottom">
+    <div>
+      <span>© 2026 GetPassLab.</span>
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+    </div>
+  </div>
 </footer>

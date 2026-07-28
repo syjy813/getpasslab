@@ -2,8 +2,13 @@
 import '../styles/global.css';
 import GNB from '../components/GNB.astro';
 import Footer from '../components/Footer.astro';
+import { withBase } from '../config/url';
+import { SITE } from '../config/site';
 interface Props { title: string; description: string; }
 const { title, description } = Astro.props;
+const siteOrigin = Astro.site ?? SITE.url;
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
+const ogImageUrl = new URL('/og-default.png', siteOrigin);
 ---
 <!doctype html>
 <html lang="ko">
@@ -12,6 +17,22 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="GetPassLab 산업안전기사 학습 서비스" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
   </head>
   <body>

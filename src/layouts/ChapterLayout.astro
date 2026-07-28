@@ -11,8 +11,12 @@ const { title, summary, subject_id, group, tags, sideChapters } = Astro.props;
 const subject = SUBJECTS[subject_id as SubjectId];
 const subjectUrl = withBase(`/industrial-safety/written/${subject.slug}/`);
 const groups = [...new Set(sideChapters.map(c => c.group))];
+const fullPageTitle = `${title} — ${subject.name} — 산업안전기사 필기 | GetPassLab`;
+const pageTitle = fullPageTitle.length <= 60
+  ? fullPageTitle
+  : `${title} — 산업안전기사 필기 | GetPassLab`;
 ---
-<BaseLayout title={`${title} | 산업안전기사 핵심요약 - GetPassLab`} description={summary}>
+<BaseLayout title={pageTitle} description={summary}>
   <div class="chapter-wrap">
     <aside class="chapter-side">
       <div class="side-sticky">
