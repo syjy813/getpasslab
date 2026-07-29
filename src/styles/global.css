@@ -154,7 +154,7 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .q-reveal .close{background:var(--gray-100);color:var(--gray-800)}
 
 /* ═══ 관련 챕터 (섹션 5) ═══ */
-.related-list{list-style:none;padding:0;margin:var(--space-3) 0;display:grid;gap:var(--space-2)}
+.related-list{list-style:none;padding:0;margin:var(--space-3) 0;display:grid;gap:var(--space-2);max-width:none}
 .related-list a{display:block;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:var(--space-4);text-decoration:none;transition:border-color .15s}
 .related-list a:hover{border-color:var(--primary-100)}
 .related-list .rel-group{font-size:var(--fs-label);color:var(--gray-600);display:block;margin-bottom:2px}
