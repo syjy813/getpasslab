@@ -3,7 +3,7 @@ title: 부주의·억측판단
 slug: carelessness-misjudgment
 subject_id: 1
 group: 사회행동·인간관계
-tags: []
+tags: [개념]
 summary: ""
 questions: []
 order: 6

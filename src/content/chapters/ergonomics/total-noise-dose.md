@@ -3,7 +3,7 @@ title: 총 소음 노출량 (TND)
 slug: total-noise-dose
 subject_id: 2
 group: 소음 분석
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: "ΣC/L, 1 이하 적합"
 questions: [20180819_032]
 order: 2

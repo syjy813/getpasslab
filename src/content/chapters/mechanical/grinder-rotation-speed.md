@@ -3,7 +3,7 @@ title: 연삭숙돌 회전속도
 slug: grinder-rotation-speed
 subject_id: 3
 group: 회전체 속도
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: "초속 πDN/60000, 분속 πDN/1000"
 questions: [20220305_043, 20220305_060, 20210307_058, 20200926_045, 20190427_052, 20200822_043, 20190303_047]
 order: 3

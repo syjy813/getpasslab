@@ -6,7 +6,7 @@ order: 5
 priority: 출시 필수
 status: 완료
 group: 시험·가공·검사
-tags: [이론, 함정]
+tags: [개념]
 summary: 램·공구대·공작물 테이블 — 아버는 밀링의 구조부
 questions: [20200822_060]
 related: [machine-tools-safety, test-types]

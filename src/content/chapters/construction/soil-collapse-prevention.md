@@ -6,7 +6,7 @@ order: 5
 priority: 출시 필수
 status: 완료
 group: 사면 공법
-tags: [이론, 빈출]
+tags: [개념]
 summary: 외적·내적 원인 구분, 전단응력 증대 요인, 압성토 등 예방 공법
 questions: [20220424_110, 20210814_106, 20190804_108, 20210515_105, 20210515_103, 20200606_111]
 related: [excavation-slope-standard, earth-retaining-components]

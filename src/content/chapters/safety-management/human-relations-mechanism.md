@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 사회행동·인간관계
-tags: [이론, 함정]
+tags: [개념]
 summary: 동일화·모방·암시·투사·커뮤니케이션 5가지 — 정의 문장 매칭
 questions: [20210515_004, 20180428_018, 20210307_019, 20180819_001]
 related: [social-behavior-types, human-error-by-process]

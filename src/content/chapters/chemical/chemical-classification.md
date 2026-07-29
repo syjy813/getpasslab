@@ -3,7 +3,7 @@ title: 화학물질 8대 분류
 slug: chemical-classification
 subject_id: 5
 group: 화학물질 분류
-tags: [빈출, 이론]
+tags: [개념]
 summary: 인화·산화·폭발·자기반응·물반응
 questions: [20220424_084, 20220305_088, 20220305_092]
 order: 1

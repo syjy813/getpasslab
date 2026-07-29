@@ -6,7 +6,7 @@ order: 1
 priority: 출시 필수
 status: 완료
 group: 법령·보상
-tags: [법령, 함정]
+tags: [개념, 법령]
 summary: 요양·휴업·장해·간병·유족급여, 상병보상연금, 장례비, 직업재활급여 — 직접비=보험급여
 questions: [20220305_013, 20190804_016, 20190303_013, 20210307_011]
 related: [serious-accident-criteria, accident-ratio-law]

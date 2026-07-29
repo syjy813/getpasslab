@@ -6,7 +6,7 @@ order: 3
 priority: 출시 필수
 status: 완료
 group: 신호·인간실수
-tags: [이론, 함정]
+tags: [개념]
 summary: C/R = 조종장치 이동량 / 표시장치 반응량 — 작을수록 민감
 questions: [20190804_032]
 related: [man-machine-system-design, workplace-layout-principles]

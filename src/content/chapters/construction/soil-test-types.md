@@ -3,7 +3,7 @@ title: 토질 시험 종류
 slug: soil-test-types
 subject_id: 6
 group: 건설 시험·진단
-tags: [이론, 함정]
+tags: [개념]
 summary: 전단·1면·베인·일축·삼축 / 투수는 별개
 questions: [20200822_116]
 order: 1

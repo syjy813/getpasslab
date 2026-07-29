@@ -6,7 +6,7 @@ order: 3
 priority: 출시 필수
 status: 완료
 group: 시스템 설계
-tags: [이론, 빈출]
+tags: [개념]
 summary: Eliminate 제거 · Combine 결합 · Rearrange 재배치 · Simplify 단순화
 questions: [20190804_025]
 related: [workplace-layout-principles, man-machine-system-design]

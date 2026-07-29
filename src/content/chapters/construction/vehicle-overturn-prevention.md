@@ -3,7 +3,7 @@ title: 차량계 하역운반기계 전도 방지
 slug: vehicle-overturn-prevention
 subject_id: 6
 group: 지게차·차량계
-tags: [법령]
+tags: [개념, 법령]
 summary: 지반·갓길·유도자·운행경로 중심 전도 예방
 questions: [20190427_103, 20180428_101, 20190804_102]
 order: 3

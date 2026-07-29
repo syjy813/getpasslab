@@ -6,7 +6,7 @@ order: 7
 priority: 출시 필수
 status: 완료
 group: 건설 법령·기준
-tags: [법령, 빈출]
+tags: [개념, 법령]
 summary: 경사 30도 이하·15도 초과 시 미끄럼 방지, 계단 강도 500kg/m², 계단참 규정
 questions: [20220424_115, 20220305_120, 20210307_105, 20200606_114, 20180428_109, 20190427_118, 20210515_117, 20200606_110, 20190427_110]
 related: [work-platform-standards, steel-pipe-scaffold]

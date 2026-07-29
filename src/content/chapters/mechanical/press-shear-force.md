@@ -3,7 +3,7 @@ title: 프레스 전단력
 slug: press-shear-force
 subject_id: 3
 group: 기계 강도·하중
-tags: [계산공식]
+tags: [계산]
 summary: F = τ × l × t
 questions: []
 order: 5

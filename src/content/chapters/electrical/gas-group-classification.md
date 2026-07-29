@@ -6,7 +6,7 @@ order: 4
 priority: 출시 필수
 status: 완료
 group: 방폭 구조
-tags: [이론, 빈출, 함정]
+tags: [개념]
 summary: IIA 프로판 / IIB 에틸렌 / IIC 수소·아세틸렌, C로 갈수록 위험
 questions: [20210515_074, 20220305_074]
 related: [explosion-proof-code, gas-group-distance, explosion-grade-vessel]

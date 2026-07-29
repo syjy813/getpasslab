@@ -3,7 +3,7 @@ title: 차단기 종류 비교
 slug: breaker-types
 subject_id: 4
 group: 차단기·피뢰
-tags: [빈출, 이론, 함정]
+tags: [개념]
 summary: OS·VCB·MCCB·ACB·DS
 questions: [20220305_062]
 order: 1

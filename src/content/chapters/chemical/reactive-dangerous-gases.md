@@ -3,7 +3,7 @@ title: 위험물 반응 가스 발생
 slug: reactive-dangerous-gases
 subject_id: 5
 group: 위험물 반응
-tags: [빈출, 이론, 함정]
+tags: [개념]
 summary: 알루미늄분 + 고온의 물 → 수소 · 인화칼슘 + 물 → 포스핀
 questions: [20220424_098, 20220305_093]
 order: 1

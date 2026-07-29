@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 비계
-tags: [법령]
+tags: [개념, 법령]
 summary: 기둥 간격 띠장방향 1.85m·장선방향 1.5m, 벽이음 수직·수평 5m
 questions: [20210814_117, 20210307_112, 20210515_106, 20180304_110, 20190427_106, 20190303_114, 20210814_113, 20180819_101, 20190804_113]
 related: [steel-frame-scaffold, work-platform-standards, temporary-passage-stairs]

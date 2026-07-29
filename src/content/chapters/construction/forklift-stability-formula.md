@@ -3,7 +3,7 @@ title: 지게차 주행 좌·우 안정도
 slug: forklift-stability-formula
 subject_id: 6
 group: 지게차·차량계
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: "(15 + 1.1V) % 이내"
 questions: []
 order: 1

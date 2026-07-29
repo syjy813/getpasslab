@@ -3,7 +3,7 @@ title: 르샤틀리에 법칙
 slug: lechatelier-law
 subject_id: 5
 group: 폭발 범위
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: "L = 100 / Σ(V/L), 혼합가스 하한계"
 questions: [20180428_100]
 order: 1

@@ -4,6 +4,10 @@ import ChapterLayout from '../../../../layouts/ChapterLayout.astro';
 import QuestionHistory from '../../../../components/QuestionHistory.astro';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
 import { SUBJECTS, type SubjectId } from '../../../../config/subjects';
+import {
+  createChapterBadgeContext,
+  getChapterBadgeSummary,
+} from '../../../../utils/chapterBadges';
 
 export async function getStaticPaths() {
   // 공개 대상: 작성 완료 챕터만. 미시작 스텁은 페이지 생성 안 함(빈 본문 비공개).
@@ -21,6 +25,12 @@ const { chapter } = Astro.props;
 const { Content } = await render(chapter);
 
 const allQuestions = await getCollection('questions');
+const badgeContext = createChapterBadgeContext(allQuestions.map(question => question.data));
+const badgeSummary = getChapterBadgeSummary(
+  chapter.data.tags,
+  chapter.data.questions,
+  badgeContext,
+);
 const questionsById = new Map(allQuestions.map((question) => [question.data.id, question.data]));
 const seenQuestionIds = new Set<string>();
 const linked = [];
@@ -68,7 +78,7 @@ const sideChapters = allChapters
   .filter(c => c.data.subject_id === chapter.data.subject_id)
   .map(c => ({ slug: c.data.slug, title: c.data.title, group: c.data.group }));
 ---
-<ChapterLayout {...chapter.data} sideChapters={sideChapters}>
+<ChapterLayout {...chapter.data} badges={badgeSummary.badges} sideChapters={sideChapters}>
   <Content />
   <QuestionHistory questions={linked as any} examComment={chapter.data.examComment} />
   <RelatedChapters manual={manual as any} sameGroup={sameGroup as any} />

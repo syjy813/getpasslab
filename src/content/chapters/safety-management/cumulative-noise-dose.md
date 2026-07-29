@@ -3,7 +3,7 @@ title: 누적소음노출량 D 계산
 slug: cumulative-noise-dose
 subject_id: 1
 group: 작업환경·소음
-tags: [계산공식]
+tags: [계산]
 summary: 실제 노출 시간 / 허용 시간 합산
 questions: []
 order: 2

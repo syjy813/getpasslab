@@ -3,7 +3,7 @@ title: 법면 붕괴 예방조치 3대 핵심
 slug: slope-collapse-prevention
 subject_id: 6
 group: 사면 공법
-tags: [실무, 함정]
+tags: [절차]
 summary: 경사 완화·배수 철저·높이 제한
 questions: [20220305_118]
 order: 4

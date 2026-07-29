@@ -3,7 +3,7 @@ title: 근골격계 유해요인 5종
 slug: msd-risk-factors
 subject_id: 2
 group: 근골격계
-tags: [빈출, 실무]
+tags: [개념]
 summary: 반 · 부 · 과 · 진 · 접 (반부과진접)
 questions: [20220424_023, 20220424_032, 20220424_038, 20220305_032, 20190804_039, 20180819_021]
 order: 1

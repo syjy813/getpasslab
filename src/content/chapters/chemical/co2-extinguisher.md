@@ -3,7 +3,7 @@ title: CO₂ 소화약제 특성
 slug: co2-extinguisher
 subject_id: 5
 group: 화재·소화
-tags: [이론]
+tags: [개념]
 summary: 무오염·장기저장·자체압력 방사
 questions: [20200822_099, 20190303_088]
 order: 4

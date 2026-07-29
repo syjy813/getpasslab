@@ -3,7 +3,7 @@ title: 가용도 (Availability)
 slug: availability
 subject_id: 2
 group: 신뢰도·수명
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: A = MTBF/(MTBF+MTTR)
 questions: [20190303_036]
 order: 6

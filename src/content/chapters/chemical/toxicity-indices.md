@@ -3,7 +3,7 @@ title: 독성 지표 (LD50·LC50·TLV)
 slug: toxicity-indices
 subject_id: 5
 group: 기체·농도·상태
-tags: []
+tags: [개념]
 summary: LD50·LC50 구분과 상가작용 혼합물의 TLV 계산
 questions: [20210307_095, 20180819_099]
 order: 7

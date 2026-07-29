@@ -6,7 +6,7 @@ order: 1
 priority: 출시 필수
 status: 완료
 group: 재해 분석·이론
-tags: [실무, 함정]
+tags: [개념]
 summary: 파레토도·특성요인도(어골상)·클로즈분석·관리도(한계선)
 questions: [20220424_006, 20200822_016, 20210515_008, 20200926_017, 20190303_012]
 related: [accident-cause-classification, accident-ratio-law]

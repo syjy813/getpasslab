@@ -2,12 +2,15 @@
 import BaseLayout from './BaseLayout.astro';
 import { SUBJECTS, type SubjectId } from '../config/subjects';
 import { withBase } from '../config/url';
+import ChapterBadges from '../components/ChapterBadges.astro';
+import type { ChapterBadge } from '../utils/chapterBadges';
 interface SideCh { slug: string; title: string; group: string; }
 interface Props {
-  title: string; summary: string; subject_id: number; group: string; tags: string[];
+  title: string; summary: string; subject_id: number; group: string;
+  badges: ChapterBadge[];
   sideChapters: SideCh[];
 }
-const { title, summary, subject_id, group, tags, sideChapters } = Astro.props;
+const { title, summary, subject_id, group, badges, sideChapters } = Astro.props;
 const subject = SUBJECTS[subject_id as SubjectId];
 const subjectUrl = withBase(`/industrial-safety/written/${subject.slug}/`);
 const groups = [...new Set(sideChapters.map(c => c.group))];
@@ -41,9 +44,7 @@ const pageTitle = fullPageTitle.length <= 60
         <a href={subjectUrl}>{subject_id}과목</a><span class="sep">/</span>
         <span class="current">{title}</span>
       </nav>
-      <div style="display:flex;gap:var(--space-2);margin:var(--space-4) 0 var(--space-2)">
-        {tags.map(t => <span class={`tag${t === '빈출' ? ' hot' : ''}`}>#{t}</span>)}
-      </div>
+      <ChapterBadges badges={badges} class="chapter-title-badges" />
       <h1 class="gpl-display">{title}</h1>
       <p class="gpl-body-lg" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">{summary}</p>
       <article><slot /></article>

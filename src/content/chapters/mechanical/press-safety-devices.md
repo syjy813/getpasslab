@@ -6,7 +6,7 @@ order: 1
 priority: 출시 필수
 status: 완료
 group: 프레스 안전
-tags: [이론, 빈출]
+tags: [개념]
 summary: 양수조작·양수기동·광전자·게이트가드·손쳐내기·수인식 6종과 방호 원리
 questions: [20220424_051, 20220424_059, 20220305_054, 20210814_051, 20210814_056, 20200926_056, 20200926_060, 20190804_057, 20180304_054, 20180428_053, 20190427_048, 20190427_056]
 related: [press-device-conditions, press-pre-work-checklist, hand-pull-device-structure]

@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 프레스 안전
-tags: [실무]
+tags: [개념]
 summary: 클러치 구조와 SPM·행정길이에 따른 장치 선택 기준
 questions: [20210307_054, 20190303_046]
 related: [press-safety-devices, hand-pull-device-structure]

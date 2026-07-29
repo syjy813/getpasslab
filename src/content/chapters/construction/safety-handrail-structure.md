@@ -3,7 +3,7 @@ title: 안전난간 구조 및 설치요건
 slug: safety-handrail-structure
 subject_id: 6
 group: 안전난간
-tags: [법령, 빈출]
+tags: [개념, 법령]
 summary: 상부90cm·발끝막10cm·지름 2.7cm·100kg
 questions: [20210814_105, 20200926_105, 20190303_103]
 order: 1

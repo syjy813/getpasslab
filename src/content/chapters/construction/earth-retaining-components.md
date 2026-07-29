@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 굴착·흙막이
-tags: [실무]
+tags: [개념]
 summary: 흙막이판·말뚝·버팀대·띠장 — 띠장은 흙막이판 변형 방지
 questions: [20220424_112, 20190804_118, 20200606_120, 20200926_113, 20190303_119, 20180304_102]
 related: [excavation-slope-standard, soil-collapse-prevention, tunnel-blasting]

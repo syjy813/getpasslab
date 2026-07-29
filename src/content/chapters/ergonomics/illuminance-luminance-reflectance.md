@@ -3,7 +3,7 @@ title: 조도·휘도·반사율 관계
 slug: illuminance-luminance-reflectance
 subject_id: 2
 group: 조명·시각
-tags: [이론]
+tags: [개념]
 summary: 광도·조도·휘도·반사율의 관계와 표면 반사율 비교
 questions: [20180304_034]
 order: 3

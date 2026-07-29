@@ -6,7 +6,7 @@ order: 1
 priority: 출시 필수
 status: 완료
 group: 기초 전기 공식
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: 전압·전류·저항의 관계식 V=IR. 4과목 감전·통전전류 계산의 출발점이 되는 기저 공식.
 questions: [20220424_061, 20200926_073, 20210307_063, 20200606_064]
 related: [power-formula, combined-resistance]

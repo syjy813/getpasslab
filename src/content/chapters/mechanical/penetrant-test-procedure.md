@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 시험·가공·검사
-tags: [실무]
+tags: [절차]
 summary: 전처리 → 침투 → 세척(제거) → 현상 → 관찰 → 후처리
 questions: [20180819_047, 20210515_049]
 related: [test-types, welding-defects]

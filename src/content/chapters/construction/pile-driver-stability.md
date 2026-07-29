@@ -3,7 +3,7 @@ title: 항타기·항발기 무너짐 방지 5호
 slug: pile-driver-stability
 subject_id: 6
 group: 건설 와이어로프
-tags: [법령]
+tags: [개념, 법령]
 summary: 아웃트리거·내력확인·고정·레일클램프·버팅대 (2022.10.18)
 questions: [20220424_106]
 order: 4

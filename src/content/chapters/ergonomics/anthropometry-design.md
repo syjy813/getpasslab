@@ -3,7 +3,7 @@ title: 인체측정·설계원칙
 slug: anthropometry-design
 subject_id: 2
 group: 시스템 설계
-tags: []
+tags: [개념]
 summary: 조절식·평균치·극단치로 인체측정 자료를 설계에 적용
 questions: [20200926_034, 20210515_021, 20210307_021, 20210814_029]
 order: 6

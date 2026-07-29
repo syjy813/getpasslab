@@ -3,7 +3,7 @@ title: 분할날 설치 조건
 slug: divider-blade-installation
 subject_id: 3
 group: 둥근톱·연삭기
-tags: [실무]
+tags: [개념]
 summary: 톱두께 1.1배 이상·후면 12mm 이내
 questions: []
 order: 2

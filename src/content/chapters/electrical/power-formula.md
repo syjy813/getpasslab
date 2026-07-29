@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 기초 전기 공식
-tags: [계산공식]
+tags: [계산]
 summary: P = VI = I²R = V²/R
 questions: [20200926_073, 20220424_077]
 related: [ohms-law, combined-resistance, static-energy]

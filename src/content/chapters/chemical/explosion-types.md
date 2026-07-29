@@ -3,7 +3,7 @@ title: 폭발 종류 (물리·화학)
 slug: explosion-types
 subject_id: 5
 group: 폭발 이론
-tags: [빈출, 이론]
+tags: [개념]
 summary: "폭발의 원인·기구와 기상·응상 분류 관점 구분"
 questions: [20210814_089, 20200926_100, 20190427_087]
 order: 1

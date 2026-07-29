@@ -6,7 +6,7 @@ order: 4
 priority: 출시 필수
 status: 완료
 group: 시험·가공·검사
-tags: [실무]
+tags: [절차]
 summary: T홈 안길이 볼트 직경 2배 이상, 나사산 3~4개 남김, 안전블록 사용
 questions: [20220424_046, 20220305_052, 20210307_043, 20190804_054, 20180819_042, 20210515_051, 20200822_046, 20180304_044, 20190427_057, 20200606_058]
 related: [press-pre-work-checklist, press-safety-devices]

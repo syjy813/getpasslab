@@ -3,7 +3,7 @@ title: 인체 피부 전기저항 영향 인자
 slug: body-resistance-factors
 subject_id: 4
 group: 감전·전류
-tags: [이론]
+tags: [개념]
 summary: 전압·면적·시간·습도·전원종류
 questions: [20190427_073, 20180428_069]
 order: 7

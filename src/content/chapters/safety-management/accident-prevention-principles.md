@@ -3,7 +3,7 @@ title: 재해예방 4원칙
 slug: accident-prevention-principles
 subject_id: 1
 group: 재해 분석·이론
-tags: []
+tags: [개념]
 summary: "재해예방의 4원칙인 예방가능·손실우연·원인연계·대책선정의 의미와 기출 함정을 정리합니다."
 questions: [20220424_010, 20220305_009, 20200606_016, 20200822_009, 20200926_004, 20190303_008]
 order: 7

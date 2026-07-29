@@ -6,7 +6,7 @@ order: 5
 priority: 출시 필수
 status: 완료
 group: FTA·시스템 분석
-tags: [이론, 빈출]
+tags: [개념]
 summary: PHA·FMEA·FTA·ETA·HAZOP·THERP·MORT — 방향(귀납/연역)과 용도 매칭
 questions: [20220305_035, 20220424_027, 20200822_034, 20180304_037, 20200926_038, 20200822_031, 20190804_030, 20220305_029, 20200926_024, 20210814_031, 20200606_033]
 related: [fmea, fta-procedure, system-lifecycle]

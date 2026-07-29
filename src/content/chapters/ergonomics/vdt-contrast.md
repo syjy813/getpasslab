@@ -3,7 +3,7 @@ title: VDT 화면 대비
 slug: vdt-contrast
 subject_id: 2
 group: 조명·시각
-tags: [계산공식, 함정]
+tags: [계산]
 summary: "C = -L글자/L배경, 음수는 네거티브 대비"
 questions: [20200606_028]
 order: 5

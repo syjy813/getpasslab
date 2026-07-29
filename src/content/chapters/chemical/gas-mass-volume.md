@@ -3,7 +3,7 @@ title: 기체 질량·부피
 slug: gas-mass-volume
 subject_id: 5
 group: 기체·농도·상태
-tags: [계산공식]
+tags: [계산]
 summary: 표준상태 몰수·질량·부피 환산 (22.4L 기준)
 questions: []
 order: 1

@@ -3,7 +3,7 @@ title: 허용보폭전압·접촉전압
 slug: step-touch-voltage
 subject_id: 4
 group: 감전·전류
-tags: []
+tags: [개념]
 summary: 접지 고장 시 전위차·인체 경로와 기출 계산
 questions: [20210515_073]
 order: 8

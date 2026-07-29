@@ -3,7 +3,7 @@ title: 달비계 안전계수 기준
 slug: hanging-scaffold-safety-factor
 subject_id: 6
 group: 건설 와이어로프
-tags: [법령]
+tags: [개념, 법령]
 summary: 달기로프10·체인·훅 5·강재 2.5·목재 5
 questions: [20210814_119, 20200606_118, 20190303_104, 20180304_105]
 order: 2

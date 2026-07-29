@@ -6,7 +6,7 @@ order: 4
 priority: 출시 필수
 status: 완료
 group: 폭발 범위
-tags: [계산공식]
+tags: [계산]
 summary: 폭발하한계(vol%) × 연소열(kcal/mol) ≈ 1,100
 questions: [20190804_088]
 related: [jones-formula, complete-combustion-cst]

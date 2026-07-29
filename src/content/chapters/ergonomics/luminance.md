@@ -3,7 +3,7 @@ title: 휘도 (L)
 slug: luminance
 subject_id: 2
 group: 조명·시각
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: "L = Eρ/π, 조도 × 반사율"
 questions: [20220305_033, 20180304_027]
 order: 1

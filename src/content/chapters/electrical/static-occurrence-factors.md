@@ -6,7 +6,7 @@ order: 1
 priority: 출시 필수
 status: 완료
 group: 정전기
-tags: [이론]
+tags: [개념]
 summary: 재질·표면상태·이력·접촉면적과 압력·분리속도 5대 요인, 발생 현상 6종
 questions: [20220424_067, 20210515_079, 20200926_070, 20200822_062, 20180819_068, 20190427_075, 20190804_070, 20210307_074]
 related: [static-prevention, static-energy, pipe-flow-limit]

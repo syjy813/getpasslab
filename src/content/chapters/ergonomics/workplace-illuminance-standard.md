@@ -3,7 +3,7 @@ title: 작업면 조도 기준
 slug: workplace-illuminance-standard
 subject_id: 2
 group: 조명·시각
-tags: [법령, 빈출]
+tags: [개념, 법령]
 summary: 초정밀 750 / 정밀 300 / 보통 150 / 기타 75 lx
 questions: []
 order: 6

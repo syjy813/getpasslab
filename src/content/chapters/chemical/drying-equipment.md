@@ -3,7 +3,7 @@ title: 건조설비 안전
 slug: drying-equipment
 subject_id: 5
 group: 안전밸브·플랜지
-tags: []
+tags: [개념]
 summary: ""
 questions: []
 order: 4

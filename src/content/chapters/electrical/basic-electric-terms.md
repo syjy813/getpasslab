@@ -3,7 +3,7 @@ title: 전기 기본 용어 정리
 slug: basic-electric-terms
 subject_id: 4
 group: 전선·전기 기본
-tags: [이론]
+tags: [개념]
 summary: 전압·전류·저항·전력·전하량 등 10종
 questions: []
 order: 3

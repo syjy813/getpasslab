@@ -3,7 +3,7 @@ title: 피뢰기 구비조건
 slug: lightning-arrester-conditions
 subject_id: 4
 group: 차단기·피뢰
-tags: [이론]
+tags: [개념]
 summary: 충격·제한 낮게 / 상용주파 높게
 questions: [20220305_076]
 order: 2

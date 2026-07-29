@@ -6,7 +6,7 @@ order: 4
 priority: 출시 필수
 status: 완료
 group: 재해 분석·이론
-tags: [이론, 빈출]
+tags: [개념]
 summary: 하인리히 1:29:300, 버드 1:10:30:600 — 비례식 계산 필수
 questions: [20220424_012, 20210814_008, 20210307_003, 20180304_007, 20200606_007]
 related: [heinrich-domino-theory, bird-domino-theory]

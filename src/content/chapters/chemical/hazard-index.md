@@ -3,7 +3,7 @@ title: 위험도 (H)
 slug: hazard-index
 subject_id: 5
 group: 폭발 범위
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: H = (U - L) / L
 questions: [20220424_097]
 order: 5

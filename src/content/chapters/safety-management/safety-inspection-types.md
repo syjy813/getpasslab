@@ -3,7 +3,7 @@ title: 안전점검 종류
 slug: safety-inspection-types
 subject_id: 1
 group: 안전관리 기준·표지
-tags: []
+tags: [개념]
 summary: "일상·정기·특별·임시 안전점검의 구분 기준과 점검표 작성 시 확인할 핵심을 정리합니다."
 questions: [20220305_010, 20210814_001, 20190804_004, 20200822_005, 20180428_009]
 order: 4

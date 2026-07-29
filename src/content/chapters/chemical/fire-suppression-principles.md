@@ -3,7 +3,7 @@ title: 소화 원리 4가지
 slug: fire-suppression-principles
 subject_id: 5
 group: 화재·소화
-tags: [빈출, 이론]
+tags: [개념]
 summary: 냉각·질식·제거·억제(부촉매)
 questions: [20210307_093]
 order: 2

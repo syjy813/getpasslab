@@ -6,7 +6,7 @@ order: 9
 priority: 출시 필수
 status: 완료
 group: 방폭 구조
-tags: [법령, 함정]
+tags: [개념, 법령]
 summary: T1 450 ~ T6 85℃, T4=135℃ / 기기 표면온도는 가스 발화온도 미만
 questions: [20200822_069, 20200822_063, 20180304_066, 20190427_069]
 related: [explosion-proof-code, gas-group-classification]

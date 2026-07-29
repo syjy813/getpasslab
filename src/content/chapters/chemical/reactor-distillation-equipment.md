@@ -6,7 +6,7 @@ order: 3
 priority: 출시 필수
 status: 완료
 group: 안전밸브·플랜지
-tags: [이론, 실무, 빈출]
+tags: [개념]
 summary: 반응기 조작(회분·반회분·연속)·구조(탑·관·교반조·유동층) 분류, 열교환기 점검·능률
 questions: [20220424_095, 20210814_099, 20190303_083, 20220305_090, 20220424_094, 20190303_086, 20200926_092, 20220305_086, 20180819_093]
 related: [safety-valve-shutoff-exception, flameproof-flange-distance]

@@ -3,7 +3,7 @@ title: 통로발판 구조 기준
 slug: walkway-board-standard
 subject_id: 6
 group: 거푸집·동바리
-tags: [법령, 함정]
+tags: [개념, 법령]
 summary: 최대폭 1.6m·겹침이음 20cm
 questions: [20220424_105]
 order: 2

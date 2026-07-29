@@ -3,7 +3,7 @@ title: 푸리에 열전도 법칙
 slug: fourier-heat-law
 subject_id: 5
 group: 열역학·용기
-tags: [계산공식]
+tags: [계산]
 summary: Q = kA(T₁-T₂)/L
 questions: [20220424_090]
 order: 1

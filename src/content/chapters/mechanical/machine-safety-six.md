@@ -3,7 +3,7 @@ title: 기계설비 안전화 6종
 slug: machine-safety-six
 subject_id: 3
 group: 위험점·안전화
-tags: [빈출, 이론]
+tags: [개념]
 summary: 외기구작보표 (외형·기능·구조·작업·보수·표준)
 questions: []
 order: 3

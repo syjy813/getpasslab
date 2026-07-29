@@ -3,7 +3,7 @@ title: 신호검출이론 (SDT)
 slug: signal-detection-theory
 subject_id: 2
 group: 신호·인간실수
-tags: [빈출, 이론]
+tags: [개념]
 summary: Hit · Miss · False Alarm · Correct Rejection
 questions: [20200926_036]
 order: 1

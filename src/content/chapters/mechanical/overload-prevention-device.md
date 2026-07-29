@@ -3,7 +3,7 @@ title: 양중기 과부하방지장치 기준
 slug: overload-prevention-device
 subject_id: 3
 group: 크레인·양중기
-tags: [법령]
+tags: [개념, 법령]
 summary: 일반 1.1배·타워크레인 1.05배 정지
 questions: [20220305_045, 20210515_059, 20180428_048, 20200822_051]
 order: 2

@@ -3,7 +3,7 @@ title: 리더십·헤드십
 slug: leadership-headship
 subject_id: 1
 group: 사회행동·인간관계
-tags: []
+tags: [개념]
 summary: 리더십은 자발적 영향, 헤드십은 공식 권한 기반
 questions: [20220424_020, 20200926_018]
 order: 4

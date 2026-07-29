@@ -6,7 +6,7 @@ order: 6
 priority: 출시 필수
 status: 완료
 group: 재해 분석·이론
-tags: [이론]
+tags: [개념]
 summary: 기회설·암시설·빈발경향자설·미숙설 — 재해 누발의 원인 해석
 questions: [20200926_005, 20210814_016, 20210307_009, 20190427_009]
 related: [heinrich-domino-theory, bird-domino-theory, accident-cause-classification]

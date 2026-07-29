@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 시스템 설계
-tags: [이론]
+tags: [절차]
 summary: 구상 → 정의 → 개발 → 생산 → 운전, PHA는 구상 단계
 questions: [20220424_021, 20210515_031, 20190303_022, 20180819_039, 20220305_023]
 related: [system-analysis-techniques, man-machine-system-design]

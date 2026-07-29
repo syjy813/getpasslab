@@ -3,7 +3,7 @@ title: 타워크레인 강풍 작업중지 기준
 slug: tower-crane-wind-limits
 subject_id: 6
 group: 건설 장비
-tags: []
+tags: [개념]
 summary: ""
 questions: [20180428_105]
 order: 3

@@ -6,7 +6,7 @@ order: 5
 priority: 출시 필수
 status: 완료
 group: 정전기
-tags: [법령]
+tags: [개념, 법령]
 summary: 이황화탄소·에테르 1m/s, 도전성 위험물 7m/s, 고저항 액체는 관내경별 제한
 questions: [20210307_072, 20210515_076]
 related: [static-prevention, static-occurrence-factors]

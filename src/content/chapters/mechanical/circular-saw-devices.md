@@ -3,7 +3,7 @@ title: 둥근톱기계 방호장치 분류
 slug: circular-saw-devices
 subject_id: 3
 group: 둥근톱·연삭기
-tags: [빈출, 실무]
+tags: [개념]
 summary: 날 접촉예방 / 반발예방
 questions: [20190804_049, 20200822_059, 20200926_050, 20180304_053, 20180819_054]
 order: 1

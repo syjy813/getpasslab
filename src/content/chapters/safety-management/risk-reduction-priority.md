@@ -3,7 +3,7 @@ title: 위험성 감소 대책 우선순위
 slug: risk-reduction-priority
 subject_id: 1
 group: 위험성평가
-tags: [빈출, 실무]
+tags: [절차]
 summary: 제거·대체·공학·관리·보호구 순서
 questions: [20190427_003]
 order: 2

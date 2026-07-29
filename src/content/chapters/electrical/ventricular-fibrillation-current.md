@@ -3,7 +3,7 @@ title: 심실세동 전류
 slug: ventricular-fibrillation-current
 subject_id: 4
 group: 감전·전류
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: Ik = 165/√T (mA)
 questions: [20220305_078, 20180428_062, 20180819_061, 20180428_065, 20210814_074]
 order: 1

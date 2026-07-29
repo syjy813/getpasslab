@@ -6,7 +6,7 @@ order: 1
 priority: 출시 필수
 status: 완료
 group: 시스템 설계
-tags: [이론]
+tags: [절차]
 summary: 목표·시스템 정의·기본설계(기능할당)·계면설계·촉진물설계·시험평가
 questions: [20210814_027, 20210515_035, 20200926_027, 20190303_027, 20200606_032]
 related: [system-lifecycle, workplace-layout-principles]

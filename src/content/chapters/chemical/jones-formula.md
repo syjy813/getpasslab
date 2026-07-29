@@ -6,7 +6,7 @@ order: 3
 priority: 출시 필수
 status: 완료
 group: 폭발 범위
-tags: [계산공식]
+tags: [계산]
 summary: LFL = 0.55 × Cst, UFL = 3.5 × Cst
 questions: [20220424_083, 20210814_094, 20200822_096, 20200606_097]
 related: [complete-combustion-cst, burgess-wheeler]

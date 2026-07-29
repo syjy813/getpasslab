@@ -3,7 +3,7 @@ title: 교류 아크 용접기 전격 방지기 설치
 slug: welder-shock-protector
 subject_id: 4
 group: 용접기
-tags: [실무]
+tags: [개념]
 summary: 무부하전압 저감·기동 복귀·기출 판단값
 questions: [20200606_070, 20200926_069, 20180304_064, 20180819_062, 20190303_062]
 order: 3

@@ -3,7 +3,7 @@ title: 추락 방지 설비 5종
 slug: fall-prevention-equipment
 subject_id: 6
 group: 추락 방지
-tags: [빈출, 이론]
+tags: [개념]
 summary: 수직구명줄·안전블록·죄줄·보조죄줄·추락방지대
 questions: [20220424_102, 20220424_114]
 order: 1

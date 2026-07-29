@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 건설 강도·하중
-tags: [법령, 빈출]
+tags: [개념, 법령]
 summary: 작업중지 기준 풍속 10m/s·강우 1mm/h·강설 1cm/h, 승강로 답단 30cm
 questions: [20220424_104, 20190303_108, 20210307_116, 20190804_106, 20220305_111, 20180819_107, 20180304_107, 20190427_108, 20200606_102, 20180428_115]
 related: [work-platform-standards, temporary-passage-stairs]

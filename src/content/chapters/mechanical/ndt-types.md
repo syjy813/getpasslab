@@ -3,7 +3,7 @@ title: 비파괴검사 종류
 slug: ndt-types
 subject_id: 3
 group: 시험·가공·검사
-tags: []
+tags: [개념]
 summary: ""
 questions: []
 order: 9

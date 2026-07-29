@@ -3,7 +3,7 @@ title: 혼합 용액 농도
 slug: mixed-solution-concentration
 subject_id: 5
 group: 기체·농도·상태
-tags: [계산공식]
+tags: [계산]
 summary: 물질수지 연립방정식
 questions: [20210515_098, 20180819_083]
 order: 3

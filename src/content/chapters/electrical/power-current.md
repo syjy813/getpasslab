@@ -3,7 +3,7 @@ title: 전력 기준 전류 (단상·3상)
 slug: power-current
 subject_id: 4
 group: 감전·전류
-tags: [계산공식]
+tags: [계산]
 summary: 단상 P/Vcosθ / 3상 P/√3Vcosθ
 questions: [20210814_076]
 order: 4

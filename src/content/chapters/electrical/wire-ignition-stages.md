@@ -3,7 +3,7 @@ title: 과전류 전선 발화 단계
 slug: wire-ignition-stages
 subject_id: 4
 group: 전선·전기 기본
-tags: [빈출, 이론]
+tags: [개념]
 summary: 인화·착화·발화·순간용단 (전류밀도)
 questions: [20190804_071]
 order: 1

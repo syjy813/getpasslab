@@ -6,7 +6,7 @@ order: 1
 priority: 출시 필수
 status: 완료
 group: 사회행동·인간관계
-tags: [이론, 함정]
+tags: [개념]
 summary: 협력·대립·도피·융합 4형태 — 하위 유형까지 세트 암기
 questions: [20220305_016]
 related: [human-relations-mechanism, human-error-by-process]

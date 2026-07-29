@@ -3,7 +3,7 @@ title: 와이어 로프 꼬임 종류
 slug: wire-rope-twist-types
 subject_id: 3
 group: 와이어 로프
-tags: [이론]
+tags: [개념]
 summary: 보통·랭·S·Z꼬임
 questions: [20190427_046, 20190303_044]
 order: 1

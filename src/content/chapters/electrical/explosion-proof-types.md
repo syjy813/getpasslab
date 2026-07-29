@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 방폭 구조
-tags: [이론, 빈출]
+tags: [개념]
 summary: 내압 d·압력 p·유입 o·안전증 e·본질안전 ia/ib·비점화 n
 questions: [20220424_076, 20210814_071, 20200822_077, 20180819_077, 20190804_075, 20200926_071, 20190427_080, 20210307_080, 20220305_067, 20190303_080, 20200606_072, 20210814_078, 20180428_078, 20180304_063, 20190427_071, 20210515_070]
 related: [explosion-proof-basics, explosion-proof-code, explosion-zones, explosion-grade-vessel]

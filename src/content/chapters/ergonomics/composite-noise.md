@@ -3,7 +3,7 @@ title: 합성 소음
 slug: composite-noise
 subject_id: 2
 group: 소음 분석
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: "10log(Σ10^(L/10)), 동일 2개 +3dB"
 questions: [20210515_023]
 order: 1

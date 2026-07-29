@@ -3,7 +3,7 @@ title: 교육의 3단계·단계별 과정
 slug: safety-education-stages
 subject_id: 1
 group: 교육 방법론
-tags: []
+tags: [절차]
 summary: "지식·기능·태도 교육 단계의 순서와 구분"
 questions: [20190427_010, 20190804_007]
 order: 2

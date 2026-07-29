@@ -3,7 +3,7 @@ title: 방음보호구 EP-1·EP-2·EM
 slug: hearing-protection
 subject_id: 1
 group: 작업환경·소음
-tags: [실무, 함정]
+tags: [개념]
 summary: 귀마개 1·2종·귀덮개 차음 특성
 questions: []
 order: 3

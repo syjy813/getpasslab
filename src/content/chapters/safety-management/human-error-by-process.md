@@ -6,7 +6,7 @@ order: 3
 priority: 출시 필수
 status: 완료
 group: 사회행동·인간관계
-tags: [이론, 실무]
+tags: [개념]
 summary: 인지·판단·조작 3과정별 착오요인, 억측판단의 발생 배경
 questions: [20200822_011, 20180428_012, 20220424_008]
 related: [social-behavior-types, human-relations-mechanism]

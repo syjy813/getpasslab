@@ -3,7 +3,7 @@ title: 피뢰설비 설치 기준
 slug: lightning-protection-standard
 subject_id: 4
 group: 차단기·피뢰
-tags: [법령]
+tags: [개념, 법령]
 summary: 20m 이상 건축물·25cm 이상 돌출
 questions: [20220424_069]
 order: 4

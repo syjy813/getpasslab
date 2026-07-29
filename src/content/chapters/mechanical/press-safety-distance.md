@@ -3,7 +3,7 @@ title: 프레스 방호장치 안전거리
 slug: press-safety-distance
 subject_id: 3
 group: 기계 강도·하중
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: "D = 1.6 × Tm, 손 평균속도 기준"
 questions: [20210307_052, 20210515_060, 20200822_058, 20180428_046]
 order: 1

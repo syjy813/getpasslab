@@ -3,7 +3,7 @@ title: HAZOP·가이드워드
 slug: hazop-guidewords
 subject_id: 2
 group: FTA·시스템 분석
-tags: []
+tags: [개념]
 summary: ""
 questions: []
 order: 7

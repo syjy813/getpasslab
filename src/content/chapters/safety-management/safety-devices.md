@@ -3,7 +3,7 @@ title: 방호장치 종류
 slug: safety-devices
 subject_id: 1
 group: 안전관리 기준·표지
-tags: [실무]
+tags: [개념]
 summary: 격리·위치제한·안전거리·접촉방지·포집형
 questions: []
 order: 2

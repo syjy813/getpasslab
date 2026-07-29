@@ -6,7 +6,7 @@ order: 4
 priority: 출시 필수
 status: 완료
 group: 정전기
-tags: [계산공식]
+tags: [계산]
 summary: V = C₁E / (C₁+C₂), 직렬 용량의 전압 분배
 questions: [20200926_068, 20180819_066, 20190303_069]
 related: [charge-capacitance, static-energy]

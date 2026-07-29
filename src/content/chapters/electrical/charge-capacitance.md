@@ -6,7 +6,7 @@ order: 5
 priority: 출시 필수
 status: 완료
 group: 기초 전기 공식
-tags: [계산공식, 함정]
+tags: [계산]
 summary: Q = CV, 전하량(C)과 정전용량(F)의 단위 구분
 questions: [20220305_073, 20180304_069]
 related: [static-energy, electrostatic-induction, ohms-law]

@@ -3,7 +3,7 @@ title: 접지공사 면제·생략 조건
 slug: grounding-exemption
 subject_id: 4
 group: 접지
-tags: [법령, 함정]
+tags: [개념, 법령]
 summary: "교류 150V·직류 300V (함정: 반대 출제)"
 questions: [20210307_062, 20200822_075]
 order: 3

@@ -3,7 +3,7 @@ title: 인체 통전전류별 영향
 slug: body-current-effect
 subject_id: 4
 group: 감전·전류
-tags: [빈출, 이론]
+tags: [개념]
 summary: 1·5·10·50·100 mA 단계별 영향
 questions: [20220305_065]
 order: 6

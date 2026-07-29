@@ -3,7 +3,7 @@ title: 플래시율 (F)
 slug: flash-rate
 subject_id: 5
 group: 열역학·용기
-tags: [계산공식]
+tags: [계산]
 summary: F = (H₁-H₂)/L
 questions: []
 order: 2

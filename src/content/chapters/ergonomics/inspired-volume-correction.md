@@ -3,7 +3,7 @@ title: 흡기량 보정
 slug: inspired-volume-correction
 subject_id: 2
 group: 에너지 소비
-tags: [계산공식, 함정]
+tags: [계산]
 summary: "질소 79% 비율로 역산"
 questions: []
 order: 1

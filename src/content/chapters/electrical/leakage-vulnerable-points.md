@@ -3,7 +3,7 @@ title: 누전 사고 취약 개소
 slug: leakage-vulnerable-points
 subject_id: 4
 group: 누전·누전차단기
-tags: [실무]
+tags: [개념]
 summary: 나선 분기 접속점·전선 열화·리드선 접속
 questions: [20190804_078]
 order: 3

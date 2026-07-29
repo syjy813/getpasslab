@@ -3,7 +3,7 @@ title: 아크 용접기 허용사용률
 slug: welder-duty-cycle
 subject_id: 4
 group: 용접기
-tags: [계산공식]
+tags: [계산]
 summary: Da = (I₁/I₂)²·D₁
 questions: [20220305_066, 20210814_066]
 order: 1

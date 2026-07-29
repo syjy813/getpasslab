@@ -6,7 +6,7 @@ order: 3
 priority: 출시 필수
 status: 완료
 group: 시험·가공·검사
-tags: [실무]
+tags: [개념]
 summary: 언더컷(과대전류·과속)·오버랩·기공·슬래그 혼입·용입불량·균열
 questions: [20210515_048, 20200926_047, 20190303_060]
 related: [test-types, penetrant-test-procedure]

@@ -6,7 +6,7 @@ order: 7
 priority: 출시 필수
 status: 완료
 group: 방폭 구조
-tags: [법령, 빈출]
+tags: [개념, 법령]
 summary: 0종 지속(탱크 내부) / 1종 정상 시 주기적(맨홀 주변) / 2종 이상 시 단시간
 questions: [20200606_062, 20190303_077, 20190804_076, 20180304_071, 20210515_070]
 related: [explosion-proof-types, explosion-proof-basics]

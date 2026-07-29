@@ -3,7 +3,7 @@ title: 표준화 변수 Z
 slug: z-score
 subject_id: 2
 group: 신뢰도·수명
-tags: [계산공식]
+tags: [계산]
 summary: "Z = (t-μ)/σ, 정규분포 신뢰도 계산용"
 questions: [20190303_030, 20200926_032]
 order: 1

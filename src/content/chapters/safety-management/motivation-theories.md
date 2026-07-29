@@ -3,7 +3,7 @@ title: 동기부여 이론 (매슬로·맥그리거·허즈버그)
 slug: motivation-theories
 subject_id: 1
 group: 사회행동·인간관계
-tags: []
+tags: [개념]
 summary: "허즈버그·맥그리거 중심 동기·위생요인과 인간관점 비교"
 questions: [20200822_015, 20200606_014, 20190427_016]
 order: 5

@@ -3,7 +3,7 @@ title: 슬링 와이어 장력
 slug: sling-wire-tension
 subject_id: 3
 group: 기계 강도·하중
-tags: [계산공식, 빈출, 함정]
+tags: [계산]
 summary: "T = W/(2cos(θ/2)), 각도 절반 주의"
 questions: [20220424_057]
 order: 2

@@ -6,7 +6,7 @@ order: 4
 priority: 출시 필수
 status: 완료
 group: 프레스 안전
-tags: [법령, 함정]
+tags: [개념, 법령]
 summary: 수인끈 합성섬유 지름 4mm 이상, 길이는 작업자에 따라 조정 가능
 questions: [20190804_058]
 related: [press-safety-devices, press-device-conditions]

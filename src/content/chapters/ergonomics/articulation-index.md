@@ -3,7 +3,7 @@ title: 명료도 지수 (AI)
 slug: articulation-index
 subject_id: 2
 group: 정보·청각
-tags: [계산공식]
+tags: [계산]
 summary: Σ(log(S/N) × W) 가중치 합산
 questions: []
 order: 1

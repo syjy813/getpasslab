@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 폭발 범위
-tags: [계산공식]
+tags: [계산]
 summary: Cst = 100 / (1 + 4.773 × 산소양론계수), MOC 계산의 기반
 questions: [20190303_098, 20200822_096, 20200606_097, 20220424_083, 20210814_094, 20190427_093, 20180304_094]
 related: [jones-formula, burgess-wheeler]

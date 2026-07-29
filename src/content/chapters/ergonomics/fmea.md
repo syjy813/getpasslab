@@ -6,7 +6,7 @@ order: 6
 priority: 출시 필수
 status: 완료
 group: FTA·시스템 분석
-tags: [이론, 빈출]
+tags: [개념]
 summary: 고장형태와 영향분석 — 귀납적·정성적, 고장평점 5요소
 questions: [20210814_038, 20180428_033, 20190427_025, 20180304_022, 20190303_035, 20220305_023, 20210307_037]
 related: [system-analysis-techniques, fta-procedure]

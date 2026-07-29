@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 법령·보상
-tags: [법령]
+tags: [개념, 법령]
 summary: 제조상·설계상·표시상 결함 3유형
 questions: []
 related: [serious-accident-criteria, industrial-accident-insurance]

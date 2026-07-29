@@ -3,7 +3,7 @@ title: 안전성 평가 기본원칙 6단계
 slug: safety-assessment-basic-principles
 subject_id: 2
 group: 화학설비 평가
-tags: [실무]
+tags: [절차]
 summary: 자료검토·정성·정량·대책·재평가·FTA
 questions: [20220305_025]
 order: 1

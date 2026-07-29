@@ -3,7 +3,7 @@ title: 해체 작업 안전 조치
 slug: demolition-safety-measures
 subject_id: 6
 group: 해체 작업
-tags: [실무]
+tags: [절차]
 summary: 계획서·출입금지·악천후·신호수
 questions: [20200822_102, 20200606_113, 20200926_109, 20180428_116, 20190427_113, 20220305_102]
 order: 2

@@ -3,7 +3,7 @@ title: 폭발 위험 낮은 조합
 slug: safe-explosion-combinations
 subject_id: 5
 group: 위험물 반응
-tags: [이론]
+tags: [개념]
 summary: 니트로셀룰로오스+물·이황화탄소+물
 questions: [20220424_086, 20210515_097, 20210814_100, 20180428_084, 20180428_081]
 order: 5

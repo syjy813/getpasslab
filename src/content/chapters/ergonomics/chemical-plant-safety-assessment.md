@@ -3,7 +3,7 @@ title: 화학설비 안전성 평가 5단계
 slug: chemical-plant-safety-assessment
 subject_id: 2
 group: 화학설비 평가
-tags: [실무]
+tags: [절차]
 summary: 자료수집·정성·정량·대책·재평가
 questions: []
 order: 2

@@ -3,7 +3,7 @@ title: 단열 압축 온도
 slug: adiabatic-compression
 subject_id: 5
 group: 열역학·용기
-tags: [계산공식, 함정]
+tags: [계산]
 summary: "T₂ = T₁(P₂/P₁)^((k-1)/k), K변환"
 questions: [20190427_084, 20210814_091]
 order: 3

@@ -1,0 +1,15 @@
+---
+import type { ChapterBadge } from '../utils/chapterBadges';
+
+interface Props {
+  badges: ChapterBadge[];
+  class?: string;
+}
+
+const { badges, class: className } = Astro.props;
+---
+<div class:list={['chapter-badges', className]}>
+  {badges.map((badge) => (
+    <span class:list={['tag', badge.tone]}>{badge.label}</span>
+  ))}
+</div>

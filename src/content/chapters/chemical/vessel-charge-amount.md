@@ -3,7 +3,7 @@ title: 용기 충전량
 slug: vessel-charge-amount
 subject_id: 5
 group: 열역학·용기
-tags: [계산공식]
+tags: [계산]
 summary: W = V / C
 questions: [20200926_096]
 order: 4

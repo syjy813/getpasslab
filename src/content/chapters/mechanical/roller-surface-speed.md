@@ -3,7 +3,7 @@ title: 롤러기 표면속도
 slug: roller-surface-speed
 subject_id: 3
 group: 회전체 속도
-tags: [계산공식]
+tags: [계산]
 summary: V = πDN/1000 (m/min)
 questions: []
 order: 1

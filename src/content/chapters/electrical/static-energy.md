@@ -6,7 +6,7 @@ order: 3
 priority: 출시 필수
 status: 완료
 group: 정전기
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: E = ½CV², 최소착화에너지와 결합한 착화전압 역산
 questions: [20210307_069, 20210515_061, 20200606_076, 20200822_074, 20200926_064, 20190804_064]
 related: [charge-capacitance, static-prevention, electrostatic-induction]

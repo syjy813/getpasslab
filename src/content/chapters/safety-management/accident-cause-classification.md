@@ -6,7 +6,7 @@ order: 5
 priority: 출시 필수
 status: 완료
 group: 재해 분석·이론
-tags: [이론]
+tags: [개념]
 summary: 직접 원인 88%(불안전 행동)·10%(불안전 상태)·2%(불가항력) + 간접 원인 5종, 4M
 questions: [20220424_018, 20200822_006, 20200926_016, 20180428_010, 20190804_020]
 related: [heinrich-domino-theory, accident-analysis-tools]

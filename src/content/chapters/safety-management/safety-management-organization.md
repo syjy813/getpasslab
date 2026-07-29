@@ -3,7 +3,7 @@ title: 안전관리 조직 (라인·스태프)
 slug: safety-management-organization
 subject_id: 1
 group: 법령·보상
-tags: []
+tags: [개념]
 summary: "라인·스태프·라인-스태프 안전관리조직 비교"
 questions: [20190804_002, 20200926_001, 20210307_005, 20180428_020, 20190303_014]
 order: 4

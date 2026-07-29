@@ -6,7 +6,7 @@ order: 4
 priority: 출시 필수
 status: 완료
 group: 전선·전기 기본
-tags: [이론, 빈출]
+tags: [개념]
 summary: 발화원 비중 1위 전기배선·배선기구, 출화 경과는 단락·누전·과전류·스파크·트래킹
 questions: [20190804_062, 20190303_065, 20210515_071, 20180428_077, 20220424_075, 20180819_078, 20220424_063, 20210307_068]
 related: [static-prevention, static-occurrence-factors]

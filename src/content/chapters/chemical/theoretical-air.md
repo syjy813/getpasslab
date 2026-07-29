@@ -3,7 +3,7 @@ title: 이론 공기량 (Ao)
 slug: theoretical-air
 subject_id: 5
 group: 기체·농도·상태
-tags: [계산공식]
+tags: [계산]
 summary: Ao = Oo / 0.21
 questions: [20190804_100]
 order: 4

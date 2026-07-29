@@ -6,7 +6,7 @@ order: 4
 priority: 출시 필수
 status: 완료
 group: FTA·시스템 분석
-tags: [이론, 함정]
+tags: [개념]
 summary: OR이지만 2개 이상 입력이 동시에 존재하면 출력이 생기지 않는 수정게이트
 questions: [20200606_036]
 related: [fta-symbols, cutset-pathset]

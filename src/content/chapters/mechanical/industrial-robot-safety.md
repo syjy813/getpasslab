@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 시험·가공·검사
-tags: [실무]
+tags: [절차]
 summary: 울타리 높이 1.8m 이상, 교시 작업 전 점검 3항목
 questions: [20220424_042, 20190804_042, 20210515_043, 20200822_050, 20200926_046, 20200822_056, 20200606_041, 20190303_048, 20190427_054, 20180304_041]
 related: [conveyor-safety, machine-tools-safety]

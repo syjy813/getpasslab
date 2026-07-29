@@ -3,7 +3,7 @@ title: 롤러기 급정지장치 조작부 로프 기준
 slug: roller-stop-rope-standard
 subject_id: 3
 group: 와이어 로프
-tags: [법령]
+tags: [개념, 법령]
 summary: 와이어 4mm·합성섬유 6mm
 questions: [20190303_042]
 order: 2

@@ -3,7 +3,7 @@ title: 해체 공법 4종
 slug: demolition-methods
 subject_id: 6
 group: 해체 작업
-tags: [이론]
+tags: [개념]
 summary: 압쇄·전도·폭파·절단
 questions: []
 order: 1

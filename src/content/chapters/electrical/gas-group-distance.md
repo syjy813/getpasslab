@@ -6,7 +6,7 @@ order: 5
 priority: 출시 필수
 status: 완료
 group: 방폭 구조
-tags: [법령]
+tags: [개념, 법령]
 summary: 내압방폭 플랜지 개구부–장애물 거리, IIA 10 / IIB 30 / IIC 40 mm
 questions: [20220305_080, 20210307_079]
 related: [gas-group-classification, explosion-grade-vessel]

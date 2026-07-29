@@ -1,6 +1,8 @@
 import { defineCollection, z } from 'astro:content';
 import { glob, file } from 'astro/loaders';
 
+const chapterTypeTag = z.enum(['개념', '계산', '절차']);
+
 const chapters = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/chapters' }),
   schema: z.object({
@@ -8,7 +10,10 @@ const chapters = defineCollection({
     slug: z.string(),               // 동결 키
     subject_id: z.number().min(1).max(6),
     group: z.string(),
-    tags: z.array(z.string()).default([]),
+    tags: z.union([
+      z.tuple([chapterTypeTag]),
+      z.tuple([chapterTypeTag, z.literal('법령')]),
+    ]),
     summary: z.string(),            // 한 줄 요약 = 목록 미리보기 + meta description
     questions: z.array(z.string()).default([]),  // 기출 문제 ID 참조 (섹션 4 자동 렌더)
     related: z.array(z.string()).default([]),    // 관련 챕터 slug (섹션 5 수동 지정분)

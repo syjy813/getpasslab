@@ -3,7 +3,7 @@ title: 안전관리자·보건관리자 선임 기준
 slug: safety-manager-appointment
 subject_id: 1
 group: 법령·보상
-tags: []
+tags: [개념]
 summary: "안전관리자와 보건관리자의 역할 차이, 사업 종류와 규모를 바탕으로 선임기준을 읽는 순서를 정리합니다."
 questions: [20220424_019, 20200606_006, 20180304_006]
 order: 5

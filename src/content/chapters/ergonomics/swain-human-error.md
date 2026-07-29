@@ -3,7 +3,7 @@ title: Swain 인간 실수 분류
 slug: swain-human-error
 subject_id: 2
 group: 신호·인간실수
-tags: [빈출, 이론]
+tags: [개념]
 summary: 생략·실행·순서·시간·불필요 5종
 questions: [20220424_022, 20220305_040, 20210814_021, 20210307_038, 20190804_023, 20200822_022, 20200926_022]
 order: 2

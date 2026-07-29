@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 안전밸브·플랜지
-tags: [법령]
+tags: [개념, 법령]
 summary: 차단밸브 설치 금지 원칙과 자물쇠형 설치 가능 예외, 검사주기(현행 2·3·4년)
 questions: [20210307_082, 20210307_084, 20180428_083]
 related: [reactor-distillation-equipment, flameproof-flange-distance]

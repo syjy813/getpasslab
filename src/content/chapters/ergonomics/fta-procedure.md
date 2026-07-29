@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: FTA·시스템 분석
-tags: [실무]
+tags: [절차]
 summary: 톱사상 선정 → 재해원인 규명 → FT도 작성 → 개선계획 — 연역적·정량적 분석
 questions: [20200606_040, 20190303_039, 20210814_025, 20220424_039, 20190804_031, 20180428_022]
 related: [fta-symbols, cutset-pathset, system-analysis-techniques]

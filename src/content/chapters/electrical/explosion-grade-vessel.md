@@ -6,7 +6,7 @@ order: 6
 priority: 출시 필수
 status: 완료
 group: 방폭 구조
-tags: [법령]
+tags: [개념, 법령]
 summary: 내용적 8L·틈새 안길이 25mm 용기로 화염일주한계(MESG) 측정
 questions: [20200606_074, 20180819_067, 20190427_066]
 related: [gas-group-classification, gas-group-distance, explosion-proof-types]

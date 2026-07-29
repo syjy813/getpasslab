@@ -3,7 +3,7 @@ title: 학습이론 (손다이크·파블로프·스키너)
 slug: learning-theories
 subject_id: 1
 group: 안전보건교육 이론
-tags: []
+tags: [개념]
 summary: "파블로프·손다이크·톨만의 학습이론 구분"
 questions: [20200822_010, 20180304_003]
 order: 4

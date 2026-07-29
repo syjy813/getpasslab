@@ -3,7 +3,7 @@ title: 안전계수 (SF)
 slug: safety-factor
 subject_id: 3
 group: 기계 강도·하중
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: SF = 파단하중 / 허용하중
 questions: [20220424_049, 20210814_049, 20200606_055, 20200926_042, 20180304_055, 20180819_059]
 order: 4

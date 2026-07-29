@@ -6,7 +6,7 @@ order: 3
 priority: 출시 필수
 status: 완료
 group: 재해 분석·이론
-tags: [이론]
+tags: [개념]
 summary: 제어부족(관리) → 기본원인(기원) → 직접원인(징후) → 사고(접촉) → 상해(손실)
 questions: [20220305_008, 20180819_013]
 related: [heinrich-domino-theory, accident-ratio-law]

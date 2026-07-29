@@ -3,7 +3,7 @@ title: 자연발화
 slug: spontaneous-combustion
 subject_id: 5
 group: 열역학·용기
-tags: []
+tags: [개념]
 summary: 열 발생·방열 균형과 축열 조건
 questions: [20220305_096, 20220305_098, 20210515_095, 20200822_100, 20180304_091, 20180819_082, 20190427_082]
 order: 5

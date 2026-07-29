@@ -3,7 +3,7 @@ title: 흡열반응 물질
 slug: endothermic-substances
 subject_id: 5
 group: 위험물 반응
-tags: [이론]
+tags: [개념]
 summary: 질산암모늄 등
 questions: [20180304_099]
 order: 2

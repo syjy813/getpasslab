@@ -3,7 +3,7 @@ title: 롤러기 급정지거리
 slug: roller-stopping-distance
 subject_id: 3
 group: 회전체 속도
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: 30 m/min 미만 πD/3 / 이상 πD/2.5
 questions: [20220424_058, 20220305_051, 20220305_057, 20200606_054, 20200926_041]
 order: 2

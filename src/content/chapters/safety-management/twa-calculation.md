@@ -3,7 +3,7 @@ title: TWA 계산
 slug: twa-calculation
 subject_id: 1
 group: 작업환경·소음
-tags: [계산공식, 함정]
+tags: [계산]
 summary: 누적소음노출량(D)을 TWA로 변환
 questions: []
 order: 1

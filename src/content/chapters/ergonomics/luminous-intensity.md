@@ -3,7 +3,7 @@ title: 광도 (I)
 slug: luminous-intensity
 subject_id: 2
 group: 조명·시각
-tags: [계산공식]
+tags: [계산]
 summary: "I = F/ω, cd(칸델라) 단위"
 questions: []
 order: 2

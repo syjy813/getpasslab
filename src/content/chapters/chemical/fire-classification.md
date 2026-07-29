@@ -3,7 +3,7 @@ title: 화재 분류 A·B·C·D급
 slug: fire-classification
 subject_id: 5
 group: 화재·소화
-tags: [빈출, 이론]
+tags: [개념]
 summary: A일반·B유류·C전기·D금속
 questions: [20220305_082, 20220305_089, 20220305_099, 20200822_085, 20200926_095, 20180428_082, 20180819_086]
 order: 1

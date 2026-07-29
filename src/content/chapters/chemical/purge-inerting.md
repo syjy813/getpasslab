@@ -3,7 +3,7 @@ title: 퍼지 (불활성화)
 slug: purge-inerting
 subject_id: 5
 group: 폭발 이론
-tags: []
+tags: [개념]
 summary: 압력·진공·스위프 퍼지의 목적과 구분
 questions: [20220424_082]
 order: 5

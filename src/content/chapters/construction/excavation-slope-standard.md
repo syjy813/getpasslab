@@ -6,7 +6,7 @@ order: 1
 priority: 출시 필수
 status: 완료
 group: 굴착·흙막이
-tags: [법령]
+tags: [개념, 법령]
 summary: 모래 1:1.8 / 연암·풍화암 1:1.0 / 경암 1:0.5 / 그 밖의 흙 1:1.2
 questions: [20220305_110, 20190804_101, 20200606_104, 20200822_108, 20200926_115, 20190427_104, 20180304_101, 20190804_104]
 related: [soil-collapse-prevention, earth-retaining-components]

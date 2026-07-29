@@ -6,7 +6,7 @@ order: 4
 priority: 출시 필수
 status: 완료
 group: 시스템 설계
-tags: [이론, 실무]
+tags: [개념]
 summary: 중요성·사용빈도(위치 결정) / 기능별·사용순서(배치 결정) 4원칙
 questions: [20220305_034, 20210307_023, 20180304_026, 20180428_035]
 related: [ecrs-principle, cr-ratio]

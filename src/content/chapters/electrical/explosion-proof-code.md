@@ -6,7 +6,7 @@ order: 3
 priority: 출시 필수
 status: 완료
 group: 방폭 구조
-tags: [이론, 빈출]
+tags: [개념]
 summary: Ex ia IIC T4 Ga — 구조·가스그룹·온도등급·EPL 순서 해독
 questions: [20200822_079, 20220424_073, 20210307_075, 20200926_061, 20210515_067]
 related: [explosion-proof-types, gas-group-classification, explosion-temperature-class]

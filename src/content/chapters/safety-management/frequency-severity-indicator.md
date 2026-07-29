@@ -3,7 +3,7 @@ title: 종합재해지수 (FSI)
 slug: frequency-severity-indicator
 subject_id: 1
 group: 재해통계 공식
-tags: [계산공식, 빈출]
+tags: [계산]
 summary: 도수율과 강도율의 기하평균
 questions: [20210307_020]
 order: 6

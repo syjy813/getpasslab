@@ -3,7 +3,7 @@ title: 연천인율
 slug: annual-1000-rate
 subject_id: 1
 group: 재해통계 공식
-tags: [계산공식]
+tags: [계산]
 summary: 근로자 1000명당 연간 재해자 수
 questions: [20200606_004, 20180819_017, 20190427_001]
 order: 3

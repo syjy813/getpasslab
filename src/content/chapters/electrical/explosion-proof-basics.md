@@ -6,7 +6,7 @@ order: 1
 priority: 출시 필수
 status: 완료
 group: 방폭 구조
-tags: [이론]
+tags: [개념]
 summary: 점화원의 방폭적 격리·안전도 증강·점화능력의 본질적 억제
 questions: [20190303_068]
 related: [explosion-proof-types, explosion-zones, explosion-proof-code]

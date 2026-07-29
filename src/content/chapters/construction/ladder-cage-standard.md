@@ -3,7 +3,7 @@ title: 사다리 울 설치기준
 slug: ladder-cage-standard
 subject_id: 6
 group: 건설 법령·기준
-tags: [법령]
+tags: [개념, 법령]
 summary: 7m 이상·2.5m부터·1.5m 간격
 questions: []
 order: 4

@@ -3,7 +3,7 @@ title: 통전전류
 slug: body-current
 subject_id: 4
 group: 감전·전류
-tags: [계산공식]
+tags: [계산]
 summary: Ik = V/R (옴의 법칙)
 questions: [20180819_070]
 order: 3

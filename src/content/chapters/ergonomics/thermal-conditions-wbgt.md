@@ -3,7 +3,7 @@ title: 온열조건 (WBGT·실효온도)
 slug: thermal-conditions-wbgt
 subject_id: 2
 group: 작업환경·소음
-tags: []
+tags: [개념]
 summary: 일사 조건별 WBGT 가중식
 questions: [20220305_036]
 order: 4

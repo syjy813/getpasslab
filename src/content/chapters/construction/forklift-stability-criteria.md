@@ -3,7 +3,7 @@ title: 지게차 안정도 기준 4종
 slug: forklift-stability-criteria
 subject_id: 6
 group: 지게차·차량계
-tags: [빈출, 이론]
+tags: [개념]
 summary: "하역 4%·6% / 주행 18%·(15+1.1V)%"
 questions: []
 order: 2

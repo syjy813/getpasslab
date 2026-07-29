@@ -3,7 +3,7 @@ title: 양립성
 slug: compatibility
 subject_id: 2
 group: 시스템 설계
-tags: []
+tags: [개념]
 summary: 인간-기계 계면의 기대 방향 일치
 questions: [20180819_022]
 order: 5

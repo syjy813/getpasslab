@@ -3,7 +3,7 @@ title: 클램셸 (Clam Shell) 용도
 slug: clam-shell
 subject_id: 6
 group: 건설 장비
-tags: [이론]
+tags: [개념]
 summary: 잠함·수면아래·기초 굴착 / 암반 부적합
 questions: []
 order: 1

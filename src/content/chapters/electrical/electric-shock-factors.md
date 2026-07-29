@@ -3,7 +3,7 @@ title: 감전 위험 4대 영향 요소
 slug: electric-shock-factors
 subject_id: 4
 group: 감전·전류
-tags: [빈출, 이론]
+tags: [개념]
 summary: 전류 크기·경로·시간·전원 종류
 questions: []
 order: 5

@@ -3,7 +3,7 @@ title: 집단토의법 종류
 slug: group-discussion-methods
 subject_id: 1
 group: 교육 방법론
-tags: [이론]
+tags: [개념]
 summary: 포럼·심포지엄·패널·버즈·브레인스토밍 등 7종
 questions: [20220305_006]
 order: 1

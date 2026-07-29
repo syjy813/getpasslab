@@ -3,7 +3,7 @@ title: 교류 아크 용접기 효율
 slug: welder-efficiency
 subject_id: 4
 group: 용접기
-tags: [계산공식, 함정]
+tags: [계산]
 summary: η = 아크출력/(아크출력+내부손실)
 questions: [20220424_071]
 order: 2

@@ -3,7 +3,7 @@ title: 안전인증대상 방호장치 8종
 slug: safety-certification-8
 subject_id: 3
 group: 법령·안전인증
-tags: [법령, 빈출]
+tags: [개념, 법령]
 summary: 안전밸브·파열판·보일러·프레스·양중기 등
 questions: [20220424_048]
 order: 1

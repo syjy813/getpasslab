@@ -3,7 +3,7 @@ title: 크레인 전용탑승설비 추락방지
 slug: crane-passenger-safety
 subject_id: 3
 group: 크레인·양중기
-tags: [법령]
+tags: [개념, 법령]
 summary: 뒤집힘 방지·안전대·동력하강
 questions: [20220305_042]
 order: 3

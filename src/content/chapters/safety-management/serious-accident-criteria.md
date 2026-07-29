@@ -6,7 +6,7 @@ order: 3
 priority: 출시 필수
 status: 완료
 group: 법령·보상
-tags: [법령, 빈출]
+tags: [개념, 법령]
 summary: 사망 1명 / 3개월 요양 부상 동시 2명 / 부상·직업성 질병 동시 10명 — OR 조건
 questions: [20210307_014, 20180819_007, 20180819_004]
 related: [industrial-accident-insurance, accident-cause-classification]

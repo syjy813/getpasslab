@@ -3,7 +3,7 @@ title: "농도 환산 (vol% → mg/L)"
 slug: concentration-conversion
 subject_id: 5
 group: 기체·농도·상태
-tags: [계산공식]
+tags: [계산]
 summary: "M×vol% / (22.4×T보정)"
 questions: [20210814_086, 20190804_090, 20190303_100]
 order: 2

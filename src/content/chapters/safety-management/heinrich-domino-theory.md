@@ -6,7 +6,7 @@ order: 2
 priority: 출시 필수
 status: 완료
 group: 재해 분석·이론
-tags: [이론, 빈출]
+tags: [개념]
 summary: 5단계 연쇄 — 3단계(불안전 행동·상태) 제거가 재해 예방의 핵심
 questions: [20190804_005, 20200822_014]
 related: [bird-domino-theory, accident-ratio-law, accident-cause-classification]

@@ -3,7 +3,7 @@ title: 안전보건교육 시간 총정리
 slug: safety-education-hours
 subject_id: 1
 group: 안전보건교육 시간
-tags: [법령, 빈출]
+tags: [개념, 법령]
 summary: 정기·채용시·작업내용 변경시 교육시간
 questions: [20220305_007]
 order: 3
