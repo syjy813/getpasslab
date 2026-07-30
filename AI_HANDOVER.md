@@ -1777,15 +1777,25 @@ READY 4개 작성 후 남은 미시작 55개의 최신 분류:
   - AdSense·GA4·canonical·네이버 인증·JSON-LD 삽입 확인.
 - 전체 페이지 모바일 캡처에서 일시적인 stitching 표시 이상이 있었으나, 일반 viewport 캡처와 실제 요소 치수 대조에서는 레이아웃 문제가 재현되지 않았다.
 
-### 4. 현재 상태와 남은 확인
+### 4. Push·production 검증과 남은 확인
 
-- 이 문서 갱신 직전 로컬 `main`은 `origin/main`보다 10커밋 ahead이고 working tree는 문서 변경 전 clean이었다.
 - Owner가 이 문서 갱신과 `main` Push를 명시 승인했다.
-- 이 문서 커밋과 Push 이후 원격 기준선 및 GitHub Pages 배포 결과를 다시 확인한다.
-- 배포 후 필수 production QA:
-  - 최신 챕터 구조와 모바일 레이아웃
-  - AdSense·GA4 태그와 `ads.txt`
-  - canonical·구조화 데이터·sitemap
-  - GA4 실시간 이벤트 수신
-- AdSense 승인·실제 광고 게재, Search Console 색인·sitemap 처리, GA4 이벤트 수신은 각각의 외부 서비스 증거가 확인되기 전까지 완료로 확정하지 않는다.
+- 첫 문서 갱신 커밋:
+  - `3fefedc514626da47326e4a33761d6f4b3b11a09`
+  - `docs: update handover after service integration`
+- `origin/main` Push 성공 후 로컬 `main`, `origin/main`, 실제 원격 `main`이 `3fefedc`로 일치하는 것을 확인했다.
+- GitHub Pages 자동 배포:
+  - workflow: `Deploy to GitHub Pages`
+  - run: `30549030290`
+  - 기준 SHA: `3fefedc514626da47326e4a33761d6f4b3b11a09`
+  - 결과: `completed / success`
+- production 확인:
+  - `https://getpasslab.co.kr/`: `200 OK`.
+  - 대표 챕터의 새 4개 섹션과 모바일 레이아웃 정상.
+  - 모바일 390px 기준 관련 챕터 카드 폭 일치, 가로 넘침 없음.
+  - AdSense·GA4·canonical·네이버 인증·JSON-LD 태그 삽입 확인.
+  - `https://getpasslab.co.kr/ads.txt`: `200 OK`, 게시자 레코드 일치.
+  - `https://getpasslab.co.kr/sitemap-index.xml`: `200 OK`, custom domain URL 포함.
+  - 브라우저 오류·경고 로그 없음.
+- AdSense 승인·실제 광고 게재, Search Console 색인·sitemap 처리, GA4 실시간 이벤트 수신은 각각의 외부 서비스 증거가 확인되기 전까지 완료로 확정하지 않는다.
 - 기존 동결 키·관계 데이터와 `R3-REV4-FIX`의 `PLANNING_ONLY` 상태는 변경하지 않는다.
