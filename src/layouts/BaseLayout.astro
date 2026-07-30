@@ -4,11 +4,38 @@ import GNB from '../components/GNB.astro';
 import Footer from '../components/Footer.astro';
 import { withBase } from '../config/url';
 import { SITE } from '../config/site';
-interface Props { title: string; description: string; }
-const { title, description } = Astro.props;
+
+interface Props {
+  title: string;
+  description: string;
+  robots?: string;
+  ogType?: 'website' | 'article';
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title,
+  description,
+  robots = 'index, follow',
+  ogType = 'website',
+  structuredData = [],
+} = Astro.props;
 const siteOrigin = Astro.site ?? SITE.url;
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
 const ogImageUrl = new URL('/og-default.png', siteOrigin);
+const pageStructuredData = Array.isArray(structuredData) ? structuredData : [structuredData];
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.url,
+    inLanguage: 'ko-KR',
+  },
+  ...pageStructuredData,
+];
+const serializeJsonLd = (value: Record<string, unknown>) =>
+  JSON.stringify(value).replace(/</g, '\\u003c');
 ---
 <!doctype html>
 <html lang="ko">
@@ -17,11 +44,25 @@ const ogImageUrl = new URL('/og-default.png', siteOrigin);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="naver-site-verification" content="834fae8c1cc760d91edf091099fa8e1d22c7085b" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8799723694540263"
+      crossorigin="anonymous"
+    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CB3KFL9FJ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0CB3KFL9FJ');
+    </script>
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:site_name" content={SITE.name} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
@@ -33,6 +74,9 @@ const ogImageUrl = new URL('/og-default.png', siteOrigin);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+    {jsonLd.map((data) => (
+      <script type="application/ld+json" set:html={serializeJsonLd(data)} />
+    ))}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
   </head>
   <body>
