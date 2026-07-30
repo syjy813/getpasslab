@@ -12,7 +12,7 @@ status: 완료
 ---
 ## 핵심 개념
 
-BLEVE(Boiling Liquid Expanding Vapor Explosion)는 가압된 액화액체 용기가 가열되어 파열될 때 액체가 급격히 기화·팽창하며 발생하는 폭발이다. 용기 파열 뒤 화구, 압력파, 용기 파편이 함께 위험을 만든다.
+**BLEVE(Boiling Liquid Expanding Vapor Explosion)**는 가압된 액화액체 용기가 가열되어 파열될 때 액체가 급격히 기화·팽창하며 발생하는 폭발이다. 용기 파열 뒤 화구, 압력파, 용기 파편이 함께 위험을 만든다.
 
 ## 판별 기준
 

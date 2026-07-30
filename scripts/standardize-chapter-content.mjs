@@ -87,7 +87,15 @@ const isAlreadyStandard = (headings) =>
   headings[2] === '시험 포인트' &&
   headings[3] === '자주 틀리는 포인트';
 
-const emphasizeDefinition = (content) => {
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const frontmatterString = (frontmatter, key) => {
+  const match = frontmatter.match(new RegExp(`^${key}:\\s*(.+?)\\s*$`, 'm'));
+  if (!match) return '';
+  return match[1].trim().replace(/^(["'])(.*)\1$/, '$2');
+};
+
+const emphasizeDefinition = (content, frontmatter) => {
   const paragraphMatch = content.match(/^([^\r\n]+)(\r?\n|$)/);
   if (!paragraphMatch) return content;
 
@@ -96,9 +104,20 @@ const emphasizeDefinition = (content) => {
     return content;
   }
 
-  const definitionMatch = paragraph.match(
-    /^([가-힣A-Za-z0-9·/()＋+\-–—\s]{1,40}?)(은|는|이란|란)\s/,
-  );
+  const title = frontmatterString(frontmatter, 'title');
+  const titleWithoutParenthetical = title.replace(/\s*\([^)]*\)\s*$/, '').trim();
+  const candidates = [...new Set([title, titleWithoutParenthetical])]
+    .map((candidate) => candidate.replace(/\s+\(/g, '(').trim())
+    .filter(Boolean)
+    .sort((left, right) => right.length - left.length);
+
+  const definitionMatch = candidates
+    .map((candidate) =>
+      paragraph.match(
+        new RegExp(`^(${escapeRegExp(candidate)}(?:\\s*\\([^)]*\\))?)(은|는|이란|란)\\s`),
+      ),
+    )
+    .find(Boolean);
   if (!definitionMatch) return content;
 
   const term = definitionMatch[1].trim();
@@ -238,7 +257,7 @@ for (const file of walk(CHAPTER_ROOT).filter((entry) => entry.endsWith('.md'))) 
   }
 
   const coreHeading = /핵심 공식/.test(core.heading) ? '핵심 공식' : '핵심 개념';
-  const coreContent = emphasizeLabels(emphasizeDefinition(core.content));
+  const coreContent = emphasizeLabels(emphasizeDefinition(core.content, frontmatter));
   const standardizedBody = [
     parsed.prefix.trim(),
     `## ${coreHeading}\n\n${coreContent}`,
