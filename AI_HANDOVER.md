@@ -15,7 +15,7 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-07-30 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.1
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-07-30 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.2
 
 ---
 
@@ -1692,3 +1692,100 @@ READY 4개 작성 후 남은 미시작 55개의 최신 분류:
 - 이번 갱신은 `AI_HANDOVER.md` 한 파일만 변경한다.
 - 구현 파일·데이터·동결 키·관계·production 설정은 변경하지 않는다.
 - 이 문서 변경의 Commit·Push는 별도 Owner 승인 전까지 수행하지 않는다.
+
+## 전체 챕터 UX 표준화·수익화·분석·SEO 통합 게이트 (2026-07-30)
+
+이 절은 Owner가 승인한 전체 챕터 UX 표준화 작업과, 별도 웹 작업으로 추가된 AdSense·검색엔진·GA4 변경을 로컬 `main`에서 비파괴 병합한 현재 상태를 기록한다. 이 절의 기준선이 앞선 8개 챕터 파일럿 및 후속 작업 안내보다 우선한다.
+
+### 1. 전체 챕터 UX 표준화
+
+- 파일럿 이후 남은 공개 대상 중 58개 챕터를 과목별 독립 커밋으로 보정했다.
+  - 인간공학 6개
+  - 안전관리 4개
+  - 화학 6개
+  - 건설 10개
+  - 전기 19개
+  - 기계 13개
+- 대상 58개는 다음 4개 H2 구조로 통일했다.
+  - 핵심 개념 또는 핵심 공식
+  - 판별·계산·절차 등 챕터별 기준
+  - 시험 포인트
+  - 자주 틀리는 포인트
+- `slug`, `subject_id`, `questions`, `related`와 기출↔챕터 관계는 변경하지 않았다.
+- 구조 검사 결과 대상 58개 불일치 0건, 동결 필드 변경 0건, question 연결 오류 0건이다.
+- 전체 빌드는 `209 page(s) built`로 성공했다.
+- 데스크톱·모바일 QA에서 대상 58개 구조와 가로 넘침을 확인했고 특이사항은 없었다.
+- 관련 로컬 커밋:
+  - `32cda44` — `content: improve remaining ergonomics chapters`
+  - `830a7b5` — `content: improve remaining safety management chapters`
+  - `a0f65f7` — `content: improve remaining chemical chapters`
+  - `7001ae3` — `content: improve remaining construction chapters`
+  - `290d172`, `a843732` — 전기 챕터 배치
+  - `a0170d4`, `cc8ebbf` — 기계 챕터 배치
+  - `6be8700` — 연간율 챕터 구조 보정
+
+### 2. 원격 수익화·분석·SEO 변경 통합
+
+- 로컬 콘텐츠 이력과 원격 변경이 서로 분기된 상태에서 `origin/main`을 merge 방식으로 통합했다.
+- 병합 충돌과 중복 변경 파일은 없었으며, 양쪽 커밋 이력을 모두 유지했다.
+- 통합 커밋:
+  - `760f26d83bcca174a4f436661f65be0f004f96b7`
+  - 부모: `6be8700`, `f0fe807`
+
+#### AdSense
+
+- 공통 레이아웃에 AdSense 연결 스크립트가 추가됐다.
+- 게시자 ID: `ca-pub-8799723694540263`.
+- `public/ads.txt`에 승인된 판매자 레코드가 추가됐다.
+- 개인정보처리방침은 광고 사용을 반영해 보정됐다.
+- Owner가 AdSense 외부 계정 등록을 진행했다.
+- AdSense 심사 승인 여부와 실제 광고 송출은 아직 검증하지 않았다.
+
+#### Google Analytics 4
+
+- 공통 레이아웃에 GA4 태그가 추가됐다.
+- 측정 ID: `G-0CB3KFL9FJ`.
+- 개인정보처리방침에 Google Analytics 사용을 고지했다.
+- 로컬 렌더링에서 외부 스크립트와 초기화 코드 삽입을 확인했다.
+- production의 실시간 이벤트 수신 여부는 Push·배포 후 별도 확인이 필요하다.
+
+#### 검색엔진·SEO
+
+- Owner가 Google Search Console 외부 등록을 진행했다고 전달했다.
+- 저장소에는 custom domain 기준 canonical, sitemap, robots, Open Graph, Twitter Card, WebSite·Article·Breadcrumb 구조화 데이터가 반영됐다.
+- 네이버 검색 노출을 위한 사이트 소유 확인 메타 태그가 추가됐다.
+- 빌드 결과물을 검사하는 `check:seo` 명령과 PR용 SEO 검사 workflow가 추가됐다.
+- 최근 SEO 검사 결과:
+  - HTML 209개
+  - sitemap URL 210개
+  - 오류 0개
+  - 경고 196개
+- 경고 196개는 짧은 meta description 개선 권고이며 현재 배포 차단 오류는 아니다.
+- Search Console 내부의 소유권 상태·색인 상태·sitemap 처리 결과는 저장소만으로 확인할 수 없으므로 외부 계정 또는 production에서 별도 확인해야 한다.
+
+### 3. 통합 검증
+
+- 전체 빌드: 성공, `209 page(s) built`.
+- `git diff --check`: 통과.
+- 로컬 브라우저 QA:
+  - 홈 데스크톱 렌더링 정상.
+  - 대표 챕터 모바일 390px 렌더링 정상.
+  - 관련 챕터 카드 폭 정상.
+  - 개인정보처리방침 모바일 렌더링 정상.
+  - 가로 넘침 없음.
+  - 브라우저 오류 로그 없음.
+  - AdSense·GA4·canonical·네이버 인증·JSON-LD 삽입 확인.
+- 전체 페이지 모바일 캡처에서 일시적인 stitching 표시 이상이 있었으나, 일반 viewport 캡처와 실제 요소 치수 대조에서는 레이아웃 문제가 재현되지 않았다.
+
+### 4. 현재 상태와 남은 확인
+
+- 이 문서 갱신 직전 로컬 `main`은 `origin/main`보다 10커밋 ahead이고 working tree는 문서 변경 전 clean이었다.
+- Owner가 이 문서 갱신과 `main` Push를 명시 승인했다.
+- 이 문서 커밋과 Push 이후 원격 기준선 및 GitHub Pages 배포 결과를 다시 확인한다.
+- 배포 후 필수 production QA:
+  - 최신 챕터 구조와 모바일 레이아웃
+  - AdSense·GA4 태그와 `ads.txt`
+  - canonical·구조화 데이터·sitemap
+  - GA4 실시간 이벤트 수신
+- AdSense 승인·실제 광고 게재, Search Console 색인·sitemap 처리, GA4 이벤트 수신은 각각의 외부 서비스 증거가 확인되기 전까지 완료로 확정하지 않는다.
+- 기존 동결 키·관계 데이터와 `R3-REV4-FIX`의 `PLANNING_ONLY` 상태는 변경하지 않는다.
