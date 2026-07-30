@@ -51,6 +51,13 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8799723694540263"
       crossorigin="anonymous"
     ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CB3KFL9FJ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0CB3KFL9FJ');
+    </script>
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
     <meta property="og:locale" content="ko_KR" />
