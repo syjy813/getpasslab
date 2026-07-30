@@ -4,6 +4,7 @@ import { SUBJECTS, type SubjectId } from '../config/subjects';
 import { withBase } from '../config/url';
 import ChapterBadges from '../components/ChapterBadges.astro';
 import type { ChapterBadge } from '../utils/chapterBadges';
+import { SITE } from '../config/site';
 interface SideCh { slug: string; title: string; group: string; }
 interface Props {
   title: string; summary: string; subject_id: number; group: string;
@@ -18,8 +19,45 @@ const fullPageTitle = `${title} — ${subject.name} — 산업안전기사 필�
 const pageTitle = fullPageTitle.length <= 60
   ? fullPageTitle
   : `${title} — 산업안전기사 필기 | GetPassLab`;
+const siteOrigin = Astro.site ?? SITE.url;
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const breadcrumbItems = [
+  { name: '홈', url: new URL('/', siteOrigin).toString() },
+  { name: '산업안전기사', url: new URL('/industrial-safety/', siteOrigin).toString() },
+  { name: '필기', url: new URL('/industrial-safety/written/', siteOrigin).toString() },
+  { name: subject.name, url: new URL(`/industrial-safety/written/${subject.slug}/`, siteOrigin).toString() },
+  { name: title, url: canonicalUrl },
+];
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'LearningResource',
+    name: title,
+    description: summary,
+    url: canonicalUrl,
+    inLanguage: 'ko-KR',
+    educationalLevel: '산업안전기사 필기',
+    learningResourceType: '핵심요약',
+    about: subject.name,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: SITE.name,
+      url: SITE.url,
+    },
+  },
+];
 ---
-<BaseLayout title={pageTitle} description={summary}>
+<BaseLayout title={pageTitle} description={summary} ogType="article" structuredData={structuredData}>
   <div class="chapter-wrap">
     <aside class="chapter-side">
       <div class="side-sticky">
