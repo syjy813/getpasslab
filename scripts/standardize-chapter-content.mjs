@@ -81,6 +81,41 @@ const sectionRole = (heading) => {
   return 'criteria';
 };
 
+const regroupSections = (sections) => {
+  const grouped = {
+    criteria: sections.filter((section) => sectionRole(section.heading) === 'criteria'),
+    exam: sections.filter((section) => sectionRole(section.heading) === 'exam'),
+    mistake: sections.filter((section) => sectionRole(section.heading) === 'mistake'),
+  };
+
+  const moveSection = (from, to, predicate) => {
+    const index = grouped[from].findIndex((section) => predicate.test(section.heading));
+    if (index === -1 || grouped[from].length === 1) return false;
+    grouped[to].push(...grouped[from].splice(index, 1));
+    return true;
+  };
+
+  if (grouped.exam.length === 0) {
+    moveSection('mistake', 'exam', /^해석\s*\/\s*함정$/) ||
+      moveSection(
+        'criteria',
+        'exam',
+        /^(?:시험.*판단.*기준|계산 예시|기출 기준|해석\s*\/\s*의미)$/,
+      );
+  }
+
+  if (grouped.mistake.length === 0) {
+    moveSection(
+      'criteria',
+      'mistake',
+      /부정형|인접 개념|유사 이론|관련 챕터 경계|피뢰침과의 구분/,
+    ) ||
+      moveSection('criteria', 'mistake', /^(?:시험 판단 기준|판단 기준|적용 판단)$/);
+  }
+
+  return grouped;
+};
+
 const isAlreadyStandard = (headings) =>
   headings.length === 4 &&
   /^(핵심 개념|핵심 공식)$/.test(headings[0]) &&
@@ -206,8 +241,14 @@ const assertUnchangedContent = (beforeBody, afterBody, file) => {
     throw new Error(`[${file}] 제목·강조 외 본문 문장이 달라졌습니다.`);
   }
 
-  if (JSON.stringify(numericTokens(beforeBody)) !== JSON.stringify(numericTokens(afterBody))) {
-    throw new Error(`[${file}] 숫자·단위 토큰이 달라졌습니다.`);
+  const beforeNumericTokens = numericTokens(beforeBody);
+  const afterNumericTokens = numericTokens(afterBody);
+  if (JSON.stringify(beforeNumericTokens) !== JSON.stringify(afterNumericTokens)) {
+    throw new Error(
+      `[${file}] 숫자·단위 토큰이 달라졌습니다.\n` +
+        `before=${JSON.stringify(beforeNumericTokens)}\n` +
+        `after=${JSON.stringify(afterNumericTokens)}`,
+    );
   }
 };
 
@@ -242,11 +283,7 @@ for (const file of walk(CHAPTER_ROOT).filter((entry) => entry.endsWith('.md'))) 
   }
 
   const [core, ...remaining] = parsed.sections;
-  const grouped = {
-    criteria: remaining.filter((section) => sectionRole(section.heading) === 'criteria'),
-    exam: remaining.filter((section) => sectionRole(section.heading) === 'exam'),
-    mistake: remaining.filter((section) => sectionRole(section.heading) === 'mistake'),
-  };
+  const grouped = regroupSections(remaining);
 
   const missingRoles = Object.entries(grouped)
     .filter(([, sections]) => sections.length === 0)
@@ -258,9 +295,12 @@ for (const file of walk(CHAPTER_ROOT).filter((entry) => entry.endsWith('.md'))) 
 
   const coreHeading = /핵심 공식/.test(core.heading) ? '핵심 공식' : '핵심 개념';
   const coreContent = emphasizeLabels(emphasizeDefinition(core.content, frontmatter));
+  const coreBlock = /\d/.test(core.heading)
+    ? `## ${coreHeading}\n\n### ${core.heading}\n\n${coreContent}`
+    : `## ${coreHeading}\n\n${coreContent}`;
   const standardizedBody = [
     parsed.prefix.trim(),
-    `## ${coreHeading}\n\n${coreContent}`,
+    coreBlock,
     formatGroup(criteriaHeading(frontmatter, grouped.criteria), grouped.criteria),
     formatGroup('시험 포인트', grouped.exam),
     formatGroup('자주 틀리는 포인트', grouped.mistake),
