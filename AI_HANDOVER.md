@@ -15,7 +15,7 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-07-30 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.2
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-07-30 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.3
 
 ---
 
@@ -25,7 +25,8 @@
 
 - **스택**: Astro 5 + Markdown + GitHub Pages. **서버 없음, DB 없음, API 없음.** 모든 게 빌드 타임에 끝난다.
 - **목적**: 1순위 = **이직 포트폴리오**, 2순위 = AdSense 수익.
-- **현재**: 출시 콘텐츠(챕터 82개) 완성. **출시 절차(정책 페이지·SEO·도메인·AdSense)가 남았다.**
+- **현재**: 공개 챕터 198개와 정적 페이지 209개를 `getpasslab.co.kr` production에 배포했다. HTTPS·정책·SEO·AdSense·GA4 코드 통합은 완료됐고, 외부 서비스의 승인·색인·실시간 수신 상태는 별도 확인이 남았다.
+- **최신 동적 상태**: 문서 맨 아래의 `공개 챕터 UX 전수 정리·production 배포 게이트 완료` 절을 우선한다.
 
 **🚨 절대 하지 마라 (이것만 기억해도 대형 사고 방지):**
 1. `slug` / `subject_id` / `question_id` **변경·생성 금지** (동결 키)
@@ -1799,3 +1800,103 @@ READY 4개 작성 후 남은 미시작 55개의 최신 분류:
   - 브라우저 오류·경고 로그 없음.
 - AdSense 승인·실제 광고 게재, Search Console 색인·sitemap 처리, GA4 실시간 이벤트 수신은 각각의 외부 서비스 증거가 확인되기 전까지 완료로 확정하지 않는다.
 - 기존 동결 키·관계 데이터와 `R3-REV4-FIX`의 `PLANNING_ONLY` 상태는 변경하지 않는다.
+
+## 공개 챕터 UX 전수 정리·production 배포 게이트 완료 (2026-07-30)
+
+이 절은 전체 챕터 UX 적용 범위와 production 상태에 관해 위의 이전 기록보다 최신이다. ChatGPT 기술 검토와 Owner의 다음 단계 진행 승인을 받은 검증 사실만 기록한다.
+
+### 1. 배포 기준
+
+- 브랜치: `main`.
+- production 기준 커밋:
+  - `a4cce168a7a37d528b41f104047adf52a01cdc1a`
+  - `fix: prevent severity rate fraction overlap`
+- GitHub Pages:
+  - workflow: `Deploy to GitHub Pages`
+  - run: `30553447087`
+  - 결과: `completed / success`
+- production URL: `https://getpasslab.co.kr/`.
+- 배포 확인 시점에는 로컬 `main`, `origin/main`, 원격 `main`이 위 커밋으로 일치했고 working tree가 깨끗했다.
+
+### 2. 전체 챕터 UX 적용 범위
+
+- 챕터 소스 파일: 250개.
+- 공개 완료 챕터: 198개.
+- 공개 챕터 198개 모두 다음 네 역할의 본문 구조를 갖는다.
+  - 핵심 개념 또는 핵심 공식
+  - 판별·계산·절차 기준
+  - 시험 포인트
+  - 자주 틀리는 포인트
+- 제목 적용 방식:
+  - 공통 제목 세트를 사용하는 챕터: 133개.
+  - 앞선 검토에서 승인한 역할별 제목을 유지하는 챕터: 65개.
+- `48069e0` 이후 추가 정리 범위:
+  - 챕터 125개와 자동화 도구 1개.
+  - 화학설비 24개, 건설안전 13개, 전기안전 22개, 인간공학 28개, 기계안전 17개, 안전관리 21개.
+  - 도구: `scripts/standardize-chapter-content.mjs`.
+- 동결된 `slug`, `subject_id`, 기출 관계와 frontmatter는 변경하지 않았다.
+- 검증 결과:
+  - frontmatter 불일치 0건.
+  - 숫자 토큰 불일치 0건.
+  - 네 역할 구조 불일치 0건.
+- 강도율 공식은 모바일 분수 겹침을 해소하기 위해 표시 문법만 `\frac{\small ...}`에서 `\dfrac{\text{...}}` 형태로 조정했다. 공식의 의미와 수치는 변경하지 않았다.
+
+### 3. 빌드·데이터·SEO 검증
+
+- 전체 빌드: 성공, `209 page(s) built`.
+- SEO 검사:
+  - HTML 209개.
+  - sitemap URL 210개.
+  - 오류 0개.
+  - 경고 196개.
+- 소스 검사:
+  - 중복 slug 0건.
+  - 중복 basename 0건.
+  - NUL 문자 0건.
+- Astro 증분 콘텐츠 동기화 과정에서 duplicate-id 경고가 출력됐지만 소스 slug와 basename 중복은 재현되지 않았다. 원인은 확정하지 않았으며 별도 기술 부채로 남긴다.
+
+### 4. production 화면 QA
+
+- 네트워크:
+  - HTTP 접속은 HTTPS로 `301` 전환.
+  - HTTPS 대표 페이지는 `200 OK`.
+- 확인 viewport:
+  - 데스크톱 `1280×720`.
+  - 모바일 `390×844`.
+- 대표 확인 챕터:
+  - 강도율
+  - 방폭 전기기기 피팅
+  - 안전보건표지
+  - 이상기체 상태방정식
+  - 안전난간 구조
+- 확인 결과:
+  - 가로 넘침 없음.
+  - 표의 모바일 반응형 표시 정상.
+  - 모바일에서 본문·기출 이력·관련 챕터·카드 폭이 모두 327px로 일치.
+  - 강도율 분수의 분자·분모·분수선 겹침 없음.
+  - 브라우저 콘솔 오류 0건.
+- production 캡처 저장은 브라우저 도구의 시간 초과와 탭 종료로 완료하지 못했다. 다만 같은 세션의 실제 DOM·레이아웃 치수와 화면 상태 대조는 완료했다.
+
+### 5. 변경하지 않은 기존 관계 불일치
+
+다음 파일은 폴더 분류와 `subject_id`가 서로 다르지만 기존 동결 관계이므로 이번 작업에서 수정하지 않았다.
+
+- `construction/vibration-diagnosis.md` → `subject_id: 3`
+- `mechanical/cavitation.md` → `subject_id: 5`
+- `mechanical/surging-phenomenon.md` → `subject_id: 5`
+- `safety-management/risk-assessment-procedure.md` → `subject_id: 2`
+
+변경하려면 Owner 판단과 동결 키·관계 변경 절차가 필요하다.
+
+### 6. 미확인 상태와 다음 작업
+
+- 저장소와 production 화면만으로 다음 외부 상태는 확정하지 않는다.
+  - AdSense 심사 승인과 실제 광고 송출.
+  - Google Search Console 색인과 sitemap 처리.
+  - GA4 실시간 이벤트 수신.
+- 법령 문구의 최신성 전체 대조는 이번 UX 구조 작업 범위가 아니므로 별도 검증이 필요하다.
+- 다음 권장 작업:
+  1. SEO description 경고 196건을 별도 배치로 분류·개선한다.
+  2. AdSense·Search Console·GA4 외부 상태를 각 서비스 화면에서 확인한다.
+  3. 기존 폴더·과목 관계 불일치는 Owner가 변경 필요성을 결정한다.
+- 완료된 전체 챕터 UX 배치를 다시 수행하지 않는다.
