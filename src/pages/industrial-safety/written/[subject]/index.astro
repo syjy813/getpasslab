@@ -30,7 +30,7 @@ const chapterCards = chapters.map(chapter => ({
 }));
 const groups = [...new Set(chapters.map(c => c.data.group))];
 ---
-<BaseLayout title={`${subject.name} — 산업안전기사 필기 — GetPassLab`} description={`산업안전기사 필기 ${subjectId}과목 ${subject.name} 챕터별 핵심요약.`}>
+<BaseLayout title={`${subject.name} — 산업안전기사 필기 — GetPassLab`} description={`산업안전기사 필기 ${subjectId}과목 ${subject.name}의 공개 챕터와 핵심 개념, 계산·판별 기준, 기출 포인트를 과목별로 정리합니다.`}>
   <section class="section container" style="padding-top:var(--space-8)">
     <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
       <a href={withBase('/')}>홈</a><span class="sep">/</span>

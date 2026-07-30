@@ -19,6 +19,17 @@ const fullPageTitle = `${title} — ${subject.name} — 산업안전기사 필�
 const pageTitle = fullPageTitle.length <= 60
   ? fullPageTitle
   : `${title} — 산업안전기사 필기 | GetPassLab`;
+const normalizedSummary = summary.replace(/[.!?]+$/u, '').trim();
+const typeBadge = badges.find((badge) => badge.tone === 'type')?.label;
+const hasLegalBadge = badges.some((badge) => badge.tone === 'legal');
+const seoDetail = hasLegalBadge
+  ? '법령 기준과 적용 조건, 시험 포인트와 주의사항을 정리합니다.'
+  : typeBadge === '계산'
+    ? '계산 공식과 적용 순서, 단위·조건 및 자주 틀리는 포인트를 정리합니다.'
+    : typeBadge === '절차'
+      ? '작업 순서와 판단 기준, 시험 포인트 및 주의사항을 정리합니다.'
+      : '핵심 정의와 판별 기준, 시험 포인트와 자주 틀리는 내용을 정리합니다.';
+const seoDescription = `${title}: ${normalizedSummary}. 산업안전기사 필기 ${subject.name} 기출을 바탕으로 ${seoDetail}`;
 const siteOrigin = Astro.site ?? SITE.url;
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
 const breadcrumbItems = [
@@ -43,7 +54,7 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'LearningResource',
     name: title,
-    description: summary,
+    description: seoDescription,
     url: canonicalUrl,
     inLanguage: 'ko-KR',
     educationalLevel: '산업안전기사 필기',
@@ -57,7 +68,7 @@ const structuredData = [
   },
 ];
 ---
-<BaseLayout title={pageTitle} description={summary} ogType="article" structuredData={structuredData}>
+<BaseLayout title={pageTitle} description={seoDescription} ogType="article" structuredData={structuredData}>
   <div class="chapter-wrap">
     <aside class="chapter-side">
       <div class="side-sticky">

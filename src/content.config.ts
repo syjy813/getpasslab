@@ -14,7 +14,7 @@ const chapters = defineCollection({
       z.tuple([chapterTypeTag]),
       z.tuple([chapterTypeTag, z.literal('법령')]),
     ]),
-    summary: z.string(),            // 한 줄 요약 = 목록 미리보기 + meta description
+    summary: z.string(),            // 한 줄 요약 = 목록 미리보기 + meta description 핵심 원본
     questions: z.array(z.string()).default([]),  // 기출 문제 ID 참조 (섹션 4 자동 렌더)
     related: z.array(z.string()).default([]),    // 관련 챕터 slug (섹션 5 수동 지정분)
     examComment: z.string().optional(),          // 섹션 4 출제 경향 코멘트 (챕터당 1줄)

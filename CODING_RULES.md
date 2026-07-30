@@ -796,20 +796,22 @@ find dist -path "*written*" -name "index.html" | wc -l
 
 ### 10.2 `summary` 필드는 SEO 자산이다
 
-`frontmatter.summary`가 **3곳**에서 쓰인다:
-1. `<meta name="description">`
+`frontmatter.summary`가 **3곳의 핵심 원본**으로 쓰인다:
+1. `<meta name="description">`의 주제별 핵심 문구
 2. 챕터 카드의 한 줄 요약
 3. 챕터 헤더
 
 ```astro
-<meta name="description" content={summary} />   <!-- 실제 코드 -->
+const seoDescription = `${title}: ${summary}. 산업안전기사 필기 ${subject.name} 기출을 바탕으로 ${seoDetail}`;
+<meta name="description" content={seoDescription} />   <!-- 실제 코드 -->
 ```
 
 | 규칙 | 근거 |
 |------|------|
-| **`summary`는 100~150자** | meta description의 검색 결과 표시 길이 |
+| **화면용 `summary`는 짧고 정확하게** | 카드와 챕터 헤더의 가독성 유지 |
+| **meta description은 50~160자** | `title`·`summary`·과목·챕터 유형을 조합해 검색 결과 표시 길이와 페이지별 고유성 확보 |
 | **핵심 키워드를 앞쪽에** | 잘려도 살아남게 |
-| **254개를 수동 작성할 수 없다** | 그래서 `summary`가 자동으로 meta가 되게 설계했다. **`summary`를 대충 쓰면 SEO가 대충 된다** |
+| **챕터별 SEO 문구를 별도 저장하지 않는다** | 이중 원본을 만들지 않고 `summary`에서 자동 파생 |
 
 ### 10.3 `<title>` 규칙 — ⚠️ **현재 불일치**
 

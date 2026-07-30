@@ -417,7 +417,7 @@ const subject = SUBJECTS[subject_id as SubjectId];
 ```
 
 **주목할 점 3가지**
-1. **`<title>`과 `<meta description>`이 frontmatter에서 자동 생성된다.** 254개 챕터의 SEO 메타를 수동 작성할 수 없으므로 **`summary` 필드가 곧 meta description**이다. → **`summary`는 SEO 자산이다. 대충 쓰면 안 된다.**
+1. **`<title>`과 `<meta description>`이 frontmatter에서 자동 생성된다.** 챕터의 meta description은 `title`·`summary`·과목·챕터 유형을 조합해 만들며, 별도 SEO 문구를 저장하지 않는다. → **`summary`는 SEO 핵심 원본이다. 대충 쓰면 안 된다.**
 2. **`SUBJECTS[subject_id]`로 과목명을 조회**한다. 과목명이 바뀌면 `subjects.ts` 한 곳만 고치면 전 페이지에 반영된다.
 3. 이후 버전에서 `sideChapters` prop이 추가되어 **사이드바**를 렌더한다.
 
@@ -879,7 +879,7 @@ const chapters = defineCollection({
     subject_id:  z.number().min(1).max(6),        // 동결 키
     group:       z.string(),
     tags:        z.array(z.string()).default([]),
-    summary:     z.string(),                      // = 목록 미리보기 + meta description
+    summary:     z.string(),                      // = 목록 미리보기 + meta description 핵심 원본
     questions:   z.array(z.string()).default([]), // 기출 ID 참조 (섹션 4 자동 렌더)
     related:     z.array(z.string()).default([]), // 관련 챕터 slug (섹션 5 수동분)
     examComment: z.string().optional(),           // 섹션 4 출제 경향 코멘트 (챕터당 1줄)
