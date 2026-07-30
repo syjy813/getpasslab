@@ -15,7 +15,7 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-07-30 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.3
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-07-31 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.4
 
 ---
 
@@ -26,7 +26,7 @@
 - **스택**: Astro 5 + Markdown + GitHub Pages. **서버 없음, DB 없음, API 없음.** 모든 게 빌드 타임에 끝난다.
 - **목적**: 1순위 = **이직 포트폴리오**, 2순위 = AdSense 수익.
 - **현재**: 공개 챕터 198개와 정적 페이지 209개를 `getpasslab.co.kr` production에 배포했다. HTTPS·정책·SEO·AdSense·GA4 코드 통합은 완료됐고, 외부 서비스의 승인·색인·실시간 수신 상태는 별도 확인이 남았다.
-- **최신 동적 상태**: 문서 맨 아래의 `공개 챕터 UX 전수 정리·production 배포 게이트 완료` 절을 우선한다.
+- **최신 동적 상태**: 문서 맨 아래의 `SEO description 전수 개선·production 배포 게이트 완료` 절을 우선한다.
 
 **🚨 절대 하지 마라 (이것만 기억해도 대형 사고 방지):**
 1. `slug` / `subject_id` / `question_id` **변경·생성 금지** (동결 키)
@@ -1896,7 +1896,85 @@ READY 4개 작성 후 남은 미시작 55개의 최신 분류:
   - GA4 실시간 이벤트 수신.
 - 법령 문구의 최신성 전체 대조는 이번 UX 구조 작업 범위가 아니므로 별도 검증이 필요하다.
 - 다음 권장 작업:
-  1. SEO description 경고 196건을 별도 배치로 분류·개선한다.
+  1. SEO description 경고 196건 개선은 다음 최신 게이트에서 완료됐다.
   2. AdSense·Search Console·GA4 외부 상태를 각 서비스 화면에서 확인한다.
   3. 기존 폴더·과목 관계 불일치는 Owner가 변경 필요성을 결정한다.
 - 완료된 전체 챕터 UX 배치를 다시 수행하지 않는다.
+
+## SEO description 전수 개선·production 배포 게이트 완료 (2026-07-31)
+
+이 절은 SEO description 경고와 현재 production 기준에 관해 위의 이전 기록보다 최신이다. ChatGPT 기술 검토와 Owner의 다음 단계 진행 승인을 받은 검증 사실만 기록한다.
+
+### 1. 구현 기준
+
+- production 기준 커밋:
+  - `5ea53cb0c0e448f56c81be3d1ae52a406c66ecf2`
+  - `feat: improve SEO meta descriptions`
+- 챕터 화면에 표시되는 기존 `summary`는 변경하지 않았다.
+- 챕터 meta description은 다음 기존 데이터에서 자동 파생한다.
+  - 챕터명
+  - `summary`
+  - 과목명
+  - 개념·계산·절차·법령 유형
+- 챕터별 SEO 문구를 별도 필드로 저장하지 않아 이중 원본을 만들지 않는다.
+- 개념·계산·절차·법령 유형별로 서로 다른 학습 범위 문장을 사용한다.
+- 산업안전기사·필기·과목 목록·개인정보처리방침·이용약관의 짧은 description도 각 페이지 목적에 맞게 보정했다.
+- `ARCHITECTURE.md`, `CODING_RULES.md`, `src/content.config.ts`의 설명을 실제 파생 방식과 일치시켰다.
+
+### 2. 로컬 검증
+
+- 전체 빌드: 성공, `209 page(s) built`.
+- SEO 검사:
+  - HTML 209개.
+  - sitemap URL 210개.
+  - 경고 196개 → 0개.
+  - 오류 0개.
+- 공개 챕터 198개 description:
+  - 최소 86자.
+  - 최대 155자.
+  - 50자 미만 0건.
+  - 160자 초과 0건.
+  - 중복 0건.
+- 챕터 본문과 frontmatter, `slug`, `subject_id`, 기출 관계 변경 0건.
+- `git diff --check` 통과.
+- 기존 `public-question-filter`의 `review=jpg 확필`·blank choice 제외 경고는 유지되며 이번 SEO 작업과 무관하다.
+
+### 3. Push·GitHub Pages 배포
+
+- `origin/main` Push 성공.
+- GitHub Pages:
+  - workflow: `Deploy to GitHub Pages`
+  - run: `30555901971`
+  - 기준 SHA: `5ea53cb0c0e448f56c81be3d1ae52a406c66ecf2`
+  - 결과: `completed / success`
+- 배포 검증 후 로컬 `main`, `origin/main`, 원격 `main`이 기준 커밋으로 일치했고 working tree가 깨끗했다.
+
+### 4. production 메타데이터 검증
+
+- 대표 확인 페이지 6개:
+  - 계산 챕터: 이상기체 법칙.
+  - 법령 챕터: 안전난간 구조 및 설치요건.
+  - 개념 챕터: THERP·휴먼에러 정량화.
+  - 화학설비 안전관리 과목 목록.
+  - 개인정보처리방침.
+  - 이용약관.
+- 확인 결과:
+  - 6개 페이지 모두 `200 OK`.
+  - description 길이 68~155자.
+  - 과목·유형별 문구 정상 반영.
+  - meta description, OG description, Twitter description, `LearningResource` 구조화 데이터 description 일치.
+  - HTTP 접속은 HTTPS로 `301` 전환.
+- 사용자에게 보이는 챕터 요약과 본문은 변경되지 않았으므로 별도 화면 레이아웃 QA는 수행하지 않았다.
+
+### 5. 남은 외부 확인과 다음 작업
+
+- 다음 외부 상태는 저장소와 production HTML만으로 확정하지 않는다.
+  - Google Search Console sitemap 처리와 색인 상태.
+  - GA4 실시간 이벤트 수신.
+  - AdSense 심사 승인과 실제 광고 송출.
+- 다음 권장 순서:
+  1. Search Console에서 sitemap 처리·색인 상태를 확인하고 중요 URL 재크롤링 필요성을 판단한다.
+  2. GA4 실시간 보고서에서 production 이벤트 수신을 확인한다.
+  3. AdSense 심사·광고 송출 상태를 확인한다.
+  4. 기존 폴더·과목 관계 불일치는 Owner가 변경 필요성을 결정한다.
+- 완료된 전체 챕터 UX 및 SEO description 배치를 다시 수행하지 않는다.
