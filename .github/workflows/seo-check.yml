@@ -32,3 +32,15 @@ jobs:
 
       - name: Validate public content
         run: npm run check:public-content
+
+      - name: Package content snapshot
+        if: always()
+        run: tar -czf content-snapshot.tar.gz src/content/chapters src/data/questions.json
+
+      - name: Upload content snapshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-snapshot
+          path: content-snapshot.tar.gz
+          retention-days: 1
