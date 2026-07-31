@@ -19,20 +19,35 @@ jobs:
           ref: agent/public-id-guard
           fetch-depth: 0
 
-      - name: Rebuild patch
+      - name: Wait for complete reviewed patch
+        id: patch
         run: |
-          cat scripts/content-cleanup.part-* | base64 -d | bunzip2 > /tmp/content-cleanup.patch
+          if [ -f scripts/content-cleanup-v2.part-04 ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Rebuild and verify reviewed patch
+        if: steps.patch.outputs.ready == 'true'
+        run: |
+          cat scripts/content-cleanup-v2.part-* | base64 -d > /tmp/content-cleanup.patch.bz2
+          bzip2 -tv /tmp/content-cleanup.patch.bz2
+          bunzip2 -c /tmp/content-cleanup.patch.bz2 > /tmp/content-cleanup.patch
           git apply --check /tmp/content-cleanup.patch
 
       - name: Apply content cleanup
+        if: steps.patch.outputs.ready == 'true'
         run: |
           git apply /tmp/content-cleanup.patch
-          git rm scripts/content-cleanup.part-*
+          git rm -f scripts/content-cleanup.part-* scripts/content-cleanup-v2.part-*
+          git rm -f .github/workflows/apply-content-cleanup.yml
 
       - name: Commit content cleanup
+        if: steps.patch.outputs.ready == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/content/chapters
+          git add -A
           git commit -m "content: clean public exam notes"
           git push origin HEAD:agent/public-id-guard
