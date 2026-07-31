@@ -1,0 +1,38 @@
+name: Apply public content cleanup
+
+on:
+  push:
+    branches:
+      - agent/public-id-guard
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: agent/public-id-guard
+          fetch-depth: 0
+
+      - name: Rebuild patch
+        run: |
+          cat scripts/content-cleanup.part-* | base64 -d | bunzip2 > /tmp/content-cleanup.patch
+          git apply --check /tmp/content-cleanup.patch
+
+      - name: Apply content cleanup
+        run: |
+          git apply /tmp/content-cleanup.patch
+          git rm scripts/content-cleanup.part-*
+
+      - name: Commit content cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/chapters
+          git commit -m "content: clean public exam notes"
+          git push origin HEAD:agent/public-id-guard
