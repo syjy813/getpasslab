@@ -4,9 +4,10 @@ import path from 'node:path';
 const DIST_DIR = path.resolve('dist');
 const CHAPTER_DIR = path.resolve('src/content/chapters');
 const INTERNAL_QUESTION_ID = /\b\d{8}_\d{3}\b/g;
+const INTERNAL_QUESTION_ALIAS = /\bq\d{8}\b/gi;
 const UNRENDERED_EMPHASIS = /(?:\*\*[^*\n]{1,200}\*\*|__[^_\n]{1,200}__)/g;
 const INTERNAL_COPY_RULES = [
-  { label: 'PDF 원문', pattern: /PDF\s*원문/gi },
+  { label: 'PDF', pattern: /\bPDF\b/gi },
   { label: 'JSON', pattern: /\bJSON\b/gi },
   { label: 'question_id', pattern: /\bquestion_id\b/gi },
   { label: 'review 상태', pattern: /\breview\s*:/gi },
@@ -93,6 +94,11 @@ for (const file of htmlFiles) {
   const ids = uniqueMatches(text, INTERNAL_QUESTION_ID);
   if (ids.length > 0) {
     errors.push(`${publicPath}: 공개 본문에 내부 question_id 노출 (${ids.join(', ')})`);
+  }
+
+  const aliases = uniqueMatches(text, INTERNAL_QUESTION_ALIAS);
+  if (aliases.length > 0) {
+    errors.push(`${publicPath}: 공개 본문에 내부 기출 별칭 노출 (${aliases.join(', ')})`);
   }
 
   const emphasis = uniqueMatches(text, UNRENDERED_EMPHASIS);
