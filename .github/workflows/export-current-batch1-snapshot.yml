@@ -1,0 +1,28 @@
+name: Export current batch1 snapshot
+
+on:
+  push:
+    branches:
+      - 'agent/exam-content-batch-1'
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/exam-content-batch-1
+
+      - name: Package repository snapshot
+        run: tar --exclude=.git --exclude=node_modules --exclude=dist -czf /tmp/current-batch1-snapshot.tar.gz .
+
+      - name: Upload snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: current-batch1-repository-snapshot
+          path: /tmp/current-batch1-snapshot.tar.gz
+          retention-days: 1
