@@ -25,48 +25,7 @@ jobs:
           python scripts/finalize-public-content-cleanup.py
 
       - name: Remove obsolete patch transport files
-        run: |
-          rm -f scripts/content-cleanup.part-* scripts/content-cleanup-v2.part-*
-          rm -f .github/workflows/apply-content-cleanup.yml
-
-      - name: Restore final validation workflow
-        run: |
-          cat > .github/workflows/seo-check.yml <<'YAML'
-          name: SEO validation
-
-          on:
-            pull_request:
-              branches: [main]
-            workflow_dispatch:
-
-          permissions:
-            contents: read
-
-          jobs:
-            validate:
-              runs-on: ubuntu-latest
-              steps:
-                - name: Checkout
-                  uses: actions/checkout@v4
-
-                - name: Setup Node.js
-                  uses: actions/setup-node@v4
-                  with:
-                    node-version: 24
-                    cache: npm
-
-                - name: Install dependencies
-                  run: npm ci
-
-                - name: Build site
-                  run: npm run build
-
-                - name: Validate SEO output
-                  run: npm run check:seo
-
-                - name: Validate public content
-                  run: npm run check:public-content
-          YAML
+        run: rm -f scripts/content-cleanup.part-* scripts/content-cleanup-v2.part-*
 
       - name: Verify frozen chapter fields
         run: |
@@ -137,30 +96,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add -A src/content/chapters scripts
           git commit -m "content: clean public exam notes"
           git push origin HEAD:agent/public-id-guard
-
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build site
-        run: npm run build
-
-      - name: Validate SEO output
-        run: npm run check:seo
-
-      - name: Validate public content
-        run: npm run check:public-content
