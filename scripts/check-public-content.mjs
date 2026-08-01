@@ -12,12 +12,20 @@ const INTERNAL_COPY_RULES = [
   { label: 'question_id', pattern: /\bquestion_id\b/gi },
   { label: 'review 상태', pattern: /\breview\s*:/gi },
   { label: 'jpg 확필', pattern: /jpg\s*확필/gi },
-  { label: '저장소의 역사적 매핑', pattern: /저장소의\s*역사적\s*매핑/g },
+  { label: '저장소', pattern: /저장소/g },
+  { label: '저장된 기출', pattern: /저장된\s*기출/g },
+  { label: '후속 관계', pattern: /후속\s*관계/g },
+  { label: '역사적 관계', pattern: /역사적\s*관계/g },
+  { label: '이미지 자산', pattern: /이미지\s*자산/g },
   { label: '공개 렌더링', pattern: /공개\s*렌더링/g },
+  { label: '공개 화면', pattern: /공개\s*화면/g },
+  { label: '공개 페이지', pattern: /공개\s*페이지/g },
   { label: '안전 필터', pattern: /안전\s*필터/g },
   { label: 'questions 배열', pattern: /questions\s*배열/gi },
   { label: '기출 DB', pattern: /기출\s*DB/gi },
   { label: 'DB ID', pattern: /DB\s*ID/gi },
+  { label: '기출 매칭', pattern: /기출\s*매칭/g },
+  { label: '등록 기출 데이터', pattern: /등록\s*기출\s*데이터/g },
 ];
 
 const errors = [];
