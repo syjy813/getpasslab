@@ -17,6 +17,10 @@
 
 ## 2. production runtime smoke test
 
+- 검증 workflow: `Verify batch1 production evidence`
+- 검증 run: `30707450628`
+- 결과: `completed / success`
+
 | 페이지 | HTTP | 결과 |
 |---|---:|---|
 | 홈 | 200 | PASS |
