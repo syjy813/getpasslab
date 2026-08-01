@@ -33,22 +33,10 @@ jobs:
       - name: Validate public content
         run: npm run check:public-content
 
-      - name: Rebuild reviewed content patch
-        if: always()
-        run: |
-          cat scripts/content-cleanup-v2.part-* \
-            | tr -d '\r\n\t ' \
-            | base64 --decode \
-            > content-cleanup.patch.bz2
-          bzip2 -tv content-cleanup.patch.bz2
-          bunzip2 -c content-cleanup.patch.bz2 > content-cleanup.patch
-
-      - name: Upload reviewed content patch
+      - name: Upload raw reviewed patch parts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: reviewed-content-patch
-          path: |
-            content-cleanup.patch
-            content-cleanup.patch.bz2
+          name: raw-reviewed-content-patch-parts
+          path: scripts/content-cleanup-v2.part-*
           retention-days: 1
