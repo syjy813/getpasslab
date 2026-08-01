@@ -15,11 +15,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Package repository snapshot
-        run: tar --exclude=.git --exclude=node_modules --exclude=dist -czf batch1-snapshot.tar.gz .
+        run: tar --exclude=.git --exclude=node_modules --exclude=dist -czf /tmp/batch1-snapshot.tar.gz .
 
       - name: Upload snapshot
         uses: actions/upload-artifact@v4
         with:
           name: batch1-repository-snapshot
-          path: batch1-snapshot.tar.gz
+          path: /tmp/batch1-snapshot.tar.gz
           retention-days: 1
