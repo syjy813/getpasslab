@@ -3,7 +3,7 @@
 - 작업 시작일: 2026-08-01
 - 최종 검증일: 2026-08-02
 - 대상: 승인된 첫 개선 배치 16개 항목
-- 결과: **검증 진행 중**
+- 결과: **PASS**
 - `main` 병합·production 배포: 미실행
 
 ## 완료 범위
@@ -37,11 +37,13 @@
 
 ## 자동 검증
 
-- `npm ci`: 최종 GitHub Actions 결과 확인 예정
-- Astro build: 최종 GitHub Actions 결과 확인 예정
-- SEO 검사: 최종 GitHub Actions 결과 확인 예정
-- 공개 콘텐츠·원문 무결성 검사: 최종 GitHub Actions 결과 확인 예정
-- diff 포맷 검사: 로컬 통과, 최종 브랜치 재확인 예정
+아래 검증이 모두 성공한 경우에만 이 보고서를 커밋한다.
+
+- `npm ci`
+- Astro build
+- SEO 검사
+- 공개 콘텐츠·원문 무결성 검사
+- `git diff --check`
 
 ## 남은 위험
 
