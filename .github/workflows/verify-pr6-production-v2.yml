@@ -1,0 +1,198 @@
+name: Verify PR6 production v2
+
+on:
+  push:
+    branches:
+      - agent/public-id-guard
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  verify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    env:
+      TARGET_SHA: ac2a610d68958c7a3193c8fbf75334c310aedf87
+      SITE_URL: https://getpasslab.co.kr
+    steps:
+      - name: Checkout verification branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/public-id-guard
+          fetch-depth: 0
+
+      - name: Generate production verification report
+        shell: bash
+        run: |
+          set +e
+          report="docs/audits/pr6-production-verification.md"
+          work="$RUNNER_TEMP/pr6-production-v2"
+          mkdir -p "$(dirname "$report")" "$work"
+          result=PASS
+          details=''
+
+          add_detail() {
+            details+="- $1"$'\n'
+          }
+
+          deploy_json="$work/deploy-runs.json"
+          curl --silent --show-error --location \
+            --retry 3 --retry-all-errors \
+            -H "Authorization: Bearer ${{ github.token }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/actions/workflows/deploy.yml/runs?branch=main&event=push&per_page=50" \
+            -o "$deploy_json"
+          api_rc=$?
+
+          deploy_id='NOT_FOUND'
+          deploy_url=''
+          deploy_status='unknown'
+          deploy_conclusion='unknown'
+          deploy_created=''
+          deploy_updated=''
+
+          if [[ "$api_rc" -ne 0 ]] || ! jq -e . "$deploy_json" >/dev/null 2>&1; then
+            result=FAIL
+            add_detail "GitHub Actions deploy-run API request failed (exit $api_rc)."
+          else
+            deploy_run=$(jq -c --arg sha "$TARGET_SHA" '[.workflow_runs[] | select(.head_sha == $sha)][0] // empty' "$deploy_json")
+            if [[ -z "$deploy_run" ]]; then
+              result=FAIL
+              add_detail "No Deploy to GitHub Pages run matched target commit."
+            else
+              deploy_id=$(jq -r '.id' <<<"$deploy_run")
+              deploy_url=$(jq -r '.html_url' <<<"$deploy_run")
+              deploy_status=$(jq -r '.status' <<<"$deploy_run")
+              deploy_conclusion=$(jq -r '.conclusion // ""' <<<"$deploy_run")
+              deploy_created=$(jq -r '.created_at' <<<"$deploy_run")
+              deploy_updated=$(jq -r '.updated_at' <<<"$deploy_run")
+              if [[ "$deploy_status" != "completed" || "$deploy_conclusion" != "success" ]]; then
+                result=FAIL
+                add_detail "Pages workflow was $deploy_status / $deploy_conclusion."
+              fi
+            fi
+          fi
+
+          fetch_page() {
+            local url="$1"
+            local output="$2"
+            local headers="$3"
+            curl --silent --show-error --location \
+              --retry 5 --retry-all-errors --max-time 45 \
+              --dump-header "$headers" --output "$output" \
+              --write-out '%{http_code}' "$url"
+          }
+
+          check_contains() {
+            local file="$1" value="$2" label="$3"
+            if ! grep -Fq -- "$value" "$file"; then
+              result=FAIL
+              add_detail "$label: expected content missing — $value"
+            fi
+          }
+
+          check_absent() {
+            local file="$1" value="$2" label="$3"
+            if grep -Fq -- "$value" "$file"; then
+              result=FAIL
+              add_detail "$label: forbidden content present — $value"
+            fi
+          }
+
+          home_code=$(fetch_page "$SITE_URL/" "$work/home.html" "$work/home.headers")
+          home_rc=$?
+          if [[ "$home_rc" -ne 0 || "$home_code" != "200" ]]; then
+            result=FAIL
+            add_detail "Home request failed: curl=$home_rc HTTP=$home_code"
+          else
+            check_contains "$work/home.html" 'GetPassLab' 'Home'
+          fi
+
+          reactive_url="$SITE_URL/industrial-safety/written/chemical/reactive-dangerous-gases/"
+          reactive_code=$(fetch_page "$reactive_url" "$work/reactive.html" "$work/reactive.headers")
+          reactive_rc=$?
+          if [[ "$reactive_rc" -ne 0 || "$reactive_code" != "200" ]]; then
+            result=FAIL
+            add_detail "Reactive dangerous gases request failed: curl=$reactive_rc HTTP=$reactive_code"
+          else
+            check_contains "$work/reactive.html" '2022년 4월 시험 98번' 'Reactive dangerous gases'
+            check_contains "$work/reactive.html" '반응 조건을 확인해 수소를 선택' 'Reactive dangerous gases'
+            check_absent "$work/reactive.html" '20220424_098' 'Reactive dangerous gases'
+            check_absent "$work/reactive.html" 'PDF 원문' 'Reactive dangerous gases'
+            check_absent "$work/reactive.html" 'JSON' 'Reactive dangerous gases'
+          fi
+
+          vdt_url="$SITE_URL/industrial-safety/written/ergonomics/vdt-contrast/"
+          vdt_code=$(fetch_page "$vdt_url" "$work/vdt.html" "$work/vdt.headers")
+          vdt_rc=$?
+          if [[ "$vdt_rc" -ne 0 || "$vdt_code" != "200" ]]; then
+            result=FAIL
+            add_detail "VDT contrast request failed: curl=$vdt_rc HTTP=$vdt_code"
+          else
+            check_contains "$work/vdt.html" '<strong>VDT 화면 대비</strong>' 'VDT contrast'
+            check_contains "$work/vdt.html" '\rho=0.85' 'VDT contrast'
+            check_absent "$work/vdt.html" '20200606_028' 'VDT contrast'
+            check_absent "$work/vdt.html" 'ho=0.85' 'VDT contrast'
+            check_absent "$work/vdt.html" '**VDT 화면 대비**' 'VDT contrast'
+          fi
+
+          cause_url="$SITE_URL/industrial-safety/written/safety-management/accident-cause-classification/"
+          cause_code=$(fetch_page "$cause_url" "$work/cause.html" "$work/cause.headers")
+          cause_rc=$?
+          if [[ "$cause_rc" -ne 0 || "$cause_code" != "200" ]]; then
+            result=FAIL
+            add_detail "Accident cause classification request failed: curl=$cause_rc HTTP=$cause_code"
+          else
+            check_contains "$work/cause.html" '<strong>불안전한 행동 88%, 불안전한 상태 10%, 불가항력 2%</strong>' 'Accident cause classification'
+            check_absent "$work/cause.html" '**불안전한 행동 88%' 'Accident cause classification'
+          fi
+
+          verification_time=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          {
+            echo '# PR #6 production verification'
+            echo
+            echo "- Result: **$result**"
+            echo "- Verification time (UTC): \`$verification_time\`"
+            echo "- Target merge commit: \`$TARGET_SHA\`"
+            if [[ "$deploy_id" != 'NOT_FOUND' ]]; then
+              echo "- Pages workflow run: [#$deploy_id]($deploy_url)"
+            else
+              echo '- Pages workflow run: not found'
+            fi
+            echo "- Pages workflow status: \`$deploy_status / $deploy_conclusion\`"
+            if [[ -n "$deploy_created" ]]; then
+              echo "- Pages workflow window: \`$deploy_created → $deploy_updated\`"
+            fi
+            echo
+            echo '## Runtime smoke test'
+            echo
+            echo '| Page | HTTP | Checks |'
+            echo '|---|---:|---|'
+            echo "| Home | ${home_code:-unknown} | Site title |"
+            echo "| Reactive dangerous gases | ${reactive_code:-unknown} | Natural-language exam labels; internal ID/PDF/JSON absent |"
+            echo "| VDT contrast | ${vdt_code:-unknown} | Rendered strong element; repaired LaTeX rho; internal ID absent |"
+            echo "| Accident cause classification | ${cause_code:-unknown} | Rendered strong element; Markdown markers absent |"
+            echo
+            echo '## Findings'
+            echo
+            if [[ -n "$details" ]]; then
+              printf '%s' "$details"
+            else
+              echo '- No blocking findings.'
+            fi
+          } > "$report"
+
+          cat "$report"
+
+      - name: Commit report and remove one-time workflow
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/verify-pr6-production-v2.yml
+          git add docs/audits/pr6-production-verification.md
+          git commit -m "docs: record PR6 production verification"
+          git push origin HEAD:agent/public-id-guard
