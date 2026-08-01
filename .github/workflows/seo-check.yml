@@ -33,10 +33,14 @@ jobs:
       - name: Validate public content
         run: npm run check:public-content
 
-      - name: Upload raw reviewed patch parts
+      - name: Package repository snapshot
+        if: always()
+        run: tar --exclude=.git --exclude=node_modules --exclude=dist -czf repository-snapshot.tar.gz .
+
+      - name: Upload repository snapshot
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: raw-reviewed-content-patch-parts
-          path: scripts/content-cleanup-v2.part-*
+          name: repository-snapshot
+          path: repository-snapshot.tar.gz
           retention-days: 1
