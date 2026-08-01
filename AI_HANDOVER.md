@@ -15,7 +15,7 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-01 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.5
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-02 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.6
 
 ---
 
@@ -25,8 +25,8 @@
 
 - **스택**: Astro 5 + Markdown + GitHub Pages. **서버 없음, DB 없음, API 없음.** 모든 게 빌드 타임에 끝난다.
 - **목적**: 1순위 = **이직 포트폴리오**, 2순위 = AdSense 수익.
-- **현재**: 공개 챕터 198개와 정적 페이지 209개를 `getpasslab.co.kr` production에 배포했다. HTTPS·정책·SEO·AdSense·GA4 코드 통합과 공개 콘텐츠 내부 식별자·운영 문구 정리, 재발 방지 CI 가드의 production 검증까지 완료됐다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
-- **최신 동적 상태**: 문서 맨 아래의 `공개 챕터 내부 식별자·운영 문구 정리·production 검증 게이트 완료` 절을 우선한다.
+- **현재**: 공개 챕터 198개와 정적 페이지 209개를 `getpasslab.co.kr` production에 배포했다. HTTPS·정책·SEO·AdSense·GA4 코드 통합, 공개 콘텐츠 내부 식별자 정리, 첫 시험 인사이트 배치의 관계·빈도·법령 편집 개선과 production 검증까지 완료됐다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
+- **최신 동적 상태**: 문서 맨 아래의 `시험 포인트 첫 개선 배치·production 검증 게이트 완료` 절을 우선한다.
 
 **🚨 절대 하지 마라 (이것만 기억해도 대형 사고 방지):**
 1. `slug` / `subject_id` / `question_id` **변경·생성 금지** (동결 키)
@@ -2078,3 +2078,58 @@ READY 4개 작성 후 남은 미시작 55개의 최신 분류:
 5. npm 취약점과 Actions 경고는 콘텐츠 작업과 분리된 의존성·CI 감사에서 처리한다.
 
 위 순서는 추천안이며, 다음 구현 범위는 Owner 승인 후 확정한다.
+
+## 시험 포인트 첫 개선 배치·production 검증 게이트 완료 (2026-08-02)
+
+이 절은 공개 챕터의 첫 시험 인사이트 개선 배치와 production 상태에 관해 위의 이전 기록보다 최신이다. 실제 저장소·CI·GitHub Pages·runtime 증거로 검증된 사실만 기록한다.
+
+### 1. 현재 단계
+
+- PR #8 `content: improve first exam-insight batch` 완료.
+- Owner 승인 후 Squash and merge로 `main` 반영 완료.
+- `main` 병합 커밋: `7898e84ed78d318fec1886daaad00bb0ef67815f`.
+- GitHub Pages 배포와 대표 runtime 검증: **PASS**.
+- 이번 배치의 Production 상태: **VERIFIED**.
+- 완료된 첫 개선 배치를 다시 수행하지 않는다.
+
+### 2. 완료 범위
+
+- 확정 관계 불일치 8건 제거.
+- 명확한 기존 완료 챕터 5곳으로 관계 이동.
+- 대상이 불명확한 3문항은 임의 관계 없이 미매핑 유지.
+- 5개 챕터의 연결 문항 수·고유 시행 회차 재집계 및 근사·과장 표현 제거.
+- 법령·고시 의존 4개 챕터의 출제 경향과 기준일 주의 보정.
+- `spontaneous-combustion` 회차별 정답 나열을 3개 판단 포인트로 압축.
+- 변경 파일: 챕터 21개, 감사 문서 4개.
+
+### 3. 데이터 무결성·빌드 검증
+
+- 전체 챕터: 250개.
+- 전체 관계: 887건.
+- 존재하지 않는 문항 참조: 0건.
+- 챕터 내부 중복 관계: 0건.
+- `subject_id` 불일치: 0건.
+- `slug`, `subject_id`, `question_id` 무변경.
+- `questions.json` 본문·선택지·정답 무변경.
+- 최종 PR CI:
+  - Astro build 성공, 209페이지.
+  - SEO 검사 경고 0개·오류 0개.
+  - 공개 콘텐츠·원문 무결성 검사 오류 0개.
+
+### 4. production 배포·runtime 검증
+
+- GitHub Pages workflow run: `30706599852`.
+- 기준 SHA: `7898e84ed78d318fec1886daaad00bb0ef67815f`.
+- 결과: `completed / success`.
+- 대표 URL 6개 모두 HTTP 200.
+- 빈도 문구, 법령 기준일 주의, 자연발화 시험 포인트, 대표 관계 이동을 production에서 확인.
+- 상세 검증 문서: `docs/audits/2026-08-02-exam-content-batch1-production-verification.md`.
+
+### 5. 남은 위험과 다음 작업
+
+- 법령 조문·별표 수치 전 항목의 의미 대조는 `LEGAL_SOURCE_RECHECK_REQUIRED`로 유지.
+- `examComment` 미작성 공개 챕터 전체 보강은 후속 배치로 유지.
+- Search Console 노출 데이터가 확보된 페이지를 다음 콘텐츠 개선 우선순위에 반영.
+- npm 취약점과 Actions deprecation 경고는 콘텐츠 작업과 분리된 감사에서 처리.
+
+다음 권장 작업은 남은 `examComment` 미작성 챕터를 빈도·검색 가치·정확성 위험으로 분류하고, 두 번째 개선 배치를 선정하는 것이다.
