@@ -5,6 +5,8 @@ const DIST_DIR = path.resolve('dist');
 const CHAPTER_DIR = path.resolve('src/content/chapters');
 const INTERNAL_QUESTION_ID = /\b\d{8}_\d{3}\b/g;
 const INTERNAL_QUESTION_ALIAS = /\bq\d{8}\b/gi;
+const SOURCE_CONTROL_CHARACTER = /[\x00-\x09\x0b-\x1f\x7f]/g;
+const ORPHANED_RHO_TOKEN = /(?:^|\n)ho\s*=/gm;
 const UNRENDERED_EMPHASIS = /(?:\*\*[^*\n]{1,200}\*\*|__[^_\n]{1,200}__)/g;
 const INTERNAL_COPY_RULES = [
   { label: 'PDF', pattern: /\bPDF\b/gi },
@@ -81,6 +83,19 @@ async function chapterSlugs() {
 
   for (const file of files) {
     const source = await readFile(file, 'utf8');
+    const relative = path.relative(CHAPTER_DIR, file).replaceAll(path.sep, '/');
+    const controlCharacters = uniqueMatches(source, SOURCE_CONTROL_CHARACTER);
+    if (controlCharacters.length > 0) {
+      const codes = controlCharacters.map((value) =>
+        `U+${value.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')}`,
+      );
+      errors.push(`${relative}: 챕터 원문에 제어문자 포함 (${codes.join(', ')})`);
+    }
+
+    if (uniqueMatches(source, ORPHANED_RHO_TOKEN).length > 0) {
+      errors.push(`${relative}: LaTeX rho 명령이 줄바꿈으로 손상된 흔적(ho=) 발견`);
+    }
+
     const slug = source.match(/^slug:\s*['"]?([^'"\r\n]+)['"]?\s*$/m)?.[1]?.trim();
     if (slug) slugs.add(slug);
   }
