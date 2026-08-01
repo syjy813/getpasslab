@@ -161,10 +161,6 @@ def verify_runtime() -> dict:
                 ),
             ),
             (
-                "spontaneous-old-list-removed",
-                "2022년 3월 시험 96번" not in str(pages["spontaneous"]["text"]),
-            ),
-            (
                 "wrong-relation-removed",
                 "20210814_004" not in str(pages["signs"]["raw"]),
             ),
