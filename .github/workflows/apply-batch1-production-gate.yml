@@ -21,6 +21,18 @@ jobs:
       - name: Apply verified gate documentation
         run: python3 scripts/apply-batch1-production-gate.py
 
+      - name: Normalize final newlines
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          for filename in (
+              'AI_HANDOVER.md',
+              'docs/audits/2026-08-02-exam-content-batch1-production-verification.md',
+          ):
+              path = Path(filename)
+              path.write_text(path.read_text(encoding='utf-8').rstrip() + '\n', encoding='utf-8', newline='\n')
+          PY
+
       - name: Validate documentation
         run: |
           git diff --check
