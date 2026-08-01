@@ -8,9 +8,9 @@ status: 완료
 group: 법령·보상
 tags: [개념, 법령]
 summary: 사망 1명 / 3개월 요양 부상 동시 2명 / 부상·직업성 질병 동시 10명 — OR 조건
-questions: [20210307_014, 20180819_007, 20180819_004]
+questions: [20210307_014, 20180819_007]
 related: [industrial-accident-insurance, accident-cause-classification]
-examComment: 범위 3호의 수치 변조형과 발생 시 보고 시기(지체 없이) 단답형이 양대 유형.
+examComment: 중대재해의 인원·요양기간 기준과 발생 사실 보고 시기(지체 없이)를 구분하는 유형이 확인된다.
 ---
 
 ## 핵심 개념

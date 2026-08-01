@@ -5,7 +5,7 @@ subject_id: 2
 group: 작업환경·소음
 tags: [개념]
 summary: 일사 조건별 WBGT 가중식
-questions: [20220305_036]
+questions: [20220305_036, 20220424_038]
 order: 4
 priority: 1차
 status: 완료

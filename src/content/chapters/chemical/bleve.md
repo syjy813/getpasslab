@@ -5,7 +5,7 @@ subject_id: 5
 group: 폭발 이론
 tags: [개념]
 summary: 가압 액화가스 용기 외부화재 → 화구 형성
-questions: [20180428_086]
+questions: [20180428_086, 20220305_099]
 order: 2
 priority: 1차
 status: 완료
