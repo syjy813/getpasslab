@@ -32,3 +32,15 @@ jobs:
 
       - name: Validate public content
         run: npm run check:public-content
+
+      - name: Package current chapter snapshot
+        if: always()
+        run: tar -czf current-chapter-snapshot.tar.gz src/content/chapters src/data/questions.json
+
+      - name: Upload current chapter snapshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: current-chapter-snapshot
+          path: current-chapter-snapshot.tar.gz
+          retention-days: 1
