@@ -1,0 +1,36 @@
+name: Verify batch1 production evidence
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  MERGE_SHA: 7898e84ed78d318fec1886daaad00bb0ef67815f
+  SITE_ORIGIN: https://getpasslab.co.kr
+
+jobs:
+  verify:
+    if: github.head_ref == 'agent/record-batch1-production-gate'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout verification branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/record-batch1-production-gate
+
+      - name: Verify Pages deployment and production runtime
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERIFY_OUTPUT: batch1-production-verification.json
+        run: python3 scripts/verify-batch1-production.py
+
+      - name: Upload verification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: batch1-production-verification
+          path: batch1-production-verification.json
+          retention-days: 1
