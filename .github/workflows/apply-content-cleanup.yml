@@ -31,7 +31,10 @@ jobs:
       - name: Rebuild and verify reviewed patch
         if: steps.patch.outputs.ready == 'true'
         run: |
-          cat scripts/content-cleanup-v2.part-* | base64 -d > /tmp/content-cleanup.patch.bz2
+          cat scripts/content-cleanup-v2.part-* \
+            | tr -d '\r\n\t ' \
+            | base64 --decode \
+            > /tmp/content-cleanup.patch.bz2
           bzip2 -tv /tmp/content-cleanup.patch.bz2
           bunzip2 -c /tmp/content-cleanup.patch.bz2 > /tmp/content-cleanup.patch
           git apply --check /tmp/content-cleanup.patch
