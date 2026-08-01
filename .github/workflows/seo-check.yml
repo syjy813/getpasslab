@@ -20,7 +20,9 @@ jobs:
           fetch-depth: 0
 
       - name: Apply deterministic content cleanup
-        run: python scripts/apply-public-content-cleanup.py
+        run: |
+          python scripts/apply-public-content-cleanup.py
+          python scripts/finalize-public-content-cleanup.py
 
       - name: Remove obsolete patch transport files
         run: |
