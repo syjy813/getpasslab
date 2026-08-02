@@ -1,0 +1,37 @@
+name: Run batch2 handover updater
+
+on:
+  push:
+    branches:
+      - agent/record-batch2-production-gate
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout documentation branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/record-batch2-production-gate
+          fetch-depth: 0
+
+      - name: Apply verified handover update
+        run: python scripts/update-batch2-handover.py
+
+      - name: Remove temporary update tools
+        run: |
+          rm .github/workflows/run-batch2-handover.yml
+          rm .github/workflows/update-batch2-handover.yml
+          rm scripts/update-batch2-handover.py
+
+      - name: Commit documentation update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "docs: finalize second exam trend production gate"
+          git push origin HEAD:agent/record-batch2-production-gate
