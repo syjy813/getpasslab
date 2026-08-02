@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - agent/verify-batch2-production
+  pull_request:
+    branches:
+      - main
 
 permissions:
   actions: read
