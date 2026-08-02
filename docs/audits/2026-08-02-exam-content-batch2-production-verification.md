@@ -2,6 +2,7 @@
 
 - 검증일: 2026-08-02
 - 대상 PR: #10 `content: add second exam trend batch`
+- 기록 PR: #12 `docs: record second exam trend production gate`
 - `main` 병합 커밋: `e10d7c59f90084bf63c1f6b9a385cc957a2e9cfd`
 - 병합 방식: Squash and merge
 - 최종 결과: **PASS**
