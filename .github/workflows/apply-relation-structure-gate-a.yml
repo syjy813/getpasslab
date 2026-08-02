@@ -1,0 +1,82 @@
+name: Apply relation structure gate A
+
+on:
+  push:
+    branches:
+      - agent/relation-structure-gate-a
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout implementation branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/relation-structure-gate-a
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Apply review blocks and validate relations
+        run: python3 scripts/apply-relation-structure-gate-a.py
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Validate SEO output
+        run: npm run check:seo
+
+      - name: Validate public content
+        run: npm run check:public-content
+
+      - name: Check patch formatting
+        run: git diff --check
+
+      - name: Remove one-time implementation assets
+        run: |
+          rm scripts/apply-relation-structure-gate-a.py
+          rm .github/workflows/apply-relation-structure-gate-a.yml
+
+      - name: Verify final uncommitted scope
+        run: |
+          python3 - <<'PY'
+          import subprocess
+
+          changed = {
+              line.strip()
+              for line in subprocess.check_output(
+                  ['git', 'diff', '--name-only'], text=True
+              ).splitlines()
+              if line.strip()
+          }
+          expected = {
+              'src/data/questions.json',
+              'scripts/apply-relation-structure-gate-a.py',
+              '.github/workflows/apply-relation-structure-gate-a.yml',
+          }
+          if changed != expected:
+              raise SystemExit(
+                  f'Unexpected final uncommitted scope: {sorted(changed)}; '
+                  f'expected {sorted(expected)}'
+              )
+          print('final uncommitted scope PASS')
+          PY
+
+      - name: Commit verified question visibility changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/questions.json scripts/apply-relation-structure-gate-a.py .github/workflows/apply-relation-structure-gate-a.yml
+          git commit -m "data: block incomplete source questions"
+          git push origin HEAD:agent/relation-structure-gate-a
