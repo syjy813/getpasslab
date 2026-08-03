@@ -1,0 +1,455 @@
+name: Gate B2 batch runner
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  apply-batch:
+    if: github.event_name == 'pull_request' && github.head_ref == 'automation/gate-b2-batch' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout batch branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Apply verified Gate B2 batch
+        shell: python
+        run: |
+          import json
+          from copy import deepcopy
+          from pathlib import Path
+
+          questions_path = Path('src/data/questions.json')
+          page_path = Path('src/pages/industrial-safety/written/[subject]/[slug].astro')
+          construction_path = Path('src/content/chapters/construction/construction-hazard-plan-documents.md')
+          leakage_path = Path('src/content/chapters/electrical/leakage-breaker-types.md')
+          q119_audit_path = Path('docs/audits/2026-08-03-question-20190804-119-source-mismatch.md')
+          gate_audit_path = Path('docs/audits/2026-08-03-gate-b2-law-and-relations-implementation.md')
+          trigger_path = Path('.gate-b2-trigger')
+
+          questions = json.loads(questions_path.read_text(encoding='utf-8'))
+          if len(questions) != 1680:
+              raise RuntimeError(f'Expected 1680 questions, found {len(questions)}')
+
+          ids = [q['id'] for q in questions]
+          if len(ids) != len(set(ids)):
+              raise RuntimeError('Duplicate question IDs detected before update')
+
+          by_id = {q['id']: q for q in questions}
+          required_ids = {
+              '20190804_118', '20190804_119', '20190804_120',
+              '20220424_065', '20200926_065', '20180428_073',
+          }
+          missing = sorted(required_ids - set(by_id))
+          if missing:
+              raise RuntimeError(f'Missing required question IDs: {missing}')
+
+          before_118 = deepcopy(by_id['20190804_118'])
+          before_120 = deepcopy(by_id['20190804_120'])
+          target = by_id['20190804_119']
+
+          expected_identity = {
+              'id': '20190804_119',
+              'subject_id': 6,
+              'date': '2019-08-04',
+              'label': '2019년 8월 시행',
+              'number': 119,
+          }
+          for key, value in expected_identity.items():
+              if target.get(key) != value:
+                  raise RuntimeError(f'Unexpected 20190804_119 {key}: {target.get(key)!r}')
+
+          restored = {
+              'body': '감전재해의 직접적인 요인으로 가장 거리가 먼 것은?',
+              'choices': ['통전전압의 크기', '통전전류의 크기', '통전시간', '통전경로'],
+              'answer': 1,
+              'review': '',
+          }
+          if not all(target.get(key) == value for key, value in restored.items()):
+              if '유해' not in str(target.get('body', '')) or target.get('answer') != 1:
+                  raise RuntimeError('20190804_119 no longer matches the audited corrupted state')
+              target.update(restored)
+
+          if by_id['20190804_118'] != before_118 or by_id['20190804_120'] != before_120:
+              raise RuntimeError('Adjacent question records changed unexpectedly')
+
+          questions_path.write_text(
+              json.dumps(questions, ensure_ascii=False, indent=1) + '\n',
+              encoding='utf-8',
+          )
+
+          page = page_path.read_text(encoding='utf-8')
+          filter_snippet = "  if (question.id === '20190804_119') {\n    exclusionReasons.push('source answer verification pending');\n  }\n"
+          if filter_snippet in page:
+              page = page.replace(filter_snippet, '', 1)
+          elif 'source answer verification pending' in page or "question.id === '20190804_119'" in page:
+              raise RuntimeError('Temporary 20190804_119 filter changed shape')
+          page_path.write_text(page, encoding='utf-8')
+
+          expected_construction_questions = [
+              '20220424_103', '20220424_107', '20220305_101', '20210814_108',
+              '20200606_101', '20200822_119', '20200926_119', '20180428_102',
+              '20180819_110', '20190303_106', '20190427_107', '20210307_118',
+              '20210515_116',
+          ]
+          construction_current = construction_path.read_text(encoding='utf-8')
+          if 'slug: construction-hazard-plan-documents' not in construction_current:
+              raise RuntimeError('Construction chapter slug mismatch')
+          if '20190804_119' in construction_current.split('---', 2)[1]:
+              raise RuntimeError('Corrupted 20190804_119 relation reappeared')
+          for qid in expected_construction_questions:
+              if qid not in construction_current.split('---', 2)[1]:
+                  raise RuntimeError(f'Missing expected construction relation: {qid}')
+
+          construction_content = '''---
+title: 건설공사 유해·위험방지계획서 제출 기준
+slug: construction-hazard-plan-documents
+subject_id: 6
+group: 건설 법령·기준
+tags: [개념, 법령]
+summary: 제출 대상 규모·제출 시기·확인 주기·첨부서류를 현행 기준과 기출 시점으로 구분
+questions: [20220424_103, 20220424_107, 20220305_101, 20210814_108, 20200606_101, 20200822_119, 20200926_119, 20180428_102, 20180819_110, 20190303_106, 20190427_107, 20210307_118, 20210515_116]
+order: 1
+priority: 1차
+status: 완료
+---
+
+## 핵심 개념
+
+건설공사 유해·위험방지계획서는 법령에서 정한 규모의 건설공사를 착공하려는 사업주가 공사의 유해·위험요인과 예방조치를 미리 정리하여 제출하고 심사받는 제도다. 기출에서는 제출 대상 규모, 제출 시기, 공사 중 확인과 첨부서류를 서로 다른 질문 축으로 묻는다.
+
+## 현행 제출 대상 규모
+
+2026년 8월 3일 확인한 「산업안전보건법 시행령」 제42조제3항의 건설공사 기준은 다음과 같다.
+
+| 공사 유형 | 제출 대상 기준 |
+|---|---|
+| 건축물 또는 인공구조물 | 지상높이 **31m 이상** |
+| 일반 건축물 | 연면적 **30,000㎡ 이상** |
+| 법령이 열거한 특정 시설 | 연면적 **5,000㎡ 이상** |
+| 냉동·냉장 창고시설의 설비공사 및 단열공사 | 연면적 **5,000㎡ 이상** |
+| 다리의 건설·개조·해체공사 | 최대 지간길이 **50m 이상** |
+| 터널공사 | 규모와 관계없이 대상 |
+| 법령이 열거한 댐 공사 | 다목적댐·발전용댐·지방상수도 전용댐 또는 저수용량 **2,000만 톤 이상** 용수전용댐 |
+| 굴착공사 | 깊이 **10m 이상** |
+
+연면적 5,000㎡ 기준이 적용되는 특정 시설에는 문화 및 집회시설 일부, 판매시설, 운수시설 일부, 종교시설, 종합병원, 관광숙박시설, 지하도상가와 냉동·냉장 창고시설이 포함된다. 선택지에서는 시설 종류의 포함·제외 조건까지 함께 확인한다.
+
+## 제출 시기
+
+건설공사 유해·위험방지계획서는 대상 시설물 또는 구조물 공사의 **착공 전날까지** 공단에 2부를 제출한다.
+
+이때 대지 정리와 가설사무소 설치 등 공사 준비기간은 법령상 착공으로 보지 않는다. 따라서 문제에서 단순한 현장 준비와 대상 구조물 공사의 실제 시작을 구분해야 한다.
+
+## 공사 중 확인
+
+계획서를 제출한 사업주는 건설공사 중 **6개월 이내마다** 다음 사항에 관하여 공단의 확인을 받아야 한다.
+
+1. 계획서 내용과 실제 공사 내용의 부합 여부
+2. 계획서 변경 내용의 적정성
+3. 추가적인 유해·위험요인의 존재 여부
+
+제출·심사 단계와 공사 중 이행 확인 단계를 혼동하지 않는다.
+
+## 계획서와 첨부서류
+
+건설공사 계획서에는 공사의 개요와 공정, 주변 현황, 건설물·기계·설비의 배치, 안전보건관리 조직과 산업안전보건관리비 사용계획, 비상연락·대피방법 및 공사 종류별 재해예방계획 등이 포함된다.
+
+시행규칙은 별지 서식과 별표의 서류를 첨부하도록 정하고 있으므로, 과거 기출의 문구와 현행 서식 명칭이 다를 수 있다. 서류의 개수만 외우기보다 공사 개요·배치·공정·조직·비상대응·공종별 위험대책이라는 기능으로 구분한다.
+
+## 기출 기준과 현행 기준
+
+2018~2022년 연결 기출의 주요 규모 수치는 현재 기준과 대체로 일치하지만, 2020년 전부개정 전후로 법률·시행령·시행규칙의 조문 체계가 달라졌다. 기출문제는 시행 당시 법령으로 판단하고 실제 업무에는 확인일 기준 현행 원문을 적용한다.
+
+잘못 저장됐던 `20190804_119`는 원본 PDF 대조 결과 감전재해 문항으로 확인되어 이 챕터 관계에서 제거된 상태를 유지한다.
+
+## 시험 포인트
+
+- 건축물 높이 **31m**, 일반 건축물 **30,000㎡**, 특정 시설 **5,000㎡** 구분
+- 교량은 전체 길이가 아니라 **최대 지간길이 50m 이상**인지 확인
+- 냉동·냉장 창고시설 설비·단열공사는 **5,000㎡ 이상**인지 확인
+- 제출은 **착공 전날까지**, 공사 중 확인은 **6개월 이내마다**로 분리
+- 터널·댐·굴착공사의 조건과 부정형 선택지 확인
+
+## 자주 틀리는 포인트
+
+높이 21m, 교량 지간 40m, 굴착 깊이 5m처럼 다른 기준이나 오답 숫자를 제출 대상 기준과 섞지 않는다. 또한 제조업 등 유해·위험방지계획서의 작업 시작 15일 전 기준을 건설공사에 적용하지 않는다.
+
+## 근거와 기준
+
+- 「산업안전보건법」 제42조
+- 「산업안전보건법 시행령」 제42조제3항
+- 「산업안전보건법 시행규칙」 제42조제3항 및 제46조
+- 기준 확인일: 2026-08-03
+'''
+          construction_path.write_text(construction_content, encoding='utf-8')
+
+          candidate_ids = ['20220424_065', '20200926_065', '20180428_073']
+          relation_hits = {qid: [] for qid in candidate_ids}
+          for chapter in Path('src/content/chapters').rglob('*.md'):
+              parts = chapter.read_text(encoding='utf-8').split('---', 2)
+              frontmatter = parts[1] if len(parts) >= 3 else ''
+              for qid in candidate_ids:
+                  if qid in frontmatter:
+                      relation_hits[qid].append(str(chapter))
+          unexpected_hits = {qid: hits for qid, hits in relation_hits.items() if hits}
+          if unexpected_hits:
+              raise RuntimeError(f'Candidate relations are no longer unmapped: {unexpected_hits}')
+
+          leakage_current = leakage_path.read_text(encoding='utf-8')
+          if 'slug: leakage-breaker-types' not in leakage_current:
+              raise RuntimeError('Leakage-breaker chapter slug mismatch')
+          expected_existing = [
+              '20210814_075', '20210307_071', '20200926_078', '20210515_065',
+              '20180304_065', '20190303_072', '20190303_076', '20190427_068',
+          ]
+          for qid in expected_existing:
+              if qid not in leakage_current.split('---', 2)[1]:
+                  raise RuntimeError(f'Missing expected leakage relation: {qid}')
+
+          leakage_content = '''---
+title: 누전차단기 구조·정격·시설기준
+slug: leakage-breaker-types
+subject_id: 4
+group: 누전·누전차단기
+tags: [개념]
+summary: 구성요소·정격감도전류·동작시간·설치기준을 법령과 장소별로 구분
+questions: [20210814_075, 20210307_071, 20200926_078, 20210515_065, 20180304_065, 20190303_072, 20190303_076, 20190427_068, 20220424_065, 20200926_065, 20180428_073]
+order: 1
+priority: 1차
+status: 완료
+---
+
+## 핵심 개념
+
+누전차단기는 누설전류를 검출하고 정해진 감도와 시간 안에 전로를 차단하여 감전과 전기재해를 줄이는 장치다. 기출에서는 구성요소, 동작 형식, 정격감도전류와 설치 장소별 기준을 묻는다.
+
+## 기본 구조와 작동 원리
+
+누전차단기의 기본 구성은 누설 상태를 검출하는 부분, 영상변류기, 동작 신호를 처리하는 부분과 전로를 끊는 차단장치로 구분할 수 있다. 전력퓨즈는 누전차단기 자체의 구성요소가 아니라 별도의 과전류 보호장치다.
+
+정상 상태에서는 불필요하게 동작하지 않아야 하며, 누설전류가 설정 조건에 도달하면 정해진 시간 안에 차단해야 한다.
+
+## 정격 용어와 동작 형식
+
+- **정격감도전류**: 누전차단기가 동작하도록 정해진 누설전류 기준
+- **정격전류용량**: 누전차단기가 정상적으로 통전할 수 있는 부하전류 기준
+- **동작시간**: 누전을 검출한 뒤 회로를 차단하기까지의 시간
+- **고속형**: 짧은 시간 안에 차단하는 형식
+- **시연형**: 보호장치 간 동작 협조 등을 위해 의도적인 시간 지연을 두는 형식
+
+감도 구분과 동작시간 구분을 같은 개념으로 보지 않는다.
+
+## 법령·장소별 핵심 기준
+
+누전차단기 수치는 적용 근거와 장소에 따라 달라진다.
+
+| 적용 상황 | 핵심 기준 |
+|---|---|
+| 안전보건규칙상 일반 감전방지용 누전차단기 | 정격감도전류 **30mA 이하**, 작동시간 **0.03초 이내** |
+| 정격전부하전류 50A 이상 기기의 오작동 방지 예외 | **200mA 이하**, **0.1초 이내** 가능 |
+| 욕조·샤워시설이 있고 인체가 물에 젖은 상태로 전기를 사용하는 장소의 콘센트 | 인체감전보호용 **15mA 이하**, **0.03초 이하** 또는 정격용량 **3kVA 이하** 절연변압기 등 |
+| 2022년 기출의 금속제 외함 저압 기계기구 | 당시 KEC 문항 기준 사용전압 **50V 초과** |
+
+50V·150V·15mA·30mA는 서로 바꿔 쓸 수 있는 공통 기준이 아니다. 전압 기준인지 감도전류 기준인지, 산업안전보건기준인지 KEC의 장소별 기준인지 먼저 구분한다.
+
+## 산업안전보건기준상 설치 대상
+
+「산업안전보건기준에 관한 규칙」 제304조는 다음 전기기계·기구에 감전방지용 누전차단기를 설치하도록 정한다.
+
+1. 대지전압이 **150V를 초과**하는 이동형 또는 휴대형 전기기계·기구
+2. 물 등 도전성이 높은 액체가 있는 습윤장소에서 사용하는 저압용 전기기계·기구
+3. 철판·철골 위 등 도전성이 높은 장소에서 사용하는 이동형 또는 휴대형 전기기계·기구
+4. 임시배선 전로가 설치되는 장소에서 사용하는 이동형 또는 휴대형 전기기계·기구
+
+이중절연 구조, 절연대 위 등 감전위험이 없는 장소, 비접지방식 전로와 같은 설치 예외는 `누전차단기 설치 불필요 조건` 챕터에서 별도로 다룬다.
+
+## 욕실·습윤장소의 KEC 기준
+
+욕조나 샤워시설이 있는 욕실·화장실 등 인체가 물에 젖은 상태에서 전기를 사용하는 장소에 콘센트를 시설할 때는 인체감전보호용 누전차단기 또는 절연변압기 등의 별도 보호조건을 적용한다.
+
+욕조나 샤워시설이 없고 인체가 물에 젖은 상태로 전기를 사용하는 장소가 아니라면 이 15mA 기준을 자동으로 적용하지 않는다. 단순히 습기가 있다는 이유만으로 모든 누전차단기에 같은 수치를 적용하지 않는다.
+
+## 기출 기준과 현행 기준
+
+`20220424_065`는 2022년 시행 당시 KEC의 금속제 외함 저압 기계기구 시설기준을 직접 묻는 문항이므로 이 챕터 관계에 포함한다. 현행 설계·시공에는 2026년 KEC 전문과 해당 전로·기기의 조건을 다시 확인한다.
+
+`20200926_065`와 `20180428_073`은 누전차단기 구성요소를 직접 묻는 동일 유형의 문항으로, 전력퓨즈가 구성요소가 아니라는 판별 근거를 제공한다.
+
+## 시험 포인트
+
+- 누전검출부·영상변류기·차단장치와 전력퓨즈 구분
+- 정격감도전류와 정격전류용량 구분
+- 일반 감전방지 **30mA·0.03초**와 욕실 등 특정 장소 **15mA·0.03초** 구분
+- 대지전압 **150V 초과** 설치 대상과 2022년 KEC 기출의 **50V 초과** 조건 구분
+- 설치 대상 문제와 설치 예외 문제를 별도 질문 축으로 판단
+
+## 자주 틀리는 포인트
+
+특정 장소의 15mA 기준을 모든 전로에 적용하거나, 전압 50V·150V와 정격감도전류 15mA·30mA를 같은 수치 체계로 비교하지 않는다. 전력퓨즈는 과전류 보호장치이지 누전차단기 내부 구성요소가 아니다.
+
+## 근거와 기준
+
+- 「산업안전보건기준에 관한 규칙」 제304조
+- 「한국전기설비규정」 211.2.4 및 234.5 관련 기준
+- 기준 확인일: 2026-08-03
+'''
+          leakage_path.write_text(leakage_content, encoding='utf-8')
+
+          relation_hits_after = []
+          for chapter in Path('src/content/chapters').rglob('*.md'):
+              parts = chapter.read_text(encoding='utf-8').split('---', 2)
+              frontmatter = parts[1] if len(parts) >= 3 else ''
+              if '20190804_119' in frontmatter:
+                  relation_hits_after.append(str(chapter))
+          if relation_hits_after:
+              raise RuntimeError(f'20190804_119 must remain unmapped: {relation_hits_after}')
+
+          q119_audit = '''# `20190804_119` 원문 복원 및 공개 차단 해제 기록
+
+- 원본 확인일: 2026-08-03
+- 복원 기준 파일: `산업안전기사20190804(교사용).pdf`
+- 원본 위치: 8쪽 119번 문항 및 같은 쪽 정답표
+- 대상 ID: `20190804_119`
+- 판정: **문제 본문·선택지·정답 전체 복원 완료**
+- 기존 잘못된 건설공사 관계: 제거 상태 유지
+- 최종 관계: 0건, 미매핑 유지
+
+## 원본 직접 대조
+
+119번 문항은 `감전재해의 직접적인 요인으로 가장 거리가 먼 것은?`이며 선택지는 통전전압의 크기, 통전전류의 크기, 통전시간, 통전경로다. 교사용 문제 본문의 정답 표시와 같은 쪽 정답표가 모두 1번을 가리킨다.
+
+## 복원 범위
+
+- `body`, `choices`, `answer`, `review`만 복원
+- `question_id`, `subject_id`, 날짜, 번호 유지
+- 전체 문제 수 1,680개 유지
+- 인접 문항 `20190804_118`, `20190804_120` 무변경
+- 임시 ID 하드코딩 공개 필터 제거
+- 기존 건설공사 관계를 복원하지 않고 미매핑 유지
+
+## 검증
+
+- JSON parse 성공
+- question ID 중복 0건
+- 대상 문항 정확히 1건
+- 대상 문항 관계 0건
+- Astro build·SEO·공개 콘텐츠 검사 대상
+'''
+          q119_audit_path.write_text(q119_audit, encoding='utf-8')
+
+          gate_audit = '''# Gate B2 법령 콘텐츠·관계 구현 기록
+
+- 구현일: 2026-08-03
+- 기준 브랜치: `automation/gate-b2-batch`
+- 범위: `20190804_119` 원문 복원, 건설공사 법령 콘텐츠, 누전차단기 법령 콘텐츠·관계
+- 신규 공개 식별자: 없음
+- 스키마·의존성·URL·production 설정 변경: 없음
+
+## 1. 원문 복원
+
+사용자 제공 교사용 PDF 8쪽을 직접 대조하여 `20190804_119`의 본문·선택지·정답을 복원했다. 잘못된 건설공사 관계는 제거 상태를 유지하며 신규 관계를 만들지 않았다.
+
+## 2. 건설공사 법령 콘텐츠
+
+현행 「산업안전보건법 시행령」 제42조제3항과 시행규칙 제42조제3항·제46조를 기준으로 제출 대상 규모, 착공 전날 제출, 공사 중 6개월 이내 확인을 반영했다. 2018~2022년 기출 수치와 현행 조문 체계를 구분했다.
+
+## 3. 누전차단기 콘텐츠와 관계
+
+「산업안전보건기준에 관한 규칙」 제304조의 150V·30mA·0.03초·50A 이상 예외와 KEC 욕실 콘센트의 15mA·0.03초 조건을 적용 상황별로 분리했다.
+
+다음 관계를 추가했다.
+
+- `20220424_065`: 2022년 KEC 금속제 외함 저압 기계기구 50V 기준
+- `20200926_065`: 누전차단기 구성요소
+- `20180428_073`: 누전차단기 구성요소
+
+세 문항은 구현 전 관계 0건임을 확인했으며, `leakage-breaker-exception`의 기존 관계는 변경하지 않았다.
+
+## 4. 공식 근거
+
+- 국가법령정보센터 「산업안전보건법」 제42조
+- 국가법령정보센터 「산업안전보건법 시행령」 제42조제3항
+- 국가법령정보센터 「산업안전보건법 시행규칙」 제42조제3항·제46조
+- 국가법령정보센터 「산업안전보건기준에 관한 규칙」 제304조
+- 국가법령정보센터 「한국전기설비규정」 시행 2026-01-05
+- 대한전기협회 전기상담실 KEC 234.5 설명
+
+## 5. 검증 조건
+
+- 전체 문제 1,680개, ID 중복 0건
+- `20190804_119` 관계 0건
+- 신규 관계 3건이 `leakage-breaker-types`에만 존재
+- 기존 동결 키 무변경
+- Astro build 209페이지 유지
+- SEO 경고·오류 0건
+- 공개 콘텐츠 검사 오류 0건
+- 병합 후 production runtime 검증
+'''
+          gate_audit_path.write_text(gate_audit, encoding='utf-8')
+
+          if trigger_path.exists():
+              trigger_path.unlink()
+
+      - name: Validate diff and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo 'No batch changes to commit.'
+            exit 0
+          fi
+          git diff --check
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'content: implement Gate B2 law and relation batch [gate-b2-batch]'
+          git push origin HEAD:${{ github.head_ref }}
+
+  verify-production:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[gate-b2-batch]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify Gate B2 production pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          construction='https://getpasslab.co.kr/industrial-safety/written/construction/construction-hazard-plan-documents/'
+          leakage='https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-breaker-types/'
+
+          for attempt in $(seq 1 24); do
+            construction_html="$(curl --fail --silent --show-error --location --max-time 30 "$construction")"
+            leakage_html="$(curl --fail --silent --show-error --location --max-time 30 "$leakage")"
+
+            if ! grep -Fq '현행 제출 대상 규모' <<<"$construction_html" || ! grep -Fq '법령·장소별 핵심 기준' <<<"$leakage_html"; then
+              echo "Attempt $attempt: new production content not ready; waiting."
+              sleep 15
+              continue
+            fi
+
+            grep -Fq '지상높이 <strong>31m 이상</strong>' <<<"$construction_html"
+            grep -Fq '착공 전날까지' <<<"$construction_html"
+            grep -Fq '6개월 이내마다' <<<"$construction_html"
+            ! grep -Fq '건설공사의 유해ㆍ위험방지계획서 제출 대상 중' <<<"$construction_html"
+            ! grep -Fq '감전재해의 직접적인 요인으로 가장 거리가 먼 것은?' <<<"$construction_html"
+
+            grep -Fq '누전차단기의 구성요소가 아닌 것은?' <<<"$leakage_html"
+            grep -Fq '사용전압이 몇 V를 초과할 때' <<<"$leakage_html"
+            grep -Fq '30mA 이하' <<<"$leakage_html"
+            grep -Fq '15mA 이하' <<<"$leakage_html"
+
+            echo "Gate B2 production verification passed on attempt $attempt."
+            exit 0
+          done
+
+          echo 'Gate B2 production content did not pass within the retry window.' >&2
+          exit 1
