@@ -1,0 +1,46 @@
+name: Verify PR20 production removal
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify production page
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          url='https://getpasslab.co.kr/industrial-safety/written/construction/construction-hazard-plan-documents/'
+          expected_title='건설공사 유해·위험방지계획서 제출 기준'
+          stale_text='지상높이가 21m 이상인 건축물 또는 인공구조물'
+
+          for attempt in $(seq 1 20); do
+            status=$(curl -L -sS -o page.html -w '%{http_code}' "$url" || true)
+            title_ok=false
+            stale_present=false
+
+            if grep -Fq "$expected_title" page.html 2>/dev/null; then
+              title_ok=true
+            fi
+            if grep -Fq "$stale_text" page.html 2>/dev/null; then
+              stale_present=true
+            fi
+
+            echo "attempt=$attempt status=$status title_ok=$title_ok stale_present=$stale_present"
+
+            if [[ "$status" == '200' && "$title_ok" == 'true' && "$stale_present" == 'false' ]]; then
+              echo 'PASS: production no longer exposes the corrupted construction-plan question.'
+              exit 0
+            fi
+
+            sleep 15
+          done
+
+          echo 'FAIL: production did not reach the expected state within the retry window.'
+          exit 1
