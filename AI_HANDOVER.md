@@ -15,7 +15,7 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-02 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.8
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-03 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.9
 
 ---
 
@@ -25,8 +25,8 @@
 
 - **스택**: Astro 5 + Markdown + GitHub Pages. **서버 없음, DB 없음, API 없음.** 모든 게 빌드 타임에 끝난다.
 - **목적**: 1순위 = **이직 포트폴리오**, 2순위 = AdSense 수익.
-- **현재**: 공개 챕터 198개와 정적 페이지 209개를 `getpasslab.co.kr` production에 배포했다. HTTPS·정책·SEO·AdSense·GA4 코드 통합, 공개 콘텐츠 내부 식별자 정리, 시험 인사이트 2개 배치, 관계·구조 정리 Gate A의 production 검증까지 완료됐다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
-- **최신 동적 상태**: 문서 맨 아래의 `관계·구조 정리 Gate A·production 검증 게이트 완료` 절을 우선한다.
+- **현재**: 공개 챕터 198개와 정적 페이지 209개를 `getpasslab.co.kr` production에 배포했다. HTTPS·정책·SEO·AdSense·GA4 코드 통합, 공개 콘텐츠 내부 식별자 정리, 시험 인사이트 2개 배치, 관계·구조 정리 Gate A와 기존 챕터 범위 보정 Gate B1의 production 검증까지 완료됐다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
+- **최신 동적 상태**: 문서 맨 아래의 `관계·구조 범위 보정 Gate B1·production 검증 게이트 완료` 절을 우선한다.
 
 **🚨 절대 하지 마라 (이것만 기억해도 대형 사고 방지):**
 1. `slug` / `subject_id` / `question_id` **변경·생성 금지** (동결 키)
@@ -2259,3 +2259,75 @@ READY 4개 작성 후 남은 미시작 55개의 최신 분류:
 
 다음 권장 작업은 신규 공개 식별자 없이 가능한 기존 챕터 범위 보정을 먼저 진행하고, 신규 `slug` 2개는 Owner 명명·생성 결정을 별도 게이트로 처리하는 것이다.
 
+## 관계·구조 범위 보정 Gate B1·production 검증 게이트 완료 (2026-08-03)
+
+이 절은 신규 공개 식별자와 관계 변경 없이 기존 챕터 3개의 사용자 노출 범위를 실제 기출 의미에 맞게 보정한 Gate B1의 최신 검증 상태를 기록한다.
+
+### 1. 현재 단계
+
+- PR #16 `content: broaden Gate B1 chapter scope` 완료.
+- Owner 승인 후 Squash and merge로 `main` 반영 완료.
+- 콘텐츠 병합 커밋: `6546086ed12e5b239a286a570397ce3672215a7b`.
+- Gate B1 검증 문서 PR #18 병합 완료.
+- 검증 문서 병합 커밋: `afb86cb7c9d933b8b4a922884ab397577f8fa809`.
+- Gate B1 Production 상태: **VERIFIED**.
+- 완료된 Gate B1 범위를 다시 수행하지 않는다.
+
+### 2. 완료 범위
+
+- `ventricular-fibrillation-current`
+  - 화면 제목을 `심실세동·전격사 위험`으로 확대.
+  - 심실세동 전류, 위험 심장주기, 전격사 메커니즘을 구분.
+  - `I²RT`와 J·cal 계산은 `vf-danger-energy` 범위로 유지.
+- `construction-hazard-plan-documents`
+  - 화면 제목을 `건설공사 유해·위험방지계획서 제출 기준`으로 확대.
+  - 제출 대상·규모·시기·공사 중 확인·첨부서류를 구분.
+  - 기출 당시 기준과 현행 기준을 혼용하지 않는 주의문 반영.
+- `leakage-breaker-types`
+  - 화면 제목을 `누전차단기 구조·정격·시설기준`으로 확대.
+  - 정격감도전류·동작시간·시설방법·습윤장소 기준을 구분.
+  - 특정 장소의 수치를 모든 누전차단기의 공통 기준으로 확대하지 않도록 보정.
+
+변경 파일은 챕터 3개이며, 추가 134줄·삭제 36줄이다.
+
+### 3. 변경하지 않은 항목
+
+- 기존 `slug`, `subject_id`, `question_id`.
+- 세 챕터의 `questions` 관계 배열.
+- 문제 본문·선택지·정답·`review`.
+- 신규 관계·신규 공개 식별자·법령 수치표.
+- 스키마·의존성·URL 규칙·production 설정.
+
+### 4. 병합 전 검증
+
+- PR 최종 HEAD: `178d52209af90d92a9d5d28e26fedb26e4b34a4a`.
+- GitHub Actions `SEO validation` run #124: `30779394278`.
+- `npm ci`: 성공.
+- Astro build: 성공, 209페이지.
+- SEO 검사: HTML 209개, sitemap URL 210개, 경고 0개, 오류 0개.
+- 공개 콘텐츠 검사: HTML 209개, 오류 0개.
+- PR mergeable 상태와 변경 파일 3개를 확인했다.
+
+### 5. production runtime 검증
+
+- 일회성 workflow: `Gate B1 production check`.
+- workflow run: `30780077891`.
+- job: `91582847298`.
+- 결과: `completed / success`.
+- 첫 번째 확인 시도에서 다음 세 페이지가 모두 통과했다.
+  - 심실세동·전격사 위험: 신규 제목과 `전격사의 주요 메커니즘` 확인.
+  - 건설공사 유해·위험방지계획서 제출 기준: 신규 제목과 `기출 기준과 현행 기준` 확인.
+  - 누전차단기 구조·정격·시설기준: 신규 제목과 `습윤장소와 욕실 기준` 확인.
+- 기존 URL 경로와 `slug`가 유지된 상태에서 production 반영을 확인했다.
+- 임시 검증 PR #17은 병합하지 않고 종료했고 workflow 파일도 제거했다.
+- 상세 검증 문서: `docs/audits/2026-08-03-relation-structure-gate-b1-production-verification.md`.
+
+### 6. 남은 위험과 다음 작업
+
+- Gate B2에서 건설공사 법령 수치와 누전차단기 산업안전보건기준·KEC의 숫자·조건·예외를 정밀 대조한다.
+- 누전차단기 후보 관계 3건은 원문·중복·공개 상태 확인 후 별도 Owner 승인을 받아야 한다.
+- Reason 인간오류 분류와 일반 연삭기 안전 신규 챕터는 신규 공개 `slug` Owner 결정이 필요하다.
+- 원문 누락·OCR·이미지 의존 문항은 복원 전 비공개를 유지한다.
+- npm 취약점 5건과 Actions deprecation 경고는 별도 의존성·CI 감사에서 처리한다.
+
+다음 권장 작업은 Gate B2 법령·관계 정밀 감사다. 숫자·조건·예외와 시행 시점 대조가 포함되므로 GPT-5.6 Thinking의 매우 높은 추론 강도를 권장한다.
