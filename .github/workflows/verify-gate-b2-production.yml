@@ -1,0 +1,50 @@
+name: Verify Gate B2 production
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify production pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          construction='https://getpasslab.co.kr/industrial-safety/written/construction/construction-hazard-plan-documents/'
+          leakage='https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-breaker-types/'
+
+          for attempt in $(seq 1 24); do
+            construction_html="$(curl --fail --silent --show-error --location --max-time 30 "$construction")"
+            leakage_html="$(curl --fail --silent --show-error --location --max-time 30 "$leakage")"
+
+            if ! grep -Fq '현행 제출 대상 규모' <<<"$construction_html" || ! grep -Fq '법령·장소별 핵심 기준' <<<"$leakage_html"; then
+              echo "Attempt $attempt: deployment not ready; waiting."
+              sleep 15
+              continue
+            fi
+
+            grep -Fq '착공 전날까지' <<<"$construction_html"
+            grep -Fq '6개월 이내마다' <<<"$construction_html"
+            grep -Fq '31m 이상' <<<"$construction_html"
+            grep -Fq '50m 이상' <<<"$construction_html"
+            ! grep -Fq '건설공사의 유해ㆍ위험방지계획서 제출 대상 중' <<<"$construction_html"
+            ! grep -Fq '감전재해의 직접적인 요인으로 가장 거리가 먼 것은?' <<<"$construction_html"
+
+            grep -Fq '누전차단기의 구성요소가 아닌 것은?' <<<"$leakage_html"
+            grep -Fq '사용전압이 몇 V를 초과할 때' <<<"$leakage_html"
+            grep -Fq '30mA 이하' <<<"$leakage_html"
+            grep -Fq '15mA 이하' <<<"$leakage_html"
+            grep -Fq '150V를 초과' <<<"$leakage_html"
+
+            echo "Gate B2 production verification passed on attempt $attempt."
+            exit 0
+          done
+
+          echo 'Gate B2 production verification failed after all retries.' >&2
+          exit 1
