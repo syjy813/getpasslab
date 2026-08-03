@@ -5,7 +5,7 @@ subject_id: 5
 group: 폭발 범위
 tags: [계산]
 summary: H = (U - L) / L
-questions: [20220424_097]
+questions: []
 order: 5
 priority: 출시 필수
 status: 미시작
