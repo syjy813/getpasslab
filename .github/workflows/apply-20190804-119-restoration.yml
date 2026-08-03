@@ -1,6 +1,8 @@
 name: Apply 20190804-119 restoration
 
 on:
+  push:
+    branches: [fix/restore-20190804-119]
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened]
@@ -10,13 +12,13 @@ permissions:
 
 jobs:
   restore-question:
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout PR branch
+      - name: Checkout working branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 0
 
       - name: Restore verified source record
@@ -189,6 +191,8 @@ jobs:
 
       - name: Validate and commit
         shell: bash
+        env:
+          TARGET_BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
           set -euo pipefail
           if git diff --quiet -- src/data/questions.json 'src/pages/industrial-safety/written/[subject]/[slug].astro' docs/audits/2026-08-03-question-20190804-119-source-mismatch.md; then
@@ -200,4 +204,4 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add src/data/questions.json 'src/pages/industrial-safety/written/[subject]/[slug].astro' docs/audits/2026-08-03-question-20190804-119-source-mismatch.md
           git commit -m 'data: restore 20190804 question 119 [source-restored]'
-          git push origin HEAD:${{ github.head_ref }}
+          git push origin HEAD:"${TARGET_BRANCH}"
