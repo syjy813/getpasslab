@@ -1,0 +1,57 @@
+name: Gate B1 production check
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify-production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for GitHub Pages and verify Gate B1 pages
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          check_page() {
+            local url="$1"
+            local title="$2"
+            local marker="$3"
+            local body
+
+            body="$(curl --fail --silent --show-error --location \
+              --retry 3 --retry-all-errors \
+              --header 'Cache-Control: no-cache' \
+              "${url}?verify=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}")"
+
+            printf '%s' "$body" | grep --fixed-strings --quiet "$title"
+            printf '%s' "$body" | grep --fixed-strings --quiet "$marker"
+          }
+
+          for attempt in $(seq 1 40); do
+            echo "Production verification attempt ${attempt}/40"
+
+            if check_page \
+                'https://getpasslab.co.kr/industrial-safety/written/electrical/ventricular-fibrillation-current/' \
+                '심실세동·전격사 위험' \
+                '전격사의 주요 메커니즘' \
+              && check_page \
+                'https://getpasslab.co.kr/industrial-safety/written/construction/construction-hazard-plan-documents/' \
+                '건설공사 유해·위험방지계획서 제출 기준' \
+                '기출 기준과 현행 기준' \
+              && check_page \
+                'https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-breaker-types/' \
+                '누전차단기 구조·정격·시설기준' \
+                '습윤장소와 욕실 기준'; then
+              echo 'Gate B1 production verification passed.'
+              exit 0
+            fi
+
+            sleep 15
+          done
+
+          echo 'Gate B1 production verification timed out.' >&2
+          exit 1
