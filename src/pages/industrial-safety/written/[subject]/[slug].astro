@@ -49,6 +49,9 @@ for (const questionId of chapter.data.questions ?? []) {
 
   const exclusionReasons: string[] = [];
   if (question.review === 'jpg 확필') exclusionReasons.push('review=jpg 확필');
+  if (question.id === '20190804_119') {
+    exclusionReasons.push('source answer verification pending');
+  }
   if (!Array.isArray(question.choices) || question.choices.length !== 4) {
     exclusionReasons.push(
       `choices length is ${Array.isArray(question.choices) ? question.choices.length : 'not-an-array'}`,
