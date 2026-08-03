@@ -1,0 +1,203 @@
+name: Apply 20190804-119 restoration
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  restore-question:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Restore verified source record
+        shell: python
+        run: |
+          import json
+          from copy import deepcopy
+          from pathlib import Path
+
+          questions_path = Path('src/data/questions.json')
+          page_path = Path('src/pages/industrial-safety/written/[subject]/[slug].astro')
+          audit_path = Path('docs/audits/2026-08-03-question-20190804-119-source-mismatch.md')
+
+          questions = json.loads(questions_path.read_text(encoding='utf-8'))
+          if len(questions) != 1680:
+              raise RuntimeError(f'Expected 1680 questions, found {len(questions)}')
+
+          matches = [q for q in questions if q.get('id') == '20190804_119']
+          if len(matches) != 1:
+              raise RuntimeError(f'Expected one 20190804_119, found {len(matches)}')
+
+          by_id = {q['id']: q for q in questions}
+          before_118 = deepcopy(by_id['20190804_118'])
+          before_120 = deepcopy(by_id['20190804_120'])
+          target = matches[0]
+
+          expected_identity = {
+              'id': '20190804_119',
+              'subject_id': 6,
+              'date': '2019-08-04',
+              'label': '2019년 8월 시행',
+              'number': 119,
+          }
+          for key, value in expected_identity.items():
+              if target.get(key) != value:
+                  raise RuntimeError(f'Unexpected {key}: {target.get(key)!r}')
+
+          restored = {
+              'body': '감전재해의 직접적인 요인으로 가장 거리가 먼 것은?',
+              'choices': [
+                  '통전전압의 크기',
+                  '통전전류의 크기',
+                  '통전시간',
+                  '통전경로',
+              ],
+              'answer': 1,
+              'review': '',
+          }
+
+          already_restored = all(target.get(key) == value for key, value in restored.items())
+          if not already_restored:
+              if '유해' not in str(target.get('body', '')) or target.get('answer') != 1:
+                  raise RuntimeError('Target record no longer matches the audited corrupted state')
+              target.update(restored)
+
+          if by_id['20190804_118'] != before_118 or by_id['20190804_120'] != before_120:
+              raise RuntimeError('Adjacent records changed unexpectedly')
+
+          ids = [q['id'] for q in questions]
+          if len(ids) != len(set(ids)):
+              raise RuntimeError('Duplicate question IDs detected')
+
+          questions_path.write_text(
+              json.dumps(questions, ensure_ascii=False, indent=1) + '\n',
+              encoding='utf-8',
+          )
+
+          page = page_path.read_text(encoding='utf-8')
+          filter_snippet = "  if (question.id === '20190804_119') {\n    exclusionReasons.push('source answer verification pending');\n  }\n"
+          if filter_snippet in page:
+              page = page.replace(filter_snippet, '', 1)
+          elif 'source answer verification pending' in page or "question.id === '20190804_119'" in page:
+              raise RuntimeError('Temporary filter changed shape; manual review required')
+          page_path.write_text(page, encoding='utf-8')
+
+          relation_hits = []
+          for chapter in Path('src/content/chapters').rglob('*.md'):
+              frontmatter = chapter.read_text(encoding='utf-8').split('---', 2)
+              if len(frontmatter) >= 3 and '20190804_119' in frontmatter[1]:
+                  relation_hits.append(str(chapter))
+          if relation_hits:
+              raise RuntimeError(f'20190804_119 must remain unmapped: {relation_hits}')
+
+          audit = '''# `20190804_119` 원문 복원 및 공개 차단 해제 기록
+
+- 원본 확인일: 2026-08-03
+- 복원 기준 파일: `산업안전기사20190804(교사용).pdf`
+- 원본 위치: 8쪽의 119번 문항 및 같은 쪽 정답표
+- 대상 ID: `20190804_119`
+- 판정: **문제 본문·선택지·정답 전체 복원 완료**
+- 기존 잘못된 건설공사 관계: 제거 상태 유지
+- 공개 상태: 적합한 챕터가 없어 미매핑 유지
+
+## 1. 원본 직접 대조
+
+사용자가 제공한 2019년 8월 4일 산업안전기사 교사용 PDF를 직접 확인했다.
+
+119번 문항:
+
+- 본문: `감전재해의 직접적인 요인으로 가장 거리가 먼 것은?`
+- 선택지:
+  1. `통전전압의 크기`
+  2. `통전전류의 크기`
+  3. `통전시간`
+  4. `통전경로`
+- 교사용 정답 표시: 1번
+- 같은 쪽 정답표: 119번 `①`
+
+문항 본문 옆 정답 표시와 하단 정답표가 서로 일치한다.
+
+## 2. 복원 내용
+
+`src/data/questions.json`의 `20190804_119`에서 다음 필드만 복원했다.
+
+```json
+{
+  "id": "20190804_119",
+  "subject_id": 6,
+  "date": "2019-08-04",
+  "label": "2019년 8월 시행",
+  "number": 119,
+  "body": "감전재해의 직접적인 요인으로 가장 거리가 먼 것은?",
+  "choices": [
+    "통전전압의 크기",
+    "통전전류의 크기",
+    "통전시간",
+    "통전경로"
+  ],
+  "answer": 1,
+  "review": ""
+}
+```
+
+유지한 항목:
+
+- `question_id`
+- `subject_id`
+- 날짜·회차·문항 번호
+- 전체 문제 수 1,680개
+- 인접 문항 `20190804_118`, `20190804_120`
+
+## 3. 관계와 공개 처리
+
+- `construction-hazard-plan-documents`에서 잘못된 관계를 다시 추가하지 않았다.
+- 다른 챕터에도 임의 연결하지 않았다.
+- 현재 해당 문항은 미매핑 상태다.
+- 원문이 복원됐으므로 `src/pages/industrial-safety/written/[subject]/[slug].astro`의 임시 ID 하드코딩 필터를 제거했다.
+- 관계가 없기 때문에 production 챕터에는 노출되지 않는다.
+
+## 4. 검증 조건
+
+- JSON parse 성공
+- 전체 문제 수 1,680개 유지
+- question ID 중복 0건
+- `20190804_119` 정확히 1건
+- `20190804_118`, `20190804_120` 무변경
+- `20190804_119` 챕터 관계 0건
+- 임시 ID 필터 제거
+- Astro build·SEO·공개 콘텐츠 검사 성공
+
+## 5. 후속 상태
+
+- 데이터 원문 복원: 완료
+- 잘못된 건설공사 관계 제거: 유지
+- 별도 신규 챕터·관계 생성: 미실행
+- Gate B2-1 건설공사 법령 콘텐츠 구현: 진행 가능
+- `AI_HANDOVER.md`: Gate B2 전체 완료 전 미갱신
+'''
+          audit_path.write_text(audit, encoding='utf-8')
+
+      - name: Validate and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- src/data/questions.json 'src/pages/industrial-safety/written/[subject]/[slug].astro' docs/audits/2026-08-03-question-20190804-119-source-mismatch.md; then
+            echo 'No restoration change to commit.'
+            exit 0
+          fi
+          git diff --check
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/data/questions.json 'src/pages/industrial-safety/written/[subject]/[slug].astro' docs/audits/2026-08-03-question-20190804-119-source-mismatch.md
+          git commit -m 'data: restore 20190804 question 119 [source-restored]'
+          git push origin HEAD:${{ github.head_ref }}
