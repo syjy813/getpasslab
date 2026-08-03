@@ -1,0 +1,171 @@
+name: Record Gate B1 documentation
+
+on:
+  push:
+    branches: [docs/gate-b1-production-record]
+    paths:
+      - '.github/workflows/gate-b1-doc-record.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update handover and audit document
+        shell: python
+        run: |
+          from pathlib import Path
+
+          handover_path = Path('AI_HANDOVER.md')
+          text = handover_path.read_text(encoding='utf-8')
+          text = text.replace('**최종 갱신일**: 2026-08-02 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.8', '**최종 갱신일**: 2026-08-03 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.9', 1)
+          text = text.replace('시험 인사이트 2개 배치, 관계·구조 정리 Gate A의 production 검증까지 완료됐다.', '시험 인사이트 2개 배치, 관계·구조 정리 Gate A와 기존 챕터 범위 보정 Gate B1의 production 검증까지 완료됐다.', 1)
+          text = text.replace('문서 맨 아래의 `관계·구조 정리 Gate A·production 검증 게이트 완료` 절을 우선한다.', '문서 맨 아래의 `관계·구조 범위 보정 Gate B1·production 검증 게이트 완료` 절을 우선한다.', 1)
+
+          section = r'''
+
+## 관계·구조 범위 보정 Gate B1·production 검증 게이트 완료 (2026-08-03)
+
+이 절은 신규 공개 식별자나 관계 변경 없이 기존 챕터 3개의 사용자 노출 범위를 실제 기출 의미에 맞게 보정한 Gate B1의 최신 상태를 기록한다.
+
+### 1. 현재 단계
+
+- PR #16 `content: broaden Gate B1 chapter scope` 완료.
+- Owner 승인 후 Squash and merge로 `main` 반영 완료.
+- `main` 병합 커밋: `6546086ed12e5b239a286a570397ce3672215a7b`.
+- 병합 전 `SEO validation` run #124 (`30779394278`): **PASS**.
+- production 대표 페이지 3곳 runtime 검증: **PASS**.
+- Gate B1 Production 상태: **VERIFIED**.
+
+### 2. 완료 범위
+
+- `ventricular-fibrillation-current`: `심실세동·전격사 위험`으로 범위 확대. 심실세동 전류·위험 심장주기·전격사 메커니즘을 구분하고 에너지 계산은 `vf-danger-energy`에 유지.
+- `construction-hazard-plan-documents`: `건설공사 유해·위험방지계획서 제출 기준`으로 범위 확대. 제출 대상·규모·시기·공사 중 확인·첨부서류를 구분.
+- `leakage-breaker-types`: `누전차단기 구조·정격·시설기준`으로 범위 확대. 정격감도전류·동작시간·시설방법·습윤장소 기준을 구분.
+- 변경 파일 3개, 추가 134줄, 삭제 36줄.
+
+### 3. 변경하지 않은 항목
+
+- 기존 `slug`, `subject_id`, `question_id`.
+- 세 챕터의 `questions` 관계 배열.
+- 문제 본문·선택지·정답·`review`.
+- 신규 관계·신규 공개 식별자·법령 수치표.
+- 스키마·의존성·URL 규칙·production 설정.
+
+### 4. 검증
+
+- PR 최종 HEAD: `178d52209af90d92a9d5d28e26fedb26e4b34a4a`.
+- Astro build: 성공, 209페이지.
+- SEO 검사: HTML 209개, sitemap URL 210개, 경고 0개, 오류 0개.
+- 공개 콘텐츠 검사: HTML 209개, 오류 0개.
+- production 검증 workflow run `30780077891`, job `91582847298`: 성공.
+- 세 페이지 모두 기존 URL을 유지한 채 신규 제목·본문 반영 확인.
+- 임시 검증 PR #17은 병합하지 않고 종료했으며 workflow도 제거했다.
+- 상세 문서: `docs/audits/2026-08-03-relation-structure-gate-b1-production-verification.md`.
+
+### 5. 남은 위험과 다음 작업
+
+- Gate B2에서 건설공사 법령 수치, 누전차단기 산업안전보건기준·KEC 수치·조건·예외와 후보 관계 3건을 정밀 검토한다.
+- Reason 인간오류 분류와 일반 연삭기 안전 신규 챕터는 신규 공개 `slug` Owner 결정이 필요하다.
+- 원문 누락·OCR·이미지 의존 문항은 복원 전 비공개 유지.
+- npm 취약점 5건과 Actions deprecation 경고는 별도 의존성·CI 감사에서 처리.
+
+다음 권장 작업은 Gate B2 법령·관계 정밀 감사이며 GPT-5.6 Sol의 Pro 추론 강도를 권장한다.
+'''
+          if '## 관계·구조 범위 보정 Gate B1·production 검증 게이트 완료 (2026-08-03)' not in text:
+              text = text.rstrip() + section + '\n'
+          handover_path.write_text(text, encoding='utf-8')
+
+          audit_path = Path('docs/audits/2026-08-03-relation-structure-gate-b1-production-verification.md')
+          audit_path.parent.mkdir(parents=True, exist_ok=True)
+          audit_path.write_text(r'''# 관계·구조 범위 보정 Gate B1 production 검증
+
+- 검증일: 2026-08-03
+- 대상 PR: #16 `content: broaden Gate B1 chapter scope`
+- `main` 병합 커밋: `6546086ed12e5b239a286a570397ce3672215a7b`
+- 병합 방식: Squash and merge
+- 최종 결과: **PASS**
+
+## 1. 구현 범위
+
+| `slug` | 기존 제목 | 변경 제목 |
+|---|---|---|
+| `ventricular-fibrillation-current` | 심실세동 전류 | 심실세동·전격사 위험 |
+| `construction-hazard-plan-documents` | 유해·위험방지계획서 첨부서류 6가지 | 건설공사 유해·위험방지계획서 제출 기준 |
+| `leakage-breaker-types` | 누전차단기 종류 | 누전차단기 구조·정격·시설기준 |
+
+- 변경 파일: 3개.
+- diff: 추가 134줄, 삭제 36줄.
+- 기존 `slug`, `subject_id`, `question_id`, 관계 배열 유지.
+- 문제 본문·선택지·정답·`review` 무변경.
+- 신규 관계·신규 공개 식별자·법령 수치표 무추가.
+
+## 2. 병합 전 검증
+
+- PR 최종 HEAD: `178d52209af90d92a9d5d28e26fedb26e4b34a4a`.
+- workflow: `SEO validation`, run `30779394278` (#124).
+- `npm ci`: 성공.
+- Astro build: 209페이지.
+- SEO: HTML 209개, sitemap URL 210개, 경고 0개, 오류 0개.
+- 공개 콘텐츠 검사: HTML 209개, 오류 0개.
+- PR mergeable: true.
+
+## 3. 병합
+
+- Owner 승인 후 Ready for review 전환.
+- Squash and merge 완료.
+- `main` 병합 커밋: `6546086ed12e5b239a286a570397ce3672215a7b`.
+
+## 4. Production runtime 검증
+
+- 일회성 workflow: `Gate B1 production check`.
+- run: `30780077891`.
+- job: `91582847298`.
+- 결과: `completed / success`.
+- 첫 확인 시도에서 세 페이지 모두 통과.
+
+검증 페이지:
+
+1. `/industrial-safety/written/electrical/ventricular-fibrillation-current/`
+   - 신규 제목과 `전격사의 주요 메커니즘` 확인.
+2. `/industrial-safety/written/construction/construction-hazard-plan-documents/`
+   - 신규 제목과 `기출 기준과 현행 기준` 확인.
+3. `/industrial-safety/written/electrical/leakage-breaker-types/`
+   - 신규 제목과 `습윤장소와 욕실 기준` 확인.
+
+기존 URL과 `slug`를 유지한 상태에서 production 반영을 확인했다. 검증용 PR #17은 병합하지 않고 종료했고 임시 workflow는 제거했다.
+
+## 5. 경고와 남은 위험
+
+- npm 감사 경고 5건: 낮음 1건, 높음 4건.
+- `tsconfck` deprecated, install-script allowlist, Actions Node.js 20 deprecation 경고 유지.
+- 이번 콘텐츠 변경으로 추가된 의존성 없음.
+- 현행 법령·KEC 세부 수치와 후보 관계 추가는 Gate B2로 유지.
+- GitHub Pages 배포 run ID는 별도로 수집하지 않았지만 production 응답으로 실제 반영을 검증함.
+
+## 6. 최종 판정
+
+- Gate B1 구현: **PASS**.
+- 병합: **완료**.
+- production: **VERIFIED**.
+- `AI_HANDOVER.md`: 별도 문서 PR에서 v1.9로 갱신.
+- 다음 작업: Gate B2 법령·관계 정밀 감사.
+''', encoding='utf-8')
+
+      - name: Commit documentation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add AI_HANDOVER.md docs/audits/2026-08-03-relation-structure-gate-b1-production-verification.md
+          git commit -m 'docs: record Gate B1 production verification [skip ci]'
+          git push origin HEAD:docs/gate-b1-production-record
