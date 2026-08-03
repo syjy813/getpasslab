@@ -22,7 +22,14 @@ jobs:
           fetch-depth: 0
 
       - name: Apply verified Gate B2 batch
-        run: python scripts/gate-b2-batch.py
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+          git fetch origin "${BASE_SHA}"
+          git show "${BASE_SHA}:scripts/gate-b2-batch.py" > /tmp/gate-b2-batch.py
+          BASE_SHA="${BASE_SHA}" python /tmp/gate-b2-batch.py
 
       - name: Validate diff and commit
         shell: bash
