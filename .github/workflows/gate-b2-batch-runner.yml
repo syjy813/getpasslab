@@ -74,6 +74,15 @@ jobs:
             echo 'No Gate B2 completion record change to commit.'
             exit 0
           fi
+          python - <<'PY'
+          from pathlib import Path
+          for name in [
+              'AI_HANDOVER.md',
+              'docs/audits/2026-08-03-gate-b2-law-and-relations-implementation.md',
+          ]:
+              path = Path(name)
+              path.write_text(path.read_text(encoding='utf-8').rstrip() + '\n', encoding='utf-8')
+          PY
           git diff --check
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
