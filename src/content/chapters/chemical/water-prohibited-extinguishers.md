@@ -5,7 +5,7 @@ subject_id: 5
 group: 위험물 반응
 tags: [개념]
 summary: 탄산수소염류분말·탄산칼륨·강화액
-questions: [20210814_083, 20210814_096]
+questions: [20190804_089]
 order: 4
 priority: 1차
 status: 미시작

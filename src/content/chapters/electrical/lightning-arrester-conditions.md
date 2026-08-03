@@ -5,7 +5,7 @@ subject_id: 4
 group: 차단기·피뢰
 tags: [개념]
 summary: 충격·제한 낮게 / 상용주파 높게
-questions: [20220305_076]
+questions: [20220424_069, 20220305_076]
 order: 2
 priority: 1차
 status: 완료

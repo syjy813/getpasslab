@@ -5,7 +5,7 @@ subject_id: 3
 group: 둥근톱·연삭기
 tags: [개념, 법령]
 summary: 평면·절단 150 / 휴대 180 / 탁상 60°
-questions: [20180819_048, 20180428_041, 20190303_041]
+questions: [20180428_041, 20190303_041]
 order: 3
 priority: 1차
 status: 미시작

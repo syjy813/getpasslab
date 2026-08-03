@@ -5,7 +5,7 @@ subject_id: 1
 group: 안전보건교육 시간
 tags: [개념, 법령]
 summary: 정기·채용시·작업내용 변경시 교육시간
-questions: [20220305_007]
+questions: [20220305_007, 20210307_018, 20200822_007, 20190427_020]
 order: 3
 priority: 1차
 status: 미시작

@@ -5,7 +5,7 @@ subject_id: 6
 group: 추락 방지
 tags: [개념]
 summary: 수직구명줄·안전블록·죄줄·보조죄줄·추락방지대
-questions: [20220424_102, 20220424_114]
+questions: [20200606_116, 20180428_108, 20180819_109, 20190427_115]
 order: 1
 priority: 1차
 status: 미시작

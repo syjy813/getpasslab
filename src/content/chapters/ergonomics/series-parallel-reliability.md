@@ -5,7 +5,7 @@ subject_id: 2
 group: 신뢰도·수명
 tags: [계산]
 summary: "곱셈, 부품 수 많을수록 신뢰도 감소"
-questions: [20220305_022]
+questions: [20210814_035, 20190804_037, 20180819_040]
 order: 4
 priority: 1차
 status: 미시작
