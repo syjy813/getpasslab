@@ -15,7 +15,7 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-03 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.11
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-04 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.12
 
 ---
 
@@ -23,10 +23,10 @@
 
 **GetPassLab** = 산업안전기사 수험생용 **기출 역설계 기반 핵심 요약 정적 웹사이트**.
 
-- **스택**: Astro 5 + Markdown + GitHub Pages. **서버 없음, DB 없음, API 없음.** 모든 게 빌드 타임에 끝난다.
+- **스택**: Astro 7 + Markdown + GitHub Pages. **서버 없음, DB 없음, API 없음.** 모든 게 빌드 타임에 끝난다.
 - **목적**: 1순위 = **이직 포트폴리오**, 2순위 = AdSense 수익.
 - **현재**: 공개 챕터 198개와 정적 페이지 209개를 `getpasslab.co.kr` production에 배포했다. HTTPS·정책·SEO·AdSense·GA4 코드 통합, 공개 콘텐츠 내부 식별자 정리, 시험 인사이트 2개 배치, 관계·구조 정리 Gate A, 기존 챕터 범위 보정 Gate B1, 원문 복원·법령·관계 보정 Gate B2의 production 검증까지 완료됐다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
-- **최신 동적 상태**: 문서 맨 아래의 `Gate B2 공식 원문 후속 보완 production 게이트 완료` 절을 우선한다.
+- **최신 동적 상태**: 문서 맨 아래의 `Astro 7 의존성·Pages production 게이트 완료` 절을 우선한다.
 
 **🚨 절대 하지 마라 (이것만 기억해도 대형 사고 방지):**
 1. `slug` / `subject_id` / `question_id` **변경·생성 금지** (동결 키)
@@ -378,9 +378,11 @@ const linked = chapter.data.questions             // frontmatter의 ID 배열
 Phase 2    → 그때만 Astro Island (client:visible 등)
 ```
 
-## 6.4 Astro 5 주의
+## 6.4 Astro 7 주의
 
 - **Content Layer API** (`glob`/`file` loader). Astro 4 예제 복사 금지 (`type: 'content'`는 구문법).
+- `remark-math`·`rehype-katex`는 `@astrojs/markdown-remark`의 `unified()` processor에 연결한다.
+- Astro 7.1.6과 production Pages build는 Node 22.12.0 이상이 필요하며 현재 workflow는 Node 24를 사용한다.
 - 링크는 **trailing slash** 필수 (`/electrica/ohm-law/`).
 - 페이지가 `getStaticPaths`로 조회·조인, 컴포넌트는 props만 받는다.
 
@@ -2471,3 +2473,39 @@ Gate B2 최종 상태: **VERIFIED**. 완료 범위를 다시 수행하지 않는
 - 기출문제와 이미지의 상용 이용 범위는 Owner 법무·사업 결정이 필요.
 
 다음 권장 작업은 외부 수익화·분석 상태 확인과 기출문제 이용 권리 결정이다. 저장소 기술 작업으로는 의존성·CI T0 감사 또는 손상·이미지 문항 위험 배치가 후속 후보다.
+
+## Astro 7 의존성·Pages production 게이트 완료 (2026-08-04)
+
+의존성 보안 패치, Astro 7 메이저 업그레이드, Pages Node 24 복구를 독립 PR로 완료했다.
+
+### 1. 구현·병합
+
+- PR #38: 기존 semver 범위의 전이 의존성 보안 패치, merge `3b686ba337b2a70552c1ba70ded08e4f94102bb8`.
+- PR #39: Astro 7.1.6 마이그레이션, merge `07b31a2a7e371f9e1aa78eae90d66515dc925f36`.
+- PR #40: Pages action Node 24 hotfix, merge `ffeb20f76e08417005a154cb8130603252e1eb86`.
+- 각 PR은 ChatGPT 최종 기술 리뷰 PASS와 SEO validation 성공 후 Squash merge했다.
+- 콘텐츠·문항·관계·동결 키·스키마·URL·핵심 UX 변경 없음.
+
+### 2. 검증·production
+
+- 현재 스택: Astro 7.1.6, `@astrojs/markdown-remark` 7.2.2, Node 24 Pages build.
+- 기존 `remark-math`·`rehype-katex` 수식 처리와 HTML 공백 동작 유지.
+- `npm audit`: 취약점 0건.
+- 전체 1,680문항, ID 중복 0건.
+- Astro build 209페이지, SEO 경고·오류 0건, 공개 콘텐츠 오류 0건.
+- 첫 Astro 7 Pages run #102 `30825708533`은 Node 20 고정으로 실패했고 배포 artifact가 생성되지 않았다.
+- 복구 Pages run #103 `30826474085`: build job `91729293756`, deploy job `91729435295` 모두 성공.
+- production 홈, Gate B2 대표 2페이지, `ohms-law`, sitemap 모두 HTTP 200.
+- `ohms-law` production에서 KaTeX 마크업 확인.
+- 상세 기록: `docs/audits/2026-08-04-astro7-dependency-and-pages-production-verification.md`.
+
+최종 상태: Astro 7 의존성·Pages production 게이트 **VERIFIED**. 완료 범위를 다시 수행하지 않는다.
+
+### 3. 남은 위험과 다음 작업
+
+- `esbuild` 설치 스크립트 allowlist 안내는 남아 있으나 clean install·build·CI·Pages는 성공했다.
+- Actions의 Node 20 action runtime deprecation과 `punycode` 경고가 남아 있다. action major-version 현대화는 별도 T0 감사·승인 범위다.
+- AdSense 승인·실제 광고 송출, Search Console 색인·sitemap 처리, GA4 실시간 이벤트는 외부 계정 증거로 별도 확정한다.
+- 기출문제와 이미지의 상용 이용 범위는 Owner 법무·사업 결정이 필요하다.
+
+다음 저장소 기술 후보는 Actions major-version 현대화 또는 손상·이미지 문항 위험 배치다. 외부 우선순위는 수익화·분석 상태 확인과 기출문제 이용 권리 결정이다.
