@@ -45,3 +45,28 @@
 - SEO 경고·오류 0건
 - 공개 콘텐츠 검사 오류 0건
 - 병합 후 production runtime 검증
+
+
+## 6. 최종 병합·production 검증
+
+- PR: #27 `content: implement Gate B2 law and relation batch`
+- PR 최종 HEAD: `07c7b40d1826cfb19ca6f5e1574ebfaf909097ea`
+- Squash merge commit: `34c818eba4af6973cfeb5fa34df3064d374a13e5`
+- Gate B2 runner run #27: `30804563487`, 성공
+- SEO validation run #156: `30804563832`, 성공
+- Build: 209페이지
+- SEO: HTML 209개, sitemap URL 210개, 경고 0개, 오류 0개
+- 공개 콘텐츠 검사: 오류 0개
+- production 검증 run: `30804840067`
+- production 검증 job: `91657665376`
+- 결과: 첫 번째 시도에서 `completed / success`
+- 검증용 PR #31: 병합하지 않고 종료, workflow 파일 제거
+
+최종 판정:
+
+- `20190804_119` 원문 복원: 완료
+- 임시 공개 차단 코드 제거: 완료
+- 건설공사 법령 콘텐츠: 완료
+- 누전차단기 법령 콘텐츠·관계 3건: 완료
+- production: **VERIFIED**
+- 신규 공개 식별자·스키마·의존성·URL·production 설정 변경: 없음
