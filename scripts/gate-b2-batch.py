@@ -1,4 +1,6 @@
 import json
+import os
+import subprocess
 from copy import deepcopy
 from pathlib import Path
 
@@ -11,26 +13,33 @@ GATE_AUDIT_PATH = Path('docs/audits/2026-08-03-gate-b2-law-and-relations-impleme
 ASSET_DIR = Path('scripts/gate-b2-assets')
 TRIGGER_PATH = Path('.gate-b2-trigger')
 
-questions = json.loads(QUESTIONS_PATH.read_text(encoding='utf-8'))
-if len(questions) != 1680:
-    raise RuntimeError(f'Expected 1680 questions, found {len(questions)}')
+base_sha = os.environ.get('BASE_SHA')
+if not base_sha:
+    raise RuntimeError('BASE_SHA is required')
 
-ids = [question['id'] for question in questions]
-if len(ids) != len(set(ids)):
-    raise RuntimeError('Duplicate question IDs detected before update')
+base_questions_text = subprocess.run(
+    ['git', 'show', f'{base_sha}:src/data/questions.json'],
+    check=True,
+    capture_output=True,
+    text=True,
+    encoding='utf-8',
+).stdout
+base_questions = json.loads(base_questions_text)
+if len(base_questions) != 1680:
+    raise RuntimeError(f'Expected 1680 base questions, found {len(base_questions)}')
 
-by_id = {question['id']: question for question in questions}
+base_ids = [question['id'] for question in base_questions]
+if len(base_ids) != len(set(base_ids)):
+    raise RuntimeError('Duplicate question IDs detected in base data')
+
+base_by_id = {question['id']: question for question in base_questions}
 required_ids = {
     '20190804_118', '20190804_119', '20190804_120',
     '20220424_065', '20200926_065', '20180428_073',
 }
-missing = sorted(required_ids - set(by_id))
+missing = sorted(required_ids - set(base_by_id))
 if missing:
     raise RuntimeError(f'Missing required question IDs: {missing}')
-
-before_118 = deepcopy(by_id['20190804_118'])
-before_120 = deepcopy(by_id['20190804_120'])
-target = by_id['20190804_119']
 
 expected_identity = {
     'id': '20190804_119',
@@ -40,27 +49,63 @@ expected_identity = {
     'number': 119,
 }
 for key, value in expected_identity.items():
-    if target.get(key) != value:
-        raise RuntimeError(f'Unexpected 20190804_119 {key}: {target.get(key)!r}')
+    if base_by_id['20190804_119'].get(key) != value:
+        raise RuntimeError(f'Unexpected base 20190804_119 {key}')
 
-restored = {
+old_block = ''' {
+  "id": "20190804_119",
+  "subject_id": 6,
+  "date": "2019-08-04",
+  "label": "2019년 8월 시행",
+  "number": 119,
+  "body": "건설공사의 유해ㆍ위험방지계획서 제출 대상 중 「건축법」에 따른 건축물 또는 이와 유사한 구조물의 건설, 개조 또는 해체를 하는 공사로서 제출 대상이 되는 공사의 기준은?",
+  "choices": [
+   "지상높이가 21m 이상인 건축물 또는 인공구조물",
+   "지상높이가 31m 이상인 건축물 또는 인공구조물",
+   "최대 지간거리가 40m 이상인 교량공사",
+   "깊이 10m 이상인 굴착공사"
+  ],
+  "answer": 1,
+  "review": ""
+ },'''
+new_block = ''' {
+  "id": "20190804_119",
+  "subject_id": 6,
+  "date": "2019-08-04",
+  "label": "2019년 8월 시행",
+  "number": 119,
+  "body": "감전재해의 직접적인 요인으로 가장 거리가 먼 것은?",
+  "choices": [
+   "통전전압의 크기",
+   "통전전류의 크기",
+   "통전시간",
+   "통전경로"
+  ],
+  "answer": 1,
+  "review": ""
+ },'''
+if base_questions_text.count(old_block) != 1:
+    raise RuntimeError('Expected exactly one audited corrupted question block in base data')
+
+restored_questions_text = base_questions_text.replace(old_block, new_block, 1)
+restored_questions = json.loads(restored_questions_text)
+restored_by_id = {question['id']: question for question in restored_questions}
+expected_restored = {
     'body': '감전재해의 직접적인 요인으로 가장 거리가 먼 것은?',
     'choices': ['통전전압의 크기', '통전전류의 크기', '통전시간', '통전경로'],
     'answer': 1,
     'review': '',
 }
-if not all(target.get(key) == value for key, value in restored.items()):
-    if '유해' not in str(target.get('body', '')) or target.get('answer') != 1:
-        raise RuntimeError('20190804_119 no longer matches the audited corrupted state')
-    target.update(restored)
-
-if by_id['20190804_118'] != before_118 or by_id['20190804_120'] != before_120:
-    raise RuntimeError('Adjacent question records changed unexpectedly')
-
-QUESTIONS_PATH.write_text(
-    json.dumps(questions, ensure_ascii=False, indent=1) + '\n',
-    encoding='utf-8',
-)
+for key, value in expected_restored.items():
+    if restored_by_id['20190804_119'].get(key) != value:
+        raise RuntimeError(f'Restored 20190804_119 {key} mismatch')
+if restored_by_id['20190804_118'] != base_by_id['20190804_118']:
+    raise RuntimeError('20190804_118 changed unexpectedly')
+if restored_by_id['20190804_120'] != base_by_id['20190804_120']:
+    raise RuntimeError('20190804_120 changed unexpectedly')
+if len(restored_questions_text) - len(base_questions_text) != len(new_block) - len(old_block):
+    raise RuntimeError('Unexpected questions.json byte-range change')
+QUESTIONS_PATH.write_text(restored_questions_text, encoding='utf-8')
 
 page = PAGE_PATH.read_text(encoding='utf-8')
 filter_snippet = "  if (question.id === '20190804_119') {\n    exclusionReasons.push('source answer verification pending');\n  }\n"
@@ -94,9 +139,10 @@ for chapter in Path('src/content/chapters').rglob('*.md'):
     for question_id in candidate_ids:
         if question_id in frontmatter:
             relation_hits[question_id].append(str(chapter))
-unexpected_hits = {question_id: hits for question_id, hits in relation_hits.items() if hits}
-if unexpected_hits:
-    raise RuntimeError(f'Candidate relations are no longer unmapped: {unexpected_hits}')
+allowed_existing = {str(LEAKAGE_PATH)}
+for question_id, hits in relation_hits.items():
+    if set(hits) not in (set(), allowed_existing):
+        raise RuntimeError(f'Unexpected existing relation for {question_id}: {hits}')
 
 leakage_current = LEAKAGE_PATH.read_text(encoding='utf-8')
 leakage_frontmatter = leakage_current.split('---', 2)[1]
@@ -137,4 +183,4 @@ for question_id in candidate_ids:
 if TRIGGER_PATH.exists():
     TRIGGER_PATH.unlink()
 
-print('Gate B2 batch changes prepared successfully.')
+print('Gate B2 batch changes prepared successfully with questions.json formatting preserved.')
