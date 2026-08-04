@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { CERTIFICATIONS, getSubjectLabel } from '../../../config/certifications';
+import { withBase } from '../../../config/url';
+
+export function getStaticPaths() {
+  return Object.values(CERTIFICATIONS).flatMap((certification) =>
+    Object.values(certification.exams).map((exam) => ({
+      params: { cert: certification.slug, exam: exam.slug },
+      props: { certification, examDefinition: exam },
+    })),
+  );
+}
+
+const { certification, examDefinition } = Astro.props;
+const chapters = (await getCollection('chapters')).filter(
+  chapter => chapter.data.cert_id === certification.slug
+    && chapter.data.exam === examDefinition.slug
+    && chapter.data.status === '완료',
+);
+const countBy = (id: number) => chapters.filter(chapter => chapter.data.subject_id === id).length;
+const subjects = Object.entries(examDefinition.subjects);
+---
+<BaseLayout title={`${certification.name} ${examDefinition.title} — GetPassLab`} description={examDefinition.description}>
+  <section class="section container" style="padding-top:var(--space-8)">
+    <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
+      <a href={withBase('/')}>홈</a><span class="sep">/</span>
+      <a href={withBase(`/${certification.slug}/`)}>{certification.name}</a><span class="sep">/</span>
+      <span class="current">{examDefinition.name}</span>
+    </nav>
+    <h1 class="gpl-h1">{examDefinition.title}</h1>
+    <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">{examDefinition.format}</p>
+    <div class="grid grid-3">
+      {subjects.map(([id, subject]) => (
+        <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/`)}>
+          <span class="card-label">{getSubjectLabel(Number(id), subject)}</span>
+          <div class="card-title">{subject.name}</div>
+          <div class="card-meta">챕터 {countBy(Number(id))}개</div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -8,6 +8,8 @@ const chapters = defineCollection({
   schema: z.object({
     title: z.string(),
     slug: z.string(),               // 동결 키
+    cert_id: z.string().default('industrial-safety'),
+    exam: z.string().default('written'),
     subject_id: z.number().min(1).max(6),
     group: z.string(),
     tags: z.union([
@@ -28,6 +30,8 @@ const questions = defineCollection({
   loader: file('./src/data/questions.json'),
   schema: z.object({
     id: z.string(),                 // 동결 키: question_id (예: 20220424_061)
+    cert_id: z.string().default('industrial-safety'),
+    exam: z.string().default('written'),
     subject_id: z.number(),
     date: z.string(),               // YYYY-MM-DD
     label: z.string(),              // 표기용: "2022년 4월 시행"

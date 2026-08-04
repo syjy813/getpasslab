@@ -4,7 +4,7 @@
 // /admin/ 과 분리된 하위 페이지. 개발 환경에서만 제공.
 import '../../../styles/global.css';
 import { getCollection } from 'astro:content';
-import { SUBJECTS, type SubjectId } from '../../../config/subjects';
+import { CERTIFICATIONS, getSubjectLabel } from '../../../config/certifications';
 import { withBase } from '../../../config/url';
 
 export function getStaticPaths() {
@@ -18,19 +18,22 @@ const chapters = await getCollection('chapters');
 const linkCount = new Map<string, number>();
 for (const c of chapters) {
   for (const qid of c.data.questions ?? []) {
-    linkCount.set(qid, (linkCount.get(qid) ?? 0) + 1);
+    const key = `${c.data.cert_id}:${c.data.exam}:${qid}`;
+    linkCount.set(key, (linkCount.get(key) ?? 0) + 1);
   }
 }
 
 const rows = questions.map((q) => ({
   id: q.data.id,
+  cert_id: q.data.cert_id,
+  exam: q.data.exam,
   subject_id: q.data.subject_id,
   label: q.data.label,
   number: q.data.number,
   body: q.data.body,
   answer: q.data.answer,
   review: q.data.review ?? '',
-  links: linkCount.get(q.data.id) ?? 0,
+  links: linkCount.get(`${q.data.cert_id}:${q.data.exam}:${q.data.id}`) ?? 0,
 }));
 
 const total = rows.length;
@@ -42,15 +45,28 @@ const unlinked = rows.filter((r) => r.links === 0).length;
 const ans = ['①', '②', '③', '④'];
 const truncate = (s: string, n = 80) => (s.length > n ? s.slice(0, n) + '…' : s);
 
-// 과목별 그룹 (문제 ID 정렬)
-const bySubject = Object.entries(SUBJECTS).map(([id, s]) => {
-  const sid = Number(id);
-  return {
-    id: sid,
-    name: s.name,
-    rows: rows.filter((r) => r.subject_id === sid).sort((a, b) => a.id.localeCompare(b.id)),
-  };
-});
+// 자격증·과목별 그룹 (문제 ID 정렬)
+const bySubject = Object.values(CERTIFICATIONS).flatMap((certification) =>
+  Object.values(certification.exams).flatMap((exam) =>
+    Object.entries(exam.subjects).map(([id, subject]) => {
+      const sid = Number(id);
+      return {
+        certification: certification.name,
+        exam: exam.name,
+        id: sid,
+        label: getSubjectLabel(sid, subject),
+        name: subject.name,
+        rows: rows
+          .filter((row) =>
+            row.cert_id === certification.slug
+            && row.exam === exam.slug
+            && row.subject_id === sid,
+          )
+          .sort((a, b) => a.id.localeCompare(b.id)),
+      };
+    }),
+  ),
+);
 ---
 
 <!doctype html>
@@ -109,7 +125,7 @@ const bySubject = Object.entries(SUBJECTS).map(([id, s]) => {
 
     {bySubject.map((s) => (
       <section>
-        <h2 class="adm">{s.id}. {s.name} <span class="c">({s.rows.length})</span></h2>
+        <h2 class="adm">{s.certification} · {s.exam} · {s.label} · {s.name} <span class="c">({s.rows.length})</span></h2>
         <table>
           <thead>
             <tr>

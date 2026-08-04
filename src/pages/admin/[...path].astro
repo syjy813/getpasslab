@@ -4,15 +4,15 @@
 // 노션 매핑 DB 이관 후 유일한 조회 대시보드. 개발 환경에서만 제공.
 import '../../styles/global.css';
 import { getCollection } from 'astro:content';
-import { SUBJECTS } from '../../config/subjects';
+import { CERTIFICATIONS, getSubjectLabel } from '../../config/certifications';
 import { withBase } from '../../config/url';
-import questions from '../../data/questions.json';
 
 export function getStaticPaths() {
   return import.meta.env.DEV ? [{ params: { path: undefined } }] : [];
 }
 
 const chapters = await getCollection('chapters');
+const questions = await getCollection('questions');
 
 // 본문 작성 여부: '## ' 헤딩이 있으면 실제 콘텐츠, 없으면 스텁
 const isWritten = (c: any) => /(^|\n)##\s/.test(c.body ?? '');
@@ -20,6 +20,8 @@ const isWritten = (c: any) => /(^|\n)##\s/.test(c.body ?? '');
 const rows = chapters.map((c) => ({
   slug: c.data.slug,
   title: c.data.title,
+  cert_id: c.data.cert_id,
+  exam: c.data.exam,
   subject_id: c.data.subject_id,
   group: c.data.group,
   order: c.data.order,
@@ -47,20 +49,35 @@ const excludedQuestions = [
   { id: '20200822_025', subject: 2, reason: '노션 정답 공란' },
 ];
 
-// 과목별 집계
-const bySubject = Object.entries(SUBJECTS).map(([id, s]) => {
-  const sid = Number(id);
-  const sr = rows.filter((r) => r.subject_id === sid);
-  return {
-    id: sid,
-    name: s.name,
-    total: sr.length,
-    done: sr.filter((r) => r.status === '완료').length,
-    written: sr.filter((r) => r.written).length,
-    notStarted: sr.filter((r) => r.status === '미시작').length,
-    questions: questions.filter((q: any) => q.subject_id === sid).length,
-  };
-});
+// 자격증·시험·과목별 집계
+const bySubject = Object.values(CERTIFICATIONS).flatMap((certification) =>
+  Object.values(certification.exams).flatMap((exam) =>
+    Object.entries(exam.subjects).map(([id, subject]) => {
+      const sid = Number(id);
+      const sr = rows.filter((row) =>
+        row.cert_id === certification.slug
+        && row.exam === exam.slug
+        && row.subject_id === sid,
+      );
+      return {
+        certification: certification.name,
+        exam: exam.name,
+        id: sid,
+        label: getSubjectLabel(sid, subject),
+        name: subject.name,
+        total: sr.length,
+        done: sr.filter((row) => row.status === '완료').length,
+        written: sr.filter((row) => row.written).length,
+        notStarted: sr.filter((row) => row.status === '미시작').length,
+        questions: questions.filter((question) =>
+          question.data.cert_id === certification.slug
+          && question.data.exam === exam.slug
+          && question.data.subject_id === sid,
+        ).length,
+      };
+    }),
+  ),
+);
 
 // 우선순위별 집계
 const priorities = ['출시 필수', '1차', '2차'];
@@ -78,7 +95,10 @@ const pct = (n: number, d: number) => (d ? Math.round((n / d) * 100) : 0);
 
 // 챕터 상세 (과목→순서)
 const detail = [...rows].sort(
-  (a, b) => a.subject_id - b.subject_id || a.order - b.order
+  (a, b) => a.cert_id.localeCompare(b.cert_id)
+    || a.exam.localeCompare(b.exam)
+    || a.subject_id - b.subject_id
+    || a.order - b.order
 );
 ---
 
@@ -145,7 +165,7 @@ const detail = [...rows].sort(
         <p class="muted" style="margin:0 0 8px;font-size:var(--fs-caption)">
           노션에서 완료 표시됐으나 git에 본문 md가 없어 스텁으로 이관됨. 본문 작성 또는 상태 정정 필요.
         </p>
-        <div>{gapDoneNoBody.map((r) => (<code>{r.subject_id}과목 · {r.slug}</code>)).reduce((a, b) => (<>{a} {b}</>))}</div>
+        <div>{gapDoneNoBody.map((r) => (<code>{r.cert_id} · {r.subject_id}과목 · {r.slug}</code>)).reduce((a, b) => (<>{a} {b}</>))}</div>
       </div>
     )}
 
@@ -161,7 +181,7 @@ const detail = [...rows].sort(
     <table>
       <thead>
         <tr>
-          <th>과목</th><th class="num">챕터</th><th class="num">완료</th>
+          <th>자격증 · 과목</th><th class="num">챕터</th><th class="num">완료</th>
           <th class="num">본문</th><th class="num">미시작</th><th class="num">기출</th>
           <th style="width:150px">본문 진행률</th>
         </tr>
@@ -169,7 +189,7 @@ const detail = [...rows].sort(
       <tbody>
         {bySubject.map((s) => (
           <tr>
-            <td>{s.id}. {s.name}</td>
+            <td>{s.certification} · {s.exam} · {s.label} · {s.name}</td>
             <td class="num">{s.total}</td>
             <td class="num">{s.done}</td>
             <td class="num">{s.written}</td>
@@ -215,13 +235,14 @@ const detail = [...rows].sort(
       <table style="margin-top:12px">
         <thead>
           <tr>
-            <th>과목</th><th>그룹</th><th class="num">순서</th><th>챕터</th>
+            <th>자격증</th><th>과목</th><th>그룹</th><th class="num">순서</th><th>챕터</th>
             <th>slug</th><th>우선순위</th><th>상태</th><th>본문</th><th class="num">기출</th>
           </tr>
         </thead>
         <tbody>
           {detail.map((r) => (
             <tr>
+              <td>{r.cert_id}</td>
               <td class="num">{r.subject_id}</td>
               <td class="muted">{r.group}</td>
               <td class="num">{r.order}</td>

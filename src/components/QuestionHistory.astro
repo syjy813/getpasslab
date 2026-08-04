@@ -1,9 +1,9 @@
 ---
-interface Q { id: string; label: string; number: number; body: string; choices: string[]; answer: number; }
+interface Q { id: string; date: string; label: string; number: number; body: string; choices: string[]; answer: number; }
 interface Props { questions: Q[]; examComment?: string; }
 const { questions, examComment } = Astro.props;
 const examLabel = (label: string) => label.replace(/ 시행$/, ' 시험');
-const years = new Set(questions.map(q => q.id.slice(0, 4)));
+const years = new Set(questions.map(q => q.date.slice(0, 4)));
 const sortedYears = [...years].sort();
 const yearRange = sortedYears.length === 0
   ? ''

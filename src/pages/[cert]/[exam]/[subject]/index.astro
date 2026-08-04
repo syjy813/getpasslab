@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import {
+  CERTIFICATIONS,
+  getSubjectLabel,
+} from '../../../../config/certifications';
+import { withBase } from '../../../../config/url';
+import ChapterBadges from '../../../../components/ChapterBadges.astro';
+import {
+  createChapterBadgeContext,
+  getChapterBadgeSummary,
+} from '../../../../utils/chapterBadges';
+
+export function getStaticPaths() {
+  return Object.values(CERTIFICATIONS).flatMap((certification) =>
+    Object.values(certification.exams).flatMap((exam) =>
+      Object.entries(exam.subjects).map(([id, subject]) => ({
+        params: {
+          cert: certification.slug,
+          exam: exam.slug,
+          subject: subject.slug,
+        },
+        props: {
+          certification,
+          examDefinition: exam,
+          subjectId: Number(id),
+          subject,
+        },
+      })),
+    ),
+  );
+}
+
+const { certification, examDefinition, subjectId, subject } = Astro.props;
+const subjectLabel = getSubjectLabel(subjectId, subject);
+const chapters = (await getCollection('chapters')).filter(
+  chapter => chapter.data.cert_id === certification.slug
+    && chapter.data.exam === examDefinition.slug
+    && chapter.data.subject_id === subjectId
+    && chapter.data.status === '완료',
+);
+const questions = (await getCollection('questions'))
+  .filter(question => question.data.cert_id === certification.slug && question.data.exam === examDefinition.slug)
+  .map(question => question.data);
+const badgeContext = createChapterBadgeContext(questions);
+const chapterCards = chapters.map(chapter => ({
+  chapter,
+  badges: getChapterBadgeSummary(
+    chapter.data.tags,
+    chapter.data.questions,
+    badgeContext,
+  ).badges,
+}));
+const groups = [...new Set(chapters.map(chapter => chapter.data.group))];
+---
+<BaseLayout
+  title={`${subject.name} — ${certification.name} ${examDefinition.name} — GetPassLab`}
+  description={`${certification.name} ${examDefinition.name} ${subject.name}의 공개 챕터와 핵심 개념, 계산·판별 기준, 시험 포인트를 정리합니다.`}
+>
+  <section class="section container" style="padding-top:var(--space-8)">
+    <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
+      <a href={withBase('/')}>홈</a><span class="sep">/</span>
+      <a href={withBase(`/${certification.slug}/`)}>{certification.name}</a><span class="sep">/</span>
+      <a href={withBase(`/${certification.slug}/${examDefinition.slug}/`)}>{examDefinition.name}</a><span class="sep">/</span>
+      <span class="current">{subjectLabel}</span>
+    </nav>
+    <span class="card-label">{subjectLabel}</span>
+    <h1 class="gpl-h1" style="margin-top:var(--space-2)">{subject.name}</h1>
+    <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-8)">챕터 {chapters.length}개</p>
+
+    {chapters.length === 0 && (
+      <div class="card" style="cursor:default"><div class="card-title">콘텐츠 준비 중</div><div class="card-meta">챕터가 순차적으로 공개됩니다.</div></div>
+    )}
+    {groups.map(group => (
+      <div style="margin-bottom:var(--space-8)">
+        <h2 class="gpl-h3" style="margin-bottom:var(--space-4)">{group}</h2>
+        <div class="grid grid-2">
+          {chapterCards.filter(({ chapter }) => chapter.data.group === group).map(({ chapter, badges }) => (
+            <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/${chapter.data.slug}/`)}>
+              <ChapterBadges badges={badges} class="card-badges" />
+              <div class="card-title">{chapter.data.title}</div>
+              <div class="card-meta">{chapter.data.summary}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+</BaseLayout>
