@@ -2509,3 +2509,39 @@ Gate B2 최종 상태: **VERIFIED**. 완료 범위를 다시 수행하지 않는
 - 기출문제와 이미지의 상용 이용 범위는 Owner 법무·사업 결정이 필요하다.
 
 다음 저장소 기술 후보는 Actions major-version 현대화 또는 손상·이미지 문항 위험 배치다. 외부 우선순위는 수익화·분석 상태 확인과 기출문제 이용 권리 결정이다.
+
+## 미시작 챕터 관계·콘텐츠 정리 production 게이트 완료 (2026-08-04)
+
+기출 관계가 있던 기존 미시작 후보 21개를 검토해 관계 오류를 정리하고, 기존 스텁 URL 18개를 공개했다.
+
+### 1. 구현·병합
+
+- PR #42: 잘못된 관계 9건 제거·이동, 검증된 미연결 기출 보완, 중복 역할 3개 흡수. merge `fcfd438636b376f7f65999792d5e7e73e420769e`.
+- PR #43: 일반 챕터 4개 공개. merge `2f36b3e8d6c0b22ab6cfec716afa22ac033cc083`.
+- PR #47: 법령·KEC·안전기준 챕터 14개 공개. merge `caa7f9b10989ae788adcce2e9ff21a443354359c`.
+- 각 PR은 ChatGPT 최종 기술 리뷰 PASS와 SEO validation 성공 후 Squash merge했다.
+- `hazard-index`는 `combustion-range-risk`, `insulation-calculation`은 `max-leakage-current`·`low-voltage-insulation`, `parallel-mesh-opening`은 `ilo-guard-opening`에 흡수했다.
+- 이미지 원본이 없는 `20220424_097`, `20220305_022`, `20180819_048`은 공개 관계에서 제외했다.
+- 신규 `slug`, 의존성, 스키마, URL 규칙, production 설정 변경 없음.
+
+### 2. 검증·production
+
+- 전체 1,680문항, ID 중복 0건, 관계 ID·중복·과목 불일치·related slug 오류 0건.
+- 전체 250챕터 중 완료 216개, 미시작 34개.
+- Astro build 227페이지, SEO HTML 227개·sitemap URL 228개·경고 0개·오류 0개, 공개 콘텐츠 오류 0개.
+- PR CI: #42 run `30829607268`, #43 run `30830285805`, #47 run `30905544812` 모두 성공.
+- GitHub Pages run #121 `30905652054`: build job `91979990108`, deploy job `91980099330` 모두 성공.
+- production 신규 공개 18페이지와 sitemap 모두 HTTP 200, 페이지별 핵심 본문과 sitemap 등재 확인.
+- 상세 기록: `docs/audits/2026-08-04-pending-chapter-relations-content-production-verification.md`.
+
+최종 상태: 미시작 챕터 관계·콘텐츠 정리 게이트 **VERIFIED**. 완료된 21개 후보 범위를 다시 수행하지 않는다.
+
+### 3. 남은 위험과 다음 작업
+
+- 미시작 챕터는 34개 남아 있다. 흡수된 중복 역할 3개는 비공개 상태를 유지한다.
+- 기출문제와 이미지의 상용 이용 권리 위험은 해소되지 않았으며 Owner 법무·사업 결정이 필요하다.
+- 이미지·OCR 의존 문항은 원본 확인 전 비공개 원칙을 유지한다.
+- `esbuild` 설치 스크립트 allowlist 안내와 Actions 런타임 경고는 별도 의존성·CI 범위다.
+- 에너지관리기능사 확장은 이번 작업에 포함하지 않았다.
+
+다음 권장 작업은 남은 미시작 34개의 역할 분류 또는 에너지관리기능사 확장에 앞선 별도 범위·데이터 정본 설계다. 외부 우선순위는 기출문제 이용 권리 결정과 수익화·분석 상태 확인이다.
