@@ -3,35 +3,48 @@ import { getCollection, render } from 'astro:content';
 import ChapterLayout from '../../../../layouts/ChapterLayout.astro';
 import QuestionHistory from '../../../../components/QuestionHistory.astro';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
-import { SUBJECTS, type SubjectId } from '../../../../config/subjects';
+import { getSubject } from '../../../../config/certifications';
 import {
   createChapterBadgeContext,
   getChapterBadgeSummary,
 } from '../../../../utils/chapterBadges';
 
 export async function getStaticPaths() {
-  // 공개 대상: 작성 완료 챕터만. 미시작 스텁은 페이지 생성 안 함(빈 본문 비공개).
-  const chapters = (await getCollection('chapters')).filter(c => c.data.status === '완료');
-  return chapters.map(ch => ({
-    params: {
-      subject: SUBJECTS[ch.data.subject_id as SubjectId].slug,
-      slug: ch.data.slug,
-    },
-    props: { chapter: ch },
-  }));
+  const chapters = (await getCollection('chapters')).filter(chapter => chapter.data.status === '완료');
+  return chapters.map((chapter) => {
+    const subject = getSubject(chapter.data.cert_id, chapter.data.exam, chapter.data.subject_id);
+    if (!subject) {
+      throw new Error(
+        `Unknown chapter scope: ${chapter.data.cert_id}/${chapter.data.exam}/${chapter.data.subject_id} (${chapter.data.slug})`,
+      );
+    }
+
+    return {
+      params: {
+        cert: chapter.data.cert_id,
+        exam: chapter.data.exam,
+        subject: subject.slug,
+        slug: chapter.data.slug,
+      },
+      props: { chapter },
+    };
+  });
 }
 
 const { chapter } = Astro.props;
 const { Content } = await render(chapter);
 
-const allQuestions = await getCollection('questions');
+const allQuestions = (await getCollection('questions')).filter(
+  question => question.data.cert_id === chapter.data.cert_id
+    && question.data.exam === chapter.data.exam,
+);
 const badgeContext = createChapterBadgeContext(allQuestions.map(question => question.data));
 const badgeSummary = getChapterBadgeSummary(
   chapter.data.tags,
   chapter.data.questions,
   badgeContext,
 );
-const questionsById = new Map(allQuestions.map((question) => [question.data.id, question.data]));
+const questionsById = new Map(allQuestions.map(question => [question.data.id, question.data]));
 const seenQuestionIds = new Set<string>();
 const linked = [];
 
@@ -53,7 +66,7 @@ for (const questionId of chapter.data.questions ?? []) {
     exclusionReasons.push(
       `choices length is ${Array.isArray(question.choices) ? question.choices.length : 'not-an-array'}`,
     );
-  } else if (question.choices.some((choice) => typeof choice !== 'string' || choice.trim() === '')) {
+  } else if (question.choices.some(choice => typeof choice !== 'string' || choice.trim() === '')) {
     exclusionReasons.push('blank choice');
   }
 
@@ -67,19 +80,32 @@ for (const questionId of chapter.data.questions ?? []) {
   linked.push(question);
 }
 
-const allChapters = (await getCollection('chapters')).filter(c => c.data.status === '완료');
+const allChapters = (await getCollection('chapters')).filter(
+  candidate => candidate.data.status === '완료'
+    && candidate.data.cert_id === chapter.data.cert_id
+    && candidate.data.exam === chapter.data.exam,
+);
 const manual = chapter.data.related
-  .map(s => allChapters.find(c => c.data.slug === s)?.data)
+  .map(slug => allChapters.find(candidate => candidate.data.slug === slug)?.data)
   .filter(Boolean);
 const sameGroup = allChapters
-  .filter(c => c.data.group === chapter.data.group && c.data.slug !== chapter.data.slug)
-  .map(c => c.data);
+  .filter(candidate => candidate.data.group === chapter.data.group && candidate.data.slug !== chapter.data.slug)
+  .map(candidate => candidate.data);
 const sideChapters = allChapters
-  .filter(c => c.data.subject_id === chapter.data.subject_id)
-  .map(c => ({ slug: c.data.slug, title: c.data.title, group: c.data.group }));
+  .filter(candidate => candidate.data.subject_id === chapter.data.subject_id)
+  .map(candidate => ({
+    slug: candidate.data.slug,
+    title: candidate.data.title,
+    group: candidate.data.group,
+  }));
 ---
 <ChapterLayout {...chapter.data} badges={badgeSummary.badges} sideChapters={sideChapters}>
   <Content />
   <QuestionHistory questions={linked as any} examComment={chapter.data.examComment} />
-  <RelatedChapters manual={manual as any} sameGroup={sameGroup as any} />
+  <RelatedChapters
+    manual={manual as any}
+    sameGroup={sameGroup as any}
+    certId={chapter.data.cert_id}
+    examSlug={chapter.data.exam}
+  />
 </ChapterLayout>

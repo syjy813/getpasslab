@@ -1,7 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { SUBJECTS, type SubjectId } from '../config/subjects';
+import {
+  CERTIFICATIONS,
+  DEFAULT_CERTIFICATION_ID,
+  DEFAULT_EXAM_SLUG,
+  getSubject,
+} from '../config/certifications';
 import { withBase } from '../config/url';
 import ChapterBadges from '../components/ChapterBadges.astro';
 import {
@@ -10,8 +15,14 @@ import {
 } from '../utils/chapterBadges';
 const chapters = (await getCollection('chapters')).filter(c => c.data.status === '완료');
 const questions = (await getCollection('questions')).map(question => question.data);
-const badgeContext = createChapterBadgeContext(questions);
-const chapterCards = chapters.map(chapter => ({
+const industrialQuestions = questions.filter(
+  question => question.cert_id === DEFAULT_CERTIFICATION_ID && question.exam === DEFAULT_EXAM_SLUG,
+);
+const badgeContext = createChapterBadgeContext(industrialQuestions);
+const chapterCards = chapters
+  .filter(chapter => chapter.data.cert_id === DEFAULT_CERTIFICATION_ID)
+  .filter(chapter => chapter.data.exam === DEFAULT_EXAM_SLUG)
+  .map(chapter => ({
   chapter,
   badgeSummary: getChapterBadgeSummary(
     chapter.data.tags,
@@ -19,7 +30,9 @@ const chapterCards = chapters.map(chapter => ({
     badgeContext,
   ),
 }));
-const countBy = (id: number) => chapters.filter(c => c.data.subject_id === id).length;
+const certifications = Object.values(CERTIFICATIONS);
+const countByCertification = (certId: string) =>
+  chapters.filter(chapter => chapter.data.cert_id === certId).length;
 const featured = chapterCards
   .filter(({ badgeSummary }) => badgeSummary.frequency !== null)
   .sort((a, b) =>
@@ -28,30 +41,34 @@ const featured = chapterCards
     || a.chapter.data.title.localeCompare(b.chapter.data.title, 'ko')
   )
   .slice(0, 4);
-const chHref = (c: any) => withBase(`/industrial-safety/written/${SUBJECTS[c.data.subject_id as SubjectId].slug}/${c.data.slug}/`);
+const chHref = (c: any) => {
+  const subject = getSubject(c.data.cert_id, c.data.exam, c.data.subject_id);
+  if (!subject) throw new Error(`Unknown chapter scope: ${c.data.cert_id}/${c.data.exam}/${c.data.subject_id}`);
+  return withBase(`/${c.data.cert_id}/${c.data.exam}/${subject.slug}/${c.data.slug}/`);
+};
 ---
-<BaseLayout title="GetPassLab — 산업안전기사 핵심요약" description="산업안전기사 필기 6과목의 공식·정의·빈출 포인트를 구조화한 핵심요약 학습 서비스. 2018~2022년 기출 데이터 기반.">
+<BaseLayout title="GetPassLab — 국가기술자격 핵심요약" description="국가기술자격 필기시험의 핵심 개념, 계산 공식, 법령 기준과 기출 포인트를 자격증과 과목별로 정리한 학습 서비스입니다.">
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-badge">산업안전기사 · 필기</span>
+      <span class="hero-badge">국가기술자격 · 필기</span>
       <h1 class="gpl-display" style="max-width:680px;margin:0 auto">합격을 위한 가장 빠른 길,<br/>핵심 개념과 기출을 한 곳에서</h1>
       <div style="display:flex;gap:var(--space-3);justify-content:center;margin-top:var(--space-8);flex-wrap:wrap">
-        <a class="btn btn-primary" href={withBase('/industrial-safety/written/')}>공부 시작하기</a>
+        <a class="btn btn-primary" href={withBase(`/${certifications[0].slug}/`)}>공부 시작하기</a>
       </div>
     </div>
   </section>
 
   <section class="section container">
     <div style="margin-bottom:var(--space-6)">
-      <h2 class="gpl-h1">필기 6과목</h2>
-      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">과목을 선택해 챕터별 학습을 시작하세요</p>
+      <h2 class="gpl-h1">자격증 선택</h2>
+      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">준비하는 자격증을 선택해 핵심요약 학습을 시작하세요</p>
     </div>
     <div class="grid grid-3">
-      {Object.entries(SUBJECTS).map(([id, s]) => (
-        <a class="card" href={withBase(`/industrial-safety/written/${s.slug}/`)}>
-          <span class="card-label">{id}과목</span>
-          <div class="card-title">{s.name}</div>
-          <div class="card-meta">챕터 {countBy(Number(id))}개</div>
+      {certifications.map((certification) => (
+        <a class="card" href={withBase(`/${certification.slug}/`)}>
+          <span class="card-label">{certification.category}</span>
+          <div class="card-title">{certification.name}</div>
+          <div class="card-meta">{certification.summary} · 챕터 {countByCertification(certification.slug)}개</div>
         </a>
       ))}
     </div>
@@ -60,7 +77,7 @@ const chHref = (c: any) => withBase(`/industrial-safety/written/${SUBJECTS[c.dat
   {featured.length > 0 && (
     <section class="section container">
       <div style="margin-bottom:var(--space-6)">
-        <h2 class="gpl-h1">빈출 챕터</h2>
+        <h2 class="gpl-h1">산업안전기사 빈출 챕터</h2>
         <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">기출 출제 이력이 많은 핵심 개념</p>
       </div>
       <div class="grid grid-2">

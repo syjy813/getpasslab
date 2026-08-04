@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { CERTIFICATIONS } from '../../config/certifications';
+import { withBase } from '../../config/url';
+
+export function getStaticPaths() {
+  return Object.values(CERTIFICATIONS).map((certification) => ({
+    params: { cert: certification.slug },
+    props: { certification },
+  }));
+}
+
+const { certification } = Astro.props;
+const exams = Object.values(certification.exams);
+---
+<BaseLayout title={`${certification.name} — GetPassLab`} description={certification.description}>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-badge">{certification.category}</span>
+      <h1 class="gpl-display">{certification.name}</h1>
+      <p class="gpl-body-lg" style="max-width:620px;margin:var(--space-4) auto 0;color:var(--gray-600)">{certification.summary}</p>
+    </div>
+  </section>
+  <section class="section container">
+    <div class="grid">
+      {exams.map((exam) => (
+        <a class="card" href={withBase(`/${certification.slug}/${exam.slug}/`)}>
+          <span class="card-label">{exam.name}</span>
+          <div class="card-title">{exam.name} 핵심요약</div>
+          <div class="card-meta">{exam.format}</div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
