@@ -15,7 +15,7 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-04 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.13
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-05 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.14
 
 ---
 
@@ -25,8 +25,8 @@
 
 - **스택**: Astro 7 + Markdown + GitHub Pages. **서버 없음, DB 없음, API 없음.** 모든 게 빌드 타임에 끝난다.
 - **목적**: 1순위 = **이직 포트폴리오**, 2순위 = AdSense 수익.
-- **현재**: 산업안전기사와 에너지관리기능사 공개 챕터 228개, 정적 페이지 242개를 `getpasslab.co.kr` production에 배포했다. 에너지관리기능사는 Q-Net 2026~2028 출제기준의 필기 주요 항목 12개를 핵심요약으로 공개했고, 기출 관계는 원본 미확보로 0건이다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
-- **최신 동적 상태**: 문서 맨 아래의 `에너지관리기능사 기반·핵심요약 production 게이트 완료` 절을 우선한다.
+- **현재**: 산업안전기사와 에너지관리기능사 기출 3,300문항, 완료 챕터 237개, 정적 HTML 251개를 `getpasslab.co.kr` production에 배포했다. 에너지관리기능사는 21개 핵심요약과 텍스트 기출 관계 1,588건을 공개했고, 이미지 문항 32건은 관계에서 제외했다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
+- **최신 동적 상태**: 문서 맨 아래의 `에너지관리기능사 기출·챕터 production 게이트 완료` 절을 우선한다.
 
 **🚨 절대 하지 마라 (이것만 기억해도 대형 사고 방지):**
 1. 기존 `slug` / `subject_id` / `question_id` **변경 금지**. 신규 공개 식별자는 Owner가 범위를 승인한 경우에만 생성한다
@@ -41,7 +41,7 @@
 
 ## 1.1 무엇인가
 
-**한 문장**: 산업안전기사 기출문제 1,680문항을 구조화하고, 검증된 기출 관계와 자격별 공식 출제기준을 바탕으로 핵심 내용을 챕터 단위로 정리해 보여주는 정적 웹사이트.
+**한 문장**: 산업안전기사 1,680문항과 에너지관리기능사 1,620문항을 자격증별로 구조화하고, 검증된 기출 관계와 공식 출제기준을 바탕으로 핵심 내용을 챕터 단위로 정리해 보여주는 정적 웹사이트.
 
 핵심 단위는 **챕터(chapter)**다. 1챕터 = 1개의 독립 학습 주제 = 1개의 URL = 1개의 SEO 랜딩 페이지.
 
@@ -84,7 +84,9 @@
 
 ---
 
-# 2. 현재 개발 상태
+# 2. 초기 개발 상태 기록
+
+> 아래 진행률과 초기 목록은 프로젝트 초반 기록이다. 현재 동적 상태는 30초 요약과 문서 말미의 최신 production 게이트를 우선한다.
 
 ## 2.1 진행률
 
@@ -105,7 +107,7 @@ Phase 1 전체 ≈ 62%  /  출시 준비도 ≈ 45%  /  콘텐츠 준비도 100%
 ## 2.2 완료된 것 ✅
 
 - 브랜드/도메인 확정 (GetPassLab / getpasslab.site — **도메인 구매만, 미연결**)
-- 기출 DB **1,675문항** → `questions.json` 탑재
+- 기출 DB를 자격증별 파일로 분리해 **3,300문항** 탑재
 - 디자인 시스템 Astro 이식 (토스풍 블루, Pretendard, 4px)
 - URL 구조 `/industrial-safety/written/[subject]/[slug]/` 확정
 - 과목 슬러그 6종 **동결**
@@ -159,7 +161,10 @@ getpasslab/
 │  │  ├─ electrical/         (4과목)  예: ohm-law.md
 │  │  ├─ chemical/           (5과목)
 │  │  └─ construction/       (6과목)   # 총 253개 (작성완료 82 + 스텁 171)
-│  ├─ data/questions.json             # ★ 기출 1,675문항 (단일 파일)
+│  ├─ data/questions/
+│  │  ├─ industrial-safety.json       # ★ 산업안전기사 1,680문항
+│  │  └─ energy-management.json       # ★ 에너지관리기능사 1,620문항
+│  ├─ loaders/questions.ts            # ★ 자격증별 파일 통합 로더·검증
 │  ├─ layouts/
 │  │  ├─ BaseLayout.astro             # 일반 페이지 셸
 │  │  └─ ChapterLayout.astro          # 챕터 상세 (사이드바 포함)
@@ -187,7 +192,7 @@ getpasslab/
 
 ```
 챕터 md (frontmatter + 본문 1~3섹션)  ─┐
-questions.json (기출 1,675문항)        ─┤
+questions/{cert_id}.json (총 3,300문항) ─┤
 subjects.ts (동결 키)                  ─┼─► [Astro 빌드: Zod 검증 → 조인 → getStaticPaths]
 global.css (디자인 토큰)               ─┘         │
                                                    ▼
@@ -202,14 +207,15 @@ global.css (디자인 토큰)               ─┘         │
 
 ```astro
 ---
-// src/pages/industrial-safety/written/[subject]/[slug].astro
+// src/pages/[cert]/[exam]/[subject]/[slug].astro
 export async function getStaticPaths() {
-  const chapters = await getCollection('chapters');
-  return chapters
-    // 🔴 .filter(c => c.data.status === '작성완료')  ← 이관 후 반드시 추가
-    .map(ch => ({
+  const chapters = (await getCollection('chapters'))
+    .filter(ch => ch.data.status === '완료');
+  return chapters.map(ch => ({
       params: {
-        subject: SUBJECTS[ch.data.subject_id].slug,   // ← 동결 키 조인
+        cert: ch.data.cert_id,
+        exam: ch.data.exam,
+        subject: getSubject(ch.data.cert_id, ch.data.exam, ch.data.subject_id).slug,
         slug: ch.data.slug,                            // ← 동결 키
       },
       props: { chapter: ch },
@@ -220,9 +226,10 @@ const { Content } = await render(chapter);
 
 // 조인: 챕터 → 기출 (섹션 4)
 const allQuestions = await getCollection('questions');
+const questionsById = new Map(allQuestions.map(q => [q.data.id, q.data]));
 const linked = chapter.data.questions             // frontmatter의 ID 배열
-  .map(id => allQuestions.find(q => q.data.id === id)?.data)
-  .filter(Boolean);                               // 🔴 오타 ID가 조용히 사라짐 (ISS-04)
+  .map(id => questionsById.get(id))
+  .filter(q => q && q.review !== 'jpg 확필');     // 공개 안전 필터
 ---
 <ChapterLayout {...chapter.data}>
   <Content />                                     <!-- 섹션 1~3: 수동 -->
@@ -274,13 +281,13 @@ const linked = chapter.data.questions             // frontmatter의 ID 배열
 |--------|-----------|
 | 챕터 본문 | `src/content/chapters/**/*.md` |
 | 챕터 메타 | 같은 md의 **frontmatter** |
-| 기출문제 | `src/data/questions.json` |
+| 기출문제 | `src/data/questions/{cert_id}.json` |
 | **기출↔챕터 관계** | 챕터 frontmatter의 **`questions` 배열** ← 여기만 |
 | 과목 정보 | `src/config/subjects.ts` |
 | 디자인 토큰 | `src/styles/global.css` |
 | 문서·정책 | 노션 (**읽기 전용. 최신 아닐 수 있음**) |
 
-> 🚨 **`questions.json`에 챕터 정보를 넣지 마라.** 관계를 양쪽에 두면 다시 이중 원본이 된다.
+> 🚨 **자격증별 기출 JSON에 챕터 정보를 넣지 마라.** 관계를 양쪽에 두면 다시 이중 원본이 된다.
 > 🚨 **본문을 DB화하지 마라.** git 줄 단위 이력이 본문 관리의 핵심 인프라다. DB화하면 "변환 계층"이 부활한다.
 
 ## 4.3 빌드 타임에 모든 게 끝난다 (런타임 없음)
@@ -305,7 +312,7 @@ const linked = chapter.data.questions             // frontmatter의 ID 배열
 
 ## 4.5 섹션 4·5는 빌드 자동 생성
 
-챕터 본문에 **기출 링크를 하드코딩하면 안 된다.** frontmatter `questions` 배열에 ID만 넣으면, 빌드 타임에 `questions.json`과 조인해 섹션 4를 자동 렌더한다. 이 덕에 챕터당 수작업이 700~900자로 줄어 **82개 양산이 가능했다.**
+챕터 본문에 **기출 링크를 하드코딩하면 안 된다.** frontmatter `questions` 배열에 ID만 넣으면, 빌드 타임에 자격증별 기출 JSON과 조인해 섹션 4를 자동 렌더한다. 이 덕에 챕터당 수작업이 700~900자로 줄어 대량 운영이 가능하다.
 
 ---
 
@@ -322,7 +329,7 @@ const linked = chapter.data.questions             // frontmatter의 ID 배열
 | **섹션 축소** | 7섹션 → 5섹션, 4·5 자동 생성 | 254개 양산 가능케 | ✅ |
 | **노션 동결** | 읽기 전용 + git 단일화 | **이중 기입 불일치를 실제로 겪음** | ✅ |
 | **본문 DB화 기각** | 메타만 frontmatter, 본문은 md | git 이력이 핵심 인프라 | ✅ |
-| **확장 순서** | 산안 → **에너지관리기능사** → 컴활 2급 | Owner 우선순위 변경과 공조냉동 학습 연계. 에너지관리기능사 12개 핵심요약 production 공개 완료 | ✅ |
+| **확장 순서** | 산안 → **에너지관리기능사** → 컴활 2급 | Owner 우선순위 변경과 공조냉동 학습 연계. 에너지관리기능사 21개 핵심요약과 기출 관계 1,588건 production 공개 완료 | ✅ |
 | **무관 카테고리 금지** | 정치·선거 등 절대 추가 안 함 | **AdSense 계정 위험** | ✅ (불변식) |
 | **Phase 2 스택** | Supabase + Stripe | 공식 통합 + **결제 구현 경험 자체가 목표** | ✅ |
 | **디자인** | 미니멀·집중 | **광고와 충돌 안 함** = 수익화 인프라 | ✅ |
@@ -448,7 +455,7 @@ Phase 2    → 그때만 Astro Island (client:visible 등)
 ```
 0. 출시 목표 일정 확정 (마일로)                    ★★★
 1. 이미지 기출문제 규모 파악:
-   python3 -c "import json;qs=json.load(open('src/data/questions.json'));print(len([q for q in qs if q.get('review')]))"
+   node -e "const fs=require('fs');const qs=fs.readdirSync('src/data/questions').filter(f=>f.endsWith('.json')).flatMap(f=>JSON.parse(fs.readFileSync('src/data/questions/'+f,'utf8')));console.log(qs.filter(q=>q.review).length)"
 2. 익명운영 vs 책임자 표기 결정 (마일로)           ★★★  ← 정책 페이지 선행
 3. 커스텀 도메인 연결 (DNS + astro.config base 제거) 🟢 1h
 4. /terms 작성                                     🟡 3h
@@ -539,7 +546,7 @@ cat src/config/subjects.ts                                           # 동결 �
 # 진행 상태 확인
 find src/content/chapters -name '*.md' | wc -l                        # 253이면 이관 완료
 grep -rl "status: 미작성" src/content/chapters | wc -l                # 스텁 수
-python3 -c "import json;print(len(json.load(open('src/data/questions.json'))))"  # 1675
+node -e "const fs=require('fs');console.log(fs.readdirSync('src/data/questions').filter(f=>f.endsWith('.json')).reduce((n,f)=>n+JSON.parse(fs.readFileSync('src/data/questions/'+f,'utf8')).length,0))"  # 3300
 find src/pages -name '*.astro'                                       # /admin/, /all 존재 여부
 
 # 버그 확인
@@ -2579,3 +2586,37 @@ Gate B2 최종 상태: **VERIFIED**. 완료 범위를 다시 수행하지 않는
 - AdSense 승인·광고 송출, Search Console 처리와 GA4 실시간 이벤트는 외부 계정 증거로 별도 확정한다.
 
 다음 저장소 콘텐츠 작업은 에너지관리기능사 기출 원본 확보 뒤 데이터·관계 설계 또는 산업안전기사의 남은 미시작 34개 역할 분류다.
+
+## 에너지관리기능사 기출·챕터 production 게이트 완료 (2026-08-05)
+
+에너지관리기능사 기출 1,620문항을 자격증별 정본에 내재화하고, 기출 기준으로 21개 핵심요약 챕터와 텍스트 관계 1,588건을 production에 공개했다. 이 절은 바로 위 2026-08-04 에너지관리기능사 기반 게이트의 후속 상태다.
+
+### 1. 구현·병합
+
+- PR #52: 기출 데이터 자격증별 분리, 에너지관리기능사 1,620문항 추가, 21개 챕터 재편, 관계 1,588건 적용, 문제 이미지 렌더러와 감사 자료 추가.
+- PR CI run `31005146577`, validate job `92303130706`: success.
+- 기술 재검토 PASS와 Owner 승인 후 Squash merge했다.
+- main 병합 커밋: `5cf709bd5a605bad249376203f4d962431766412`.
+- 전체 기출 정본: 산업안전기사 1,680문항 + 에너지관리기능사 1,620문항 = 3,300문항.
+- 전체 271챕터 중 완료 237개, 미시작 34개.
+
+### 2. 검증·production
+
+- 로컬 관계 감사: 에너지 1,620문항, 미분류 0건, 관계 1,588건, 이미지 제외 32건, 중복·누락·과목 불일치 0건.
+- Astro build 정적 HTML 251개, SEO 경고·오류 0건, 공개 콘텐츠 오류 0건.
+- GitHub Pages run `31005356290`: build job `92303817892`, deploy job `92303947296` 모두 success.
+- production 에너지 과목 목록과 챕터 21개 모두 HTTP 200이며 기출 이력 UI를 렌더링한다.
+- 신규 `boiler-types-construction`, 기존 산업안전기사 대표 페이지, sitemap index와 sitemap 모두 HTTP 200이다.
+- production `sitemap-0.xml`에 콘텐츠 URL 251개와 신규 에너지 챕터가 포함됐다.
+- 상세 기록: `docs/audits/2026-08-05-energy-management-question-content-production-verification.md`.
+
+최종 상태: 에너지관리기능사 기출·챕터 production 게이트 **VERIFIED**. 완료 범위를 다시 수행하지 않는다.
+
+### 3. 남은 위험과 다음 작업
+
+- CBT 기반 문제 텍스트와 이미지의 이용 권리 위험은 해소되지 않았으며 Owner 법무·사업 결정이 필요하다.
+- 이미지 문항 32개는 공개 챕터 관계 제외 상태를 유지한다.
+- Actions의 Node.js 20 runtime deprecation과 `esbuild` allowlist 안내는 별도 의존성·CI 감사 후 처리한다.
+- AdSense 승인·실제 광고 송출, Search Console 처리, GA4 실시간 이벤트는 외부 계정 증거로 별도 확정한다.
+
+다음 작업은 Owner 우선순위에 따라 기출 이용 권리 결정, 이미지 문항 공개 정책, 수익화·분석 상태 확인, 또는 다음 자격증 확장 중 하나를 별도 승인 범위로 진행한다.

@@ -2094,6 +2094,13 @@ order: 12
 - Owner가 승인한 21개 챕터에 `jpg 확필` 32건을 제외한 텍스트 기출 1,588건을 로컬로 적용했다.
 - 이 후속 상태는 Commit·Push·PR·production 배포 전이며, 세부 검증은 `docs/audits/2026-08-05-energy-management-21-chapter-local-implementation.md`에 기록한다.
 
+**후속 production 완료 상태 (2026-08-05)**
+- PR #52를 기술 재검토 PASS, CI 성공, Owner 승인 후 Squash merge했다. main 병합 커밋은 `5cf709bd5a605bad249376203f4d962431766412`다.
+- 자격증별 기출 정본은 산업안전기사 1,680문항과 에너지관리기능사 1,620문항, 합계 3,300문항이다.
+- 에너지관리기능사 21개 챕터와 텍스트 관계 1,588건을 production에 공개했고 이미지 문항 32건은 관계 제외를 유지했다.
+- PR CI run `31005146577`과 GitHub Pages run `31005356290`은 성공했다. 에너지 챕터 21개, 기존 산업안전기사 대표 페이지와 sitemap의 production runtime 검증도 통과했다.
+- 상세 검증은 `docs/audits/2026-08-05-energy-management-question-content-production-verification.md`에 기록한다.
+
 > 저장소에 포함되는 것과 사이트에 공개되는 것은 별개다. 원본 이용 권리 위험이 해소됐다는 의미는 아니며, push·배포는 별도 승인과 검증을 따른다.
 
 ---
