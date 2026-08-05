@@ -15,7 +15,7 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-05 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.14
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-05 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.15
 
 ---
 
@@ -25,8 +25,8 @@
 
 - **스택**: Astro 7 + Markdown + GitHub Pages. **서버 없음, DB 없음, API 없음.** 모든 게 빌드 타임에 끝난다.
 - **목적**: 1순위 = **이직 포트폴리오**, 2순위 = AdSense 수익.
-- **현재**: 산업안전기사와 에너지관리기능사 기출 3,300문항, 완료 챕터 237개, 정적 HTML 251개를 `getpasslab.co.kr` production에 배포했다. 에너지관리기능사는 21개 핵심요약과 텍스트 기출 관계 1,588건을 공개했고, 이미지 문항 32건은 관계에서 제외했다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
-- **최신 동적 상태**: 문서 맨 아래의 `에너지관리기능사 기출·챕터 production 게이트 완료` 절을 우선한다.
+- **현재**: 산업안전기사와 에너지관리기능사 기출 3,300문항, 완료 챕터 237개, 정적 HTML 251개를 `getpasslab.co.kr` production에 배포했다. 에너지관리기능사는 21개 핵심요약과 텍스트 기출 관계 1,588건을 공개했고, 이미지 문항 32건은 관계에서 제외했다. GitHub Actions는 Node 24 기반 최신 major로 전환했고 `esbuild@0.28.1` 설치 스크립트 승인 경고를 해소했다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
+- **최신 동적 상태**: 문서 맨 아래의 `GitHub Actions Node 24·esbuild 설치 스크립트 production 게이트 완료` 절을 우선한다.
 
 **🚨 절대 하지 마라 (이것만 기억해도 대형 사고 방지):**
 1. 기존 `slug` / `subject_id` / `question_id` **변경 금지**. 신규 공개 식별자는 Owner가 범위를 승인한 경우에만 생성한다
@@ -2617,6 +2617,52 @@ Gate B2 최종 상태: **VERIFIED**. 완료 범위를 다시 수행하지 않는
 - CBT 기반 문제 텍스트와 이미지의 이용 권리 위험은 해소되지 않았으며 Owner 법무·사업 결정이 필요하다.
 - 이미지 문항 32개는 공개 챕터 관계 제외 상태를 유지한다.
 - Actions의 Node.js 20 runtime deprecation과 `esbuild` allowlist 안내는 별도 의존성·CI 감사 후 처리한다.
+- AdSense 승인·실제 광고 송출, Search Console 처리, GA4 실시간 이벤트는 외부 계정 증거로 별도 확정한다.
+
+다음 작업은 Owner 우선순위에 따라 기출 이용 권리 결정, 이미지 문항 공개 정책, 수익화·분석 상태 확인, 또는 다음 자격증 확장 중 하나를 별도 승인 범위로 진행한다.
+
+## GitHub Actions Node 24·esbuild 설치 스크립트 production 게이트 완료 (2026-08-05)
+
+이 절은 앞선 게이트들에 남아 있던 Actions Node 20 runtime deprecation과 `esbuild` 설치 스크립트 승인 안내의 후속 상태다. 이전 절의 관련 경고 기록은 당시 상태이며, 현재 상태는 아래 검증 결과를 우선한다.
+
+### 1. 구현·병합
+
+- PR #54: `.github/workflows/deploy.yml`과 `.github/workflows/seo-check.yml`의 Actions major를 Node 24 지원 계열로 현대화했다.
+  - `actions/checkout@v7`
+  - `actions/setup-node@v7`
+  - `withastro/action@v6`
+  - `actions/deploy-pages@v5`
+  - PR CI run `31007490243`, validate job `92310931998`: success.
+  - Squash merge `69a42af04cccc7b54aa153c5f5af85bb510c2fbc`.
+  - Pages run `31007632905`: build job `92311421348`, deploy job `92311552780` 모두 success.
+- PR #55: `package.json`의 `allowScripts`에 잠금 파일과 일치하는 `esbuild@0.28.1`만 승인했다.
+  - 의존성 버전과 `package-lock.json`은 변경하지 않았다.
+  - PR CI run `31008013341`, validate job `92312693715`: success.
+  - Squash merge `a571cf401a48594680f978dac5a4d6d35756db13`.
+  - Pages run `31008121248`: build job `92313056982`, deploy job `92313205404` 모두 success.
+- 두 PR 모두 ChatGPT 최종 기술 리뷰 PASS 후 Owner 승인 범위에 따라 Squash merge했다.
+- 애플리케이션 코드, 콘텐츠, 문제·관계 데이터, 의존성 버전, 스키마, 동결 키, slug, URL 규칙, 핵심 UX와 수동 production 설정은 변경하지 않았다.
+
+### 2. 검증·production
+
+- `git diff --check`와 `package.json` JSON parse 성공.
+- `npm ci`: 274 packages, 취약점 0건, `npm warn allow-scripts` 0건.
+- `npm approve-scripts --allow-scripts-pending`: 미검토 설치 스크립트 0건.
+- `npm exec -- esbuild --version`: `0.28.1`.
+- `package-lock.json` SHA-256 `D757FB248357FD321016F321581B1012D19EA0FF5F626362B22D076192A9192F`로 작업 전후 동일.
+- Astro build 정적 HTML 251개, SEO HTML 251개·sitemap URL 252개·경고 0개·오류 0개, 공개 콘텐츠 오류 0개.
+- 에너지 관계 감사: 1,620문항, 미분류 0건, 중복 정답 충돌 0건.
+- 최종 Pages run `31008121248` 로그에서 npm `allow-scripts` 경고와 Node 20 runtime 경고가 모두 0건이다.
+- production 에너지관리기능사 과목 목록, `boiler-types-construction`, 산업안전기사 과목 목록, sitemap index와 sitemap이 모두 HTTP 200이다.
+- production `sitemap-0.xml`에는 콘텐츠 URL 251개와 대표 에너지관리기능사 챕터 URL이 포함됐다.
+
+최종 상태: Actions Node 20 runtime deprecation과 `esbuild@0.28.1` 설치 스크립트 승인 안내 **해소·VERIFIED**. 완료 범위를 다시 수행하지 않는다.
+
+### 3. 남은 위험과 다음 작업
+
+- 최신 `actions/deploy-pages@v5` 내부에서 Node.js `punycode` deprecation 경고가 1회 발생한다. Pages build·deploy와 production 결과에는 영향이 없었으며 저장소 애플리케이션 코드에서 발생한 경고가 아니다.
+- CBT 기반 문제 텍스트와 이미지의 이용 권리 위험은 해소되지 않았으며 Owner 법무·사업 결정이 필요하다.
+- 이미지 문항 32개는 공개 챕터 관계 제외 상태를 유지한다.
 - AdSense 승인·실제 광고 송출, Search Console 처리, GA4 실시간 이벤트는 외부 계정 증거로 별도 확정한다.
 
 다음 작업은 Owner 우선순위에 따라 기출 이용 권리 결정, 이미지 문항 공개 정책, 수익화·분석 상태 확인, 또는 다음 자격증 확장 중 하나를 별도 승인 범위로 진행한다.
