@@ -1,7 +1,7 @@
 # ARCHITECTURE.md — GetPassLab 시스템 아키텍처
 
 > **선행 문서**: `PROJECT_CONTEXT.md` (배경·철학), `PRD.md` (기능 정의)
-> **작성 기준일**: 2026-07-14 / **버전**: v1.0
+> **작성 기준일**: 2026-07-14 / **기출 저장 구조 갱신**: 2026-08-04 / **버전**: v1.1
 > **작성자**: Claude (대화 기록 + 실제 구현 코드 기반 재구성)
 
 ---
@@ -33,7 +33,7 @@
 | # | 원칙 | 구체적 귀결 |
 |---|------|-------------|
 | 1 | **모든 것은 빌드 타임에** | 서버 비용 0, DB 비용 0, 응답 속도 최고, SEO 최적 |
-| 2 | **단일 진실 원천 (이중 원본 금지)** | 챕터 = md, 기출 = questions.json, 관계 = frontmatter `questions` 배열. 각 데이터의 집은 **정확히 한 곳** |
+| 2 | **단일 진실 원천 (이중 원본 금지)** | 챕터 = md, 기출 = 자격증별 `src/data/questions/*.json`, 관계 = frontmatter `questions` 배열. 각 데이터의 집은 **정확히 한 곳** |
 | 3 | **동결 키 불변** | `slug` / `subject_id` / `question_id`는 URL·조인·(미래) 유저 데이터 참조를 동시에 담당 → **변경 불가** |
 | 4 | **프레임워크 없음** | React/Vue 미사용. Astro 컴포넌트 + 네이티브 HTML/JS. **JS 번들 거의 0** |
 | 5 | **웹앱 확장을 전제로 설계** | Phase 2에서 Supabase를 붙일 때 **콘텐츠 계층은 건드리지 않는다** |
@@ -142,8 +142,8 @@ flowchart TB
     end
 
     subgraph SOURCE["② 소스 계층 (git = 단일 진실 원천)"]
-        MD["src/content/chapters/**/*.md<br/>253개 (본문 + frontmatter)"]
-        QJSON["src/data/questions.json<br/>1,675문항"]
+        MD["src/content/chapters/**/*.md<br/>271개 (본문 + frontmatter)"]
+        QJSON["src/data/questions/*.json<br/>자격증별 물리 분리"]
         CFG["src/config/subjects.ts<br/>동결 키 매핑"]
         CSS["src/styles/global.css<br/>디자인 토큰"]
     end
@@ -242,10 +242,14 @@ getpasslab/
 │  │     │  └─ ohm-law.md                # 🟢 (샘플로 실재 확인)
 │  │     ├─ chemical/                    # 5과목
 │  │     └─ construction/                # 6과목
-│  │                                     # 총 253개 (작성완료 82 + 스텁 171) 🟡
+│  │                                     # 총 271개 (작성완료 237 + 스텁 34) 🟢
 │  │
 │  ├─ data/
-│  │  └─ questions.json                  # ★ 🟢 기출 1,675문항 (단일 파일)
+│  │  └─ questions/
+│  │     ├─ industrial-safety.json       # ★ 🟢 산업안전기사 1,680문항
+│  │     └─ energy-management.json       # ★ 🟢 에너지관리기능사 1,620문항
+│  ├─ loaders/
+│  │  └─ questions.ts                    # 자격증별 파일을 단일 content collection으로 로드
 │  │
 │  ├─ layouts/
 │  │  ├─ BaseLayout.astro                # 🟢 일반 페이지 공통 셸
@@ -532,8 +536,8 @@ const chapter = chapters.find(c => c.data.slug === 'ohm-law');
 
 | 호출 | 반환 | 사용처 |
 |------|------|--------|
-| `getCollection('chapters')` | 253개 챕터 (frontmatter + 본문) | 모든 페이지 |
-| `getCollection('questions')` | 1,675문항 | 챕터 상세 (조인용) |
+| `getCollection('chapters')` | 271개 챕터 (frontmatter + 본문) | 모든 페이지 |
+| `getCollection('questions')` | 3,300문항 | 챕터 상세 (자격증·시험 범위 조인) |
 | `render(chapter)` | `{ Content }` — md 본문의 Astro 컴포넌트 | 챕터 상세 |
 | `SUBJECTS[subject_id]` | `{ slug, name }` | 전역 |
 | `withBase(path)` | base path가 붙은 URL | 모든 링크 |
@@ -644,7 +648,7 @@ flowchart LR
 | **콘텐츠 계층은 건드리지 않는다** | 챕터·기출은 계속 git + 정적 빌드. DB로 옮기면 속도·비용·SEO를 전부 잃는다 |
 | **DB에 들어가는 것은 "사람마다 다른 값"뿐** | "이 사용자의 오답", "이 사용자의 진도". 챕터 본문은 모두에게 동일 → 정적 |
 | **Astro Islands로 부분 하이드레이션** | 페이지 전체를 SPA로 바꾸지 않는다. 로그인/오답 UI만 섬으로 |
-| **동결 키가 외래 키가 된다** | `wrong_notes.question_id` → `questions.json`의 `id`. `progress.chapter_slug` → md의 `slug` |
+| **동결 키가 외래 키가 된다** | `wrong_notes.question_id` → 자격증별 기출 JSON의 `id`. `progress.chapter_slug` → md의 `slug` |
 | **RLS(Row Level Security) 필수** | Supabase는 클라이언트에서 직접 DB를 호출한다. RLS 없으면 남의 데이터가 보인다 |
 
 **변수가 들어가는 순간 DB가 필요하다** — 이 판단 기준이 Phase 1/2의 경계선이다.
@@ -759,7 +763,7 @@ for _, r in df.iterrows():
 
 **데이터 fetch는 0건이다.** 기출문제 데이터도 이미 HTML에 인라인되어 있다.
 
-> ⚠️ **`questions.json`은 클라이언트에 통째로 내려가지 않는다.** 빌드 타임에 챕터별로 필요한 문제만 HTML에 박힌다. 즉 **한 챕터 페이지에는 그 챕터의 기출 N개만 존재한다.** (정답 노출은 여전하지만, 1,675문항 전체가 한 번에 새는 것은 아니다)
+> ⚠️ **자격증별 기출 JSON은 클라이언트에 통째로 내려가지 않는다.** 빌드 타임에 챕터별로 필요한 문제만 HTML에 박힌다. 즉 **한 챕터 페이지에는 그 챕터의 기출 N개만 존재한다.**
 
 ---
 
@@ -892,9 +896,11 @@ const chapters = defineCollection({
 });
 
 const questions = defineCollection({
-  loader: file('./src/data/questions.json'),
+  loader: questionFiles(),
   schema: z.object({
     id:         z.string(),                       // 동결 키 (예: 20220424_061)
+    cert_id:    z.string().default('industrial-safety'),
+    exam:       z.string().default('written'),
     subject_id: z.number(),
     date:       z.string(),                       // YYYY-MM-DD
     label:      z.string(),                       // 표기용: "2022년 4월 시행"
@@ -915,7 +921,7 @@ export const collections = { chapters, questions };
 
 | 역할 | 설명 |
 |------|------|
-| **데이터 계약(contract)** | 253개 md와 1,675문항이 지켜야 할 형태를 **단 한 곳에** 선언 |
+| **데이터 계약(contract)** | 271개 md와 3,300문항이 지켜야 할 형태를 **단 한 곳에** 선언 |
 | **빌드 게이트** | 위반 시 **배포 전에 빌드가 실패한다.** 잘못된 데이터가 프로덕션에 나갈 수 없다 |
 | **타입 생성기** | Astro가 이 스키마에서 TypeScript 타입을 자동 생성 → 페이지에서 자동완성·타입체크 |
 | **문서** | 이 파일만 읽어도 데이터 모델 전체를 알 수 있다 |
@@ -1040,13 +1046,13 @@ flowchart TD
 |--------|-----------|
 | 챕터 본문 | `src/content/chapters/**/*.md` |
 | 챕터 메타 | 같은 md의 **frontmatter** |
-| 기출문제 | `src/data/questions.json` |
+| 기출문제 | `src/data/questions/{cert_id}.json` |
 | **기출↔챕터 관계** | 챕터 frontmatter의 **`questions` 배열** ← 여기만 |
 | 과목 정보 | `src/config/subjects.ts` |
 | 디자인 토큰 | `src/styles/global.css` |
 | 문서·정책 | 노션 (**읽기 전용**) |
 
-> **`questions.json`에는 챕터 정보를 넣지 않는다.** 관계를 양쪽에 두면 다시 이중 원본이 된다. 이 프로젝트가 가장 크게 데인 문제다.
+> **자격증별 기출 JSON에는 챕터 정보를 넣지 않는다.** 관계를 양쪽에 두면 다시 이중 원본이 된다. 이 프로젝트가 가장 크게 데인 문제다.
 
 #### 방어선 ③ — 빌드 타임 검증
 Zod 스키마 위반 → **빌드 실패 → 배포 안 됨.** 잘못된 데이터가 프로덕션에 나갈 물리적 경로가 없다.
@@ -1090,7 +1096,7 @@ DB가 없어도 일괄 수정은 가능하다.
 | 주기 | 작업 |
 |------|------|
 | 콘텐츠 추가 시 | Cowork 세션 → 빌드 검증 → push → `/admin/` 확인 |
-| 시험 회차 종료 후 (연 3회) | 신규 기출 PDF 수집 → questions.json 갱신 → 미매칭 문제 → 신규 챕터 도출 |
+| 시험 회차 종료 후 (연 3회) | 신규 기출 PDF 수집 → 해당 자격증 JSON 갱신 → 미매칭 문제 → 신규 챕터 도출 |
 | 연 1회 (1월) | 시험 일정·응시료 수동 갱신 (Q-net 확인) |
 | 법령 개정 시 | ⚠️ **프로세스 없음. 리스크** (§13) |
 
@@ -1229,12 +1235,12 @@ cat src/config/subjects.ts
 # ⑤ withBase 구현
 cat src/config/url.ts
 
-# ⑥ 챕터 수 / 스텁 수 (이관 완료 여부의 결정적 증거)
-find src/content/chapters -name "*.md" | wc -l          # 253이면 이관 완료
-grep -rl "status: 미작성" src/content/chapters | wc -l   # 스텁 수
+# ⑥ 챕터 수 / 스텁 수
+find src/content/chapters -name "*.md" | wc -l
+grep -rl "status: 미시작" src/content/chapters | wc -l
 
-# ⑦ 기출 문항 수 (1,675 검증)
-python3 -c "import json;print(len(json.load(open('src/data/questions.json'))))"
+# ⑦ 자격증별 기출 파일의 총 문항 수
+node -e "const fs=require('fs');const d='src/data/questions';console.log(fs.readdirSync(d).filter(f=>f.endsWith('.json')).reduce((n,f)=>n+JSON.parse(fs.readFileSync(d+'/'+f,'utf8')).length,0))"
 
 # ⑧ 컴포넌트 목록
 ls src/components/
@@ -1253,9 +1259,9 @@ npm run build && find dist -name "index.html" | wc -l
 | Tailwind 사용 여부 | ❌ 미사용 | |
 | Pagefind 사용 여부 | ❌ 미사용 (검색 미구현) | |
 | `@astrojs/sitemap` | 🟡 추가되었을 것 | |
-| 챕터 md 파일 수 | 253 | |
-| `status: 미작성` 스텁 수 | ~171 | |
-| `questions.json` 문항 수 | **1,675** | |
+| 챕터 md 파일 수 | 271 | |
+| `status: 미시작` 스텁 수 | 34 | |
+| 자격증별 기출 JSON 총 문항 수 | **3,300** | |
 | `/admin/index.astro` 존재 | 🟡 이관 세션 결과물 | |
 | `/all` 페이지 존재 | ⚪ 미구현 추정 | |
 | `astro.config.mjs`의 `base` | `/getpasslab` 추정 | |

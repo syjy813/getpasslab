@@ -40,11 +40,17 @@ const chapters = (await getCollection('chapters')).filter(
     && chapter.data.subject_id === subjectId
     && chapter.data.status === '완료',
 );
+// Legacy subjects reuse order values inside each group. Apply subject-wide
+// ordering only when the completed chapter set has unique order values.
+const hasSubjectWideOrder = new Set(chapters.map(chapter => chapter.data.order)).size === chapters.length;
+const orderedChapters = hasSubjectWideOrder
+  ? [...chapters].sort((a, b) => a.data.order - b.data.order || a.data.slug.localeCompare(b.data.slug))
+  : chapters;
 const questions = (await getCollection('questions'))
   .filter(question => question.data.cert_id === certification.slug && question.data.exam === examDefinition.slug)
   .map(question => question.data);
 const badgeContext = createChapterBadgeContext(questions);
-const chapterCards = chapters.map(chapter => ({
+const chapterCards = orderedChapters.map(chapter => ({
   chapter,
   badges: getChapterBadgeSummary(
     chapter.data.tags,
@@ -52,7 +58,7 @@ const chapterCards = chapters.map(chapter => ({
     badgeContext,
   ).badges,
 }));
-const groups = [...new Set(chapters.map(chapter => chapter.data.group))];
+const groups = [...new Set(orderedChapters.map(chapter => chapter.data.group))];
 ---
 <BaseLayout
   title={`${subject.name} — ${certification.name} ${examDefinition.name} — GetPassLab`}

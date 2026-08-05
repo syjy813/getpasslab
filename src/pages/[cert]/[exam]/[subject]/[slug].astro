@@ -4,6 +4,7 @@ import ChapterLayout from '../../../../layouts/ChapterLayout.astro';
 import QuestionHistory from '../../../../components/QuestionHistory.astro';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
 import { getSubject } from '../../../../config/certifications';
+import { getQuestionImage } from '../../../../config/questionImages';
 import {
   createChapterBadgeContext,
   getChapterBadgeSummary,
@@ -55,7 +56,7 @@ for (const questionId of chapter.data.questions ?? []) {
   const question = questionsById.get(questionId);
   if (!question) {
     console.warn(
-      `[public-question-filter] chapter=${chapter.data.slug} question_id=${questionId} excluded: missing from questions.json`,
+      `[public-question-filter] chapter=${chapter.data.slug} question_id=${questionId} excluded: missing from certification question data`,
     );
     continue;
   }
@@ -77,7 +78,10 @@ for (const questionId of chapter.data.questions ?? []) {
     continue;
   }
 
-  linked.push(question);
+  linked.push({
+    ...question,
+    image: getQuestionImage(question.cert_id, question.id),
+  });
 }
 
 const allChapters = (await getCollection('chapters')).filter(
@@ -91,8 +95,17 @@ const manual = chapter.data.related
 const sameGroup = allChapters
   .filter(candidate => candidate.data.group === chapter.data.group && candidate.data.slug !== chapter.data.slug)
   .map(candidate => candidate.data);
-const sideChapters = allChapters
-  .filter(candidate => candidate.data.subject_id === chapter.data.subject_id)
+const subjectChapters = allChapters
+  .filter(candidate => candidate.data.subject_id === chapter.data.subject_id);
+const hasSubjectWideOrder = new Set(
+  subjectChapters.map(candidate => candidate.data.order),
+).size === subjectChapters.length;
+const orderedSideChapters = hasSubjectWideOrder
+  ? [...subjectChapters].sort(
+      (a, b) => a.data.order - b.data.order || a.data.slug.localeCompare(b.data.slug),
+    )
+  : subjectChapters;
+const sideChapters = orderedSideChapters
   .map(candidate => ({
     slug: candidate.data.slug,
     title: candidate.data.title,
