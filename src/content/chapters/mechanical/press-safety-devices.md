@@ -7,13 +7,15 @@ priority: 출시 필수
 status: 완료
 group: 프레스 안전
 tags: [개념]
-summary: 양수조작·양수기동·광전자·게이트가드·손쳐내기·수인식 6종과 방호 원리
+summary: 양수조작식·양수기동식·광전자식·게이트가드식·손쳐내기식·수인식의 방호 원리
 questions: [20220424_051, 20220424_059, 20220305_054, 20210814_051, 20210814_056, 20200926_056, 20200926_060, 20190804_057, 20180304_054, 20180428_053, 20190427_048, 20190427_056]
-related: [press-device-conditions, press-pre-work-checklist, hand-pull-device-structure]
+related: [press-device-conditions, press-pre-work-checklist, hand-pull-device-structure, mold-safety]
 examComment: 3과목 최다 빈출 축. 장치명·방호원리 짝짓기와 방호 유형(위치제한·접근거부·접근반응) 분류형이 반복.
 ---
 
 ## 핵심 개념
+
+프레스 방호장치 종류는 손을 위험한계에서 배제하는 방식과 급정지 가능 여부로 구분한다.
 
 | 장치 | 원리 | 방호 유형 |
 |------|------|------|
