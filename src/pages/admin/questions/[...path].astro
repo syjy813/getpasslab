@@ -1,6 +1,6 @@
 ---
 // TRACK 4-2 하위: 기출문제 DB 리스트 (조회 전용)
-// 원본: src/data/questions.json + 챕터 md questions[] 역인덱스
+// 원본: src/data/questions/*.json + 챕터 md questions[] 역인덱스
 // /admin/ 과 분리된 하위 페이지. 개발 환경에서만 제공.
 import '../../../styles/global.css';
 import { getCollection } from 'astro:content';
@@ -111,7 +111,7 @@ const bySubject = Object.values(CERTIFICATIONS).flatMap((certification) =>
       <span class="muted">기출문제 DB</span>
     </div>
     <h1 class="adm-h1">기출문제 DB</h1>
-    <p class="adm-sub">원본: questions.json · 연결 챕터 수 = 전체 챕터 md의 questions[] 역인덱스</p>
+    <p class="adm-sub">원본: 자격증별 기출 JSON 파일 · 연결 챕터 수 = 전체 챕터 md의 questions[] 역인덱스</p>
 
     <div class="kpi-grid">
       <div class="kpi"><div class="n">{total.toLocaleString()}</div><div class="l">총 문항</div></div>

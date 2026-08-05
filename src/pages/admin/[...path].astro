@@ -1,6 +1,6 @@
 ---
 // TRACK 4-2: 내부 관리 현황 페이지 (조회 전용)
-// 원본: 챕터 md frontmatter + src/data/questions.json
+// 원본: 챕터 md frontmatter + src/data/questions/*.json
 // 노션 매핑 DB 이관 후 유일한 조회 대시보드. 개발 환경에서만 제공.
 import '../../styles/global.css';
 import { getCollection } from 'astro:content';
@@ -40,7 +40,7 @@ const writtenCount = rows.filter((r) => r.written).length;
 const gapDoneNoBody = rows.filter((r) => r.status === '완료' && !r.written)
   .sort((a, b) => a.subject_id - b.subject_id);
 
-// Gap 2: 노션 정답 공란으로 questions.json 에서 제외된 기출 (이관 검토 필요)
+// Gap 2: 노션 정답 공란으로 자격증별 기출 파일에서 제외된 기출 (이관 검토 필요)
 const excludedQuestions = [
   { id: '20180304_078', subject: 4, reason: '노션 정답 공란' },
   { id: '20180819_057', subject: 3, reason: '노션 정답 공란' },
@@ -148,7 +148,7 @@ const detail = [...rows].sort(
     </div>
     <h1 class="adm-h1">챕터 · 기출 관리 현황</h1>
     <p class="adm-sub">
-      노션 매핑 DB 이관 완료. 챕터 메타데이터 원본 = md frontmatter · 기출 원본 = questions.json
+      노션 매핑 DB 이관 완료. 챕터 메타데이터 원본 = md frontmatter · 기출 원본 = 자격증별 JSON 파일
     </p>
 
     <div class="kpi-grid">
@@ -172,7 +172,7 @@ const detail = [...rows].sort(
     <div class="gap">
       <h3>⚠ 이관 제외 기출 — {excludedQuestions.length}건</h3>
       <p class="muted" style="margin:0 0 8px;font-size:var(--fs-caption)">
-        노션 정답 공란으로 questions.json 에서 제외 (1,680 → {questions.length}). 정답 확정 후 추가 필요.
+        노션 정답 공란으로 산업안전기사 기출 파일에서 제외. 정답 확정 후 추가 필요.
       </p>
       <div>{excludedQuestions.map((q) => (<code>{q.subject}과목 · {q.id}</code>)).reduce((a, b) => (<>{a} {b}</>))}</div>
     </div>

@@ -1,0 +1,22 @@
+﻿topic_code,title,current_slug,recommendation,question_count,unique_question_count,exam_count,high,medium,low,tied,image_count,first_exam,last_exam,rationale
+energy-laws-inspection,에너지 관계법규·검사,energy-laws-and-inspection,기존 URL 유지·주제 집중,172,163,27,165,6,1,0,5,2010-01-31,2016-07-10,법규·검사 문항이 독립적으로 충분하고 기존 URL의 의미와 일치
+boiler-types-construction,보일러 형식·구조·재료,boiler-operation-basics,분리 후보,142,136,27,101,39,2,1,0,2010-01-31,2016-07-10,보일러 형식·구조·재료는 열역학 기초와 다른 암기 체계
+heating-systems,증기·온수·복사난방,boiler-piping-insulation,분리 후보,114,105,27,100,11,3,2,0,2010-01-31,2016-07-10,증기·온수·복사난방의 방식 비교가 배관 시공과 별도 학습 단위
+piping-fittings-valves,배관·이음쇠·밸브,boiler-piping-insulation,기존 URL 유지·주제 집중,109,105,24,89,17,3,1,9,2010-03-28,2016-07-10,기존 배관 URL의 중심 주제로 적합
+efficiency-output-heat-balance,효율·증발량·열정산,boiler-efficiency-heat-balance,기존 URL 유지·주제 집중,108,101,26,90,13,5,2,5,2010-01-31,2016-07-10,효율·증발량·열정산 계산이 기존 URL과 일치
+water-treatment-corrosion,수질관리·스케일·부식,boiler-water-treatment,기존 URL 유지·주제 집중,97,91,27,81,14,2,0,1,2010-01-31,2016-07-10,기존 URL과 분류 경계가 일치
+heat-steam-thermodynamics,열·증기·열역학 기초,boiler-operation-basics,기존 URL 유지·주제 집중,92,84,27,80,11,1,0,0,2010-01-31,2016-07-10,기존 기초 URL에서 열·증기·열역학을 중심으로 유지
+instruments-accessories,계측·부속장치,boiler-accessory-equipment,기존 URL 유지·주제 집중,86,83,25,69,16,1,0,0,2010-01-31,2016-04-02,계측기와 보일러 부속장치가 기존 URL의 중심 주제
+fuel-properties,연료 특성·발열량,boiler-installation-combustion,분리 후보,83,79,26,78,4,1,0,0,2010-01-31,2016-07-10,연료 종류·성분·발열량이 독립적인 기초 단원
+auxiliary-feedwater-equipment,급수·부대설비,boiler-auxiliary-equipment,기존 URL 유지·주제 집중,75,74,27,59,7,9,5,1,2010-01-31,2016-07-10,급수·절탄기·과열기 등 부대설비가 일관된 문제군
+safety-devices,안전장치·연소안전,boiler-protection-devices,기존 URL 유지·주제 집중,73,70,27,63,7,3,1,0,2010-01-31,2016-07-10,안전밸브·저수위·화염검출 보호가 기존 URL과 일치
+automatic-control-interlocks,자동제어·인터록,boiler-control-systems,기존 URL 유지·주제 집중,70,65,27,65,5,0,0,1,2010-01-31,2016-07-10,제어 동작·3요소 급수·인터록 문제가 단일 체계
+operation-maintenance-preservation,기동·운전·정지·보존,boiler-operation-maintenance,기존 URL 유지·주제 집중,63,61,26,41,8,14,5,3,2010-01-31,2016-07-10,기동·운전·정지·보존 절차가 하나의 운전 흐름을 구성
+burners-furnaces-atomization,버너·화격자·연소장치,boiler-installation-combustion,분리 후보,62,58,25,56,4,2,0,0,2010-01-31,2016-07-10,버너·무화·화격자 구조가 연소 계산과 별도 문제군
+draft-flue-gas,통풍·연도·굴뚝,boiler-installation-combustion,분리 후보,51,46,25,43,6,2,0,4,2010-01-31,2016-07-10,통풍·연도·굴뚝 계산과 설비 문제가 독립적으로 반복
+heating-load-radiators,난방부하·방열기 계산,boiler-installation-combustion,분리 후보,45,44,26,43,1,1,1,0,2010-01-31,2016-07-10,연소·설치와 다른 계산 체계이며 45문항이 반복 출제
+combustion-air-calculation,연소·공기비·배기가스 계산,boiler-installation-combustion,기존 URL 유지·주제 집중,45,41,23,36,9,0,0,1,2010-03-28,2016-04-02,기존 연소 URL에서 공기비·배기가스 계산을 중심으로 유지
+insulation-materials,보온·단열재,boiler-piping-insulation,분리 후보,41,39,21,39,1,1,1,0,2010-03-28,2016-07-10,재료·허용온도·열전도율 문제가 독립적으로 반복
+failures-accidents-safety,고장·사고·작업안전,boiler-work-safety,기존 URL 유지·주제 집중,34,33,22,24,7,3,0,0,2010-01-31,2016-07-10,사고 원인과 작업안전 문제가 기존 URL의 목적과 일치
+environmental-pollution-control,집진·환경설비,boiler-accessory-equipment,분리 후보,32,30,26,30,2,0,0,1,2010-01-31,2016-07-10,집진·대기오염 문제는 계측·부속장치와 학습 목표가 다름
+steam-traps-condensate,증기트랩·응축수 환수,boiler-piping-insulation,분리 후보,26,25,19,19,6,1,0,1,2010-01-31,2016-07-10,26문항이지만 트랩·환수·수격이라는 일관된 문제군 형성

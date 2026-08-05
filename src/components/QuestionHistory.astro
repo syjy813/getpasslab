@@ -1,8 +1,28 @@
 ---
-interface Q { id: string; date: string; label: string; number: number; body: string; choices: string[]; answer: number; }
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Q {
+  id: string;
+  date: string;
+  label: string;
+  number: number;
+  body: string;
+  choices: string[];
+  answer: number;
+  image?: { src: ImageMetadata; alt: string };
+}
 interface Props { questions: Q[]; examComment?: string; }
 const { questions, examComment } = Astro.props;
 const examLabel = (label: string) => label.replace(/ 시행$/, ' 시험');
+const choiceSymbols = ['①', '②', '③', '④'];
+const imageChoicePattern = /^(수식|그림)[①②③④]$/;
+const displayChoice = (choice: string, hasImage: boolean) => {
+  if (!hasImage) return choice;
+  const match = choice.match(imageChoicePattern);
+  if (!match) return choice;
+  return match[1] === '수식' ? '위 이미지에 제시된 수식' : '위 이미지에 제시된 보기';
+};
 const years = new Set(questions.map(q => q.date.slice(0, 4)));
 const sortedYears = [...years].sort();
 const yearRange = sortedYears.length === 0
@@ -18,7 +38,14 @@ const yearRange = sortedYears.length === 0
       <div class="freq-label">{yearRange} 기출 {questions.length}회 · {years.size}개 연도</div>
       <div class="round-badges">
         {questions.map(q => (
-          <button class="round-badge" data-open={q.id}>{examLabel(q.label)} {q.number}번</button>
+          <button
+            class="round-badge"
+            data-open={q.id}
+            aria-haspopup="dialog"
+            aria-controls={`q-${q.id}`}
+          >
+            {examLabel(q.label)} {q.number}번
+          </button>
         ))}
       </div>
     </>
@@ -28,35 +55,77 @@ const yearRange = sortedYears.length === 0
   {examComment && <p class="exam-comment"><strong>출제 경향</strong> — {examComment}</p>}
 </div>
 
-{questions.map(q => (
-  <dialog class="q-layer" id={`q-${q.id}`} data-revealed="false">
+{questions.map(q => {
+  const titleId = `q-title-${q.id}`;
+  const choicesId = `q-choices-${q.id}`;
+  return (
+  <dialog class="q-layer" id={`q-${q.id}`} data-revealed="false" aria-labelledby={titleId}>
     <div class="q-inner">
-      <div class="q-meta">{examLabel(q.label)} · {q.number}번</div>
+      <div class="q-meta" id={titleId} tabindex="-1">{examLabel(q.label)} · {q.number}번</div>
       <div class="q-body">{q.body}</div>
-      <ol class="q-choices">
+      {q.image && (
+        <figure class="q-figure">
+          <Image
+            class="q-image"
+            src={q.image.src}
+            alt={q.image.alt}
+            width={q.image.src.width}
+            height={q.image.src.height}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption class="q-image-actions">
+            <a class="q-image-original" href={q.image.src.src} target="_blank" rel="noopener">
+              원본 크기로 보기
+            </a>
+          </figcaption>
+        </figure>
+      )}
+      <ol class="q-choices" id={choicesId}>
         {q.choices.map((c, i) => (
-          <li class={i + 1 === q.answer ? 'is-answer' : ''}>{['①','②','③','④'][i]} {c}</li>
+          <li class={i + 1 === q.answer ? 'is-answer' : ''}>
+            {choiceSymbols[i]} {displayChoice(c, Boolean(q.image))}
+            {i + 1 === q.answer && <span class="q-answer-mark">(정답)</span>}
+          </li>
         ))}
       </ol>
       <div class="q-reveal">
-        <button class="reveal" data-reveal={q.id}>정답 확인</button>
+        <button
+          class="reveal"
+          data-reveal={q.id}
+          aria-controls={choicesId}
+        >정답 확인</button>
         <button class="close" data-close={q.id}>닫기</button>
+        <span class="q-answer-status" aria-live="polite"></span>
       </div>
     </div>
   </dialog>
-))}
+  );
+})}
 
 <script>
   document.querySelectorAll<HTMLButtonElement>('[data-open]').forEach(btn => {
     btn.addEventListener('click', () => {
       const d = document.getElementById(`q-${btn.dataset.open}`) as HTMLDialogElement;
       d.dataset.revealed = 'false';
+      const revealButton = d.querySelector<HTMLButtonElement>('[data-reveal]');
+      const status = d.querySelector<HTMLElement>('.q-answer-status');
+      if (revealButton) revealButton.textContent = '정답 확인';
+      if (status) status.textContent = '';
       d.showModal();
+      const inner = d.querySelector<HTMLElement>('.q-inner');
+      const title = d.querySelector<HTMLElement>('.q-meta');
+      if (inner) inner.scrollTop = 0;
+      title?.focus({ preventScroll: true });
     });
   });
   document.querySelectorAll<HTMLButtonElement>('[data-reveal]').forEach(btn => {
     btn.addEventListener('click', () => {
-      (btn.closest('dialog') as HTMLDialogElement).dataset.revealed = 'true';
+      const dialog = btn.closest('dialog') as HTMLDialogElement;
+      dialog.dataset.revealed = 'true';
+      btn.textContent = '정답 공개됨';
+      const status = dialog.querySelector<HTMLElement>('.q-answer-status');
+      if (status) status.textContent = '정답이 표시되었습니다.';
     });
   });
   document.querySelectorAll<HTMLButtonElement>('[data-close]').forEach(btn => {

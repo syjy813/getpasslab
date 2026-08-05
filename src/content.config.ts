@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
-import { glob, file } from 'astro/loaders';
+import { glob } from 'astro/loaders';
+import { questionFiles } from './loaders/questions';
 
 const chapterTypeTag = z.enum(['개념', '계산', '절차']);
 
@@ -27,7 +28,7 @@ const chapters = defineCollection({
 });
 
 const questions = defineCollection({
-  loader: file('./src/data/questions.json'),
+  loader: questionFiles(),
   schema: z.object({
     id: z.string(),                 // 동결 키: question_id (예: 20220424_061)
     cert_id: z.string().default('industrial-safety'),
