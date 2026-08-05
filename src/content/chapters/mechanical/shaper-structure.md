@@ -1,5 +1,5 @@
 ---
-title: 형삭기 주요 구조부
+title: 형삭기 구조와 램
 slug: shaper-structure
 subject_id: 3
 order: 5
@@ -7,7 +7,7 @@ priority: 출시 필수
 status: 완료
 group: 시험·가공·검사
 tags: [개념]
-summary: 램·공구대·공작물 테이블 — 아버는 밀링의 구조부
+summary: 형삭기 램·공구대·공작물 테이블의 역할과 밀링 아버 구분
 questions: [20200822_060]
 related: [machine-tools-safety, test-types]
 examComment: 구조부가 아닌 것 고르기 단일 유형 — 밀링의 아버를 끼운 선지가 기출 정답.
@@ -15,7 +15,7 @@ examComment: 구조부가 아닌 것 고르기 단일 유형 — 밀링의 아�
 
 ## 핵심 개념
 
-형삭기(셰이퍼·슬로터) — 램에 고정된 바이트가 직선 왕복하며 평면·홈을 절삭하는 공작기계.
+형삭기(셰이퍼·슬로터)는 램에 고정된 바이트가 직선 왕복하며 평면·홈을 절삭하는 공작기계다.
 
 주요 구조부.
 

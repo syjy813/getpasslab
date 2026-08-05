@@ -1,5 +1,5 @@
 ---
-title: 안전밸브 차단밸브 금지 예외
+title: 안전밸브 전단·후단 차단밸브 금지 예외
 slug: safety-valve-shutoff-exception
 subject_id: 5
 order: 2
@@ -7,7 +7,7 @@ priority: 출시 필수
 status: 완료
 group: 안전밸브·플랜지
 tags: [개념, 법령]
-summary: 차단밸브 설치 금지 원칙과 자물쇠형 설치 가능 예외, 검사주기(현행 2·3·4년)
+summary: 안전밸브 전단·후단의 차단밸브 설치 금지 원칙, 자물쇠형 예외와 현행 검사주기 2·3·4년
 questions: [20210307_082, 20210307_084, 20180428_083]
 related: [reactor-distillation-equipment, flameproof-flange-distance]
 examComment: 안전밸브 전후 차단밸브 설치 금지 원칙과 허용 예외를 설비 조건에 맞춰 구분하는 법령형이 확인된다.
@@ -15,7 +15,7 @@ examComment: 안전밸브 전후 차단밸브 설치 금지 원칙과 허용 예
 
 ## 핵심 개념
 
-원칙 — 안전밸브 등의 전단·후단에 차단밸브 설치 금지 (배출 경로 확보).
+안전밸브 등의 전단·후단에는 배출 경로 확보를 위해 원칙적으로 차단밸브를 설치할 수 없다.
 
 예외 — 자물쇠형 또는 이에 준하는 형식의 차단밸브 설치 가능한 경우.
 

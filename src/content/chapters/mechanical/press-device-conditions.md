@@ -1,5 +1,5 @@
 ---
-title: 프레스 방호장치 적용 조건
+title: 프레스 방호장치 적용 조건과 SPM 기준
 slug: press-device-conditions
 subject_id: 3
 order: 2
@@ -7,7 +7,7 @@ priority: 출시 필수
 status: 완료
 group: 프레스 안전
 tags: [개념]
-summary: 클러치 구조와 SPM·행정길이에 따른 장치 선택 기준
+summary: 마찰식·확동식 클러치 구분과 손쳐내기식·수인식의 120 SPM 이하·행정길이 40mm 이상 기준
 questions: [20210307_054, 20190303_046]
 related: [press-safety-devices, hand-pull-device-structure]
 examComment: 손쳐내기식 설치·성능 기준(SPM 120 이하, 방호판 폭 1/2 이상)의 수치 변조형으로 출제.
@@ -15,7 +15,7 @@ examComment: 손쳐내기식 설치·성능 기준(SPM 120 이하, 방호판 폭
 
 ## 핵심 개념
 
-클러치 구조에 따른 적용.
+프레스 방호장치는 클러치의 급정지 가능 여부와 SPM·행정길이 조건에 따라 적용 범위가 달라진다.
 
 | 프레스 구조 | 적용 가능 장치 |
 |------|------|
