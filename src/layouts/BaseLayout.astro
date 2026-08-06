@@ -11,6 +11,7 @@ interface Props {
   robots?: string;
   ogType?: 'website' | 'article';
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  bodyClass?: string;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   robots = 'index, follow',
   ogType = 'website',
   structuredData = [],
+  bodyClass,
 } = Astro.props;
 const siteOrigin = Astro.site ?? SITE.url;
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
@@ -79,7 +81,7 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
     ))}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
   </head>
-  <body>
+  <body class={bodyClass}>
     <GNB />
     <slot />
     <Footer />

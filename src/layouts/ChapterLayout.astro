@@ -12,13 +12,14 @@ import type { ChapterBadge } from '../utils/chapterBadges';
 import { SITE } from '../config/site';
 interface SideCh { slug: string; title: string; group: string; }
 interface Props {
-  title: string; summary: string; cert_id: string; exam: string;
+  title: string; slug: string; summary: string; cert_id: string; exam: string;
   subject_id: number; group: string; questions?: string[];
   badges: ChapterBadge[];
   sideChapters: SideCh[];
 }
 const {
   title,
+  slug,
   summary,
   cert_id,
   exam,
@@ -37,6 +38,17 @@ const subjectLabel = getSubjectLabel(subject_id, subject);
 const routePrefix = `/${certification.slug}/${examDefinition.slug}`;
 const subjectUrl = withBase(`${routePrefix}/${subject.slug}/`);
 const groups = [...new Set(sideChapters.map(c => c.group))];
+const navigableChapters = groups.flatMap(group =>
+  sideChapters.filter(chapter => chapter.group === group),
+);
+const currentChapterIndex = navigableChapters.findIndex(chapter => chapter.slug === slug);
+if (currentChapterIndex === -1) {
+  throw new Error(`Current chapter is missing from subject navigation: ${slug}`);
+}
+const previousChapter = navigableChapters[currentChapterIndex - 1];
+const nextChapter = navigableChapters[currentChapterIndex + 1];
+const chapterUrl = (chapter: SideCh) =>
+  withBase(`${routePrefix}/${subject.slug}/${chapter.slug}/`);
 const fullPageTitle = `${title} — ${subject.name} — ${certification.name} ${examDefinition.name} | GetPassLab`;
 const pageTitle = fullPageTitle.length <= 60
   ? fullPageTitle
@@ -93,7 +105,13 @@ const structuredData = [
   },
 ];
 ---
-<BaseLayout title={pageTitle} description={seoDescription} ogType="article" structuredData={structuredData}>
+<BaseLayout
+  title={pageTitle}
+  description={seoDescription}
+  ogType="article"
+  structuredData={structuredData}
+  bodyClass="chapter-page"
+>
   <div class="chapter-wrap">
     <aside class="chapter-side">
       <div class="side-sticky">
@@ -103,7 +121,13 @@ const structuredData = [
             <>
               <div class="side-group">{g}</div>
               {sideChapters.filter(c => c.group === g).map(c => (
-                <a href={withBase(`${routePrefix}/${subject.slug}/${c.slug}/`)} class={c.title === title ? 'active' : ''}>{c.title}</a>
+                <a
+                  href={chapterUrl(c)}
+                  class={c.slug === slug ? 'active' : ''}
+                  aria-current={c.slug === slug ? 'page' : undefined}
+                >
+                  {c.title}
+                </a>
               ))}
             </>
           ))}
@@ -124,4 +148,52 @@ const structuredData = [
       <article><slot /></article>
     </main>
   </div>
+  <nav class="chapter-mobile-nav" aria-label="이전 및 다음 챕터">
+    <div class="chapter-mobile-nav-inner">
+      {previousChapter ? (
+        <a
+          class="chapter-mobile-link previous"
+          href={chapterUrl(previousChapter)}
+          rel="prev"
+          aria-label={`이전 챕터: ${previousChapter.title}`}
+        >
+          <span class="chapter-mobile-arrow" aria-hidden="true">←</span>
+          <span class="chapter-mobile-copy">
+            <span class="chapter-mobile-label">이전 챕터</span>
+            <span class="chapter-mobile-title">{previousChapter.title}</span>
+          </span>
+        </a>
+      ) : (
+        <span class="chapter-mobile-link previous is-disabled" aria-disabled="true">
+          <span class="chapter-mobile-arrow" aria-hidden="true">←</span>
+          <span class="chapter-mobile-copy">
+            <span class="chapter-mobile-label">이전 챕터</span>
+            <span class="chapter-mobile-title">첫 챕터입니다</span>
+          </span>
+        </span>
+      )}
+      {nextChapter ? (
+        <a
+          class="chapter-mobile-link next"
+          href={chapterUrl(nextChapter)}
+          rel="next"
+          aria-label={`다음 챕터: ${nextChapter.title}`}
+        >
+          <span class="chapter-mobile-copy">
+            <span class="chapter-mobile-label">다음 챕터</span>
+            <span class="chapter-mobile-title">{nextChapter.title}</span>
+          </span>
+          <span class="chapter-mobile-arrow" aria-hidden="true">→</span>
+        </a>
+      ) : (
+        <span class="chapter-mobile-link next is-disabled" aria-disabled="true">
+          <span class="chapter-mobile-copy">
+            <span class="chapter-mobile-label">다음 챕터</span>
+            <span class="chapter-mobile-title">마지막 챕터입니다</span>
+          </span>
+          <span class="chapter-mobile-arrow" aria-hidden="true">→</span>
+        </span>
+      )}
+    </div>
+  </nav>
 </BaseLayout>
