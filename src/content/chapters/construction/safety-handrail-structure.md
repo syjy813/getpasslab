@@ -22,6 +22,22 @@ status: 완료
 | **난간기둥** | 난간대를 지지하고 구조를 고정하는 부재 |
 | **발끝막이판** | 발이 빠지거나 물체가 떨어지는 것을 막는 부재 |
 
+<figure class="chapter-figure chapter-figure-wide">
+  <img
+    src="/images/chapters/safety-handrail-structure/safety-handrail-structure.svg"
+    alt="상부난간대 높이에 따른 중간난간대 배치와 발끝막이판, 난간기둥의 치수 기준"
+    width="1100"
+    height="680"
+    loading="lazy"
+    decoding="async"
+  />
+  <figcaption>
+    기준: <a href="https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1016700271" target="_blank" rel="external noopener">「산업안전보건기준에 관한 규칙」 제13조</a>
+    · 참고: <a href="https://www.kosha.or.kr/ebook/fcatalog/access/ecatalogt.jsp?Dir=436&amp;callmode=normal&amp;catimage=&amp;eclang=ko&amp;start=200&amp;um=s" target="_blank" rel="external noopener">KOSHA 안전보건 실무정보 200쪽</a>
+    · GetPassLab 학습용 재구성
+  </figcaption>
+</figure>
+
 안전난간의 설치기준은 다음과 같다.
 
 - 상부난간대: 바닥면·발판 또는 경사로의 표면(이하 바닥면등)으로부터 <strong>90cm 이상</strong>에 설치

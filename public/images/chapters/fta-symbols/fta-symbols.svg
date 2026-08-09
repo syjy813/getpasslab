@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="570" viewBox="0 0 1000 570" role="img" aria-labelledby="title desc">
+  <title id="title">FTA 사상기호와 게이트 기호</title>
+  <desc id="desc">결함사상, 기본사상, 통상사상, 생략사상과 AND, OR, 부정, 수정 게이트를 흑백 선화로 비교한 그림</desc>
+
+  <rect x="1" y="1" width="998" height="568" fill="#fff" stroke="#d1d5db" stroke-width="2"/>
+  <g font-family="Pretendard, 'Noto Sans KR', Arial, sans-serif" fill="#111827">
+    <text x="500" y="39" text-anchor="middle" font-size="23" font-weight="600">FTA 사상기호와 게이트 기호</text>
+    <path d="M32 56H968" stroke="#9ca3af" stroke-width="1"/>
+
+    <text x="36" y="88" font-size="18" font-weight="600">사상기호</text>
+    <path d="M32 101H968" stroke="#d1d5db" stroke-width="1"/>
+    <path d="M266 101V258M500 101V258M734 101V258" stroke="#e5e7eb" stroke-width="1"/>
+
+    <g text-anchor="middle" stroke="#374151" stroke-width="3.5" fill="none" stroke-linejoin="round">
+      <g transform="translate(149 145)">
+        <path d="M0-31V-48M0 31V48"/>
+        <rect x="-48" y="-31" width="96" height="62"/>
+      </g>
+      <g transform="translate(383 145)">
+        <path d="M0-38V-53"/>
+        <circle r="38"/>
+      </g>
+      <g transform="translate(617 145)">
+        <path d="M0-37V-52"/>
+        <path d="M-48 35V-7L0-37 48-7V35Z"/>
+      </g>
+      <g transform="translate(851 145)">
+        <path d="M0-42V-57"/>
+        <path d="M0-42 43 0 0 42-43 0Z"/>
+      </g>
+    </g>
+
+    <g text-anchor="middle">
+      <text x="149" y="215" font-size="17" font-weight="600">결함사상</text>
+      <text x="149" y="239" font-size="14" fill="#6b7280">중간·정상 사상</text>
+      <text x="383" y="215" font-size="17" font-weight="600">기본사상</text>
+      <text x="383" y="239" font-size="14" fill="#6b7280">더 전개할 수 없음</text>
+      <text x="617" y="215" font-size="17" font-weight="600">통상사상</text>
+      <text x="617" y="239" font-size="14" fill="#6b7280">통상의 작업·기계 상태</text>
+      <text x="851" y="215" font-size="17" font-weight="600">생략사상</text>
+      <text x="851" y="239" font-size="14" fill="#6b7280">전개를 생략함</text>
+    </g>
+
+    <path d="M32 274H968" stroke="#9ca3af" stroke-width="1"/>
+    <text x="36" y="307" font-size="18" font-weight="600">게이트 기호</text>
+    <path d="M32 320H968" stroke="#d1d5db" stroke-width="1"/>
+    <path d="M266 320V535M500 320V535M734 320V535" stroke="#e5e7eb" stroke-width="1"/>
+
+    <g text-anchor="middle" stroke="#374151" stroke-width="3.5" fill="none" stroke-linejoin="round">
+      <g transform="translate(149 389)">
+        <path d="M-45 30V0C-45-36-25-55 0-55S45-36 45 0V30Z"/>
+        <path d="M-24 30V54M24 30V54M0-55V-76"/>
+      </g>
+      <g transform="translate(383 389)">
+        <path d="M-48 31C-27 10-22-29-31-55C-9-46 9-46 31-55C22-29 27 10 48 31C17 20-17 20-48 31Z"/>
+        <path d="M-23 29V54M23 29V54M0-51V-76"/>
+      </g>
+      <g transform="translate(617 389)">
+        <path d="M-44 0 25-39V39Z"/>
+        <circle cx="37" cy="0" r="10" fill="#fff"/>
+        <path d="M-44 0H-66M47 0H66"/>
+      </g>
+      <g transform="translate(851 389)">
+        <path d="M0-49 48-20V35L0 64-48 35V-20Z"/>
+        <path d="M0-49V-72"/>
+      </g>
+    </g>
+
+    <g text-anchor="middle">
+      <text x="149" y="477" font-size="17" font-weight="600">AND 게이트</text>
+      <text x="149" y="501" font-size="14" fill="#6b7280">모든 입력이 발생</text>
+      <text x="383" y="477" font-size="17" font-weight="600">OR 게이트</text>
+      <text x="383" y="501" font-size="14" fill="#6b7280">하나 이상 발생</text>
+      <text x="617" y="477" font-size="17" font-weight="600">부정 게이트</text>
+      <text x="617" y="501" font-size="14" fill="#6b7280">입력과 반대 출력</text>
+      <text x="851" y="477" font-size="17" font-weight="600">수정 게이트</text>
+      <text x="851" y="501" font-size="14" fill="#6b7280">조건을 함께 표시</text>
+    </g>
+  </g>
+</svg>

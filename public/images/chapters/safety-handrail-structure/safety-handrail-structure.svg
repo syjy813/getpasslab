@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680" role="img" aria-labelledby="title desc">
+  <title id="title">안전난간의 구조와 치수 기준</title>
+  <desc id="desc">상부난간대 높이 120센티미터 이하와 이상일 때의 중간난간대 배치, 발끝막이판, 난간기둥을 비교한 학습용 그림</desc>
+  <defs>
+    <marker id="dim" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 5l10-5v10Z" fill="#475569"/></marker>
+    <style>.title{font:700 28px Arial,'Noto Sans KR',sans-serif;fill:#0f172a}.label{font:700 19px Arial,'Noto Sans KR',sans-serif;fill:#0f172a}.note{font:16px Arial,'Noto Sans KR',sans-serif;fill:#475569}.rail{stroke:#2563eb;stroke-width:13;stroke-linecap:round}.post{stroke:#334155;stroke-width:13}.dim{stroke:#475569;stroke-width:3;marker-start:url(#dim);marker-end:url(#dim)}</style>
+  </defs>
+  <rect width="1100" height="680" rx="30" fill="#f8fafc"/>
+  <text x="550" y="48" text-anchor="middle" class="title">상부난간대 높이에 따라 중간난간대 배치가 달라진다</text>
+
+  <g transform="translate(45 85)">
+    <rect width="485" height="460" rx="22" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="242" y="42" text-anchor="middle" class="label">상부난간대 90cm 이상 · 120cm 이하</text>
+    <line x1="92" y1="115" x2="408" y2="115" class="rail"/>
+    <line x1="92" y1="262" x2="408" y2="262" class="rail"/>
+    <line x1="105" y1="108" x2="105" y2="391" class="post"/>
+    <line x1="395" y1="108" x2="395" y2="391" class="post"/>
+    <rect x="90" y="359" width="320" height="32" fill="#fbbf24" stroke="#92400e" stroke-width="3"/>
+    <line x1="53" y1="115" x2="53" y2="391" class="dim"/>
+    <text x="35" y="255" text-anchor="middle" class="note" transform="rotate(-90 35 255)">높이 90cm 이상</text>
+    <line x1="437" y1="115" x2="437" y2="262" class="dim"/>
+    <line x1="437" y1="262" x2="437" y2="391" class="dim"/>
+    <text x="250" y="224" text-anchor="middle" class="note">중간난간대: 상부와 바닥의 중간</text>
+    <text x="250" y="424" text-anchor="middle" class="note">발끝막이판 10cm 이상</text>
+  </g>
+
+  <g transform="translate(570 85)">
+    <rect width="485" height="460" rx="22" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="242" y="42" text-anchor="middle" class="label">상부난간대 120cm 이상</text>
+    <line x1="92" y1="88" x2="408" y2="88" class="rail"/>
+    <line x1="92" y1="190" x2="408" y2="190" class="rail"/>
+    <line x1="92" y1="292" x2="408" y2="292" class="rail"/>
+    <line x1="105" y1="81" x2="105" y2="391" class="post"/>
+    <line x1="395" y1="81" x2="395" y2="391" class="post"/>
+    <rect x="90" y="359" width="320" height="32" fill="#fbbf24" stroke="#92400e" stroke-width="3"/>
+    <line x1="447" y1="88" x2="447" y2="190" class="dim"/>
+    <line x1="447" y1="190" x2="447" y2="292" class="dim"/>
+    <line x1="447" y1="292" x2="447" y2="391" class="dim"/>
+    <text x="428" y="241" text-anchor="middle" class="note" transform="rotate(-90 428 241)">각 간격 60cm 이하</text>
+    <text x="250" y="332" text-anchor="middle" class="note">중간난간대 2단 이상 · 균등 설치</text>
+    <text x="250" y="424" text-anchor="middle" class="note">발끝막이판 10cm 이상</text>
+  </g>
+
+  <rect x="90" y="582" width="920" height="62" rx="16" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <text x="550" y="608" text-anchor="middle" class="label">공통 확인</text>
+  <text x="550" y="632" text-anchor="middle" class="note">난간기둥으로 고정 · 난간대 지름 2.7cm 이상 · 가장 취약한 방향으로 100kg 이상 하중을 견딜 것</text>
+</svg>

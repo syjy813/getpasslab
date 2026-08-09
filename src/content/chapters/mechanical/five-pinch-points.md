@@ -22,6 +22,21 @@ status: 완료
 | **물림점** | 회전하는 두 부품 사이로 재료나 신체가 끌려 들어가는 지점 |
 | **접선물림점** | 회전부와 인접한 고정면의 접선 방향으로 말려 들어가는 지점 |
 
+<figure class="chapter-figure chapter-figure-wide">
+  <img
+    src="/images/chapters/five-pinch-points/five-pinch-points.svg"
+    alt="협착점, 끼임점, 절단점, 물림점, 접선물림점의 운동 관계와 위험 위치를 비교한 그림"
+    width="1200"
+    height="720"
+    loading="lazy"
+    decoding="async"
+  />
+  <figcaption>
+    내용 기준: <a href="https://www.kosha.or.kr/ebook/fcatalog/access/ecatalogt.jsp?Dir=541&amp;callmode=normal&amp;catimage=&amp;eclang=ko&amp;start=14&amp;um=s" target="_blank" rel="external noopener">한국산업안전보건공단, 끼임 위험의 종류(15쪽)</a>
+    · GetPassLab 학습용 재구성
+  </figcaption>
+</figure>
+
 ## 판별 기준
 
 밀링커터나 둥근톱날처럼 날이 재료를 자르는 기계요소가 단독으로 만드는 위험점은 절단점이다. 연삭숫돌과 작업받침대처럼 회전부와 고정부 사이에 신체가 끼일 수 있는 지점은 끼임점으로 구분한다. 두 부품 사이로 끌려 들어가는 물림점과도 구분한다.

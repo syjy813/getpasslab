@@ -22,6 +22,18 @@ examComment: 2과목 최다 빈출 축. FT도에서 최소 컷셋을 구하는 �
 | 패스셋(Path set) | 그 안의 기본사상이 모두 발생하지 않으면 정상사상이 발생하지 않는 집합 | 시스템 기능을 살리는 최소 요인의 집합 |
 | 미니멀 패스셋 | 패스셋 중 최소한의 집합 | 시스템의 **신뢰성** 지표 |
 
+<figure class="chapter-figure chapter-figure-wide">
+  <img
+    src="/images/chapters/cutset-pathset/cutset-pathset.svg"
+    alt="톱사상 T를 AND와 OR 게이트로 전개하여 미니멀 컷셋 AB와 AC를 구하는 과정"
+    width="1000"
+    height="620"
+    loading="lazy"
+    decoding="async"
+  />
+  <figcaption>GetPassLab 자체 제작 · AND·OR 전개 규칙을 설명하기 위한 예시 FT도</figcaption>
+</figure>
+
 Fussell 알고리즘 — 톱사상부터 AND는 가로(같은 행에 병기), OR은 세로(행 분리)로 전개해 행렬을 만들고, 중복·포함 행을 제거하면 미니멀 컷셋.
 
 정상사상 발생확률 — 미니멀 컷셋이 {q₁q₂}, {q₁q₃}일 때.
