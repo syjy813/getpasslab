@@ -108,7 +108,8 @@ const bySubject = Object.values(CERTIFICATIONS).flatMap((certification) =>
     <div class="adm-sub">GetPassLab · 내부 관리 · noindex</div>
     <div class="adm-nav">
       <a href={withBase('/admin/')}>← 관리 현황</a><span class="sep">/</span>
-      <span class="muted">기출문제 DB</span>
+      <span class="muted">기출문제 DB</span><span class="sep">/</span>
+      <a href={withBase('/admin/computer-literacy-preview/')}>컴활 2급 1회차 검수 →</a>
     </div>
     <h1 class="adm-h1">기출문제 DB</h1>
     <p class="adm-sub">원본: 자격증별 기출 JSON 파일 · 연결 챕터 수 = 전체 챕터 md의 questions[] 역인덱스</p>

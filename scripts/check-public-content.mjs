@@ -8,6 +8,12 @@ const INTERNAL_QUESTION_ALIAS = /\bq\d{8}\b/gi;
 const SOURCE_CONTROL_CHARACTER = /[\x00-\x09\x0b-\x1f\x7f]/g;
 const ORPHANED_RHO_TOKEN = /(?:^|\n)ho\s*=/gm;
 const UNRENDERED_EMPHASIS = /(?:\*\*[^*\n]{1,200}\*\*|__[^_\n]{1,200}__)/g;
+const PRIVATE_COMPUTER_LITERACY_MARKERS = [
+  { label: '컴활 검수 경로', pattern: /computer-literacy/gi },
+  { label: '컴활 2급 문항 ID', pattern: /20200704_\d{3}/g },
+  { label: '컴퓨터활용능력 명칭', pattern: /컴퓨터활용능력/g },
+];
+const TEXT_BUILD_EXTENSIONS = new Set(['.css', '.html', '.js', '.json', '.svg', '.txt', '.xml']);
 const INTERNAL_COPY_RULES = [
   { label: 'PDF', pattern: /\bPDF\b/gi },
   { label: 'JSON', pattern: /\bJSON\b/gi },
@@ -106,6 +112,22 @@ async function chapterSlugs() {
 const files = await walk(DIST_DIR);
 const htmlFiles = files.filter((file) => file.endsWith('.html'));
 const knownSlugs = await chapterSlugs();
+
+for (const file of files) {
+  const relative = path.relative(DIST_DIR, file).replaceAll(path.sep, '/');
+  if (relative.toLowerCase().includes('computer-literacy')) {
+    errors.push(`${relative}: production 빌드에 컴활 2급 전용 경로 또는 자산 포함`);
+  }
+
+  if (!TEXT_BUILD_EXTENSIONS.has(path.extname(file).toLowerCase())) continue;
+  const source = await readFile(file, 'utf8');
+  for (const marker of PRIVATE_COMPUTER_LITERACY_MARKERS) {
+    const matches = uniqueMatches(source, marker.pattern);
+    if (matches.length > 0) {
+      errors.push(`${relative}: production 빌드에 ${marker.label} 포함 (${matches.join(', ')})`);
+    }
+  }
+}
 
 for (const file of htmlFiles) {
   const publicPath = pagePath(file);
