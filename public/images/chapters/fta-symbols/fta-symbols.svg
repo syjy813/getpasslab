@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="570" viewBox="0 0 1000 570" role="img" aria-labelledby="title desc">
   <title id="title">FTA 사상기호와 게이트 기호</title>
-  <desc id="desc">결함사상, 기본사상, 통상사상, 생략사상과 AND, OR, 부정, 수정 게이트를 흑백 선화로 비교한 그림</desc>
+  <desc id="desc">결함사상, 기본사상, 통상사상, 생략사상과 AND, OR, 부정, 억제 게이트를 흑백 선화로 비교한 그림</desc>
 
   <rect x="1" y="1" width="998" height="568" fill="#fff" stroke="#d1d5db" stroke-width="2"/>
   <g font-family="Pretendard, 'Noto Sans KR', Arial, sans-serif" fill="#111827">
@@ -32,7 +32,7 @@
 
     <g text-anchor="middle">
       <text x="149" y="215" font-size="17" font-weight="600">결함사상</text>
-      <text x="149" y="239" font-size="14" fill="#6b7280">중간·정상 사상</text>
+      <text x="149" y="239" font-size="14" fill="#6b7280">톱(정상·頂上)·중간 사상</text>
       <text x="383" y="215" font-size="17" font-weight="600">기본사상</text>
       <text x="383" y="239" font-size="14" fill="#6b7280">더 전개할 수 없음</text>
       <text x="617" y="215" font-size="17" font-weight="600">통상사상</text>
@@ -62,9 +62,11 @@
       </g>
       <g transform="translate(851 389)">
         <path d="M0-49 48-20V35L0 64-48 35V-20Z"/>
-        <path d="M0-49V-72"/>
+        <path d="M0-49V-72M48 8H73"/>
       </g>
     </g>
+
+    <text x="940" y="403" text-anchor="middle" font-size="16" font-weight="600">P</text>
 
     <g text-anchor="middle">
       <text x="149" y="477" font-size="17" font-weight="600">AND 게이트</text>
@@ -73,8 +75,8 @@
       <text x="383" y="501" font-size="14" fill="#6b7280">하나 이상 발생</text>
       <text x="617" y="477" font-size="17" font-weight="600">부정 게이트</text>
       <text x="617" y="501" font-size="14" fill="#6b7280">입력과 반대 출력</text>
-      <text x="851" y="477" font-size="17" font-weight="600">수정 게이트</text>
-      <text x="851" y="501" font-size="14" fill="#6b7280">조건을 함께 표시</text>
+      <text x="851" y="477" font-size="17" font-weight="600">억제 게이트</text>
+      <text x="851" y="501" font-size="14" fill="#6b7280">입력과 조건 P가 함께 성립</text>
     </g>
   </g>
 </svg>
