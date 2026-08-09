@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+  <title id="title">둥근톱 안전장치의 위치</title>
+  <desc id="desc">회전날, 날접촉예방장치, 분할날, 반발예방장치와 가공재의 위치 관계를 나타낸 학습용 그림</desc>
+  <defs>
+    <marker id="feedArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0l10 5-10 5Z" fill="#2563eb"/>
+    </marker>
+    <marker id="riskArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0l10 5-10 5Z" fill="#dc2626"/>
+    </marker>
+    <style>.title{font:700 28px Arial,'Noto Sans KR',sans-serif;fill:#0f172a}.label{font:700 20px Arial,'Noto Sans KR',sans-serif;fill:#0f172a}.note{font:17px Arial,'Noto Sans KR',sans-serif;fill:#475569}.call{stroke:#334155;stroke-width:3;fill:none}</style>
+  </defs>
+  <rect width="1100" height="650" rx="30" fill="#f8fafc"/>
+  <text x="550" y="50" text-anchor="middle" class="title">가공재의 진행방향을 기준으로 안전장치 위치 확인</text>
+  <rect x="70" y="390" width="960" height="42" rx="8" fill="#94a3b8"/>
+  <rect x="105" y="331" width="830" height="42" rx="6" fill="#fbbf24" stroke="#92400e" stroke-width="3"/>
+  <text x="300" y="358" text-anchor="middle" class="label">가공재</text>
+  <path d="M135 302h235" stroke="#2563eb" stroke-width="8" marker-end="url(#feedArrow)"/>
+  <text x="250" y="283" text-anchor="middle" class="label" fill="#1d4ed8">이송 방향</text>
+
+  <circle cx="555" cy="389" r="137" fill="#dbeafe" stroke="#1d4ed8" stroke-width="7"/>
+  <circle cx="555" cy="389" r="19" fill="#334155"/>
+  <g stroke="#1d4ed8" stroke-width="11">
+    <path d="M555 252v26M555 500v26M418 389h26M666 389h26M458 292l19 19M633 467l19 19M652 292l-19 19M477 467l-19 19"/>
+  </g>
+  <path d="M423 349a145 145 0 0 1 265 0" fill="#bfdbfe" stroke="#0f766e" stroke-width="8"/>
+  <path d="M445 350a121 121 0 0 1 220 0" fill="#ecfeff" opacity=".9"/>
+  <text x="555" y="182" text-anchor="middle" class="label">날접촉예방장치</text>
+  <path d="M555 198v65" class="call"/>
+
+  <path d="M710 326v-126c0-16 13-29 29-29h7v176" fill="#f1f5f9" stroke="#334155" stroke-width="8"/>
+  <text x="811" y="145" text-anchor="middle" class="label">분할날</text>
+  <path d="M779 154l-42 36" class="call"/>
+
+  <g transform="translate(778 251)" fill="#fecaca" stroke="#b91c1c" stroke-width="4">
+    <path d="M0 0l40 8-30 43Z"/>
+    <path d="M43 2l40 8-30 43Z"/>
+  </g>
+  <text x="912" y="232" text-anchor="middle" class="label">반발예방장치</text>
+  <path d="M842 268l-28 15" class="call"/>
+
+  <path d="M930 325l48-62" stroke="#dc2626" stroke-width="7" marker-end="url(#riskArrow)"/>
+  <text x="1000" y="385" text-anchor="end" class="note" fill="#b91c1c">반발 위험 방향</text>
+  <rect x="105" y="508" width="890" height="86" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="550" y="542" text-anchor="middle" class="label">핵심 위치 관계</text>
+  <text x="550" y="574" text-anchor="middle" class="note">덮개는 날의 노출부를 가리고 · 분할날과 반발예방장치는 가공재 뒤쪽의 반발 위험을 줄인다</text>
+</svg>

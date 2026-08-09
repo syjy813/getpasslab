@@ -1,0 +1,301 @@
+---
+// 컴퓨터활용능력 2급 PDF 내재화 검수 화면. 개발 환경에서만 제공한다.
+import '../../../styles/global.css';
+import { readFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
+import questions from '../../../data/questions/computer-literacy.json';
+import assetRegistry from '../../../data/question-assets/computer-literacy.json';
+
+export function getStaticPaths() {
+  return import.meta.env.DEV ? [{ params: { path: undefined } }] : [];
+}
+
+const examQuestions = questions
+  .filter(question => question.date === '2020-07-04')
+  .sort((a, b) => a.number - b.number);
+
+if (examQuestions.length !== 40) {
+  throw new Error(`Expected 40 questions for 2020-07-04, got ${examQuestions.length}`);
+}
+
+const repoRoot = fileURLToPath(new URL('../../../../', import.meta.url));
+const imageEntries = import.meta.env.DEV
+  ? await Promise.all(assetRegistry.map(async (entry) => {
+      const file = await readFile(resolve(repoRoot, entry.asset_path));
+      return [
+        entry.id,
+        {
+          ...entry,
+          src: `data:image/png;base64,${file.toString('base64')}`,
+        },
+      ] as const;
+    }))
+  : [];
+const images = new Map(imageEntries);
+
+const choiceSymbols = ['①', '②', '③', '④'];
+const displayChoice = (choice: string, hasImage: boolean) => {
+  if (!hasImage) return choice;
+  const match = choice.match(/^이미지 선택지 ([1-4])$/);
+  if (!match) return choice;
+  return `위 이미지의 ${choiceSymbols[Number(match[1]) - 1]} 보기`;
+};
+
+const subjects = [
+  { id: 1, title: '1과목 · 컴퓨터 일반' },
+  { id: 2, title: '2과목 · 스프레드시트 일반' },
+];
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>컴퓨터활용능력 2급 2020년 7월 기출 검수 — GetPassLab Admin</title>
+  </head>
+  <body class="preview-page">
+    <main class="preview-shell">
+      <nav class="preview-nav" aria-label="관리자 이동">
+        <a href="/admin/">관리 현황</a>
+        <span aria-hidden="true">/</span>
+        <a href="/admin/questions/">기출문제 DB</a>
+        <span aria-hidden="true">/</span>
+        <span>컴활 2급 1회차 검수</span>
+      </nav>
+
+      <header class="preview-hero">
+        <div class="preview-eyebrow">LOCAL REVIEW · PRODUCTION 비공개</div>
+        <h1>컴퓨터활용능력 2급 필기</h1>
+        <p>2020년 7월 4일 시행 · 교사용 PDF 1회차 · 40문항</p>
+        <div class="preview-stats" aria-label="내재화 현황">
+          <div><strong>40</strong><span>전체 문항</span></div>
+          <div><strong>16</strong><span>이미지 문항</span></div>
+          <div><strong>23</strong><span>원본 시각 블록</span></div>
+          <div><strong>0</strong><span>공개 관계</span></div>
+        </div>
+      </header>
+
+      <aside class="preview-guide">
+        <strong>검수 방법</strong>
+        <span>문항을 열어 본문 → 이미지 → 선택지 순서를 확인하고, 정답 확인과 이전·다음 이동을 시험하세요.</span>
+      </aside>
+
+      {subjects.map(subject => {
+        const rows = examQuestions.filter(question => question.subject_id === subject.id);
+        return (
+          <section class="preview-subject" aria-labelledby={`subject-${subject.id}`}>
+            <div class="preview-subject-heading">
+              <h2 id={`subject-${subject.id}`}>{subject.title}</h2>
+              <span>{rows.length}문항</span>
+            </div>
+            <div class="preview-question-grid">
+              {rows.map(question => {
+                const image = images.get(question.id);
+                return (
+                  <button
+                    class="preview-question-button"
+                    data-preview-open={question.id}
+                    aria-haspopup="dialog"
+                    aria-controls={`preview-${question.id}`}
+                  >
+                    <span class="preview-question-number">{question.number}번</span>
+                    <span class="preview-question-title">{question.body}</span>
+                    <span class={`preview-question-state ${image ? 'has-image' : ''}`}>
+                      {image ? '이미지 포함' : '텍스트 문항'}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </main>
+
+    {examQuestions.map((question, index) => {
+      const image = images.get(question.id);
+      const previous = examQuestions[index - 1];
+      const next = examQuestions[index + 1];
+      const titleId = `preview-title-${question.id}`;
+      const choicesId = `preview-choices-${question.id}`;
+      return (
+        <dialog
+          class="q-layer preview-dialog"
+          id={`preview-${question.id}`}
+          data-revealed="false"
+          data-question-index={index}
+          aria-labelledby={titleId}
+        >
+          <div class="q-inner">
+            <div class="q-meta" id={titleId} tabindex="-1">
+              2020년 7월 시험 · {question.number}번 · {index + 1}/40
+            </div>
+            <div class="q-body">{question.body}</div>
+            {image && (
+              <figure class="q-figure">
+                <img
+                  class="q-image"
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+            )}
+            <ol class="q-choices" id={choicesId}>
+              {question.choices.map((choice, choiceIndex) => (
+                <li class={choiceIndex + 1 === question.answer ? 'is-answer' : ''}>
+                  {choiceSymbols[choiceIndex]} {displayChoice(choice, Boolean(image))}
+                  {choiceIndex + 1 === question.answer && <span class="q-answer-mark">(정답)</span>}
+                </li>
+              ))}
+            </ol>
+
+            <nav class="preview-dialog-nav" aria-label="이전 및 다음 문제">
+              {previous ? (
+                <button data-preview-switch={previous.id}>← {previous.number}번</button>
+              ) : <span class="is-disabled">첫 문제</span>}
+              <span>{question.number} / 40</span>
+              {next ? (
+                <button data-preview-switch={next.id}>{next.number}번 →</button>
+              ) : <span class="is-disabled">마지막 문제</span>}
+            </nav>
+
+            <div class="q-reveal">
+              <button class="reveal" data-preview-reveal aria-controls={choicesId}>정답 확인</button>
+              <button class="close" data-preview-close>닫기</button>
+              <span class="q-answer-status" aria-live="polite"></span>
+            </div>
+          </div>
+        </dialog>
+      );
+    })}
+
+    <script>
+      const dialogs = Array.from(document.querySelectorAll<HTMLDialogElement>('dialog.preview-dialog'));
+      let returnFocus: HTMLElement | null = null;
+
+      const resetDialog = (dialog: HTMLDialogElement) => {
+        dialog.dataset.revealed = 'false';
+        const reveal = dialog.querySelector<HTMLButtonElement>('[data-preview-reveal]');
+        const status = dialog.querySelector<HTMLElement>('.q-answer-status');
+        if (reveal) reveal.textContent = '정답 확인';
+        if (status) status.textContent = '';
+        const inner = dialog.querySelector<HTMLElement>('.q-inner');
+        if (inner) inner.scrollTop = 0;
+      };
+
+      const openDialog = (questionId: string, preserveReturnFocus = false) => {
+        const dialog = document.getElementById(`preview-${questionId}`) as HTMLDialogElement | null;
+        if (!dialog) return;
+        if (!preserveReturnFocus) returnFocus = document.activeElement as HTMLElement | null;
+        resetDialog(dialog);
+        dialog.showModal();
+        dialog.querySelector<HTMLElement>('.q-meta')?.focus({ preventScroll: true });
+      };
+
+      document.querySelectorAll<HTMLButtonElement>('[data-preview-open]').forEach(button => {
+        button.addEventListener('click', () => openDialog(button.dataset.previewOpen ?? ''));
+      });
+
+      document.querySelectorAll<HTMLButtonElement>('[data-preview-reveal]').forEach(button => {
+        button.addEventListener('click', () => {
+          const dialog = button.closest<HTMLDialogElement>('dialog');
+          if (!dialog) return;
+          dialog.dataset.revealed = 'true';
+          button.textContent = '정답 공개됨';
+          const status = dialog.querySelector<HTMLElement>('.q-answer-status');
+          if (status) status.textContent = '정답이 표시되었습니다.';
+        });
+      });
+
+      document.querySelectorAll<HTMLButtonElement>('[data-preview-switch]').forEach(button => {
+        button.addEventListener('click', () => {
+          const current = button.closest<HTMLDialogElement>('dialog');
+          const target = button.dataset.previewSwitch;
+          if (!current || !target) return;
+          current.close();
+          requestAnimationFrame(() => openDialog(target, true));
+        });
+      });
+
+      document.querySelectorAll<HTMLButtonElement>('[data-preview-close]').forEach(button => {
+        button.addEventListener('click', () => button.closest<HTMLDialogElement>('dialog')?.close());
+      });
+
+      dialogs.forEach(dialog => {
+        dialog.addEventListener('close', () => {
+          if (!dialogs.some(candidate => candidate.open)) returnFocus?.focus();
+        });
+      });
+
+      document.addEventListener('keydown', event => {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        const current = dialogs.find(dialog => dialog.open);
+        if (!current) return;
+        const selector = event.key === 'ArrowLeft'
+          ? '[data-preview-switch]:first-child'
+          : '[data-preview-switch]:last-child';
+        const target = current.querySelector<HTMLButtonElement>(selector);
+        if (!target) return;
+        event.preventDefault();
+        target.click();
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  .preview-page{background:var(--gray-50);color:var(--gray-900);min-height:100vh}
+  .preview-shell{width:min(1120px,calc(100% - 32px));margin:0 auto;padding:32px 0 80px}
+  .preview-nav{display:flex;flex-wrap:wrap;gap:8px;color:var(--gray-600);font-size:var(--fs-caption);margin-bottom:18px}
+  .preview-nav a{color:var(--primary-600);text-decoration:none}
+  .preview-hero{background:linear-gradient(135deg,var(--primary-700),var(--primary-500));color:var(--white);border-radius:var(--radius-xl);padding:32px;box-shadow:0 12px 30px rgba(20,82,180,.18)}
+  .preview-eyebrow{font-size:12px;font-weight:var(--fw-bold);letter-spacing:.08em;opacity:.82;margin-bottom:10px}
+  .preview-hero h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 8px}
+  .preview-hero p{margin:0;opacity:.9}
+  .preview-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:26px}
+  .preview-stats div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-lg);padding:14px}
+  .preview-stats strong,.preview-stats span{display:block}
+  .preview-stats strong{font-size:24px}
+  .preview-stats span{font-size:12px;margin-top:2px;opacity:.82}
+  .preview-guide{display:flex;gap:12px;align-items:flex-start;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:15px 18px;margin:18px 0 34px;font-size:var(--fs-caption)}
+  .preview-guide strong{color:var(--primary-700);white-space:nowrap}
+  .preview-guide span{color:var(--gray-600)}
+  .preview-subject{margin-top:36px}
+  .preview-subject-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+  .preview-subject-heading h2{font-size:var(--fs-h2);margin:0}
+  .preview-subject-heading span{font-size:var(--fs-caption);color:var(--gray-600)}
+  .preview-question-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .preview-question-button{position:relative;display:flex;flex-direction:column;align-items:flex-start;min-height:154px;text-align:left;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:18px;cursor:pointer;font-family:var(--font-sans);transition:transform .15s,border-color .15s,box-shadow .15s}
+  .preview-question-button:hover{transform:translateY(-2px);border-color:var(--primary-200);box-shadow:0 8px 20px rgba(25,31,40,.08)}
+  .preview-question-button:focus-visible{outline:3px solid var(--primary-500);outline-offset:2px}
+  .preview-question-number{color:var(--primary-700);font-weight:var(--fw-bold);font-size:var(--fs-body);margin-bottom:8px}
+  .preview-question-title{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;color:var(--gray-800);font-size:var(--fs-caption);line-height:1.55}
+  .preview-question-state{margin-top:auto;padding-top:14px;color:var(--gray-600);font-size:11px;font-weight:var(--fw-medium)}
+  .preview-question-state.has-image{color:var(--primary-600)}
+  .preview-dialog-nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin-top:var(--space-4);font-size:var(--fs-label);color:var(--gray-600)}
+  .preview-dialog-nav button{border:none;background:var(--primary-50);color:var(--primary-700);border-radius:var(--radius-md);padding:8px 10px;cursor:pointer;font-family:var(--font-sans);font-size:var(--fs-label)}
+  .preview-dialog-nav button:last-child{text-align:right}
+  .preview-dialog-nav .is-disabled:last-child{text-align:right}
+  .preview-dialog-nav button:focus-visible{outline:3px solid var(--primary-500);outline-offset:2px}
+  .preview-dialog .q-meta:focus{outline:none}
+  @media(max-width:639px){
+    .preview-shell{width:min(100% - 24px,1120px);padding-top:18px}
+    .preview-hero{padding:24px 20px}
+    .preview-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .preview-guide{display:block}
+    .preview-guide strong{display:block;margin-bottom:4px}
+    .preview-question-grid{grid-template-columns:1fr 1fr;gap:8px}
+    .preview-question-button{min-height:132px;padding:14px}
+    .preview-question-title{-webkit-line-clamp:2}
+  }
+  @media(max-width:390px){
+    .preview-question-grid{grid-template-columns:1fr}
+  }
+</style>

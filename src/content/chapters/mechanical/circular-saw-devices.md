@@ -14,6 +14,21 @@ status: 완료
 
 원형톱 안전장치는 회전 톱날의 접촉과 재료 반발을 줄이는 보호수단이다. 문제에서는 톱날 접촉부의 방호와 절단 재료의 비산·반발 방지를 분리해 본다.
 
+<figure class="chapter-figure chapter-figure-wide">
+  <img
+    src="/images/chapters/circular-saw-devices/circular-saw-devices.svg"
+    alt="둥근톱의 날접촉예방장치, 분할날, 반발예방장치와 가공재 진행방향의 위치 관계"
+    width="1100"
+    height="650"
+    loading="lazy"
+    decoding="async"
+  />
+  <figcaption>
+    내용 기준: <a href="https://www.kosha.or.kr/ebook/fcatalog/access/ecatalogt.jsp?Dir=633&amp;callmode=normal&amp;catimage=&amp;eclang=ko&amp;start=58&amp;um=s" target="_blank" rel="external noopener">한국산업안전보건공단, 산업안전보건기준에 관한 규칙 해설(59쪽)</a>
+    · GetPassLab 학습용 재구성
+  </figcaption>
+</figure>
+
 ## 판별 기준
 
 ### 주요 장치

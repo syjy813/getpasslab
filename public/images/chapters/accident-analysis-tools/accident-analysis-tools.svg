@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+  <title id="title">재해분석 도구 네 종류의 형태 비교</title>
+  <desc id="desc">파레토도, 특성요인도, 클로즈분석, 관리도의 대표 형태를 비교한 그림</desc>
+  <rect width="1000" height="650" rx="28" fill="#f8fafc"/>
+  <text x="500" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">형태를 보면 분석 목적이 보인다</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(40 78)">
+      <rect width="440" height="245" rx="22" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+      <text x="25" y="38" font-size="22" font-weight="700" fill="#1d4ed8">파레토도</text>
+      <path d="M58 196h315M58 75v121" stroke="#64748b" stroke-width="3"/>
+      <rect x="78" y="102" width="48" height="94" fill="#2563eb"/>
+      <rect x="142" y="126" width="48" height="70" fill="#3b82f6"/>
+      <rect x="206" y="150" width="48" height="46" fill="#60a5fa"/>
+      <rect x="270" y="169" width="48" height="27" fill="#93c5fd"/>
+      <path d="M102 98c53 8 99 23 128 38 37 20 70 28 119 31" fill="none" stroke="#f97316" stroke-width="5"/>
+      <circle cx="349" cy="167" r="6" fill="#f97316"/>
+      <text x="215" y="225" text-anchor="middle" font-size="16" fill="#475569">내림차순 막대 + 누적곡선</text>
+    </g>
+    <g transform="translate(520 78)">
+      <rect width="440" height="245" rx="22" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+      <text x="25" y="38" font-size="22" font-weight="700" fill="#1d4ed8">특성요인도</text>
+      <path d="M62 137h265" stroke="#0f172a" stroke-width="5"/>
+      <path d="M106 137L72 92M165 137l-35-58M224 137l-35-45M106 137l-34 45M165 137l-35 58M224 137l-35 45" stroke="#0f172a" stroke-width="4"/>
+      <path d="M327 105h76v64h-76l-30-32Z" fill="#fee2e2" stroke="#991b1b" stroke-width="3"/>
+      <text x="365" y="144" text-anchor="middle" font-size="18" font-weight="700" fill="#7f1d1d">재해</text>
+      <text x="215" y="225" text-anchor="middle" font-size="16" fill="#475569">원인 → 결과를 생선뼈처럼 전개</text>
+    </g>
+    <g transform="translate(40 355)">
+      <rect width="440" height="245" rx="22" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+      <text x="25" y="38" font-size="22" font-weight="700" fill="#1d4ed8">클로즈분석</text>
+      <g transform="translate(100 64)">
+        <path d="M0 0h220v132H0Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+        <path d="M55 0v132M110 0v132M165 0v132M0 44h220M0 88h220" stroke="#cbd5e1" stroke-width="2"/>
+        <circle cx="27" cy="22" r="10" fill="#60a5fa"/><circle cx="82" cy="66" r="17" fill="#2563eb"/>
+        <circle cx="137" cy="22" r="13" fill="#3b82f6"/><circle cx="192" cy="110" r="19" fill="#1d4ed8"/>
+        <circle cx="27" cy="110" r="7" fill="#93c5fd"/><circle cx="137" cy="66" r="8" fill="#93c5fd"/>
+      </g>
+      <text x="215" y="225" text-anchor="middle" font-size="16" fill="#475569">복수 요인의 교차 관계를 집계</text>
+    </g>
+    <g transform="translate(520 355)">
+      <rect width="440" height="245" rx="22" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+      <text x="25" y="38" font-size="22" font-weight="700" fill="#1d4ed8">관리도</text>
+      <path d="M55 190h330M55 65v125" stroke="#64748b" stroke-width="3"/>
+      <path d="M55 91h330M55 160h330" stroke="#ef4444" stroke-width="3" stroke-dasharray="8 7"/>
+      <text x="392" y="96" font-size="14" fill="#b91c1c">UCL</text>
+      <text x="392" y="165" font-size="14" fill="#b91c1c">LCL</text>
+      <polyline points="66,132 112,119 158,145 204,110 250,137 296,100 342,126" fill="none" stroke="#2563eb" stroke-width="5"/>
+      <g fill="#2563eb"><circle cx="66" cy="132" r="5"/><circle cx="112" cy="119" r="5"/><circle cx="158" cy="145" r="5"/><circle cx="204" cy="110" r="5"/><circle cx="250" cy="137" r="5"/><circle cx="296" cy="100" r="5"/><circle cx="342" cy="126" r="5"/></g>
+      <text x="215" y="225" text-anchor="middle" font-size="16" fill="#475569">시계열 + 상·하 관리한계선</text>
+    </g>
+  </g>
+</svg>

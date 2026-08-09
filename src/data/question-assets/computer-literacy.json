@@ -1,0 +1,114 @@
+[
+  {
+    "id": "20200704_001",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_001.png",
+    "width": 969,
+    "height": 212,
+    "alt": "컴퓨터 프로그램으로 3차원 애니메이션 사물 모형에 명암과 색상을 추가하는 작업을 설명한 보기"
+  },
+  {
+    "id": "20200704_018",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_018.png",
+    "width": 539,
+    "height": 284,
+    "alt": "Intel Core i5-8세대, Intel UHD Graphics 620, 16GB DDR4 RAM, SSD 256GB로 구성된 노트북 사양"
+  },
+  {
+    "id": "20200704_021",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_021.png",
+    "width": 72,
+    "height": 59,
+    "alt": "왼쪽으로 굽은 파란색 화살표 모양의 실행 취소 아이콘"
+  },
+  {
+    "id": "20200704_023",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_023.png",
+    "width": 972,
+    "height": 751,
+    "alt": "노트북·프린터·스캐너 판매량과 평균을 보여 주는 표 및 수식 셀 E4, 찾는 값 40, 값을 바꿀 셀 B4가 입력된 목표값 찾기 화면"
+  },
+  {
+    "id": "20200704_025",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_025.png",
+    "width": 716,
+    "height": 684,
+    "alt": "근무기간 15년 이상과 나이 50세 이상 조건을 행과 열에 다르게 배치한 선택지 네 개"
+  },
+  {
+    "id": "20200704_026",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_026.png",
+    "width": 847,
+    "height": 984,
+    "alt": "그룹화할 항목은 지점, 사용할 함수는 합계, 부분합 계산 항목은 재고로 설정된 부분합 대화상자"
+  },
+  {
+    "id": "20200704_027",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_027.png",
+    "width": 951,
+    "height": 563,
+    "alt": "입력 데이터와 표시 형식, 표시 결과를 비교하는 선택지 네 개"
+  },
+  {
+    "id": "20200704_028",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_028.png",
+    "width": 1062,
+    "height": 833,
+    "alt": "함수 합계와 사용할 레이블, 원본 데이터 연결 항목이 표시된 통합 대화상자"
+  },
+  {
+    "id": "20200704_029",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_029.png",
+    "width": 1047,
+    "height": 514,
+    "alt": "A1부터 D1까지 가, 갑, 월, 자가 입력되고 해당 범위가 선택된 워크시트"
+  },
+  {
+    "id": "20200704_032",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_032.png",
+    "width": 859,
+    "height": 414,
+    "alt": "A4 셀의 이름 이길순 옆에 장학생 메모가 표시된 성적 관리 워크시트"
+  },
+  {
+    "id": "20200704_033",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_033.png",
+    "width": 1062,
+    "height": 493,
+    "alt": "행에는 이율 1.5%, 2.3%, 3.0%, 5.0%, 열에는 원금이 배치된 수익금액 계산표"
+  },
+  {
+    "id": "20200704_035",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_035.png",
+    "width": 914,
+    "height": 701,
+    "alt": "환자번호의 네 번째 문자 M과 F를 성별 남과 여로 변환하는 데이터표와 코드표"
+  },
+  {
+    "id": "20200704_036",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_036.png",
+    "width": 1062,
+    "height": 724,
+    "alt": "나무번호, 종류, 높이, 나이, 수확량, 수입과 사과나무 평균 수확량 셀이 포함된 표"
+  },
+  {
+    "id": "20200704_038",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_038.png",
+    "width": 1062,
+    "height": 689,
+    "alt": "보안 경고와 콘텐츠 사용 버튼이 표시된 엑셀 화면"
+  },
+  {
+    "id": "20200704_039",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_039.png",
+    "width": 877,
+    "height": 686,
+    "alt": "학생별 학점과 학점별 인원수를 클럽 기호로 표시한 엑셀 성적 분포표"
+  },
+  {
+    "id": "20200704_040",
+    "asset_path": "src/assets/questions/computer-literacy/20200704_040.png",
+    "width": 864,
+    "height": 1049,
+    "alt": "반별 남녀 인원과 합계를 나타낸 표 및 남녀 묶은 세로 막대형 차트"
+  }
+]

@@ -17,6 +17,39 @@ examComment: 표지 유형·색채 의미·기본 모형을 적용 상황과 함
 
 안전·보건표지는 전달하려는 행동과 위험의 성격에 따라 금지·경고·지시·안내로 구분한다.
 
+<figure class="chapter-figure chapter-figure-document">
+  <div class="chapter-figure-page chapter-figure-page-1">
+    <img
+      src="/images/chapters/safety-signs/industrial-safety-health-rules-annex-6-page-1.gif"
+      alt="산업안전보건법 시행규칙 별표 6 안전보건표지 원본 1쪽: 금지표지, 경고표지, 지시표지"
+      width="651"
+      height="911"
+      loading="lazy"
+      decoding="async"
+    />
+    <span class="chapter-figure-section-title chapter-figure-section-title-prohibition" aria-hidden="true"><small>1.</small><strong>금지표지</strong></span>
+    <span class="chapter-figure-section-title chapter-figure-section-title-warning" aria-hidden="true"><small>2.</small><strong>경고표지</strong></span>
+    <span class="chapter-figure-section-title chapter-figure-section-title-mandatory" aria-hidden="true"><small>3.</small><strong>지시표지</strong></span>
+  </div>
+  <div class="chapter-figure-page chapter-figure-page-2">
+    <img
+      src="/images/chapters/safety-signs/industrial-safety-health-rules-annex-6-page-2.gif"
+      alt="산업안전보건법 시행규칙 별표 6 안전보건표지 원본 2쪽: 안내표지, 관계자외 출입금지, 문자 추가 시 예시문"
+      width="651"
+      height="978"
+      loading="lazy"
+      decoding="async"
+    />
+    <span class="chapter-figure-section-title chapter-figure-section-title-guide" aria-hidden="true"><small>4.</small><strong>안내표지</strong></span>
+    <span class="chapter-figure-section-title chapter-figure-section-title-restricted" aria-hidden="true"><small>5.</small><strong>관계자외<br />출입금지</strong></span>
+    <span class="chapter-figure-section-title chapter-figure-section-title-copy" aria-hidden="true"><small>6.</small><strong>문자 추가 시<br />예시문</strong></span>
+  </div>
+  <figcaption>
+    원본: 국가법령정보센터 <a href="https://www.law.go.kr/법령별표서식/(산업안전보건법 시행규칙,20260801,별표6)" target="_blank" rel="external noopener">「산업안전보건법 시행규칙」 별표 6(시행 2026. 8. 1.)</a>의 안전보건표지 도안 1·2쪽.
+    표지 도안은 원본을 유지하고 검정 분류 제목 영역만 가독성을 위해 덧씌웠으며, 학습에 필요한 표지 부분만 표시했다. 용도·설치 장소·형태·색채 기준은 <a href="https://www.law.go.kr/법령별표서식/(산업안전보건법 시행규칙,20260801,별표7)" target="_blank" rel="external noopener">별표 7</a>에서 확인한다.
+  </figcaption>
+</figure>
+
 | **유형** | 전달 목적 |
 | --- | --- |
 | **금지표지** | 특정 행동이나 출입을 하지 못하게 함 |

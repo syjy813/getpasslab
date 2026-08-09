@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+  <title id="title">와이어로프 꼬임 종류 비교</title>
+  <desc id="desc">보통꼬임과 랭꼬임의 소선 및 스트랜드 방향 관계와 S꼬임, Z꼬임의 외관 방향을 비교한 학습용 그림</desc>
+  <defs>
+    <style>.title{font:700 28px Arial,'Noto Sans KR',sans-serif;fill:#0f172a}.label{font:700 23px Arial,'Noto Sans KR',sans-serif;fill:#0f172a}.note{font:17px Arial,'Noto Sans KR',sans-serif;fill:#475569}.rope{stroke:#334155;stroke-width:6}.wire{stroke:#2563eb;stroke-width:6}.guide{stroke:#94a3b8;stroke-width:3;stroke-dasharray:7 7}</style>
+  </defs>
+  <rect width="1000" height="650" rx="30" fill="#f8fafc"/>
+  <text x="500" y="50" text-anchor="middle" class="title">소선 방향과 스트랜드 꼬임 방향을 함께 본다</text>
+
+  <g transform="translate(45 86)">
+    <rect width="435" height="315" rx="22" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="218" y="42" text-anchor="middle" class="label">보통꼬임</text>
+    <text x="218" y="70" text-anchor="middle" class="note">소선과 스트랜드 방향이 반대</text>
+    <rect x="45" y="112" width="345" height="112" rx="54" fill="#e2e8f0"/>
+    <g class="rope">
+      <path d="M55 204L145 120M125 216l102-96M209 216l102-96M293 216l88-83"/>
+    </g>
+    <g class="wire">
+      <path d="M54 133l62 72M121 120l84 96M204 120l84 96M288 120l84 96"/>
+    </g>
+    <g transform="translate(65 267)">
+      <path d="M0 0l50-40" class="rope"/><text x="63" y="-30" class="note">스트랜드</text>
+      <path d="M201-40l50 40" class="wire"/><text x="262" y="-5" class="note">소선</text>
+    </g>
+  </g>
+
+  <g transform="translate(520 86)">
+    <rect width="435" height="315" rx="22" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="218" y="42" text-anchor="middle" class="label">랭꼬임</text>
+    <text x="218" y="70" text-anchor="middle" class="note">소선과 스트랜드 방향이 같음</text>
+    <rect x="45" y="112" width="345" height="112" rx="54" fill="#e2e8f0"/>
+    <g class="rope">
+      <path d="M55 204L145 120M125 216l102-96M209 216l102-96M293 216l88-83"/>
+    </g>
+    <g class="wire">
+      <path d="M72 204l90-84M142 216l102-96M226 216l102-96M310 216l71-67"/>
+    </g>
+    <g transform="translate(65 267)">
+      <path d="M0 0l50-40" class="rope"/><text x="63" y="-30" class="note">스트랜드</text>
+      <path d="M201 0l50-40" class="wire"/><text x="262" y="-30" class="note">소선</text>
+    </g>
+  </g>
+
+  <g transform="translate(145 445)">
+    <rect width="710" height="155" rx="22" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="355" y="38" text-anchor="middle" class="label">로프 외관의 기울기</text>
+    <line x1="355" y1="54" x2="355" y2="135" class="guide"/>
+    <path d="M85 117l125-66" stroke="#2563eb" stroke-width="14" stroke-linecap="round"/>
+    <text x="148" y="142" text-anchor="middle" class="note">Z꼬임(오른쪽 위 방향)</text>
+    <path d="M500 51l125 66" stroke="#2563eb" stroke-width="14" stroke-linecap="round"/>
+    <text x="562" y="142" text-anchor="middle" class="note">S꼬임(오른쪽 아래 방향)</text>
+  </g>
+</svg>

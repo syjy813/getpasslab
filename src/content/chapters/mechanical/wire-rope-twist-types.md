@@ -14,6 +14,18 @@ status: 완료
 
 와이어로프의 꼬임은 스트랜드의 꼬임 방향과 로프 전체의 꼬임 방향 관계로 구분한다.
 
+<figure class="chapter-figure chapter-figure-wide">
+  <img
+    src="/images/chapters/wire-rope-twist-types/wire-rope-twist-types.svg"
+    alt="보통꼬임과 랭꼬임의 소선 및 스트랜드 방향, S꼬임과 Z꼬임의 외관 방향을 비교한 그림"
+    width="1000"
+    height="650"
+    loading="lazy"
+    decoding="async"
+  />
+  <figcaption>GetPassLab 자체 제작 · 소선과 스트랜드의 꼬임 방향 관계를 학습용으로 도식화</figcaption>
+</figure>
+
 - **보통꼬임(ordinary lay)**: 스트랜드와 로프의 꼬임 방향이 서로 반대다. 취급이 비교적 안정적이고 킹크가 덜 생기는 방향의 특징이 있다.
 - **랭꼬임(lang lay)**: 스트랜드와 로프의 꼬임 방향이 같다. 마모에 강하고 유연성이 좋지만 끝단 회전이나 킹크에 주의한다.
 - S·Z는 꼬임 방향을 나타내는 표현이며, 보통꼬임과 랭꼬임의 분류와 혼동하지 않는다.

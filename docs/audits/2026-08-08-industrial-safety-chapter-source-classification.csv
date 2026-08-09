@@ -1,0 +1,251 @@
+subject_id,status,slug,title,tags,questions,body_length,content_status,kosha_enrichment,legal_enrichment,visual_priority,action_priority,pending_disposition,reason,file
+1,완료,accident-analysis-tools,재해분석 도구 4종,개념,5,1063,현재 충분,아님,아님,권장,P2,,시각자료 권장,safety-management/accident-analysis-tools.md
+1,완료,accident-cause-classification,재해 원인 분류,개념,5,1231,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/accident-cause-classification.md
+1,완료,accident-occurrence-theories,재해 발생 학설 4가지,개념,4,1261,현재 충분,아님,아님,권장,P2,,시각자료 권장,safety-management/accident-occurrence-theories.md
+1,완료,accident-prevention-principles,재해예방 4원칙,개념,6,1165,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/accident-prevention-principles.md
+1,완료,accident-ratio-law,재해 비율 법칙,개념,5,1123,현재 충분,아님,아님,권장,P2,,시각자료 권장,safety-management/accident-ratio-law.md
+1,완료,annual-1000-rate,연천인율,계산,3,1494,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/annual-1000-rate.md
+1,완료,bird-domino-theory,버드의 수정 도미노 이론,개념,2,945,현재 충분,아님,아님,권장,P2,,시각자료 권장,safety-management/bird-domino-theory.md
+1,완료,carelessness-misjudgment,부주의 발생 원인·사고방지대책,개념,2,918,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/carelessness-misjudgment.md
+1,미시작,cumulative-noise-dose,누적소음노출량 D 계산,계산,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,safety-management/cumulative-noise-dose.md
+1,완료,fatality-per-10k,사망만인율,계산,1,534,보강 권장,아님,아님,낮음,P1,,본문 534자로 얇음,safety-management/fatality-per-10k.md
+1,완료,frequency-rate,도수율,계산,1,707,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/frequency-rate.md
+1,완료,frequency-severity-indicator,종합재해지수 (FSI),계산,1,539,보강 권장,아님,아님,낮음,P1,,본문 539자로 얇음,safety-management/frequency-severity-indicator.md
+1,완료,group-discussion-methods,집단토의법 종류,개념,1,743,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/group-discussion-methods.md
+1,완료,hazard-prediction-training,위험예지훈련,절차,5,1101,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,safety-management/hazard-prediction-training.md
+1,미시작,hearing-protection,방음보호구 EP-1·EP-2·EM,개념,0,45,미시작,후속 검증,후속 검증,권장,P2,독립 챕터 유지 후보,독립 챕터 유지 후보,safety-management/hearing-protection.md
+1,완료,heinrich-domino-theory,하인리히 도미노 이론,개념,2,1019,현재 충분,아님,아님,권장,P2,,시각자료 권장,safety-management/heinrich-domino-theory.md
+1,완료,human-error-by-process,인간 동작특성 - 과정별 착오요인,개념,3,864,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/human-error-by-process.md
+1,완료,human-relations-mechanism,인간관계 메커니즘,개념,4,970,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/human-relations-mechanism.md
+1,완료,industrial-accident-insurance,산재보험 보험급여 8종,개념+법령,4,1049,보강 권장,아님,필요,낮음,P1,,법령 태그이나 전용 근거 영역 없음,safety-management/industrial-accident-insurance.md
+1,완료,leadership-headship,리더십·헤드십,개념,2,567,보강 권장,아님,아님,낮음,P1,,본문 567자로 얇음,safety-management/leadership-headship.md
+1,완료,learning-theories,학습이론 (손다이크·파블로프·스키너),개념,2,622,보강 권장,아님,아님,낮음,P1,,본문 622자로 얇음,safety-management/learning-theories.md
+1,완료,motivation-theories,동기부여 이론 (매슬로·맥그리거·허즈버그),개념,3,759,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/motivation-theories.md
+1,완료,ojt-offjt,OJT·Off-JT,개념,5,692,보강 권장,아님,아님,낮음,P1,,본문 692자로 얇음,safety-management/ojt-offjt.md
+1,미시작,pavlov-conditioning,파블로프 조건반사설,개념,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,safety-management/pavlov-conditioning.md
+1,완료,product-liability-defects,제조물책임법 결함 유형,개념+법령,0,894,보강 권장,아님,필요,낮음,P1,,법령 태그이나 전용 근거 영역 없음,safety-management/product-liability-defects.md
+1,완료,protective-equipment-types,보호구 종류 및 적용,개념,10,1027,보강 권장,필요,필요,권장,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,safety-management/protective-equipment-types.md
+1,완료,risk-reduction-priority,위험성 감소 대책 우선순위,절차,1,1117,보강 권장,필요,아님,낮음,P1,,KOSHA 현장 해설·사례 보강 후보,safety-management/risk-reduction-priority.md
+1,미시작,safety-devices,방호장치 종류,개념,0,45,미시작,아님,아님,낮음,HOLD,과목 범위 충돌 보류,과목 범위 충돌 보류,safety-management/safety-devices.md
+1,완료,safety-education-hours,안전보건교육 시간 총정리,개념+법령,4,1304,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/safety-education-hours.md
+1,완료,safety-education-stages,교육의 3단계·단계별 과정,절차,2,589,보강 권장,아님,아님,권장,P1,,본문 589자로 얇음; 시각자료 권장,safety-management/safety-education-stages.md
+1,완료,safety-inspection-types,안전점검 종류,개념,5,935,보강 권장,필요,아님,낮음,P1,,KOSHA 현장 해설·사례 보강 후보,safety-management/safety-inspection-types.md
+1,완료,safety-management-organization,안전관리 조직 (라인·스태프),개념,6,843,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,safety-management/safety-management-organization.md
+1,완료,safety-manager-appointment,안전관리자·보건관리자 선임 기준,개념,3,862,보강 권장,필요,필요,낮음,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보,safety-management/safety-manager-appointment.md
+1,완료,safety-signs,안전표지 종류,개념,15,1282,보강 권장,필요,필요,필수,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,safety-management/safety-signs.md
+1,완료,serious-accident-criteria,중대재해 범위,개념+법령,2,863,보강 권장,아님,필요,낮음,P1,,법령 태그이나 전용 근거 영역 없음,safety-management/serious-accident-criteria.md
+1,완료,severity-rate,강도율,계산,7,1110,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/severity-rate.md
+1,완료,social-behavior-types,사회행동 기본형태,개념,1,662,보강 권장,아님,아님,낮음,P1,,본문 662자로 얇음,safety-management/social-behavior-types.md
+1,미시작,twa-calculation,TWA 계산,계산,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,safety-management/twa-calculation.md
+1,완료,twi-supervisor-training,TWI 등 관리감독자 훈련,개념,5,980,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,safety-management/twi-supervisor-training.md
+1,완료,tyler-learning-principles,타일러 학습경험 원리,개념,1,616,보강 권장,아님,아님,낮음,P1,,본문 616자로 얇음,safety-management/tyler-learning-principles.md
+1,완료,zero-accident-movement,무재해운동 3요소·3원칙,개념,5,720,보강 권장,필요,아님,낮음,P1,,KOSHA 현장 해설·사례 보강 후보,safety-management/zero-accident-movement.md
+2,완료,anthropometry-design,인체측정·설계원칙,개념,4,772,현재 충분,아님,아님,권장,P2,,시각자료 권장,ergonomics/anthropometry-design.md
+2,완료,articulation-index,음성통신 지수 — AI·SIL·PNC,개념,2,1102,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/articulation-index.md
+2,완료,availability,가용도 (Availability),계산,1,606,보강 권장,아님,아님,낮음,P1,,본문 606자로 얇음,ergonomics/availability.md
+2,미시작,chemical-plant-safety-assessment,화학설비 안전성 평가 5단계,절차,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,ergonomics/chemical-plant-safety-assessment.md
+2,완료,compatibility,양립성,개념,1,507,보강 권장,아님,아님,낮음,P1,,본문 507자로 얇음,ergonomics/compatibility.md
+2,완료,composite-noise,합성 소음,계산,1,604,보강 권장,아님,아님,낮음,P1,,본문 604자로 얇음,ergonomics/composite-noise.md
+2,완료,cr-ratio,C/R비 (Control-Response),개념,1,934,현재 충분,아님,아님,권장,P2,,시각자료 권장,ergonomics/cr-ratio.md
+2,완료,cutset-pathset,컷셋·패스셋·미니멀,개념,13,1055,현재 충분,아님,아님,필수,P2,,시각자료 필수,ergonomics/cutset-pathset.md
+2,완료,ecrs-principle,ECRS 원리,개념,1,997,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/ecrs-principle.md
+2,완료,exclusive-or-gate,배타적 OR 게이트,개념,1,839,현재 충분,아님,아님,필수,P2,,시각자료 필수,ergonomics/exclusive-or-gate.md
+2,완료,fmea,FMEA,개념,7,957,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/fmea.md
+2,완료,fta-procedure,FTA 수행 절차,절차,6,1025,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/fta-procedure.md
+2,완료,fta-symbols,FTA 사상기호와 게이트 기호,개념,11,993,현재 충분,아님,아님,필수,P2,,시각자료 필수,ergonomics/fta-symbols.md
+2,완료,hazard-prevention-plan-qualification,유해·위험 방지계획서 작성 자격,개념+법령,1,967,보강 권장,필요,필요,낮음,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보,ergonomics/hazard-prevention-plan-qualification.md
+2,미시작,hazop-guidewords,HAZOP·가이드워드,개념,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,ergonomics/hazop-guidewords.md
+2,완료,illuminance-luminance-reflectance,조도·휘도·반사율 관계,개념,1,1878,현재 충분,아님,아님,권장,P2,,시각자료 권장,ergonomics/illuminance-luminance-reflectance.md
+2,완료,information-entropy,정보량 (엔트로피 H),계산,3,739,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/information-entropy.md
+2,미시작,inspired-volume-correction,흡기량 보정,계산,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,ergonomics/inspired-volume-correction.md
+2,완료,luminance,휘도 (L),계산,2,1013,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/luminance.md
+2,미시작,luminous-intensity,광도 (I),계산,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,ergonomics/luminous-intensity.md
+2,완료,maintenance-types,보전의 종류 5가지,개념,2,690,보강 권장,아님,아님,낮음,P1,,본문 690자로 얇음,ergonomics/maintenance-types.md
+2,완료,man-machine-system-design,인간-기계 시스템 설계 6단계,절차,5,1167,현재 충분,아님,아님,권장,P2,,시각자료 권장,ergonomics/man-machine-system-design.md
+2,완료,mil-std-882b-frequency,MIL-STD-882B 발생빈도 분류,개념,1,804,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/mil-std-882b-frequency.md
+2,미시작,msd-investigation-cycle,근골격계 유해요인 조사 주기,개념+법령,0,45,미시작,후속 검증,후속 검증,낮음,P2,독립 챕터 유지 후보,독립 챕터 유지 후보,ergonomics/msd-investigation-cycle.md
+2,완료,msd-risk-factors,근골격계 유해요인 5종,개념,4,995,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,ergonomics/msd-risk-factors.md
+2,완료,mttf,MTTF (평균동작시간),계산,1,579,보강 권장,아님,아님,낮음,P1,,본문 579자로 얇음,ergonomics/mttf.md
+2,완료,murrell-rest-formula,휴식시간 산정 (Murrell),계산,2,616,보강 권장,아님,아님,낮음,P1,,본문 616자로 얇음,ergonomics/murrell-rest-formula.md
+2,완료,oxygen-consumption,산소소비량,계산,2,963,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/oxygen-consumption.md
+2,완료,point-source-illuminance,점광원 조도,계산,2,537,보강 권장,아님,아님,권장,P1,,본문 537자로 얇음; 시각자료 권장,ergonomics/point-source-illuminance.md
+2,완료,qualitative-assessment-items,정성적 평가 항목,개념,2,1096,보강 권장,필요,아님,낮음,P1,,KOSHA 현장 해설·사례 보강 후보,ergonomics/qualitative-assessment-items.md
+2,완료,quantitative-assessment-items,정량적 평가 항목,개념,4,1111,보강 권장,필요,아님,낮음,P1,,KOSHA 현장 해설·사례 보강 후보,ergonomics/quantitative-assessment-items.md
+2,완료,reliability-rt,신뢰도 R(t),계산,1,584,보강 권장,아님,아님,낮음,P1,,본문 584자로 얇음,ergonomics/reliability-rt.md
+2,미시작,risk-assessment-procedure,위험성평가 수행 절차,절차,0,45,미시작,후속 검증,후속 검증,낮음,P2,독립 챕터 유지 후보,독립 챕터 유지 후보,safety-management/risk-assessment-procedure.md
+2,완료,rmr-energy-metabolism,RMR (에너지 대사율),계산,1,515,보강 권장,아님,아님,낮음,P1,,본문 515자로 얇음,ergonomics/rmr-energy-metabolism.md
+2,완료,safety-assessment-basic-principles,안전성 평가 기본원칙 6단계,절차,1,621,보강 권장,필요,아님,낮음,P1,,본문 621자로 얇음; KOSHA 현장 해설·사례 보강 후보,ergonomics/safety-assessment-basic-principles.md
+2,완료,safety-improvement-plan-items,안전보건개선계획서 항목,개념+법령,0,814,보강 권장,아님,필요,낮음,P1,,법령 태그이나 전용 근거 영역 없음,ergonomics/safety-improvement-plan-items.md
+2,완료,series-parallel-reliability,직렬·병렬 신뢰도,계산,3,759,현재 충분,아님,아님,권장,P2,,시각자료 권장,ergonomics/series-parallel-reliability.md
+2,완료,signal-detection-theory,신호검출이론 (SDT),개념,1,541,보강 권장,아님,아님,권장,P1,,본문 541자로 얇음; 시각자료 권장,ergonomics/signal-detection-theory.md
+2,완료,swain-human-error,Swain 인간 실수 분류,개념,5,1204,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/swain-human-error.md
+2,완료,system-analysis-techniques,시스템 분석 기법 비교,개념,11,1177,현재 충분,아님,아님,권장,P2,,시각자료 권장,ergonomics/system-analysis-techniques.md
+2,완료,system-lifecycle,시스템 수명주기 5단계,절차,5,1023,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/system-lifecycle.md
+2,완료,thermal-conditions-wbgt,온열조건 (WBGT·실효온도),개념,2,483,보강 우선,필요,아님,낮음,P0,,본문 483자; KOSHA 현장 해설·사례 보강 후보,ergonomics/thermal-conditions-wbgt.md
+2,완료,therp-human-error,THERP·휴먼에러 정량화,개념,2,1336,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,ergonomics/therp-human-error.md
+2,완료,total-noise-dose,총 소음 노출량 (TND),계산,1,659,보강 권장,아님,아님,낮음,P1,,본문 659자로 얇음,ergonomics/total-noise-dose.md
+2,완료,vdt-contrast,VDT 화면 대비,계산,1,608,보강 권장,아님,아님,낮음,P1,,본문 608자로 얇음,ergonomics/vdt-contrast.md
+2,완료,weber-fechner-law,웨버-페히너 법칙,계산,1,694,보강 권장,아님,아님,낮음,P1,,본문 694자로 얇음,ergonomics/weber-fechner-law.md
+2,미시작,workplace-illuminance-standard,작업면 조도 기준,개념+법령,0,45,미시작,아님,후속 검증,낮음,HOLD,근거 부족 정리 후보,근거 부족 정리 후보,ergonomics/workplace-illuminance-standard.md
+2,완료,workplace-layout-principles,작업장 배치 원칙,개념,4,1058,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,ergonomics/workplace-layout-principles.md
+2,완료,z-score,표준화 변수 Z,계산,2,546,보강 권장,아님,아님,낮음,P1,,본문 546자로 얇음,ergonomics/z-score.md
+3,완료,balance-flange-diameter,평형 플랜지 지름,개념,4,609,보강 권장,아님,아님,권장,P1,,본문 609자로 얇음; 시각자료 권장,mechanical/balance-flange-diameter.md
+3,완료,boiler-safety-devices,보일러 안전장치,개념,15,742,보강 권장,필요,필요,권장,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,mechanical/boiler-safety-devices.md
+3,완료,circular-saw-devices,둥근톱기계 방호장치 분류,개념,5,570,보강 우선,필요,필요,필수,P0,,본문 570자로 얇음; 현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/circular-saw-devices.md
+3,완료,conveyor-safety,콘베이어 안전,개념+법령,10,975,보강 권장,필요,필요,필수,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/conveyor-safety.md
+3,완료,crane-passenger-safety,크레인 전용탑승설비 추락방지,개념+법령,1,490,보강 우선,필요,필요,필수,P0,,본문 490자; 법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/crane-passenger-safety.md
+3,완료,crane-rope-load,크레인 로프 하중,계산,2,622,보강 권장,아님,아님,권장,P1,,본문 622자로 얇음; 시각자료 권장,mechanical/crane-rope-load.md
+3,완료,crane-safety-devices,크레인 안전장치,개념,5,646,보강 우선,필요,필요,필수,P0,,본문 646자로 얇음; 현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/crane-safety-devices.md
+3,미시작,divider-blade-installation,분할날 설치 조건,개념,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,mechanical/divider-blade-installation.md
+3,완료,equipment-safety-three,설비 안전화 3가지 분류,개념,3,1055,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,mechanical/equipment-safety-three.md
+3,완료,five-pinch-points,기계의 5대 위험점,개념,3,711,보강 권장,필요,아님,필수,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/five-pinch-points.md
+3,완료,forklift-safety,지게차 안전,계산+법령,13,1227,보강 권장,필요,필요,권장,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,mechanical/forklift-safety.md
+3,완료,grinder-exposure-angle,연삭기 노출각도 기준,개념+법령,2,594,보강 권장,아님,아님,필수,P1,,본문 594자로 얇음; 시각자료 필수,mechanical/grinder-exposure-angle.md
+3,완료,grinder-rotation-speed,연삭숫돌 회전속도,계산,3,558,보강 권장,아님,아님,권장,P1,,본문 558자로 얇음; 시각자료 권장,mechanical/grinder-rotation-speed.md
+3,완료,hand-pull-device-structure,수인식 방호장치 일반구조 기준,개념+법령,1,774,보강 권장,필요,필요,필수,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/hand-pull-device-structure.md
+3,완료,ilo-guard-opening,보호망·가드 개구부 안전간격,계산,2,647,보강 권장,아님,아님,필수,P1,,본문 647자로 얇음; 시각자료 필수,mechanical/ilo-guard-opening.md
+3,완료,industrial-robot-safety,산업용 로봇 안전 조치,절차,10,1061,보강 권장,필요,필요,권장,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,mechanical/industrial-robot-safety.md
+3,미시작,machine-safety-six,기계설비 안전화 6종,개념,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,mechanical/machine-safety-six.md
+3,완료,machine-tools-safety,공작기계 안전 (선반·밀링·드릴),절차,22,973,보강 권장,필요,필요,필수,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/machine-tools-safety.md
+3,완료,mold-safety,금형 설치·해체 안전조치와 안전블록,절차,10,907,보강 권장,필요,필요,필수,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/mold-safety.md
+3,미시작,ndt-types,비파괴검사 종류,개념,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,mechanical/ndt-types.md
+3,완료,overload-prevention-device,양중기 과부하방지장치 기준,개념+법령,4,467,보강 우선,필요,필요,필수,P0,,본문 467자; 법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/overload-prevention-device.md
+3,미시작,parallel-mesh-opening,평형 보호망 최대 구멍,계산,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,mechanical/parallel-mesh-opening.md
+3,완료,penetrant-test-procedure,침투탐상검사 순서 6단계,절차,2,957,현재 충분,아님,아님,권장,P2,,시각자료 권장,mechanical/penetrant-test-procedure.md
+3,완료,press-device-conditions,프레스 방호장치 적용 조건과 SPM 기준,개념,2,1049,보강 권장,필요,필요,필수,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/press-device-conditions.md
+3,완료,press-pre-work-checklist,프레스 작업시작 전 점검사항 7가지,절차+법령,9,833,보강 권장,필요,필요,권장,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,mechanical/press-pre-work-checklist.md
+3,완료,press-safety-devices,프레스 방호장치 종류,개념,12,1054,보강 권장,필요,필요,필수,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/press-safety-devices.md
+3,완료,press-safety-distance,프레스 방호장치 안전거리,계산,4,1288,현재 충분,아님,아님,필수,P2,,시각자료 필수,mechanical/press-safety-distance.md
+3,미시작,press-shear-force,프레스 전단력,계산,0,45,미시작,아님,아님,낮음,HOLD,근거 부족 정리 후보,근거 부족 정리 후보,mechanical/press-shear-force.md
+3,완료,roller-stop-rope-standard,롤러기 급정지장치 조작부 로프 기준,개념+법령,1,592,보강 권장,필요,아님,필수,P1,,본문 592자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/roller-stop-rope-standard.md
+3,완료,roller-stopping-distance,롤러기 급정지거리,계산,5,477,보강 우선,아님,아님,권장,P0,,본문 477자; 시각자료 권장,mechanical/roller-stopping-distance.md
+3,완료,roller-surface-speed,롤러기 표면속도,계산,0,434,보강 우선,아님,아님,권장,P0,,본문 434자; 시각자료 권장,mechanical/roller-surface-speed.md
+3,완료,safety-certification-8,안전인증대상 방호장치 판별,개념+법령,1,707,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,mechanical/safety-certification-8.md
+3,완료,safety-factor,안전계수 (SF),계산,6,602,보강 권장,아님,아님,낮음,P1,,본문 602자로 얇음,mechanical/safety-factor.md
+3,완료,shaper-structure,형삭기 구조와 램,개념,1,641,보강 권장,필요,아님,필수,P1,,본문 641자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/shaper-structure.md
+3,완료,sling-wire-tension,슬링 와이어 장력,계산,1,550,보강 권장,아님,아님,권장,P1,,본문 550자로 얇음; 시각자료 권장,mechanical/sling-wire-tension.md
+3,완료,test-types,재료 시험 종류,개념,14,1131,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,mechanical/test-types.md
+3,완료,vibration-diagnosis,진동 1차 설비진단법 3가지,개념,1,1051,현재 충분,아님,아님,권장,P2,,시각자료 권장,construction/vibration-diagnosis.md
+3,완료,welding-defects,주요 용접 결함 종류,개념,3,899,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,mechanical/welding-defects.md
+3,완료,wire-rope-twist-types,와이어 로프 꼬임 종류,개념,2,692,보강 권장,필요,아님,필수,P1,,본문 692자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,mechanical/wire-rope-twist-types.md
+4,미시작,basic-electric-terms,전기 기본 용어 정리,개념,0,45,미시작,아님,아님,낮음,HOLD,근거 부족 정리 후보,근거 부족 정리 후보,electrical/basic-electric-terms.md
+4,완료,body-current,통전전류,계산,1,552,보강 권장,아님,아님,낮음,P1,,본문 552자로 얇음,electrical/body-current.md
+4,완료,body-current-effect,인체 통전전류별 영향,개념,1,674,보강 권장,아님,아님,권장,P1,,본문 674자로 얇음; 시각자료 권장,electrical/body-current-effect.md
+4,완료,body-resistance-factors,인체 피부 전기저항 영향 인자,개념,2,913,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,electrical/body-resistance-factors.md
+4,완료,breaker-types,차단기 종류 비교,개념,1,586,보강 권장,아님,아님,필수,P1,,본문 586자로 얇음; 시각자료 필수,electrical/breaker-types.md
+4,완료,charge-capacitance,전하량·정전용량,계산,2,677,보강 권장,아님,아님,낮음,P1,,본문 677자로 얇음,electrical/charge-capacitance.md
+4,완료,combined-resistance,합성저항 (직렬·병렬),계산,1,786,현재 충분,아님,아님,권장,P2,,시각자료 권장,electrical/combined-resistance.md
+4,미시작,electric-shock-factors,감전 위험 4대 영향 요소,개념,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,electrical/electric-shock-factors.md
+4,완료,electrical-fire-causes,전기화재 원인,개념,8,1061,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,electrical/electrical-fire-causes.md
+4,완료,electrostatic-induction,정전유도 분배 전압,계산,3,692,보강 권장,아님,아님,권장,P1,,본문 692자로 얇음; 시각자료 권장,electrical/electrostatic-induction.md
+4,완료,explosion-grade-vessel,폭발등급 측정 표준용기,개념+법령,3,901,보강 권장,아님,필요,권장,P1,,법령 태그이나 전용 근거 영역 없음; 시각자료 권장,electrical/explosion-grade-vessel.md
+4,완료,explosion-proof-basics,방폭 3대 기본 개념,개념,1,839,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,electrical/explosion-proof-basics.md
+4,완료,explosion-proof-code,방폭전기기기 표시코드,개념,5,1168,보강 권장,필요,아님,필수,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,electrical/explosion-proof-code.md
+4,완료,explosion-proof-fittings,금속관 방폭형 부속품,개념,2,778,보강 권장,필요,아님,필수,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,electrical/explosion-proof-fittings.md
+4,완료,explosion-proof-types,방폭구조 대표 6가지,개념,16,1252,보강 권장,필요,아님,필수,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,electrical/explosion-proof-types.md
+4,완료,explosion-temperature-class,방폭기기 온도등급 (T1~T6),개념+법령,4,814,보강 권장,아님,필요,낮음,P1,,법령 태그이나 전용 근거 영역 없음,electrical/explosion-temperature-class.md
+4,완료,explosion-zones,폭발 위험 장소 0·1·2종,개념+법령,5,951,보강 권장,필요,필요,권장,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,electrical/explosion-zones.md
+4,완료,gas-group-classification,가스 그룹 분류 (IIA/IIB/IIC),개념,2,860,현재 충분,아님,아님,권장,P2,,시각자료 권장,electrical/gas-group-classification.md
+4,완료,gas-group-distance,가스 그룹별 최소 이격거리,개념+법령,2,709,보강 권장,아님,필요,낮음,P1,,법령 태그이나 전용 근거 영역 없음,electrical/gas-group-distance.md
+4,완료,grounding-exemption,접지공사 면제·생략 조건,개념+법령,2,496,보강 우선,아님,필요,낮음,P0,,본문 496자; 법령 태그이나 전용 근거 영역 없음,electrical/grounding-exemption.md
+4,완료,grounding-targets,전기기기 접지 대상,개념+법령,1,464,보강 우선,아님,필요,권장,P0,,본문 464자; 법령 태그이나 전용 근거 영역 없음; 시각자료 권장,electrical/grounding-targets.md
+4,완료,grounding-types,접지공사 종류별 기준,개념+법령,9,532,보강 우선,아님,필요,필수,P0,,본문 532자로 얇음; 법령 태그이나 전용 근거 영역 없음; 시각자료 필수,electrical/grounding-types.md
+4,미시작,insulation-calculation,저압전로 절연저항 계산,계산,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,electrical/insulation-calculation.md
+4,완료,insulation-temperature,절연물 등급별 허용온도,개념+법령,2,642,보강 우선,아님,필요,낮음,P0,,본문 642자로 얇음; 법령 태그이나 전용 근거 영역 없음,electrical/insulation-temperature.md
+4,완료,leakage-breaker-exception,누전차단기 설치 불필요 조건,개념+법령,4,504,보강 우선,아님,필요,권장,P0,,본문 504자로 얇음; 법령 태그이나 전용 근거 영역 없음; 시각자료 권장,electrical/leakage-breaker-exception.md
+4,완료,leakage-breaker-types,누전차단기 구조·정격·시설기준,개념,11,2264,현재 충분,아님,아님,필수,P2,,시각자료 필수,electrical/leakage-breaker-types.md
+4,완료,leakage-vulnerable-points,누전 사고 취약 개소,개념,1,769,보강 권장,필요,아님,낮음,P1,,KOSHA 현장 해설·사례 보강 후보,electrical/leakage-vulnerable-points.md
+4,완료,lightning-arrester-conditions,피뢰기 구비조건,개념,2,532,보강 권장,아님,아님,권장,P1,,본문 532자로 얇음; 시각자료 권장,electrical/lightning-arrester-conditions.md
+4,완료,lightning-protection-standard,피뢰설비 설치 기준,개념+법령,3,870,현재 충분,아님,아님,필수,P2,,시각자료 필수,electrical/lightning-protection-standard.md
+4,완료,low-voltage-insulation,저압전로 절연저항 기준,개념+법령,3,946,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,electrical/low-voltage-insulation.md
+4,완료,max-leakage-current,저압전선로 허용 누설전류,개념+법령,3,534,보강 우선,아님,필요,낮음,P0,,본문 534자로 얇음; 법령 태그이나 전용 근거 영역 없음,electrical/max-leakage-current.md
+4,완료,ohms-law,옴의 법칙,계산,4,669,보강 권장,아님,아님,낮음,P1,,본문 669자로 얇음,electrical/ohms-law.md
+4,완료,pipe-flow-limit,정전기 방지 배관 유속 제한,개념+법령,2,901,보강 권장,아님,필요,낮음,P1,,법령 태그이나 전용 근거 영역 없음,electrical/pipe-flow-limit.md
+4,완료,power-current,전력 기준 전류 (단상·3상),계산,1,620,보강 권장,아님,아님,낮음,P1,,본문 620자로 얇음,electrical/power-current.md
+4,미시작,power-cut-rate,정전률,계산,0,45,미시작,아님,아님,낮음,HOLD,근거 부족 정리 후보,근거 부족 정리 후보,electrical/power-cut-rate.md
+4,완료,power-formula,전력 공식,계산,2,732,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,electrical/power-formula.md
+4,완료,power-off-procedure,정전작업 절차 6단계,절차,11,578,보강 우선,필요,필요,권장,P0,,본문 578자로 얇음; 현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,electrical/power-off-procedure.md
+4,완료,shock-prevention,감전사고 방지 대책,절차,9,449,보강 우선,필요,필요,낮음,P0,,본문 449자; 현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보,electrical/shock-prevention.md
+4,완료,static-energy,정전기 축적 에너지,계산,6,770,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,electrical/static-energy.md
+4,완료,static-occurrence-factors,정전기 발생 요인,개념,8,823,현재 충분,아님,아님,권장,P2,,시각자료 권장,electrical/static-occurrence-factors.md
+4,완료,static-prevention,정전기 재해 방지 대책,절차,14,912,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,electrical/static-prevention.md
+4,완료,step-touch-voltage,허용보폭전압·접촉전압,개념,1,1155,현재 충분,아님,아님,필수,P2,,시각자료 필수,electrical/step-touch-voltage.md
+4,완료,ventricular-fibrillation-current,심실세동·전격사 위험,계산,4,1171,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,electrical/ventricular-fibrillation-current.md
+4,완료,vf-danger-energy,심실세동 위험한계 에너지,계산,11,1224,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,electrical/vf-danger-energy.md
+4,완료,welder-duty-cycle,아크 용접기 허용사용률,계산,2,554,보강 권장,아님,아님,낮음,P1,,본문 554자로 얇음,electrical/welder-duty-cycle.md
+4,완료,welder-efficiency,교류 아크 용접기 효율,계산,1,600,보강 권장,아님,아님,낮음,P1,,본문 600자로 얇음,electrical/welder-efficiency.md
+4,완료,welder-shock-protector,교류 아크 용접기 전격 방지기 설치,개념,5,1417,보강 권장,필요,필요,필수,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,electrical/welder-shock-protector.md
+4,완료,wire-ignition-stages,과전류 전선 발화 단계,개념,1,916,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,electrical/wire-ignition-stages.md
+5,완료,acetylene-properties,아세틸렌 특성 (희석제·제조),개념,8,1316,보강 권장,필요,아님,낮음,P1,,KOSHA 현장 해설·사례 보강 후보,chemical/acetylene-properties.md
+5,완료,adiabatic-compression,단열 압축 온도,계산,2,819,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,chemical/adiabatic-compression.md
+5,완료,bleve,BLEVE (비등액체증기폭발),개념,2,533,보강 권장,필요,아님,권장,P1,,본문 533자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,chemical/bleve.md
+5,완료,burgess-wheeler,Burgess-Wheeler 법칙,계산,1,762,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,chemical/burgess-wheeler.md
+5,완료,cavitation,공동현상 (Cavitation),개념,2,1092,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,mechanical/cavitation.md
+5,완료,chemical-classification,산업안전보건규칙 위험물질 분류,개념,10,1227,보강 권장,필요,아님,낮음,P1,,KOSHA 현장 해설·사례 보강 후보,chemical/chemical-classification.md
+5,완료,co2-extinguisher,CO₂ 소화약제 특성,개념,2,530,보강 권장,필요,아님,낮음,P1,,본문 530자로 얇음; KOSHA 현장 해설·사례 보강 후보,chemical/co2-extinguisher.md
+5,완료,combustion-range-risk,연소 범위와 위험성,개념,21,710,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,chemical/combustion-range-risk.md
+5,완료,complete-combustion-cst,완전연소 조성 농도 (Cst),계산,8,983,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,chemical/complete-combustion-cst.md
+5,완료,concentration-conversion,"""농도 환산 (vol% → mg/L)""",계산,3,860,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,chemical/concentration-conversion.md
+5,미시작,drying-equipment,건조설비 안전,개념,0,45,미시작,후속 검증,후속 검증,권장,P2,독립 챕터 유지 후보,독립 챕터 유지 후보,chemical/drying-equipment.md
+5,완료,dust-explosion-factors,분진폭발 요인 (화학·물리적),개념,13,503,보강 우선,필요,아님,권장,P0,,본문 503자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,chemical/dust-explosion-factors.md
+5,완료,endothermic-substances,흡열반응 물질,개념,1,512,보강 권장,아님,아님,낮음,P1,,본문 512자로 얇음,chemical/endothermic-substances.md
+5,완료,explosion-types,폭발 종류 (물리·화학),개념,3,1192,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,chemical/explosion-types.md
+5,완료,extinguisher-effects,소화약제별 주 소화효과,개념,4,1007,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,chemical/extinguisher-effects.md
+5,완료,fire-classification,화재 분류 A·B·C·D급,개념,5,390,보강 우선,필요,아님,필수,P0,,본문 390자; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,chemical/fire-classification.md
+5,완료,fire-suppression-principles,소화 원리 4가지,개념,1,479,보강 우선,필요,아님,권장,P0,,본문 479자; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,chemical/fire-suppression-principles.md
+5,완료,flameproof-flange-distance,내압방폭 플랜지 이격거리,개념+법령,0,656,보강 우선,아님,필요,낮음,P0,,본문 656자로 얇음; 법령 태그이나 전용 근거 영역 없음,chemical/flameproof-flange-distance.md
+5,미시작,flash-rate,플래시율 (F),계산,0,45,미시작,아님,아님,낮음,HOLD,근거 부족 정리 후보,근거 부족 정리 후보,chemical/flash-rate.md
+5,완료,flash-vs-ignition-point,인화점 vs 발화점,개념,9,509,보강 우선,필요,아님,권장,P0,,본문 509자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,chemical/flash-vs-ignition-point.md
+5,완료,fourier-heat-law,푸리에 열전도 법칙,계산,1,575,보강 권장,아님,아님,낮음,P1,,본문 575자로 얇음,chemical/fourier-heat-law.md
+5,미시작,gas-mass-volume,기체 질량·부피,계산,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,chemical/gas-mass-volume.md
+5,미시작,hazard-index,위험도 (H),계산,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,chemical/hazard-index.md
+5,완료,ideal-gas-law,이상기체 법칙,계산,0,2268,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,chemical/ideal-gas-law.md
+5,완료,jones-formula,Jones 식 (폭발범위 추정),계산,4,855,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,chemical/jones-formula.md
+5,완료,lechatelier-law,르샤틀리에 법칙,계산,1,863,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,chemical/lechatelier-law.md
+5,완료,mixed-solution-concentration,혼합 용액 농도,계산,2,662,보강 권장,아님,아님,낮음,P1,,본문 662자로 얇음,chemical/mixed-solution-concentration.md
+5,완료,purge-inerting,퍼지 (불활성화),개념,1,531,보강 권장,필요,아님,권장,P1,,본문 531자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,chemical/purge-inerting.md
+5,완료,reactive-dangerous-gases,위험물 반응 가스 발생,개념,2,630,보강 권장,필요,아님,낮음,P1,,본문 630자로 얇음; KOSHA 현장 해설·사례 보강 후보,chemical/reactive-dangerous-gases.md
+5,완료,reactor-distillation-equipment,반응기·증류탑·열교환기,개념,9,950,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,chemical/reactor-distillation-equipment.md
+5,완료,safe-explosion-combinations,폭발 위험 낮은 조합,개념,5,537,보강 권장,필요,아님,낮음,P1,,본문 537자로 얇음; KOSHA 현장 해설·사례 보강 후보,chemical/safe-explosion-combinations.md
+5,완료,safety-valve-shutoff-exception,안전밸브 전단·후단 차단밸브 금지 예외,개념+법령,3,1421,보강 권장,필요,필요,낮음,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보,chemical/safety-valve-shutoff-exception.md
+5,완료,spontaneous-combustion,자연발화,개념,7,1047,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,chemical/spontaneous-combustion.md
+5,완료,surging-phenomenon,서징(Surging) 현상,개념,1,1011,보강 권장,필요,아님,권장,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,mechanical/surging-phenomenon.md
+5,완료,theoretical-air,이론 공기량 (Ao),계산,1,910,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,chemical/theoretical-air.md
+5,완료,toxicity-indices,독성 지표 (LD50·LC50·TLV),개념,2,1124,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,chemical/toxicity-indices.md
+5,완료,vessel-charge-amount,용기 충전량,계산,1,672,보강 권장,아님,아님,낮음,P1,,본문 672자로 얇음,chemical/vessel-charge-amount.md
+5,완료,water-prohibited-extinguishers,금수성 물질 소화기,개념,1,718,보강 권장,필요,아님,낮음,P1,,KOSHA 현장 해설·사례 보강 후보,chemical/water-prohibited-extinguishers.md
+6,미시작,clam-shell,클램셸 (Clam Shell) 용도,개념,0,45,미시작,아님,아님,낮음,HOLD,근거 부족 정리 후보,근거 부족 정리 후보,construction/clam-shell.md
+6,완료,construction-hazard-plan-documents,건설공사 유해·위험방지계획서 제출 기준,개념+법령,13,2579,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,construction/construction-hazard-plan-documents.md
+6,완료,construction-illuminance,작업면 조도 기준,개념+법령,2,1058,현재 충분,아님,아님,낮음,READY,,현재 기출 중심 설명 구조로 우선 사용 가능,construction/construction-illuminance.md
+6,미시작,demolition-methods,해체 공법 4종,개념,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,construction/demolition-methods.md
+6,완료,demolition-safety-measures,해체 작업 안전 조치,절차,6,455,보강 우선,필요,필요,권장,P0,,본문 455자; 현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,construction/demolition-safety-measures.md
+6,완료,earth-retaining-components,흙막이 지보공 구성요소,개념,6,903,보강 권장,필요,아님,필수,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/earth-retaining-components.md
+6,미시작,euler-buckling-load,오일러 좌굴하중 (Pcr),계산,0,45,미시작,아님,아님,낮음,P2,독립 챕터 유지 후보,독립 챕터 유지 후보,construction/euler-buckling-load.md
+6,완료,excavation-slope-standard,굴착면 기울기 기준표,개념+법령,8,978,보강 권장,필요,필요,필수,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/excavation-slope-standard.md
+6,완료,fall-prevention-equipment,안전대·추락방지 설비,개념,4,938,보강 권장,필요,아님,필수,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/fall-prevention-equipment.md
+6,미시작,forklift-stability-criteria,지게차 안정도 기준 4종,개념,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,construction/forklift-stability-criteria.md
+6,미시작,forklift-stability-formula,지게차 주행 좌·우 안정도,계산,0,45,미시작,아님,아님,낮음,HOLD,기존 완료 챕터 흡수 후보,기존 완료 챕터 흡수 후보,construction/forklift-stability-formula.md
+6,완료,gangway-ladder-standard,현문 사다리 설치기준,개념+법령,2,532,보강 권장,필요,아님,필수,P1,,본문 532자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/gangway-ladder-standard.md
+6,완료,hanging-scaffold-safety-factor,달비계 안전계수 기준,개념+법령,4,555,보강 우선,필요,필요,낮음,P0,,본문 555자로 얇음; 법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보,construction/hanging-scaffold-safety-factor.md
+6,완료,ladder-cage-standard,사다리식 통로·고정식 사다리 기준,개념+법령,8,1826,현재 충분,아님,아님,필수,P2,,시각자료 필수,construction/ladder-cage-standard.md
+6,완료,pile-driver-stability,항타기·항발기 무너짐·권상 기준,개념+법령,4,1136,보강 권장,필요,아님,필수,P1,,KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/pile-driver-stability.md
+6,완료,safety-handrail-structure,안전난간 구조 및 설치요건,개념+법령,3,1891,보강 권장,필요,필요,필수,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/safety-handrail-structure.md
+6,완료,safety-management-cost,산업안전보건관리비,개념+법령,12,1172,보강 권장,아님,필요,낮음,P1,,법령 태그이나 전용 근거 영역 없음,construction/safety-management-cost.md
+6,완료,safety-net-standards,추락방호망 설치기준,개념,9,478,보강 우선,필요,필요,필수,P0,,본문 478자; 현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/safety-net-standards.md
+6,완료,shore-safety-standard,동바리 안전기준,개념+법령,11,531,보강 우선,필요,필요,필수,P0,,본문 531자로 얇음; 법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/shore-safety-standard.md
+6,완료,slope-collapse-prevention,법면 붕괴 예방조치 3대 핵심,절차,1,836,보강 권장,필요,필요,권장,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,construction/slope-collapse-prevention.md
+6,완료,slope-stabilization-methods,사면 안정 공법 분류,개념,1,631,보강 권장,필요,아님,권장,P1,,본문 631자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,construction/slope-stabilization-methods.md
+6,완료,soil-collapse-prevention,토사붕괴 원인·예방,개념,6,1038,보강 권장,필요,필요,권장,P1,,현행 법령·고시 직접 확인이 필요한 주제; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,construction/soil-collapse-prevention.md
+6,완료,soil-permeability-factors,흙의 투수계수 영향 인자,개념,1,540,보강 권장,아님,아님,낮음,P1,,본문 540자로 얇음,construction/soil-permeability-factors.md
+6,완료,soil-test-types,토질 시험 종류,개념,1,558,보강 권장,아님,아님,낮음,P1,,본문 558자로 얇음,construction/soil-test-types.md
+6,완료,steel-frame-scaffold,강관틀비계 조립 준수사항,개념+법령,6,895,보강 권장,필요,필요,필수,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/steel-frame-scaffold.md
+6,완료,steel-frame-work,철골작업 안전,개념+법령,10,1083,보강 권장,필요,필요,권장,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,construction/steel-frame-work.md
+6,완료,steel-pipe-scaffold,강관비계·강관틀비계 설치 기준,개념+법령,9,879,보강 권장,필요,필요,필수,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/steel-pipe-scaffold.md
+6,완료,temporary-passage-stairs,가설통로·계단 기준,개념+법령,9,1006,보강 권장,필요,필요,필수,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/temporary-passage-stairs.md
+6,완료,temporary-structure-defects,가설구조물 4대 특징,개념,1,623,보강 권장,필요,아님,권장,P1,,본문 623자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,construction/temporary-structure-defects.md
+6,완료,tower-crane-rope-support,타워크레인 와이어로프 지지,개념+법령,3,497,보강 우선,필요,필요,필수,P0,,본문 497자; 법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/tower-crane-rope-support.md
+6,완료,tower-crane-wind-limits,타워크레인 강풍 작업중지 기준,개념+법령,1,451,보강 우선,필요,아님,권장,P0,,본문 451자; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,construction/tower-crane-wind-limits.md
+6,완료,tunnel-blasting,터널·발파 안전,절차+법령,16,1112,보강 권장,필요,필요,권장,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,construction/tunnel-blasting.md
+6,완료,vehicle-overturn-prevention,차량계 하역운반기계 전도 방지,개념+법령,3,1079,보강 권장,필요,필요,권장,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 권장,construction/vehicle-overturn-prevention.md
+6,완료,walkway-board-standard,통로발판 구조 기준,개념+법령,1,556,보강 권장,필요,아님,필수,P1,,본문 556자로 얇음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/walkway-board-standard.md
+6,완료,work-platform-standards,작업발판 기준,개념+법령,6,868,보강 권장,필요,필요,필수,P1,,법령 태그이나 전용 근거 영역 없음; KOSHA 현장 해설·사례 보강 후보; 시각자료 필수,construction/work-platform-standards.md

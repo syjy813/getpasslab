@@ -16,3 +16,8 @@ npm-debug.log*
 Thumbs.db
 
 raw_pdfs/
+
+# local review output and Python caches
+tmp/
+__pycache__/
+*.pyc

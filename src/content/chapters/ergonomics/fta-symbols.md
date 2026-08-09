@@ -17,6 +17,18 @@ examComment: 기호 그림→명칭 매칭형이 매 회차급 출제. 통상사
 
 FTA 사상기호는 사건의 종류를, 게이트 기호는 사건 사이의 논리 관계를 나타낸다.
 
+<figure class="chapter-figure chapter-figure-wide">
+  <img
+    src="/images/chapters/fta-symbols/fta-symbols.svg"
+    alt="FTA 결함사상, 기본사상, 통상사상, 생략사상과 AND, OR, 부정, 수정 게이트 기호를 비교한 그림"
+    width="1000"
+    height="570"
+    loading="lazy"
+    decoding="async"
+  />
+  <figcaption>GetPassLab 자체 제작 · 연결 기출의 사상·게이트 기본 모형을 학습용으로 도식화</figcaption>
+</figure>
+
 | 기호 | 명칭 | 의미 |
 |------|------|------|
 | 사각형 | 결함사상 | 해석 대상이 되는 고장·결함 (톱사상·중간사상) |
