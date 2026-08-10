@@ -23,7 +23,7 @@ const chapters = defineCollection({
     examComment: z.string().optional(),          // 섹션 4 출제 경향 코멘트 (챕터당 1줄)
     order: z.number().default(0),                 // 그룹 내 정렬 순서 (노션 매핑 DB 이관)
     priority: z.enum(['출시 필수', '1차', '2차']).default('1차'), // 작성 우선순위
-    status: z.enum(['미시작', '완료']).default('미시작'),          // 작성 상태
+    status: z.enum(['미시작', '완료', '통합']).default('미시작'),  // 작성·공개 상태
   }),
 });
 

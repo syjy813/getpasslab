@@ -4,8 +4,8 @@
 
 ## 결과 요약
 
-- 검사한 완료 챕터: 241개
-- 얇은 콘텐츠 후보: 96개
+- 검사한 완료 챕터: 239개
+- 얇은 콘텐츠 후보: 93개
 - 우선 검토 후보: 31개
 - 자동 수정한 챕터: 0개
 
@@ -53,10 +53,8 @@
 | 우선 | industrial-safety | 6 | safety-management-cost | 산업안전보건관리비 | 789 | 4/0 | 있음 | 없음 | 12 | 65.8 | 기출 관계가 8개 이상인데 본문이 800자 미만 |
 | 검토 | industrial-safety | 6 | tower-crane-wind-limits | 타워크레인 강풍 작업중지 기준 | 306 | 3/0 | 있음 | 없음 | 1 | 306 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 4 | grounding-targets | 전기기기 접지 대상 | 312 | 4/2 | 없음 | 없음 | 1 | 312 | 완료 챕터의 자체 본문이 450자 미만 |
-| 검토 | industrial-safety | 3 | roller-surface-speed | 롤러기 표면속도 | 320 | 4/0 | 없음 | 있음 | 0 | 해당 없음 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 5 | fire-suppression-principles | 소화 원리 4가지 | 321 | 4/0 | 없음 | 없음 | 1 | 321 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 6 | demolition-safety-measures | 해체 작업 안전 조치 | 334 | 4/0 | 없음 | 없음 | 6 | 55.7 | 완료 챕터의 자체 본문이 450자 미만 |
-| 검토 | industrial-safety | 3 | roller-stopping-distance | 롤러기 급정지거리 | 337 | 4/2 | 없음 | 없음 | 5 | 67.4 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 3 | overload-prevention-device | 양중기 과부하방지장치 기준 | 338 | 4/0 | 없음 | 없음 | 4 | 84.5 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 6 | tower-crane-rope-support | 타워크레인 와이어로프 지지 | 347 | 4/2 | 없음 | 없음 | 3 | 115.7 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 6 | gangway-ladder-standard | 현문 사다리 설치기준 | 351 | 3/0 | 있음 | 없음 | 2 | 175.5 | 완료 챕터의 자체 본문이 450자 미만 |
@@ -99,7 +97,6 @@
 | 검토 | industrial-safety | 3 | balance-flange-diameter | 평형 플랜지 지름 | 425 | 4/0 | 없음 | 있음 | 4 | 106.3 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 2 | mttf | MTTF (평균동작시간) | 425 | 4/0 | 없음 | 있음 | 1 | 425 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 2 | composite-noise | 합성 소음 | 427 | 4/2 | 없음 | 있음 | 1 | 427 | 완료 챕터의 자체 본문이 450자 미만 |
-| 검토 | industrial-safety | 5 | flameproof-flange-distance | 내압방폭 플랜지 이격거리 | 427 | 4/0 | 있음 | 없음 | 0 | 해당 없음 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 1 | tyler-learning-principles | 타일러 학습경험 원리 | 429 | 4/1 | 없음 | 없음 | 1 | 429 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 4 | insulation-temperature | 절연물 등급별 허용온도 | 433 | 4/0 | 있음 | 없음 | 2 | 216.5 | 완료 챕터의 자체 본문이 450자 미만 |
 | 검토 | industrial-safety | 4 | power-current | 전력 기준 전류 (단상·3상) | 433 | 4/2 | 없음 | 있음 | 1 | 433 | 완료 챕터의 자체 본문이 450자 미만 |

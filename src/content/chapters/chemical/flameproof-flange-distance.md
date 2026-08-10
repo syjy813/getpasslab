@@ -4,7 +4,7 @@ slug: flameproof-flange-distance
 subject_id: 5
 order: 1
 priority: 출시 필수
-status: 완료
+status: 통합
 group: 안전밸브·플랜지
 tags: [개념, 법령]
 summary: 플랜지 개구부–장애물 최소 거리, IIA 10 / IIB 30 / IIC 40 mm

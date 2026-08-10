@@ -31,10 +31,12 @@ const rows = chapters.map((c) => ({
   written: isWritten(c),
 }));
 
-const total = rows.length;
-const doneStatus = rows.filter((r) => r.status === '완료').length;
-const notStarted = rows.filter((r) => r.status === '미시작').length;
-const writtenCount = rows.filter((r) => r.written).length;
+const activeRows = rows.filter((r) => r.status !== '통합');
+const total = activeRows.length;
+const doneStatus = activeRows.filter((r) => r.status === '완료').length;
+const notStarted = activeRows.filter((r) => r.status === '미시작').length;
+const mergedStatus = rows.filter((r) => r.status === '통합').length;
+const writtenCount = activeRows.filter((r) => r.written).length;
 
 // Gap 1: 상태=완료 이나 본문 없음
 const gapDoneNoBody = rows.filter((r) => r.status === '완료' && !r.written)
@@ -54,7 +56,7 @@ const bySubject = Object.values(CERTIFICATIONS).flatMap((certification) =>
   Object.values(certification.exams).flatMap((exam) =>
     Object.entries(exam.subjects).map(([id, subject]) => {
       const sid = Number(id);
-      const sr = rows.filter((row) =>
+      const sr = activeRows.filter((row) =>
         row.cert_id === certification.slug
         && row.exam === exam.slug
         && row.subject_id === sid,
@@ -82,7 +84,7 @@ const bySubject = Object.values(CERTIFICATIONS).flatMap((certification) =>
 // 우선순위별 집계
 const priorities = ['출시 필수', '1차', '2차'];
 const byPriority = priorities.map((p) => {
-  const pr = rows.filter((r) => r.priority === p);
+  const pr = activeRows.filter((r) => r.priority === p);
   return {
     p,
     total: pr.length,
@@ -127,6 +129,7 @@ const detail = [...rows].sort(
       .badge { display: inline-block; padding: 1px 8px; border-radius: var(--radius-full); font-size: 12px; font-weight: var(--fw-medium); }
       .b-done { background: var(--success-bg); color: var(--success); }
       .b-todo { background: var(--gray-100); color: var(--gray-600); }
+      .b-merged { background: var(--primary-50); color: var(--primary-700); }
       .b-warn { background: var(--warning-bg); color: var(--warning); }
       .b-p0 { background: var(--error-bg); color: var(--error); }
       .b-p1 { background: var(--primary-50); color: var(--primary-700); }
@@ -156,6 +159,7 @@ const detail = [...rows].sort(
       <div class="kpi"><div class="n">{writtenCount}</div><div class="l">본문 작성 완료</div></div>
       <div class="kpi"><div class="n">{doneStatus}</div><div class="l">상태=완료</div></div>
       <div class="kpi"><div class="n">{notStarted}</div><div class="l">미시작</div></div>
+      <div class="kpi"><div class="n">{mergedStatus}</div><div class="l">통합·이동</div></div>
       <div class="kpi"><div class="n">{questions.length}</div><div class="l">기출문제</div></div>
     </div>
 
@@ -229,7 +233,7 @@ const detail = [...rows].sort(
       </tbody>
     </table>
 
-    <h2 class="adm">챕터 상세 <span class="muted" style="font-size:var(--fs-caption)">({total})</span></h2>
+    <h2 class="adm">챕터 상세 <span class="muted" style="font-size:var(--fs-caption)">({rows.length})</span></h2>
     <details>
       <summary>전체 챕터 테이블 펼치기</summary>
       <table style="margin-top:12px">
@@ -251,7 +255,7 @@ const detail = [...rows].sort(
               <td>
                 <span class={`badge ${r.priority === '출시 필수' ? 'b-p0' : r.priority === '1차' ? 'b-p1' : 'b-p2'}`}>{r.priority}</span>
               </td>
-              <td><span class={`badge ${r.status === '완료' ? 'b-done' : 'b-todo'}`}>{r.status}</span></td>
+              <td><span class={`badge ${r.status === '완료' ? 'b-done' : r.status === '통합' ? 'b-merged' : 'b-todo'}`}>{r.status}</span></td>
               <td>{r.written ? <span class="badge b-done">작성</span> : <span class="badge b-warn">스텁</span>}</td>
               <td class="num">{r.qcount}</td>
             </tr>

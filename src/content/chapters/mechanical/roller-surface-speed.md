@@ -8,7 +8,7 @@ summary: V = πDN/1000 (m/min)
 questions: []
 order: 1
 priority: 1차
-status: 완료
+status: 통합
 ---
 ## 핵심 공식
 

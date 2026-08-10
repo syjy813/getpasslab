@@ -53,14 +53,30 @@ for (const file of htmlFiles) {
   const description = attr(html, /<meta\s+[^>]*name=["']description["'][^>]*>/i, 'content');
   const robots = attr(html, /<meta\s+[^>]*name=["']robots["'][^>]*>/i, 'content').toLowerCase();
   const canonical = attr(html, /<link\s+[^>]*rel=["']canonical["'][^>]*>/i, 'href');
+  const redirect = attr(html, /<meta\s+[^>]*http-equiv=["']refresh["'][^>]*>/i, 'content');
   const jsonLdBlocks = [...html.matchAll(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
 
   if (!title) errors.push(`${url}: title 누락`);
-  if (!description) errors.push(`${url}: description 누락`);
   if (!canonical) errors.push(`${url}: canonical 누락`);
   if (canonical && !canonical.startsWith(SITE_ORIGIN)) errors.push(`${url}: canonical 도메인 불일치 (${canonical})`);
   if (!robots) warnings.push(`${url}: robots meta 누락`);
-  if (robots.includes('noindex')) noindexUrls.add(canonical || url);
+
+  if (redirect) {
+    if (!robots.includes('noindex')) errors.push(`${url}: 이동 페이지 robots=noindex 누락`);
+    const destination = redirect.match(/url=(.+)$/i)?.[1]?.trim() ?? '';
+    if (!destination) errors.push(`${url}: 이동 페이지 목적지 누락`);
+    if (destination && canonical) {
+      const destinationUrl = new URL(destination, SITE_ORIGIN).href;
+      if (destinationUrl !== canonical) {
+        errors.push(`${url}: 이동 목적지와 canonical 불일치 (${destinationUrl} / ${canonical})`);
+      }
+    }
+    noindexUrls.add(url);
+    continue;
+  }
+
+  if (!description) errors.push(`${url}: description 누락`);
+  if (robots.includes('noindex')) noindexUrls.add(url);
   if (!jsonLdBlocks.length) errors.push(`${url}: JSON-LD 누락`);
 
   for (const [, rawJson] of jsonLdBlocks) {
