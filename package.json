@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "audit:content-value": "node scripts/audit-content-value.mjs",
     "check:seo": "node scripts/check-seo.mjs",
     "check:public-content": "node scripts/check-public-content.mjs"
   },

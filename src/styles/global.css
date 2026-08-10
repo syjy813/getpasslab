@@ -49,6 +49,37 @@ a{color:inherit}
 .grid-2,.grid-3{grid-template-columns:1fr}
 @media (min-width:640px){.grid-2,.grid-3{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.section-heading{max-width:760px;margin-bottom:var(--space-6)}
+.section-heading.compact{margin-top:var(--space-8);margin-bottom:var(--space-4)}
+.section-heading p{color:var(--gray-600);margin:var(--space-2) 0 0}
+.learning-summary{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:var(--space-4)}
+.learning-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);margin:0}
+.learning-stat{min-width:0}
+.learning-stat dt{font-size:var(--fs-label);font-weight:var(--fw-medium);color:var(--gray-600)}
+.learning-stat dd{margin:var(--space-1) 0 0;font-size:var(--fs-h3);font-weight:var(--fw-bold);line-height:var(--lh-heading);color:var(--gray-900)}
+.learning-steps{display:grid;gap:var(--space-3);list-style:none;margin:0;padding:0}
+.learning-steps li{display:flex;gap:var(--space-3);padding:var(--space-4);background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg)}
+.learning-step-number{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:var(--radius-full);background:var(--primary-50);color:var(--primary-600);font-size:var(--fs-caption);font-weight:var(--fw-bold)}
+.learning-steps strong{font-size:var(--fs-h4);color:var(--gray-900)}
+.learning-steps p{margin:var(--space-1) 0 0;font-size:var(--fs-caption);color:var(--gray-600)}
+.learning-guide{max-width:800px;margin-top:var(--space-6);padding:var(--space-6);background:var(--primary-50);border:1px solid var(--primary-100);border-radius:var(--radius-xl)}
+.learning-guide p{margin:var(--space-2) 0 0;color:var(--gray-800)}
+.subject-section{margin-top:var(--space-8)}
+.subject-section .section-heading.compact{margin-top:0}
+.scope-list{display:grid;gap:var(--space-3)}
+.scope-item{padding:var(--space-4);background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg)}
+.scope-item>div{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-3)}
+.scope-item strong{font-size:var(--fs-h4);color:var(--gray-900)}
+.scope-item span{flex:none;font-size:var(--fs-label);color:var(--primary-600);font-weight:var(--fw-semibold)}
+.scope-item p{margin:var(--space-2) 0 0;font-size:var(--fs-caption);color:var(--gray-600);word-break:keep-all;overflow-wrap:break-word}
+.scope-meta{margin-top:var(--space-4);font-size:var(--fs-caption);font-weight:var(--fw-semibold);color:var(--primary-600)}
+.scope-subjects{margin-top:var(--space-2);font-size:var(--fs-caption);color:var(--gray-600);word-break:keep-all;overflow-wrap:break-word}
+@media (min-width:640px){
+  .learning-summary{padding:var(--space-6)}
+  .learning-stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-6)}
+  .scope-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:768px){.learning-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 /* ═══ GNB ═══ */
 .gnb{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--gray-200)}
@@ -177,10 +208,11 @@ article>p:has(>.katex:only-child){max-width:none}
 /* ═══ 기출 이력 (섹션 4) ═══ */
 .exam-history{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:var(--space-6);margin:var(--space-4) 0}
 .freq-label{font-size:var(--fs-caption);font-weight:var(--fw-bold);color:var(--primary-600);margin-bottom:var(--space-3)}
+.evidence-intro{max-width:760px;margin:0 0 var(--space-3);font-size:var(--fs-body);color:var(--gray-800)}
 .round-badges{display:flex;flex-wrap:wrap;gap:var(--space-2)}
 .round-badge{font-family:var(--font-sans);font-size:var(--fs-label);font-weight:var(--fw-medium);cursor:pointer;border:1px solid var(--primary-100);color:var(--primary-600);background:var(--primary-50);padding:6px 12px;border-radius:var(--radius-full);transition:background .15s}
 .round-badge:hover{background:var(--primary-100)}
-.exam-comment{margin:var(--space-4) 0 0;font-size:var(--fs-caption);color:var(--gray-600)}
+.exam-comment{margin:0 0 var(--space-4);font-size:var(--fs-caption);color:var(--gray-600)}
 .exam-comment strong{color:var(--gray-900)}
 
 /* 문제 레이어 */

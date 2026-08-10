@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 import { CERTIFICATIONS } from '../../config/certifications';
 import { withBase } from '../../config/url';
 
@@ -12,6 +13,47 @@ export function getStaticPaths() {
 
 const { certification } = Astro.props;
 const exams = Object.values(certification.exams);
+const chapters = (await getCollection('chapters')).filter(
+  chapter => chapter.data.cert_id === certification.slug
+    && chapter.data.status === '완료',
+);
+const questions = (await getCollection('questions'))
+  .filter(question => question.data.cert_id === certification.slug)
+  .map(question => question.data);
+const linkedQuestionKeys = new Set(
+  chapters.flatMap(chapter =>
+    chapter.data.questions.map(questionId => `${chapter.data.exam}:${questionId}`),
+  ),
+);
+const linkedQuestions = questions.filter(question =>
+  linkedQuestionKeys.has(`${question.exam}:${question.id}`),
+);
+const sessionCount = new Set(
+  linkedQuestions.map(question => `${question.exam}:${question.date}`),
+).size;
+const publicSubjectCount = new Set(
+  chapters.map(chapter => `${chapter.data.exam}:${chapter.data.subject_id}`),
+).size;
+const examScopes = exams.map((exam) => {
+  const examChapters = chapters.filter(chapter => chapter.data.exam === exam.slug);
+  const examQuestionIds = new Set(
+    examChapters.flatMap(chapter => chapter.data.questions),
+  );
+  const examQuestions = questions.filter(
+    question => question.exam === exam.slug && examQuestionIds.has(question.id),
+  );
+  const publicSubjects = Object.entries(exam.subjects)
+    .filter(([id]) => examChapters.some(chapter => chapter.data.subject_id === Number(id)))
+    .map(([, subject]) => subject.name);
+
+  return {
+    exam,
+    chapterCount: examChapters.length,
+    questionCount: examQuestions.length,
+    sessionCount: new Set(examQuestions.map(question => question.date)).size,
+    publicSubjects,
+  };
+});
 ---
 <BaseLayout title={`${certification.name} — GetPassLab`} description={certification.description}>
   <section class="hero">
@@ -22,12 +64,45 @@ const exams = Object.values(certification.exams);
     </div>
   </section>
   <section class="section container">
+    <div class="section-heading">
+      <h2 class="gpl-h1">현재 학습 데이터</h2>
+      <p class="gpl-body">공개된 학습 콘텐츠와 연결 기출을 기준으로 현재 제공 범위를 요약했습니다.</p>
+    </div>
+    <div class="learning-summary">
+      <dl class="learning-stats">
+        <div class="learning-stat"><dt>공개 챕터</dt><dd>{chapters.length}개</dd></div>
+        <div class="learning-stat"><dt>연결 기출</dt><dd>{linkedQuestions.length}문항</dd></div>
+        <div class="learning-stat"><dt>시험 회차</dt><dd>{sessionCount}개</dd></div>
+        <div class="learning-stat"><dt>공개 과목</dt><dd>{publicSubjectCount}개</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-heading">
+      <h2 class="gpl-h1">GetPassLab에서 공부하는 방식</h2>
+      <p class="gpl-body">개념을 먼저 이해하고, 계산·판별 기준을 익힌 뒤 실제 출제 이력으로 확인합니다.</p>
+    </div>
+    <ol class="learning-steps">
+      <li><span class="learning-step-number">1</span><div><strong>핵심 개념 이해</strong><p>정의와 원리를 챕터 단위로 나눠 필요한 주제를 빠르게 찾습니다.</p></div></li>
+      <li><span class="learning-step-number">2</span><div><strong>계산·판별 기준 학습</strong><p>공식의 적용 순서와 단위, 조건·예외를 함께 확인합니다.</p></div></li>
+      <li><span class="learning-step-number">3</span><div><strong>실제 기출로 확인</strong><p>연결된 문항과 시험 회차를 통해 개념이 어떻게 출제됐는지 점검합니다.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="section container">
+    <div class="section-heading">
+      <h2 class="gpl-h1">현재 공개된 시험·학습 범위</h2>
+      <p class="gpl-body">시험별 공개 과목과 연결된 학습 데이터를 확인하고 원하는 범위부터 시작하세요.</p>
+    </div>
     <div class="grid">
-      {exams.map((exam) => (
+      {examScopes.map(({ exam, chapterCount, questionCount, sessionCount: examSessionCount, publicSubjects }) => (
         <a class="card" href={withBase(`/${certification.slug}/${exam.slug}/`)}>
           <span class="card-label">{exam.name}</span>
           <div class="card-title">{exam.name} 핵심요약</div>
           <div class="card-meta">{exam.format}</div>
+          <div class="scope-meta">공개 챕터 {chapterCount}개 · 연결 기출 {questionCount}문항 · 시험 회차 {examSessionCount}개</div>
+          {publicSubjects.length > 0 && <div class="scope-subjects">{publicSubjects.join(' · ')}</div>}
         </a>
       ))}
     </div>

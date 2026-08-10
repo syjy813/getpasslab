@@ -19,8 +19,29 @@ const chapters = (await getCollection('chapters')).filter(
     && chapter.data.exam === examDefinition.slug
     && chapter.data.status === '완료',
 );
-const countBy = (id: number) => chapters.filter(chapter => chapter.data.subject_id === id).length;
+const questions = (await getCollection('questions'))
+  .filter(question => question.data.cert_id === certification.slug
+    && question.data.exam === examDefinition.slug)
+  .map(question => question.data);
+const questionsById = new Map(questions.map(question => [question.id, question]));
+const linkedQuestionIds = new Set(chapters.flatMap(chapter => chapter.data.questions));
+const linkedQuestions = [...linkedQuestionIds]
+  .map(questionId => questionsById.get(questionId))
+  .filter((question): question is (typeof questions)[number] => Boolean(question));
 const subjects = Object.entries(examDefinition.subjects);
+const subjectCards = subjects.map(([id, subject]) => {
+  const subjectId = Number(id);
+  const subjectChapters = chapters.filter(chapter => chapter.data.subject_id === subjectId);
+  const subjectQuestionIds = new Set(subjectChapters.flatMap(chapter => chapter.data.questions));
+
+  return {
+    subjectId,
+    subject,
+    chapterCount: subjectChapters.length,
+    questionCount: [...subjectQuestionIds].filter(questionId => questionsById.has(questionId)).length,
+  };
+});
+const sessionCount = new Set(linkedQuestions.map(question => question.date)).size;
 ---
 <BaseLayout title={`${certification.name} ${examDefinition.title} — GetPassLab`} description={examDefinition.description}>
   <section class="section container" style="padding-top:var(--space-8)">
@@ -31,12 +52,31 @@ const subjects = Object.entries(examDefinition.subjects);
     </nav>
     <h1 class="gpl-h1">{examDefinition.title}</h1>
     <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">{examDefinition.format}</p>
+
+    <div class="learning-summary">
+      <dl class="learning-stats">
+        <div class="learning-stat"><dt>공개 챕터</dt><dd>{chapters.length}개</dd></div>
+        <div class="learning-stat"><dt>연결 기출</dt><dd>{linkedQuestions.length}문항</dd></div>
+        <div class="learning-stat"><dt>시험 회차</dt><dd>{sessionCount}개</dd></div>
+        <div class="learning-stat"><dt>과목</dt><dd>{subjects.length}개</dd></div>
+      </dl>
+    </div>
+
+    <div class="learning-guide">
+      <h2 class="gpl-h2">이 페이지 활용법</h2>
+      <p class="gpl-body">과목별 공개 범위를 확인한 뒤, 챕터에서 개념과 계산·판별 기준을 학습하고 연결 기출로 실제 출제 방식을 점검하세요.</p>
+    </div>
+
+    <div class="section-heading compact">
+      <h2 class="gpl-h2">과목별 학습 범위</h2>
+      <p class="gpl-body">각 과목에서 현재 공개된 챕터와 연결 기출 수를 함께 표시합니다.</p>
+    </div>
     <div class="grid grid-3">
-      {subjects.map(([id, subject]) => (
+      {subjectCards.map(({ subjectId, subject, chapterCount, questionCount }) => (
         <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/`)}>
-          <span class="card-label">{getSubjectLabel(Number(id), subject)}</span>
+          <span class="card-label">{getSubjectLabel(subjectId, subject)}</span>
           <div class="card-title">{subject.name}</div>
-          <div class="card-meta">챕터 {countBy(Number(id))}개</div>
+          <div class="card-meta">공개 챕터 {chapterCount}개 · 연결 기출 {questionCount}문항</div>
         </a>
       ))}
     </div>

@@ -23,7 +23,8 @@ const displayChoice = (choice: string, hasImage: boolean) => {
   if (!match) return choice;
   return match[1] === '수식' ? '위 이미지에 제시된 수식' : '위 이미지에 제시된 보기';
 };
-const years = new Set(questions.map(q => q.date.slice(0, 4)));
+const sessions = new Set(questions.map(q => q.date));
+const years = new Set([...sessions].map(date => date.slice(0, 4)));
 const sortedYears = [...years].sort();
 const yearRange = sortedYears.length === 0
   ? ''
@@ -35,7 +36,9 @@ const yearRange = sortedYears.length === 0
 <div class="exam-history">
   {questions.length > 0 ? (
     <>
-      <div class="freq-label">{yearRange} 기출 {questions.length}회 · {years.size}개 연도</div>
+      <p class="evidence-intro">아래 기출은 위에서 정리한 개념이 실제 시험에서 어떻게 출제됐는지 확인하기 위한 근거 자료입니다.</p>
+      <div class="freq-label">수록 기출 {questions.length}문항 · {sessions.size}개 시험 회차 · {yearRange}</div>
+      {examComment && <p class="exam-comment"><strong>출제 경향</strong> — {examComment}</p>}
       <div class="round-badges">
         {questions.map(q => (
           <button
@@ -50,9 +53,11 @@ const yearRange = sortedYears.length === 0
       </div>
     </>
   ) : (
-    <div class="freq-label">수록 기출에서 직접 출제 이력 없음</div>
+    <>
+      <div class="freq-label">수록 기출에서 직접 출제 이력 없음</div>
+      {examComment && <p class="exam-comment"><strong>출제 경향</strong> — {examComment}</p>}
+    </>
   )}
-  {examComment && <p class="exam-comment"><strong>출제 경향</strong> — {examComment}</p>}
 </div>
 
 {questions.map(q => {

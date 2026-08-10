@@ -52,13 +52,37 @@ const questions = (await getCollection('questions'))
 const badgeContext = createChapterBadgeContext(questions);
 const chapterCards = orderedChapters.map(chapter => ({
   chapter,
-  badges: getChapterBadgeSummary(
+  badgeSummary: getChapterBadgeSummary(
     chapter.data.tags,
     chapter.data.questions,
     badgeContext,
-  ).badges,
+  ),
+  questionCount: new Set(
+    chapter.data.questions.filter(questionId => badgeContext.questionsById.has(questionId)),
+  ).size,
 }));
 const groups = [...new Set(orderedChapters.map(chapter => chapter.data.group))];
+const linkedQuestionIds = new Set(orderedChapters.flatMap(chapter => chapter.data.questions));
+const linkedQuestions = [...linkedQuestionIds]
+  .map(questionId => badgeContext.questionsById.get(questionId))
+  .filter((question): question is { id: string; date: string } => Boolean(question));
+const groupScopes = groups.map(group => {
+  const groupChapters = orderedChapters.filter(chapter => chapter.data.group === group);
+  return {
+    name: group,
+    chapterCount: groupChapters.length,
+    representatives: groupChapters.slice(0, 3).map(chapter => chapter.data.title),
+  };
+});
+const featuredChapters = chapterCards
+  .filter(({ badgeSummary }) => badgeSummary.frequency !== null)
+  .sort((a, b) =>
+    b.badgeSummary.sessionCount - a.badgeSummary.sessionCount
+    || b.questionCount - a.questionCount
+    || a.chapter.data.title.localeCompare(b.chapter.data.title, 'ko')
+  )
+  .slice(0, 3);
+const sessionCount = new Set(linkedQuestions.map(question => question.date)).size;
 ---
 <BaseLayout
   title={`${subject.name} — ${certification.name} ${examDefinition.name} — GetPassLab`}
@@ -73,18 +97,69 @@ const groups = [...new Set(orderedChapters.map(chapter => chapter.data.group))];
     </nav>
     <span class="card-label">{subjectLabel}</span>
     <h1 class="gpl-h1" style="margin-top:var(--space-2)">{subject.name}</h1>
-    <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-8)">챕터 {chapters.length}개</p>
+    <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">공개된 챕터를 학습 범위와 기출 출제 이력에 따라 탐색할 수 있습니다.</p>
+
+    <div class="learning-summary">
+      <dl class="learning-stats">
+        <div class="learning-stat"><dt>공개 챕터</dt><dd>{chapters.length}개</dd></div>
+        <div class="learning-stat"><dt>연결 기출</dt><dd>{linkedQuestions.length}문항</dd></div>
+        <div class="learning-stat"><dt>시험 회차</dt><dd>{sessionCount}개</dd></div>
+        <div class="learning-stat"><dt>학습 그룹</dt><dd>{groups.length}개</dd></div>
+      </dl>
+    </div>
 
     {chapters.length === 0 && (
       <div class="card" style="cursor:default"><div class="card-title">콘텐츠 준비 중</div><div class="card-meta">챕터가 순차적으로 공개됩니다.</div></div>
+    )}
+
+    {groupScopes.length > 0 && (
+      <section class="subject-section">
+        <div class="section-heading compact">
+          <h2 class="gpl-h2">이 과목에서 다루는 학습 범위</h2>
+          <p class="gpl-body">학습 그룹별 공개 챕터 수와 대표 주제를 먼저 확인하세요.</p>
+        </div>
+        <div class="scope-list">
+          {groupScopes.map(group => (
+            <div class="scope-item">
+              <div><strong>{group.name}</strong><span>{group.chapterCount}개 챕터</span></div>
+              <p>{group.representatives.join(' · ')}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {featuredChapters.length > 0 && (
+      <section class="subject-section">
+        <div class="section-heading compact">
+          <h2 class="gpl-h2">빈출 챕터</h2>
+          <p class="gpl-body">현재 수록 기출의 시험 회차 기준으로 자주 확인된 챕터입니다.</p>
+        </div>
+        <div class="grid grid-3">
+          {featuredChapters.map(({ chapter, badgeSummary, questionCount }) => (
+            <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/${chapter.data.slug}/`)}>
+              <ChapterBadges badges={badgeSummary.badges} class="card-badges" />
+              <div class="card-title">{chapter.data.title}</div>
+              <div class="card-meta">수록 기출 {questionCount}문항 · {badgeSummary.sessionCount}개 시험 회차</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {groups.length > 0 && (
+      <div class="section-heading compact">
+        <h2 class="gpl-h2">전체 챕터</h2>
+        <p class="gpl-body">그룹별로 정리된 전체 공개 챕터를 확인하세요.</p>
+      </div>
     )}
     {groups.map(group => (
       <div style="margin-bottom:var(--space-8)">
         <h2 class="gpl-h3" style="margin-bottom:var(--space-4)">{group}</h2>
         <div class="grid grid-2">
-          {chapterCards.filter(({ chapter }) => chapter.data.group === group).map(({ chapter, badges }) => (
+          {chapterCards.filter(({ chapter }) => chapter.data.group === group).map(({ chapter, badgeSummary }) => (
             <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/${chapter.data.slug}/`)}>
-              <ChapterBadges badges={badges} class="card-badges" />
+              <ChapterBadges badges={badgeSummary.badges} class="card-badges" />
               <div class="card-title">{chapter.data.title}</div>
               <div class="card-meta">{chapter.data.summary}</div>
             </a>
