@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { CERTIFICATIONS } from '../../config/certifications';
+import { CERTIFICATIONS, getExamEntryPath } from '../../config/certifications';
 import { withBase } from '../../config/url';
 
 export function getStaticPaths() {
@@ -80,24 +80,12 @@ const examScopes = exams.map((exam) => {
 
   <section class="section container">
     <div class="section-heading">
-      <h2 class="gpl-h1">GetPassLab에서 공부하는 방식</h2>
-      <p class="gpl-body">개념을 먼저 이해하고, 계산·판별 기준을 익힌 뒤 실제 출제 이력으로 확인합니다.</p>
-    </div>
-    <ol class="learning-steps">
-      <li><span class="learning-step-number">1</span><div><strong>핵심 개념 이해</strong><p>정의와 원리를 챕터 단위로 나눠 필요한 주제를 빠르게 찾습니다.</p></div></li>
-      <li><span class="learning-step-number">2</span><div><strong>계산·판별 기준 학습</strong><p>공식의 적용 순서와 단위, 조건·예외를 함께 확인합니다.</p></div></li>
-      <li><span class="learning-step-number">3</span><div><strong>실제 기출로 확인</strong><p>연결된 문항과 시험 회차를 통해 개념이 어떻게 출제됐는지 점검합니다.</p></div></li>
-    </ol>
-  </section>
-
-  <section class="section container">
-    <div class="section-heading">
       <h2 class="gpl-h1">현재 공개된 시험·학습 범위</h2>
       <p class="gpl-body">시험별 공개 과목과 연결된 학습 데이터를 확인하고 원하는 범위부터 시작하세요.</p>
     </div>
     <div class="grid">
       {examScopes.map(({ exam, chapterCount, questionCount, sessionCount: examSessionCount, publicSubjects }) => (
-        <a class="card" href={withBase(`/${certification.slug}/${exam.slug}/`)}>
+        <a class="card" href={withBase(getExamEntryPath(certification.slug, exam.slug))}>
           <span class="card-label">{exam.name}</span>
           <div class="card-title">{exam.name} 핵심요약</div>
           <div class="card-meta">{exam.format}</div>

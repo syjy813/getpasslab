@@ -1,8 +1,17 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { CERTIFICATIONS, getSubjectLabel } from '../../../config/certifications';
+import {
+  CERTIFICATIONS,
+  getSubject,
+  getSubjectLabel,
+} from '../../../config/certifications';
 import { withBase } from '../../../config/url';
+import ChapterBadges from '../../../components/ChapterBadges.astro';
+import {
+  createChapterBadgeContext,
+  getChapterBadgeSummary,
+} from '../../../utils/chapterBadges';
 
 export function getStaticPaths() {
   return Object.values(CERTIFICATIONS).flatMap((certification) =>
@@ -23,6 +32,15 @@ const questions = (await getCollection('questions'))
   .filter(question => question.data.cert_id === certification.slug
     && question.data.exam === examDefinition.slug)
   .map(question => question.data);
+const badgeContext = createChapterBadgeContext(questions);
+const chapterCards = chapters.map(chapter => ({
+  chapter,
+  badgeSummary: getChapterBadgeSummary(
+    chapter.data.tags,
+    chapter.data.questions,
+    badgeContext,
+  ),
+}));
 const questionsById = new Map(questions.map(question => [question.id, question]));
 const linkedQuestionIds = new Set(chapters.flatMap(chapter => chapter.data.questions));
 const linkedQuestions = [...linkedQuestionIds]
@@ -41,13 +59,43 @@ const subjectCards = subjects.map(([id, subject]) => {
     questionCount: [...subjectQuestionIds].filter(questionId => questionsById.has(questionId)).length,
   };
 });
-const sessionCount = new Set(linkedQuestions.map(question => question.date)).size;
+const featuredChapters = chapterCards
+  .filter(({ badgeSummary }) => badgeSummary.frequency !== null)
+  .sort((a, b) =>
+    b.badgeSummary.sessionCount - a.badgeSummary.sessionCount
+    || b.chapter.data.questions.length - a.chapter.data.questions.length
+    || a.chapter.data.title.localeCompare(b.chapter.data.title, 'ko')
+  )
+  .slice(0, 4);
+const chapterHref = (chapter: (typeof chapters)[number]) => {
+  const chapterSubject = getSubject(
+    chapter.data.cert_id,
+    chapter.data.exam,
+    chapter.data.subject_id,
+  );
+  if (!chapterSubject) {
+    throw new Error(`Unknown chapter scope: ${chapter.data.cert_id}/${chapter.data.exam}/${chapter.data.subject_id}`);
+  }
+  return withBase(`/${chapter.data.cert_id}/${chapter.data.exam}/${chapterSubject.slug}/${chapter.data.slug}/`);
+};
+const sessionDates = [...new Set(linkedQuestions.map(question => question.date))].sort((a, b) => a.localeCompare(b));
+const sessionCount = sessionDates.length;
+const formatSessionDate = (date: string) => {
+  const [year, month, day] = date.split('-').map(Number);
+  return `${year}년 ${month}월 ${day}일`;
+};
+const sessionTooltip = sessionDates.length > 0
+  ? `수록 기출 기준: ${formatSessionDate(sessionDates[0])}부터 ${formatSessionDate(sessionDates.at(-1)!)}까지 시행된 ${sessionCount}개 회차입니다.`
+  : '연결된 기출 회차가 아직 없습니다.';
+const subjectTooltip = subjects.length > 0
+  ? `현재 출제기준 과목명: ${subjects.map(([id, subject]) => `${getSubjectLabel(Number(id), subject)} ${subject.name}`).join(' · ')}`
+  : '현재 공개된 과목이 없습니다.';
 ---
 <BaseLayout title={`${certification.name} ${examDefinition.title} — GetPassLab`} description={examDefinition.description}>
   <section class="section container" style="padding-top:var(--space-8)">
     <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
       <a href={withBase('/')}>홈</a><span class="sep">/</span>
-      <a href={withBase(`/${certification.slug}/`)}>{certification.name}</a><span class="sep">/</span>
+      <span>{certification.name}</span><span class="sep">/</span>
       <span class="current">{examDefinition.name}</span>
     </nav>
     <h1 class="gpl-h1">{examDefinition.title}</h1>
@@ -56,16 +104,47 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
     <div class="learning-summary">
       <dl class="learning-stats">
         <div class="learning-stat"><dt>공개 챕터</dt><dd>{chapters.length}개</dd></div>
-        <div class="learning-stat"><dt>연결 기출</dt><dd>{linkedQuestions.length}문항</dd></div>
-        <div class="learning-stat"><dt>시험 회차</dt><dd>{sessionCount}개</dd></div>
-        <div class="learning-stat"><dt>과목</dt><dd>{subjects.length}개</dd></div>
+        <div class="learning-stat"><dt>안내 기출 문제</dt><dd>{linkedQuestions.length}문항</dd></div>
+        <div class="learning-stat">
+          <dt class="stat-label-with-help">
+            <span>기출 회차</span>
+            <span class="info-tooltip">
+              <button type="button" class="info-trigger" aria-label="기출 회차 설명" aria-describedby="exam-session-tooltip">i</button>
+              <span id="exam-session-tooltip" class="info-tooltip-content" role="tooltip">{sessionTooltip}</span>
+            </span>
+          </dt>
+          <dd>{sessionCount}회</dd>
+        </div>
+        <div class="learning-stat">
+          <dt class="stat-label-with-help">
+            <span>과목</span>
+            <span class="info-tooltip">
+              <button type="button" class="info-trigger" aria-label="과목 명칭 설명" aria-describedby="exam-subject-tooltip">i</button>
+              <span id="exam-subject-tooltip" class="info-tooltip-content" role="tooltip">{subjectTooltip}</span>
+            </span>
+          </dt>
+          <dd>{subjects.length}개</dd>
+        </div>
       </dl>
     </div>
 
-    <div class="learning-guide">
-      <h2 class="gpl-h2">이 페이지 활용법</h2>
-      <p class="gpl-body">과목별 공개 범위를 확인한 뒤, 챕터에서 개념과 계산·판별 기준을 학습하고 연결 기출로 실제 출제 방식을 점검하세요.</p>
-    </div>
+    {featuredChapters.length > 0 && (
+      <section class="subject-section">
+        <div class="section-heading compact">
+          <h2 class="gpl-h2">{certification.name} 빈출 챕터</h2>
+          <p class="gpl-body">기출 출제 이력이 많은 핵심 개념입니다.</p>
+        </div>
+        <div class="grid grid-2">
+          {featuredChapters.map(({ chapter, badgeSummary }) => (
+            <a class="card" href={chapterHref(chapter)}>
+              <ChapterBadges badges={badgeSummary.badges} class="card-badges" />
+              <div class="card-title">{chapter.data.title}</div>
+              <div class="card-meta">{chapter.data.summary}</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
     <div class="section-heading compact">
       <h2 class="gpl-h2">과목별 학습 범위</h2>

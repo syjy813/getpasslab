@@ -34,6 +34,7 @@ export function getStaticPaths() {
 
 const { certification, examDefinition, subjectId, subject } = Astro.props;
 const subjectLabel = getSubjectLabel(subjectId, subject);
+const isSingleSubjectExam = Object.keys(examDefinition.subjects).length === 1;
 const chapters = (await getCollection('chapters')).filter(
   chapter => chapter.data.cert_id === certification.slug
     && chapter.data.exam === examDefinition.slug
@@ -66,14 +67,6 @@ const linkedQuestionIds = new Set(orderedChapters.flatMap(chapter => chapter.dat
 const linkedQuestions = [...linkedQuestionIds]
   .map(questionId => badgeContext.questionsById.get(questionId))
   .filter((question): question is { id: string; date: string } => Boolean(question));
-const groupScopes = groups.map(group => {
-  const groupChapters = orderedChapters.filter(chapter => chapter.data.group === group);
-  return {
-    name: group,
-    chapterCount: groupChapters.length,
-    representatives: groupChapters.slice(0, 3).map(chapter => chapter.data.title),
-  };
-});
 const featuredChapters = chapterCards
   .filter(({ badgeSummary }) => badgeSummary.frequency !== null)
   .sort((a, b) =>
@@ -91,11 +84,17 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
   <section class="section container" style="padding-top:var(--space-8)">
     <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
       <a href={withBase('/')}>홈</a><span class="sep">/</span>
-      <a href={withBase(`/${certification.slug}/`)}>{certification.name}</a><span class="sep">/</span>
-      <a href={withBase(`/${certification.slug}/${examDefinition.slug}/`)}>{examDefinition.name}</a><span class="sep">/</span>
-      <span class="current">{subjectLabel}</span>
+      <span>{certification.name}</span><span class="sep">/</span>
+      {isSingleSubjectExam ? (
+        <span class="current">{examDefinition.name}</span>
+      ) : (
+        <>
+          <a href={withBase(`/${certification.slug}/${examDefinition.slug}/`)}>{examDefinition.name}</a><span class="sep">/</span>
+          <span class="current">{subjectLabel}</span>
+        </>
+      )}
     </nav>
-    <span class="card-label">{subjectLabel}</span>
+    {!isSingleSubjectExam && <span class="card-label">{subjectLabel}</span>}
     <h1 class="gpl-h1" style="margin-top:var(--space-2)">{subject.name}</h1>
     <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">공개된 챕터를 학습 범위와 기출 출제 이력에 따라 탐색할 수 있습니다.</p>
 
@@ -110,23 +109,6 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
 
     {chapters.length === 0 && (
       <div class="card" style="cursor:default"><div class="card-title">콘텐츠 준비 중</div><div class="card-meta">챕터가 순차적으로 공개됩니다.</div></div>
-    )}
-
-    {groupScopes.length > 0 && (
-      <section class="subject-section">
-        <div class="section-heading compact">
-          <h2 class="gpl-h2">이 과목에서 다루는 학습 범위</h2>
-          <p class="gpl-body">학습 그룹별 공개 챕터 수와 대표 주제를 먼저 확인하세요.</p>
-        </div>
-        <div class="scope-list">
-          {groupScopes.map(group => (
-            <div class="scope-item">
-              <div><strong>{group.name}</strong><span>{group.chapterCount}개 챕터</span></div>
-              <p>{group.representatives.join(' · ')}</p>
-            </div>
-          ))}
-        </div>
-      </section>
     )}
 
     {featuredChapters.length > 0 && (
@@ -153,9 +135,13 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
         <p class="gpl-body">그룹별로 정리된 전체 공개 챕터를 확인하세요.</p>
       </div>
     )}
-    {groups.map(group => (
-      <div style="margin-bottom:var(--space-8)">
-        <h2 class="gpl-h3" style="margin-bottom:var(--space-4)">{group}</h2>
+    {groups.map((group, index) => (
+      <section
+        id={`chapter-group-${index + 1}`}
+        class="chapter-group"
+        aria-labelledby={`chapter-group-heading-${index + 1}`}
+      >
+        <h2 id={`chapter-group-heading-${index + 1}`} class="gpl-h3" style="margin-bottom:var(--space-4)">{group}</h2>
         <div class="grid grid-2">
           {chapterCards.filter(({ chapter }) => chapter.data.group === group).map(({ chapter, badgeSummary }) => (
             <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/${chapter.data.slug}/`)}>
@@ -165,7 +151,7 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
             </a>
           ))}
         </div>
-      </div>
+      </section>
     ))}
   </section>
 </BaseLayout>

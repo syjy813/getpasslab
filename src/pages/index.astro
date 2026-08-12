@@ -2,50 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import {
-  CERTIFICATIONS,
-  DEFAULT_CERTIFICATION_ID,
-  DEFAULT_EXAM_SLUG,
-  getSubject,
+  getCertificationEntryPath,
+  getFeaturedCertifications,
 } from '../config/certifications';
 import { withBase } from '../config/url';
-import ChapterBadges from '../components/ChapterBadges.astro';
-import {
-  createChapterBadgeContext,
-  getChapterBadgeSummary,
-} from '../utils/chapterBadges';
 const chapters = (await getCollection('chapters')).filter(c => c.data.status === '완료');
-const questions = (await getCollection('questions')).map(question => question.data);
-const industrialQuestions = questions.filter(
-  question => question.cert_id === DEFAULT_CERTIFICATION_ID && question.exam === DEFAULT_EXAM_SLUG,
-);
-const badgeContext = createChapterBadgeContext(industrialQuestions);
-const chapterCards = chapters
-  .filter(chapter => chapter.data.cert_id === DEFAULT_CERTIFICATION_ID)
-  .filter(chapter => chapter.data.exam === DEFAULT_EXAM_SLUG)
-  .map(chapter => ({
-  chapter,
-  badgeSummary: getChapterBadgeSummary(
-    chapter.data.tags,
-    chapter.data.questions,
-    badgeContext,
-  ),
-}));
-const certifications = Object.values(CERTIFICATIONS);
+const certifications = getFeaturedCertifications();
 const countByCertification = (certId: string) =>
   chapters.filter(chapter => chapter.data.cert_id === certId).length;
-const featured = chapterCards
-  .filter(({ badgeSummary }) => badgeSummary.frequency !== null)
-  .sort((a, b) =>
-    b.badgeSummary.sessionCount - a.badgeSummary.sessionCount
-    || b.chapter.data.questions.length - a.chapter.data.questions.length
-    || a.chapter.data.title.localeCompare(b.chapter.data.title, 'ko')
-  )
-  .slice(0, 4);
-const chHref = (c: any) => {
-  const subject = getSubject(c.data.cert_id, c.data.exam, c.data.subject_id);
-  if (!subject) throw new Error(`Unknown chapter scope: ${c.data.cert_id}/${c.data.exam}/${c.data.subject_id}`);
-  return withBase(`/${c.data.cert_id}/${c.data.exam}/${subject.slug}/${c.data.slug}/`);
-};
 ---
 <BaseLayout title="GetPassLab — 국가기술자격 핵심요약" description="국가기술자격 필기시험의 핵심 개념, 계산 공식, 법령 기준과 기출 포인트를 자격증과 과목별로 정리한 학습 서비스입니다.">
   <section class="hero">
@@ -53,7 +17,7 @@ const chHref = (c: any) => {
       <span class="hero-badge">국가기술자격 · 필기</span>
       <h1 class="gpl-display" style="max-width:680px;margin:0 auto">합격을 위한 가장 빠른 길,<br/>핵심 개념과 기출을 한 곳에서</h1>
       <div style="display:flex;gap:var(--space-3);justify-content:center;margin-top:var(--space-8);flex-wrap:wrap">
-        <a class="btn btn-primary" href={withBase(`/${certifications[0].slug}/`)}>공부 시작하기</a>
+        <a class="btn btn-primary" href={withBase(getCertificationEntryPath(certifications[0].slug))}>공부 시작하기</a>
       </div>
     </div>
   </section>
@@ -61,11 +25,11 @@ const chHref = (c: any) => {
   <section class="section container">
     <div style="margin-bottom:var(--space-6)">
       <h2 class="gpl-h1">자격증 선택</h2>
-      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">준비하는 자격증을 선택해 핵심요약 학습을 시작하세요</p>
+      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">필기시험을 준비하는 자격증을 선택해 핵심 이론을 빠르게 습득해 보세요</p>
     </div>
     <div class="grid grid-3">
       {certifications.map((certification) => (
-        <a class="card" href={withBase(`/${certification.slug}/`)}>
+        <a class="card" href={withBase(getCertificationEntryPath(certification.slug))}>
           <span class="card-label">{certification.category}</span>
           <div class="card-title">{certification.name}</div>
           <div class="card-meta">{certification.summary} · 챕터 {countByCertification(certification.slug)}개</div>
@@ -74,21 +38,16 @@ const chHref = (c: any) => {
     </div>
   </section>
 
-  {featured.length > 0 && (
-    <section class="section container">
-      <div style="margin-bottom:var(--space-6)">
-        <h2 class="gpl-h1">산업안전기사 빈출 챕터</h2>
-        <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">기출 출제 이력이 많은 핵심 개념</p>
-      </div>
-      <div class="grid grid-2">
-        {featured.map(({ chapter, badgeSummary }) => (
-          <a class="card" href={chHref(chapter)}>
-            <ChapterBadges badges={badgeSummary.badges} class="card-badges" />
-            <div class="card-title">{chapter.data.title}</div>
-            <div class="card-meta">{chapter.data.summary}</div>
-          </a>
-        ))}
-      </div>
-    </section>
-  )}
+  <section class="section container">
+    <div class="section-heading">
+      <h2 class="gpl-h1">GetPassLab에서 공부하는 방식</h2>
+      <p class="gpl-body">개념을 먼저 이해하고, 계산·판별 기준을 익힌 뒤 실제 출제 이력으로 확인합니다.</p>
+    </div>
+    <ol class="learning-steps">
+      <li><span class="learning-step-number">1</span><div><strong>핵심 개념 이해</strong><p>정의와 원리를 챕터 단위로 나눠 필요한 주제를 빠르게 찾습니다.</p></div></li>
+      <li><span class="learning-step-number">2</span><div><strong>계산·판별 기준 학습</strong><p>공식의 적용 순서와 단위, 조건·예외를 함께 확인합니다.</p></div></li>
+      <li><span class="learning-step-number">3</span><div><strong>실제 기출로 확인</strong><p>연결된 문항과 시험 회차를 통해 개념이 어떻게 출제됐는지 점검합니다.</p></div></li>
+    </ol>
+  </section>
+
 </BaseLayout>

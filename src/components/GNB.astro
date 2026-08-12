@@ -1,7 +1,7 @@
 ---
-import { CERTIFICATIONS } from '../config/certifications';
+import { getCertificationEntryPath, getFeaturedCertifications } from '../config/certifications';
 import { withBase } from '../config/url';
-const certifications = Object.values(CERTIFICATIONS);
+const certifications = getFeaturedCertifications();
 ---
 <header class="gnb">
   <nav class="gnb-inner">
@@ -14,7 +14,7 @@ const certifications = Object.values(CERTIFICATIONS);
       <div class="gnb-dropdown">
         {certifications.map((certification) => (
           <div class="gnb-certification">
-            <a class="gnb-certification-link" href={withBase(`/${certification.slug}/`)}>{certification.name}</a>
+            <a class="gnb-certification-link" href={withBase(getCertificationEntryPath(certification.slug))}>{certification.name}</a>
             {Object.values(certification.exams).map((exam) => (
               Object.entries(exam.subjects).map(([id, subject]) => (
                 <a href={withBase(`/${certification.slug}/${exam.slug}/${subject.slug}/`)}>

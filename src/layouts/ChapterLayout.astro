@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import {
   getCertification,
+  getExamEntryPath,
   getExam,
   getSubject,
   getSubjectLabel,
@@ -11,11 +12,13 @@ import ChapterBadges from '../components/ChapterBadges.astro';
 import type { ChapterBadge } from '../utils/chapterBadges';
 import { SITE } from '../config/site';
 interface SideCh { slug: string; title: string; group: string; }
+interface SubjectStartChapter { subjectId: number; chapterSlug: string; }
 interface Props {
   title: string; slug: string; summary: string; cert_id: string; exam: string;
   subject_id: number; group: string; questions?: string[];
   badges: ChapterBadge[];
   sideChapters: SideCh[];
+  subjectStartChapters: SubjectStartChapter[];
 }
 const {
   title,
@@ -27,6 +30,7 @@ const {
   questions = [],
   badges,
   sideChapters,
+  subjectStartChapters,
 } = Astro.props;
 const certification = getCertification(cert_id);
 const examDefinition = getExam(cert_id, exam);
@@ -35,8 +39,22 @@ if (!certification || !examDefinition || !subject) {
   throw new Error(`Unknown chapter scope: ${cert_id}/${exam}/${subject_id}`);
 }
 const subjectLabel = getSubjectLabel(subject_id, subject);
+const isSingleSubjectExam = Object.keys(examDefinition.subjects).length === 1;
 const routePrefix = `/${certification.slug}/${examDefinition.slug}`;
 const subjectUrl = withBase(`${routePrefix}/${subject.slug}/`);
+const examEntryUrl = withBase(getExamEntryPath(certification.slug, examDefinition.slug));
+const subjectSwitchItems = Object.entries(examDefinition.subjects).flatMap(([id, itemSubject]) => {
+  const itemSubjectId = Number(id);
+  const startChapter = subjectStartChapters.find(item => item.subjectId === itemSubjectId);
+  if (!startChapter) return [];
+
+  return [{
+    subjectId: itemSubjectId,
+    label: getSubjectLabel(itemSubjectId, itemSubject),
+    name: itemSubject.name,
+    url: withBase(`${routePrefix}/${itemSubject.slug}/${startChapter.chapterSlug}/`),
+  }];
+});
 const groups = [...new Set(sideChapters.map(c => c.group))];
 const navigableChapters = groups.flatMap(group =>
   sideChapters.filter(chapter => chapter.group === group),
@@ -73,7 +91,9 @@ const breadcrumbItems = [
   { name: '홈', url: new URL('/', siteOrigin).toString() },
   { name: certification.name, url: new URL(`/${certification.slug}/`, siteOrigin).toString() },
   { name: examDefinition.name, url: new URL(`${routePrefix}/`, siteOrigin).toString() },
-  { name: subject.name, url: new URL(`${routePrefix}/${subject.slug}/`, siteOrigin).toString() },
+  ...(!isSingleSubjectExam
+    ? [{ name: subject.name, url: new URL(`${routePrefix}/${subject.slug}/`, siteOrigin).toString() }]
+    : []),
   { name: title, url: canonicalUrl },
 ];
 const structuredData = [
@@ -115,7 +135,7 @@ const structuredData = [
   <div class="chapter-wrap">
     <aside class="chapter-side">
       <div class="side-sticky">
-        <div class="gpl-caption" style="margin-bottom:var(--space-2)">{subjectLabel} · 챕터 목록</div>
+        <div class="gpl-caption" style="margin-bottom:var(--space-2)">{isSingleSubjectExam ? '챕터 목록' : `${subjectLabel} · 챕터 목록`}</div>
         <nav class="side-nav">
           {groups.map(g => (
             <>
@@ -137,9 +157,39 @@ const structuredData = [
     <main style="min-width:0">
       <nav class="breadcrumb">
         <a href={withBase('/')}>홈</a><span class="sep">/</span>
-        <a href={withBase(`/${certification.slug}/`)}>{certification.name}</a><span class="sep">/</span>
-        <a href={withBase(`${routePrefix}/`)}>{examDefinition.name}</a><span class="sep">/</span>
-        <a href={subjectUrl}>{subjectLabel}</a><span class="sep">/</span>
+        <span>{certification.name}</span><span class="sep">/</span>
+        <a href={examEntryUrl}>{examDefinition.name}</a>
+        {!isSingleSubjectExam && (
+          <>
+            <span class="sep">/</span>
+            {subjectSwitchItems.length > 1 ? (
+              <details class="subject-switcher">
+                <summary aria-label={`${subjectLabel} 전환`}>
+                  <span>{subjectLabel}</span>
+                  <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </summary>
+                <div class="subject-switcher-menu" aria-label="과목 목록">
+                  {subjectSwitchItems.map(item => item.subjectId === subject_id ? (
+                    <span class="subject-switcher-item current" aria-current="page">
+                      <span class="subject-switcher-label">{item.label}</span>
+                      <span>{item.name}</span>
+                    </span>
+                  ) : (
+                    <a class="subject-switcher-item" href={item.url}>
+                      <span class="subject-switcher-label">{item.label}</span>
+                      <span>{item.name}</span>
+                    </a>
+                  ))}
+                </div>
+              </details>
+            ) : (
+              <a href={subjectUrl}>{subjectLabel}</a>
+            )}
+          </>
+        )}
+        <span class="sep">/</span>
         <span class="current">{title}</span>
       </nav>
       <ChapterBadges badges={badges} class="chapter-title-badges" />
@@ -196,4 +246,28 @@ const structuredData = [
       )}
     </div>
   </nav>
+  <script>
+    const desktopSubjectHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+    document.querySelectorAll('.subject-switcher').forEach((switcher) => {
+      if (!(switcher instanceof HTMLDetailsElement)) return;
+
+      switcher.addEventListener('mouseenter', () => {
+        if (desktopSubjectHover.matches) switcher.open = true;
+      });
+      switcher.addEventListener('mouseleave', () => {
+        if (desktopSubjectHover.matches) switcher.open = false;
+      });
+
+      document.addEventListener('click', (event) => {
+        if (switcher.open && !switcher.contains(event.target as Node)) switcher.open = false;
+      });
+      switcher.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          switcher.open = false;
+          switcher.querySelector('summary')?.focus();
+        }
+      });
+    });
+  </script>
 </BaseLayout>

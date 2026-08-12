@@ -89,6 +89,27 @@ const allChapters = (await getCollection('chapters')).filter(
     && candidate.data.cert_id === chapter.data.cert_id
     && candidate.data.exam === chapter.data.exam,
 );
+const subjectStartChapters = [...new Set(allChapters.map(candidate => candidate.data.subject_id))]
+  .sort((a, b) => a - b)
+  .map((candidateSubjectId) => {
+    const candidateChapters = allChapters.filter(
+      candidate => candidate.data.subject_id === candidateSubjectId,
+    );
+    const hasSubjectWideOrder = new Set(
+      candidateChapters.map(candidate => candidate.data.order),
+    ).size === candidateChapters.length;
+    const orderedChapters = hasSubjectWideOrder
+      ? [...candidateChapters].sort(
+          (a, b) => a.data.order - b.data.order || a.data.slug.localeCompare(b.data.slug),
+        )
+      : candidateChapters;
+
+    return {
+      subjectId: candidateSubjectId,
+      chapterSlug: orderedChapters[0]?.data.slug,
+    };
+  })
+  .filter((item): item is { subjectId: number; chapterSlug: string } => Boolean(item.chapterSlug));
 const manual = chapter.data.related
   .map(slug => allChapters.find(candidate => candidate.data.slug === slug)?.data)
   .filter(Boolean);
@@ -112,7 +133,12 @@ const sideChapters = orderedSideChapters
     group: candidate.data.group,
   }));
 ---
-<ChapterLayout {...chapter.data} badges={badgeSummary.badges} sideChapters={sideChapters}>
+<ChapterLayout
+  {...chapter.data}
+  badges={badgeSummary.badges}
+  sideChapters={sideChapters}
+  subjectStartChapters={subjectStartChapters}
+>
   <Content />
   <QuestionHistory questions={linked as any} examComment={chapter.data.examComment} />
   <RelatedChapters

@@ -66,6 +66,30 @@ export type CertificationId = keyof typeof CERTIFICATIONS;
 
 export const DEFAULT_CERTIFICATION_ID: CertificationId = 'industrial-safety';
 export const DEFAULT_EXAM_SLUG = 'written';
+export const FEATURED_CERTIFICATION_IDS: readonly CertificationId[] = [
+  DEFAULT_CERTIFICATION_ID,
+  'energy-management',
+];
+
+export function getFeaturedCertifications() {
+  return FEATURED_CERTIFICATION_IDS.map(certId => CERTIFICATIONS[certId]);
+}
+
+export function getCertificationEntryPath(certId: string): string {
+  return getCertification(certId)?.exams[DEFAULT_EXAM_SLUG]
+    ? getExamEntryPath(certId, DEFAULT_EXAM_SLUG)
+    : `/${certId}/`;
+}
+
+export function getExamEntryPath(certId: string, examSlug: string): string {
+  const exam = getExam(certId, examSlug);
+  if (!exam) return `/${certId}/`;
+
+  const subjects = Object.values(exam.subjects);
+  return subjects.length === 1
+    ? `/${certId}/${examSlug}/${subjects[0].slug}/`
+    : `/${certId}/${examSlug}/`;
+}
 
 export function getCertification(certId: string): CertificationDefinition | undefined {
   return CERTIFICATIONS[certId as CertificationId];

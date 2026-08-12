@@ -1,8 +1,8 @@
 ---
 import { withBase } from '../config/url';
 import { SITE } from '../config/site';
-import { CERTIFICATIONS } from '../config/certifications';
-const certifications = Object.values(CERTIFICATIONS);
+import { getCertificationEntryPath, getFeaturedCertifications } from '../config/certifications';
+const certifications = getFeaturedCertifications();
 ---
 <footer class="footer">
   <div class="footer-inner">
@@ -14,7 +14,7 @@ const certifications = Object.values(CERTIFICATIONS);
       <h4>학습</h4>
       <ul>
         {certifications.map((certification) => (
-          <li><a href={withBase(`/${certification.slug}/`)}>{certification.name}</a></li>
+          <li><a href={withBase(getCertificationEntryPath(certification.slug))}>{certification.name}</a></li>
         ))}
       </ul>
     </div>
