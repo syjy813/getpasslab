@@ -14,29 +14,18 @@ status: 완료
 
 원형톱 안전장치는 회전 톱날의 접촉과 재료 반발을 줄이는 보호수단이다. 문제에서는 톱날 접촉부의 방호와 절단 재료의 비산·반발 방지를 분리해 본다.
 
-<figure class="chapter-figure chapter-figure-wide">
-  <img
-    src="/images/chapters/circular-saw-devices/circular-saw-devices.svg"
-    alt="둥근톱의 날접촉예방장치, 분할날, 반발예방장치와 가공재 진행방향의 위치 관계"
-    width="1100"
-    height="650"
-    loading="lazy"
-    decoding="async"
-  />
-  <figcaption>
-    내용 기준: <a href="https://www.kosha.or.kr/ebook/fcatalog/access/ecatalogt.jsp?Dir=633&amp;callmode=normal&amp;catimage=&amp;eclang=ko&amp;start=58&amp;um=s" target="_blank" rel="external noopener">한국산업안전보건공단, 산업안전보건기준에 관한 규칙 해설(59쪽)</a>
-    · GetPassLab 학습용 재구성
-  </figcaption>
-</figure>
-
 ## 판별 기준
 
-### 주요 장치
+### 방호장치 비교
 
-- 톱날 덮개는 노출된 톱날을 가리고 절단 작업에 필요한 부분만 제한적으로 노출한다.
-- 분할날은 절단 후 재료가 톱날을 조여 되튐하는 현상을 줄인다.
-- 반발방지장치는 재료가 작업자 방향으로 튀는 것을 억제한다.
-- 보조 가이드와 작업대는 재료를 안정적으로 지지하고 절단선에서 손이 벗어나도록 돕는다.
+| 구분 | 주요 역할 | 문제 판별 기준 |
+| --- | --- | --- |
+| **톱날 덮개** | 톱날 접촉 방지 | 노출된 톱날을 가리고 절단에 필요한 부분만 제한적으로 노출한다. |
+| **분할날** | 끼임·반발 억제 | 톱날 뒤에서 절단 틈이 닫히며 재료가 톱날을 조이는 현상을 줄인다. |
+| **반발방지장치** | 재료의 역방향 튐 방지 | 가공재가 이송 반대 방향인 작업자 쪽으로 되튀는 것을 억제한다. |
+| **보조 가이드·작업대** | 재료 지지와 안정적인 이송 | 손이 절단선에 접근하지 않도록 돕는 보조수단이며 주 방호장치를 대신하지 않는다. |
+
+*내용 기준: [한국산업안전보건공단, 산업안전보건기준에 관한 규칙 해설(59쪽)](https://www.kosha.or.kr/ebook/fcatalog/access/ecatalogt.jsp?Dir=633&callmode=normal&catimage=&eclang=ko&start=58&um=s) · GetPassLab 학습용 정리*
 
 ### 적용 판단
 

@@ -24,18 +24,6 @@ examComment: 도구의 정의 문장을 주고 명칭을 고르는 유형 고정
 | **클로즈(Close)분석** | 2개 이상의 문제 관계를 분석, 데이터를 집계해 클로즈 그림으로 표시 | 요인 간 관계 |
 | **관리도** | 재해 발생 건수 추이에 상방·하방 관리한계선을 설정해 목표 관리 | 한계선(UCL·LCL) |
 
-<figure class="chapter-figure chapter-figure-wide">
-  <img
-    src="/images/chapters/accident-analysis-tools/accident-analysis-tools.svg"
-    alt="파레토도, 특성요인도, 클로즈분석, 관리도의 대표 형태를 비교한 그림"
-    width="1000"
-    height="650"
-    loading="lazy"
-    decoding="async"
-  />
-  <figcaption>GetPassLab 자체 제작 · 네 분석도구의 대표 형태를 단순화한 학습용 도식</figcaption>
-</figure>
-
 ## 판별 기준
 
 | 도구 | 형태 | 용도 |

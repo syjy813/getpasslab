@@ -8,7 +8,6 @@
     <path d="M32 56H968" stroke="#9ca3af" stroke-width="1"/>
 
     <text x="36" y="88" font-size="18" font-weight="600">사상기호</text>
-    <path d="M32 101H968" stroke="#d1d5db" stroke-width="1"/>
     <path d="M266 101V258M500 101V258M734 101V258" stroke="#e5e7eb" stroke-width="1"/>
 
     <g text-anchor="middle" stroke="#374151" stroke-width="3.5" fill="none" stroke-linejoin="round">
@@ -43,30 +42,32 @@
 
     <path d="M32 274H968" stroke="#9ca3af" stroke-width="1"/>
     <text x="36" y="307" font-size="18" font-weight="600">게이트 기호</text>
-    <path d="M32 320H968" stroke="#d1d5db" stroke-width="1"/>
     <path d="M266 320V535M500 320V535M734 320V535" stroke="#e5e7eb" stroke-width="1"/>
 
-    <g text-anchor="middle" stroke="#374151" stroke-width="3.5" fill="none" stroke-linejoin="round">
+    <g text-anchor="middle" stroke="#374151" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
       <g transform="translate(149 389)">
-        <path d="M-45 30V0C-45-36-25-55 0-55S45-36 45 0V30Z"/>
-        <path d="M-24 30V54M24 30V54M0-55V-76"/>
+        <path d="M-42 30V0C-42-34-23-52 0-52S42-34 42 0V30Z"/>
+        <path d="M-22 30V58M22 30V58M0-52V-76"/>
       </g>
       <g transform="translate(383 389)">
-        <path d="M-48 31C-27 10-22-29-31-55C-9-46 9-46 31-55C22-29 27 10 48 31C17 20-17 20-48 31Z"/>
-        <path d="M-23 29V54M23 29V54M0-51V-76"/>
+        <path d="M0-45C-28-24-42 2-42 32C-18 18 18 18 42 32C42 2 28-24 0-45Z"/>
+        <path d="M-21 22V58M21 22V58M0-45V-76"/>
       </g>
       <g transform="translate(617 389)">
-        <path d="M-44 0 25-39V39Z"/>
-        <circle cx="37" cy="0" r="10" fill="#fff"/>
-        <path d="M-44 0H-66M47 0H66"/>
+        <path d="M0-70V-38M0 38V65"/>
+        <rect x="-36" y="-38" width="72" height="76"/>
       </g>
-      <g transform="translate(851 389)">
-        <path d="M0-49 48-20V35L0 64-48 35V-20Z"/>
-        <path d="M0-49V-72M48 8H73"/>
+      <g transform="translate(826 389)">
+        <path d="M0-45 38-22V22L0 45-38 22V-22Z"/>
+        <path d="M0-45V-72M0 45V65M38 0H52"/>
+        <rect x="52" y="-19" width="72" height="38" rx="18"/>
       </g>
     </g>
 
-    <text x="940" y="403" text-anchor="middle" font-size="16" font-weight="600">P</text>
+    <g text-anchor="middle" font-weight="500" fill="#111827">
+      <text x="617" y="397" font-size="24">A</text>
+      <text x="914" y="395" font-size="16">P</text>
+    </g>
 
     <g text-anchor="middle">
       <text x="149" y="477" font-size="17" font-weight="600">AND 게이트</text>

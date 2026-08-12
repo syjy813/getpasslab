@@ -13,43 +13,6 @@ related: [conveyor-safety, industrial-robot-safety]
 examComment: 안정도 4개 수치와 헤드가드 강도(2배·4톤 한도)가 번갈아 출제. 앞바퀴 모멘트 평형 계산형도 반복.
 ---
 
-## 구조 한눈에 보기
-
-<figure class="chapter-figure">
-  <div class="chapter-figure-visual">
-    <img
-      src="/images/chapters/forklift-safety/kosha-forklift-structure.webp"
-      alt="지게차의 포크, 마스트, 백레스트, 헤드가드 등 주요 구조를 번호로 표시한 그림"
-      width="645"
-      height="700"
-      loading="lazy"
-      decoding="async"
-    />
-    <ol class="chapter-figure-key" aria-label="지게차 구조 명칭">
-      <li>포크</li>
-      <li>백레스트</li>
-      <li>틸트 실린더</li>
-      <li>마스트</li>
-      <li>전조등</li>
-      <li>조향핸들</li>
-      <li>안전벨트</li>
-      <li>제동장치</li>
-      <li>헤드가드</li>
-      <li>후미등</li>
-      <li>방향지시기</li>
-      <li>후진경보장치</li>
-      <li>카운터웨이트</li>
-      <li>전륜</li>
-      <li>후륜</li>
-    </ol>
-  </div>
-  <figcaption>
-    출처: <a href="https://www.kosha.or.kr/ebook/fcatalog/include/monthly_detail.jsp?ccate=010C0B0000&amp;cimg=&amp;sdir=159" rel="external">한국산업안전보건공단, 「월간 안전보건 2012년 11월호」 70쪽</a>
-    · <a href="https://www.kogl.or.kr/info/licenseType1.do" rel="external">공공누리 제1유형</a>
-    · 일부 발췌·편집
-  </figcaption>
-</figure>
-
 ## 핵심 공식
 
 작업 상태별 안정도 기준.

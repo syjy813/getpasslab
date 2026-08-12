@@ -176,6 +176,9 @@ article .chapter-figure{width:min(100%,640px);margin:var(--space-4) 0 var(--spac
 article .chapter-figure-wide{width:min(100%,800px)}
 article .chapter-figure-visual{display:grid;grid-template-columns:minmax(0,2fr) minmax(150px,1fr);gap:var(--space-3);align-items:center}
 article .chapter-figure img{display:block;width:100%;height:auto;border-radius:var(--radius-md)}
+article .chapter-figure-zoom-target{display:block;border-radius:var(--radius-md);cursor:zoom-in}
+article .chapter-figure-zoom-target:focus-visible{outline:3px solid var(--primary-500);outline-offset:3px}
+article .chapter-figure-zoom-link{display:inline-flex;margin-left:var(--space-2);font-weight:var(--fw-semibold);white-space:nowrap}
 article .chapter-figure-page{position:relative;overflow:hidden;border-radius:var(--radius-md)}
 article .chapter-figure-page+.chapter-figure-page{margin-top:var(--space-3)}
 article .chapter-figure-page img{border-radius:0}
@@ -187,8 +190,8 @@ article .chapter-figure-section-title strong{font-weight:800}
 article .chapter-figure-section-title-prohibition{left:0;top:8.56%;width:15.52%;height:16.03%}
 article .chapter-figure-section-title-warning{left:29.19%;top:24.59%;width:15.21%;height:16.68%}
 article .chapter-figure-section-title-mandatory{left:58.06%;top:56.97%;width:13.52%;height:24.37%}
-article .chapter-figure-section-title-guide{left:0;top:0;width:19.66%;height:20.89%}
-article .chapter-figure-section-title-restricted{left:0;top:20.89%;width:32.56%;height:32.1%}
+article .chapter-figure-section-title-guide{left:0;top:0;width:19.66%;height:20.89%;background:#eaf1fa}
+article .chapter-figure-section-title-restricted{left:0;top:20.89%;width:32.56%;height:32.1%;background:#eaf1fa}
 article .chapter-figure-section-title-copy{left:0;top:53.15%;width:19.66%;height:46.85%}
 article .chapter-figure-key{display:grid;gap:3px;margin:0;padding-left:1.5rem}
 article .chapter-figure-key li{font-size:var(--fs-caption);line-height:1.4}

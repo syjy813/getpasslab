@@ -1,58 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
   <title id="title">FT도와 미니멀 컷셋 전개</title>
-  <desc id="desc">정상사상 T가 A와 B 또는 A와 C의 동시 발생으로 생기는 결함수와 미니멀 컷셋 전개를 보여주는 그림</desc>
+  <desc id="desc">정상사상 T가 A와 B 또는 A와 C의 동시 발생으로 생기는 결함수와 미니멀 컷셋 전개를 흑백 선화로 보여주는 그림</desc>
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3 0 6Z" fill="#2563eb"/></marker>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3 0 6Z" fill="#374151"/></marker>
+    <g id="event-top" stroke="#374151" stroke-width="3.5" fill="none" stroke-linejoin="round">
+      <path d="M0-31V-48M0 31V48"/>
+      <rect x="-48" y="-31" width="96" height="62"/>
+    </g>
+    <g id="event-basic" stroke="#374151" stroke-width="3.5" fill="none" stroke-linejoin="round">
+      <path d="M0-38V-53"/>
+      <circle r="38"/>
+    </g>
+    <g id="gate-and" stroke="#374151" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-42 30V0C-42-34-23-52 0-52S42-34 42 0V30Z"/>
+      <path d="M-22 30V58M22 30V58M0-52V-76"/>
+    </g>
+    <g id="gate-or" stroke="#374151" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M0-45C-28-24-42 2-42 32C-18 18 18 18 42 32C42 2 28-24 0-45Z"/>
+      <path d="M-21 22V58M21 22V58M0-45V-76"/>
+    </g>
   </defs>
-  <rect width="1000" height="620" rx="28" fill="#f8fafc"/>
-  <text x="500" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">AND는 같은 행 · OR은 행 분리</text>
+  <rect width="1000" height="620" rx="28" fill="#fff" stroke="#d1d5db" stroke-width="2"/>
+  <text x="500" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#111827">AND는 같은 행 · OR은 행 분리</text>
 
   <g transform="translate(45 82)" font-family="Arial, sans-serif">
-    <rect width="430" height="485" rx="24" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
-    <text x="215" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1d4ed8">예시 FT도</text>
-    <rect x="174" y="63" width="82" height="46" rx="8" fill="#fee2e2" stroke="#991b1b" stroke-width="3"/>
-    <text x="215" y="94" text-anchor="middle" font-size="22" font-weight="700" fill="#7f1d1d">T</text>
-    <path d="M215 109v34" stroke="#0f172a" stroke-width="4"/>
-    <path d="M172 205c18-17 23-48 16-70 19 7 35 7 54 0-7 22-2 53 16 70-29-9-57-9-86 0Z" fill="#dcfce7" stroke="#0f172a" stroke-width="4"/>
-    <text x="215" y="180" text-anchor="middle" font-size="17" font-weight="700">OR</text>
-    <path d="M194 204v30H115v37M236 204v30h79v37" fill="none" stroke="#0f172a" stroke-width="4"/>
-    <g>
-      <path d="M77 330v-28c0-28 17-42 38-42s38 14 38 42v28Z" fill="#dbeafe" stroke="#0f172a" stroke-width="4"/>
-      <text x="115" y="306" text-anchor="middle" font-size="17" font-weight="700">AND</text>
-      <path d="M95 330v43M135 330v43" stroke="#0f172a" stroke-width="4"/>
-      <circle cx="95" cy="404" r="25" fill="#fff" stroke="#0f172a" stroke-width="4"/>
-      <circle cx="135" cy="404" r="25" fill="#fff" stroke="#0f172a" stroke-width="4"/>
-      <text x="95" y="411" text-anchor="middle" font-size="20" font-weight="700">A</text>
-      <text x="135" y="411" text-anchor="middle" font-size="20" font-weight="700">B</text>
-    </g>
-    <g>
-      <path d="M277 330v-28c0-28 17-42 38-42s38 14 38 42v28Z" fill="#dbeafe" stroke="#0f172a" stroke-width="4"/>
-      <text x="315" y="306" text-anchor="middle" font-size="17" font-weight="700">AND</text>
-      <path d="M295 330v43M335 330v43" stroke="#0f172a" stroke-width="4"/>
-      <circle cx="295" cy="404" r="25" fill="#fff" stroke="#0f172a" stroke-width="4"/>
-      <circle cx="335" cy="404" r="25" fill="#fff" stroke="#0f172a" stroke-width="4"/>
-      <text x="295" y="411" text-anchor="middle" font-size="20" font-weight="700">A</text>
-      <text x="335" y="411" text-anchor="middle" font-size="20" font-weight="700">C</text>
-    </g>
-    <text x="215" y="465" text-anchor="middle" font-size="18" fill="#475569">T = AB + AC</text>
+    <rect width="430" height="500" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2"/>
+    <text x="215" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">예시 FT도 · T = AB + AC</text>
+
+    <use href="#event-top" transform="translate(215 92)"/>
+    <text x="215" y="100" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">T</text>
+
+    <use href="#gate-or" transform="translate(215 194)"/>
+    <text x="215" y="202" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">OR</text>
+    <path d="M194 252V256H115V260M236 252V256H315V260" fill="none" stroke="#374151" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <use href="#gate-and" transform="translate(115 336)"/>
+    <text x="115" y="344" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">AND</text>
+    <path d="M93 394V396H65V397M137 394V396H165V397" fill="none" stroke="#374151" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <use href="#event-basic" transform="translate(65 450)"/>
+    <use href="#event-basic" transform="translate(165 450)"/>
+    <text x="65" y="458" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">A</text>
+    <text x="165" y="458" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">B</text>
+
+    <use href="#gate-and" transform="translate(315 336)"/>
+    <text x="315" y="344" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">AND</text>
+    <path d="M293 394V396H265V397M337 394V396H365V397" fill="none" stroke="#374151" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <use href="#event-basic" transform="translate(265 450)"/>
+    <use href="#event-basic" transform="translate(365 450)"/>
+    <text x="265" y="458" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">A</text>
+    <text x="365" y="458" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">C</text>
   </g>
 
-  <path d="M495 324h54" stroke="#2563eb" stroke-width="6" marker-end="url(#arrow)"/>
+  <path d="M495 324h54" stroke="#374151" stroke-width="6" marker-end="url(#arrow)"/>
 
   <g transform="translate(565 82)" font-family="Arial, sans-serif">
-    <rect width="390" height="485" rx="24" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
-    <text x="195" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1d4ed8">Fussell 전개</text>
-    <rect x="45" y="75" width="300" height="66" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
-    <text x="195" y="102" text-anchor="middle" font-size="17" fill="#1e3a8a">OR: 행을 분리</text>
-    <text x="195" y="127" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">[ AB ]   [ AC ]</text>
-    <rect x="45" y="169" width="300" height="66" rx="12" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
-    <text x="195" y="196" text-anchor="middle" font-size="17" fill="#166534">AND: 같은 행에 나열</text>
-    <text x="195" y="221" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">A·B      A·C</text>
-    <path d="M195 250v48" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow)"/>
-    <rect x="45" y="315" width="300" height="112" rx="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
-    <text x="195" y="350" text-anchor="middle" font-size="18" fill="#92400e">포함·중복 제거 후</text>
-    <text x="195" y="385" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">{A,B}   {A,C}</text>
-    <text x="195" y="414" text-anchor="middle" font-size="18" font-weight="700" fill="#92400e">미니멀 컷셋</text>
-    <text x="195" y="462" text-anchor="middle" font-size="17" fill="#475569">단일 고장 컷셋이 있으면 최우선 개선</text>
+    <rect width="390" height="500" rx="24" fill="#fff" stroke="#d1d5db" stroke-width="2"/>
+    <text x="195" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Fussell 전개</text>
+    <rect x="45" y="75" width="300" height="66" rx="12" fill="#f9fafb" stroke="#9ca3af" stroke-width="2"/>
+    <text x="195" y="102" text-anchor="middle" font-size="17" fill="#374151">OR: 행을 분리</text>
+    <text x="195" y="127" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">[ AB ]   [ AC ]</text>
+    <rect x="45" y="169" width="300" height="66" rx="12" fill="#f9fafb" stroke="#9ca3af" stroke-width="2"/>
+    <text x="195" y="196" text-anchor="middle" font-size="17" fill="#374151">AND: 같은 행에 나열</text>
+    <text x="195" y="221" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">A·B      A·C</text>
+    <path d="M195 250v48" stroke="#374151" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="45" y="315" width="300" height="112" rx="16" fill="#f3f4f6" stroke="#4b5563" stroke-width="3"/>
+    <text x="195" y="350" text-anchor="middle" font-size="18" fill="#374151">포함·중복 제거 후</text>
+    <text x="195" y="385" text-anchor="middle" font-size="24" font-weight="700" fill="#111827">{A,B}   {A,C}</text>
+    <text x="195" y="414" text-anchor="middle" font-size="18" font-weight="700" fill="#374151">미니멀 컷셋</text>
+    <text x="195" y="462" text-anchor="middle" font-size="17" fill="#4b5563">단일 고장 컷셋이 있으면 최우선 개선</text>
   </g>
 </svg>
