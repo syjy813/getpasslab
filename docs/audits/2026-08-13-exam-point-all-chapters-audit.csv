@@ -1,0 +1,240 @@
+﻿챕터명,사이트 링크,파일,연결 기출,시험 포인트 행,볼드 수,정답 선택지 완전 일치,정답 키워드 대조,키워드 대조율,부정형 문항,긍정형 문항,본문 정답 근거 대조,본문 대조율,누락 기출 ID,태그,검토 플래그
+아세틸렌 특성 (희석제·제조),/industrial-safety/written/chemical/acetylene-properties/,chemical/acetylene-properties.md,8,5,6,3,5,0.625,1,7,6,0.857,,개념,부정형 1
+단열 압축 온도,/industrial-safety/written/chemical/adiabatic-compression/,chemical/adiabatic-compression.md,2,8,8,2,2,1.000,0,2,2,1.000,,계산,계산 직접 검토
+BLEVE (비등액체증기폭발),/industrial-safety/written/chemical/bleve/,chemical/bleve.md,2,6,9,1,2,1.000,0,2,2,1.000,,개념,
+Burgess-Wheeler 법칙,/industrial-safety/written/chemical/burgess-wheeler/,chemical/burgess-wheeler.md,1,6,9,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+산업안전보건규칙 위험물질 분류,/industrial-safety/written/chemical/chemical-classification/,chemical/chemical-classification.md,10,6,6,7,8,0.800,1,9,9,1.000,,개념,부정형 1
+CO₂ 소화약제 특성,/industrial-safety/written/chemical/co2-extinguisher/,chemical/co2-extinguisher.md,2,6,7,0,1,0.500,2,0,0,1.000,,개념,부정형 2
+연소 범위와 위험성,/industrial-safety/written/chemical/combustion-range-risk/,chemical/combustion-range-risk.md,21,8,11,3,8,0.381,2,19,11,0.579,,개념,부정형 2
+완전연소 조성 농도 (Cst),/industrial-safety/written/chemical/complete-combustion-cst/,chemical/complete-combustion-cst.md,8,13,12,3,4,0.500,0,8,5,0.625,,계산,계산 직접 검토
+농도 환산 (vol% → mg/L),/industrial-safety/written/chemical/concentration-conversion/,chemical/concentration-conversion.md,3,7,7,0,1,0.333,0,3,3,1.000,,계산,계산 직접 검토
+분진폭발 요인 (화학·물리적),/industrial-safety/written/chemical/dust-explosion-factors/,chemical/dust-explosion-factors.md,13,6,9,1,6,0.462,4,9,9,1.000,,개념,부정형 4
+흡열반응 물질,/industrial-safety/written/chemical/endothermic-substances/,chemical/endothermic-substances.md,1,5,6,1,1,1.000,0,1,1,1.000,,개념,
+폭발 종류 (물리·화학),/industrial-safety/written/chemical/explosion-types/,chemical/explosion-types.md,3,6,7,1,1,0.333,3,0,0,1.000,,개념,부정형 3
+소화약제별 주 소화효과,/industrial-safety/written/chemical/extinguisher-effects/,chemical/extinguisher-effects.md,4,6,6,3,3,0.750,0,4,3,0.750,,개념,
+화재 분류 A·B·C·D급,/industrial-safety/written/chemical/fire-classification/,chemical/fire-classification.md,5,6,7,5,5,1.000,0,5,5,1.000,,개념,
+소화 원리 4가지,/industrial-safety/written/chemical/fire-suppression-principles/,chemical/fire-suppression-principles.md,1,6,6,0,1,1.000,0,1,1,1.000,,개념,
+인화점 vs 발화점,/industrial-safety/written/chemical/flash-vs-ignition-point/,chemical/flash-vs-ignition-point.md,9,4,4,1,3,0.333,2,7,5,0.714,,개념,부정형 2
+푸리에 열전도 법칙,/industrial-safety/written/chemical/fourier-heat-law/,chemical/fourier-heat-law.md,1,5,5,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+이상기체 법칙,/industrial-safety/written/chemical/ideal-gas-law/,chemical/ideal-gas-law.md,0,7,7,0,0,1.000,0,0,0,1.000,,계산,계산 직접 검토
+Jones 식 (폭발범위 추정),/industrial-safety/written/chemical/jones-formula/,chemical/jones-formula.md,4,6,8,1,1,0.250,0,4,2,0.500,,계산,계산 직접 검토
+르샤틀리에 법칙,/industrial-safety/written/chemical/lechatelier-law/,chemical/lechatelier-law.md,1,6,6,0,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+혼합 용액 농도,/industrial-safety/written/chemical/mixed-solution-concentration/,chemical/mixed-solution-concentration.md,2,6,6,0,2,1.000,0,2,2,1.000,,계산,계산 직접 검토
+퍼지 (불활성화),/industrial-safety/written/chemical/purge-inerting/,chemical/purge-inerting.md,1,7,8,1,1,1.000,1,0,0,1.000,,개념,부정형 1
+위험물 반응 가스 발생,/industrial-safety/written/chemical/reactive-dangerous-gases/,chemical/reactive-dangerous-gases.md,2,5,5,1,1,0.500,0,2,2,1.000,,개념,
+반응기·증류탑·열교환기,/industrial-safety/written/chemical/reactor-distillation-equipment/,chemical/reactor-distillation-equipment.md,9,6,6,0,4,0.444,7,2,2,1.000,,개념,부정형 7
+폭발 위험 낮은 조합,/industrial-safety/written/chemical/safe-explosion-combinations/,chemical/safe-explosion-combinations.md,5,6,7,1,4,0.800,1,4,4,1.000,,개념,부정형 1
+안전밸브 전단·후단 차단밸브 금지 예외,/industrial-safety/written/chemical/safety-valve-shutoff-exception/,chemical/safety-valve-shutoff-exception.md,3,8,10,2,3,1.000,2,1,1,1.000,,개념 법령,법령 직접 검토 · 부정형 2
+자연발화,/industrial-safety/written/chemical/spontaneous-combustion/,chemical/spontaneous-combustion.md,7,10,10,2,5,0.714,5,2,1,0.500,,개념,부정형 5
+이론 공기량 (Ao),/industrial-safety/written/chemical/theoretical-air/,chemical/theoretical-air.md,1,6,6,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+독성 지표 (LD50·LC50·TLV),/industrial-safety/written/chemical/toxicity-indices/,chemical/toxicity-indices.md,2,6,7,2,2,1.000,0,2,2,1.000,,개념,
+용기 충전량,/industrial-safety/written/chemical/vessel-charge-amount/,chemical/vessel-charge-amount.md,1,4,4,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+금수성 물질 소화기,/industrial-safety/written/chemical/water-prohibited-extinguishers/,chemical/water-prohibited-extinguishers.md,1,6,7,1,1,1.000,0,1,1,1.000,,개념,
+건설공사 유해·위험방지계획서 제출 기준,/industrial-safety/written/construction/construction-hazard-plan-documents/,construction/construction-hazard-plan-documents.md,13,6,6,0,9,0.692,8,5,5,1.000,,개념 법령,법령 직접 검토 · 부정형 8
+작업면 조도 기준,/industrial-safety/written/construction/construction-illuminance/,construction/construction-illuminance.md,2,4,4,0,2,1.000,2,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 2
+해체 작업 안전 조치,/industrial-safety/written/construction/demolition-safety-measures/,construction/demolition-safety-measures.md,6,9,16,1,5,0.833,5,1,0,0.000,,절차,본문 정답 근거 대조 낮음 · 부정형 5
+흙막이 지보공 구성요소,/industrial-safety/written/construction/earth-retaining-components/,construction/earth-retaining-components.md,6,6,7,1,2,0.333,5,1,1,1.000,,개념,부정형 5
+굴착면 기울기 기준표,/industrial-safety/written/construction/excavation-slope-standard/,construction/excavation-slope-standard.md,8,6,7,3,7,0.875,3,5,5,1.000,,개념 법령,법령 직접 검토 · 부정형 3
+안전대·추락방지 설비,/industrial-safety/written/construction/fall-prevention-equipment/,construction/fall-prevention-equipment.md,4,6,6,1,3,0.750,0,4,4,1.000,,개념,
+현문 사다리 설치기준,/industrial-safety/written/construction/gangway-ladder-standard/,construction/gangway-ladder-standard.md,2,6,7,1,2,1.000,1,1,1,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+달비계 안전계수 기준,/industrial-safety/written/construction/hanging-scaffold-safety-factor/,construction/hanging-scaffold-safety-factor.md,4,6,6,0,4,1.000,4,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 4
+사다리식 통로·고정식 사다리 기준,/industrial-safety/written/construction/ladder-cage-standard/,construction/ladder-cage-standard.md,8,7,9,5,8,1.000,3,5,5,1.000,,개념 법령,법령 직접 검토 · 부정형 3
+항타기·항발기 무너짐·권상 기준,/industrial-safety/written/construction/pile-driver-stability/,construction/pile-driver-stability.md,4,5,7,0,1,0.250,2,2,2,1.000,,개념 법령,법령 직접 검토 · 부정형 2
+안전난간 구조 및 설치요건,/industrial-safety/written/construction/safety-handrail-structure/,construction/safety-handrail-structure.md,3,7,8,2,3,1.000,2,1,1,1.000,,개념 법령,법령 직접 검토 · 부정형 2
+산업안전보건관리비,/industrial-safety/written/construction/safety-management-cost/,construction/safety-management-cost.md,12,6,6,4,7,0.583,2,10,7,0.700,,개념 법령,법령 직접 검토 · 부정형 2
+추락방호망 설치기준,/industrial-safety/written/construction/safety-net-standards/,construction/safety-net-standards.md,9,6,10,6,6,0.667,2,7,7,1.000,,개념,부정형 2
+동바리 안전기준,/industrial-safety/written/construction/shore-safety-standard/,construction/shore-safety-standard.md,11,6,7,0,5,0.455,8,3,2,0.667,,개념 법령,법령 직접 검토 · 부정형 8
+법면 붕괴 예방조치 3대 핵심,/industrial-safety/written/construction/slope-collapse-prevention/,construction/slope-collapse-prevention.md,1,6,6,0,1,1.000,0,1,1,1.000,,절차,
+사면 안정 공법 분류,/industrial-safety/written/construction/slope-stabilization-methods/,construction/slope-stabilization-methods.md,1,6,7,0,1,1.000,1,0,0,1.000,,개념,부정형 1
+토사붕괴 원인·예방,/industrial-safety/written/construction/soil-collapse-prevention/,construction/soil-collapse-prevention.md,6,9,9,2,4,0.667,4,2,2,1.000,,개념,부정형 4
+흙의 투수계수 영향 인자,/industrial-safety/written/construction/soil-permeability-factors/,construction/soil-permeability-factors.md,1,6,6,0,1,1.000,1,0,0,1.000,,개념,부정형 1
+토질 시험 종류,/industrial-safety/written/construction/soil-test-types/,construction/soil-test-types.md,1,5,7,0,1,1.000,0,1,1,1.000,,개념,
+강관틀비계 조립 준수사항,/industrial-safety/written/construction/steel-frame-scaffold/,construction/steel-frame-scaffold.md,6,7,11,1,6,1.000,3,3,3,1.000,,개념 법령,법령 직접 검토 · 부정형 3
+철골작업 안전,/industrial-safety/written/construction/steel-frame-work/,construction/steel-frame-work.md,10,6,6,0,7,0.700,6,4,4,1.000,,개념 법령,법령 직접 검토 · 부정형 6
+강관비계·강관틀비계 설치 기준,/industrial-safety/written/construction/steel-pipe-scaffold/,construction/steel-pipe-scaffold.md,9,7,11,0,9,1.000,5,4,4,1.000,,개념 법령,법령 직접 검토 · 부정형 5
+가설통로·계단 기준,/industrial-safety/written/construction/temporary-passage-stairs/,construction/temporary-passage-stairs.md,9,7,10,1,9,1.000,5,4,4,1.000,,개념 법령,법령 직접 검토 · 부정형 5
+가설구조물 4대 특징,/industrial-safety/written/construction/temporary-structure-defects/,construction/temporary-structure-defects.md,1,6,7,0,1,1.000,1,0,0,1.000,,개념,부정형 1
+타워크레인 와이어로프 지지,/industrial-safety/written/construction/tower-crane-rope-support/,construction/tower-crane-rope-support.md,3,5,5,0,2,0.667,3,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 3
+타워크레인 강풍 작업중지 기준,/industrial-safety/written/construction/tower-crane-wind-limits/,construction/tower-crane-wind-limits.md,1,6,8,0,1,1.000,0,1,1,1.000,,개념 법령,법령 직접 검토
+터널·발파 안전,/industrial-safety/written/construction/tunnel-blasting/,construction/tunnel-blasting.md,16,17,16,1,14,0.875,14,2,2,1.000,,절차 법령,법령 직접 검토 · 부정형 14
+차량계 하역운반기계 전도 방지,/industrial-safety/written/construction/vehicle-overturn-prevention/,construction/vehicle-overturn-prevention.md,3,6,8,2,3,1.000,3,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 3
+진동 1차 설비진단법 3가지,/industrial-safety/written/mechanical/vibration-diagnosis/,construction/vibration-diagnosis.md,1,5,5,1,1,1.000,1,0,0,1.000,,개념,부정형 1
+통로발판 구조 기준,/industrial-safety/written/construction/walkway-board-standard/,construction/walkway-board-standard.md,1,6,6,0,1,1.000,1,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+작업발판 기준,/industrial-safety/written/construction/work-platform-standards/,construction/work-platform-standards.md,6,6,6,0,5,0.833,4,2,2,1.000,,개념 법령,법령 직접 검토 · 부정형 4
+인체 통전전류별 영향,/industrial-safety/written/electrical/body-current-effect/,electrical/body-current-effect.md,1,6,7,1,1,1.000,1,0,0,1.000,,개념,부정형 1
+통전전류,/industrial-safety/written/electrical/body-current/,electrical/body-current.md,1,6,6,0,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+인체 피부 전기저항 영향 인자,/industrial-safety/written/electrical/body-resistance-factors/,electrical/body-resistance-factors.md,2,6,6,2,2,1.000,1,1,1,1.000,,개념,부정형 1
+차단기 종류 비교,/industrial-safety/written/electrical/breaker-types/,electrical/breaker-types.md,1,6,6,1,1,1.000,0,1,1,1.000,,개념,
+전하량·정전용량,/industrial-safety/written/electrical/charge-capacitance/,electrical/charge-capacitance.md,2,6,9,1,2,1.000,0,2,2,1.000,,계산,계산 직접 검토
+합성저항 (직렬·병렬),/industrial-safety/written/electrical/combined-resistance/,electrical/combined-resistance.md,1,7,8,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+전기화재 원인,/industrial-safety/written/electrical/electrical-fire-causes/,electrical/electrical-fire-causes.md,8,6,6,1,2,0.250,4,4,4,1.000,,개념,부정형 4
+정전유도 분배 전압,/industrial-safety/written/electrical/electrostatic-induction/,electrical/electrostatic-induction.md,3,7,7,3,3,1.000,0,3,3,1.000,,계산,계산 직접 검토
+폭발등급 측정 표준용기,/industrial-safety/written/electrical/explosion-grade-vessel/,electrical/explosion-grade-vessel.md,3,6,6,0,2,0.667,0,3,3,1.000,,개념 법령,법령 직접 검토
+방폭 3대 기본 개념,/industrial-safety/written/electrical/explosion-proof-basics/,electrical/explosion-proof-basics.md,1,7,7,1,1,1.000,1,0,0,1.000,,개념,부정형 1
+방폭전기기기 표시코드,/industrial-safety/written/electrical/explosion-proof-code/,electrical/explosion-proof-code.md,5,7,10,0,3,0.600,3,2,1,0.500,,개념,부정형 3
+금속관 방폭형 부속품,/industrial-safety/written/electrical/explosion-proof-fittings/,electrical/explosion-proof-fittings.md,2,6,7,1,2,1.000,1,1,1,1.000,,개념,부정형 1
+방폭구조 대표 6가지,/industrial-safety/written/electrical/explosion-proof-types/,electrical/explosion-proof-types.md,16,7,14,0,13,0.813,10,6,6,1.000,,개념,부정형 10
+방폭기기 온도등급 (T1~T6),/industrial-safety/written/electrical/explosion-temperature-class/,electrical/explosion-temperature-class.md,4,7,7,1,3,0.750,0,4,3,0.750,,개념 법령,법령 직접 검토
+폭발 위험 장소 0·1·2종,/industrial-safety/written/electrical/explosion-zones/,electrical/explosion-zones.md,5,6,7,2,4,0.800,1,4,4,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+가스 그룹 분류 (IIA/IIB/IIC),/industrial-safety/written/electrical/gas-group-classification/,electrical/gas-group-classification.md,2,6,10,0,1,0.500,2,0,0,1.000,,개념,부정형 2
+가스 그룹별 최소 이격거리,/industrial-safety/written/electrical/gas-group-distance/,electrical/gas-group-distance.md,2,6,7,2,2,1.000,0,2,2,1.000,,개념 법령,법령 직접 검토
+접지공사 면제·생략 조건,/industrial-safety/written/electrical/grounding-exemption/,electrical/grounding-exemption.md,2,6,6,0,2,1.000,1,1,1,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+전기기기 접지 대상,/industrial-safety/written/electrical/grounding-targets/,electrical/grounding-targets.md,1,6,6,0,1,1.000,1,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+접지공사 종류별 기준,/industrial-safety/written/electrical/grounding-types/,electrical/grounding-types.md,9,7,7,2,7,0.778,3,6,6,1.000,,개념 법령,법령 직접 검토 · 부정형 3
+절연물 등급별 허용온도,/industrial-safety/written/electrical/insulation-temperature/,electrical/insulation-temperature.md,2,6,6,0,2,1.000,0,2,2,1.000,,개념 법령,법령 직접 검토
+누전차단기 설치 불필요 조건,/industrial-safety/written/electrical/leakage-breaker-exception/,electrical/leakage-breaker-exception.md,4,4,4,0,1,0.250,1,3,2,0.667,,개념 법령,법령 직접 검토 · 부정형 1
+누전차단기 구조·정격·시설기준,/industrial-safety/written/electrical/leakage-breaker-types/,electrical/leakage-breaker-types.md,11,6,10,3,7,0.636,5,6,6,1.000,,개념,부정형 5
+누전 사고 취약 개소,/industrial-safety/written/electrical/leakage-vulnerable-points/,electrical/leakage-vulnerable-points.md,1,6,6,0,1,1.000,1,0,0,1.000,,개념,부정형 1
+피뢰기 구비조건,/industrial-safety/written/electrical/lightning-arrester-conditions/,electrical/lightning-arrester-conditions.md,2,6,6,1,1,0.500,1,1,1,1.000,,개념,부정형 1
+피뢰설비 설치 기준,/industrial-safety/written/electrical/lightning-protection-standard/,electrical/lightning-protection-standard.md,3,6,8,0,1,0.333,3,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 3
+저압전로 절연저항 기준,/industrial-safety/written/electrical/low-voltage-insulation/,electrical/low-voltage-insulation.md,3,5,6,1,3,1.000,1,2,2,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+저압전선로 허용 누설전류,/industrial-safety/written/electrical/max-leakage-current/,electrical/max-leakage-current.md,3,7,7,3,3,1.000,0,3,3,1.000,,개념 법령,법령 직접 검토
+옴의 법칙,/industrial-safety/written/electrical/ohms-law/,electrical/ohms-law.md,4,6,6,3,3,0.750,0,4,3,0.750,,계산,계산 직접 검토
+정전기 방지 배관 유속 제한,/industrial-safety/written/electrical/pipe-flow-limit/,electrical/pipe-flow-limit.md,2,7,8,0,2,1.000,1,1,1,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+전력 기준 전류 (단상·3상),/industrial-safety/written/electrical/power-current/,electrical/power-current.md,1,6,7,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+전력 공식,/industrial-safety/written/electrical/power-formula/,electrical/power-formula.md,2,8,10,2,2,1.000,0,2,2,1.000,,계산,계산 직접 검토
+정전작업 절차 6단계,/industrial-safety/written/electrical/power-off-procedure/,electrical/power-off-procedure.md,11,6,8,0,6,0.545,5,6,6,1.000,,절차,부정형 5
+감전사고 방지 대책,/industrial-safety/written/electrical/shock-prevention/,electrical/shock-prevention.md,9,10,10,2,8,0.889,6,3,3,1.000,,절차,부정형 6
+정전기 축적 에너지,/industrial-safety/written/electrical/static-energy/,electrical/static-energy.md,6,10,13,4,5,0.833,0,6,5,0.833,,계산,계산 직접 검토
+정전기 발생 요인,/industrial-safety/written/electrical/static-occurrence-factors/,electrical/static-occurrence-factors.md,8,6,6,0,5,0.625,4,4,3,0.750,,개념,부정형 4
+정전기 재해 방지 대책,/industrial-safety/written/electrical/static-prevention/,electrical/static-prevention.md,14,15,15,2,9,0.643,10,4,3,0.750,,절차,부정형 10
+허용보폭전압·접촉전압,/industrial-safety/written/electrical/step-touch-voltage/,electrical/step-touch-voltage.md,1,7,7,1,1,1.000,0,1,1,1.000,,개념,
+심실세동·전격사 위험,/industrial-safety/written/electrical/ventricular-fibrillation-current/,electrical/ventricular-fibrillation-current.md,4,6,6,0,3,0.750,2,2,2,1.000,,계산,계산 직접 검토 · 부정형 2
+심실세동 위험한계 에너지,/industrial-safety/written/electrical/vf-danger-energy/,electrical/vf-danger-energy.md,11,10,10,11,5,0.455,0,11,5,0.455,,계산,본문 정답 근거 대조 낮음 · 계산 직접 검토
+아크 용접기 허용사용률,/industrial-safety/written/electrical/welder-duty-cycle/,electrical/welder-duty-cycle.md,2,6,6,2,2,1.000,0,2,2,1.000,,계산,계산 직접 검토
+교류 아크 용접기 효율,/industrial-safety/written/electrical/welder-efficiency/,electrical/welder-efficiency.md,1,6,6,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+교류 아크 용접기 전격 방지기 설치,/industrial-safety/written/electrical/welder-shock-protector/,electrical/welder-shock-protector.md,5,10,10,1,5,1.000,2,3,3,1.000,,개념,부정형 2
+과전류 전선 발화 단계,/industrial-safety/written/electrical/wire-ignition-stages/,electrical/wire-ignition-stages.md,1,6,8,1,1,1.000,0,1,1,1.000,,개념,
+보일러 계측·부속장치,/energy-management/written/thermal-equipment/boiler-accessory-equipment/,energy-management/thermal-equipment/boiler-accessory-equipment.md,86,10,10,3,30,0.349,52,34,16,0.471,,개념,본문 정답 근거 대조 낮음 · 부정형 52
+보일러 부대설비,/energy-management/written/thermal-equipment/boiler-auxiliary-equipment/,energy-management/thermal-equipment/boiler-auxiliary-equipment.md,74,11,11,7,22,0.297,39,35,16,0.457,,개념,본문 정답 근거 대조 낮음 · 부정형 39
+보일러 자동제어와 인터록,/energy-management/written/thermal-equipment/boiler-control-systems/,energy-management/thermal-equipment/boiler-control-systems.md,69,15,15,18,32,0.464,19,50,30,0.600,,개념,부정형 19
+보일러 효율·증발량·열정산,/energy-management/written/thermal-equipment/boiler-efficiency-heat-balance/,energy-management/thermal-equipment/boiler-efficiency-heat-balance.md,103,8,9,11,53,0.515,28,75,50,0.667,,계산,계산 직접 검토 · 부정형 28
+연소·공기비·배기가스 계산,/energy-management/written/thermal-equipment/boiler-installation-combustion/,energy-management/thermal-equipment/boiler-installation-combustion.md,44,7,8,4,24,0.545,10,34,21,0.618,,계산,계산 직접 검토 · 부정형 10
+열·증기·열역학 기초,/energy-management/written/thermal-equipment/boiler-operation-basics/,energy-management/thermal-equipment/boiler-operation-basics.md,92,14,13,18,29,0.315,14,78,36,0.462,,개념,본문 정답 근거 대조 낮음 · 부정형 14
+보일러 기동·운전·정지,/energy-management/written/thermal-equipment/boiler-operation-maintenance/,energy-management/thermal-equipment/boiler-operation-maintenance.md,60,9,9,3,15,0.250,42,18,10,0.556,,절차,부정형 42
+배관·이음쇠·밸브,/energy-management/written/thermal-equipment/boiler-piping-insulation/,energy-management/thermal-equipment/boiler-piping-insulation.md,100,14,13,14,39,0.390,24,76,30,0.395,,개념,본문 정답 근거 대조 낮음 · 부정형 24
+보일러 안전장치,/energy-management/written/thermal-equipment/boiler-protection-devices/,energy-management/thermal-equipment/boiler-protection-devices.md,73,14,13,16,41,0.562,25,48,33,0.688,,절차,부정형 25
+보일러 형식·구조·재료,/energy-management/written/thermal-equipment/boiler-types-construction/,energy-management/thermal-equipment/boiler-types-construction.md,142,13,12,15,53,0.373,50,92,44,0.478,,개념,본문 정답 근거 대조 낮음 · 부정형 50
+보일러 수질관리,/energy-management/written/thermal-equipment/boiler-water-treatment/,energy-management/thermal-equipment/boiler-water-treatment.md,96,10,10,7,22,0.229,49,47,19,0.404,,개념,정답 키워드 대조 낮음 · 본문 정답 근거 대조 낮음 · 부정형 49
+보일러 작업안전과 사고예방,/energy-management/written/thermal-equipment/boiler-work-safety/,energy-management/thermal-equipment/boiler-work-safety.md,34,11,11,4,16,0.471,26,8,5,0.625,,절차,부정형 26
+버너·화격자·연소장치,/energy-management/written/thermal-equipment/burners-furnaces-atomization/,energy-management/thermal-equipment/burners-furnaces-atomization.md,62,11,11,7,27,0.435,29,33,19,0.576,,개념,부정형 29
+통풍·연도·굴뚝,/energy-management/written/thermal-equipment/draft-flue-gas/,energy-management/thermal-equipment/draft-flue-gas.md,47,10,10,8,20,0.426,20,27,15,0.556,,계산,계산 직접 검토 · 부정형 20
+에너지 관계법규와 검사 체계,/energy-management/written/thermal-equipment/energy-laws-and-inspection/,energy-management/thermal-equipment/energy-laws-and-inspection.md,167,13,12,14,65,0.389,45,122,69,0.566,,개념 법령,법령 직접 검토 · 부정형 45
+집진·환경설비,/energy-management/written/thermal-equipment/environmental-pollution-control/,energy-management/thermal-equipment/environmental-pollution-control.md,31,8,8,3,16,0.516,13,18,13,0.722,,개념,부정형 13
+연료 특성·발열량,/energy-management/written/thermal-equipment/fuel-properties/,energy-management/thermal-equipment/fuel-properties.md,83,15,14,13,32,0.386,37,46,15,0.326,,개념,본문 정답 근거 대조 낮음 · 부정형 37
+난방부하·방열기 계산,/energy-management/written/thermal-equipment/heating-load-radiators/,energy-management/thermal-equipment/heating-load-radiators.md,45,7,7,1,16,0.356,12,33,13,0.394,,계산,본문 정답 근거 대조 낮음 · 계산 직접 검토 · 부정형 12
+증기·온수·복사난방,/energy-management/written/thermal-equipment/heating-systems/,energy-management/thermal-equipment/heating-systems.md,114,13,12,10,31,0.272,50,64,47,0.734,,개념,부정형 50
+보온·단열재,/energy-management/written/thermal-equipment/insulation-materials/,energy-management/thermal-equipment/insulation-materials.md,41,10,10,11,15,0.366,13,28,15,0.536,,개념,부정형 13
+증기트랩·응축수 환수,/energy-management/written/thermal-equipment/steam-traps-condensate/,energy-management/thermal-equipment/steam-traps-condensate.md,25,8,8,8,17,0.680,8,17,13,0.765,,개념,부정형 8
+인체측정·설계원칙,/industrial-safety/written/ergonomics/anthropometry-design/,ergonomics/anthropometry-design.md,4,6,6,1,3,0.750,1,3,2,0.667,,개념,부정형 1
+음성통신 지수 — AI·SIL·PNC,/industrial-safety/written/ergonomics/articulation-index/,ergonomics/articulation-index.md,2,6,6,1,2,1.000,0,2,2,1.000,,개념,
+가용도 (Availability),/industrial-safety/written/ergonomics/availability/,ergonomics/availability.md,1,6,7,0,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+양립성,/industrial-safety/written/ergonomics/compatibility/,ergonomics/compatibility.md,1,7,7,0,1,1.000,1,0,0,1.000,,개념,부정형 1
+합성 소음,/industrial-safety/written/ergonomics/composite-noise/,ergonomics/composite-noise.md,1,6,6,0,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+C/R비 (Control-Response),/industrial-safety/written/ergonomics/cr-ratio/,ergonomics/cr-ratio.md,1,7,8,0,1,1.000,1,0,0,1.000,,개념,부정형 1
+컷셋·패스셋·미니멀,/industrial-safety/written/ergonomics/cutset-pathset/,ergonomics/cutset-pathset.md,13,6,7,0,11,0.846,1,12,10,0.833,,개념,부정형 1
+ECRS 원리,/industrial-safety/written/ergonomics/ecrs-principle/,ergonomics/ecrs-principle.md,1,7,7,1,1,1.000,0,1,1,1.000,,개념,
+배타적 OR 게이트,/industrial-safety/written/ergonomics/exclusive-or-gate/,ergonomics/exclusive-or-gate.md,1,6,7,0,1,1.000,0,1,1,1.000,,개념,
+FMEA,/industrial-safety/written/ergonomics/fmea/,ergonomics/fmea.md,7,6,6,0,4,0.571,3,4,3,0.750,,개념,부정형 3
+FTA 수행 절차,/industrial-safety/written/ergonomics/fta-procedure/,ergonomics/fta-procedure.md,6,6,6,0,2,0.333,2,4,2,0.500,,절차,부정형 2
+FTA 사상기호와 게이트 기호,/industrial-safety/written/ergonomics/fta-symbols/,ergonomics/fta-symbols.md,11,8,8,7,9,0.818,0,11,9,0.818,,개념,
+유해·위험 방지계획서 작성 자격,/industrial-safety/written/ergonomics/hazard-prevention-plan-qualification/,ergonomics/hazard-prevention-plan-qualification.md,1,6,8,0,1,1.000,1,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+조도·휘도·반사율 관계,/industrial-safety/written/ergonomics/illuminance-luminance-reflectance/,ergonomics/illuminance-luminance-reflectance.md,1,6,6,1,1,1.000,0,1,1,1.000,,개념,
+정보량 (엔트로피 H),/industrial-safety/written/ergonomics/information-entropy/,ergonomics/information-entropy.md,3,6,6,3,3,1.000,0,3,3,1.000,,계산,계산 직접 검토
+휘도 (L),/industrial-safety/written/ergonomics/luminance/,ergonomics/luminance.md,2,7,7,1,1,0.500,1,1,1,1.000,,계산,계산 직접 검토 · 부정형 1
+보전의 종류 5가지,/industrial-safety/written/ergonomics/maintenance-types/,ergonomics/maintenance-types.md,2,6,7,2,2,1.000,0,2,2,1.000,,개념,
+인간-기계 시스템 설계 6단계,/industrial-safety/written/ergonomics/man-machine-system-design/,ergonomics/man-machine-system-design.md,5,6,6,1,4,0.800,2,3,3,1.000,,절차,부정형 2
+MIL-STD-882B 발생빈도 분류,/industrial-safety/written/ergonomics/mil-std-882b-frequency/,ergonomics/mil-std-882b-frequency.md,1,6,6,0,1,1.000,0,1,1,1.000,,개념,
+근골격계 유해요인 5종,/industrial-safety/written/ergonomics/msd-risk-factors/,ergonomics/msd-risk-factors.md,4,10,11,0,3,0.750,2,2,1,0.500,,개념,부정형 2
+MTTF (평균동작시간),/industrial-safety/written/ergonomics/mttf/,ergonomics/mttf.md,1,6,6,0,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+휴식시간 산정 (Murrell),/industrial-safety/written/ergonomics/murrell-rest-formula/,ergonomics/murrell-rest-formula.md,2,6,6,1,1,0.500,0,2,1,0.500,,계산,계산 직접 검토
+산소소비량,/industrial-safety/written/ergonomics/oxygen-consumption/,ergonomics/oxygen-consumption.md,2,6,6,2,2,1.000,0,2,2,1.000,,계산,계산 직접 검토
+점광원 조도,/industrial-safety/written/ergonomics/point-source-illuminance/,ergonomics/point-source-illuminance.md,2,7,7,2,2,1.000,0,2,2,1.000,,계산,계산 직접 검토
+정성적 평가 항목,/industrial-safety/written/ergonomics/qualitative-assessment-items/,ergonomics/qualitative-assessment-items.md,2,6,6,2,2,1.000,0,2,2,1.000,,개념,
+정량적 평가 항목,/industrial-safety/written/ergonomics/quantitative-assessment-items/,ergonomics/quantitative-assessment-items.md,4,6,7,3,4,1.000,3,1,1,1.000,,개념,부정형 3
+신뢰도 R(t),/industrial-safety/written/ergonomics/reliability-rt/,ergonomics/reliability-rt.md,1,6,7,0,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+RMR (에너지 대사율),/industrial-safety/written/ergonomics/rmr-energy-metabolism/,ergonomics/rmr-energy-metabolism.md,1,6,6,0,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+안전성 평가 기본원칙 6단계,/industrial-safety/written/ergonomics/safety-assessment-basic-principles/,ergonomics/safety-assessment-basic-principles.md,1,6,10,1,1,1.000,1,0,0,1.000,,절차,부정형 1
+안전보건개선계획서 항목,/industrial-safety/written/ergonomics/safety-improvement-plan-items/,ergonomics/safety-improvement-plan-items.md,0,6,6,0,0,1.000,0,0,0,1.000,,개념 법령,법령 직접 검토
+직렬·병렬 신뢰도,/industrial-safety/written/ergonomics/series-parallel-reliability/,ergonomics/series-parallel-reliability.md,3,6,6,2,2,0.667,0,3,2,0.667,,계산,계산 직접 검토
+신호검출이론 (SDT),/industrial-safety/written/ergonomics/signal-detection-theory/,ergonomics/signal-detection-theory.md,1,5,6,0,1,1.000,0,1,1,1.000,,개념,
+Swain 인간 실수 분류,/industrial-safety/written/ergonomics/swain-human-error/,ergonomics/swain-human-error.md,5,6,6,2,5,1.000,4,1,1,1.000,,개념,부정형 4
+시스템 분석 기법 비교,/industrial-safety/written/ergonomics/system-analysis-techniques/,ergonomics/system-analysis-techniques.md,11,9,10,3,7,0.636,5,6,4,0.667,,개념,부정형 5
+시스템 수명주기 5단계,/industrial-safety/written/ergonomics/system-lifecycle/,ergonomics/system-lifecycle.md,5,7,7,2,2,0.400,0,5,3,0.600,,절차,
+온열조건 (WBGT·실효온도),/industrial-safety/written/ergonomics/thermal-conditions-wbgt/,ergonomics/thermal-conditions-wbgt.md,2,6,6,0,1,0.500,0,2,1,0.500,,개념,
+THERP·휴먼에러 정량화,/industrial-safety/written/ergonomics/therp-human-error/,ergonomics/therp-human-error.md,2,6,6,0,1,0.500,0,2,1,0.500,,개념,
+총 소음 노출량 (TND),/industrial-safety/written/ergonomics/total-noise-dose/,ergonomics/total-noise-dose.md,1,6,7,0,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+VDT 화면 대비,/industrial-safety/written/ergonomics/vdt-contrast/,ergonomics/vdt-contrast.md,1,7,7,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+웨버-페히너 법칙,/industrial-safety/written/ergonomics/weber-fechner-law/,ergonomics/weber-fechner-law.md,1,6,8,0,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+작업장 배치 원칙,/industrial-safety/written/ergonomics/workplace-layout-principles/,ergonomics/workplace-layout-principles.md,4,6,6,0,3,0.750,1,3,2,0.667,,개념,부정형 1
+표준화 변수 Z,/industrial-safety/written/ergonomics/z-score/,ergonomics/z-score.md,2,6,6,2,2,1.000,0,2,2,1.000,,계산,계산 직접 검토
+평형 플랜지 지름,/industrial-safety/written/mechanical/balance-flange-diameter/,mechanical/balance-flange-diameter.md,4,6,6,4,4,1.000,0,4,4,1.000,,개념,
+보일러 안전장치,/industrial-safety/written/mechanical/boiler-safety-devices/,mechanical/boiler-safety-devices.md,15,11,11,9,12,0.800,4,11,9,0.818,,개념,부정형 4
+공동현상 (Cavitation),/industrial-safety/written/chemical/cavitation/,mechanical/cavitation.md,2,6,6,1,1,0.500,1,1,1,1.000,,개념,부정형 1
+둥근톱기계 방호장치 분류,/industrial-safety/written/mechanical/circular-saw-devices/,mechanical/circular-saw-devices.md,5,8,10,3,4,0.800,3,2,2,1.000,,개념,부정형 3
+콘베이어 안전,/industrial-safety/written/mechanical/conveyor-safety/,mechanical/conveyor-safety.md,10,11,11,2,6,0.600,7,3,3,1.000,,개념 법령,법령 직접 검토 · 부정형 7
+크레인 전용탑승설비 추락방지,/industrial-safety/written/mechanical/crane-passenger-safety/,mechanical/crane-passenger-safety.md,1,5,5,0,1,1.000,1,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+크레인 로프 하중,/industrial-safety/written/mechanical/crane-rope-load/,mechanical/crane-rope-load.md,2,6,7,2,2,1.000,0,2,2,1.000,,계산,계산 직접 검토
+크레인 안전장치,/industrial-safety/written/mechanical/crane-safety-devices/,mechanical/crane-safety-devices.md,5,9,10,5,5,1.000,3,2,2,1.000,,개념,부정형 3
+설비 안전화 3가지 분류,/industrial-safety/written/mechanical/equipment-safety-three/,mechanical/equipment-safety-three.md,3,6,6,3,3,1.000,2,1,1,1.000,,개념,부정형 2
+기계의 5대 위험점,/industrial-safety/written/mechanical/five-pinch-points/,mechanical/five-pinch-points.md,3,5,6,3,3,1.000,0,3,3,1.000,,개념,
+지게차 안전,/industrial-safety/written/mechanical/forklift-safety/,mechanical/forklift-safety.md,13,7,13,3,7,0.538,3,10,7,0.700,,계산 법령,계산 직접 검토 · 법령 직접 검토 · 부정형 3
+연삭기 노출각도 기준,/industrial-safety/written/mechanical/grinder-exposure-angle/,mechanical/grinder-exposure-angle.md,2,4,4,2,2,1.000,0,2,2,1.000,,개념 법령,법령 직접 검토
+연삭숫돌 회전속도,/industrial-safety/written/mechanical/grinder-rotation-speed/,mechanical/grinder-rotation-speed.md,3,8,8,2,2,0.667,0,3,2,0.667,,계산,계산 직접 검토
+수인식 방호장치 일반구조 기준,/industrial-safety/written/mechanical/hand-pull-device-structure/,mechanical/hand-pull-device-structure.md,1,6,7,0,1,1.000,1,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+보호망·가드 개구부 안전간격,/industrial-safety/written/mechanical/ilo-guard-opening/,mechanical/ilo-guard-opening.md,2,6,6,0,1,0.500,0,2,2,1.000,,계산,계산 직접 검토
+산업용 로봇 안전 조치,/industrial-safety/written/mechanical/industrial-robot-safety/,mechanical/industrial-robot-safety.md,10,6,7,2,7,0.700,7,3,3,1.000,,절차,부정형 7
+공작기계 안전 (선반·밀링·드릴),/industrial-safety/written/mechanical/machine-tools-safety/,mechanical/machine-tools-safety.md,22,6,7,5,10,0.455,11,11,9,0.818,,절차,부정형 11
+금형 설치·해체 안전조치와 안전블록,/industrial-safety/written/mechanical/mold-safety/,mechanical/mold-safety.md,10,9,9,3,7,0.700,7,3,1,0.333,,절차,본문 정답 근거 대조 낮음 · 부정형 7
+양중기 과부하방지장치 기준,/industrial-safety/written/mechanical/overload-prevention-device/,mechanical/overload-prevention-device.md,4,6,6,1,2,0.500,1,3,3,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+침투탐상검사 순서 6단계,/industrial-safety/written/mechanical/penetrant-test-procedure/,mechanical/penetrant-test-procedure.md,2,6,6,0,1,0.500,0,2,1,0.500,,절차,
+프레스 방호장치 적용 조건과 SPM 기준,/industrial-safety/written/mechanical/press-device-conditions/,mechanical/press-device-conditions.md,2,7,11,0,2,1.000,2,0,0,1.000,,개념,부정형 2
+프레스 작업시작 전 점검사항 7가지,/industrial-safety/written/mechanical/press-pre-work-checklist/,mechanical/press-pre-work-checklist.md,9,6,6,0,7,0.778,7,2,2,1.000,,절차 법령,법령 직접 검토 · 부정형 7
+프레스 방호장치 종류,/industrial-safety/written/mechanical/press-safety-devices/,mechanical/press-safety-devices.md,12,6,6,3,9,0.750,4,8,7,0.875,,개념,부정형 4
+프레스 방호장치 안전거리,/industrial-safety/written/mechanical/press-safety-distance/,mechanical/press-safety-distance.md,4,6,8,1,4,1.000,0,4,4,1.000,,계산,계산 직접 검토
+롤러기 급정지장치 조작부 로프 기준,/industrial-safety/written/mechanical/roller-stop-rope-standard/,mechanical/roller-stop-rope-standard.md,1,4,5,0,1,1.000,0,1,1,1.000,,개념 법령,법령 직접 검토
+롤러기 급정지거리,/industrial-safety/written/mechanical/roller-stopping-distance/,mechanical/roller-stopping-distance.md,5,10,12,3,5,1.000,2,3,3,1.000,,계산,계산 직접 검토 · 부정형 2
+안전인증대상 방호장치 판별,/industrial-safety/written/mechanical/safety-certification-8/,mechanical/safety-certification-8.md,1,4,4,1,1,1.000,1,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 1
+안전계수 (SF),/industrial-safety/written/mechanical/safety-factor/,mechanical/safety-factor.md,6,6,6,3,4,0.667,0,6,6,1.000,,계산,계산 직접 검토
+형삭기 구조와 램,/industrial-safety/written/mechanical/shaper-structure/,mechanical/shaper-structure.md,1,6,6,1,1,1.000,1,0,0,1.000,,개념,부정형 1
+슬링 와이어 장력,/industrial-safety/written/mechanical/sling-wire-tension/,mechanical/sling-wire-tension.md,1,7,8,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+서징(Surging) 현상,/industrial-safety/written/chemical/surging-phenomenon/,mechanical/surging-phenomenon.md,1,8,9,0,1,1.000,1,0,0,1.000,,개념,부정형 1
+재료 시험 종류,/industrial-safety/written/mechanical/test-types/,mechanical/test-types.md,14,15,15,3,7,0.500,7,7,4,0.571,,개념,부정형 7
+주요 용접 결함 종류,/industrial-safety/written/mechanical/welding-defects/,mechanical/welding-defects.md,3,6,6,2,2,0.667,1,2,2,1.000,,개념,부정형 1
+와이어 로프 꼬임 종류,/industrial-safety/written/mechanical/wire-rope-twist-types/,mechanical/wire-rope-twist-types.md,2,6,7,0,2,1.000,2,0,0,1.000,,개념,부정형 2
+재해분석 도구 4종,/industrial-safety/written/safety-management/accident-analysis-tools/,safety-management/accident-analysis-tools.md,5,6,6,3,3,0.600,2,3,3,1.000,,개념,부정형 2
+재해 원인 분류,/industrial-safety/written/safety-management/accident-cause-classification/,safety-management/accident-cause-classification.md,5,6,8,0,4,0.800,3,2,2,1.000,,개념,부정형 3
+재해 발생 학설 4가지,/industrial-safety/written/safety-management/accident-occurrence-theories/,safety-management/accident-occurrence-theories.md,4,4,4,3,3,0.750,3,1,1,1.000,,개념,부정형 3
+재해예방 4원칙,/industrial-safety/written/safety-management/accident-prevention-principles/,safety-management/accident-prevention-principles.md,6,6,7,0,6,1.000,5,1,1,1.000,,개념,부정형 5
+재해 비율 법칙,/industrial-safety/written/safety-management/accident-ratio-law/,safety-management/accident-ratio-law.md,5,6,10,1,3,0.600,0,5,3,0.600,,개념,
+연천인율,/industrial-safety/written/safety-management/annual-1000-rate/,safety-management/annual-1000-rate.md,3,8,8,1,2,0.667,0,3,3,1.000,,계산,계산 직접 검토
+버드의 수정 도미노 이론,/industrial-safety/written/safety-management/bird-domino-theory/,safety-management/bird-domino-theory.md,2,6,6,0,1,0.500,1,1,1,1.000,,개념,부정형 1
+부주의 발생 원인·사고방지대책,/industrial-safety/written/safety-management/carelessness-misjudgment/,safety-management/carelessness-misjudgment.md,2,6,6,1,2,1.000,1,1,1,1.000,,개념,부정형 1
+사망만인율,/industrial-safety/written/safety-management/fatality-per-10k/,safety-management/fatality-per-10k.md,1,4,4,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+도수율,/industrial-safety/written/safety-management/frequency-rate/,safety-management/frequency-rate.md,1,5,6,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+종합재해지수 (FSI),/industrial-safety/written/safety-management/frequency-severity-indicator/,safety-management/frequency-severity-indicator.md,1,5,6,1,1,1.000,0,1,1,1.000,,계산,계산 직접 검토
+집단토의법 종류,/industrial-safety/written/safety-management/group-discussion-methods/,safety-management/group-discussion-methods.md,1,6,6,0,1,1.000,0,1,1,1.000,,개념,
+위험예지훈련,/industrial-safety/written/safety-management/hazard-prediction-training/,safety-management/hazard-prediction-training.md,5,6,7,1,3,0.600,1,4,4,1.000,,절차,부정형 1
+하인리히 도미노 이론,/industrial-safety/written/safety-management/heinrich-domino-theory/,safety-management/heinrich-domino-theory.md,2,6,6,0,2,1.000,0,2,2,1.000,,개념,
+인간 동작특성 - 과정별 착오요인,/industrial-safety/written/safety-management/human-error-by-process/,safety-management/human-error-by-process.md,3,9,9,1,3,1.000,2,1,1,1.000,,개념,부정형 2
+인간관계 메커니즘,/industrial-safety/written/safety-management/human-relations-mechanism/,safety-management/human-relations-mechanism.md,4,6,6,2,2,0.500,2,2,2,1.000,,개념,부정형 2
+산재보험 보험급여 8종,/industrial-safety/written/safety-management/industrial-accident-insurance/,safety-management/industrial-accident-insurance.md,4,9,12,3,3,0.750,3,1,1,1.000,,개념 법령,법령 직접 검토 · 부정형 3
+리더십·헤드십,/industrial-safety/written/safety-management/leadership-headship/,safety-management/leadership-headship.md,2,6,6,0,1,0.500,2,0,0,1.000,,개념,부정형 2
+학습이론 (손다이크·파블로프·스키너),/industrial-safety/written/safety-management/learning-theories/,safety-management/learning-theories.md,2,6,7,0,2,1.000,1,1,1,1.000,,개념,부정형 1
+동기부여 이론 (매슬로·맥그리거·허즈버그),/industrial-safety/written/safety-management/motivation-theories/,safety-management/motivation-theories.md,3,8,8,2,2,0.667,2,1,0,0.000,,개념,본문 정답 근거 대조 낮음 · 부정형 2
+OJT·Off-JT,/industrial-safety/written/safety-management/ojt-offjt/,safety-management/ojt-offjt.md,5,6,7,0,3,0.600,3,2,1,0.500,,개념,부정형 3
+제조물책임법 결함 유형,/industrial-safety/written/safety-management/product-liability-defects/,safety-management/product-liability-defects.md,0,6,6,0,0,1.000,0,0,0,1.000,,개념 법령,법령 직접 검토
+보호구 종류 및 적용,/industrial-safety/written/safety-management/protective-equipment-types/,safety-management/protective-equipment-types.md,10,14,13,7,9,0.900,1,9,8,0.889,,개념,부정형 1
+위험성 감소 대책 우선순위,/industrial-safety/written/safety-management/risk-reduction-priority/,safety-management/risk-reduction-priority.md,1,7,11,0,1,1.000,0,1,1,1.000,,절차,
+안전보건교육 시간 총정리,/industrial-safety/written/safety-management/safety-education-hours/,safety-management/safety-education-hours.md,4,7,9,1,4,1.000,3,1,1,1.000,,개념 법령,법령 직접 검토 · 부정형 3
+교육의 3단계·단계별 과정,/industrial-safety/written/safety-management/safety-education-stages/,safety-management/safety-education-stages.md,2,6,6,1,2,1.000,1,1,1,1.000,,절차,부정형 1
+안전점검 종류,/industrial-safety/written/safety-management/safety-inspection-types/,safety-management/safety-inspection-types.md,5,6,6,3,4,0.800,1,4,3,0.750,,개념,부정형 1
+안전관리 조직 (라인·스태프),/industrial-safety/written/safety-management/safety-management-organization/,safety-management/safety-management-organization.md,6,6,6,0,5,0.833,3,3,3,1.000,,개념,부정형 3
+안전관리자·보건관리자 선임 기준,/industrial-safety/written/safety-management/safety-manager-appointment/,safety-management/safety-manager-appointment.md,3,5,5,0,1,0.333,1,2,2,1.000,,개념,부정형 1
+안전표지 종류,/industrial-safety/written/safety-management/safety-signs/,safety-management/safety-signs.md,15,6,6,2,9,0.600,5,10,8,0.800,,개념,부정형 5
+중대재해 범위,/industrial-safety/written/safety-management/serious-accident-criteria/,safety-management/serious-accident-criteria.md,2,6,6,0,1,0.500,2,0,0,1.000,,개념 법령,법령 직접 검토 · 부정형 2
+강도율,/industrial-safety/written/safety-management/severity-rate/,safety-management/severity-rate.md,7,9,9,2,6,0.857,2,5,4,0.800,,계산,계산 직접 검토 · 부정형 2
+사회행동 기본형태,/industrial-safety/written/safety-management/social-behavior-types/,safety-management/social-behavior-types.md,1,7,7,1,1,1.000,1,0,0,1.000,,개념,부정형 1
+TWI 등 관리감독자 훈련,/industrial-safety/written/safety-management/twi-supervisor-training/,safety-management/twi-supervisor-training.md,5,6,6,0,4,0.800,3,2,2,1.000,,개념,부정형 3
+타일러 학습경험 원리,/industrial-safety/written/safety-management/tyler-learning-principles/,safety-management/tyler-learning-principles.md,1,3,3,0,1,1.000,0,1,1,1.000,,개념,
+무재해운동 3요소·3원칙,/industrial-safety/written/safety-management/zero-accident-movement/,safety-management/zero-accident-movement.md,5,6,6,2,5,1.000,2,3,3,1.000,,개념,부정형 2
