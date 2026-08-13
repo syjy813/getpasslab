@@ -53,12 +53,32 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8799723694540263"
       crossorigin="anonymous"
     ></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CB3KFL9FJ"></script>
     <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-0CB3KFL9FJ');
+      (() => {
+        const measurementId = 'G-0CB3KFL9FJ';
+        const hostname = window.location.hostname;
+        const isLocalhost =
+          hostname === 'localhost' ||
+          hostname.endsWith('.localhost') ||
+          ['127.0.0.1', '0.0.0.0', '::1', '[::1]'].includes(hostname);
+
+        if (isLocalhost) {
+          window[`ga-disable-${measurementId}`] = true;
+          return;
+        }
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag('js', new Date());
+        window.gtag('config', measurementId);
+
+        const analyticsScript = document.createElement('script');
+        analyticsScript.async = true;
+        analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+        document.head.appendChild(analyticsScript);
+      })();
     </script>
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href={withBase('/favicon-approved-v1.png')} type="image/png" sizes="96x96" />
