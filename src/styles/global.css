@@ -82,7 +82,11 @@ a{color:inherit}
   .learning-stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-6)}
 }
 @media (max-width:639px){
-  .learning-stat:nth-child(odd) .info-tooltip-content{left:0;transform:none}
+  .learning-stat{position:relative}
+  .learning-stat .info-tooltip{position:static}
+  .learning-stat .info-tooltip-content{top:calc(100% + var(--space-2));width:calc(200% + var(--space-4));max-width:none;transform:none;overflow-wrap:anywhere}
+  .learning-stat:nth-child(odd) .info-tooltip-content{right:auto;left:0}
+  .learning-stat:nth-child(even) .info-tooltip-content{right:0;left:auto}
 }
 @media (min-width:768px){.learning-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
