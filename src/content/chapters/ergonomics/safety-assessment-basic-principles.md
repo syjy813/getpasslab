@@ -5,7 +5,7 @@ subject_id: 2
 group: 화학설비 평가
 tags: [절차]
 summary: 자료검토·정성·정량·대책·재평가·FTA
-questions: [20220305_025]
+questions: [20220305_025, 20210515_024, 20190804_027, 20190303_026, 20180819_034]
 order: 1
 priority: 1차
 status: 완료

@@ -8,7 +8,7 @@ status: 완료
 group: 안전밸브·플랜지
 tags: [개념, 법령]
 summary: 안전밸브 전단·후단의 차단밸브 설치 금지 원칙, 자물쇠형 예외와 현행 검사주기 2·3·4년
-questions: [20210307_082, 20210307_084, 20180428_083]
+questions: [20220305_100, 20210307_082, 20210307_084, 20180428_083]
 related: [reactor-distillation-equipment, flameproof-flange-distance]
 examComment: 안전밸브 전후 차단밸브 설치 금지 원칙과 허용 예외를 설비 조건에 맞춰 구분하는 법령형이 확인됨
 ---

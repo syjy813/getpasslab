@@ -5,7 +5,7 @@ subject_id: 4
 group: 차단기·피뢰
 tags: [개념]
 summary: 충격·제한전압 낮게 / 뇌전류 방전능력 크게 / 속류 확실히 차단
-questions: [20220424_069, 20220305_076]
+questions: [20220424_069, 20220305_076, 20190303_079]
 order: 2
 priority: 1차
 status: 완료

@@ -5,7 +5,7 @@ subject_id: 1
 group: 교육 방법론
 tags: [개념]
 summary: 포럼·심포지엄·패널·버즈·브레인스토밍 등 7종
-questions: [20220305_006]
+questions: [20220305_006, 20180304_005]
 order: 1
 priority: 1차
 status: 완료

@@ -5,7 +5,7 @@ subject_id: 5
 group: 폭발 이론
 tags: [개념]
 summary: 압력·진공·스위프 퍼지의 목적과 구분
-questions: [20220424_082]
+questions: [20220424_082, 20180428_091]
 order: 5
 priority: 1차
 status: 완료
