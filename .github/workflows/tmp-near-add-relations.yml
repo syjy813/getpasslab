@@ -1,0 +1,262 @@
+name: Temporary near-add relation batch
+
+on:
+  push:
+    branches:
+      - work/industrial-safety-near-add-20260816
+
+permissions:
+  contents: write
+
+jobs:
+  apply-and-verify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: work/industrial-safety-near-add-20260816
+          fetch-depth: 0
+
+      - name: Apply reviewed content and relations
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          def read(path):
+              return Path(path).read_text(encoding='utf-8')
+
+          def write(path, text):
+              Path(path).write_text(text, encoding='utf-8', newline='\n')
+
+          def replace_once(text, old, new, label):
+              if text.count(old) != 1:
+                  raise SystemExit(f'STOP: {label}: expected marker count=1, actual={text.count(old)}')
+              return text.replace(old, new, 1)
+
+          def append_questions(text, additions, label):
+              m = re.search(r'^questions:\s*\[(.*?)\]\s*$', text, flags=re.MULTILINE)
+              if not m:
+                  raise SystemExit(f'STOP: {label}: questions line missing')
+              current = [x.strip() for x in m.group(1).split(',') if x.strip()]
+              overlap = sorted(set(current) & set(additions))
+              if overlap:
+                  raise SystemExit(f'STOP: {label}: additions already present {overlap}')
+              updated = current + additions
+              line = 'questions: [' + ', '.join(updated) + ']'
+              return text[:m.start()] + line + text[m.end():]
+
+          # 1) motivation-theories: title already promises Maslow, so fill the missing in-scope content.
+          path = 'src/content/chapters/safety-management/motivation-theories.md'
+          text = read(path)
+          text = append_questions(text, ['20180428_011','20190427_006','20200822_008','20210814_014','20220424_001'], 'motivation-theories')
+          text = replace_once(text,
+              'summary: "허즈버그·맥그리거 중심 동기·위생요인과 인간관점 비교"',
+              'summary: "매슬로 욕구 5단계·허즈버그 2요인·맥그리거 X·Y·데이비스 동기 관계식 비교"',
+              'motivation summary')
+          maslow = '''## 매슬로 욕구 5단계\n\n매슬로의 욕구단계는 낮은 단계에서 높은 단계로 `생리적 → 안전 → 사회적 → 존경 → 자아실현` 순서로 구분함\n\n| 단계 | 욕구 | 기출 판별 |\n|---|---|---|\n| 1단계 | 생리적 욕구 | 생존에 필요한 기본 욕구 |\n| 2단계 | 안전 욕구 | 위험 회피·안정·보호 |\n| 3단계 | 사회적 욕구 | 소속·애정·관계 |\n| 4단계 | 존경 욕구 | 인정·자존·지위 |\n| 5단계 | 자아실현 욕구 | 자신의 잠재력을 최대한 실현 |\n\n수록 기출에서는 제2단계를 묻는 문제가 반복되며 정답은 **안전 욕구**, 잠재력을 최대한 살려 하고 싶은 일을 실현하려는 욕구는 **자아실현 욕구(5단계)**임\n\n'''
+          text = replace_once(text, '## 판별 기준\n', maslow + '## 판별 기준\n', 'motivation Maslow section')
+          text = replace_once(text,
+              '| 문제에서 보이는 키워드 | 정답으로 연결 |\n|---|---|\n',
+              '| 문제에서 보이는 키워드 | 정답으로 연결 |\n|---|---|\n| 매슬로 제2단계 | **안전 욕구** |\n| 잠재력을 최대한 실현 | **자아실현 욕구 · 5단계** |\n| 매슬로 욕구 순서 | **생리적 → 안전 → 사회적 → 존경 → 자아실현** |\n',
+              'motivation exam points')
+          write(path, text)
+
+          # 2) compatibility: add the missing modality-compatibility type.
+          path = 'src/content/chapters/ergonomics/compatibility.md'
+          text = read(path)
+          text = append_questions(text, ['20190804_028','20200822_038','20220305_039','20220424_036'], 'compatibility')
+          text = replace_once(text,
+              'summary: 인간-기계 계면의 기대 방향 일치',
+              'summary: 개념·운동·공간·양식 양립성으로 인간-기계 계면의 기대 방향 일치 판별',
+              'compatibility summary')
+          text = replace_once(text,
+              '- 공간 양립성은 표시장치와 조작장치의 위치 관계가 대응하는지 봄\n',
+              '- 공간 양립성은 표시장치와 조작장치의 위치 관계가 대응하는지 봄\n- 양식 양립성은 자극을 제시하는 감각 양식과 응답 방식이 자연스럽게 대응하는지 봄 · 청각적 자극에 음성으로 응답하는 조합이 대표 기출 예시임\n',
+              'compatibility modality bullet')
+          text = replace_once(text,
+              '| 공간 양립성 | **표시장치와 조작장치의 위치 관계가 대응하는지 봄** |\n',
+              '| 공간 양립성 | **표시장치와 조작장치의 위치 관계가 대응하는지 봄** |\n| 양식 양립성 | **청각적 자극 → 음성 응답**처럼 자극·응답 양식이 자연스럽게 대응 |\n| 양립성 종류가 아닌 것 | **형태 양립성·감성 양립성** |\n',
+              'compatibility exam rows')
+          text = replace_once(text,
+              '양립성이 높을수록 반응 시간이 길어진다는 서술은 방향을 뒤집은 것임 · 양립성은 단순한 장치의 물리적 크기가 아니라 인간의 기대와 자극·반응 관계를 다룸',
+              '양립성이 높을수록 반응 시간이 길어진다는 서술은 방향을 뒤집은 것임 · 양립성은 단순한 장치의 물리적 크기가 아니라 인간의 기대와 자극·반응 관계를 다룸 · 수록 기출의 기본 분류는 개념·운동·공간·양식이며 형태·감성 양립성을 섞은 선지는 오답으로 구분함',
+              'compatibility pitfall')
+          write(path, text)
+
+          # 3) anthropometry-design: static/dynamic measurement + 5~95 percentile adjustable range.
+          path = 'src/content/chapters/ergonomics/anthropometry-design.md'
+          text = read(path)
+          text = append_questions(text, ['20190303_032','20200926_031'], 'anthropometry-design')
+          text = replace_once(text,
+              'examComment: 수록 기출 5문항이 전체 14개 회차 중 5개 회차에서 확인되며, 조절식·평균치·최대치·최소치 설계를 사용 상황과 도달·여유 조건에 맞춰 구분함',
+              'examComment: 수록 기출 7문항이 전체 14개 회차 중 6개 회차에서 확인되며, 정적·동적 인체측정과 조절식·평균치·최대치·최소치 설계를 사용 상황과 도달·여유 조건에 맞춰 구분함',
+              'anthropometry examComment')
+          addition = '''### 인체측정과 조절범위\n\n- 인체측정은 고정된 자세의 치수를 재는 **정적 측정**과 움직임·작업 중의 범위를 다루는 **동적 측정**으로 구분함\n- 수록 기출에서 조절식 설계가 통상 수용하는 범위는 **5~95 %tile**로 출제됨 · 중앙 90% 정도를 조절범위로 수용하는 기준임\n\n'''
+          text = replace_once(text, '### 설계 원칙\n', addition + '### 설계 원칙\n', 'anthropometry basic section')
+          text = replace_once(text,
+              '| 조절식 설계 | 의자나 책상처럼 사용자가 직접 **높이·위치를 조절할 수 있을 때** 적용 |\n',
+              '| 정적·동적 인체측정 | **고정 자세 치수 = 정적 / 움직임·작업 범위 = 동적** |\n| 조절범위의 통상 범위 | 수록 기출 기준 **5~95 %tile** |\n| 조절식 설계 | 의자나 책상처럼 사용자가 직접 **높이·위치를 조절할 수 있을 때** 적용 |\n',
+              'anthropometry exam rows')
+          text = replace_once(text,
+              '- 조절식 설계는 평균치의 대체가 아니라 사용자 차이를 흡수하는 방법임',
+              '- 조절식 설계는 평균치의 대체가 아니라 사용자 차이를 흡수하는 방법임\n- `5~95 %tile`은 수록 기출에서 조절범위의 통상 범위를 묻는 값이며 모든 인체치수 설계에 무조건 적용하는 단일 기준으로 확대하지 않음',
+              'anthropometry pitfall')
+          write(path, text)
+
+          # 4) machine-tools-safety: absorb two questions into the already broad machine-tool safety slug.
+          path = 'src/content/chapters/mechanical/machine-tools-safety.md'
+          text = read(path)
+          text = append_questions(text, ['20190427_053','20220305_044'], 'machine-tools-safety')
+          text = replace_once(text,
+              'title: 공작기계 안전 (선반·밀링·드릴)',
+              'title: 공작기계 안전 (선반·밀링·드릴·플레이너)',
+              'machine title')
+          text = replace_once(text,
+              'summary: 선반 칩브레이커·방진구, 밀링·드릴 공통 수칙 — 장갑 착용 금지',
+              'summary: 선반·밀링·드릴·플레이너 안전수칙 — 칩 처리·정지 후 접촉·장갑 판단',
+              'machine summary')
+          text = replace_once(text,
+              '| 드릴 | 장갑 금지, 작은 일감은 바이스·클램프로 고정(손으로 잡지 않기), 구멍 관통 직전 이송 감속, 칩은 정지 후 제거 |\n',
+              '| 드릴 | 장갑 금지, 작은 일감은 바이스·클램프로 고정(손으로 잡지 않기), 구멍 관통 직전 이송 감속, 칩은 정지 후 제거 |\n| 플레이너 | 베드 위에 물건을 두지 않고 바이트 돌출을 짧게 하며 피트에는 뚜껑 설치 · 칩 브레이커는 칩을 **짧게** 끊는 방향 |\n',
+              'machine planer row')
+          text = replace_once(text,
+              '세 기계의 공통 판단 순서는 **회전체 정지 → 일감·공구 고정 → 손 대신 브러시·전용공구 사용**임 · 장치 이름을 묻는 문제와 작업 행동을 묻는 문제를 먼저 구분하면 선지 소거가 쉬움',
+              '선반·밀링·드릴의 공통 판단 순서는 **회전체 정지 → 일감·공구 고정 → 손 대신 브러시·전용공구 사용**임 · 이 세 절삭기계는 장갑을 끼고 회전체에 접근하지 않는 것이 핵심이며, 이들과 전기용접을 비교해 장갑 착용 작업을 고르는 수록 기출에서는 **전기용접작업**이 정답임 · 장치 이름을 묻는 문제와 작업 행동을 묻는 문제를 먼저 구분하면 선지 소거가 쉬움',
+              'machine glove comparison')
+          text = replace_once(text,
+              '| 선반 | **장갑 착용 금지** · 치수 측정·수리·청소는 정지 후, 칩은 브러시로 제거, 긴 일감은 방진구 |\n',
+              '| 선반 | **장갑 착용 금지** · 치수 측정·수리·청소는 정지 후, 칩은 브러시로 제거, 긴 일감은 방진구 |\n| 선반·밀링·드릴 vs 전기용접 | 장갑 착용 작업을 고르면 **전기용접작업** |\n| 플레이너 | **베드 위 물건 금지·바이트 짧게·피트 뚜껑·칩은 짧게 처리** |\n',
+              'machine exam rows')
+          text = replace_once(text,
+              '선반·밀링·드릴의 공통 원칙은 장갑 금지, 정지 후 접촉, 브러시로 칩 제거임',
+              '선반·밀링·드릴의 공통 원칙은 장갑 금지, 정지 후 접촉, 브러시로 칩 제거임 · 플레이너 문제에서는 `칩 브레이커로 칩이 길게 되도록 한다`는 표현이 반대 방향의 오답임',
+              'machine pitfall')
+          write(path, text)
+
+          # 5) spontaneous-combustion: relation was semantically correct; checker had a false positive on normal exam wording.
+          path = 'src/content/chapters/chemical/spontaneous-combustion.md'
+          text = read(path)
+          text = append_questions(text, ['20190303_094'], 'spontaneous-combustion')
+          text = replace_once(text,
+              '| 자연발화 방지 | **통풍·온도·퇴적량·표면적·공기 접촉 관리** |\n',
+              '| 자연발화 방지 | **통풍·온도·퇴적량·표면적·공기 접촉 관리** |\n| 방지법과 가장 거리가 먼 것 | **직접 점화원만 제거하면 된다는 설명** · 내부 발열·축열 관리가 빠짐 |\n',
+              'spontaneous exam row')
+          write(path, text)
+
+          # 6) Narrow the public-content validator: allow legitimate domain noun "저장소" while still blocking internal repo wording.
+          path = 'scripts/check-public-content.mjs'
+          text = read(path)
+          text = replace_once(text,
+              "  { label: '저장소', pattern: /저장소/g },",
+              "  { label: '내부 저장소 문구', pattern: /Git(?:Hub)?\\s*저장소|코드\\s*저장소|프로젝트\\s*저장소|저장소\\s*(?:정본|기준|경로|브랜치|커밋)/gi },",
+              'public-content repository rule')
+          write(path, text)
+
+          # 7) Audit record: all 20 near-ADD candidates, including the six holds.
+          audit = '''# 산업안전기사 near-ADD 20문항 정밀 검토 — 2026-08-16\n\n기준 `main`: `5e61daefcba1de8a9e969ed181a202dfec0958cd`\n\n## 결론\n\n- 기존 챕터 보강 후 관계 추가: **14건**\n- 계속 보류: **6건**\n- 신규 slug 생성: **0건**\n\n## 구현 14건\n\n### motivation-theories — 5건\n`20180428_011`, `20190427_006`, `20200822_008`, `20210814_014`, `20220424_001`\n\n챕터 제목 자체가 매슬로를 포함하지만 본문에 욕구 5단계가 빠져 있던 CONTENT_GAP. 1~5단계를 보강한 뒤 연결한다.\n\n### compatibility — 4건\n`20190804_028`, `20200822_038`, `20220305_039`, `20220424_036`\n\n기존 챕터에 개념·운동·공간 양립성은 있으나 양식 양립성이 누락되어 있었다. 수록 기출의 기본 분류와 `청각 자극 → 음성 응답` 예시를 보강한 뒤 연결한다.\n\n### anthropometry-design — 2건\n`20190303_032`, `20200926_031`\n\n현재 챕터 범위인 인체측정·설계원칙 안에서 정적/동적 측정과 조절범위 `5~95 %tile`을 보강하면 직접 수용 가능하다.\n\n### machine-tools-safety — 2건\n`20190427_053`, `20220305_044`\n\n전자는 선반·밀링·드릴의 장갑 금지를 이용해 전기용접을 고르는 비교형이고, 후자는 공작기계 안전 범위의 플레이너 수칙이다. 기존 broad slug에 플레이너와 장갑 비교를 최소 보강해 연결한다.\n\n### spontaneous-combustion — 1건\n`20190303_094`\n\n문항 의미는 기존 자연발화 방지 내용과 직접 일치한다. 기존 공개검사기의 `/저장소/g` 규칙이 시험 선택지 `저장소 등의 주위 온도`까지 오탐하므로, 정상 도메인 용어는 허용하고 Git/프로젝트 저장소 같은 내부 문맥만 차단하도록 규칙을 좁힌 뒤 연결한다.\n\n## 계속 보류 6건\n\n| question_id | 판정 | 이유 |\n|---|---|---|\n| `20180304_048` | STRUCTURE_REVIEW | 형삭기 방호장치 문제. 현재 `shaper-structure`는 구조부 판별 챕터라 보호장치까지 넣으려면 공개 범위 결정이 필요 |\n| `20180304_061` | STRUCTURE_REVIEW | 폭발위험분위기 생성 방지 문제. `explosion-proof-basics`의 방폭 3대 개념과 질문 축이 다름 |\n| `20190804_072` | MULTI_TOPIC_REVIEW | 발화온도·화염일주한계·최소점화전류 등 여러 방폭 위험특성을 한 번에 비교. 기존 단일 챕터 하나로 귀속하기 어려움 |\n| `20200606_079` | LEGAL_STANDARD_REQUIRED | 폭발위험장소 전기설비 방호조치. 현 방폭 기본개념 범위를 벗어나며 기준·규격 의존성이 큼 |\n| `20180304_073` | IMAGE_REQUIRED_MOVE | T파/심장주기 문제는 `ventricular-fibrillation-current`가 의미상 더 적합하지만 문제 자체가 그림 의존이고 현재 repository tree에서 `20180304_073` 이미지 자산을 확인하지 못함 |\n| `20210307_101` | ANSWER_CONFLICT_HOLD | 지하수위 계측기 문제는 확정답안에서 모두 정답 처리된 오류 문항. 현재 단일 answer 데이터 구조 그대로 관계를 공개하면 오해 가능 |\n\n## 위험 등급\n\n이번 구현은 기존 slug 안의 누락 콘텐츠 보강과 기존 관계 추가, 공개검사기 false-positive 최소 수정만 포함하는 T1 범위다. 보류 6건의 신규 챕터·구조 결정·법령 검증·오류문항 데이터 모델 변경은 이번 범위에 포함하지 않는다.\n'''
+          audit_path = Path('docs/audits/2026-08-16-industrial-safety-near-add-review.md')
+          if audit_path.exists():
+              raise SystemExit('STOP: audit file already exists')
+          audit_path.write_text(audit, encoding='utf-8', newline='\n')
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and standard validation
+        run: |
+          npm run build
+          npm run check:seo
+          npm run check:public-content
+
+      - name: Relation and validator QA
+        shell: python
+        run: |
+          import json, re
+          from collections import Counter
+          from pathlib import Path
+
+          expected = {
+              'motivation-theories': ['20180428_011','20190427_006','20200822_008','20210814_014','20220424_001'],
+              'compatibility': ['20190804_028','20200822_038','20220305_039','20220424_036'],
+              'anthropometry-design': ['20190303_032','20200926_031'],
+              'machine-tools-safety': ['20190427_053','20220305_044'],
+              'spontaneous-combustion': ['20190303_094'],
+          }
+          holds = {'20180304_048','20180304_061','20190804_072','20200606_079','20180304_073','20210307_101'}
+          questions = json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
+          qmap = {q['id']: q for q in questions}
+          if len(questions) != 1680 or len(qmap) != 1680:
+              raise SystemExit(f'STOP: question integrity {len(questions)=} {len(qmap)=}')
+
+          refs = []
+          by_slug = {}
+          for f in Path('dist/industrial-safety/written').rglob('index.html'):
+              rel = f.relative_to('dist/industrial-safety/written')
+              if len(rel.parts) != 3:
+                  continue
+              text = f.read_text(encoding='utf-8', errors='ignore')
+              ids = re.findall(r'data-open="(\d{8}_\d{3})"', text)
+              slug = rel.parts[1]
+              by_slug[slug] = ids
+              refs.extend(ids)
+
+          for slug, ids in expected.items():
+              actual = by_slug.get(slug, [])
+              for qid in ids:
+                  if actual.count(qid) != 1:
+                      raise SystemExit(f'STOP: {qid} count in {slug} = {actual.count(qid)}')
+          mapped = set(refs)
+          if holds & mapped:
+              raise SystemExit(f'STOP: hold candidate unexpectedly mapped: {sorted(holds & mapped)}')
+
+          counts = Counter(refs)
+          multi = sum(1 for c in counts.values() if c > 1)
+          expected_counts = (978, 968, 712, 10)
+          actual_counts = (len(refs), len(mapped), 1680-len(mapped), multi)
+          if actual_counts != expected_counts:
+              raise SystemExit(f'STOP: relation counts {actual_counts} != {expected_counts}')
+          print(f'RELATION QA PASS refs={len(refs)} unique={len(mapped)} unmapped={1680-len(mapped)} multi={multi}')
+
+      - name: Validator regex regression
+        run: |
+          node --input-type=module - <<'NODE'
+          const p = /Git(?:Hub)?\s*저장소|코드\s*저장소|프로젝트\s*저장소|저장소\s*(?:정본|기준|경로|브랜치|커밋)/gi;
+          for (const text of ['Git 저장소', 'GitHub 저장소', '프로젝트 저장소', '저장소 기준']) {
+            p.lastIndex = 0;
+            if (!p.test(text)) throw new Error(`internal phrase not caught: ${text}`);
+          }
+          p.lastIndex = 0;
+          if (p.test('저장소 등의 주위 온도를 낮게 한다.')) throw new Error('legitimate exam wording still blocked');
+          console.log('VALIDATOR REGRESSION PASS');
+          NODE
+
+      - name: Verify changed scope
+        run: |
+          git diff --check
+          printf '%s\n' \
+            docs/audits/2026-08-16-industrial-safety-near-add-review.md \
+            scripts/check-public-content.mjs \
+            src/content/chapters/chemical/spontaneous-combustion.md \
+            src/content/chapters/ergonomics/anthropometry-design.md \
+            src/content/chapters/ergonomics/compatibility.md \
+            src/content/chapters/mechanical/machine-tools-safety.md \
+            src/content/chapters/safety-management/motivation-theories.md \
+            | sort > /tmp/expected
+          git diff --name-only | sort > /tmp/actual
+          diff -u /tmp/expected /tmp/actual
+
+      - name: Commit reviewed batch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/audits/2026-08-16-industrial-safety-near-add-review.md \
+            scripts/check-public-content.mjs \
+            src/content/chapters/chemical/spontaneous-combustion.md \
+            src/content/chapters/ergonomics/anthropometry-design.md \
+            src/content/chapters/ergonomics/compatibility.md \
+            src/content/chapters/mechanical/machine-tools-safety.md \
+            src/content/chapters/safety-management/motivation-theories.md
+          git commit -m 'feat: expand verified industrial safety relations'
+          git push origin HEAD:work/industrial-safety-near-add-20260816
