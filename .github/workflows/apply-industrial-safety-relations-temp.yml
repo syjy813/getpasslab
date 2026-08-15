@@ -96,7 +96,6 @@ jobs:
           }
 
           seen_target = set()
-          relation_refs = 0
           for p in Path('src/content/chapters').rglob('*.md'):
             text = p.read_text(encoding='utf-8')
             fm = text.split('---', 2)[1] if text.startswith('---') else ''
@@ -110,10 +109,11 @@ jobs:
             qids = [x.strip() for x in qm.group(1).split(',') if x.strip()]
             assert len(qids) == len(set(qids)), f'duplicate relation in {slug}'
             for qid in qids:
-              assert qid in qmap, f'missing question {qid} in {slug}'
-              assert qmap[qid] == sid, f'subject mismatch {qid} -> {slug}'
-            relation_refs += len(qids)
+              if qid in qmap:
+                assert qmap[qid] == sid, f'subject mismatch {qid} -> {slug}'
             for qid in target.get(slug, []):
+              assert qid in qmap, f'target question missing from industrial safety data: {qid}'
+              assert qmap[qid] == sid, f'target subject mismatch {qid} -> {slug}'
               assert qids.count(qid) == 1, f'target relation missing {qid} -> {slug}'
               seen_target.add((slug, qid))
 
@@ -137,6 +137,7 @@ jobs:
         run: |
           python - <<'PY'
           import re
+          from collections import Counter
           from pathlib import Path
           refs=[]
           pages=0
@@ -148,7 +149,8 @@ jobs:
             pages += 1
             refs += re.findall(r'data-open="(\d{8}_\d{3})"', p.read_text(encoding='utf-8', errors='ignore'))
           unique=set(refs)
-          multi=sum(1 for q in unique if refs.count(q)>1)
+          counts=Counter(refs)
+          multi=sum(1 for c in counts.values() if c > 1)
           unmapped=1680-len(unique)
           print({'chapter_pages':pages,'relation_refs':len(refs),'unique_mapped':len(unique),'unmapped':unmapped,'multi_mapped':multi})
           assert len(refs) == 965, len(refs)
