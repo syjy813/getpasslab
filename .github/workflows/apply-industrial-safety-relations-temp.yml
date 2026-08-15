@@ -33,6 +33,11 @@ jobs:
       - name: Apply verified relations
         run: python scripts/apply-industrial-safety-relations-20260815.py --apply
 
+      - name: Defer checker-conflicting relation
+        run: |
+          git checkout -- src/content/chapters/chemical/spontaneous-combustion.md
+          echo "Deferred 20190303_094 -> spontaneous-combustion because the legitimate exam word '저장소' currently triggers the public-content guard."
+
       - name: Validate changed-file scope
         shell: bash
         run: |
@@ -42,7 +47,6 @@ jobs:
           src/content/chapters/chemical/complete-combustion-cst.md
           src/content/chapters/chemical/purge-inerting.md
           src/content/chapters/chemical/reactive-dangerous-gases.md
-          src/content/chapters/chemical/spontaneous-combustion.md
           src/content/chapters/construction/safety-handrail-structure.md
           src/content/chapters/construction/soil-test-types.md
           src/content/chapters/construction/temporary-structure-defects.md
@@ -90,7 +94,6 @@ jobs:
             'safety-management-organization': ['20180304_010','20190427_004'],
             'severity-rate': ['20180428_015'],
             'soil-test-types': ['20200926_104'],
-            'spontaneous-combustion': ['20190303_094'],
             'temporary-structure-defects': ['20220305_114'],
             'twi-supervisor-training': ['20190303_001'],
           }
@@ -117,8 +120,8 @@ jobs:
               assert qids.count(qid) == 1, f'target relation missing {qid} -> {slug}'
               seen_target.add((slug, qid))
 
-          assert len(seen_target) == 24, len(seen_target)
-          print('relation integrity PASS; 24 target relations present')
+          assert len(seen_target) == 23, len(seen_target)
+          print('relation integrity PASS; 23 target relations present')
           PY
 
       - name: Install dependencies
@@ -163,9 +166,9 @@ jobs:
           multi=sum(1 for c in counts.values() if c > 1)
           unmapped=1680-len(unique)
           print({'chapter_pages':pages,'relation_refs':len(refs),'unique_mapped':len(unique),'unmapped':unmapped,'multi_mapped':multi})
-          assert len(refs) == 965, len(refs)
-          assert len(unique) == 955, len(unique)
-          assert unmapped == 725, unmapped
+          assert len(refs) == 964, len(refs)
+          assert len(unique) == 954, len(unique)
+          assert unmapped == 726, unmapped
           assert multi == 10, multi
           PY
 
@@ -202,6 +205,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/content/chapters
-          test "$(git diff --cached --name-only | wc -l)" -eq 19
+          test "$(git diff --cached --name-only | wc -l)" -eq 18
           git commit -m "fix: add verified industrial safety question relations"
           git push origin HEAD:work/industrial-safety-relations-20260815
