@@ -5,7 +5,7 @@ subject_id: 6
 group: 건설 시험·진단
 tags: [개념]
 summary: 전단·1면·베인·일축·삼축 / 투수는 별개
-questions: [20200822_116]
+questions: [20200822_116, 20200926_104]
 order: 1
 priority: 2차
 status: 완료

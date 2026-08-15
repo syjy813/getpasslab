@@ -5,7 +5,7 @@ subject_id: 1
 group: 안전보건교육 이론
 tags: [개념]
 summary: "파블로프·손다이크·톨만의 학습이론 구분"
-questions: [20200822_010, 20180304_003]
+questions: [20200822_010, 20180304_003, 20210307_015, 20210515_016]
 order: 4
 priority: 1차
 status: 완료

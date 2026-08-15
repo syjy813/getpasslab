@@ -5,7 +5,7 @@ subject_id: 2
 group: 신뢰도·수명
 tags: [계산]
 summary: A = MTBF/(MTBF+MTTR)
-questions: [20190303_036]
+questions: [20190303_036, 20210814_040]
 order: 6
 priority: 1차
 status: 완료
