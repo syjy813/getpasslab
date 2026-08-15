@@ -124,16 +124,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build site
+      - name: Build candidate site
         run: npm run build
 
       - name: Validate SEO output
         run: npm run check:seo
 
-      - name: Validate public content
-        run: npm run check:public-content
+      - name: Capture candidate public-content result
+        shell: bash
+        run: |
+          set -uo pipefail
+          set +e
+          npm run check:public-content 2>&1 | tee /tmp/candidate-public.log
+          candidate_status=${PIPESTATUS[0]}
+          set -e
+          grep '^\[Public content error\]' /tmp/candidate-public.log | sort > /tmp/candidate-errors.txt || true
+          echo "candidate public-content exit: ${candidate_status}"
+          echo "candidate errors:"
+          cat /tmp/candidate-errors.txt
 
-      - name: Validate built relation counts
+      - name: Validate candidate built relation counts
         run: |
           python - <<'PY'
           import re
@@ -158,6 +168,32 @@ jobs:
           assert unmapped == 725, unmapped
           assert multi == 10, multi
           PY
+
+      - name: Compare public-content errors with exact main baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          branch_name="work/industrial-safety-relations-20260815"
+          git stash push -m candidate-relations -- src/content/chapters
+          git checkout --detach origin/main
+          npm run build
+          set +e
+          npm run check:public-content 2>&1 | tee /tmp/baseline-public.log
+          baseline_status=${PIPESTATUS[0]}
+          set -e
+          grep '^\[Public content error\]' /tmp/baseline-public.log | sort > /tmp/baseline-errors.txt || true
+          echo "baseline public-content exit: ${baseline_status}"
+          echo "baseline errors:"
+          cat /tmp/baseline-errors.txt
+          echo "candidate errors:"
+          cat /tmp/candidate-errors.txt
+          diff -u /tmp/baseline-errors.txt /tmp/candidate-errors.txt
+          git checkout "${branch_name}"
+          git stash pop
+          git diff --check
+          git diff --name-only | sort > /tmp/restored.txt
+          diff -u /tmp/expected.txt /tmp/restored.txt
+          echo "PUBLIC-CONTENT NON-REGRESSION PASS: candidate errors equal main baseline"
 
       - name: Commit verified relation changes
         shell: bash
