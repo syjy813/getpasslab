@@ -1,0 +1,92 @@
+name: Temporary subject1 P1 batch3 candidates
+
+on:
+  push:
+    branches:
+      - work/industrial-safety-subject1-p1-batch3-20260817
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Print next unreviewed subject1 candidates
+        shell: python
+        run: |
+          import json, math, re
+          from collections import Counter
+          from pathlib import Path
+
+          qdata = json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
+          chapter_dir = Path('src/content/chapters/safety-management')
+          qline = re.compile(r'^questions:\s*\[(.*?)\]\s*$', re.M)
+          meta_re = lambda key: re.compile(r'^' + re.escape(key) + r':\s*(.*?)\s*$', re.M)
+
+          mapped = set()
+          chapters = []
+          for p in chapter_dir.glob('*.md'):
+              text = p.read_text(encoding='utf-8')
+              qm = qline.search(text)
+              if qm:
+                  mapped.update(x.strip() for x in qm.group(1).split(',') if x.strip())
+              status_m = meta_re('status').search(text)
+              if not status_m or status_m.group(1).strip().strip('"\'') != '완료':
+                  continue
+              sm = meta_re('slug').search(text); tm = meta_re('title').search(text); sum_m = meta_re('summary').search(text)
+              if not (sm and tm): continue
+              slug=sm.group(1).strip().strip('"\''); title=tm.group(1).strip().strip('"\''); summary=sum_m.group(1).strip().strip('"\'') if sum_m else ''
+              body=re.sub(r'`?20\d{6}_\d{3}`?', ' ', text.split('---',2)[-1])
+              chapters.append({'slug':slug,'title':title,'summary':summary,'text':f'{title} {summary} {body}'})
+
+          batch1_holds = {
+            '20210515_005','20190427_015','20180428_016','20200926_019','20200606_008',
+            '20180304_011','20180819_018','20190303_002','20200606_012'
+          }
+          batch2_reviewed = {
+            '20190427_008','20180428_017','20210814_015','20210515_010','20220305_002','20200822_003','20220424_011','20200606_005',
+            '20190303_011','20180819_002','20210814_013','20180428_003','20220305_005','20190804_010','20220424_007','20190303_018',
+            '20210515_018','20200606_002','20180304_014','20210814_010','20210814_019','20180819_004','20180428_005','20180428_019',
+            '20190303_016','20200606_010','20200926_015','20190427_017','20190427_019','20210515_017','20200606_013','20190303_020',
+            '20210307_012','20190804_009','20190804_017','20190303_019','20180819_005','20220424_013','20210307_006','20190804_013'
+          }
+          excluded = batch1_holds | batch2_reviewed
+
+          def clean(s):
+              s=re.sub(r'\s+','',s or '')
+              return re.sub(r'[^0-9A-Za-z가-힣]+','',s).lower()
+          def grams(s):
+              s=clean(s); c=Counter()
+              for n in (2,3,4):
+                  for i in range(max(0,len(s)-n+1)): c[s[i:i+n]]+=1
+              return c
+          def cosine(a,b):
+              if not a or not b:return 0.0
+              common=set(a)&set(b); dot=sum(a[k]*b[k] for k in common)
+              na=math.sqrt(sum(v*v for v in a.values())); nb=math.sqrt(sum(v*v for v in b.values()))
+              return dot/(na*nb) if na and nb else 0.0
+
+          chapter_vec=[(c,grams(c['text'])) for c in chapters]
+          results=[]
+          for q in qdata:
+              if q.get('subject_id') != 1 or q['id'] in mapped or q['id'] in excluded: continue
+              qv=grams(' '.join([q.get('body','')] + list(q.get('choices') or [])))
+              scored=[]
+              for c,cv in chapter_vec:
+                  s=cosine(qv,cv)+0.25*cosine(qv,grams(c['title']+' '+c['summary']))
+                  scored.append((s,c))
+              scored.sort(key=lambda x:x[0], reverse=True)
+              results.append((scored[0][0] if scored else 0,q,scored[:3]))
+          results.sort(key=lambda x:x[0], reverse=True)
+
+          print(f'SUBJECT1_NEXT_UNREVIEWED={len(results)}')
+          print('SUBJECT1_BATCH3_CANDIDATES_START')
+          for rank,(score,q,tops) in enumerate(results[:60],1):
+              print(f'\n### RANK {rank} | {q["id"]} | score={score:.4f} | answer={q.get("answer")}')
+              print('BODY:',q.get('body',''))
+              for i,ch in enumerate(q.get('choices') or [],1): print(f'  {i}. {ch}')
+              print('TOP_CHAPTERS:')
+              for s,c in tops: print(f'  - {c["slug"]} | {c["title"]} | score={s:.4f} | summary={c["summary"]}')
+          print('\nSUBJECT1_BATCH3_CANDIDATES_END')
