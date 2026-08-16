@@ -1,4 +1,4 @@
-name: Temporary subject1 P1 batch3 candidates
+name: Temporary subject1 P1 batch3 validation
 
 on:
   push:
@@ -9,84 +9,115 @@ permissions:
   contents: read
 
 jobs:
-  extract:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Print next unreviewed subject1 candidates
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Apply six candidate changes ephemerally
         shell: python
         run: |
-          import json, math, re
-          from collections import Counter
           from pathlib import Path
+          import re
 
-          qdata = json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
-          chapter_dir = Path('src/content/chapters/safety-management')
-          qline = re.compile(r'^questions:\s*\[(.*?)\]\s*$', re.M)
-          meta_re = lambda key: re.compile(r'^' + re.escape(key) + r':\s*(.*?)\s*$', re.M)
+          group = Path('src/content/chapters/safety-management/group-discussion-methods.md')
+          t = group.read_text(encoding='utf-8')
+          old = 'questions: [20220305_006, 20180304_005, 20200606_002, 20210307_006]'
+          new = 'questions: [20220305_006, 20180304_005, 20200606_002, 20210307_006, 20200822_020, 20180819_014, 20190427_005, 20200926_006, 20180428_001]'
+          if t.count(old) != 1: raise SystemExit('STOP group relation state changed')
+          t = t.replace(old, new, 1)
+          group.write_text(t, encoding='utf-8', newline='\n')
 
-          mapped = set()
-          chapters = []
-          for p in chapter_dir.glob('*.md'):
-              text = p.read_text(encoding='utf-8')
-              qm = qline.search(text)
-              if qm:
-                  mapped.update(x.strip() for x in qm.group(1).split(',') if x.strip())
-              status_m = meta_re('status').search(text)
-              if not status_m or status_m.group(1).strip().strip('"\'') != '완료':
-                  continue
-              sm = meta_re('slug').search(text); tm = meta_re('title').search(text); sum_m = meta_re('summary').search(text)
-              if not (sm and tm): continue
-              slug=sm.group(1).strip().strip('"\''); title=tm.group(1).strip().strip('"\''); summary=sum_m.group(1).strip().strip('"\'') if sum_m else ''
-              body=re.sub(r'`?20\d{6}_\d{3}`?', ' ', text.split('---',2)[-1])
-              chapters.append({'slug':slug,'title':title,'summary':summary,'text':f'{title} {summary} {body}'})
+          sev = Path('src/content/chapters/safety-management/severity-rate.md')
+          t = sev.read_text(encoding='utf-8')
+          old = 'questions: [20220424_002, 20210515_015, 20200822_019, 20200926_007, 20180304_016, 20180428_004, 20190427_012, 20180428_015, 20190303_018]'
+          new = 'questions: [20220424_002, 20210515_015, 20200822_019, 20200926_007, 20180304_016, 20180428_004, 20190427_012, 20180428_015, 20190303_018, 20180304_008]'
+          if t.count(old) != 1: raise SystemExit('STOP severity relation state changed')
+          t = t.replace(old, new, 1)
+          old_comment = 'examComment: 수록 기출 8문항이 전체 14개 회차 중 7개 회차에서 확인되며, 1,000근로시간당 근로손실일수의 의미·역산과 재해별 손실일수 환산 기준을 물음'
+          new_comment = 'examComment: 수록 기출 10문항이 전체 14개 회차 중 8개 회차에서 확인되며, 1,000근로시간당 근로손실일수의 의미·역산과 재해별 손실일수 환산 기준 및 상해 정도 분류를 물음'
+          if t.count(old_comment) != 1: raise SystemExit('STOP severity examComment state changed')
+          t = t.replace(old_comment, new_comment, 1)
+          marker = '| 일시 전노동 불능 | **휴업일수 × 300 / 365** |'
+          if t.count(marker) != 1: raise SystemExit('STOP severity classification marker changed')
+          t = t.replace(marker, marker + '\n\n**일시 전노동 불능상해**는 의사의 진단에 따라 일정 기간 정규 노동에 종사할 수 없는 상해를 뜻함 · 영구 일부 노동불능과 구분함', 1)
+          point = '| 일시 전노동 불능 | **휴업일수 × 300 / 365** |'
+          # first occurrence is calculation table; add a separate exam point via known keyword row.
+          point2 = '| 일시 전노동 불능 | **휴업일수 × 300 / 365** |'
+          # existing 시험 포인트 uses same text once more; replace second occurrence by split.
+          parts = t.split(point2)
+          if len(parts) != 3: raise SystemExit(f'STOP expected two temporary-total rows, got {len(parts)-1}')
+          t = parts[0] + point2 + parts[1] + '| 일시 전노동 불능 | **일정 기간 정규 노동에 종사할 수 없는 상해** · 휴업일수 × 300 / 365 |' + parts[2]
+          if '| 사망 또는 영구 전노동 불능(13급) |' in t:
+              t = t.replace('| 사망 또는 영구 전노동 불능(13급) |', '| 사망 또는 영구 전노동 불능(1~3급) |', 1)
+          sev.write_text(t, encoding='utf-8', newline='\n')
 
-          batch1_holds = {
-            '20210515_005','20190427_015','20180428_016','20200926_019','20200606_008',
-            '20180304_011','20180819_018','20190303_002','20200606_012'
+      - name: Validate canonical answers and relation integrity
+        shell: python
+        run: |
+          import json, re
+          from pathlib import Path
+          from collections import Counter
+
+          expected = {
+            '20200822_020': ('group-discussion-methods', 1),
+            '20180819_014': ('group-discussion-methods', 4),
+            '20190427_005': ('group-discussion-methods', 1),
+            '20200926_006': ('group-discussion-methods', 2),
+            '20180428_001': ('group-discussion-methods', 2),
+            '20180304_008': ('severity-rate', 2),
           }
-          batch2_reviewed = {
-            '20190427_008','20180428_017','20210814_015','20210515_010','20220305_002','20200822_003','20220424_011','20200606_005',
-            '20190303_011','20180819_002','20210814_013','20180428_003','20220305_005','20190804_010','20220424_007','20190303_018',
-            '20210515_018','20200606_002','20180304_014','20210814_010','20210814_019','20180819_004','20180428_005','20180428_019',
-            '20190303_016','20200606_010','20200926_015','20190427_017','20190427_019','20210515_017','20200606_013','20190303_020',
-            '20210307_012','20190804_009','20190804_017','20190303_019','20180819_005','20220424_013','20210307_006','20190804_013'
-          }
-          excluded = batch1_holds | batch2_reviewed
+          data=json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
+          by_id={q['id']:q for q in data}
+          assert len(data)==len(by_id)==1680
+          for qid,(slug,ans) in expected.items():
+              q=by_id[qid]
+              assert q['subject_id']==1,(qid,q['subject_id'])
+              assert q['answer']==ans,(qid,q['answer'],ans)
+          assert '브레인' in by_id['20200822_020']['body']
+          assert '브레인스토밍' in by_id['20180819_014']['body']
+          assert '브레인스토밍' in by_id['20190427_005']['body']
+          assert 'Brain storming' in ' '.join(by_id['20200926_006']['choices'])
+          assert 'Brain storming' in ' '.join(by_id['20180428_001']['choices'])
+          assert '일정 기간 정규 노동' in by_id['20180304_008']['body']
 
-          def clean(s):
-              s=re.sub(r'\s+','',s or '')
-              return re.sub(r'[^0-9A-Za-z가-힣]+','',s).lower()
-          def grams(s):
-              s=clean(s); c=Counter()
-              for n in (2,3,4):
-                  for i in range(max(0,len(s)-n+1)): c[s[i:i+n]]+=1
-              return c
-          def cosine(a,b):
-              if not a or not b:return 0.0
-              common=set(a)&set(b); dot=sum(a[k]*b[k] for k in common)
-              na=math.sqrt(sum(v*v for v in a.values())); nb=math.sqrt(sum(v*v for v in b.values()))
-              return dot/(na*nb) if na and nb else 0.0
+          refs=[]; owners={}
+          for folder in ['safety-management','ergonomics','mechanical','electrical','chemical','construction']:
+              for p in Path('src/content/chapters',folder).glob('*.md'):
+                  t=p.read_text(encoding='utf-8')
+                  sidm=re.search(r'^subject_id:\s*(\d+)\s*$',t,re.M)
+                  slugm=re.search(r'^slug:\s*([^\n]+)$',t,re.M)
+                  qm=re.search(r'^questions:\s*\[(.*?)\]\s*$',t,re.M)
+                  if not (sidm and slugm and qm): continue
+                  sid=int(sidm.group(1)); slug=slugm.group(1).strip().strip('"\'')
+                  qids=[x.strip() for x in qm.group(1).split(',') if x.strip()]
+                  assert len(qids)==len(set(qids)),slug
+                  for qid in qids:
+                      assert qid in by_id,(slug,qid)
+                      assert by_id[qid]['subject_id']==sid,(slug,qid)
+                      refs.append(qid); owners.setdefault(qid,[]).append(slug)
+          for qid,(slug,_) in expected.items():
+              assert owners.get(qid)==[slug],(qid,owners.get(qid))
+          c=Counter(refs)
+          assert len(refs)==1004,len(refs)
+          assert len(c)==994,len(c)
+          assert 1680-len(c)==686
+          assert sum(v>1 for v in c.values())==10
+          print('BATCH3_RELATION_QA_PASS refs=1004 mapped=994 unmapped=686 multi=10')
 
-          chapter_vec=[(c,grams(c['text'])) for c in chapters]
-          results=[]
-          for q in qdata:
-              if q.get('subject_id') != 1 or q['id'] in mapped or q['id'] in excluded: continue
-              qv=grams(' '.join([q.get('body','')] + list(q.get('choices') or [])))
-              scored=[]
-              for c,cv in chapter_vec:
-                  s=cosine(qv,cv)+0.25*cosine(qv,grams(c['title']+' '+c['summary']))
-                  scored.append((s,c))
-              scored.sort(key=lambda x:x[0], reverse=True)
-              results.append((scored[0][0] if scored else 0,q,scored[:3]))
-          results.sort(key=lambda x:x[0], reverse=True)
-
-          print(f'SUBJECT1_NEXT_UNREVIEWED={len(results)}')
-          print('SUBJECT1_BATCH3_CANDIDATES_START')
-          for rank,(score,q,tops) in enumerate(results[:60],1):
-              print(f'\n### RANK {rank} | {q["id"]} | score={score:.4f} | answer={q.get("answer")}')
-              print('BODY:',q.get('body',''))
-              for i,ch in enumerate(q.get('choices') or [],1): print(f'  {i}. {ch}')
-              print('TOP_CHAPTERS:')
-              for s,c in tops: print(f'  - {c["slug"]} | {c["title"]} | score={s:.4f} | summary={c["summary"]}')
-          print('\nSUBJECT1_BATCH3_CANDIDATES_END')
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: SEO validation
+        run: npm run check:seo
+      - name: Public content validation
+        run: npm run check:public-content
+      - name: Diff validation
+        run: |
+          git diff --check
+          git diff --name-only
