@@ -15,14 +15,19 @@ jobs:
       - uses: actions/checkout@v7
         with:
           ref: docs/industrial-safety-subject1-final-sweep-20260817
-      - name: Update verified handover metadata
-        shell: bash
+      - name: Update verified audit and handover
+        shell: python
         run: |
-          python - <<'PY'
           from pathlib import Path
+          import base64
 
-          p = Path('AI_HANDOVER.md')
-          text = p.read_text(encoding='utf-8')
+          section_b64 = "CgotLS0KCiMjIOyCsOyXheyViOyghOq4sOyCrCAx6rO866qpIFAxIOq0gOqzhCDrs7TqsJXCt+y1nOyihSBzd2VlcCDsmYTro4wgKDIwMjYtMDgtMTcpCgrsgrDsl4XslYjsoITquLDsgqwg66+47Jew6rKwIOusuO2VrSDspJEgMeqzvOuqqShQMSnsnYQg7LWc7IugIGBtYWluYOyXkOyEnCDri6Tsi5wg6rKA7Yag7ZaI64ukLiDsnpDrj5kg7Jyg7IKs64+E64qUIO2bhOuztCDstpXshozsl5Drp4wg7IKs7Jqp7ZWY6rOgLCDrrLjtla0g7J2Y66+4wrftmITsnqwg7LGV7YSwIOyGjOycoCDrspTsnITCt+ygleuLtcK37J2066+47KeAL+ybkOusuCDriITrnb0g7JyE7ZeY7J2EIOyngeygkSDrjIDsobDtlbQg6riw7KG0IOyxle2EsOyXkCDsoJXtmZXtnogg65Ok7Ja06rCA64qUIOq0gOqzhOunjCDrsJjsmIHtlojri6QuCgojIyMgMS4gQmF0Y2ggMyDqtaztmITCt3Byb2R1Y3Rpb24g6rKA7KadCgotIFBSICM3MzogYGZlYXQ6IGFkZCBzdWJqZWN0MSBQMSBiYXRjaDMgdmVyaWZpZWQgcmVsYXRpb25zYC4KLSBTcXVhc2ggbWVyZ2UgY29tbWl0OiBgNzUwM2I3Yjk2ODY4NjgwMTlmYjYwZjJjZDJjNzA1Nzc0YjMzYzY3YmAuCi0g6riw7KG0IOyxle2EsCDqtIDqs4QgKio26rG0Kiog7LaU6rCALgogIC0gYGdyb3VwLWRpc2N1c3Npb24tbWV0aG9kc2A6IOu4jOugiOyduOyKpO2GoOuwjSA16rG0LgogIC0gYHNldmVyaXR5LXJhdGVgOiDsnbzsi5wg7KCE64W464+ZIOu2iOuKpeyDge2VtCAx6rG0LgotIGBzZXZlcml0eS1yYXRlYOydmCDsi6TsoJwg6rSA6rOEIOq4sOykgCBgZXhhbUNvbW1lbnRg66W8ICoqMTDrrLjtla0gLyA47ZqM7LCoKirroZwg7KCV7KCV7ZWY6rOgLCBg7JiB6rWsIOyghOuFuOuPmSDrtojriqUoMTPquIkpYCDsmKTtkZzquLDrpbwgKioxfjPquIkqKuycvOuhnCDsiJjsoJXtlojri6QuCi0gUFIgaGVhZOyZgCBzcXVhc2ggbWVyZ2Ug7ZuEIGBtYWluYOydmCBHaXQgdHJlZSBTSEHqsIAgYGNiYmYxMjI0Mjk0MjUwMjUwZjI4NDM2ZmJhMjVlMzY4MjhlYzI0NGNg66GcIOuPmeydvO2VqOydhCDtmZXsnbjtlojri6QuCi0gR2l0SHViIFBhZ2VzIHJ1biBgMzE5NjQ3MTA0MzJgOiBidWlsZCAqKnN1Y2Nlc3MqKiwgZGVwbG95ICoqc3VjY2VzcyoqLgotIGRlcGxveW1lbnQgYDU5MzQwNzY4NDFgOiDstZzsooUg7IOB7YOcICoqc3VjY2VzcyoqLCBlbnZpcm9ubWVudCBVUkwgYGh0dHBzOi8vZ2V0cGFzc2xhYi5jby5rci9gLgoKIyMjIDIuIOqygOymneuQnCDstZzsi6Ag6rSA6rOEIOq4sOykgOyEoAoKLSDsgrDsl4XslYjsoITquLDsgqwg7KCE7LK0IOusuO2VrTogKioxLDY4MCoqLgotIOq0gOqzhCDssLjsobA6ICoqMSwwMDQqKi4KLSDqs6DsnKAg7Jew6rKwIOusuO2VrTogKio5OTQqKi4KLSDrr7jsl7DqsrAg66y47ZWtOiAqKjY4NioqLgotIOuLpOykkSDsl7DqsrAg66y47ZWtOiAqKjEwKiouCi0gMeqzvOuqqSDsoITssrQg66y47ZWtOiAqKjI4MCoqLgotIDHqs7zrqqkg6rOg7JygIOyXsOqysDogKioxNzAqKi4KLSAx6rO866qpIOuvuOyXsOqysDogKioxMTAqKi4KCuydtCDsiJjsuZjripQg7KCA7J6l7IaMIOq0gOqzhOulvCDri6Tsi5wg7KeR6rOE7ZWcIOqysOqzvOuLpC4g7J207KCEIGA5NzggcmVmcyAvIDk2OCBtYXBwZWQgLyA3MTIgdW5tYXBwZWRgIOq4sOykgOyEoOydgCDqs7zqsbAg7IOB7YOc7J2066mwIO2YhOyerCDrj5nsoIEg7KCV67O47Jy866GcIOyCrOyaqe2VmOyngCDslYrripTri6QuCgojIyMgMy4gMeqzvOuqqSDquLDsobQg7LGV7YSwIOy1nOyihSBzd2VlcAoK7J207KCEIOqygO2GoMK367O066WYIOydtOugpeydhCDsoJzsmbjtlZjqs6Ag66eI7KeA66eJ7Jy866GcIOuCqOydgCDrr7jqsoDthqAgMTDrrLjtla3snYQg7J6s7LaU7Lac7ZW0IOuqqOuRkCDsp4HsoJEg6rKA7Yag7ZaI64ukLiAqKuq4sOyhtCDssZXthLDsl5Ag7LaU6rCA7ZWgIOyImCDsnojripQg7JWI7KCE7ZWcIOq0gOqzhOuKlCAw6rG0KirsnLzroZwg7YyQ7KCV7ZaI64ukLgoKLSBgMjAyMTA1MTVfMDExYDog7J6s7ZW07KGw7IKsIOygiOywqCDigJQg7Iug6recIOyxle2EsCDtm4Trs7QuCi0gYDIwMjEwNTE1XzAxNGA6IO2XpOungSDssKnsi5wg4oCUICoqSU1BR0VfREVQRU5ERU5UKiosIOyLoOq3nCDssZXthLAg7ZuE67O0LgotIGAyMDIyMDMwNV8wMTlgOiDsnpDrj5nsmrTrj5kg7Iuc7KeA6rCBIOKAlCDsi6Dqt5wg7LGV7YSwIO2bhOuztC4KLSBgMjAyMTA4MTRfMDEyYDog66CI7JyIIO2WieuPmeyLnSDigJQg7Iug6recIOyxle2EsCDtm4Trs7QuCi0gYDIwMjAwNjA2XzAxNWA6IOyDneyytOumrOuTrCDigJQg7Iug6recIOyxle2EsCDtm4Trs7QuCi0gYDIwMTgwODE5XzAwNmA6IOyCsOyXheyerO2VtCDquLDroZ3Ct+u2hOulmCDigJQgKipTT1VSQ0VfSU5DT01QTEVURSAvIE9SSUdJTkFMX0NIRUNLX1JFUVVJUkVEKiouCi0gYDIwMTkwMzAzXzAxMGA6IOyduOqwhOyYpOulmCDrj4Xrpr3tlonrj5kg67aE66WYIOKAlCDsi6Dqt5wg7LGV7YSwIO2bhOuztC4KLSBgMjAxODAzMDRfMDIwYDog7IOd7LK066as65OsIOKAlCDsi6Dqt5wg7LGV7YSwIO2bhOuztC4KLSBgMjAyMjAzMDVfMDE4YDog67CU7J207Jik66as65OsIOKAlCDsi6Dqt5wg7LGV7YSwIO2bhOuztC4KLSBgMjAyMDA5MjZfMDAzYDogWS1LIOyEseqyqeqygOyCrCDigJQg7Iug6recIOyxle2EsCDtm4Trs7QuCgrquLDsobQg7LGV7YSwIOuylOychOulvCDri6Tsi5wg64yA7KGw7ZWcIOqysOqzvCBgYWNjaWRlbnQtYW5hbHlzaXMtdG9vbHNg64qUIO2GteqzhCDrtoTshJ3rj4TqtawsIGBodW1hbi1lcnJvci1ieS1wcm9jZXNzYOuKlCDsnbjsp4DCt+2MkOuLqMK37KGw7J6RIOqzvOygleuzhCDssKnsmKTsmpTsnbgsIGBodW1hbi1yZWxhdGlvbnMtbWVjaGFuaXNtYOydgCDrj5nsnbztmZTCt+uqqOuwqcK37JWU7IucwrftiKzsgqzCt+y7pOuupOuLiOy8gOydtOyFmOydhCDshozsnKDtlZjrr4DroZwg7JyEIOusuO2VreydhCDsnKDsgqztlZjri6TripQg7J207Jyg66eM7Jy866GcIO2doeyImO2VmOyngCDslYrripTri6QuCgojIyMgNC4g7Iug6recIOyxle2EsCDtm4Trs7Qg6rWw7KeRCgrtmITsnqwgMeqzvOuqqSDrr7jsl7DqsrAg7KCE7LK07JeQ7IScIOq0gOugqCDtgqTsm4zrk5zrpbwg64uk7IucIOustuydgCDqsrDqs7w6CgotIOugiOyciCDtlonrj5nrspXsuZk6ICoqNeusuO2VrSoqLgotIOyDneyytOumrOuTrDogKio266y47ZWtKiog4oCUIOqzoOyghOyggSAyMy8yOC8zM+ydvCDrpqzrk6zqs7wg7KO87JW8IOyDneumrOuzgO2ZlOqwgCDshJ7sl6wg7J6I7Ja0IOuylOychCDqsrDsoJUg7ZWE7JqULgotIOyerO2VtOyhsOyCrMK37J6s7ZW0IOuwnOyDnSDsobDsuZg6ICoqM+usuO2VrSoqLgotIFktRyAvIFktSyDshLHqsqnqsoDsgqw6ICoqMuusuO2VrSoqLgotIOywqeyLnMK37J6Q64+Z7Jq064+ZOiAqKjLrrLjtla0qKiDigJQg7Zek66eBIOusuO2VreydgCDsnbTrr7jsp4Ag7ZmV7J24IO2VhOyalC4KLSDsnbjqsITsmKTrpZgg64+F66a97ZaJ64+ZIOu2hOulmDogKiox66y47ZWtKiouCgrsi6Dqt5wg6rO16rCcIHNsdWfripQgT3duZXIg6rKw7KCVIOuylOychOydtOuvgOuhnCDsnbQg64uo6rOE7JeQ7ISc64qUIOyDneyEse2VmOyngCDslYrslZjri6QuCgojIyMgNS4g64Ko7J2AIOychO2XmMK364uk7J2MIOyekeyXhQoKLSBgMjAxODA4MTlfMDA2YOydgCDtmITsnqwgSlNPTiDrs7jrrLjsl5Ag67aE66WYIOyhsOqxtOydtCDruaDsoLgg7J6I7Ja0IOybkOuzuCDtmZXsnbgg7KCEIOq0gOqzhMK37Iug6recIOy9mO2FkOy4oCDtmZXsoJUg6riI7KeALgotIGAyMDIxMDUxNV8wMTRg64qUIOq3uOumvCDshKDtg53sp4DsnbTrr4DroZwg7JuQ67O4IOydtOuvuOyngCDtmZXsnbgg7KCEIOqzteqwnCDqtIDqs4Qg7ZmV7KCVIOq4iOyngC4KLSDsg53ssrTrpqzrk6wgNuusuO2VreydgCDtlZjrgpjsnZgg7LGV7YSw66GcIO2Vqey5oOyngCDrspTsnITrpbwg64KY64iM7KeAIOq1rOyhsCDqsrDsoJXsnbQg7ZWE7JqULgotIOyLoOq3nCDqs7XqsJwg7Iud67OE7J6QIOyDneyEseydgCBPd25lciDsirnsnbgg7ZuEIOynhO2Wie2VnOuLpC4KLSDstpTsspwg64uk7J2MIOuwsOy5mOuKlCAqKuugiOyciCDtlonrj5nrspXsuZkgNeusuO2VrSArIOyerO2VtOyhsOyCrCAz66y47ZWtICsg7ISx6rKp6rKA7IKsIDLrrLjtla0qKuydmCDsoIDsnITtl5gg7Iug6recIOyxle2EsCAz6rCc7J2066mwLCDssKnsi5zCt+yDneyytOumrOuTrMK37J246rCE7Jik66WYIOu2hOulmOuKlCDrs4Trj4Qg6rKA7Yag66W8IOq2jOyepe2VnOuLpC4KLSBgbnBtIGNpYOydmCDquLDsobQgKioyIGhpZ2ggc2V2ZXJpdHkgdnVsbmVyYWJpbGl0aWVzKiog6rK96rOg64qUIOq0gOqzhCDsnpHsl4Xqs7wg66y06rSA7ZWY66mwIOyVhOyngSDrs4Trj4Qg7ZW06rKw65CY7KeAIOyViuyVmOuLpC4KCuy1nOyihSDsg4Htg5w6IOyCsOyXheyViOyghOq4sOyCrCAx6rO866qp7J2YICoq6riw7KG0IOyxle2EsCDqtIDqs4Qg67O06rCVIOuwjyBQMSDstZzsooUgc3dlZXAgVkVSSUZJRUQqKi4g64uk7J2MIOq1rO2YhOydgCBPd25lcuqwgCDsi6Dqt5wg6rO16rCcIOyxle2EsCDrspTsnITrpbwg7Iq57J247ZWcIOuSpCDsi5zsnpHtlZzri6QuCg=="
+          audit_b64 = "IyDsgrDsl4XslYjsoITquLDsgqwgMeqzvOuqqSBQMSDstZzsooUgc3dlZXAg6rCQ7IKsCgotIOq4sOykgCBtYWluOiBgNzUwM2I3Yjk2ODY4NjgwMTlmYjYwZjJjZDJjNzA1Nzc0YjMzYzY3YmAKLSDquLDspIAg7KCE7LK0IOq0gOqzhDogKioxLDAwNCByZWZzIC8gOTk0IHVuaXF1ZSBtYXBwZWQgLyA2ODYgdW5tYXBwZWQgLyAxMCBtdWx0aSoqCi0gMeqzvOuqqTogKioyODDrrLjtla0gLyAxNzAgbWFwcGVkIC8gMTEwIHVubWFwcGVkKioKLSDrqqnsoIE6IOydtOyghCDqsoDthqAg7J2066Cl7J2EIOygnOyZuO2VnCDrp4jsp4Drp4kg66+46rKA7YagIDEw66y47ZWt7J2YIOq4sOyhtCDssZXthLAg7Jew6rKwIOqwgOuKpeyEsSDsnqzqsoDspp0KLSDquLDsobQg7LGV7YSwIOyLoOq3nCDsl7DqsrA6ICoqMOqxtCoqCi0g7Iug6recIOqzteqwnCBzbHVnIOyDneyEsTogKiow6rG0KioKCiMjIDEuIDPssKggUUEg6rKw6rO8CgojIyMgUUEgMSDigJQg7J6U7JesIO2bhOuztCDsnqzstpTstpwKCuy1nOyLoCBgbWFpbmDsl5DshJwgMeqzvOuqqSDqtIDqs4Trpbwg7J6s7KeR6rOE7ZWY6rOgIOydtOyghCBCYXRjaCAxIOuztOulmCwgQmF0Y2ggMiDsp4HsoJEg6rKA7YagLCBCYXRjaCAzIOyngeygkSDqsoDthqDrpbwg7KCc7Jm47ZaI64ukLiDsmIjsg4HrjIDroZwg66eI7KeA66eJIOuvuOqygO2GoCDtm4Trs7TqsIAgKioxMOusuO2VrSoq7J6E7J2EIO2ZleyduO2WiOuLpC4KCiMjIyBRQSAyIOKAlCDquLDsobQg7LGV7YSwIOyGjOycoCDrspTsnIQg7KeB7KCRIOuMgOyhsAoK7Jyg7IKs64+EIOyDgeychCDssZXthLAg67O466y47J2EIOuLpOyLnCDsnb3slrQg66y47ZWtIOydmOuvuOulvCDsi6TsoJzroZwg7IaM7Jyg7ZWY64qU7KeAIO2ZleyduO2WiOuLpC4gYGFjY2lkZW50LWFuYWx5c2lzLXRvb2xzYCwgYGh1bWFuLWVycm9yLWJ5LXByb2Nlc3NgLCBgaHVtYW4tcmVsYXRpb25zLW1lY2hhbmlzbWAsIGBjYXJlbGVzc25lc3MtbWlzanVkZ21lbnRgIOuTseydgCDqsIHsnpDsnZgg7ZiE7J6sIOuylOychOqwgCDrqoXtmZXtlbQg7LWc7KKFIDEw66y47ZWt7J2EIO2doeyImO2VmOuptCDsnZjrr7gg67KU7JyE6rCAIOq5qOynhOuLpC4g65Sw65287IScIOq0gOqzhCDsiJgg7Kad6rCA66W8IOuqqeyggeycvOuhnCDqsJXsoJwg7Jew6rKw7ZWY7KeAIOyViuuKlOuLpC4KCiMjIyBRQSAzIOKAlCDrr7jsl7DqsrAg7KCE7LK07J2YIOuwmOuztSDstpzsoJwg6rWw7KeRIOyerO2ZleyduAoK7LWc7KKFIDEw66y47ZWt66eMIOuztOyngCDslYrqs6Ag7ZiE7J6sIDHqs7zrqqkg7KCE7LK0IOuvuOyXsOqysCDrrLjtla3sl5DshJwg7YKk7JuM65OcIOq1sOynkeydhCDri6Tsi5wg6rKA7IOJ7ZaI64ukLiDsi6Dqt5wg7LGV7YSw66GcIOustuydhCDqsIDsuZjqsIAg7J6I64qUIOuwmOuztSDstpzsoJwg7KO87KCc66W8IO2ZleyduO2WiOuLpC4KCi0g66CI7JyIIO2WieuPmeuyley5mTogKio166y47ZWtKioKLSDsg53ssrTrpqzrk6w6ICoqNuusuO2VrSoqCi0g7J6s7ZW07KGw7IKswrfsobDsuZg6ICoqM+usuO2VrSoqCi0g7ISx6rKp6rKA7IKsKFktRy9ZLUspOiAqKjLrrLjtla0qKgotIOywqeyLnMK37J6Q64+Z7Jq064+ZOiAqKjLrrLjtla0qKgotIOyduOqwhOyYpOulmCDrj4Xrpr3tlonrj5kg67aE66WYOiAqKjHrrLjtla0qKgoKIyMgMi4g66eI7KeA66eJIDEw66y47ZWtIO2MkOyglQoKfCBxdWVzdGlvbl9pZCB8IO2MkOyglSB8IOq3vOqxsCB8CnwtLS18LS0tfC0tLXwKfCBgMjAyMTA1MTVfMDExYCB8IE5FV19DSEFQVEVSX0NBTkRJREFURSB8IOyerO2VtOyhsOyCrCDrsKnrspXCt+ybkOy5mSB8CnwgYDIwMjEwNTE1XzAxNGAgfCBJTUFHRV9ERVBFTkRFTlQgKyBORVdfQ0hBUFRFUl9DQU5ESURBVEUgfCDtl6Trp4Eg7LCp7IucIOq3uOumvCDshKDtg53sp4AgfAp8IGAyMDIyMDMwNV8wMTlgIHwgTkVXX0NIQVBURVJfQ0FORElEQVRFIHwg7J6Q64+Z7Jq064+ZIOyLnOyngOqwgSDsobDqsbQgfAp8IGAyMDIxMDgxNF8wMTJgIHwgTkVXX0NIQVBURVJfQ0FORElEQVRFIHwg66CI7JyIIGBCPWYoUMK3RSlgIHwKfCBgMjAyMDA2MDZfMDE1YCB8IE5FV19DSEFQVEVSX0NBTkRJREFURSB8IDI47J28IOyDneyytOumrOuTrCB8CnwgYDIwMTgwODE5XzAwNmAgfCBTT1VSQ0VfSU5DT01QTEVURSAvIE9SSUdJTkFMX0NIRUNLX1JFUVVJUkVEIHwg7ZiE7J6sIOuzuOusuOyXkOyEnCDqtITtmLgg7KGw6rG0IOuIhOudvSB8CnwgYDIwMTkwMzAzXzAxMGAgfCBORVdfQ0hBUFRFUl9DQU5ESURBVEUgfCDsnbjqsITsmKTrpZgg64+F66a97ZaJ64+ZIOu2hOulmCB8CnwgYDIwMTgwMzA0XzAyMGAgfCBORVdfQ0hBUFRFUl9DQU5ESURBVEUgfCAzM+ydvCDsg53ssrTrpqzrk6wgfAp8IGAyMDIyMDMwNV8wMThgIHwgTkVXX0NIQVBURVJfQ0FORElEQVRFIHwg67CU7J207Jik66as65OsIO2MkOuzhCB8CnwgYDIwMjAwOTI2XzAwM2AgfCBORVdfQ0hBUFRFUl9DQU5ESURBVEUgfCBZLUsg7ISx6rKp6rKA7IKsIHwKCiMjIDMuIOuLpOydjCDqtaztmIQg7ZuE67O0Cgrsi6Dqt5wg6rO16rCcIOyLneuzhOyekOuKlCBPd25lciDsirnsnbgg64yA7IOB7J2066+A66GcIOydtOuyiCDqsJDsgqzsl5DshJzripQg66eM65Ok7KeAIOyViuuKlOuLpC4KCuy2lOyynCDsmrDshKDsiJzsnITripQg64uk7J2M6rO8IOqwmeuLpC4KCjEuIOugiOyciCDtlonrj5nrspXsuZkg4oCUIDXrrLjtla0sIOydtOuvuOyngMK367KV66C5IOydmOyhtCDsl4bsnYwuCjIuIOyerO2VtOyhsOyCrMK37KGw7LmYIOKAlCAz66y47ZWtLCDquLDsobQg7Ya16rOEIOu2hOyEnSDssZXthLDsmYAg67aE66as65CcIOuPheumvSDso7zsoJwuCjMuIOyEseqyqeqygOyCrChZLUcvWS1LKSDigJQgMuusuO2VrSwg64+F66a9IOqwnOuFkOycvOuhnCDrspTsnITqsIAg66qF7ZmV7ZWoLgoK7IOd7LK066as65Os7J2AIDbrrLjtla3snbTsp4Drp4wgYDIzLzI4LzMz7J28IOumrOuTrGDqs7wgYOyjvOqwhC/slbzqsIQg7IOd66as67OA7ZmUYOqwgCDshJ7sl6wg7J6I7Ja0IOq1rOyhsCDrspTsnITrpbwg66i87KCAIOqysOygle2VnOuLpC4g7LCp7Iuc64qUIO2XpOungSDsnbTrr7jsp4Ag66y47KCcIOuVjOusuOyXkCDsm5Drs7gg7ZmV7J24IO2bhCDsp4TtlontlZzri6QuIOyduOqwhOyYpOulmCDrj4Xrpr3tlonrj5kg67aE66WY64qUIDHrrLjtla3snbTrnbwg64uo64+FIOyLoOq3nCDssZXthLAg7Zqo7Jqp7J2EIOuzhOuPhCDtjJDri6jtlZzri6QuCgrstZzsooUg6rKw66GgOiAqKjHqs7zrqqnsnZgg6riw7KG0IOyxle2EsOyXkCDslYjsoITtlZjqsowg7LaU6rCAIOqwgOuKpe2VnCBQMSDqtIDqs4Qg7ZuE67O0IOqygO2GoOuKlCDsooXro4wqKu2VnOuLpC4g64uk7J2MIOuLqOqzhOuKlCDsi6Dqt5wg7LGV7YSwIOuylOychOyXkCDrjIDtlZwgT3duZXIg7Iq57J247J2064ukLgo="
+
+          handover = Path('AI_HANDOVER.md')
+          text = handover.read_text(encoding='utf-8')
+          section = base64.b64decode(section_b64).decode('utf-8')
+          audit_content = base64.b64decode(audit_b64).decode('utf-8')
           title = '## 산업안전기사 1과목 P1 관계 보강·최종 sweep 완료 (2026-08-17)'
 
           if title not in text:
@@ -35,137 +40,12 @@ jobs:
                   if text.count(old) != 1:
                       raise SystemExit(f'STOP replacement target count={text.count(old)}: {old[:80]}')
                   text = text.replace(old, new, 1)
-              p.write_text(text.rstrip() + '\n', encoding='utf-8', newline='\n')
-          PY
+              text = text.rstrip() + section + '\n'
+              handover.write_text(text, encoding='utf-8', newline='\n')
 
-          if ! grep -Fq '## 산업안전기사 1과목 P1 관계 보강·최종 sweep 완료 (2026-08-17)' AI_HANDOVER.md; then
-            cat >> AI_HANDOVER.md <<'EOF'
-
----
-
-## 산업안전기사 1과목 P1 관계 보강·최종 sweep 완료 (2026-08-17)
-
-산업안전기사 미연결 문항 중 1과목(P1)을 최신 `main`에서 재검토했다. 자동 유사도는 후보 축소에만 사용하고 문항 의미·현재 챕터 소유 범위·정답·이미지/원문 누락 위험을 직접 대조해 검증된 관계만 반영했다.
-
-### 1. Batch 3 구현·production 검증
-
-- PR #73: `feat: add subject1 P1 batch3 verified relations`.
-- Squash merge commit: `7503b7b9686868019fb60f2cd2c705774b33c67b`.
-- 기존 챕터 관계 **6건** 추가: `group-discussion-methods` 5건, `severity-rate` 1건.
-- `severity-rate`의 `examComment`를 실제 관계 기준 **10문항 / 8회차**로 정정하고 `영구 전노동 불능(13급)` 오표기를 **1~3급**으로 수정했다.
-- PR head와 squash merge 후 `main`의 Git tree SHA가 `cbbf1224294250250f28436fba25e36828ec244c`로 동일함을 확인했다.
-- GitHub Pages run `31964710432`: build **success**, deploy **success**.
-- deployment `5934076841`: 최종 상태 **success**, environment URL `https://getpasslab.co.kr/`.
-
-### 2. 검증된 최신 관계 기준선
-
-- 산업안전기사 전체: **1,680문항**.
-- 관계 참조: **1,004**.
-- 고유 연결: **994문항**.
-- 미연결: **686문항**.
-- 다중 연결: **10문항**.
-- 1과목: **280문항 / 170 mapped / 110 unmapped**.
-
-이전 `978 refs / 968 mapped / 712 unmapped` 기준선은 과거 상태이며 현재 동적 정본으로 사용하지 않는다.
-
-### 3. 1과목 기존 챕터 최종 sweep
-
-이전 검토·보류 이력을 제외하고 마지막 미검토 10문항을 재추출해 직접 검토했다. **기존 챕터에 추가할 수 있는 안전한 관계는 0건**으로 판정했다.
-
-- `20210515_011`: 재해조사 절차 — 신규 챕터 후보.
-- `20210515_014`: 헤링 착시 — **IMAGE_DEPENDENT**, 신규 챕터 후보.
-- `20220305_019`: 자동운동 시지각 — 신규 챕터 후보.
-- `20210814_012`: 레윈 행동식 — 신규 챕터 후보.
-- `20200606_015`: 생체리듬 — 신규 챕터 후보.
-- `20180819_006`: 산업재해 기록·분류 — **SOURCE_INCOMPLETE / ORIGINAL_CHECK_REQUIRED**.
-- `20190303_010`: 인간오류 독립행동 분류 — 신규 챕터 후보.
-- `20180304_020`: 생체리듬 — 신규 챕터 후보.
-- `20220305_018`: 바이오리듬 — 신규 챕터 후보.
-- `20200926_003`: Y-K 성격검사 — 신규 챕터 후보.
-
-기존 챕터 범위를 재대조한 결과 `accident-analysis-tools`는 통계 분석도구, `human-error-by-process`는 인지·판단·조작 과정별 착오요인, `human-relations-mechanism`은 동일화·모방·암시·투사·커뮤니케이션을 소유하므로 위 문항을 유사하다는 이유만으로 흡수하지 않는다.
-
-### 4. 신규 챕터 후보 군집
-
-현재 1과목 미연결 전체에서 반복 출제 군집을 다시 확인했다.
-
-- 레윈 행동법칙: **5문항**.
-- 생체리듬: **6문항** — 23/28/33일 리듬과 주야 생리변화가 섞여 있어 범위 결정 필요.
-- 재해조사·재해 발생 조치: **3문항**.
-- Y-G / Y-K 성격검사: **2문항**.
-- 착시·자동운동: **2문항** — 헤링 문항은 이미지 확인 필요.
-- 인간오류 독립행동 분류: **1문항**.
-
-신규 공개 slug는 Owner 결정 범위이므로 생성하지 않았다.
-
-### 5. 남은 위험·다음 작업
-
-- `20180819_006`은 현재 JSON 본문에 분류 조건이 빠져 있어 원본 확인 전 확정 금지.
-- `20210515_014`는 그림 선택지이므로 원본 이미지 확인 전 공개 관계 확정 금지.
-- 생체리듬 6문항은 하나의 챕터로 합칠지 범위를 나눌지 구조 결정이 필요.
-- 추천 다음 배치는 **레윈 행동법칙 5문항 + 재해조사 3문항 + 성격검사 2문항**의 저위험 신규 챕터 3개다. 착시·생체리듬·인간오류 분류는 별도 검토한다.
-- `npm ci`의 기존 **2 high severity vulnerabilities** 경고는 별도 해결되지 않았다.
-
-최종 상태: 산업안전기사 1과목의 **기존 챕터 관계 보강 및 P1 최종 sweep VERIFIED**. 다음 구현은 Owner가 신규 공개 챕터 범위를 승인한 뒤 시작한다.
-EOF
-          fi
-
-          if [ ! -f docs/audits/2026-08-17-industrial-safety-subject1-p1-final-sweep.md ]; then
-            cat > docs/audits/2026-08-17-industrial-safety-subject1-p1-final-sweep.md <<'EOF'
-# 산업안전기사 1과목 P1 최종 sweep 감사
-
-- 기준 main: `7503b7b9686868019fb60f2cd2c705774b33c67b`
-- 기준 전체 관계: **1,004 refs / 994 unique mapped / 686 unmapped / 10 multi**
-- 1과목: **280문항 / 170 mapped / 110 unmapped**
-- 목적: 이전 검토 이력을 제외한 마지막 미검토 10문항의 기존 챕터 연결 가능성 재검증
-- 기존 챕터 신규 연결: **0건**
-- 신규 공개 slug 생성: **0건**
-
-## 1. 3차 QA 결과
-
-### QA 1 — 잔여 후보 재추출
-
-최신 `main`에서 1과목 관계를 재집계하고 이전 Batch 1 보류, Batch 2 직접 검토, Batch 3 직접 검토를 제외했다. 마지막 미검토 후보가 **10문항**임을 확인했다.
-
-### QA 2 — 기존 챕터 소유 범위 직접 대조
-
-유사도 상위 챕터 본문을 다시 읽어 문항 의미를 실제로 소유하는지 확인했다. `accident-analysis-tools`, `human-error-by-process`, `human-relations-mechanism`, `carelessness-misjudgment` 등은 현재 범위가 명확해 최종 10문항을 흡수하면 의미 범위가 깨진다. 따라서 관계 수 증가를 목적으로 강제 연결하지 않는다.
-
-### QA 3 — 미연결 전체 반복 출제 군집 재확인
-
-최종 10문항만 보지 않고 현재 1과목 전체 미연결 문항에서 반복 출제 주제를 다시 검색했다.
-
-- 레윈 행동법칙: **5문항**
-- 생체리듬: **6문항**
-- 재해조사·조치: **3문항**
-- 성격검사(Y-G/Y-K): **2문항**
-- 착시·자동운동: **2문항**
-- 인간오류 독립행동 분류: **1문항**
-
-## 2. 마지막 10문항 판정
-
-| question_id | 판정 | 근거 |
-|---|---|---|
-| `20210515_011` | NEW_CHAPTER_CANDIDATE | 재해조사 방법·원칙 |
-| `20210515_014` | IMAGE_DEPENDENT + NEW_CHAPTER_CANDIDATE | 헤링 착시 그림 선택지 |
-| `20220305_019` | NEW_CHAPTER_CANDIDATE | 자동운동 시지각 조건 |
-| `20210814_012` | NEW_CHAPTER_CANDIDATE | 레윈 `B=f(P·E)` |
-| `20200606_015` | NEW_CHAPTER_CANDIDATE | 28일 생체리듬 |
-| `20180819_006` | SOURCE_INCOMPLETE / ORIGINAL_CHECK_REQUIRED | 현재 본문에서 괄호 조건 누락 |
-| `20190303_010` | NEW_CHAPTER_CANDIDATE | 인간오류 독립행동 분류 |
-| `20180304_020` | NEW_CHAPTER_CANDIDATE | 33일 생체리듬 |
-| `20220305_018` | NEW_CHAPTER_CANDIDATE | 바이오리듬 판별 |
-| `20200926_003` | NEW_CHAPTER_CANDIDATE | Y-K 성격검사 |
-
-## 3. 다음 구현 후보
-
-신규 공개 식별자는 Owner 승인 대상이므로 이번 감사에서는 만들지 않는다. 추천 우선순위는 **레윈 행동법칙 5문항 → 재해조사·조치 3문항 → 성격검사 2문항**이다.
-
-생체리듬은 6문항이지만 23/28/33일 리듬과 주간/야간 생리변화가 섞여 있어 구조 범위를 먼저 결정한다. 착시는 헤링 이미지 문제 때문에 원본 확인 후 진행한다. 인간오류 독립행동 분류는 1문항이라 단독 신규 챕터 효용을 별도 판단한다.
-
-최종 결론: **1과목의 기존 챕터에 안전하게 추가 가능한 P1 관계 후보 검토는 종료**한다. 다음 단계는 신규 챕터 범위에 대한 Owner 승인이다.
-EOF
-          fi
+          audit = Path('docs/audits/2026-08-17-industrial-safety-subject1-p1-final-sweep.md')
+          if not audit.exists():
+              audit.write_text(audit_content, encoding='utf-8', newline='\n')
       - name: Validate documentation changes
         shell: bash
         run: |
