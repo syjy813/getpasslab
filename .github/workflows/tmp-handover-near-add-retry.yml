@@ -1,0 +1,116 @@
+name: Temporary handover near-add retry
+
+on:
+  push:
+    branches:
+      - docs/handover-near-add-20260816
+
+permissions:
+  contents: write
+
+jobs:
+  update-handover:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: docs/handover-near-add-20260816
+          fetch-depth: 0
+
+      - name: Update header and current relation status
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('AI_HANDOVER.md')
+          t = p.read_text(encoding='utf-8')
+          old = '**최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-16 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.18'
+          new = '**최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-16 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.19'
+          if t.count(old) != 1: raise SystemExit(f'STOP version count={t.count(old)}')
+          t = t.replace(old, new, 1)
+          old = '- **산업안전 관계 상태**: 1,680문항 중 고유 연결 954문항, 미연결 726문항. 관계 참조 964건, 다중 연결 10문항. PR #66에서 검증된 23개 관계를 기존 18개 챕터에 추가했다.'
+          new = '- **산업안전 관계 상태**: 1,680문항 중 고유 연결 968문항, 미연결 712문항. 관계 참조 978건, 다중 연결 10문항. PR #66의 23건에 이어 PR #68에서 14개 관계를 기존 5개 챕터에 추가했고, 보류 6건은 미연결 상태를 유지한다.'
+          if t.count(old) != 1: raise SystemExit(f'STOP relation status count={t.count(old)}')
+          if '## 산업안전기사 near-ADD 관계 보강 production 게이트 완료 (2026-08-16)' in t: raise SystemExit('STOP gate already recorded')
+          p.write_text(t.replace(old, new, 1), encoding='utf-8', newline='\n')
+
+      - name: Append verified gate
+        shell: bash
+        run: |
+          cat >> AI_HANDOVER.md <<'EOF'
+
+          ---
+
+          ## 산업안전기사 near-ADD 관계 보강 production 게이트 완료 (2026-08-16)
+
+          직전 관계 정밀 보강 게이트에서 보류한 20문항을 문항 원문과 현재 챕터 본문 범위로 다시 대조해, 기존 챕터를 소폭 보강하면 정확히 수용 가능한 14문항만 추가 연결했다. 신규 공개 slug는 만들지 않았고 구조·이미지·법령·오류문항 위험 6건은 계속 미연결로 유지했다.
+
+          ### 1. 구현·병합
+
+          - PR #68: `feat: expand verified industrial safety relations`.
+          - Squash merge commit: `4f92d8fa5166a2b512768ca02e989fe92c74e12a`.
+          - 기존 5개 챕터에 기출 관계 **14건** 추가.
+            - `motivation-theories`: 5건 — 매슬로 욕구 5단계 보강.
+            - `compatibility`: 4건 — 양식 양립성 보강.
+            - `anthropometry-design`: 2건 — 정적·동적 인체측정과 `5~95 %tile` 조절범위 보강.
+            - `machine-tools-safety`: 2건 — 플레이너 및 장갑 비교형 기출 보강.
+            - `spontaneous-combustion`: 1건 — 자연발화 방지 문제 연결.
+          - `scripts/check-public-content.mjs`의 `저장소` 전체 차단 규칙을 Git·코드·프로젝트 저장소 같은 내부 문맥만 차단하도록 좁혀, 정상 시험 용어의 false positive를 제거했다.
+          - 신규 `slug`, `subject_id`, `question_id`, 의존성, 스키마, URL 규칙 변경 없음.
+
+          ### 2. 검증된 관계 상태
+
+          - 산업안전기사 전체 문항: **1,680**.
+          - 관계 참조: **978**.
+          - 고유 연결 문항: **968**.
+          - 미연결 문항: **712**.
+          - 다중 연결 문항: **10**.
+          - PR 직전 20개 보류 후보 중 14건만 연결했고 다음 6건은 계속 보류한다.
+            - `20180304_048` — STRUCTURE_REVIEW.
+            - `20180304_061` — STRUCTURE_REVIEW.
+            - `20190804_072` — MULTI_TOPIC_REVIEW.
+            - `20200606_079` — LEGAL_STANDARD_REQUIRED.
+            - `20180304_073` — IMAGE_REQUIRED_MOVE.
+            - `20210307_101` — ANSWER_CONFLICT_HOLD.
+
+          ### 3. 검증·production 증거
+
+          - 전용 GitHub Actions finalizer run `31893871188`: PASS.
+          - `npm run build`: PASS — **255 pages**.
+          - `npm run check:seo`: PASS — HTML **257**, sitemap URL **256**, warning **0**, error **0**.
+          - `npm run check:public-content`: PASS — HTML **257**, error **0**.
+          - 산업안전 1,680개 `question_id` unique, 14개 관계 target 존재·중복 없음·`subject_id` 일치, 보류 6건 미연결 유지: PASS.
+          - 공개 콘텐츠 검사기 regression test: PASS.
+          - merge 후 GitHub Pages run `31939883605`: build **success**, deploy **success**.
+          - 실제 라이브 페이지의 별도 브라우저 runtime QA는 이번 게이트에서 추가 수행하지 않았다.
+
+          ### 4. 남은 위험·다음 작업
+
+          - 최신 산업안전 미연결 기준선은 **712문항**이다. 이전 749·726 후보표는 동적 수치 정본으로 사용하지 않는다.
+          - 다음 작업은 최신 `main`에서 712개 미연결 ID를 다시 추출하고, 기존 REVIEW·NEW_CHAPTER_CANDIDATE·NO_RELATION 판단을 가능한 범위에서 승계한 뒤 현재 챕터 상태와 충돌하는 항목만 재검토한다.
+          - 관계 수를 늘리기 위한 억지 매핑은 하지 않는다. 기존 챕터에 직접 연결 가능하거나 소폭 보강으로 수용 가능한 후보를 우선한다.
+          - 위 6개 보류 문항의 구조·이미지·법령·오류답안 이슈는 별도 위험 범위로 유지한다.
+          - `npm ci`의 기존 **2 high severity vulnerabilities** 경고는 이번 관계 게이트에서 새로 발생한 것이 아니며 의존성 변경은 수행하지 않았다.
+          - 기출 텍스트·이미지 이용 권리, AdSense·Search Console·GA4 외부 상태는 기존 Owner 결정/외부 검증 범위로 유지한다.
+
+          최종 상태: 산업안전기사 near-ADD 관계 보강 게이트 **VERIFIED**. 다음 관계 작업은 `main`의 **968 mapped / 712 unmapped / 978 refs / 10 multi**를 기준선으로 사용한다.
+          EOF
+
+      - name: Validate handover scope
+        run: |
+          git diff --check
+          test "$(git diff --name-only | wc -l)" -eq 1
+          test "$(git diff --name-only)" = "AI_HANDOVER.md"
+          grep -F '**버전**: v1.19' AI_HANDOVER.md
+          grep -F '고유 연결 968문항, 미연결 712문항' AI_HANDOVER.md
+          grep -F '산업안전기사 near-ADD 관계 보강 production 게이트' AI_HANDOVER.md
+          grep -F '4f92d8fa5166a2b512768ca02e989fe92c74e12a' AI_HANDOVER.md
+          grep -F '31939883605' AI_HANDOVER.md
+
+      - name: Commit handover only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add AI_HANDOVER.md
+          git commit -m 'docs: record near-add industrial safety relation gate'
+          git push origin HEAD:docs/handover-near-add-20260816
