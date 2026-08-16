@@ -15,7 +15,7 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-16 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.18
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-16 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.19
 
 ---
 
@@ -26,7 +26,7 @@
 - **스택**: Astro 7 + Markdown + GitHub Pages. **서버 없음, DB 없음, API 없음.** 모든 게 빌드 타임에 끝난다.
 - **목적**: 1순위 = **이직 포트폴리오**, 2순위 = AdSense 수익.
 - **현재**: 산업안전기사와 에너지관리기능사 기출 3,300문항을 production 학습 데이터로 유지한다. 공개 챕터 239개의 시험 포인트 1,647행을 `문제 표현 → 정답 키워드` 구조로 전수 정리했고, 장문 챕터 13개는 `우선 암기 / 추가 확인`으로 분리했다. 산업안전기사에는 원본 기반 문항 이미지 75개를 등록했고 기존 관계가 있는 34개 이미지 문항과 9개 챕터 시각자료를 공개했다. 컴퓨터활용능력 2급 2020-07-04 회차 40문항과 이미지 16개는 별도 정본에 내재화했지만 개발 전용 검수 화면만 제공하며 production에는 노출하지 않는다. 최신 production 산출물은 HTML 255개이고 GitHub Actions·Pages·대표 runtime 검증을 통과했다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
-- **산업안전 관계 상태**: 1,680문항 중 고유 연결 954문항, 미연결 726문항. 관계 참조 964건, 다중 연결 10문항. PR #66에서 검증된 23개 관계를 기존 18개 챕터에 추가했다.
+- **산업안전 관계 상태**: 1,680문항 중 고유 연결 968문항, 미연결 712문항. 관계 참조 978건, 다중 연결 10문항. PR #66의 23건에 이어 PR #68에서 14개 관계를 기존 5개 챕터에 추가했고, 보류 6건은 미연결 상태를 유지한다.
 - **최신 동적 상태**: 문서 맨 아래의 `산업안전기사 기출 관계 정밀 보강 게이트 완료` 절을 우선한다.
 
 **🚨 절대 하지 마라 (이것만 기억해도 대형 사고 방지):**
@@ -2793,3 +2793,59 @@ Gate B2 최종 상태: **VERIFIED**. 완료 범위를 다시 수행하지 않는
 - 기출 텍스트·이미지 이용 권리, AdSense·Search Console·GA4 외부 상태는 기존 Owner 결정/외부 검증 범위로 유지한다.
 
 최종 상태: 산업안전기사 기출 관계 정밀 보강 게이트 **VERIFIED**. 다음 관계 작업은 현재 `main`과 이 수치를 기준선으로 사용한다.
+
+---
+
+## 산업안전기사 near-ADD 관계 보강 production 게이트 완료 (2026-08-16)
+
+직전 관계 정밀 보강 게이트에서 보류한 20문항을 문항 원문과 현재 챕터 본문 범위로 다시 대조해, 기존 챕터를 소폭 보강하면 정확히 수용 가능한 14문항만 추가 연결했다. 신규 공개 slug는 만들지 않았고 구조·이미지·법령·오류문항 위험 6건은 계속 미연결로 유지했다.
+
+### 1. 구현·병합
+
+- PR #68: `feat: expand verified industrial safety relations`.
+- Squash merge commit: `4f92d8fa5166a2b512768ca02e989fe92c74e12a`.
+- 기존 5개 챕터에 기출 관계 **14건** 추가.
+  - `motivation-theories`: 5건 — 매슬로 욕구 5단계 보강.
+  - `compatibility`: 4건 — 양식 양립성 보강.
+  - `anthropometry-design`: 2건 — 정적·동적 인체측정과 `5~95 %tile` 조절범위 보강.
+  - `machine-tools-safety`: 2건 — 플레이너 및 장갑 비교형 기출 보강.
+  - `spontaneous-combustion`: 1건 — 자연발화 방지 문제 연결.
+- `scripts/check-public-content.mjs`의 `저장소` 전체 차단 규칙을 Git·코드·프로젝트 저장소 같은 내부 문맥만 차단하도록 좁혀, 정상 시험 용어의 false positive를 제거했다.
+- 신규 `slug`, `subject_id`, `question_id`, 의존성, 스키마, URL 규칙 변경 없음.
+
+### 2. 검증된 관계 상태
+
+- 산업안전기사 전체 문항: **1,680**.
+- 관계 참조: **978**.
+- 고유 연결 문항: **968**.
+- 미연결 문항: **712**.
+- 다중 연결 문항: **10**.
+- PR 직전 20개 보류 후보 중 14건만 연결했고 다음 6건은 계속 보류한다.
+  - `20180304_048` — STRUCTURE_REVIEW.
+  - `20180304_061` — STRUCTURE_REVIEW.
+  - `20190804_072` — MULTI_TOPIC_REVIEW.
+  - `20200606_079` — LEGAL_STANDARD_REQUIRED.
+  - `20180304_073` — IMAGE_REQUIRED_MOVE.
+  - `20210307_101` — ANSWER_CONFLICT_HOLD.
+
+### 3. 검증·production 증거
+
+- 전용 GitHub Actions finalizer run `31893871188`: PASS.
+- `npm run build`: PASS — **255 pages**.
+- `npm run check:seo`: PASS — HTML **257**, sitemap URL **256**, warning **0**, error **0**.
+- `npm run check:public-content`: PASS — HTML **257**, error **0**.
+- 산업안전 1,680개 `question_id` unique, 14개 관계 target 존재·중복 없음·`subject_id` 일치, 보류 6건 미연결 유지: PASS.
+- 공개 콘텐츠 검사기 regression test: PASS.
+- merge 후 GitHub Pages run `31939883605`: build **success**, deploy **success**.
+- 실제 라이브 페이지의 별도 브라우저 runtime QA는 이번 게이트에서 추가 수행하지 않았다.
+
+### 4. 남은 위험·다음 작업
+
+- 최신 산업안전 미연결 기준선은 **712문항**이다. 이전 749·726 후보표는 동적 수치 정본으로 사용하지 않는다.
+- 다음 작업은 최신 `main`에서 712개 미연결 ID를 다시 추출하고, 기존 REVIEW·NEW_CHAPTER_CANDIDATE·NO_RELATION 판단을 가능한 범위에서 승계한 뒤 현재 챕터 상태와 충돌하는 항목만 재검토한다.
+- 관계 수를 늘리기 위한 억지 매핑은 하지 않는다. 기존 챕터에 직접 연결 가능하거나 소폭 보강으로 수용 가능한 후보를 우선한다.
+- 위 6개 보류 문항의 구조·이미지·법령·오류답안 이슈는 별도 위험 범위로 유지한다.
+- `npm ci`의 기존 **2 high severity vulnerabilities** 경고는 이번 관계 게이트에서 새로 발생한 것이 아니며 의존성 변경은 수행하지 않았다.
+- 기출 텍스트·이미지 이용 권리, AdSense·Search Console·GA4 외부 상태는 기존 Owner 결정/외부 검증 범위로 유지한다.
+
+최종 상태: 산업안전기사 near-ADD 관계 보강 게이트 **VERIFIED**. 다음 관계 작업은 `main`의 **968 mapped / 712 unmapped / 978 refs / 10 multi**를 기준선으로 사용한다.
