@@ -20,7 +20,7 @@ const INTERNAL_COPY_RULES = [
   { label: 'question_id', pattern: /\bquestion_id\b/gi },
   { label: 'review 상태', pattern: /\breview\s*:/gi },
   { label: 'jpg 확필', pattern: /jpg\s*확필/gi },
-  { label: '저장소', pattern: /저장소/g },
+  { label: '내부 저장소 문구', pattern: /Git(?:Hub)?\s*저장소|코드\s*저장소|프로젝트\s*저장소|저장소\s*(?:정본|기준|경로|브랜치|커밋)/gi },
   { label: '저장된 기출', pattern: /저장된\s*기출/g },
   { label: '후속 관계', pattern: /후속\s*관계/g },
   { label: '역사적 관계', pattern: /역사적\s*관계/g },
