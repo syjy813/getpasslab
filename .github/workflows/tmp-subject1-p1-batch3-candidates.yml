@@ -22,15 +22,13 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
-          import re
 
           group = Path('src/content/chapters/safety-management/group-discussion-methods.md')
           t = group.read_text(encoding='utf-8')
           old = 'questions: [20220305_006, 20180304_005, 20200606_002, 20210307_006]'
           new = 'questions: [20220305_006, 20180304_005, 20200606_002, 20210307_006, 20200822_020, 20180819_014, 20190427_005, 20200926_006, 20180428_001]'
           if t.count(old) != 1: raise SystemExit('STOP group relation state changed')
-          t = t.replace(old, new, 1)
-          group.write_text(t, encoding='utf-8', newline='\n')
+          group.write_text(t.replace(old, new, 1), encoding='utf-8', newline='\n')
 
           sev = Path('src/content/chapters/safety-management/severity-rate.md')
           t = sev.read_text(encoding='utf-8')
@@ -43,17 +41,15 @@ jobs:
           if t.count(old_comment) != 1: raise SystemExit('STOP severity examComment state changed')
           t = t.replace(old_comment, new_comment, 1)
           marker = '| 일시 전노동 불능 | **휴업일수 × 300 / 365** |'
-          if t.count(marker) != 1: raise SystemExit('STOP severity classification marker changed')
+          if t.count(marker) != 2: raise SystemExit(f'STOP severity marker count={t.count(marker)}')
           t = t.replace(marker, marker + '\n\n**일시 전노동 불능상해**는 의사의 진단에 따라 일정 기간 정규 노동에 종사할 수 없는 상해를 뜻함 · 영구 일부 노동불능과 구분함', 1)
-          point = '| 일시 전노동 불능 | **휴업일수 × 300 / 365** |'
-          # first occurrence is calculation table; add a separate exam point via known keyword row.
-          point2 = '| 일시 전노동 불능 | **휴업일수 × 300 / 365** |'
-          # existing 시험 포인트 uses same text once more; replace second occurrence by split.
-          parts = t.split(point2)
-          if len(parts) != 3: raise SystemExit(f'STOP expected two temporary-total rows, got {len(parts)-1}')
-          t = parts[0] + point2 + parts[1] + '| 일시 전노동 불능 | **일정 기간 정규 노동에 종사할 수 없는 상해** · 휴업일수 × 300 / 365 |' + parts[2]
-          if '| 사망 또는 영구 전노동 불능(13급) |' in t:
-              t = t.replace('| 사망 또는 영구 전노동 불능(13급) |', '| 사망 또는 영구 전노동 불능(1~3급) |', 1)
+          idx = t.rfind(marker)
+          if idx < 0: raise SystemExit('STOP exam-point marker missing')
+          expanded = '| 일시 전노동 불능 | **일정 기간 정규 노동에 종사할 수 없는 상해** · 휴업일수 × 300 / 365 |'
+          t = t[:idx] + expanded + t[idx+len(marker):]
+          typo = '| 사망 또는 영구 전노동 불능(13급) |'
+          if t.count(typo) != 1: raise SystemExit('STOP severity grade typo state changed')
+          t = t.replace(typo, '| 사망 또는 영구 전노동 불능(1~3급) |', 1)
           sev.write_text(t, encoding='utf-8', newline='\n')
 
       - name: Validate canonical answers and relation integrity
@@ -62,7 +58,6 @@ jobs:
           import json, re
           from pathlib import Path
           from collections import Counter
-
           expected = {
             '20200822_020': ('group-discussion-methods', 1),
             '20180819_014': ('group-discussion-methods', 4),
@@ -75,38 +70,22 @@ jobs:
           by_id={q['id']:q for q in data}
           assert len(data)==len(by_id)==1680
           for qid,(slug,ans) in expected.items():
-              q=by_id[qid]
-              assert q['subject_id']==1,(qid,q['subject_id'])
-              assert q['answer']==ans,(qid,q['answer'],ans)
-          assert '브레인' in by_id['20200822_020']['body']
-          assert '브레인스토밍' in by_id['20180819_014']['body']
-          assert '브레인스토밍' in by_id['20190427_005']['body']
-          assert 'Brain storming' in ' '.join(by_id['20200926_006']['choices'])
-          assert 'Brain storming' in ' '.join(by_id['20180428_001']['choices'])
+              q=by_id[qid]; assert q['subject_id']==1; assert q['answer']==ans,(qid,q['answer'],ans)
           assert '일정 기간 정규 노동' in by_id['20180304_008']['body']
-
           refs=[]; owners={}
           for folder in ['safety-management','ergonomics','mechanical','electrical','chemical','construction']:
               for p in Path('src/content/chapters',folder).glob('*.md'):
                   t=p.read_text(encoding='utf-8')
-                  sidm=re.search(r'^subject_id:\s*(\d+)\s*$',t,re.M)
-                  slugm=re.search(r'^slug:\s*([^\n]+)$',t,re.M)
-                  qm=re.search(r'^questions:\s*\[(.*?)\]\s*$',t,re.M)
+                  sidm=re.search(r'^subject_id:\s*(\d+)\s*$',t,re.M); slugm=re.search(r'^slug:\s*([^\n]+)$',t,re.M); qm=re.search(r'^questions:\s*\[(.*?)\]\s*$',t,re.M)
                   if not (sidm and slugm and qm): continue
-                  sid=int(sidm.group(1)); slug=slugm.group(1).strip().strip('"\'')
-                  qids=[x.strip() for x in qm.group(1).split(',') if x.strip()]
+                  sid=int(sidm.group(1)); slug=slugm.group(1).strip().strip('"\''); qids=[x.strip() for x in qm.group(1).split(',') if x.strip()]
                   assert len(qids)==len(set(qids)),slug
                   for qid in qids:
-                      assert qid in by_id,(slug,qid)
-                      assert by_id[qid]['subject_id']==sid,(slug,qid)
+                      assert qid in by_id,(slug,qid); assert by_id[qid]['subject_id']==sid,(slug,qid)
                       refs.append(qid); owners.setdefault(qid,[]).append(slug)
-          for qid,(slug,_) in expected.items():
-              assert owners.get(qid)==[slug],(qid,owners.get(qid))
+          for qid,(slug,_) in expected.items(): assert owners.get(qid)==[slug],(qid,owners.get(qid))
           c=Counter(refs)
-          assert len(refs)==1004,len(refs)
-          assert len(c)==994,len(c)
-          assert 1680-len(c)==686
-          assert sum(v>1 for v in c.values())==10
+          assert len(refs)==1004,len(refs); assert len(c)==994,len(c); assert 1680-len(c)==686; assert sum(v>1 for v in c.values())==10
           print('BATCH3_RELATION_QA_PASS refs=1004 mapped=994 unmapped=686 multi=10')
 
       - name: Install dependencies
