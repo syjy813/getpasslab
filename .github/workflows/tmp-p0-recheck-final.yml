@@ -1,0 +1,87 @@
+name: Temporary P0 relation final QA
+
+on:
+  push:
+    branches:
+      - work/industrial-safety-p0-recheck-20260816
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: work/industrial-safety-p0-recheck-20260816
+          fetch-depth: 0
+
+      - name: Align metadata wording
+        shell: python
+        run: |
+          from pathlib import Path
+
+          def once(path, old, new):
+              p = Path(path)
+              t = p.read_text(encoding='utf-8')
+              if t.count(old) != 1:
+                  raise SystemExit(f'STOP: {path} marker count={t.count(old)}')
+              p.write_text(t.replace(old, new, 1), encoding='utf-8', newline='\n')
+
+          once(
+              'src/content/chapters/ergonomics/fta-procedure.md',
+              'examComment: 재해사례 연구순서 나열형과 FTA 특징(연역적·정량적·톱다운) 소거형이 양대 유형',
+              'examComment: 재해사례 연구순서 나열형, FTA 특징(연역적·정량적·톱다운) 소거형, 기대효과 소거형이 확인됨',
+          )
+          once(
+              'src/content/chapters/ergonomics/articulation-index.md',
+              '2021년 8월 수록 기출의 그림형은 각 구간에 제시된 `log(S/N)` 값에 **말소리 중요도 가중치**를 곱한 뒤 모두 합산하는 방식으로 계산함',
+              '2021년 8월 수록 기출에서 `명료도 지수`로 제시된 그림형은 각 구간에 제시된 `log(S/N)` 값에 **말소리 중요도 가중치**를 곱한 뒤 모두 합산하는 방식으로 계산함',
+          )
+          once(
+              'src/content/chapters/ergonomics/articulation-index.md',
+              '| 그림형 AI 계산 | **각 구간 `log(S/N) × 말소리 중요도 가중치`의 합** · 수록 그림은 **1.38** |',
+              '| 수록 그림형 명료도 지수 | **각 구간 `log(S/N) × 말소리 중요도 가중치`의 합** · 수록 그림은 **1.38** |',
+          )
+
+      - name: Full validation
+        run: |
+          npm ci
+          npm run build
+          npm run check:seo
+          npm run check:public-content
+          git diff --check
+
+      - name: Reconfirm exact relation state
+        shell: python
+        run: |
+          import json, re
+          from collections import Counter
+          from pathlib import Path
+          q = {x['id']: x for x in json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))}
+          if q['20190427_026']['answer'] != 2 or q['20210814_036']['answer'] != 3:
+              raise SystemExit('STOP: canonical answers changed')
+          refs=[]
+          by={}
+          root=Path('dist/industrial-safety/written')
+          for f in root.rglob('index.html'):
+              rel=f.relative_to(root)
+              if len(rel.parts)!=3: continue
+              ids=re.findall(r'data-open="(\d{8}_\d{3})"', f.read_text(encoding='utf-8', errors='ignore'))
+              by[rel.parts[1]]=ids
+              refs.extend(ids)
+          if by.get('fta-procedure',[]).count('20190427_026') != 1: raise SystemExit('STOP FTA relation')
+          if by.get('articulation-index',[]).count('20210814_036') != 1: raise SystemExit('STOP AI relation')
+          c=Counter(refs); actual=(len(refs),len(set(refs)),1680-len(set(refs)),sum(v>1 for v in c.values()))
+          if actual != (980,970,710,10): raise SystemExit(f'STOP counts {actual}')
+          print('FINAL P0 QA PASS', actual)
+
+      - name: Commit wording corrections
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/content/chapters/ergonomics/articulation-index.md src/content/chapters/ergonomics/fta-procedure.md
+          git commit -m 'fix: align P0 relation chapter metadata'
+          git push origin HEAD:work/industrial-safety-p0-recheck-20260816
