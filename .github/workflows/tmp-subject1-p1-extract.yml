@@ -1,0 +1,42 @@
+name: Temporary subject1 P1 extract
+
+on:
+  push:
+    branches:
+      - work/industrial-safety-subject1-p1-batch1-20260816
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Print selected canonical questions
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+
+          ids = [
+            '20190804_003','20200926_012',
+            '20200926_020','20210307_008','20210515_005',
+            '20180304_009','20210515_006',
+            '20180819_020',
+            '20180428_013','20180819_015','20190303_006','20200606_003','20210814_017','20220305_012',
+            '20180428_016','20180819_009','20190427_015','20200926_019','20210814_003',
+            '20200606_008',
+            '20180304_011','20180819_018','20190303_002','20200606_012'
+          ]
+          data = json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
+          by_id = {q['id']: q for q in data}
+          missing = [qid for qid in ids if qid not in by_id]
+          if missing:
+              raise SystemExit(f'MISSING={missing}')
+          selected = [by_id[qid] for qid in ids]
+          assert len(selected) == 24
+          print('SUBJECT1_P1_SELECTED_JSON_START')
+          print(json.dumps(selected, ensure_ascii=False, indent=2))
+          print('SUBJECT1_P1_SELECTED_JSON_END')
