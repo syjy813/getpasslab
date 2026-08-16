@@ -1,4 +1,4 @@
-name: Temporary subject1 P1 extract
+name: Temporary subject1 P1 batch1 finalizer
 
 on:
   push:
@@ -6,37 +6,224 @@ on:
       - work/industrial-safety-subject1-p1-batch1-20260816
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  extract:
+  finalize:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Print selected canonical questions
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Apply 18 verified relations and narrow content updates
         shell: python
         run: |
-          import json
           from pathlib import Path
+          import re
 
-          ids = [
-            '20190804_003','20200926_012',
-            '20200926_020','20210307_008','20210515_005',
-            '20180304_009','20210515_006',
-            '20180819_020',
-            '20180428_013','20180819_015','20190303_006','20200606_003','20210814_017','20220305_012',
-            '20180428_016','20180819_009','20190427_015','20200926_019','20210814_003',
-            '20200606_008',
-            '20180304_011','20180819_018','20190303_002','20200606_012'
-          ]
+          spec = {
+            'src/content/chapters/safety-management/zero-accident-movement.md': {
+              'expected': ['20210814_020','20210307_004','20210515_013','20200606_019','20190427_018'],
+              'add': ['20190804_003','20200926_012'],
+            },
+            'src/content/chapters/safety-management/safety-education-stages.md': {
+              'expected': ['20190427_010','20190804_007'],
+              'add': ['20200926_020','20210307_008','20180428_016','20200926_019','20200606_008'],
+            },
+            'src/content/chapters/safety-management/motivation-theories.md': {
+              'expected': ['20200822_015','20200606_014','20190427_016','20180428_011','20190427_006','20200822_008','20210814_014','20220424_001'],
+              'add': ['20180304_009','20210515_006'],
+            },
+            'src/content/chapters/safety-management/leadership-headship.md': {
+              'expected': ['20220424_020','20200926_018','20210515_002'],
+              'add': ['20180819_020'],
+            },
+            'src/content/chapters/safety-management/carelessness-misjudgment.md': {
+              'expected': ['20190804_012','20180819_012'],
+              'add': ['20180428_013','20180819_015','20190303_006','20200606_003','20210814_017','20220305_012'],
+            },
+            'src/content/chapters/safety-management/tyler-learning-principles.md': {
+              'expected': ['20220305_011'],
+              'add': ['20180819_009','20210814_003'],
+            },
+          }
+
+          q_re = re.compile(r'^questions:\s*\[(.*?)\]\s*$', re.M)
+          for pstr, cfg in spec.items():
+              p = Path(pstr)
+              text = p.read_text(encoding='utf-8')
+              m = q_re.search(text)
+              if not m:
+                  raise SystemExit(f'STOP no questions line: {pstr}')
+              current = [x.strip() for x in m.group(1).split(',') if x.strip()]
+              if current != cfg['expected']:
+                  raise SystemExit(f'STOP relation state changed: {pstr} expected={cfg["expected"]} actual={current}')
+              if set(current) & set(cfg['add']):
+                  raise SystemExit(f'STOP candidate already linked: {pstr}')
+              updated = current + cfg['add']
+              text = q_re.sub('questions: [' + ', '.join(updated) + ']', text, count=1)
+              p.write_text(text, encoding='utf-8', newline='\n')
+
+          # zero-accident-movement: current scope already covers the movement; add only the two directly tested details.
+          p = Path('src/content/chapters/safety-management/zero-accident-movement.md')
+          t = p.read_text(encoding='utf-8')
+          marker = '추진 3요소는 최고경영자의 확고한 경영자세, 관리감독자가 생산활동 속에서 안전보건을 실천하는 것, 직장 구성원이 협동하여 자주적으로 추진하는 것임 · 3원칙과 3요소를 같은 목록으로 세지 않음'
+          if t.count(marker) != 1: raise SystemExit('STOP zero-accident marker changed')
+          addition = '''\n\n기출에서는 추진 3요소를 **조직의 세 기둥**으로도 표현함 · **최고경영자의 경영자세 / 라인관리자에 의한 안전보건 추진 / 소집단 자주활동의 활성화**를 세 기둥으로 묶으며, `전 종업원의 안전요원화`는 이 세 기둥의 명칭이 아님\n\n### 추진 기법: Touch and Call\n\n**Touch and Call**은 팀원이 손을 포개거나 맞대고 행동구호를 함께 외치며 일체감·연대감과 안전태도를 강화하는 무재해운동 추진 기법임 · Brain Storming이나 STP와 구분함'''
+          t = t.replace(marker, marker + addition, 1)
+          point_marker = '| 선취의 원칙 | **위험요소를 사전에 발견·파악·해결**해 재해 예방 |'
+          if t.count(point_marker) != 1: raise SystemExit('STOP zero-accident point marker changed')
+          t = t.replace(point_marker, point_marker + '\n| 조직의 세 기둥 | **최고경영자 경영자세 · 라인관리자 추진 · 소집단 자주활동** |\n| 손을 포개고 행동구호를 함께 외침 | **Touch and Call** |', 1)
+          p.write_text(t, encoding='utf-8', newline='\n')
+
+          # safety-education-stages: add only concepts directly required by the five newly linked questions.
+          p = Path('src/content/chapters/safety-management/safety-education-stages.md')
+          t = p.read_text(encoding='utf-8')
+          marker = '- **기능교육**: 보호구 착용, 작업 절차 등 배운 내용을 실제로 수행하는 단계임'
+          if t.count(marker) != 1: raise SystemExit('STOP education function marker changed')
+          t = t.replace(marker, marker + ' · 반복 실행과 시행착오를 거치며 스스로 행해 기능을 습득하는 형태도 기능교육으로 판별함', 1)
+          marker = '계획 수립 시에는 대상자의 필요정보를 수집하고 현장의 의견을 반영함 · 전체 안전교육 체계와의 연계성을 살피며, 교육 필요성 파악 → 대상·내용·방법 결정 → 준비·실시 → 성과평가 순으로 연결함'
+          if t.count(marker) != 1: raise SystemExit('STOP education plan marker changed')
+          t = t.replace(marker, marker + '\n\n기출의 교육계획 항목 분류에서는 **교육의 종류·대상 / 과목·교육내용 / 장소·교육방법**을 계획에 포함함 · `교육지도안`은 이 문제에서 교육계획의 포함 항목으로 분류하지 않음', 1)
+          marker = '- 안전목표를 명확히 하고 책임감·자기보존 욕구를 자극하며 경쟁과 협동을 적절히 활용함'
+          if t.count(marker) != 1: raise SystemExit('STOP education guidance marker changed')
+          addition = '''\n\n### 학습지도 기본원리\n\n| 원리 | 판별 기준 |\n|---|---|\n| **직관의 원리** | 구체적 사물·자료와 직접 경험을 활용해 이해를 도움 |\n| **개별화의 원리** | 학습자의 요구·능력·개인차에 맞는 학습기회를 제공 |\n| **자기활동의 원리** | 학습자가 스스로 참여하고 활동하도록 구성 |\n| **사회화의 원리** | 공동활동과 상호작용을 통해 사회적 학습을 촉진 |\n\n`계속성`은 위 학습지도 기본원리의 명칭으로 고르지 않음 · 계속성·계열성·통합성은 타일러 학습경험 **조직** 원리와 구분함'''
+          t = t.replace(marker, marker + addition, 1)
+          p.write_text(t, encoding='utf-8', newline='\n')
+
+          # carelessness-misjudgment: make the five consciousness phases explicit; source answers are checked below.
+          p = Path('src/content/chapters/safety-management/carelessness-misjudgment.md')
+          t = p.read_text(encoding='utf-8')
+          marker = '주의상태는 수면·무의식 상태인 Phase 0에서 이완, 일상생활, 적극 활동, 과긴장 상태로 높아짐 · Phase 3은 주의가 가장 명료하게 집중되는 상태지만 오래 지속하기 어렵고, Phase 4의 과긴장은 한 대상에 주의가 고정되어 판단 범위가 좁아질 수 있음'
+          if t.count(marker) != 1: raise SystemExit('STOP phase marker changed')
+          replacement = '''주의·의식 수준은 다음 5단계로 구분해 판별함\n\n| 단계 | 의식상태 | 기출 판별 |\n|---|---|---|\n| **Phase 0** | 무의식 | 수면·무의식 상태 |\n| **Phase I** | 의식 이완 | 의식이 몽롱한 상태 |\n| **Phase II** | 정상·이완 | 일상적·습관적 작업이 가능한 상태 |\n| **Phase III** | 명료 | 적극 활동, 주의가 가장 명료하게 집중되는 상태 |\n| **Phase IV** | 과긴장·의식의 과잉 | 긴급·돌발 상황의 순간적 긴장으로 판단능력이 둔화·정지될 수 있는 상태 |\n\nPhase III의 높은 주의는 오래 지속하기 어렵고, Phase IV는 주의가 한곳에 고정되어 판단 범위가 좁아질 수 있음'''
+          t = t.replace(marker, replacement, 1)
+          point_marker = '| Phase 0 | **수면·무의식 상태** |'
+          if t.count(point_marker) != 1: raise SystemExit('STOP phase point marker changed')
+          t = t.replace(point_marker, point_marker + '\n| Phase I | **의식이 몽롱한 이완 상태** |\n| Phase III | **주의가 가장 명료한 상태** |\n| Phase IV · 의식의 과잉 | **과긴장으로 판단능력이 둔화·정지될 수 있음** |', 1)
+          p.write_text(t, encoding='utf-8', newline='\n')
+
+          audit = Path('docs/audits/2026-08-16-industrial-safety-subject1-p1-batch1.md')
+          audit.write_text('''# 산업안전기사 1과목 P1 의미검토 Batch 1\n\n- 기준 main: `af39304fdc832f5a4cc9be5aa48facdeb6aed0ce`\n- 검토 대상: 기존 챕터 흡수 가능성이 높은 P1 24문항\n- 판정: 기존 챕터 연결 18건 / 보류 6건\n- 신규 slug: 0\n\n## 기존 챕터 연결 18건\n\n- `zero-accident-movement`: `20190804_003`, `20200926_012`\n- `safety-education-stages`: `20200926_020`, `20210307_008`, `20180428_016`, `20200926_019`, `20200606_008`\n- `motivation-theories`: `20180304_009`, `20210515_006`\n- `leadership-headship`: `20180819_020`\n- `carelessness-misjudgment`: `20180428_013`, `20180819_015`, `20190303_006`, `20200606_003`, `20210814_017`, `20220305_012`\n- `tyler-learning-principles`: `20180819_009`, `20210814_003`\n\n관계만으로 정답 근거가 부족한 `zero-accident-movement`, `safety-education-stages`, `carelessness-misjudgment`는 해당 18문항이 요구하는 범위 안에서만 본문을 보강했다.\n\n## 보류 6건\n\n- `20210515_005`: 질문 본문에서 제시된 교육내용이 누락되어 source/media 확인 전 관계 확정 금지\n- `20190427_015`: 듀이 사고과정 5단계로 현재 기존 챕터와 직접 일치하지 않아 신규 주제 후보로 유지\n- `20180304_011`: 자율검사프로그램 검사장비 관리주체 — 법령·제도 범위\n- `20180819_018`: 안전검사 대상 유해·위험기계 — 법령·제도 범위\n- `20190303_002`: 안전검사기관 실적 보고주기 — 법령·제도 범위\n- `20200606_012`: 크레인·리프트·곤돌라 최초 안전검사 시기 — 법령·제도 범위\n\n`safety-inspection-types`는 일상·정기·특별·임시 안전점검과 점검표가 범위이며 법정 안전검사 대상·주기·자율검사프로그램은 명시적 제외 범위이므로 위 4건을 억지로 연결하지 않았다.\n''', encoding='utf-8', newline='\n')
+
+      - name: Validate canonical answers and relation structure
+        shell: python
+        run: |
+          import json, re
+          from pathlib import Path
+          from collections import Counter
+
+          safe = {
+            '20190804_003': ('zero-accident-movement', 1),
+            '20200926_012': ('zero-accident-movement', 3),
+            '20200926_020': ('safety-education-stages', 2),
+            '20210307_008': ('safety-education-stages', 3),
+            '20180304_009': ('motivation-theories', 4),
+            '20210515_006': ('motivation-theories', 2),
+            '20180819_020': ('leadership-headship', 3),
+            '20180428_013': ('carelessness-misjudgment', 1),
+            '20180819_015': ('carelessness-misjudgment', 3),
+            '20190303_006': ('carelessness-misjudgment', 1),
+            '20200606_003': ('carelessness-misjudgment', 2),
+            '20210814_017': ('carelessness-misjudgment', 1),
+            '20220305_012': ('carelessness-misjudgment', 3),
+            '20180428_016': ('safety-education-stages', 3),
+            '20180819_009': ('tyler-learning-principles', 1),
+            '20200926_019': ('safety-education-stages', 3),
+            '20210814_003': ('tyler-learning-principles', 1),
+            '20200606_008': ('safety-education-stages', 1),
+          }
+          holds = {'20210515_005','20190427_015','20180304_011','20180819_018','20190303_002','20200606_012'}
           data = json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
+          assert len(data) == 1680
           by_id = {q['id']: q for q in data}
-          missing = [qid for qid in ids if qid not in by_id]
-          if missing:
-              raise SystemExit(f'MISSING={missing}')
-          selected = [by_id[qid] for qid in ids]
-          assert len(selected) == 24
-          print('SUBJECT1_P1_SELECTED_JSON_START')
-          print(json.dumps(selected, ensure_ascii=False, indent=2))
-          print('SUBJECT1_P1_SELECTED_JSON_END')
+          assert len(by_id) == 1680
+          for qid, (_, answer) in safe.items():
+              assert by_id[qid]['subject_id'] == 1, qid
+              assert by_id[qid]['answer'] == answer, (qid, by_id[qid]['answer'], answer)
+          assert by_id['20210515_005']['body'] == '다음의 교육내용과 관련 있는 교육은?'
+
+          relation_refs = []
+          owner = {}
+          for folder in ['safety-management','ergonomics','mechanical','electrical','chemical','construction']:
+              for p in Path('src/content/chapters', folder).glob('*.md'):
+                  text = p.read_text(encoding='utf-8')
+                  sid_m = re.search(r'^subject_id:\s*(\d+)\s*$', text, re.M)
+                  slug_m = re.search(r'^slug:\s*([^\n]+)$', text, re.M)
+                  q_m = re.search(r'^questions:\s*\[(.*?)\]\s*$', text, re.M)
+                  if not (sid_m and slug_m and q_m):
+                      continue
+                  slug = slug_m.group(1).strip().strip('"\'')
+                  sid = int(sid_m.group(1))
+                  qids = [x.strip() for x in q_m.group(1).split(',') if x.strip()]
+                  if len(qids) != len(set(qids)):
+                      raise SystemExit(f'duplicate relation inside {slug}')
+                  for qid in qids:
+                      if qid not in by_id:
+                          raise SystemExit(f'unknown question {qid} in {slug}')
+                      if by_id[qid]['subject_id'] != sid:
+                          raise SystemExit(f'subject mismatch {qid}: question={by_id[qid]["subject_id"]} chapter={sid}')
+                      relation_refs.append(qid)
+                      owner.setdefault(qid, []).append(slug)
+
+          for qid, (slug, _) in safe.items():
+              assert slug in owner.get(qid, []), (qid, owner.get(qid))
+          for qid in holds:
+              assert qid not in owner, (qid, owner[qid])
+
+          counts = Counter(relation_refs)
+          assert len(relation_refs) == 998, len(relation_refs)
+          assert len(counts) == 988, len(counts)
+          assert 1680 - len(counts) == 692
+          assert sum(v > 1 for v in counts.values()) == 10
+          print('RELATION_QA_PASS refs=998 mapped=988 unmapped=692 multi=10')
+
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: SEO validation
+        run: npm run check:seo
+      - name: Public content validation
+        run: npm run check:public-content
+
+      - name: Validate scope and diff
+        run: |
+          git diff --check
+          python - <<'PY'
+          import subprocess
+          expected = {
+            'src/content/chapters/safety-management/zero-accident-movement.md',
+            'src/content/chapters/safety-management/safety-education-stages.md',
+            'src/content/chapters/safety-management/motivation-theories.md',
+            'src/content/chapters/safety-management/leadership-headship.md',
+            'src/content/chapters/safety-management/carelessness-misjudgment.md',
+            'src/content/chapters/safety-management/tyler-learning-principles.md',
+            'docs/audits/2026-08-16-industrial-safety-subject1-p1-batch1.md',
+          }
+          status = subprocess.check_output(['git','status','--porcelain'], text=True).splitlines()
+          actual = {line[3:] for line in status if line.strip()}
+          if actual != expected:
+              raise SystemExit(f'Unexpected scope: {sorted(actual ^ expected)} actual={sorted(actual)}')
+          print('SCOPE_PASS', len(actual), 'files')
+          PY
+
+      - name: Commit verified batch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/content/chapters/safety-management/zero-accident-movement.md \
+                  src/content/chapters/safety-management/safety-education-stages.md \
+                  src/content/chapters/safety-management/motivation-theories.md \
+                  src/content/chapters/safety-management/leadership-headship.md \
+                  src/content/chapters/safety-management/carelessness-misjudgment.md \
+                  src/content/chapters/safety-management/tyler-learning-principles.md \
+                  docs/audits/2026-08-16-industrial-safety-subject1-p1-batch1.md
+          git commit -m 'feat: add subject1 verified industrial safety relations'
+          git push origin HEAD:work/industrial-safety-subject1-p1-batch1-20260816
