@@ -1,4 +1,4 @@
-name: Temporary subject1 final sweep
+name: Temporary subject1 final sweep clusters
 
 on:
   push:
@@ -13,98 +13,39 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Extract last unreviewed subject1 candidates
+      - name: Verify unmapped keyword clusters
         shell: python
         run: |
-          import json, math, re
-          from collections import Counter
+          import json, re
           from pathlib import Path
 
-          qdata = json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
-          qline = re.compile(r'^questions:\s*\[(.*?)\]\s*$', re.M)
-          meta = lambda key: re.compile(r'^' + re.escape(key) + r':\s*(.*?)\s*$', re.M)
-
-          mapped = set()
-          chapters = []
+          qdata=json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
+          qline=re.compile(r'^questions:\s*\[(.*?)\]\s*$',re.M)
+          mapped=set()
           for p in Path('src/content/chapters/safety-management').glob('*.md'):
-              text = p.read_text(encoding='utf-8')
-              qm = qline.search(text)
-              if qm:
-                  mapped.update(x.strip() for x in qm.group(1).split(',') if x.strip())
-              sm = meta('status').search(text)
-              if not sm or sm.group(1).strip().strip('"\'') != '완료':
-                  continue
-              slugm = meta('slug').search(text); titlem = meta('title').search(text); summ = meta('summary').search(text)
-              if not (slugm and titlem):
-                  continue
-              slug = slugm.group(1).strip().strip('"\'')
-              title = titlem.group(1).strip().strip('"\'')
-              summary = summ.group(1).strip().strip('"\'') if summ else ''
-              body = re.sub(r'`?20\d{6}_\d{3}`?', ' ', text.split('---',2)[-1])
-              chapters.append({'slug':slug,'title':title,'summary':summary,'text':f'{title} {summary} {body}'})
+              m=qline.search(p.read_text(encoding='utf-8'))
+              if m:
+                  mapped.update(x.strip() for x in m.group(1).split(',') if x.strip())
 
-          batch1_holds = {
-            '20210515_005','20190427_015','20180428_016','20200926_019','20200606_008',
-            '20180304_011','20180819_018','20190303_002','20200606_012'
+          clusters={
+            'LEWIN': re.compile(r'레빈|레윈|Lewin|B\s*=\s*f',re.I),
+            'BIORHYTHM': re.compile(r'생체\s*리듬|바이오리듬|Bio\s*Rhythm',re.I),
+            'PERSONALITY_TEST': re.compile(r'Y[-·]?K|Yutaka|Y[-·]?G|성격검사',re.I),
+            'VISUAL_ILLUSION': re.compile(r'착시|시지각|자동운동|헤링|Hering',re.I),
+            'ACCIDENT_INVESTIGATION': re.compile(r'재해\s*조사|재해\s*발생\s*시\s*조치',re.I),
+            'HUMAN_ERROR_TAXONOMY': re.compile(r'생략오류|실행오류|시간오류|명령오류|인간오류',re.I),
           }
-          batch2_reviewed = {
-            '20190427_008','20180428_017','20210814_015','20210515_010','20220305_002','20200822_003','20220424_011','20200606_005',
-            '20190303_011','20180819_002','20210814_013','20180428_003','20220305_005','20190804_010','20220424_007','20190303_018',
-            '20210515_018','20200606_002','20180304_014','20210814_010','20210814_019','20180819_004','20180428_005','20180428_019',
-            '20190303_016','20200606_010','20200926_015','20190427_017','20190427_019','20210515_017','20200606_013','20190303_020',
-            '20210307_012','20190804_009','20190804_017','20190303_019','20180819_005','20220424_013','20210307_006','20190804_013'
-          }
-          batch3_reviewed = {
-            '20200822_020','20180819_014','20220305_001','20180819_008','20220424_009','20200606_011','20180819_019','20180304_008','20200926_014','20180304_002',
-            '20210814_009','20210814_006','20190303_004','20190427_005','20190303_005','20220305_003','20190427_007','20220424_017','20180304_004','20180819_010',
-            '20210515_001','20200926_006','20200822_004','20180428_001','20210515_020','20190804_018','20190427_011','20210814_002','20220424_004','20210814_007',
-            '20180304_012','20180819_003','20210814_018','20190303_009','20210307_001','20210515_019','20190804_014','20190303_015','20190427_002','20200926_008',
-            '20200926_002','20210307_002','20210307_010','20200926_013','20180304_013','20190427_013','20210307_007','20200822_001','20220424_015','20200822_018',
-            '20190804_011','20190303_003','20200926_010','20180428_002','20190804_015','20200926_011','20180428_014','20190804_001','20200606_009','20180304_019'
-          }
-          excluded = batch1_holds | batch2_reviewed | batch3_reviewed
 
-          def clean(s):
-              s = re.sub(r'\s+','',s or '')
-              return re.sub(r'[^0-9A-Za-z가-힣]+','',s).lower()
-          def grams(s):
-              s=clean(s); c=Counter()
-              for n in (2,3,4):
-                  for i in range(max(0,len(s)-n+1)): c[s[i:i+n]] += 1
-              return c
-          def cosine(a,b):
-              if not a or not b: return 0.0
-              common=set(a)&set(b); dot=sum(a[k]*b[k] for k in common)
-              na=math.sqrt(sum(v*v for v in a.values())); nb=math.sqrt(sum(v*v for v in b.values()))
-              return dot/(na*nb) if na and nb else 0.0
-
-          chapter_vec=[(c,grams(c['text'])) for c in chapters]
-          remaining=[]
-          for q in qdata:
-              if q.get('subject_id') != 1 or q['id'] in mapped or q['id'] in excluded:
-                  continue
-              qv=grams(' '.join([q.get('body','')] + list(q.get('choices') or [])))
-              scored=[]
-              for c,cv in chapter_vec:
-                  score=cosine(qv,cv)+0.25*cosine(qv,grams(c['title']+' '+c['summary']))
-                  scored.append((score,c))
-              scored.sort(key=lambda x:x[0], reverse=True)
-              remaining.append((scored[0][0] if scored else 0,q,scored[:5]))
-          remaining.sort(key=lambda x:x[0], reverse=True)
-
-          subject1_total=sum(1 for q in qdata if q.get('subject_id')==1)
-          subject1_unmapped=sum(1 for q in qdata if q.get('subject_id')==1 and q['id'] not in mapped)
-          print(f'SUBJECT1_TOTAL={subject1_total}')
-          print(f'SUBJECT1_CURRENT_MAPPED={subject1_total-subject1_unmapped}')
-          print(f'SUBJECT1_CURRENT_UNMAPPED={subject1_unmapped}')
-          print(f'FINAL_UNREVIEWED_EXCLUDING_HOLDS={len(remaining)}')
-          if len(remaining) != 10:
-              raise SystemExit(f'STOP expected 10 remaining candidates, got {len(remaining)}')
-          print('FINAL_SWEEP_START')
-          for rank,(score,q,tops) in enumerate(remaining,1):
-              print(f'\n### RANK {rank} | {q["id"]} | score={score:.4f} | answer={q.get("answer")} | date={q.get("date")}')
-              print('BODY:',q.get('body',''))
-              for i,ch in enumerate(q.get('choices') or [],1): print(f'  {i}. {ch}')
-              print('TOP_CHAPTERS:')
-              for s,c in tops: print(f'  - {c["slug"]} | {c["title"]} | score={s:.4f} | summary={c["summary"]}')
-          print('\nFINAL_SWEEP_END')
+          print('CLUSTER_SCAN_START')
+          for name,pat in clusters.items():
+              rows=[]
+              for q in qdata:
+                  if q.get('subject_id') != 1 or q['id'] in mapped:
+                      continue
+                  text=' '.join([q.get('body','')] + list(q.get('choices') or []))
+                  if pat.search(text):
+                      rows.append(q)
+              print(f'\n## {name} | unmapped_count={len(rows)}')
+              for q in rows:
+                  print(f'- {q["id"]} | answer={q.get("answer")} | {q.get("body","")}')
+          print('\nCLUSTER_SCAN_END')
