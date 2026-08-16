@@ -1,0 +1,108 @@
+name: Temporary subject1 P1 batch2 candidates
+
+on:
+  push:
+    branches:
+      - work/industrial-safety-subject1-p1-batch2-20260817
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Print strongest current existing-chapter candidates
+        shell: python
+        run: |
+          import json, math, re
+          from collections import Counter
+          from pathlib import Path
+
+          qdata = json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
+          by_id = {q['id']: q for q in qdata}
+
+          chapter_dir = Path('src/content/chapters/safety-management')
+          qline = re.compile(r'^questions:\s*\[(.*?)\]\s*$', re.M)
+          meta_re = lambda key: re.compile(r'^' + re.escape(key) + r':\s*(.*?)\s*$', re.M)
+
+          mapped = set()
+          chapters = []
+          for p in chapter_dir.glob('*.md'):
+              text = p.read_text(encoding='utf-8')
+              qm = qline.search(text)
+              if qm:
+                  mapped.update(x.strip() for x in qm.group(1).split(',') if x.strip())
+              status_m = meta_re('status').search(text)
+              if not status_m or status_m.group(1).strip().strip('"\'') != '완료':
+                  continue
+              slug_m = meta_re('slug').search(text)
+              title_m = meta_re('title').search(text)
+              summary_m = meta_re('summary').search(text)
+              if not (slug_m and title_m):
+                  continue
+              slug = slug_m.group(1).strip().strip('"\'')
+              title = title_m.group(1).strip().strip('"\'')
+              summary = summary_m.group(1).strip().strip('"\'') if summary_m else ''
+              body = text.split('---', 2)[-1]
+              # relation IDs and boilerplate should not drive retrieval.
+              body = re.sub(r'`?20\d{6}_\d{3}`?', ' ', body)
+              chapters.append({'slug': slug, 'title': title, 'summary': summary, 'text': f'{title} {summary} {body}'})
+
+          holds = {
+            '20210515_005','20190427_015','20180428_016','20200926_019','20200606_008',
+            '20180304_011','20180819_018','20190303_002','20200606_012'
+          }
+
+          def clean(s):
+              s = re.sub(r'\s+', '', s or '')
+              s = re.sub(r'[^0-9A-Za-z가-힣]+', '', s)
+              return s.lower()
+
+          def grams(s):
+              s = clean(s)
+              c = Counter()
+              for n in (2,3,4):
+                  for i in range(max(0, len(s)-n+1)):
+                      c[s[i:i+n]] += 1
+              return c
+
+          def cosine(a, b):
+              if not a or not b: return 0.0
+              common = set(a) & set(b)
+              dot = sum(a[k]*b[k] for k in common)
+              na = math.sqrt(sum(v*v for v in a.values()))
+              nb = math.sqrt(sum(v*v for v in b.values()))
+              return dot/(na*nb) if na and nb else 0.0
+
+          chapter_vec = [(c, grams(c['text'])) for c in chapters]
+          results=[]
+          for q in qdata:
+              if q.get('subject_id') != 1 or q['id'] in mapped or q['id'] in holds:
+                  continue
+              qtext = ' '.join([q.get('body','')] + list(q.get('choices') or []))
+              qv = grams(qtext)
+              scored=[]
+              for c, cv in chapter_vec:
+                  score = cosine(qv, cv)
+                  # modest title/summary boost only for candidate narrowing, never final judgment.
+                  title_score = cosine(qv, grams(c['title'] + ' ' + c['summary']))
+                  scored.append((score + 0.25*title_score, c))
+              scored.sort(key=lambda x: x[0], reverse=True)
+              results.append((scored[0][0] if scored else 0, q, scored[:3]))
+
+          results.sort(key=lambda x: x[0], reverse=True)
+          selected = results[:40]
+          print(f'CURRENT_SUBJECT1_UNMAPPED_EXCLUDING_BATCH1_HOLDS={len(results)}')
+          print('SUBJECT1_BATCH2_CANDIDATES_START')
+          for rank, (score, q, tops) in enumerate(selected, 1):
+              print(f'\n### RANK {rank} | {q["id"]} | score={score:.4f} | answer={q.get("answer")}')
+              print('BODY:', q.get('body',''))
+              for i, choice in enumerate(q.get('choices') or [], 1):
+                  print(f'  {i}. {choice}')
+              print('TOP_CHAPTERS:')
+              for s, c in tops:
+                  print(f'  - {c["slug"]} | {c["title"]} | score={s:.4f} | summary={c["summary"]}')
+          print('\nSUBJECT1_BATCH2_CANDIDATES_END')
