@@ -1,4 +1,4 @@
-name: Temporary subject1 P1 batch2 candidates
+name: Temporary subject1 P1 batch2 finalizer
 
 on:
   push:
@@ -6,103 +6,158 @@ on:
       - work/industrial-safety-subject1-p1-batch2-20260817
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  extract:
+  finalize:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Print strongest current existing-chapter candidates
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Apply three exact-match relations
         shell: python
         run: |
-          import json, math, re
-          from collections import Counter
           from pathlib import Path
+          import re
 
-          qdata = json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
-          by_id = {q['id']: q for q in qdata}
-
-          chapter_dir = Path('src/content/chapters/safety-management')
-          qline = re.compile(r'^questions:\s*\[(.*?)\]\s*$', re.M)
-          meta_re = lambda key: re.compile(r'^' + re.escape(key) + r':\s*(.*?)\s*$', re.M)
-
-          mapped = set()
-          chapters = []
-          for p in chapter_dir.glob('*.md'):
-              text = p.read_text(encoding='utf-8')
-              qm = qline.search(text)
-              if qm:
-                  mapped.update(x.strip() for x in qm.group(1).split(',') if x.strip())
-              status_m = meta_re('status').search(text)
-              if not status_m or status_m.group(1).strip().strip('"\'') != '완료':
-                  continue
-              slug_m = meta_re('slug').search(text)
-              title_m = meta_re('title').search(text)
-              summary_m = meta_re('summary').search(text)
-              if not (slug_m and title_m):
-                  continue
-              slug = slug_m.group(1).strip().strip('"\'')
-              title = title_m.group(1).strip().strip('"\'')
-              summary = summary_m.group(1).strip().strip('"\'') if summary_m else ''
-              body = text.split('---', 2)[-1]
-              # relation IDs and boilerplate should not drive retrieval.
-              body = re.sub(r'`?20\d{6}_\d{3}`?', ' ', body)
-              chapters.append({'slug': slug, 'title': title, 'summary': summary, 'text': f'{title} {summary} {body}'})
-
-          holds = {
-            '20210515_005','20190427_015','20180428_016','20200926_019','20200606_008',
-            '20180304_011','20180819_018','20190303_002','20200606_012'
+          spec = {
+            'src/content/chapters/safety-management/group-discussion-methods.md': {
+              'expected': ['20220305_006','20180304_005'],
+              'add': ['20200606_002','20210307_006'],
+            },
+            'src/content/chapters/safety-management/severity-rate.md': {
+              'expected': ['20220424_002','20210515_015','20200822_019','20200926_007','20180304_016','20180428_004','20190427_012','20180428_015'],
+              'add': ['20190303_018'],
+            },
           }
 
-          def clean(s):
-              s = re.sub(r'\s+', '', s or '')
-              s = re.sub(r'[^0-9A-Za-z가-힣]+', '', s)
-              return s.lower()
+          q_re = re.compile(r'^questions:\s*\[(.*?)\]\s*$', re.M)
+          for pstr, cfg in spec.items():
+              p = Path(pstr)
+              text = p.read_text(encoding='utf-8')
+              m = q_re.search(text)
+              if not m:
+                  raise SystemExit(f'STOP no questions line: {pstr}')
+              current = [x.strip() for x in m.group(1).split(',') if x.strip()]
+              if current != cfg['expected']:
+                  raise SystemExit(f'STOP relation state changed: {pstr} expected={cfg["expected"]} actual={current}')
+              if set(current) & set(cfg['add']):
+                  raise SystemExit(f'STOP candidate already linked: {pstr}')
+              updated = current + cfg['add']
+              text = q_re.sub('questions: [' + ', '.join(updated) + ']', text, count=1)
+              p.write_text(text, encoding='utf-8', newline='\n')
 
-          def grams(s):
-              s = clean(s)
-              c = Counter()
-              for n in (2,3,4):
-                  for i in range(max(0, len(s)-n+1)):
-                      c[s[i:i+n]] += 1
-              return c
+          # group-discussion-methods already declares brainstorming in its scope/summary,
+          # but its body lacked the principle needed by 20210307_006. Add only that missing rule.
+          p = Path('src/content/chapters/safety-management/group-discussion-methods.md')
+          t = p.read_text(encoding='utf-8')
+          row_marker = '| **자유토의** | 정해진 발표자보다 참가자들의 자유로운 의견 교환을 중심으로 진행 |'
+          if t.count(row_marker) != 1:
+              raise SystemExit('STOP group-discussion table marker changed')
+          t = t.replace(row_marker, row_marker + '\n| **브레인스토밍** | 비판을 보류하고 자유롭게 많은 의견을 내며 다른 의견의 결합·개선을 장려 |', 1)
 
-          def cosine(a, b):
-              if not a or not b: return 0.0
-              common = set(a) & set(b)
-              dot = sum(a[k]*b[k] for k in common)
-              na = math.sqrt(sum(v*v for v in a.values()))
-              nb = math.sqrt(sum(v*v for v in b.values()))
-              return dot/(na*nb) if na and nb else 0.0
+          point_marker = '| 자유토의 | 정해진 발표자보다 **참가자의 자유로운 의견 교환** 중심 |'
+          if t.count(point_marker) != 1:
+              raise SystemExit('STOP group-discussion point marker changed')
+          t = t.replace(point_marker, point_marker + '\n| 브레인스토밍 | **비판금지 · 자유분방 · 다량발언 · 결합개선** · 정해진 표현방식에 얽매이지 않고 자유롭게 의견 제시 |', 1)
 
-          chapter_vec = [(c, grams(c['text'])) for c in chapters]
-          results=[]
-          for q in qdata:
-              if q.get('subject_id') != 1 or q['id'] in mapped or q['id'] in holds:
-                  continue
-              qtext = ' '.join([q.get('body','')] + list(q.get('choices') or []))
-              qv = grams(qtext)
-              scored=[]
-              for c, cv in chapter_vec:
-                  score = cosine(qv, cv)
-                  # modest title/summary boost only for candidate narrowing, never final judgment.
-                  title_score = cosine(qv, grams(c['title'] + ' ' + c['summary']))
-                  scored.append((score + 0.25*title_score, c))
-              scored.sort(key=lambda x: x[0], reverse=True)
-              results.append((scored[0][0] if scored else 0, q, scored[:3]))
+          wrong_marker = '- 자유토의는 참가자 중심의 교환이므로 ‘전문가 발표 후 질문’이라는 문장과 구분함'
+          if t.count(wrong_marker) != 1:
+              raise SystemExit('STOP group-discussion warning marker changed')
+          t = t.replace(wrong_marker, wrong_marker + '\n- 브레인스토밍에서는 제시된 의견을 즉시 비판·평가하지 않으며, 자유로운 발언과 아이디어의 결합·개선을 장려함', 1)
+          p.write_text(t, encoding='utf-8', newline='\n')
 
-          results.sort(key=lambda x: x[0], reverse=True)
-          selected = results[:40]
-          print(f'CURRENT_SUBJECT1_UNMAPPED_EXCLUDING_BATCH1_HOLDS={len(results)}')
-          print('SUBJECT1_BATCH2_CANDIDATES_START')
-          for rank, (score, q, tops) in enumerate(selected, 1):
-              print(f'\n### RANK {rank} | {q["id"]} | score={score:.4f} | answer={q.get("answer")}')
-              print('BODY:', q.get('body',''))
-              for i, choice in enumerate(q.get('choices') or [], 1):
-                  print(f'  {i}. {choice}')
-              print('TOP_CHAPTERS:')
-              for s, c in tops:
-                  print(f'  - {c["slug"]} | {c["title"]} | score={s:.4f} | summary={c["summary"]}')
-          print('\nSUBJECT1_BATCH2_CANDIDATES_END')
+          audit = Path('docs/audits/2026-08-17-industrial-safety-subject1-p1-batch2.md')
+          audit.write_text('''# 산업안전기사 1과목 P1 의미검토 Batch 2\n\n- 기준 main: `ea37c9de2a77276452fe8ab82e39b4fa83351305`\n- 기준 관계: 995 refs / 985 unique mapped / 695 unmapped / 10 multi\n- 후보 추출: 현재 1과목 미연결 중 Batch 1 보류 9건을 제외하고 기존 완료 챕터와의 의미 유사도 상위 40건을 우선 선별\n- 최종 기존 챕터 연결: **3건**\n- 신규 slug: 0\n\n## 기존 챕터 연결 3건\n\n- `20200606_002` → `group-discussion-methods`\n  - 여러 전문가가 과제에 관한 견해를 발표한 뒤 참가자의 의견·질문을 받는 방식 = 심포지엄\n  - 현재 챕터의 심포지엄 정의와 직접 일치\n- `20210307_006` → `group-discussion-methods`\n  - 브레인스토밍의 자유로운 의견 제시 원칙을 묻는 문제\n  - 챕터 summary가 브레인스토밍을 명시적으로 소유하고 있어 관계 적합\n  - 본문에 비판금지·자유분방·다량발언·결합개선 원칙만 최소 보강\n- `20190303_018` → `severity-rate`\n  - 신체장해등급 12급 = 영구 일부 노동불능\n  - 현재 강도율 챕터의 근로손실일수 환산 기준에서 4~14급을 영구 일부 노동불능으로 직접 구분\n\n## 이번 배치에서 연결하지 않은 주요 유형\n\n- 교육계획·강의법·관리감독자 정기교육 내용: `safety-education-stages` 또는 `safety-education-hours`와 단어는 겹치지만 현재 챕터의 직접 소유 범위를 넘기므로 강제 연결하지 않음\n- 산업안전보건위원회·안전보건관리규정·건강진단·특별교육 내용: 법령·제도 최신성 검토가 필요하므로 보류\n- 유기화합물용 방독마스크 시험가스·절연장갑 등급: 표준·수치 직접 확인이 필요하므로 보류\n- `20210814_019`: 문제 본문에 계산 조건이 누락되어 원문/이미지 확인 전 관계 확정 금지\n- 시몬즈 재해코스트·하인리히 사고방지 5단계·재해조사 목적: 현재 완료 챕터와 정확한 소유 주제가 일치하지 않아 신규 주제 후보 또는 후속 검토로 유지\n\n## 기대 집계\n\n- 998 refs\n- 988 unique mapped\n- 692 unmapped\n- 10 multi\n''', encoding='utf-8', newline='\n')
+
+      - name: Validate canonical questions and relation integrity
+        shell: python
+        run: |
+          import json, re
+          from pathlib import Path
+          from collections import Counter
+
+          expected = {
+            '20200606_002': ('group-discussion-methods', 1),
+            '20210307_006': ('group-discussion-methods', 2),
+            '20190303_018': ('severity-rate', 2),
+          }
+          data = json.loads(Path('src/data/questions/industrial-safety.json').read_text(encoding='utf-8'))
+          by_id = {q['id']: q for q in data}
+          assert len(data) == len(by_id) == 1680
+          assert '전문가' in by_id['20200606_002']['body'] and '심포지움' in ' '.join(by_id['20200606_002']['choices'])
+          assert '브레인스토밍' in by_id['20210307_006']['body']
+          assert '제12급' in by_id['20190303_018']['body']
+          for qid, (_, ans) in expected.items():
+              assert by_id[qid]['subject_id'] == 1, qid
+              assert by_id[qid]['answer'] == ans, (qid, by_id[qid]['answer'], ans)
+
+          refs=[]; owners={}
+          for folder in ['safety-management','ergonomics','mechanical','electrical','chemical','construction']:
+              for p in Path('src/content/chapters', folder).glob('*.md'):
+                  t=p.read_text(encoding='utf-8')
+                  sidm=re.search(r'^subject_id:\s*(\d+)\s*$',t,re.M)
+                  slugm=re.search(r'^slug:\s*([^\n]+)$',t,re.M)
+                  qm=re.search(r'^questions:\s*\[(.*?)\]\s*$',t,re.M)
+                  if not (sidm and slugm and qm):
+                      continue
+                  sid=int(sidm.group(1)); slug=slugm.group(1).strip().strip('"\'')
+                  qids=[x.strip() for x in qm.group(1).split(',') if x.strip()]
+                  assert len(qids)==len(set(qids)), slug
+                  for qid in qids:
+                      assert qid in by_id, (slug,qid)
+                      assert by_id[qid]['subject_id']==sid, (slug,qid,by_id[qid]['subject_id'],sid)
+                      refs.append(qid); owners.setdefault(qid,[]).append(slug)
+
+          for qid, (slug, _) in expected.items():
+              assert owners.get(qid) == [slug], (qid, owners.get(qid))
+          c=Counter(refs)
+          assert len(refs)==998, len(refs)
+          assert len(c)==988, len(c)
+          assert 1680-len(c)==692
+          assert sum(v>1 for v in c.values())==10
+          print('RELATION_QA_PASS refs=998 mapped=988 unmapped=692 multi=10')
+
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: SEO validation
+        run: npm run check:seo
+      - name: Public content validation
+        run: npm run check:public-content
+
+      - name: Remove temporary workflow and validate net scope
+        run: |
+          git rm .github/workflows/tmp-subject1-p1-batch2-candidates.yml
+          git diff --check
+          python - <<'PY'
+          import subprocess
+          expected = {
+            'src/content/chapters/safety-management/group-discussion-methods.md',
+            'src/content/chapters/safety-management/severity-rate.md',
+            'docs/audits/2026-08-17-industrial-safety-subject1-p1-batch2.md',
+          }
+          actual=set(subprocess.check_output(['git','diff','--name-only','origin/main'], text=True).splitlines())
+          if actual != expected:
+              raise SystemExit(f'Unexpected net scope: expected={sorted(expected)} actual={sorted(actual)}')
+          print('NET_SCOPE_PASS', sorted(actual))
+          PY
+
+      - name: Commit verified batch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/content/chapters/safety-management/group-discussion-methods.md \
+                  src/content/chapters/safety-management/severity-rate.md \
+                  docs/audits/2026-08-17-industrial-safety-subject1-p1-batch2.md \
+                  .github/workflows/tmp-subject1-p1-batch2-candidates.yml
+          git commit -m 'feat: add subject1 P1 batch2 verified relations'
+          git push origin HEAD:work/industrial-safety-subject1-p1-batch2-20260817
