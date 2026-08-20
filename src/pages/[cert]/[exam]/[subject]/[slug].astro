@@ -84,6 +84,8 @@ for (const questionId of chapter.data.questions ?? []) {
   });
 }
 
+const deferQuestionContent = chapter.data.cert_id === 'energy-management';
+
 const allChapters = (await getCollection('chapters')).filter(
   candidate => candidate.data.status === '완료'
     && candidate.data.cert_id === chapter.data.cert_id
@@ -140,7 +142,11 @@ const sideChapters = orderedSideChapters
   subjectStartChapters={subjectStartChapters}
 >
   <Content />
-  <QuestionHistory questions={linked as any} examComment={chapter.data.examComment} />
+  <QuestionHistory
+    questions={linked as any}
+    examComment={chapter.data.examComment}
+    deferQuestionContent={deferQuestionContent}
+  />
   <RelatedChapters
     manual={manual as any}
     sameGroup={sameGroup as any}

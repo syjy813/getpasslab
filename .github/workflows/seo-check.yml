@@ -33,3 +33,6 @@ jobs:
 
       - name: Validate public content
         run: npm run check:public-content
+
+      - name: Validate deferred question delivery
+        run: npm run check:deferred-question-content
