@@ -29,6 +29,10 @@ function hasAttribute(tag, name) {
   return new RegExp(`\\b${name}=["'][^"']+["']`).test(tag);
 }
 
+function isStaticRedirect(html) {
+  return /<meta\b[^>]*http-equiv=["']refresh["'][^>]*>/i.test(html);
+}
+
 let industrialImageIds = new Set();
 try {
   const manifestPath = path.resolve('src/data/question-assets/industrial-safety.json');
@@ -53,23 +57,31 @@ for (const certification of CERTIFICATIONS) {
     process.exit(1);
   }
 
-  const chapterFiles = files.filter((file) => {
+  const candidateChapterFiles = files.filter((file) => {
     if (!file.endsWith('index.html')) return false;
     const relative = path.relative(writtenDir, file).replaceAll(path.sep, '/');
     return relative.split('/').length === 3;
   });
 
-  if (chapterFiles.length === 0) {
+  if (candidateChapterFiles.length === 0) {
     errors.push(`검사할 ${certification.label} 공개 챕터 HTML이 없습니다.`);
   }
 
+  let chapterFilesTotal = 0;
+  let redirectFilesTotal = 0;
   let deferredButtonsTotal = 0;
   let deferredDialogsTotal = 0;
   let imageButtonsTotal = 0;
 
-  for (const file of chapterFiles) {
+  for (const file of candidateChapterFiles) {
     const relative = path.relative(path.resolve('dist'), file).replaceAll(path.sep, '/');
     const html = await readFile(file, 'utf8');
+
+    if (isStaticRedirect(html)) {
+      redirectFilesTotal += 1;
+      continue;
+    }
+    chapterFilesTotal += 1;
 
     const deferredModeCount = countMatches(html, /data-question-history-mode=["']deferred["']/g);
     const questionButtons = [...html.matchAll(/<button\b[^>]*\bdata-open=["']([^"']+)["'][^>]*>/g)]
@@ -165,8 +177,9 @@ for (const certification of CERTIFICATIONS) {
   const imageSummary = certification.id === 'industrial-safety'
     ? ` · 이미지 버튼 ${imageButtonsTotal}개`
     : '';
+  const redirectSummary = redirectFilesTotal > 0 ? ` · redirect ${redirectFilesTotal}개 제외` : '';
   console.log(
-    `[Deferred questions] ${certification.label} 챕터 ${chapterFiles.length}개 · deferred 버튼 ${deferredButtonsTotal}개 · 공용 dialog ${deferredDialogsTotal}개${imageSummary} 검사`,
+    `[Deferred questions] ${certification.label} 챕터 ${chapterFilesTotal}개 · deferred 버튼 ${deferredButtonsTotal}개 · 공용 dialog ${deferredDialogsTotal}개${imageSummary}${redirectSummary} 검사`,
   );
 }
 
