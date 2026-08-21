@@ -12,12 +12,21 @@ interface Q {
   answer: number;
   image?: { src: ImageMetadata; alt: string };
 }
+type DeferredQuestionDataset = 'energy-management' | 'industrial-safety';
 interface Props {
   questions: Q[];
   examComment?: string;
   deferQuestionContent?: boolean;
+  deferredQuestionDataset?: DeferredQuestionDataset;
 }
-const { questions, examComment, deferQuestionContent = false } = Astro.props;
+const {
+  questions,
+  examComment,
+  deferQuestionContent = false,
+  deferredQuestionDataset,
+} = Astro.props;
+const deferredDataset = deferredQuestionDataset ?? (deferQuestionContent ? 'energy-management' : undefined);
+const isDeferred = Boolean(deferredDataset);
 const examLabel = (label: string) => label.replace(/ 시행$/, ' 시험');
 const choiceSymbols = ['①', '②', '③', '④'];
 const imageChoicePattern = /^(수식|그림)[①②③④]$/;
@@ -37,7 +46,7 @@ const yearRange = sortedYears.length === 0
     : `${sortedYears[0]}~${sortedYears.at(-1)}년`;
 ---
 <h2>기출 출제 이력</h2>
-<div class="exam-history" data-question-history-mode={deferQuestionContent ? 'deferred' : 'static'}>
+<div class="exam-history" data-question-history-mode={isDeferred ? 'deferred' : 'static'}>
   {questions.length > 0 ? (
     <>
       <p class="evidence-intro">아래 기출은 위에서 정리한 개념이 실제 시험에서 어떻게 출제됐는지 확인하기 위한 근거 자료입니다.</p>
@@ -48,9 +57,12 @@ const yearRange = sortedYears.length === 0
           <button
             class="round-badge"
             data-open={q.id}
-            data-deferred-question={deferQuestionContent ? 'true' : undefined}
+            data-deferred-question={isDeferred ? 'true' : undefined}
+            data-question-image-src={isDeferred && q.image ? q.image.src.src : undefined}
+            data-question-image-width={isDeferred && q.image ? String(q.image.src.width) : undefined}
+            data-question-image-height={isDeferred && q.image ? String(q.image.src.height) : undefined}
             aria-haspopup="dialog"
-            aria-controls={deferQuestionContent ? 'deferred-question-dialog' : `q-${q.id}`}
+            aria-controls={isDeferred ? 'deferred-question-dialog' : `q-${q.id}`}
           >
             {examLabel(q.label)} {q.number}번
           </button>
@@ -65,17 +77,27 @@ const yearRange = sortedYears.length === 0
   )}
 </div>
 
-{deferQuestionContent ? (
+{isDeferred ? (
   questions.length > 0 && (
     <dialog
       class="q-layer"
       id="deferred-question-dialog"
       data-revealed="false"
+      data-question-dataset={deferredDataset}
       aria-labelledby="deferred-question-title"
     >
       <div class="q-inner">
         <div class="q-meta" id="deferred-question-title" tabindex="-1">기출문제</div>
         <div class="q-body" data-question-body>문항을 불러오는 중입니다.</div>
+        <figure class="q-figure" data-question-figure hidden>
+          <img
+            class="q-image"
+            data-question-image
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
         <ol class="q-choices" id="deferred-question-choices" data-question-choices></ol>
         <div class="q-reveal">
           <button
@@ -144,9 +166,14 @@ const yearRange = sortedYears.length === 0
     choices: string[];
     answer: number;
   }
+  type DeferredQuestionDataset = 'energy-management' | 'industrial-safety';
 
   const choiceSymbols = ['①', '②', '③', '④'];
-  let energyQuestionsPromise: Promise<Map<string, DeferredQuestion>> | null = null;
+  const imageChoicePattern = /^(수식|그림)[①②③④]$/;
+  const questionPromises = new Map<
+    DeferredQuestionDataset,
+    Promise<Map<string, DeferredQuestion>>
+  >();
 
   const resetDialog = (dialog: HTMLDialogElement) => {
     dialog.dataset.revealed = 'false';
@@ -163,18 +190,71 @@ const yearRange = sortedYears.length === 0
     title?.focus({ preventScroll: true });
   };
 
-  const loadEnergyQuestions = () => {
-    if (!energyQuestionsPromise) {
-      energyQuestionsPromise = import('../data/questions/energy-management.json')
-        .then(module => new Map(
-          (module.default as DeferredQuestion[]).map(question => [question.id, question]),
-        ))
-        .catch(error => {
-          energyQuestionsPromise = null;
-          throw error;
-        });
+  const importQuestionDataset = (dataset: DeferredQuestionDataset) => {
+    if (dataset === 'industrial-safety') {
+      return import('../data/questions/industrial-safety.json');
     }
-    return energyQuestionsPromise;
+    return import('../data/questions/energy-management.json');
+  };
+
+  const loadQuestions = (dataset: DeferredQuestionDataset) => {
+    const cached = questionPromises.get(dataset);
+    if (cached) return cached;
+
+    const promise = importQuestionDataset(dataset)
+      .then(module => new Map(
+        (module.default as DeferredQuestion[]).map(question => [question.id, question]),
+      ))
+      .catch(error => {
+        questionPromises.delete(dataset);
+        throw error;
+      });
+    questionPromises.set(dataset, promise);
+    return promise;
+  };
+
+  const displayDeferredChoice = (choice: string, hasImage: boolean) => {
+    if (!hasImage) return choice;
+    const match = choice.match(imageChoicePattern);
+    if (!match) return choice;
+    return match[1] === '수식' ? '위 이미지에 제시된 수식' : '위 이미지에 제시된 보기';
+  };
+
+  const clearDeferredImage = (dialog: HTMLDialogElement) => {
+    const figure = dialog.querySelector<HTMLElement>('[data-question-figure]');
+    const image = dialog.querySelector<HTMLImageElement>('[data-question-image]');
+    if (figure) figure.hidden = true;
+    if (image) {
+      image.removeAttribute('src');
+      image.removeAttribute('width');
+      image.removeAttribute('height');
+      image.alt = '';
+    }
+  };
+
+  const showDeferredImage = (
+    dialog: HTMLDialogElement,
+    button: HTMLButtonElement,
+    titleText: string,
+  ) => {
+    const imageSrc = button.dataset.questionImageSrc;
+    if (!imageSrc) {
+      clearDeferredImage(dialog);
+      return false;
+    }
+
+    const figure = dialog.querySelector<HTMLElement>('[data-question-figure]');
+    const image = dialog.querySelector<HTMLImageElement>('[data-question-image]');
+    if (!figure || !image) return false;
+
+    image.src = imageSrc;
+    image.alt = `${titleText} 문항의 표·수식·도형`;
+    const width = Number(button.dataset.questionImageWidth);
+    const height = Number(button.dataset.questionImageHeight);
+    if (Number.isFinite(width) && width > 0) image.width = width;
+    if (Number.isFinite(height) && height > 0) image.height = height;
+    figure.hidden = false;
+    return true;
   };
 
   document
@@ -197,6 +277,9 @@ const yearRange = sortedYears.length === 0
         const dialog = document.getElementById('deferred-question-dialog') as HTMLDialogElement | null;
         if (!questionId || !dialog) return;
 
+        const dataset = dialog.dataset.questionDataset as DeferredQuestionDataset | undefined;
+        if (dataset !== 'energy-management' && dataset !== 'industrial-safety') return;
+
         const title = dialog.querySelector<HTMLElement>('.q-meta');
         const body = dialog.querySelector<HTMLElement>('[data-question-body]');
         const choices = dialog.querySelector<HTMLOListElement>('[data-question-choices]');
@@ -209,22 +292,27 @@ const yearRange = sortedYears.length === 0
         body.textContent = '문항을 불러오는 중입니다.';
         choices.replaceChildren();
         revealButton.hidden = true;
+        clearDeferredImage(dialog);
         dialog.showModal();
         focusDialogTitle(dialog);
 
         try {
-          const questions = await loadEnergyQuestions();
+          const questions = await loadQuestions(dataset);
           if (dialog.dataset.questionId !== questionId) return;
 
           const question = questions.get(questionId);
           if (!question) throw new Error(`Question not found: ${questionId}`);
 
-          title.textContent = `${question.label.replace(/ 시행$/, ' 시험')} · ${question.number}번`;
+          const titleText = `${question.label.replace(/ 시행$/, ' 시험')} · ${question.number}번`;
+          title.textContent = titleText;
           body.textContent = question.body;
+          const hasImage = showDeferredImage(dialog, btn, titleText);
           choices.replaceChildren(...question.choices.map((choice, index) => {
             const item = document.createElement('li');
             if (index + 1 === question.answer) item.classList.add('is-answer');
-            item.append(document.createTextNode(`${choiceSymbols[index]} ${choice}`));
+            item.append(document.createTextNode(
+              `${choiceSymbols[index]} ${displayDeferredChoice(choice, hasImage)}`,
+            ));
             if (index + 1 === question.answer) {
               const answerMark = document.createElement('span');
               answerMark.className = 'q-answer-mark';
@@ -240,6 +328,7 @@ const yearRange = sortedYears.length === 0
           body.textContent = '문항을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.';
           choices.replaceChildren();
           revealButton.hidden = true;
+          clearDeferredImage(dialog);
         }
       });
     });
