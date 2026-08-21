@@ -12,8 +12,12 @@ interface Q {
   answer: number;
   image?: { src: ImageMetadata; alt: string };
 }
-interface Props { questions: Q[]; examComment?: string; }
-const { questions, examComment } = Astro.props;
+interface Props {
+  questions: Q[];
+  examComment?: string;
+  deferQuestionContent?: boolean;
+}
+const { questions, examComment, deferQuestionContent = false } = Astro.props;
 const examLabel = (label: string) => label.replace(/ 시행$/, ' 시험');
 const choiceSymbols = ['①', '②', '③', '④'];
 const imageChoicePattern = /^(수식|그림)[①②③④]$/;
@@ -33,7 +37,7 @@ const yearRange = sortedYears.length === 0
     : `${sortedYears[0]}~${sortedYears.at(-1)}년`;
 ---
 <h2>기출 출제 이력</h2>
-<div class="exam-history">
+<div class="exam-history" data-question-history-mode={deferQuestionContent ? 'deferred' : 'static'}>
   {questions.length > 0 ? (
     <>
       <p class="evidence-intro">아래 기출은 위에서 정리한 개념이 실제 시험에서 어떻게 출제됐는지 확인하기 위한 근거 자료입니다.</p>
@@ -44,8 +48,9 @@ const yearRange = sortedYears.length === 0
           <button
             class="round-badge"
             data-open={q.id}
+            data-deferred-question={deferQuestionContent ? 'true' : undefined}
             aria-haspopup="dialog"
-            aria-controls={`q-${q.id}`}
+            aria-controls={deferQuestionContent ? 'deferred-question-dialog' : `q-${q.id}`}
           >
             {examLabel(q.label)} {q.number}번
           </button>
@@ -60,65 +65,185 @@ const yearRange = sortedYears.length === 0
   )}
 </div>
 
-{questions.map(q => {
-  const titleId = `q-title-${q.id}`;
-  const choicesId = `q-choices-${q.id}`;
-  return (
-  <dialog class="q-layer" id={`q-${q.id}`} data-revealed="false" aria-labelledby={titleId}>
-    <div class="q-inner">
-      <div class="q-meta" id={titleId} tabindex="-1">{examLabel(q.label)} · {q.number}번</div>
-      <div class="q-body">{q.body}</div>
-      {q.image && (
-        <figure class="q-figure">
-          <Image
-            class="q-image"
-            src={q.image.src}
-            alt={q.image.alt}
-            width={q.image.src.width}
-            height={q.image.src.height}
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-      )}
-      <ol class="q-choices" id={choicesId}>
-        {q.choices.map((c, i) => (
-          <li class={i + 1 === q.answer ? 'is-answer' : ''}>
-            {choiceSymbols[i]} {displayChoice(c, Boolean(q.image))}
-            {i + 1 === q.answer && <span class="q-answer-mark">(정답)</span>}
-          </li>
-        ))}
-      </ol>
-      <div class="q-reveal">
-        <button
-          class="reveal"
-          data-reveal={q.id}
-          aria-controls={choicesId}
-        >정답 확인</button>
-        <button class="close" data-close={q.id}>닫기</button>
-        <span class="q-answer-status" aria-live="polite"></span>
+{deferQuestionContent ? (
+  questions.length > 0 && (
+    <dialog
+      class="q-layer"
+      id="deferred-question-dialog"
+      data-revealed="false"
+      aria-labelledby="deferred-question-title"
+    >
+      <div class="q-inner">
+        <div class="q-meta" id="deferred-question-title" tabindex="-1">기출문제</div>
+        <div class="q-body" data-question-body>문항을 불러오는 중입니다.</div>
+        <ol class="q-choices" id="deferred-question-choices" data-question-choices></ol>
+        <div class="q-reveal">
+          <button
+            class="reveal"
+            data-reveal="deferred"
+            aria-controls="deferred-question-choices"
+            hidden
+          >정답 확인</button>
+          <button class="close" data-close="deferred">닫기</button>
+          <span class="q-answer-status" aria-live="polite"></span>
+        </div>
       </div>
-    </div>
-  </dialog>
-  );
-})}
+    </dialog>
+  )
+) : (
+  questions.map(q => {
+    const titleId = `q-title-${q.id}`;
+    const choicesId = `q-choices-${q.id}`;
+    return (
+      <dialog class="q-layer" id={`q-${q.id}`} data-revealed="false" aria-labelledby={titleId}>
+        <div class="q-inner">
+          <div class="q-meta" id={titleId} tabindex="-1">{examLabel(q.label)} · {q.number}번</div>
+          <div class="q-body">{q.body}</div>
+          {q.image && (
+            <figure class="q-figure">
+              <Image
+                class="q-image"
+                src={q.image.src}
+                alt={q.image.alt}
+                width={q.image.src.width}
+                height={q.image.src.height}
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          )}
+          <ol class="q-choices" id={choicesId}>
+            {q.choices.map((c, i) => (
+              <li class={i + 1 === q.answer ? 'is-answer' : ''}>
+                {choiceSymbols[i]} {displayChoice(c, Boolean(q.image))}
+                {i + 1 === q.answer && <span class="q-answer-mark">(정답)</span>}
+              </li>
+            ))}
+          </ol>
+          <div class="q-reveal">
+            <button
+              class="reveal"
+              data-reveal={q.id}
+              aria-controls={choicesId}
+            >정답 확인</button>
+            <button class="close" data-close={q.id}>닫기</button>
+            <span class="q-answer-status" aria-live="polite"></span>
+          </div>
+        </div>
+      </dialog>
+    );
+  })
+)}
 
 <script>
-  document.querySelectorAll<HTMLButtonElement>('[data-open]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const d = document.getElementById(`q-${btn.dataset.open}`) as HTMLDialogElement;
-      d.dataset.revealed = 'false';
-      const revealButton = d.querySelector<HTMLButtonElement>('[data-reveal]');
-      const status = d.querySelector<HTMLElement>('.q-answer-status');
-      if (revealButton) revealButton.textContent = '정답 확인';
-      if (status) status.textContent = '';
-      d.showModal();
-      const inner = d.querySelector<HTMLElement>('.q-inner');
-      const title = d.querySelector<HTMLElement>('.q-meta');
-      if (inner) inner.scrollTop = 0;
-      title?.focus({ preventScroll: true });
+  interface DeferredQuestion {
+    id: string;
+    label: string;
+    number: number;
+    body: string;
+    choices: string[];
+    answer: number;
+  }
+
+  const choiceSymbols = ['①', '②', '③', '④'];
+  let energyQuestionsPromise: Promise<Map<string, DeferredQuestion>> | null = null;
+
+  const resetDialog = (dialog: HTMLDialogElement) => {
+    dialog.dataset.revealed = 'false';
+    const revealButton = dialog.querySelector<HTMLButtonElement>('[data-reveal]');
+    const status = dialog.querySelector<HTMLElement>('.q-answer-status');
+    if (revealButton) revealButton.textContent = '정답 확인';
+    if (status) status.textContent = '';
+  };
+
+  const focusDialogTitle = (dialog: HTMLDialogElement) => {
+    const inner = dialog.querySelector<HTMLElement>('.q-inner');
+    const title = dialog.querySelector<HTMLElement>('.q-meta');
+    if (inner) inner.scrollTop = 0;
+    title?.focus({ preventScroll: true });
+  };
+
+  const loadEnergyQuestions = () => {
+    if (!energyQuestionsPromise) {
+      energyQuestionsPromise = import('../data/questions/energy-management.json')
+        .then(module => new Map(
+          (module.default as DeferredQuestion[]).map(question => [question.id, question]),
+        ))
+        .catch(error => {
+          energyQuestionsPromise = null;
+          throw error;
+        });
+    }
+    return energyQuestionsPromise;
+  };
+
+  document
+    .querySelectorAll<HTMLButtonElement>('[data-open]:not([data-deferred-question="true"])')
+    .forEach(btn => {
+      btn.addEventListener('click', () => {
+        const dialog = document.getElementById(`q-${btn.dataset.open}`) as HTMLDialogElement | null;
+        if (!dialog) return;
+        resetDialog(dialog);
+        dialog.showModal();
+        focusDialogTitle(dialog);
+      });
     });
-  });
+
+  document
+    .querySelectorAll<HTMLButtonElement>('[data-open][data-deferred-question="true"]')
+    .forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const questionId = btn.dataset.open;
+        const dialog = document.getElementById('deferred-question-dialog') as HTMLDialogElement | null;
+        if (!questionId || !dialog) return;
+
+        const title = dialog.querySelector<HTMLElement>('.q-meta');
+        const body = dialog.querySelector<HTMLElement>('[data-question-body]');
+        const choices = dialog.querySelector<HTMLOListElement>('[data-question-choices]');
+        const revealButton = dialog.querySelector<HTMLButtonElement>('[data-reveal]');
+        if (!title || !body || !choices || !revealButton) return;
+
+        dialog.dataset.questionId = questionId;
+        resetDialog(dialog);
+        title.textContent = btn.textContent?.trim() || '기출문제';
+        body.textContent = '문항을 불러오는 중입니다.';
+        choices.replaceChildren();
+        revealButton.hidden = true;
+        dialog.showModal();
+        focusDialogTitle(dialog);
+
+        try {
+          const questions = await loadEnergyQuestions();
+          if (dialog.dataset.questionId !== questionId) return;
+
+          const question = questions.get(questionId);
+          if (!question) throw new Error(`Question not found: ${questionId}`);
+
+          title.textContent = `${question.label.replace(/ 시행$/, ' 시험')} · ${question.number}번`;
+          body.textContent = question.body;
+          choices.replaceChildren(...question.choices.map((choice, index) => {
+            const item = document.createElement('li');
+            if (index + 1 === question.answer) item.classList.add('is-answer');
+            item.append(document.createTextNode(`${choiceSymbols[index]} ${choice}`));
+            if (index + 1 === question.answer) {
+              const answerMark = document.createElement('span');
+              answerMark.className = 'q-answer-mark';
+              answerMark.textContent = '(정답)';
+              item.append(' ', answerMark);
+            }
+            return item;
+          }));
+          revealButton.hidden = false;
+        } catch (error) {
+          console.error('[question-history] deferred question load failed', error);
+          if (dialog.dataset.questionId !== questionId) return;
+          body.textContent = '문항을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.';
+          choices.replaceChildren();
+          revealButton.hidden = true;
+        }
+      });
+    });
+
   document.querySelectorAll<HTMLButtonElement>('[data-reveal]').forEach(btn => {
     btn.addEventListener('click', () => {
       const dialog = btn.closest('dialog') as HTMLDialogElement;
@@ -128,6 +253,7 @@ const yearRange = sortedYears.length === 0
       if (status) status.textContent = '정답이 표시되었습니다.';
     });
   });
+
   document.querySelectorAll<HTMLButtonElement>('[data-close]').forEach(btn => {
     btn.addEventListener('click', () => (btn.closest('dialog') as HTMLDialogElement).close());
   });

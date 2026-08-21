@@ -9,7 +9,8 @@
     "audit:content-value": "node scripts/audit-content-value.mjs",
     "check:contrast": "node scripts/check-color-contrast.mjs",
     "check:seo": "node scripts/check-seo.mjs",
-    "check:public-content": "node scripts/check-public-content.mjs"
+    "check:public-content": "node scripts/check-public-content.mjs",
+    "check:deferred-question-content": "node scripts/check-deferred-question-content.mjs"
   },
   "allowScripts": {
     "esbuild@0.28.1": true
