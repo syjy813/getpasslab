@@ -1,35 +1,109 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import industrialSafetyQuestions from '../data/questions/industrial-safety.json';
+import energyManagementQuestions from '../data/questions/energy-management.json';
 import {
   getCertificationEntryPath,
   getFeaturedCertifications,
 } from '../config/certifications';
 import { withBase } from '../config/url';
+
 const chapters = (await getCollection('chapters')).filter(c => c.data.status === '완료');
 const certifications = getFeaturedCertifications();
 const countByCertification = (certId: string) =>
   chapters.filter(chapter => chapter.data.cert_id === certId).length;
+const questionCountByCertification: Record<string, number> = {
+  'industrial-safety': industrialSafetyQuestions.length,
+  'energy-management': energyManagementQuestions.length,
+};
+const totalQuestionCount = Object.values(questionCountByCertification).reduce((sum, count) => sum + count, 0);
+const formatCount = (count: number) => count.toLocaleString('ko-KR');
 ---
-<BaseLayout title="GetPassLab — 국가기술자격 핵심요약" description="국가기술자격 필기시험의 핵심 개념, 계산 공식, 법령 기준과 기출 포인트를 자격증과 과목별로 정리한 학습 서비스입니다.">
+<BaseLayout
+  title="GetPassLab — 기출 데이터 기반 국가기술자격 핵심요약"
+  description={`국가기술자격 필기 기출 ${formatCount(totalQuestionCount)}문항의 출제 이력을 챕터별로 연결해 핵심 개념, 계산 공식, 법령 기준과 반복 출제 포인트를 정리한 학습 서비스입니다.`}
+>
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-badge">국가기술자격 · 필기</span>
-      <h1 class="gpl-display" style="max-width:680px;margin:0 auto">합격을 위한 가장 빠른 길,<br/>핵심 개념과 기출을 한 곳에서</h1>
+      <span class="hero-badge">기출 데이터 기반 · 국가기술자격 필기</span>
+      <h1 class="gpl-display" style="max-width:760px;margin:0 auto">기출을 풀기 전에,<br/>무엇이 반복 출제되는지부터</h1>
+      <p class="gpl-body-lg" style="max-width:720px;margin:var(--space-4) auto 0;color:var(--gray-600)">
+        GetPassLab은 기출문제를 회차별로 나열하는 대신, 각 문항을 학습 주제에 연결해
+        어떤 개념이 언제 어떻게 출제됐는지 확인할 수 있게 정리합니다.
+      </p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="learning-summary" aria-label="GetPassLab 공개 학습 데이터 요약">
+      <dl class="learning-stats">
+        <div class="learning-stat">
+          <dt>분석 대상 기출</dt>
+          <dd>{formatCount(totalQuestionCount)}문항</dd>
+        </div>
+        <div class="learning-stat">
+          <dt>공개 학습 챕터</dt>
+          <dd>{formatCount(chapters.length)}개</dd>
+        </div>
+        <div class="learning-stat">
+          <dt>현재 제공 자격증</dt>
+          <dd>{certifications.length}종</dd>
+        </div>
+        <div class="learning-stat">
+          <dt>출제 이력 확인</dt>
+          <dd>회차별</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-heading">
+      <h2 class="gpl-h1">GetPassLab이 기출을 쓰는 방식</h2>
+      <p class="gpl-body">문제 원문 자체보다, 기출 데이터에서 학습자가 가져가야 할 출제 패턴과 개념 구조를 앞에 둡니다.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="learning-summary">
+        <span class="card-label">01 · 역설계</span>
+        <h3 class="gpl-h3">문항을 학습 주제에 다시 연결</h3>
+        <p class="gpl-body" style="margin:var(--space-2) 0 0;color:var(--gray-600)">
+          기출문항을 챕터 단위로 연결해 회차 순서가 아니라 개념 순서로 공부할 수 있게 구성합니다.
+        </p>
+      </div>
+      <div class="learning-summary">
+        <span class="card-label">02 · 출제 이력</span>
+        <h3 class="gpl-h3">빈출을 감이 아니라 기록으로 확인</h3>
+        <p class="gpl-body" style="margin:var(--space-2) 0 0;color:var(--gray-600)">
+          각 챕터에서 실제 연결 문항과 시험 회차를 함께 보여줘 반복 출제 여부를 직접 확인할 수 있습니다.
+        </p>
+      </div>
+      <div class="learning-summary">
+        <span class="card-label">03 · 학습 우선</span>
+        <h3 class="gpl-h3">문제보다 개념과 판별 기준을 먼저</h3>
+        <p class="gpl-body" style="margin:var(--space-2) 0 0;color:var(--gray-600)">
+          정의·공식·단위·조건·예외를 먼저 정리하고, 기출 문제 내용은 필요한 문항을 열었을 때 확인합니다.
+        </p>
+      </div>
     </div>
   </section>
 
   <section class="section container">
     <div style="margin-bottom:var(--space-6)">
       <h2 class="gpl-h1">자격증 선택</h2>
-      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">준비 중인 자격증을 선택해 필기 시험의 핵심 이론을 쉽고 빠르게 공부해 보세요.</p>
+      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">준비 중인 자격증을 선택해 핵심 이론과 실제 출제 이력을 함께 확인해 보세요.</p>
     </div>
     <div class="grid grid-3">
       {certifications.map((certification) => (
         <a class="card" href={withBase(getCertificationEntryPath(certification.slug))}>
           <span class="card-label">{certification.category}</span>
           <div class="card-title">{certification.name}</div>
-          <div class="card-meta">{certification.summary} · 챕터 {countByCertification(certification.slug)}개</div>
+          <div class="card-meta">
+            {certification.summary} · 챕터 {countByCertification(certification.slug)}개
+            {questionCountByCertification[certification.slug]
+              ? ` · 기출 ${formatCount(questionCountByCertification[certification.slug])}문항`
+              : ''}
+          </div>
         </a>
       ))}
     </div>
@@ -44,6 +118,18 @@ const countByCertification = (certId: string) =>
       <li><span class="learning-step-number">1</span><div><strong>핵심 개념 이해</strong><p>정의와 원리를 챕터 단위로 나눠 필요한 주제를 빠르게 찾습니다.</p></div></li>
       <li><span class="learning-step-number">2</span><div><strong>계산·판별 기준 학습</strong><p>공식의 적용 순서와 단위, 조건·예외를 함께 확인합니다.</p></div></li>
       <li><span class="learning-step-number">3</span><div><strong>실제 기출로 확인</strong><p>연결된 문항과 시험 회차를 통해 개념이 어떻게 출제됐는지 점검합니다.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="section container" style="padding-bottom:var(--space-16)">
+    <div class="section-heading">
+      <h2 class="gpl-h1">콘텐츠를 정리하는 기준</h2>
+      <p class="gpl-body">기출문제와 학습 본문을 같은 것으로 취급하지 않고, 데이터 확인과 학습용 재구성을 분리합니다.</p>
+    </div>
+    <ol class="learning-steps">
+      <li><span class="learning-step-number">1</span><div><strong>기출 데이터로 범위 확인</strong><p>실제 문항과 출제 회차를 바탕으로 챕터와 출제 이력을 연결합니다.</p></div></li>
+      <li><span class="learning-step-number">2</span><div><strong>학습 본문은 개념 중심으로 재구성</strong><p>정의, 공식, 단위, 조건과 자주 혼동하는 판별 기준을 중심으로 다시 정리합니다.</p></div></li>
+      <li><span class="learning-step-number">3</span><div><strong>정확도가 중요한 항목을 별도 확인</strong><p>숫자, 단위, 수식, 부호, 조건·예외, 정답과 이미지 자료는 직접 확인 대상로 관리합니다.</p></div></li>
     </ol>
   </section>
 
