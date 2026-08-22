@@ -15,7 +15,7 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-17 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.20
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-08-22 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.21
 
 ---
 
@@ -25,9 +25,11 @@
 
 - **스택**: Astro 7 + Markdown + GitHub Pages. **서버 없음, DB 없음, API 없음.** 모든 게 빌드 타임에 끝난다.
 - **목적**: 1순위 = **이직 포트폴리오**, 2순위 = AdSense 수익.
-- **현재**: 산업안전기사와 에너지관리기능사 기출 3,300문항을 production 학습 데이터로 유지한다. 공개 챕터 239개의 시험 포인트 1,647행을 `문제 표현 → 정답 키워드` 구조로 전수 정리했고, 장문 챕터 13개는 `우선 암기 / 추가 확인`으로 분리했다. 산업안전기사에는 원본 기반 문항 이미지 75개를 등록했고 기존 관계가 있는 34개 이미지 문항과 9개 챕터 시각자료를 공개했다. 컴퓨터활용능력 2급 2020-07-04 회차 40문항과 이미지 16개는 별도 정본에 내재화했지만 개발 전용 검수 화면만 제공하며 production에는 노출하지 않는다. 최신 production 산출물은 HTML 255개이고 GitHub Actions·Pages·대표 runtime 검증을 통과했다. AdSense 승인·실제 광고 송출과 Search Console 색인 상태는 별도 확인이 남았다.
+- **현재**: `https://getpasslab.co.kr/`에서 산업안전기사와 에너지관리기능사 기출 3,300문항, 공개 학습 챕터 241개를 운영한다. 최근 AdSense 대응으로 양 자격증 기출을 deferred delivery로 전환하고, 홈페이지 차별화 메시지와 `/about/` 콘텐츠 작성·검수 방법론을 공개했다. 2026-08-22 Production T0 QA는 **PASS**다. 초기 HTML에는 회차·문항 metadata와 버튼만 남고 대량 문제 본문·선택지·정답은 포함되지 않으며, 클릭 후 canonical dataset·공용 dialog·선택지·정답과 산업안전 이미지 lazy load가 정상 동작한다.
+- **최신 기준선**: `main` SHA는 `08d1b14b1111bf4a270845aa7a1c5ffbb1ecb8ac`이다. `boiler-water-treatment`의 잘못된 관계 13건을 기존 적합 챕터로 이동해 96문항에서 83문항으로 정리했고 전체 관계 수와 `question_id`는 유지했다. 최근 검증은 Astro build 256페이지, SEO HTML 258개·sitemap URL 257개·경고 0개·오류 0개, 공개 콘텐츠 HTML 258개·오류 0개다.
 - **산업안전 관계 상태**: 1,680문항 중 고유 연결 **994문항**, 미연결 **686문항**. 관계 참조 **1,004건**, 다중 연결 **10문항**. 1과목은 280문항 중 170문항 연결·110문항 미연결이며, 기존 챕터에 안전하게 추가할 수 있는 P1 후보의 최종 sweep을 완료했다.
-- **최신 동적 상태**: 문서 맨 아래의 `산업안전기사 1과목 P1 관계 보강·최종 sweep 완료` 절을 우선한다.
+- **외부 다음 단계**: Search Console의 sitemap·주요 URL 상태는 Owner 확인 전이며 AdSense 재검토 요청도 아직 실행하지 않았다. **Search Console 최종 확인 → AdSense 재검토 요청** 순서로 진행한다. AdSense 승인은 아직 받지 않았다.
+- **최신 동적 상태**: 문서 맨 아래의 `2026-08-22 AdSense 대응·Production QA 게이트 완료` 절을 우선한다.
 
 **🚨 절대 하지 마라 (이것만 기억해도 대형 사고 방지):**
 1. 기존 `slug` / `subject_id` / `question_id` **변경 금지**. 신규 공개 식별자는 Owner가 범위를 승인한 경우에만 생성한다
@@ -2916,3 +2918,74 @@ Gate B2 최종 상태: **VERIFIED**. 완료 범위를 다시 수행하지 않는
 - `npm ci`의 기존 **2 high severity vulnerabilities** 경고는 별도 해결되지 않았다.
 
 최종 상태: 산업안전기사 1과목의 **기존 챕터 관계 보강 및 P1 최종 sweep VERIFIED**. 다음 구현은 Owner가 신규 공개 챕터 범위를 승인한 뒤 시작한다.
+
+---
+
+## 2026-08-22 AdSense 대응·Production QA 게이트 완료
+
+이 절은 최근 AdSense 대응과 Production T0 QA 이후의 최신 동적 상태다. 앞선 게이트는 당시 기록으로 보존하며, 현재 production·외부 작업 상태는 이 절을 우선한다.
+
+### 1. 기준선
+
+- 기준 브랜치: `main`.
+- 최신 SHA: `08d1b14b1111bf4a270845aa7a1c5ffbb1ecb8ac`.
+- 커밋: `fix: realign boiler water treatment question relations`.
+- production: `https://getpasslab.co.kr/`.
+- 2026-08-22 Production T0 QA 최종 판정: **PASS**.
+
+### 2. 완료된 AdSense 대응
+
+- 에너지관리기능사와 산업안전 계열 기출을 deferred delivery로 전환했다.
+  - 초기 HTML은 회차·문항 metadata와 버튼을 유지한다.
+  - 대량 문제 본문·선택지·정답은 초기 HTML에 포함하지 않는다.
+  - 버튼 클릭 후 canonical question dataset을 동적으로 불러와 공용 dialog에 문제·선택지를 표시하고 정답을 공개한다.
+  - 산업안전 이미지 기출은 해당 문항을 열 때만 lazy load한다.
+- production 홈페이지에 `기출을 풀기 전에, 무엇이 반복 출제되는지부터`와 `GetPassLab이 기출을 쓰는 방식`을 반영하고 기출 역설계·출제 이력·학습 우선순위를 설명한다.
+- `/about/`에 기출과 학습 콘텐츠의 구분, 챕터 연결·작성 기준, 숫자·단위·수식·부호·조건·예외·정답·이미지 검수 원칙과 AI 사용 범위를 공개했다.
+  - AI는 반복 정리·초안 구조화·표현 보정·검토 후보 탐색에 보조적으로 사용할 수 있다.
+  - AI 생성 내용을 근거로 삼거나 검증 없이 자동 공개하는 구조는 아니다.
+- `boiler-water-treatment`의 잘못 연결된 관계 13건을 기존 적합 챕터로 이동했다.
+  - 96문항 → 83문항.
+  - `question_id`와 전체 관계 수는 유지했다.
+
+### 3. 검증 결과
+
+- `origin/main` SHA 일치.
+- 홈페이지 차별화 콘텐츠와 `/about/` 정상 공개.
+- 에너지관리기능사·산업안전 deferred delivery 정상.
+- 서버 초기 HTML에 표본 기출 본문·선택지·정답 markup 없음.
+- 버튼 클릭 전 dataset chunk와 이미지 resource 미로드, 클릭 후 동적 로드 확인.
+- 공용 dialog·문제 본문·4개 선택지·정답 공개 정상.
+- 산업안전 이미지 기출은 클릭 후 정상 크기로 로드.
+- 브라우저 runtime 오류·경고 없음.
+- release blocker 없음.
+
+최근 저장소 검증:
+
+- Astro build: PASS, 256페이지.
+- SEO: HTML 258개, sitemap URL 257개, warning 0개, error 0개.
+- 공개 콘텐츠: HTML 258개, error 0개.
+- Deferred QA:
+  - Energy: 챕터 21개, 버튼 1,588개, dialog 21개, error 0개.
+  - Industrial: 챕터 220개, 버튼 1,004개, dialog 217개, 이미지 버튼 35개, redirect 제외 2개, error 0개.
+
+### 4. 비차단 backlog
+
+- `npm audit`: high severity vulnerability 2건. 별도 dependency review 대상이며 자동 `npm audit fix`를 실행하지 않는다.
+- Vite: 일부 minified chunk가 500kB를 초과한다. 실제 runtime 실패는 확인되지 않았으며 별도 성능 최적화 후보로 유지한다.
+
+두 항목은 현재 AdSense 재검토를 막는 release blocker로 기록하지 않는다.
+
+### 5. 미완료 외부 작업과 다음 단계
+
+- Search Console은 Owner 확인 전이다.
+  - sitemap.
+  - 홈페이지 URL inspection.
+  - `/about/`.
+  - 대표 챕터.
+  - 필요 시 색인 요청.
+- AdSense 재검토 요청은 아직 실행하지 않았다.
+- AdSense 승인 상태는 아직 미승인이다.
+- 다음 순서: **Search Console 최종 확인 → AdSense 재검토 요청**.
+
+완료된 AdSense 대응 구조와 Production QA를 다시 설계하거나 반복하지 않는다. 이후 작업에서도 기존 `slug`, `subject_id`, `question_id`, 콘텐츠·관계 정본과 deferred delivery 구조를 유지한다.
