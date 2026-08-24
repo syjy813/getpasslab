@@ -36,25 +36,23 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
   </section>
 
   <section class="section container">
-    <div class="learning-summary" aria-label="GetPassLab 공개 학습 데이터 요약">
-      <dl class="learning-stats">
-        <div class="learning-stat">
-          <dt>분석 대상 기출</dt>
-          <dd>{formatCount(totalQuestionCount)}문항</dd>
-        </div>
-        <div class="learning-stat">
-          <dt>공개 학습 챕터</dt>
-          <dd>{formatCount(chapters.length)}개</dd>
-        </div>
-        <div class="learning-stat">
-          <dt>현재 제공 자격증</dt>
-          <dd>{certifications.length}종</dd>
-        </div>
-        <div class="learning-stat">
-          <dt>출제 이력 확인</dt>
-          <dd>회차별</dd>
-        </div>
-      </dl>
+    <div style="margin-bottom:var(--space-6)">
+      <h2 class="gpl-h1">자격증 선택</h2>
+      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">준비 중인 자격증을 선택해 핵심 이론과 실제 출제 이력을 함께 확인해 보세요.</p>
+    </div>
+    <div class="grid grid-3">
+      {certifications.map((certification) => (
+        <a class="card" href={withBase(getCertificationEntryPath(certification.slug))}>
+          <span class="card-label">{certification.category}</span>
+          <div class="card-title">{certification.name}</div>
+          <div class="card-meta">
+            {certification.summary} · 챕터 {countByCertification(certification.slug)}개
+            {questionCountByCertification[certification.slug]
+              ? ` · 기출 ${formatCount(questionCountByCertification[certification.slug])}문항`
+              : ''}
+          </div>
+        </a>
+      ))}
     </div>
   </section>
 
@@ -89,27 +87,6 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
   </section>
 
   <section class="section container">
-    <div style="margin-bottom:var(--space-6)">
-      <h2 class="gpl-h1">자격증 선택</h2>
-      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">준비 중인 자격증을 선택해 핵심 이론과 실제 출제 이력을 함께 확인해 보세요.</p>
-    </div>
-    <div class="grid grid-3">
-      {certifications.map((certification) => (
-        <a class="card" href={withBase(getCertificationEntryPath(certification.slug))}>
-          <span class="card-label">{certification.category}</span>
-          <div class="card-title">{certification.name}</div>
-          <div class="card-meta">
-            {certification.summary} · 챕터 {countByCertification(certification.slug)}개
-            {questionCountByCertification[certification.slug]
-              ? ` · 기출 ${formatCount(questionCountByCertification[certification.slug])}문항`
-              : ''}
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <section class="section container">
     <div class="section-heading">
       <h2 class="gpl-h1">GetPassLab에서 공부하는 방식</h2>
       <p class="gpl-body">개념을 먼저 이해하고, 계산·판별 기준을 익힌 뒤 실제 출제 이력으로 확인합니다.</p>
@@ -137,3 +114,4 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
   </section>
 
 </BaseLayout>
+
