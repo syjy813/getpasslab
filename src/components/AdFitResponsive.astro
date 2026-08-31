@@ -1,0 +1,89 @@
+---
+const mobileUnit = 'DAN-U6F9ynxN62tqAd07';
+const desktopUnit = 'DAN-cUOTdTkWFtH2f3C1';
+---
+
+<aside
+  class="adfit-placement"
+  data-adfit-responsive
+  data-mobile-unit={mobileUnit}
+  data-desktop-unit={desktopUnit}
+  aria-label="광고"
+>
+  <span class="adfit-label">광고</span>
+  <div class="adfit-mount" data-adfit-mount></div>
+</aside>
+
+<script is:inline>
+  (() => {
+    const initializeAdFit = (placement) => {
+      if (!(placement instanceof HTMLElement) || placement.dataset.adfitReady) return;
+
+      const mount = placement.querySelector('[data-adfit-mount]');
+      if (!(mount instanceof HTMLElement)) return;
+
+      const useDesktop = placement.getBoundingClientRect().width >= 728;
+      const width = useDesktop ? 728 : 320;
+      const height = useDesktop ? 90 : 100;
+      const unit = useDesktop ? placement.dataset.desktopUnit : placement.dataset.mobileUnit;
+      if (!unit) return;
+
+      placement.dataset.adfitSize = useDesktop ? 'desktop' : 'mobile';
+
+      if (window.location.hostname !== 'getpasslab.co.kr') {
+        placement.dataset.adfitReady = 'preview';
+        return;
+      }
+
+      placement.dataset.adfitReady = 'true';
+
+      const ad = document.createElement('ins');
+      ad.className = 'kakao_ad_area';
+      ad.style.display = 'none';
+      ad.dataset.adUnit = unit;
+      ad.dataset.adWidth = String(width);
+      ad.dataset.adHeight = String(height);
+      mount.appendChild(ad);
+
+      const sdk = document.createElement('script');
+      sdk.type = 'text/javascript';
+      sdk.src = '//t1.kakaocdn.net/kas/static/ba.min.js';
+      sdk.async = true;
+      mount.appendChild(sdk);
+    };
+
+    document.querySelectorAll('[data-adfit-responsive]').forEach(initializeAdFit);
+  })();
+</script>
+
+<style>
+  .adfit-placement {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    min-height: 124px;
+    margin: var(--space-8) 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .adfit-label {
+    margin-bottom: var(--space-2);
+    font-size: var(--fs-label);
+    line-height: 1;
+    color: var(--gray-600);
+  }
+
+  .adfit-mount {
+    display: block;
+    width: 320px;
+    height: 100px;
+    flex: 0 0 auto;
+  }
+
+  .adfit-placement[data-adfit-size='desktop'] .adfit-mount {
+    width: 728px;
+    height: 90px;
+  }
+</style>

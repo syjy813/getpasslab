@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import ChapterLayout from '../../../../layouts/ChapterLayout.astro';
+import AdFitResponsive from '../../../../components/AdFitResponsive.astro';
 import QuestionHistory from '../../../../components/QuestionHistory.astro';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
 import { getSubject } from '../../../../config/certifications';
@@ -147,6 +148,7 @@ const sideChapters = orderedSideChapters
   subjectStartChapters={subjectStartChapters}
 >
   <Content />
+  <AdFitResponsive />
   <QuestionHistory
     questions={linked as any}
     examComment={chapter.data.examComment}
