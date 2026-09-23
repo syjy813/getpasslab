@@ -50,7 +50,7 @@ const orderedChapters = hasSubjectWideOrder
 const questions = (await getCollection('questions'))
   .filter(question => question.data.cert_id === certification.slug && question.data.exam === examDefinition.slug)
   .map(question => question.data);
-const badgeContext = createChapterBadgeContext(questions);
+const badgeContext = createChapterBadgeContext(questions, certification.slug !== 'computer-literacy');
 const chapterCards = orderedChapters.map(chapter => ({
   chapter,
   badgeSummary: getChapterBadgeSummary(

@@ -1,4 +1,5 @@
 import {
+  COMPUTER_LITERACY_SUBJECTS,
   ENERGY_MANAGEMENT_SUBJECTS,
   INDUSTRIAL_SAFETY_SUBJECTS,
   type SubjectDefinition,
@@ -10,6 +11,7 @@ export interface ExamDefinition {
   title: string;
   description: string;
   format: string;
+  releaseNotice?: string;
   subjects: Record<number, SubjectDefinition>;
 }
 
@@ -24,6 +26,23 @@ export interface CertificationDefinition {
 }
 
 export const CERTIFICATIONS = {
+  'computer-literacy': {
+    slug: 'computer-literacy',
+    name: '컴퓨터활용능력 2급',
+    englishName: 'Computer Specialist in Spreadsheet Level 2',
+    category: '국가기술자격 · 2급',
+    summary: '컴퓨터일반·스프레드시트 일반의 핵심 개념과 기출 적용 · 일부 챕터 공개',
+    description: '컴퓨터활용능력 2급 필기의 Windows 조작과 Excel 수식·데이터 분석을 핵심 설명, 학습 그림과 연결 기출로 학습합니다. 현재 8개 챕터를 제공합니다.',
+    exams: {
+      written: {
+        slug: 'written', name: '필기', title: '컴활 2급 필기 핵심요약',
+        description: '컴퓨터일반과 스프레드시트 일반의 공개 챕터를 학습하고 연결 기출에서 적용 방법을 확인합니다.',
+        format: '컴퓨터일반 · 스프레드시트 일반',
+        releaseNotice: '일부 챕터 공개 · 현재 8개 챕터 제공',
+        subjects: COMPUTER_LITERACY_SUBJECTS,
+      },
+    },
+  },
   'industrial-safety': {
     slug: 'industrial-safety',
     name: '산업안전기사',
@@ -69,6 +88,7 @@ export const DEFAULT_EXAM_SLUG = 'written';
 export const FEATURED_CERTIFICATION_IDS: readonly CertificationId[] = [
   DEFAULT_CERTIFICATION_ID,
   'energy-management',
+  'computer-literacy',
 ];
 
 export function getFeaturedCertifications() {

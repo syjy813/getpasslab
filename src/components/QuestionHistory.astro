@@ -16,12 +16,16 @@ type DeferredQuestionDataset = 'energy-management' | 'industrial-safety';
 interface Props {
   questions: Q[];
   examComment?: string;
+  introText?: string;
+  emptyText?: string;
   deferQuestionContent?: boolean;
   deferredQuestionDataset?: DeferredQuestionDataset;
 }
 const {
   questions,
   examComment,
+  introText = '아래 기출은 위에서 정리한 개념이 실제 시험에서 어떻게 출제됐는지 확인하기 위한 근거 자료입니다.',
+  emptyText = '수록 기출에서 직접 출제 이력 없음',
   deferQuestionContent = false,
   deferredQuestionDataset,
 } = Astro.props;
@@ -49,7 +53,7 @@ const yearRange = sortedYears.length === 0
 <div class="exam-history" data-question-history-mode={isDeferred ? 'deferred' : 'static'}>
   {questions.length > 0 ? (
     <>
-      <p class="evidence-intro">아래 기출은 위에서 정리한 개념이 실제 시험에서 어떻게 출제됐는지 확인하기 위한 근거 자료입니다.</p>
+      <p class="evidence-intro">{introText}</p>
       <div class="freq-label">수록 기출 {questions.length}문항 · {sessions.size}개 시험 회차 · {yearRange}</div>
       {examComment && <p class="exam-comment"><strong>출제 경향</strong> — {examComment}</p>}
       <div class="round-badges">
@@ -71,7 +75,7 @@ const yearRange = sortedYears.length === 0
     </>
   ) : (
     <>
-      <div class="freq-label">수록 기출에서 직접 출제 이력 없음</div>
+      <div class="freq-label">{emptyText}</div>
       {examComment && <p class="exam-comment"><strong>출제 경향</strong> — {examComment}</p>}
     </>
   )}

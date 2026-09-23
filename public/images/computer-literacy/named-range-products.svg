@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" role="img" aria-labelledby="title desc">
+<title id="title">이름 범위의 대응 값과 SUMPRODUCT</title>
+<desc id="desc">첫범위 A1:A2의 2와 4, 둘째범위 B1:B2의 3과 5를 같은 위치끼리 곱한 뒤 합산하여 26 산출</desc>
+<style>text{font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#191F28;font-size:20px}.small{font-size:18px}.value{font-size:28px;font-weight:700}.blue{fill:#1E40AF}</style>
+<rect width="480" height="360" fill="#FFFFFF"/>
+<g text-anchor="middle"><text x="115" y="32" class="blue">첫범위</text><text x="245" y="32">둘째범위</text><text x="115" y="56" class="small">A1:A2</text><text x="245" y="56" class="small">B1:B2</text></g>
+<rect x="20" y="76" width="290" height="160" fill="#FFFFFF" stroke="#E5E8EB"/>
+<path d="M20 76H310V112H20Z M20 112H50V236H20Z" fill="#F2F4F6"/>
+<rect x="51" y="113" width="128" height="122" fill="#EFF6FF"/>
+<rect x="181" y="113" width="128" height="122" fill="#FFFBEB"/>
+<path d="M50 76V236 M180 76V236 M20 112H310 M20 174H310" stroke="#E5E8EB" fill="none"/>
+<g text-anchor="middle"><text x="115" y="101">A</text><text x="245" y="101">B</text><text x="35" y="152">1</text><text x="35" y="214">2</text>
+<text x="115" y="154" class="value blue">2</text><text x="245" y="154" class="value">3</text><text x="115" y="216" class="value blue">4</text><text x="245" y="216" class="value">5</text></g>
+<path d="M136 142H222 M136 204H222" stroke="#94A3B8" stroke-dasharray="4 4"/>
+<circle cx="180" cy="142" r="15" fill="#FFFFFF"/><circle cx="180" cy="204" r="15" fill="#FFFFFF"/>
+<g text-anchor="middle"><text x="180" y="149">×</text><text x="180" y="211">×</text><text x="390" y="151">2×3 = 6</text><text x="390" y="213">4×5 = 20</text></g>
+<path d="M314 142H327 M321 137L327 142L321 147 M314 204H327 M321 199L327 204L321 209" fill="none" stroke="#64748B" stroke-width="2"/>
+<rect x="20" y="258" width="440" height="56" rx="8" fill="#EFF6FF"/>
+<text x="240" y="294" text-anchor="middle" class="blue" font-weight="700">대응 곱의 합   6 + 20 = 26</text>
+<text x="240" y="344" text-anchor="middle" class="small">=SUMPRODUCT(첫범위,둘째범위)</text>
+</svg>

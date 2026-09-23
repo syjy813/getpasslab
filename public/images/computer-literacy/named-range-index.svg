@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" role="img" aria-labelledby="title desc">
+<title id="title">INDEX로 범위 안의 두 번째 행과 첫 번째 열 찾기</title>
+<desc id="desc">성적 범위 B2:D4의 두 번째 행은 시트 3행, 첫 번째 열은 B열이므로 INDEX(성적,2,1)의 결과는 B3의 60</desc>
+<style>text{font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#191F28;font-size:20px}.small{font-size:18px}.value{font-size:25px}.blue{fill:#1E40AF}</style>
+<rect width="480" height="360" fill="#FFFFFF"/>
+<text x="24" y="32" font-size="23" font-weight="700">=INDEX(성적,2,1)</text>
+<text x="24" y="63" class="small">성적 = B2:D4 · 범위 안의 2행, 1열</text>
+<rect x="100" y="84" width="345" height="216" fill="#FFFFFF" stroke="#E5E8EB"/>
+<rect x="100" y="84" width="345" height="32" fill="#F2F4F6"/>
+<rect x="100" y="116" width="345" height="28" fill="#F9FAFB"/>
+<rect x="100" y="116" width="115" height="184" fill="#EFF6FF"/>
+<rect x="48" y="196" width="397" height="52" fill="#FFFBEB"/>
+<path d="M215 84V300 M330 84V300 M100 116H445 M100 144H445 M100 196H445 M100 248H445" stroke="#E5E8EB" fill="none"/>
+<g text-anchor="middle"><text x="157" y="107">B</text><text x="272" y="107">C</text><text x="387" y="107">D</text>
+<text x="157" y="137" class="small blue">1열</text><text x="272" y="137" class="small">2열</text><text x="387" y="137" class="small">3열</text>
+<text x="24" y="137" class="small">시트</text><text x="72" y="137" class="small">범위</text>
+<text x="24" y="178">2</text><text x="24" y="230">3</text><text x="24" y="282">4</text>
+<text x="72" y="178" class="small">1행</text><text x="72" y="230" class="small">2행</text><text x="72" y="282" class="small">3행</text></g>
+<rect x="102" y="198" width="111" height="48" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="3"/>
+<g text-anchor="middle" class="value"><text x="157" y="178">70</text><text x="272" y="178">80</text><text x="387" y="178">90</text>
+<text x="157" y="230" class="blue" font-weight="700">60</text><text x="272" y="230">85</text><text x="387" y="230">95</text>
+<text x="157" y="282">75</text><text x="272" y="282">88</text><text x="387" y="282">100</text></g>
+<text x="240" y="339" text-anchor="middle" class="blue" font-weight="700">범위의 2행 · 1열 → B3 = 60</text>
+</svg>

@@ -17,6 +17,7 @@ const questionCountByCertification: Record<string, number> = {
   'industrial-safety': industrialSafetyQuestions.length,
   'energy-management': energyManagementQuestions.length,
 };
+questionCountByCertification['computer-literacy'] = new Set(chapters.filter(c => c.data.cert_id === 'computer-literacy').flatMap(c => c.data.questions)).size;
 const totalQuestionCount = Object.values(questionCountByCertification).reduce((sum, count) => sum + count, 0);
 const formatCount = (count: number) => count.toLocaleString('ko-KR');
 ---

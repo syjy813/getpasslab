@@ -1,0 +1,69 @@
+[
+  {
+    "draft": "ADD-01",
+    "slug": "windows-apps-files-windows",
+    "subject": "computer-basics",
+    "questions": []
+  },
+  {
+    "draft": "ADD-44",
+    "slug": "window-states",
+    "subject": "computer-basics",
+    "questions": []
+  },
+  {
+    "draft": "P1-24-01",
+    "slug": "taskbar-settings",
+    "subject": "computer-basics",
+    "questions": [
+      "20160305_016",
+      "20170902_017",
+      "20180901_007"
+    ]
+  },
+  {
+    "draft": "P1-39",
+    "slug": "windows-shortcuts",
+    "subject": "computer-basics",
+    "questions": [
+      "20150627_015",
+      "20180303_019",
+      "20190302_019",
+      "20200704_006"
+    ]
+  },
+  {
+    "draft": "ADD-36",
+    "slug": "operator-precedence",
+    "subject": "spreadsheets",
+    "questions": []
+  },
+  {
+    "draft": "P2-23-01",
+    "slug": "function-arguments-nesting",
+    "subject": "spreadsheets",
+    "questions": [
+      "20151017_031"
+    ]
+  },
+  {
+    "draft": "P2-44-03",
+    "slug": "named-range-calculations",
+    "subject": "spreadsheets",
+    "questions": [
+      "20150307_037"
+    ]
+  },
+  {
+    "draft": "P2-20",
+    "slug": "goal-seek",
+    "subject": "spreadsheets",
+    "questions": [
+      "20161022_037",
+      "20170902_021",
+      "20180303_023",
+      "20180901_040",
+      "20200704_023"
+    ]
+  }
+]
