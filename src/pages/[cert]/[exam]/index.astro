@@ -32,7 +32,7 @@ const questions = (await getCollection('questions'))
   .filter(question => question.data.cert_id === certification.slug
     && question.data.exam === examDefinition.slug)
   .map(question => question.data);
-const badgeContext = createChapterBadgeContext(questions);
+const badgeContext = createChapterBadgeContext(questions, certification.slug !== 'computer-literacy');
 const chapterCards = chapters.map(chapter => ({
   chapter,
   badgeSummary: getChapterBadgeSummary(
@@ -101,6 +101,7 @@ const subjectTooltip = subjects.length > 0
     <h1 class="gpl-h1">{examDefinition.title}</h1>
     <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">{examDefinition.format}</p>
 
+    {examDefinition.releaseNotice && <p class="gpl-body">{examDefinition.releaseNotice}</p>}
     <div class="learning-summary">
       <dl class="learning-stats">
         <div class="learning-stat"><dt>공개 챕터</dt><dd>{chapters.length}개</dd></div>

@@ -22,6 +22,11 @@ export const ENERGY_MANAGEMENT_SUBJECTS = {
   },
 } as const satisfies Record<number, SubjectDefinition>;
 
+export const COMPUTER_LITERACY_SUBJECTS = {
+  1: { slug: 'computer-basics', name: '컴퓨터일반' },
+  2: { slug: 'spreadsheets', name: '스프레드시트 일반' },
+} as const satisfies Record<number, SubjectDefinition>;
+
 // 기존 import 호환용. 산업안전기사 전용 코드는 단계적으로 자격증 스코프를 사용한다.
 export const SUBJECTS = INDUSTRIAL_SAFETY_SUBJECTS;
 export type SubjectId = keyof typeof SUBJECTS;

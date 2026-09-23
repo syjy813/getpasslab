@@ -17,6 +17,7 @@ interface QuestionForBadge {
 export interface ChapterBadgeContext {
   questionsById: Map<string, QuestionForBadge>;
   totalSessionCount: number;
+  frequencyEnabled: boolean;
 }
 
 export interface ChapterBadgeSummary {
@@ -28,8 +29,10 @@ export interface ChapterBadgeSummary {
 
 export function createChapterBadgeContext(
   questions: QuestionForBadge[],
+  frequencyEnabled = true,
 ): ChapterBadgeContext {
   return {
+    frequencyEnabled,
     questionsById: new Map(questions.map((question) => [question.id, question])),
     totalSessionCount: new Set(questions.map((question) => question.date)).size,
   };
@@ -56,12 +59,12 @@ export function getChapterBadgeSummary(
 
   let frequency: ChapterBadgeSummary['frequency'] = null;
   if (
-    context.totalSessionCount > 0
+    context.frequencyEnabled && context.totalSessionCount > 0
     && sessionCount * 100 >= context.totalSessionCount * 70
   ) {
     frequency = '최빈출';
   } else if (
-    context.totalSessionCount > 0
+    context.frequencyEnabled && context.totalSessionCount > 0
     && sessionCount * 100 >= context.totalSessionCount * 40
   ) {
     frequency = '빈출';

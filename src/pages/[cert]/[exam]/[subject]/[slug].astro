@@ -40,7 +40,7 @@ const allQuestions = (await getCollection('questions')).filter(
   question => question.data.cert_id === chapter.data.cert_id
     && question.data.exam === chapter.data.exam,
 );
-const badgeContext = createChapterBadgeContext(allQuestions.map(question => question.data));
+const badgeContext = createChapterBadgeContext(allQuestions.map(question => question.data), chapter.data.cert_id !== 'computer-literacy');
 const badgeSummary = getChapterBadgeSummary(
   chapter.data.tags,
   chapter.data.questions,
@@ -152,6 +152,8 @@ const sideChapters = orderedSideChapters
   <QuestionHistory
     questions={linked as any}
     examComment={chapter.data.examComment}
+    introText={chapter.data.cert_id === 'computer-literacy' ? '연결 기출로 개념의 출제 방식 확인' : undefined}
+    emptyText={chapter.data.cert_id === 'computer-literacy' ? '기출 미배정 · 기초 개념 학습' : undefined}
     deferredQuestionDataset={deferredQuestionDataset}
   />
   <RelatedChapters

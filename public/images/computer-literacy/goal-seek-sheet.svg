@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="336" viewBox="0 0 480 336" role="img" aria-labelledby="title desc">
+<title id="title">목표값 찾기: 워크시트의 결과 셀과 입력 셀</title><desc id="desc">평균 결과 셀 E3과 컴퓨터 판매량 입력 셀 B3의 위치를 표시한 학습용 그림</desc>
+<style>text{font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#191F28} .small{font-size:18px} .label{font-size:20px} .value{font-size:24px;font-weight:700} .blue{fill:#1E40AF} .muted{fill:#626D7A}</style>
+<rect width="480" height="336" fill="#FFFFFF"/>
+
+<rect x="12" y="20" width="456" height="40" rx="6" fill="#F2F4F6"/>
+<rect x="13" y="21" width="66" height="38" rx="5" fill="#EFF6FF"/>
+<text x="46" y="47" text-anchor="middle" class="label blue">E3</text>
+<text x="93" y="47" class="small muted" font-style="italic">fx</text>
+<text x="126" y="47" class="small">=AVERAGE(B3:D3)</text>
+<rect x="12" y="80" width="456" height="164" fill="#FFFFFF" stroke="#E5E8EB"/>
+<path d="M12 80H468V116H12Z M12 116H48V244H12Z" fill="#F2F4F6"/>
+<rect x="48" y="116" width="420" height="42" fill="#F9FAFB"/>
+<path d="M48 80V244 M132 80V244 M218 80V244 M304 80V244 M390 80V244 M12 116H468 M12 158H468 M12 210H468" fill="none" stroke="#E5E8EB"/>
+<g class="small" text-anchor="middle">
+<text x="90" y="105">A</text><text x="175" y="105">B</text><text x="261" y="105">C</text><text x="347" y="105">D</text><text x="429" y="105">E</text>
+<text x="30" y="145">2</text><text x="30" y="191">3</text><text x="30" y="234">4</text>
+<text x="90" y="145">품목</text><text x="175" y="145">컴퓨터</text><text x="261" y="145">프린터</text><text x="347" y="145">캠코더</text><text x="429" y="145">평균</text><text x="90" y="191">판매량</text>
+</g>
+<rect x="133.5" y="159.5" width="83" height="49" fill="#FFFBEB" stroke="#F59E0B" stroke-width="3"/>
+<rect x="391.5" y="159.5" width="75" height="49" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="3"/>
+<g class="value" text-anchor="middle"><text x="175" y="192">50</text><text x="261" y="192" font-weight="400">70</text><text x="347" y="192" font-weight="400">60</text><text x="429" y="192" class="blue">60</text></g>
+<path d="M175 211V254H121V274" fill="none" stroke="#F59E0B" stroke-width="2"/>
+<path d="M429 211V254H359V274" fill="none" stroke="#1D4ED8" stroke-width="2"/>
+<rect x="12" y="274" width="218" height="46" rx="8" fill="#FFFBEB"/>
+<rect x="250" y="274" width="218" height="46" rx="8" fill="#EFF6FF"/>
+<text x="121" y="304" text-anchor="middle" class="label" font-weight="700">③ 바꿀 입력 B3</text>
+<text x="359" y="304" text-anchor="middle" class="label blue" font-weight="700">① 맞출 결과 E3</text>
+
+</svg>

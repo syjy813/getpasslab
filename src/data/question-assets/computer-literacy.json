@@ -1,5 +1,40 @@
 [
   {
+    "id": "20150307_037",
+    "asset_path": "src/assets/questions/computer-literacy/20150307_037.png",
+    "width": 572,
+    "height": 234,
+    "alt": "A1=1, A2=3, B1=2, B2=4인 두 행 두 열의 워크시트"
+  },
+  {
+    "id": "20170902_021",
+    "asset_path": "src/assets/questions/computer-literacy/20170902_021.png",
+    "width": 1062,
+    "height": 1061,
+    "alt": "아래 워크시트에서 총이익[G12]이 500000이 되려면 4분기 판매수량[G3]이 얼마가 되어야 하는지 목표값 찾기를 이용하여 계산하고자 한다. 다음 중 [목표값 찾기] 대화상자에 입력할 내용이 순서대로 바르게 나열된 것은 문항에 포함된 시각자료"
+  },
+  {
+    "id": "20180303_019",
+    "asset_path": "src/assets/questions/computer-literacy/20180303_019.png",
+    "width": 1062,
+    "height": 278,
+    "alt": "다음 중 Windows 바탕 화면에서 아래 그림과 같이 열려 있는 모든 창들을 미리 보기로 보면서 활성창을 전환할 수 있는 바로 가기 키는 문항에 포함된 시각자료"
+  },
+  {
+    "id": "20180303_023",
+    "asset_path": "src/assets/questions/computer-literacy/20180303_023.png",
+    "width": 1062,
+    "height": 946,
+    "alt": "아래 견적서에서 총합계 [F2] 셀을 1,170,000원으로 맞추기 위해서 [D6] 셀의 할인율을 어느 정도로 조정해야 하는지 그 목표값을 찾고자 한다. 다음 중 [목표값 찾기] 대화상자의 각 항목에 들어갈 내용으로 옳은 것은 문항에 포함된 시각자료"
+  },
+  {
+    "id": "20180901_040",
+    "asset_path": "src/assets/questions/computer-literacy/20180901_040.png",
+    "width": 1062,
+    "height": 739,
+    "alt": "다음 중 아래 그림과 같이 [목표값 찾기]를 실행했을 때 이에 대한 의미로 옳은 것은 문항에 포함된 시각자료"
+  },
+  {
     "id": "20200704_001",
     "asset_path": "src/assets/questions/computer-literacy/20200704_001.png",
     "width": 969,

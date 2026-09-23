@@ -1,4 +1,11 @@
 import type { ImageMetadata } from 'astro';
+import computerLiteracyRegistry from '../data/question-assets/computer-literacy.json';
+import computerImage0 from '../assets/questions/computer-literacy/20150307_037.png';
+import computerImage1 from '../assets/questions/computer-literacy/20170902_021.png';
+import computerImage2 from '../assets/questions/computer-literacy/20180303_019.png';
+import computerImage3 from '../assets/questions/computer-literacy/20180303_023.png';
+import computerImage4 from '../assets/questions/computer-literacy/20180901_040.png';
+import computerImage5 from '../assets/questions/computer-literacy/20200704_023.png';
 import industrialSafetyRegistry from '../data/question-assets/industrial-safety.json';
 
 export interface QuestionImage {
@@ -27,9 +34,18 @@ const questionImageEntries: readonly QuestionImageEntry[] = industrialSafetyRegi
   ] as const;
 });
 
+const computerLiteracyImages: readonly QuestionImageEntry[] = [
+  ['computer-literacy:20150307_037', { src: computerImage0, alt: computerLiteracyRegistry.find(entry => entry.id === '20150307_037')!.alt }],
+  ['computer-literacy:20170902_021', { src: computerImage1, alt: computerLiteracyRegistry.find(entry => entry.id === '20170902_021')!.alt }],
+  ['computer-literacy:20180303_019', { src: computerImage2, alt: computerLiteracyRegistry.find(entry => entry.id === '20180303_019')!.alt }],
+  ['computer-literacy:20180303_023', { src: computerImage3, alt: computerLiteracyRegistry.find(entry => entry.id === '20180303_023')!.alt }],
+  ['computer-literacy:20180901_040', { src: computerImage4, alt: computerLiteracyRegistry.find(entry => entry.id === '20180901_040')!.alt }],
+  ['computer-literacy:20200704_023', { src: computerImage5, alt: computerLiteracyRegistry.find(entry => entry.id === '20200704_023')!.alt }],
+];
+
 const questionImages = new Map<string, QuestionImage>();
 
-for (const [key, image] of questionImageEntries) {
+for (const [key, image] of [...questionImageEntries, ...computerLiteracyImages]) {
   if (questionImages.has(key)) {
     throw new Error(`Duplicate question image key: ${key}`);
   }

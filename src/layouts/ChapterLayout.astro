@@ -1,4 +1,5 @@
 ---
+import '../styles/learningFigures.css';
 import BaseLayout from './BaseLayout.astro';
 import {
   getCertification,
@@ -193,6 +194,15 @@ const structuredData = [
         <span class="current">{title}</span>
       </nav>
       <ChapterBadges badges={badges} class="chapter-title-badges" />
+      {examDefinition.releaseNotice && <>
+        <p class="learning-release">{examDefinition.releaseNotice}</p>
+        <details class="learning-chapters">
+          <summary>이 과목의 챕터 {sideChapters.length}개</summary>
+          <nav class="side-nav" aria-label="모바일 챕터 목록">
+            {sideChapters.map(c => <a href={chapterUrl(c)} aria-current={c.slug === slug ? 'page' : undefined}>{c.title}</a>)}
+          </nav>
+        </details>
+      </>}
       <h1 class="gpl-display">{title}</h1>
       <p class="gpl-body-lg" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">{summary}</p>
       <article><slot /></article>

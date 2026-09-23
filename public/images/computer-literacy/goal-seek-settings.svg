@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="336" viewBox="0 0 480 336" role="img" aria-labelledby="title desc">
+<title id="title">목표값 찾기: 세 항목에 입력할 값</title><desc id="desc">수식 셀 $E$3, 찾는 값 70, 값을 바꿀 셀 $B$3 — 목표 70은 문제의 조건에서 확인</desc>
+<style>text{font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#191F28} .small{font-size:18px} .label{font-size:20px} .value{font-size:24px;font-weight:700} .blue{fill:#1E40AF} .muted{fill:#626D7A}</style>
+<rect width="480" height="336" fill="#FFFFFF"/>
+
+<rect x="12" y="20" width="456" height="246" rx="8" fill="#F9FAFB" stroke="#E5E8EB"/>
+<path d="M20 20H460Q468 20 468 28V63H12V28Q12 20 20 20Z" fill="#F2F4F6"/>
+<text x="28" y="48" class="label" font-weight="700">목표값 찾기</text>
+<path d="M436 35L448 47M448 35L436 47" stroke="#626D7A" stroke-width="2"/>
+<rect x="28" y="80" width="32" height="32" rx="16" fill="#1D4ED8"/>
+<rect x="28" y="126" width="32" height="32" rx="16" fill="#333D4B"/>
+<rect x="28" y="172" width="32" height="32" rx="16" fill="#F59E0B"/>
+<g class="label" text-anchor="middle" font-weight="700"><text x="44" y="103" style="fill:#FFFFFF">1</text><text x="44" y="149" style="fill:#FFFFFF">2</text><text x="44" y="195">3</text></g>
+<g class="label"><text x="72" y="103">수식 셀</text><text x="72" y="149">찾는 값</text><text x="72" y="195">값을 바꿀 셀</text></g>
+<rect x="234" y="77" width="212" height="38" rx="4" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+<rect x="234" y="123" width="212" height="38" rx="4" fill="#FFFFFF" stroke="#333D4B" stroke-width="2"/>
+<rect x="234" y="169" width="212" height="38" rx="4" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+<text x="250" y="104" class="value blue">$E$3</text><text x="250" y="150" class="value">70</text><text x="250" y="196" class="value">$B$3</text>
+<rect x="248" y="225" width="92" height="29" rx="4" fill="#FFFFFF" stroke="#E5E8EB"/><rect x="354" y="225" width="92" height="29" rx="4" fill="#FFFFFF" stroke="#E5E8EB"/>
+<text x="294" y="246" text-anchor="middle" class="small muted">확인</text><text x="400" y="246" text-anchor="middle" class="small muted">취소</text>
+<text x="240" y="305" text-anchor="middle" class="label" font-weight="700">② 문제의 조건에서 가져온 목표 70</text>
+
+</svg>
