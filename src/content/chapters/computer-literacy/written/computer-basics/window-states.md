@@ -8,6 +8,10 @@ group: "Windows 화면과 조작"
 tags: ["개념"]
 summary: "창을 감추기·펼치기·닫기의 결과와 저장 여부 구별"
 questions: []
+supportingQuestions:
+  - id: "20180303_019"
+    note: "창 닫기와 활성 창 전환을 구별하는 문제 — 전환 단축키는 아래 설명과 함께 확인"
+    chapter: "windows-shortcuts"
 related: []
 order: 2
 priority: "1차"

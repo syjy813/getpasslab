@@ -8,6 +8,10 @@ group: "Windows 화면과 조작"
 tags: ["개념"]
 summary: "앱은 작업 도구, 파일은 저장한 데이터, 창은 작업 화면"
 questions: []
+supportingQuestions:
+  - id: "20200704_006"
+    note: "시작 메뉴·탐색기·선택 항목의 역할을 구별하는 문제 — 단축키 동작은 아래 설명과 함께 확인"
+    chapter: "windows-shortcuts"
 related: []
 order: 1
 priority: "1차"

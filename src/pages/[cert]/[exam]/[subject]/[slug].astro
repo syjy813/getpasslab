@@ -6,6 +6,7 @@ import QuestionHistory from '../../../../components/QuestionHistory.astro';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
 import { getSubject } from '../../../../config/certifications';
 import { getQuestionImage } from '../../../../config/questionImages';
+import { withBase } from '../../../../config/url';
 import {
   createChapterBadgeContext,
   getChapterBadgeSummary,
@@ -97,6 +98,26 @@ const allChapters = (await getCollection('chapters')).filter(
     && candidate.data.cert_id === chapter.data.cert_id
     && candidate.data.exam === chapter.data.exam,
 );
+const supporting = chapter.data.supportingQuestions.map(reference => {
+  const question = questionsById.get(reference.id);
+  const target = allChapters.find(candidate => candidate.data.slug === reference.chapter);
+  if (!question || question.review === 'jpg 확필' || !target
+    || !target.data.questions.includes(reference.id)
+    || chapter.data.questions.includes(reference.id)) {
+    throw new Error(`Invalid supporting question: ${chapter.data.slug}/${reference.id}`);
+  }
+  const subject = getSubject(target.data.cert_id, target.data.exam, target.data.subject_id);
+  if (!subject) throw new Error(`Unknown supporting chapter subject: ${reference.chapter}`);
+  return {
+    ...question,
+    image: getQuestionImage(question.cert_id, question.id),
+    learningContext: {
+      note: reference.note,
+      href: withBase(`/${target.data.cert_id}/${target.data.exam}/${subject.slug}/${target.data.slug}/`),
+      title: target.data.title,
+    },
+  };
+});
 const subjectStartChapters = [...new Set(allChapters.map(candidate => candidate.data.subject_id))]
   .sort((a, b) => a - b)
   .map((candidateSubjectId) => {
@@ -149,13 +170,18 @@ const sideChapters = orderedSideChapters
 >
   <Content />
   <AdFitResponsive />
-  <QuestionHistory
+  {(linked.length > 0 || supporting.length === 0) && <QuestionHistory
     questions={linked as any}
     examComment={chapter.data.examComment}
     introText={chapter.data.cert_id === 'computer-literacy' ? '연결 기출로 개념의 출제 방식 확인' : undefined}
     emptyText={chapter.data.cert_id === 'computer-literacy' ? '기출 미배정 · 기초 개념 학습' : undefined}
     deferredQuestionDataset={deferredQuestionDataset}
-  />
+  />}
+  {supporting.length > 0 && <QuestionHistory
+    questions={supporting}
+    supporting
+    introText="이 챕터의 기초 개념과 연결 챕터의 설명을 함께 적용"
+  />}
   <RelatedChapters
     manual={manual as any}
     sameGroup={sameGroup as any}
