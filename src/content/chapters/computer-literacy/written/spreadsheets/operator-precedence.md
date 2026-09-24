@@ -8,6 +8,10 @@ group: "수식과 함수"
 tags: ["계산"]
 summary: "괄호 안부터 계산하고, 같은 순위는 왼쪽부터 계산"
 questions: []
+supportingQuestions:
+  - id: "20150307_037"
+    note: "수식의 +와 함수 이름을 구별해 읽는 문제 — 이름 범위의 계산은 아래 설명과 함께 적용"
+    chapter: "named-range-calculations"
 related: []
 order: 1
 priority: "1차"
