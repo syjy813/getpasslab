@@ -59,9 +59,16 @@ const yearRange = sortedYears.length === 0
       <p class="evidence-intro">{introText}</p>
       {!supporting && <div class="freq-label">수록 기출 {questions.length}문항 · {sessions.size}개 시험 회차 · {yearRange}</div>}
       {examComment && <p class="exam-comment"><strong>출제 경향</strong> — {examComment}</p>}
+      {questions.map(q => (
+        q.learningContext && (
+          <p class="evidence-intro">
+            {q.learningContext.note}<br />
+            <a href={q.learningContext.href}>함께 볼 설명: {q.learningContext.title}</a>
+          </p>
+        )
+      ))}
       <div class="round-badges">
-        {questions.map(q => (<>
-          {q.learningContext && <p class="evidence-intro">{q.learningContext.note}<br /><a href={q.learningContext.href}>함께 볼 설명: {q.learningContext.title}</a></p>}
+        {questions.map(q => (
           <button
             class="round-badge"
             data-open={q.id}
@@ -74,7 +81,7 @@ const yearRange = sortedYears.length === 0
           >
             {examLabel(q.label)} {q.number}번
           </button>
-        </>))}
+        ))}
       </div>
     </>
   ) : (
