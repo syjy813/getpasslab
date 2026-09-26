@@ -45,9 +45,10 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
       {certifications.map((certification) => (
         <a class="card" href={withBase(getCertificationEntryPath(certification.slug))}>
           <span class="card-label">{certification.category}</span>
-          <div class="card-title">{certification.name}</div>
+          <div class="card-title card-title-primary">{certification.name}</div>
+          <div class="card-description">{certification.summary}</div>
           <div class="card-meta">
-            {certification.summary} · 챕터 {countByCertification(certification.slug)}개
+            챕터 {countByCertification(certification.slug)}개
             {questionCountByCertification[certification.slug]
               ? ` · 기출 ${formatCount(questionCountByCertification[certification.slug])}문항`
               : ''}
