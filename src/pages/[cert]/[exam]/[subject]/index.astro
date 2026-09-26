@@ -108,7 +108,7 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
     </div>
 
     {chapters.length === 0 && (
-      <div class="card" style="cursor:default"><div class="card-title">콘텐츠 준비 중</div><div class="card-meta">챕터가 순차적으로 공개됩니다.</div></div>
+      <div class="card" style="cursor:default"><div class="card-title">콘텐츠 준비 중</div><div class="card-description">챕터가 순차적으로 공개됩니다.</div></div>
     )}
 
     {featuredChapters.length > 0 && (
@@ -147,7 +147,7 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
             <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/${chapter.data.slug}/`)}>
               <ChapterBadges badges={badgeSummary.badges} class="card-badges" />
               <div class="card-title">{chapter.data.title}</div>
-              <div class="card-meta">{chapter.data.summary}</div>
+              <div class="card-description">{chapter.data.summary}</div>
             </a>
           ))}
         </div>
