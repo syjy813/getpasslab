@@ -16,19 +16,25 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-09-27 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.35
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-09-27 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.36
 
 ---
 
 
-## C1 공개 진행 — 2026-09-27
+## C1 공개 완료 — 2026-09-27
 
 - 사용자의 실서버 배포 요청으로 C1 공개 승인 · 아래의 로컬 전용·미배포 기록은 당시 단계
 - 범위: C1 27개 추가, 전체 컴활 35개, 주 63/보조 41 연결, 4문항/6곳의 ‘풀이 참고’ 안내
 - 원격 main `ef065f7b1925bee2d99f52e694426b99a871a8b4`의 기출 배치·타이포그래피 변경을 보존하며 통합
 - 원본 저장소의 작업 파일을 보존하고 기존 C1 worktree에서 commit·PR·검증·배포 진행
 - PR 검사에 C1의 고정 식별자·기출 원문 해시·배정·렌더링 검사 추가
-- 현재는 배포 준비 · Push·Deploy·Production 완료는 원격 실행과 실사이트 확인 후 기록
+- 공개 커밋: `294f9f01b1ba78f54e679c0d731a9fba173ccea6` · [PR #85](https://github.com/syjy813/getpasslab/pull/85) 병합 완료
+- [GitHub PR 검증](https://github.com/syjy813/getpasslab/actions/runs/36325051956) 통과 · [Pages 배포](https://github.com/syjy813/getpasslab/actions/runs/36325180914) 2026-09-27 23:15 KST 성공
+- Production: 27개 신규 챕터 HTTP 200·104개 문제/정답 표시·풀이 참고 범위·원본 그림 2종 응답·과목 목차 연결 확인 · 전체 컴활 35개(컴퓨터일반 31/스프레드시트일반 4)
+- 실서버 모바일: SATA 문제 열기·수록 답안/풀이 참고·닫기·재열기 초기화 및 가로 넘침 없음 확인
+- 공식 정정·복수정답 여부 및 일부 원문 타당성 쟁점은 여전히 미해결 · 풀이 참고는 쟁점을 명시한 것이며 정답 원문 수정이 아님
+- 단계: 계획 완료 → 구현 완료 → Test 완료 → Build 완료 → Push 완료 → Deploy 완료 → Production 확인 완료
+- 세부 증거: `docs/audits/2026-09-25-c1/PRODUCTION_RELEASE.md` 및 `production-verification.json` · 아래 미배포 표시는 과거 기록
 
 ## 최신 화면 문구 변경 — 2026-09-27
 

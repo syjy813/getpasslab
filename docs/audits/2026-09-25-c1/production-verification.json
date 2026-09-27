@@ -1,0 +1,215 @@
+{
+  "verifiedAt": "2026-09-27T14:15:57.385832+00:00",
+  "origin": "https://getpasslab.co.kr",
+  "chapters": [
+    {
+      "slug": "computer-classification",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-classification/",
+      "status": 200,
+      "dialogs": 5,
+      "images": []
+    },
+    {
+      "slug": "wearable-computers",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/wearable-computers/",
+      "status": 200,
+      "dialogs": 2,
+      "images": []
+    },
+    {
+      "slug": "computer-development",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-development/",
+      "status": 200,
+      "dialogs": 1,
+      "images": []
+    },
+    {
+      "slug": "bits-bytes-data-units",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/bits-bytes-data-units/",
+      "status": 200,
+      "dialogs": 4,
+      "images": []
+    },
+    {
+      "slug": "storage-capacity-conversion",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/storage-capacity-conversion/",
+      "status": 200,
+      "dialogs": 2,
+      "images": []
+    },
+    {
+      "slug": "character-codes",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/character-codes/",
+      "status": 200,
+      "dialogs": 7,
+      "images": []
+    },
+    {
+      "slug": "parity-bit",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/parity-bit/",
+      "status": 200,
+      "dialogs": 5,
+      "images": []
+    },
+    {
+      "slug": "cpu-operations-control",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/cpu-operations-control/",
+      "status": 200,
+      "dialogs": 5,
+      "images": [
+        "/_astro/20151017_012.BNnGVEGK_ovF2u.webp",
+        "/_astro/20200704_018.Bj2GPiR4_ZG6P0N.webp"
+      ]
+    },
+    {
+      "slug": "cpu-registers",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/cpu-registers/",
+      "status": 200,
+      "dialogs": 7,
+      "images": [
+        "/_astro/20151017_012.BNnGVEGK_ovF2u.webp"
+      ]
+    },
+    {
+      "slug": "ram-rom-flash",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ram-rom-flash/",
+      "status": 200,
+      "dialogs": 16,
+      "images": [
+        "/_astro/20151017_012.BNnGVEGK_ovF2u.webp",
+        "/_astro/20200704_018.Bj2GPiR4_ZG6P0N.webp"
+      ]
+    },
+    {
+      "slug": "storage-devices",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/storage-devices/",
+      "status": 200,
+      "dialogs": 7,
+      "images": [
+        "/_astro/20200704_018.Bj2GPiR4_ZG6P0N.webp"
+      ]
+    },
+    {
+      "slug": "memory-speed-hierarchy",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/memory-speed-hierarchy/",
+      "status": 200,
+      "dialogs": 4,
+      "images": [
+        "/_astro/20151017_012.BNnGVEGK_ovF2u.webp"
+      ]
+    },
+    {
+      "slug": "cache-buffer",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/cache-buffer/",
+      "status": 200,
+      "dialogs": 5,
+      "images": []
+    },
+    {
+      "slug": "virtual-memory",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/virtual-memory/",
+      "status": 200,
+      "dialogs": 6,
+      "images": []
+    },
+    {
+      "slug": "input-output-devices",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/input-output-devices/",
+      "status": 200,
+      "dialogs": 3,
+      "images": []
+    },
+    {
+      "slug": "multimedia-boards",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/multimedia-boards/",
+      "status": 200,
+      "dialogs": 1,
+      "images": []
+    },
+    {
+      "slug": "printer-principles",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/printer-principles/",
+      "status": 200,
+      "dialogs": 1,
+      "images": []
+    },
+    {
+      "slug": "plug-and-play-hot-swap",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/plug-and-play-hot-swap/",
+      "status": 200,
+      "dialogs": 5,
+      "images": []
+    },
+    {
+      "slug": "usb-interface",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/usb-interface/",
+      "status": 200,
+      "dialogs": 2,
+      "images": []
+    },
+    {
+      "slug": "sata-interface",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/sata-interface/",
+      "status": 200,
+      "dialogs": 1,
+      "images": []
+    },
+    {
+      "slug": "hdmi-interface",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/hdmi-interface/",
+      "status": 200,
+      "dialogs": 1,
+      "images": []
+    },
+    {
+      "slug": "firmware-bios",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/firmware-bios/",
+      "status": 200,
+      "dialogs": 4,
+      "images": []
+    },
+    {
+      "slug": "processing-time-units",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/processing-time-units/",
+      "status": 200,
+      "dialogs": 2,
+      "images": []
+    },
+    {
+      "slug": "performance-metrics",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/performance-metrics/",
+      "status": 200,
+      "dialogs": 3,
+      "images": []
+    },
+    {
+      "slug": "computer-specifications",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-specifications/",
+      "status": 200,
+      "dialogs": 1,
+      "images": [
+        "/_astro/20200704_018.Bj2GPiR4_ZG6P0N.webp"
+      ]
+    },
+    {
+      "slug": "pc-upgrade-compatibility",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/pc-upgrade-compatibility/",
+      "status": 200,
+      "dialogs": 0,
+      "images": []
+    },
+    {
+      "slug": "data-processing-methods",
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/data-processing-methods/",
+      "status": 200,
+      "dialogs": 4,
+      "images": []
+    }
+  ],
+  "dialogs": 104,
+  "questionImages": [
+    "/_astro/20151017_012.BNnGVEGK_ovF2u.webp",
+    "/_astro/20200704_018.Bj2GPiR4_ZG6P0N.webp"
+  ],
+  "subjectIndex": "passed"
+}
