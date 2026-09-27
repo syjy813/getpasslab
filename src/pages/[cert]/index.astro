@@ -88,7 +88,7 @@ const examScopes = exams.map((exam) => {
         <a class="card" href={withBase(getExamEntryPath(certification.slug, exam.slug))}>
           <span class="card-label">{exam.name}</span>
           <div class="card-title">{exam.name} 핵심요약</div>
-          <div class="card-meta">{exam.format}</div>
+          <div class="card-description">{exam.format}</div>
           <div class="scope-meta">공개 챕터 {chapterCount}개 · 연결 기출 {questionCount}문항 · 시험 회차 {examSessionCount}개</div>
           {publicSubjects.length > 0 && <div class="scope-subjects">{publicSubjects.join(' · ')}</div>}
         </a>
