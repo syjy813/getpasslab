@@ -13,7 +13,7 @@ supportingQuestions:
     note: "시작 메뉴·탐색기·선택 항목의 역할을 구별하는 문제 — 단축키 동작은 아래 설명과 함께 확인"
     chapter: "windows-shortcuts"
 related: []
-order: 1
+order: 38
 priority: "1차"
 status: "완료"
 ---

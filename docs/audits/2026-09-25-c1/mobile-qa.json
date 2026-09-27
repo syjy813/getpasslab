@@ -1,0 +1,317 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "method": "Codex in-app Browser DOM measurements; initial mobile page load",
+  "pages": [
+    {
+      "images": [],
+      "questionButtons": 5,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327,
+        327
+      ],
+      "title": "컴퓨터를 분류하는 기준",
+      "url": "/computer-literacy/written/computer-basics/computer-classification/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 2,
+      "scrollWidth": 375,
+      "tableWidths": [],
+      "title": "웨어러블 컴퓨터의 착용과 입력 방식",
+      "url": "/computer-literacy/written/computer-basics/wearable-computers/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 1,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "컴퓨터 발전의 주요 전환",
+      "url": "/computer-literacy/written/computer-basics/computer-development/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 4,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "비트·바이트와 자료 구성 단위",
+      "url": "/computer-literacy/written/computer-basics/bits-bytes-data-units/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 2,
+      "scrollWidth": 375,
+      "tableWidths": [],
+      "title": "저장 용량 환산하기",
+      "url": "/computer-literacy/written/computer-basics/storage-capacity-conversion/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 7,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "ASCII·EBCDIC·Unicode의 문자 표현",
+      "url": "/computer-literacy/written/computer-basics/character-codes/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 5,
+      "scrollWidth": 375,
+      "tableWidths": [],
+      "title": "패리티 비트로 오류 검출하기",
+      "url": "/computer-literacy/written/computer-basics/parity-bit/",
+      "width": 390
+    },
+    {
+      "images": [
+        {
+          "loaded": true,
+          "width": 327
+        }
+      ],
+      "questionButtons": 5,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "CPU의 연산·제어 기능",
+      "url": "/computer-literacy/written/computer-basics/cpu-operations-control/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 7,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "레지스터에 저장하는 정보",
+      "url": "/computer-literacy/written/computer-basics/cpu-registers/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 16,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327,
+        327
+      ],
+      "title": "RAM·ROM·플래시 메모리 비교",
+      "url": "/computer-literacy/written/computer-basics/ram-rom-flash/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 7,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "HDD·SSD·광학 저장장치 비교",
+      "url": "/computer-literacy/written/computer-basics/storage-devices/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 4,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "기억장치의 위치와 속도 순서",
+      "url": "/computer-literacy/written/computer-basics/memory-speed-hierarchy/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 5,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "캐시와 버퍼의 임시 저장 목적",
+      "url": "/computer-literacy/written/computer-basics/cache-buffer/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 6,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "가상 메모리로 주기억 용량 보완하기",
+      "url": "/computer-literacy/written/computer-basics/virtual-memory/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 3,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "정보의 이동 방향으로 입출력장치 구별하기",
+      "url": "/computer-literacy/written/computer-basics/input-output-devices/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 1,
+      "scrollWidth": 375,
+      "tableWidths": [],
+      "title": "멀티미디어 보드의 처리 역할",
+      "url": "/computer-literacy/written/computer-basics/multimedia-boards/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 1,
+      "scrollWidth": 375,
+      "tableWidths": [],
+      "title": "프린터의 인쇄 원리",
+      "url": "/computer-literacy/written/computer-basics/printer-principles/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 5,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "자동 인식과 전원을 켠 채 연결: PnP·핫 스와핑",
+      "url": "/computer-literacy/written/computer-basics/plug-and-play-hot-swap/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 2,
+      "scrollWidth": 375,
+      "tableWidths": [],
+      "title": "USB의 연결 방식과 규격",
+      "url": "/computer-literacy/written/computer-basics/usb-interface/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 1,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "SATA의 저장장치 연결 방식",
+      "url": "/computer-literacy/written/computer-basics/sata-interface/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 1,
+      "scrollWidth": 375,
+      "tableWidths": [],
+      "title": "HDMI의 영상·음향 전송",
+      "url": "/computer-literacy/written/computer-basics/hdmi-interface/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 4,
+      "scrollWidth": 375,
+      "tableWidths": [],
+      "title": "펌웨어와 BIOS의 부팅 역할",
+      "url": "/computer-literacy/written/computer-basics/firmware-bios/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 2,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "연산 시간 단위와 빠르기 비교",
+      "url": "/computer-literacy/written/computer-basics/processing-time-units/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 3,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "성능 수치의 크기와 비교 방향",
+      "url": "/computer-literacy/written/computer-basics/performance-metrics/",
+      "width": 390
+    },
+    {
+      "images": [
+        {
+          "loaded": true,
+          "width": 327
+        }
+      ],
+      "questionButtons": 1,
+      "scrollWidth": 375,
+      "tableWidths": [],
+      "title": "컴퓨터 사양표에서 장치와 용량 읽기",
+      "url": "/computer-literacy/written/computer-basics/computer-specifications/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 0,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "부품 업그레이드의 목적과 호환 조건",
+      "url": "/computer-literacy/written/computer-basics/pc-upgrade-compatibility/",
+      "width": 390
+    },
+    {
+      "images": [],
+      "questionButtons": 4,
+      "scrollWidth": 375,
+      "tableWidths": [
+        327
+      ],
+      "title": "일괄·실시간·분산 처리 비교",
+      "url": "/computer-literacy/written/computer-basics/data-processing-methods/",
+      "width": 390
+    }
+  ],
+  "interactions": {
+    "cpuImageDialog": {
+      "question": "20151017_012",
+      "open": true,
+      "answer": 1,
+      "close": true
+    },
+    "specificationImageDialog": {
+      "question": "20200704_018",
+      "open": true,
+      "answer": 4,
+      "close": true
+    },
+    "supportingChapterLink": true,
+    "nextChapterLink": true,
+    "unassignedFoundationNoFabricatedFrequency": true
+  }
+}

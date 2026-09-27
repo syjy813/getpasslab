@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-26",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pages": [
+    {
+      "pageWidth": 375,
+      "title": "컴퓨터 발전의 주요 전환",
+      "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/computer-development/",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "pageWidth": 375,
+      "title": "ASCII·EBCDIC·Unicode의 문자 표현",
+      "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/character-codes/",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "pageWidth": 375,
+      "title": "정보의 이동 방향으로 입출력장치 구별하기",
+      "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/input-output-devices/",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "pageWidth": 375,
+      "title": "멀티미디어 보드의 처리 역할",
+      "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/multimedia-boards/",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "pageWidth": 375,
+      "title": "USB의 연결 방식과 규격",
+      "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/usb-interface/",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "pageWidth": 375,
+      "title": "SATA의 저장장치 연결 방식",
+      "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/sata-interface/",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "pageWidth": 375,
+      "title": "성능 수치의 크기와 비교 방향",
+      "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/performance-metrics/",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "pageWidth": 375,
+      "title": "일괄·실시간·분산 처리 비교",
+      "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/data-processing-methods/",
+      "viewport": 390,
+      "overflow": false
+    }
+  ],
+  "scope": "본문·보조 안내를 수정한 8개 챕터"
+}

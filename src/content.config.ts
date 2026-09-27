@@ -7,6 +7,7 @@ const chapterTypeTag = z.enum(['개념', '계산', '절차']);
 const chapters = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/chapters' }),
   schema: z.object({
+    chapter_id: z.string().optional(), // 통합 집필 목차의 감사용 식별자
     title: z.string(),
     slug: z.string(),               // 동결 키
     cert_id: z.string().default('industrial-safety'),
@@ -22,7 +23,7 @@ const chapters = defineCollection({
     supportingQuestions: z.array(z.object({
       id: z.string(),
       note: z.string(),
-      chapter: z.string(),
+      chapter: z.string().optional(), // 연결 설명이 구현된 경우에만 slug 지정
     })).default([]), // 기초 개념 적용용. 주 기출·빈도 집계에서 제외
     related: z.array(z.string()).default([]),    // 관련 챕터 slug (섹션 5 수동 지정분)
     examComment: z.string().optional(),          // 섹션 4 출제 경향 코멘트 (챕터당 1줄)
