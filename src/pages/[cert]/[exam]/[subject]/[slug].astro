@@ -6,6 +6,7 @@ import QuestionHistory from '../../../../components/QuestionHistory.astro';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
 import { getSubject } from '../../../../config/certifications';
 import { getQuestionImage } from '../../../../config/questionImages';
+import { getQuestionCaution } from '../../../../config/questionCautions';
 import { withBase } from '../../../../config/url';
 import {
   createChapterBadgeContext,
@@ -83,6 +84,7 @@ for (const questionId of chapter.data.questions ?? []) {
   linked.push({
     ...question,
     image: getQuestionImage(question.cert_id, question.id),
+    caution: getQuestionCaution(question.cert_id, question.exam, question.id),
   });
 }
 
@@ -100,21 +102,26 @@ const allChapters = (await getCollection('chapters')).filter(
 );
 const supporting = chapter.data.supportingQuestions.map(reference => {
   const question = questionsById.get(reference.id);
-  const target = allChapters.find(candidate => candidate.data.slug === reference.chapter);
-  if (!question || question.review === 'jpg 확필' || !target
-    || !target.data.questions.includes(reference.id)
+  const target = reference.chapter
+    ? allChapters.find(candidate => candidate.data.slug === reference.chapter)
+    : undefined;
+  if (!question || question.review === 'jpg 확필'
+    || (reference.chapter && (!target || !target.data.questions.includes(reference.id)))
     || chapter.data.questions.includes(reference.id)) {
     throw new Error(`Invalid supporting question: ${chapter.data.slug}/${reference.id}`);
   }
-  const subject = getSubject(target.data.cert_id, target.data.exam, target.data.subject_id);
-  if (!subject) throw new Error(`Unknown supporting chapter subject: ${reference.chapter}`);
+  const subject = target && getSubject(target.data.cert_id, target.data.exam, target.data.subject_id);
+  if (target && !subject) throw new Error(`Unknown supporting chapter subject: ${reference.chapter}`);
   return {
     ...question,
     image: getQuestionImage(question.cert_id, question.id),
+    caution: getQuestionCaution(question.cert_id, question.exam, question.id),
     learningContext: {
       note: reference.note,
-      href: withBase(`/${target.data.cert_id}/${target.data.exam}/${subject.slug}/${target.data.slug}/`),
-      title: target.data.title,
+      ...(target && subject ? {
+        href: withBase(`/${target.data.cert_id}/${target.data.exam}/${subject.slug}/${target.data.slug}/`),
+        title: target.data.title,
+      } : {}),
     },
   };
 });
@@ -180,7 +187,7 @@ const sideChapters = orderedSideChapters
   {supporting.length > 0 && <QuestionHistory
     questions={supporting}
     supporting
-    introText="이 챕터의 기초 개념과 연결 챕터의 설명을 함께 적용"
+    introText="각 문제에 표시된 적용 범위를 확인하며 학습"
   />}
   <RelatedChapters
     manual={manual as any}

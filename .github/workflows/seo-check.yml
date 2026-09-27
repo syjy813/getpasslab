@@ -37,5 +37,8 @@ jobs:
       - name: Validate computer literacy publication
         run: npm run check:computer-literacy
 
+      - name: Validate C1 chapters and canonical question assignments
+        run: npm run check:computer-literacy-c1
+
       - name: Validate deferred question delivery
         run: npm run check:deferred-question-content

@@ -6,6 +6,8 @@ import computerImage2 from '../assets/questions/computer-literacy/20180303_019.p
 import computerImage3 from '../assets/questions/computer-literacy/20180303_023.png';
 import computerImage4 from '../assets/questions/computer-literacy/20180901_040.png';
 import computerImage5 from '../assets/questions/computer-literacy/20200704_023.png';
+import computerImage6 from '../assets/questions/computer-literacy/20151017_012.png';
+import computerImage7 from '../assets/questions/computer-literacy/20200704_018.png';
 import industrialSafetyRegistry from '../data/question-assets/industrial-safety.json';
 
 export interface QuestionImage {
@@ -35,6 +37,8 @@ const questionImageEntries: readonly QuestionImageEntry[] = industrialSafetyRegi
 });
 
 const computerLiteracyImages: readonly QuestionImageEntry[] = [
+  ['computer-literacy:20151017_012', { src: computerImage6, alt: computerLiteracyRegistry.find(entry => entry.id === '20151017_012')!.alt }],
+  ['computer-literacy:20200704_018', { src: computerImage7, alt: computerLiteracyRegistry.find(entry => entry.id === '20200704_018')!.alt }],
   ['computer-literacy:20150307_037', { src: computerImage0, alt: computerLiteracyRegistry.find(entry => entry.id === '20150307_037')!.alt }],
   ['computer-literacy:20170902_021', { src: computerImage1, alt: computerLiteracyRegistry.find(entry => entry.id === '20170902_021')!.alt }],
   ['computer-literacy:20180303_019', { src: computerImage2, alt: computerLiteracyRegistry.find(entry => entry.id === '20180303_019')!.alt }],

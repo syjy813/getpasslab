@@ -13,7 +13,7 @@ supportingQuestions:
     note: "창 닫기와 활성 창 전환을 구별하는 문제 — 전환 단축키는 아래 설명과 함께 확인"
     chapter: "windows-shortcuts"
 related: []
-order: 2
+order: 39
 priority: "1차"
 status: "완료"
 ---

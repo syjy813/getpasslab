@@ -10,8 +10,9 @@ interface Q {
   body: string;
   choices: string[];
   answer: number;
+  caution?: string;
   image?: { src: ImageMetadata; alt: string };
-  learningContext?: { note: string; href: string; title: string };
+  learningContext?: { note: string; href?: string; title?: string };
 }
 type DeferredQuestionDataset = 'energy-management' | 'industrial-safety';
 interface Props {
@@ -62,8 +63,8 @@ const yearRange = sortedYears.length === 0
       {questions.map(q => (
         q.learningContext && (
           <p class="evidence-intro">
-            {q.learningContext.note}<br />
-            <a href={q.learningContext.href}>함께 볼 설명: {q.learningContext.title}</a>
+            {q.learningContext.note}
+            {q.learningContext.href && <><br /><a href={q.learningContext.href}>함께 볼 설명: {q.learningContext.title}</a></>}
           </p>
         )
       ))}
@@ -80,6 +81,7 @@ const yearRange = sortedYears.length === 0
             aria-controls={isDeferred ? 'deferred-question-dialog' : `q-${q.id}`}
           >
             {examLabel(q.label)} {q.number}번
+            {!isDeferred && q.caution && <span class="q-caution-badge"> · 풀이 참고</span>}
           </button>
         ))}
       </div>
@@ -131,10 +133,13 @@ const yearRange = sortedYears.length === 0
   questions.map(q => {
     const titleId = `q-title-${q.id}`;
     const choicesId = `q-choices-${q.id}`;
+    const cautionId = `q-caution-${q.id}`;
+    const answerLabel = q.caution ? '수록 답안' : '정답';
     return (
-      <dialog class="q-layer" id={`q-${q.id}`} data-revealed="false" aria-labelledby={titleId}>
+      <dialog class="q-layer" id={`q-${q.id}`} data-revealed="false" data-answer-label={answerLabel} aria-labelledby={titleId}>
         <div class="q-inner">
           <div class="q-meta" id={titleId} tabindex="-1">{examLabel(q.label)} · {q.number}번</div>
+          {q.caution && <p class="q-caution-hint">선택지 표현·조건에 주의 · 답안 확인 시 설명 표시</p>}
           <div class="q-body">{q.body}</div>
           {q.image && (
             <figure class="q-figure">
@@ -153,7 +158,7 @@ const yearRange = sortedYears.length === 0
             {q.choices.map((c, i) => (
               <li class={i + 1 === q.answer ? 'is-answer' : ''}>
                 {choiceSymbols[i]} {displayChoice(c, Boolean(q.image))}
-                {i + 1 === q.answer && <span class="q-answer-mark">(정답)</span>}
+                {i + 1 === q.answer && <span class="q-answer-mark">({answerLabel})</span>}
               </li>
             ))}
           </ol>
@@ -161,11 +166,12 @@ const yearRange = sortedYears.length === 0
             <button
               class="reveal"
               data-reveal={q.id}
-              aria-controls={choicesId}
-            >정답 확인</button>
+              aria-controls={q.caution ? `${choicesId} ${cautionId}` : choicesId}
+            >{answerLabel} 확인</button>
             <button class="close" data-close={q.id}>닫기</button>
             <span class="q-answer-status" aria-live="polite"></span>
           </div>
+          {q.caution && <div class="q-caution" id={cautionId} data-question-caution hidden><strong>풀이 참고</strong><p>{q.caution}</p></div>}
         </div>
       </dialog>
     );
@@ -194,7 +200,9 @@ const yearRange = sortedYears.length === 0
     dialog.dataset.revealed = 'false';
     const revealButton = dialog.querySelector<HTMLButtonElement>('[data-reveal]');
     const status = dialog.querySelector<HTMLElement>('.q-answer-status');
-    if (revealButton) revealButton.textContent = '정답 확인';
+    if (revealButton) revealButton.textContent = `${dialog.dataset.answerLabel ?? '정답'} 확인`;
+    const caution = dialog.querySelector<HTMLElement>('[data-question-caution]');
+    if (caution) caution.hidden = true;
     if (status) status.textContent = '';
   };
 
@@ -352,9 +360,14 @@ const yearRange = sortedYears.length === 0
     btn.addEventListener('click', () => {
       const dialog = btn.closest('dialog') as HTMLDialogElement;
       dialog.dataset.revealed = 'true';
-      btn.textContent = '정답 공개됨';
+      const answerLabel = dialog.dataset.answerLabel ?? '정답';
+      btn.textContent = `${answerLabel} 공개됨`;
+      const caution = dialog.querySelector<HTMLElement>('[data-question-caution]');
+      if (caution) caution.hidden = false;
       const status = dialog.querySelector<HTMLElement>('.q-answer-status');
-      if (status) status.textContent = '정답이 표시되었습니다.';
+      if (status) status.textContent = caution
+        ? `${answerLabel} 표시됨 · 풀이 참고: ${caution.querySelector('p')?.textContent ?? ''}`
+        : '정답이 표시되었습니다.';
     });
   });
 

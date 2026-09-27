@@ -1,0 +1,593 @@
+{
+  "sourceOutline": {
+    "path": "docs/audits/2026-09-13-computer-literacy-writing-outline.md",
+    "sha256": "ce1280c976426f9a3d21f176d45fbc09a8bb27cc3eed7157312fe7753a2f9230"
+  },
+  "sourceDraft": {
+    "file": "computer-literacy-C1-drafts-001-027.md",
+    "sha256": "931f3cabb3b68817559a465225caa5b3f60882aa336b9ea8aea20eee983ecd0d"
+  },
+  "baseline": "6a35d7f76703b5b121502c599d7eaf134ca99e28",
+  "chapters": [
+    {
+      "order": 1,
+      "id": "P1-15a",
+      "title": "컴퓨터를 분류하는 기준",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "computer-classification",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/computer-classification.md",
+      "primary": [
+        "20150307_014",
+        "20151017_005",
+        "20151017_011",
+        "20170304_010",
+        "20180901_014"
+      ],
+      "support": []
+    },
+    {
+      "order": 2,
+      "id": "P1-42a",
+      "title": "웨어러블 컴퓨터의 착용과 입력 방식",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "wearable-computers",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/wearable-computers.md",
+      "primary": [
+        "20170304_011",
+        "20200704_019"
+      ],
+      "support": []
+    },
+    {
+      "order": 3,
+      "id": "P1-15b",
+      "title": "컴퓨터 발전의 주요 전환",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "computer-development",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/computer-development.md",
+      "primary": [
+        "20160305_012"
+      ],
+      "support": []
+    },
+    {
+      "order": 4,
+      "id": "P1-16a-01",
+      "title": "비트·바이트와 자료 구성 단위",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "bits-bytes-data-units",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/bits-bytes-data-units.md",
+      "primary": [
+        "20160625_012",
+        "20161022_009",
+        "20190302_004",
+        "20190831_011"
+      ],
+      "support": []
+    },
+    {
+      "order": 5,
+      "id": "P1-16a-02",
+      "title": "저장 용량 환산하기",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "storage-capacity-conversion",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/storage-capacity-conversion.md",
+      "primary": [
+        "20150307_016",
+        "20180901_013"
+      ],
+      "support": []
+    },
+    {
+      "order": 6,
+      "id": "P1-31-01",
+      "title": "ASCII·EBCDIC·Unicode의 문자 표현",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "character-codes",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/character-codes.md",
+      "primary": [
+        "20150307_002",
+        "20150627_011",
+        "20170902_012",
+        "20180303_011",
+        "20190831_010"
+      ],
+      "support": [
+        "20170304_013",
+        "20200229_009"
+      ]
+    },
+    {
+      "order": 7,
+      "id": "P1-31-02",
+      "title": "패리티 비트로 오류 검출하기",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "parity-bit",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/parity-bit.md",
+      "primary": [
+        "20190302_007"
+      ],
+      "support": [
+        "20150627_011",
+        "20170902_012",
+        "20180303_011",
+        "20190831_010"
+      ]
+    },
+    {
+      "order": 8,
+      "id": "P1-17-01",
+      "title": "CPU의 연산·제어 기능",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "cpu-operations-control",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/cpu-operations-control.md",
+      "primary": [
+        "20150307_011",
+        "20150627_018",
+        "20151017_012",
+        "20180303_016"
+      ],
+      "support": [
+        "20200704_018"
+      ]
+    },
+    {
+      "order": 9,
+      "id": "P1-17-02",
+      "title": "레지스터에 저장하는 정보",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "cpu-registers",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/cpu-registers.md",
+      "primary": [
+        "20160625_014",
+        "20161022_017",
+        "20170304_012",
+        "20180303_013",
+        "20180901_010"
+      ],
+      "support": [
+        "20150627_016",
+        "20151017_012"
+      ]
+    },
+    {
+      "order": 10,
+      "id": "P1-18a",
+      "title": "RAM·ROM·플래시 메모리 비교",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "ram-rom-flash",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ram-rom-flash.md",
+      "primary": [
+        "20160305_008",
+        "20160305_013",
+        "20160625_013",
+        "20170902_013",
+        "20170902_020",
+        "20190831_014"
+      ],
+      "support": [
+        "20150307_011",
+        "20151017_012",
+        "20160625_011",
+        "20161022_017",
+        "20170304_012",
+        "20180901_009",
+        "20190302_010",
+        "20200229_006",
+        "20200704_016",
+        "20200704_018"
+      ]
+    },
+    {
+      "order": 11,
+      "id": "P1-19",
+      "title": "HDD·SSD·광학 저장장치 비교",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "storage-devices",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/storage-devices.md",
+      "primary": [
+        "20160625_019",
+        "20170304_014",
+        "20180901_008",
+        "20190302_013"
+      ],
+      "support": [
+        "20150627_002",
+        "20150627_016",
+        "20200704_018"
+      ]
+    },
+    {
+      "order": 12,
+      "id": "P1-18b-01",
+      "title": "기억장치의 위치와 속도 순서",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "memory-speed-hierarchy",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/memory-speed-hierarchy.md",
+      "primary": [
+        "20150627_016"
+      ],
+      "support": [
+        "20151017_012",
+        "20161022_017",
+        "20170304_012"
+      ]
+    },
+    {
+      "order": 13,
+      "id": "P1-18b-02",
+      "title": "캐시와 버퍼의 임시 저장 목적",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "cache-buffer",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/cache-buffer.md",
+      "primary": [
+        "20200704_016"
+      ],
+      "support": [
+        "20150627_012",
+        "20160305_013",
+        "20190302_010",
+        "20200229_006"
+      ]
+    },
+    {
+      "order": 14,
+      "id": "P1-18b-03",
+      "title": "가상 메모리로 주기억 용량 보완하기",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "virtual-memory",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/virtual-memory.md",
+      "primary": [
+        "20150627_012",
+        "20190302_010",
+        "20200229_006"
+      ],
+      "support": [
+        "20160305_013",
+        "20180901_004",
+        "20200704_016"
+      ]
+    },
+    {
+      "order": 15,
+      "id": "P1-20a-01",
+      "title": "정보의 이동 방향으로 입출력장치 구별하기",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "input-output-devices",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/input-output-devices.md",
+      "primary": [
+        "20150307_017",
+        "20151017_013"
+      ],
+      "support": [
+        "20150307_011"
+      ]
+    },
+    {
+      "order": 16,
+      "id": "P1-20a-02",
+      "title": "멀티미디어 보드의 처리 역할",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "multimedia-boards",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/multimedia-boards.md",
+      "primary": [
+        "20170902_002"
+      ],
+      "support": []
+    },
+    {
+      "order": 17,
+      "id": "P1-20a-03",
+      "title": "프린터의 인쇄 원리",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "printer-principles",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/printer-principles.md",
+      "primary": [
+        "20200704_017"
+      ],
+      "support": []
+    },
+    {
+      "order": 18,
+      "id": "P1-20b-01",
+      "title": "자동 인식과 전원을 켠 채 연결: PnP·핫 스와핑",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "plug-and-play-hot-swap",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/plug-and-play-hot-swap.md",
+      "primary": [
+        "20150307_010",
+        "20160625_018"
+      ],
+      "support": [
+        "20161022_016",
+        "20190831_012",
+        "20200229_011"
+      ]
+    },
+    {
+      "order": 19,
+      "id": "P1-20b-02",
+      "title": "USB의 연결 방식과 규격",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "usb-interface",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/usb-interface.md",
+      "primary": [
+        "20161022_016",
+        "20200229_011"
+      ],
+      "support": []
+    },
+    {
+      "order": 20,
+      "id": "P1-20b-03",
+      "title": "SATA의 저장장치 연결 방식",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "sata-interface",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sata-interface.md",
+      "primary": [
+        "20190831_012"
+      ],
+      "support": []
+    },
+    {
+      "order": 21,
+      "id": "P1-20b-04",
+      "title": "HDMI의 영상·음향 전송",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "hdmi-interface",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/hdmi-interface.md",
+      "primary": [
+        "20200704_015"
+      ],
+      "support": []
+    },
+    {
+      "order": 22,
+      "id": "P1-46",
+      "title": "펌웨어와 BIOS의 부팅 역할",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "firmware-bios",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/firmware-bios.md",
+      "primary": [
+        "20160625_011",
+        "20180901_009"
+      ],
+      "support": [
+        "20150307_019",
+        "20151017_013"
+      ]
+    },
+    {
+      "order": 23,
+      "id": "P1-16b-01",
+      "title": "연산 시간 단위와 빠르기 비교",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "processing-time-units",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/processing-time-units.md",
+      "primary": [
+        "20160305_019",
+        "20180303_012"
+      ],
+      "support": []
+    },
+    {
+      "order": 24,
+      "id": "P1-16b-02",
+      "title": "성능 수치의 크기와 비교 방향",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "performance-metrics",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/performance-metrics.md",
+      "primary": [
+        "20180303_014",
+        "20190831_013"
+      ],
+      "support": [
+        "20150627_010"
+      ]
+    },
+    {
+      "order": 25,
+      "id": "P1-16b-03",
+      "title": "컴퓨터 사양표에서 장치와 용량 읽기",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "computer-specifications",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/computer-specifications.md",
+      "primary": [
+        "20200704_018"
+      ],
+      "support": []
+    },
+    {
+      "order": 26,
+      "id": "ADD-17",
+      "title": "부품 업그레이드의 목적과 호환 조건",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "pc-upgrade-compatibility",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/pc-upgrade-compatibility.md",
+      "primary": [],
+      "support": []
+    },
+    {
+      "order": 27,
+      "id": "P1-15c",
+      "title": "일괄·실시간·분산 처리 비교",
+      "subject_id": 1,
+      "group": "컴퓨터의 구성과 동작",
+      "slug": "data-processing-methods",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/data-processing-methods.md",
+      "primary": [
+        "20170304_009",
+        "20190831_009"
+      ],
+      "support": [
+        "20150627_018",
+        "20161022_011"
+      ]
+    }
+  ],
+  "questionHashes": {
+    "20150307_002": "bd920c18772b2784eb0b013e9fd6ad780f22fc43c68f3ee1d3d80353d4157479",
+    "20150307_010": "29dd4e804adaebc3573ca6dccbaa80b8a743659c95186c6de3300c98f7072057",
+    "20150307_011": "f9ccfd442ccf4c25873721527ddd2a1798cdd624a9d85908749cd22020e1f39a",
+    "20150307_014": "16fadd1bb9a8e1539bb76b71b3e879ddc3ce1af5f8c751504eb0f34be0432e03",
+    "20150307_016": "7fa6d52ff2b75b9f0f14250271fcd74ee4a6929b4753beba6b82bb1250fd6be5",
+    "20150307_017": "d9287729ab1c32eb392a31277edb735d7673e0bdaa3ac02f4d9b9f730eecca79",
+    "20150307_019": "4ea0c0dad321b3ffb48a1caded23db71921dd3f233714afa15a7d6b0cc7de338",
+    "20150627_002": "9a7b0bb36267a05378767b5f46a36c85731b3d41f011748c020c383cf7778256",
+    "20150627_010": "5b450f966c4672b611f31e762caa57b55811abda781b1d723285efef7c0a24c6",
+    "20150627_011": "19d79055346f16729350abbd67e9bb4b15d79ac9747004b2745932e9d0c2ea76",
+    "20150627_012": "f0b55cb24a5b6ef7620cc26aeaf04f007fa3b3c46b020afbd1d90dcbae90391f",
+    "20150627_016": "4c9fad4224b943c6418422e36db8630378b4afd769b628c47536576dfbba35ce",
+    "20150627_018": "3710f41e2665692f29d57c5b2896415bff8f4525e46b90a0c4be8a8a0dae6227",
+    "20151017_005": "14be9dfdd31cfb7bb241d292fa126e96ea7273ed96526d15e315491eb81270e4",
+    "20151017_011": "62ba5a8ede28b8b7a275f059a6af057d0b30aaaf31293f7b458dc9e5e46c918b",
+    "20151017_012": "4fbe38776c7561dc6a0de553dbb515f5ccba5a1478ffc9ce5123f1616a98d4bf",
+    "20151017_013": "c410b843e6dc5362a187789050feb24ebc02ed5ce59497af621b16dace817033",
+    "20160305_008": "e6b8b92866cbb9767ac36d4e478290753bbcfbaf8eb4dc0db0e3a95865f359fb",
+    "20160305_012": "39e0613b6cf941c47c734ceffbccc6c373ed1252283672d84bb6070e6bf0a9be",
+    "20160305_013": "d337175c36e8e57f5d5ea36da6332a1ca9475943fa1033107f973578efea3b88",
+    "20160305_019": "5066b190013df06b04dabc38a0b27b0ef848745361bf0e09ef077fa0a06bad80",
+    "20160625_011": "669d000df881db4d702c6089f787fcfe9d4427e40ae1d06fbbe358dcd037f5c4",
+    "20160625_012": "b6b9231d8b2ebe20a25510ad073fe3f755f12de3d1df1eee1a8c4a918ae8b005",
+    "20160625_013": "059f3b3fcec1d3f616495586ae31f7a3b01a5e7491136358e2ae99866bbfd26c",
+    "20160625_014": "254f9c927405a0b810848e867f8935478b1cdef78955924ececb87dce8646d3a",
+    "20160625_018": "2e9bb41164621bc090ec5f4b84ac7072fd8f0565937de05feec1c1f4041e5e25",
+    "20160625_019": "1956f48044c37388a5c740028ab8c3b92a6bd5af3468646bee6320229bd96947",
+    "20161022_009": "daa66059fde52c6118bf26e7a3b5f0470169b359109ac391b7f0a5ee8c151dda",
+    "20161022_011": "ecc4c9a782ad1f699f0577fb595c566f90e8456d43c048b4a4658a2341e8b7ff",
+    "20161022_016": "6102d7da85d3e78ff23bf6f61c98aafc662e3e8a24ce049c5d94e2c556b9c480",
+    "20161022_017": "cae122ef26e5cb7e88c957ef7a7d737cb87077c69071864c9bc7c98c0a569d08",
+    "20170304_009": "ee97f8b9becf5c1104b453f69ea60d8d0fb64d0cf1407caf0cd1205991ddf40b",
+    "20170304_010": "33141002a4254ba277fd5901c52330043387c35f88fb98c425442854130ce75b",
+    "20170304_011": "68ff6461905e4895c9c7272c0842bae7c0f8464a0898bb910ec58d43ac2c3a6c",
+    "20170304_012": "3587f9cd1b0ceb734a298bda6d7ded2cf38e71ad00bec15c78d1a4c134eef1aa",
+    "20170304_013": "0fff27ba3bb8e4bab31538939b70e616d35284a1fdfacc0301548a6c9623a6ae",
+    "20170304_014": "5613c19e9e7294b1ca10fba15a97281fa2a0cd19885e2d2dbf31a4da9d4ec501",
+    "20170902_002": "99109bc76a68f4fafe55ef3cc3d2746ea285bb90bf6da5674ddf504b965ffd61",
+    "20170902_012": "06271a3c633e82f90c25c039e5edf00ac2d35a1d55d3df5d47690c08303876c0",
+    "20170902_013": "048eaf53c5411f8fd123e4295a5b044ab3be5d1756e2edf34af32b5cfc009e26",
+    "20170902_020": "6ee379d313c7cf3af40ae639800d1c7a8343b600c4eeb481f6858aa65622bf50",
+    "20180303_011": "fdb51318a79f04bf00d8854875d533b3a45341f9f442005f35461934db787932",
+    "20180303_012": "1ea4ecaa6fbf020e85441676ed5bc0a8926b27efc38eb10e619bd8b103f292e2",
+    "20180303_013": "306f8d962e2a5c86e289e98324e0ebf8f8bf012ca3445e6821ec1c61cbbed800",
+    "20180303_014": "f67d5c93d5218a23404403a5a28155105c580692ba818b7aadc6e171c83223f9",
+    "20180303_016": "1e96fd3f4f0076d1d2e5eee41a50be56b150f35e2856009bcd3991feb775d979",
+    "20180901_004": "6807143f43a3952a0a697cd5b1fdb0e28a22dac4e2250d91344f198b3e8241b8",
+    "20180901_008": "80659e0f63306b428deeabfab83b8d7ba302bb7d82f82d1811f95e9f656e15ec",
+    "20180901_009": "090bc92e9e86bc0fb6afa40b72edd0194991ff0a14291b9a4e3ae1552912dfe2",
+    "20180901_010": "984f26240617dc0889c038bb729bef70f7951bde23bfd611f47d84ea79803f1f",
+    "20180901_013": "e7c30d22c91f831bdf8462ac89438cecdf03067cc6ff7b898c9e270abc5656a4",
+    "20180901_014": "21b6acecc8433c7009a8c6d57f0a0a058dad3daca52b169a73a3967af97ef925",
+    "20190302_004": "c615b69d103a6fa80b048768b60d9d86238ed505afc71e22a3ee570efcf5b033",
+    "20190302_007": "3e5b7ee199009039dcad1fbf3a24f5ef2f52d48684141e858db94e6be0f0307f",
+    "20190302_010": "eafc3bdc7fcf9fd58fb10fa717ec0dd2f6fdca52f033ef3050898230c39ec2ce",
+    "20190302_013": "230822aef15fbcbb6420f73eab2b49d9fefa53d52592dd029872e37aa26eb714",
+    "20190831_009": "d1c054a6ce90c77950022098ba74f17898612d45c83bcebd217db027e9323505",
+    "20190831_010": "a15b95e96a4eda774c7d2bfc9bff7b97f050dc3646b60c6f0af505b43c643ea8",
+    "20190831_011": "b3947d622ca56414570e3d2288fac53094083f9a8d2622849295fe1b1578db59",
+    "20190831_012": "9e43b5b82fe13732dea234a89ef849bb57a4f4e856668147327e324b120d3b6e",
+    "20190831_013": "eff80366610ae99f8e4940db2ae5b88a99dcfffc53ad977afdf85c05adbd2fa3",
+    "20190831_014": "04ad4cbdd45b43ca87f85861b0c570bae11a41a9c15067e50da082f471dfcfd0",
+    "20200229_006": "262c7873244e0208be66d245706a44a31f46c3815b2e5a6086cb787dbf919d18",
+    "20200229_009": "f7cc6d607f5a6c626edd9957948e6b98c9265a83a6133368b1cdb790cc8f1fb5",
+    "20200229_011": "c3500d7994897a76ab44c72e2f1b9bd88d0e79235a563f53373eb39d875ade3a",
+    "20200704_015": "82e1149efd1571c890bceb1152f3fbdc145ef7e5da1abf1ee743efde30f8e825",
+    "20200704_016": "b4b630022362b0ed9a1fac70c9f9043e32065dcbcc67916efb65a8693bcc9bf4",
+    "20200704_017": "cb28658181e7c8661611776e8060de3890d17e11d93777d51a3485b44d026e88",
+    "20200704_018": "c01af43fb6d703e386add863e515316bb3989bd5cc4c33969d712ee95c3f6f07",
+    "20200704_019": "aecef154e6fb57414ab3ec6e239a512344058727e1566b1c24e491aab6efaf39"
+  },
+  "images": [
+    {
+      "id": "20151017_012",
+      "path": "src/assets/questions/computer-literacy/20151017_012.png",
+      "sha256": "24900e14fb1c7bfa11719a9c9f60af3a1bbdfddecd6fd2b6c202cbe8f901f00f",
+      "width": 1039,
+      "height": 637
+    },
+    {
+      "id": "20200704_018",
+      "path": "src/assets/questions/computer-literacy/20200704_018.png",
+      "sha256": "d09a90d6467ee70cf25a7db34f686c56519e42ee6a60dbe78d6b3db155e6584d",
+      "width": 539,
+      "height": 284
+    }
+  ],
+  "externalSupport": [
+    {
+      "question": "20150307_019",
+      "owner": "P1-30b-01",
+      "title": "부팅 실패의 원인 구별하기"
+    },
+    {
+      "question": "20150627_002",
+      "owner": "P1-01",
+      "title": "멀티미디어의 통합과 상호작용"
+    },
+    {
+      "question": "20150627_010",
+      "owner": "P1-38-03",
+      "title": "패치와 업데이트의 목적"
+    },
+    {
+      "question": "20161022_011",
+      "owner": "P1-23-02",
+      "title": "운영체제의 성능 평가 지표"
+    },
+    {
+      "question": "20170304_013",
+      "owner": "P1-37-02",
+      "title": "SMTP·POP3·MIME의 전자우편 처리 역할"
+    },
+    {
+      "question": "20180901_004",
+      "owner": "P1-30b-03",
+      "title": "RAM 부족에 맞는 조치 구별하기"
+    },
+    {
+      "question": "20200229_009",
+      "owner": "P1-37-02",
+      "title": "SMTP·POP3·MIME의 전자우편 처리 역할"
+    }
+  ],
+  "imageReviewOverrides": [
+    {
+      "id": "20151017_012",
+      "canonical": "jpg 확필",
+      "local": "",
+      "reason": "2026-09-25 등록 PNG 직접 열람 · 그림 단서와 canonical 선택지/정답 대조 완료 · 원본 canonical은 변경하지 않음"
+    },
+    {
+      "id": "20200704_018",
+      "canonical": "jpg 확필",
+      "local": "",
+      "reason": "2026-09-25 등록 PNG 직접 열람 · 그림 단서와 canonical 선택지/정답 대조 완료 · 원본 canonical은 변경하지 않음"
+    }
+  ]
+}

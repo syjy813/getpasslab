@@ -58,9 +58,10 @@ const homepage = await readFile(path.join(root, 'index.html'), 'utf8');
 assert(homepage.includes(`${scope}/`));
 for (const subject of ['computer-basics', 'spreadsheets']) {
   const files = await readdir(path.join(root, scope, subject));
-  assert.equal(files.filter(f => f !== 'index.html').length, 4, `${subject}: only four released chapters`);
+  const expectedCount = subject === 'computer-basics' ? 31 : 4;
+  assert.equal(files.filter(f => f !== 'index.html').length, expectedCount, `${subject}: integrated chapter count`);
 }
 for (const name of ['goal-seek-sheet', 'goal-seek-settings', 'named-range-products', 'named-range-index']) {
   await access(path.join(root, `images/computer-literacy/${name}.svg`));
 }
-console.log('[Computer literacy] 8 chapters, 14 primary questions, 3 supporting links, 8 rendered question images, 4 learning SVGs, public links and release scope passed');
+console.log('[Computer literacy] Existing 8 chapters preserved; 14 primary questions, 3 supporting links, 8 rendered question images, 4 learning SVGs passed; total scope 35 chapters');

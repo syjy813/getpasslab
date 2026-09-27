@@ -1,0 +1,959 @@
+{
+  "review_date": "2026-09-26",
+  "method": "AI 문항별 본문·선택지 대조; 블라인드 응시·실제 수험생 시험 아님",
+  "primary_results": {
+    "충분": 54,
+    "조건부": 6,
+    "원문 주의": 3
+  },
+  "support_results": {
+    "판별 가능": 15,
+    "일부 판단": 23,
+    "원문 주의": 3
+  },
+  "chapters": [
+    {
+      "id": "P1-15a",
+      "order": 1,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/computer-classification.md",
+      "sha256": "bb39ba6ce4008efcbbf50f1557e6719862c933eeee886cd1be5dc1f6e5722d2c",
+      "primary": [
+        {
+          "question_id": "20150307_014",
+          "canonical_answer": 1,
+          "section": "분류 기준부터 확인",
+          "rationale": "처리 능력은 메인프레임·퍼스널·슈퍼, 하이브리드는 데이터 형태이므로 ①",
+          "result": "충분"
+        },
+        {
+          "question_id": "20151017_005",
+          "canonical_answer": 3,
+          "section": "분류 기준부터 확인",
+          "rationale": "데이터 형태는 디지털·아날로그·하이브리드, 슈퍼는 처리 능력이므로 ③",
+          "result": "충분"
+        },
+        {
+          "question_id": "20151017_011",
+          "canonical_answer": 1,
+          "section": "스마트폰과 팜톱",
+          "rationale": "2015년 문제의 휴대 크기·형태 분류에 따라 스마트폰을 팜톱에 대응하여 ①; 현재 제품의 보편적 공식 분류로 일반화 금지",
+          "result": "조건부"
+        },
+        {
+          "question_id": "20170304_010",
+          "canonical_answer": 3,
+          "section": "디지털과 아날로그 비교",
+          "rationale": "아날로그 미분·적분 / 디지털 산술·논리의 대응이 ③; ① 데이터·② 회로·④ 용도는 반대로 서술",
+          "result": "충분"
+        },
+        {
+          "question_id": "20180901_014",
+          "canonical_answer": 1,
+          "section": "디지털과 아날로그 비교",
+          "rationale": "디지털은 산술·논리 연산이므로 ①; 증폭회로·프로그램 불필요·기억 없음 배제",
+          "result": "충분"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-42a",
+      "order": 2,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/wearable-computers.md",
+      "sha256": "c9f274cfb2665bd5dbf2b1e61f35e7f13a50e73db668301fcfe9bc0062cdc0d0",
+      "primary": [
+        {
+          "question_id": "20170304_011",
+          "canonical_answer": 1,
+          "section": "휴대성과 착용 여부 구별",
+          "rationale": "소형이라는 조건보다 몸에 착용하는 컴퓨터라는 정의가 웨어러블 ①과 직접 일치",
+          "result": "충분"
+        },
+        {
+          "question_id": "20200704_019",
+          "canonical_answer": 1,
+          "section": "휴대성과 착용 여부 구별",
+          "rationale": "음성·동작 인식은 보조 단서, 몸에 착용한다는 핵심으로 웨어러블 ① 선택",
+          "result": "충분"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-15b",
+      "order": 3,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/computer-development.md",
+      "sha256": "d248655c8483cf5b48d65d3b35c61e95681c96c8253f087bc6be340035af812a",
+      "primary": [
+        {
+          "question_id": "20160305_012",
+          "canonical_answer": 1,
+          "section": "장치와 전환점 연결",
+          "rationale": "파스칼의 덧셈·뺄셈과 사칙연산 직접 수행을 구별하면 제시 정답 ①; 다만 ③ EDSAC·④ UNIVAC의 최초 범위가 생략되어 일반 역사 사실만으로 단일 오답 확정 불가",
+          "result": "원문 주의"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-16a-01",
+      "order": 4,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/bits-bytes-data-units.md",
+      "sha256": "5358fafaacab4c416d7da746cb613139ffa18835f84c3d9dc2f0e46018c43e2d",
+      "primary": [
+        {
+          "question_id": "20160625_012",
+          "canonical_answer": 2,
+          "section": "비트·니블·바이트·워드",
+          "rationale": "4비트=니블이므로 ②; 옥텟은 8비트, 워드는 시스템의 처리 단위",
+          "result": "충분"
+        },
+        {
+          "question_id": "20161022_009",
+          "canonical_answer": 1,
+          "section": "비트·니블·바이트·워드",
+          "rationale": "니블은 4비트이므로 8비트라는 ①이 틀림; 필드→레코드→파일→DB 구성도 본문 확인",
+          "result": "충분"
+        },
+        {
+          "question_id": "20190302_004",
+          "canonical_answer": 3,
+          "section": "비트·니블·바이트·워드",
+          "rationale": "명령 처리의 기본 단위는 워드이므로 바이트라고 한 ③; ① 8비트·④ 256가지는 계산 확인, ② 한글 2바이트는 과거 코드 조건",
+          "result": "조건부"
+        },
+        {
+          "question_id": "20190831_011",
+          "canonical_answer": 4,
+          "section": "비트·니블·바이트·워드",
+          "rationale": "1바이트=8비트이므로 5비트라는 ④ 배제; 니블·워드·DB 정의와 대조",
+          "result": "충분"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-16a-02",
+      "order": 5,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/storage-capacity-conversion.md",
+      "sha256": "23a6a70d5cf9e342debb111dc53d7426e56540ad2fd7c2338753019bc0961715",
+      "primary": [
+        {
+          "question_id": "20150307_016",
+          "canonical_answer": 3,
+          "section": "단계를 세어 1024 적용",
+          "rationale": "연결 기출의 이진 관례에서 GB→MB→KB→Byte는 3단계, 1024³인 ③; 현재 GB와 GiB 구별",
+          "result": "조건부"
+        },
+        {
+          "question_id": "20180901_013",
+          "canonical_answer": 3,
+          "section": "단계를 세어 1024 적용",
+          "rationale": "GB에서 Byte까지 1024를 세 번 곱해 ③; SI의 10⁹B와 기출 1024³B 혼용 금지",
+          "result": "조건부"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-31-01",
+      "order": 6,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/character-codes.md",
+      "sha256": "33fba080923d91a31ca0b6729162717237859116c64fd32c356cdcfd712ca5d3",
+      "primary": [
+        {
+          "question_id": "20150307_002",
+          "canonical_answer": 4,
+          "section": "문자 코드의 비트와 목적",
+          "rationale": "Zone 3+Digit 4=7비트 표준 ASCII이므로 ④",
+          "result": "충분"
+        },
+        {
+          "question_id": "20150627_011",
+          "canonical_answer": 3,
+          "section": "문자 코드의 비트와 목적",
+          "rationale": "7비트 ASCII의 영문·숫자·기호·제어문자 표현인 ③; 패리티 교정·대형컴퓨터·멀티미디어 목적은 본문으로 배제",
+          "result": "충분"
+        },
+        {
+          "question_id": "20170902_012",
+          "canonical_answer": 3,
+          "section": "문자 코드의 비트와 목적",
+          "rationale": "표준 ASCII 7비트 문자 표현인 ③; 패리티는 검출만, 대형컴퓨터는 EBCDIC, 확장 ASCII는 멀티미디어용이 아님",
+          "result": "충분"
+        },
+        {
+          "question_id": "20180303_011",
+          "canonical_answer": 2,
+          "section": "문자 코드의 비트와 목적",
+          "rationale": "확장 ASCII 8비트=2⁸=256가지인 ②; BCD 확장·4+4비트·오류 교정 설명과 구별",
+          "result": "충분"
+        },
+        {
+          "question_id": "20190831_010",
+          "canonical_answer": 4,
+          "section": "Unicode의 과거 기출 표현",
+          "rationale": "제시 정답 ④ 보존; Unicode는 1996년부터 고정 16비트가 아니므로 2019년에도 문장 그대로 참은 아님; 표준만으로 네 보기 중 참인 문장을 고르는 연습은 불가",
+          "result": "원문 주의"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20170304_013",
+          "canonical_answer": 1,
+          "result": "판별 가능",
+          "rationale": "기본 전자우편 ASCII 설명을 보강하여 ①의 8비트 Unicode 기본 사용을 배제; 주소·프로토콜의 전체 이론은 범위 밖"
+        },
+        {
+          "question_id": "20200229_009",
+          "canonical_answer": 2,
+          "result": "판별 가능",
+          "rationale": "ASCII 기반 메시지와 IBM 문자 코드 EBCDIC을 구별하여 ② 배제; SMTP·POP3의 기능 학습까지 포함하지 않음"
+        }
+      ]
+    },
+    {
+      "id": "P1-31-02",
+      "order": 7,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/parity-bit.md",
+      "sha256": "d1cb116ec9bd30aa219337b59010e317df970e1f0d4fcecd37509de01e41f2fb",
+      "primary": [
+        {
+          "question_id": "20190302_007",
+          "canonical_answer": 4,
+          "section": "문자 코드와 패리티 비트",
+          "rationale": "ASCII·EBCDIC·Unicode는 문자 코드, Parity bit는 오류 검출용 추가 비트이므로 ④",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20150627_011",
+          "canonical_answer": 3,
+          "result": "일부 판단",
+          "rationale": "패리티는 교정 불가이므로 ① 배제 가능; 정답 ③의 ASCII 문자 범위는 연결된 문자 코드 챕터 필요"
+        },
+        {
+          "question_id": "20170902_012",
+          "canonical_answer": 3,
+          "result": "일부 판단",
+          "rationale": "① 오류 교정이라는 설명 배제에 적용; ③ 정답 확정은 문자 코드 챕터 사용"
+        },
+        {
+          "question_id": "20180303_011",
+          "canonical_answer": 2,
+          "result": "일부 판단",
+          "rationale": "④ 오류 검출·교정용 문자 코드 설명 배제; ② 확장 ASCII 256가지는 문자 코드 챕터 필요"
+        },
+        {
+          "question_id": "20190831_010",
+          "canonical_answer": 4,
+          "result": "원문 주의",
+          "rationale": "② 오류 검출·교정 코드 배제에만 적용; 제시 정답 ④ 고정 16비트는 표준과 충돌하므로 주 챕터의 주의 승계"
+        }
+      ]
+    },
+    {
+      "id": "P1-17-01",
+      "order": 8,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/cpu-operations-control.md",
+      "sha256": "6359ad7a9cd127fb9104eecf975aa217ba52fd68f08202a69a97580bf175d3ce",
+      "primary": [
+        {
+          "question_id": "20150307_011",
+          "canonical_answer": 2,
+          "section": "계산·제어·임시 저장 구별",
+          "rationale": "각 장치 지시·감독은 CU 제어 기능이므로 ②; 입력·저장·연산과 구별",
+          "result": "충분"
+        },
+        {
+          "question_id": "20150627_018",
+          "canonical_answer": 2,
+          "section": "계산·제어·임시 저장 구별",
+          "rationale": "명령 해독과 제어 신호는 CU의 역할인데 ALU라고 한 ②; GIGO·ADPS의 상세 정의 없이도 이 모순을 확정 가능",
+          "result": "충분"
+        },
+        {
+          "question_id": "20151017_012",
+          "canonical_answer": 1,
+          "section": "기출 그림의 내부 명칭 확인",
+          "rationale": "실제 PNG에서 ㄱ ALU·누산기=연산, ㄴ 명령·번지 레지스터=제어를 읽어 ①",
+          "result": "충분"
+        },
+        {
+          "question_id": "20180303_016",
+          "canonical_answer": 4,
+          "section": "계산·제어·임시 저장 구별",
+          "rationale": "CPU 구성은 ALU·CU·레지스터; SSD는 보조기억장치이므로 ④",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20200704_018",
+          "canonical_answer": 4,
+          "result": "일부 판단",
+          "rationale": "Core i5가 CPU라는 연결 설명으로 ① 배제; ④ SSD까지 확인하려면 연결된 사양표 설명 필요"
+        }
+      ]
+    },
+    {
+      "id": "P1-17-02",
+      "order": 9,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/cpu-registers.md",
+      "sha256": "5dbe9805c304abb2eebfab2bcea4c51ab3f8bb6e52a64bf834ec3103901b290a",
+      "primary": [
+        {
+          "question_id": "20160625_014",
+          "canonical_answer": 1,
+          "section": "주요 레지스터",
+          "rationale": "누산기=연산 중간 결과·결과 임시 저장이므로 ①; 명령 저장·해독 역할과 구별",
+          "result": "충분"
+        },
+        {
+          "question_id": "20161022_017",
+          "canonical_answer": 2,
+          "section": "레지스터의 위치와 속도",
+          "rationale": "레지스터는 주기억장치보다 작고 빠르므로 느리다는 ②가 틀림",
+          "result": "충분"
+        },
+        {
+          "question_id": "20170304_012",
+          "canonical_answer": 4,
+          "section": "레지스터의 위치와 속도",
+          "rationale": "CPU 내부 임시기억장치이므로 ④; 하드디스크·전담 입출력·가상 메모리 설명과 구별",
+          "result": "충분"
+        },
+        {
+          "question_id": "20180303_013",
+          "canonical_answer": 4,
+          "section": "Windows 레지스트리와 구별",
+          "rationale": "Windows 시스템 설정 데이터베이스는 Registry이며 CPU Register가 아니므로 ④",
+          "result": "충분"
+        },
+        {
+          "question_id": "20180901_010",
+          "canonical_answer": 1,
+          "section": "주요 레지스터",
+          "rationale": "다음 명령어의 주소=PC이므로 ①; AC 결과·MAR 접근 주소·MBR 데이터와 구별",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20150627_016",
+          "canonical_answer": 2,
+          "result": "일부 판단",
+          "rationale": "레지스터가 CPU 내부이며 RAM보다 빠름을 확인; 캐시까지 포함한 전체 순서 ②는 연결된 기억장치 속도 챕터 필요"
+        },
+        {
+          "question_id": "20151017_012",
+          "canonical_answer": 1,
+          "result": "일부 판단",
+          "rationale": "누산기·명령 레지스터의 역할 해석에 적용; 원본 그림 영역 ㄱ·ㄴ 대응은 CPU 챕터와 함께 판단"
+        }
+      ]
+    },
+    {
+      "id": "P1-18a",
+      "order": 10,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ram-rom-flash.md",
+      "sha256": "eb790dcadaab24940cd876cbf4c405c550721ac43715d6091edc39cd9b6ca7d5",
+      "primary": [
+        {
+          "question_id": "20160305_008",
+          "canonical_answer": 2,
+          "section": "ROM 계열의 기록·소거 방식",
+          "rationale": "자외선 소거 후 재기록=EPROM이므로 ②; 전기적 소거 EEPROM·일회 기록 PROM과 구별",
+          "result": "충분"
+        },
+        {
+          "question_id": "20160305_013",
+          "canonical_answer": 4,
+          "section": "플래시 메모리",
+          "rationale": "EEPROM 계열 비휘발성 전기적 수정·휴대기기 저장은 플래시 ④; 캐시·가상·연관 메모리 역할과 구별",
+          "result": "충분"
+        },
+        {
+          "question_id": "20160625_013",
+          "canonical_answer": 3,
+          "section": "플래시 메모리",
+          "rationale": "반도체 플래시는 자기 디스크의 트랙 단위 저장 장치가 아니므로 ③",
+          "result": "충분"
+        },
+        {
+          "question_id": "20170902_013",
+          "canonical_answer": 3,
+          "section": "RAM과 ROM",
+          "rationale": "현재 실행하는 프로그램·데이터 저장은 RAM ③; 전원 유지·BIOS 저장은 ROM 계열과 비교",
+          "result": "충분"
+        },
+        {
+          "question_id": "20170902_020",
+          "canonical_answer": 2,
+          "section": "플래시 메모리",
+          "rationale": "전원 차단 뒤에도 유지하는 비휘발성 플래시에 휘발성이라고 한 ②가 틀림",
+          "result": "충분"
+        },
+        {
+          "question_id": "20190831_014",
+          "canonical_answer": 3,
+          "section": "플래시 메모리",
+          "rationale": "EEPROM 계열 반도체 저장을 트랙 저장으로 설명한 ③이 틀림",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20150307_011",
+          "canonical_answer": 2,
+          "result": "일부 판단",
+          "rationale": "③ 기억·저장 기능을 RAM 역할에 대응; 제어 기능 정답 ②는 연결된 CPU 설명 필요"
+        },
+        {
+          "question_id": "20151017_012",
+          "canonical_answer": 1,
+          "result": "일부 판단",
+          "rationale": "주기억장치와 CPU 내부 저장의 구별만 지원; ㄱ 연산·ㄴ 제어 정답 ①은 CPU 그림 설명 필요"
+        },
+        {
+          "question_id": "20160625_011",
+          "canonical_answer": 4,
+          "result": "판별 가능",
+          "rationale": "ROM 계열의 펌웨어 저장 역할로 ④ 대응 가능; 마이크로프로그램·업데이트는 펌웨어 챕터에서 보완"
+        },
+        {
+          "question_id": "20161022_017",
+          "canonical_answer": 2,
+          "result": "일부 판단",
+          "rationale": "RAM의 용도를 배운 뒤 비교할 문항; 레지스터가 더 빠르다는 ② 판별 근거는 연결된 레지스터 챕터 필요"
+        },
+        {
+          "question_id": "20170304_012",
+          "canonical_answer": 4,
+          "result": "일부 판단",
+          "rationale": "현재 프로그램을 RAM에 저장한다는 개념과 CPU 내부 임시 저장을 비교; 정답 ④는 연결된 레지스터 설명 필요"
+        },
+        {
+          "question_id": "20180901_009",
+          "canonical_answer": 3,
+          "result": "일부 판단",
+          "rationale": "RAM의 휘발성과 ROM 계열의 펌웨어 저장까지 지원; BIOS가 펌웨어라는 연결과 정답 ③ 판단은 펌웨어 챕터 필요"
+        },
+        {
+          "question_id": "20190302_010",
+          "canonical_answer": 4,
+          "result": "판별 가능",
+          "rationale": "본문의 디스크 일부를 RAM처럼 쓰는 가상 메모리 구별로 ④ 선택 가능; 주 설명 링크도 있음"
+        },
+        {
+          "question_id": "20200229_006",
+          "canonical_answer": 2,
+          "result": "일부 판단",
+          "rationale": "① EEPROM 비휘발성은 플래시임을 판별; 가상 메모리 정답 ②의 실행 목적은 연결된 주 설명 필요"
+        },
+        {
+          "question_id": "20200704_016",
+          "canonical_answer": 4,
+          "result": "판별 가능",
+          "rationale": "③ EEPROM 비휘발성은 플래시, ④ CPU와 RAM 사이 속도 향상은 캐시라는 본문으로 판별"
+        },
+        {
+          "question_id": "20200704_018",
+          "canonical_answer": 4,
+          "result": "일부 판단",
+          "rationale": "RAM과 플래시 저장의 차이를 적용; 원본 SSD 256GB→④와 CPU·GPU는 사양표 챕터와 함께 확인"
+        }
+      ]
+    },
+    {
+      "id": "P1-19",
+      "order": 11,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/storage-devices.md",
+      "sha256": "00c0ea896fed23a4b7e2603da32b0aed7589feae05e37ddf9c595bd94eae0585",
+      "primary": [
+        {
+          "question_id": "20160625_019",
+          "canonical_answer": 3,
+          "section": "HDD와 SSD",
+          "rationale": "반도체·기계적 구동부 없음·빠른 접근·낮은 소음의 조합은 SSD ③",
+          "result": "충분"
+        },
+        {
+          "question_id": "20170304_014",
+          "canonical_answer": 3,
+          "section": "광학 저장장치",
+          "rationale": "고화질 영상·25GB급 광학 디스크는 Blu-ray ③; ZIP은 광학매체 아님",
+          "result": "충분"
+        },
+        {
+          "question_id": "20180901_008",
+          "canonical_answer": 2,
+          "section": "HDD와 SSD",
+          "rationale": "SSD는 회전 기계부가 없어 HDD보다 충격에 유리; 충격에 약하다는 ②가 틀림; SSD 고장·불량 불가능으로 역추론 금지",
+          "result": "충분"
+        },
+        {
+          "question_id": "20190302_013",
+          "canonical_answer": 3,
+          "section": "HDD와 SSD",
+          "rationale": "HDD 대체 반도체·빠른 접근·적은 기계적 지연이라는 단서로 SSD ③",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20150627_002",
+          "canonical_answer": 4,
+          "result": "일부 판단",
+          "rationale": "광학매체 CD·DVD·Blu-ray의 저장 역할인 ③만 지원; 사운드·영상 분리라는 정답 ④의 오류는 멀티미디어 이론 필요, 주 챕터 미작성"
+        },
+        {
+          "question_id": "20150627_016",
+          "canonical_answer": 2,
+          "result": "일부 판단",
+          "rationale": "HDD·SSD가 보조기억장치임을 분류; 레지스터·캐시·RAM 전체 순서 ②는 주 설명 필요"
+        },
+        {
+          "question_id": "20200704_018",
+          "canonical_answer": 4,
+          "result": "판별 가능",
+          "rationale": "SSD가 보조기억장치이므로 그림의 SSD 256GB를 저장 종류·용량 ④에 대응"
+        }
+      ]
+    },
+    {
+      "id": "P1-18b-01",
+      "order": 12,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/memory-speed-hierarchy.md",
+      "sha256": "555c01c27f9223f73798574a56c561f6f4b87cb7058aa8c00b99df3d39da81e7",
+      "primary": [
+        {
+          "question_id": "20150627_016",
+          "canonical_answer": 2,
+          "section": "위치와 속도 연결",
+          "rationale": "레지스터>캐시>주기억>보조기억의 전체 순서가 ②와 일치",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20151017_012",
+          "canonical_answer": 1,
+          "result": "일부 판단",
+          "rationale": "CPU 내부 레지스터와 밖의 주기억장치 위치만 지원; ㄱ·ㄴ의 연산·제어 역할 ①은 CPU 챕터 필요"
+        },
+        {
+          "question_id": "20161022_017",
+          "canonical_answer": 2,
+          "result": "판별 가능",
+          "rationale": "레지스터가 주기억장치보다 작지만 빠르므로 느리다는 ② 배제 가능"
+        },
+        {
+          "question_id": "20170304_012",
+          "canonical_answer": 4,
+          "result": "판별 가능",
+          "rationale": "레지스터=CPU 내부 임시 저장, 가장 빠른 접근이라는 표와 순서로 ④ 선택"
+        }
+      ]
+    },
+    {
+      "id": "P1-18b-02",
+      "order": 13,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/cache-buffer.md",
+      "sha256": "b1a595dea0c181d66277e07416de30bfde18bf31ceecbe1a84d4bf86f3c30e9d",
+      "primary": [
+        {
+          "question_id": "20200704_016",
+          "canonical_answer": 4,
+          "section": "임시 저장의 목적 구별",
+          "rationale": "CPU와 RAM 속도 차이 완화는 캐시 ④; ① 가상·② 연관·③ 플래시와 비교표로 구별",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20150627_012",
+          "canonical_answer": 4,
+          "result": "판별 가능",
+          "rationale": "가상 메모리의 용량 보완과 캐시·버퍼의 속도 차이 완화를 비교하여 ④ 선택"
+        },
+        {
+          "question_id": "20160305_013",
+          "canonical_answer": 4,
+          "result": "판별 가능",
+          "rationale": "비교표에서 ① 캐시·② 가상·③ 연관·④ 플래시를 모두 대응 가능"
+        },
+        {
+          "question_id": "20190302_010",
+          "canonical_answer": 4,
+          "result": "판별 가능",
+          "rationale": "RAM 부족+디스크 공간 활용은 비교표의 가상 메모리 ④"
+        },
+        {
+          "question_id": "20200229_006",
+          "canonical_answer": 2,
+          "result": "판별 가능",
+          "rationale": "비교표로 ① 플래시·② 가상·③ 캐시·④ 버퍼를 나누어 ② 선택"
+        }
+      ]
+    },
+    {
+      "id": "P1-18b-03",
+      "order": 14,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/virtual-memory.md",
+      "sha256": "444e098ca0a53616537b4b233ee25b18f4b495880063fc8610a48a3feb60794d",
+      "primary": [
+        {
+          "question_id": "20150627_012",
+          "canonical_answer": 4,
+          "section": "RAM 부족과 디스크 공간 연결",
+          "rationale": "RAM보다 큰 프로그램을 위해 디스크 일부 활용=가상 메모리 ④; 캐시·버퍼·연관의 다른 목적 확인",
+          "result": "충분"
+        },
+        {
+          "question_id": "20190302_010",
+          "canonical_answer": 4,
+          "section": "RAM 부족과 디스크 공간 연결",
+          "rationale": "메인 메모리 부족+하드디스크 일부 이용=가상 메모리 ④",
+          "result": "충분"
+        },
+        {
+          "question_id": "20200229_006",
+          "canonical_answer": 2,
+          "section": "다른 메모리와 비교",
+          "rationale": "RAM보다 큰 프로그램 실행 보완=가상 ②; ① 플래시·③ 캐시·④ 버퍼와 구별",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20160305_013",
+          "canonical_answer": 4,
+          "result": "일부 판단",
+          "rationale": "가상 메모리 정의로 ② 구별 가능; 정답 ④의 EEPROM 계열·전기적 수정 설명은 연결된 플래시 챕터 필요"
+        },
+        {
+          "question_id": "20180901_004",
+          "canonical_answer": 4,
+          "result": "일부 판단",
+          "rationale": "③ 가상 메모리 조정이 RAM 부족 보완에 쓰임을 확인; ④ 휴지통 삭제가 RAM 해결이 아님은 Windows 조치 범위, 주 챕터 미작성"
+        },
+        {
+          "question_id": "20200704_016",
+          "canonical_answer": 4,
+          "result": "판별 가능",
+          "rationale": "① 가상·② 연관·③ 플래시·④ 캐시를 정의와 비교표로 대응하여 ④ 선택"
+        }
+      ]
+    },
+    {
+      "id": "P1-20a-01",
+      "order": 15,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/input-output-devices.md",
+      "sha256": "441d41a2b3dabdd9f9b5a6f490b9572ba78c786ff3d9c3148a0fdce7c4d927c7",
+      "primary": [
+        {
+          "question_id": "20150307_017",
+          "canonical_answer": 3,
+          "section": "입력과 출력",
+          "rationale": "터치패드·OCR·트랙볼은 입력, LCD만 출력이므로 ③",
+          "result": "충분"
+        },
+        {
+          "question_id": "20151017_013",
+          "canonical_answer": 4,
+          "section": "펌웨어는 입출력장치가 아님",
+          "rationale": "키보드·스캐너·터치스크린은 입력 기능이 있고 펌웨어는 제어 코드이므로 아닌 것 ④ 선택; 제거라는 혼동 문구 수정",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20150307_011",
+          "canonical_answer": 2,
+          "result": "일부 판단",
+          "rationale": "① 입력 기능 배제까지만 직접 지원; 정답 ② 제어 기능은 연결된 CPU 챕터 필요"
+        }
+      ]
+    },
+    {
+      "id": "P1-20a-02",
+      "order": 16,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/multimedia-boards.md",
+      "sha256": "df98c3db13205275baa08aae2c168b4f78b070dfd536e486054b385ed8cdea55",
+      "primary": [
+        {
+          "question_id": "20170902_002",
+          "canonical_answer": 4,
+          "section": "그래픽 카드",
+          "rationale": "CPU의 그래픽 데이터는 디지털, 아날로그 화면으로 변환은 디지털→아날로그; 이를 뒤집은 ④ 배제; 다른 3개 보드 역할도 본문에 있음",
+          "result": "충분"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-20a-03",
+      "order": 17,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/printer-principles.md",
+      "sha256": "10b2bc5e16b4449e720d82a69f3eaf8ed9e6d66823328fec70b92bf28959c0fc",
+      "primary": [
+        {
+          "question_id": "20200704_017",
+          "canonical_answer": 3,
+          "section": "충격식 종류와 구별",
+          "rationale": "드럼·체인·밴드식은 충격식 라인 프린터 종류라서 레이저의 방식이라는 ③ 배제; 토너 드럼과 드럼식 프린터 구별",
+          "result": "충분"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-20b-01",
+      "order": 18,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/plug-and-play-hot-swap.md",
+      "sha256": "634cededed668fa0c912e4142e2540cfa826369dd416092bd77ef1c4a64e7ab7",
+      "primary": [
+        {
+          "question_id": "20150307_010",
+          "canonical_answer": 2,
+          "section": "자동 설정과 전원 상태 구별",
+          "rationale": "전원을 켠 채 연결·분리=핫 스와핑 ②, 자동 인식 PnP와 구별",
+          "result": "충분"
+        },
+        {
+          "question_id": "20160625_018",
+          "canonical_answer": 2,
+          "section": "자동 설정과 전원 상태 구별",
+          "rationale": "운영체제가 하드웨어를 자동 인식·설정=PnP ②; 전원 상태를 묻는 핫 플러그와 구별",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20161022_016",
+          "canonical_answer": 4,
+          "result": "일부 판단",
+          "rationale": "③ 핫 플러그·PnP 지원의 의미에만 적용; 색상 오답 ④는 USB 챕터 필요"
+        },
+        {
+          "question_id": "20190831_012",
+          "canonical_answer": 1,
+          "result": "원문 주의",
+          "rationale": "② 핫 플러그의 의미·지원 조건만 적용; ①·③ 타당성은 SATA 주 챕터의 주의 승계"
+        },
+        {
+          "question_id": "20200229_011",
+          "canonical_answer": 4,
+          "result": "일부 판단",
+          "rationale": "③ 자동 인식·전원을 켠 채 연결 개념만 지원; 정답 ④ 색상 판단은 USB 챕터 필요"
+        }
+      ]
+    },
+    {
+      "id": "P1-20b-02",
+      "order": 19,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/usb-interface.md",
+      "sha256": "64bb2607b9c49b2e4e911baf792a67dda6baa7ddeaa86572e066cc2eec532ac7",
+      "primary": [
+        {
+          "question_id": "20161022_016",
+          "canonical_answer": 4,
+          "section": "색상 선택지 판단",
+          "rationale": "USB 3.0 Standard-A 권장 파랑과 반대인 ④; 127은 물리 포트 보장 수가 아니라 버스 장치 주소 한계, 색상은 강제 규칙 아님",
+          "result": "충분"
+        },
+        {
+          "question_id": "20200229_011",
+          "canonical_answer": 4,
+          "section": "색상 선택지 판단",
+          "rationale": "USB 3.0 빨강·2.0 파랑이라는 ④가 권장 규격과 불일치; 실제 제조사 색상만으로 판별 금지",
+          "result": "충분"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-20b-03",
+      "order": 20,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sata-interface.md",
+      "sha256": "2ca820843d12817a128d8d8219efb88b59d8b1f3e69036cfc0f6cdd580b94e43",
+      "primary": [
+        {
+          "question_id": "20190831_012",
+          "canonical_answer": 1,
+          "section": "2019년 8월 12번의 조건",
+          "rationale": "SATA의 Serial=직렬로 제시 정답 ①은 판단 가능; ③ Master/Slave 자동 지정도 일반 SATA와 맞지 않아 단일 정답 타당성 보류",
+          "result": "원문 주의"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-20b-04",
+      "order": 21,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/hdmi-interface.md",
+      "sha256": "256bbe69e615aa5dd2f2f921d443effae29cc4bcbefa8d55d66eae04745c1422",
+      "primary": [
+        {
+          "question_id": "20200704_015",
+          "canonical_answer": 2,
+          "section": "기출에서 찾을 단서",
+          "rationale": "고선명 멀티미디어·디지털 영상과 음향의 통합 연결이라는 조합은 HDMI ②; DVI 영상·USB 범용·1394 직렬과 구별",
+          "result": "충분"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-46",
+      "order": 22,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/firmware-bios.md",
+      "sha256": "83a12aeff772473f7a06d6a06ccd0f3d896953268b80dd0bcbf3154e94ac0a0f",
+      "primary": [
+        {
+          "question_id": "20160625_011",
+          "canonical_answer": 4,
+          "section": "펌웨어의 성격과 저장 위치",
+          "rationale": "ROM·플래시의 하드웨어 제어 코드이며 업데이트 가능=펌웨어 ④; 배포 방식과 구별",
+          "result": "충분"
+        },
+        {
+          "question_id": "20180901_009",
+          "canonical_answer": 3,
+          "section": "BIOS의 부팅 역할",
+          "rationale": "지속 보관은 ROM·플래시, 휘발성 RAM이라는 ③ 배제; POST·초기화·플래시 업데이트도 본문 확인",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20150307_019",
+          "canonical_answer": 3,
+          "result": "원문 주의",
+          "rationale": "② BIOS 이상이 부팅과 관련됨은 판단 가능; 제시 정답 ③ 키보드 연결 이상도 BIOS Halt On 설정에 따라 부팅을 멈출 수 있어 보편적 단일 정답 근거로 사용 금지"
+        },
+        {
+          "question_id": "20151017_013",
+          "canonical_answer": 4,
+          "result": "판별 가능",
+          "rationale": "펌웨어=하드웨어 제어 코드이며 입력장치가 아니므로 ④ 직접 선택"
+        }
+      ]
+    },
+    {
+      "id": "P1-16b-01",
+      "order": 23,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/processing-time-units.md",
+      "sha256": "ab0bc1a880289fdd8d9f8e1d4e299cf9351aff739747b4e4832b90febbca7aa9",
+      "primary": [
+        {
+          "question_id": "20160305_019",
+          "canonical_answer": 4,
+          "section": "같은 숫자라면 단위 비교",
+          "rationale": "10⁻¹²s인 1ps가 ms·μs·ns보다 짧아 가장 빠른 ④",
+          "result": "충분"
+        },
+        {
+          "question_id": "20180303_012",
+          "canonical_answer": 4,
+          "section": "같은 숫자라면 단위 비교",
+          "rationale": "동일 숫자 1에서 ps<ns<μs<ms이므로 가장 짧은 ④",
+          "result": "충분"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "P1-16b-02",
+      "order": 24,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/performance-metrics.md",
+      "sha256": "946748e1cac7b8396a3b28cc0a851880c6280b9456fd6994e65a63d3fd09095f",
+      "primary": [
+        {
+          "question_id": "20180303_014",
+          "canonical_answer": 2,
+          "section": "기출의 ‘RAM 접근 속도’ 표현",
+          "rationale": "RAM 접근 속도를 접근 시간값으로 해석하는 기출 조건에서 작을수록 유리한 ②; 주파수·전송률과 반대",
+          "result": "조건부"
+        },
+        {
+          "question_id": "20190831_013",
+          "canonical_answer": 3,
+          "section": "기출의 ‘RAM 접근 속도’ 표현",
+          "rationale": "수치가 작을수록 좋은 것은 접근 시간 의미의 RAM 접근 속도 ③; 전송 속도·클럭·용량은 같은 조건에서 클수록 유리",
+          "result": "조건부"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20150627_010",
+          "canonical_answer": 2,
+          "result": "판별 가능",
+          "rationale": "벤치마크=성능 비교, 패치=프로그램 일부 수정 설명 보강 후 ② 선택 가능; 알파·베타 시험 상세는 별도 범위"
+        }
+      ]
+    },
+    {
+      "id": "P1-16b-03",
+      "order": 25,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/computer-specifications.md",
+      "sha256": "a62eb274e1cf5ae9cc913f0ea6d160bb59fbd3416c32fd289da4f686fb7cc0dd",
+      "primary": [
+        {
+          "question_id": "20200704_018",
+          "canonical_answer": 4,
+          "section": "사양의 이름과 단위 연결",
+          "rationale": "원본 PNG의 ㄹ SSD 256GB=저장장치 종류·용량으로 ④; ㄱ CPU·ㄴ GPU·ㄷ RAM에 다른 역할을 붙인 선택지는 배제",
+          "result": "충분"
+        }
+      ],
+      "supporting": []
+    },
+    {
+      "id": "ADD-17",
+      "order": 26,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/pc-upgrade-compatibility.md",
+      "sha256": "843ed74178b5b207e6de516b09672e77778ceec25247d3c181113d437d6d40d0",
+      "primary": [],
+      "supporting": []
+    },
+    {
+      "id": "P1-15c",
+      "order": 27,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/data-processing-methods.md",
+      "sha256": "595dda8fd5437207100a49097e8757280defb7f5daafa9b14d7b79eb666d2f10",
+      "primary": [
+        {
+          "question_id": "20170304_009",
+          "canonical_answer": 2,
+          "section": "처리 방식의 단서",
+          "rationale": "제시된 세 방식의 기출 순서 일괄→실시간→분산과 일치하는 ②; 모든 컴퓨팅 역사의 단일 발전 순서로 확대 금지",
+          "result": "충분"
+        },
+        {
+          "question_id": "20190831_009",
+          "canonical_answer": 2,
+          "section": "임베디드 시스템과 구별",
+          "rationale": "특정 장치의 전용 제어가 임베디드; 일정시간 모아 한꺼번에 처리는 일괄이므로 ②",
+          "result": "충분"
+        }
+      ],
+      "supporting": [
+        {
+          "question_id": "20150627_018",
+          "canonical_answer": 2,
+          "result": "일부 판단",
+          "rationale": "처리 방식과 장치 역할의 분류 차이만 지원하도록 보조 안내 수정; ALU·CU를 뒤바꾼 정답 ②는 CPU 챕터 필요"
+        },
+        {
+          "question_id": "20161022_011",
+          "canonical_answer": 3,
+          "result": "일부 판단",
+          "rationale": "③이 일괄 처리 방식이라는 뜻은 알 수 있음; 처리 능력·신뢰도·가용도의 성능 평가 기준은 주 챕터가 필요하며 현재 미작성"
+        }
+      ]
+    }
+  ]
+}
