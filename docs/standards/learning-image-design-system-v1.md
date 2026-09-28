@@ -158,6 +158,16 @@ alt text 초안:
 
 **v1 문서만으로 기존 4장의 재제작이나 운영 화면 변경을 승인한 것으로 보지 않음.** 기준 샘플의 실기기 모바일 QA → 샘플 1장 개선 → 검수 후 나머지 확장 순서 권장.
 
+## 11. 최초 적용 샘플: 압입통풍 모바일 L1 시안
+
+- 원본 참고: 사용자 제공 `image-gen-1.png` (압입통풍 포스터)
+- 운영 기존본: `public/images/energy-management/draft-forced.svg`
+- **검토용 신규 시안:** `docs/samples/learning-images/draft-forced-mobile-v1.svg` (390×570, 운영 미반영)
+- 상세 비교·미완료 검증: `docs/audits/2026-09-28-energy-draft-image-baseline.md`
+- 원본에서 유지: 외부 공기→FD 송풍기→버너/연소실, 배기가스→연도/연돌, 양압 경향
+- 원본의 반복 요약·장문은 그림 밖 HTML 캡션/본문으로 분리하는 L1 접근을 시험함
+- 이 샘플은 **L1과 원본 유지형 중 어느 것이 적절한지 비교할 자료**이며 이후 제작물의 디자인 확정판으로 간주하지 않음
+- 실제 390px 카드 내부 너비·320px 접근성·연결 기출 적용·Production 화면은 아직 검증되지 않음
 ## 참고한 외부 자료
 
 - Google Technical Writing, *Illustrating*: https://developers.google.com/tech-writing/two/illustrations — 캡션 선작성, 필요한 그림만 활용
