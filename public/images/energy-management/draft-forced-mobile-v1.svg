@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="450" viewBox="0 0 390 450" role="img" aria-labelledby="title desc">
+<title id="title">압입통풍: FD 송풍기가 연소용 공기를 앞에서 밀어 넣는 방식</title>
+<desc id="desc">외부 공기가 연소실 앞의 FD 송풍기와 버너를 지나 연소실로 들어온다. 연소 후 배기가스는 연도를 따라 위쪽 연돌로 배출된다. 압입통풍의 노내압은 양압 경향이다. 학습용 재구성.</desc>
+<style><![CDATA[
+  text{font-family:'Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#25334B}
+  .title{font-size:27px;font-weight:800}.subtitle{font-size:16px;fill:#526176}
+  .label{font-size:16px;font-weight:700}.note{font-size:15px}.small{font-size:13px;font-weight:700}
+  .air{fill:#1769AA}.flue{fill:#A94E32}
+]]></style>
+<defs>
+  <marker id="airArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L8 4.5 L1 8Z" fill="#1769AA"/></marker>
+  <marker id="flueArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L8 4.5 L1 8Z" fill="#A94E32"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="389" height="449" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="20" y="42" class="title">압입통풍</text>
+<text x="20" y="71" class="subtitle">FD 송풍기가 앞에서 공기를 밀어 넣음</text>
+<rect x="20" y="91" width="163" height="35" rx="8" fill="#F7F9FC" stroke="#526176"/>
+<text x="33" y="115" class="note">노내압: <tspan font-weight="800">양압(+) 경향</tspan></text>
+<text x="335" y="146" text-anchor="middle" class="label">연돌</text>
+<!-- Diagram: blue combustion air enters at the left, red exhaust gas rises on the right. -->
+<rect x="315" y="158" width="37" height="104" rx="4" fill="#F7F9FC" stroke="#526176" stroke-width="2.5"/>
+<path d="M313 158 H354" stroke="#526176" stroke-width="3.5" stroke-linecap="round"/>
+<text x="19" y="231" class="label">외부 공기</text>
+<text x="23" y="253" class="small air">AIR</text>
+<path d="M22 285 H62" fill="none" stroke="#1769AA" stroke-width="4.5" stroke-linecap="round" marker-end="url(#airArrow)"/>
+<!-- FD fan in front of the burner -->
+<g transform="translate(92 285)">
+ <circle r="30" fill="#F7F9FC" stroke="#526176" stroke-width="3"/>
+ <circle r="23" fill="#EAF2F9" stroke="#1769AA" stroke-width="2"/>
+ <path d="M0 -5 C-7 -22 9 -21 5 -5 C22 -9 20 9 5 5 C8 22 -9 21 -5 5 C-21 8 -20 -9 -5 -5Z" fill="#1769AA"/>
+ <circle r="4.3" fill="#FFFFFF" stroke="#526176"/>
+</g>
+<text x="93" y="333" text-anchor="middle" class="label">FD 송풍기</text>
+<path d="M123 285 H154" fill="none" stroke="#1769AA" stroke-width="4.5" marker-end="url(#airArrow)"/>
+<!-- Burner: preserve identifiable burner and independent fuel input from the source PNG -->
+<rect x="157" y="272" width="44" height="26" rx="5" fill="#E9EEF5" stroke="#526176" stroke-width="2.5"/>
+<rect x="201" y="281" width="14" height="9" rx="2" fill="#D5DFE8" stroke="#526176" stroke-width="2"/>
+<path d="M180 258 V272" stroke="#9B5A13" stroke-width="3" stroke-linecap="round"/>
+<path d="M176 267 L180 273 L184 267" fill="#9B5A13"/>
+<text x="164" y="252" class="small">연료</text>
+<text x="179" y="333" text-anchor="middle" class="label">버너</text>
+<!-- Boiler furnace and flame -->
+<rect x="215" y="244" width="138" height="82" rx="10" fill="#FFF8ED" stroke="#526176" stroke-width="3"/>
+<path d="M221 284 H264" fill="none" stroke="#1769AA" stroke-width="3" marker-end="url(#airArrow)"/>
+<path d="M259 308 C242 300 253 288 259 280 C262 288 269 288 266 295 C281 290 284 306 273 308Z" fill="#B45309"/>
+<path d="M261 305 C257 299 261 296 263 291 C269 299 270 302 267 305Z" fill="#FFD07E"/>
+<text x="288" y="238" text-anchor="middle" class="label">연소실</text>
+<path d="M282 283 H328 V171" fill="none" stroke="#A94E32" stroke-width="4.5" stroke-linecap="round" marker-end="url(#flueArrow)"/>
+<text x="334" y="341" text-anchor="middle" class="small flue">배기가스</text>
+<!-- Inline legend and main learning relationship -->
+<path d="M19 377 H371" stroke="#E1E7EE"/>
+<path d="M25 398 H58" stroke="#1769AA" stroke-width="3.5" marker-end="url(#airArrow)"/>
+<text x="70" y="404" class="note">연소용 공기</text>
+<path d="M215 398 H248" stroke="#A94E32" stroke-width="3.5" marker-end="url(#flueArrow)"/>
+<text x="260" y="404" class="note">배기가스</text>
+<text x="20" y="435" class="small" fill="#526176">학습용 재구성</text>
+</svg>
