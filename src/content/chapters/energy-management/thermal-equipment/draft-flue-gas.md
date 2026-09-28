@@ -26,6 +26,30 @@ status: 완료
 | 흡입통풍 | 유인통풍기가 연소가스를 끌어냄 | 부압이 됨 |
 | 평형통풍 | 송풍기와 유인통풍기를 함께 사용 | 필요한 공기량과 노내압을 조절함 |
 
+
+### 통풍 4방식의 팬 위치와 흐름
+
+아래 그림은 학습용 재구성임 · **파란 화살표는 연소용 공기**, **빨간 화살표는 배기가스**의 이동 방향을 나타냄 · 팬 위치와 노내압 경향을 함께 비교
+
+<div class="learning-visuals">
+<figure>
+<figcaption><strong>① 자연통풍</strong><span>팬 없이 굴뚝 안팎 기체의 밀도차 이용</span></figcaption>
+<img src="/images/energy-management/draft-natural.svg" width="560" height="275" loading="lazy" alt="자연통풍: 팬 없이 외부 공기가 연소실에 유입되고 배기가스가 굴뚝을 통해 상승 배출됨. 노내는 부압 경향" />
+</figure>
+<figure>
+<figcaption><strong>② 압입통풍</strong><span>앞의 FD 송풍기가 연소용 공기를 밀어 넣음</span></figcaption>
+<img src="/images/energy-management/draft-forced.svg" width="560" height="275" loading="lazy" alt="압입통풍: 연소실 앞 FD 송풍기가 공기를 강제로 밀어 넣고 배기가스는 굴뚝으로 배출됨. 노내 양압 경향" />
+</figure>
+<figure>
+<figcaption><strong>③ 흡입통풍</strong><span>뒤의 ID 유인통풍기가 배기가스를 끌어냄</span></figcaption>
+<img src="/images/energy-management/draft-induced.svg" width="560" height="275" loading="lazy" alt="흡입통풍: 연소실 뒤 ID 유인통풍기가 배기가스를 빨아내어 외부 공기가 자연 유입됨. 노내 부압 경향" />
+</figure>
+<figure>
+<figcaption><strong>④ 평형통풍</strong><span>FD 송풍기와 ID 유인통풍기를 함께 사용해 압력 조절</span></figcaption>
+<img src="/images/energy-management/draft-balanced.svg" width="560" height="275" loading="lazy" alt="평형통풍: 연소실 앞 FD 송풍기가 공기를 밀어 넣고 뒤 ID 유인통풍기가 배기가스를 끌어냄. 노내압을 조절하며 보통 약한 부압으로 운전" />
+</figure>
+</div>
+
 ## 자연통풍과 굴뚝
 
 자연통풍력은 굴뚝 높이와 안팎 기체의 밀도차가 클수록 커지는 방향임 · 배기가스 온도가 높으면 밀도차는 커지지만 배기가스 현열손실도 커지므로 통풍과 효율을 따로 판단함
