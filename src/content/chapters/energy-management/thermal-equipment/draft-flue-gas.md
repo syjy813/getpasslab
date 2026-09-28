@@ -38,7 +38,10 @@ status: 완료
 </figure>
 <figure>
 <figcaption><strong>② 압입통풍</strong><span>앞의 FD 송풍기가 연소용 공기를 밀어 넣음</span></figcaption>
-<img src="/images/energy-management/draft-forced.svg" width="560" height="275" loading="lazy" alt="압입통풍: 연소실 앞 FD 송풍기가 공기를 강제로 밀어 넣고 배기가스는 굴뚝으로 배출됨. 노내 양압 경향" />
+<picture>
+<source media="(max-width: 767px)" srcset="/images/energy-management/draft-forced-mobile-v1.svg" type="image/svg+xml" width="390" height="450" />
+<img src="/images/energy-management/draft-forced.svg" width="560" height="275" loading="lazy" decoding="async" alt="압입통풍: 연소실 앞 FD 송풍기가 연소용 공기를 밀어 넣고 버너·연소실을 거친 배기가스가 연돌로 배출됨. 노내는 양압 경향" />
+</picture>
 </figure>
 <figure>
 <figcaption><strong>③ 흡입통풍</strong><span>뒤의 ID 유인통풍기가 배기가스를 끌어냄</span></figcaption>
