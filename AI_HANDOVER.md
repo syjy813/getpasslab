@@ -10,6 +10,7 @@
 > | `ARCHITECTURE.md` | 코드를 짜기 전 (§9 스키마, §7 조인 포함) |
 > | `CODING_RULES.md` | 코드를 짤 때 (특히 §13 제약 블록) |
 > | `CHAPTER_WRITING_GUIDE.md` | 모든 자격증의 챕터 집필·축약·검토 전 |
+> | `docs/standards/learning-image-design-system-v1.md` | **모든 학습 이미지 신규 제작·수정·교체·검수 시작 전(웹/LOCAL 공통 필수)** |
 > | `DECISION_LOG.md` | "왜 이렇게 됐지?" 궁금할 때 |
 > | `PRD.md` | 기능 세부가 필요할 때 |
 > | `KNOWN_ISSUES.md` | 버그·부채를 건드릴 때 |
