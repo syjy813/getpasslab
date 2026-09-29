@@ -36,8 +36,8 @@
   <text x="290" y="112" class="small">넘침관</text>
   <text x="263" y="260" class="small">별도 배출</text>
 
-  <path d="M189 210 V268" class="pipe" fill="none" stroke="#526176" stroke-width="10"/>
-  <path d="M189 210 V268" fill="none" stroke="#E1F2EA" stroke-width="4"/>
+  <path d="M189 210 V256" class="pipe" fill="none" stroke="#526176" stroke-width="10"/>
+  <path d="M189 210 V256" fill="none" stroke="#E1F2EA" stroke-width="4"/>
   <path d="M189 253 V226" class="water-line" marker-end="url(#water-arrow)"/>
   <text x="34" y="248" class="small">팽창관</text>
   <path d="M116 244 H178" class="callout"/>
