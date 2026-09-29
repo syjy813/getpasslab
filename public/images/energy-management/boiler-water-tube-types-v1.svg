@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="520" viewBox="0 0 390 520" role="img" aria-labelledby="title description">
+  <title id="title">수관식 보일러의 자연순환·강제순환·관류식 구분</title>
+  <desc id="description">자연순환은 위 드럼과 아래 헤더 사이의 두 물길이 펌프 없이 순환한다. 강제순환은 회로에 순환펌프가 들어간다. 관류식은 드럼 없이 급수가 가열된 관을 한 번 통과해 증기로 나간다. 실제 배관 배치를 뜻하지 않는 학습용 재구성이다.</desc>
+  <defs>
+    <marker id="water-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#FFFFFF" stroke="#15785C" stroke-width="1.2" stroke-linejoin="round"/></marker>
+    <marker id="steam-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#FFFFFF" stroke="#734BA6" stroke-width="1.2" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#25334B}
+      .kind{font-size:22px;font-weight:700}
+      .label{font-size:19px;font-weight:700}
+      .water-text{fill:#15785C}
+      .steam-text{fill:#734BA6}
+      .heat-text{fill:#B45309}
+      .pipe{fill:none;stroke:#526176;stroke-width:10;stroke-linecap:round;stroke-linejoin:round}
+      .inside{fill:none;stroke:#E1F2EA;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+      .flow{fill:none;stroke:#15785C;stroke-width:3.5;stroke-linecap:round;marker-end:url(#water-head)}
+    </style>
+  </defs>
+  <rect width="390" height="520" fill="#FFFFFF"/>
+
+  <text x="24" y="34" class="kind">자연순환식</text>
+  <text x="24" y="142" class="label water-text">밀도차</text>
+  <path d="M169 79 V143 M266 79 V143" class="pipe"/>
+  <path d="M169 79 V143 M266 79 V143" class="inside"/>
+  <rect x="139" y="53" width="159" height="34" rx="16" fill="#E1F2EA" stroke="#526176" stroke-width="3"/>
+  <rect x="157" y="137" width="123" height="29" rx="14" fill="#E1F2EA" stroke="#526176" stroke-width="3"/>
+  <path d="M169 100 V125 M266 133 V106" class="flow"/>
+  <text x="310" y="79" class="label">드럼</text>
+  <text x="288" y="135" class="label water-text">물·증기</text>
+
+  <text x="24" y="204" class="kind">강제순환식</text>
+  <text x="24" y="309" class="label water-text">순환펌프</text>
+  <path d="M169 249 V319 M266 249 V319" class="pipe"/>
+  <path d="M169 249 V319 M266 249 V319" class="inside"/>
+  <rect x="139" y="223" width="159" height="34" rx="16" fill="#E1F2EA" stroke="#526176" stroke-width="3"/>
+  <rect x="157" y="313" width="123" height="29" rx="14" fill="#E1F2EA" stroke="#526176" stroke-width="3"/>
+  <circle cx="169" cy="287" r="16" fill="#FFFFFF" stroke="#526176" stroke-width="3"/>
+  <path d="M164 280 L178 287 L164 294 Z" fill="#15785C"/>
+  <path d="M266 307 V273" class="flow"/>
+  <path d="M121 302 H149" fill="none" stroke="#526176" stroke-width="2"/>
+  <text x="288" y="305" class="label water-text">물·증기</text>
+
+  <text x="24" y="378" class="kind">관류식</text>
+  <rect x="110" y="399" width="232" height="80" rx="20" fill="#FFF4E5"/>
+  <path d="M87 415 H311 V441 H119 V467 H313" class="pipe"/>
+  <path d="M87 415 H311 V441 H119 V467 H313" class="inside"/>
+  <path d="M61 415 H100" class="flow"/>
+  <path d="M300 467 H343" fill="none" stroke="#734BA6" stroke-width="3.5" stroke-linecap="round" marker-end="url(#steam-head)"/>
+  <text x="24" y="449" class="label water-text">급수</text>
+  <text x="294" y="502" class="label steam-text">증기</text>
+  <text x="115" y="502" class="label heat-text">관 밖 가열</text>
+</svg>
