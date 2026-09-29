@@ -30,7 +30,7 @@
   <path d="M125 87 H259" fill="none" stroke="#70BDA0" stroke-width="1.5"/>
   <path d="M110 85 v102 h38" class="pipe"/>
   <path d="M110 85 v102 h38" class="pipeWater"/>
-  <rect x="141" y="111" width="107" height="62" rx="11" fill="#FFF7EA"/>
+  <rect x="138" y="108" width="113" height="67" rx="11" fill="#FFF7EA" stroke="#EBCFA5" stroke-width="1.4"/>
   <rect x="144" y="177" width="108" height="28" rx="14" class="body"/>
   <path d="M147 190 H249 V196 Q249 202 241 202 H156 Q147 202 147 196Z" class="water"/>
   <g class="pipe"><path d="M157 177 164 107 M178 177 184 107 M198 177 202 107 M218 177 220 107 M239 177 238 107"/></g>
@@ -51,7 +51,7 @@
   <path d="M125 87 H259" fill="none" stroke="#70BDA0" stroke-width="1.5"/>
   <path d="M110 85 v102 h38" class="pipe"/>
   <path d="M110 85 v102 h38" class="pipeWater"/>
-  <rect x="141" y="111" width="107" height="62" rx="11" fill="#FFF7EA"/>
+  <rect x="138" y="108" width="113" height="67" rx="11" fill="#FFF7EA" stroke="#EBCFA5" stroke-width="1.4"/>
   <rect x="144" y="177" width="108" height="28" rx="14" class="body"/>
   <path d="M147 190 H249 V196 Q249 202 241 202 H156 Q147 202 147 196Z" class="water"/>
   <g class="pipe"><path d="M157 177 164 107 M178 177 184 107 M198 177 202 107 M218 177 220 107 M239 177 238 107"/></g>
