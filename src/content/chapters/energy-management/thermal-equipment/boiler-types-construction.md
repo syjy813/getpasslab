@@ -38,6 +38,15 @@ status: 완료
 
 자연순환은 가열된 혼합물과 상대적으로 차가운 물의 밀도차를 이용함 · 순환이 나쁘면 국부 과열과 증발 불균형이 생길 수 있음
 
+<div class="learning-visuals learning-visuals--single">
+<figure>
+<figcaption><strong>자연순환식 수관 보일러의 순환경로</strong><span>강수관과 승수관이 드럼·하부 헤더를 잇는 회로</span></figcaption>
+<img src="/images/energy-management/boiler-natural-circulation-v1.svg" width="390" height="420" loading="lazy" decoding="async" alt="상부 증기드럼의 물이 강수관을 따라 하부 헤더로 내려가고, 외부에서 가열된 승수관의 물·증기 혼합물이 증기드럼으로 올라가는 자연순환 경로" />
+</figure>
+</div>
+
+그림은 학습용 재구성임 · 강수관 안에는 물이 흐르며 연소가스의 통로가 아님 · 고압에서는 포화수와 포화증기의 밀도차가 작아져 자연순환이 약해질 수 있음
+
 ## 전열면과 재료
 
 전열면은 한쪽이 연소가스, 다른 쪽이 물 또는 증기와 접촉해 열을 전달하는 면임 · 복사전열면과 대류전열면의 비중은 화실과 가스 통로 배치에 따라 달라짐
