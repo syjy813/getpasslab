@@ -12,6 +12,7 @@ article .learning-visuals figure{min-width:0;margin:0;background:var(--white);bo
 article .learning-visuals figcaption{display:flex;flex-direction:column;gap:var(--space-1);padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--gray-200)}
 article .learning-visuals figcaption strong{font-size:var(--fs-body)}
 article .learning-visuals figcaption span{font-size:var(--fs-caption);color:var(--gray-600)}
+article .learning-visuals picture{display:block;width:100%}
 article .learning-visuals img{display:block;width:100%;height:auto}
 @media(max-width:767px){article .learning-visuals{grid-template-columns:1fr}}
 
