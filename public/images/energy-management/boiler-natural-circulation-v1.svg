@@ -11,7 +11,7 @@
       .part{font-size:20px;font-weight:700}
       .medium{font-size:19px;font-weight:600}
       .water-text{fill:#15785C}
-      .heat-text{fill:#855400;font-size:18px;font-weight:700}
+      .heat-text{fill:#B45309;font-size:18px;font-weight:700}
       .pipe{fill:none;stroke:#526176;stroke-width:12;stroke-linecap:round;stroke-linejoin:round}
       .pipe-water{fill:none;stroke:#E1F2EA;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
       .flow{fill:none;stroke:#15785C;stroke-width:3;stroke-linecap:round}
@@ -21,7 +21,7 @@
 
   <rect width="390" height="420" fill="#FFFFFF"/>
   <!-- Heating is outside the riser; it is not a hot-gas path inside the tube. -->
-  <rect x="229" y="167" width="54" height="145" rx="22" fill="#FFF4E5"/>
+  <rect x="273" y="167" width="14" height="145" rx="7" fill="#FFF4E5"/>
 
   <!-- Both pipes join the upper drum and the lower header. -->
   <path d="M117 137 V335 M260 137 V335" class="pipe"/>
