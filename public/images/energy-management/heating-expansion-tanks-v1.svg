@@ -2,7 +2,7 @@
   <title id="title">개방형과 격막식 밀폐형 팽창탱크의 구조</title>
   <desc id="description">위: 개방형 탱크는 위쪽이 대기에 열려 있고, 수위가 높아지면 별도의 넘침관으로 물을 배출한다. 아래: 밀폐형 탱크는 격막이 공기실과 난방수를 분리하며 아래 연결관을 통해 팽창한 물을 받아들인다.</desc>
   <defs>
-    <marker id="water-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+    <marker id="water-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
       <path d="M1 1 L9 5 L1 9 Z" fill="#15785C"/>
     </marker>
     <style>
@@ -26,7 +26,6 @@
   <path d="M107 152 Q129 146 150 152 T193 152 T236 152 T272 152" fill="none" stroke="#15785C" stroke-width="3"/>
   <text x="165" y="185" class="label" fill="#15785C">난방수</text>
   <path d="M160 88 V69 M213 88 V69" fill="none" stroke="#526176" stroke-width="3"/>
-  <path d="M183 74 V58" class="water-line" marker-end="url(#water-arrow)"/>
   <text x="232" y="76" class="small">대기와 통함</text>
   <path d="M228 79 L210 79" class="callout"/>
 
