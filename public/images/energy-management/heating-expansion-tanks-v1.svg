@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="610" viewBox="0 0 390 610" role="img" aria-labelledby="title description">
+  <title id="title">개방형과 격막식 밀폐형 팽창탱크의 구조</title>
+  <desc id="description">위: 개방형 탱크는 위쪽이 대기에 열려 있고, 수위가 높아지면 별도의 넘침관으로 물을 배출한다. 아래: 밀폐형 탱크는 격막이 공기실과 난방수를 분리하며 아래 연결관을 통해 팽창한 물을 받아들인다.</desc>
+  <defs>
+    <marker id="water-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1 1 L9 5 L1 9 Z" fill="#15785C"/>
+    </marker>
+    <style>
+      text{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#25334B}
+      .section{font-size:21px;font-weight:700}
+      .label{font-size:20px;font-weight:600}
+      .small{font-size:18px;font-weight:600}
+      .shell{fill:#fff;stroke:#526176;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+      .pipe{fill:none;stroke:#526176;stroke-width:10;stroke-linecap:round;stroke-linejoin:round}
+      .water-line{fill:none;stroke:#15785C;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .callout{fill:none;stroke:#526176;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <rect x="8" y="8" width="374" height="288" rx="16" fill="#F7F9FC" stroke="#CBD5E1"/>
+  <text x="28" y="40" class="section">개방형</text>
+
+  <!-- Open top: the gap remains physically connected to the atmosphere. -->
+  <path d="M103 88 H160 M213 88 H276 V197 Q276 210 263 210 H116 Q103 210 103 197 V88" class="shell" fill="#FFFFFF" stroke="#526176" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M107 152 Q129 146 150 152 T193 152 T236 152 T272 152 V195 Q272 206 260 206 H119 Q107 206 107 195 Z" fill="#E1F2EA"/>
+  <path d="M107 152 Q129 146 150 152 T193 152 T236 152 T272 152" fill="none" stroke="#15785C" stroke-width="3"/>
+  <text x="165" y="185" class="label" fill="#15785C">난방수</text>
+  <path d="M160 88 V69 M213 88 V69" fill="none" stroke="#526176" stroke-width="3"/>
+  <path d="M183 74 V58" class="water-line" marker-end="url(#water-arrow)"/>
+  <text x="232" y="76" class="small">대기와 통함</text>
+  <path d="M228 79 L210 79" class="callout"/>
+
+  <!-- Overflow has an open discharge end, independent of the heating return. -->
+  <path d="M276 129 H327 V229" class="pipe" fill="none" stroke="#526176" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M276 129 H327 V229" fill="none" stroke="#E1F2EA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M327 210 V233" class="water-line" marker-end="url(#water-arrow)"/>
+  <text x="290" y="112" class="small">넘침관</text>
+  <text x="263" y="260" class="small">별도 배출</text>
+
+  <path d="M189 210 V268" class="pipe" fill="none" stroke="#526176" stroke-width="10"/>
+  <path d="M189 210 V268" fill="none" stroke="#E1F2EA" stroke-width="4"/>
+  <path d="M189 253 V226" class="water-line" marker-end="url(#water-arrow)"/>
+  <text x="34" y="248" class="small">팽창관</text>
+  <path d="M116 244 H178" class="callout"/>
+  <text x="118" y="284" class="small">난방 계통과 연결</text>
+
+  <rect x="8" y="312" width="374" height="288" rx="16" fill="#F7F9FC" stroke="#CBD5E1"/>
+  <text x="28" y="344" class="section">격막식 밀폐형</text>
+
+  <!-- Sealed vessel: diaphragm separates the compressed air from system water. -->
+  <rect x="101" y="373" width="178" height="159" rx="28" fill="#fff" stroke="#526176" stroke-width="3"/>
+  <path d="M105 451 Q145 423 189 451 T275 451 V503 Q275 528 251 528 H129 Q105 528 105 503 Z" fill="#E1F2EA"/>
+  <path d="M105 451 Q145 423 189 451 T275 451" fill="none" stroke="#526176" stroke-width="5" stroke-linecap="round"/>
+  <text x="160" y="412" class="label">공기실</text>
+  <text x="163" y="494" class="label" fill="#15785C">난방수</text>
+  <text x="292" y="445" class="small">격막</text>
+  <path d="M285 448 L260 448" class="callout"/>
+
+  <path d="M190 532 V574" class="pipe" fill="none" stroke="#526176" stroke-width="10"/>
+  <path d="M190 532 V574" fill="none" stroke="#E1F2EA" stroke-width="4"/>
+  <path d="M190 563 V537" class="water-line" marker-end="url(#water-arrow)"/>
+  <text x="204" y="579" class="small">난방 계통과 연결</text>
+</svg>
