@@ -12,13 +12,13 @@
   </style>
   <rect width="390" height="520" fill="#FFFFFF"/>
 
-  <text x="25" y="35" class="kind">노통식</text>
+  <text x="25" y="35" class="kind">노통 보일러</text>
   <rect x="25" y="52" width="340" height="101" rx="38" class="shell"/>
   <circle cx="116" cy="102" r="32" class="gas"/>
-  <text x="206" y="102" class="label gas-text">큰 노통</text>
+  <text x="206" y="102" class="label gas-text">큰 노통(가스)</text>
   <text x="206" y="132" class="label water-text">주변의 물</text>
 
-  <text x="25" y="195" class="kind">연관식</text>
+  <text x="25" y="195" class="kind">연관 보일러</text>
   <rect x="25" y="212" width="340" height="101" rx="38" class="shell"/>
   <circle cx="85" cy="245" r="12" class="gas"/>
   <circle cx="119" cy="245" r="12" class="gas"/>
@@ -26,7 +26,7 @@
   <circle cx="85" cy="279" r="12" class="gas"/>
   <circle cx="119" cy="279" r="12" class="gas"/>
   <circle cx="153" cy="279" r="12" class="gas"/>
-  <text x="206" y="260" class="label gas-text">작은 연관</text>
+  <text x="206" y="260" class="label gas-text">작은 연관(가스)</text>
   <text x="206" y="290" class="label water-text">주변의 물</text>
 
   <text x="25" y="355" class="kind">노통연관식</text>
@@ -37,6 +37,6 @@
   <circle cx="150" cy="444" r="11" class="gas"/>
   <circle cx="179" cy="444" r="11" class="gas"/>
   <text x="222" y="421" class="label gas-text">노통 +</text>
-  <text x="222" y="449" class="label gas-text">연관</text>
+  <text x="222" y="449" class="label gas-text">연관(가스)</text>
   <text x="222" y="476" class="label water-text">주변의 물</text>
 </svg>
