@@ -10,7 +10,8 @@
     text{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#25334B}
     .type{font-size:21px;font-weight:700}
     .label{font-size:17px;font-weight:700}
-    .small{font-size:15px;font-weight:600}
+    .small{font-size:18px;font-weight:600}
+    .note{font-size:15px;font-weight:600}
     .waterText{fill:#15785C} .gasText{fill:#A94E32} .steamText{fill:#734BA6} .heatText{fill:#B45309}
     .body{fill:url(#metal);stroke:#526176;stroke-width:2.4}
     .water{fill:#DDF1E9}
@@ -81,6 +82,6 @@
   <path d="M147 222 Q159 204 173 218 Q189 197 202 216 Q218 203 232 220" fill="none" stroke="#E5A245" stroke-width="5" stroke-linecap="round"/>
   <text x="20" y="188" class="small waterText">급수</text>
   <text x="327" y="84" class="small steamText">증기</text>
-  <text x="116" y="260" class="small heatText">관 밖에서 가열 · 드럼 없음</text>
+  <text x="116" y="260" class="note heatText">관 밖에서 가열 · 드럼 없음</text>
 </g>
 </svg>
