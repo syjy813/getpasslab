@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="772" viewBox="0 0 390 772" role="img" aria-labelledby="title description">
+<title id="title">수관식 보일러 자연순환·강제순환·관류식 구조</title>
+<desc id="description">자연순환식은 증기드럼과 하부 헤더, 수관, 강수관을 물과 증기가 밀도차로 순환한다. 강제순환식은 순환펌프가 더해진다. 관류식은 드럼 없이 급수가 수관을 한 번 지나 증기로 나간다. 버너의 열은 관 밖에서 전달된다. 실제 배관 설계가 아닌 학습용 재구성이다.</desc>
+<defs>
+  <linearGradient id="metal" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#F5F8FC"/><stop offset="1" stop-color="#DDE6EF"/></linearGradient>
+  <linearGradient id="fire" x1="0" x2="1"><stop stop-color="#F9CA7A"/><stop offset="1" stop-color="#F5A270"/></linearGradient>
+  <marker id="water-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#15785C" stroke-width="1.5" stroke-linejoin="round"/></marker>
+  <marker id="steam-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#734BA6" stroke-width="1.5" stroke-linejoin="round"/></marker>
+  <style>
+    text{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#25334B}
+    .type{font-size:21px;font-weight:700}
+    .label{font-size:17px;font-weight:700}
+    .small{font-size:18px;font-weight:600}
+    .note{font-size:15px;font-weight:600}
+    .waterText{fill:#15785C} .gasText{fill:#A94E32} .steamText{fill:#734BA6} .heatText{fill:#B45309}
+    .body{fill:url(#metal);stroke:#526176;stroke-width:2.4}
+    .water{fill:#DDF1E9}
+    .gas{fill:#FCEDE7;stroke:#A94E32;stroke-width:2.2}
+    .pipe{fill:none;stroke:#526176;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+    .pipeWater{fill:none;stroke:#15785C;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .pipeSteam{fill:none;stroke:#734BA6;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .hair{fill:none;stroke:#A9B8C7;stroke-width:1.2}
+  </style>
+</defs>
+<rect width="390" height="772" fill="#fff"/>
+<g transform="translate(0 0)">
+  <text x="22" y="31" class="type">자연순환식</text>
+  <path d="M22 43 H368" class="hair"/>
+  <rect x="117" y="64" width="150" height="45" rx="22" class="body"/>
+  <path d="M120 87 h144 v5 q0 14-16 14 H135 q-15 0-15-14Z" class="water"/>
+  <path d="M125 87 H259" fill="none" stroke="#70BDA0" stroke-width="1.5"/>
+  <path d="M110 85 v102 h38" class="pipe"/>
+  <path d="M110 85 v102 h38" class="pipeWater"/>
+  <rect x="138" y="108" width="113" height="67" rx="11" fill="#FFF7EA" stroke="#EBCFA5" stroke-width="1.4"/>
+  <rect x="144" y="177" width="108" height="28" rx="14" class="body"/>
+  <path d="M147 190 H249 V196 Q249 202 241 202 H156 Q147 202 147 196Z" class="water"/>
+  <g class="pipe"><path d="M157 177 164 107 M178 177 184 107 M198 177 202 107 M218 177 220 107 M239 177 238 107"/></g>
+  <g class="pipeWater"><path d="M157 177 164 107 M178 177 184 107 M198 177 202 107 M218 177 220 107 M239 177 238 107"/></g>
+  <path d="M169 164 Q181 151 190 164 Q200 145 208 162 Q219 150 228 164" fill="none" stroke="#E5A245" stroke-width="5" stroke-linecap="round"/>
+  <path d="M206 153 205 130" class="pipeWater" marker-end="url(#water-arrow)"/>
+  <path d="M110 109 v22" class="pipeWater" marker-end="url(#water-arrow)"/>
+  <text x="28" y="143" class="small waterText">밀도차</text>
+  <text x="276" y="84" class="small">증기드럼</text>
+  <text x="273" y="144" class="small waterText">수관</text>
+  <text x="273" y="162" class="small waterText">(물·증기)</text>
+  <text x="264" y="191" class="small">하부 헤더</text>
+  <text x="133" y="231" class="small heatText">수관 밖 가열</text>
+</g>
+<g transform="translate(0 250)">
+  <text x="22" y="31" class="type">강제순환식</text>
+  <path d="M22 43 H368" class="hair"/>
+  <rect x="117" y="64" width="150" height="45" rx="22" class="body"/>
+  <path d="M120 87 h144 v5 q0 14-16 14 H135 q-15 0-15-14Z" class="water"/>
+  <path d="M125 87 H259" fill="none" stroke="#70BDA0" stroke-width="1.5"/>
+  <path d="M110 85 v102 h38" class="pipe"/>
+  <path d="M110 85 v102 h38" class="pipeWater"/>
+  <rect x="138" y="108" width="113" height="67" rx="11" fill="#FFF7EA" stroke="#EBCFA5" stroke-width="1.4"/>
+  <rect x="144" y="177" width="108" height="28" rx="14" class="body"/>
+  <path d="M147 190 H249 V196 Q249 202 241 202 H156 Q147 202 147 196Z" class="water"/>
+  <g class="pipe"><path d="M157 177 164 107 M178 177 184 107 M198 177 202 107 M218 177 220 107 M239 177 238 107"/></g>
+  <g class="pipeWater"><path d="M157 177 164 107 M178 177 184 107 M198 177 202 107 M218 177 220 107 M239 177 238 107"/></g>
+  <path d="M169 164 Q181 151 190 164 Q200 145 208 162 Q219 150 228 164" fill="none" stroke="#E5A245" stroke-width="5" stroke-linecap="round"/>
+  <path d="M206 153 205 130" class="pipeWater" marker-end="url(#water-arrow)"/>
+  <path d="M110 165 v14" class="pipeWater" marker-end="url(#water-arrow)"/>
+  <circle cx="110" cy="139" r="15" fill="#fff" stroke="#526176" stroke-width="2.5"/>
+    <path d="m102 135 8 12 8-12Z" fill="#15785C"/><text x="23" y="171" class="small waterText">순환펌프</text>
+  <text x="276" y="84" class="small">증기드럼</text>
+  <text x="273" y="144" class="small waterText">수관</text>
+  <text x="273" y="162" class="small waterText">(물·증기)</text>
+  <text x="264" y="191" class="small">하부 헤더</text>
+  <text x="133" y="231" class="small heatText">수관 밖 가열</text>
+</g>
+<g transform="translate(0 500)">
+  <text x="22" y="31" class="type">관류식</text>
+  <path d="M22 43 H368" class="hair"/>
+  <rect x="86" y="59" width="235" height="175" rx="23" fill="#FFF7EA" stroke="#DFE5EC" stroke-width="2"/>
+  <path d="M61 207 H284 V178 H121 V149 H284 V120 H121 V91 H284" class="pipe"/>
+  <path d="M61 207 H284 V178 H121 V149 H284" class="pipeWater"/>
+  <path d="M284 149 H121 V120 H284 V91 H316" class="pipeSteam"/>
+  <path d="M63 207 H82" class="pipeWater" marker-end="url(#water-arrow)"/>
+  <path d="M296 91 H328" class="pipeSteam" marker-end="url(#steam-arrow)"/>
+  <path d="M147 222 Q159 204 173 218 Q189 197 202 216 Q218 203 232 220" fill="none" stroke="#E5A245" stroke-width="5" stroke-linecap="round"/>
+  <text x="20" y="188" class="small waterText">급수</text>
+  <text x="327" y="84" class="small steamText">증기</text>
+  <text x="116" y="260" class="note heatText">관 밖에서 가열 · 드럼 없음</text>
+</g>
+</svg>
