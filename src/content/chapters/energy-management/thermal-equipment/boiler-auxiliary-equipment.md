@@ -24,6 +24,15 @@ status: 완료
 - **급수탱크·탈기기**: 급수를 저장하고 용존 산소와 이산화탄소를 줄여 부식을 억제함
 - **응축수 회수**: 고온 응축수의 현열과 처리수를 재사용해 연료와 보충수 사용을 줄임
 
+<div class="learning-visuals learning-visuals--single">
+<figure>
+<figcaption><strong>급수펌프의 캐비테이션</strong><span>임펠러 입구의 저압과 기포 붕괴 위치를 구분</span></figcaption>
+<img src="/images/energy-management/boiler-feed-pump-cavitation-v1.svg" width="390" height="380" loading="lazy" decoding="async" alt="흡입관의 물이 임펠러 입구로 들어갈 때 낮은 압력에서 증기 기포가 생기고, 흐름을 따라 압력이 회복되는 곳에서 기포가 붕괴하는 급수펌프 학습 도식" />
+</figure>
+</div>
+
+그림은 실제 펌프 단면이 아닌 학습용 재구성임 · 흡입관 저항을 줄이면 흡입측 압력 손실이 줄어드는 방향이므로, 저항이 작은 경우를 캐비테이션 발생 원인으로 고르지 않음
+
 급수 부족은 전열면 과열로 이어지고, 과다 급수는 증기 공간을 줄여 수분 동반을 일으킬 수 있음 · 수위제어기만 믿지 말고 수면계와 급수 상태를 함께 확인함
 
 ## 압력용기와 열교환기
