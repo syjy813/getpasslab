@@ -34,7 +34,10 @@ status: 완료
 <div class="learning-visuals">
 <figure>
 <figcaption><strong>① 자연통풍</strong><span>팬 없이 굴뚝 안팎 기체의 밀도차 이용</span></figcaption>
-<img src="/images/energy-management/draft-natural.svg" width="560" height="275" loading="lazy" alt="자연통풍: 팬 없이 외부 공기가 연소실에 유입되고 배기가스가 굴뚝을 통해 상승 배출됨. 노내는 부압 경향" />
+<picture>
+<source media="(max-width: 767px)" srcset="/images/energy-management/draft-natural-mobile-v2.svg" type="image/svg+xml" width="390" height="290" />
+<img src="/images/energy-management/draft-natural.svg" width="560" height="275" loading="lazy" decoding="async" alt="자연통풍: 팬 없이 외부 공기가 연소실에 유입되고 배기가스가 굴뚝을 통해 상승 배출됨. 노내는 부압 경향" />
+</picture>
 </figure>
 <figure>
 <figcaption><strong>② 압입통풍</strong><span>앞의 FD 송풍기가 연소용 공기를 밀어 넣음</span></figcaption>
@@ -45,11 +48,17 @@ status: 완료
 </figure>
 <figure>
 <figcaption><strong>③ 흡입통풍</strong><span>뒤의 ID 유인통풍기가 배기가스를 끌어냄</span></figcaption>
-<img src="/images/energy-management/draft-induced.svg" width="560" height="275" loading="lazy" alt="흡입통풍: 연소실 뒤 ID 유인통풍기가 배기가스를 빨아내어 외부 공기가 자연 유입됨. 노내 부압 경향" />
+<picture>
+<source media="(max-width: 767px)" srcset="/images/energy-management/draft-induced-mobile-v2.svg" type="image/svg+xml" width="390" height="290" />
+<img src="/images/energy-management/draft-induced.svg" width="560" height="275" loading="lazy" decoding="async" alt="흡입통풍: 연소실 뒤 ID 유인통풍기가 배기가스를 빨아내어 외부 공기가 자연 유입됨. 노내 부압 경향" />
+</picture>
 </figure>
 <figure>
 <figcaption><strong>④ 평형통풍</strong><span>FD 송풍기와 ID 유인통풍기를 함께 사용해 압력 조절</span></figcaption>
-<img src="/images/energy-management/draft-balanced.svg" width="560" height="275" loading="lazy" alt="평형통풍: 연소실 앞 FD 송풍기가 공기를 밀어 넣고 뒤 ID 유인통풍기가 배기가스를 끌어냄. 노내압을 조절하며 보통 약한 부압으로 운전" />
+<picture>
+<source media="(max-width: 767px)" srcset="/images/energy-management/draft-balanced-mobile-v2.svg" type="image/svg+xml" width="390" height="290" />
+<img src="/images/energy-management/draft-balanced.svg" width="560" height="275" loading="lazy" decoding="async" alt="평형통풍: 연소실 앞 FD 송풍기가 공기를 밀어 넣고 뒤 ID 유인통풍기가 배기가스를 끌어냄. 노내압을 조절하며 보통 약한 부압으로 운전" />
+</picture>
 </figure>
 </div>
 
