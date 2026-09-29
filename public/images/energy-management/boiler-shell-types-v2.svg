@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="390" height="660" viewBox="0 0 390 660" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="675" viewBox="0 0 390 675" role="img" aria-labelledby="title description">
 <title id="title">원통형 보일러 노통식·연관식·노통연관식 구조</title>
 <desc id="description">측면을 잘라 본 학습용 구조 비교. 세 형식 모두 연소가스가 관 안, 물이 관 밖에 있다. 노통식은 큰 가스 통로, 연관식은 가는 연관 다발, 노통연관식은 두 구조가 함께 있다. 연소가스의 실제 왕복 경로는 표시하지 않는다.</desc>
 <defs>
@@ -21,7 +21,7 @@
     .hair{fill:none;stroke:#A9B8C7;stroke-width:1.2}
   </style>
 </defs>
-<rect width="390" height="660" fill="#fff"/>
+<rect width="390" height="675" fill="#fff"/>
 <g transform="translate(0 0)">
   <text x="22" y="31" class="type">노통식</text>
   <path d="M22 43 H368" class="hair"/>
