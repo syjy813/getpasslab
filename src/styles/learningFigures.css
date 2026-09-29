@@ -16,6 +16,11 @@ article .learning-visuals figcaption span{font-size:var(--fs-caption);color:var(
 article .learning-visuals picture{display:block;width:100%}
 article .learning-visuals img{display:block;width:100%;height:auto}
 article .learning-visuals--single img{max-width:390px;margin-inline:auto}
+article .learning-visuals--boiler-types figcaption{gap:var(--space-1);padding:var(--space-4) var(--space-4);background:var(--gray-50)}
+article .learning-visuals--boiler-types figcaption strong{font-size:19px;line-height:1.35;color:var(--gray-900)}
+article .learning-visuals--boiler-types figcaption span{font-size:14px;line-height:1.45}
+article .learning-visuals--boiler-types img{max-width:390px;margin-inline:auto}
+@media(max-width:767px){article .learning-visuals--boiler-types figcaption strong{font-size:18px}}
 @media(max-width:767px){article .learning-visuals{grid-template-columns:1fr}}
 
 .learning-release{margin:var(--space-4) 0;padding:var(--space-3) var(--space-4);border-radius:var(--radius-md);background:var(--primary-50);color:var(--primary-700);font-size:var(--fs-caption)}
