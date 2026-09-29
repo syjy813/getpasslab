@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="660" viewBox="0 0 390 660" role="img" aria-labelledby="title description">
+<title id="title">원통형 보일러 노통식·연관식·노통연관식 구조</title>
+<desc id="description">측면을 잘라 본 학습용 구조 비교. 세 형식 모두 연소가스가 관 안, 물이 관 밖에 있다. 노통식은 큰 가스 통로, 연관식은 가는 연관 다발, 노통연관식은 두 구조가 함께 있다. 연소가스의 실제 왕복 경로는 표시하지 않는다.</desc>
+<defs>
+  <linearGradient id="metal" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#F5F8FC"/><stop offset="1" stop-color="#DDE6EF"/></linearGradient>
+  <linearGradient id="fire" x1="0" x2="1"><stop stop-color="#F9CA7A"/><stop offset="1" stop-color="#F5A270"/></linearGradient>
+  <marker id="water-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#15785C" stroke-width="1.5" stroke-linejoin="round"/></marker>
+  <marker id="steam-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#734BA6" stroke-width="1.5" stroke-linejoin="round"/></marker>
+  <style>
+    text{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#25334B}
+    .type{font-size:21px;font-weight:700}
+    .label{font-size:17px;font-weight:700}
+    .small{font-size:15px;font-weight:600}
+    .waterText{fill:#15785C} .gasText{fill:#A94E32} .steamText{fill:#734BA6} .heatText{fill:#B45309}
+    .body{fill:url(#metal);stroke:#526176;stroke-width:2.4}
+    .water{fill:#DDF1E9}
+    .gas{fill:#FCEDE7;stroke:#A94E32;stroke-width:2.2}
+    .pipe{fill:none;stroke:#526176;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+    .pipeWater{fill:none;stroke:#15785C;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .pipeSteam{fill:none;stroke:#734BA6;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .hair{fill:none;stroke:#A9B8C7;stroke-width:1.2}
+  </style>
+</defs>
+<rect width="390" height="660" fill="#fff"/>
+<g transform="translate(0 0)">
+  <text x="22" y="31" class="type">노통식</text>
+  <path d="M22 43 H368" class="hair"/>
+  <rect x="49" y="67" width="292" height="117" rx="27" fill="#F7F9FC" stroke="#CBD5E1" stroke-width="1.3"/>
+  <path d="M65 183 v13 h25 v-11 M298 185 v11 h25 v-13" fill="none" stroke="#526176" stroke-width="2.5"/>
+  <rect x="65" y="75" width="260" height="102" rx="22" class="body"/>
+  <path d="M68 119 H322 V152 Q322 174 303 174 H87 Q68 174 68 153 Z" class="water"/>
+  <path d="M69 119 Q104 116 137 119 T205 119 T273 119 T322 119" fill="none" stroke="#70BDA0" stroke-width="1.6"/>
+  <path d="M312 74 v-21 q0-7 7-7 h13 v29" fill="url(#metal)" stroke="#526176" stroke-width="2.2"/>
+  <path d="M64 145 H42 Q34 145 34 153 V161" class="pipe"/>
+  <path d="M45 140 v11 M51 139 v12" stroke="#526176" stroke-width="2"/>
+  
+  <path d="M68 135 Q83 123 106 129 H285 Q308 129 311 147 Q308 164 286 164 H104 Q81 164 68 153 Z" class="gas"/>
+  <path d="M50 149 Q70 129 86 145 Q105 132 117 145 Q100 142 90 155 Q75 145 68 158 Z" fill="url(#fire)"/>
+  <text x="159" y="152" class="label gasText">노통(가스)</text>
+  <text x="119" y="108" class="label waterText">물</text>
+
+</g>
+<g transform="translate(0 220)">
+  <text x="22" y="31" class="type">연관식</text>
+  <path d="M22 43 H368" class="hair"/>
+  <rect x="49" y="67" width="292" height="117" rx="27" fill="#F7F9FC" stroke="#CBD5E1" stroke-width="1.3"/>
+  <path d="M65 183 v13 h25 v-11 M298 185 v11 h25 v-13" fill="none" stroke="#526176" stroke-width="2.5"/>
+  <rect x="65" y="75" width="260" height="102" rx="22" class="body"/>
+  <path d="M68 119 H322 V152 Q322 174 303 174 H87 Q68 174 68 153 Z" class="water"/>
+  <path d="M69 119 Q104 116 137 119 T205 119 T273 119 T322 119" fill="none" stroke="#70BDA0" stroke-width="1.6"/>
+  <path d="M312 74 v-21 q0-7 7-7 h13 v29" fill="url(#metal)" stroke="#526176" stroke-width="2.2"/>
+  <path d="M64 145 H42 Q34 145 34 153 V161" class="pipe"/>
+  <path d="M45 140 v11 M51 139 v12" stroke="#526176" stroke-width="2"/>
+  
+  <path d="M68 131 h35 q14 0 14 14 q0 14-14 14 H68 Z" class="gas"/>
+  <path d="M50 146 Q69 131 84 144 Q95 136 103 143 Q91 145 82 154 Q73 147 66 158 Z" fill="url(#fire)"/>
+  <g class="gas"><rect x="114" y="126" width="175" height="9" rx="4"/><rect x="114" y="142" width="175" height="9" rx="4"/><rect x="114" y="158" width="175" height="9" rx="4"/></g>
+  <path d="M291 131 H307" stroke="#A94E32" stroke-width="2"/>
+  <text x="118" y="108" class="label waterText">물</text>
+  <text x="142" y="187" class="label gasText">연관(가스)</text>
+
+</g>
+<g transform="translate(0 440)">
+  <text x="22" y="31" class="type">노통연관식</text>
+  <path d="M22 43 H368" class="hair"/>
+  <rect x="49" y="67" width="292" height="117" rx="27" fill="#F7F9FC" stroke="#CBD5E1" stroke-width="1.3"/>
+  <path d="M65 183 v13 h25 v-11 M298 185 v11 h25 v-13" fill="none" stroke="#526176" stroke-width="2.5"/>
+  <rect x="65" y="75" width="260" height="102" rx="22" class="body"/>
+  <path d="M68 119 H322 V152 Q322 174 303 174 H87 Q68 174 68 153 Z" class="water"/>
+  <path d="M69 119 Q104 116 137 119 T205 119 T273 119 T322 119" fill="none" stroke="#70BDA0" stroke-width="1.6"/>
+  <path d="M312 74 v-21 q0-7 7-7 h13 v29" fill="url(#metal)" stroke="#526176" stroke-width="2.2"/>
+  <path d="M64 145 H42 Q34 145 34 153 V161" class="pipe"/>
+  <path d="M45 140 v11 M51 139 v12" stroke="#526176" stroke-width="2"/>
+  
+  <path d="M68 139 Q78 131 99 132 H189 Q200 132 201 146 Q200 160 187 160 H94 Q77 159 68 151 Z" class="gas"/>
+  <path d="M48 148 Q67 135 83 145 Q92 136 101 146 Q88 145 80 155 Q70 146 64 159 Z" fill="url(#fire)"/>
+  <g class="gas"><rect x="207" y="129" width="89" height="8" rx="4"/><rect x="207" y="143" width="89" height="8" rx="4"/><rect x="207" y="157" width="89" height="8" rx="4"/></g>
+  <text x="113" y="108" class="label waterText">물</text>
+  <text x="72" y="214" class="small gasText">노통(가스)</text>
+  <text x="237" y="214" class="small gasText">연관(가스)</text>
+
+</g>
+</svg>
