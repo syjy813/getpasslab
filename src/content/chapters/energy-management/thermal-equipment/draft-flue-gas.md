@@ -39,7 +39,7 @@ status: 완료
 <figure>
 <figcaption><strong>② 압입통풍</strong><span>앞의 FD 송풍기가 연소용 공기를 밀어 넣음</span></figcaption>
 <picture>
-<source media="(max-width: 767px)" srcset="/images/energy-management/draft-forced-mobile-v1.svg" type="image/svg+xml" width="390" height="450" />
+<source media="(max-width: 767px)" srcset="/images/energy-management/draft-forced-mobile-v2.svg" type="image/svg+xml" width="390" height="290" />
 <img src="/images/energy-management/draft-forced.svg" width="560" height="275" loading="lazy" decoding="async" alt="압입통풍: 연소실 앞 FD 송풍기가 연소용 공기를 밀어 넣고 버너·연소실을 거친 배기가스가 연돌로 배출됨. 노내는 양압 경향" />
 </picture>
 </figure>
