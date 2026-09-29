@@ -3,7 +3,7 @@
   <desc id="description">위: 개방형 탱크는 위쪽이 대기에 열려 있고, 수위가 높아지면 별도의 넘침관으로 물을 배출한다. 아래: 밀폐형 탱크는 격막이 공기실과 난방수를 분리하며 아래 연결관을 통해 팽창한 물을 받아들인다.</desc>
   <defs>
     <marker id="water-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
-      <path d="M1 1 L9 5 L1 9 Z" fill="#15785C" stroke="#FFFFFF" stroke-width="0.7" stroke-linejoin="round"/>
+      <path d="M1 1 L9 5 L1 9 Z" fill="#FFFFFF" stroke="#15785C" stroke-width="1.15" stroke-linejoin="round"/>
     </marker>
     <style>
       text{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#25334B}
