@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="520" viewBox="0 0 390 520" role="img" aria-labelledby="title description">
+  <title id="title">노통식·연관식·노통연관식 구조 비교</title>
+  <desc id="description">원통형 보일러의 대표 단면을 세 칸으로 비교한다. 노통식은 물로 둘러싸인 큰 연소가스 통로, 연관식은 물로 둘러싸인 여러 작은 가스 통로, 노통연관식은 큰 노통과 작은 연관을 함께 갖는다. 정확한 가스 왕복 경로를 뜻하지 않는 학습용 재구성이다.</desc>
+  <style>
+    text{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#25334B}
+    .kind{font-size:22px;font-weight:700}
+    .label{font-size:20px;font-weight:700}
+    .gas-text{fill:#A94E32}
+    .water-text{fill:#15785C}
+    .shell{fill:#E1F2EA;stroke:#526176;stroke-width:3}
+    .gas{fill:#FCEDE7;stroke:#A94E32;stroke-width:3}
+  </style>
+  <rect width="390" height="520" fill="#FFFFFF"/>
+
+  <text x="25" y="35" class="kind">노통식</text>
+  <rect x="25" y="52" width="340" height="101" rx="38" class="shell"/>
+  <circle cx="116" cy="102" r="32" class="gas"/>
+  <text x="206" y="102" class="label gas-text">큰 노통</text>
+  <text x="206" y="132" class="label water-text">주변의 물</text>
+
+  <text x="25" y="195" class="kind">연관식</text>
+  <rect x="25" y="212" width="340" height="101" rx="38" class="shell"/>
+  <circle cx="85" cy="245" r="12" class="gas"/>
+  <circle cx="119" cy="245" r="12" class="gas"/>
+  <circle cx="153" cy="245" r="12" class="gas"/>
+  <circle cx="85" cy="279" r="12" class="gas"/>
+  <circle cx="119" cy="279" r="12" class="gas"/>
+  <circle cx="153" cy="279" r="12" class="gas"/>
+  <text x="206" y="260" class="label gas-text">작은 연관</text>
+  <text x="206" y="290" class="label water-text">주변의 물</text>
+
+  <text x="25" y="355" class="kind">노통연관식</text>
+  <rect x="25" y="372" width="340" height="114" rx="38" class="shell"/>
+  <circle cx="89" cy="429" r="28" class="gas"/>
+  <circle cx="150" cy="413" r="11" class="gas"/>
+  <circle cx="179" cy="413" r="11" class="gas"/>
+  <circle cx="150" cy="444" r="11" class="gas"/>
+  <circle cx="179" cy="444" r="11" class="gas"/>
+  <text x="222" y="421" class="label gas-text">노통 +</text>
+  <text x="222" y="449" class="label gas-text">연관</text>
+  <text x="222" y="476" class="label water-text">주변의 물</text>
+</svg>
