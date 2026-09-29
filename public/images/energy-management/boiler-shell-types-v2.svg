@@ -30,6 +30,10 @@
   <rect x="65" y="75" width="260" height="102" rx="22" class="body"/>
   <path d="M68 119 H322 V152 Q322 174 303 174 H87 Q68 174 68 153 Z" class="water"/>
   <path d="M69 119 Q104 116 137 119 T205 119 T273 119 T322 119" fill="none" stroke="#70BDA0" stroke-width="1.6"/>
+  <path d="M77 81 Q65 90 65 126 Q65 162 77 171" fill="none" stroke="#8799AD" stroke-width="2.2"/>
+  <path d="M312 81 Q325 91 325 126 Q325 160 312 171" fill="none" stroke="#8799AD" stroke-width="1.5"/>
+  <circle cx="79" cy="93" r="2" fill="#526176"/><circle cx="79" cy="165" r="2" fill="#526176"/>
+  <path d="M154 75 v-6 q0-4 5-4 h32 q5 0 5 4 v6" fill="url(#metal)" stroke="#526176" stroke-width="1.6"/>
   <path d="M312 74 v-21 q0-7 7-7 h13 v29" fill="url(#metal)" stroke="#526176" stroke-width="2.2"/>
   <path d="M64 145 H42 Q34 145 34 153 V161" class="pipe"/>
   <path d="M45 140 v11 M51 139 v12" stroke="#526176" stroke-width="2"/>
@@ -48,6 +52,10 @@
   <rect x="65" y="75" width="260" height="102" rx="22" class="body"/>
   <path d="M68 119 H322 V152 Q322 174 303 174 H87 Q68 174 68 153 Z" class="water"/>
   <path d="M69 119 Q104 116 137 119 T205 119 T273 119 T322 119" fill="none" stroke="#70BDA0" stroke-width="1.6"/>
+  <path d="M77 81 Q65 90 65 126 Q65 162 77 171" fill="none" stroke="#8799AD" stroke-width="2.2"/>
+  <path d="M312 81 Q325 91 325 126 Q325 160 312 171" fill="none" stroke="#8799AD" stroke-width="1.5"/>
+  <circle cx="79" cy="93" r="2" fill="#526176"/><circle cx="79" cy="165" r="2" fill="#526176"/>
+  <path d="M154 75 v-6 q0-4 5-4 h32 q5 0 5 4 v6" fill="url(#metal)" stroke="#526176" stroke-width="1.6"/>
   <path d="M312 74 v-21 q0-7 7-7 h13 v29" fill="url(#metal)" stroke="#526176" stroke-width="2.2"/>
   <path d="M64 145 H42 Q34 145 34 153 V161" class="pipe"/>
   <path d="M45 140 v11 M51 139 v12" stroke="#526176" stroke-width="2"/>
@@ -57,7 +65,7 @@
   <g class="gas"><rect x="114" y="126" width="175" height="9" rx="4"/><rect x="114" y="142" width="175" height="9" rx="4"/><rect x="114" y="158" width="175" height="9" rx="4"/></g>
   <path d="M291 131 H307" stroke="#A94E32" stroke-width="2"/>
   <text x="118" y="108" class="label waterText">물</text>
-  <text x="142" y="187" class="label gasText">연관(가스)</text>
+  <text x="142" y="214" class="label gasText">연관(가스)</text>
 
 </g>
 <g transform="translate(0 440)">
@@ -68,6 +76,10 @@
   <rect x="65" y="75" width="260" height="102" rx="22" class="body"/>
   <path d="M68 119 H322 V152 Q322 174 303 174 H87 Q68 174 68 153 Z" class="water"/>
   <path d="M69 119 Q104 116 137 119 T205 119 T273 119 T322 119" fill="none" stroke="#70BDA0" stroke-width="1.6"/>
+  <path d="M77 81 Q65 90 65 126 Q65 162 77 171" fill="none" stroke="#8799AD" stroke-width="2.2"/>
+  <path d="M312 81 Q325 91 325 126 Q325 160 312 171" fill="none" stroke="#8799AD" stroke-width="1.5"/>
+  <circle cx="79" cy="93" r="2" fill="#526176"/><circle cx="79" cy="165" r="2" fill="#526176"/>
+  <path d="M154 75 v-6 q0-4 5-4 h32 q5 0 5 4 v6" fill="url(#metal)" stroke="#526176" stroke-width="1.6"/>
   <path d="M312 74 v-21 q0-7 7-7 h13 v29" fill="url(#metal)" stroke="#526176" stroke-width="2.2"/>
   <path d="M64 145 H42 Q34 145 34 153 V161" class="pipe"/>
   <path d="M45 140 v11 M51 139 v12" stroke="#526176" stroke-width="2"/>
