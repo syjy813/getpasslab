@@ -26,6 +26,19 @@ status: 완료
 | 관류식 | 급수가 긴 관로를 한 번 통과 | 드럼이 없고 보유수량이 작아 급수·연소 제어가 중요함 |
 | 주철제 | 주철 섹션을 조립 | 운반·증설이 쉽지만 충격과 급격한 온도변화에 주의함 |
 
+<div class="learning-visuals">
+<figure>
+<figcaption><strong>원통형 보일러의 노통·연관</strong><span>큰 가스 통로와 작은 가스관의 조합</span></figcaption>
+<img src="/images/energy-management/boiler-shell-types-v1.svg" width="390" height="520" loading="lazy" decoding="async" alt="노통식은 물로 둘러싸인 큰 노통, 연관식은 여러 작은 연관, 노통연관식은 큰 노통과 작은 연관을 함께 가진 대표 단면 비교" />
+</figure>
+<figure>
+<figcaption><strong>수관식 보일러의 순환 구분</strong><span>자연·강제순환의 회로와 관류식의 한 번 통과</span></figcaption>
+<img src="/images/energy-management/boiler-water-tube-types-v1.svg" width="390" height="520" loading="lazy" decoding="async" alt="자연순환식은 밀도차로 드럼과 헤더 사이를 순환하고, 강제순환식에는 순환펌프가 있으며, 관류식은 드럼 없이 급수가 관을 한 번 지나 증기로 나감" />
+</figure>
+</div>
+
+두 그림은 대표 구조의 학습용 재구성임 · 주철제는 재료·조립 방식, 내분식/외분식은 연소실 위치에 따른 별도 분류임
+
 노통연관식·직립식·횡형식·다관식은 노통과 연관의 배치, 동체 방향과 가스 통로를 함께 확인함 · 내분식과 외분식은 연소실이 보일러 본체 내부에 있는지 외부에 있는지로 나눔
 
 ## 주요 구조와 순환
