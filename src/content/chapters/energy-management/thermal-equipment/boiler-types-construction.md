@@ -29,7 +29,7 @@ status: 완료
 <div class="learning-visuals">
 <figure>
 <figcaption><strong>원통형 보일러의 내부 구조</strong><span>노통·연관이 동체 속 물과 만나는 방식</span></figcaption>
-<img src="/images/energy-management/boiler-shell-types-v2.svg" width="390" height="660" loading="lazy" decoding="async" alt="동체를 잘라 본 세 구조. 노통식은 물 속의 큰 가스 통로, 연관식은 물 속의 여러 작은 가스관, 노통연관식은 두 통로를 모두 가진다. 버너와 물 공간이 구분되어 있다." />
+<img src="/images/energy-management/boiler-shell-types-v2.svg" width="390" height="675" loading="lazy" decoding="async" alt="동체를 잘라 본 세 구조. 노통식은 물 속의 큰 가스 통로, 연관식은 물 속의 여러 작은 가스관, 노통연관식은 두 통로를 모두 가진다. 버너와 물 공간이 구분되어 있다." />
 </figure>
 <figure>
 <figcaption><strong>수관식 보일러의 물길</strong><span>드럼·수관·펌프와 관류식의 한 번 통과</span></figcaption>
