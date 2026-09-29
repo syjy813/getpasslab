@@ -10,7 +10,8 @@
     text{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#25334B}
     .type{font-size:21px;font-weight:700}
     .label{font-size:17px;font-weight:700}
-    .small{font-size:15px;font-weight:600}
+    .small{font-size:18px;font-weight:600}
+    .note{font-size:15px;font-weight:600}
     .waterText{fill:#15785C} .gasText{fill:#A94E32} .steamText{fill:#734BA6} .heatText{fill:#B45309}
     .body{fill:url(#metal);stroke:#526176;stroke-width:2.4}
     .water{fill:#DDF1E9}
