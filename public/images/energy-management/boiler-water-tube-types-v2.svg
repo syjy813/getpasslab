@@ -40,6 +40,8 @@
   <path d="M110 109 v22" class="pipeWater" marker-end="url(#water-arrow)"/>
   <text x="28" y="143" class="small waterText">밀도차</text>
   <text x="276" y="84" class="small">증기드럼</text>
+  <text x="273" y="144" class="small waterText">수관</text>
+  <text x="273" y="162" class="small waterText">(물·증기)</text>
   <text x="264" y="191" class="small">하부 헤더</text>
   <text x="133" y="231" class="small heatText">수관 밖 가열</text>
 </g>
@@ -62,6 +64,8 @@
   <circle cx="110" cy="139" r="15" fill="#fff" stroke="#526176" stroke-width="2.5"/>
     <path d="m102 135 8 12 8-12Z" fill="#15785C"/><text x="23" y="171" class="small waterText">순환펌프</text>
   <text x="276" y="84" class="small">증기드럼</text>
+  <text x="273" y="144" class="small waterText">수관</text>
+  <text x="273" y="162" class="small waterText">(물·증기)</text>
   <text x="264" y="191" class="small">하부 헤더</text>
   <text x="133" y="231" class="small heatText">수관 밖 가열</text>
 </g>
