@@ -26,14 +26,14 @@ status: 완료
 | 관류식 | 급수가 긴 관로를 한 번 통과 | 드럼이 없고 보유수량이 작아 급수·연소 제어가 중요함 |
 | 주철제 | 주철 섹션을 조립 | 운반·증설이 쉽지만 충격과 급격한 온도변화에 주의함 |
 
-<div class="learning-visuals">
+<div class="learning-visuals learning-visuals--boiler-types">
 <figure>
 <figcaption><strong>원통형 보일러의 내부 구조</strong><span>노통·연관이 동체 속 물과 만나는 방식</span></figcaption>
-<img src="/images/energy-management/boiler-shell-types-v2.svg" width="390" height="675" loading="lazy" decoding="async" alt="동체를 잘라 본 세 구조. 노통식은 물 속의 큰 가스 통로, 연관식은 물 속의 여러 작은 가스관, 노통연관식은 두 통로를 모두 가진다. 버너와 물 공간이 구분되어 있다." />
+<img src="/images/energy-management/boiler-shell-types-v3.svg" width="390" height="675" loading="lazy" decoding="async" alt="동체를 잘라 본 세 구조. 노통식은 물 속의 큰 가스 통로, 연관식은 물 속의 여러 작은 가스관, 노통연관식은 두 통로를 모두 가진다. 버너와 물 공간이 구분되어 있다." />
 </figure>
 <figure>
 <figcaption><strong>수관식 보일러의 물길</strong><span>드럼·수관·펌프와 관류식의 한 번 통과</span></figcaption>
-<img src="/images/energy-management/boiler-water-tube-types-v2.svg" width="390" height="772" loading="lazy" decoding="async" alt="자연순환식은 증기드럼에서 내려온 물이 하부 헤더와 가열된 수관을 거쳐 올라간다. 강제순환식은 강수관에 순환펌프가 있다. 관류식은 드럼 없이 급수가 관을 한 번 지나 증기로 나간다." />
+<img src="/images/energy-management/boiler-water-tube-types-v3.svg" width="390" height="772" loading="lazy" decoding="async" alt="자연순환식은 증기드럼에서 내려온 물이 하부 헤더와 가열된 수관을 거쳐 올라간다. 강제순환식은 강수관에 순환펌프가 있다. 관류식은 드럼 없이 급수가 관을 한 번 지나 증기로 나간다." />
 </figure>
 </div>
 
