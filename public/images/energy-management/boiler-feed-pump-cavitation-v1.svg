@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="380" viewBox="0 0 390 380" role="img" aria-labelledby="title description">
+  <title id="title">급수펌프 안의 캐비테이션 발생과 붕괴</title>
+  <desc id="description">왼쪽 흡입관의 물이 원심펌프 임펠러 입구로 들어온다. 국부 압력이 낮아진 입구에서 증기 기포가 생기고, 임펠러 안쪽 흐름을 따라 압력이 회복되는 곳에서 기포가 붕괴한다. 오른쪽 위는 물의 토출관이다. 실제 펌프 단면이 아닌 학습용 재구성이다.</desc>
+  <defs>
+    <marker id="flow-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M1 1 L9 5 L1 9 Z" fill="#FFFFFF" stroke="#15785C" stroke-width="1.15" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      text{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;fill:#25334B}
+      .part{font-size:21px;font-weight:700}
+      .detail{font-size:20px;font-weight:600}
+      .water{fill:#15785C}
+      .warning{fill:#855400}
+      .leader{fill:none;stroke:#526176;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+      .flow{fill:none;stroke:#15785C;stroke-width:3.5;stroke-linecap:round;marker-end:url(#flow-head)}
+    </style>
+  </defs>
+  <rect width="390" height="380" fill="#FFFFFF"/>
+
+  <!-- The outlet leaves the volute above the wheel; the inlet reaches the eye from the left. -->
+  <path d="M247 175 V63 H274 V175" fill="#E1F2EA" stroke="#526176" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="195" cy="194" r="84" fill="#F7F9FC" stroke="#526176" stroke-width="3"/>
+  <path d="M25 179 H136 V209 H25 Z" fill="#E1F2EA" stroke="#526176" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="195" cy="194" r="50" fill="#E1F2EA" stroke="#526176" stroke-width="3"/>
+  <path d="M195 187 Q211 164 226 158 M202 199 Q227 203 238 219 M188 199 Q182 222 162 232 M188 188 Q173 174 166 158" fill="none" stroke="#526176" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="195" cy="194" r="8" fill="#FFFFFF" stroke="#526176" stroke-width="3"/>
+
+  <path d="M62 194 H111" class="flow"/>
+  <path d="M260 118 V76" class="flow"/>
+  <text x="28" y="160" class="part">흡입관</text>
+  <text x="287" y="89" class="part">토출관</text>
+  <text x="287" y="117" class="detail water">물</text>
+
+  <!-- Bubbles are shown near the eye, with collapse after pressure recovery. -->
+  <circle cx="149" cy="190" r="6" fill="#FFFFFF" stroke="#15785C" stroke-width="2.5"/>
+  <circle cx="162" cy="180" r="5" fill="#FFFFFF" stroke="#15785C" stroke-width="2.5"/>
+  <circle cx="169" cy="201" r="4" fill="#FFFFFF" stroke="#15785C" stroke-width="2"/>
+  <path d="M223 173 l3 -7 3 6 7 -3 -2 7 7 3 -7 3 2 7 -7 -3 -3 6 -3 -7 -7 1 4 -7 -5 -5 7 -1 Z" fill="#FFF4E5" stroke="#855400" stroke-width="2" stroke-linejoin="round"/>
+
+  <path d="M150 211 L104 289 H35" class="leader"/>
+  <text x="28" y="320" class="part">입구 저압</text>
+  <text x="28" y="349" class="detail water">기포 생성</text>
+  <path d="M234 192 L282 289 H362" class="leader"/>
+  <text x="223" y="320" class="part">압력 회복</text>
+  <text x="223" y="349" class="detail warning">기포 붕괴</text>
+</svg>
