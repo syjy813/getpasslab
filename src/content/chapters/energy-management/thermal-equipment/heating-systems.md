@@ -42,14 +42,20 @@ status: 완료
 
 개방식 팽창탱크는 대기와 통하고 계통의 높은 위치에 설치함 · 물이 넘칠 때는 넘침관으로 별도 배출함 · 격막식 밀폐형은 공기실과 난방수를 격막으로 나누어 팽창한 물을 받아들이며, 계통의 안전밸브·압력계와 함께 관리함
 
-<div class="learning-visuals learning-visuals--single">
+<div class="learning-visuals learning-visuals--heating-expansion">
 <figure>
-<figcaption><strong>팽창탱크의 구조 비교</strong><span>개방형의 대기·넘침관과 격막식 밀폐형의 공기실 구별</span></figcaption>
-<img src="/images/energy-management/heating-expansion-tanks-v1.svg" width="390" height="610" loading="lazy" decoding="async" alt="위 개방형: 탱크 윗부분이 대기에 열려 있고 넘침관은 난방 계통과 분리되어 밖으로 배출됨. 아래 격막식 밀폐형: 공기실과 난방수가 격막으로 나뉘고 난방 계통 연결관은 물 쪽에 연결됨" />
+<figcaption><strong>개방형 팽창탱크</strong><span>윗면은 대기에 열리고, 넘침관은 별도로 배출</span></figcaption>
+<img src="/images/energy-management/heating-expansion-open-illustrated-v2.webp" width="1145" height="1374" loading="lazy" decoding="async" alt="절개한 개방형 팽창탱크. 열린 윗면은 대기와 통하고, 오른쪽 위의 넘침관은 수위가 높아질 때 별도로 배출한다. 아래 팽창관은 난방 계통에 연결된다" />
+<p class="heating-expansion-key"><strong>윗면</strong> 대기와 통함 <span aria-hidden="true">·</span> <strong>옆</strong> 넘침관 별도 배출 <span aria-hidden="true">·</span> <strong>아래</strong> 팽창관</p>
+</figure>
+<figure>
+<figcaption><strong>격막식 밀폐형 팽창탱크</strong><span>공기실과 난방수를 격막으로 분리</span></figcaption>
+<img src="/images/energy-management/heating-expansion-diaphragm-illustrated-v2.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="절개한 밀폐형 팽창탱크. 위쪽 공기실과 아래쪽 난방수가 휘어지는 검은 격막으로 완전히 나뉘며, 아래 물 연결관만 난방 계통으로 이어진다. 위의 작은 부품은 공기 충전용 밸브다" />
+<p class="heating-expansion-key"><strong>위</strong> 공기실 <span aria-hidden="true">·</span> <strong>경계</strong> 격막 <span aria-hidden="true">·</span> <strong>아래</strong> 난방수·계통 연결</p>
 </figure>
 </div>
 
-그림은 학습용 재구성임 · 팽창탱크는 순환력을 만드는 펌프가 아니라 가열로 늘어난 물의 체적을 받아들이는 장치임
+그림은 학습용 재구성임 · 넘침관은 평상시 계속 물을 내보내는 관이 아니라 수위가 높아질 때의 별도 배출관임 · 팽창탱크는 순환력을 만드는 펌프가 아니라 가열로 늘어난 물의 체적을 받아들이는 장치임
 
 순환펌프 위치는 흡입압력, 캐비테이션, 팽창탱크 접속점과 계통 압력분포를 함께 고려함
 
