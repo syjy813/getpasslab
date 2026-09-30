@@ -36,6 +36,33 @@ status: 완료
 
 팽창 루프, 벨로즈형 신축이음, 슬립형 신축이음 등으로 변위를 흡수함 · 고정점은 기준 위치를 잡고, 가이드와 행거는 배관이 의도한 방향으로 움직이게 함 · 신축이음만 설치하고 고정점·가이드를 잘못 배치하면 추력이 장비에 전달될 수 있음
 
+### 신축이음 형식 구별
+
+<div class="learning-visuals learning-visuals--pipe-expansion">
+<figure>
+<figcaption><strong>루프형</strong><span>관을 굽힌 여유 구간에서 신축을 흡수</span></figcaption>
+<img src="/images/energy-management/pipe-expansion-loop-illustrated-v1.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="루프형 신축이음의 학습용 외형 그림. 한 줄의 관이 엘보를 거쳐 위로 올라갔다 내려오는 여유 구간을 이룬다. 설치 방향과 치수는 나타내지 않았다" />
+<p class="pipe-expansion-key"><strong>구분 단서</strong> 관 자체의 굽은 루프</p>
+</figure>
+<figure>
+<figcaption><strong>슬리브형</strong><span>안쪽 관이 바깥 몸체 안에서 미끄러짐</span></figcaption>
+<img src="/images/energy-management/pipe-expansion-sleeve-illustrated-v1.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="슬리브형 신축이음의 학습용 부분 절개 그림. 같은 축의 안쪽 관이 원통형 외부 몸체로 들어가며 입구 둘레에 패킹 부위가 보인다. 실제 스트로크와 세부 밀봉 구조는 나타내지 않았다" />
+<p class="pipe-expansion-key"><strong>구분 단서</strong> 서로 미끄러지는 이중 관 + 패킹</p>
+</figure>
+<figure>
+<figcaption><strong>벨로즈형</strong><span>주름진 금속부가 늘고 줄며 변위 흡수</span></figcaption>
+<img src="/images/energy-management/pipe-expansion-bellows-illustrated-v1.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="벨로즈형 신축이음의 학습용 외형 그림. 좌우 직관 사이에 연결된 여러 겹의 금속 주름이 보인다. 정확한 변위량과 앵커 배치는 나타내지 않았다" />
+<p class="pipe-expansion-key"><strong>구분 단서</strong> 주름진 금속 벨로즈</p>
+</figure>
+<figure>
+<figcaption><strong>스위블형</strong><span>엘보 사이의 회전 이음으로 신축 흡수</span></figcaption>
+<img src="/images/energy-management/pipe-expansion-swivel-illustrated-v1.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="스위블형 신축이음의 학습용 외형 그림. 두 개의 엘보와 그 옆의 회전 연결부로 굽어진 한 줄의 관을 이룬다. 회전 범위와 세부 내부 구조는 나타내지 않았다" />
+<p class="pipe-expansion-key"><strong>구분 단서</strong> 엘보 2개 + 회전 연결부</p>
+</figure>
+</div>
+
+그림은 형식 판별에 필요한 외형을 강조한 학습용 재구성임 · 설치 방향, 압력 조건, 실제 이동 범위와 고정점·가이드 배치를 지정한 시공도는 아님
+
 ## 밸브와 밀봉
 
 | 장치 | 주 기능 |
