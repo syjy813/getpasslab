@@ -30,6 +30,13 @@ article .learning-visuals--steam-traps figcaption span{font-size:14px;line-heigh
 article .learning-visuals--steam-traps img{max-width:390px;margin-inline:auto}
 article .learning-visuals--steam-traps .steam-trap-key{margin:auto 0 0;padding:var(--space-3) var(--space-4);border-top:1px solid var(--gray-200);font-size:14px;line-height:1.55;color:var(--gray-700)}
 article .learning-visuals--steam-traps .steam-trap-key strong{color:var(--gray-900)}
+article .learning-visuals--pipe-expansion figure{display:flex;flex-direction:column}
+article .learning-visuals--pipe-expansion figcaption{background:var(--gray-50)}
+article .learning-visuals--pipe-expansion figcaption strong{font-size:18px;line-height:1.35}
+article .learning-visuals--pipe-expansion figcaption span{font-size:14px;line-height:1.45}
+article .learning-visuals--pipe-expansion img{max-width:390px;margin-inline:auto}
+article .learning-visuals--pipe-expansion .pipe-expansion-key{margin:auto 0 0;padding:var(--space-3) var(--space-4);border-top:1px solid var(--gray-200);font-size:14px;line-height:1.55;color:var(--gray-700)}
+article .learning-visuals--pipe-expansion .pipe-expansion-key strong{color:var(--gray-900)}
 article .learning-visuals--boiler-types figcaption{gap:var(--space-1);padding:var(--space-4) var(--space-4);background:var(--gray-50)}
 article .learning-visuals--boiler-types figcaption strong{font-size:19px;line-height:1.35;color:var(--gray-900)}
 article .learning-visuals--boiler-types figcaption span{font-size:14px;line-height:1.45}
