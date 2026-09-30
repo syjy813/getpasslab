@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="335" viewBox="0 0 390 335" role="img" aria-labelledby="t d">
+<title id="t">건물 외피와 외기에서 생기는 난방부하</title><desc id="d">지붕·창·외벽으로 열이 빠져나가며, 외기는 틈새를 통해 들어와 실내온도까지 가열되어야 한다. 학습용 재구성.</desc>
+<defs>
+<linearGradient id="wall" x2="1" y2="1"><stop stop-color="#F9F3E8"/><stop offset="1" stop-color="#E8DBC9"/></linearGradient>
+<linearGradient id="metal" x2="1" y2="0"><stop stop-color="#C7D1DC"/><stop offset=".43" stop-color="#F8FAFC"/><stop offset="1" stop-color="#A5B5C3"/></linearGradient>
+<filter id="shadow" x="-20%" y="-30%" width="150%" height="160%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#25334B" flood-opacity=".13"/></filter>
+</defs>
+<rect width="390" height="335" fill="#F7F9FC"/><rect x="12" y="12" width="366" height="311" rx="18" fill="#FFFFFF" stroke="#DEE5ED"/>
+<path d="M58 93 L193 40 L326 93 V264 H58Z" fill="#FFF9EF" stroke="#526176" stroke-width="7" stroke-linejoin="round"/>
+<path d="M58 93 L193 40 L326 93" fill="none" stroke="#A9B7C6" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="95" y="125" width="77" height="92" rx="3" fill="#E1F2F9" stroke="#526176" stroke-width="5"/>
+<path d="M134 127 V216 M97 170 H170" stroke="#849BAC" stroke-width="3"/>
+<path d="M204 264 V177 H281 V264" fill="#EADBC4" stroke="#526176" stroke-width="5"/>
+<path d="M228 216 a5 5 0 1 0 0 1" fill="#526176"/>
+<path d="M196 45 V19 M196 18 l-7 10 M196 18 l7 10" stroke="#B45309" fill="none" stroke-width="4" stroke-linecap="round"/>
+<path d="M145 165 H47 M47 165 l10 -7 M47 165 l10 7" stroke="#B45309" fill="none" stroke-width="4" stroke-linecap="round"/>
+<rect x="320" y="139" width="13" height="31" fill="#FFFFFF"/>
+<path d="M333 154 H278 M278 154 l9 -7 M278 154 l9 7" stroke="#1769AA" fill="none" stroke-width="4" stroke-linecap="round"/>
+<path d="M326 221 H354 M354 221 l-9 -7 M354 221 l-9 7" stroke="#B45309" fill="none" stroke-width="4" stroke-linecap="round"/>
+<rect x="89" y="231" width="81" height="17" rx="8" fill="#E7ECEF"/>
+<text x="116" y="287" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#B45309">관류열손실</text><text x="293" y="287" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#1769AA">환기·틈새</text><text x="193" y="315" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#25334B">실내 목표온도 유지에 필요한 열</text>
+</svg>
