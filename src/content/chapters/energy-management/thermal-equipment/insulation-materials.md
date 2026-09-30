@@ -32,14 +32,26 @@ status: 완료
 
 ### 재료 분류와 식별 단서
 
-| 분류 | 기출에 등장하는 대표 재료 | 판별 단서 |
-|---|---|---|
-| 유기질 | 코르크·탄화코르크, 발포 폴리스티렌, 기포성 수지 | 가볍고 다공질이며 비교적 낮은 온도 범위에서 사용 |
-| 무기질 섬유 | 글라스울, 암면 | 유리 또는 광물을 섬유상으로 만든 재료 |
-| 무기질 다공체 | 규산칼슘, 펄라이트, 규조토, 내화단열벽돌 | 광물질 원료와 내부 기공으로 열전도를 줄임 |
-| 금속질 | 금속박·다층 반사재 | 금속 표면의 복사열 반사 특성을 이용 |
+<div class="learning-visuals learning-visuals--insulation">
+  <figure>
+    <figcaption><strong>유기질</strong><span>코르크·발포 폴리스티렌·기포성 수지</span></figcaption>
+    <img src="/images/energy-management/insulation-organic-v1.svg" alt="코르크 단면과 발포 폴리스티렌 기포의 형태 예시. 둘 다 유기질 보온재" width="390" height="250" loading="lazy" />
+  </figure>
+  <figure>
+    <figcaption><strong>무기질 섬유</strong><span>유리·광물을 가는 섬유로 만든 재료</span></figcaption>
+    <img src="/images/energy-management/insulation-mineral-fibre-v1.svg" alt="글라스울과 암면을 섬유상 단면으로 그린 예시" width="390" height="250" loading="lazy" />
+  </figure>
+  <figure>
+    <figcaption><strong>무기질 다공체</strong><span>광물질 원료의 블록·입자 내부에 기공</span></figcaption>
+    <img src="/images/energy-management/insulation-mineral-porous-v1.svg" alt="규산칼슘 성형 블록과 펄라이트 입자 내부 기공의 형태 예시" width="390" height="250" loading="lazy" />
+  </figure>
+  <figure>
+    <figcaption><strong>금속질 반사재</strong><span>금속박은 공기층을 둔 면의 복사열을 줄임</span></figcaption>
+    <img src="/images/energy-management/insulation-reflective-v1.svg" alt="열원과 떨어진 금속박 및 공기층. 복사열 일부가 반사되는 개념" width="390" height="250" loading="lazy" />
+  </figure>
+</div>
 
-재료 이름을 외울 때는 `유기질/무기질`만 구분하지 말고 **재료의 형태**, **습기에 대한 조건**, **적용 온도 범위**를 함께 연결함 · 과거 기출에 등장하는 석면계 재료는 당시 문제의 분류를 이해하기 위한 항목이며 현재 시공 재료로 권장하는 의미가 아님
+학습용 형태 재구성임 · 실제 제품의 색·형태만으로 재료나 허용온도를 판별하지 않음 · 규조토·내화단열벽돌도 무기질 다공체에, 금속박·다층 반사재는 금속질 반사재에 해당함 · 과거 기출의 석면계 재료는 당시 분류를 이해하기 위한 항목이며 현재 시공을 권장하는 의미가 아님
 
 ## 열전도와 두께
 
@@ -53,7 +65,14 @@ $$
 
 여기서 `k`는 열전도율, `A`는 전열면적, `L`은 두께임 · 단위를 그대로 사용할 때 `k`와 면적·두께·시간의 단위가 서로 맞는지 먼저 확인함
 
-2014년 1월 시험 1번은 두께 13 cm, 면적 10 m², 양쪽 온도 200℃와 20℃, 열전도율 `0.02 kcal/(m·h·℃)`를 제시함 · 두께를 `0.13 m`로 바꾸면
+2014년 1월 시험 1번의 값은 아래처럼 평판에 대응함 · 두께 13 cm를 `0.13 m`로 바꾸면
+
+<div class="learning-visuals learning-visuals--single learning-visuals--insulation">
+  <figure>
+    <figcaption><strong>평판 한 겹을 지나는 열</strong><span>면적·온도차·두께를 식의 위치에 맞춰 읽기</span></figcaption>
+    <img src="/images/energy-management/insulation-flat-conduction-v1.svg" alt="200℃에서 20℃로 향하는 평판 열전도. A는 10 m², L은 13 cm를 0.13 m로 환산, k는 0.02 kcal/(m·h·℃), 결과는 약 276.9 kcal/h" width="390" height="360" loading="lazy" />
+  </figure>
+</div>
 
 $$
 Q=\frac{0.02\times10\times(200-20)}{0.13}
@@ -83,9 +102,6 @@ $$
 | 문제에서 보이는 표현 | 정답으로 연결 |
 |---|---|
 | 좋은 보온재 | **열전도율이 낮음** |
-| 유기질 | **코르크·발포 폴리스티렌·기포성 수지** |
-| 무기질 섬유 | **글라스울·암면** |
-| 무기질 다공체 | **규산칼슘·펄라이트·규조토** |
 | 현무암·안산암 등을 용융해 섬유화 | **암면** |
 | 500℃ 이하 파이프·탱크·노벽 | **규조토** |
 | 평판 전도열량 | **`Q = kA(t₁-t₂) ÷ L`** |
