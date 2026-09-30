@@ -25,6 +25,33 @@ status: 완료
 | 온도조절식 | 증기와 응축수의 온도차 | 바이메탈식, 벨로즈식 |
 | 열역학식 | 재증발증기의 속도·압력 변화 | 디스크식 |
 
+### 작동부 모양으로 구별
+
+<div class="learning-visuals learning-visuals--steam-traps">
+<figure>
+<figcaption><strong>플로트식 · 기계식</strong><span>응축수가 차면 둥근 부자가 올라감</span></figcaption>
+<img src="/images/energy-management/steam-trap-float-illustrated-v1.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="플로트식 증기트랩의 학습용 절개 그림. 아래 응축수에 뜬 둥근 금속 부자가 오른쪽 밸브와 레버로 연결되어 있다. 전체 유로와 정확한 개폐 상태는 표시하지 않았다" />
+<p class="steam-trap-key"><strong>구분 단서</strong> 둥근 부자 + 레버</p>
+</figure>
+<figure>
+<figcaption><strong>역버킷식 · 기계식</strong><span>증기가 버킷을 띄우면 밸브가 닫힘</span></figcaption>
+<img src="/images/energy-management/steam-trap-bucket-illustrated-v1.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="역버킷식 증기트랩의 학습용 절개 그림. 아래가 열린 거꾸로 된 금속 버킷이 응축수 속에 놓이고, 버킷 윗면의 작은 통기 구멍과 밸브 연결 레버가 보인다. 전체 유로는 표시하지 않았다" />
+<p class="steam-trap-key"><strong>구분 단서</strong> 거꾸로 된 버킷 + 레버</p>
+</figure>
+<figure>
+<figcaption><strong>바이메탈식 · 온도조절식</strong><span>온도에 따라 금속편이 휘어 밸브를 움직임</span></figcaption>
+<img src="/images/energy-management/steam-trap-bimetal-illustrated-v1.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="바이메탈식 증기트랩의 학습용 절개 그림. 중앙에 색이 다른 금속편 여러 장이 겹쳐 있고 그 아래 밸브 축이 있다. 특정 온도에서의 개폐 상태와 전체 유로는 표시하지 않았다" />
+<p class="steam-trap-key"><strong>구분 단서</strong> 휘어지는 이종 금속편</p>
+</figure>
+<figure>
+<figcaption><strong>디스크식 · 열역학식</strong><span>재증발증기의 흐름·압력 변화로 원판이 개폐</span></figcaption>
+<img src="/images/energy-management/steam-trap-disc-illustrated-v1.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="디스크식 증기트랩의 학습용 절개 그림. 윗덮개 안쪽의 평평한 원판 하나가 아래 환형 밸브 시트와 떨어져 있으며 중심축에 고정되지 않았다. 전체 유로와 순간 작동 상태는 표시하지 않았다" />
+<p class="steam-trap-key"><strong>구분 단서</strong> 윗덮개 안 자유 원판 1개</p>
+</figure>
+</div>
+
+그림은 형식 판별에 필요한 작동부를 강조한 학습용 재구성임 · 제조사별 배관 연결과 순간 개폐 상태를 재현한 완결된 유로도는 아님
+
 형식별로 공기배출 능력, 부하 변화 대응, 내수격성, 설치 방향이 다르므로 작동원리와 사용조건을 연결해 판단함
 
 ## 설치와 점검
