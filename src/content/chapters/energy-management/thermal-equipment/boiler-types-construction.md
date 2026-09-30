@@ -17,27 +17,48 @@ status: 완료
 
 ## 형식 판별의 기준
 
-보일러 형식은 이름을 외우기보다 물·증기와 연소가스가 어디로 흐르는지, 드럼과 화실이 어떻게 배치되는지로 판별함
-
-| 형식 | 유체 흐름 | 대표 특징 |
-|---|---|---|
-| 연관식 | 연소가스가 관 안, 물이 관 밖 | 보유수량이 비교적 많고 부하응답이 완만함 |
-| 수관식 | 물과 증기가 관 안 | 고압·대용량에 유리하고 기동이 빠르나 수질관리가 중요함 |
-| 관류식 | 급수가 긴 관로를 한 번 통과 | 드럼이 없고 보유수량이 작아 급수·연소 제어가 중요함 |
-| 주철제 | 주철 섹션을 조립 | 운반·증설이 쉽지만 충격과 급격한 온도변화에 주의함 |
+보일러 형식은 **관 안에 흐르는 것**과 **드럼·화실의 배치**로 판별함 · 원통형은 노통·연관 안에 연소가스가, 수관식은 수관 안에 물·증기가 흐름
 
 <div class="learning-visuals learning-visuals--boiler-types">
 <figure>
-<figcaption><strong>원통형 보일러의 내부 구조</strong><span>노통·연관이 동체 속 물과 만나는 방식</span></figcaption>
-<img src="/images/energy-management/boiler-shell-types-v3.svg" width="390" height="675" loading="lazy" decoding="async" alt="동체를 잘라 본 세 구조. 노통식은 물 속의 큰 가스 통로, 연관식은 물 속의 여러 작은 가스관, 노통연관식은 두 통로를 모두 가진다. 버너와 물 공간이 구분되어 있다." />
+<figcaption><strong>원통형 보일러의 내부 구조</strong><span>연소가스는 관 안, 물은 관 밖</span></figcaption>
+<div class="boiler-type-item">
+<strong class="boiler-type-name">노통식</strong>
+<img src="/images/energy-management/boiler-shell-flue-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="동체를 절개한 노통식 보일러. 버너 앞의 큰 노통 하나에 연소가스가 있고, 그 둘레의 동체 내부에 물이 있다" />
+<p class="boiler-type-point">가운데 큰 노통(가스) · 바깥 파란 영역은 물</p>
+</div>
+<div class="boiler-type-item">
+<strong class="boiler-type-name">연관식</strong>
+<img src="/images/energy-management/boiler-shell-fire-tubes-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="동체를 절개한 연관식 보일러. 여러 가는 연관 안에 연소가스가 있고, 연관 바깥의 동체 내부에 물이 있다" />
+<p class="boiler-type-point">가운데 여러 연관(가스) · 바깥 파란 영역은 물</p>
+</div>
+<div class="boiler-type-item">
+<strong class="boiler-type-name">노통연관식</strong>
+<img src="/images/energy-management/boiler-shell-combined-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="동체를 절개한 노통연관식 보일러. 큰 노통 하나와 여러 가는 연관이 같은 물 공간에 들어 있다" />
+<p class="boiler-type-point">아래 큰 노통 + 위 여러 연관 · 한 동체 안에 결합</p>
+</div>
 </figure>
 <figure>
-<figcaption><strong>수관식 보일러의 물길</strong><span>드럼·수관·펌프와 관류식의 한 번 통과</span></figcaption>
-<img src="/images/energy-management/boiler-water-tube-types-v3.svg" width="390" height="772" loading="lazy" decoding="async" alt="자연순환식은 증기드럼에서 내려온 물이 하부 헤더와 가열된 수관을 거쳐 올라간다. 강제순환식은 강수관에 순환펌프가 있다. 관류식은 드럼 없이 급수가 관을 한 번 지나 증기로 나간다." />
+<figcaption><strong>수관식 보일러의 물길</strong><span>물·증기는 관 안, 열은 관 밖</span></figcaption>
+<div class="boiler-type-item">
+<strong class="boiler-type-name">자연순환식</strong>
+<img src="/images/energy-management/boiler-water-natural-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="상부 증기드럼, 외부 강수관, 하부 헤더, 가열된 수관을 연결한 자연순환식 수관 보일러 단면. 펌프는 없다" />
+<p class="boiler-type-point">왼쪽 강수관(물) ↓ → 아래 헤더 → 가열 수관 ↑</p>
+</div>
+<div class="boiler-type-item">
+<strong class="boiler-type-name">강제순환식</strong>
+<img src="/images/energy-management/boiler-water-forced-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="자연순환식과 같은 드럼·헤더·수관에 더해 외부 물 순환 배관에 펌프가 설치된 강제순환식 보일러 단면" />
+<p class="boiler-type-point">왼쪽 강수관 ↓ → 순환펌프 → 아래 헤더 → 수관 ↑</p>
+</div>
+<div class="boiler-type-item">
+<strong class="boiler-type-name">관류식</strong>
+<img src="/images/energy-management/boiler-water-once-through-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="드럼 없이 급수가 하나의 연속된 가열관을 통과해 증기 출구로 나가는 관류식 보일러 단면" />
+<p class="boiler-type-point">왼쪽 아래 급수 → 굽은 가열관 → 오른쪽 위 증기 · 드럼 없음</p>
+</div>
 </figure>
 </div>
 
-두 그림은 사용자 원본의 구조 구분을 바탕으로 한 학습용 재구성임 · 실제 배관과 연소가스의 왕복 경로는 기종에 따라 다름 · 주철제는 재료·조립 방식, 내분식/외분식은 연소실 위치에 따른 별도 분류임
+그림은 구조 차이를 강조한 학습용 재구성임 · 실제 배관과 연소가스의 왕복 경로는 기종에 따라 다름 · 주철제는 재료·조립 방식, 내분식/외분식은 연소실 위치에 따른 별도 분류임
 
 노통연관식·직립식·횡형식·다관식은 노통과 연관의 배치, 동체 방향과 가스 통로를 함께 확인함 · 내분식과 외분식은 연소실이 보일러 본체 내부에 있는지 외부에 있는지로 나눔
 
