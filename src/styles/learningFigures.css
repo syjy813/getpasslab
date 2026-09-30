@@ -23,6 +23,13 @@ article .learning-visuals--heating-expansion figcaption span{font-size:14px;line
 article .learning-visuals--heating-expansion img{max-width:390px;max-height:480px;width:100%;height:auto;object-fit:contain;margin-inline:auto}
 article .learning-visuals--heating-expansion .heating-expansion-key{margin:auto 0 0;padding:var(--space-3) var(--space-4);border-top:1px solid var(--gray-200);font-size:14px;line-height:1.7;color:var(--gray-700)}
 article .learning-visuals--heating-expansion .heating-expansion-key strong{color:var(--gray-900)}
+article .learning-visuals--steam-traps figure{display:flex;flex-direction:column}
+article .learning-visuals--steam-traps figcaption{background:var(--gray-50)}
+article .learning-visuals--steam-traps figcaption strong{font-size:18px;line-height:1.35}
+article .learning-visuals--steam-traps figcaption span{font-size:14px;line-height:1.45}
+article .learning-visuals--steam-traps img{max-width:390px;margin-inline:auto}
+article .learning-visuals--steam-traps .steam-trap-key{margin:auto 0 0;padding:var(--space-3) var(--space-4);border-top:1px solid var(--gray-200);font-size:14px;line-height:1.55;color:var(--gray-700)}
+article .learning-visuals--steam-traps .steam-trap-key strong{color:var(--gray-900)}
 article .learning-visuals--boiler-types figcaption{gap:var(--space-1);padding:var(--space-4) var(--space-4);background:var(--gray-50)}
 article .learning-visuals--boiler-types figcaption strong{font-size:19px;line-height:1.35;color:var(--gray-900)}
 article .learning-visuals--boiler-types figcaption span{font-size:14px;line-height:1.45}
