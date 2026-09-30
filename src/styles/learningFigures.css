@@ -37,11 +37,6 @@ article .learning-visuals--pipe-expansion figcaption span{font-size:14px;line-he
 article .learning-visuals--pipe-expansion img{max-width:390px;margin-inline:auto}
 article .learning-visuals--pipe-expansion .pipe-expansion-key{margin:auto 0 0;padding:var(--space-3) var(--space-4);border-top:1px solid var(--gray-200);font-size:14px;line-height:1.55;color:var(--gray-700)}
 article .learning-visuals--pipe-expansion .pipe-expansion-key strong{color:var(--gray-900)}
-article .learning-visuals--insulation figure{display:flex;flex-direction:column}
-article .learning-visuals--insulation figcaption{background:var(--gray-50)}
-article .learning-visuals--insulation figcaption strong{font-size:18px;line-height:1.35}
-article .learning-visuals--insulation figcaption span{font-size:14px;line-height:1.45}
-article .learning-visuals--insulation img{max-width:390px;margin-inline:auto}
 article .learning-visuals--heating-load figcaption{background:var(--gray-50)}
 article .learning-visuals--heating-load figcaption strong{font-size:18px;line-height:1.35}
 article .learning-visuals--heating-load figcaption span{font-size:14px;line-height:1.45}
