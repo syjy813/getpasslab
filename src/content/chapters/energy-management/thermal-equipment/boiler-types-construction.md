@@ -24,17 +24,17 @@ status: 완료
 <figcaption><strong>원통형 보일러의 내부 구조</strong><span>연소가스는 관 안, 물은 관 밖</span></figcaption>
 <div class="boiler-type-item">
 <strong class="boiler-type-name">노통식</strong>
-<img src="/images/energy-management/boiler-shell-flue-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="동체를 절개한 노통식 보일러. 버너 앞의 큰 노통 하나에 연소가스가 있고, 그 둘레의 동체 내부에 물이 있다" />
+<img src="/images/energy-management/boiler-shell-flue-illustrated-v2.webp" width="1200" height="800" loading="lazy" decoding="async" alt="동체를 절개한 노통식 보일러의 구조 비교 그림. 버너 앞 큰 노통 안에 연소가스가 있고, 그 둘레 동체 내부에 물이 있다. 배기가스 배출관은 그리지 않았다" />
 <p class="boiler-type-point">가운데 큰 노통(가스) · 바깥 파란 영역은 물</p>
 </div>
 <div class="boiler-type-item">
 <strong class="boiler-type-name">연관식</strong>
-<img src="/images/energy-management/boiler-shell-fire-tubes-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="동체를 절개한 연관식 보일러. 여러 가는 연관 안에 연소가스가 있고, 연관 바깥의 동체 내부에 물이 있다" />
+<img src="/images/energy-management/boiler-shell-fire-tubes-illustrated-v2.webp" width="1200" height="800" loading="lazy" decoding="async" alt="동체를 절개한 연관식 보일러의 구조 비교 그림. 여러 가는 연관 안에 연소가스가 있고, 연관 바깥 동체 내부에 물이 있다. 배기가스 배출관은 그리지 않았다" />
 <p class="boiler-type-point">가운데 여러 연관(가스) · 바깥 파란 영역은 물</p>
 </div>
 <div class="boiler-type-item">
 <strong class="boiler-type-name">노통연관식</strong>
-<img src="/images/energy-management/boiler-shell-combined-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="동체를 절개한 노통연관식 보일러. 큰 노통 하나와 여러 가는 연관이 같은 물 공간에 들어 있다" />
+<img src="/images/energy-management/boiler-shell-combined-illustrated-v2.webp" width="1200" height="800" loading="lazy" decoding="async" alt="동체를 절개한 노통연관식 보일러의 구조 비교 그림. 아래 큰 노통과 위의 여러 연관이 같은 물 공간에 들어 있다. 가스 반전·배출관은 그리지 않았다" />
 <p class="boiler-type-point">아래 큰 노통 + 위 여러 연관 · 한 동체 안에 결합</p>
 </div>
 </figure>
@@ -42,23 +42,23 @@ status: 완료
 <figcaption><strong>수관식 보일러의 물길</strong><span>물·증기는 관 안, 열은 관 밖</span></figcaption>
 <div class="boiler-type-item">
 <strong class="boiler-type-name">자연순환식</strong>
-<img src="/images/energy-management/boiler-water-natural-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="상부 증기드럼, 외부 강수관, 하부 헤더, 가열된 수관을 연결한 자연순환식 수관 보일러 단면. 펌프는 없다" />
+<img src="/images/energy-management/boiler-water-natural-illustrated-v2.webp" width="1200" height="800" loading="lazy" decoding="async" alt="상부 증기드럼의 물이 왼쪽 강수관으로 내려와 하부 헤더에 모이고, 가열 수관 안에서 생긴 물·증기 혼합물이 다시 드럼으로 올라가는 자연순환식 단면. 펌프는 없다" />
 <p class="boiler-type-point">왼쪽 강수관(물) ↓ → 아래 헤더 → 가열 수관 ↑</p>
 </div>
 <div class="boiler-type-item">
 <strong class="boiler-type-name">강제순환식</strong>
-<img src="/images/energy-management/boiler-water-forced-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="자연순환식과 같은 드럼·헤더·수관에 더해 외부 물 순환 배관에 펌프가 설치된 강제순환식 보일러 단면" />
+<img src="/images/energy-management/boiler-water-forced-illustrated-v2.webp" width="1200" height="800" loading="lazy" decoding="async" alt="증기드럼에서 내려온 물이 왼쪽 순환펌프를 거쳐 하부 헤더로 가고 가열 수관을 통해 다시 드럼으로 올라가는 강제순환식 보일러 단면" />
 <p class="boiler-type-point">왼쪽 강수관 ↓ → 순환펌프 → 아래 헤더 → 수관 ↑</p>
 </div>
 <div class="boiler-type-item">
 <strong class="boiler-type-name">관류식</strong>
-<img src="/images/energy-management/boiler-water-once-through-illustrated-v1.webp" width="1200" height="800" loading="lazy" decoding="async" alt="드럼 없이 급수가 하나의 연속된 가열관을 통과해 증기 출구로 나가는 관류식 보일러 단면" />
-<p class="boiler-type-point">왼쪽 아래 급수 → 굽은 가열관 → 오른쪽 위 증기 · 드럼 없음</p>
+<img src="/images/energy-management/boiler-water-once-through-illustrated-v2.webp" width="1200" height="800" loading="lazy" decoding="async" alt="드럼 없이 왼쪽 아래 급수가 하나로 이어진 은색 굽은 가열관을 통과해 오른쪽 위 증기 출구로 나가는 관류식 보일러 단면" />
+<p class="boiler-type-point">왼쪽 아래 급수 → 한 줄로 이어진 가열관 → 오른쪽 위 증기 · 드럼 없음</p>
 </div>
 </figure>
 </div>
 
-그림은 구조 차이를 강조한 학습용 재구성임 · 실제 배관과 연소가스의 왕복 경로는 기종에 따라 다름 · 주철제는 재료·조립 방식, 내분식/외분식은 연소실 위치에 따른 별도 분류임
+그림은 구조 차이를 강조한 학습용 재구성임 · 원통형 3종의 연소가스 반전·배출 연결은 생략했고 기종별 실제 경로는 다름 · 수관식의 주황 영역은 관 밖 가열부를 뜻하며 관 안 연소가스가 아님 · 주철제는 재료·조립 방식, 내분식/외분식은 연소실 위치에 따른 별도 분류임
 
 노통연관식·직립식·횡형식·다관식은 노통과 연관의 배치, 동체 방향과 가스 통로를 함께 확인함 · 내분식과 외분식은 연소실이 보일러 본체 내부에 있는지 외부에 있는지로 나눔
 
@@ -72,10 +72,20 @@ status: 완료
 
 자연순환은 가열된 혼합물과 상대적으로 차가운 물의 밀도차를 이용함 · 순환이 나쁘면 국부 과열과 증발 불균형이 생길 수 있음
 
-<div class="learning-visuals learning-visuals--single">
+<div class="learning-visuals learning-visuals--single learning-visuals--boiler-circulation">
 <figure>
-<figcaption><strong>자연순환식 수관 보일러의 순환경로</strong><span>강수관과 승수관이 드럼·하부 헤더를 잇는 회로</span></figcaption>
-<img src="/images/energy-management/boiler-natural-circulation-v1.svg" width="390" height="420" loading="lazy" decoding="async" alt="상부 증기드럼의 물이 강수관을 따라 하부 헤더로 내려가고, 외부에서 가열된 승수관의 물·증기 혼합물이 증기드럼으로 올라가는 자연순환 경로" />
+<figcaption><strong>자연순환식 수관 보일러의 순환경로</strong><span>강수관의 물은 내려가고, 가열 수관의 혼합물은 올라감</span></figcaption>
+<div class="boiler-circulation-image">
+<img src="/images/energy-management/boiler-water-natural-illustrated-v2.webp" width="1200" height="800" loading="lazy" decoding="async" alt="상부 증기드럼에서 왼쪽 강수관으로 물이 내려가 하부 헤더를 지나고, 가열 수관에서 생성된 물·증기 혼합물이 위로 올라가 드럼으로 돌아오는 자연순환식 보일러. 왼쪽 아래 버너와 주황색 화실은 물길 바깥에 있다" />
+<svg class="boiler-circulation-arrows" viewBox="0 0 1200 800" aria-hidden="true" focusable="false">
+  <defs><marker id="boiler-flow-arrow" markerWidth="3.5" markerHeight="3.5" refX="3" refY="1.75" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L3.5 1.75 L0 3.5 Z" fill="#15785C" /></marker></defs>
+  <path class="boiler-flow-outline" d="M293 280 V515 M465 648 H765 M690 535 V310" />
+  <path class="boiler-flow-line" d="M293 280 V515" marker-end="url(#boiler-flow-arrow)" />
+  <path class="boiler-flow-line" d="M465 648 H765" marker-end="url(#boiler-flow-arrow)" />
+  <path class="boiler-flow-line" d="M690 535 V310" marker-end="url(#boiler-flow-arrow)" />
+</svg>
+</div>
+<p class="boiler-circulation-key">증기드럼 → 강수관 <strong>물 ↓</strong> → 하부 헤더 → 가열 수관 <strong>물·증기 ↑</strong> → 증기드럼</p>
 </figure>
 </div>
 
