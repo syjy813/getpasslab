@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="250" viewBox="0 0 390 250" role="img" aria-labelledby="t d">
+<title id="t">반사형 재료: 열원과 공기층 사이에 놓인 금속박의 개념</title><desc id="d">학습용 구조 재구성. 재료의 실제 색과 형태는 제품마다 다를 수 있다.</desc>
+<defs>
+  <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F7F9FC"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-30%" width="150%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#25334B" flood-opacity=".15"/></filter>
+  <linearGradient id="edge" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#D8E0E9"/></linearGradient>
+</defs>
+<rect width="390" height="250" fill="url(#paper)"/>
+<rect x="14" y="14" width="362" height="221" rx="20" fill="#FFFFFF" stroke="#DEE5ED"/>
+<rect x="51" y="64" width="42" height="119" rx="7" fill="#B45309" opacity=".17"/>
+<path d="M92 67 Q106 77 92 88 Q106 100 92 110 Q106 122 92 133 Q106 145 92 156 Q106 169 92 181" fill="none" stroke="#B45309" stroke-width="3" opacity=".65"/>
+<path d="M145 75 L192 68 L207 77 L207 177 L160 184 L145 175Z" fill="url(#edge)" stroke="#526176" stroke-width="3" filter="url(#shadow)"/>
+<path d="M145 75 L160 84 L160 184 L145 175Z" fill="#93A3B5" stroke="#526176" stroke-width="2"/>
+<path d="M160 84 L207 77 L207 177 L160 184Z" fill="#EFF4F9" stroke="#526176" stroke-width="2"/>
+<path d="M221 75 L270 68 L285 77 L285 177 L237 184 L221 175Z" fill="url(#edge)" stroke="#526176" stroke-width="3" filter="url(#shadow)"/>
+<path d="M237 84 L285 77 L285 177 L237 184Z" fill="#EFF4F9" stroke="#526176" stroke-width="2"/>
+<path d="M210 126 H228" fill="none" stroke="#1769AA" stroke-width="3" stroke-dasharray="4 4"/>
+<path d="M102 106 H127 M102 143 H127 M102 124 H136" fill="none" stroke="#B45309" stroke-width="3"/>
+<path d="M107 101 l-7 5 7 5 M107 138 l-7 5 7 5 M130 119 l7 5 -7 5" fill="none" stroke="#B45309" stroke-width="3" stroke-linejoin="round"/>
+<text x="73" y="213" text-anchor="middle" fill="#B45309" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="18" font-weight="700">열</text><text x="175" y="213" text-anchor="middle" fill="#25334B" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="18" font-weight="700">금속박</text><text x="252" y="213" text-anchor="middle" fill="#1769AA" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="18" font-weight="700">공기층</text>
+</svg>
