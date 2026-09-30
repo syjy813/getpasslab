@@ -109,6 +109,7 @@ a{color:inherit}
 .gnb-spacer{flex:1}
 .gnb-menu{position:relative}
 .gnb-menu>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:var(--fs-caption);font-weight:var(--fw-medium);color:var(--gray-800);padding:8px 12px;border-radius:var(--radius-md)}
+@media(max-width:767px){.gnb-menu>summary{padding-right:0}}
 .gnb-menu>summary::-webkit-details-marker{display:none}
 .gnb-menu>summary:hover{background:var(--gray-100)}
 .gnb-menu[open]>summary{background:var(--gray-100)}
