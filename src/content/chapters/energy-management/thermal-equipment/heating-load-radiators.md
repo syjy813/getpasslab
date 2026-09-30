@@ -21,8 +21,15 @@ status: 완료
 
 - **관류열부하**: 벽·창·지붕·바닥을 통과하는 열손실
 - **환기·침입외기부하**: 외부 공기를 실내온도까지 가열하는 열량
-- **예열부하**: 정지 뒤 건물과 설비를 운전온도까지 올리는 추가 열량
+- **예열부하**: 정지 뒤 식은 설비를 운전온도까지 올리는 추가 열량 · 2010년 1월 36번은 냉각된 보일러와 보유수의 가열량을 묻음
 - **배관·기타 손실**: 배관 방열과 운전조건에 따른 여유
+
+<div class="learning-visuals learning-visuals--single learning-visuals--heating-load">
+  <figure>
+    <figcaption><strong>실내에서 빠져나가는 열</strong><span>외피를 지나는 열과 들어온 외기를 데우는 열을 구분</span></figcaption>
+    <img src="/images/energy-management/heating-load-paths-v1.svg" alt="실내의 열이 지붕·창·외벽을 통해 밖으로 나가고, 틈새로 들어온 외기는 실내온도까지 가열되어야 하는 학습용 개념도" width="390" height="335" loading="lazy" />
+  </figure>
+</div>
 
 ## 관류와 환기 계산
 
@@ -45,6 +52,17 @@ status: 완료
 
 문제에서 방열계수·평균온도차나 별도 보정조건을 제시하면 표준값 대신 주어진 조건으로 실제 방열량을 계산함
 
+온수 입구·출구 온도가 주어진 기출에서는 두 온도의 평균에서 실내온도를 빼 방열계수를 곱함 · 이는 **문제에서 방열계수가 주어진 경우의 계산식**이며 실제 제품의 모든 운전 조건을 대신하지 않음
+
+`단위면적 방열량 = 방열계수 × [(입구온도 + 출구온도) ÷ 2 − 실내온도]`
+
+<div class="learning-visuals learning-visuals--single learning-visuals--heating-load">
+  <figure>
+    <figcaption><strong>평균온수온도와 실내온도차</strong><span>2011년 2월 43번: 85℃·65℃·18℃에 주어진 방열계수 7.4 적용</span></figcaption>
+    <img src="/images/energy-management/radiator-mean-temperature-v1.svg" alt="온수 입구 85℃와 출구 65℃의 평균 75℃에서 실내 18℃를 뺀 57℃에 방열계수 7.4를 곱해 421.8 kcal/(m²·h)를 얻는 방열기 개념도" width="390" height="390" loading="lazy" />
+  </figure>
+</div>
+
 ## 방열면적과 쪽수
 
 `필요 방열면적 = 난방부하 / 단위면적당 방열량`
@@ -52,6 +70,13 @@ status: 완료
 `필요 쪽수 = 필요 방열면적 / 1쪽의 방열면적`
 
 쪽수는 실제 설치 가능한 정수로 올림함 · 난방부하에 이미 여유율이 포함됐는지 확인하고 임의로 중복 가산하지 않음
+
+<div class="learning-visuals learning-visuals--single learning-visuals--heating-load">
+  <figure>
+    <figcaption><strong>방열기 한 쪽의 면적에서 총 쪽수까지</strong><span>2010년 3월 40번: 온수 표준방열량과 1쪽 면적을 함께 곱함</span></figcaption>
+    <img src="/images/energy-management/radiator-sections-v1.svg" alt="난방부하 6,000 kcal/h를 온수 표준방열량 450 kcal/(m²·h)와 한 쪽 면적 0.15 m²의 곱으로 나누면 88.89이므로 올려서 89쪽" width="390" height="405" loading="lazy" />
+  </figure>
+</div>
 
 ## 시험 포인트
 

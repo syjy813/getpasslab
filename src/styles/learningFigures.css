@@ -42,6 +42,10 @@ article .learning-visuals--insulation figcaption{background:var(--gray-50)}
 article .learning-visuals--insulation figcaption strong{font-size:18px;line-height:1.35}
 article .learning-visuals--insulation figcaption span{font-size:14px;line-height:1.45}
 article .learning-visuals--insulation img{max-width:390px;margin-inline:auto}
+article .learning-visuals--heating-load figcaption{background:var(--gray-50)}
+article .learning-visuals--heating-load figcaption strong{font-size:18px;line-height:1.35}
+article .learning-visuals--heating-load figcaption span{font-size:14px;line-height:1.45}
+article .learning-visuals--heating-load img{max-width:390px;margin-inline:auto}
 article .learning-visuals--boiler-types figcaption{gap:var(--space-1);padding:var(--space-4) var(--space-4);background:var(--gray-50)}
 article .learning-visuals--boiler-types figcaption strong{font-size:19px;line-height:1.35;color:var(--gray-900)}
 article .learning-visuals--boiler-types figcaption span{font-size:14px;line-height:1.45}

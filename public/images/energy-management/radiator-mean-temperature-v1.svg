@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="390" viewBox="0 0 390 390" role="img" aria-labelledby="t d">
+<title id="t">온수 방열기의 평균온도와 방열량</title><desc id="d">온수 입구 85도, 출구 65도의 산술평균 75도에서 실내온도 18도를 빼 온도차 57도. 문제의 방열계수 7.4를 곱해 단위면적 방열량 421.8킬로칼로리 매 제곱미터 매시를 구한다. 학습용 재구성.</desc>
+<defs>
+<linearGradient id="wall" x2="1" y2="1"><stop stop-color="#F9F3E8"/><stop offset="1" stop-color="#E8DBC9"/></linearGradient>
+<linearGradient id="metal" x2="1" y2="0"><stop stop-color="#C7D1DC"/><stop offset=".43" stop-color="#F8FAFC"/><stop offset="1" stop-color="#A5B5C3"/></linearGradient>
+<filter id="shadow" x="-20%" y="-30%" width="150%" height="160%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#25334B" flood-opacity=".13"/></filter>
+</defs>
+<rect width="390" height="390" fill="#F7F9FC"/><rect x="12" y="12" width="366" height="366" rx="18" fill="#FFFFFF" stroke="#DEE5ED"/>
+<path d="M50 149 H88" stroke="#15785C" stroke-width="9" stroke-linecap="round"/>
+<path d="M302 248 H340" stroke="#126D86" stroke-width="9" stroke-linecap="round"/>
+<path d="M78 143 l12 6 -12 6 M328 242 l12 6 -12 6" fill="none" stroke="#15785C" stroke-width="4"/>
+<path d="M91 150 V250 M299 150 V249" stroke="#526176" stroke-width="9"/>
+<path d="M91 150 H299 M91 249 H299" stroke="#526176" stroke-width="7"/>
+<rect x="105" y="126" width="26" height="148" rx="12" fill="url(#metal)" stroke="#526176" stroke-width="3" filter="url(#shadow)"/><rect x="143" y="126" width="26" height="148" rx="12" fill="url(#metal)" stroke="#526176" stroke-width="3" filter="url(#shadow)"/><rect x="181" y="126" width="26" height="148" rx="12" fill="url(#metal)" stroke="#526176" stroke-width="3" filter="url(#shadow)"/><rect x="219" y="126" width="26" height="148" rx="12" fill="url(#metal)" stroke="#526176" stroke-width="3" filter="url(#shadow)"/><rect x="257" y="126" width="26" height="148" rx="12" fill="url(#metal)" stroke="#526176" stroke-width="3" filter="url(#shadow)"/><path d="M138 114 V88 M194 112 V86 M249 114 V88" fill="none" stroke="#B45309" stroke-width="4" stroke-linecap="round"/>
+<path d="M132 95 l6 -8 6 8 M188 93 l6 -8 6 8 M243 95 l6 -8 6 8" fill="none" stroke="#B45309" stroke-width="3"/>
+<text x="78" y="70" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#15785C">입구 85℃</text><text x="305" y="70" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#126D86">출구 65℃</text><text x="194" y="306" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#25334B">실내 18℃</text><text x="194" y="337" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#25334B">평균온수 75℃ − 실내 18℃ = 57℃</text><text x="194" y="371" font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#236E49">7.4 × 57 = 421.8 kcal/(m²·h)</text>
+</svg>
