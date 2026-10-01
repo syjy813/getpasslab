@@ -1,0 +1,17 @@
+{
+  "base": "http://127.0.0.1:4325",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "externalRequests": "Planned local-only QA; browser never launched",
+  "pages": [],
+  "screenshots": [],
+  "errors": [],
+  "passed": false,
+  "failure": "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /root/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome",
+  "status": "BLOCKED",
+  "browserInstall": "Chromium download returned an invalid/truncated ZIP; installation failed",
+  "cloudBrowser": "http://127.0.0.1:4325/computer-literacy/written/computer-basics/software-license-types/ failed: net::ERR_BLOCKED_BY_CLIENT",
+  "completedPages": 0
+}

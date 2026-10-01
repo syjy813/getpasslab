@@ -8,6 +8,10 @@ import computerImage4 from '../assets/questions/computer-literacy/20180901_040.p
 import computerImage5 from '../assets/questions/computer-literacy/20200704_023.png';
 import computerImage6 from '../assets/questions/computer-literacy/20151017_012.png';
 import computerImage7 from '../assets/questions/computer-literacy/20200704_018.png';
+import computerImage8 from '../assets/questions/computer-literacy/20151017_009.png';
+import computerImage9 from '../assets/questions/computer-literacy/20151017_010.png';
+import computerImage10 from '../assets/questions/computer-literacy/20180901_003.png';
+import computerImage11 from '../assets/questions/computer-literacy/20180901_012.png';
 import industrialSafetyRegistry from '../data/question-assets/industrial-safety.json';
 
 export interface QuestionImage {
@@ -37,6 +41,11 @@ const questionImageEntries: readonly QuestionImageEntry[] = industrialSafetyRegi
 });
 
 const computerLiteracyImages: readonly QuestionImageEntry[] = [
+  ['computer-literacy:20151017_009', { src: computerImage8, alt: computerLiteracyRegistry.find(entry => entry.id === '20151017_009')!.alt }],
+  ['computer-literacy:20151017_010', { src: computerImage9, alt: computerLiteracyRegistry.find(entry => entry.id === '20151017_010')!.alt }],
+  ['computer-literacy:20180901_003', { src: computerImage10, alt: computerLiteracyRegistry.find(entry => entry.id === '20180901_003')!.alt }],
+  ['computer-literacy:20180901_012', { src: computerImage11, alt: computerLiteracyRegistry.find(entry => entry.id === '20180901_012')!.alt }],
+
   ['computer-literacy:20151017_012', { src: computerImage6, alt: computerLiteracyRegistry.find(entry => entry.id === '20151017_012')!.alt }],
   ['computer-literacy:20200704_018', { src: computerImage7, alt: computerLiteracyRegistry.find(entry => entry.id === '20200704_018')!.alt }],
   ['computer-literacy:20150307_037', { src: computerImage0, alt: computerLiteracyRegistry.find(entry => entry.id === '20150307_037')!.alt }],

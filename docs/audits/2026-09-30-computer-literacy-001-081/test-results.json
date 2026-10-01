@@ -1,0 +1,44 @@
+[
+  {
+    "command": "npm run check:seo",
+    "exitCode": 0,
+    "stdout": "\n> getpasslab@0.1.0 check:seo\n> node scripts/check-seo.mjs\n\n[SEO] HTML 347개, sitemap URL 346개 검사\n[SEO] 경고 0개, 오류 0개\n",
+    "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+  },
+  {
+    "command": "npm run check:public-content",
+    "exitCode": 0,
+    "stdout": "\n> getpasslab@0.1.0 check:public-content\n> node scripts/check-public-content.mjs\n\n[Public content] HTML 347개 검사\n[Public content] 오류 0개\n",
+    "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+  },
+  {
+    "command": "npm run check:computer-literacy",
+    "exitCode": 0,
+    "stdout": "\n> getpasslab@0.1.0 check:computer-literacy\n> node scripts/check-computer-literacy-publication.mjs\n\n[Computer literacy] Existing 8 chapters preserved; 14 primary questions, 3 supporting links, 8 rendered question images, 4 learning SVGs passed; total scope 85 chapters\n",
+    "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+  },
+  {
+    "command": "npm run check:computer-literacy-c1",
+    "exitCode": 0,
+    "stdout": "\n> getpasslab@0.1.0 check:computer-literacy-c1\n> node scripts/check-computer-literacy-c1.mjs\n\n[C1] 27 chapters; canonical hashes for 70 questions; 63 primary + 41 supporting assignments; 104 rendered dialogs/answers; 2 original images; order, links, and editorial separation passed\n[C1] 4 caution questions across 6 primary/support dialogs; recorded answers distinguished; guidance initially hidden and consistent\n",
+    "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+  },
+  {
+    "command": "npm run check:deferred-question-content",
+    "exitCode": 0,
+    "stdout": "\n> getpasslab@0.1.0 check:deferred-question-content\n> node scripts/check-deferred-question-content.mjs\n\n[Deferred questions] 에너지관리기능사 챕터 21개 · deferred 버튼 1588개 · 공용 dialog 21개 검사\n[Deferred questions] 산업안전산업기사 챕터 220개 · deferred 버튼 1004개 · 공용 dialog 217개 · 이미지 버튼 35개 · redirect 2개 제외 검사\n[Deferred questions] 오류 0개\n",
+    "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+  },
+  {
+    "command": "npm run check:computer-literacy-001-081",
+    "exitCode": 0,
+    "stdout": "\n> getpasslab@0.1.0 check:computer-literacy-001-081\n> node scripts/check-computer-literacy-001-081.mjs\n\n[001–081] 81 chapters (50 new, 31 preserved); 145 primary + 63 supporting links; 208 rendered dialogs/answers; 7 original images / 15 occurrences passed\n[001–081] Canonical hashes, all prior chapter files, URLs, IDs, sequence, scoped support links, 6 caution questions, and editorial separation passed\n",
+    "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+  },
+  {
+    "command": "npm run check:contrast",
+    "exitCode": 0,
+    "stdout": "\n> getpasslab@0.1.0 check:contrast\n> node scripts/check-color-contrast.mjs\n\n[Contrast] --gray-600 #626D7A on --white #FFFFFF: 5.27:1\n[Contrast] --gray-600 #626D7A on --gray-50 #F9FAFB: 5.04:1\n[Contrast] --gray-600 #626D7A on --gray-100 #F2F4F6: 4.78:1\n[Contrast] 오류 0개\n",
+    "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+  }
+]

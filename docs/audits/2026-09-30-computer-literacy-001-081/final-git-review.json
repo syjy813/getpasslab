@@ -1,0 +1,398 @@
+{
+  "branch": "codex/computer-literacy-001-081-local",
+  "head": "eb5726619dc7835d6c3d5820fef8650710b7407b",
+  "stagedDiff": "",
+  "trackedDiffStat": " AI_HANDOVER.md                                  |   15 +\n package.json                                    |    3 +-\n scripts/check-computer-literacy-publication.mjs |    4 +-\n src/config/questionCautions.ts                  |    5 +\n src/config/questionImages.ts                    |    9 +\n src/data/question-assets/computer-literacy.json |   28 +\n src/data/questions/computer-literacy.json       | 1286 ++++++++++++++++++++++-\n 7 files changed, 1334 insertions(+), 16 deletions(-)\n",
+  "trackedDiffCheck": 0,
+  "status": " M AI_HANDOVER.md\n M package.json\n M scripts/check-computer-literacy-publication.mjs\n M src/config/questionCautions.ts\n M src/config/questionImages.ts\n M src/data/question-assets/computer-literacy.json\n M src/data/questions/computer-literacy.json\n?? docs/audits/2026-09-30-computer-literacy-001-081/README.md\n?? docs/audits/2026-09-30-computer-literacy-001-081/WORK_REQUEST.md\n?? docs/audits/2026-09-30-computer-literacy-001-081/browser-qa.cjs\n?? docs/audits/2026-09-30-computer-literacy-001-081/browser-qa.json\n?? docs/audits/2026-09-30-computer-literacy-001-081/build-output.txt\n?? docs/audits/2026-09-30-computer-literacy-001-081/input-hashes.json\n?? docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/001-027.md\n?? docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/028-037.md\n?? docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/041-051.md\n?? docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/052-061.md\n?? docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/062-071.md\n?? docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/072-081.md\n?? docs/audits/2026-09-30-computer-literacy-001-081/source-verification.json\n?? docs/audits/2026-09-30-computer-literacy-001-081/test-results.json\n?? scripts/check-computer-literacy-001-081.mjs\n?? src/assets/questions/computer-literacy/20151017_009.png\n?? src/assets/questions/computer-literacy/20151017_010.png\n?? src/assets/questions/computer-literacy/20180901_003.png\n?? src/assets/questions/computer-literacy/20180901_012.png\n?? src/content/chapters/computer-literacy/written/computer-basics/aero-peek.md\n?? src/content/chapters/computer-literacy/written/computer-basics/archive-file-formats.md\n?? src/content/chapters/computer-literacy/written/computer-basics/backgrounds-and-themes.md\n?? src/content/chapters/computer-literacy/written/computer-basics/bluetooth-pairing.md\n?? src/content/chapters/computer-literacy/written/computer-basics/compiler-interpreter.md\n?? src/content/chapters/computer-literacy/written/computer-basics/copying-moving-files.md\n?? src/content/chapters/computer-literacy/written/computer-basics/default-apps.md\n?? src/content/chapters/computer-literacy/written/computer-basics/device-manager.md\n?? src/content/chapters/computer-literacy/written/computer-basics/disk-cleanup.md\n?? src/content/chapters/computer-literacy/written/computer-basics/disk-error-checking.md\n?? src/content/chapters/computer-literacy/written/computer-basics/disk-format-file-systems.md\n?? src/content/chapters/computer-literacy/written/computer-basics/display-settings.md\n?? src/content/chapters/computer-literacy/written/computer-basics/drive-optimization.md\n?? src/content/chapters/computer-literacy/written/computer-basics/file-explorer-hierarchy.md\n?? src/content/chapters/computer-literacy/written/computer-basics/file-extension-types.md\n?? src/content/chapters/computer-literacy/written/computer-basics/file-folder-properties.md\n?? src/content/chapters/computer-literacy/written/computer-basics/file-search-and-run.md\n?? src/content/chapters/computer-literacy/written/computer-basics/game-bar-and-game-mode.md\n?? src/content/chapters/computer-literacy/written/computer-basics/hidden-files-extensions.md\n?? src/content/chapters/computer-literacy/written/computer-basics/jump-lists.md\n?? src/content/chapters/computer-literacy/written/computer-basics/keyboard-mouse-properties.md\n?? src/content/chapters/computer-literacy/written/computer-basics/language-and-region.md\n?? src/content/chapters/computer-literacy/written/computer-basics/notepad-features.md\n?? src/content/chapters/computer-literacy/written/computer-basics/object-oriented-features.md\n?? src/content/chapters/computer-literacy/written/computer-basics/operating-system-environments.md\n?? src/content/chapters/computer-literacy/written/computer-basics/operating-system-performance.md\n?? src/content/chapters/computer-literacy/written/computer-basics/operating-system-resources.md\n?? src/content/chapters/computer-literacy/written/computer-basics/patches-and-updates.md\n?? src/content/chapters/computer-literacy/written/computer-basics/phone-pc-link.md\n?? src/content/chapters/computer-literacy/written/computer-basics/programs-and-windows-features.md\n?? src/content/chapters/computer-literacy/written/computer-basics/recycle-bin-recovery.md\n?? src/content/chapters/computer-literacy/written/computer-basics/selecting-files-folders.md\n?? src/content/chapters/computer-literacy/written/computer-basics/shortcuts-and-originals.md\n?? src/content/chapters/computer-literacy/written/computer-basics/sign-in-and-account-types.md\n?? src/content/chapters/computer-literacy/written/computer-basics/sleep-hibernate-shutdown.md\n?? src/content/chapters/computer-literacy/written/computer-basics/software-license-types.md\n?? src/content/chapters/computer-literacy/written/computer-basics/software-release-versions.md\n?? src/content/chapters/computer-literacy/written/computer-basics/software-types.md\n?? src/content/chapters/computer-literacy/written/computer-basics/sound-input-output.md\n?? src/content/chapters/computer-literacy/written/computer-basics/storage-sense.md\n?? src/content/chapters/computer-literacy/written/computer-basics/system-about-information.md\n?? src/content/chapters/computer-literacy/written/computer-basics/system-information-categories.md\n?? src/content/chapters/computer-literacy/written/computer-basics/task-manager.md\n?? src/content/chapters/computer-literacy/written/computer-basics/time-and-time-zones.md\n?? src/content/chapters/computer-literacy/written/computer-basics/update-restart-states.md\n?? src/content/chapters/computer-literacy/written/computer-basics/user-accounts-uac.md\n?? src/content/chapters/computer-literacy/written/computer-basics/windows-accessibility.md\n?? src/content/chapters/computer-literacy/written/computer-basics/windows-accessories.md\n?? src/content/chapters/computer-literacy/written/computer-basics/windows-libraries.md\n?? src/content/chapters/computer-literacy/written/computer-basics/windows-registry.md\n",
+  "existingQuestionRecordsPreservedIncludingReview": 117,
+  "originalWorkspace": {
+    "branch": "codex/energy-expansion-tank-figure",
+    "head": "10c42b68720a1c253a36fadb649e1c5baca97372",
+    "status": " M public/images/energy-management/heating-expansion-tanks-v1.svg\n M src/assets/questions/energy-management/20141011_056.png\n",
+    "dirtyHashesUnchanged": true
+  },
+  "changedFilesExcludingThisSelfReferentialRecord": [
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/README.md",
+      "bytes": 22814,
+      "sha256": "8a3c066a833ac4376263640f9c387df3ace8556c93a6a7e16669cc4e60cef8e0"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/WORK_REQUEST.md",
+      "bytes": 7971,
+      "sha256": "996c11c93b2ee8b611d6f34a17d165dcba03b334e231781a0696bab543c4fb0c"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/browser-qa.cjs",
+      "bytes": 6973,
+      "sha256": "46cb344ba4eaab940239c3a3608df1817e493bc7f032668d2eee511887bf717b"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/browser-qa.json",
+      "bytes": 691,
+      "sha256": "912198ae4fb2a1908768c80a601c7d2f00ce9cee78784ded1ba91f4aa8687ca8"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/build-output.txt",
+      "bytes": 36649,
+      "sha256": "5b27cd6fd0ca525a378f15628dbc9a587cc71272c09ba2664a86e29b02c4c272"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/input-hashes.json",
+      "bytes": 1294,
+      "sha256": "b91ca886879ce898f2319b4012da2558c23d8d2c8a51f8270a23503a0f6682c3"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/001-027.md",
+      "bytes": 64269,
+      "sha256": "931f3cabb3b68817559a465225caa5b3f60882aa336b9ea8aea20eee983ecd0d"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/028-037.md",
+      "bytes": 27237,
+      "sha256": "312689590e944d2cfa7232b468bf453e28a1f6dd0fbec357648a04637d48be25"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/041-051.md",
+      "bytes": 29790,
+      "sha256": "0218db7cfe2d74d5afcd0ff4d8fee6756de775c9e2d9a0d8edbe0b9816f24c3f"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/052-061.md",
+      "bytes": 27405,
+      "sha256": "a73ca949d481024f98ddf4cab8160436c77493ffd42a5e392c810d4ec14809e1"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/062-071.md",
+      "bytes": 27259,
+      "sha256": "2d631e25d5c1b26bf6297f040876c3ec227a8e8fd05d5f4528869d95b52acd1f"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/source-drafts/072-081.md",
+      "bytes": 31056,
+      "sha256": "680364948b02e22827cfab91c262a48a2ed134b04d14758f1b2ce305edaf5379"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/source-verification.json",
+      "bytes": 155902,
+      "sha256": "e4655b49e42dd307bc41f569c5849edafc816ba74562c2c4e8fe31ff03a6f5e8"
+    },
+    {
+      "path": "docs/audits/2026-09-30-computer-literacy-001-081/test-results.json",
+      "bytes": 3617,
+      "sha256": "1eda218e1984b95253abbef8aa928bec0e3437e58fcfd4918cb36ac4078f468e"
+    },
+    {
+      "path": "scripts/check-computer-literacy-001-081.mjs",
+      "bytes": 7242,
+      "sha256": "83b8a684c64f8b926c8d105666f39fffbf628dcea44e7f92940d1666a32be84d"
+    },
+    {
+      "path": "src/assets/questions/computer-literacy/20151017_009.png",
+      "bytes": 7163,
+      "sha256": "eb679d9a16a1fc59daf12fbf5a35d994e5a146c9bbbda1d029eae9b207f0435a"
+    },
+    {
+      "path": "src/assets/questions/computer-literacy/20151017_010.png",
+      "bytes": 1644,
+      "sha256": "ff34b9f9ec7ae0eb1bff7fef5659cb3fce9e2a21d40a9c0eba07704fb367d75c"
+    },
+    {
+      "path": "src/assets/questions/computer-literacy/20180901_003.png",
+      "bytes": 97288,
+      "sha256": "381eed53542dbc6b73a74bebe1d575e27a3df996c970760b57f74c8fbc65c5ce"
+    },
+    {
+      "path": "src/assets/questions/computer-literacy/20180901_012.png",
+      "bytes": 5333,
+      "sha256": "4a19857132a83bff91fbe455daa865f9ffdea3be4bff7f545632278ca86abdca"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/aero-peek.md",
+      "bytes": 2051,
+      "sha256": "3fe970f0cfb58d177dc81a6deb5b271de28c88eb1116c3101ba08cf9d9532466"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/archive-file-formats.md",
+      "bytes": 1179,
+      "sha256": "74aa526118b1351b7e6290070b86ad45f8e34a4f77d2af53ea57121963372d7e"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/backgrounds-and-themes.md",
+      "bytes": 1844,
+      "sha256": "7d45cc3523b7d6b29f5804155df812182c9d9f3b125041690069a9bec8ecff19"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/bluetooth-pairing.md",
+      "bytes": 2012,
+      "sha256": "bd294a71e8423837f79fd45607569c46343dd0ffab32256afc69bd84d1dcda03"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/compiler-interpreter.md",
+      "bytes": 1476,
+      "sha256": "dc4b9307532a3139a890ae7343ecbe1e81e0e0bcb2b01d49824a6afaa6dc3772"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/copying-moving-files.md",
+      "bytes": 1754,
+      "sha256": "a441a9b465989a2e87972ea7d18810c287090c4a49fa4bbfdf7fd8240d9aeb38"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/default-apps.md",
+      "bytes": 1857,
+      "sha256": "3a1913e1be766c6f222b589cd57bb3af89e5a2644b3632a2e95db12fc5ae225d"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/device-manager.md",
+      "bytes": 2232,
+      "sha256": "28c4b72cf0077bd00e656f7bf7a2ede9738419bcb4e2da6df06891d5bc742771"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/disk-cleanup.md",
+      "bytes": 1892,
+      "sha256": "9dc231c33b292706cc33ca8a5a7266f630a036ef0949a0e82e6f9872ecb16c53"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/disk-error-checking.md",
+      "bytes": 1873,
+      "sha256": "a3317d6f8b26cf399fd0cae2fe37cc4f4044c62bd284da3354343bd787f4ddc0"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/disk-format-file-systems.md",
+      "bytes": 2205,
+      "sha256": "8d9d738059d845f544a3e6b2ed1b48b3ef1f746f2d70b3b19b3bea3a1a2af99b"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/display-settings.md",
+      "bytes": 1818,
+      "sha256": "4be9067da7bba1aaadb016e302b15f4a0214acaf3d22e01e51638e0fb6dce99c"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/drive-optimization.md",
+      "bytes": 2265,
+      "sha256": "c17bee85561ee004c7935a4dd1d5b3de39291b67add5d2dd389c5f1a107cd7c8"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/file-explorer-hierarchy.md",
+      "bytes": 1834,
+      "sha256": "a5f9fcaf903c5fb28a55ff3678c73487869ebc1fb4f56516a372c5e7b969d314"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/file-extension-types.md",
+      "bytes": 1530,
+      "sha256": "767fdb53554b2737957953e554b3d19c0e833c336469349754b51b23524d308f"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/file-folder-properties.md",
+      "bytes": 1627,
+      "sha256": "7100f421e6d87cda85aa0ff0247088102d62fa5a5ed5322ba51dfc877c0c31ac"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/file-search-and-run.md",
+      "bytes": 1778,
+      "sha256": "91680a0b26515c47b59348d9c6a4da724e052dcc6a2d0b898b4596affd54120b"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/game-bar-and-game-mode.md",
+      "bytes": 1651,
+      "sha256": "150db43b5904ca52c0332559c892df062227d62dd761436e6466e326b3edd364"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/hidden-files-extensions.md",
+      "bytes": 1945,
+      "sha256": "db1f29ad36f5762814b9fdf3de7b07343376e9bd08bce3f2a09ff78d3ff3d92d"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/jump-lists.md",
+      "bytes": 2330,
+      "sha256": "f5af46f6b8873dc3a45b8534dc000096de4f570200045732e24ab6c7974bcc5f"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/keyboard-mouse-properties.md",
+      "bytes": 1574,
+      "sha256": "f5bcff15eb9516dfbb8393282542e02c18014904d85955b1669b3ee199f6012f"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/language-and-region.md",
+      "bytes": 2189,
+      "sha256": "4a30bd938482da6bef0546824a9b17b671102f9a815e0ef55c33801d7ceed636"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/notepad-features.md",
+      "bytes": 1676,
+      "sha256": "53f6bc57df7dcc3312f7818586b1974cf6bf035ac33b49a2fcd63890b264e953"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/object-oriented-features.md",
+      "bytes": 1278,
+      "sha256": "702abad1fb35c92b86046492e762da89fd678af8d5e92565eaf257e8a4479dca"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/operating-system-environments.md",
+      "bytes": 1588,
+      "sha256": "4f2f940b59230416ff2538fbf572d0512647ae7edfe2164b54edcf155ce34373"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/operating-system-performance.md",
+      "bytes": 1447,
+      "sha256": "869df36a81b0e31924fbf1fb82b4239d49ea636f674b35f033b6e0a029ce44bd"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/operating-system-resources.md",
+      "bytes": 2775,
+      "sha256": "b2e9c99cb10d9d5e83d2c5b115461d0ba80a6abd2ea83eacde6dd5470a216203"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/patches-and-updates.md",
+      "bytes": 1756,
+      "sha256": "fab2e734b03d72d941dcc0a23761d9f8b6c697c9e09185f5bc6cf7852ec93e1b"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/phone-pc-link.md",
+      "bytes": 2188,
+      "sha256": "939be5b109c04f52f0a2903cd5b31ba0bb07458efd9a91417fba2e111c8d4be8"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/programs-and-windows-features.md",
+      "bytes": 2459,
+      "sha256": "553f69f5eb8c03634a82d45bea05153f07d6aba5c114b6264dceb36f0ec4052b"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/recycle-bin-recovery.md",
+      "bytes": 2913,
+      "sha256": "b828fbe6a043c8a8823c99906fb5f67c5b1beeb4c25ad2a98e60ad753eda67ff"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/selecting-files-folders.md",
+      "bytes": 1225,
+      "sha256": "84efeca5b7497e667714359bff2a13e9413d74d63a16e3e20813b119a0bf7b40"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/shortcuts-and-originals.md",
+      "bytes": 1866,
+      "sha256": "b1b9a75793ac278515d3557cf757061be0364e1f3c7253e841a52b739610d4cd"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sign-in-and-account-types.md",
+      "bytes": 1871,
+      "sha256": "30f0d572e6d1fe82e0200895c7f6b7b74b1dc1f34feab7586cbfdaf6f56c5368"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sleep-hibernate-shutdown.md",
+      "bytes": 2211,
+      "sha256": "ad48fd949d884a38d1a12885fccd2e8d7bbbcde10c158456fc0e84ff63481877"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/software-license-types.md",
+      "bytes": 2099,
+      "sha256": "7acf8b5d60344a0d91ed1561e4e708ed7d21ac11d8ae58d8de81eda2a5a86064"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/software-release-versions.md",
+      "bytes": 1808,
+      "sha256": "ba084ed38ffeb789fef9c346bf48af32577751d4e5b487d110ac8dd7f8fe528c"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/software-types.md",
+      "bytes": 2663,
+      "sha256": "d9b44568d70a3640531ad9d5cb109be80239301d70c66cde6e0712de70290d6e"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sound-input-output.md",
+      "bytes": 1865,
+      "sha256": "e9284bc1fae25a35e5eb06332260fa9431e0864e30fa19d74c64cc213efb42e3"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/storage-sense.md",
+      "bytes": 1549,
+      "sha256": "1034df2ab0b5dc5a0aa3b790676e661ce4deca5d4b867b95a0048d46e3e981df"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/system-about-information.md",
+      "bytes": 2098,
+      "sha256": "d83d87892a8d75c6fbb63dadfcd9caa320faa23d8ff03b2f405fc0f9b09ec490"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/system-information-categories.md",
+      "bytes": 1565,
+      "sha256": "ade0672c8043c0b2a2cb76126ef93cf6410cc35c75dd0ee344756885c19b7e2a"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/task-manager.md",
+      "bytes": 2096,
+      "sha256": "afc042051557c4e5c9af5bd99054870779d84b4d59ddef35cae63c6da28dfbb9"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/time-and-time-zones.md",
+      "bytes": 1882,
+      "sha256": "a34b3d67c17eafda780f9b0c13a244437bc4a903249e9af1c5c705c960b2e06d"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/update-restart-states.md",
+      "bytes": 1851,
+      "sha256": "620ff96f98790c772c94d47ac92de19fe33da9cab32e2697b3a831a3cc1258e3"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/user-accounts-uac.md",
+      "bytes": 3454,
+      "sha256": "92431560a25e96ad5853e291afbd1d78b2300fe0d2dbe407992e01fdced85944"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-accessibility.md",
+      "bytes": 3243,
+      "sha256": "3164b9f51e70c64235727e95bf447b8eb2ea1178c969e0404525ddedef07be1c"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-accessories.md",
+      "bytes": 1523,
+      "sha256": "a0a67751d5e5707ae71b929ab1628bc703f0cd6f35ee94f9291e26ae79e1f090"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-libraries.md",
+      "bytes": 1616,
+      "sha256": "1a1577dd5c7d57da346ac8400a745111e9ccc8e9262dabffc11cbfa7515d0573"
+    },
+    {
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-registry.md",
+      "bytes": 2102,
+      "sha256": "157eea834e00427e94d07d73ab37a8e6caf7af918873846f6bccca8227f221f0"
+    },
+    {
+      "path": "AI_HANDOVER.md",
+      "bytes": 192949,
+      "sha256": "dc310b6fd397823948f6b27d48c5401a50073a7c665d84c039afe6c1e9790902"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1024,
+      "sha256": "be3a02dc58194b5c7c866b8c823d049b93b8459423dbd5c3c7d67c4a8f9f3c99"
+    },
+    {
+      "path": "scripts/check-computer-literacy-publication.mjs",
+      "bytes": 3612,
+      "sha256": "ec269e3c398ba061a3225324589cdc35277bf41a1ba3cb35f269d06a6bc1d42b"
+    },
+    {
+      "path": "src/config/questionCautions.ts",
+      "bytes": 1775,
+      "sha256": "dd0aea1ea3e7dcd37549ba1cb2c0b7c13e17d0f449a253cc3c65417e3ac05d1e"
+    },
+    {
+      "path": "src/config/questionImages.ts",
+      "bytes": 4434,
+      "sha256": "bcb3f29b8a1cb269f79467cc71ec60b89b62c7e4871dd8f56217379db18da289"
+    },
+    {
+      "path": "src/data/question-assets/computer-literacy.json",
+      "bytes": 7634,
+      "sha256": "ddb8109cb2bdb7916fae5d8e5b62a78d7d447dc22f2b23e65c71419338711c5c"
+    },
+    {
+      "path": "src/data/questions/computer-literacy.json",
+      "bytes": 130301,
+      "sha256": "3cf8faf353ab0fc89a4ac53c66366d8a5ebc67805988136ebd37189582070174"
+    }
+  ],
+  "commitPushDeploy": "not executed"
+}

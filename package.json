@@ -12,7 +12,8 @@
     "check:public-content": "node scripts/check-public-content.mjs",
     "check:computer-literacy": "node scripts/check-computer-literacy-publication.mjs",
     "check:computer-literacy-c1": "node scripts/check-computer-literacy-c1.mjs",
-    "check:deferred-question-content": "node scripts/check-deferred-question-content.mjs"
+    "check:deferred-question-content": "node scripts/check-deferred-question-content.mjs",
+    "check:computer-literacy-001-081": "node scripts/check-computer-literacy-001-081.mjs"
   },
   "allowScripts": {
     "esbuild@0.28.1": true

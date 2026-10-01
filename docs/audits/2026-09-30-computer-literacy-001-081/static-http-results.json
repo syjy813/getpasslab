@@ -1,0 +1,1839 @@
+{
+  "date": "2026-10-01",
+  "type": "static HTML and local HTTP checks; no browser execution",
+  "baseUrl": "http://127.0.0.1:4331",
+  "passed": true,
+  "summary": {
+    "chapters": 81,
+    "previousNextLinks": 160,
+    "internalLinkOccurrences": 15684,
+    "uniqueHttpTargets": 108,
+    "dialogWiringCount": 208,
+    "questionImageOccurrences": 15,
+    "tablesInventoriedNotVisuallyTested": 35
+  },
+  "pages": [
+    {
+      "order": 1,
+      "path": "/computer-literacy/written/computer-basics/computer-classification/",
+      "navigation": {
+        "next": "/computer-literacy/written/computer-basics/wearable-computers/"
+      },
+      "internalLinkOccurrences": 192,
+      "dialogWiringCount": 5,
+      "images": [],
+      "tableCount": 2
+    },
+    {
+      "order": 2,
+      "path": "/computer-literacy/written/computer-basics/wearable-computers/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/computer-classification/",
+        "next": "/computer-literacy/written/computer-basics/computer-development/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 2,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 3,
+      "path": "/computer-literacy/written/computer-basics/computer-development/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/wearable-computers/",
+        "next": "/computer-literacy/written/computer-basics/bits-bytes-data-units/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 4,
+      "path": "/computer-literacy/written/computer-basics/bits-bytes-data-units/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/computer-development/",
+        "next": "/computer-literacy/written/computer-basics/storage-capacity-conversion/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 4,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 5,
+      "path": "/computer-literacy/written/computer-basics/storage-capacity-conversion/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/bits-bytes-data-units/",
+        "next": "/computer-literacy/written/computer-basics/character-codes/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 2,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 6,
+      "path": "/computer-literacy/written/computer-basics/character-codes/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/storage-capacity-conversion/",
+        "next": "/computer-literacy/written/computer-basics/parity-bit/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 7,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 7,
+      "path": "/computer-literacy/written/computer-basics/parity-bit/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/character-codes/",
+        "next": "/computer-literacy/written/computer-basics/cpu-operations-control/"
+      },
+      "internalLinkOccurrences": 197,
+      "dialogWiringCount": 5,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 8,
+      "path": "/computer-literacy/written/computer-basics/cpu-operations-control/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/parity-bit/",
+        "next": "/computer-literacy/written/computer-basics/cpu-registers/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 5,
+      "images": [
+        {
+          "src": "/_astro/20151017_012.BNnGVEGK_ovF2u.webp",
+          "alt": "다음 중 아래 그림에서 (ㄱ)과 (ㄴ)에 해당하는 장치를 올바르게 연결한 것은 문항에 포함된 시각자료",
+          "actualSize": [
+            1039,
+            637
+          ],
+          "declaredSize": [
+            1039,
+            637
+          ]
+        },
+        {
+          "src": "/_astro/20200704_018.Bj2GPiR4_ZG6P0N.webp",
+          "alt": "Intel Core i5-8세대, Intel UHD Graphics 620, 16GB DDR4 RAM, SSD 256GB로 구성된 노트북 사양",
+          "actualSize": [
+            539,
+            284
+          ],
+          "declaredSize": [
+            539,
+            284
+          ]
+        }
+      ],
+      "tableCount": 1
+    },
+    {
+      "order": 9,
+      "path": "/computer-literacy/written/computer-basics/cpu-registers/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/cpu-operations-control/",
+        "next": "/computer-literacy/written/computer-basics/ram-rom-flash/"
+      },
+      "internalLinkOccurrences": 195,
+      "dialogWiringCount": 7,
+      "images": [
+        {
+          "src": "/_astro/20151017_012.BNnGVEGK_ovF2u.webp",
+          "alt": "다음 중 아래 그림에서 (ㄱ)과 (ㄴ)에 해당하는 장치를 올바르게 연결한 것은 문항에 포함된 시각자료",
+          "actualSize": [
+            1039,
+            637
+          ],
+          "declaredSize": [
+            1039,
+            637
+          ]
+        }
+      ],
+      "tableCount": 1
+    },
+    {
+      "order": 10,
+      "path": "/computer-literacy/written/computer-basics/ram-rom-flash/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/cpu-registers/",
+        "next": "/computer-literacy/written/computer-basics/storage-devices/"
+      },
+      "internalLinkOccurrences": 203,
+      "dialogWiringCount": 16,
+      "images": [
+        {
+          "src": "/_astro/20151017_012.BNnGVEGK_ovF2u.webp",
+          "alt": "다음 중 아래 그림에서 (ㄱ)과 (ㄴ)에 해당하는 장치를 올바르게 연결한 것은 문항에 포함된 시각자료",
+          "actualSize": [
+            1039,
+            637
+          ],
+          "declaredSize": [
+            1039,
+            637
+          ]
+        },
+        {
+          "src": "/_astro/20200704_018.Bj2GPiR4_ZG6P0N.webp",
+          "alt": "Intel Core i5-8세대, Intel UHD Graphics 620, 16GB DDR4 RAM, SSD 256GB로 구성된 노트북 사양",
+          "actualSize": [
+            539,
+            284
+          ],
+          "declaredSize": [
+            539,
+            284
+          ]
+        }
+      ],
+      "tableCount": 2
+    },
+    {
+      "order": 11,
+      "path": "/computer-literacy/written/computer-basics/storage-devices/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/ram-rom-flash/",
+        "next": "/computer-literacy/written/computer-basics/memory-speed-hierarchy/"
+      },
+      "internalLinkOccurrences": 195,
+      "dialogWiringCount": 7,
+      "images": [
+        {
+          "src": "/_astro/20200704_018.Bj2GPiR4_ZG6P0N.webp",
+          "alt": "Intel Core i5-8세대, Intel UHD Graphics 620, 16GB DDR4 RAM, SSD 256GB로 구성된 노트북 사양",
+          "actualSize": [
+            539,
+            284
+          ],
+          "declaredSize": [
+            539,
+            284
+          ]
+        }
+      ],
+      "tableCount": 1
+    },
+    {
+      "order": 12,
+      "path": "/computer-literacy/written/computer-basics/memory-speed-hierarchy/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/storage-devices/",
+        "next": "/computer-literacy/written/computer-basics/cache-buffer/"
+      },
+      "internalLinkOccurrences": 196,
+      "dialogWiringCount": 4,
+      "images": [
+        {
+          "src": "/_astro/20151017_012.BNnGVEGK_ovF2u.webp",
+          "alt": "다음 중 아래 그림에서 (ㄱ)과 (ㄴ)에 해당하는 장치를 올바르게 연결한 것은 문항에 포함된 시각자료",
+          "actualSize": [
+            1039,
+            637
+          ],
+          "declaredSize": [
+            1039,
+            637
+          ]
+        }
+      ],
+      "tableCount": 1
+    },
+    {
+      "order": 13,
+      "path": "/computer-literacy/written/computer-basics/cache-buffer/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/memory-speed-hierarchy/",
+        "next": "/computer-literacy/written/computer-basics/virtual-memory/"
+      },
+      "internalLinkOccurrences": 197,
+      "dialogWiringCount": 5,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 14,
+      "path": "/computer-literacy/written/computer-basics/virtual-memory/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/cache-buffer/",
+        "next": "/computer-literacy/written/computer-basics/input-output-devices/"
+      },
+      "internalLinkOccurrences": 195,
+      "dialogWiringCount": 6,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 15,
+      "path": "/computer-literacy/written/computer-basics/input-output-devices/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/virtual-memory/",
+        "next": "/computer-literacy/written/computer-basics/multimedia-boards/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 16,
+      "path": "/computer-literacy/written/computer-basics/multimedia-boards/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/input-output-devices/",
+        "next": "/computer-literacy/written/computer-basics/printer-principles/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 17,
+      "path": "/computer-literacy/written/computer-basics/printer-principles/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/multimedia-boards/",
+        "next": "/computer-literacy/written/computer-basics/plug-and-play-hot-swap/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 18,
+      "path": "/computer-literacy/written/computer-basics/plug-and-play-hot-swap/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/printer-principles/",
+        "next": "/computer-literacy/written/computer-basics/usb-interface/"
+      },
+      "internalLinkOccurrences": 196,
+      "dialogWiringCount": 5,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 19,
+      "path": "/computer-literacy/written/computer-basics/usb-interface/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/plug-and-play-hot-swap/",
+        "next": "/computer-literacy/written/computer-basics/sata-interface/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 2,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 20,
+      "path": "/computer-literacy/written/computer-basics/sata-interface/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/usb-interface/",
+        "next": "/computer-literacy/written/computer-basics/hdmi-interface/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 21,
+      "path": "/computer-literacy/written/computer-basics/hdmi-interface/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/sata-interface/",
+        "next": "/computer-literacy/written/computer-basics/firmware-bios/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 22,
+      "path": "/computer-literacy/written/computer-basics/firmware-bios/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/hdmi-interface/",
+        "next": "/computer-literacy/written/computer-basics/processing-time-units/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 4,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 23,
+      "path": "/computer-literacy/written/computer-basics/processing-time-units/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/firmware-bios/",
+        "next": "/computer-literacy/written/computer-basics/performance-metrics/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 2,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 24,
+      "path": "/computer-literacy/written/computer-basics/performance-metrics/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/processing-time-units/",
+        "next": "/computer-literacy/written/computer-basics/computer-specifications/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 25,
+      "path": "/computer-literacy/written/computer-basics/computer-specifications/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/performance-metrics/",
+        "next": "/computer-literacy/written/computer-basics/pc-upgrade-compatibility/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [
+        {
+          "src": "/_astro/20200704_018.Bj2GPiR4_ZG6P0N.webp",
+          "alt": "Intel Core i5-8세대, Intel UHD Graphics 620, 16GB DDR4 RAM, SSD 256GB로 구성된 노트북 사양",
+          "actualSize": [
+            539,
+            284
+          ],
+          "declaredSize": [
+            539,
+            284
+          ]
+        }
+      ],
+      "tableCount": 0
+    },
+    {
+      "order": 26,
+      "path": "/computer-literacy/written/computer-basics/pc-upgrade-compatibility/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/computer-specifications/",
+        "next": "/computer-literacy/written/computer-basics/data-processing-methods/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 27,
+      "path": "/computer-literacy/written/computer-basics/data-processing-methods/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/pc-upgrade-compatibility/",
+        "next": "/computer-literacy/written/computer-basics/software-types/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 4,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 28,
+      "path": "/computer-literacy/written/computer-basics/software-types/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/data-processing-methods/",
+        "next": "/computer-literacy/written/computer-basics/operating-system-resources/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 5,
+      "images": [
+        {
+          "src": "/_astro/20151017_010.DV_YNQKy_ZhIkWM.webp",
+          "alt": "다음 중 아래에서 응용 소프트웨어만 선택하여 나열한 것은 문항에 포함된 시각자료",
+          "actualSize": [
+            727,
+            172
+          ],
+          "declaredSize": [
+            727,
+            172
+          ]
+        }
+      ],
+      "tableCount": 1
+    },
+    {
+      "order": 29,
+      "path": "/computer-literacy/written/computer-basics/operating-system-resources/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/software-types/",
+        "next": "/computer-literacy/written/computer-basics/operating-system-environments/"
+      },
+      "internalLinkOccurrences": 197,
+      "dialogWiringCount": 8,
+      "images": [
+        {
+          "src": "/_astro/20151017_010.DV_YNQKy_ZhIkWM.webp",
+          "alt": "다음 중 아래에서 응용 소프트웨어만 선택하여 나열한 것은 문항에 포함된 시각자료",
+          "actualSize": [
+            727,
+            172
+          ],
+          "declaredSize": [
+            727,
+            172
+          ]
+        }
+      ],
+      "tableCount": 0
+    },
+    {
+      "order": 30,
+      "path": "/computer-literacy/written/computer-basics/operating-system-environments/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/operating-system-resources/",
+        "next": "/computer-literacy/written/computer-basics/operating-system-performance/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 31,
+      "path": "/computer-literacy/written/computer-basics/operating-system-performance/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/operating-system-environments/",
+        "next": "/computer-literacy/written/computer-basics/compiler-interpreter/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 2,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 32,
+      "path": "/computer-literacy/written/computer-basics/compiler-interpreter/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/operating-system-performance/",
+        "next": "/computer-literacy/written/computer-basics/object-oriented-features/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 33,
+      "path": "/computer-literacy/written/computer-basics/object-oriented-features/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/compiler-interpreter/",
+        "next": "/computer-literacy/written/computer-basics/software-license-types/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 2,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 34,
+      "path": "/computer-literacy/written/computer-basics/software-license-types/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/object-oriented-features/",
+        "next": "/computer-literacy/written/computer-basics/software-release-versions/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 4,
+      "images": [
+        {
+          "src": "/_astro/20151017_009.DRJOTd0z_Z1nnFsH.webp",
+          "alt": "다음 중 아래의 (ㄱ), (ㄴ), (ㄷ)에 해당하는 소프트웨어의 종류를 올바르게 짝지어 나열한 것은 문항에 포함된 시각자료",
+          "actualSize": [
+            984,
+            327
+          ],
+          "declaredSize": [
+            984,
+            327
+          ]
+        },
+        {
+          "src": "/_astro/20180901_012.DRkSxD5l_Z1FnztM.webp",
+          "alt": "다음 중 아래의 ㉠, ㉡, ㉢에 해당하는 소프트웨어의 종류를 올바르게 짝지어 나열한 것은 문항에 포함된 시각자료",
+          "actualSize": [
+            897,
+            394
+          ],
+          "declaredSize": [
+            897,
+            394
+          ]
+        }
+      ],
+      "tableCount": 1
+    },
+    {
+      "order": 35,
+      "path": "/computer-literacy/written/computer-basics/software-release-versions/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/software-license-types/",
+        "next": "/computer-literacy/written/computer-basics/patches-and-updates/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 36,
+      "path": "/computer-literacy/written/computer-basics/patches-and-updates/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/software-release-versions/",
+        "next": "/computer-literacy/written/computer-basics/archive-file-formats/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 37,
+      "path": "/computer-literacy/written/computer-basics/archive-file-formats/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/patches-and-updates/",
+        "next": "/computer-literacy/written/computer-basics/windows-apps-files-windows/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 38,
+      "path": "/computer-literacy/written/computer-basics/windows-apps-files-windows/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/archive-file-formats/",
+        "next": "/computer-literacy/written/computer-basics/window-states/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 39,
+      "path": "/computer-literacy/written/computer-basics/window-states/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/windows-apps-files-windows/",
+        "next": "/computer-literacy/written/computer-basics/taskbar-settings/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 1,
+      "images": [
+        {
+          "src": "/_astro/20180303_019.uUJOQgw6_SKsET.webp",
+          "alt": "다음 중 Windows 바탕 화면에서 아래 그림과 같이 열려 있는 모든 창들을 미리 보기로 보면서 활성창을 전환할 수 있는 바로 가기 키는 문항에 포함된 시각자료",
+          "actualSize": [
+            1062,
+            278
+          ],
+          "declaredSize": [
+            1062,
+            278
+          ]
+        }
+      ],
+      "tableCount": 0
+    },
+    {
+      "order": 40,
+      "path": "/computer-literacy/written/computer-basics/taskbar-settings/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/window-states/",
+        "next": "/computer-literacy/written/computer-basics/jump-lists/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 41,
+      "path": "/computer-literacy/written/computer-basics/jump-lists/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/taskbar-settings/",
+        "next": "/computer-literacy/written/computer-basics/aero-peek/"
+      },
+      "internalLinkOccurrences": 195,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 42,
+      "path": "/computer-literacy/written/computer-basics/aero-peek/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/jump-lists/",
+        "next": "/computer-literacy/written/computer-basics/windows-shortcuts/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 43,
+      "path": "/computer-literacy/written/computer-basics/windows-shortcuts/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/aero-peek/",
+        "next": "/computer-literacy/written/computer-basics/display-settings/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 4,
+      "images": [
+        {
+          "src": "/_astro/20180303_019.uUJOQgw6_SKsET.webp",
+          "alt": "다음 중 Windows 바탕 화면에서 아래 그림과 같이 열려 있는 모든 창들을 미리 보기로 보면서 활성창을 전환할 수 있는 바로 가기 키는 문항에 포함된 시각자료",
+          "actualSize": [
+            1062,
+            278
+          ],
+          "declaredSize": [
+            1062,
+            278
+          ]
+        }
+      ],
+      "tableCount": 0
+    },
+    {
+      "order": 44,
+      "path": "/computer-literacy/written/computer-basics/display-settings/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/windows-shortcuts/",
+        "next": "/computer-literacy/written/computer-basics/sound-input-output/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 45,
+      "path": "/computer-literacy/written/computer-basics/sound-input-output/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/display-settings/",
+        "next": "/computer-literacy/written/computer-basics/backgrounds-and-themes/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 46,
+      "path": "/computer-literacy/written/computer-basics/backgrounds-and-themes/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/sound-input-output/",
+        "next": "/computer-literacy/written/computer-basics/sleep-hibernate-shutdown/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 47,
+      "path": "/computer-literacy/written/computer-basics/sleep-hibernate-shutdown/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/backgrounds-and-themes/",
+        "next": "/computer-literacy/written/computer-basics/keyboard-mouse-properties/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 48,
+      "path": "/computer-literacy/written/computer-basics/keyboard-mouse-properties/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/sleep-hibernate-shutdown/",
+        "next": "/computer-literacy/written/computer-basics/bluetooth-pairing/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 49,
+      "path": "/computer-literacy/written/computer-basics/bluetooth-pairing/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/keyboard-mouse-properties/",
+        "next": "/computer-literacy/written/computer-basics/phone-pc-link/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 50,
+      "path": "/computer-literacy/written/computer-basics/phone-pc-link/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/bluetooth-pairing/",
+        "next": "/computer-literacy/written/computer-basics/windows-accessibility/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 51,
+      "path": "/computer-literacy/written/computer-basics/windows-accessibility/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/phone-pc-link/",
+        "next": "/computer-literacy/written/computer-basics/file-explorer-hierarchy/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 5,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 52,
+      "path": "/computer-literacy/written/computer-basics/file-explorer-hierarchy/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/windows-accessibility/",
+        "next": "/computer-literacy/written/computer-basics/file-search-and-run/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 53,
+      "path": "/computer-literacy/written/computer-basics/file-search-and-run/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/file-explorer-hierarchy/",
+        "next": "/computer-literacy/written/computer-basics/file-folder-properties/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 54,
+      "path": "/computer-literacy/written/computer-basics/file-folder-properties/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/file-search-and-run/",
+        "next": "/computer-literacy/written/computer-basics/file-extension-types/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 55,
+      "path": "/computer-literacy/written/computer-basics/file-extension-types/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/file-folder-properties/",
+        "next": "/computer-literacy/written/computer-basics/hidden-files-extensions/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 56,
+      "path": "/computer-literacy/written/computer-basics/hidden-files-extensions/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/file-extension-types/",
+        "next": "/computer-literacy/written/computer-basics/selecting-files-folders/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 57,
+      "path": "/computer-literacy/written/computer-basics/selecting-files-folders/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/hidden-files-extensions/",
+        "next": "/computer-literacy/written/computer-basics/copying-moving-files/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 58,
+      "path": "/computer-literacy/written/computer-basics/copying-moving-files/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/selecting-files-folders/",
+        "next": "/computer-literacy/written/computer-basics/shortcuts-and-originals/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 2,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 59,
+      "path": "/computer-literacy/written/computer-basics/shortcuts-and-originals/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/copying-moving-files/",
+        "next": "/computer-literacy/written/computer-basics/windows-libraries/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 4,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 60,
+      "path": "/computer-literacy/written/computer-basics/windows-libraries/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/shortcuts-and-originals/",
+        "next": "/computer-literacy/written/computer-basics/recycle-bin-recovery/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 61,
+      "path": "/computer-literacy/written/computer-basics/recycle-bin-recovery/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/windows-libraries/",
+        "next": "/computer-literacy/written/computer-basics/windows-accessories/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 62,
+      "path": "/computer-literacy/written/computer-basics/windows-accessories/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/recycle-bin-recovery/",
+        "next": "/computer-literacy/written/computer-basics/notepad-features/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 63,
+      "path": "/computer-literacy/written/computer-basics/notepad-features/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/windows-accessories/",
+        "next": "/computer-literacy/written/computer-basics/storage-sense/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 64,
+      "path": "/computer-literacy/written/computer-basics/storage-sense/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/notepad-features/",
+        "next": "/computer-literacy/written/computer-basics/disk-cleanup/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 65,
+      "path": "/computer-literacy/written/computer-basics/disk-cleanup/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/storage-sense/",
+        "next": "/computer-literacy/written/computer-basics/disk-error-checking/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 4,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 66,
+      "path": "/computer-literacy/written/computer-basics/disk-error-checking/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/disk-cleanup/",
+        "next": "/computer-literacy/written/computer-basics/drive-optimization/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 2,
+      "images": [
+        {
+          "src": "/_astro/20180901_003.Cf41Vupz_mtASq.webp",
+          "alt": "다음 중 Windows에서 아래 그림의 [오류 검사]에 관한 설명으로 옳지 않은 것은?(윈도우 10 검증 완료) 문항에 포함된 시각자료",
+          "actualSize": [
+            1062,
+            265
+          ],
+          "declaredSize": [
+            1062,
+            265
+          ]
+        }
+      ],
+      "tableCount": 0
+    },
+    {
+      "order": 67,
+      "path": "/computer-literacy/written/computer-basics/drive-optimization/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/disk-error-checking/",
+        "next": "/computer-literacy/written/computer-basics/disk-format-file-systems/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 6,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 68,
+      "path": "/computer-literacy/written/computer-basics/disk-format-file-systems/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/drive-optimization/",
+        "next": "/computer-literacy/written/computer-basics/system-about-information/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 69,
+      "path": "/computer-literacy/written/computer-basics/system-about-information/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/disk-format-file-systems/",
+        "next": "/computer-literacy/written/computer-basics/system-information-categories/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 70,
+      "path": "/computer-literacy/written/computer-basics/system-information-categories/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/system-about-information/",
+        "next": "/computer-literacy/written/computer-basics/device-manager/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 1,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 71,
+      "path": "/computer-literacy/written/computer-basics/device-manager/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/system-information-categories/",
+        "next": "/computer-literacy/written/computer-basics/task-manager/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 3,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 72,
+      "path": "/computer-literacy/written/computer-basics/task-manager/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/device-manager/",
+        "next": "/computer-literacy/written/computer-basics/windows-registry/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 2,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 73,
+      "path": "/computer-literacy/written/computer-basics/windows-registry/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/task-manager/",
+        "next": "/computer-literacy/written/computer-basics/programs-and-windows-features/"
+      },
+      "internalLinkOccurrences": 194,
+      "dialogWiringCount": 2,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 74,
+      "path": "/computer-literacy/written/computer-basics/programs-and-windows-features/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/windows-registry/",
+        "next": "/computer-literacy/written/computer-basics/default-apps/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 4,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 75,
+      "path": "/computer-literacy/written/computer-basics/default-apps/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/programs-and-windows-features/",
+        "next": "/computer-literacy/written/computer-basics/update-restart-states/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 76,
+      "path": "/computer-literacy/written/computer-basics/update-restart-states/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/default-apps/",
+        "next": "/computer-literacy/written/computer-basics/sign-in-and-account-types/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 77,
+      "path": "/computer-literacy/written/computer-basics/sign-in-and-account-types/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/update-restart-states/",
+        "next": "/computer-literacy/written/computer-basics/time-and-time-zones/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 78,
+      "path": "/computer-literacy/written/computer-basics/time-and-time-zones/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/sign-in-and-account-types/",
+        "next": "/computer-literacy/written/computer-basics/language-and-region/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 0
+    },
+    {
+      "order": 79,
+      "path": "/computer-literacy/written/computer-basics/language-and-region/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/time-and-time-zones/",
+        "next": "/computer-literacy/written/computer-basics/game-bar-and-game-mode/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 80,
+      "path": "/computer-literacy/written/computer-basics/game-bar-and-game-mode/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/language-and-region/",
+        "next": "/computer-literacy/written/computer-basics/user-accounts-uac/"
+      },
+      "internalLinkOccurrences": 193,
+      "dialogWiringCount": 0,
+      "images": [],
+      "tableCount": 1
+    },
+    {
+      "order": 81,
+      "path": "/computer-literacy/written/computer-basics/user-accounts-uac/",
+      "navigation": {
+        "previous": "/computer-literacy/written/computer-basics/game-bar-and-game-mode/"
+      },
+      "internalLinkOccurrences": 192,
+      "dialogWiringCount": 6,
+      "images": [],
+      "tableCount": 1
+    }
+  ],
+  "http": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 11884,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/_astro/20151017_009.DRJOTd0z_Z1nnFsH.webp",
+      "status": 200,
+      "bytes": 22554,
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/_astro/20151017_010.DV_YNQKy_ZhIkWM.webp",
+      "status": 200,
+      "bytes": 4894,
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/_astro/20151017_012.BNnGVEGK_ovF2u.webp",
+      "status": 200,
+      "bytes": 38612,
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/_astro/20180303_019.uUJOQgw6_SKsET.webp",
+      "status": 200,
+      "bytes": 14142,
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/_astro/20180901_003.Cf41Vupz_mtASq.webp",
+      "status": 200,
+      "bytes": 11306,
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/_astro/20180901_012.DRkSxD5l_Z1FnztM.webp",
+      "status": 200,
+      "bytes": 19652,
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/_astro/20200704_018.Bj2GPiR4_ZG6P0N.webp",
+      "status": 200,
+      "bytes": 7644,
+      "contentType": "image/webp"
+    },
+    {
+      "path": "/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.DIPINcy-.js",
+      "status": 200,
+      "bytes": 5070,
+      "contentType": "text/javascript"
+    },
+    {
+      "path": "/_astro/_slug_.DuhbIUSe.css",
+      "status": 200,
+      "bytes": 6924,
+      "contentType": "text/css"
+    },
+    {
+      "path": "/_astro/global.sMQvzKka.css",
+      "status": 200,
+      "bytes": 27480,
+      "contentType": "text/css"
+    },
+    {
+      "path": "/about/",
+      "status": 200,
+      "bytes": 11249,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/",
+      "status": 200,
+      "bytes": 8454,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/",
+      "status": 200,
+      "bytes": 37833,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/aero-peek/",
+      "status": 200,
+      "bytes": 42338,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/archive-file-formats/",
+      "status": 200,
+      "bytes": 37385,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/backgrounds-and-themes/",
+      "status": 200,
+      "bytes": 37352,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/bits-bytes-data-units/",
+      "status": 200,
+      "bytes": 41794,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/bluetooth-pairing/",
+      "status": 200,
+      "bytes": 37285,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/cache-buffer/",
+      "status": 200,
+      "bytes": 44613,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/character-codes/",
+      "status": 200,
+      "bytes": 47586,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/compiler-interpreter/",
+      "status": 200,
+      "bytes": 38374,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/computer-classification/",
+      "status": 200,
+      "bytes": 43163,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/computer-development/",
+      "status": 200,
+      "bytes": 38341,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/computer-specifications/",
+      "status": 200,
+      "bytes": 37659,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/copying-moving-files/",
+      "status": 200,
+      "bytes": 40153,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/cpu-operations-control/",
+      "status": 200,
+      "bytes": 43980,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/cpu-registers/",
+      "status": 200,
+      "bytes": 46862,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/data-processing-methods/",
+      "status": 200,
+      "bytes": 43180,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/default-apps/",
+      "status": 200,
+      "bytes": 37292,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/device-manager/",
+      "status": 200,
+      "bytes": 42573,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/disk-cleanup/",
+      "status": 200,
+      "bytes": 42388,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/disk-error-checking/",
+      "status": 200,
+      "bytes": 40945,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/disk-format-file-systems/",
+      "status": 200,
+      "bytes": 42514,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/display-settings/",
+      "status": 200,
+      "bytes": 38683,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/drive-optimization/",
+      "status": 200,
+      "bytes": 45808,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/file-explorer-hierarchy/",
+      "status": 200,
+      "bytes": 38633,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/file-extension-types/",
+      "status": 200,
+      "bytes": 38220,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/file-folder-properties/",
+      "status": 200,
+      "bytes": 41046,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/file-search-and-run/",
+      "status": 200,
+      "bytes": 37096,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/firmware-bios/",
+      "status": 200,
+      "bytes": 42353,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/game-bar-and-game-mode/",
+      "status": 200,
+      "bytes": 37002,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/hdmi-interface/",
+      "status": 200,
+      "bytes": 37177,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/hidden-files-extensions/",
+      "status": 200,
+      "bytes": 37345,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/input-output-devices/",
+      "status": 200,
+      "bytes": 40807,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/jump-lists/",
+      "status": 200,
+      "bytes": 43021,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/keyboard-mouse-properties/",
+      "status": 200,
+      "bytes": 38008,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/language-and-region/",
+      "status": 200,
+      "bytes": 37609,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/memory-speed-hierarchy/",
+      "status": 200,
+      "bytes": 42811,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/multimedia-boards/",
+      "status": 200,
+      "bytes": 38503,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/notepad-features/",
+      "status": 200,
+      "bytes": 38234,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/object-oriented-features/",
+      "status": 200,
+      "bytes": 39008,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/operating-system-environments/",
+      "status": 200,
+      "bytes": 36965,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/operating-system-performance/",
+      "status": 200,
+      "bytes": 39907,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/operating-system-resources/",
+      "status": 200,
+      "bytes": 49196,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/parity-bit/",
+      "status": 200,
+      "bytes": 44569,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/patches-and-updates/",
+      "status": 200,
+      "bytes": 41683,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/pc-upgrade-compatibility/",
+      "status": 200,
+      "bytes": 36424,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/performance-metrics/",
+      "status": 200,
+      "bytes": 40894,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/phone-pc-link/",
+      "status": 200,
+      "bytes": 37614,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/plug-and-play-hot-swap/",
+      "status": 200,
+      "bytes": 44099,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/printer-principles/",
+      "status": 200,
+      "bytes": 37367,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/processing-time-units/",
+      "status": 200,
+      "bytes": 38080,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/programs-and-windows-features/",
+      "status": 200,
+      "bytes": 43441,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/ram-rom-flash/",
+      "status": 200,
+      "bytes": 60991,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/recycle-bin-recovery/",
+      "status": 200,
+      "bytes": 42816,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/sata-interface/",
+      "status": 200,
+      "bytes": 38160,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/selecting-files-folders/",
+      "status": 200,
+      "bytes": 37931,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/shortcuts-and-originals/",
+      "status": 200,
+      "bytes": 42569,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/sign-in-and-account-types/",
+      "status": 200,
+      "bytes": 37305,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/sleep-hibernate-shutdown/",
+      "status": 200,
+      "bytes": 37682,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/software-license-types/",
+      "status": 200,
+      "bytes": 43884,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/software-release-versions/",
+      "status": 200,
+      "bytes": 41975,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/software-types/",
+      "status": 200,
+      "bytes": 45511,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/sound-input-output/",
+      "status": 200,
+      "bytes": 37245,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/storage-capacity-conversion/",
+      "status": 200,
+      "bytes": 38293,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/storage-devices/",
+      "status": 200,
+      "bytes": 46792,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/storage-sense/",
+      "status": 200,
+      "bytes": 36617,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/system-about-information/",
+      "status": 200,
+      "bytes": 41327,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/system-information-categories/",
+      "status": 200,
+      "bytes": 38599,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/task-manager/",
+      "status": 200,
+      "bytes": 41011,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/taskbar-settings/",
+      "status": 200,
+      "bytes": 41170,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/time-and-time-zones/",
+      "status": 200,
+      "bytes": 37221,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/update-restart-states/",
+      "status": 200,
+      "bytes": 37159,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/usb-interface/",
+      "status": 200,
+      "bytes": 38785,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/user-accounts-uac/",
+      "status": 200,
+      "bytes": 47053,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/virtual-memory/",
+      "status": 200,
+      "bytes": 45605,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/wearable-computers/",
+      "status": 200,
+      "bytes": 38565,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/window-states/",
+      "status": 200,
+      "bytes": 38237,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/windows-accessibility/",
+      "status": 200,
+      "bytes": 46155,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/windows-accessories/",
+      "status": 200,
+      "bytes": 36815,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/windows-apps-files-windows/",
+      "status": 200,
+      "bytes": 38075,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/windows-libraries/",
+      "status": 200,
+      "bytes": 38699,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/windows-registry/",
+      "status": 200,
+      "bytes": 40407,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/computer-basics/windows-shortcuts/",
+      "status": 200,
+      "bytes": 42788,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/spreadsheets/",
+      "status": 200,
+      "bytes": 9410,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/computer-literacy/written/spreadsheets/operator-precedence/",
+      "status": 200,
+      "bytes": 18931,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/energy-management/written/thermal-equipment/",
+      "status": 200,
+      "bytes": 18344,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/favicon-approved-v1.png",
+      "status": 200,
+      "bytes": 7893,
+      "contentType": "image/png"
+    },
+    {
+      "path": "/industrial-safety/written/",
+      "status": 200,
+      "bytes": 11498,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/industrial-safety/written/chemical/",
+      "status": 200,
+      "bytes": 22326,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/industrial-safety/written/construction/",
+      "status": 200,
+      "bytes": 23895,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/industrial-safety/written/electrical/",
+      "status": 200,
+      "bytes": 26886,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/industrial-safety/written/ergonomics/",
+      "status": 200,
+      "bytes": 26584,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/industrial-safety/written/mechanical/",
+      "status": 200,
+      "bytes": 23573,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/industrial-safety/written/safety-management/",
+      "status": 200,
+      "bytes": 24502,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/privacy/",
+      "status": 200,
+      "bytes": 15700,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/terms/",
+      "status": 200,
+      "bytes": 10934,
+      "contentType": "text/html"
+    }
+  ],
+  "errors": [],
+  "notVerified": [
+    "390px actual layout",
+    "table overflow/clipping",
+    "rendered line wrapping",
+    "image readability/displayed size",
+    "popup JavaScript interaction",
+    "actual click navigation",
+    "overlap"
+  ]
+}
