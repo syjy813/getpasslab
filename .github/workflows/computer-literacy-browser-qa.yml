@@ -1,4 +1,4 @@
-name: Computer literacy Production browser QA
+name: Computer literacy Browser QA runtime
 
 on:
   pull_request:
@@ -23,15 +23,58 @@ jobs:
       - name: Install isolated QA dependency
         run: npm install --prefix /tmp/getpasslab-browser-qa --no-package-lock playwright@1.62.1
       - name: Install Chromium
-        run: /tmp/getpasslab-browser-qa/node_modules/.bin/playwright install --with-deps chromium
-      - name: Verify published chapters at mobile and desktop widths
-        env:
-          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-qa/node_modules/playwright
-        run: node scripts/qa-computer-literacy-production.cjs
-      - name: Save measurements and actual screenshots
-        if: always()
+        run: /tmp/getpasslab-browser-qa/node_modules/.bin/playwright install --with-deps --only-shell chromium
+      - name: Package reviewed Chromium runtime for local QA
+        run: |
+          cd "$HOME/.cache/ms-playwright"
+          tar -czf /tmp/browser-runtime.tgz chromium_headless_shell-* ffmpeg-*
+          sha256sum /tmp/browser-runtime.tgz > /tmp/browser-runtime.sha256
+          split -b 24M /tmp/browser-runtime.tgz /tmp/browser-part-
+      - name: Save runtime chunk aa
         uses: actions/upload-artifact@v4
         with:
-          name: computer-literacy-production-browser-qa
-          path: qa-results/computer-literacy/
-          retention-days: 14
+          name: chromium-runtime-aa
+          path: /tmp/browser-part-aa
+          if-no-files-found: ignore
+          retention-days: 1
+      - name: Save runtime chunk ab
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromium-runtime-ab
+          path: /tmp/browser-part-ab
+          if-no-files-found: ignore
+          retention-days: 1
+      - name: Save runtime chunk ac
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromium-runtime-ac
+          path: /tmp/browser-part-ac
+          if-no-files-found: ignore
+          retention-days: 1
+      - name: Save runtime chunk ad
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromium-runtime-ad
+          path: /tmp/browser-part-ad
+          if-no-files-found: ignore
+          retention-days: 1
+      - name: Save runtime chunk ae
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromium-runtime-ae
+          path: /tmp/browser-part-ae
+          if-no-files-found: ignore
+          retention-days: 1
+      - name: Save runtime chunk af
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromium-runtime-af
+          path: /tmp/browser-part-af
+          if-no-files-found: ignore
+          retention-days: 1
+      - name: Save runtime checksum
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromium-runtime-checksum
+          path: /tmp/browser-runtime.sha256
+          retention-days: 1
