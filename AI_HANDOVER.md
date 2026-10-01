@@ -22,6 +22,29 @@
 ---
 
 
+## 컴활 1~81 배포 진행 — 2026-10-01
+
+- 사용자가 이용자 수를 고려해 **실서버 배포 후 PC·모바일 QA** 순서를 승인함. 아래 9/30 Commit/Push/Deploy 금지는 당시 단계의 기록
+- 배포 전 최신 main `6b65cdf1b60b6de5e86671426e493912865555ab`의 모바일 GNB 여백 수정을 fast-forward로 보존
+- 이 main 커밋을 배포 전 복구 기준으로 기록. 다른 작업의 변경을 되돌리지 않고 본 배포 변경만 revert할 것
+- 콘텐츠 반영 상태 유지. PC·390px 실화면 QA는 아직 미완료이며 배포 후 접근 가능한 공개 URL에서 시도
+- Test/Build 재실행·PR CI·배포·Production QA 결과는 `docs/audits/2026-09-30-computer-literacy-001-081/RELEASE.md`에 단계별 기록
+
+## 컴활 1~81 콘텐츠 반영 — 2026-09-30, 로컬 검증 단계
+
+- 사용자 승인 범위: 실제 파일 반영·로컬 Test/Build·diff 확인만. Commit / Push / Deploy 금지 요청에 따라 미실행
+- 기준: origin/main `eb5726619dc7835d6c3d5820fef8650710b7407b`, 별도 branch `codex/computer-literacy-001-081-local`
+- 경로: `/workspace/scratch/c98702d47b0f/getpasslab` (사용자 Windows PC 로컬 경로를 수정한 것이 아님)
+- 77개 웹 초안 중 기존 최신 C1 27개 보존 + 신규 50개 반영. 기존 38·39·40·43 URL/slug/본문 보호. 컴퓨터일반 81개 + 스프레드시트 4개
+- 질문 70개 추가(117→187), 원본 PNG 4개 추가. 1~81 주 145/보조 63 연결, 팝업 208개. 기존 117문항·전체 기존 챕터 해시 보존
+- 과거 목차 대비 40·43의 보조 배정 차이는 현재 저장소 우선. Windows 그룹도 기존 공개 4개 명칭 유지
+- Device Manager 과거 아이콘 주의와 `20161022_018` 포맷 문항의 원문/답안 모호함에 풀이 참고 추가. 원문·수록 답안 변경 없음, 공식 정정 미확인
+- Test 7개 PASS, Build 345페이지 PASS. 신규 `npm run check:computer-literacy-001-081` 포함
+- **390px 모바일/320px 보조/데스크톱 실화면 QA 미완료**: 로컬 Chromium 부재, 설치 ZIP 다운로드 실패, 제공 브라우저 localhost 접근 `ERR_BLOCKED_BY_CLIENT`. 화면 통과를 추정하지 않음
+- 단계: 구현 완료 → 정적 Test 완료 → Build 완료 → 실화면 QA 차단 → Commit/Push/CI/Deploy/Production QA 미실행
+- 상세 결과·81개 대장·원본·해시·재실행 QA 스크립트: `docs/audits/2026-09-30-computer-literacy-001-081/README.md`
+- 다음 담당: 실화면 QA를 완료한 후 결과 보고. 사용자 별도 지시 없이 commit/push/deploy 금지
+
 ## C1 공개 완료 — 2026-09-27
 
 - 사용자의 실서버 배포 요청으로 C1 공개 승인 · 아래의 로컬 전용·미배포 기록은 당시 단계

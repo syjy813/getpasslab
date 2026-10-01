@@ -7,6 +7,20 @@
     "alt": "A1=1, A2=3, B1=2, B2=4인 두 행 두 열의 워크시트"
   },
   {
+    "id": "20151017_009",
+    "asset_path": "src/assets/questions/computer-literacy/20151017_009.png",
+    "width": 984,
+    "height": 327,
+    "alt": "다음 중 아래의 (ㄱ), (ㄴ), (ㄷ)에 해당하는 소프트웨어의 종류를 올바르게 짝지어 나열한 것은 문항에 포함된 시각자료"
+  },
+  {
+    "id": "20151017_010",
+    "asset_path": "src/assets/questions/computer-literacy/20151017_010.png",
+    "width": 727,
+    "height": 172,
+    "alt": "다음 중 아래에서 응용 소프트웨어만 선택하여 나열한 것은 문항에 포함된 시각자료"
+  },
+  {
     "id": "20151017_012",
     "asset_path": "src/assets/questions/computer-literacy/20151017_012.png",
     "width": 1039,
@@ -33,6 +47,20 @@
     "width": 1062,
     "height": 946,
     "alt": "아래 견적서에서 총합계 [F2] 셀을 1,170,000원으로 맞추기 위해서 [D6] 셀의 할인율을 어느 정도로 조정해야 하는지 그 목표값을 찾고자 한다. 다음 중 [목표값 찾기] 대화상자의 각 항목에 들어갈 내용으로 옳은 것은 문항에 포함된 시각자료"
+  },
+  {
+    "id": "20180901_003",
+    "asset_path": "src/assets/questions/computer-literacy/20180901_003.png",
+    "width": 1062,
+    "height": 265,
+    "alt": "다음 중 Windows에서 아래 그림의 [오류 검사]에 관한 설명으로 옳지 않은 것은?(윈도우 10 검증 완료) 문항에 포함된 시각자료"
+  },
+  {
+    "id": "20180901_012",
+    "asset_path": "src/assets/questions/computer-literacy/20180901_012.png",
+    "width": 897,
+    "height": 394,
+    "alt": "다음 중 아래의 ㉠, ㉡, ㉢에 해당하는 소프트웨어의 종류를 올바르게 짝지어 나열한 것은 문항에 포함된 시각자료"
   },
   {
     "id": "20180901_040",
