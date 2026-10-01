@@ -1,4 +1,4 @@
-name: Computer literacy Browser QA runtime
+name: Computer literacy Production browser QA
 
 on:
   pull_request:
@@ -23,16 +23,15 @@ jobs:
       - name: Install isolated QA dependency
         run: npm install --prefix /tmp/getpasslab-browser-qa --no-package-lock playwright@1.62.1
       - name: Install Chromium
-        run: /tmp/getpasslab-browser-qa/node_modules/.bin/playwright install --with-deps --only-shell chromium
-      - name: Package Unicode fallback fonts for local QA
-        run: |
-          find /usr/share/fonts -type f \( -iname '*unifont*' -o -iname '*wqy*' \) -print0 | tar --null -T - -czf /tmp/browser-fonts.tgz
-          sha256sum /tmp/browser-fonts.tgz > /tmp/browser-fonts.sha256
-      - name: Save fallback fonts
+        run: /tmp/getpasslab-browser-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify published chapters at mobile and desktop widths
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-qa/node_modules/playwright
+        run: node scripts/qa-computer-literacy-production.cjs
+      - name: Save measurements and actual screenshots
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: browser-fallback-fonts
-          path: |
-            /tmp/browser-fonts.tgz
-            /tmp/browser-fonts.sha256
-          retention-days: 1
+          name: computer-literacy-production-browser-qa
+          path: qa-results/computer-literacy/
+          retention-days: 14
