@@ -1,0 +1,129 @@
+{
+  "releaseCommit": "e5814d4fe298f84dfb730dc96cb6ff5e2509f3c6",
+  "baseCommit": "27dc3924aff77f478df50c15b5b7b337125c7fdb",
+  "productionURL": "https://getpasslab.co.kr/",
+  "contentPR": 116,
+  "deployRun": 36977703260,
+  "productionQARun": 36977996390,
+  "qaWorkflowCommit": "d69765d5a6f31df245316a0e6e546b269e002503",
+  "artifact": {
+    "id": 11214752062,
+    "sha256": "10ca91b451c6cb794b77ae67ab183f07f625aac888f85461463bc82e6aa2bd9d",
+    "screenshots": 34,
+    "resultsJSONs": 3,
+    "expiresAt": "2026-10-16T07:27:54Z"
+  },
+  "checks": {
+    "newChapters": {
+      "passed": true,
+      "errors": 0,
+      "resultSha256": "810a5a89d930d05a75eaa1c4c5ae68bd1d9e2f077ed2c0b5069c5df09b36e850",
+      "startedAt": "2026-10-02T07:23:27.860Z",
+      "finishedAt": "2026-10-02T07:27:53.940Z",
+      "viewports": [
+        {
+          "width": 390,
+          "pages": 79,
+          "dialogs": 214
+        },
+        {
+          "width": 320,
+          "pages": 8,
+          "dialogs": 33
+        },
+        {
+          "width": 1440,
+          "pages": 79,
+          "dialogs": 214
+        }
+      ],
+      "screenshots": 28,
+      "imageChecks": 22
+    },
+    "protectedRegression": {
+      "passed": true,
+      "errors": 0,
+      "resultSha256": "e9d22ca1d53ac423fd1c5625d22a1182dffa0f51f59e85fc4dbe2de1258352c1",
+      "startedAt": "2026-10-02T07:20:53.681Z",
+      "finishedAt": "2026-10-02T07:23:27.451Z",
+      "viewports": [
+        {
+          "width": 390,
+          "pages": 81,
+          "dialogs": 208
+        },
+        {
+          "width": 320,
+          "pages": 24,
+          "dialogs": 69
+        },
+        {
+          "width": 1440,
+          "pages": 24,
+          "dialogs": 69
+        }
+      ],
+      "screenshots": 6,
+      "imageChecks": 27
+    },
+    "productionHTTP": {
+      "passed": true,
+      "errors": 0,
+      "resultSha256": "2464b57f5389bb0d285dbc06d122c7212679561cd952988cc138515993b3bc7d",
+      "startedAt": "2026-10-02T07:20:26.579Z",
+      "finishedAt": "2026-10-02T07:20:29.290Z",
+      "chapters": 163,
+      "comparison": "Exact SHA-256 of chapter <main> from released build and Production HTTP response"
+    }
+  },
+  "limitations": [
+    "Chromium viewport emulation, not a physical device",
+    "No Excel application execution",
+    "External advertisement/tracking requests blocked in automation; reserved slots checked",
+    "Provided Chrome 1348px observed one rendered advertisement; not a full ad-delivery audit"
+  ],
+  "manualProductionReview": {
+    "browser": "provided Chrome",
+    "width": 1348,
+    "chapters": [
+      82,
+      97,
+      100,
+      159
+    ],
+    "verified": [
+      "Published chapter content",
+      "Sidebar navigation",
+      "Image 20161022_008 decoded and displayed",
+      "Original answer and IPv6 caution revealed",
+      "Final spreadsheet chapter has next navigation disabled",
+      "Spreadsheet sidebar contains exactly 10 published chapters"
+    ]
+  },
+  "manualScreenshotReview": {
+    "images": [
+      "20161022_008",
+      "20150307_001",
+      "20200704_001",
+      "20200229_012",
+      "20150627_028",
+      "20200704_021",
+      "20190831_028"
+    ],
+    "cautions": [
+      "20150307_005",
+      "20151017_006",
+      "20151017_035"
+    ],
+    "chapterCaptures": [
+      "390-chapter-100.png",
+      "1440-chapter-159.png"
+    ]
+  },
+  "blocked": {
+    "order": 160,
+    "id": "P2-02a",
+    "status": "BLOCKED",
+    "published": false
+  }
+}

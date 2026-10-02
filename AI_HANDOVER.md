@@ -17,10 +17,23 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-09-27 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.36
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-02 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.36
 
 ---
 
+
+## 컴활 82~159 Production 배포 완료 — 2026-10-02
+
+- 사용자 `실서버 반영해줘` 명시 승인으로 아래 Web Work 검토 단계의 Merge/Deploy 금지 경계를 갱신함
+- 배포 전 main `27dc3924aff77f478df50c15b5b7b337125c7fdb` 및 최종 PR HEAD `3793f93bd6b29f2d81dfa741f7d3b3839c8184d0`의 성공 CI를 확인한 뒤 [PR #116](https://github.com/syjy813/getpasslab/pull/116)을 expected HEAD 고정 squash merge
+- 배포 커밋 `e5814d4fe298f84dfb730dc96cb6ff5e2509f3c6`. [GitHub Pages 36977703260](https://github.com/syjy813/getpasslab/actions/runs/36977703260) Build/Deploy success, https://getpasslab.co.kr/ 반영 완료
+- 82~159 신규 78개 공개. 기존 1~81/Excel 4개 본문·URL·정본 payload·원본 이미지 보호. 160 `P2-02a`는 BLOCKED 유지
+- [Production QA 36977996390](https://github.com/syjy813/getpasslab/actions/runs/36977996390): 공개 163개 HTTP 200 및 본문 SHA-256이 배포 빌드와 일치. 실제 공개 URL에서 신규 390/1440px 각 79페이지·320px 8페이지, 기존 390px 81페이지·320/1440px 각 24페이지 모두 PASS/오류 0개
+- 모달·답안 초기화·목차·81→82 및 마지막 153/159 이동·표/긴 문자열·이미지·광고 예약 영역 검사 PASS. 캡처 34장·JSON 3개 다운로드 후 지문 대조, 원본 도판 7개 및 풀이 참고 3개 Production 화면 직접 검수
+- 제공 Chrome 1348px에서 공개 82/97/100/159, PC 목차 이동, 원본 이미지 로딩, IPv6 답안·풀이 참고, 159 마지막 처리·과목 목차 10개 직접 확인
+- 실물 스마트폰·Excel 앱 실행은 미검증. 자동화 광고/추적 외부 요청은 차단하고 예약 영역만 검사. 제공 Chrome에서 광고 한 건을 관찰했으나 전체 송출 검증으로 확대하지 않음
+- 상세 결과서: `docs/audits/2026-10-02-computer-literacy-082-159/RELEASE.md`, `production-verification.json`. 임시 [QA PR #117](https://github.com/syjy813/getpasslab/pull/117)의 workflow는 검사 후 제거하고 이 배포 기록과 인수인계 문서만 반영
+- 아래 미배포 표시는 당시 단계의 기록. 현재 공개 상태는 이 항목과 RELEASE 결과서를 우선함. 되돌림은 해당 배포 커밋만 전용 브랜치/PR에서 revert하며 다른 main 작업이나 기존 콘텐츠를 reset하지 않음
 
 ## 컴활 82~159 Web Work 반영 — 2026-10-02
 
