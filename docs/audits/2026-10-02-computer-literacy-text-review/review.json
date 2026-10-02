@@ -1,0 +1,819 @@
+{
+  "base": "cbcb81020d6489193e278eeee1160f4268972f33",
+  "reviewedAt": "2026-10-02T02:11:33.165Z",
+  "reviewed": 81,
+  "changed": 49,
+  "stableFieldsAndCanonicalData": "PASS",
+  "chapters": [
+    {
+      "order": 1,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/computer-classification.md",
+      "slug": "computer-classification",
+      "title": "컴퓨터를 분류하는 기준",
+      "originalSha256": "bb39ba6ce4008efcbbf50f1557e6719862c933eeee886cd1be5dc1f6e5722d2c",
+      "sha256": "bb39ba6ce4008efcbbf50f1557e6719862c933eeee886cd1be5dc1f6e5722d2c",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 2,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/wearable-computers.md",
+      "slug": "wearable-computers",
+      "title": "웨어러블 컴퓨터의 착용과 입력 방식",
+      "originalSha256": "c9f274cfb2665bd5dbf2b1e61f35e7f13a50e73db668301fcfe9bc0062cdc0d0",
+      "sha256": "c9f274cfb2665bd5dbf2b1e61f35e7f13a50e73db668301fcfe9bc0062cdc0d0",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 3,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/computer-development.md",
+      "slug": "computer-development",
+      "title": "컴퓨터 발전의 주요 전환",
+      "originalSha256": "d248655c8483cf5b48d65d3b35c61e95681c96c8253f087bc6be340035af812a",
+      "sha256": "d248655c8483cf5b48d65d3b35c61e95681c96c8253f087bc6be340035af812a",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 4,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/bits-bytes-data-units.md",
+      "slug": "bits-bytes-data-units",
+      "title": "비트·바이트와 자료 구성 단위",
+      "originalSha256": "5358fafaacab4c416d7da746cb613139ffa18835f84c3d9dc2f0e46018c43e2d",
+      "sha256": "5358fafaacab4c416d7da746cb613139ffa18835f84c3d9dc2f0e46018c43e2d",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 5,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/storage-capacity-conversion.md",
+      "slug": "storage-capacity-conversion",
+      "title": "저장 용량 환산하기",
+      "originalSha256": "23a6a70d5cf9e342debb111dc53d7426e56540ad2fd7c2338753019bc0961715",
+      "sha256": "23a6a70d5cf9e342debb111dc53d7426e56540ad2fd7c2338753019bc0961715",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 6,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/character-codes.md",
+      "slug": "character-codes",
+      "title": "ASCII·EBCDIC·Unicode의 문자 표현",
+      "originalSha256": "33fba080923d91a31ca0b6729162717237859116c64fd32c356cdcfd712ca5d3",
+      "sha256": "165c28c9e3b0ce2e54081686cbd8602bf65f7bd432935da43198db2569fd7ee2",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 7,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/parity-bit.md",
+      "slug": "parity-bit",
+      "title": "패리티 비트로 오류 검출하기",
+      "originalSha256": "d1cb116ec9bd30aa219337b59010e317df970e1f0d4fcecd37509de01e41f2fb",
+      "sha256": "d1cb116ec9bd30aa219337b59010e317df970e1f0d4fcecd37509de01e41f2fb",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 8,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/cpu-operations-control.md",
+      "slug": "cpu-operations-control",
+      "title": "CPU의 연산·제어 기능",
+      "originalSha256": "6359ad7a9cd127fb9104eecf975aa217ba52fd68f08202a69a97580bf175d3ce",
+      "sha256": "c0d32f0bda00a2a9280869f1e18eb91887c87ceddb713c5eaaa7a717882ed487",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 9,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/cpu-registers.md",
+      "slug": "cpu-registers",
+      "title": "레지스터에 저장하는 정보",
+      "originalSha256": "5dbe9805c304abb2eebfab2bcea4c51ab3f8bb6e52a64bf834ec3103901b290a",
+      "sha256": "710dad1f039f80d0297c306c7e910f64e0db517fa0a957ff002876a94de88547",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 10,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ram-rom-flash.md",
+      "slug": "ram-rom-flash",
+      "title": "RAM·ROM·플래시 메모리 비교",
+      "originalSha256": "eb790dcadaab24940cd876cbf4c405c550721ac43715d6091edc39cd9b6ca7d5",
+      "sha256": "eb790dcadaab24940cd876cbf4c405c550721ac43715d6091edc39cd9b6ca7d5",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 11,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/storage-devices.md",
+      "slug": "storage-devices",
+      "title": "HDD·SSD·광학 저장장치 비교",
+      "originalSha256": "00c0ea896fed23a4b7e2603da32b0aed7589feae05e37ddf9c595bd94eae0585",
+      "sha256": "e7ab15a44c9a225bdc7da1e118ca51eddfe8cb4a0b7e3b2b02c7e8f2bfefb663",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 12,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/memory-speed-hierarchy.md",
+      "slug": "memory-speed-hierarchy",
+      "title": "기억장치의 위치와 속도 순서",
+      "originalSha256": "555c01c27f9223f73798574a56c561f6f4b87cb7058aa8c00b99df3d39da81e7",
+      "sha256": "555c01c27f9223f73798574a56c561f6f4b87cb7058aa8c00b99df3d39da81e7",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 13,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/cache-buffer.md",
+      "slug": "cache-buffer",
+      "title": "캐시와 버퍼의 임시 저장 목적",
+      "originalSha256": "b1a595dea0c181d66277e07416de30bfde18bf31ceecbe1a84d4bf86f3c30e9d",
+      "sha256": "b1a595dea0c181d66277e07416de30bfde18bf31ceecbe1a84d4bf86f3c30e9d",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 14,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/virtual-memory.md",
+      "slug": "virtual-memory",
+      "title": "가상 메모리로 주기억 용량 보완하기",
+      "originalSha256": "444e098ca0a53616537b4b233ee25b18f4b495880063fc8610a48a3feb60794d",
+      "sha256": "21dd15a2a9114880146f364765c7e81e409cb4e37611bfb5218af0d338f90284",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 15,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/input-output-devices.md",
+      "slug": "input-output-devices",
+      "title": "정보의 이동 방향으로 입출력장치 구별하기",
+      "originalSha256": "441d41a2b3dabdd9f9b5a6f490b9572ba78c786ff3d9c3148a0fdce7c4d927c7",
+      "sha256": "441d41a2b3dabdd9f9b5a6f490b9572ba78c786ff3d9c3148a0fdce7c4d927c7",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 16,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/multimedia-boards.md",
+      "slug": "multimedia-boards",
+      "title": "멀티미디어 보드의 처리 역할",
+      "originalSha256": "df98c3db13205275baa08aae2c168b4f78b070dfd536e486054b385ed8cdea55",
+      "sha256": "df98c3db13205275baa08aae2c168b4f78b070dfd536e486054b385ed8cdea55",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 17,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/printer-principles.md",
+      "slug": "printer-principles",
+      "title": "프린터의 인쇄 원리",
+      "originalSha256": "10b2bc5e16b4449e720d82a69f3eaf8ed9e6d66823328fec70b92bf28959c0fc",
+      "sha256": "10b2bc5e16b4449e720d82a69f3eaf8ed9e6d66823328fec70b92bf28959c0fc",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 18,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/plug-and-play-hot-swap.md",
+      "slug": "plug-and-play-hot-swap",
+      "title": "자동 인식과 전원을 켠 채 연결: PnP·핫 스와핑",
+      "originalSha256": "634cededed668fa0c912e4142e2540cfa826369dd416092bd77ef1c4a64e7ab7",
+      "sha256": "88ccda85a961940a6ac550cb5e56f5c859964eaac9112a79958491dd8ee108ce",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 19,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/usb-interface.md",
+      "slug": "usb-interface",
+      "title": "USB의 연결 방식과 규격",
+      "originalSha256": "64bb2607b9c49b2e4e911baf792a67dda6baa7ddeaa86572e066cc2eec532ac7",
+      "sha256": "64bb2607b9c49b2e4e911baf792a67dda6baa7ddeaa86572e066cc2eec532ac7",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 20,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sata-interface.md",
+      "slug": "sata-interface",
+      "title": "SATA의 저장장치 연결 방식",
+      "originalSha256": "2ca820843d12817a128d8d8219efb88b59d8b1f3e69036cfc0f6cdd580b94e43",
+      "sha256": "0da316631b062af0dca6eb6fa494cc35fc130b8fda859b0b56c11a883dbb2e75",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 21,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/hdmi-interface.md",
+      "slug": "hdmi-interface",
+      "title": "HDMI의 영상·음향 전송",
+      "originalSha256": "256bbe69e615aa5dd2f2f921d443effae29cc4bcbefa8d55d66eae04745c1422",
+      "sha256": "256bbe69e615aa5dd2f2f921d443effae29cc4bcbefa8d55d66eae04745c1422",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 22,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/firmware-bios.md",
+      "slug": "firmware-bios",
+      "title": "펌웨어와 BIOS의 부팅 역할",
+      "originalSha256": "83a12aeff772473f7a06d6a06ccd0f3d896953268b80dd0bcbf3154e94ac0a0f",
+      "sha256": "83a12aeff772473f7a06d6a06ccd0f3d896953268b80dd0bcbf3154e94ac0a0f",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 23,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/processing-time-units.md",
+      "slug": "processing-time-units",
+      "title": "연산 시간 단위와 빠르기 비교",
+      "originalSha256": "ab0bc1a880289fdd8d9f8e1d4e299cf9351aff739747b4e4832b90febbca7aa9",
+      "sha256": "ab0bc1a880289fdd8d9f8e1d4e299cf9351aff739747b4e4832b90febbca7aa9",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 24,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/performance-metrics.md",
+      "slug": "performance-metrics",
+      "title": "성능 수치의 크기와 비교 방향",
+      "originalSha256": "946748e1cac7b8396a3b28cc0a851880c6280b9456fd6994e65a63d3fd09095f",
+      "sha256": "80292dcc69babf5ad7f006af8143345ea167d9dd0237ad82c3d31786dcdf9f0b",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 25,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/computer-specifications.md",
+      "slug": "computer-specifications",
+      "title": "컴퓨터 사양표에서 장치와 용량 읽기",
+      "originalSha256": "a62eb274e1cf5ae9cc913f0ea6d160bb59fbd3416c32fd289da4f686fb7cc0dd",
+      "sha256": "a62eb274e1cf5ae9cc913f0ea6d160bb59fbd3416c32fd289da4f686fb7cc0dd",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 26,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/pc-upgrade-compatibility.md",
+      "slug": "pc-upgrade-compatibility",
+      "title": "부품 업그레이드의 목적과 호환 조건",
+      "originalSha256": "843ed74178b5b207e6de516b09672e77778ceec25247d3c181113d437d6d40d0",
+      "sha256": "843ed74178b5b207e6de516b09672e77778ceec25247d3c181113d437d6d40d0",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 27,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/data-processing-methods.md",
+      "slug": "data-processing-methods",
+      "title": "일괄·실시간·분산 처리 비교",
+      "originalSha256": "595dda8fd5437207100a49097e8757280defb7f5daafa9b14d7b79eb666d2f10",
+      "sha256": "c6729bdedf0c5d8432f9fafb04719979989980d00baea32ee22c279e6c3dad63",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 28,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/software-types.md",
+      "slug": "software-types",
+      "title": "시스템·응용·유틸리티 구별하기",
+      "originalSha256": "d9b44568d70a3640531ad9d5cb109be80239301d70c66cde6e0712de70290d6e",
+      "sha256": "0d6ebb05b7517ed322329f939cfdf49915db2cee0b47d7785c5d3430814d96dc",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 29,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/operating-system-resources.md",
+      "slug": "operating-system-resources",
+      "title": "운영체제가 관리하는 자원과 작업",
+      "originalSha256": "b2e9c99cb10d9d5e83d2c5b115461d0ba80a6abd2ea83eacde6dd5470a216203",
+      "sha256": "c557ce0965069495ff822a5812194dad2b8ff8507c8d0925b9bd95a9de4766ba",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 30,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/operating-system-environments.md",
+      "slug": "operating-system-environments",
+      "title": "운영체제의 종류와 사용 환경",
+      "originalSha256": "4f2f940b59230416ff2538fbf572d0512647ae7edfe2164b54edcf155ce34373",
+      "sha256": "d002673ebd16fab0495bb593577786741ffb1e03a923241b45292875f6b32920",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 31,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/operating-system-performance.md",
+      "slug": "operating-system-performance",
+      "title": "운영체제의 성능 평가 지표",
+      "originalSha256": "869df36a81b0e31924fbf1fb82b4239d49ea636f674b35f033b6e0a029ce44bd",
+      "sha256": "47ba0932324c52422314baf1761361a3d292698b5988024babefeb0b06c9a632",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 32,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/compiler-interpreter.md",
+      "slug": "compiler-interpreter",
+      "title": "컴파일러와 인터프리터의 번역·실행 방식",
+      "originalSha256": "dc4b9307532a3139a890ae7343ecbe1e81e0e0bcb2b01d49824a6afaa6dc3772",
+      "sha256": "dc4b9307532a3139a890ae7343ecbe1e81e0e0bcb2b01d49824a6afaa6dc3772",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 33,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/object-oriented-features.md",
+      "slug": "object-oriented-features",
+      "title": "객체지향의 주요 특징 비교",
+      "originalSha256": "702abad1fb35c92b86046492e762da89fd678af8d5e92565eaf257e8a4479dca",
+      "sha256": "4663419117bcf2e652460ed27c1816a52edf7e67c071f10453912480dbda82e0",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 34,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/software-license-types.md",
+      "slug": "software-license-types",
+      "title": "프리웨어·셰어웨어·오픈소스의 사용 조건",
+      "originalSha256": "7acf8b5d60344a0d91ed1561e4e708ed7d21ac11d8ae58d8de81eda2a5a86064",
+      "sha256": "f03a03ae4aecb50d22449daf8f206b5bfa76af4d3f6db73754112d45829a1a62",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 35,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/software-release-versions.md",
+      "slug": "software-release-versions",
+      "title": "알파·베타·체험판·번들의 배포 목적",
+      "originalSha256": "ba084ed38ffeb789fef9c346bf48af32577751d4e5b487d110ac8dd7f8fe528c",
+      "sha256": "426492abfff0641b6c3c24571948571256e6b9fe37fc2355dcd54f6cdc767c26",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 36,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/patches-and-updates.md",
+      "slug": "patches-and-updates",
+      "title": "패치와 업데이트의 목적",
+      "originalSha256": "fab2e734b03d72d941dcc0a23761d9f8b6c697c9e09185f5bc6cf7852ec93e1b",
+      "sha256": "32bedeb5748ddbf6b374e2130516960629189038e9d0b56043774ef97e29331a",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 37,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/archive-file-formats.md",
+      "slug": "archive-file-formats",
+      "title": "파일 압축 형식 구별하기",
+      "originalSha256": "74aa526118b1351b7e6290070b86ad45f8e34a4f77d2af53ea57121963372d7e",
+      "sha256": "f62dfdee8fe36048b05ba96dd42340ee8d7b539139d11fbb65cb2e04af7c2c0c",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 38,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-apps-files-windows.md",
+      "slug": "windows-apps-files-windows",
+      "title": "Windows 화면의 앱·파일·창 구별하기",
+      "originalSha256": "1b64415b990f150a9cb5cbdf2c16cc35bb5bab7c5fccc3265c8b09842e0f7973",
+      "sha256": "1b64415b990f150a9cb5cbdf2c16cc35bb5bab7c5fccc3265c8b09842e0f7973",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 39,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/window-states.md",
+      "slug": "window-states",
+      "title": "창 최소화·최대화·닫기의 결과",
+      "originalSha256": "c220094735a1203e42f8b1bb9e323bc489e84f600153da99b3cd2fd8d0ce8327",
+      "sha256": "c220094735a1203e42f8b1bb9e323bc489e84f600153da99b3cd2fd8d0ce8327",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 40,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/taskbar-settings.md",
+      "slug": "taskbar-settings",
+      "title": "작업 표시줄의 설정과 창 배열",
+      "originalSha256": "e17c94011e199638143b15d777a7b0a58e1cd592287a197bc1243500cf9e23f4",
+      "sha256": "e17c94011e199638143b15d777a7b0a58e1cd592287a197bc1243500cf9e23f4",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 41,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/jump-lists.md",
+      "slug": "jump-lists",
+      "title": "점프 목록의 최근 항목과 고정",
+      "originalSha256": "f5af46f6b8873dc3a45b8534dc000096de4f570200045732e24ab6c7974bcc5f",
+      "sha256": "fc1a07916a4fe8cd2690a196aa70359663b49bf91644064457760228b38564c6",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 42,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/aero-peek.md",
+      "slug": "aero-peek",
+      "title": "Aero Peek으로 바탕화면·창 미리보기",
+      "originalSha256": "3fe970f0cfb58d177dc81a6deb5b271de28c88eb1116c3101ba08cf9d9532466",
+      "sha256": "c608b008553dbc554de9e840f1691fd20083231a039f01311265a3e1e3bf4566",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 43,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-shortcuts.md",
+      "slug": "windows-shortcuts",
+      "title": "Windows 단축키로 실행되는 동작",
+      "originalSha256": "27de46d797187eedfb3c680e2b7c0d8730fed89cc4b1a4c5144a9eb22d64ff2e",
+      "sha256": "27de46d797187eedfb3c680e2b7c0d8730fed89cc4b1a4c5144a9eb22d64ff2e",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 44,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/display-settings.md",
+      "slug": "display-settings",
+      "title": "해상도와 텍스트 표시 설정",
+      "originalSha256": "4be9067da7bba1aaadb016e302b15f4a0214acaf3d22e01e51638e0fb6dce99c",
+      "sha256": "4be9067da7bba1aaadb016e302b15f4a0214acaf3d22e01e51638e0fb6dce99c",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 45,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sound-input-output.md",
+      "slug": "sound-input-output",
+      "title": "소리의 입력·출력 장치와 음량",
+      "originalSha256": "e9284bc1fae25a35e5eb06332260fa9431e0864e30fa19d74c64cc213efb42e3",
+      "sha256": "24bd23fa5bcb38559d67c3c676699c8fcef176ab6bf1bcb28cc5275e6b8dbaff",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 46,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/backgrounds-and-themes.md",
+      "slug": "backgrounds-and-themes",
+      "title": "배경·테마와 해상도 설정 구별하기",
+      "originalSha256": "7d45cc3523b7d6b29f5804155df812182c9d9f3b125041690069a9bec8ecff19",
+      "sha256": "a0be9b117d7bca11cabaab666c9abba8bf4ad9820f0b9bc5ac4171e06bbd1a1e",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 47,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sleep-hibernate-shutdown.md",
+      "slug": "sleep-hibernate-shutdown",
+      "title": "절전·최대 절전·종료의 차이",
+      "originalSha256": "ad48fd949d884a38d1a12885fccd2e8d7bbbcde10c158456fc0e84ff63481877",
+      "sha256": "3c00ba0261bc2a4167b0f6a4553a08f74e41a7364b81566fc9540a6a274319df",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 48,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/keyboard-mouse-properties.md",
+      "slug": "keyboard-mouse-properties",
+      "title": "키보드와 마우스의 속성 설정",
+      "originalSha256": "f5bcff15eb9516dfbb8393282542e02c18014904d85955b1669b3ee199f6012f",
+      "sha256": "59cce6f8bd50efe453bbba9a8a0665010c809a45020622b3a4a11afe86fc49e4",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 49,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/bluetooth-pairing.md",
+      "slug": "bluetooth-pairing",
+      "title": "Bluetooth 장치의 검색·페어링·연결",
+      "originalSha256": "bd294a71e8423837f79fd45607569c46343dd0ffab32256afc69bd84d1dcda03",
+      "sha256": "854f7f0780387b3fe5f9451d1790e11b6874bd8bb3ec1da43498839de6e41d09",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 50,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/phone-pc-link.md",
+      "slug": "phone-pc-link",
+      "title": "휴대전화와 PC 연결의 목적과 조건",
+      "originalSha256": "939be5b109c04f52f0a2903cd5b31ba0bb07458efd9a91417fba2e111c8d4be8",
+      "sha256": "f088182371ee01c00d788026e4fa32c42f6af4f9d538630302c070066fc43449",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 51,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-accessibility.md",
+      "slug": "windows-accessibility",
+      "title": "Windows 접근성 기능의 도움 대상",
+      "originalSha256": "3164b9f51e70c64235727e95bf447b8eb2ea1178c969e0404525ddedef07be1c",
+      "sha256": "29243c36688573a29cd785f6c0f5df58b085fecc5215938559bcf220fe7dabbd",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 52,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/file-explorer-hierarchy.md",
+      "slug": "file-explorer-hierarchy",
+      "title": "탐색기의 폴더 계층과 이동",
+      "originalSha256": "a5f9fcaf903c5fb28a55ff3678c73487869ebc1fb4f56516a372c5e7b969d314",
+      "sha256": "48bbfa26fb8bda4b204c3a84ad27120b3d853f24de68bc8b107d1ea21dd6ecc0",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 53,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/file-search-and-run.md",
+      "slug": "file-search-and-run",
+      "title": "파일 찾기와 프로그램 실행 구별하기",
+      "originalSha256": "91680a0b26515c47b59348d9c6a4da724e052dcc6a2d0b898b4596affd54120b",
+      "sha256": "a731aa8badce507b5bb7ac38209da1be260fcba88610758ac3cb552741b99280",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 54,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/file-folder-properties.md",
+      "slug": "file-folder-properties",
+      "title": "파일·폴더의 이름과 속성",
+      "originalSha256": "7100f421e6d87cda85aa0ff0247088102d62fa5a5ed5322ba51dfc877c0c31ac",
+      "sha256": "26c579ec308a3ca2be171c41ca69848a43bace8ac10d0e079df63b2f5ba623e4",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 55,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/file-extension-types.md",
+      "slug": "file-extension-types",
+      "title": "확장자로 파일의 용도 구별하기",
+      "originalSha256": "767fdb53554b2737957953e554b3d19c0e833c336469349754b51b23524d308f",
+      "sha256": "d4b8715b39e2efb9e14115f407ff0bfe38b11422cb84c5544885c28dff4ff156",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 56,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/hidden-files-extensions.md",
+      "slug": "hidden-files-extensions",
+      "title": "숨김 파일과 확장자의 표시 설정",
+      "originalSha256": "db1f29ad36f5762814b9fdf3de7b07343376e9bd08bce3f2a09ff78d3ff3d92d",
+      "sha256": "62c5fd2139b200be01d5dff77eaea9391b2964fb04cf8c9ea7c3615c9098c963",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 57,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/selecting-files-folders.md",
+      "slug": "selecting-files-folders",
+      "title": "파일·폴더 선택하기",
+      "originalSha256": "84efeca5b7497e667714359bff2a13e9413d74d63a16e3e20813b119a0bf7b40",
+      "sha256": "84efeca5b7497e667714359bff2a13e9413d74d63a16e3e20813b119a0bf7b40",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 58,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/copying-moving-files.md",
+      "slug": "copying-moving-files",
+      "title": "파일 복사·이동 결과 판단하기",
+      "originalSha256": "a441a9b465989a2e87972ea7d18810c287090c4a49fa4bbfdf7fd8240d9aeb38",
+      "sha256": "ba1b482b6dec3680dc300597a9abd31e1ac305d9163079acc2dfd2f6fb1b8ed3",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 59,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/shortcuts-and-originals.md",
+      "slug": "shortcuts-and-originals",
+      "title": "바로가기와 원본의 관계",
+      "originalSha256": "b1b9a75793ac278515d3557cf757061be0364e1f3c7253e841a52b739610d4cd",
+      "sha256": "b63a1bf5f778ec245e23666bb199eb040c2b200d9e5ee4c865dd885b1ae5c0dd",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 60,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-libraries.md",
+      "slug": "windows-libraries",
+      "title": "라이브러리로 여러 위치의 파일 모아 보기",
+      "originalSha256": "1a1577dd5c7d57da346ac8400a745111e9ccc8e9262dabffc11cbfa7515d0573",
+      "sha256": "b4d3d57ba1236239ebe6d407db629843530ed71790779a46fa8ce559fbafe473",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 61,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/recycle-bin-recovery.md",
+      "slug": "recycle-bin-recovery",
+      "title": "파일 삭제와 휴지통 복원 조건",
+      "originalSha256": "b828fbe6a043c8a8823c99906fb5f67c5b1beeb4c25ad2a98e60ad753eda67ff",
+      "sha256": "74a04ee5329a7f510c3f707e9201b921faf3c780930c8d9afe8caa7e07cd7725",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 62,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-accessories.md",
+      "slug": "windows-accessories",
+      "title": "작업에 맞는 Windows 보조 도구 고르기",
+      "originalSha256": "a0a67751d5e5707ae71b929ab1628bc703f0cd6f35ee94f9291e26ae79e1f090",
+      "sha256": "abd173d995f6f2f9e8f170189c5f275bf31f6be2c65a48d2fffe10643ce3e770",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 63,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/notepad-features.md",
+      "slug": "notepad-features",
+      "title": "메모장에서 할 수 있는 작업",
+      "originalSha256": "53f6bc57df7dcc3312f7818586b1974cf6bf035ac33b49a2fcd63890b264e953",
+      "sha256": "53f6bc57df7dcc3312f7818586b1974cf6bf035ac33b49a2fcd63890b264e953",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 64,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/storage-sense.md",
+      "slug": "storage-sense",
+      "title": "저장 공간 확인과 자동 정리",
+      "originalSha256": "1034df2ab0b5dc5a0aa3b790676e661ce4deca5d4b867b95a0048d46e3e981df",
+      "sha256": "1034df2ab0b5dc5a0aa3b790676e661ce4deca5d4b867b95a0048d46e3e981df",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 65,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/disk-cleanup.md",
+      "slug": "disk-cleanup",
+      "title": "디스크 정리로 지울 수 있는 항목",
+      "originalSha256": "9dc231c33b292706cc33ca8a5a7266f630a036ef0949a0e82e6f9872ecb16c53",
+      "sha256": "9dc231c33b292706cc33ca8a5a7266f630a036ef0949a0e82e6f9872ecb16c53",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 66,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/disk-error-checking.md",
+      "slug": "disk-error-checking",
+      "title": "디스크 오류 검사의 대상과 역할",
+      "originalSha256": "a3317d6f8b26cf399fd0cae2fe37cc4f4044c62bd284da3354343bd787f4ddc0",
+      "sha256": "a3317d6f8b26cf399fd0cae2fe37cc4f4044c62bd284da3354343bd787f4ddc0",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 67,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/drive-optimization.md",
+      "slug": "drive-optimization",
+      "title": "디스크 조각 모음과 최적화의 목적",
+      "originalSha256": "c17bee85561ee004c7935a4dd1d5b3de39291b67add5d2dd389c5f1a107cd7c8",
+      "sha256": "c17bee85561ee004c7935a4dd1d5b3de39291b67add5d2dd389c5f1a107cd7c8",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 68,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/disk-format-file-systems.md",
+      "slug": "disk-format-file-systems",
+      "title": "디스크 포맷과 파일 시스템",
+      "originalSha256": "8d9d738059d845f544a3e6b2ed1b48b3ef1f746f2d70b3b19b3bea3a1a2af99b",
+      "sha256": "9762b3d0f94250bda1fdb9f4ea5678ad756a8abaf1a7793a4ac5634ce352368e",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 69,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/system-about-information.md",
+      "slug": "system-about-information",
+      "title": "시스템 기본 정보에서 확인하는 항목",
+      "originalSha256": "d83d87892a8d75c6fbb63dadfcd9caa320faa23d8ff03b2f405fc0f9b09ec490",
+      "sha256": "d83d87892a8d75c6fbb63dadfcd9caa320faa23d8ff03b2f405fc0f9b09ec490",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 70,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/system-information-categories.md",
+      "slug": "system-information-categories",
+      "title": "시스템 정보의 범주별 확인 항목",
+      "originalSha256": "ade0672c8043c0b2a2cb76126ef93cf6410cc35c75dd0ee344756885c19b7e2a",
+      "sha256": "ade0672c8043c0b2a2cb76126ef93cf6410cc35c75dd0ee344756885c19b7e2a",
+      "changed": false,
+      "status": "전체 검토 · 수정 불필요"
+    },
+    {
+      "order": 71,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/device-manager.md",
+      "slug": "device-manager",
+      "title": "장치 관리자에서 장치·드라이버 확인하기",
+      "originalSha256": "28c4b72cf0077bd00e656f7bf7a2ede9738419bcb4e2da6df06891d5bc742771",
+      "sha256": "a4893c19719730daa0edb70e9b47e9d86652f1fb0f8a5d4b69ae9d4bb6560718",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 72,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/task-manager.md",
+      "slug": "task-manager",
+      "title": "작업 관리자에서 사용량 확인·작업 종료하기",
+      "originalSha256": "afc042051557c4e5c9af5bd99054870779d84b4d59ddef35cae63c6da28dfbb9",
+      "sha256": "f1af9c4dc89d822658b49fb39bf6c3c5bb15e40c844232adeecde665c11e30a5",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 73,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-registry.md",
+      "slug": "windows-registry",
+      "title": "Windows 레지스트리에 저장하는 정보",
+      "originalSha256": "157eea834e00427e94d07d73ab37a8e6caf7af918873846f6bccca8227f221f0",
+      "sha256": "3bb497f24d59ed586b4561a9e2d20766a42e700238e4257b9c07197e83cc204f",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 74,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/programs-and-windows-features.md",
+      "slug": "programs-and-windows-features",
+      "title": "프로그램 제거·복구와 Windows 기능 설정",
+      "originalSha256": "553f69f5eb8c03634a82d45bea05153f07d6aba5c114b6264dceb36f0ec4052b",
+      "sha256": "07e2f3d935a3802f9099b4e28de44c4ee01ba95bcf892a81d0cf5997210a3526",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 75,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/default-apps.md",
+      "slug": "default-apps",
+      "title": "기본 앱과 파일 형식 연결",
+      "originalSha256": "3a1913e1be766c6f222b589cd57bb3af89e5a2644b3632a2e95db12fc5ae225d",
+      "sha256": "f8e6090a84dc3b4f2feb66113edba3211ec52b70f4a42900dde64eba2c1bee4e",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 76,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/update-restart-states.md",
+      "slug": "update-restart-states",
+      "title": "업데이트 설치와 재시작 상태",
+      "originalSha256": "620ff96f98790c772c94d47ac92de19fe33da9cab32e2697b3a831a3cc1258e3",
+      "sha256": "99fd0dc2e633286be9a3b6a1fd03ba11612a31b533203ac9738650ca856ebfc7",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 77,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sign-in-and-account-types.md",
+      "slug": "sign-in-and-account-types",
+      "title": "로그인 수단과 사용자 권한 구별하기",
+      "originalSha256": "30f0d572e6d1fe82e0200895c7f6b7b74b1dc1f34feab7586cbfdaf6f56c5368",
+      "sha256": "78c668a23b8f6d96706f99a7fa92d8f301345187cb0aa54f8b1c8415aa0e47cd",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 78,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/time-and-time-zones.md",
+      "slug": "time-and-time-zones",
+      "title": "시각·시간대·자동 설정의 차이",
+      "originalSha256": "a34b3d67c17eafda780f9b0c13a244437bc4a903249e9af1c5c705c960b2e06d",
+      "sha256": "d41f91047c2e7f5579b20b907f1b20c5dc284e15c3271aecb1a2224fe9852fff",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 79,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/language-and-region.md",
+      "slug": "language-and-region",
+      "title": "표시 언어·입력 언어·지역 형식",
+      "originalSha256": "4a30bd938482da6bef0546824a9b17b671102f9a815e0ef55c33801d7ceed636",
+      "sha256": "b21554283bd9356d7369b67df17e840fe3b3c62a20efc960a20337adc4981501",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 80,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/game-bar-and-game-mode.md",
+      "slug": "game-bar-and-game-mode",
+      "title": "게임 바와 게임 모드의 목적",
+      "originalSha256": "150db43b5904ca52c0332559c892df062227d62dd761436e6466e326b3edd364",
+      "sha256": "b05aa3898950ccbb43086a8e7cd000a28c70ae38ae3197796ed798e1e6c0dc16",
+      "changed": true,
+      "status": "문구 수정"
+    },
+    {
+      "order": 81,
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/user-accounts-uac.md",
+      "slug": "user-accounts-uac",
+      "title": "사용자 계정의 권한과 UAC 승인",
+      "originalSha256": "92431560a25e96ad5853e291afbd1d78b2300fe0d2dbe407992e01fdced85944",
+      "sha256": "342404c5d260d3fd6e818bcfb068789436faee4a686d1f6e0d45f549f82e1a7f",
+      "changed": true,
+      "status": "문구 수정"
+    }
+  ]
+}

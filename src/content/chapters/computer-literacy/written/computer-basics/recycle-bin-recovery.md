@@ -9,7 +9,7 @@ group: "Windows 화면과 조작"
 tags: ["절차"]
 summary: "삭제 위치·키 조합·휴지통 용량 설정으로 복원 가능 여부 판단"
 questions: ["20190831_015", "20200704_014"]
-supportingQuestions: [{"id": "20150307_004", "note": "휴지통 정리는 저장 공간 확보라는 점에만 적용 · 디스크 정리 대상은 함께 볼 설명에서 확인", "chapter": "disk-cleanup"}]
+supportingQuestions: [{"id": "20150307_004", "note": "휴지통 정리로 저장 공간을 확보하는 이유를 확인함 · 다른 정리 대상은 아래 설명도 함께 확인함", "chapter": "disk-cleanup"}]
 related: []
 order: 61
 priority: "1차"

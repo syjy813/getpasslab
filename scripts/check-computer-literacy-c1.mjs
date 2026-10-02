@@ -97,7 +97,7 @@ for (const chapter of evidence.chapters) {
     await access(path.join('dist', source));
   }
   if (chapter.id === 'ADD-17') {
-    assert(html.includes('기출 미배정'));
+    assert(html.includes('이 챕터에 직접 연결된 기출은 없음'));
     assert(!html.includes('수록 기출 0문항'));
   }
   const position = subjectHtml.indexOf(`href="${scope}${chapter.slug}/"`);

@@ -9,7 +9,7 @@ group: "컴퓨터의 구성과 동작"
 tags: ["개념"]
 summary: "HDD는 자기 디스크 · SSD는 반도체 · 광학매체는 레이저 사용"
 questions: ["20160625_019", "20170304_014", "20180901_008", "20190302_013"]
-supportingQuestions: [{"id": "20150627_002", "note": "광학매체의 저장 역할에만 적용 · 멀티미디어 통합·상호작용은 별도 범위"}, {"id": "20150627_016", "note": "보조기억장치와 레지스터·캐시·주기억장치의 속도 비교", "chapter": "memory-speed-hierarchy"}, {"id": "20200704_018", "note": "SSD 256GB를 저장장치의 종류·용량에 대응", "chapter": "computer-specifications"}]
+supportingQuestions: [{"id": "20150627_002", "note": "광학매체의 저장 역할을 확인함 · 멀티미디어의 통합·상호작용은 다른 개념으로 판단함"}, {"id": "20150627_016", "note": "보조기억장치와 레지스터·캐시·주기억장치의 속도 비교", "chapter": "memory-speed-hierarchy"}, {"id": "20200704_018", "note": "SSD 256GB를 저장장치의 종류·용량에 대응", "chapter": "computer-specifications"}]
 related: []
 order: 11
 priority: "1차"

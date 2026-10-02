@@ -9,7 +9,7 @@ group: "컴퓨터의 구성과 동작"
 tags: ["개념"]
 summary: "ALU는 계산 · CU는 명령 해독과 제어 · 레지스터는 내부 임시 저장"
 questions: ["20150307_011", "20150627_018", "20151017_012", "20180303_016"]
-supportingQuestions: [{"id": "20200704_018", "note": "사양표의 Core i5를 CPU에 대응 · RAM·SSD 구별은 함께 볼 설명에 포함", "chapter": "computer-specifications"}]
+supportingQuestions: [{"id": "20200704_018", "note": "사양표의 Core i5를 CPU와 연결함 · RAM·SSD는 아래 사양표 설명도 함께 확인함", "chapter": "computer-specifications"}]
 related: []
 order: 8
 priority: "1차"

@@ -36,6 +36,7 @@ export async function getStaticPaths() {
 }
 
 const { chapter } = Astro.props;
+const isComputerBasics = chapter.data.cert_id === 'computer-literacy' && chapter.data.subject_id === 1;
 const { Content } = await render(chapter);
 
 const allQuestions = (await getCollection('questions')).filter(
@@ -180,14 +181,16 @@ const sideChapters = orderedSideChapters
   {(linked.length > 0 || supporting.length === 0) && <QuestionHistory
     questions={linked as any}
     examComment={chapter.data.examComment}
-    introText={chapter.data.cert_id === 'computer-literacy' ? '연결 기출로 개념의 출제 방식 확인' : undefined}
-    emptyText={chapter.data.cert_id === 'computer-literacy' ? '기출 미배정 · 기초 개념 학습' : undefined}
+    headingText={isComputerBasics ? '개념을 확인하는 기출문제' : undefined}
+    introText={isComputerBasics ? '문제 버튼을 눌러 배운 개념을 적용해 보기' : chapter.data.cert_id === 'computer-literacy' ? '연결 기출로 개념의 출제 방식 확인' : undefined}
+    emptyText={isComputerBasics ? '이 챕터에 직접 연결된 기출은 없음 · 기초 개념부터 학습' : chapter.data.cert_id === 'computer-literacy' ? '기출 미배정 · 기초 개념 학습' : undefined}
     deferredQuestionDataset={deferredQuestionDataset}
   />}
   {supporting.length > 0 && <QuestionHistory
     questions={supporting}
     supporting
-    introText="각 문제에 표시된 적용 범위를 확인하며 학습"
+    headingText={isComputerBasics ? '함께 연습할 기출문제' : undefined}
+    introText={isComputerBasics ? '아래 안내에서 이 개념으로 판단할 선택지를 확인한 뒤 문제 풀기' : '각 문제에 표시된 적용 범위를 확인하며 학습'}
   />}
   <RelatedChapters
     manual={manual as any}

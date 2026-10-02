@@ -35,7 +35,7 @@ for (const [chapter, ids] of Object.entries(expected)) {
   assert.deepEqual(renderedIds.sort(), [...ids, ...(supportId ? [supportId] : [])].sort(), `${chapter}: linked questions`);
   if (supportId) {
     supportingCount++;
-    assert(html.includes('기초 개념을 적용할 기출'));
+    assert(html.includes(chapter.startsWith('computer-basics/') ? '함께 연습할 기출문제' : '기초 개념을 적용할 기출'));
     assert(html.includes('함께 볼 설명:'));
     assert(html.includes('data-question-role="supporting"'));
     assert(!html.includes('수록 기출 1문항'));
