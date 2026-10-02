@@ -37,11 +37,11 @@ async function layout() {
   return page.evaluate(() => {
     const width = document.documentElement.clientWidth;
     const visible = e => { const r = e.getBoundingClientRect(); return r.width > 0 && r.height > 0; };
-    const overflow = [...document.querySelectorAll('main h1, main h2, main p, main li, main pre, main code, main table, dialog[open] li, dialog[open] p, dialog[open] img')].filter(visible).filter(e => {
+    const overflow = [...document.querySelectorAll(':is(main, section.section.container) :is(h1, h2, p, li, pre, code, table), dialog[open] li, dialog[open] p, dialog[open] img')].filter(visible).filter(e => {
       const r = e.getBoundingClientRect();
       return r.left < -1 || r.right > width + 1;
     }).map(e => ({ tag: e.tagName, text: e.textContent.slice(0, 100), width: e.clientWidth, scroll: e.scrollWidth }));
-    const tables = [...document.querySelectorAll('main table')].map(e => ({ width: e.clientWidth, scrollWidth: e.scrollWidth, overflowX: getComputedStyle(e).overflowX, clipped: e.scrollWidth > e.clientWidth + 3 && getComputedStyle(e).overflowX === 'hidden' }));
+    const tables = [...document.querySelectorAll(':is(main, section.section.container) table')].map(e => ({ width: e.clientWidth, scrollWidth: e.scrollWidth, overflowX: getComputedStyle(e).overflowX, clipped: e.scrollWidth > e.clientWidth + 3 && getComputedStyle(e).overflowX === 'hidden' }));
     return { width, scrollWidth: document.documentElement.scrollWidth, overflow, tables };
   });
 }
@@ -158,8 +158,9 @@ async function checkLayout(label) {
         if (samples.includes(chapter.order)) {
           await page.goto(base + scope, {waitUntil:'networkidle'});
           await checkLayout(current + '/subject');
-          for (const c of ordered) assert(await page.locator(`main a[href="${scope}${c.slug}/"]`).count(), 'subject missing chapter');
-          await page.locator(`main a[href="${scope}${chapter.slug}/"]`).first().click();
+          // The existing subject index uses section.section.container, while chapter pages use main.
+          for (const c of ordered) assert(await page.locator(`section.section.container a.card[href="${scope}${c.slug}/"]`).count(), 'subject missing chapter');
+          await page.locator(`section.section.container a.card[href="${scope}${chapter.slug}/"]`).first().click();
           await page.waitForURL(record.url);
           record.subjectTocClicked = true;
         }
