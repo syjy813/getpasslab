@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, readdir, access } from 'node:fs/promises';
 import path from 'node:path';
+import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
 
 // Frozen source-review evidence; live assignments exist only in frontmatter.
 const evidence = JSON.parse(await readFile('docs/audits/2026-10-02-computer-literacy-082-159/source-verification.json', 'utf8'));
@@ -56,7 +57,7 @@ assert.equal(evidence.chapters.length, 78);
 for (const [index, chapter] of evidence.chapters.entries()) {
   assert.equal(chapter.order, index + 82);
   const markdown = await readFile(chapter.path, 'utf8');
-  assert.equal(hash(markdown), chapter.sha256, `${chapter.id}: unreviewed chapter change`);
+  assert.equal(hash(markdown), reviewedChapterHash(chapter.path, chapter.sha256), `${chapter.id}: unreviewed chapter change`);
   const [, fm, body] = markdown.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
   const fields = Object.fromEntries(fm.trim().split('\n').map(line => {
     const split = line.indexOf(':');

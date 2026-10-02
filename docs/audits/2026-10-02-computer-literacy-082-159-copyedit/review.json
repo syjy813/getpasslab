@@ -1,0 +1,2072 @@
+{
+  "baseCommit": "0eed0e2ffa2cbb86f53aa6c882b665ed32db4ba6",
+  "scope": "82–159 full prose review",
+  "originalSnapshot": "docs/audits/2026-10-02-computer-literacy-082-159/source-verification.json",
+  "chapters": [
+    {
+      "order": 82,
+      "id": "ADD-14",
+      "title": "카메라·마이크 접근 권한과 예외",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/camera-microphone-permissions.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "31904908c21f776da64b3afba37b73ccc8a7338afe66e8fdde102777654c49e4",
+      "sha256": "8c9d83cb4c569c55c6950176a923eaffc4ae916ea4976c37431abc93957eea97",
+      "frontmatterSha256": "8573134928f25cab59009474a8df1040d6e858613537a2782cb0017610f62267",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "카메라·마이크 권한은 **장치 전체 접근, 앱 접근, 데스크톱 앱 접근, 웹사이트 권한**을 나누어 확인하며 Windows의 한 토글이 모든 프로그램·사이트를 개별 통제한다고 보면 안 됨",
+          "after": "카메라·마이크 권한은 **장치 전체 접근, 앱 접근, 데스크톱 앱 접근, 웹사이트 권한**을 나누어 확인함\n\nWindows의 접근 허용 설정 하나로 모든 프로그램·사이트를 개별 제어할 수 있다고 판단하지 않음",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "## 데스크톱 앱은 개별 토글과 다름",
+          "after": "## 데스크톱 앱의 접근 허용 설정",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "각 프로그램을 항상 개별 토글로 제어할 수 있는 구조가 아님",
+          "after": "각 프로그램의 접근을 항상 개별 설정으로 제어할 수 있는 구조가 아님",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "현재 Windows에서는 `데스크톱 앱이 카메라/마이크에 액세스하도록 허용` 같은 묶음 설정으로 제어하는 범위가 있음",
+          "after": "현재 Windows에서는 `데스크톱 앱이 카메라/마이크에 액세스하도록 허용` 같은 설정으로 여러 데스크톱 앱의 접근을 함께 제어함",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "일부 데스크톱 앱은 Windows의 개인정보 설정만으로 접근을 완전히 차단할 수 없는 경우도 있으므로\n\n",
+          "after": "일부 데스크톱 앱은 Windows의 개인정보 설정만으로 접근을 완전히 차단할 수 없는 경우도 있음\n\n따라서 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "따라서 대표 상황\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 83,
+      "id": "P1-29a",
+      "title": "Windows의 파일·프린터 공유",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/windows-file-printer-sharing.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "6fa7354af4b7c426fdfe1fafb98790ce42f3c23a960ba01738de59eed5b1ebc9",
+      "sha256": "e2a83c53f1bd8bd688f0527d6c97fb5005d6562a6bfbebf88b104b186a41f77f",
+      "frontmatterSha256": "2babbe616ed5b9c2a29043048f14b13b270dbda9bca7ca91cc9938969778fe36",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "따라서 이 챕터에서 홈 그룹을 **현재 Windows의 일반 공유 방법**처럼 설명하지 않음",
+          "after": "과거 기출의 홈 그룹을 **현재 Windows의 일반 공유 방법**으로 이해하지 않음",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 84,
+      "id": "P1-29b",
+      "title": "원격 지원을 요청하고 동의하는 순서",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/remote-assistance-consent.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "b06da9c7abbf90dd4c97364481f736ca24ad337ae70f5cd2d025e1c85b4b5996",
+      "sha256": "8d12e0c58283d568e5750783d898507cd20a449a2a41497b2f63031f7bd327e0",
+      "frontmatterSha256": "ef8b359d6247da5eb2352aea8bc5070c5625e6d640b33b014dba4c023a35a406",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "도움 받는 사용자",
+          "after": "도움을 받는 사용자",
+          "occurrences": 4
+        },
+        {
+          "category": "문맥·표현",
+          "before": "이 보안 주의는 현재 Microsoft 문서에서도 강조됨\n",
+          "after": "",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "2017년 Windows 7 기출의 핵심 함정은\n\n",
+          "after": "2017년 Windows 7 기출의 핵심 함정은 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "\n\n",
+          "after": "\n",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 85,
+      "id": "P1-35-01",
+      "title": "프린터 설치와 기본 출력 대상 지정",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/printer-installation-default.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "6f86de4154003748c0fd6ac186ee6ce7f2afd0f5342761018b415c57f62f15d1",
+      "sha256": "d5b74235d1ed428c2c701b3b792344d9524829c22d45b3576311463ed50f1ad9",
+      "frontmatterSha256": "27f0372bf8900fea66c901a238ccd26d77f90dc1ca2fae065301573be1bf8068",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "현재 Windows에서는 자동 검색되지 않는 프린터를 수동 추가할 때 네트워크 주소·TCP/IP 등 다양한 방법을 사용할 수 있으므로\n\n",
+          "after": "현재 Windows에서는 자동 검색되지 않는 프린터를 수동 추가할 때 네트워크 주소·TCP/IP 등 다양한 방법을 사용할 수 있음\n\n따라서 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "2019년 기출의 핵심 오답은\n\n",
+          "after": "2019년 기출의 핵심 오답은 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 86,
+      "id": "P1-35-02",
+      "title": "스풀과 인쇄 대기열 관리",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/print-spooling-queue.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "cc52325a568de0e891e6d674a56f7fe34d4fc2382a4726d884f1a67172f745bb",
+      "sha256": "793b45763b075904c4170565b30604f5de1a0d776f71a51ae4604e71166aa4ce",
+      "frontmatterSha256": "feb012e84ffc54eea9529372385a5f9b07836212b4999144fe7ea0fae1d1fef0",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "스풀은 **인쇄할 데이터를 먼저 저장장치의 대기 영역에 보내고 CPU·응용 프로그램이 프린터의 느린 출력 완료를 계속 기다리지 않도록 하는 방식**이며, 대기열에서는 인쇄 작업을 취소·일시 중지하는 등의 관리가 가능함",
+          "after": "스풀은 **인쇄할 데이터를 저장장치의 대기 영역에 보내 CPU·응용 프로그램이 출력 완료를 계속 기다리지 않도록 하는 방식**임\n\n인쇄 대기열에서는 작업 취소·일시 중지 등의 관리가 가능함",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "이러한 인쇄 조건은 보통 문서를 인쇄 요청할 때 또는 프린터 기본 설정·인쇄 기본 설정에서 정하는 항목이며, 이미 스풀된 대기 문서의 속성을 대기열에서 모두 다시 편집하는 기능으로 보지 않음",
+          "after": "용지 방향·용지 종류·인쇄 매수는 보통 인쇄를 요청할 때나 프린터 기본 설정·인쇄 기본 설정에서 정함\n\n이미 스풀된 문서의 인쇄 조건을 대기열에서 모두 다시 편집할 수 있다고 판단하지 않음",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "2015년 기출의 핵심 오답은\n\n",
+          "after": "2015년 기출의 핵심 오답은 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "2016년 기출의 핵심 오답은\n\n",
+          "after": "2016년 기출의 핵심 오답은 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 87,
+      "id": "P1-35-03",
+      "title": "인쇄 증상에 맞는 점검 방법",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/printer-troubleshooting.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "3271339341a3143ae0af0ac35600dee9e80d4ee22212542e92aae07755eae11b",
+      "sha256": "9ea1ff749546992f9d7629f1f33d5073c3af34d7f440f3bd717079cda7cf5107",
+      "frontmatterSha256": "d73d5c4803f4e9b6851ce348bca10b12dde8352e28f8fa204d2de302c7374c0e",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "프린터 장애는 **증상을 먼저 읽고 연결·드라이버·소모품/헤드·스풀러 중 어디를 점검할지 대응**해야 함",
+          "after": "프린터 장애는 **증상을 먼저 읽고 연결·드라이버·소모품·헤드·스풀러 중 점검 대상을 선택**함",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "기출에서는 다음과 같은 프린터 자체의 출력 품질 점검을 대응함",
+          "after": "기출에서는 출력 품질 문제에 다음 점검 방법을 연결함",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 88,
+      "id": "P1-30a",
+      "title": "PC 예방 관리와 백업 원칙",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/pc-maintenance-backup.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "23752c33c26b23156ed5635f267331a4098d1ccfc31a5bb41e234350b4f6128c",
+      "sha256": "16845acf9147bd632d4c66fb9982c9beac32824b0080c9cfda0eef006dab72fe",
+      "frontmatterSha256": "7f852dadc3f9fc6f7bf77f1bfcefa340a3ef0d1a2e256ea916604eab1a80ebdf",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "같은 자주 사용하는 저장장치 안에 백업 사본을 두면\n\n",
+          "after": "자주 사용하는 저장장치에 원본과 백업 사본을 함께 두면 다음 상황에서 둘 다 피해를 입을 수 있음\n\n",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "\n\n등에서 원본과 백업이 함께 피해를 입을 수 있음",
+          "after": "",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "단, 감염된 파일을 백업하면 감염된 사본이 함께 남을 수 있으므로\n\n",
+          "after": "단, 감염된 파일을 백업하면 감염된 사본이 함께 남을 수 있음\n\n따라서 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "**백업이 감염 예방 도구 자체**라고 설명하지도 않음",
+          "after": "**백업 자체가 감염 예방 도구**라고 판단하지 않음",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "반면\n\n",
+          "after": "반면 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "2016년 기출의 핵심 오답은\n\n",
+          "after": "2016년 기출의 핵심 오답은 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 89,
+      "id": "P1-30b-01",
+      "title": "부팅 실패의 원인 구별하기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/boot-failure-causes.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "f59426d6d4ed931b32f7163c00a913ac94cd458114a67b2eb14310636bae2ee1",
+      "sha256": "64ed089a3e476f32306f9acde66598f9c25825fbebf08913a77c3f6b01f70191",
+      "frontmatterSha256": "0d5d41ea2756c81708b5fb2e0e144a1f101707b3befa3a66cf10ab62b6aefcf3",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "저장 정답",
+          "after": "수록 답안",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "하지만 이 정답을 근거로\n\n",
+          "after": "하지만 이 정답을 근거로 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "## 문제 풀이 순서\n\n",
+          "after": "## 문제 풀이 순서\n\n다음 순서로 상태를 확인하며 원인을 좁힘\n\n",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "\n\n순서로 원인을 좁힘",
+          "after": "",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 90,
+      "id": "P1-30b-02",
+      "title": "모니터가 하얗게 보일 때 점검할 항목",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/monitor-white-screen.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "c1d1d26fcd471503d85900aab842ac23def16f585ae86c14f3f4a86959b288c7",
+      "sha256": "3f6e13b2661e76f43a8df6010de7a24caf79714dc88b71c55730c9f10f4d13b1",
+      "frontmatterSha256": "aeb1f0b79c99f7f95d67b3ef6d5c129ce5fe0368d46fed68a930ce119e6735db",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "문제에 이미\n\n",
+          "after": "문제에 이미 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "해상도 설정 문제는 화면 크기·표시 범위·지원하지 않는 모드 같은 문제와 연결될 수 있지만\n\n`전원은 정상인데 화면 전체가 백색으로 보이는 증상`\n\n의 대표 원인으로 보기 어려움",
+          "after": "해상도 설정 문제는 화면 크기·표시 범위·지원하지 않는 모드와 관련될 수 있음\n\n하지만 `전원은 정상인데 화면 전체가 백색으로 보이는 증상`의 대표 원인으로 보기 어려움",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "따라서 시험에서는\n\n",
+          "after": "따라서 시험에서는 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 91,
+      "id": "P1-30b-03",
+      "title": "RAM 부족에 맞는 조치 구별하기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ram-shortage-response.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "2a95206d445e08f8518d0723edc0de6e67f854b839d389f1b1a1c407b04ce065",
+      "sha256": "f01d7a68f6bb508e85c73a0784b0e46456369aa9c9ca5bcf413bc37038f94333",
+      "frontmatterSha256": "ad8fed6a1afac60ca8fcebbfaa9be0d871ca95cc58ac772e175b04212bec12d2",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "현재 Windows에서는 페이지 파일을 시스템이 자동으로 관리하는 구성이 일반적일 수 있으므로\n\n",
+          "after": "현재 Windows에서는 페이지 파일을 시스템이 자동으로 관리하는 경우가 있으므로 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "핵심은\n\n",
+          "after": "핵심은 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 92,
+      "id": "P1-11b-01",
+      "title": "LAN·WAN 등 통신망의 분류 기준",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/network-scope-types.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "353bbc3dea6172f453d2ce6c248a9ab8e010a5f8683652aeba12613aeca1cbd5",
+      "sha256": "8a3d82ae4005178500f423c7b683fd7fb45a98e60b255a5463a6adfe39cfbe61",
+      "frontmatterSha256": "d7b9d67db1b531edb8d3cffbed1e8f054e4cad3749f6e0b5c5740a3e56183a2a",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "문제에서 묻는 축을 먼저 확인",
+          "after": "문제에서 묻는 분류 기준을 먼저 확인",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "\n\n아님\n\n",
+          "after": "\n\n",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "현재 일반 네트워크 학습에서 자주 쓰이는 핵심 용어라기보다 **과거 기출의 통신망 분류 용어**로 이해함",
+          "after": "**과거 기출의 통신망 분류 용어**로 이해함",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "B-ISDN도 현재 일상 네트워크 구성에서 자주 선택하는 기술명으로 설명하기보다 **과거 통신 기술 분류의 기출 용어**로 다룸",
+          "after": "B-ISDN도 **과거 기출의 통신 기술 분류 용어**로 이해함",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "연결 기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 2
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 93,
+      "id": "P1-12a",
+      "title": "네트워크 연결 형태와 장애 영향",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/network-topology-failures.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "def28b33751faf8c27224b2cf318f2dd5e9c2751c7cca42edf419e65c22f2488",
+      "sha256": "4e0cd23d1eb9e5f4e58ccdb72e37f2d26b0dd7ddc3790d69a6560eeb9b41f6b7",
+      "frontmatterSha256": "90c9f530bf100f610b566b70248b015f710e6b3886f8ff7550ed2a8e79fa27df",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "현대의 이중 링·우회 구조까지 포함해\n\n",
+          "after": "이중 링·우회 구조도 있으므로 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "공유 매체라는 특성상 기밀성이 자동으로 보장되는 구조가 아니며 실제 전송 매체에는 물리적 길이·신호 조건이 존재함",
+          "after": "공유 매체의 기밀성이 자동으로 보장되는 것은 아님\n\n실제 전송 매체에는 물리적 길이·신호 조건이 존재함",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "연결 기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 94,
+      "id": "P1-12b",
+      "title": "중앙 집중·클라이언트/서버·P2P 구성",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/network-operating-structures.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "6458a49b7d985e8a46024e7e0f9a52bb5681113c79cc12af76577670ceaa9a28",
+      "sha256": "f8e27b01167ca9a9cef29470dbd595636dca18eaa955f7acd4e91ed347ac395d",
+      "frontmatterSha256": "e4755aa1ec91fe4fca356a52232f8c6d9b29256116025a7f9c61e866c7fbe689",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "클라이언트/서버 방식을 정답 처리함",
+          "after": "클라이언트/서버 방식을 정답으로 제시함",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "다만 현대 컴퓨팅 관점에서 P2P도 분산 구조를 가질 수 있으므로\n\n",
+          "after": "다만 P2P도 분산 구조를 가질 수 있으므로 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "분류 축이 다름",
+          "after": "분류 기준이 다름",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 95,
+      "id": "P1-13",
+      "title": "네트워크 장비의 처리 역할",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/network-device-roles.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "32a59042a52db0fd7168a799b9d2090abd695038659705954acb849545258cfc",
+      "sha256": "6484b53e75b140856f7e45ba974ebb21b7fea5edd717fde7c173a1a8f3c0264d",
+      "frontmatterSha256": "c0f5f70cdbaa2739c49c6004ff0673bb374d5942e88e39ee9f75ef5b4f1636ed",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "과거 컴활 기출에서는\n\n",
+          "after": "과거 컴활 기출에서는 게이트웨이를 다음과 같은 넓은 의미로 사용함\n\n",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "\n\n의 넓은 의미로 사용함",
+          "after": "",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "현대 IP 네트워크의 `기본 게이트웨이`는 흔히 라우터가 담당하므로\n\n",
+          "after": "현대 IP 네트워크의 `기본 게이트웨이`는 흔히 라우터가 담당하므로 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "다만 현재 실제 무선망에는 무선 리피터·익스텐더를 사용할 수도 있으므로\n\n",
+          "after": "다만 현재 무선망에는 무선 리피터·익스텐더를 사용할 수도 있으므로 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "기출 단서\n\n",
+          "after": "기출 단서: ",
+          "occurrences": 2
+        },
+        {
+          "category": "문단 흐름",
+          "before": "`디지털 신호를 아날로그로 바꾸고 다시 원래 신호로 변환`\n\n→ ",
+          "after": "`디지털 신호를 아날로그로 바꾸고 다시 원래 신호로 변환` → ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 96,
+      "id": "P1-14c",
+      "title": "단방향·반이중·전이중 통신 비교",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/simplex-half-full-duplex.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "99c323e6352550719ff3254fd8795520f814dd4095eefbe220647d7efe3772f5",
+      "sha256": "c14d4567e5af1db97ddf1f333c6eeb0df0c6a926b3cc65465773f1e3fb5afaef",
+      "frontmatterSha256": "fe34d28a46a14b2f407187f8987f5f1707ed041929d440a90d0216b79057a2dd",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "대표적인 시험 예\n\n**라디오 방송**",
+          "after": "시험 예: **라디오 방송**",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "대표적인 학습 예\n\n무전기",
+          "after": "학습 예: 무전기",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "대표적인 학습 예\n\n전화 통화",
+          "after": "학습 예: 전화 통화",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "서로 같은 축에서 비교하지 않음",
+          "after": "서로 같은 분류 기준으로 비교하지 않음",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 97,
+      "id": "P1-14a-01",
+      "title": "Wi-Fi·Bluetooth·Ethernet의 연결 용도",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/wifi-bluetooth-ethernet.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "4571dba36d45d39a247da2f394c065969833b5af393b50cbba17e0470501197e",
+      "sha256": "06cf3a22d6c4eb9a2b9098ef5f1a2bdf3027fc5475741a944c009ec6af438bfe",
+      "frontmatterSha256": "a9d3ff2f67437e8a99dc01b53c005143c23969677a70509d43e82d14bf5ba059",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "Bluetooth는 흔히 주변기기 가까운 거리 연결에 사용되지만 실제 통신 가능 거리는 기기 설계·출력·환경에 따라 크게 달라질 수 있음",
+          "after": "Bluetooth는 흔히 가까운 거리의 주변기기 연결에 사용됨\n\n실제 통신 가능 거리는 기기 설계·출력·환경에 따라 달라질 수 있음",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "연결 기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 3
+        },
+        {
+          "category": "문단 흐름",
+          "before": "기출의 `비즈니스 네트워크나 유선 홈 네트워크 구성`\n\n→ ",
+          "after": "기출의 `비즈니스 네트워크나 유선 홈 네트워크 구성` → ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "기출의 `무선 마우스를 PC에 연결`\n\n→ ",
+          "after": "기출의 `무선 마우스를 PC에 연결` → ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "기출의 `노트북을 무선 핫스팟(hotspot)에 연결`\n\n→ ",
+          "after": "기출의 `노트북을 무선 핫스팟(hotspot)에 연결` → ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 98,
+      "id": "P1-14b",
+      "title": "OSI 계층 모델의 목적",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/osi-reference-model.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "f092cab4375e32d34b619c9667bf9a222d64bde3a987822f8fa4390278b8b778",
+      "sha256": "c4442fc594753c63b689976334e182198aa43988c594de0de8751ef559619b9a",
+      "frontmatterSha256": "f733cfdc994b2c55833b79e1137a757b7b369e2c9859a41911a2463c29c56bc4",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "시험에서는\n\n",
+          "after": "시험에서는 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "따라서 기출이 `통신 규약 명칭`이라고 표현하더라도 학습 본문에서는\n\n",
+          "after": "따라서 기출이 `통신 규약 명칭`이라고 표현하더라도 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "이 두 연결 기출은 7개 계층의 개별 이름을 순서대로 외워야 풀리는 문제가 아님\n\n핵심은\n\n**ISO → OSI → 7계층 → 상호 운용·표준화의 공통 모델**\n\n연결임",
+          "after": "이 챕터의 두 기출은 계층별 이름보다 다음 관계를 구별하면 풀 수 있음\n\n**ISO → OSI → 7계층 → 상호 운용·표준화의 공통 모델**",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 99,
+      "id": "P1-11b-03",
+      "title": "인터넷의 상호 연결과 운영 방식",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/internet-interconnection.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "d541b4ee0ee029a3b461331d5b947158acaa6940a73265302396d18baee3400b",
+      "sha256": "8bb81a1f7b74359819188fc77dcfefca8e06cbab0a613926e60262dfd6de4a93",
+      "frontmatterSha256": "f7f8e3db73d850a53048ca9a0ee4936a23c582572c52d91d6b68429f8574d77b",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "시험에서는\n\n",
+          "after": "시험에서는 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "\n\n아님\n\n",
+          "after": "\n\n",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "즉\n\n",
+          "after": "즉 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "연결 기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 100,
+      "id": "P1-09-01",
+      "title": "IPv4·IPv6 주소 읽기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ipv4-ipv6-addresses.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "158fa66a38203057cc8b13b86ee38fa3a749e93e8adfe0f94123c156b6938091",
+      "sha256": "a9fb93452fb131c554f0a5a32c63cce31ee81ca641327211824b74bc51b8cf96",
+      "frontmatterSha256": "c0b1e4a1397b222a879bf384a752767a923aa7f509fda0c8762efc332698472c",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "대표적인 IPv4 주소 표현\n\n",
+          "after": "IPv4 주소 예: ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "핵심\n\n",
+          "after": "",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "과거 시험 문구를 근거로\n\n",
+          "after": "과거 시험 문구를 근거로 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "\n\n아님\n\n",
+          "after": "\n\nIPv6가 보안 문제를 자동으로 해결하는 것은 아님\n\n",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "저장 정답",
+          "after": "수록 답안",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 2
+        },
+        {
+          "category": "문단 흐름",
+          "before": "예\n\n",
+          "after": "예: ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "2015년 기출의 ④는\n\n",
+          "after": "2015년 기출의 ④는 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 101,
+      "id": "P1-43-01",
+      "title": "도메인 이름의 계층 읽기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/domain-name-hierarchy.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "c506d92a317fac65617e7ac113825d7b117398f61c3c79fcd4559e31caf897e5",
+      "sha256": "3426cda3d15b85d361f36dc906cb147cbeabbf58dc182a550196fbbe2a9f296a",
+      "frontmatterSha256": "f62d19042ae8ccd6e04b295c945e8654a26e9cd91c5ab2fbc7d6efd378825787",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "따라서 과거 교재식 표현으로 왼쪽에서 오른쪽을 읽으면\n\n",
+          "after": "과거 교재식 표현으로 왼쪽에서 오른쪽을 읽으면 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "따라서 기출의\n\n`국가가 다르면 중복된 도메인 네임을 사용할 수 있다`는 표현을\n\n`완전히 같은 전체 도메인 이름을 중복 등록할 수 있다`는 의미로 받아들이면 틀림",
+          "after": "기출의 `국가가 다르면 중복된 도메인 네임을 사용할 수 있다`는 표현을 `완전히 같은 전체 도메인 이름을 중복 등록할 수 있다`는 의미로 받아들이면 틀림",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "연결 기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "예\n\n",
+          "after": "예: ",
+          "occurrences": 3
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 102,
+      "id": "P1-43-02",
+      "title": "DNS의 도메인 이름 변환",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/dns-name-resolution.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "8766321109f37a92d2586cbedd7bf0934a71cdbec7348c171d19d4e47a64c0fb",
+      "sha256": "08679817308ace3d89d6ecfae4b7a447a84dc2b62e583cf4a55183c80027bb0c",
+      "frontmatterSha256": "59da4d523dd8729de80bcba55fe2986042013927afd53a53444e0576494990c0",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "URL은 「HTTP 전송과 URL의 구성」에서 담당함",
+          "after": "URL은 「HTTP 전송과 URL의 구성」에서 다룸",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 103,
+      "id": "P1-09-02",
+      "title": "IP 수동 설정과 DHCP 자동 할당",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/manual-ip-dhcp.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "67f9896e363d61388216b29d6b52c32595284e782b27e89feb234e3037363b9d",
+      "sha256": "67f9896e363d61388216b29d6b52c32595284e782b27e89feb234e3037363b9d",
+      "frontmatterSha256": "bc85b1691a8fe4941090f251a9c72b033f53f4f9221d5819da63c27997c901dd",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 104,
+      "id": "P1-14a-02",
+      "title": "PING으로 연결 응답 확인하기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ping-connectivity.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "0c868ce71a85a2d2e4ea500ada9f081107d6fdf71acd24846e4f7aeb495371ed",
+      "sha256": "0c868ce71a85a2d2e4ea500ada9f081107d6fdf71acd24846e4f7aeb495371ed",
+      "frontmatterSha256": "a7b4bb1aae21f222c483de5ea303d19d23f23ff3047939ac576ef04fddde8688",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 105,
+      "id": "P1-11b-02",
+      "title": "인트라넷과 엑스트라넷의 접근 대상",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/intranet-extranet.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "985a9978310b2f332a61c0211e955163b2feeaca6cf24225c71ec0b3148b0159",
+      "sha256": "985a9978310b2f332a61c0211e955163b2feeaca6cf24225c71ec0b3148b0159",
+      "frontmatterSha256": "aae6710bb75d6a38c8a61a08609b55b2033bfa3ffe655942d89b23d07c5404d0",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 106,
+      "id": "P1-11a",
+      "title": "HTTP 전송과 URL의 구성",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/http-url-structure.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "cb885e53e48ac025c0816f287c937b0574e059c37042da907033179043f185a6",
+      "sha256": "cb885e53e48ac025c0816f287c937b0574e059c37042da907033179043f185a6",
+      "frontmatterSha256": "1b7fd3e5cdcee09833f27decf371b75feb0f7f367bca829601239c07e3486745",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 107,
+      "id": "ADD-18",
+      "title": "HTML·CSS·JavaScript의 역할",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/html-css-javascript.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "cded1179f461c33c3815749da177744cb9d46bcefbe54a31d577595872c3da25",
+      "sha256": "8493003628ea795bfae65fb2b8ce1859fcb2e1d53c6a9b98b30cf08289a36e6e",
+      "frontmatterSha256": "3dc914287b89b3c6fd6f31557bdc8c71dd4ddb89eb25e7b747e384e3360b1916",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "직접 연결 기출이 없는 출제기준 보완 챕터이며 존재하지 않는 출제 빈도를 붙이지 않음\n",
+          "after": "",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "\n\n",
+          "after": "\n",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 108,
+      "id": "P1-44",
+      "title": "HTML5·DHTML과 과거 웹 기술",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/html5-dhtml-legacy-web.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "cc68b9fad95cd4fa5c3b53f9d969c4ad41234e8c16735868e2d24e981491ee7d",
+      "sha256": "cc68b9fad95cd4fa5c3b53f9d969c4ad41234e8c16735868e2d24e981491ee7d",
+      "frontmatterSha256": "ce0542591f73c266bb0a9bd9d6384d73befd47dd451d17206661ebab47439ee9",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 109,
+      "id": "P1-10b",
+      "title": "브라우저 기능과 인터넷 옵션의 설정 범위",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/browser-internet-options.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "ebb3de317f1dc770c869fe07ce2ae510c2294f9dc2377b24be52d44819f859a4",
+      "sha256": "ebb3de317f1dc770c869fe07ce2ae510c2294f9dc2377b24be52d44819f859a4",
+      "frontmatterSha256": "08634b5f03c8dcc7dda680a6c315379ee6cd63ee1a181a2edf5f286857f027fd",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 110,
+      "id": "P1-10a",
+      "title": "쿠키·캐시·방문 기록의 차이",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/cookies-cache-history.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "d31e38b076f35758a1949801f57eb053ece8bd3db770ef5be54cc7d0d94a61e4",
+      "sha256": "d99843a1f477e092e5e3c9f84294ca922ee253f1389e60bd96ca2e7a3fb85426",
+      "frontmatterSha256": "11e612692178014192874ba292aef15afa47f5f6386e92cad2a4ddf70f1a6ab0",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "저장해 로딩을 줄이는 기능임",
+          "after": "저장해 다시 불러오는 시간을 줄이는 기능임",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 111,
+      "id": "P1-45",
+      "title": "포털과 미러 사이트의 제공 목적",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/portal-mirror-sites.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "799ba562b4d5deda02d102cf5f68a24b452e60032f07e04761edbfd91b29f52c",
+      "sha256": "799ba562b4d5deda02d102cf5f68a24b452e60032f07e04761edbfd91b29f52c",
+      "frontmatterSha256": "0d3a257c4bb803fd34026be058209d772bde5cce6e17a5f944d8525b7c98edbf",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 112,
+      "id": "P1-36",
+      "title": "FTP의 파일 전송과 작업 범위",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ftp-file-transfer.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "fae605c62f8d7a801aca3a6a6d696e1df977801d94cd0993653448fcbfadf8c8",
+      "sha256": "fae605c62f8d7a801aca3a6a6d696e1df977801d94cd0993653448fcbfadf8c8",
+      "frontmatterSha256": "ef9e619426558b896ef505689a4893fe85c43456fabf90617f0395739c00d94d",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 113,
+      "id": "P1-37-01",
+      "title": "전자우편 주소와 회신·전달의 수신 대상",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/email-address-reply-forward.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "cca2561d9339c1b95b60cc0c5dec9ffc80112381640cd8a1f8c3ccd41359624e",
+      "sha256": "cca2561d9339c1b95b60cc0c5dec9ffc80112381640cd8a1f8c3ccd41359624e",
+      "frontmatterSha256": "b452042651fc908e4ecb557338f1a9ca6004681f20a0ca300c7a790b2f1f0731",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 114,
+      "id": "P1-37-02",
+      "title": "SMTP·POP3·MIME의 전자우편 처리 역할",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/email-smtp-pop3-mime.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "be196f639dc61a6ee77faba8d56513edb747ca78fe300d22e1ae286c0df5ae31",
+      "sha256": "e680ad31a6e09c289d8c71d0a605d92935492c3ad4e9a4da0f4745daa45c1dda",
+      "frontmatterSha256": "c45244d2eee483f409795c3e8a440389a08b67a37908afa292edfb9697d67770",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "전자우편 프로토콜은 **SMTP=보내기·서버 간 전달, POP3=서버에서 메일 가져오기, MIME=여러 문자·첨부·멀티미디어 형식을 표현하도록 메시지 형식을 확장**으로 구별함",
+          "after": "전자우편 처리에서는 **SMTP의 메일 전송·서버 간 전달, POP3의 메일 가져오기, MIME의 메시지 형식 확장**을 구별함",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 115,
+      "id": "P1-37-03",
+      "title": "스팸 메시지와 의심 메일 구별하기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/spam-suspicious-email.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "465f5cc8ad6bc6cce3f5c6ecbbd394b3d19778c0accc93cfb8d35332d9c66acd",
+      "sha256": "5c5c165b800e6850f3b48e7bbb9a102959d8b7ce471109d93a58a17f113a4ab0",
+      "frontmatterSha256": "4b4d445be6d9d6dc84af2a6d085070d8f5589c599659465e27ed5008fb0c8f27",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "학습 행동\n\n",
+          "after": "",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 116,
+      "id": "P1-08a-01",
+      "title": "VOD·MOD로 영상·음악 선택하기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/vod-mod-services.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "8689fad166b0b9f7066e2f5539f5614b37051c13c27382d93b9b1c5392764332",
+      "sha256": "1702793a0d780761814de58c25a53f2a52216fd150e77f3c9c4dba82c66ad0ae",
+      "frontmatterSha256": "c4cea83c89cec3932d48139d6d1ded1298f2dfcf5ef0f4e21117079be4593575",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "2015년 그림 기출은\n\n",
+          "after": "2015년 그림 기출은 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 117,
+      "id": "P1-08a-02",
+      "title": "IPTV·스마트 TV의 서비스 특징",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/iptv-smart-tv.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "9775ed9709ad39119d28319e1bbe7c55d24890ae40c9518cfdad7cc02794fa03",
+      "sha256": "74947c4d56c6fed867f018ec14142b7a91aad7ce5aa72c3d184674ebf549af22",
+      "frontmatterSha256": "7fabecbe7f1bfade0c77ebe8656e8fbb823ae88b89daca7201f4ed3697a77a69",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "2015년 3월 기출 5번는 기존 정답을 Smart TV ④로 보존하고 있으나 이후 IPTV 셋톱박스·플랫폼도 앱 기능을 제공하게 되어 표현이 겹칠 수 있다는 기존 검토가 있음",
+          "after": "2015년 3월 기출 5번의 수록 답안은 ④ Smart TV임\n\n이후 IPTV 셋톱박스·플랫폼도 앱 기능을 제공하게 되어 두 개념의 설명이 겹칠 수 있음",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 118,
+      "id": "P1-08b",
+      "title": "인터넷 음성·메시지·회의 서비스 비교",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/internet-communication-services.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "869610470ca0c20088516616f7443d94f73a5c027f8b47b8c3514ce409f93220",
+      "sha256": "869610470ca0c20088516616f7443d94f73a5c027f8b47b8c3514ce409f93220",
+      "frontmatterSha256": "994f4b15ee641afa805d230882d235684bb545b59da6cd9a9e759b8291a641d2",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 119,
+      "id": "P1-08c-01",
+      "title": "LBS의 위치 정보 활용",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/location-based-services.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "46e90d3ea1ec649e0ce3262a601de5411dabc533d1d9a27ba72a147a46aca26f",
+      "sha256": "46e90d3ea1ec649e0ce3262a601de5411dabc533d1d9a27ba72a147a46aca26f",
+      "frontmatterSha256": "5736b8858fc01d13a57720e1fc0d02f6490faa9cfbacac4cd5fb7a70a339bef8",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 120,
+      "id": "P1-08c-02",
+      "title": "키오스크의 정보 안내 방식",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/kiosk-information-terminals.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "ef4411fe646c4297237204f5f5dabfd906f9be36c2c451c68ad31ac9d70c372e",
+      "sha256": "ef4411fe646c4297237204f5f5dabfd906f9be36c2c451c68ad31ac9d70c372e",
+      "frontmatterSha256": "1053cf3702ba1ec93f32ae030b0e487114ec4f92931a693f8ad55b9289490d9a",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 121,
+      "id": "P1-41-02",
+      "title": "RFID의 태그 식별 방식",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/rfid-tag-identification.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "2d00021b51e6d1fa64cbba1fb1a5b6a8057bae57b65fd5acbb6861b591fd6609",
+      "sha256": "2d00021b51e6d1fa64cbba1fb1a5b6a8057bae57b65fd5acbb6861b591fd6609",
+      "frontmatterSha256": "eac335668728fd5e50d35af975f192bec9f33d5e002ecc9d2674637b519f1d20",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 122,
+      "id": "P1-41-01",
+      "title": "사물인터넷과 ICT 융합의 정보 흐름",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/iot-information-flow.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "7965955bea147c451d7c0c1a29f00c8576d1fb161d144e9d915b2a389f80205e",
+      "sha256": "7965955bea147c451d7c0c1a29f00c8576d1fb161d144e9d915b2a389f80205e",
+      "frontmatterSha256": "7dbdad6d9fc96d4204fa6a07d486c727c7756b3ff72bf76fec6c5eb0632210df",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 123,
+      "id": "P1-01",
+      "title": "멀티미디어의 통합과 상호작용",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/multimedia-integration.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "39b33d21783f44355e3bcc2ca130b0014d6da3de52de0808562877a4372bfa49",
+      "sha256": "39b33d21783f44355e3bcc2ca130b0014d6da3de52de0808562877a4372bfa49",
+      "frontmatterSha256": "f3d4a560c07924f2f0764cf5a3c76e27b02c4ae4983eb2d8843ddb7e4a4bfd68",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 124,
+      "id": "P1-02a",
+      "title": "비트맵·벡터와 해상도 비교",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/bitmap-vector-resolution.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "7f4e844a2bca5228e9799420b221b371126568b19daa7d4d9c96e130468a5917",
+      "sha256": "3012ccb43d20846cb4ed0790adab47945b86d19fab7dc087f529c2bc0cefa4b4",
+      "frontmatterSha256": "3122563d4dddd6533d0cc7e3f6df13a628545dac63558b6fc4d30fa6118324f9",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "화면·이미지를 얼마나 세밀하게 표현하는지와 관련된 픽셀 수 기준임",
+          "after": "화면·이미지의 픽셀 수와 관련된 표현 세밀도임",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 125,
+      "id": "P1-03a",
+      "title": "정지영상 파일의 형식과 압축 특성",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/image-file-compression.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "7fb9893246afd41437b0d1323f630cfce301e6dde510d4ef65899c71eea27a0e",
+      "sha256": "72abd036ab3bdae2a865ae61279a757d722bcaa76efb96940ca0cffb15c859d4",
+      "frontmatterSha256": "dc82bb856018e0ef281b8615dd8c443bd130134b64f79fe78add9324aef4c4d9",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "정지영상 형식은 **사진에 강한 JPEG, 투명·그래픽에 활용되는 PNG, 제한 색·애니메이션 GIF, BMP·TIFF 등 이미지 형식**처럼 압축과 표현 특성을 비교함",
+          "after": "정지영상은 **JPEG·PNG·GIF·BMP·TIFF 등 파일 형식별 압축 방식과 표현 특성**을 비교함",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 126,
+      "id": "P1-02b-02",
+      "title": "경계·색 표현을 보완하는 안티앨리어싱·디더링",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/antialiasing-dithering.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "6128fe761ba51d71de1059b60435a27082c15cea74d100724867f8b82b98b476",
+      "sha256": "892173446598e4db9de9311d49eadc8f64edfe15d68104a8e2085ca64d629eb2",
+      "frontmatterSha256": "da4aec201be61036b0bdb78aa8cdad5b2cba3f7387e083e4b955c6ca08b13479",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "계단현상을",
+          "after": "계단 현상을",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 127,
+      "id": "P1-02b-01",
+      "title": "형태를 만드는 모델링과 질감을 표현하는 렌더링",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/modeling-rendering.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "d93ac940f2a53f38497763975c82efc8ee055a42a69c33d04357b4ccbc3b283f",
+      "sha256": "d93ac940f2a53f38497763975c82efc8ee055a42a69c33d04357b4ccbc3b283f",
+      "frontmatterSha256": "3f436cc7bfc74c57cc0165b5493aa7e84ebcb85a7b23084915f373f4e26d0f35",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 128,
+      "id": "P1-02b-03",
+      "title": "모핑으로 중간 형태 만들기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/morphing-animation.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "aacbbd2b47f1684bd125295a6b649eb15ac085f63fc97223d9561e0686fa80f2",
+      "sha256": "07bc7716499ba00d41329159f18572b9b0042806a35842b0340d25873c9c5dc2",
+      "frontmatterSha256": "ceba9457325df68e04ebe4a25f58e06e27da054d4ab72dfdf522afabac8ff59a",
+      "changes": [
+        {
+          "category": "문단 흐름",
+          "before": "`이미지 A → 여러 중간 형태 → 이미지 B`\n\n→ ",
+          "after": "`이미지 A → 여러 중간 형태 → 이미지 B` → ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 129,
+      "id": "P1-42b",
+      "title": "가상현실의 경험과 구현 방식",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/virtual-reality.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "23e08906052029f82323c19bb8b4668160bbc925afd4f644beaf69a9fd8b268d",
+      "sha256": "23e08906052029f82323c19bb8b4668160bbc925afd4f644beaf69a9fd8b268d",
+      "frontmatterSha256": "163ef2c3ff4f98c47e1259cc670d120e792090d293e74c2b5aaf8a6051f152b3",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 130,
+      "id": "P1-03b-01",
+      "title": "WAV·MIDI의 소리 표현 방식 비교",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/wav-midi-audio.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "6b347d5e53fa92358ee3445cb63513ae5a64674b9e7c733752898c929ed98318",
+      "sha256": "6b347d5e53fa92358ee3445cb63513ae5a64674b9e7c733752898c929ed98318",
+      "frontmatterSha256": "2a9f848582e2d2fde98e5d321a41425d8ef5f7a765570cacad0bc8ed7912e5b5",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 131,
+      "id": "P1-03b-02",
+      "title": "샘플링·PCM·시퀀싱의 소리 처리 역할",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sampling-pcm-sequencing.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "2643096f405b69ba8ae400bc72712e7ed4b7c0cc36bbfa193dd5ac3d15b42a02",
+      "sha256": "50b5d66bf3a039c85e473b59a45e03339f0ebbf3b62bc71c39750217723dcba6",
+      "frontmatterSha256": "b20d138ff54fc9568d6f88139c024c3d1d58392af638613797db0f18e6cca502",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "오디오 처리에서는 **샘플링=연속 음을 일정 간격으로 측정, PCM=측정값을 디지털 수치로 부호화, 시퀀싱=연주 이벤트를 시간 순서로 편집**으로 구별함",
+          "after": "오디오 처리에서는 **샘플링의 일정 간격 측정, PCM의 디지털 부호화, 시퀀싱의 연주 이벤트 편집**을 구별함",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 132,
+      "id": "P1-03c",
+      "title": "동영상 규약과 코덱의 역할",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/video-standards-codecs.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "8af4a9a37fff1f9e8d338449a45343162e07fbd770be2198f6e299fe79590339",
+      "sha256": "8af4a9a37fff1f9e8d338449a45343162e07fbd770be2198f6e299fe79590339",
+      "frontmatterSha256": "c5cbaff3146a6d6a792f5ec3b45f23f9339b65a6aab7c1014c3bc4ccc57dba16",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 133,
+      "id": "P1-49",
+      "title": "미디어 재생 도구와 편집 도구 구별하기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/media-playback-editing.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "f8ce4f804e8664356d7bd26066a8ac5a258cfb5dca728ad2dc352507cca9b8da",
+      "sha256": "40f68ad42e9dfd443326e1e1c1ccefc08b0bcc0eff45d4c9956b38da31eb5736",
+      "frontmatterSha256": "bf471db5806f47bd2d0b46b06242daaf82d89ff6082ed77c40424272a7f9df4d",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "과거 Windows 환경에서는 Windows Movie Maker 같은 별도 편집 도구와 구별했음",
+          "after": "과거 Windows 환경에서는 Windows Movie Maker 같은 별도 편집 도구와 구별함",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "`사진과 영상 파일을 편집해 UCC 제작`\n\n→ ",
+          "after": "`사진과 영상 파일을 편집해 UCC 제작` → ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 134,
+      "id": "P1-04a-01",
+      "title": "자료를 가공해 정보로 만드는 과정",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/data-information-informatization.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "4b59cbe3a7440496b0f27f44a4253ccb912a3606d6eb6f6adf21bb0adb1e77d4",
+      "sha256": "c91851f2010287413f016707495b8eeb2b1867aa5a78fd6bf28c2ded7dda5ebc",
+      "frontmatterSha256": "c09eded9f49e7f117d1ec3b748a843aca0196141c77f343a6f89bde072353deb",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "입력 자료가 잘못되면 처리 과정이 정확해도 결과 정보의 신뢰성이 떨어질 수 있음\n\n`Garbage In, Garbage Out`",
+          "after": "입력 자료가 잘못되면 처리 과정이 정확해도 결과 정보의 신뢰성이 떨어질 수 있음 (`Garbage In, Garbage Out`)",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "예\n\n",
+          "after": "예: ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 135,
+      "id": "ADD-20",
+      "title": "AI·기계학습·딥러닝의 관계",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ai-machine-learning-deep-learning.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "aa35aaed50c4fa3eb71cb5d7e4df44ce7a7de2bb5e56426c93b5d6d851a9c75b",
+      "sha256": "c5935112c68b0634baaac7c62a6bca679d9740186b7c1a8d8706d54f9c3f88a6",
+      "frontmatterSha256": "abe0c6e9283a6793a2f62e56e6248107fa9e76bd2d3d0359fce9116926fbb2b0",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "## 모든 자동화가 AI인가\n\n아님",
+          "after": "## 모든 자동화가 AI인가\n\n모든 자동화 프로그램이 AI인 것은 아님",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "## 모든 AI가 기계학습인가\n\n아님",
+          "after": "## 모든 AI가 기계학습인가\n\n모든 AI가 기계학습을 사용하는 것은 아님",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "`AI = 기계학습 = 딥러닝`\n\n처럼",
+          "after": "`AI = 기계학습 = 딥러닝`처럼",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 136,
+      "id": "ADD-21",
+      "title": "기계학습의 학습과 예측 단계",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/machine-learning-training-inference.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "3c83e157f4b0e2aae1b78353eb3cddea35687a9ac4ccbb3882fba40591431b83",
+      "sha256": "6615db4dd9e454d2c8b2280a0a6f53968ca554930956562e1405fefa987bf0b8",
+      "frontmatterSha256": "59f2d6212706cc1dcdfa1161776f2c835750a39117e9bfc2c0b0072b079c06c5",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "고양이·강아지 사진으로 모델을 학습함\n\n새 사진을 넣어 `고양이`라고 판단함\n\n→ 새 사진을 처리하는 과정은 **예측·추론**",
+          "after": "1. 고양이·강아지 사진으로 모델 학습 → **학습**\n2. 학습된 모델에 새 사진을 넣어 `고양이`라고 판단 → **예측·추론**",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 137,
+      "id": "ADD-22",
+      "title": "학습 데이터와 결과의 신뢰성",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/learning-data-reliability.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "17a2c62c8a58bc186a16ebd6940bd3be31c92e385ef2506c10cb52381a0f15c7",
+      "sha256": "17a2c62c8a58bc186a16ebd6940bd3be31c92e385ef2506c10cb52381a0f15c7",
+      "frontmatterSha256": "845b444ed177bccaeae7194ccf5193d71314ce5c5d5ae64721e61778b9000e7e",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 138,
+      "id": "ADD-23",
+      "title": "AI 활용 사례의 입력과 출력",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ai-input-output.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "8c46c970ffb932850ebe2a00545b29ce0316e0586597e94b3a99f98bedf616e7",
+      "sha256": "8c46c970ffb932850ebe2a00545b29ce0316e0586597e94b3a99f98bedf616e7",
+      "frontmatterSha256": "1e2a6f9e774fbf0af1cf6d1be475d004e664d875f7fbc622c388b4d452476bf9",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 139,
+      "id": "ADD-24",
+      "title": "AI 결과의 오류와 확인 방법",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ai-result-verification.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "76fa58833f7ff4a12b7e4b8508479deaae3bd657df8c140f5c29f95afcbb916f",
+      "sha256": "f5571942451e8c5ae83e5694e36eafc90d2ca670b5746ed1f50c994577f1a0a7",
+      "frontmatterSha256": "4a5035b721e08c45b097a29da4b281e467b32f584f0f240ecb3b5b1d347293cf",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "## 오류가 생기는 이유\n\n",
+          "after": "## 오류가 생기는 이유\n\n다음과 같은 원인으로 오류가 생길 수 있음\n\n",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "\n\n등 여러 원인이 있을 수 있음",
+          "after": "",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "해당 분야 사람의 검토 추가",
+          "after": "해당 분야 전문가의 검토 추가",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 140,
+      "id": "P1-04a-02",
+      "title": "정보사회의 변화와 문제점",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/information-society-challenges.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "a1a8bfc92c6448f30d54f95973a91c528addd3f9246904b49152b7d973f04dec",
+      "sha256": "10064b79261263e3de6bff548274d31232c4f7e8c9963b9fd477ef275dcd93c5",
+      "frontmatterSha256": "aa2ede70b3acac5fbbf36bd962106636a432ebf74c5a95e0ac514855e0d43bc7",
+      "changes": [
+        {
+          "category": "문단 흐름",
+          "before": "`정보사회는 개성과 자유를 경시하는 대중화가 강화된다`\n\n→ ",
+          "after": "`정보사회는 개성과 자유를 경시하는 대중화가 강화된다` → ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "`정보 편중으로 계층 간 정보차이가 감소한다`\n\n→ ",
+          "after": "`정보 편중으로 계층 간 정보차이가 감소한다` → ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 141,
+      "id": "ADD-25",
+      "title": "정보를 공유하기 전 사실·권리 확인",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sharing-facts-rights.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "3ccf4f5df423336d6785bc7136abd6fce1b418a15e90ce5d9c1bd272addbf3af",
+      "sha256": "3ccf4f5df423336d6785bc7136abd6fce1b418a15e90ce5d9c1bd272addbf3af",
+      "frontmatterSha256": "3ec790412ee9802063e83a7baf8dbb566f4a93eb7a7e0137f2ab6692c628ca5b",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 142,
+      "id": "P1-04b",
+      "title": "저작권 보호 대상 구별하기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/copyright-protection.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "372177f97a18caefbbc4708ac5d32b17c18e936bbc666d2efef74b7badd338f9",
+      "sha256": "539aa7ce64b586768d315385469b790075c4a104607b2facaabf41bca360cd29",
+      "frontmatterSha256": "d5ab6864cefd5e8aa6d7ce491f21e3a4d03e96e20d125e953842a137a8973859",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "법에서 보호 대상에서 제외한 공공 저작물인지",
+          "after": "법에서 보호 대상에서 제외한 저작물인지",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서 기출의 `국가 또는 지방자치단체 홈페이지에 게시된 고시·공고·훈령 등은 저작권법의 보호를 받는다`\n\n→ ",
+          "after": "따라서 기출의 `국가 또는 지방자치단체 홈페이지에 게시된 고시·공고·훈령 등은 저작권법의 보호를 받는다` → ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 143,
+      "id": "ADD-26",
+      "title": "개인정보의 수집·공유·보관 점검",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/personal-information-handling.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "59aca712a67739991ab89cc0af714ebb569e9ad6799303bb9fe5d2effb98368d",
+      "sha256": "e2c3569896520f656ee2d917ffbcea70bb62e71168a8b232398d5497db693ab5",
+      "frontmatterSha256": "a293e4a65630440077dfc6192a7281f99ae0d42cfce9667c8c1102b46d6bad42",
+      "changes": [
+        {
+          "category": "문단 흐름",
+          "before": "`서비스가 요구하면 목적과 상관없이 가능한 많은 정보를 제공`\n\n→ ",
+          "after": "`서비스가 요구하면 목적과 상관없이 가능한 많은 정보를 제공` → ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 144,
+      "id": "ADD-27",
+      "title": "AI 활용의 권리·공정성·책임",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ai-rights-fairness-responsibility.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "e4a26e2a0fbc91c4b2389cbac30142159f8daaf6d1c2dcb9526b532ed818aa1c",
+      "sha256": "e4a26e2a0fbc91c4b2389cbac30142159f8daaf6d1c2dcb9526b532ed818aa1c",
+      "frontmatterSha256": "71a40aace3e11cdc1107745d3e2a02db44a309b9b661631f033bbf5fbc6e0204",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 145,
+      "id": "P1-05",
+      "title": "기밀성·무결성·가용성과 침해 유형",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/security-cia-threats.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "2a63dd701ec987ffc2cbfc16df17cbcb20e0a237b1cd71d80d1d669bd986588f",
+      "sha256": "592b73062809eb0b14cb214ab8654192a9ab9bb3e5c98a56c8153255c12fd6af",
+      "frontmatterSha256": "a42ed35c5cabbb365d8c0d33cc0920fc97743f43b1f042bdecce8e34e965ee09",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "침해 예\n\n",
+          "after": "침해 예: ",
+          "occurrences": 3
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 146,
+      "id": "P1-06-01",
+      "title": "스니핑·키로거의 정보 수집 지점",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/sniffing-keyloggers.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "4816873b9af09e6e3d65c077792590198da32cdf413c72c2f2c0dea8ede2e2ed",
+      "sha256": "8cf3c1f9bc815fd220359d3971353970ec65e365c8f7f97b70f8a97a9db3476c",
+      "frontmatterSha256": "35c9637432bac7e13d6c40b22afc6e9142a7ce6c5f794358013e5d914d2ecef9",
+      "changes": [
+        {
+          "category": "문단 흐름",
+          "before": "기출 단서\n\n",
+          "after": "기출 단서: ",
+          "occurrences": 2
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 147,
+      "id": "P1-06-02",
+      "title": "스푸핑·피싱의 사칭과 입력 유도",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/spoofing-phishing.md",
+      "reviewed": true,
+      "changed": false,
+      "originalSha256": "f8713878a2c73f636dd15f7f19ab0b3255d9c60ed4bcd27bad339da911434b66",
+      "sha256": "f8713878a2c73f636dd15f7f19ab0b3255d9c60ed4bcd27bad339da911434b66",
+      "frontmatterSha256": "f99e90ecfb95311c15d2338fedea8653a1cd81fee597dbbde1d2409520709c8b",
+      "changes": [],
+      "findings": "수정이 필요한 오탈자·표현 문제 없음"
+    },
+    {
+      "order": 148,
+      "id": "P1-06-03",
+      "title": "DDoS의 요청 집중과 서비스 방해",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/ddos-service-disruption.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "f66da215bc480042ee59489582f948d5663390cc91db7248d9e81c44be79282d",
+      "sha256": "665f32231be1c4d8341eaa4a75aba85b4dc006b129e7d037b560e37dc0550aca",
+      "frontmatterSha256": "e4f2fa21419172995ed7c8983cf78325aa4f3ce5d97df259dab78ff4e2d0f47b",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "Hacking → 매우 넓은 비인가 침해 행위 표현",
+          "after": "Hacking → 비인가 침해 행위를 폭넓게 가리키는 표현",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "방어·공격 방법의 구체적 실행 절차는 이 챕터 범위가 아님\n",
+          "after": "",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "\n\n",
+          "after": "\n",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 149,
+      "id": "P1-06-04",
+      "title": "피기배킹의 무단 접근 방식",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/piggybacking-access.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "262b5c341c8048dd6eda921bdfb1bbcb9c9c4ffa89c039692a5867a93ff30f64",
+      "sha256": "ef1f7a00e391289ddd9a2655bc7a9ad96dbe4aea113e07132f30642544126796",
+      "frontmatterSha256": "022e44f19ef8a39d21614a6a3d2cbef61f41201ce4cbab358e469fc160dcb3c7",
+      "changes": [
+        {
+          "category": "문단 흐름",
+          "before": "기출 단서\n\n",
+          "after": "기출 단서: ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 150,
+      "id": "P1-07-01",
+      "title": "악성코드의 감염·전파 방식",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/malware-infection-propagation.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "5cbf4caf08b9acd2e647e5b740cbd1deafb2009c6b6e76ebab293b6c687cecdb",
+      "sha256": "5e72394cfe18cf391185abad013db398f32090d3aa38bd109d725a0dddf20a2b",
+      "frontmatterSha256": "9d2ca2177ac0c4491b0301b182434806d9ac89a58b74e028255d914a8576f07a",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "악성코드는 **바이러스=다른 파일·프로그램에 붙어 감염, 웜=네트워크 등을 통해 스스로 확산, 트로이목마=정상 프로그램처럼 위장해 실행, 매크로 바이러스=문서의 매크로 기능을 매개로 감염**으로 구별함",
+          "after": "**바이러스·웜·트로이목마·매크로 바이러스**는 감염 대상, 스스로 확산하는지, 위장 방식에 따라 구별함",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "만들 수도 있음",
+          "after": "일으킬 수도 있음",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "같은 분류 축으로 보지 않음",
+          "after": "같은 기준으로 분류하지 않음",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 151,
+      "id": "P1-07-02",
+      "title": "악성코드 예방 행동 구별하기",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/malware-prevention.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "b16cac618ea7ed30394466c05503e673fcb72662ecc5141579319a74d18a2e7d",
+      "sha256": "4c0f16148f9ebb76a1e2b06b396e6d43c4ecc2f009b0c2b6835318dae780107d",
+      "frontmatterSha256": "93cd20d61853a186c3c5302b80c4c31200ff75ac564bd2241ac4682e10c70e37",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "전자우편 첨부파일을\n\n`report.exe → report2.exe`\n\n처럼 다른 이름으로 저장해도 파일 내용의 악성 여부가 바뀌지 않음",
+          "after": "전자우편 첨부파일을 `report.exe → report2.exe`처럼 다른 이름으로 저장해도 파일 내용의 악성 여부가 바뀌지 않음",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "악성코드를 탐지·차단하는 기능이 아니므로\n\n",
+          "after": "악성코드를 탐지·차단하는 기능이 아니므로 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "`의심이 가는 이메일은 열어서 내용을 확인하고 삭제`\n\n→ ",
+          "after": "`의심이 가는 이메일은 열어서 내용을 확인하고 삭제` → ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 152,
+      "id": "P1-34b",
+      "title": "인증·암호화·방화벽·백신의 보호 대상",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/security-protection-roles.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "4075afb7215c112ffacbe7dff1752c99604bacb26a3ed29b42b59ff713aae0f8",
+      "sha256": "f77581e6a9bf734455ddb289b926c7127444faf6d459d875e1f300713f96ef9b",
+      "frontmatterSha256": "43d556c07c3f0c6ed05761431b1eadbeb0e7c0e5e52f17ac79aed7782948084b",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "방화벽은 네트워크 경계에서 통신을 제어하는 기능이지\n\n**바이러스 감염 자체를 검사해 감염 사실을 알려 주는 백신**과 같은 기능이 아님",
+          "after": "방화벽은 네트워크 경계에서 통신을 제어하는 기능임\n\n**바이러스 감염을 검사해 감염 사실을 알려 주는 백신**과 같은 기능이 아님",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "현재 제품 명칭과 구성은 달라졌으므로\n\n",
+          "after": "현재 제품 명칭과 구성은 달라졌으므로 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "핵심 단서\n\n",
+          "after": "핵심 단서: ",
+          "occurrences": 2
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 153,
+      "id": "P1-34a",
+      "title": "시스템 복원과 개인 파일 백업의 차이",
+      "path": "src/content/chapters/computer-literacy/written/computer-basics/system-restore-file-backup.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "87f459898b438a8e2faabb9b891fa5c13e16a1aafb62ce951884e3939c3825b5",
+      "sha256": "9bacfd1508c64d6b54016799ba9d7c5490bc8836d3d6832a13af67fb9621cfc2",
+      "frontmatterSha256": "21b6b63a0f702d85bd1b64ba734390f377e34c731e0f5d9cdd016605ba4bd091",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "대표적으로\n\n",
+          "after": "시스템 복원은 다음 항목에 영향을 줄 수 있음\n\n",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "\n\n등에 영향을 줄 수 있음",
+          "after": "",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "연결 기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 154,
+      "id": "P2-13a",
+      "title": "Excel 화면 요소와 보기 설정",
+      "path": "src/content/chapters/computer-literacy/written/spreadsheets/excel-interface-view.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "a27824044aa5426b7ff3059c23c3e82accbfa225bebe3523667c65fa12fb4717",
+      "sha256": "359b3a998f73b45b31e9ba97e2f534f097bb87ca0b98ddc3492423b1b196cee0",
+      "frontmatterSha256": "b78148164917a132ddfc4077c84038e206949ee5056cb2ef85b7a1ffa73edde5",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "해당 보기에서도 셀 데이터 입력·편집이 가능하므로\n\n",
+          "after": "해당 보기에서도 셀 데이터 입력·편집이 가능하므로 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 155,
+      "id": "ADD-28",
+      "title": "Excel 옵션의 적용 대상 구별하기",
+      "path": "src/content/chapters/computer-literacy/written/spreadsheets/excel-option-scope.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "8a8fc99ab09e3d4902094f568e01354577a01e1de3fe35bc272fbeba7ae91150",
+      "sha256": "c38538cf6e412a3ece49f7585f0a9a89e1010ab5188624efdcc931ed3427ef96",
+      "frontmatterSha256": "cc1c4f6bc4fec3c900e136960b3b4fe2c7d5ff5ab2a3c2a5026c8751e57aac1e",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "`Excel 옵션에서 변경했다 → 무조건 현재 파일에만 적용`\n\n또는\n\n`Excel 옵션에서 변경했다 → 모든 파일에 항상 적용`\n\n처럼 판단하면 안 됨",
+          "after": "`Excel 옵션에서 변경했다 → 무조건 현재 파일에만 적용`이나 `Excel 옵션에서 변경했다 → 모든 파일에 항상 적용`으로 일반화하지 않음",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "4. 입력·표시·계산 등 세부 기능은 해당 담당 챕터로 연결",
+          "after": "4. 입력·표시·계산 등 세부 기능은 관련 챕터에서 확인",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "학습 예시에서는 데스크톱 Excel에서 계산 방식을 수동으로 변경한 상황을 대표 사례로 제시함",
+          "after": "계산 방식을 수동으로 바꾼 상황에서 데스크톱 앱과 웹용 Excel의 적용 범위를 비교함",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "현재 문제 해결에 필요한 판단\n\n**무엇을 설정하는가 + 어디에 적용되는가**\n\n만 구별함",
+          "after": "**무엇을 설정하는가 + 어디에 적용되는가**를 먼저 구별함",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 156,
+      "id": "P2-01-01",
+      "title": "통합문서와 시트 만들기",
+      "path": "src/content/chapters/computer-literacy/written/spreadsheets/workbook-worksheet-creation.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "8fafe9ba2dc62bceb52022fa2c3cb0082509a64edf2f4eb0c4b945be16e4533a",
+      "sha256": "8dd0a48278e280c7a5cfedd8df50e651d69ccc6113f2ffba38fd12e32acd4d0d",
+      "frontmatterSha256": "359b5de856e754c77178f207a2b7940f34c7bd96014f98aa9f55494127962a59",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "`Ctrl + N`\n\n→ 새 통합문서 생성",
+          "after": "`Ctrl + N` → 새 통합문서 생성",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "`Shift + F11`\n\n→ 현재 통합문서에 새 워크시트 삽입",
+          "after": "`Shift + F11` → 현재 통합문서에 새 워크시트 삽입",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 157,
+      "id": "P2-01-02",
+      "title": "여러 시트 선택과 그룹 해제",
+      "path": "src/content/chapters/computer-literacy/written/spreadsheets/worksheet-selection-groups.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "b30c34dfe4b79bc18da9c4cd8a85685171c4347f39a7f2b075cc0a0d193f4a24",
+      "sha256": "c14bc39a0607d7956589d056635cae186cf7048a1b5f0649ced943eb66910c04",
+      "frontmatterSha256": "0cd1065431b3bf09cfdcd792e09aeca9fb4dd04c5a3411a06b096880eabd2423",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "`Shift + F11`\n\n→ 새 워크시트 삽입",
+          "after": "`Shift + F11` → 새 워크시트 삽입",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 158,
+      "id": "P2-01-03",
+      "title": "시트 이름 변경·이동·복사·삭제",
+      "path": "src/content/chapters/computer-literacy/written/spreadsheets/worksheet-rename-move-copy-delete.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "2f7b4e63766eda7c16b2e8b40f75bd9eb566b8272bd981b377652a7466ce36f2",
+      "sha256": "83e2b7ed0287325fe0ba12bde43ba1b1145330146c069430702ef0274349dc5f",
+      "frontmatterSha256": "b30dfc7a9bea718dd1c30e23d5ef896c168a066072fa54ae8983b50c28cecfb0",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "시트마다 탭 색을 지정할 수 있으나\n\n",
+          "after": "시트마다 탭 색을 지정할 수 있으나 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "`Shift + F11`\n\n→ 현재 선택 시트 앞쪽에 새 워크시트 삽입",
+          "after": "`Shift + F11` → 현재 선택 시트 앞쪽에 새 워크시트 삽입",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "연결 원본 이미지의 실행 취소 아이콘을 보고도\n\n",
+          "after": "기출 그림에 실행 취소 아이콘이 있어도 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "따라서\n\n",
+          "after": "따라서 ",
+          "occurrences": 1
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    },
+    {
+      "order": 159,
+      "id": "P2-02b",
+      "title": "셀 입력·편집과 선택 위치 이동",
+      "path": "src/content/chapters/computer-literacy/written/spreadsheets/cell-entry-edit-navigation.md",
+      "reviewed": true,
+      "changed": true,
+      "originalSha256": "f69cc3bf0c3db3ae42948cb91ae526fe9a3b4df752b0064e91d805aec1adedbf",
+      "sha256": "2d0f3f94375517dc54b2f5572fa396e0e8f1831fda4410d1f1f2620e81217865",
+      "frontmatterSha256": "80b3762e5fa5df9a674b406b57350fe9f3c5760bbe608f4b240460d493b58881",
+      "changes": [
+        {
+          "category": "문맥·표현",
+          "before": "셀에 값을 입력하는 도중 `Esc`\n\n→ 현재 입력 취소",
+          "after": "셀에 값을 입력하는 도중 `Esc` → 현재 입력 취소",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "일반적인 기본 설정에서 값을 입력하고 `Enter`\n\n→ 입력 확정 후 아래 셀로 이동",
+          "after": "기본 설정에서 값을 입력하고 `Enter` → 입력 확정 후 아래 셀로 이동",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "일반 셀 입력 상태에서 값을 입력한 뒤 오른쪽 방향키\n\n→ 값을 확정하고 오른쪽 셀로 이동하는 것으로 출제됨",
+          "after": "일반 셀 입력 상태에서 값을 입력한 뒤 오른쪽 방향키 → 값을 확정하고 오른쪽 셀로 이동하는 것으로 출제됨",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "일반 선택 상태에서 `Home`\n\n→ 현재 행의 첫 번째 열인 A열로 이동",
+          "after": "일반 선택 상태에서 `Home` → 현재 행의 첫 번째 열인 A열로 이동",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "원본 기출\n\n",
+          "after": "기출 예: ",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "`Alt + Enter`\n\n→ 한 셀 안에서 줄바꿈",
+          "after": "`Alt + Enter` → 한 셀 안에서 줄바꿈",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "기본 Enter 이동 방향이 아래쪽일 때\n\n`Shift + Enter`\n\n→ 반대 방향인 위쪽 셀로 이동",
+          "after": "기본 Enter 이동 방향이 아래쪽일 때 `Shift + Enter` → 반대 방향인 위쪽 셀로 이동",
+          "occurrences": 1
+        },
+        {
+          "category": "문맥·표현",
+          "before": "Scroll Lock이 켜진 상태에서 방향키\n\n→ 셀 포인터는 고정되고 워크시트 화면이 스크롤되는 동작으로 기출에 출제됨",
+          "after": "Scroll Lock이 켜진 상태에서 방향키 → 셀 포인터는 고정되고 워크시트 화면이 스크롤되는 동작으로 기출에 출제됨",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "연결 기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "기출의\n\n",
+          "after": "기출의 ",
+          "occurrences": 1
+        },
+        {
+          "category": "문단 흐름",
+          "before": "예\n\n",
+          "after": "예: ",
+          "occurrences": 2
+        }
+      ],
+      "findings": "표현·문단 흐름 보완"
+    }
+  ],
+  "legalClarification": {
+    "order": 142,
+    "source": "https://www.law.go.kr/lsLinkProc.do?joNo=000700&lsClsCd=L&lsNm=%EC%A0%80%EC%9E%91%EA%B6%8C%EB%B2%95&mode=11",
+    "reason": "보호 제외 대상을 공공 저작물 전체로 읽지 않도록 범위를 좁힘; 저작권법 제7조 확인"
+  },
+  "preserved": [
+    "All 78 frontmatter blocks",
+    "Canonical question/choice/answer data",
+    "Quoted examples and shortcut/formula/extension strings",
+    "Existing 1–81 and four Excel chapters",
+    "Question assets and mappings",
+    "Chapter 160 BLOCKED"
+  ]
+}

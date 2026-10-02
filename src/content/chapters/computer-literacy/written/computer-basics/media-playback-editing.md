@@ -26,11 +26,9 @@ Windows 7의 Windows Media Player는 **미디어 재생·CD 리핑·음악 CD �
 
 ## 편집 도구와 구별
 
-`사진과 영상 파일을 편집해 UCC 제작`
+`사진과 영상 파일을 편집해 UCC 제작` → Windows Media Player의 주 기능이 아님
 
-→ Windows Media Player의 주 기능이 아님
-
-과거 Windows 환경에서는 Windows Movie Maker 같은 별도 편집 도구와 구별했음
+과거 Windows 환경에서는 Windows Movie Maker 같은 별도 편집 도구와 구별함
 
 ## 현재 버전 주의
 
