@@ -2,6 +2,12 @@
 // Additional review: docs/audits/2026-09-30-computer-literacy-001-081/README.md
 // Separate from canonical question text, answers, and chapter assignments.
 const QUESTION_CAUTIONS: Readonly<Record<string, string>> = {
+  'computer-literacy:written:20151017_006':
+    '수록 답안은 ①임 · ④의 IPv4 호환성·보안 해결 표현은 당시 시험 문맥 · IPv4·IPv6 공존에는 전환 기술이 필요하며 IPv6가 보안 문제를 자동 해결하지 않음',
+  'computer-literacy:written:20150307_005':
+    '수록 답안은 ④ Smart TV임 · 이후 IPTV에도 앱 기능이 추가되어 보기의 표현이 겹칠 수 있음 · 앱 설치가 언제나 Smart TV만의 기능이라고 외우지 않기',
+  'computer-literacy:written:20151017_035':
+    '수록 답안은 ④임 · ①의 최대 255개 시트 표현은 과거 기출 문맥 · 현재 Excel 통합문서의 시트 수는 사용 가능한 메모리에 따라 제한됨',
   'computer-literacy:written:20150627_013':
     '수록 답안은 드라이버 미설치 · 현재 Code 28의 의미와 과거 노란 물음표 아이콘 표현을 구별 · 당시 아이콘 모양의 공식 근거는 미확인',
   'computer-literacy:written:20161022_018':

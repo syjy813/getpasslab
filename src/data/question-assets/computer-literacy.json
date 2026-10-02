@@ -1,10 +1,24 @@
 [
   {
+    "id": "20150307_001",
+    "asset_path": "src/assets/questions/computer-literacy/20150307_001.png",
+    "width": 957,
+    "height": 219,
+    "alt": "모바일 인터넷으로 음악 파일과 음원을 제공하고 스트리밍으로 실시간 청취할 수 있는 주문형 음악 서비스 설명"
+  },
+  {
     "id": "20150307_037",
     "asset_path": "src/assets/questions/computer-literacy/20150307_037.png",
     "width": 572,
     "height": 234,
     "alt": "A1=1, A2=3, B1=2, B2=4인 두 행 두 열의 워크시트"
+  },
+  {
+    "id": "20150627_028",
+    "asset_path": "src/assets/questions/computer-literacy/20150627_028.png",
+    "width": 964,
+    "height": 334,
+    "alt": "연속 시트 선택에는 첫 시트 이후 ⓐ 키와 마지막 시트, 비연속 선택에는 ⓑ 키와 원하는 시트를 클릭한다는 빈칸 설명"
   },
   {
     "id": "20151017_009",
@@ -26,6 +40,13 @@
     "width": 1039,
     "height": 637,
     "alt": "다음 중 아래 그림에서 (ㄱ)과 (ㄴ)에 해당하는 장치를 올바르게 연결한 것은 문항에 포함된 시각자료"
+  },
+  {
+    "id": "20161022_008",
+    "asset_path": "src/assets/questions/computer-literacy/20161022_008.png",
+    "width": 1002,
+    "height": 402,
+    "alt": "다음 중 네트워크 구성에 대한 설명과 해당 프로토콜이 바르게 연결된 것은 문항에 포함된 시각자료"
   },
   {
     "id": "20170902_021",
@@ -68,6 +89,20 @@
     "width": 1062,
     "height": 739,
     "alt": "다음 중 아래 그림과 같이 [목표값 찾기]를 실행했을 때 이에 대한 의미로 옳은 것은 문항에 포함된 시각자료"
+  },
+  {
+    "id": "20190831_028",
+    "asset_path": "src/assets/questions/computer-literacy/20190831_028.png",
+    "width": 927,
+    "height": 402,
+    "alt": "다음 중 아래 시트에서 셀 포인터를 [D5] 셀에 두고 ＜Home＞ 키를 누른 경우 셀 포인터의 위치는 문항에 포함된 시각자료"
+  },
+  {
+    "id": "20200229_012",
+    "asset_path": "src/assets/questions/computer-literacy/20200229_012.png",
+    "width": 949,
+    "height": 524,
+    "alt": "다음 중 빈 칸의 용어를 올바르게 나열한 것은 문항에 포함된 시각자료"
   },
   {
     "id": "20200704_001",

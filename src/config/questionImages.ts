@@ -12,6 +12,13 @@ import computerImage8 from '../assets/questions/computer-literacy/20151017_009.p
 import computerImage9 from '../assets/questions/computer-literacy/20151017_010.png';
 import computerImage10 from '../assets/questions/computer-literacy/20180901_003.png';
 import computerImage11 from '../assets/questions/computer-literacy/20180901_012.png';
+import computerImage12 from '../assets/questions/computer-literacy/20150307_001.png';
+import computerImage13 from '../assets/questions/computer-literacy/20150627_028.png';
+import computerImage14 from '../assets/questions/computer-literacy/20161022_008.png';
+import computerImage15 from '../assets/questions/computer-literacy/20190831_028.png';
+import computerImage16 from '../assets/questions/computer-literacy/20200229_012.png';
+import computerImage17 from '../assets/questions/computer-literacy/20200704_001.png';
+import computerImage18 from '../assets/questions/computer-literacy/20200704_021.png';
 import industrialSafetyRegistry from '../data/question-assets/industrial-safety.json';
 
 export interface QuestionImage {
@@ -41,6 +48,13 @@ const questionImageEntries: readonly QuestionImageEntry[] = industrialSafetyRegi
 });
 
 const computerLiteracyImages: readonly QuestionImageEntry[] = [
+  ['computer-literacy:20150307_001', { src: computerImage12, alt: computerLiteracyRegistry.find(entry => entry.id === '20150307_001')!.alt }],
+  ['computer-literacy:20150627_028', { src: computerImage13, alt: computerLiteracyRegistry.find(entry => entry.id === '20150627_028')!.alt }],
+  ['computer-literacy:20161022_008', { src: computerImage14, alt: computerLiteracyRegistry.find(entry => entry.id === '20161022_008')!.alt }],
+  ['computer-literacy:20190831_028', { src: computerImage15, alt: computerLiteracyRegistry.find(entry => entry.id === '20190831_028')!.alt }],
+  ['computer-literacy:20200229_012', { src: computerImage16, alt: computerLiteracyRegistry.find(entry => entry.id === '20200229_012')!.alt }],
+  ['computer-literacy:20200704_001', { src: computerImage17, alt: computerLiteracyRegistry.find(entry => entry.id === '20200704_001')!.alt }],
+  ['computer-literacy:20200704_021', { src: computerImage18, alt: computerLiteracyRegistry.find(entry => entry.id === '20200704_021')!.alt }],
   ['computer-literacy:20151017_009', { src: computerImage8, alt: computerLiteracyRegistry.find(entry => entry.id === '20151017_009')!.alt }],
   ['computer-literacy:20151017_010', { src: computerImage9, alt: computerLiteracyRegistry.find(entry => entry.id === '20151017_010')!.alt }],
   ['computer-literacy:20180901_003', { src: computerImage10, alt: computerLiteracyRegistry.find(entry => entry.id === '20180901_003')!.alt }],
