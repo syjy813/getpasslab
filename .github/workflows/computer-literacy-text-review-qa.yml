@@ -1,4 +1,4 @@
-name: Computer literacy text review browser QA
+name: Computer literacy browser QA
 on:
   pull_request:
     branches: [main]
@@ -6,15 +6,21 @@ on:
       - 'src/content/chapters/computer-literacy/**'
       - 'src/components/QuestionHistory.astro'
       - 'src/config/questionCautions.ts'
+      - 'src/config/questionImages.ts'
+      - 'src/data/questions/computer-literacy.json'
+      - 'src/data/question-assets/computer-literacy.json'
+      - 'src/assets/questions/computer-literacy/**'
       - 'src/pages/**'
       - 'scripts/qa-computer-literacy-text-review.cjs'
+      - 'scripts/qa-computer-literacy-082-159.cjs'
+      - 'scripts/check-computer-literacy-082-159.mjs'
       - '.github/workflows/computer-literacy-text-review-qa.yml'
 permissions:
   contents: read
 jobs:
   browser-qa:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -23,6 +29,16 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Check canonical sources, protected content and published output
+        run: |
+          npm run check:contrast
+          npm run check:seo
+          npm run check:public-content
+          npm run check:computer-literacy
+          npm run check:computer-literacy-c1
+          npm run check:deferred-question-content
+          npm run check:computer-literacy-001-081
+          npm run check:computer-literacy-082-159
       - name: Prepare browser in temporary tooling directory
         run: |
           mkdir -p /tmp/getpasslab-browser-tools
@@ -39,9 +55,10 @@ jobs:
             sleep 1
           done
           node scripts/qa-computer-literacy-text-review.cjs
+          node scripts/qa-computer-literacy-082-159.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: computer-literacy-text-review-screenshots
-          path: qa-results/computer-literacy-text-review
+          name: computer-literacy-082-159-and-regression-qa
+          path: qa-results/
           retention-days: 14

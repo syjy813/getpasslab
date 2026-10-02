@@ -22,6 +22,19 @@
 ---
 
 
+## 컴활 82~159 Web Work 반영 — 2026-10-02
+
+- 기준 main `27dc3924aff77f478df50c15b5b7b337125c7fdb`에는 1~81 텍스트 검토 PR #115가 반영되어 있음
+- 사용자 승인: Web Work 전용 브랜치에서 82~159 총 78개 반영·Test/Build·390px/1440px QA·Commit/Push·검토용 Draft PR. main push/merge·Production deploy는 금지
+- 브랜치 `codex/computer-literacy-082-159-web-20261002`; 기존 공개 컴활 85개 본문·기존 PNG·정본 payload 해시 보호
+- 신규 78개: 컴퓨터일반 72 + 스프레드시트일반 6. 주 149문항 + 보조 59건, 중복 제외 155문항. 정본 134문항 추가로 저장소 321문항
+- 원본 이미지 7장 대조·연결. 이미지 직접 확인 후 기존 미사용 2문항의 `jpg 확필` 플래그만 해제. 원문·선택지·정답·이미지 변경 없음
+- 160 `P2-02a`는 BLOCKED 유지: `20200704_024` 실행 재현 대기, `20190302_034` 이미지 검수 필요. 문항/본문/공개 경로 추가 안 함. 159 다음은 기존 마지막 챕터 처리 사용
+- 자료: `docs/audits/2026-10-02-computer-literacy-082-159/README.md`, `source-verification.json`, 신규 `check:computer-literacy-082-159`
+- 브라우저는 Web Work 다운로드 오류로 설치 실패하여 Draft PR의 배포 없는 GitHub Actions preview에서 QA 진행. 최종 단계·workflow·Commit/Push 결과는 같은 audit의 `WEB_WORK_RESULT.md`를 우선 확인
+- 완료: [Draft PR #116](https://github.com/syjy813/getpasslab/pull/116), 콘텐츠 `5c83ad8`. [CI 36974197532](https://github.com/syjy813/getpasslab/actions/runs/36974197532) Build·8개 검사·신규 390px/1440px 각 79페이지·320px 8페이지·기존 1~81 회귀 모두 PASS. 원본 이미지·풀이 참고 및 최종 문장/표 캡처 직접 확인. main은 `27dc392` 그대로이며 Merge/Deploy 미실행
+- 관계 정본은 frontmatter이며 감사 JSON은 검수 스냅샷. 기존 1~81/Excel 4개는 수정하지 않음
+
 ## 컴활 1~81 배포 진행 — 2026-10-01
 
 - 사용자가 이용자 수를 고려해 **실서버 배포 후 PC·모바일 QA** 순서를 승인함. 아래 9/30 Commit/Push/Deploy 금지는 당시 단계의 기록
