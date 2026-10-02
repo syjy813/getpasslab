@@ -32,6 +32,7 @@
 - 160 `P2-02a`는 BLOCKED 유지: `20200704_024` 실행 재현 대기, `20190302_034` 이미지 검수 필요. 문항/본문/공개 경로 추가 안 함. 159 다음은 기존 마지막 챕터 처리 사용
 - 자료: `docs/audits/2026-10-02-computer-literacy-082-159/README.md`, `source-verification.json`, 신규 `check:computer-literacy-082-159`
 - 브라우저는 Web Work 다운로드 오류로 설치 실패하여 Draft PR의 배포 없는 GitHub Actions preview에서 QA 진행. 최종 단계·workflow·Commit/Push 결과는 같은 audit의 `WEB_WORK_RESULT.md`를 우선 확인
+- 완료: [Draft PR #116](https://github.com/syjy813/getpasslab/pull/116), 콘텐츠 `5c83ad8`. [CI 36974197532](https://github.com/syjy813/getpasslab/actions/runs/36974197532) Build·8개 검사·신규 390px/1440px 각 79페이지·320px 8페이지·기존 1~81 회귀 모두 PASS. 원본 이미지·풀이 참고 및 최종 문장/표 캡처 직접 확인. main은 `27dc392` 그대로이며 Merge/Deploy 미실행
 - 관계 정본은 frontmatter이며 감사 JSON은 검수 스냅샷. 기존 1~81/Excel 4개는 수정하지 않음
 
 ## 컴활 1~81 배포 진행 — 2026-10-01

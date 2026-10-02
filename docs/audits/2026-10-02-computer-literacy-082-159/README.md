@@ -75,7 +75,7 @@
 - 브라우저 installer의 ZIP 다운로드 오류로 이 Web Work 컨테이너에서 Chromium 구동 불가. 승인된 작업 브랜치·Draft PR의 GitHub Actions 임시 preview에서 QA 수행
 - 브라우저 QA는 기존 1~81 회귀와 신규 전체 78개 및 81 경계 페이지의 390px/1440px, 신규 대표 8개 320px를 검사. 목차 펼침/접기·과목 전체 목록·PC 사이드바·팝업 열기/정답/닫기/재열기/Escape·이미지 decode/비율·표/문자 넘침·광고 예약 영역·이전/다음 실제 클릭 검증
 - 광고의 실제 외부 송출은 preview에서 비활성화되므로 광고 예약 영역만 검증함. Chromium viewport QA이며 실물 휴대폰·Windows/Excel 앱 실행 검증은 아님
-- CI 완료 후 `WEB_WORK_RESULT.md`에 실제 workflow·QA 결과를 확정 기록. main merge·Production deploy는 수행하지 않음
+- 최종 콘텐츠 `5c83ad8`의 [CI 36974197532](https://github.com/syjy813/getpasslab/actions/runs/36974197532)에서 Build·8개 검사·390px/320px/1440px 신규 및 기존 회귀 QA 모두 PASS. 캡처 152장과 JSON 2개를 다운로드하고 해시·결과를 확인함. 상세 workflow·QA 결과는 `WEB_WORK_RESULT.md`에 확정 기록. main merge·Production deploy는 수행하지 않음
 
 ## BLOCKED
 
