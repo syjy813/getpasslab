@@ -36,6 +36,7 @@
 - Smart TV 기능 중첩·IPv6 호환성/보안 표현·과거 255개 시트 제한은 별도 풀이 참고 안내로도 제공. 기존 부팅 키보드 조건부 안내 유지
 - HomeGroup 제거, Easy Connect/Quick Assist, 프린터 설치 UI/포트·기본 프린터, IPv6 표기, OSI 참조 모델, 인터넷 분산 운영, Bluetooth 범위, hs/sc/퀵돔, IE/ActiveX, 악성코드 예방, Defender/방화벽, System Restore/개인 파일 백업, AutoComplete/AutoFill 및 Alt+Enter/Ctrl+Enter 조건 유지
 - 공공기관 홈페이지 모든 자료가 비보호 대상이거나 모든 저작물 복사가 범죄인 것처럼 일반화하지 않음
+- Point-in-time restore는 Windows 설치 드라이브의 파일·앱·설정만 복구한다는 범위를 명시. 다른 드라이브·클라우드 파일까지 되돌리는 기능으로 설명하지 않음
 
 ## 이미지 디자인 기준 적용 및 원본 대조
 
