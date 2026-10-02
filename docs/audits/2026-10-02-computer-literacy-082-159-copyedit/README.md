@@ -1,10 +1,12 @@
 # 컴활 82~159 콘텐츠 교정·교열 및 가독성 검수
 
+> **2026-10-03 Production 반영 완료.** 최신 배포·실서버 QA 상태는 [RELEASE.md](RELEASE.md)를 우선 확인함
+
 - 기준 main: `0eed0e2ffa2cbb86f53aa6c882b665ed32db4ba6`
 - 작업 브랜치: `codex/computer-literacy-082-159-copyedit-20261002`
 - 범위: 82~159 총 78개 본문 전수 독해·교정·교열·윤문
 - 결과: 54개 수정, 24개 유지. 원문·수정문 및 SHA-256은 [review.json](review.json)에 기록
-- 이번 결과는 검토용 수정본이며 main merge·Production deploy 미실행. 이미 배포된 원본의 기록은 기존 audit에서 보존
+- 아래 검수 결과는 배포 전 검토용 수정본을 작성한 단계의 기록. 이후 PR #118 병합·Production 배포 및 검증을 완료했으며 상세는 RELEASE.md를 확인. 수정 전 원본의 배포 기록은 기존 audit에서 보존
 
 ## 검수 기준
 

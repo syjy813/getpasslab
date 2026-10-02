@@ -17,10 +17,21 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-02 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.37
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-03 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.38
 
 ---
 
+
+## 컴활 82~159 교정·교열 수정본 Production 배포 완료 — 2026-10-03
+
+- 사용자 `수정본 반영해줘` 명시 승인으로 아래 검토용 수정본의 Merge/Deploy 미실행 상태를 갱신함
+- [PR #118](https://github.com/syjy813/getpasslab/pull/118) expected HEAD `e20bfde772355d96ef8914b74a885ff1c4a5509a` 고정 squash merge. 기준 main `0eed0e2ffa2cbb86f53aa6c882b665ed32db4ba6` 보존
+- 배포 커밋 `7b1b9d2d93a1e53dbd432a6bf9c7132a0cc659a2`; 검토 커밋과 tree 일치. [GitHub Pages 37028869533](https://github.com/syjy813/getpasslab/actions/runs/37028869533) Build/Deploy success
+- 78개 전수 검수 중 54개 본문 수정·24개 유지. 기존 1~81/Excel 4개·모든 frontmatter·기출 인용/단축키/수식·정본/이미지 보존. 160 `P2-02a` BLOCKED 유지
+- [Production QA 37029293094](https://github.com/syjy813/getpasslab/actions/runs/37029293094) 공개 163개 HTTP 200 및 본문 SHA-256이 배포 빌드와 일치. 실제 공개 URL 390/1440px 각 대표 14페이지·44팝업, 320px 7페이지·32팝업 PASS/오류 0개
+- Production PNG 41장·JSON 2개 다운로드 및 지문 대조. 수정 본문/강조/단축키 및 Smart TV 풀이 참고 캡처 6장 직접 검수
+- 임시 [QA PR #119](https://github.com/syjy813/getpasslab/pull/119)의 workflow는 검사 후 제거하고 배포 기록·인수인계만 남김. 실물 스마트폰/Excel 앱 미검증, 외부 광고/추적 차단·예약 영역만 검사
+- 상세: `docs/audits/2026-10-02-computer-literacy-082-159-copyedit/RELEASE.md`, `production-verification.json`. 아래 검토용·미배포 표시는 당시 단계의 기록이며 현재 공개 상태는 이 항목을 우선함
 
 ## 컴활 82~159 교정·교열 수정본 — 2026-10-02
 
