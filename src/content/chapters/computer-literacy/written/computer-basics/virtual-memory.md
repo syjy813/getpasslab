@@ -9,7 +9,7 @@ group: "컴퓨터의 구성과 동작"
 tags: ["개념"]
 summary: "디스크 일부를 주기억장치처럼 활용해 RAM 부족 보완"
 questions: ["20150627_012", "20190302_010", "20200229_006"]
-supportingQuestions: [{"id": "20160305_013", "note": "디스크 공간을 활용하는 가상 메모리와 플래시 메모리 구별", "chapter": "ram-rom-flash"}, {"id": "20180901_004", "note": "가상 메모리 조정의 RAM 부족 보완 목적에 적용 · Windows의 다른 조치는 별도 범위"}, {"id": "20200704_016", "note": "용량 부족을 보완하는 가상 메모리와 속도 차이를 줄이는 캐시 구별", "chapter": "cache-buffer"}]
+supportingQuestions: [{"id": "20160305_013", "note": "디스크 공간을 활용하는 가상 메모리와 플래시 메모리 구별", "chapter": "ram-rom-flash"}, {"id": "20180901_004", "note": "가상 메모리 조정이 RAM 부족을 보완하는 이유를 확인함 · 다른 Windows 조치의 판단에는 추가 설명이 필요함"}, {"id": "20200704_016", "note": "용량 부족을 보완하는 가상 메모리와 속도 차이를 줄이는 캐시 구별", "chapter": "cache-buffer"}]
 related: ["ram-rom-flash"]
 order: 14
 priority: "1차"

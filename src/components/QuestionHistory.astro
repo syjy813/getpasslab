@@ -20,6 +20,8 @@ interface Props {
   examComment?: string;
   introText?: string;
   emptyText?: string;
+  headingText?: string;
+  labelNoteWithQuestion?: boolean;
   supporting?: boolean;
   deferQuestionContent?: boolean;
   deferredQuestionDataset?: DeferredQuestionDataset;
@@ -29,6 +31,8 @@ const {
   examComment,
   introText = '아래 기출은 위에서 정리한 개념이 실제 시험에서 어떻게 출제됐는지 확인하기 위한 근거 자료입니다.',
   emptyText = '수록 기출에서 직접 출제 이력 없음',
+  headingText,
+  labelNoteWithQuestion = false,
   supporting = false,
   deferQuestionContent = false,
   deferredQuestionDataset,
@@ -53,7 +57,7 @@ const yearRange = sortedYears.length === 0
     ? `${sortedYears[0]}년`
     : `${sortedYears[0]}~${sortedYears.at(-1)}년`;
 ---
-<h2>{supporting ? '기초 개념을 적용할 기출' : '기출 출제 이력'}</h2>
+<h2>{headingText ?? (supporting ? '기초 개념을 적용할 기출' : '기출 출제 이력')}</h2>
 <div class="exam-history" data-question-role={supporting ? 'supporting' : 'primary'} data-question-history-mode={isDeferred ? 'deferred' : 'static'}>
   {questions.length > 0 ? (
     <>
@@ -63,6 +67,7 @@ const yearRange = sortedYears.length === 0
       {questions.map(q => (
         q.learningContext && (
           <p class="evidence-intro">
+            {labelNoteWithQuestion && <><strong>{examLabel(q.label)} {q.number}번</strong><br /></>}
             {q.learningContext.note}
             {q.learningContext.href && <><br /><a href={q.learningContext.href}>함께 볼 설명: {q.learningContext.title}</a></>}
           </p>
@@ -139,7 +144,7 @@ const yearRange = sortedYears.length === 0
       <dialog class="q-layer" id={`q-${q.id}`} data-revealed="false" data-answer-label={answerLabel} aria-labelledby={titleId}>
         <div class="q-inner">
           <div class="q-meta" id={titleId} tabindex="-1">{examLabel(q.label)} · {q.number}번</div>
-          {q.caution && <p class="q-caution-hint">선택지 표현·조건에 주의 · 답안 확인 시 설명 표시</p>}
+          {q.caution && <p class="q-caution-hint">선택지 해석에 주의가 필요한 문항임 · ‘수록 답안 확인’을 누르면 참고 설명이 표시됨</p>}
           <div class="q-body">{q.body}</div>
           {q.image && (
             <figure class="q-figure">

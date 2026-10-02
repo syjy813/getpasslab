@@ -9,7 +9,7 @@ group: "컴퓨터의 구성과 동작"
 tags: ["개념"]
 summary: "PnP는 자동 인식·설정 · 핫 스와핑은 전원을 켠 상태의 연결·분리"
 questions: ["20150307_010", "20160625_018"]
-supportingQuestions: [{"id": "20161022_016", "note": "핫 플러그·PnP 선택지에만 적용 · 규격별 특징과 조건은 함께 볼 설명에서 확인", "chapter": "usb-interface"}, {"id": "20190831_012", "note": "핫 플러그·PnP 선택지에만 적용 · 규격별 특징과 조건은 함께 볼 설명에서 확인", "chapter": "sata-interface"}, {"id": "20200229_011", "note": "핫 플러그·PnP 선택지에만 적용 · 규격별 특징과 조건은 함께 볼 설명에서 확인", "chapter": "usb-interface"}]
+supportingQuestions: [{"id": "20161022_016", "note": "핫 플러그·PnP를 묻는 선택지 연습 · 규격의 다른 특징은 아래 설명도 함께 확인함", "chapter": "usb-interface"}, {"id": "20190831_012", "note": "핫 플러그·PnP를 묻는 선택지 연습 · 규격의 다른 특징은 아래 설명도 함께 확인함", "chapter": "sata-interface"}, {"id": "20200229_011", "note": "핫 플러그·PnP를 묻는 선택지 연습 · 규격의 다른 특징은 아래 설명도 함께 확인함", "chapter": "usb-interface"}]
 related: []
 order: 18
 priority: "1차"

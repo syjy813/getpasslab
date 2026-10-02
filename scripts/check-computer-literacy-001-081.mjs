@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, access } from 'node:fs/promises';
 import path from 'node:path';
+import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
 
 // Frozen review evidence, not runtime relationships. Run after npm run build.
 const evidence = JSON.parse(await readFile('docs/audits/2026-09-30-computer-literacy-001-081/source-verification.json', 'utf8'));
@@ -16,7 +17,7 @@ for (const [id, expected] of Object.entries({ ...evidence.existingQuestionHashes
   assert.equal(hash(JSON.stringify(payload)), expected, `${id}: original question changed`);
 }
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
-  assert.equal(hash(await readFile(file)), expected, `${file}: existing chapter changed`);
+  assert.equal(hash(await readFile(file)), reviewedChapterHash(file, expected), `${file}: unreviewed chapter change`);
 }
 const registry = JSON.parse(await readFile('src/data/question-assets/computer-literacy.json', 'utf8'));
 const imageIds = new Set(evidence.images.map(image => image.id));
@@ -45,7 +46,7 @@ for (const [i, chapter] of evidence.chapters.entries()) {
   assert(!slugs.has(chapter.slug), `${chapter.id}: slug collision`);
   slugs.add(chapter.slug);
   const markdown = (await readFile(chapter.path, 'utf8')).replace(/\r\n/g, '\n');
-  assert.equal(hash(await readFile(chapter.path)), chapter.sha256, `${chapter.id}: reviewed chapter changed`);
+  assert.equal(hash(await readFile(chapter.path)), reviewedChapterHash(chapter.path, chapter.sha256), `${chapter.id}: unreviewed chapter change`);
   const [, frontmatter, body] = markdown.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
   // The original four public files retain their existing YAML and identity map.
   if (![38, 39, 40, 43].includes(chapter.order)) {
@@ -96,7 +97,7 @@ for (const [i, chapter] of evidence.chapters.entries()) {
     assert.equal(dialog.includes('(수록 답안)'), cautionIds.has(id), `${id}: recorded answer label`);
   }
   for (const [, source] of html.matchAll(/<img\b[^>]*src="(\/[^"?#]+)"/g)) await access(path.join('dist', source));
-  if (!chapter.primary.length && !chapter.support.length) assert(html.includes('기출 미배정'), `${chapter.id}: no invented questions`);
+  if (!chapter.primary.length && !chapter.support.length) assert(html.includes('이 챕터에 직접 연결된 기출은 없음'), `${chapter.id}: no invented questions`);
   const position = subjectHtml.indexOf(`href="${scope}${chapter.slug}/"`);
   assert(position > previousPosition, `${chapter.id}: subject order`);
   previousPosition = position;

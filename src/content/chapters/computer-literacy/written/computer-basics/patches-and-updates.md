@@ -9,7 +9,7 @@ group: "소프트웨어와 운영체제"
 tags: ["개념"]
 summary: "패치는 배포 후 오류 수정·성능 개선 · 시험판·성능 비교와 구별"
 questions: ["20150627_010", "20200704_008"]
-supportingQuestions: [{"id": "20160305_010", "note": "패치의 오류 수정·성능 개선 설명에만 적용 · 체험판·번들 비교는 함께 볼 설명에서 확인", "chapter": "software-release-versions"}]
+supportingQuestions: [{"id": "20160305_010", "note": "오류 수정·성능 개선을 패치와 연결하는 선택지 연습 · 체험판·번들은 아래 설명도 함께 확인함", "chapter": "software-release-versions"}]
 related: []
 order: 36
 priority: "1차"
@@ -31,19 +31,13 @@ status: "완료"
 - 개발사 내부 시험 → 알파
 - 출시 전 외부 사용자 시험 → 베타
 
-## Windows Update 기출의 주의
+## Windows Update 문항의 분류 기준
 
 2020년 7월 8번은 Windows Update를 보기 중 **패치 버전**으로 분류하여 정답 ①로 채점함
 
-이 문항은 **2020년 기출의 시험 분류 문맥**으로 보존함
+해당 기출에서는 **Windows Update를 오류 수정·개선용 패치 계열**로 판단함
 
-현재 Windows Update라는 서비스가 제공하는 모든 업데이트를 `사용권에 따른 패치 버전`이라는 하나의 현대적 분류로 일반화하지 않음
-
-이 챕터에서 필요한 판단은
-
-**Windows Update → 해당 기출에서는 오류 수정·개선용 패치 계열로 분류**
-
-하는 수준임
+현재 Windows Update가 제공하는 모든 업데이트를 같은 분류로 묶는 것은 아님
 
 ## 시험판과 구별
 
