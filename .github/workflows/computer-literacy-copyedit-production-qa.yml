@@ -1,0 +1,105 @@
+name: Computer literacy copyedit Production QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/computer-literacy-copyedit-production-qa.yml'
+permissions:
+  contents: read
+jobs:
+  production-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: 7b1b9d2d93a1e53dbd432a6bf9c7132a0cc659a2
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Verify deployed chapter HTML against the released build
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const assert = require('node:assert/strict');
+          const crypto = require('node:crypto');
+          const path = require('node:path');
+          const base = 'https://getpasslab.co.kr';
+          const chapters = [];
+          for (const subject of ['computer-basics', 'spreadsheets']) {
+            for (const name of fs.readdirSync('src/content/chapters/computer-literacy/written/' + subject)) {
+              const source = fs.readFileSync('src/content/chapters/computer-literacy/written/' + subject + '/' + name, 'utf8');
+              const slug = JSON.parse(source.match(/^slug: (.+)$/m)[1]);
+              chapters.push({ subject, slug, order: Number(source.match(/^order: (.+)$/m)[1]) });
+            }
+          }
+          assert.equal(chapters.length, 163);
+          const result = { base, releaseCommit: '7b1b9d2d93a1e53dbd432a6bf9c7132a0cc659a2', startedAt: new Date().toISOString(), chapters: [], errors: [] };
+          const hash = value => crypto.createHash('sha256').update(value).digest('hex');
+          let index = 0;
+          async function worker() {
+            while (index < chapters.length) {
+              const chapter = chapters[index++];
+              const route = '/computer-literacy/written/' + chapter.subject + '/' + chapter.slug + '/';
+              const record = { ...chapter, url: base + route };
+              result.chapters.push(record);
+              try {
+                const response = await fetch(record.url, { signal: AbortSignal.timeout(45000), headers: { 'Cache-Control': 'no-cache' } });
+                record.status = response.status;
+                assert.equal(record.status, 200);
+                const actual = await response.text();
+                const expected = fs.readFileSync(path.join('dist', route, 'index.html'), 'utf8');
+                const main = html => html.match(/<main\b[^>]*>[\s\S]*?<\/main>/)?.[0];
+                assert(main(actual) && main(expected), 'Missing chapter content');
+                record.expectedMainSha256 = hash(main(expected));
+                record.actualMainSha256 = hash(main(actual));
+                assert.equal(record.actualMainSha256, record.expectedMainSha256, 'Production chapter differs from released build');
+              } catch (error) { record.error = String(error); result.errors.push({ url: record.url, error: String(error) }); }
+            }
+          }
+          (async () => {
+            await Promise.all([worker(), worker(), worker(), worker()]);
+            result.passed = result.errors.length === 0;
+            result.finishedAt = new Date().toISOString();
+            fs.mkdirSync('qa-results/production-http', { recursive: true });
+            fs.writeFileSync('qa-results/production-http/results.json', JSON.stringify(result, null, 2));
+            console.log(JSON.stringify({ passed: result.passed, chapters: result.chapters.length, errors: result.errors }));
+            if (!result.passed) process.exitCode = 1;
+          })().catch(error => { console.error(error); process.exitCode = 1; });
+          NODE
+      - name: Prepare read-only Production browser checks
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          for (const name of ['qa-computer-literacy-082-159.cjs']) {
+            const file = 'scripts/' + name;
+            let code = fs.readFileSync(file, 'utf8');
+            code = code.replace("assert.equal(ad.preview,'preview');", "assert.notEqual(ad.preview,'preview', 'Production must not use preview ad mode');");
+            const wide = [1,81,82,87,97,100,117,131,142,153,154,155,158,159];
+            const narrow = [1,81,97,100,154,158,159];
+            code = code.replace(/const samples = \[[^;]+;/, 'const samples = ' + JSON.stringify(wide) + ';');
+            const before = "const chapters = width === 320 ? evidence.chapters.filter(c => [97,100,106,134,154,157,158,159].includes(c.order)) : [boundary, ...evidence.chapters];";
+            if (!code.includes(before)) throw new Error('Production QA selector changed');
+            code = code.replace(before, "const chapters = [previousEvidence.chapters[0], boundary, ...evidence.chapters].filter(c => (width === 320 ? " + JSON.stringify(narrow) + " : " + JSON.stringify(wide) + ").includes(c.order));");
+            if (code.includes("assert.equal(ad.preview,'preview');")) throw new Error('Preview ad condition not replaced');
+            fs.writeFileSync(file, code);
+          }
+          NODE
+          mkdir -p /tmp/getpasslab-browser-tools
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Review the live Production site at mobile and PC sizes
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: https://getpasslab.co.kr
+        run: |
+          node scripts/qa-computer-literacy-082-159.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: computer-literacy-copyedit-production-qa
+          path: qa-results/
+          retention-days: 14
