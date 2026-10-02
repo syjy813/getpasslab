@@ -9,7 +9,7 @@ const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4321';
 const scope = '/computer-literacy/written/computer-basics/';
 const out = path.join(root, 'qa-results/computer-literacy-text-review');
 fs.mkdirSync(out, { recursive: true });
-const samples = [6, 20, 28, 34, 36, 39, 41, 49, 51, 53, 56, 58, 59, 63, 68, 71, 74, 77, 78, 79, 80, 81];
+const samples = [6, 10, 20, 28, 34, 36, 39, 41, 48, 49, 51, 53, 56, 58, 59, 63, 68, 71, 74, 77, 78, 79, 80, 81];
 const results = { base, startedAt: new Date().toISOString(), viewports: [], errors: [], screenshots: [], externalRequests: 'Advertising/tracking blocked; built assets and KaTeX CSS/fonts allowed', browser: 'Chromium; viewport emulation, not a physical phone' };
 const save = () => fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(results, null, 2));
 let browser;

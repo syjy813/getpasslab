@@ -1,6 +1,6 @@
 {
   "base": "cbcb81020d6489193e278eeee1160f4268972f33",
-  "reviewedAt": "2026-10-02T02:11:33.165Z",
+  "reviewedAt": "2026-10-02T02:17:37.663Z",
   "reviewed": 81,
   "changed": 49,
   "stableFieldsAndCanonicalData": "PASS",
@@ -481,7 +481,7 @@
       "slug": "keyboard-mouse-properties",
       "title": "키보드와 마우스의 속성 설정",
       "originalSha256": "f5bcff15eb9516dfbb8393282542e02c18014904d85955b1669b3ee199f6012f",
-      "sha256": "59cce6f8bd50efe453bbba9a8a0665010c809a45020622b3a4a11afe86fc49e4",
+      "sha256": "64d64ded1a9c3704da3170d150f22699dcff6806cff579fa051172fc5e20b323",
       "changed": true,
       "status": "문구 수정"
     },

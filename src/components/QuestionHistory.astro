@@ -21,6 +21,7 @@ interface Props {
   introText?: string;
   emptyText?: string;
   headingText?: string;
+  labelNoteWithQuestion?: boolean;
   supporting?: boolean;
   deferQuestionContent?: boolean;
   deferredQuestionDataset?: DeferredQuestionDataset;
@@ -31,6 +32,7 @@ const {
   introText = '아래 기출은 위에서 정리한 개념이 실제 시험에서 어떻게 출제됐는지 확인하기 위한 근거 자료입니다.',
   emptyText = '수록 기출에서 직접 출제 이력 없음',
   headingText,
+  labelNoteWithQuestion = false,
   supporting = false,
   deferQuestionContent = false,
   deferredQuestionDataset,
@@ -65,6 +67,7 @@ const yearRange = sortedYears.length === 0
       {questions.map(q => (
         q.learningContext && (
           <p class="evidence-intro">
+            {labelNoteWithQuestion && <><strong>{examLabel(q.label)} {q.number}번</strong><br /></>}
             {q.learningContext.note}
             {q.learningContext.href && <><br /><a href={q.learningContext.href}>함께 볼 설명: {q.learningContext.title}</a></>}
           </p>
