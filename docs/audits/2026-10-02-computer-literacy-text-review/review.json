@@ -1,8 +1,8 @@
 {
   "base": "cbcb81020d6489193e278eeee1160f4268972f33",
-  "reviewedAt": "2026-10-02T02:17:37.663Z",
+  "reviewedAt": "2026-10-02T02:26:55.017Z",
   "reviewed": 81,
-  "changed": 49,
+  "changed": 57,
   "stableFieldsAndCanonicalData": "PASS",
   "chapters": [
     {
@@ -161,9 +161,9 @@
       "slug": "multimedia-boards",
       "title": "멀티미디어 보드의 처리 역할",
       "originalSha256": "df98c3db13205275baa08aae2c168b4f78b070dfd536e486054b385ed8cdea55",
-      "sha256": "df98c3db13205275baa08aae2c168b4f78b070dfd536e486054b385ed8cdea55",
-      "changed": false,
-      "status": "전체 검토 · 수정 불필요"
+      "sha256": "833c6f0cef898353621dbc9a7da772e6cf2b083d3813f6ca2aee171379d2da40",
+      "changed": true,
+      "status": "문구 수정"
     },
     {
       "order": 17,
@@ -281,7 +281,7 @@
       "slug": "software-types",
       "title": "시스템·응용·유틸리티 구별하기",
       "originalSha256": "d9b44568d70a3640531ad9d5cb109be80239301d70c66cde6e0712de70290d6e",
-      "sha256": "0d6ebb05b7517ed322329f939cfdf49915db2cee0b47d7785c5d3430814d96dc",
+      "sha256": "b546afedebd46dc094589955df4f8e798d0e3c8d19321d2626e7fdf21f681ecc",
       "changed": true,
       "status": "문구 수정"
     },
@@ -341,7 +341,7 @@
       "slug": "software-license-types",
       "title": "프리웨어·셰어웨어·오픈소스의 사용 조건",
       "originalSha256": "7acf8b5d60344a0d91ed1561e4e708ed7d21ac11d8ae58d8de81eda2a5a86064",
-      "sha256": "f03a03ae4aecb50d22449daf8f206b5bfa76af4d3f6db73754112d45829a1a62",
+      "sha256": "d2a532c191b72777d831120650509e8324e3bf7f23c93bebf994711e3b54be8a",
       "changed": true,
       "status": "문구 수정"
     },
@@ -351,7 +351,7 @@
       "slug": "software-release-versions",
       "title": "알파·베타·체험판·번들의 배포 목적",
       "originalSha256": "ba084ed38ffeb789fef9c346bf48af32577751d4e5b487d110ac8dd7f8fe528c",
-      "sha256": "426492abfff0641b6c3c24571948571256e6b9fe37fc2355dcd54f6cdc767c26",
+      "sha256": "3974d43f75bb512dc4803953660792c6550d7ec2901c6e40ac61d40c4eb3e65b",
       "changed": true,
       "status": "문구 수정"
     },
@@ -441,9 +441,9 @@
       "slug": "display-settings",
       "title": "해상도와 텍스트 표시 설정",
       "originalSha256": "4be9067da7bba1aaadb016e302b15f4a0214acaf3d22e01e51638e0fb6dce99c",
-      "sha256": "4be9067da7bba1aaadb016e302b15f4a0214acaf3d22e01e51638e0fb6dce99c",
-      "changed": false,
-      "status": "전체 검토 · 수정 불필요"
+      "sha256": "fbc78cc9a9f45f31474733c4d3fb32067b67ecae2ce60f8b9e27b04513f9bb4f",
+      "changed": true,
+      "status": "문구 수정"
     },
     {
       "order": 45,
@@ -461,7 +461,7 @@
       "slug": "backgrounds-and-themes",
       "title": "배경·테마와 해상도 설정 구별하기",
       "originalSha256": "7d45cc3523b7d6b29f5804155df812182c9d9f3b125041690069a9bec8ecff19",
-      "sha256": "a0be9b117d7bca11cabaab666c9abba8bf4ad9820f0b9bc5ac4171e06bbd1a1e",
+      "sha256": "28f2183e6fe38042794f6528c653a8c298468e63c53005f131310d10b0385b0e",
       "changed": true,
       "status": "문구 수정"
     },
@@ -501,7 +501,7 @@
       "slug": "phone-pc-link",
       "title": "휴대전화와 PC 연결의 목적과 조건",
       "originalSha256": "939be5b109c04f52f0a2903cd5b31ba0bb07458efd9a91417fba2e111c8d4be8",
-      "sha256": "f088182371ee01c00d788026e4fa32c42f6af4f9d538630302c070066fc43449",
+      "sha256": "0e9f22960525c9b933da00b074f0dd70d84e805aca1a4c75eb9f365310ae038d",
       "changed": true,
       "status": "문구 수정"
     },
@@ -511,7 +511,7 @@
       "slug": "windows-accessibility",
       "title": "Windows 접근성 기능의 도움 대상",
       "originalSha256": "3164b9f51e70c64235727e95bf447b8eb2ea1178c969e0404525ddedef07be1c",
-      "sha256": "29243c36688573a29cd785f6c0f5df58b085fecc5215938559bcf220fe7dabbd",
+      "sha256": "f2060eb969c1a5d5988dcc4df9d13464a4dcdae39d37ac20db25532e6dc96e7c",
       "changed": true,
       "status": "문구 수정"
     },
@@ -521,7 +521,7 @@
       "slug": "file-explorer-hierarchy",
       "title": "탐색기의 폴더 계층과 이동",
       "originalSha256": "a5f9fcaf903c5fb28a55ff3678c73487869ebc1fb4f56516a372c5e7b969d314",
-      "sha256": "48bbfa26fb8bda4b204c3a84ad27120b3d853f24de68bc8b107d1ea21dd6ecc0",
+      "sha256": "a75a4986877f830e9a51eee8c3a93e15825d39470a0d1fc4907c18e3e8e2aa47",
       "changed": true,
       "status": "문구 수정"
     },
@@ -531,7 +531,7 @@
       "slug": "file-search-and-run",
       "title": "파일 찾기와 프로그램 실행 구별하기",
       "originalSha256": "91680a0b26515c47b59348d9c6a4da724e052dcc6a2d0b898b4596affd54120b",
-      "sha256": "a731aa8badce507b5bb7ac38209da1be260fcba88610758ac3cb552741b99280",
+      "sha256": "1fdc1bd038cc94a8bfa6a02baf00870dc06501827865d99655d0b317dda1a622",
       "changed": true,
       "status": "문구 수정"
     },
@@ -541,7 +541,7 @@
       "slug": "file-folder-properties",
       "title": "파일·폴더의 이름과 속성",
       "originalSha256": "7100f421e6d87cda85aa0ff0247088102d62fa5a5ed5322ba51dfc877c0c31ac",
-      "sha256": "26c579ec308a3ca2be171c41ca69848a43bace8ac10d0e079df63b2f5ba623e4",
+      "sha256": "b6847b1393a41a37f71c1e6b633240d67aa2061f3f9ae76673c585d547aaf562",
       "changed": true,
       "status": "문구 수정"
     },
@@ -551,7 +551,7 @@
       "slug": "file-extension-types",
       "title": "확장자로 파일의 용도 구별하기",
       "originalSha256": "767fdb53554b2737957953e554b3d19c0e833c336469349754b51b23524d308f",
-      "sha256": "d4b8715b39e2efb9e14115f407ff0bfe38b11422cb84c5544885c28dff4ff156",
+      "sha256": "ffcca22fa15a03603e06789a4a48bde25092b2f15480b3b363bd91bd50fafdd0",
       "changed": true,
       "status": "문구 수정"
     },
@@ -561,7 +561,7 @@
       "slug": "hidden-files-extensions",
       "title": "숨김 파일과 확장자의 표시 설정",
       "originalSha256": "db1f29ad36f5762814b9fdf3de7b07343376e9bd08bce3f2a09ff78d3ff3d92d",
-      "sha256": "62c5fd2139b200be01d5dff77eaea9391b2964fb04cf8c9ea7c3615c9098c963",
+      "sha256": "c283bb1eb75c3998f78ea1c4046f8047fad1ebc38d12d33f420e839f758519b4",
       "changed": true,
       "status": "문구 수정"
     },
@@ -581,7 +581,7 @@
       "slug": "copying-moving-files",
       "title": "파일 복사·이동 결과 판단하기",
       "originalSha256": "a441a9b465989a2e87972ea7d18810c287090c4a49fa4bbfdf7fd8240d9aeb38",
-      "sha256": "ba1b482b6dec3680dc300597a9abd31e1ac305d9163079acc2dfd2f6fb1b8ed3",
+      "sha256": "789a9ecbef49c76d8e5f034414deeaf2f5ebe81ab4505f9b2a600d7cc2aec2c8",
       "changed": true,
       "status": "문구 수정"
     },
@@ -591,7 +591,7 @@
       "slug": "shortcuts-and-originals",
       "title": "바로가기와 원본의 관계",
       "originalSha256": "b1b9a75793ac278515d3557cf757061be0364e1f3c7253e841a52b739610d4cd",
-      "sha256": "b63a1bf5f778ec245e23666bb199eb040c2b200d9e5ee4c865dd885b1ae5c0dd",
+      "sha256": "433a327cadb000ce266607c0a21300c1c3779dcfe66f417b78bd55da899530f8",
       "changed": true,
       "status": "문구 수정"
     },
@@ -601,7 +601,7 @@
       "slug": "windows-libraries",
       "title": "라이브러리로 여러 위치의 파일 모아 보기",
       "originalSha256": "1a1577dd5c7d57da346ac8400a745111e9ccc8e9262dabffc11cbfa7515d0573",
-      "sha256": "b4d3d57ba1236239ebe6d407db629843530ed71790779a46fa8ce559fbafe473",
+      "sha256": "37c51a490d9e3409fbd49934cc3397886778e7ad6ef147c9636ec0c4307c6de2",
       "changed": true,
       "status": "문구 수정"
     },
@@ -611,7 +611,7 @@
       "slug": "recycle-bin-recovery",
       "title": "파일 삭제와 휴지통 복원 조건",
       "originalSha256": "b828fbe6a043c8a8823c99906fb5f67c5b1beeb4c25ad2a98e60ad753eda67ff",
-      "sha256": "74a04ee5329a7f510c3f707e9201b921faf3c780930c8d9afe8caa7e07cd7725",
+      "sha256": "ef658587400c429d9386bf9ebf9451b611fd359bbb1c37b30a897f5e5288330c",
       "changed": true,
       "status": "문구 수정"
     },
@@ -631,9 +631,9 @@
       "slug": "notepad-features",
       "title": "메모장에서 할 수 있는 작업",
       "originalSha256": "53f6bc57df7dcc3312f7818586b1974cf6bf035ac33b49a2fcd63890b264e953",
-      "sha256": "53f6bc57df7dcc3312f7818586b1974cf6bf035ac33b49a2fcd63890b264e953",
-      "changed": false,
-      "status": "전체 검토 · 수정 불필요"
+      "sha256": "b903657b3fc233f0f9deeda56eeb3723c2ee71a5dacd982084f84c784d31005a",
+      "changed": true,
+      "status": "문구 수정"
     },
     {
       "order": 64,
@@ -641,9 +641,9 @@
       "slug": "storage-sense",
       "title": "저장 공간 확인과 자동 정리",
       "originalSha256": "1034df2ab0b5dc5a0aa3b790676e661ce4deca5d4b867b95a0048d46e3e981df",
-      "sha256": "1034df2ab0b5dc5a0aa3b790676e661ce4deca5d4b867b95a0048d46e3e981df",
-      "changed": false,
-      "status": "전체 검토 · 수정 불필요"
+      "sha256": "a7534b249302998f8da52156a4defd5e7ab752d528565a9613a34d5bcc32f96d",
+      "changed": true,
+      "status": "문구 수정"
     },
     {
       "order": 65,
@@ -651,9 +651,9 @@
       "slug": "disk-cleanup",
       "title": "디스크 정리로 지울 수 있는 항목",
       "originalSha256": "9dc231c33b292706cc33ca8a5a7266f630a036ef0949a0e82e6f9872ecb16c53",
-      "sha256": "9dc231c33b292706cc33ca8a5a7266f630a036ef0949a0e82e6f9872ecb16c53",
-      "changed": false,
-      "status": "전체 검토 · 수정 불필요"
+      "sha256": "78839854e5fe416e21664dedade7f5528f7b4cbef6e5315b91212b7c29cc8c62",
+      "changed": true,
+      "status": "문구 수정"
     },
     {
       "order": 66,
@@ -661,9 +661,9 @@
       "slug": "disk-error-checking",
       "title": "디스크 오류 검사의 대상과 역할",
       "originalSha256": "a3317d6f8b26cf399fd0cae2fe37cc4f4044c62bd284da3354343bd787f4ddc0",
-      "sha256": "a3317d6f8b26cf399fd0cae2fe37cc4f4044c62bd284da3354343bd787f4ddc0",
-      "changed": false,
-      "status": "전체 검토 · 수정 불필요"
+      "sha256": "14627791117f1af6716ea0ed0e8056cf01765f5e7a25ba3d5b98292c5aeae01b",
+      "changed": true,
+      "status": "문구 수정"
     },
     {
       "order": 67,
@@ -671,9 +671,9 @@
       "slug": "drive-optimization",
       "title": "디스크 조각 모음과 최적화의 목적",
       "originalSha256": "c17bee85561ee004c7935a4dd1d5b3de39291b67add5d2dd389c5f1a107cd7c8",
-      "sha256": "c17bee85561ee004c7935a4dd1d5b3de39291b67add5d2dd389c5f1a107cd7c8",
-      "changed": false,
-      "status": "전체 검토 · 수정 불필요"
+      "sha256": "d5df854bcca5535053f89d6e65ba6803114717002b6db075ed123b5a63c71289",
+      "changed": true,
+      "status": "문구 수정"
     },
     {
       "order": 68,
@@ -681,7 +681,7 @@
       "slug": "disk-format-file-systems",
       "title": "디스크 포맷과 파일 시스템",
       "originalSha256": "8d9d738059d845f544a3e6b2ed1b48b3ef1f746f2d70b3b19b3bea3a1a2af99b",
-      "sha256": "9762b3d0f94250bda1fdb9f4ea5678ad756a8abaf1a7793a4ac5634ce352368e",
+      "sha256": "187268b460cd822a66277bb2e4dc72188a05370f5634963a23ceadb7e8ce0913",
       "changed": true,
       "status": "문구 수정"
     },
@@ -691,9 +691,9 @@
       "slug": "system-about-information",
       "title": "시스템 기본 정보에서 확인하는 항목",
       "originalSha256": "d83d87892a8d75c6fbb63dadfcd9caa320faa23d8ff03b2f405fc0f9b09ec490",
-      "sha256": "d83d87892a8d75c6fbb63dadfcd9caa320faa23d8ff03b2f405fc0f9b09ec490",
-      "changed": false,
-      "status": "전체 검토 · 수정 불필요"
+      "sha256": "a3192bdb9c69786855f5300095ea237b38d5e7ec70588ff29ed72f931a5578be",
+      "changed": true,
+      "status": "문구 수정"
     },
     {
       "order": 70,
@@ -711,7 +711,7 @@
       "slug": "device-manager",
       "title": "장치 관리자에서 장치·드라이버 확인하기",
       "originalSha256": "28c4b72cf0077bd00e656f7bf7a2ede9738419bcb4e2da6df06891d5bc742771",
-      "sha256": "a4893c19719730daa0edb70e9b47e9d86652f1fb0f8a5d4b69ae9d4bb6560718",
+      "sha256": "117fd0fe0715328b104ce3a7f9409d1b1341703d2fb3fe341e6ed182523a84f3",
       "changed": true,
       "status": "문구 수정"
     },
@@ -721,7 +721,7 @@
       "slug": "task-manager",
       "title": "작업 관리자에서 사용량 확인·작업 종료하기",
       "originalSha256": "afc042051557c4e5c9af5bd99054870779d84b4d59ddef35cae63c6da28dfbb9",
-      "sha256": "f1af9c4dc89d822658b49fb39bf6c3c5bb15e40c844232adeecde665c11e30a5",
+      "sha256": "8e5c4255a58823b5e5455519b926c2786dbd3bb616c8947a1307352cabc514c4",
       "changed": true,
       "status": "문구 수정"
     },
@@ -731,7 +731,7 @@
       "slug": "windows-registry",
       "title": "Windows 레지스트리에 저장하는 정보",
       "originalSha256": "157eea834e00427e94d07d73ab37a8e6caf7af918873846f6bccca8227f221f0",
-      "sha256": "3bb497f24d59ed586b4561a9e2d20766a42e700238e4257b9c07197e83cc204f",
+      "sha256": "927a2c43a043af6064b25ba16e1bb10f361195393338366c01910490796cca75",
       "changed": true,
       "status": "문구 수정"
     },
@@ -741,7 +741,7 @@
       "slug": "programs-and-windows-features",
       "title": "프로그램 제거·복구와 Windows 기능 설정",
       "originalSha256": "553f69f5eb8c03634a82d45bea05153f07d6aba5c114b6264dceb36f0ec4052b",
-      "sha256": "07e2f3d935a3802f9099b4e28de44c4ee01ba95bcf892a81d0cf5997210a3526",
+      "sha256": "6f3a89ebe8aa11d66de8af910efaa066eeccf6a16976e33d8ffdad2256a9ce56",
       "changed": true,
       "status": "문구 수정"
     },
@@ -751,7 +751,7 @@
       "slug": "default-apps",
       "title": "기본 앱과 파일 형식 연결",
       "originalSha256": "3a1913e1be766c6f222b589cd57bb3af89e5a2644b3632a2e95db12fc5ae225d",
-      "sha256": "f8e6090a84dc3b4f2feb66113edba3211ec52b70f4a42900dde64eba2c1bee4e",
+      "sha256": "58a1fae4d85217fd9afdba471af6a345e92a32a8f0dfe0102af658b2f45aaeed",
       "changed": true,
       "status": "문구 수정"
     },
@@ -761,7 +761,7 @@
       "slug": "update-restart-states",
       "title": "업데이트 설치와 재시작 상태",
       "originalSha256": "620ff96f98790c772c94d47ac92de19fe33da9cab32e2697b3a831a3cc1258e3",
-      "sha256": "99fd0dc2e633286be9a3b6a1fd03ba11612a31b533203ac9738650ca856ebfc7",
+      "sha256": "1d20f94b931a16f08a3c97f49b5c0fc2df22881e5713ef2de9f0c2723a7c0a1c",
       "changed": true,
       "status": "문구 수정"
     },
@@ -771,7 +771,7 @@
       "slug": "sign-in-and-account-types",
       "title": "로그인 수단과 사용자 권한 구별하기",
       "originalSha256": "30f0d572e6d1fe82e0200895c7f6b7b74b1dc1f34feab7586cbfdaf6f56c5368",
-      "sha256": "78c668a23b8f6d96706f99a7fa92d8f301345187cb0aa54f8b1c8415aa0e47cd",
+      "sha256": "f64c8a9f5191756b3d631526da6562571c7fe8b8c2dec26f4536ef80913ed646",
       "changed": true,
       "status": "문구 수정"
     },
@@ -781,7 +781,7 @@
       "slug": "time-and-time-zones",
       "title": "시각·시간대·자동 설정의 차이",
       "originalSha256": "a34b3d67c17eafda780f9b0c13a244437bc4a903249e9af1c5c705c960b2e06d",
-      "sha256": "d41f91047c2e7f5579b20b907f1b20c5dc284e15c3271aecb1a2224fe9852fff",
+      "sha256": "69def9cc4cccf45818dd6156540db3138702b094d466ecb905751d63e7622a74",
       "changed": true,
       "status": "문구 수정"
     },
@@ -791,7 +791,7 @@
       "slug": "language-and-region",
       "title": "표시 언어·입력 언어·지역 형식",
       "originalSha256": "4a30bd938482da6bef0546824a9b17b671102f9a815e0ef55c33801d7ceed636",
-      "sha256": "b21554283bd9356d7369b67df17e840fe3b3c62a20efc960a20337adc4981501",
+      "sha256": "1c1b99941554eead8595cb901920023b735cdaaa9476f70c9175edb6e082bbfc",
       "changed": true,
       "status": "문구 수정"
     },
@@ -801,7 +801,7 @@
       "slug": "game-bar-and-game-mode",
       "title": "게임 바와 게임 모드의 목적",
       "originalSha256": "150db43b5904ca52c0332559c892df062227d62dd761436e6466e326b3edd364",
-      "sha256": "b05aa3898950ccbb43086a8e7cd000a28c70ae38ae3197796ed798e1e6c0dc16",
+      "sha256": "f6af1805dc49ab866d6f1d6278f8a23fd30a06d7726bf07db1ef5bef92c43fee",
       "changed": true,
       "status": "문구 수정"
     },
@@ -811,7 +811,7 @@
       "slug": "user-accounts-uac",
       "title": "사용자 계정의 권한과 UAC 승인",
       "originalSha256": "92431560a25e96ad5853e291afbd1d78b2300fe0d2dbe407992e01fdced85944",
-      "sha256": "342404c5d260d3fd6e818bcfb068789436faee4a686d1f6e0d45f549f82e1a7f",
+      "sha256": "d7fcb57051f4593f8ab4541d7fa829028e784a3fade9af5eab03602b29b68c78",
       "changed": true,
       "status": "문구 수정"
     }
