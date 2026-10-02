@@ -17,10 +17,21 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-02 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.36
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-02 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.37
 
 ---
 
+
+## 컴활 82~159 교정·교열 수정본 — 2026-10-02
+
+- 배포된 78개 본문에 대해 사용자 요청 `오탈자, 어색한 표현, 가독성 검수` 수행. 이 작업의 전문 명칭은 콘텐츠 교정·교열 및 윤문
+- 기준 main `0eed0e2ffa2cbb86f53aa6c882b665ed32db4ba6`; 전용 브랜치 `codex/computer-literacy-082-159-copyedit-20261002`
+- 78개 전수 독해, 54개 본문 수정·24개 유지. 조사 오타 `5번는`, 어색한 용어·편집 메모, 문장 중간 단절과 긴 도입문을 정리함
+- 78개 frontmatter 전체·기출 인용·단축키·수식 보존. 기존 1~81/Excel 4개, 정본·원본 이미지 변경 없음. 160 `P2-02a` BLOCKED 유지
+- 기존 배포 snapshot은 변경하지 않음. 새 교열 audit의 원본/수정 해시만 허용하도록 공용 `reviewedChapterHash` 및 82~159 검사에 연결
+- Web Work Build·8개 검사·범위/인용/frontmatter/소제목 대조·diff 검사 PASS. PR의 배포 없는 CI preview에서 390/320/1440px QA 수행하며 확정 run·캡처·결과는 PR 본문/Checks를 참조
+- 상세 기록: `docs/audits/2026-10-02-computer-literacy-082-159-copyedit/README.md`, `review.json`
+- 이번 수정본은 검토용 Draft PR 대상으로 작성. main 직접 push·merge·Production deploy 미실행. 아래 배포 완료 항목은 수정 전 78개 원본의 Production 기록
 
 ## 컴활 82~159 Production 배포 완료 — 2026-10-02
 
