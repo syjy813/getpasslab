@@ -34,6 +34,7 @@ const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
         const minLabelPx = 22 * state.width / 360;
         assert(minLabelPx >= 14, `${f.slug}: labels too small`);
         const screenshot = `${width}-${f.slug}-figure.png`;
+        await figure.evaluate(el => el.scrollIntoView({ block: 'center' }));
         await figure.screenshot({ path: path.join(out, screenshot) });
         const imageResponse = await context.request.get(base + state.src);
         assert.equal(imageResponse.status(), 200);

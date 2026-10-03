@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="340" viewBox="0 0 360 340" role="img" aria-labelledby="title desc">
 <title id="title">플레이너의 왕복 테이블과 베드</title><desc id="desc">고정된 바이트 아래로 일감과 테이블이 함께 왕복하고, 베드는 테이블을 받침. 학습용 재구성으로 방호장치와 이송장치 및 피트는 생략함.</desc>
-<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L7 3.5L0 7Z" fill="#25334B"/></marker></defs>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L12 6L0 12Z" fill="#25334B"/></marker></defs>
 <rect width="360" height="340" fill="#fff"/>
 <g stroke="#526176" stroke-width="3" stroke-linejoin="round">
 <path d="M34 63H65V254H34Z" fill="#F7F9FC"/><path d="M64 76H299V97H64Z" fill="#F7F9FC"/><path d="M285 63H316V254H285Z" fill="#F7F9FC"/>

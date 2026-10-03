@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="390" viewBox="0 0 360 390" role="img" aria-labelledby="title desc">
 <title id="title">드릴의 척과 고정된 일감</title><desc id="desc">스핀들에 연결된 척이 드릴날을 회전시키고, 바이스에 고정된 일감에 구멍을 뚫음. 척 렌치는 꽂혀 있지 않음. 학습용 재구성으로 방호장치와 조작부는 생략함.</desc>
-<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L7 3.5L0 7Z" fill="#25334B"/></marker></defs>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L12 6L0 12Z" fill="#25334B"/></marker></defs>
 <rect width="360" height="390" fill="#fff"/>
 <g stroke="#526176" stroke-width="3" stroke-linejoin="round">
 <rect x="89" y="78" width="21" height="265" rx="6" fill="#CBD5E1"/><path d="M87 49H219V93H87Z" fill="#F7F9FC"/><rect x="184" y="93" width="13" height="24" fill="#CBD5E1"/>

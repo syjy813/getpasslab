@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="330" viewBox="0 0 360 330" role="img" aria-labelledby="title desc">
 <title id="title">선반의 일감과 바이트</title><desc id="desc">척이 잡고 있는 가로 일감은 회전하고, 바이트 끝은 일감 표면에 접촉함. 학습용 재구성으로 방호장치와 구동부는 생략함.</desc>
-<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L7 3.5L0 7Z" fill="#25334B"/></marker></defs>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L12 6L0 12Z" fill="#25334B"/></marker></defs>
 <rect width="360" height="330" fill="#fff"/>
 <g stroke="#526176" stroke-width="3" stroke-linejoin="round">
 <path d="M30 135H78V250H30Z" fill="#F7F9FC"/><rect x="75" y="155" width="30" height="64" rx="5" fill="#CBD5E1"/>

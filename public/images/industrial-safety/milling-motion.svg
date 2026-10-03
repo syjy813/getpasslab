@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="340" viewBox="0 0 360 340" role="img" aria-labelledby="title desc">
 <title id="title">밀링의 커터와 일감 고정</title><desc id="desc">수평형 밀링의 컬럼 옆 커터가 회전하며 바이스에 물린 일감을 깎음. 학습용 재구성으로 방호장치와 이송장치는 생략함.</desc>
-<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L7 3.5L0 7Z" fill="#25334B"/></marker></defs>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L12 6L0 12Z" fill="#25334B"/></marker></defs>
 <rect width="360" height="340" fill="#fff"/>
 <g stroke="#526176" stroke-width="3" stroke-linejoin="round">
 <path d="M77 85H125V292H77Z" fill="#F7F9FC"/><path d="M112 90H266V106H112Z" fill="#CBD5E1"/><path d="M249 106H264V153H249Z" fill="#F7F9FC"/>
