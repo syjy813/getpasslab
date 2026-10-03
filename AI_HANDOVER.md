@@ -17,9 +17,20 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-03 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.38
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-03 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.39
 
 ---
+
+## 산업안전 공작기계 시범 분리 검토본 — 2026-10-03
+
+- 사용자 `분리 진행해줘` 요청에 따라 WEB에서 공작기계 챕터만 시범 분리함 · [Draft PR #120](https://github.com/syjy813/getpasslab/pull/120), 브랜치 `codex/industrial-safety-machine-tools-split-20261003`
+- 기준 main `f7247f69d49379f7649070df3378fe99d52d32b7` · 기존 `machine-tools-safety` URL·제목 유지, 기계별 비교·공통 2문항으로 재구성 · 새 `lathe-safety` 11문항, `milling-safety` 6문항, `drill-safety` 4문항, `planer-safety` 1문항
+- 기계 움직임·필수 용어부터 설명하고 반복 요약 제거 · `공작기계` 그룹 및 자동 관련 챕터 링크 활용 · 과목 전체 정렬·스타일·기출 팝업 구현 변경 없음
+- 정본 수록 24문항 본문·선택지·답안 독해 후 배분 · 원본 PDF 대조 미실행 · 580개 보호 파일 및 정본 1,680문항·이미지 불변 · 산업안전 완료 220→224, 주 기출 연결 1,004개 유지
+- 컴활 기존 보호 검사의 이 챕터 지문은 분리 검수의 정확한 원본/수정 SHA-256으로만 허용함 · 기존 컴활 배포 snapshot 수정 없음
+- 로컬 Build·분리 전용 검사·SEO·공개 본문·deferred 기출·색상 대비·컴활 회귀 PASS · 최종 브라우저 QA와 캡처 검수 결과는 같은 audit의 `VALIDATION.md` 참조
+- Git CLI의 브라우저 다운로드/인증 제한을 보완해 연결 GitHub 앱으로 Draft PR 생성 · 원격 코드 tree와 로컬 코드 tree 일치 확인 · main merge/push·Production Deploy 미실행
+- 검수·24문항 배분표·검증 근거: `docs/audits/2026-10-03-industrial-safety-machine-tools-split/` · 다른 챕터 분리와 학습 이미지 제작은 후속 작업임
 
 
 ## 컴활 82~159 교정·교열 수정본 Production 배포 완료 — 2026-10-03
