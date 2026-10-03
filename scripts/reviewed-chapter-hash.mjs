@@ -9,6 +9,7 @@ for (const file of [
   'docs/audits/2026-10-02-computer-literacy-082-159-copyedit/review.json',
   'docs/audits/2026-10-03-industrial-safety-machine-tools-split/review.json',
   'docs/audits/2026-10-04-machine-tools-copyedit/review.json',
+  'docs/audits/2026-10-04-machine-tools-linebreaks/review.json',
 ]) {
   let review;
   try {
