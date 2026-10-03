@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { readFile, readdir, access } from 'node:fs/promises';
 import path from 'node:path';
 import yaml from 'js-yaml';
+import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
 
 const audit = 'docs/audits/2026-10-03-industrial-safety-machine-tools-split';
 const evidence = JSON.parse(await readFile(`${audit}/source-verification.json`, 'utf8'));
@@ -51,7 +52,8 @@ const toc = await readFile(`dist${scope}index.html`, 'utf8');
 const sitemap = await readFile('dist/sitemap-0.xml', 'utf8');
 for (const [slug, ids] of Object.entries(evidence.allocations)) {
   const source = await readFile(`src/content/chapters/mechanical/${slug}.md`, 'utf8');
-  assert.equal(hash(source), review.chapters.find(c => c.path.endsWith(`/${slug}.md`))?.sha256, `${slug}: unreviewed learning copy`);
+  const reviewedPath = `src/content/chapters/mechanical/${slug}.md`;
+  assert.equal(hash(source), reviewedChapterHash(reviewedPath, review.chapters.find(c => c.path === reviewedPath)?.sha256), `${slug}: unreviewed learning copy`);
   const fields = parse(source);
   assert.deepEqual(fields.questions, ids, `${slug}: wrong primary allocation`);
   assert.equal(fields.subject_id, '3');

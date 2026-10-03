@@ -1,0 +1,41 @@
+{
+  "baseCommit": "f4b3c2d7e1f127b321c2f2ec411635dd25b863a8",
+  "type": "copyedit; frontmatter and all 24 question payloads unchanged",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/machine-tools-safety.md",
+      "changed": true,
+      "originalSha256": "ae13d699649d62082eb362da292d85c6dcbaa36d2678da8a622750939f7736ef",
+      "frontmatterSha256": "522770f31d80b52f667328ba807502f90b2682aa29f7cacecdd3500174fb123e",
+      "sha256": "e7eae74eff2c471c272050dd8d1c0a582cfba8e7cc4ce1b24fe468c9e215b7cc"
+    },
+    {
+      "path": "src/content/chapters/mechanical/lathe-safety.md",
+      "changed": true,
+      "originalSha256": "2823a594f25694d4409bb87f708f4e01e27ad69fd6665a16aa5ab082c37e33b7",
+      "frontmatterSha256": "3cb7b246f3185695e55071e2fcb9faece733916d09db405fb082594f653f2921",
+      "sha256": "8357c132da381ca8b97d86bb356ee29a32a50e1641fb17868bf84cb9bcce38bb"
+    },
+    {
+      "path": "src/content/chapters/mechanical/milling-safety.md",
+      "changed": true,
+      "originalSha256": "70bd6f8b9ab5c2ad3f0dd436491ae9adc74955874e0c7aff19eb633507797b80",
+      "frontmatterSha256": "f75c1d77b5f667d1fc8a92b3ada33c5af3c31860313c45dc2d518954c2dbb695",
+      "sha256": "d294965bd146b5828985ba14d231ad97ea12eb021269d0234f778c5216afa6a7"
+    },
+    {
+      "path": "src/content/chapters/mechanical/drill-safety.md",
+      "changed": true,
+      "originalSha256": "5da024da90fa391b3133b12209d8fc74d5b33b2192721877e9334c2a17fec1f6",
+      "frontmatterSha256": "2bb5945c948345b00475ae9b2c972b655f919d088dfe6f0aad96b55f00bc0d08",
+      "sha256": "98c67cfbbf281e4f69033863d4229dcaa6e6571dc39d70f4f938de6b86a9d918"
+    },
+    {
+      "path": "src/content/chapters/mechanical/planer-safety.md",
+      "changed": true,
+      "originalSha256": "4b22c76d1d004ecacfded448913be013c8c09cfc22d56351a2c4498639198a20",
+      "frontmatterSha256": "0638b0a183fd8ee46da85a74af7edf8a45d0c609cd9e17a4a126c549a140c6a3",
+      "sha256": "e0d17c6313e31cdd0062d13e9c31aaf7b5c00a124f14a3d2f5545ecccf722c19"
+    }
+  ]
+}
