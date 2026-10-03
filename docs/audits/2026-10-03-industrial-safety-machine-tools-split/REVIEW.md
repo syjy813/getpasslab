@@ -68,6 +68,6 @@
 
 ## 검증 상태
 
-로컬 Build 및 분리 전용 검사·SEO·공개 본문·deferred 기출·색상 대비·컴활 회귀 검사 통과 · 브라우저 실행 파일 설치는 다운로드 실패로 로컬 화면 QA 미실행 · 검토 PR의 전용 CI에서 390/1440/320px 및 24문항 전수 팝업을 검증하도록 준비함
+로컬 Build 및 분리 전용 검사·SEO·공개 본문·deferred 기출·색상 대비·컴활 회귀 검사 통과 · 브라우저 실행 파일 설치는 다운로드 실패로 로컬 화면 QA 미실행 · [전용 CI 37112200473](https://github.com/syjy813/getpasslab/actions/runs/37112200473)에서 390/1440/320px 및 24문항 전수 팝업 검증 PASS/오류 0
 
-후속 CI 결과와 직접 화면 검수는 `VALIDATION.md`에 기록함 · main merge/push 및 Production Deploy 미실행
+CI 결과·17개 캡처 직접 검수·대표 PNG 4장 보존은 `VALIDATION.md`에 기록함 · main merge/push 및 Production Deploy 미실행

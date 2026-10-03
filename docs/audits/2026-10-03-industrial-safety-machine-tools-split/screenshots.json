@@ -1,0 +1,211 @@
+{
+  "artifactId": 11270143750,
+  "runId": 37112200473,
+  "codeCommit": "c1f26f451ac7195ca755f74d50887e335cb7fa3f",
+  "zipSha256": "b58c73901c0b4d68ca4cb0901582517e05fedd54fe90c6439697bb9cacff689c",
+  "expiresAt": "2026-10-17T09:13:45Z",
+  "screenshots": [
+    {
+      "filename": "390-machine-tools-safety.png",
+      "sha256": "f864214d3442746e9dae1619dd3f8438bb3f599bacda1f08b95705bede5cb3b6",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "390-machine-tools-safety-answer.png",
+      "sha256": "ad0d622d779b70b9fda82ecf7f7ec5390d2146d4604349d431ad7b980caebfbc",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "390-lathe-safety.png",
+      "sha256": "b5e412411e25f0f22c8ee343fbbece33605a9f0c944dd1a8d2d11dfcc627d222",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "390-lathe-safety-answer.png",
+      "sha256": "3c79f2e7c8ee9e6336e5f1c41f081ca5583329d4988e2cfb8a4c8ffb9d9da8b9",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "390-milling-safety.png",
+      "sha256": "b0c4d7462fb8e838e1de737e43fbc790ea12ed30b548bd8e0a4d4500b68b2895",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "390-milling-safety-answer.png",
+      "sha256": "e78f1be4cafc479b7d61d864eeae92de92e266b1a64e76e6f2b19db53a5f2dce",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "390-drill-safety.png",
+      "sha256": "90fe624480c26993ac4ac8bda953392e1c98179e5cdb086f2192f13a7b6d19d3",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "390-drill-safety-answer.png",
+      "sha256": "66b491b59e24497b9368336cc46ece1277b0ed216be1e33c54938ff8124b84bb",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "390-planer-safety.png",
+      "sha256": "cf56d33a8714bcad734a0170c70cf89e9ef1f70312bf6091db8c97321dd09dde",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "390-planer-safety-answer.png",
+      "sha256": "b716c8c28d823474c7aa772d490eacd95860cbd49a9c92202bacabea97a795df",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "390-mechanical-toc.png",
+      "sha256": "1db72f7d46926ffcee237bd09a042e3afa7b937ee7d82df8b5c404bee53e8e37",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "1440-machine-tools-safety.png",
+      "sha256": "06478fcb21c645b5867042821a566f0d8740213fc541f4e84e5e23d3c7fc3c75",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "1440-machine-tools-safety-answer.png",
+      "sha256": "97300fcd75a089ef5f2509228a0a3fbce6bec4d97f5ed4fe520109f1ba230677",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "1440-lathe-safety.png",
+      "sha256": "2115765b2f61e599444faa2a03f8a2b12871602ea9518f7e3e0e5b01cbf4a089",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "1440-lathe-safety-answer.png",
+      "sha256": "cda94b35978b5b4482950d68b5392b501b6fd263d11af3769cd18d137ed164f4",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "1440-milling-safety.png",
+      "sha256": "f97f2f374e8ea26680f74caf01eeed01c59ca98cb407e25ac96293c0dc13d039",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "1440-milling-safety-answer.png",
+      "sha256": "a0e6f69594dbf1478daed2831f94ea35db4dee0d85aa58b783246b8441ac591b",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "1440-drill-safety.png",
+      "sha256": "09628c73ba1f597a689f019a324be351924b3279c00387d3bbaae2aa61baf9c3",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "1440-drill-safety-answer.png",
+      "sha256": "5090b90dfc2b0ff05e42dcdc33816994ad095b07d61c314a45f73965ac28dcc0",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "1440-planer-safety.png",
+      "sha256": "e842062fce249c2ad38c73bfb2ff39ea47ede07f22ed1eed298592a300033124",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "1440-planer-safety-answer.png",
+      "sha256": "7c1a5b8846480338d6a2f5e25ceffff379280de99d532ac733afa5dd3eb806e7",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "1440-mechanical-toc.png",
+      "sha256": "5427a2e2542045f3c0bc11ebdaf8d0f0f3efc7d57af7b531efd245278474f6b6",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "320-machine-tools-safety.png",
+      "sha256": "9ec6464df26bb2f729c6814a7ecaf74d3e02ed9529eb51a0fac60a141d06a5bb",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "320-machine-tools-safety-answer.png",
+      "sha256": "35333f9ac89d782b6bb292643092ccf5f32f94a2484e4aa9839cc514c4a3fdcb",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "320-lathe-safety.png",
+      "sha256": "37ac96ce128285a9145535e247fbf56528ee3e7c9fad2ee5c583696cbc5ccb5d",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "320-lathe-safety-answer.png",
+      "sha256": "de05402ebdfd9ff8d24e5a8bb8909f0502a6e515331bee84ddca37dead5cdb69",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "320-milling-safety.png",
+      "sha256": "1bcc3d73cc84ef1a1b5a069686bb7c9b72a0a780576e2359c987b83f2839f03b",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "320-milling-safety-answer.png",
+      "sha256": "4e3093ec9630f50868895a99c1370a76a18b072ac9eb010a9d0433139ee633ab",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "320-drill-safety.png",
+      "sha256": "9da30f8e87a2be3028e8ed1280b5863e25b5aac9b3bfec6c11f6c6ce9a0e32c1",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "320-drill-safety-answer.png",
+      "sha256": "8dbe5193e0db749d5718da01ecef86e000a4bf1fd4b142f24dc7e7861ca63443",
+      "manuallyInspectedFinalRun": true
+    },
+    {
+      "filename": "320-planer-safety.png",
+      "sha256": "14e23bce6d3b5bfe261143d7d26a18f9c3cb24e11e4efba7dba5e744639411a5",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "320-planer-safety-answer.png",
+      "sha256": "536071bca7a207b11e8fcce7c5b911a16bc28c6ce7d3d5d6d78bfd89da69f64e",
+      "manuallyInspectedFinalRun": false
+    },
+    {
+      "filename": "320-mechanical-toc.png",
+      "sha256": "76452eb97b9803a21ec07096e733102aef3a9399b2404157e7a28a09eacff795",
+      "manuallyInspectedFinalRun": false
+    }
+  ],
+  "preservedInRepository": [
+    "1440-machine-tools-safety.png",
+    "1440-lathe-safety.png",
+    "320-drill-safety.png",
+    "320-drill-safety-answer.png"
+  ],
+  "initialRunInspections": {
+    "runId": 37112009579,
+    "artifactId": 11269224729,
+    "note": "Identical learning content to final run; only QA selectors changed afterwards",
+    "screenshots": [
+      {
+        "filename": "390-machine-tools-safety.png",
+        "sha256": "f864214d3442746e9dae1619dd3f8438bb3f599bacda1f08b95705bede5cb3b6"
+      },
+      {
+        "filename": "390-lathe-safety.png",
+        "sha256": "b5e412411e25f0f22c8ee343fbbece33605a9f0c944dd1a8d2d11dfcc627d222"
+      },
+      {
+        "filename": "390-milling-safety.png",
+        "sha256": "b0c4d7462fb8e838e1de737e43fbc790ea12ed30b548bd8e0a4d4500b68b2895"
+      },
+      {
+        "filename": "390-drill-safety.png",
+        "sha256": "90fe624480c26993ac4ac8bda953392e1c98179e5cdb086f2192f13a7b6d19d3"
+      },
+      {
+        "filename": "390-planer-safety.png",
+        "sha256": "cf56d33a8714bcad734a0170c70cf89e9ef1f70312bf6091db8c97321dd09dde"
+      },
+      {
+        "filename": "390-lathe-safety-answer.png",
+        "sha256": "3c79f2e7c8ee9e6336e5f1c41f081ca5583329d4988e2cfb8a4c8ffb9d9da8b9"
+      }
+    ]
+  }
+}
