@@ -1,0 +1,41 @@
+{
+  "baseCommit": "ab97623ed97ddbaff088b456656eb88631553b58",
+  "type": "paragraph and list breaks only; frontmatter and all 24 question payloads unchanged",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/machine-tools-safety.md",
+      "changed": true,
+      "originalSha256": "e7eae74eff2c471c272050dd8d1c0a582cfba8e7cc4ce1b24fe468c9e215b7cc",
+      "sha256": "ba7f7341e4b8e688302ab54e9cdd6902fb0c2c5d38f54214f66ab1d1c9cc9226",
+      "frontmatterSha256": "9521f339d6a8504422fec5c791e48c9570f65dabb44ab0af3ebe536b1552dc80"
+    },
+    {
+      "path": "src/content/chapters/mechanical/lathe-safety.md",
+      "changed": true,
+      "originalSha256": "8357c132da381ca8b97d86bb356ee29a32a50e1641fb17868bf84cb9bcce38bb",
+      "sha256": "73df10dab71329fb512a7d5451c6ac57d5c2ffe07742515b59b1979d2957e115",
+      "frontmatterSha256": "bc43aae8f497347b20ca9b7a76d8bd102b2705cd3e675e7b264239feaf50911c"
+    },
+    {
+      "path": "src/content/chapters/mechanical/milling-safety.md",
+      "changed": true,
+      "originalSha256": "d294965bd146b5828985ba14d231ad97ea12eb021269d0234f778c5216afa6a7",
+      "sha256": "f10dbe641d058f4b5ec522fc866d067f108d9705ed0c9af05cf2f96623e92cad",
+      "frontmatterSha256": "54f3e24cb33820a62cf599f07d30daf2a6644b41bd02873b904e552151e306f5"
+    },
+    {
+      "path": "src/content/chapters/mechanical/drill-safety.md",
+      "changed": true,
+      "originalSha256": "98c67cfbbf281e4f69033863d4229dcaa6e6571dc39d70f4f938de6b86a9d918",
+      "sha256": "e6a03d38da189af313cad652e8002111f4df48f1d72b7bc30b14b9e80a9f79e1",
+      "frontmatterSha256": "ded9b4575a4b2ce444571e82b2c5c6a23de0ebf4c56944c21374efe223f3f256"
+    },
+    {
+      "path": "src/content/chapters/mechanical/planer-safety.md",
+      "changed": true,
+      "originalSha256": "e0d17c6313e31cdd0062d13e9c31aaf7b5c00a124f14a3d2f5545ecccf722c19",
+      "sha256": "ae40a692f2f64614cd526de8551a1097dc569c0bfa9fc04ebe7cf4e8c923d3e4",
+      "frontmatterSha256": "bcc5cad7f96209f02a29795ca1b421e7db54457113ce29de3afed3b7bfb0055f"
+    }
+  ]
+}
