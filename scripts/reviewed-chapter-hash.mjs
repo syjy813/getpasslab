@@ -8,6 +8,7 @@ for (const file of [
   'docs/audits/2026-10-02-computer-literacy-text-review/review.json',
   'docs/audits/2026-10-02-computer-literacy-082-159-copyedit/review.json',
   'docs/audits/2026-10-03-industrial-safety-machine-tools-split/review.json',
+  'docs/audits/2026-10-04-machine-tools-copyedit/review.json',
 ]) {
   let review;
   try {
@@ -16,14 +17,21 @@ for (const file of [
     if (error.code === 'ENOENT') continue;
     throw error;
   }
+  const seen = new Set();
   for (const chapter of review.chapters.filter(chapter => chapter.changed)) {
-    assert(!reviewed.has(chapter.path), `${chapter.path}: duplicate review override`);
-    reviewed.set(chapter.path, chapter);
+    assert(!seen.has(chapter.path), `${chapter.path}: duplicate file in one review`);
+    seen.add(chapter.path);
+    const chain = reviewed.get(chapter.path) ?? [];
+    if (chain.length) {
+      assert.equal(chapter.originalSha256, chain.at(-1).sha256, `${chapter.path}: review chain must preserve the previous approved hash`);
+    }
+    chain.push(chapter);
+    reviewed.set(chapter.path, chain);
   }
 }
 export function reviewedChapterHash(file, originalHash) {
-  const chapter = reviewed.get(file);
-  if (!chapter) return originalHash;
-  assert.equal(chapter.originalSha256, originalHash, `${file}: review must refer to the original release hash`);
-  return chapter.sha256;
+  const chain = reviewed.get(file);
+  if (!chain) return originalHash;
+  assert(chain.some(chapter => chapter.originalSha256 === originalHash), `${file}: review must refer to a verified release hash`);
+  return chain.at(-1).sha256;
 }
