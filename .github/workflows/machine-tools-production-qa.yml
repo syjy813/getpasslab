@@ -1,0 +1,76 @@
+name: Machine tools Production QA
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/workflows/machine-tools-production-qa.yml']
+permissions:
+  contents: read
+jobs:
+  production-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Verify deployed content against the release build
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          import { createHash } from 'node:crypto';
+          const base = 'https://getpasslab.co.kr';
+          const scope = '/industrial-safety/written/mechanical/';
+          const audit = 'docs/audits/2026-10-03-industrial-safety-machine-tools-split';
+          const evidence = JSON.parse(fs.readFileSync(audit + '/source-verification.json'));
+          const result = { base, releaseCommit: 'ca25785948d122e05fbe98d628f2d7788e1af789', startedAt: new Date().toISOString(), pages: [], passed: false };
+          const out = 'qa-results/industrial-safety-machine-tools-split';
+          fs.mkdirSync(out, {recursive:true});
+          const hash = text => createHash('sha256').update(text).digest('hex');
+          for (const slug of Object.keys(evidence.allocations)) {
+            const url = base + scope + slug + '/';
+            const response = await fetch(url);
+            assert.equal(response.status, 200, url);
+            const deployed = await response.text();
+            const built = fs.readFileSync('dist' + scope + slug + '/index.html', 'utf8');
+            const fragment = text => text.match(/<article>([\s\S]*?)<\/article>/)?.[1];
+            assert(fragment(built), 'built article missing');
+            assert.equal(hash(fragment(deployed)), hash(fragment(built)), slug + ': release body mismatch');
+            assert.deepEqual([...deployed.matchAll(/data-open="(\d{8}_\d{3})"/g)].map(m=>m[1]), evidence.allocations[slug]);
+            result.pages.push({url,status:response.status,articleSha256:hash(fragment(deployed)),questions:evidence.allocations[slug]});
+          }
+          const toc = await fetch(base + scope);
+          assert.equal(toc.status, 200);
+          const tocText = await toc.text();
+          const sitemap = await fetch(base + '/sitemap-0.xml');
+          assert.equal(sitemap.status, 200);
+          const sitemapText = await sitemap.text();
+          for (const slug of Object.keys(evidence.allocations)) {
+            assert(tocText.includes('href="' + scope + slug + '/"'));
+            assert(sitemapText.includes(base + scope + slug + '/'));
+          }
+          result.tocAndSitemap = true;
+          result.passed = true;
+          result.finishedAt = new Date().toISOString();
+          fs.writeFileSync(out + '/production-verification.json', JSON.stringify(result,null,2)+'\n');
+          console.log(JSON.stringify(result));
+          JS
+      - name: Prepare browser
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Test deployed 390px, 1440px and 320px pages and all 24 questions
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: https://getpasslab.co.kr
+        run: node scripts/qa-industrial-safety-machine-tools-split.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: machine-tools-production-qa
+          path: qa-results/industrial-safety-machine-tools-split/
+          retention-days: 14
