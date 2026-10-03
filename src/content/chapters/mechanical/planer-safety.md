@@ -28,6 +28,13 @@ examComment: 수록 기출 1문항은 베드·바이트·피트의 안전조치�
 
 **피트**는 기계 프레임 안의 바닥 아래 공간을 뜻함
 
+<div class="learning-visuals learning-visuals--single">
+<figure>
+<figcaption><strong>플레이너의 테이블·베드·바이트</strong><span>학습용 재구성 · 방호장치·구동부를 생략한 움직임·부품 개념도</span></figcaption>
+<img src="/images/industrial-safety/planer-motion.svg" alt="바이트 아래의 일감과 테이블이 베드 위에서 왕복하는 플레이너의 단순화 그림" width="360" height="340" loading="lazy" decoding="async" />
+</figure>
+</div>
+
 | 확인할 부분 | 안전조치 | 판단 이유 |
 |---|---|---|
 | 베드 | 다른 물건을 올려놓지 않음 | 왕복 운동을 방해하거나 물건이 충돌하는 위험 방지 |

@@ -26,6 +26,13 @@ examComment: 수록 기출 6문항은 장갑 착용·절삭 중 측정·커터 �
 - **컬럼**: 기계의 기둥
 - **바이스**: 일감을 물려 고정하는 장치
 
+<div class="learning-visuals learning-visuals--single">
+<figure>
+<figcaption><strong>밀링의 커터·컬럼·바이스</strong><span>학습용 재구성 · 방호장치·구동부를 생략한 움직임·부품 개념도</span></figcaption>
+<img src="/images/industrial-safety/milling-motion.svg" alt="기둥인 컬럼 옆의 수평 축 커터가 회전하며 바이스에 고정된 일감 위를 깎는 밀링의 단순화 그림" width="360" height="340" loading="lazy" decoding="async" />
+</figure>
+</div>
+
 | 대상 | 안전조치 | 피해야 할 행동 |
 |---|---|---|
 | 커터 | 될 수 있는 한 컬럼 가까이 설치 | 컬럼에서 멀리 설치 |

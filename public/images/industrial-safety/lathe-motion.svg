@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="330" viewBox="0 0 360 330" role="img" aria-labelledby="title desc">
+<title id="title">선반의 일감과 바이트</title><desc id="desc">척이 잡고 있는 가로 일감은 회전하고, 바이트 끝은 일감 표면에 접촉함. 학습용 재구성으로 방호장치와 구동부는 생략함.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L7 3.5L0 7Z" fill="#25334B"/></marker></defs>
+<rect width="360" height="330" fill="#fff"/>
+<g stroke="#526176" stroke-width="3" stroke-linejoin="round">
+<path d="M30 135H78V250H30Z" fill="#F7F9FC"/><rect x="75" y="155" width="30" height="64" rx="5" fill="#CBD5E1"/>
+<path d="M100 168H225Q240 168 240 186Q240 204 225 204H100Z" fill="#E8EDF5"/><ellipse cx="228" cy="186" rx="12" ry="18" fill="#F7F9FC"/>
+<path d="M92 157H110V171H92ZM92 204H110V216H92Z" fill="#526176"/>
+<rect x="30" y="250" width="295" height="20" rx="3" fill="#F7F9FC"/><rect x="185" y="229" width="86" height="21" fill="#CBD5E1"/>
+<path d="M212 203L234 223H264V234H220Z" fill="#526176"/>
+</g>
+<g fill="none" stroke="#25334B" stroke-width="4.5" stroke-linecap="round"><path d="M251 165C269 171 271 197 253 207" marker-end="url(#arrow)"/></g>
+<g fill="none" stroke="#526176" stroke-width="2.8"><path d="M92 109V151"/><path d="M295 241L257 230"/></g>
+<g font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" font-weight="600" fill="#25334B">
+<text x="72" y="97">척</text><text x="146" y="147">일감</text><text x="275" y="267">바이트</text><text x="165" y="63">일감 회전</text>
+</g>
+<path d="M248 73L253 150" fill="none" stroke="#526176" stroke-width="2.8"/>
+</svg>
