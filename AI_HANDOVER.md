@@ -17,9 +17,19 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-04 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.40
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-04 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.41
 
 ---
+
+## 산업안전 공작기계 본문 줄바꿈 배포 및 이미지 검토본 — 2026-10-04
+
+- 사용자 `그건 수정해서 배포하자` 승인으로 [PR #124](https://github.com/syjy813/getpasslab/pull/124) expected HEAD 고정 squash merge. 배포 `17d9d8d59b5ccccac4b0bedebca192bbbbd15bf3`, [Pages 37134617492](https://github.com/syjy813/getpasslab/actions/runs/37134617492) success
+- 5개 챕터의 별개 설명을 가운뎃점으로 잇던 부분을 빈 줄 Markdown 문단·목록으로 분리. 기존 단어/조건/강조/frontmatter/URL/24문항·정본/이미지 불변
+- Build·분리 전용·SEO·공개 본문·deferred PASS. [CI preview QA 37134237057](https://github.com/syjy813/getpasslab/actions/runs/37134237057) 390/1440/320px 각 5개 챕터·24팝업·목차/회귀 PASS, 오류 0. PC·모바일 비교 캡처 직접 검수
+- Production 제공 Chrome에서 정의/설명 및 장갑 판단의 별도 문단 표시 확인. Production 전수 QA와 CI preview 결과 구분
+- 사용자 기계별 이미지 문의에 따라 [Draft PR #125](https://github.com/syjy813/getpasslab/pull/125) 제작. 선반/수평 밀링/드릴링 머신/플레이너의 회전·왕복 및 핵심 부품을 보여주는 L1 SVG 4장. 학습 이미지 정본 v1.2 적용·제작 전 brief 작성·24문항 독해/CCOHS·NPTEL 대조
+- 그림 4장의 Build·SVG XML·기출 보호·SEO·공개 본문 PASS, 390/1440/320px 이미지 QA 진행. **이미지 Merge/Deploy 미실행**. 확정 CI 결과는 해당 PR Checks 및 audit 검수 기록을 우선 확인
+- 상세: `docs/audits/2026-10-04-machine-tools-linebreaks/RELEASE.md`, `docs/audits/2026-10-04-machine-tools-visuals/brief.json`. 그림은 방호/구동부 및 미검증 피트 형상을 생략한 학습용 재구성. 원본 PDF·실물 스마트폰·학습자 효과 미검증
 
 ## 산업안전 공작기계 5개 챕터 교정·교열 재배포 완료 — 2026-10-04
 
