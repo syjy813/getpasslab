@@ -1,0 +1,69 @@
+{
+  "base": "https://getpasslab.co.kr",
+  "releaseCommit": "ca25785948d122e05fbe98d628f2d7788e1af789",
+  "startedAt": "2026-10-03T14:33:42.641Z",
+  "pages": [
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/machine-tools-safety/",
+      "status": 200,
+      "articleSha256": "60dcb3a6e1508d784f6365932ff3ac017d3be02e37c818adadd8014e91300af0",
+      "questions": [
+        "20210307_045",
+        "20190427_053"
+      ]
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/lathe-safety/",
+      "status": 200,
+      "articleSha256": "e9b536cc53c49212ce60f549dfdbd717b982b6c7d5867352ca3b6e31d486fcfd",
+      "questions": [
+        "20220424_047",
+        "20200606_049",
+        "20180304_050",
+        "20180819_049",
+        "20210515_045",
+        "20200926_049",
+        "20210814_047",
+        "20210307_042",
+        "20200822_055",
+        "20200926_057",
+        "20190427_050"
+      ]
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/milling-safety/",
+      "status": 200,
+      "articleSha256": "0fc8992b72a2b6b9ce364dd317bb179b81d9a4fec223976a0b61afe375c7b8a5",
+      "questions": [
+        "20220424_043",
+        "20210814_050",
+        "20200606_046",
+        "20190804_055",
+        "20180304_059",
+        "20180428_052"
+      ]
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/drill-safety/",
+      "status": 200,
+      "articleSha256": "743026802415afb973c785f360e1f2aca1305a363761189c7e2313cca7b9bd41",
+      "questions": [
+        "20210515_058",
+        "20190804_052",
+        "20180304_057",
+        "20180819_043"
+      ]
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/planer-safety/",
+      "status": 200,
+      "articleSha256": "07e55904e740d9be1ea9644672f1e4b72651b6e10dfa8ac77941af6f853335d2",
+      "questions": [
+        "20220305_044"
+      ]
+    }
+  ],
+  "passed": true,
+  "tocAndSitemap": true,
+  "finishedAt": "2026-10-03T14:33:43.648Z"
+}

@@ -21,6 +21,16 @@
 
 ---
 
+## 산업안전 공작기계 시범 분리 Production 배포 완료 — 2026-10-03
+
+- 사용자 `실서버 배포 해줘` 명시 승인. [PR #120](https://github.com/syjy813/getpasslab/pull/120) expected HEAD `5b0a8785b0648971734ef8a40691aa9e1e3a0619` 고정 squash merge
+- 배포 커밋 `ca25785948d122e05fbe98d628f2d7788e1af789`, 검토본/배포본 tree 일치. [Pages 37129895941](https://github.com/syjy813/getpasslab/actions/runs/37129895941) Build/Deploy success
+- [Production QA 37130003677](https://github.com/syjy813/getpasslab/actions/runs/37130003677): 공개 5개 HTTP 200 및 본문 SHA-256이 배포 빌드와 일치, 24문항 배정·목차·sitemap 정상
+- 실제 공개 URL 390/1440/320px 각각 5개 챕터·24문항 전수 팝업·목차 카드 5개·기존 회귀 4개 PASS/오류 0. 관련 링크·모바일 이전/다음·답안 초기화·Esc·표/본문 레이아웃 확인
+- PNG 33장·JSON 2개 다운로드 및 ZIP 지문 대조. 390px 선반·1440px 비교·320px 드릴 정답 캡처 직접 검수. 제공 Chrome에서 비교→선반 이동·기출 열기/정답/닫기 확인
+- 임시 [QA PR #121](https://github.com/syjy813/getpasslab/pull/121)의 workflow는 검사 후 제거하고 배포 기록·인수인계만 남김. 실물 스마트폰·원본 PDF 검증·학습 이미지 제작 미실행
+- 상세: `docs/audits/2026-10-03-industrial-safety-machine-tools-split/RELEASE.md`, `production-verification.json`, `production-browser-results.json`. 아래 검토본의 미배포 표시는 당시 단계 기록임
+
 ## 산업안전 공작기계 시범 분리 검토본 — 2026-10-03
 
 - 사용자 `분리 진행해줘` 요청에 따라 WEB에서 공작기계 챕터만 시범 분리함 · [Draft PR #120](https://github.com/syjy813/getpasslab/pull/120), 브랜치 `codex/industrial-safety-machine-tools-split-20261003`

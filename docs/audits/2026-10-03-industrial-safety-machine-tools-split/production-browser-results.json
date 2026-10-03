@@ -1,0 +1,3176 @@
+{
+  "base": "https://getpasslab.co.kr",
+  "startedAt": "2026-10-03T14:34:07.702Z",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "pages": [
+        {
+          "slug": "machine-tools-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/machine-tools-safety/",
+          "dialogs": [
+            {
+              "id": "20210307_045",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_053",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "공작기계 안전 (선반·밀링·드릴·플레이너)",
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/",
+            "/industrial-safety/written/mechanical/shaper-structure/",
+            "/industrial-safety/written/mechanical/mold-safety/"
+          ],
+          "previousNext": [
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "lathe-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/lathe-safety/",
+          "dialogs": [
+            {
+              "id": "20220424_047",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_049",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_050",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_049",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210515_045",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_049",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_047",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210307_042",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200822_055",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_057",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_050",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  },
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "선반 안전",
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              },
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "previousNext": [
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/machine-tools-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "milling-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/milling-safety/",
+          "dialogs": [
+            {
+              "id": "20220424_043",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_050",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_046",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_055",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_059",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180428_052",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "밀링 안전",
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/shaper-structure/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "previousNext": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "drill-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/drill-safety/",
+          "dialogs": [
+            {
+              "id": "20210515_058",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_052",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_057",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_043",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "드릴 안전",
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "previousNext": [
+            "/industrial-safety/written/mechanical/sling-wire-tension/",
+            "/industrial-safety/written/mechanical/lathe-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "planer-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/planer-safety/",
+          "dialogs": [
+            {
+              "id": "20220305_044",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 390,
+                "scrollWidth": 390,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 342,
+                    "scrollWidth": 340,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "플레이너 안전",
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/shaper-structure/",
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/"
+          ],
+          "previousNext": [
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/equipment-safety-three/"
+          ],
+          "passed": true
+        }
+      ],
+      "regression": [
+        {
+          "url": "https://getpasslab.co.kr/",
+          "status": 200,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "https://getpasslab.co.kr/industrial-safety/",
+          "status": 200,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/shaper-structure/",
+          "status": 200,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              },
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              },
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          }
+        },
+        {
+          "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/",
+          "status": 200,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": []
+          }
+        }
+      ],
+      "toc": {
+        "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/",
+        "layout": {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": [],
+          "tables": []
+        },
+        "clickedChapters": [
+          "machine-tools-safety",
+          "lathe-safety",
+          "milling-safety",
+          "drill-safety",
+          "planer-safety"
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "height": 844,
+      "pages": [
+        {
+          "slug": "machine-tools-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/machine-tools-safety/",
+          "dialogs": [
+            {
+              "id": "20210307_045",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_053",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "공작기계 안전 (선반·밀링·드릴·플레이너)",
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/",
+            "/industrial-safety/written/mechanical/shaper-structure/",
+            "/industrial-safety/written/mechanical/mold-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "lathe-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/lathe-safety/",
+          "dialogs": [
+            {
+              "id": "20220424_047",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_049",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_050",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_049",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210515_045",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_049",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_047",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210307_042",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200822_055",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_057",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_050",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  },
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "선반 안전",
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              },
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "milling-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/milling-safety/",
+          "dialogs": [
+            {
+              "id": "20220424_043",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_050",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_046",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_055",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_059",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180428_052",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "밀링 안전",
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/shaper-structure/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "drill-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/drill-safety/",
+          "dialogs": [
+            {
+              "id": "20210515_058",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_052",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_057",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_043",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "드릴 안전",
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "planer-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/planer-safety/",
+          "dialogs": [
+            {
+              "id": "20220305_044",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 1440,
+                "scrollWidth": 1440,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 880,
+                    "scrollWidth": 878,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "플레이너 안전",
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/shaper-structure/",
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/"
+          ],
+          "passed": true
+        }
+      ],
+      "regression": [
+        {
+          "url": "https://getpasslab.co.kr/",
+          "status": 200,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "https://getpasslab.co.kr/industrial-safety/",
+          "status": 200,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/shaper-structure/",
+          "status": 200,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              },
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              },
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          }
+        },
+        {
+          "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/",
+          "status": 200,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": []
+          }
+        }
+      ],
+      "toc": {
+        "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/",
+        "layout": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": [],
+          "tables": []
+        },
+        "clickedChapters": [
+          "machine-tools-safety",
+          "lathe-safety",
+          "milling-safety",
+          "drill-safety",
+          "planer-safety"
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "pages": [
+        {
+          "slug": "machine-tools-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/machine-tools-safety/",
+          "dialogs": [
+            {
+              "id": "20210307_045",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_053",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "공작기계 안전 (선반·밀링·드릴·플레이너)",
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/",
+            "/industrial-safety/written/mechanical/shaper-structure/",
+            "/industrial-safety/written/mechanical/mold-safety/"
+          ],
+          "previousNext": [
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "lathe-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/lathe-safety/",
+          "dialogs": [
+            {
+              "id": "20220424_047",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_049",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_050",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_049",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210515_045",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_049",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_047",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210307_042",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200822_055",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_057",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_050",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  },
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "선반 안전",
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              },
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "previousNext": [
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/machine-tools-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "milling-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/milling-safety/",
+          "dialogs": [
+            {
+              "id": "20220424_043",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_050",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_046",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_055",
+              "expectedAnswer": 1,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_059",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180428_052",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "밀링 안전",
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/shaper-structure/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "previousNext": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "drill-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/drill-safety/",
+          "dialogs": [
+            {
+              "id": "20210515_058",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_052",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_057",
+              "expectedAnswer": 3,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_043",
+              "expectedAnswer": 2,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "드릴 안전",
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/planer-safety/"
+          ],
+          "previousNext": [
+            "/industrial-safety/written/mechanical/sling-wire-tension/",
+            "/industrial-safety/written/mechanical/lathe-safety/"
+          ],
+          "passed": true
+        },
+        {
+          "slug": "planer-safety",
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/planer-safety/",
+          "dialogs": [
+            {
+              "id": "20220305_044",
+              "expectedAnswer": 4,
+              "layout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "revealedLayout": {
+                "width": 320,
+                "scrollWidth": 320,
+                "overflow": [],
+                "tables": [
+                  {
+                    "width": 272,
+                    "scrollWidth": 270,
+                    "clipped": false
+                  }
+                ]
+              },
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ],
+          "status": 200,
+          "title": "플레이너 안전",
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          },
+          "related": [
+            "/industrial-safety/written/mechanical/machine-tools-safety/",
+            "/industrial-safety/written/mechanical/shaper-structure/",
+            "/industrial-safety/written/mechanical/lathe-safety/",
+            "/industrial-safety/written/mechanical/drill-safety/",
+            "/industrial-safety/written/mechanical/milling-safety/"
+          ],
+          "previousNext": [
+            "/industrial-safety/written/mechanical/milling-safety/",
+            "/industrial-safety/written/mechanical/equipment-safety-three/"
+          ],
+          "passed": true
+        }
+      ],
+      "regression": [
+        {
+          "url": "https://getpasslab.co.kr/",
+          "status": 200,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "https://getpasslab.co.kr/industrial-safety/",
+          "status": 200,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/shaper-structure/",
+          "status": 200,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              },
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              },
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          }
+        },
+        {
+          "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/",
+          "status": 200,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": []
+          }
+        }
+      ],
+      "toc": {
+        "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/",
+        "layout": {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": [],
+          "tables": []
+        },
+        "clickedChapters": [
+          "machine-tools-safety",
+          "lathe-safety",
+          "milling-safety",
+          "drill-safety",
+          "planer-safety"
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "390-machine-tools-safety.png",
+    "390-machine-tools-safety-answer.png",
+    "390-lathe-safety.png",
+    "390-lathe-safety-answer.png",
+    "390-milling-safety.png",
+    "390-milling-safety-answer.png",
+    "390-drill-safety.png",
+    "390-drill-safety-answer.png",
+    "390-planer-safety.png",
+    "390-planer-safety-answer.png",
+    "390-mechanical-toc.png",
+    "1440-machine-tools-safety.png",
+    "1440-machine-tools-safety-answer.png",
+    "1440-lathe-safety.png",
+    "1440-lathe-safety-answer.png",
+    "1440-milling-safety.png",
+    "1440-milling-safety-answer.png",
+    "1440-drill-safety.png",
+    "1440-drill-safety-answer.png",
+    "1440-planer-safety.png",
+    "1440-planer-safety-answer.png",
+    "1440-mechanical-toc.png",
+    "320-machine-tools-safety.png",
+    "320-machine-tools-safety-answer.png",
+    "320-lathe-safety.png",
+    "320-lathe-safety-answer.png",
+    "320-milling-safety.png",
+    "320-milling-safety-answer.png",
+    "320-drill-safety.png",
+    "320-drill-safety-answer.png",
+    "320-planer-safety.png",
+    "320-planer-safety-answer.png",
+    "320-mechanical-toc.png"
+  ],
+  "browser": "Chromium viewport emulation; not a physical phone",
+  "externalRequests": "Advertising/tracking blocked; local assets and jsDelivr fonts/CSS allowed",
+  "passed": true,
+  "finishedAt": "2026-10-03T14:35:36.929Z"
+}
