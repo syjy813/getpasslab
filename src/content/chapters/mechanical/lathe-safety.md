@@ -26,6 +26,13 @@ examComment: 수록 기출 11문항은 칩 브레이커·실드·방진구의 �
 
 칩은 재료를 깎을 때 생기는 조각임
 
+<div class="learning-visuals learning-visuals--single">
+<figure>
+<figcaption><strong>선반의 일감·척·바이트</strong><span>학습용 재구성 · 방호장치·구동부를 생략한 움직임·부품 개념도</span></figcaption>
+<img src="/images/industrial-safety/lathe-motion.svg" alt="척에 물린 가로 일감이 회전하고 바이트 끝이 일감 표면에 닿는 선반의 단순화 그림" width="360" height="330" loading="lazy" decoding="async" />
+</figure>
+</div>
+
 길게 이어진 칩은 작업자에게 감기거나 상처를 줄 수 있으므로 **짧게 끊는 기능**과 **날아오는 칩을 막는 기능**을 구분함
 
 | 장치 | 기능 | 기출에서 연결할 표현 |

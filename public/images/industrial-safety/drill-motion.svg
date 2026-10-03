@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="390" viewBox="0 0 360 390" role="img" aria-labelledby="title desc">
+<title id="title">드릴의 척과 고정된 일감</title><desc id="desc">스핀들에 연결된 척이 드릴날을 회전시키고, 바이스에 고정된 일감에 구멍을 뚫음. 척 렌치는 꽂혀 있지 않음. 학습용 재구성으로 방호장치와 조작부는 생략함.</desc>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L12 6L0 12Z" fill="#25334B"/></marker></defs>
+<rect width="360" height="390" fill="#fff"/>
+<g stroke="#526176" stroke-width="3" stroke-linejoin="round">
+<rect x="89" y="78" width="21" height="265" rx="6" fill="#CBD5E1"/><path d="M87 49H219V93H87Z" fill="#F7F9FC"/><rect x="184" y="93" width="13" height="24" fill="#CBD5E1"/>
+<path d="M177 117H204V144L198 153H183L177 144Z" fill="#526176"/>
+<path d="M185 154H196V222L190 237L185 222Z" fill="#E8EDF5"/><path d="M185 163L196 174M185 178L196 189M185 194L196 204M185 210L196 220" fill="none"/>
+<rect x="138" y="235" width="108" height="27" fill="#E8EDF5"/><path d="M128 235H140V270H128ZM244 235H256V270H244Z" fill="#526176"/>
+<rect x="122" y="270" width="142" height="16" rx="3" fill="#CBD5E1"/><path d="M107 289H279V306H107Z" fill="#F7F9FC"/><path d="M79 343H251V361H79Z" fill="#F7F9FC"/>
+</g>
+<path d="M209 161C235 153 244 171 209 178" fill="none" stroke="#25334B" stroke-width="4.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<g fill="none" stroke="#526176" stroke-width="2.8"><path d="M267 102L199 105"/><path d="M270 134H210"/><path d="M259 211H202"/><path d="M45 224L137 245"/><path d="M295 316L254 273"/></g>
+<g font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" font-weight="600" fill="#25334B">
+<text x="170" y="31">드릴날 회전</text><text x="268" y="83">스핀들</text><text x="277" y="142">척</text><text x="264" y="218">드릴날</text><text x="18" y="210">일감</text><text x="261" y="344">바이스</text>
+</g>
+</svg>

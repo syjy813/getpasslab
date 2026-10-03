@@ -25,6 +25,13 @@ examComment: 수록 기출 4문항은 작은 일감의 고정·기동 전 척 �
 
 작거나 길이가 긴 일감도 **바이스·클램프 등으로 고정**함
 
+<div class="learning-visuals learning-visuals--single">
+<figure>
+<figcaption><strong>드릴의 척·스핀들·일감</strong><span>학습용 재구성 · 방호장치·구동부를 생략한 움직임·부품 개념도</span></figcaption>
+<img src="/images/industrial-safety/drill-motion.svg" alt="스핀들과 척 아래의 드릴날이 회전하며 바이스로 고정한 일감에 구멍을 뚫는 드릴링 머신의 단순화 그림" width="360" height="390" loading="lazy" decoding="async" />
+</figure>
+</div>
+
 손으로 잡으면 드릴날에 걸린 일감이 함께 돌아갈 수 있으므로, 양손으로 단단히 잡는다는 설명도 안전조치가 아님
 
 척을 조인 후에는 **기동 전에 척 렌치를 반드시 제거**함
