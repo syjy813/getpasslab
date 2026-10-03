@@ -17,9 +17,20 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-03 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.39
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-04 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.40
 
 ---
+
+## 산업안전 공작기계 5개 챕터 교정·교열 재배포 완료 — 2026-10-04
+
+- 사용자 `수정 재배포 진행해주고 챕터별 링크 전달해줘` 명시 승인. [PR #122](https://github.com/syjy813/getpasslab/pull/122) expected HEAD 고정 squash merge
+- 배포 커밋 `0152c485946eabf929d1f9190f0dd39ca05455cd`, 검토본/배포본 tree 일치. [Pages 37132671197](https://github.com/syjy813/getpasslab/actions/runs/37132671197) Build/Deploy success
+- 5개 챕터의 긴 도입문·표·용어 정의 위치를 정리하고 반복 안내/요약 축약, 칩 발생 표현 교정. 12배·이송 핸들·소매의 끈 등 기출 판단 조건 보존
+- 기존 frontmatter·URL·24문항 배정·정본/이미지 불변. 이전 검수 snapshot을 보존하며 연속 검수 hash chain만 허용
+- Build·SEO·공개 본문·deferred·대비·컴활 회귀 PASS. [CI preview QA 37132306698](https://github.com/syjy813/getpasslab/actions/runs/37132306698) 390/1440/320px 각 5개 챕터·24팝업·목차/회귀 PASS, 오류 0. 캡처 33장 중 5장 직접 검수
+- Production 제공 Chrome에서 비교→선반→밀링→드릴→플레이너 이동·수정 본문 및 선반 기출 정답/닫기 확인. 이번 Production 3 viewport/24문항 전수 재검사는 미실행이며 CI preview 결과와 구분
+- 기출 문자 오류는 원본 PDF 미대조 상태로 유지. 실물 스마트폰·학습자 효과 검증·학습 이미지 제작 미실행
+- 상세: `docs/audits/2026-10-04-machine-tools-copyedit/RELEASE.md`, `ci-browser-summary.json`. 아래 분리 배포 기록은 이번 교열 전 단계의 이력임
 
 ## 산업안전 공작기계 시범 분리 Production 배포 완료 — 2026-10-03
 

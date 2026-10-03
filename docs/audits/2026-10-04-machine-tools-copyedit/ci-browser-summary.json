@@ -1,0 +1,924 @@
+{
+  "type": "CI preview QA (not production)",
+  "runId": 37132306698,
+  "headSha": "437572dcfbdce387455ee94943dfc72543686f3c",
+  "artifactId": 11277442187,
+  "artifactZipSha256": "a3fbbcf25be9de51801debcee0e860589f05a44dd7ce9076475347ed0f078b48",
+  "fullResultsSha256": "e811606b4346e00b35e4473ecb5ed83468dddd53d910f3382825611f58cbe177",
+  "base": "http://127.0.0.1:4321",
+  "startedAt": "2026-10-03T15:11:16.589Z",
+  "finishedAt": "2026-10-03T15:12:30.740Z",
+  "passed": true,
+  "errors": [],
+  "browser": "Chromium viewport emulation; not a physical phone",
+  "screenshotCount": 33,
+  "directlyReviewedScreenshots": [
+    "390-machine-tools-safety.png",
+    "390-lathe-safety.png",
+    "320-milling-safety.png",
+    "390-drill-safety.png",
+    "1440-planer-safety.png"
+  ],
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "pages": [
+        {
+          "slug": "machine-tools-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20210307_045",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_053",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "lathe-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              },
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20220424_047",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_049",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_050",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_049",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210515_045",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_049",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_047",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210307_042",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200822_055",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_057",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_050",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "milling-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20220424_043",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_050",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_046",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_055",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_059",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180428_052",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "drill-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20210515_058",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_052",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_057",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_043",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "planer-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20220305_044",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        }
+      ],
+      "toc": {
+        "url": "http://127.0.0.1:4321/industrial-safety/written/mechanical/",
+        "layout": {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": [],
+          "tables": []
+        },
+        "clickedChapters": [
+          "machine-tools-safety",
+          "lathe-safety",
+          "milling-safety",
+          "drill-safety",
+          "planer-safety"
+        ]
+      },
+      "regression": [
+        {
+          "url": "http://127.0.0.1:4321/",
+          "status": 200,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4321/industrial-safety/",
+          "status": 200,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4321/industrial-safety/written/mechanical/shaper-structure/",
+          "status": 200,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              },
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              },
+              {
+                "width": 342,
+                "scrollWidth": 340,
+                "clipped": false
+              }
+            ]
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/",
+          "status": 200,
+          "layout": {
+            "width": 390,
+            "scrollWidth": 390,
+            "overflow": [],
+            "tables": []
+          }
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 844,
+      "pages": [
+        {
+          "slug": "machine-tools-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20210307_045",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_053",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "lathe-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              },
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20220424_047",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_049",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_050",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_049",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210515_045",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_049",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_047",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210307_042",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200822_055",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_057",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_050",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "milling-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20220424_043",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_050",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_046",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_055",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_059",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180428_052",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "drill-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20210515_058",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_052",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_057",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_043",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "planer-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20220305_044",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        }
+      ],
+      "toc": {
+        "url": "http://127.0.0.1:4321/industrial-safety/written/mechanical/",
+        "layout": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": [],
+          "tables": []
+        },
+        "clickedChapters": [
+          "machine-tools-safety",
+          "lathe-safety",
+          "milling-safety",
+          "drill-safety",
+          "planer-safety"
+        ]
+      },
+      "regression": [
+        {
+          "url": "http://127.0.0.1:4321/",
+          "status": 200,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4321/industrial-safety/",
+          "status": 200,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4321/industrial-safety/written/mechanical/shaper-structure/",
+          "status": 200,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              },
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              },
+              {
+                "width": 880,
+                "scrollWidth": 878,
+                "clipped": false
+              }
+            ]
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/",
+          "status": 200,
+          "layout": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "overflow": [],
+            "tables": []
+          }
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "pages": [
+        {
+          "slug": "machine-tools-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20210307_045",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_053",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "lathe-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              },
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20220424_047",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_049",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_050",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_049",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210515_045",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_049",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_047",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210307_042",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200822_055",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200926_057",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190427_050",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "milling-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20220424_043",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20210814_050",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20200606_046",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_055",
+              "expectedAnswer": 1,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_059",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180428_052",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "drill-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20210515_058",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20190804_052",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180304_057",
+              "expectedAnswer": 3,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            },
+            {
+              "id": "20180819_043",
+              "expectedAnswer": 2,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        },
+        {
+          "slug": "planer-safety",
+          "status": 200,
+          "passed": true,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          },
+          "dialogs": [
+            {
+              "id": "20220305_044",
+              "expectedAnswer": 4,
+              "bodyChoicesAnswerOpenRevealCloseResetEscape": true
+            }
+          ]
+        }
+      ],
+      "toc": {
+        "url": "http://127.0.0.1:4321/industrial-safety/written/mechanical/",
+        "layout": {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": [],
+          "tables": []
+        },
+        "clickedChapters": [
+          "machine-tools-safety",
+          "lathe-safety",
+          "milling-safety",
+          "drill-safety",
+          "planer-safety"
+        ]
+      },
+      "regression": [
+        {
+          "url": "http://127.0.0.1:4321/",
+          "status": 200,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4321/industrial-safety/",
+          "status": 200,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": []
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4321/industrial-safety/written/mechanical/shaper-structure/",
+          "status": 200,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": [
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              },
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              },
+              {
+                "width": 272,
+                "scrollWidth": 270,
+                "clipped": false
+              }
+            ]
+          }
+        },
+        {
+          "url": "http://127.0.0.1:4321/computer-literacy/written/computer-basics/",
+          "status": 200,
+          "layout": {
+            "width": 320,
+            "scrollWidth": 320,
+            "overflow": [],
+            "tables": []
+          }
+        }
+      ]
+    }
+  ]
+}
