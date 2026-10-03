@@ -1,0 +1,60 @@
+name: Industrial safety machine tools split QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/content/chapters/mechanical/machine-tools-safety.md'
+      - 'src/content/chapters/mechanical/lathe-safety.md'
+      - 'src/content/chapters/mechanical/milling-safety.md'
+      - 'src/content/chapters/mechanical/drill-safety.md'
+      - 'src/content/chapters/mechanical/planer-safety.md'
+      - 'scripts/*industrial-safety-machine-tools-split*'
+      - 'docs/audits/2026-10-03-industrial-safety-machine-tools-split/source-verification.json'
+      - 'docs/audits/2026-10-03-industrial-safety-machine-tools-split/review.json'
+      - '.github/workflows/industrial-safety-machine-tools-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Check the split and site regressions
+        run: |
+          node scripts/check-industrial-safety-machine-tools-split.mjs
+          npm run check:contrast
+          npm run check:seo
+          npm run check:public-content
+          npm run check:deferred-question-content
+          npm run check:computer-literacy
+          npm run check:computer-literacy-c1
+          npm run check:computer-literacy-001-081
+          npm run check:computer-literacy-082-159
+      - name: Prepare temporary browser tooling
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Check 390px mobile, 1440px PC and 320px narrow mobile
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: http://127.0.0.1:4321
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4321/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa-industrial-safety-machine-tools-split.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: industrial-safety-machine-tools-split-qa
+          path: qa-results/industrial-safety-machine-tools-split/
+          retention-days: 14

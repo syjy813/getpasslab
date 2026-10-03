@@ -2,11 +2,12 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 // Keep the release's historical snapshot immutable. Permit only the exact files
-// approved in the later text review, while retaining their original hashes.
+// covered by a later text or structural review, retaining their original hashes.
 const reviewed = new Map();
 for (const file of [
   'docs/audits/2026-10-02-computer-literacy-text-review/review.json',
   'docs/audits/2026-10-02-computer-literacy-082-159-copyedit/review.json',
+  'docs/audits/2026-10-03-industrial-safety-machine-tools-split/review.json',
 ]) {
   let review;
   try {

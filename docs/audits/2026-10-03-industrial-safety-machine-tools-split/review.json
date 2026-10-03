@@ -1,0 +1,36 @@
+{
+  "baseCommit": "f7247f69d49379f7649070df3378fe99d52d32b7",
+  "type": "structural split; question assignments and learning copy reviewed",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/machine-tools-safety.md",
+      "changed": true,
+      "originalSha256": "ef33fe17263c37b54cfcfdf3012a7269416c8b07e128a003abad54bb85caa013",
+      "sha256": "ae13d699649d62082eb362da292d85c6dcbaa36d2678da8a622750939f7736ef"
+    },
+    {
+      "path": "src/content/chapters/mechanical/lathe-safety.md",
+      "changed": false,
+      "originalSha256": null,
+      "sha256": "2823a594f25694d4409bb87f708f4e01e27ad69fd6665a16aa5ab082c37e33b7"
+    },
+    {
+      "path": "src/content/chapters/mechanical/milling-safety.md",
+      "changed": false,
+      "originalSha256": null,
+      "sha256": "70bd6f8b9ab5c2ad3f0dd436491ae9adc74955874e0c7aff19eb633507797b80"
+    },
+    {
+      "path": "src/content/chapters/mechanical/drill-safety.md",
+      "changed": false,
+      "originalSha256": null,
+      "sha256": "5da024da90fa391b3133b12209d8fc74d5b33b2192721877e9334c2a17fec1f6"
+    },
+    {
+      "path": "src/content/chapters/mechanical/planer-safety.md",
+      "changed": false,
+      "originalSha256": null,
+      "sha256": "4b22c76d1d004ecacfded448913be013c8c09cfc22d56351a2c4498639198a20"
+    }
+  ]
+}
