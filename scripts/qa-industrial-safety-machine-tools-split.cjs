@@ -25,11 +25,11 @@ async function checkLayout() {
   const state = await page.evaluate(() => {
     const width = document.documentElement.clientWidth;
     const visible = e => { const r = e.getBoundingClientRect(); return r.width > 0 && r.height > 0; };
-    const overflow = [...document.querySelectorAll('main h1, main h2, main p, main li, main table, .chapter-mobile-nav a, dialog[open] li, dialog[open] .q-body')].filter(visible).filter(e => {
+    const overflow = [...document.querySelectorAll('h1, h2, p, li, table, .chapter-mobile-nav a, dialog[open] .q-body')].filter(visible).filter(e => {
       const r = e.getBoundingClientRect();
       return r.left < -1 || r.right > width + 1;
     }).map(e => ({ tag: e.tagName, text: e.textContent.slice(0, 80) }));
-    const tables = [...document.querySelectorAll('main table')].map(e => ({ width: e.clientWidth, scrollWidth: e.scrollWidth, clipped: e.scrollWidth > e.clientWidth + 3 && getComputedStyle(e).overflowX === 'hidden' }));
+    const tables = [...document.querySelectorAll('table')].map(e => ({ width: e.clientWidth, scrollWidth: e.scrollWidth, clipped: e.scrollWidth > e.clientWidth + 3 && getComputedStyle(e).overflowX === 'hidden' }));
     return { width, scrollWidth: document.documentElement.scrollWidth, overflow, tables };
   });
   assert(state.scrollWidth <= state.width + 1, `${current}: horizontal page overflow`);
@@ -41,7 +41,7 @@ async function goto(url) {
   const response = await page.goto(base + url, { waitUntil: 'networkidle', timeout: 45000 });
   assert.equal(response.status(), 200, `${url}: HTTP status`);
   await page.evaluate(() => document.fonts.ready);
-  assert.equal(await page.locator('main h1').count(), 1);
+  assert.equal(await page.locator('h1').count(), 1);
   return response.status();
 }
 
@@ -142,7 +142,7 @@ async function goto(url) {
     viewport.toc = toc;
     await capture(`${width}-mechanical-toc.png`, true);
     for (const slug of Object.keys(evidence.allocations)) {
-      await page.locator(`main a.card[href="${scope}${slug}/"]`).click();
+      await page.locator(`.chapter-group a.card[href="${scope}${slug}/"]`).click();
       await page.waitForURL(base + scope + slug + '/');
       toc.clickedChapters.push(slug);
       await goto(scope);
