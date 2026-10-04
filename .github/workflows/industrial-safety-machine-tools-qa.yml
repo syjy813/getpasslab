@@ -8,6 +8,8 @@ on:
       - 'src/content/chapters/mechanical/milling-safety.md'
       - 'src/content/chapters/mechanical/drill-safety.md'
       - 'src/content/chapters/mechanical/planer-safety.md'
+      - 'public/images/industrial-safety/*-motion.svg'
+      - 'docs/audits/2026-10-04-machine-tools-visuals/brief.json'
       - 'scripts/*industrial-safety-machine-tools-split*'
       - 'docs/audits/2026-10-03-industrial-safety-machine-tools-split/source-verification.json'
       - 'docs/audits/2026-10-03-industrial-safety-machine-tools-split/review.json'
@@ -52,6 +54,7 @@ jobs:
             sleep 1
           done
           node scripts/qa-industrial-safety-machine-tools-split.cjs
+          node scripts/qa-industrial-safety-machine-tools-split-visuals.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

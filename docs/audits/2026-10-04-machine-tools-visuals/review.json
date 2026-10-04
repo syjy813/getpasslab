@@ -1,0 +1,34 @@
+{
+  "baseCommit": "17d9d8d59b5ccccac4b0bedebca192bbbbd15bf3",
+  "type": "four movement diagrams; frontmatter and all 24 question payloads unchanged",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/lathe-safety.md",
+      "changed": true,
+      "originalSha256": "73df10dab71329fb512a7d5451c6ac57d5c2ffe07742515b59b1979d2957e115",
+      "sha256": "b8eec026e33bb7ca8767e7cdc828e1dbdbb4add64b390b9fea7180183a5cd706",
+      "frontmatterSha256": "bc43aae8f497347b20ca9b7a76d8bd102b2705cd3e675e7b264239feaf50911c"
+    },
+    {
+      "path": "src/content/chapters/mechanical/milling-safety.md",
+      "changed": true,
+      "originalSha256": "f10dbe641d058f4b5ec522fc866d067f108d9705ed0c9af05cf2f96623e92cad",
+      "sha256": "7f7dca2b5a52d3044f7230af79b802e5170e2f3b4a5f6f1a0277710778c1ab2e",
+      "frontmatterSha256": "54f3e24cb33820a62cf599f07d30daf2a6644b41bd02873b904e552151e306f5"
+    },
+    {
+      "path": "src/content/chapters/mechanical/drill-safety.md",
+      "changed": true,
+      "originalSha256": "e6a03d38da189af313cad652e8002111f4df48f1d72b7bc30b14b9e80a9f79e1",
+      "sha256": "3f341d420046f5996104c591277d508247a38f3100eb0f6d2b9c2d3ffb972ee5",
+      "frontmatterSha256": "ded9b4575a4b2ce444571e82b2c5c6a23de0ebf4c56944c21374efe223f3f256"
+    },
+    {
+      "path": "src/content/chapters/mechanical/planer-safety.md",
+      "changed": true,
+      "originalSha256": "ae40a692f2f64614cd526de8551a1097dc569c0bfa9fc04ebe7cf4e8c923d3e4",
+      "sha256": "a171a0dc85e13238f831144080b0fc107ad661c1eb98ddf447a1cc5c0d56bbeb",
+      "frontmatterSha256": "bcc5cad7f96209f02a29795ca1b421e7db54457113ce29de3afed3b7bfb0055f"
+    }
+  ]
+}

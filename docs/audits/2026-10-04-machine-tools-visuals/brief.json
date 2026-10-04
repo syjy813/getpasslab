@@ -1,0 +1,96 @@
+{
+  "stage": "planning before SVG creation; separate draft after approved linebreak release",
+  "standard": "docs/standards/learning-image-design-system-v1.md v1.2 §§1–9",
+  "type": "L1 educational reconstruction; generic geometry, not a manufacturer model or operation instruction",
+  "reuseReview": "No existing machine identity illustrations found in public/images. All 24 canonical question texts/choices/answers reviewed; these questions provide no original machine drawing for reuse. Public agency/education pages consulted for relationships only; their images will not be copied.",
+  "sources": [
+    "https://www.ccohs.ca/oshanswers/safety_haz/metalworking/millingmachines.html",
+    "https://www.ccohs.ca/oshanswers/safety_haz/metalworking/lathes.html",
+    "https://www.ccohs.ca/oshanswers/safety_haz/metalworking/drillpresses.html",
+    "https://www.ccohs.ca/oshanswers/safety_haz/metalworking/planers.html",
+    "https://archive.nptel.ac.in/content/storage2/courses/112101005/modules/lec3-5/1.2.html",
+    "https://archive.nptel.ac.in/content/storage2/courses/112101005/modules/lec3-5/1.6.html"
+  ],
+  "common": {
+    "color": "Neutral structure #526176; text/motion #25334B, direct labels; no fluid or correct/error colors",
+    "mobile": "360 viewBox; core labels 22 units; one file PC/mobile; existing learning-visuals--single limits display to 390px. Expected image width 272px at 320 viewport and 342px at 390 viewport; verify rendered measurements",
+    "omitted": "Guards, controls, drives, feed mechanisms and exact model dimensions; omit from simplified movement/part identification diagrams. Do not depict hands, gloves or operational safety setup",
+    "captionNote": "학습용 재구성; caption explains motion, SVG labels only identify parts and motion. No repeated title inside SVG",
+    "timeDependent": "No legal thresholds or current machinery standards introduced"
+  },
+  "figures": [
+    {
+      "slug": "lathe-safety",
+      "question_ids": [
+        "20220424_047",
+        "20210814_047",
+        "20210307_042"
+      ],
+      "question": "일감과 바이트 중 무엇이 회전하며 어디가 접촉하는가?",
+      "caption": "선반의 일감·척·바이트",
+      "alt": "척에 물린 가로 일감이 회전하고 바이트 끝이 일감 표면에 닿는 선반의 단순화 그림",
+      "required": [
+        "척",
+        "일감",
+        "바이트",
+        "일감 회전 화살표"
+      ],
+      "verified": "Workpiece primary rotation, tool cuts at contact point. No implied tool rotation. Tailstock/support detail omitted; not a long slender work safety setup"
+    },
+    {
+      "slug": "milling-safety",
+      "question_ids": [
+        "20180304_059",
+        "20180428_052",
+        "20220424_043"
+      ],
+      "question": "커터·컬럼·바이스가 각각 어디에 있는가?",
+      "caption": "밀링의 커터·컬럼·바이스",
+      "alt": "기둥인 컬럼 옆의 수평 축 커터가 회전하며 바이스에 고정된 일감 위를 깎는 밀링의 단순화 그림",
+      "required": [
+        "컬럼",
+        "커터",
+        "일감",
+        "바이스",
+        "커터 회전 화살표"
+      ],
+      "verified": "Horizontal milling example; cutter rotates, workpiece held in vise mounted on table. Rotation sign is illustrative, not universal up/down-milling direction"
+    },
+    {
+      "slug": "drill-safety",
+      "question_ids": [
+        "20210515_058",
+        "20190804_052"
+      ],
+      "question": "회전하는 척·드릴날과 고정해야 하는 일감은 어디인가?",
+      "caption": "드릴의 척·스핀들·일감",
+      "alt": "스핀들과 척 아래의 드릴날이 회전하며 바이스로 고정한 일감에 구멍을 뚫는 드릴링 머신의 단순화 그림",
+      "required": [
+        "스핀들",
+        "척",
+        "드릴날",
+        "일감",
+        "바이스",
+        "드릴날 회전 화살표"
+      ],
+      "verified": "Drill/chuck rotation; work secured against spinning. No chuck wrench installed. Portable drill posture/reamer detail outside diagram scope"
+    },
+    {
+      "slug": "planer-safety",
+      "question_ids": [
+        "20220305_044"
+      ],
+      "question": "형삭기와 달리 무엇이 왕복하며 베드는 어디에 있는가?",
+      "caption": "플레이너의 테이블·베드·바이트",
+      "alt": "바이트 아래의 일감과 테이블이 베드 위에서 왕복하는 플레이너의 단순화 그림",
+      "required": [
+        "바이트",
+        "일감",
+        "테이블",
+        "베드",
+        "왕복 화살표 2개"
+      ],
+      "verified": "Work table reciprocates; tool stationary during cutting stroke. Feed motion omitted. Pit shape/location not inferred and not drawn"
+    }
+  ]
+}
