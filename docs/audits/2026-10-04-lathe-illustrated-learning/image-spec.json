@@ -1,0 +1,10 @@
+{
+  "lathe-safety": {
+    "src": "/images/industrial-safety/lathe-motion-illustrated-v1.webp",
+    "alt": "전체 선반과 가공부 확대 그림. ① 척이 ② 일감을 잡고 함께 회전하며, ③ 바이트 끝이 일감 표면을 깎는다. 회전 화살표는 움직임의 예시이며 방호장치는 생략했다",
+    "width": 1200,
+    "height": 1440,
+    "minFontSize": 64,
+    "partLabelFontSize": 72
+  }
+}
