@@ -9,6 +9,7 @@ const brief = JSON.parse(fs.readFileSync('docs/audits/2026-10-04-machine-tools-v
 const illustration = {
   ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-lathe-figure-spacing/image-spec.json')),
   ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-milling-illustrated-learning/image-spec.json')),
+  ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-milling-left-alignment/image-spec.json')),
 };
 const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
 (async () => {
@@ -68,17 +69,23 @@ const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
             const image = el.getBoundingClientRect();
             const card = el.closest('figure').getBoundingClientRect();
             const caption = el.closest('figure').querySelector('figcaption').getBoundingClientRect();
-            return { cardWidth: card.width, top: image.top - caption.bottom, left: image.left - card.left, right: card.right - image.right };
+            const container = el.closest('.learning-visuals').getBoundingClientRect();
+            return { cardWidth: card.width, top: image.top - caption.bottom, left: image.left - card.left, right: card.right - image.right, cardLeftOffset: card.left - container.left };
           });
           assert(gaps.cardWidth <= expected.cardMaxWidth + 1, `${f.slug}: card must fit the illustration`);
           assert(gaps.top >= expected.imageTopGap - 1, `${f.slug}: image needs space below its caption`);
           assert(gaps.left >= expected.imageSideGap && gaps.right >= expected.imageSideGap, `${f.slug}: image needs space at both sides`);
+          if (expected.cardAlignment === 'left') assert(Math.abs(gaps.cardLeftOffset) <= 1, `${f.slug}: card must align with the content start`);
           state.spacing = gaps;
         }
         const minLabelPx = expected.minFontSize * state.width / expected.width;
         assert(minLabelPx >= 14, `${f.slug}: labels too small`);
         const screenshot = `${width}-${f.slug}-figure.png`;
         await figure.evaluate(el => el.scrollIntoView({ block: 'center' }));
+        if (expected.cardAlignment === 'left') {
+          // Keep the full caption below the sticky header in the taller milling card capture.
+          await figure.evaluate(el => window.scrollTo(0, window.scrollY + el.getBoundingClientRect().top - 72));
+        }
         await figure.screenshot({ path: path.join(out, screenshot) });
         const imageResponse = await context.request.get(base + state.src);
         assert.equal(imageResponse.status(), 200);

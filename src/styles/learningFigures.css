@@ -20,7 +20,7 @@ article .learning-visuals--single img{max-width:390px;margin-inline:auto}
 article .learning-visuals--lathe figure{width:100%;max-width:424px;box-sizing:border-box;margin-inline:auto}
 article .learning-visuals--lathe img{width:calc(100% - 32px);margin:24px auto 12px}
 /* Match the approved lathe spacing for the milling full/detail illustration. */
-article .learning-visuals--milling figure{width:100%;max-width:424px;box-sizing:border-box;margin-inline:auto}
+article .learning-visuals--milling figure{width:100%;max-width:424px;box-sizing:border-box;margin-inline:0}
 article .learning-visuals--milling img{width:calc(100% - 32px);margin:24px auto 12px}
 article .learning-visuals--heating-expansion figure{display:flex;flex-direction:column}
 article .learning-visuals--heating-expansion figcaption{background:var(--gray-50)}

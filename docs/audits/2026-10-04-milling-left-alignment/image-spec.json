@@ -1,0 +1,16 @@
+{
+  "milling-safety": {
+    "src": "/images/industrial-safety/milling-motion-illustrated-v1.webp",
+    "alt": "전체 수평형 밀링과 가공부 확대 그림. ① 컬럼 옆의 ② 커터가 회전하고, ④ 바이스에 고정된 ③ 일감은 테이블과 함께 이동한다. 화살표는 움직임 예시이며 방호장치는 생략했다",
+    "width": 1200,
+    "height": 2000,
+    "minFontSize": 72,
+    "partLabelFontSize": 72,
+    "bottomPadding": 64,
+    "minDisplayWidth": 234,
+    "cardMaxWidth": 424,
+    "imageTopGap": 24,
+    "imageSideGap": 16,
+    "cardAlignment": "left"
+  }
+}
