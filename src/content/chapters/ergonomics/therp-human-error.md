@@ -3,13 +3,20 @@ title: THERP·휴먼에러 정량화
 slug: therp-human-error
 subject_id: 2
 group: FTA·시스템 분석
-tags: [개념]
-summary: "THERP의 작업 분해 절차와 인간실수확률(HEP), 단계 의존성 및 다른 시스템 분석 기법과의 차이를 정리함"
-questions: [20200822_031, 20180428_026]
+tags:
+- 개념
+summary: THERP의 작업 분해 절차와 인간실수확률(HEP), 단계 의존성 및 다른 시스템 분석 기법과의 차이를 정리함
+questions:
+- 20200822_031
+- 20180428_026
 order: 8
 priority: 1차
 status: 완료
+related:
+- system-analysis-techniques
+- eta-event-tree
 ---
+
 ## 핵심 개념
 
 THERP(Technique for Human Error Rate Prediction)는 작업을 수행하는 사람의 실수 가능성을 정량적으로 추정하는 기법임 · 작업을 세부 단계로 나누고 각 단계의 성공·실패 확률과 작업 조건, 의존관계를 사용해 인간실수확률(HEP)을 계산함

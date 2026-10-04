@@ -1,0 +1,1557 @@
+[
+  {
+    "id": "20190804_030",
+    "chapter": "system-analysis-techniques",
+    "question": "원자력 산업과 같이 상당한 안전이 확보되어 있는 장소에서 추가적인 고도의 안전 달성을 목적으로 하고 있으며, 관리, 설계, 생산, 보전 등 광범위한 안전을 도모하기 위하여 개발 된 분석기법은?",
+    "answer": 4,
+    "correctChoice": "MORT",
+    "learningSections": [
+      "분석 기법을 고르는 기준",
+      "MORT의 판별 단서"
+    ]
+  },
+  {
+    "id": "20220305_035",
+    "chapter": "hazop-guidewords",
+    "question": "HAZOP 분석기법의 장점이 아닌 것은?",
+    "answer": 3,
+    "correctChoice": "짧은 시간에 저렴한 비용으로 분석이 가능하다.",
+    "learningSections": [
+      "설계 의도에서 벗어난 이탈 찾기",
+      "가이드워드의 의미",
+      "장점과 비용 판단"
+    ]
+  },
+  {
+    "id": "20220424_027",
+    "chapter": "hazop-guidewords",
+    "question": "HAZOP 기법에서 사용하는 가이드워드와 그 의미가 잘못 연결된 것은?",
+    "answer": 3,
+    "correctChoice": "Other than : 기타 환경적인 요인",
+    "learningSections": [
+      "설계 의도에서 벗어난 이탈 찾기",
+      "가이드워드의 의미",
+      "장점과 비용 판단"
+    ]
+  },
+  {
+    "id": "20200822_034",
+    "chapter": "hazop-guidewords",
+    "question": "HAZOP 기법에서 사용하는 가이드 워드와 의미가 잘못 연결된 것은?",
+    "answer": 4,
+    "correctChoice": "Other than – 기타 환경적인 요인",
+    "learningSections": [
+      "설계 의도에서 벗어난 이탈 찾기",
+      "가이드워드의 의미",
+      "장점과 비용 판단"
+    ]
+  },
+  {
+    "id": "20180304_037",
+    "chapter": "hazop-guidewords",
+    "question": "HAZOP 기법에서 사용하는 가이드워드와 그 의미가 잘못 연결된 것은?",
+    "answer": 1,
+    "correctChoice": "Other than : 기타 환경적인 요인",
+    "learningSections": [
+      "설계 의도에서 벗어난 이탈 찾기",
+      "가이드워드의 의미",
+      "장점과 비용 판단"
+    ]
+  },
+  {
+    "id": "20200926_038",
+    "chapter": "hazop-guidewords",
+    "question": "시스템 안전분석 방법 중 HAZOP에서 \"완전대체\"를 의미하는 것은?",
+    "answer": 4,
+    "correctChoice": "OTHER THAN",
+    "learningSections": [
+      "설계 의도에서 벗어난 이탈 찾기",
+      "가이드워드의 의미",
+      "장점과 비용 판단"
+    ]
+  },
+  {
+    "id": "20220305_029",
+    "chapter": "pha-preliminary-analysis",
+    "question": "예비위험분석(PHA)에서 식별된 사고의 범주가 아닌 것은?",
+    "answer": 4,
+    "correctChoice": "수용가능(acceptable)",
+    "learningSections": [
+      "가장 먼저 위험을 식별하는 분석",
+      "사고의 심각도 4범주"
+    ]
+  },
+  {
+    "id": "20200926_024",
+    "chapter": "pha-preliminary-analysis",
+    "question": "시스템 안전분석 방법 중 예비위험분석(PHA)단계에서 식별하는 4가지 범주에 속하지 않는 것은?",
+    "answer": 4,
+    "correctChoice": "예비조처상태",
+    "learningSections": [
+      "가장 먼저 위험을 식별하는 분석",
+      "사고의 심각도 4범주"
+    ]
+  },
+  {
+    "id": "20200606_033",
+    "chapter": "pha-preliminary-analysis",
+    "question": "모든 시스템 안전분석에서 제일 첫번째 단계의 분석으로, 실행되고 있는 시스템을 포함한 모든 것의 상태를 인식하고 시스템의 개발단계에서 시스템 고유의 위험상태를 식별하여 예상되고 있는 재해의 위험수준을 결정하는 것을 목적으로 하는 위험분석 기법은?",
+    "answer": 3,
+    "correctChoice": "예비위험분석(PHA: Preliminary Hazard Analysis)",
+    "learningSections": [
+      "가장 먼저 위험을 식별하는 분석",
+      "사고의 심각도 4범주"
+    ]
+  },
+  {
+    "id": "20210814_031",
+    "chapter": "eta-event-tree",
+    "question": "'화재 발생'이라는 시작(초기)사상에 대하여, 화재감지기, 화재 경보, 스프링클러 등의 성공 또는 실패 작동여부와 그 확률에 따른 피해 결과를 분석하는데 가장 적합한 위험 분석 기법은?",
+    "answer": 2,
+    "correctChoice": "ETA",
+    "learningSections": [
+      "초기 사건에서 결과로 분기",
+      "화재 문제에 적용"
+    ]
+  },
+  {
+    "id": "20200822_031",
+    "chapter": "therp-human-error",
+    "question": "THERP(Technique for Human Error Rate Prediction)의 특징에 대한 설명으로 옳은 것을 모두 고른 것은?",
+    "answer": 2,
+    "correctChoice": "㉠, ㉢",
+    "learningSections": [
+      "핵심 개념",
+      "판별 기준",
+      "시험 포인트",
+      "자주 틀리는 포인트"
+    ]
+  },
+  {
+    "id": "20180428_026",
+    "chapter": "therp-human-error",
+    "question": "인간실수확률에 대한 추정기법으로 가장 적절하지 않은 것 은?",
+    "answer": 2,
+    "correctChoice": "FMEA(Failure Mode and Effect Analysis) : 고장형태 영향분석",
+    "learningSections": [
+      "핵심 개념",
+      "판별 기준",
+      "시험 포인트",
+      "자주 틀리는 포인트"
+    ]
+  },
+  {
+    "id": "20220424_116",
+    "chapter": "blasting-safety",
+    "question": "터널공사에서 발파작업 시 안전대책으로 옳지 않은 것은?",
+    "answer": 4,
+    "correctChoice": "발파용 점화회선은 타동력선 및 조명회선과 한곳으로 통합하여 관리",
+    "learningSections": [
+      "전기발파 전후 조치",
+      "건물기초의 허용진동치",
+      "암질 변화 구간의 판별"
+    ]
+  },
+  {
+    "id": "20180304_104",
+    "chapter": "blasting-safety",
+    "question": "터널공사에서 발파작업 시 안전대책으로 옳지 않은 것은?",
+    "answer": 4,
+    "correctChoice": "발파용 점화회선은 타동력선 및 조명회선과 한곳으로 통 합하여 관리",
+    "learningSections": [
+      "전기발파 전후 조치",
+      "건물기초의 허용진동치",
+      "암질 변화 구간의 판별"
+    ]
+  },
+  {
+    "id": "20210307_108",
+    "chapter": "blasting-safety",
+    "question": "터널공사의 전기발파작업에 관한 설명으로 옳지 않은 것은?",
+    "answer": 3,
+    "correctChoice": "발파 후 발파기와 발파모선의 연결을 유지한 채 그 단부를 절연시킨 후 재점화가 되지 않도록 한다.",
+    "learningSections": [
+      "전기발파 전후 조치",
+      "건물기초의 허용진동치",
+      "암질 변화 구간의 판별"
+    ]
+  },
+  {
+    "id": "20210814_120",
+    "chapter": "blasting-safety",
+    "question": "발파작업 시 암질변화 구간 및 이상암질의 출현 시 반드시 암질판별을 실시하여야 하는데, 이와 관련된 암질판별기준과 가장 거리가 먼 것은?",
+    "answer": 3,
+    "correctChoice": "전단강도(kg/cm²)",
+    "learningSections": [
+      "전기발파 전후 조치",
+      "건물기초의 허용진동치",
+      "암질 변화 구간의 판별"
+    ]
+  },
+  {
+    "id": "20210307_110",
+    "chapter": "blasting-safety",
+    "question": "발파구간 인접구조물에 대한 피해 및 손상을 예방하기 위한 건물기초에서의 허용진동치(cm/sec) 기준으로 옳지 않은 것은? (단, 기존 구조물에 금이 가 있거나 노후구조물 대상일 경우 등은 고려하지 않는다.)",
+    "answer": 4,
+    "correctChoice": "철골콘크리트 빌딩 : 0.8 ~ 1.0cm/sec",
+    "learningSections": [
+      "전기발파 전후 조치",
+      "건물기초의 허용진동치",
+      "암질 변화 구간의 판별"
+    ]
+  },
+  {
+    "id": "20200822_111",
+    "chapter": "tunnel-support-safety",
+    "question": "터널등의 건설작업을 하는 경우에 낙반 등에 의하여 근로자가 위험해질 우려가 있는 경우에 필요한 직접적인 조치사항과 거리가 먼 것은?",
+    "answer": 3,
+    "correctChoice": "울 설치",
+    "learningSections": [
+      "낙반을 직접 막는 조치",
+      "조립도와 조립 기준",
+      "수시 점검 4항목"
+    ]
+  },
+  {
+    "id": "20180304_109",
+    "chapter": "tunnel-support-safety",
+    "question": "터널 등의 건설작업을 하는 경우에 낙반 등에 의하여 근로 자가 위험해질 우려가 있는 경우에 필요한 조치와 가장 거 리가 먼 것은?",
+    "answer": 3,
+    "correctChoice": "환기, 조명시설을 설치한다.",
+    "learningSections": [
+      "낙반을 직접 막는 조치",
+      "조립도와 조립 기준",
+      "수시 점검 4항목"
+    ]
+  },
+  {
+    "id": "20210307_103",
+    "chapter": "tunnel-support-safety",
+    "question": "터널 지보공을 조립하거나 변경하는 경우에 조치하여야 하는 사항으로 옳지 않은 것은?",
+    "answer": 1,
+    "correctChoice": "목재의 터널 지보공은 그 터널 지보공의 각 부재에 작용하는 긴압 정도를 체크하여 그 정도가 최대한 차이나도록 할 것",
+    "learningSections": [
+      "낙반을 직접 막는 조치",
+      "조립도와 조립 기준",
+      "수시 점검 4항목"
+    ]
+  },
+  {
+    "id": "20180428_110",
+    "chapter": "tunnel-support-safety",
+    "question": "터널 지보공을 조립하거나 변경하는 경우에 조치하여야 하 는 사항으로 옳지 않은 것은?",
+    "answer": 1,
+    "correctChoice": "목재의 터널 지보공은 그 터널 지보공의 각 부재에 작용 하는 긴압정도를 체크하여 그 정도가 최대한 차이나도록 한다.",
+    "learningSections": [
+      "낙반을 직접 막는 조치",
+      "조립도와 조립 기준",
+      "수시 점검 4항목"
+    ]
+  },
+  {
+    "id": "20210515_115",
+    "chapter": "tunnel-support-safety",
+    "question": "터널 지보공을 조립하는 경우에는 미리 그 구조를 검토한 후 조립도를 작성하고, 그 조립도에 따라 조립하도록 하여 야 하는데 이 조립도에 명시하여야할 사항과 가장 거리가 먼 것은?",
+    "answer": 4,
+    "correctChoice": "재료의 구입처",
+    "learningSections": [
+      "낙반을 직접 막는 조치",
+      "조립도와 조립 기준",
+      "수시 점검 4항목"
+    ]
+  },
+  {
+    "id": "20180304_118",
+    "chapter": "tunnel-support-safety",
+    "question": "터널붕괴를 방지하기 위한 지보공에 대한 점검사항과 가장 거리가 먼 것은?",
+    "answer": 4,
+    "correctChoice": "경보장치의 작동상태",
+    "learningSections": [
+      "낙반을 직접 막는 조치",
+      "조립도와 조립 기준",
+      "수시 점검 4항목"
+    ]
+  },
+  {
+    "id": "20190427_120",
+    "chapter": "tunnel-support-safety",
+    "question": "터널 지보공을 설치한 경우에 수시로 점검하여 이상을 발견 시 즉시 보강하거나 보수해야 할 사항이 아닌 것은?",
+    "answer": 4,
+    "correctChoice": "계측기 설치상태",
+    "learningSections": [
+      "낙반을 직접 막는 조치",
+      "조립도와 조립 기준",
+      "수시 점검 4항목"
+    ]
+  },
+  {
+    "id": "20200822_106",
+    "chapter": "tunnel-survey-monitoring",
+    "question": "터널작업 시 자동경보장치에 대하여 당일의 작업시작 전 점검하여야 할 사항으로 옳지 않은 것은?",
+    "answer": 2,
+    "correctChoice": "조명시설의 이상 유무",
+    "learningSections": [
+      "본 터널 전에 확인할 조건",
+      "터널 굴착 작업계획",
+      "자동경보장치의 작업 전 점검",
+      "NATM 록볼트 관련 계측"
+    ]
+  },
+  {
+    "id": "20190427_111",
+    "chapter": "tunnel-survey-monitoring",
+    "question": "터널굴착작업을 하는 때 미리 작성하여야 하는 작업계획서에 포함되어야 할 사항이 아닌 것은?",
+    "answer": 2,
+    "correctChoice": "암석의 분할방법",
+    "learningSections": [
+      "본 터널 전에 확인할 조건",
+      "터널 굴착 작업계획",
+      "자동경보장치의 작업 전 점검",
+      "NATM 록볼트 관련 계측"
+    ]
+  },
+  {
+    "id": "20200822_120",
+    "chapter": "tunnel-survey-monitoring",
+    "question": "본 터널(main tunnel)을 시공하기 전에 터널에서 약간 떨어진 곳에 지질조사, 환기, 배수, 운반 등의 상태를 알아보기 위하여 설치하는 터널은?",
+    "answer": 4,
+    "correctChoice": "파일럿(pilot) 터널",
+    "learningSections": [
+      "본 터널 전에 확인할 조건",
+      "터널 굴착 작업계획",
+      "자동경보장치의 작업 전 점검",
+      "NATM 록볼트 관련 계측"
+    ]
+  },
+  {
+    "id": "20200926_110",
+    "chapter": "tunnel-survey-monitoring",
+    "question": "NATM공법 터널공사의 경우 록 볼트 작업과 관련된 계측 결과에 해당되지 않은 것은?",
+    "answer": 4,
+    "correctChoice": "진동 측정 결과",
+    "learningSections": [
+      "본 터널 전에 확인할 조건",
+      "터널 굴착 작업계획",
+      "자동경보장치의 작업 전 점검",
+      "NATM 록볼트 관련 계측"
+    ]
+  },
+  {
+    "id": "20180428_011",
+    "chapter": "maslow-needs",
+    "question": "매슬로우(Maslow)의 욕구단계 이론 중 제2단계 욕구에 해 당하는 것은?",
+    "answer": 2,
+    "correctChoice": "안전에 대한 욕구",
+    "learningSections": [
+      "낮은 욕구에서 높은 욕구로"
+    ]
+  },
+  {
+    "id": "20190427_006",
+    "chapter": "maslow-needs",
+    "question": "매슬로우의 욕구단계이론 중 자기의 잠재력을 최대한 살리고 자기가 하고 싶었던 일을 실현하려는 인간의 욕구에 해당하는 것은?",
+    "answer": 3,
+    "correctChoice": "자아실현의 욕구",
+    "learningSections": [
+      "낮은 욕구에서 높은 욕구로"
+    ]
+  },
+  {
+    "id": "20200822_008",
+    "chapter": "maslow-needs",
+    "question": "매슬로우(Maslow)의 욕구단계 이론 중 제2단계 욕구에 해당하는 것은?",
+    "answer": 2,
+    "correctChoice": "안전에 대한 욕구",
+    "learningSections": [
+      "낮은 욕구에서 높은 욕구로"
+    ]
+  },
+  {
+    "id": "20210814_014",
+    "chapter": "maslow-needs",
+    "question": "매슬로우(Maslow)의 욕구 5단계 이론 중 안전욕구의 단계는?",
+    "answer": 2,
+    "correctChoice": "제2단계",
+    "learningSections": [
+      "낮은 욕구에서 높은 욕구로"
+    ]
+  },
+  {
+    "id": "20220424_001",
+    "chapter": "maslow-needs",
+    "question": "매슬로우(Maslow)의 인간의 욕구단계 중 5번째 단계에 속하는 것은?",
+    "answer": 4,
+    "correctChoice": "자아실현의 욕구",
+    "learningSections": [
+      "낮은 욕구에서 높은 욕구로"
+    ]
+  },
+  {
+    "id": "20200822_015",
+    "chapter": "herzberg-two-factor",
+    "question": "허즈버그(Herzberg)의 위생-동기 이론에서 동기요인에 해당하는 것은?",
+    "answer": 3,
+    "correctChoice": "쇼임감",
+    "learningSections": [
+      "두 요인의 역할",
+      "일을 통한 동기부여"
+    ]
+  },
+  {
+    "id": "20190427_016",
+    "chapter": "herzberg-two-factor",
+    "question": "허츠버그(Herzberg)의 일을 통한 동기부여 원칙으로 틀린 것은?",
+    "answer": 2,
+    "correctChoice": "교육을 통한 간접적 정보제공",
+    "learningSections": [
+      "두 요인의 역할",
+      "일을 통한 동기부여"
+    ]
+  },
+  {
+    "id": "20200606_014",
+    "chapter": "mcgregor-xy",
+    "question": "다음 중 맥그리거(McGregor)의 Y이론과 가장 거리가 먼 것은?",
+    "answer": 4,
+    "correctChoice": "권위주의적 리더십",
+    "learningSections": [
+      "사람을 바라보는 두 가정"
+    ]
+  },
+  {
+    "id": "20180304_009",
+    "chapter": "davis-motivation",
+    "question": "데이비스(Davis)의 동기부여이론 중 동기유발의 식으로 옳은 것은?",
+    "answer": 4,
+    "correctChoice": "상황 × 태도",
+    "learningSections": [
+      "능력과 동기유발의 구성"
+    ]
+  },
+  {
+    "id": "20210515_006",
+    "chapter": "davis-motivation",
+    "question": "데이비스(K.Davis)의 동기부여 이론에 관한 등식에서 그 관계 가 틀린 것은?",
+    "answer": 2,
+    "correctChoice": "상황 x 능력 = 동기유발",
+    "learningSections": [
+      "능력과 동기유발의 구성"
+    ]
+  },
+  {
+    "id": "20220424_095",
+    "chapter": "reactor-classification",
+    "question": "다음 중 반응기의 구조 방식에 의한 분류에 해당하는 것은?",
+    "answer": 1,
+    "correctChoice": "탑형 반응기",
+    "learningSections": [
+      "조작방식과 구조방식",
+      "설계 요인 고르기"
+    ]
+  },
+  {
+    "id": "20210814_099",
+    "chapter": "reactor-classification",
+    "question": "반응기를 조작방식에 따라 분류할 때 해당되지 않는 것은?",
+    "answer": 4,
+    "correctChoice": "관형식 반응기",
+    "learningSections": [
+      "조작방식과 구조방식",
+      "설계 요인 고르기"
+    ]
+  },
+  {
+    "id": "20190303_083",
+    "chapter": "reactor-classification",
+    "question": "다음 중 반응기를 조작방식에 따라 분류할 때 이에 해당하지 않는 것은?",
+    "answer": 4,
+    "correctChoice": "관형식 반응기",
+    "learningSections": [
+      "조작방식과 구조방식",
+      "설계 요인 고르기"
+    ]
+  },
+  {
+    "id": "20220305_090",
+    "chapter": "reactor-classification",
+    "question": "반응기를 설계할 때 고려하여야 할 요인으로 가장 거리가 먼 것은?",
+    "answer": 4,
+    "correctChoice": "중간생성물의 유무",
+    "learningSections": [
+      "조작방식과 구조방식",
+      "설계 요인 고르기"
+    ]
+  },
+  {
+    "id": "20220424_094",
+    "chapter": "heat-exchanger-inspection",
+    "question": "다음 중 열교환기의 보수에 있어 일상점검항목과 정기적 개방점검항목으로 구분할 때 일상점검항목으로 거리가 먼 것은?",
+    "answer": 2,
+    "correctChoice": "부착물에 의한 오염의 상황",
+    "learningSections": [
+      "외부 점검과 내부 점검",
+      "열교환 능률 향상"
+    ]
+  },
+  {
+    "id": "20190303_086",
+    "chapter": "heat-exchanger-inspection",
+    "question": "다음 중 열교환기의 보수에 있어 일상점검항목과 정기적 개방점검항목으로 구분할 때 일상점검항목으로 가장 거리가 먼 것은?",
+    "answer": 2,
+    "correctChoice": "부착물에 의한 오염의 상황",
+    "learningSections": [
+      "외부 점검과 내부 점검",
+      "열교환 능률 향상"
+    ]
+  },
+  {
+    "id": "20200926_092",
+    "chapter": "heat-exchanger-inspection",
+    "question": "열교환기의 정기적 점검을 일상점검과 개방점검으로 구분할 때 개방점검 항목에 해당하는 것은?",
+    "answer": 4,
+    "correctChoice": "생성물, 부착물에 의한 오염 상황",
+    "learningSections": [
+      "외부 점검과 내부 점검",
+      "열교환 능률 향상"
+    ]
+  },
+  {
+    "id": "20220305_086",
+    "chapter": "heat-exchanger-inspection",
+    "question": "열교환기의 열교환 능률을 향상시키기 위한 방법으로 거리가 먼 것은?",
+    "answer": 2,
+    "correctChoice": "유체의 흐르는 방향을 병류로 한다.",
+    "learningSections": [
+      "외부 점검과 내부 점검",
+      "열교환 능률 향상"
+    ]
+  },
+  {
+    "id": "20180819_093",
+    "chapter": "heat-exchanger-inspection",
+    "question": "열교환기의 열 교환 능률을 향상시키기 위한 방법이 아닌 것은?",
+    "answer": 2,
+    "correctChoice": "유체의 흐르는 방향을 병류로 한다.",
+    "learningSections": [
+      "외부 점검과 내부 점검",
+      "열교환 능률 향상"
+    ]
+  },
+  {
+    "id": "20210307_060",
+    "chapter": "test-types",
+    "question": "비파괴 검사 방법으로 틀린 것은?",
+    "answer": 1,
+    "correctChoice": "인장 시험",
+    "learningSections": [
+      "성질을 측정하는 시험과 결함을 찾는 검사",
+      "비파괴검사가 아닌 것 고르기"
+    ]
+  },
+  {
+    "id": "20190427_044",
+    "chapter": "test-types",
+    "question": "비파괴시험의 종류가 아닌 것은?",
+    "answer": 4,
+    "correctChoice": "샤르피 충격시험",
+    "learningSections": [
+      "성질을 측정하는 시험과 결함을 찾는 검사",
+      "비파괴검사가 아닌 것 고르기"
+    ]
+  },
+  {
+    "id": "20200822_048",
+    "chapter": "test-types",
+    "question": "다음 중 비파괴검사법으로 틀린 것은?",
+    "answer": 1,
+    "correctChoice": "인장검사",
+    "learningSections": [
+      "성질을 측정하는 시험과 결함을 찾는 검사",
+      "비파괴검사가 아닌 것 고르기"
+    ]
+  },
+  {
+    "id": "20200606_056",
+    "chapter": "test-types",
+    "question": "다음 중 설비의 진단방법에 있어 비파괴 시험이나 검사에 해당하지 않는 것은?",
+    "answer": 1,
+    "correctChoice": "피로시험",
+    "learningSections": [
+      "성질을 측정하는 시험과 결함을 찾는 검사",
+      "비파괴검사가 아닌 것 고르기"
+    ]
+  },
+  {
+    "id": "20190303_055",
+    "chapter": "test-types",
+    "question": "재료의 강도시험 중 항복점을 알 수 있는 시험의 종류는?",
+    "answer": 3,
+    "correctChoice": "인장시험",
+    "learningSections": [
+      "성질을 측정하는 시험과 결함을 찾는 검사",
+      "비파괴검사가 아닌 것 고르기"
+    ]
+  },
+  {
+    "id": "20210307_053",
+    "chapter": "ndt-types",
+    "question": "산업안전보건법령상 고속회전체의 회전시험을 하는 경우 미리 회전축의 재질 및 형상 등에 상응하는 종류의 비파괴검사를 해서 결함 유무를 확인해야 한다. 이때 검사 대상이 되는 고속회전체의 기준은?",
+    "answer": 4,
+    "correctChoice": "회전축의 중량이 1톤을 초과하고, 원주속도가 120m/s이상인 것",
+    "learningSections": [
+      "검사 원리로 구분",
+      "검사별 세부 구별",
+      "고속회전체의 사전 검사 조건"
+    ]
+  },
+  {
+    "id": "20180819_051",
+    "chapter": "ndt-types",
+    "question": "다음 중 기계 설비에서 재료 내부의 균열결함을 확인할 수 있는 가장 적절한 검사 방법은?",
+    "answer": 2,
+    "correctChoice": "초음파탐상검사",
+    "learningSections": [
+      "검사 원리로 구분",
+      "검사별 세부 구별",
+      "고속회전체의 사전 검사 조건"
+    ]
+  },
+  {
+    "id": "20220305_049",
+    "chapter": "ndt-types",
+    "question": "금속 등의 도체에 교류를 통한 코일을 접근시켰을 때, 결함이 존재하면 코일에 유기되는 전압이나 전류가 변하는 것을 이용한 검사방법은?",
+    "answer": 3,
+    "correctChoice": "와류탐상검사",
+    "learningSections": [
+      "검사 원리로 구분",
+      "검사별 세부 구별",
+      "고속회전체의 사전 검사 조건"
+    ]
+  },
+  {
+    "id": "20210814_053",
+    "chapter": "ndt-types",
+    "question": "강자성체를 자화하여 표면의 누설자속을 검출하는 비파괴 검사 방법은?",
+    "answer": 4,
+    "correctChoice": "자분 탐상 시험",
+    "learningSections": [
+      "검사 원리로 구분",
+      "검사별 세부 구별",
+      "고속회전체의 사전 검사 조건"
+    ]
+  },
+  {
+    "id": "20190804_046",
+    "chapter": "ndt-types",
+    "question": "재료가 변형 시에 외부응력이나 내부의 변형과정에서 방출되는 낮은 응력파(stress wave)를 감지하여 측정하는 비파괴시험은?",
+    "answer": 3,
+    "correctChoice": "음향탐상 시험",
+    "learningSections": [
+      "검사 원리로 구분",
+      "검사별 세부 구별",
+      "고속회전체의 사전 검사 조건"
+    ]
+  },
+  {
+    "id": "20180304_052",
+    "chapter": "ndt-types",
+    "question": "초음파 탐상법의 종류에 해당하지 않는 것은?",
+    "answer": 4,
+    "correctChoice": "침투식",
+    "learningSections": [
+      "검사 원리로 구분",
+      "검사별 세부 구별",
+      "고속회전체의 사전 검사 조건"
+    ]
+  },
+  {
+    "id": "20190303_057",
+    "chapter": "ndt-types",
+    "question": "자분탐사검사에서 사용하는 자화방법이 아닌 것은?",
+    "answer": 4,
+    "correctChoice": "임피던스법",
+    "learningSections": [
+      "검사 원리로 구분",
+      "검사별 세부 구별",
+      "고속회전체의 사전 검사 조건"
+    ]
+  },
+  {
+    "id": "20180304_042",
+    "chapter": "ndt-types",
+    "question": "방사선 투과검사에서 투과사진에 영향을 미치는 인자는 크 게 콘트라스트(명암도)와 명료도로 나누어 검토할 수 있다. 다음 중 투과사진의 콘트라스트(명암도)에 영향을 미치는 인 자에 속하지 않는 것은?",
+    "answer": 4,
+    "correctChoice": "초점-필름간 거리",
+    "learningSections": [
+      "검사 원리로 구분",
+      "검사별 세부 구별",
+      "고속회전체의 사전 검사 조건"
+    ]
+  },
+  {
+    "id": "20180428_047",
+    "chapter": "ndt-types",
+    "question": "방사선 투과검사에서 투과사진의 상질을 점검할 때 확인해 야 할 항목으로 거리가 먼 것은?",
+    "answer": 4,
+    "correctChoice": "주파수의 크기",
+    "learningSections": [
+      "검사 원리로 구분",
+      "검사별 세부 구별",
+      "고속회전체의 사전 검사 조건"
+    ]
+  },
+  {
+    "id": "20190804_012",
+    "chapter": "carelessness-misjudgment",
+    "question": "부주의의 발생 원인에 포함되지 않는 것은?",
+    "answer": 4,
+    "correctChoice": "의식의 지배",
+    "learningSections": [
+      "부주의의 발생 원인",
+      "방지대책의 분류"
+    ]
+  },
+  {
+    "id": "20180819_012",
+    "chapter": "carelessness-misjudgment",
+    "question": "부주의에 대한 사고방지대책 중 기능 및 작업측면의 대책이 아닌 것은?",
+    "answer": 3,
+    "correctChoice": "안전의식의 제고",
+    "learningSections": [
+      "부주의의 발생 원인",
+      "방지대책의 분류"
+    ]
+  },
+  {
+    "id": "20180428_013",
+    "chapter": "attention-consciousness",
+    "question": "주의의 수준이 Phase 0 인 상태에서의 의식상태로 옳은 것 은?",
+    "answer": 1,
+    "correctChoice": "무의식 상태",
+    "learningSections": [
+      "주의의 세 가지 특성",
+      "의식 수준 5단계"
+    ]
+  },
+  {
+    "id": "20180819_015",
+    "chapter": "attention-consciousness",
+    "question": "주의의 특성에 해당되지 않는 것은?",
+    "answer": 3,
+    "correctChoice": "가능성",
+    "learningSections": [
+      "주의의 세 가지 특성",
+      "의식 수준 5단계"
+    ]
+  },
+  {
+    "id": "20190303_006",
+    "chapter": "attention-consciousness",
+    "question": "주의의 수준이 Phase 0 인 상태에서의 의식상태는?",
+    "answer": 1,
+    "correctChoice": "무의식상태",
+    "learningSections": [
+      "주의의 세 가지 특성",
+      "의식 수준 5단계"
+    ]
+  },
+  {
+    "id": "20200606_003",
+    "chapter": "attention-consciousness",
+    "question": "작업을 하고 있을 때 긴급 이상상태 또는 돌발 사태가 되면 순간적으로 긴장하게 되어 판단능력의 둔화 또는 정지상태가 되는 것은?",
+    "answer": 2,
+    "correctChoice": "의식의 과잉",
+    "learningSections": [
+      "주의의 세 가지 특성",
+      "의식 수준 5단계"
+    ]
+  },
+  {
+    "id": "20210814_017",
+    "chapter": "attention-consciousness",
+    "question": "인간의 의식 수준을 5단계로 구분할 때 의식이 몽롱한 상태의 단계는?",
+    "answer": 1,
+    "correctChoice": "Phase Ⅰ",
+    "learningSections": [
+      "주의의 세 가지 특성",
+      "의식 수준 5단계"
+    ]
+  },
+  {
+    "id": "20220305_012",
+    "chapter": "attention-consciousness",
+    "question": "주의(Attention)의 특성에 관한 설명 중 틀린 것은?",
+    "answer": 3,
+    "correctChoice": "최고의 주의 집중은 의식의 과잉 상태에서 가능하다.",
+    "learningSections": [
+      "주의의 세 가지 특성",
+      "의식 수준 5단계"
+    ]
+  },
+  {
+    "id": "20190303_076",
+    "chapter": "leakage-breaker-operation",
+    "question": "정격감도전류에서 동작시간이 가장 짧은 누전차단기는?",
+    "answer": 4,
+    "correctChoice": "감전보호용 누전차단기",
+    "learningSections": [
+      "누전 검출에서 전로 차단까지",
+      "동작시간에 따른 구분"
+    ]
+  },
+  {
+    "id": "20200926_065",
+    "chapter": "leakage-breaker-operation",
+    "question": "누전차단기의 구성요소가 아닌 것은?",
+    "answer": 4,
+    "correctChoice": "전력퓨즈",
+    "learningSections": [
+      "누전 검출에서 전로 차단까지",
+      "동작시간에 따른 구분"
+    ]
+  },
+  {
+    "id": "20180428_073",
+    "chapter": "leakage-breaker-operation",
+    "question": "누전차단기의 구성요소가 아닌 것은?",
+    "answer": 4,
+    "correctChoice": "전력퓨즈",
+    "learningSections": [
+      "누전 검출에서 전로 차단까지",
+      "동작시간에 따른 구분"
+    ]
+  },
+  {
+    "id": "20210814_075",
+    "chapter": "leakage-breaker-ratings",
+    "question": "욕조나 샤워시설이 있는 욕실 또는 화장실에 콘센트가 시설되어 있다. 해당 전로에 설치된 누전차단기의 정격감도전류와 동작시간은?",
+    "answer": 2,
+    "correctChoice": "정격감도전류 15mA 이하, 동작시간 0.03초 이하",
+    "learningSections": [
+      "정격 용어",
+      "연결 기출의 감도·시간 기준",
+      "설치 대상의 전압·장소 구분"
+    ]
+  },
+  {
+    "id": "20210307_071",
+    "chapter": "leakage-breaker-ratings",
+    "question": "한국전기설비규정에 따라 욕조나 샤워시설이 있는 욕실 등 인체가 물에 젖어있는 상태에서 전기를 사용하는 장소에 인체감전보호용 누전차단기가 부착된 콘센트를 시설하는 경우 누전차단기의 정격감도전류 및 동작시간은?",
+    "answer": 2,
+    "correctChoice": "15mA 이하, 0.03초 이하",
+    "learningSections": [
+      "정격 용어",
+      "연결 기출의 감도·시간 기준",
+      "설치 대상의 전압·장소 구분"
+    ]
+  },
+  {
+    "id": "20200926_078",
+    "chapter": "leakage-breaker-ratings",
+    "question": "전기기계·기구에 설치되어 있는 감전방지용 누전차단기의 정격감도전류 및 작동시간으로 옳은 것은? (단, 정격전부하전류가 50A 미만이다.)",
+    "answer": 2,
+    "correctChoice": "30mA이하, 0.03초 이내",
+    "learningSections": [
+      "정격 용어",
+      "연결 기출의 감도·시간 기준",
+      "설치 대상의 전압·장소 구분"
+    ]
+  },
+  {
+    "id": "20210515_065",
+    "chapter": "leakage-breaker-ratings",
+    "question": "누전차단기의 시설방법 중 옳지 않은 것은?",
+    "answer": 4,
+    "correctChoice": "인체감전보호형은 0.05초 이내에 동작하는 고감도고속형 이어야 한다.",
+    "learningSections": [
+      "정격 용어",
+      "연결 기출의 감도·시간 기준",
+      "설치 대상의 전압·장소 구분"
+    ]
+  },
+  {
+    "id": "20180304_065",
+    "chapter": "leakage-breaker-ratings",
+    "question": "누전차단기의 시설방법 중 옳지 않은 것은?",
+    "answer": 4,
+    "correctChoice": "인체감전보호형은 0.05초 이내에 동작하는 고감도고속형 이어야 한다.",
+    "learningSections": [
+      "정격 용어",
+      "연결 기출의 감도·시간 기준",
+      "설치 대상의 전압·장소 구분"
+    ]
+  },
+  {
+    "id": "20190303_072",
+    "chapter": "leakage-breaker-ratings",
+    "question": "샤워시설이 있는 욕실에 콘센트를 시설하고자 한다. 이때 설치되는 인체감전보호용 누전차단기의 정격감도전류는 몇 mA 이하인가?",
+    "answer": 2,
+    "correctChoice": "15",
+    "learningSections": [
+      "정격 용어",
+      "연결 기출의 감도·시간 기준",
+      "설치 대상의 전압·장소 구분"
+    ]
+  },
+  {
+    "id": "20190427_068",
+    "chapter": "leakage-breaker-ratings",
+    "question": "인체감전보호용 누전차단기의 정격감도전류(mA)와 동작시간(초)의 최대값은?",
+    "answer": 3,
+    "correctChoice": "30mA, 0.03초",
+    "learningSections": [
+      "정격 용어",
+      "연결 기출의 감도·시간 기준",
+      "설치 대상의 전압·장소 구분"
+    ]
+  },
+  {
+    "id": "20220424_065",
+    "chapter": "leakage-breaker-ratings",
+    "question": "한국전기설비규정에 따라 사람이 쉽게 접촉할 우려가 있는 곳에 금속제 외함을 가지는 저압의 기계기구가 시설되어 있다. 이 기계기구의 사용전압이 몇 V를 초과할 때 전기를 공급하는 전로에 누전차단기를 시설해야 하는가? (단, 누전차단기를 시설하지 않아도 되는 조건은 제외한다.)",
+    "answer": 3,
+    "correctChoice": "50V",
+    "learningSections": [
+      "정격 용어",
+      "연결 기출의 감도·시간 기준",
+      "설치 대상의 전압·장소 구분"
+    ]
+  },
+  {
+    "id": "20190303_073",
+    "chapter": "leakage-breaker-ratings",
+    "question": "인체의 저항을 500Ω이라 할 때 단상 440V의 회로에서 누전으로 인한 감전재해를 방지할 목적으로 설치하는 누전 차단기의 규격은?",
+    "answer": 2,
+    "correctChoice": "30 mA, 0.03초",
+    "learningSections": [
+      "정격 용어",
+      "연결 기출의 감도·시간 기준",
+      "설치 대상의 전압·장소 구분"
+    ]
+  },
+  {
+    "id": "20220424_115",
+    "chapter": "temporary-passage-stairs",
+    "question": "가설통로를 설치하는 경우 준수해야할 기준으로 옳지 않은 것은?",
+    "answer": 2,
+    "correctChoice": "경사가 25° 를 초과하는 경우에는 미끄러지지 아니하는 구조로 할 것",
+    "learningSections": [
+      "가설통로의 경사와 안전난간",
+      "가설통로의 계단참",
+      "미끄럼 방지의 시작값"
+    ]
+  },
+  {
+    "id": "20220305_120",
+    "chapter": "temporary-passage-stairs",
+    "question": "가설통로의 설치기준으로 옳지 않은 것은?",
+    "answer": 3,
+    "correctChoice": "수직갱에 가설된 통로의 길이가 15m 이상일 경우에는 15m 이내마다 계단참을 설치한다.",
+    "learningSections": [
+      "가설통로의 경사와 안전난간",
+      "가설통로의 계단참",
+      "미끄럼 방지의 시작값"
+    ]
+  },
+  {
+    "id": "20210307_105",
+    "chapter": "temporary-passage-stairs",
+    "question": "가설통로를 설치하는 경우 준수하여야 할 기준으로 옳지 않은 것은?",
+    "answer": 4,
+    "correctChoice": "수직갱에 가설된 통로의 길이가 15m 이상인 경우에는 7m 이내마다 계단참을 설치할 것",
+    "learningSections": [
+      "가설통로의 경사와 안전난간",
+      "가설통로의 계단참",
+      "미끄럼 방지의 시작값"
+    ]
+  },
+  {
+    "id": "20200606_114",
+    "chapter": "temporary-passage-stairs",
+    "question": "가설통로의 설치에 관한 기준으로 옳지 않은 것은?",
+    "answer": 4,
+    "correctChoice": "수직갱에 가설된 통로의 길이가 10m 이상인 경우에는 5m 이내마다 계단참을 설치한다.",
+    "learningSections": [
+      "가설통로의 경사와 안전난간",
+      "가설통로의 계단참",
+      "미끄럼 방지의 시작값"
+    ]
+  },
+  {
+    "id": "20180428_109",
+    "chapter": "temporary-passage-stairs",
+    "question": "가설통로의 설치 기준으로 옳지 않은 것은?",
+    "answer": 2,
+    "correctChoice": "경사가 10 를 초과하는 경우에는 미끌러지 지 아니하는 구조로 할 것",
+    "learningSections": [
+      "가설통로의 경사와 안전난간",
+      "가설통로의 계단참",
+      "미끄럼 방지의 시작값"
+    ]
+  },
+  {
+    "id": "20190427_118",
+    "chapter": "temporary-passage-stairs",
+    "question": "다음은 가설통로를 설치하는 경우의 준수사항이다. ( )안에 들어갈 숫자로 옫은 것은?",
+    "answer": 1,
+    "correctChoice": "7",
+    "learningSections": [
+      "가설통로의 경사와 안전난간",
+      "가설통로의 계단참",
+      "미끄럼 방지의 시작값"
+    ]
+  },
+  {
+    "id": "20210515_117",
+    "chapter": "temporary-passage-stairs",
+    "question": "가설통로 설치에 있어 경사가 최소 얼마를 초과하는 경우 에는 미끄러지지 아니하는 구조로 하여야 하는가?",
+    "answer": 1,
+    "correctChoice": "15도",
+    "learningSections": [
+      "가설통로의 경사와 안전난간",
+      "가설통로의 계단참",
+      "미끄럼 방지의 시작값"
+    ]
+  },
+  {
+    "id": "20200606_110",
+    "chapter": "stairs-landings",
+    "question": "작업장에 계단 및 계단참을 설치하는 경우 매제곱미터 당 최소 몇 킬로그램 이상의 하중에 견딧 수 있는 강도를 가진 구조로 설치하여야 하는가?",
+    "answer": 3,
+    "correctChoice": "500kg",
+    "learningSections": [
+      "계단과 계단참에 작용하는 하중"
+    ]
+  },
+  {
+    "id": "20190427_110",
+    "chapter": "stairs-landings",
+    "question": "건설현장의 가설계단 및 계단참을 설치하는 경우 얼마 이상의 하중에 견딜 수 있는 강도를 가진 구조로 설치하여야 하는가?",
+    "answer": 4,
+    "correctChoice": "500kg/m²",
+    "learningSections": [
+      "계단과 계단참에 작용하는 하중"
+    ]
+  },
+  {
+    "id": "20220424_020",
+    "chapter": "leadership-headship",
+    "question": "헤드십(headship)의 특성에 관한 설명으로 틀린 것은?",
+    "answer": 2,
+    "correctChoice": "상사의 권한 증거는 비공식적이다.",
+    "learningSections": [
+      "영향력과 공식 권한"
+    ]
+  },
+  {
+    "id": "20200926_018",
+    "chapter": "leadership-headship",
+    "question": "다음 중 헤드십(headship)에 관한 설명과 가장 거리가 먼 것은?",
+    "answer": 2,
+    "correctChoice": "지휘의 형태는 민주주의적이다.",
+    "learningSections": [
+      "영향력과 공식 권한"
+    ]
+  },
+  {
+    "id": "20210515_002",
+    "chapter": "leadership-headship",
+    "question": "헤드십의 특성이 아닌 것은?",
+    "answer": 4,
+    "correctChoice": "상관과 부하와의 관계는 개인적인 영향이다",
+    "learningSections": [
+      "영향력과 공식 권한"
+    ]
+  },
+  {
+    "id": "20180819_020",
+    "chapter": "managerial-grid",
+    "question": "관리 그리드 이론에서 인간관계 유지에는 낮은 관심을 보이 지만 과업에 대해서는 높은 관심을 가지는 리더십의 유형 은?",
+    "answer": 3,
+    "correctChoice": "9.1형",
+    "learningSections": [
+      "좌표를 읽는 순서"
+    ]
+  },
+  {
+    "id": "20200822_102",
+    "chapter": "demolition-safety-measures",
+    "question": "다음 중 해체작업용 기계 기구로 가장 거리가 먼 것은?",
+    "answer": 4,
+    "correctChoice": "진동롤러",
+    "learningSections": [
+      "해체 장비와 취급 기준",
+      "도심지 폭파해체",
+      "압쇄기로 건물을 해체하는 순서"
+    ]
+  },
+  {
+    "id": "20200606_113",
+    "chapter": "demolition-safety-measures",
+    "question": "해체공사 시 작업용 기계기구의 취급 안전기준에 관한 설명으로 옳지 않은 것은?",
+    "answer": 2,
+    "correctChoice": "팽창제 천공간격은 콘크리트 강도에 의하여 결정되나 70~120cm 정도를 유지하도록 한다.",
+    "learningSections": [
+      "해체 장비와 취급 기준",
+      "도심지 폭파해체",
+      "압쇄기로 건물을 해체하는 순서"
+    ]
+  },
+  {
+    "id": "20200926_109",
+    "chapter": "demolition-safety-measures",
+    "question": "도심지 폭파해체공법에 관한 설명으로 옳지 않은 것은?",
+    "answer": 3,
+    "correctChoice": "주위의 구조물에 끼치는 영향이 적다.",
+    "learningSections": [
+      "해체 장비와 취급 기준",
+      "도심지 폭파해체",
+      "압쇄기로 건물을 해체하는 순서"
+    ]
+  },
+  {
+    "id": "20180428_116",
+    "chapter": "demolition-safety-measures",
+    "question": "압쇄기를 사용하여 건물해체 시 그 순서로 가장 타당한 것 은?",
+    "answer": 3,
+    "correctChoice": "C→A→D→B",
+    "learningSections": [
+      "해체 장비와 취급 기준",
+      "도심지 폭파해체",
+      "압쇄기로 건물을 해체하는 순서"
+    ]
+  },
+  {
+    "id": "20190427_113",
+    "chapter": "formwork-removal",
+    "question": "거푸집 해체작업 시 유의사항으로 옳지 않은 것은?",
+    "answer": 1,
+    "correctChoice": "일반적으로 수평부재의 거푸집은 연직부재의 거푸집보다 빨리 떼어낸다.",
+    "learningSections": [
+      "구조물 해체와 거푸집 제거의 차이",
+      "작업 중 유의사항"
+    ]
+  },
+  {
+    "id": "20220305_102",
+    "chapter": "formwork-removal",
+    "question": "거푸집 해체작업 시 유의사항으로 옳지 않은 것은?",
+    "answer": 1,
+    "correctChoice": "일반적으로 수평부재의 거푸집은 연직부재의 거푸집보다 빨리 떼어낸다.",
+    "learningSections": [
+      "구조물 해체와 거푸집 제거의 차이",
+      "작업 중 유의사항"
+    ]
+  },
+  {
+    "id": "20220424_101",
+    "chapter": "shore-safety-standard",
+    "question": "건설현장에 거푸집동바리 설치 시 준수사항으로 옳지 않은 것은?",
+    "answer": 1,
+    "correctChoice": "파이프서포트 높이가 4.5m를 초과하는 경우에는 높이 2m 이내마다 2개 방향으로 수평 연결재를 설치한다.",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20220424_119",
+    "chapter": "shore-safety-standard",
+    "question": "거푸집 동바리의 침하를 방지하기 위한 직접적인 조치로 옳지 않은 것은?",
+    "answer": 1,
+    "correctChoice": "수평연결재 사용",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20210515_110",
+    "chapter": "shore-safety-standard",
+    "question": "거푸집동바리 등을 조립하는 경우에 준수해야 할 기준으로 옳지 않은 것은?",
+    "answer": 4,
+    "correctChoice": "동바리로 사용하는 파이프서포트는 4개이상 이어서 사용 하지 않도록 할 것",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20210307_104",
+    "chapter": "shore-safety-standard",
+    "question": "거푸집동바리 등을 조립하는 경우에 준수하여야 하는 기준으로 옳지 않은 것은?",
+    "answer": 1,
+    "correctChoice": "동바리로 사용하는 파이프 서포트를 이어서 사용하는 경우에는 3개 이상의 볼트 또는 전용철물을 사용하여 이을 것",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20200822_101",
+    "chapter": "shore-safety-standard",
+    "question": "콘크리트 타설을 위한 거푸집 동바리의 구조검토 시 가장 선행되어야 할 작업은?",
+    "answer": 2,
+    "correctChoice": "가설물에 작용하는 하중 및 외력의 종류, 크기를 산정한다.",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20200822_103",
+    "chapter": "shore-safety-standard",
+    "question": "거푸집동바리 등을 조립하는 경우에 준수하여야할 안전조치기준으로 옳지 않은 것은?",
+    "answer": 3,
+    "correctChoice": "동바리로 사용하는 파이프 서포트를 이어서 사용하는 경우에는 3개 이상의 볼트 또는 전용철물을 사용하여 이을 것",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20200926_111",
+    "chapter": "shore-safety-standard",
+    "question": "거푸집동바리 등을 조립하는 경우에 준수하여야 할 사항으로 옳지 않은 것은?",
+    "answer": 4,
+    "correctChoice": "동바리의 이음은 맞댄이음이나 장부이음을 피할 것",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20190303_101",
+    "chapter": "shore-safety-standard",
+    "question": "산업안전보건법령에 따른 거푸집동바리를 조립하는 경우의 준수사항으로 옳지 않은 것은?",
+    "answer": 3,
+    "correctChoice": "강재와 강재의 접속부 및 교차부는 철선을 사용하여 단단히 연결할 것",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20180819_103",
+    "chapter": "shore-safety-standard",
+    "question": "다음은 산업안전보건법령에 따른 동바리로 사용하는 파이 프 서포트에 관한 사항이다. ( )안에 들어갈 내용을 순서대 로 옳게 나타낸 것은?",
+    "answer": 2,
+    "correctChoice": "A: 3개, B: 4개",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20190804_109",
+    "chapter": "shore-safety-standard",
+    "question": "거푸집 동바리로 사용하는 강관 틀 비계에 대한 기준으로 틀린 것은?",
+    "answer": 1,
+    "correctChoice": "높이 2m 이내마다 수평연결재를 2개 방향으로 설치하고 수평연결재의 변위를 방지한다.",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20180304_114",
+    "chapter": "shore-safety-standard",
+    "question": "거푸집동바리 등을 조립하는 경우에 준수하여야 할 사항으 로 옳지 않은 것은?",
+    "answer": 4,
+    "correctChoice": "동바리의 이음은 맞댄이음이나 장부이음을 피할 것",
+    "learningSections": [
+      "하중을 지지하는 동바리",
+      "침하와 이탈을 막는 조치",
+      "2018~2022년 기출의 조립 기준",
+      "강관틀 기출의 별도 기준"
+    ]
+  },
+  {
+    "id": "20210814_110",
+    "chapter": "euler-buckling-load",
+    "question": "거푸집동바리 구조에서 높이가 l=3.5m인 파이프서포트의 좌굴하중은? (I=8.31cm4, E=2.1x105MPa, 힙지 조건)",
+    "answer": 1,
+    "correctChoice": "14060N",
+    "learningSections": [
+      "양단 힌지의 좌굴하중",
+      "연결 문제의 단위 환산"
+    ]
+  },
+  {
+    "id": "20220424_091",
+    "chapter": "combustion-range-risk",
+    "question": "산업안전보건법령상 다음 인화성 가스의 정의에서 ( ) 안에 알맞은 값은?",
+    "answer": 1,
+    "correctChoice": "㉠ 13, ㉡ 12",
+    "learningSections": [
+      "연소할 수 있는 농도 구간",
+      "연결 기출의 물질과 값",
+      "조건이 변할 때의 범위"
+    ]
+  },
+  {
+    "id": "20210814_085",
+    "chapter": "combustion-range-risk",
+    "question": "디에틸에테르의 연소범위에 가장 가까운 값은?",
+    "answer": 2,
+    "correctChoice": "1.9~48%",
+    "learningSections": [
+      "연소할 수 있는 농도 구간",
+      "연결 기출의 물질과 값",
+      "조건이 변할 때의 범위"
+    ]
+  },
+  {
+    "id": "20210307_097",
+    "chapter": "combustion-range-risk",
+    "question": "다음 중 폭발한계(vol%)의 범위가 가장 넓은 것은?",
+    "answer": 4,
+    "correctChoice": "아세틸렌",
+    "learningSections": [
+      "연소할 수 있는 농도 구간",
+      "연결 기출의 물질과 값",
+      "조건이 변할 때의 범위"
+    ]
+  },
+  {
+    "id": "20200926_091",
+    "chapter": "combustion-range-risk",
+    "question": "가연성가스의 폭발범위에 관한 설명으로 틀린 것은?",
+    "answer": 1,
+    "correctChoice": "압력 증가에 따라 폭발 상한계와 하한계가 모두 현저히 증가한다.",
+    "learningSections": [
+      "연소할 수 있는 농도 구간",
+      "연결 기출의 물질과 값",
+      "조건이 변할 때의 범위"
+    ]
+  },
+  {
+    "id": "20180304_097",
+    "chapter": "combustion-range-risk",
+    "question": "디에틸에테르의 연소범위에 가장 가까운 값은?",
+    "answer": 2,
+    "correctChoice": "1.9~48%",
+    "learningSections": [
+      "연소할 수 있는 농도 구간",
+      "연결 기출의 물질과 값",
+      "조건이 변할 때의 범위"
+    ]
+  },
+  {
+    "id": "20180428_090",
+    "chapter": "combustion-range-risk",
+    "question": "다음 중 벤젠(C6H6)의 공기 중 폭발하한계값(vol%)에 가장 가까운 것은?",
+    "answer": 2,
+    "correctChoice": "1.5",
+    "learningSections": [
+      "연소할 수 있는 농도 구간",
+      "연결 기출의 물질과 값",
+      "조건이 변할 때의 범위"
+    ]
+  },
+  {
+    "id": "20190427_099",
+    "chapter": "combustion-range-risk",
+    "question": "가솔린(휘발유)의 일반적인 연소범위에 가장 가까운 값은?",
+    "answer": 3,
+    "correctChoice": "1.4~7.6 vol%",
+    "learningSections": [
+      "연소할 수 있는 농도 구간",
+      "연결 기출의 물질과 값",
+      "조건이 변할 때의 범위"
+    ]
+  },
+  {
+    "id": "20220305_083",
+    "chapter": "combustion-range-risk",
+    "question": "다음 중 폭발범위에 관한 설명으로 틀린 것은?",
+    "answer": 2,
+    "correctChoice": "온도에는 비례하지만 압력과는 무관하다.",
+    "learningSections": [
+      "연소할 수 있는 농도 구간",
+      "연결 기출의 물질과 값",
+      "조건이 변할 때의 범위"
+    ]
+  },
+  {
+    "id": "20210307_099",
+    "chapter": "hazard-index",
+    "question": "공기 중에서 A 물질의 폭발하한계가 4vol%, 상한계가 75vol%라면 이 물질의 위험도는?",
+    "answer": 2,
+    "correctChoice": "17.75",
+    "learningSections": [
+      "범위 폭을 하한으로 나누기",
+      "계산 예"
+    ]
+  },
+  {
+    "id": "20210515_090",
+    "chapter": "hazard-index",
+    "question": "가연성 가스 A의 연소범위를 2.2~9.5vol% 라 할 때 가스 A 의 위험도는 얼마인가?",
+    "answer": 2,
+    "correctChoice": "3.32",
+    "learningSections": [
+      "범위 폭을 하한으로 나누기",
+      "계산 예"
+    ]
+  },
+  {
+    "id": "20200606_094",
+    "chapter": "hazard-index",
+    "question": "공기 중에서 폭발범위가 12.5~74vol% 인 일산화탄소의 위험도는 얼마인가?",
+    "answer": 1,
+    "correctChoice": "4.92",
+    "learningSections": [
+      "범위 폭을 하한으로 나누기",
+      "계산 예"
+    ]
+  },
+  {
+    "id": "20180304_089",
+    "chapter": "hazard-index",
+    "question": "공기 중에서 폭발범위가 12.5~74vol%인 일산화탄소의 위험 도는 얼마인가?",
+    "answer": 1,
+    "correctChoice": "4.92",
+    "learningSections": [
+      "범위 폭을 하한으로 나누기",
+      "계산 예"
+    ]
+  },
+  {
+    "id": "20220424_099",
+    "chapter": "mixed-gas-explosion-limits",
+    "question": "메탄, 에탄, 프로판의 폭발하한계가 각각 5vol%, 2vol%, 2.1vol%일 때 다음 중 폭발하한계가 가장 낮은 것은? (단, Le Chatelier의 법칙을 이용한다.)",
+    "answer": 1,
+    "correctChoice": "메탄 20vol%, 에탄 30vol%, 프로판 50vol%의 혼합가스",
+    "learningSections": [
+      "조성비로 가중한 역수 계산",
+      "프로판·메탄 3:1 예",
+      "공기가 포함된 혼합물",
+      "혼합물끼리 비교하는 순서"
+    ]
+  },
+  {
+    "id": "20210515_085",
+    "chapter": "mixed-gas-explosion-limits",
+    "question": "다음 [표]를 참조하여 메탄 70vol%, 프로판 21vol%, 부탄 9vol%인 혼합가스의 폭발범위를 구하면 약 몇 vol%인가?",
+    "answer": 2,
+    "correctChoice": "3.45~12.58",
+    "learningSections": [
+      "조성비로 가중한 역수 계산",
+      "프로판·메탄 3:1 예",
+      "공기가 포함된 혼합물",
+      "혼합물끼리 비교하는 순서"
+    ]
+  },
+  {
+    "id": "20200606_099",
+    "chapter": "mixed-gas-explosion-limits",
+    "question": "메탄 1vol%, 헥산 2vol%, 에틸렌 2vol%, 공기 95vol%로 된 혼합가스의 폭발하한계값(vol%)은 약 얼마인가? (단, 메탄, 헥산, 에틸렌의 폭발하한계 값은 각각 5.0, 1.1, 2.7vol% 이다.)",
+    "answer": 1,
+    "correctChoice": "1.8",
+    "learningSections": [
+      "조성비로 가중한 역수 계산",
+      "프로판·메탄 3:1 예",
+      "공기가 포함된 혼합물",
+      "혼합물끼리 비교하는 순서"
+    ]
+  },
+  {
+    "id": "20200822_098",
+    "chapter": "mixed-gas-explosion-limits",
+    "question": "프로판과 메탄의 폭발하한계가 각각 2.5, 5.0vol% 이라고 할 때 프로판과 메탄이 3:1의 체적비로 혼합되어 있다면 이 혼합가스의 폭발하한계는 약 몇 vol%인가? (단, 상온, 상압 상태이다.)",
+    "answer": 1,
+    "correctChoice": "2.9",
+    "learningSections": [
+      "조성비로 가중한 역수 계산",
+      "프로판·메탄 3:1 예",
+      "공기가 포함된 혼합물",
+      "혼합물끼리 비교하는 순서"
+    ]
+  },
+  {
+    "id": "20180819_097",
+    "chapter": "mixed-gas-explosion-limits",
+    "question": "다음 [표]를 참조하여 메탄 70vol%, 프로판 21vol%, 부탄 9vol%인 혼합가스의 폭발범위를 구하면 약 몇 vol%인가?",
+    "answer": 2,
+    "correctChoice": "3.45~12.58",
+    "learningSections": [
+      "조성비로 가중한 역수 계산",
+      "프로판·메탄 3:1 예",
+      "공기가 포함된 혼합물",
+      "혼합물끼리 비교하는 순서"
+    ]
+  },
+  {
+    "id": "20190303_087",
+    "chapter": "mixed-gas-explosion-limits",
+    "question": "헥산 1 vol%, 메탄 2 vol%, 에틸렌 2 vol%, 공기 95 vol%로 된 혼합가스의 폭발하한계 값(vol%)은 약 얼마인가? (단, 헥산, 메탄, 에틸렌의 폭발하한계 값은 각각 1.1, 5.0, 2.7 vol% 이다.)",
+    "answer": 1,
+    "correctChoice": "2.44",
+    "learningSections": [
+      "조성비로 가중한 역수 계산",
+      "프로판·메탄 3:1 예",
+      "공기가 포함된 혼합물",
+      "혼합물끼리 비교하는 순서"
+    ]
+  },
+  {
+    "id": "20190427_081",
+    "chapter": "mixed-gas-explosion-limits",
+    "question": "가연성 가스 혼합물을 구성하는 각 성분의 조성과 연소범위가 다음 [표]와 같을 때 혼합 가스의 연소하한값은 약 몇 vol%인가?",
+    "answer": 1,
+    "correctChoice": "2.51",
+    "learningSections": [
+      "조성비로 가중한 역수 계산",
+      "프로판·메탄 3:1 예",
+      "공기가 포함된 혼합물",
+      "혼합물끼리 비교하는 순서"
+    ]
+  },
+  {
+    "id": "20190804_099",
+    "chapter": "mixed-gas-explosion-limits",
+    "question": "디에틸에테르와 에틸알코올이 3:1로 혼합증기의 몰비가 각각 0.75, 0.25이고, 디에틸에테르와 에틸알코올의 폭발하한값이 각각 1.9vol%, 4.3vol%일 때 혼합가스의 폭발하한값은 약 몇 vol%인가?",
+    "answer": 1,
+    "correctChoice": "2.2",
+    "learningSections": [
+      "조성비로 가중한 역수 계산",
+      "프로판·메탄 3:1 예",
+      "공기가 포함된 혼합물",
+      "혼합물끼리 비교하는 순서"
+    ]
+  },
+  {
+    "id": "20220305_084",
+    "chapter": "mixed-gas-explosion-limits",
+    "question": "다음 표와 같은 혼합가스의 폭발범위(vol%)로 옳은 것은?",
+    "answer": 1,
+    "correctChoice": "3.75~13.21",
+    "learningSections": [
+      "조성비로 가중한 역수 계산",
+      "프로판·메탄 3:1 예",
+      "공기가 포함된 혼합물",
+      "혼합물끼리 비교하는 순서"
+    ]
+  }
+]
