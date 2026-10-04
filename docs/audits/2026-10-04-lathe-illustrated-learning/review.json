@@ -1,0 +1,13 @@
+{
+  "baseCommit": "7aeb6dc1f4c028c6529221e9d6ada15160438926",
+  "type": "one lathe illustration and placement; definitions preserved, workpiece definition added; canonical questions unchanged",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/lathe-safety.md",
+      "changed": true,
+      "originalSha256": "b8eec026e33bb7ca8767e7cdc828e1dbdbb4add64b390b9fea7180183a5cd706",
+      "sha256": "1853717471e6852f8fcc9c9d40b024a93692e70b25f89337f5775b22a149d480",
+      "frontmatterSha256": "bc43aae8f497347b20ca9b7a76d8bd102b2705cd3e675e7b264239feaf50911c"
+    }
+  ]
+}
