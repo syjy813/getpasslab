@@ -1,0 +1,201 @@
+{
+  "type": "CI preview Chromium viewport emulation",
+  "head": "749d35cfd95abf9640c0e2977cb9141bed4188eb",
+  "runId": 37181187814,
+  "seoRunId": 37181187800,
+  "artifactId": 11294814736,
+  "artifactSha256": "f63d4ffc9b1d3299dc8a37e82041714bc556376207ed39e345c061f5ebd8039a",
+  "passed": true,
+  "errors": [],
+  "viewports": [
+    {
+      "width": 390,
+      "pages": 5,
+      "questions": 24
+    },
+    {
+      "width": 1440,
+      "pages": 5,
+      "questions": 24
+    },
+    {
+      "width": 320,
+      "pages": 5,
+      "questions": 24
+    }
+  ],
+  "images": [
+    {
+      "slug": "lathe-safety",
+      "viewport": 390,
+      "src": "/images/industrial-safety/lathe-motion-illustrated-v1.webp",
+      "alt": "전체 선반과 가공부 확대 그림. ① 척이 ② 일감을 잡고 함께 회전하며, ③ 바이트 끝이 일감 표면을 깎는다. 회전 화살표는 움직임의 예시이며 방호장치는 생략했다",
+      "width": 340,
+      "naturalWidth": 1200,
+      "naturalHeight": 1440,
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "minLabelPx": 18.133333333333333,
+      "screenshot": "390-lathe-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "milling-safety",
+      "viewport": 390,
+      "src": "/images/industrial-safety/milling-motion.svg",
+      "alt": "기둥인 컬럼 옆의 수평 축 커터가 회전하며 바이스에 고정된 일감 위를 깎는 밀링의 단순화 그림",
+      "width": 340,
+      "naturalWidth": 360,
+      "naturalHeight": 340,
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "minLabelPx": 20.77777777777778,
+      "screenshot": "390-milling-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "drill-safety",
+      "viewport": 390,
+      "src": "/images/industrial-safety/drill-motion.svg",
+      "alt": "스핀들과 척 아래의 드릴날이 회전하며 바이스로 고정한 일감에 구멍을 뚫는 드릴링 머신의 단순화 그림",
+      "width": 340,
+      "naturalWidth": 360,
+      "naturalHeight": 390,
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "minLabelPx": 20.77777777777778,
+      "screenshot": "390-drill-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "planer-safety",
+      "viewport": 390,
+      "src": "/images/industrial-safety/planer-motion.svg",
+      "alt": "바이트 아래의 일감과 테이블이 베드 위에서 왕복하는 플레이너의 단순화 그림",
+      "width": 340,
+      "naturalWidth": 360,
+      "naturalHeight": 340,
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "minLabelPx": 20.77777777777778,
+      "screenshot": "390-planer-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "lathe-safety",
+      "viewport": 1440,
+      "src": "/images/industrial-safety/lathe-motion-illustrated-v1.webp",
+      "alt": "전체 선반과 가공부 확대 그림. ① 척이 ② 일감을 잡고 함께 회전하며, ③ 바이트 끝이 일감 표면을 깎는다. 회전 화살표는 움직임의 예시이며 방호장치는 생략했다",
+      "width": 390,
+      "naturalWidth": 1200,
+      "naturalHeight": 1440,
+      "viewportWidth": 1440,
+      "scrollWidth": 1440,
+      "minLabelPx": 20.8,
+      "screenshot": "1440-lathe-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "milling-safety",
+      "viewport": 1440,
+      "src": "/images/industrial-safety/milling-motion.svg",
+      "alt": "기둥인 컬럼 옆의 수평 축 커터가 회전하며 바이스에 고정된 일감 위를 깎는 밀링의 단순화 그림",
+      "width": 390,
+      "naturalWidth": 360,
+      "naturalHeight": 340,
+      "viewportWidth": 1440,
+      "scrollWidth": 1440,
+      "minLabelPx": 23.833333333333332,
+      "screenshot": "1440-milling-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "drill-safety",
+      "viewport": 1440,
+      "src": "/images/industrial-safety/drill-motion.svg",
+      "alt": "스핀들과 척 아래의 드릴날이 회전하며 바이스로 고정한 일감에 구멍을 뚫는 드릴링 머신의 단순화 그림",
+      "width": 390,
+      "naturalWidth": 360,
+      "naturalHeight": 390,
+      "viewportWidth": 1440,
+      "scrollWidth": 1440,
+      "minLabelPx": 23.833333333333332,
+      "screenshot": "1440-drill-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "planer-safety",
+      "viewport": 1440,
+      "src": "/images/industrial-safety/planer-motion.svg",
+      "alt": "바이트 아래의 일감과 테이블이 베드 위에서 왕복하는 플레이너의 단순화 그림",
+      "width": 390,
+      "naturalWidth": 360,
+      "naturalHeight": 340,
+      "viewportWidth": 1440,
+      "scrollWidth": 1440,
+      "minLabelPx": 23.833333333333332,
+      "screenshot": "1440-planer-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "lathe-safety",
+      "viewport": 320,
+      "src": "/images/industrial-safety/lathe-motion-illustrated-v1.webp",
+      "alt": "전체 선반과 가공부 확대 그림. ① 척이 ② 일감을 잡고 함께 회전하며, ③ 바이트 끝이 일감 표면을 깎는다. 회전 화살표는 움직임의 예시이며 방호장치는 생략했다",
+      "width": 270,
+      "naturalWidth": 1200,
+      "naturalHeight": 1440,
+      "viewportWidth": 320,
+      "scrollWidth": 320,
+      "minLabelPx": 14.4,
+      "screenshot": "320-lathe-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "milling-safety",
+      "viewport": 320,
+      "src": "/images/industrial-safety/milling-motion.svg",
+      "alt": "기둥인 컬럼 옆의 수평 축 커터가 회전하며 바이스에 고정된 일감 위를 깎는 밀링의 단순화 그림",
+      "width": 270,
+      "naturalWidth": 360,
+      "naturalHeight": 340,
+      "viewportWidth": 320,
+      "scrollWidth": 320,
+      "minLabelPx": 16.5,
+      "screenshot": "320-milling-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "drill-safety",
+      "viewport": 320,
+      "src": "/images/industrial-safety/drill-motion.svg",
+      "alt": "스핀들과 척 아래의 드릴날이 회전하며 바이스로 고정한 일감에 구멍을 뚫는 드릴링 머신의 단순화 그림",
+      "width": 270,
+      "naturalWidth": 360,
+      "naturalHeight": 390,
+      "viewportWidth": 320,
+      "scrollWidth": 320,
+      "minLabelPx": 16.5,
+      "screenshot": "320-drill-safety-figure.png",
+      "passed": true
+    },
+    {
+      "slug": "planer-safety",
+      "viewport": 320,
+      "src": "/images/industrial-safety/planer-motion.svg",
+      "alt": "바이트 아래의 일감과 테이블이 베드 위에서 왕복하는 플레이너의 단순화 그림",
+      "width": 270,
+      "naturalWidth": 360,
+      "naturalHeight": 340,
+      "viewportWidth": 320,
+      "scrollWidth": 320,
+      "minLabelPx": 16.5,
+      "screenshot": "320-planer-safety-figure.png",
+      "passed": true
+    }
+  ],
+  "directVisualReview": [
+    "320-lathe-safety-figure.png",
+    "1440-lathe-safety-figure.png"
+  ]
+}

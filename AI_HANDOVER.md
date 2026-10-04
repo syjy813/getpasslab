@@ -17,9 +17,18 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-04 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.42
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-04 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.43
 
 ---
+
+## 산업안전 선반 실물형 그림 교체 Production 완료 — 2026-10-04
+
+- 사용자 이미지 삽입 승인 및 기존 배포 승인 범위로 PR #128 expected HEAD `749d35cfd95abf9640c0e2977cb9141bed4188eb` 고정 squash merge. 배포 `347c19bcfdbe2b1dd0be5f3dbee8d1d02cab421e` / Pages37181440715 success, 검토본/배포본 tree 일치
+- 선반만 실물형 외형·가공부 확대·척/일감/바이트 직접 라벨·회전 표식의 WebP로 교체. 기존 척·바이트 정의 유지, 일감 정의 보충, 그림을 정의 목록 바로 뒤에 배치. 다른3개 기계 그림·URL/frontmatter/기출 불변
+- 학습 이미지 정본 v1.2 §§1–9 및 제작 전 brief·원본 재사용·모바일 라벨 검수 적용. 생성 외형은 특정 기종 설계도 아님. 캡션에 방호장치 생략/회전방향 예시 표기
+- SEO37181187800 / CI preview QA37181187814 success. 390/1440/320px 각5챕터/24문항 및 이미지12개 검사 오류0, ZIP 지문 및320/1440px 그림 직접 검수
+- Production 제공 Chrome에서 정의 뒤 그림 배치·alt·로드 완료/natural1200×1440/표시폭390/가로 넘침 없음 확인. Production 전수3viewport/24문항 재검사 및 실물 스마트폰/원본PDF/전문가 설계도/학습자 효과 검증 미실행
+- 상세: `docs/audits/2026-10-04-lathe-illustrated-learning/RELEASE.md`, `ci-browser-summary.json`, `production-verification.json`. 아래 SVG4장 배포 기록은 이번 선반 교체 이전 이력
 
 ## 산업안전 공작기계 그림 4장 Production 배포 완료 — 2026-10-04
 

@@ -1,0 +1,28 @@
+{
+  "type": "Production provided Chrome direct UI verification",
+  "verifiedAt": "2026-10-04T06:01:43.239828+00:00",
+  "deploymentCommit": "347c19bcfdbe2b1dd0be5f3dbee8d1d02cab421e",
+  "tree": "91dae1f5e6d9318ac796b37b47617e9d549e6ba0",
+  "pagesRunId": 37181440715,
+  "pagesConclusion": "success",
+  "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/lathe-safety/",
+  "definitions": [
+    "척: 일감을 잡아 회전시키는 장치",
+    "일감(공작물): 가공할 재료",
+    "바이트: 재료를 깎는 날이 달린 공구"
+  ],
+  "placement": "Immediately after definitions UL, before chip section",
+  "image": {
+    "src": "/images/industrial-safety/lathe-motion-illustrated-v1.webp",
+    "complete": true,
+    "naturalWidth": 1200,
+    "naturalHeight": 1440,
+    "displayWidth": 390,
+    "alt": "전체 선반과 가공부 확대 그림. ① 척이 ② 일감을 잡고 함께 회전하며, ③ 바이트 끝이 일감 표면을 깎는다. 회전 화살표는 움직임의 예시이며 방호장치는 생략했다"
+  },
+  "viewport": 1363,
+  "documentScrollWidth": 1348,
+  "horizontalOverflow": false,
+  "passed": true,
+  "limitations": "Production 3 viewport/24 question exhaustive checks not repeated; refer to CI preview summary. Physical phone, source PDF, expert blueprint and learner effect verification not performed."
+}
