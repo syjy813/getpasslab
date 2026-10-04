@@ -7,6 +7,7 @@ import yaml from 'js-yaml';
 const audit = 'docs/audits/2026-10-04-industrial-safety-chapter-splits';
 const evidence = JSON.parse(await readFile(`${audit}/source-verification.json`, 'utf8'));
 const review = JSON.parse(await readFile(`${audit}/review.json`, 'utf8'));
+const headingReview = JSON.parse(await readFile('docs/audits/2026-10-04-chapter-section-heading-ui/review.json', 'utf8'));
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const parse = source => yaml.load(source.match(/^---\n([\s\S]*?)\n---\n/)[1]);
 const subjects = { 1: 'safety-management', 2: 'ergonomics', 3: 'mechanical', 4: 'electrical', 5: 'chemical', 6: 'construction' };
@@ -19,6 +20,15 @@ assert.equal(review.chapters.filter(c => c.newFile || c.previousStatus === 'ып╕ь
 assert.deepEqual(review.deduplicated.map(q => q.id), ['20200822_031']);
 
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
+  if (file === 'src/styles/global.css') {
+    const css = await readFile(file, 'utf8');
+    assert.equal(headingReview.path, file);
+    assert.equal(headingReview.originalSha256, expected, 'heading style: preserve the historical baseline');
+    assert.equal(hash(css), headingReview.sha256, 'heading style: exact reviewed CSS');
+    assert.equal(css.split(headingReview.insertedCss).length, 2, 'heading style: one scoped insertion');
+    assert.equal(hash(css.replace(headingReview.insertedCss, '')), expected, 'heading style: all other CSS unchanged');
+    continue;
+  }
   const row = changed.get(file);
   if (row) assert.equal(row.originalSha256, expected, `${file}: baseline review hash`);
   assert.equal(hash(await readFile(file)), row ? row.sha256 : expected, `${file}: unreviewed baseline change`);

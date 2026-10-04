@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - 'src/content/chapters/**'
+      - 'src/styles/global.css'
+      - 'docs/audits/2026-10-04-chapter-section-heading-ui/**'
       - 'scripts/*industrial-safety-chapter-splits*'
       - 'scripts/reviewed-chapter-hash.mjs'
       - 'docs/audits/2026-10-04-industrial-safety-chapter-splits/**'
