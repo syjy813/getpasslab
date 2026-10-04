@@ -54,6 +54,8 @@ let browser;
       assert(state.coreLabelPx >= 14);
       const response = await context.request.get(base + state.src);
       assert.equal(response.status(), 200); assert.deepEqual(await response.body(), fs.readFileSync(asset.path));
+      // Keep the complete card above the fixed mobile navigation in captures.
+      await figure.evaluate(el => window.scrollTo(0, window.scrollY + el.getBoundingClientRect().top - 72));
       await figure.screenshot({ path: path.join(out, `${width}-${index + 1}-figure.png`) });
       record.figures.push(state);
     }
