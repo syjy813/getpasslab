@@ -11,6 +11,7 @@ const illustration = {
   ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-milling-illustrated-learning/image-spec.json')),
   ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-milling-left-alignment/image-spec.json')),
   ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-drill-illustrated-learning/image-spec.json')),
+  ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-planer-illustrated-learning/image-spec.json')),
 };
 const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
 (async () => {
