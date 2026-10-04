@@ -5,6 +5,7 @@ on:
     paths:
       - 'src/content/chapters/mechanical/machine-tools-safety.md'
       - 'src/content/chapters/mechanical/lathe-safety.md'
+      - 'src/styles/learningFigures.css'
       - 'src/content/chapters/mechanical/milling-safety.md'
       - 'src/content/chapters/mechanical/drill-safety.md'
       - 'src/content/chapters/mechanical/planer-safety.md'
@@ -12,6 +13,7 @@ on:
       - 'public/images/industrial-safety/lathe-motion-illustrated-*.webp'
       - 'docs/audits/2026-10-04-lathe-illustrated-learning/image-spec.json'
       - 'docs/audits/2026-10-04-lathe-image-crop-fix/image-spec.json'
+      - 'docs/audits/2026-10-04-lathe-figure-spacing/image-spec.json'
       - 'docs/audits/2026-10-04-machine-tools-visuals/brief.json'
       - 'scripts/*industrial-safety-machine-tools-split*'
       - 'docs/audits/2026-10-03-industrial-safety-machine-tools-split/source-verification.json'

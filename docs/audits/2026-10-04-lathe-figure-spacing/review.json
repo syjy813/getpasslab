@@ -1,0 +1,13 @@
+{
+  "baseCommit": "1d170fc5b4c1f6a6e09088e62e2c6819f6de7c33",
+  "type": "lathe figure spacing only; all learning text and questions preserved",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/lathe-safety.md",
+      "changed": true,
+      "originalSha256": "efd71bdadd801eecc929fc83d8d1728abb172d064b20315dadc371399c29f840",
+      "sha256": "cfedae90978c3034bc92bc936aac5e81f6f73e7f7d8b508da17befd17f5df203",
+      "frontmatterSha256": "bc43aae8f497347b20ca9b7a76d8bd102b2705cd3e675e7b264239feaf50911c"
+    }
+  ]
+}

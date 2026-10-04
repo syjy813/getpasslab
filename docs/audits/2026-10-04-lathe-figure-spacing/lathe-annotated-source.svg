@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1800" viewBox="0 0 1200 1800">
+<title>선반의 척·일감·바이트와 회전·절삭 위치</title>
+<desc>전체 선반에서 가공부를 확대한 그림. 척은 일감을 잡고 함께 회전하며, 바이트 끝은 일감의 표면을 깎는다. 회전방향은 움직임을 보여주는 예시이고 실제 기종의 설정을 지정하지 않는다.</desc>
+<defs><marker id="motion" viewBox="0 0 18 18" refX="14" refY="9" markerWidth="2.4" markerHeight="2.4" orient="auto"><path d="M0 0 L18 9 L0 18 Z" fill="#25334B"/></marker></defs>
+<rect width="1200" height="1800" fill="white"/>
+<g transform="translate(0,-174)" font-family="NanumGothic" fill="#25334B">
+
+
+<image href="../2026-10-04-lathe-illustrated-learning/lathe-original-reference.jpg" x="60" y="194" width="1080" height="720"/>
+<rect x="356" y="300" width="380" height="235" rx="12" fill="none" stroke="white" stroke-width="11"/>
+<rect x="356" y="300" width="380" height="235" rx="12" fill="none" stroke="#526176" stroke-width="5" stroke-dasharray="14 10"/>
+<path d="M738 322 L868 248" fill="none" stroke="#526176" stroke-width="5"/>
+<rect x="734" y="199" width="406" height="78" rx="15" fill="white"/>
+<text x="754" y="252" font-size="72">가공부 확대</text>
+<path d="M60 916 H1140" stroke="#CBD5E1" stroke-width="3"/>
+
+<defs>
+<linearGradient id="fadeX"><stop offset="0" stop-color="black"/><stop offset=".045" stop-color="white"/><stop offset=".955" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<linearGradient id="fadeY" x2="0" y2="1"><stop offset="0" stop-color="black"/><stop offset=".05" stop-color="white"/><stop offset=".95" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<mask id="zoomX"><rect x="60" y="1114" width="1080" height="759" fill="url(#fadeX)"/></mask>
+<mask id="zoomY"><rect x="60" y="1114" width="1080" height="759" fill="url(#fadeY)"/></mask>
+</defs>
+<g mask="url(#zoomX)"><g mask="url(#zoomY)">
+<svg x="60" y="1114" width="1080" height="759" viewBox="320 120 840 590" overflow="hidden">
+<image href="../2026-10-04-lathe-illustrated-learning/lathe-original-reference.jpg" x="0" y="0" width="1536" height="1024"/>
+</svg>
+</g></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M162 1118 L185 1200 L202 1255" stroke="white" stroke-width="15"/>
+<path d="M162 1118 L185 1200 L202 1255" stroke="#526176" stroke-width="7"/>
+<path d="M468 1118 L480 1250 L484 1358" stroke="white" stroke-width="15"/>
+<path d="M468 1118 L480 1250 L484 1358" stroke="#526176" stroke-width="7"/>
+<path d="M924 1518 L836 1550 L619 1406" stroke="white" stroke-width="15"/>
+<path d="M924 1518 L836 1550 L619 1406" stroke="#526176" stroke-width="7"/>
+<path d="M548 1474 C482 1364 523 1274 605 1278 C664 1282 692 1334 683 1384" stroke="white" stroke-width="21"/>
+<path d="M548 1474 C482 1364 523 1274 605 1278 C664 1282 692 1334 683 1384" stroke="#25334B" stroke-width="12" marker-end="url(#motion)"/>
+</g>
+<g fill="#526176" stroke="white" stroke-width="3"><circle cx="202" cy="1255" r="10"/><circle cx="484" cy="1358" r="10"/><circle cx="619" cy="1406" r="10"/></g>
+<rect x="70" y="1045" width="252" height="82" rx="14" fill="white"/>
+<text x="90" y="1107" font-size="72" font-weight="bold">① 척</text>
+<rect x="370" y="1045" width="330" height="82" rx="14" fill="white"/>
+<text x="390" y="1107" font-size="72" font-weight="bold">② 일감</text>
+<rect x="796" y="1442" width="344" height="82" rx="14" fill="white"/>
+<text x="810" y="1504" font-size="72" font-weight="bold">③ 바이트</text>
+<rect x="733" y="1175" width="405" height="80" rx="14" fill="white"/>
+<text x="755" y="1233" font-size="72" font-weight="bold">일감 회전</text>
+
+
+
+
+</g></svg>
