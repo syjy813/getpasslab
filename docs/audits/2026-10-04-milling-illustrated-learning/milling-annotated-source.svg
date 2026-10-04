@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2000" viewBox="0 0 1200 2000">
+<title>수평형 밀링의 컬럼·커터·일감·바이스</title>
+<desc>전체 기계와 가공부 확대. 커터는 회전하고 바이스에 고정된 일감은 테이블과 함께 이송된다. 화살표는 회전과 교차 이송의 한 예시이며 상향·하향 밀링 조건을 지정하지 않는다.</desc>
+<defs>
+<marker id="motion" viewBox="0 0 18 18" refX="14" refY="9" markerWidth="2.4" markerHeight="2.4" orient="auto"><path d="M0 0L18 9L0 18Z" fill="#25334B"/></marker>
+<linearGradient id="fadeX"><stop offset="0" stop-color="black"/><stop offset=".035" stop-color="white"/><stop offset=".965" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<linearGradient id="fadeY" x2="0" y2="1"><stop offset="0" stop-color="black"/><stop offset=".035" stop-color="white"/><stop offset=".965" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<mask id="zoomX"><rect x="60" y="1000" width="1080" height="831" fill="url(#fadeX)"/></mask>
+<mask id="zoomY"><rect x="60" y="1000" width="1080" height="831" fill="url(#fadeY)"/></mask>
+</defs>
+<rect width="1200" height="2000" fill="white"/>
+<g font-family="NanumGothic" fill="#25334B">
+<image href="milling-original-reference.jpg" x="60" y="130" width="1080" height="720"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M230 100L310 420" stroke="white" stroke-width="19"/><path d="M230 100L310 420" stroke="#526176" stroke-width="11"/>
+<rect x="490" y="253" width="370" height="258" rx="12" stroke="white" stroke-width="13"/>
+<rect x="490" y="253" width="370" height="258" rx="12" stroke="#526176" stroke-width="7" stroke-dasharray="16 11"/>
+<path d="M770 160L825 253" stroke="white" stroke-width="19"/><path d="M770 160L825 253" stroke="#526176" stroke-width="11"/>
+</g>
+<circle cx="310" cy="420" r="12" fill="#526176" stroke="white" stroke-width="4"/>
+<rect x="70" y="24" width="400" height="86" rx="14" fill="white"/><text x="90" y="88" font-size="72" font-weight="bold">① 컬럼</text>
+<rect x="694" y="75" width="446" height="86" rx="14" fill="white"/><text x="715" y="139" font-size="72">가공부 확대</text>
+<path d="M60 876H1140" stroke="#CBD5E1" stroke-width="3"/>
+<g mask="url(#zoomX)"><g mask="url(#zoomY)">
+<svg x="60" y="1000" width="1080" height="831" viewBox="600 150 650 500" overflow="hidden"><image href="milling-original-reference.jpg" width="1536" height="1024"/></svg>
+</g></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M200 990L286 1102L325 1203" stroke="white" stroke-width="19"/><path d="M200 990L286 1102L325 1203" stroke="#526176" stroke-width="11"/>
+<path d="M898 1416L708 1402L447 1400" stroke="white" stroke-width="19"/><path d="M898 1416L708 1402L447 1400" stroke="#526176" stroke-width="11"/>
+<path d="M925 1688L705 1625L634 1531" stroke="white" stroke-width="19"/><path d="M925 1688L705 1625L634 1531" stroke="#526176" stroke-width="11"/>
+<path d="M444 1073C548 1067 576 1230 491 1320" stroke="white" stroke-width="25"/><path d="M444 1073C548 1067 576 1230 491 1320" stroke="#25334B" stroke-width="16" marker-end="url(#motion)"/>
+<path d="M173 1777L260 1651" stroke="white" stroke-width="25"/><path d="M173 1777L260 1651" stroke="#25334B" stroke-width="16" marker-end="url(#motion)"/>
+</g>
+<g fill="#526176" stroke="white" stroke-width="4"><circle cx="325" cy="1203" r="12"/><circle cx="447" cy="1400" r="12"/><circle cx="634" cy="1531" r="12"/></g>
+<rect x="70" y="914" width="390" height="86" rx="14" fill="white"/><text x="90" y="978" font-size="72" font-weight="bold">② 커터</text>
+<rect x="644" y="990" width="494" height="86" rx="14" fill="white"/><text x="665" y="1054" font-size="72" font-weight="bold">커터 회전</text>
+<rect x="750" y="1340" width="388" height="86" rx="14" fill="white"/><text x="770" y="1404" font-size="72" font-weight="bold">③ 일감</text>
+<rect x="720" y="1680" width="420" height="86" rx="14" fill="white"/><text x="738" y="1744" font-size="72" font-weight="bold">④ 바이스</text>
+<rect x="70" y="1817" width="580" height="86" rx="14" fill="white"/><text x="90" y="1881" font-size="72" font-weight="bold">테이블 이송</text>
+</g></svg>

@@ -1,0 +1,13 @@
+{
+  "baseCommit": "0a822b38c84c1befa2cd9887472401ccf09e89fd",
+  "type": "milling illustrated figure replacement only; all learning text, frontmatter and questions preserved",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/milling-safety.md",
+      "changed": true,
+      "originalSha256": "7f7dca2b5a52d3044f7230af79b802e5170e2f3b4a5f6f1a0277710778c1ab2e",
+      "sha256": "51cc4f24915bb4821734ea8cf019ced941e1e08f5d4fe0b03a5ebcd6b3ef49c9",
+      "frontmatterSha256": "54f3e24cb33820a62cf599f07d30daf2a6644b41bd02873b904e552151e306f5"
+    }
+  ]
+}
