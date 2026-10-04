@@ -6,7 +6,7 @@ const assert = require('node:assert/strict');
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4321';
 const out = path.resolve('qa-results/industrial-safety-machine-tools-split');
 const brief = JSON.parse(fs.readFileSync('docs/audits/2026-10-04-machine-tools-visuals/brief.json'));
-const illustration = JSON.parse(fs.readFileSync('docs/audits/2026-10-04-lathe-image-crop-fix/image-spec.json'));
+const illustration = JSON.parse(fs.readFileSync('docs/audits/2026-10-04-lathe-figure-spacing/image-spec.json'));
 const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
 (async () => {
   const browser = await chromium.launch();
@@ -46,9 +46,21 @@ const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
           });
           assert(definitionOrder, 'lathe illustration must follow the definitions in the movement section');
         }
-        assert(state.width >= 240);
+        assert(state.width >= (expected.minDisplayWidth || 240));
         assert(Math.abs(state.height - state.width * state.naturalHeight / state.naturalWidth) <= 1, `${f.slug}: rendered image must preserve its complete aspect ratio`);
         assert(state.scrollWidth <= state.viewportWidth + 1);
+        if (expected.cardMaxWidth) {
+          const gaps = await img.evaluate(el => {
+            const image = el.getBoundingClientRect();
+            const card = el.closest('figure').getBoundingClientRect();
+            const caption = el.closest('figure').querySelector('figcaption').getBoundingClientRect();
+            return { cardWidth: card.width, top: image.top - caption.bottom, left: image.left - card.left, right: card.right - image.right };
+          });
+          assert(gaps.cardWidth <= expected.cardMaxWidth + 1, 'lathe card must fit the illustration');
+          assert(gaps.top >= expected.imageTopGap - 1, 'lathe image needs space below its caption');
+          assert(gaps.left >= expected.imageSideGap && gaps.right >= expected.imageSideGap, 'lathe image needs space at both sides');
+          state.spacing = gaps;
+        }
         const minLabelPx = expected.minFontSize * state.width / expected.width;
         assert(minLabelPx >= 14, `${f.slug}: labels too small`);
         const screenshot = `${width}-${f.slug}-figure.png`;

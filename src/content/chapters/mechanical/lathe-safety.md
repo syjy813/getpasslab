@@ -21,10 +21,10 @@ examComment: 수록 기출 11문항은 칩 브레이커·실드·방진구의 �
 - **일감(공작물)**: 가공할 재료
 - **바이트**: 재료를 깎는 날이 달린 공구
 
-<div class="learning-visuals learning-visuals--single">
+<div class="learning-visuals learning-visuals--single learning-visuals--lathe">
 <figure>
 <figcaption><strong>선반의 일감·척·바이트</strong><span>학습용 재구성 · 방호장치 생략 · 회전방향은 예시</span></figcaption>
-<img src="/images/industrial-safety/lathe-motion-illustrated-v2.webp" alt="전체 선반과 가공부 확대 그림. ① 척이 ② 일감을 잡고 함께 회전하며, ③ 바이트 끝이 일감 표면을 깎는다. 회전 화살표는 움직임의 예시이며 방호장치는 생략했다" width="1200" height="1800" loading="lazy" decoding="async" />
+<img src="/images/industrial-safety/lathe-motion-illustrated-v3.webp" alt="전체 선반과 가공부 확대 그림. ① 척이 ② 일감을 잡고 함께 회전하며, ③ 바이트 끝이 일감 표면을 깎는다. 회전 화살표는 움직임의 예시이며 방호장치는 생략했다" width="1200" height="1800" loading="lazy" decoding="async" />
 </figure>
 </div>
 
