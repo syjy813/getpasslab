@@ -10,6 +10,7 @@ const illustration = {
   ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-lathe-figure-spacing/image-spec.json')),
   ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-milling-illustrated-learning/image-spec.json')),
   ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-milling-left-alignment/image-spec.json')),
+  ...JSON.parse(fs.readFileSync('docs/audits/2026-10-04-drill-illustrated-learning/image-spec.json')),
 };
 const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
 (async () => {
@@ -83,7 +84,7 @@ const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
         const screenshot = `${width}-${f.slug}-figure.png`;
         await figure.evaluate(el => el.scrollIntoView({ block: 'center' }));
         if (expected.cardAlignment === 'left') {
-          // Keep the full caption below the sticky header in the taller milling card capture.
+          // Keep the full caption below the sticky header in tall illustration captures.
           await figure.evaluate(el => window.scrollTo(0, window.scrollY + el.getBoundingClientRect().top - 72));
         }
         await figure.screenshot({ path: path.join(out, screenshot) });

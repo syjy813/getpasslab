@@ -1,0 +1,13 @@
+{
+  "baseCommit": "6c6e333dbc8e5fc6bfde5d246ee66e952c964bc6",
+  "type": "drill illustrated figure plus minimal vise definition; frontmatter/questions and all remaining teaching text preserved",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/drill-safety.md",
+      "changed": true,
+      "originalSha256": "3f341d420046f5996104c591277d508247a38f3100eb0f6d2b9c2d3ffb972ee5",
+      "sha256": "9999fedf68c06b50993577ad307f6e29c7865775ef152eb0b55be0d8b7121de1",
+      "frontmatterSha256": "ded9b4575a4b2ce444571e82b2c5c6a23de0ebf4c56944c21374efe223f3f256"
+    }
+  ]
+}
