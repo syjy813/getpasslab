@@ -1,0 +1,7 @@
+{
+  "baseCommit": "ac6f96fd4be91e0168e89806d090430590d0c6f3",
+  "path": "src/styles/global.css",
+  "originalSha256": "1a935738fd516da61f3093fb6f222155312624c11e82bec9f8c4b8e1ac437eff",
+  "sha256": "bd59a608398395d78ef6be7b34f700c8b9843838bfbc1a6ccff373056ce7e449",
+  "insertedCss": "/* Chapter section headings: a quiet background separates each learning topic. */\n.chapter-page article h2{position:relative;display:block;padding:var(--space-3) var(--space-4) var(--space-3) calc(var(--space-4) + 10px + var(--space-2));background:var(--primary-50);border-radius:var(--radius-md);line-height:var(--lh-heading);word-break:keep-all;overflow-wrap:anywhere}\n.chapter-page article h2::before{position:absolute;left:var(--space-4);top:calc(var(--space-3) + .1em)}\n"
+}

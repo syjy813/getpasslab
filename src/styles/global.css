@@ -205,6 +205,9 @@ a{color:inherit}
 article{min-width:0}
 article h2{display:flex;align-items:center;gap:var(--space-2);font-size:var(--fs-h3);font-weight:var(--fw-semibold);color:var(--gray-900);margin:var(--space-8) 0 var(--space-3)}
 article h2::before{content:'';width:10px;height:22px;border-radius:4px;background:var(--primary-600);flex:none}
+/* Chapter section headings: a quiet background separates each learning topic. */
+.chapter-page article h2{position:relative;display:block;padding:var(--space-3) var(--space-4) var(--space-3) calc(var(--space-4) + 10px + var(--space-2));background:var(--primary-50);border-radius:var(--radius-md);line-height:var(--lh-heading);word-break:keep-all;overflow-wrap:anywhere}
+.chapter-page article h2::before{position:absolute;left:var(--space-4);top:calc(var(--space-3) + .1em)}
 article h3{font-size:var(--fs-h4);font-weight:var(--fw-semibold);color:var(--gray-900);margin:var(--space-6) 0 var(--space-2)}
 article p,article li{font-size:var(--fs-body);color:var(--gray-800);word-break:keep-all;overflow-wrap:break-word}
 article>p,article>ul,article>ol,article>blockquote{max-width:800px}
