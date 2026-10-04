@@ -1,0 +1,77 @@
+name: Industrial safety chapter splits QA
+on:
+  workflow_run:
+    workflows: ['Deploy to GitHub Pages']
+    types: [completed]
+    branches: [main]
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/content/chapters/**'
+      - 'scripts/*industrial-safety-chapter-splits*'
+      - 'scripts/reviewed-chapter-hash.mjs'
+      - 'docs/audits/2026-10-04-industrial-safety-chapter-splits/**'
+      - '.github/workflows/industrial-safety-chapter-splits-qa.yml'
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: 'Optional Production URL; leave empty for local preview'
+        default: ''
+permissions:
+  contents: read
+jobs:
+  browser-qa:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Check split invariants and site regressions
+        run: |
+          node scripts/check-industrial-safety-chapter-splits.mjs
+          node scripts/check-industrial-safety-machine-tools-split.mjs
+          npm run check:contrast
+          npm run check:seo
+          npm run check:public-content
+          npm run check:deferred-question-content
+          npm run check:computer-literacy
+          npm run check:computer-literacy-c1
+          npm run check:computer-literacy-001-081
+          npm run check:computer-literacy-082-159
+      - name: Prepare temporary browser tooling
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify 390px, 1440px and 320px
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          REQUESTED_BASE_URL: ${{ inputs.base_url }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = workflow_run ]; then
+            REQUESTED_BASE_URL=https://getpasslab.co.kr
+          fi
+          if [ -z "$REQUESTED_BASE_URL" ]; then
+            npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-preview.log 2>&1 &
+            for attempt in $(seq 1 30); do
+              if curl -fsS http://127.0.0.1:4321/ >/dev/null; then break; fi
+              sleep 1
+            done
+            export QA_BASE_URL=http://127.0.0.1:4321
+          else
+            export QA_BASE_URL="$REQUESTED_BASE_URL"
+          fi
+          node scripts/qa-industrial-safety-chapter-splits.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: industrial-safety-chapter-splits-qa
+          path: qa-results/industrial-safety-chapter-splits/
+          retention-days: 14
