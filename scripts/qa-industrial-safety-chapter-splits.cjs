@@ -22,13 +22,15 @@ async function layout(page) {
     const width = document.documentElement.clientWidth;
     const overflow = [...document.querySelectorAll('article h1, article h2, article p, article li, article table, .chapter-mobile-nav a, dialog[open] .q-body')].filter(e => { const r = e.getBoundingClientRect(); return r.width > 0 && r.height > 0 && (r.left < -1 || r.right > width + 1); }).map(e => ({ tag: e.tagName, text: e.textContent.slice(0, 80) }));
     const tables = [...document.querySelectorAll('article table')].map(e => ({ width: e.clientWidth, scroll: e.scrollWidth, cells: [...e.querySelectorAll('th,td')].map(c => ({ client: c.clientWidth, scroll: c.scrollWidth, font: parseFloat(getComputedStyle(c).fontSize) })) }));
-    return { width, scroll: document.documentElement.scrollWidth, overflow, tables };
+    const math = [...document.querySelectorAll('article .katex-display')].map(e => ({ width: e.clientWidth, scroll: e.scrollWidth, text: e.textContent.slice(0,80) }));
+    return { width, scroll: document.documentElement.scrollWidth, overflow, tables, math };
   });
   result.lastLayout = { current, ...state }; save();
   if (state.scroll > state.width + 1 || state.overflow.length) await page.screenshot({ path: path.join(out, 'layout-failure.png'), fullPage: true });
   assert(state.scroll <= state.width + 1, `${current}: page overflow ${JSON.stringify(state)}`);
   assert.deepEqual(state.overflow, [], `${current}: viewport clipping`);
   assert(state.tables.every(t => t.scroll <= t.width + 2 && t.cells.every(c => c.scroll <= c.client + 2 && c.font >= 13)), `${current}: table readability`);
+  assert(state.math.every(m => m.scroll <= m.width + 2), `${current}: formula needs horizontal scrolling ${JSON.stringify(state.math)}`);
   assert.equal(await page.locator('.katex-error').count(), 0);
   return state;
 }

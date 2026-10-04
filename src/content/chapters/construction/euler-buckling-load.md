@@ -38,13 +38,17 @@ $$
 MPa를 N/mm²로 읽고 길이와 단면을 mm 기준으로 맞춤
 
 $$
-L=3500\,\text{mm},\quad I=83100\,\text{mm}^4
+\begin{aligned}
+L&=3500\,\text{mm} \\
+I&=83100\,\text{mm}^4
+\end{aligned}
 $$
 
 $$
 P_{cr}=\frac{\pi^2\times2.1\times10^5\times83100}{3500^2}
-\approx14060\,\text{N}
 $$
+
+계산 결과는 약 **14060N**임
 
 단면2차모멘트는 **4제곱 단위**이므로 cm⁴에서 mm⁴로 바꿀 때 10,000배임
 
