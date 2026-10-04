@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-04",
+  "commit": "451bc9d56f13da4d0ddcb9c059cb91893e6f1b39",
+  "pages_run": 37178244034,
+  "pages_conclusion": "success",
+  "review_tree": "7a43c61eedf57165b5ee7aed49786d78741fc83b",
+  "production_scope": "Provided Chrome desktop; 4 images and 5 chapter links; representative lathe question open/answer/close",
+  "ci_preview_runs": [
+    37135894154,
+    37135894151
+  ],
+  "production_full_3_viewport_24_question_qa": false,
+  "images": [
+    {
+      "chapter": "lathe",
+      "src": "/images/industrial-safety/lathe-motion.svg",
+      "complete": true,
+      "naturalWidth": 360,
+      "naturalHeight": 330,
+      "displayWidth": 390,
+      "alt_present": true,
+      "page_overflow": false,
+      "direct_visual_review": true
+    },
+    {
+      "chapter": "milling",
+      "src": "/images/industrial-safety/milling-motion.svg",
+      "complete": true,
+      "naturalWidth": 360,
+      "naturalHeight": 340,
+      "displayWidth": 390,
+      "alt_present": true,
+      "page_overflow": false,
+      "direct_visual_review": true
+    },
+    {
+      "chapter": "drill",
+      "src": "/images/industrial-safety/drill-motion.svg",
+      "complete": true,
+      "naturalWidth": 360,
+      "naturalHeight": 390,
+      "displayWidth": 390,
+      "alt_present": true,
+      "page_overflow": false,
+      "direct_visual_review": true
+    },
+    {
+      "chapter": "planer",
+      "src": "/images/industrial-safety/planer-motion.svg",
+      "complete": true,
+      "naturalWidth": 360,
+      "naturalHeight": 340,
+      "displayWidth": 390,
+      "alt_present": true,
+      "page_overflow": false,
+      "direct_visual_review": true
+    }
+  ],
+  "question": {
+    "chapter": "lathe-safety",
+    "exam": "2022-04",
+    "number": 47,
+    "open": true,
+    "answer": "① 칩 브레이커",
+    "close": true
+  }
+}
