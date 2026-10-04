@@ -24,7 +24,9 @@ async function layout(page) {
     const tables = [...document.querySelectorAll('article table')].map(e => ({ width: e.clientWidth, scroll: e.scrollWidth, cells: [...e.querySelectorAll('th,td')].map(c => ({ client: c.clientWidth, scroll: c.scrollWidth, font: parseFloat(getComputedStyle(c).fontSize) })) }));
     return { width, scroll: document.documentElement.scrollWidth, overflow, tables };
   });
-  assert(state.scroll <= state.width + 1, `${current}: page overflow`);
+  result.lastLayout = { current, ...state }; save();
+  if (state.scroll > state.width + 1 || state.overflow.length) await page.screenshot({ path: path.join(out, 'layout-failure.png'), fullPage: true });
+  assert(state.scroll <= state.width + 1, `${current}: page overflow ${JSON.stringify(state)}`);
   assert.deepEqual(state.overflow, [], `${current}: viewport clipping`);
   assert(state.tables.every(t => t.scroll <= t.width + 2 && t.cells.every(c => c.scroll <= c.client + 2 && c.font >= 13)), `${current}: table readability`);
   assert.equal(await page.locator('.katex-error').count(), 0);
@@ -40,7 +42,7 @@ async function layout(page) {
     assert.equal(createHash('sha256').update(actual).digest('hex'), createHash('sha256').update(expected).digest('hex'), `${row.slug}: served HTML differs from reviewed build`);
   }
   result.exactHtmlMatches = review.chapters.length;
-  for (const width of [390, 1440, 320]) {
+  for (const width of [320, 390, 1440]) {
     const context = await browser.newContext({ viewport: { width, height: 844 }, isMobile: width < 768, hasTouch: width < 768 });
     await context.route('**/*', route => { const u = new URL(route.request().url()); return u.origin === new URL(base).origin || u.hostname === 'cdn.jsdelivr.net' ? route.continue() : route.abort(); });
     const page = await context.newPage();
