@@ -1,4 +1,4 @@
-name: Accident analysis figures QA
+name: Accident analysis chapter QA
 on:
   pull_request:
     branches: [main]
@@ -7,6 +7,7 @@ on:
       - 'src/styles/learningFigures.css'
       - 'public/images/industrial-safety/analysis-*.svg'
       - 'docs/audits/2026-10-04-accident-analysis-figures/**'
+      - 'docs/audits/2026-10-04-accident-analysis-table/**'
       - 'scripts/*accident-analysis-figures*'
       - 'scripts/reviewed-chapter-hash.mjs'
       - '.github/workflows/accident-analysis-figures-qa.yml'

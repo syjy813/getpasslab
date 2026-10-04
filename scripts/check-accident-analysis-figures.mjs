@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import yaml from 'js-yaml';
-const audit = 'docs/audits/2026-10-04-accident-analysis-figures';
+const audit = 'docs/audits/2026-10-04-accident-analysis-table';
 const review = JSON.parse(await readFile(`${audit}/review.json`, 'utf8'));
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const source = await readFile(review.chapters[0].path, 'utf8');
@@ -27,13 +27,14 @@ for (const slug of fields.related) {
   assert(html.includes(`href="${scope}${slug}/"`));
   await readFile(`dist${scope}${slug}/index.html`);
 }
-for (const asset of review.assets) {
+const historical = JSON.parse(await readFile('docs/audits/2026-10-04-accident-analysis-figures/review.json', 'utf8'));
+for (const asset of historical.assets) {
   const svg = await readFile(asset.path, 'utf8');
   assert.equal(hash(svg), asset.sha256);
   assert.equal(hash(await readFile(asset.path.replace(/^public\//, 'dist/'))), asset.sha256);
   assert(!/<script|<image|<foreignObject|(?:href|src)=|[\u3040-\u30ff]/.test(svg));
   assert(svg.includes('학습용'));
 }
-assert.equal((source.match(/<figure>/g) || []).length, 3);
-assert(!/^\|/m.test(source), 'duplicate teaching tables must not return');
-console.log('[Accident analysis] 3 exact SVG assets, canonical dataset, 5 question assignments, public URL/TOC/sitemap/related links passed');
+assert(!/<figure|<img|learning-visuals/.test(source), 'user requested table-only learning copy');
+assert.equal((html.match(/<table\b/g) || []).length, 1);
+console.log('[Accident analysis] one comparison table, no displayed diagrams; historical assets unchanged; canonical dataset, 5 questions and public route links passed');

@@ -1,0 +1,21 @@
+{
+  "baseCommit": "6a7fb02de69409d0814edbcf8c02612a00a5ede0",
+  "type": "user prefers table comparison; remove displayed diagrams and keep one concise table",
+  "chapters": [
+    {
+      "path": "src/content/chapters/safety-management/accident-analysis-tools.md",
+      "changed": true,
+      "originalSha256": "aa164e8e7dc594a2be93d27aac77c56a793fec2322133c9674f92610f3f31e56",
+      "sha256": "6cc397d6ea60f4fcb06f466cf9b83e231843b78d08ce9fdac7e799ff0a4bbf40",
+      "frontmatterSha256": "d3889044502c495496754a195eca2377552f3905ef77640321eef23670a12e8c"
+    }
+  ],
+  "questionIds": [
+    "20220424_006",
+    "20200822_016",
+    "20210515_008",
+    "20200926_017",
+    "20190303_012"
+  ],
+  "canonicalSha256": "d7da505307c790d56adbdc0fbd01cac2abe6a348a2c2023c9702e4f52470ce15"
+}
