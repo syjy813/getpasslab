@@ -12,7 +12,7 @@ Actually read design standard v1.2 §§1–9 and CHAPTER_WRITING_GUIDE.md. Appli
 - Scope caption/alt explicitly omit guards, drive internals and pit. Pit cannot be placed from external geometry; existing pit cover explanation remains. Chip breaker is described in the unchanged body and is not inferred on the generic cutter.
 - Generated bolts, handles and frame details are generic and unverified as particular manufacturer specifications. No dimensions, numerical overhang recommendation or complete safe operating setup claimed.
 - Built-in image_gen base; exact SVG annotation/Sharp renderer retained. Existing website Pretendard Variable font converted locally for rendering; no additional font binary published. Original generated PNG untouched; prompt in generation.md.
-- Public WebP1200×1900 /224948bytes. OriginalJPEG439803bytes. Text72source units (320px image238px→14.28px). Motion16units→3.17px; leaders11units→2.18px. Bottom64 rows RGB minima253/255/253 after extract→PNG→stats.
+- Public WebP1200×1900 /228008bytes. OriginalJPEG439803bytes. Text72source units (320px image238px→14.28px). Motion16units→3.17px; leaders11units→2.18px. Bottom64 rows RGB minima253/255/253 after extract→PNG→stats.
 - Only planer scoped card: left aligned, maximum424px; image390px maximum; caption top24px/sides16px. Other machine figures unchanged.
 
 ## Local checks

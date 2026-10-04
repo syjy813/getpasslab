@@ -28,7 +28,7 @@
 </g></g>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="M398 996L548 1170" stroke="white" stroke-width="19"/><path d="M398 996L548 1170" stroke="#526176" stroke-width="11"/>
-<path d="M810 1366L609 1342" stroke="white" stroke-width="19"/><path d="M810 1366L609 1342" stroke="#526176" stroke-width="11"/>
+<path d="M430 1250L609 1342" stroke="white" stroke-width="19"/><path d="M430 1250L609 1342" stroke="#526176" stroke-width="11"/>
 <path d="M619 1118H650M650 1118V1267M619 1267H650" stroke="white" stroke-width="19"/>
 <path d="M619 1118H650M650 1118V1267M619 1267H650" stroke="#526176" stroke-width="11"/>
 <path d="M300 1580L940 1432M940 1472L300 1620" stroke="white" stroke-width="25"/>
@@ -38,6 +38,6 @@
 <g fill="#526176" stroke="white" stroke-width="4"><circle cx="548" cy="1170" r="12"/><circle cx="609" cy="1342" r="12"/></g>
 <rect x="60" y="890" width="480" height="86" rx="14" fill="white"/><text x="80" y="954" font-size="72" font-weight="bold">① 바이트</text>
 <rect x="680" y="1120" width="460" height="86" rx="14" fill="white"/><text x="700" y="1184" font-size="72" font-weight="bold">짧은 돌출</text>
-<rect x="760" y="1320" width="380" height="86" rx="14" fill="white"/><text x="780" y="1384" font-size="72" font-weight="bold">② 일감</text>
+<rect x="60" y="1180" width="370" height="86" rx="14" fill="white"/><text x="80" y="1244" font-size="72" font-weight="bold">② 일감</text>
 <rect x="550" y="1746" width="590" height="86" rx="14" fill="white"/><text x="570" y="1810" font-size="72" font-weight="bold">테이블 왕복</text>
 </g></svg>
