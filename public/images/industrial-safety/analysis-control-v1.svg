@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="365" viewBox="0 0 390 365" role="img" aria-labelledby="title desc">
+  <title id="title">시간축과 상방·하방 관리한계선을 갖춘 관리도</title>
+  <desc id="desc">학습용 형태 예시. 시간 순서대로 관측점을 연결하고 상방 관리한계UCL, 중심선, 하방 관리한계LCL을 표시함. 여섯째 관측점은 상방 관리한계 위에 있음. 실제 통계나 계산된 한계값이 아님.</desc>
+  <rect width="390" height="365" fill="#FFFFFF"/>
+  <g font-family="sans-serif" font-size="24" fill="#25334B">
+    <text x="26" y="28">재해 발생 건수</text>
+    <text x="40" y="99">UCL · 상방 한계</text>
+    <path d="M28 110H363M28 286H363" fill="none" stroke="#526176" stroke-width="5" stroke-dasharray="10 7"/>
+    <text x="40" y="172">중심선</text><path d="M28 188H363" fill="none" stroke="#526176" stroke-width="4"/>
+    <text x="40" y="277">LCL · 하방 한계</text>
+    <path d="M28 49V314H364" fill="none" stroke="#526176" stroke-width="4"/>
+    <path d="M48 216L92 206L136 236L180 147L224 207L268 58L312 216" fill="none" stroke="#25334B" stroke-width="5" stroke-linejoin="round"/>
+    <g fill="#25334B"><circle cx="48" cy="216" r="5"/><circle cx="92" cy="206" r="5"/><circle cx="136" cy="236" r="5"/><circle cx="180" cy="147" r="5"/><circle cx="224" cy="207" r="5"/><circle cx="312" cy="216" r="5"/></g>
+    <circle cx="268" cy="58" r="9" fill="#FFFFFF" stroke="#90234B" stroke-width="5"/>
+    <text x="289" y="54" fill="#90234B">초과</text>
+    <path d="M28 314H364L352 305M364 314L352 323" fill="none" stroke="#526176" stroke-width="4"/>
+    <text x="180" y="350" text-anchor="middle">시간 순서 →</text>
+  </g>
+</svg>

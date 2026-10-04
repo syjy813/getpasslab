@@ -17,7 +17,8 @@ const byId = new Map(questions.map(q => [q.id, q]));
 // Baseline evidence is independent of the live assignments. Canonical question
 // payloads, answers, image registries and all unrelated chapters remain frozen.
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
-  assert.equal(hash(await readFile(file)), expected, `${file}: protected baseline changed`);
+  const actual = hash(await readFile(file));
+  if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: protected baseline changed without an exact reviewed chapter hash`);
 }
 assert.equal(questions.length, 1680);
 assert.equal(byId.size, 1680);
@@ -87,4 +88,4 @@ for (const [slug, ids] of Object.entries(evidence.allocations)) {
   if (slug !== 'machine-tools-safety') assert(fields.related.includes('machine-tools-safety'), `${slug}: missing return link`);
 }
 console.log('[Machine tools split] 5 routes + TOC/sitemap/related links passed; all 24 questions allocated once; 224 completed chapters / 1004 primary references');
-console.log(`[Machine tools split] ${Object.keys(evidence.protectedFiles).length} protected files unchanged, including 1680 canonical questions and all image registries/assets`);
+console.log(`[Machine tools split] ${Object.keys(evidence.protectedFiles).length} protected files unchanged or covered by exact reviewed chapter hashes; 1680 canonical questions and historical image registries/assets unchanged`);

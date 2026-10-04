@@ -17,6 +17,7 @@ for (const file of [
   'docs/audits/2026-10-04-milling-illustrated-learning/review.json',
   'docs/audits/2026-10-04-drill-illustrated-learning/review.json',
   'docs/audits/2026-10-04-planer-illustrated-learning/review.json',
+  'docs/audits/2026-10-04-accident-analysis-figures/review.json',
 ]) {
   let review;
   try {

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="360" viewBox="0 0 390 360" role="img" aria-labelledby="title desc">
+  <title id="title">파레토도의 내림차순 막대와 누적선</title>
+  <desc id="desc">학습용 예시. 유형 A50건, B25건, C15건, D10건을 큰 순서대로 배치. 누적 비율은50,75,90,100퍼센트. 왼쪽 건수100과 오른쪽100퍼센트의 높이가 같음.</desc>
+  <rect width="390" height="360" fill="#FFFFFF"/>
+  <g font-family="sans-serif" font-size="24" fill="#25334B">
+    <text x="16" y="32">건수</text><text x="270" y="32" fill="#734BA6">누적(%)</text>
+    <g stroke="#CBD5E1" stroke-width="1"><path d="M62 72H322M62 172H322"/></g>
+    <path d="M62 64V272H322V64" fill="none" stroke="#526176" stroke-width="4"/>
+    <g font-size="22" text-anchor="end"><text x="53" y="80">100</text><text x="53" y="180">50</text><text x="53" y="280">0</text></g>
+    <g font-size="22"><text x="332" y="80">100</text><text x="332" y="180">50</text><text x="332" y="280">0</text></g>
+    <g fill="#25334B"><rect x="73" y="172" width="38" height="100" rx="3"/><rect x="137" y="222" width="38" height="50" rx="3"/><rect x="201" y="242" width="38" height="30" rx="3"/><rect x="265" y="252" width="38" height="20" rx="3"/></g>
+    <g text-anchor="middle"><text x="92" y="213" fill="#FFFFFF">50</text><text x="156" y="211">25</text><text x="220" y="231">15</text><text x="284" y="241">10</text></g>
+    <path d="M92 172L156 122L220 92L284 72" fill="none" stroke="#734BA6" stroke-width="5" stroke-linejoin="round"/>
+    <g fill="#FFFFFF" stroke="#734BA6" stroke-width="4"><circle cx="92" cy="172" r="6"/><circle cx="156" cy="122" r="6"/><circle cx="220" cy="92" r="6"/><circle cx="284" cy="72" r="6"/></g>
+    <g text-anchor="middle"><text x="92" y="305">A</text><text x="156" y="305">B</text><text x="220" y="305">C</text><text x="284" y="305">D</text></g>
+    <text x="192" y="341" text-anchor="middle">사고 유형</text>
+  </g>
+</svg>
