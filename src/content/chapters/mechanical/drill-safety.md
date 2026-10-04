@@ -20,15 +20,16 @@ examComment: 수록 기출 4문항은 작은 일감의 고정·기동 전 척 �
 - **척**: 드릴날을 잡는 장치
 - **척 렌치**: 척을 조이거나 푸는 공구
 - **스핀들**: 드릴날을 회전시키는 주축
+- **바이스**: 일감을 물려 고정하는 장치
 
 ## 일감 고정과 기동 전 확인
 
 작거나 길이가 긴 일감도 **바이스·클램프 등으로 고정**함
 
-<div class="learning-visuals learning-visuals--single">
+<div class="learning-visuals learning-visuals--single learning-visuals--drill">
 <figure>
-<figcaption><strong>드릴의 척·스핀들·일감</strong><span>학습용 재구성 · 방호장치·구동부를 생략한 움직임·부품 개념도</span></figcaption>
-<img src="/images/industrial-safety/drill-motion.svg" alt="스핀들과 척 아래의 드릴날이 회전하며 바이스로 고정한 일감에 구멍을 뚫는 드릴링 머신의 단순화 그림" width="360" height="390" loading="lazy" decoding="async" />
+<figcaption><strong>드릴의 척·스핀들·일감</strong><span>학습용 재구성 · 고정식 예시, 방호장치 생략</span></figcaption>
+<img src="/images/industrial-safety/drill-motion-illustrated-v1.webp" alt="전체 고정식 드릴과 가공부 확대 그림. ① 스핀들에 연결된 ② 척이 ③ 드릴날을 잡고 함께 회전하며, ⑤ 바이스에 고정된 ④ 일감에 구멍을 뚫는다. 척 렌치는 꽂혀 있지 않으며 방호장치는 생략했다" width="1200" height="2000" loading="lazy" decoding="async" />
 </figure>
 </div>
 

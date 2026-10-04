@@ -1,0 +1,16 @@
+{
+  "drill-safety": {
+    "src": "/images/industrial-safety/drill-motion-illustrated-v1.webp",
+    "alt": "전체 고정식 드릴과 가공부 확대 그림. ① 스핀들에 연결된 ② 척이 ③ 드릴날을 잡고 함께 회전하며, ⑤ 바이스에 고정된 ④ 일감에 구멍을 뚫는다. 척 렌치는 꽂혀 있지 않으며 방호장치는 생략했다",
+    "width": 1200,
+    "height": 2000,
+    "minFontSize": 72,
+    "partLabelFontSize": 72,
+    "bottomPadding": 64,
+    "minDisplayWidth": 234,
+    "cardMaxWidth": 424,
+    "imageTopGap": 24,
+    "imageSideGap": 16,
+    "cardAlignment": "left"
+  }
+}
