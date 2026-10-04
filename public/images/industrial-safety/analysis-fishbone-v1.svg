@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="410" viewBox="0 0 390 410" role="img" aria-labelledby="title desc">
+  <title id="title">원인에서 오른쪽 결과로 향하는 특성요인도</title>
+  <desc id="desc">학습용 예시. 큰뼈의 사람, 설비, 방법, 환경에서 교육 부족, 점검 미흡, 절차 누락, 바닥 젖음으로 원인을 세분화함. 가운데 등뼈 화살표는 왼쪽에서 오른쪽 결과인 넘어짐을 향함.</desc>
+  <rect width="390" height="410" fill="#FFFFFF"/>
+  <g font-family="sans-serif" font-size="24" fill="#25334B">
+    <path d="M24 202H279" fill="none" stroke="#25334B" stroke-width="5"/>
+    <path d="M265 190L282 202L265 214" fill="none" stroke="#25334B" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M54 65L132 202M191 65L269 202M54 339L132 202M191 339L269 202" fill="none" stroke="#526176" stroke-width="5"/>
+    <path d="M22 150H102M159 150H239M22 278H89M159 278H226" fill="none" stroke="#526176" stroke-width="4"/>
+    <text x="54" y="46" text-anchor="middle">사람</text><text x="191" y="46" text-anchor="middle">설비</text>
+    <text x="8" y="108">교육</text><text x="8" y="137">부족</text><text x="146" y="108">점검</text><text x="146" y="137">미흡</text>
+    <text x="8" y="309">절차</text><text x="8" y="338">누락</text><text x="146" y="309">바닥</text><text x="146" y="338">젖음</text>
+    <text x="54" y="370" text-anchor="middle">방법</text><text x="191" y="370" text-anchor="middle">환경</text>
+    <rect x="289" y="163" width="93" height="78" rx="8" fill="#F7F9FC" stroke="#526176" stroke-width="4"/>
+    <text x="335" y="194" text-anchor="middle">넘어짐</text><text x="335" y="225" text-anchor="middle">(결과)</text>
+    <text x="124" y="237">등뼈 →</text>
+  </g>
+</svg>

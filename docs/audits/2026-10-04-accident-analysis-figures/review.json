@@ -1,0 +1,44 @@
+{
+  "baseCommit": "a721d43c4a5451062cc5279feac9db3c0c84b6c6",
+  "type": "three verified statistical diagrams and deduplicated chapter; Close diagram explicitly deferred",
+  "chapters": [
+    {
+      "path": "src/content/chapters/safety-management/accident-analysis-tools.md",
+      "changed": true,
+      "originalSha256": "c809c1582cf3224afc14273b39eca79fb8545c38985aa495119f97463dbf71e3",
+      "sha256": "48146630bff72a775dd579c26118d3b2bb5d6dd987e35e05013b004a325429c2",
+      "frontmatterSha256": "d3889044502c495496754a195eca2377552f3905ef77640321eef23670a12e8c"
+    }
+  ],
+  "questionIds": [
+    "20220424_006",
+    "20200822_016",
+    "20210515_008",
+    "20200926_017",
+    "20190303_012"
+  ],
+  "canonicalSha256": "d7da505307c790d56adbdc0fbd01cac2abe6a348a2c2023c9702e4f52470ce15",
+  "assets": [
+    {
+      "path": "public/images/industrial-safety/analysis-pareto-v1.svg",
+      "width": 390,
+      "height": 360,
+      "coreFontSize": 24,
+      "sha256": "6391618c53576d295f63a0c47403a0351f030b4b36870e196298e17b58154ed3"
+    },
+    {
+      "path": "public/images/industrial-safety/analysis-fishbone-v1.svg",
+      "width": 390,
+      "height": 410,
+      "coreFontSize": 24,
+      "sha256": "cd9dd7b6e5f567fd4d7a908e178614c4d24d8febe93ff0b4298e09d3884b5eb2"
+    },
+    {
+      "path": "public/images/industrial-safety/analysis-control-v1.svg",
+      "width": 390,
+      "height": 365,
+      "coreFontSize": 24,
+      "sha256": "86d9bf37f588209ce4a97e0c7792a1338f1453024f9e658f1cad8e81f246f3c3"
+    }
+  ]
+}

@@ -28,6 +28,11 @@ article .learning-visuals--drill img{width:calc(100% - 32px);margin:24px auto 12
 /* Planer full/detail figure follows the approved left-aligned machine cards. */
 article .learning-visuals--planer figure{width:100%;max-width:424px;box-sizing:border-box;margin-inline:0}
 article .learning-visuals--planer img{width:calc(100% - 32px);margin:24px auto 12px}
+/* Statistical comparisons retain exact geometry and the approved left alignment. */
+article .learning-visuals--analysis{grid-template-columns:minmax(0,1fr)}
+article .learning-visuals--analysis figure{width:100%;max-width:424px;box-sizing:border-box;margin-inline:0}
+article .learning-visuals--analysis img{width:calc(100% - 32px);max-width:390px;margin:24px auto 12px}
+article .learning-visuals--analysis .analysis-key{margin:0;padding:var(--space-3) var(--space-4);border-top:1px solid var(--gray-200);font-size:var(--fs-caption);line-height:1.7}
 article .learning-visuals--heating-expansion figure{display:flex;flex-direction:column}
 article .learning-visuals--heating-expansion figcaption{background:var(--gray-50)}
 article .learning-visuals--heating-expansion figcaption strong{font-size:18px;line-height:1.35}
