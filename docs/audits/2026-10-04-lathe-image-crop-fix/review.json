@@ -1,0 +1,13 @@
+{
+  "baseCommit": "2bb7ef698be4858777ffc8c8db4841308bd1f3d6",
+  "type": "lathe image crop fix only; definitions and canonical questions unchanged",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/lathe-safety.md",
+      "changed": true,
+      "originalSha256": "1853717471e6852f8fcc9c9d40b024a93692e70b25f89337f5775b22a149d480",
+      "sha256": "efd71bdadd801eecc929fc83d8d1728abb172d064b20315dadc371399c29f840",
+      "frontmatterSha256": "bc43aae8f497347b20ca9b7a76d8bd102b2705cd3e675e7b264239feaf50911c"
+    }
+  ]
+}

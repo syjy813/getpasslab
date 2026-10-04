@@ -6,7 +6,7 @@ const assert = require('node:assert/strict');
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4321';
 const out = path.resolve('qa-results/industrial-safety-machine-tools-split');
 const brief = JSON.parse(fs.readFileSync('docs/audits/2026-10-04-machine-tools-visuals/brief.json'));
-const illustration = JSON.parse(fs.readFileSync('docs/audits/2026-10-04-lathe-illustrated-learning/image-spec.json'));
+const illustration = JSON.parse(fs.readFileSync('docs/audits/2026-10-04-lathe-image-crop-fix/image-spec.json'));
 const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
 (async () => {
   const browser = await chromium.launch();
@@ -27,7 +27,7 @@ const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
         const img = figure.locator('img');
         await img.scrollIntoViewIfNeeded();
         await img.evaluate(el => el.decode());
-        const state = await img.evaluate(el => ({ src: el.getAttribute('src'), alt: el.alt, width: el.clientWidth, naturalWidth: el.naturalWidth, naturalHeight: el.naturalHeight, viewportWidth: document.documentElement.clientWidth, scrollWidth: document.documentElement.scrollWidth }));
+        const state = await img.evaluate(el => ({ src: el.getAttribute('src'), alt: el.alt, height: el.clientHeight, width: el.clientWidth, naturalWidth: el.naturalWidth, naturalHeight: el.naturalHeight, viewportWidth: document.documentElement.clientWidth, scrollWidth: document.documentElement.scrollWidth }));
         assert.equal(state.src, expected.src);
         assert.equal(state.alt, expected.alt);
         assert.equal(state.naturalWidth, expected.width);
@@ -47,6 +47,7 @@ const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
           assert(definitionOrder, 'lathe illustration must follow the definitions in the movement section');
         }
         assert(state.width >= 240);
+        assert(Math.abs(state.height - state.width * state.naturalHeight / state.naturalWidth) <= 1, `${f.slug}: rendered image must preserve its complete aspect ratio`);
         assert(state.scrollWidth <= state.viewportWidth + 1);
         const minLabelPx = expected.minFontSize * state.width / expected.width;
         assert(minLabelPx >= 14, `${f.slug}: labels too small`);
@@ -65,6 +66,11 @@ const results = { base, type: 'CI preview image QA', pages: [], errors: [] };
         } else {
           assert.equal(bytes.subarray(0, 4).toString(), 'RIFF');
           assert.equal(bytes.subarray(8, 12).toString(), 'WEBP');
+          if (expected.bottomPadding) {
+            const padding = await require('sharp')(bytes).extract({ left: 0, top: expected.height - expected.bottomPadding, width: expected.width, height: expected.bottomPadding }).png().toBuffer();
+            const stats = await require('sharp')(padding).stats();
+            assert(stats.channels.slice(0, 3).every(c => c.min >= 248), 'lathe detail must leave clear padding below the image');
+          }
         }
         results.pages.push({ slug: f.slug, viewport: width, ...state, minLabelPx, screenshot, passed: true });
       }
