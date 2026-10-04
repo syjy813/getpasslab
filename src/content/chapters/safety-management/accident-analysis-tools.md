@@ -27,7 +27,7 @@ examComment: 도구의 정의 문장을 주고 명칭을 고르는 유형 고정
     <p class="analysis-key">학습용 예시 · 큰뼈는 주요 원인 분류, 중뼈·작은뼈는 세부 원인<br />등뼈의 화살표는 왼쪽에서 오른쪽으로 향함</p>
   </figure>
   <figure>
-    <figcaption><strong>관리도</strong><span>시간에 따른 재해 발생 추이를 관리한계선과 비교함</span></figcaption>
+    <figcaption><strong>관리도</strong><span>재해 발생 추이에 관리한계선을 설정해 목표 관리함</span></figcaption>
     <img src="/images/industrial-safety/analysis-control-v1.svg" width="390" height="365" alt="시간 순서로 연결한 관측점과 중심선, 상방 관리한계UCL, 하방 관리한계LCL 및 상방 한계 초과점을 표시한 관리도" loading="lazy" decoding="async" />
     <p class="analysis-key">학습용 형태 예시 · UCL은 상방, LCL은 하방 관리한계<br />실제 통계나 계산된 한계값을 나타낸 그림은 아님</p>
   </figure>

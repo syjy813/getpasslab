@@ -14,6 +14,8 @@ Control: time runs left to right, labelled centre/UCL/LCL, circled point lies ab
 
 SVG previews rendered with existing Pretendard font and visually inspected in full. Fixed initial label/line collisions: first Pareto value moved inside the bar, fishbone subcauses split into two lines clear of bones, centre label moved clear of the control chart axis. No cropped arrowheads or plot labels. Caption titles absent from visible SVG content. Mobile/desktop use identical exact vector assets; no raster expansion or generated chart values.
 
+First CI passed all three widths and15 full question interactions; artifact ZIP SHA256 verified and captures inspected. Fixed screenshot positioning to clear fixed mobile navigation. Follow-up320px capture revealed a lone final 함 in the control caption; changed the caption to the question's limit-setting/target-management wording and scoped word-break:keep-all to captions/keys. Final-head CI and visual inspection required again for that layout change.
+
 ## Local checks
 
 Astro build427 pages; SEO429 HTML/428 sitemap URLs, errors0/warnings0. New chapter/resource checks passed. Machine split regression5 routes/24 questions/580 protected files passed with exact reviewed chapter chain. Contrast, public-content, deferred-question, computer-literacy publication/C1/001–081/082–159 checks passed. All frontmatter bytes matched previous commit; JavaScript syntax and diff whitespace passed.

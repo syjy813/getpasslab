@@ -10,7 +10,7 @@ Prior plan: 산업안전기사-이미지-챕터분리-1차검수-20261003.md, Li
 |---|---|---|
 | analysis-pareto-v1.svg | 20200926_017: distinguish sorted categories from chronological observations | 파레토도 / 사고 유형·기인물 등의 분류 항목을 큰 순서대로 나열함 |
 | analysis-fishbone-v1.svg | 20200822_016, 20210515_008: fish skeleton, cause hierarchy and right-facing spine | 특성요인도(어골상) / 원인 가지를 모아 오른쪽의 결과(특성)에 연결함 |
-| analysis-control-v1.svg | 20220424_006: time trend plus upper/lower limits | 관리도 / 시간에 따른 재해 발생 추이를 관리한계선과 비교함 |
+| analysis-control-v1.svg | 20220424_006: time trend plus upper/lower limits | 관리도 / 재해 발생 추이에 관리한계선을 설정해 목표 관리함 |
 
 All SVGs 390px wide. Core labels24px → 14.65px at238px display width. Structural/data lines5px →3.05px, detail leaders4px →2.44px. White/navy/slate standard palette; purple cumulative line is statistical data, not a fluid. Dashed control limits labelled UCL/LCL; out-of-limit point is circled and explicitly labelled, not conveyed by colour alone. Neutral direct category labels. No 3D styling on exact charts.
 
