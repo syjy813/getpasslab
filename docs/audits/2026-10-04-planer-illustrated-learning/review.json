@@ -1,0 +1,13 @@
+{
+  "baseCommit": "04509e88dd6db83ddd0e8f392bf204b4d379c86e",
+  "type": "planer illustrated figure only; frontmatter/questions and all teaching text preserved",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/planer-safety.md",
+      "changed": true,
+      "originalSha256": "a171a0dc85e13238f831144080b0fc107ad661c1eb98ddf447a1cc5c0d56bbeb",
+      "sha256": "c198bf63c1257fb825969e1fc8e51de68177511abfd0da6370fbcaa5fcd0110b",
+      "frontmatterSha256": "162e3c6b3707b3ed1d3512711df906efc27158a079b14d7c995b982f46197da1"
+    }
+  ]
+}

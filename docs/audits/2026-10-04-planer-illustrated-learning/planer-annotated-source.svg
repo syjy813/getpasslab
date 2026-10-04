@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1900" viewBox="0 0 1200 1900">
+<title>플레이너의 바이트·일감·테이블·베드</title>
+<desc>테이블에 고정한 일감이 고정 베드 위에서 왕복하고, 공구대에 짧게 설치한 단인 바이트가 일감의 상면에 접촉한다. 확대부의 선분은 돌출 길이 표시이며 운동 화살표가 아니다. 방호장치·구동부·피트와 상세 이송은 생략했다.</desc>
+<defs>
+<marker id="motion" viewBox="0 0 18 18" refX="14" refY="9" markerWidth="2.4" markerHeight="2.4" orient="auto"><path d="M0 0L18 9L0 18Z" fill="#25334B"/></marker>
+<linearGradient id="fadeX"><stop offset="0" stop-color="black"/><stop offset=".035" stop-color="white"/><stop offset=".965" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<linearGradient id="fadeY" x2="0" y2="1"><stop offset="0" stop-color="black"/><stop offset=".035" stop-color="white"/><stop offset=".965" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<mask id="zoomX"><rect x="60" y="890" width="1080" height="844" fill="url(#fadeX)"/></mask>
+<mask id="zoomY"><rect x="60" y="890" width="1080" height="844" fill="url(#fadeY)"/></mask>
+</defs>
+<rect width="1200" height="1900" fill="white"/>
+<g font-family="Pretendard Variable" fill="#25334B">
+<image href="planer-original-reference.jpg" x="120" y="80" width="960" height="640"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="479" y="230" width="325" height="254" rx="8" stroke="white" stroke-width="12"/>
+<rect x="479" y="230" width="325" height="254" rx="8" stroke="#526176" stroke-width="7" stroke-dasharray="16 11"/>
+<path d="M320 70L479 240" stroke="white" stroke-width="19"/><path d="M320 70L479 240" stroke="#526176" stroke-width="11"/>
+<path d="M348 248L569 439" stroke="white" stroke-width="19"/><path d="M348 248L569 439" stroke="#526176" stroke-width="11"/>
+<path d="M352 742L382 568" stroke="white" stroke-width="19"/><path d="M352 742L382 568" stroke="#526176" stroke-width="11"/>
+</g>
+<g fill="#526176" stroke="white" stroke-width="4"><circle cx="569" cy="439" r="12"/><circle cx="382" cy="568" r="12"/></g>
+<rect x="70" y="0" width="470" height="84" rx="14" fill="white"/><text x="90" y="64" font-size="72">가공부 확대</text>
+<rect x="50" y="152" width="400" height="86" rx="14" fill="white"/><text x="70" y="216" font-size="72" font-weight="bold">③ 테이블</text>
+<rect x="60" y="744" width="360" height="86" rx="14" fill="white"/><text x="80" y="808" font-size="72" font-weight="bold">④ 베드</text>
+<path d="M60 864H1140" stroke="#CBD5E1" stroke-width="3"/>
+<g mask="url(#zoomX)"><g mask="url(#zoomY)">
+<svg x="60" y="890" width="1080" height="844" viewBox="575 240 520 406" overflow="hidden"><image href="planer-original-reference.jpg" width="1536" height="1024"/></svg>
+</g></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M398 996L548 1170" stroke="white" stroke-width="19"/><path d="M398 996L548 1170" stroke="#526176" stroke-width="11"/>
+<path d="M430 1250L609 1342" stroke="white" stroke-width="19"/><path d="M430 1250L609 1342" stroke="#526176" stroke-width="11"/>
+<path d="M619 1118H650M650 1118V1267M619 1267H650" stroke="white" stroke-width="19"/>
+<path d="M619 1118H650M650 1118V1267M619 1267H650" stroke="#526176" stroke-width="11"/>
+<path d="M300 1580L940 1432M940 1472L300 1620" stroke="white" stroke-width="25"/>
+<path d="M300 1580L940 1432" stroke="#25334B" stroke-width="16" marker-end="url(#motion)"/>
+<path d="M940 1472L300 1620" stroke="#25334B" stroke-width="16" marker-end="url(#motion)"/>
+</g>
+<g fill="#526176" stroke="white" stroke-width="4"><circle cx="548" cy="1170" r="12"/><circle cx="609" cy="1342" r="12"/></g>
+<rect x="60" y="890" width="480" height="86" rx="14" fill="white"/><text x="80" y="954" font-size="72" font-weight="bold">① 바이트</text>
+<rect x="680" y="1120" width="460" height="86" rx="14" fill="white"/><text x="700" y="1184" font-size="72" font-weight="bold">짧은 돌출</text>
+<rect x="60" y="1180" width="370" height="86" rx="14" fill="white"/><text x="80" y="1244" font-size="72" font-weight="bold">② 일감</text>
+<rect x="550" y="1746" width="590" height="86" rx="14" fill="white"/><text x="570" y="1810" font-size="72" font-weight="bold">테이블 왕복</text>
+</g></svg>

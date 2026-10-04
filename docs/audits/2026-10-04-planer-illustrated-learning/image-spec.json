@@ -1,0 +1,16 @@
+{
+  "planer-safety": {
+    "src": "/images/industrial-safety/planer-motion-illustrated-v1.webp",
+    "alt": "전체 플레이너와 가공부 확대 그림. ③ 테이블과 고정된 ② 일감이 ④ 베드 위에서 왕복하며, 공구대에 짧게 설치된 ① 바이트가 일감의 평면을 깎는다. 방호장치·구동부·피트는 생략했다",
+    "width": 1200,
+    "height": 1900,
+    "minFontSize": 72,
+    "partLabelFontSize": 72,
+    "bottomPadding": 64,
+    "minDisplayWidth": 234,
+    "cardMaxWidth": 424,
+    "imageTopGap": 24,
+    "imageSideGap": 16,
+    "cardAlignment": "left"
+  }
+}
