@@ -12,7 +12,7 @@ status: 완료
 ---
 ## 핵심 개념
 
-<strong>VDT 화면 대비</strong>는 문자와 배경의 휘도 관계를 나타냄 · 수록 기출의 부호 convention에서는 문자 휘도를 배경 휘도로 나눈 뒤 음수 부호를 붙여 네거티브 대비를 표시함
+<strong>VDT 화면 대비</strong>는 문자와 배경의 휘도 관계를 나타냄 · 수록 기출의 부호 표기 기준에서는 문자 휘도를 배경 휘도로 나눈 뒤 음수 부호를 붙여 네거티브 대비를 표시함
 
 $$C=-\frac{L_{\mathrm{char}}}{L_{\mathrm{bg}}}$$
 
@@ -22,7 +22,9 @@ $$C=-\frac{L_{\mathrm{char}}}{L_{\mathrm{bg}}}$$
 
 $$L_{\mathrm{bg}}=\frac{E\rho}{\pi}$$
 
-문항 값 (E=350\ \text{lux}), (\rho=0.85)이면 (L_{배경}\approx94.6\ \text{cd/m^2})임 · 문자 휘도 (400\ \text{cd/m^2})를 대입하면
+문항 값 $E=350\ \text{lux}$, $\rho=0.85$이면 $L_{배경}\approx94.6\ \mathrm{cd/m^2}$임
+
+문자 휘도 $400\ \mathrm{cd/m^2}$를 대입하면
 
 $$C\approx-\frac{400}{94.6}\approx-4.2$$
 

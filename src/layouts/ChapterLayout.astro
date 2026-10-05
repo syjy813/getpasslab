@@ -1,5 +1,6 @@
 ---
 import '../styles/learningFigures.css';
+import '../styles/industrialReadability.css';
 import BaseLayout from './BaseLayout.astro';
 import {
   getCertification,
@@ -131,7 +132,7 @@ const structuredData = [
   description={seoDescription}
   ogType="article"
   structuredData={structuredData}
-  bodyClass="chapter-page"
+  bodyClass={cert_id === 'industrial-safety' ? 'chapter-page industrial-safety-chapter' : 'chapter-page'}
 >
   <div class="chapter-wrap">
     <aside class="chapter-side">

@@ -12,7 +12,9 @@ status: 완료
 ---
 ## 핵심 개념
 
-<strong>가용도(Availability)</strong>는 장비가 전체 관측 시간 중 정상적으로 작동할 수 있는 비율임 · 수리가 가능한 장비에서는 평균고장간격(MTBF)과 평균수리시간(MTTR)의 관계로 표현함
+<strong>가용도(Availability)</strong>는 장비가 전체 관측 시간 중 정상적으로 작동할 수 있는 비율임
+
+수리가 가능한 장비에서는 평균고장간격(MTBF)과 평균수리시간(MTTR)의 관계로 표현함
 
 $$A = \frac{MTBF}{MTBF + MTTR}$$
 

@@ -12,7 +12,9 @@ status: 완료
 ---
 ## 핵심 개념
 
-<strong>MTTF(Mean Time To Failure)</strong>는 수리하지 않고 사용하는 부품이나 시스템이 고장날 때까지의 평균 동작시간임 · 고장률이 일정한 지수분포 모델에서는 평균 고장률의 역수로 표현할 수 있음
+<strong>MTTF(Mean Time To Failure)</strong>는 수리하지 않고 사용하는 부품이나 시스템이 고장날 때까지의 평균 동작시간임
+
+고장률이 일정한 지수분포 모델에서는 평균 고장률의 역수로 표현할 수 있음
 
 $$MTTF = \frac{1}{\lambda}$$
 
