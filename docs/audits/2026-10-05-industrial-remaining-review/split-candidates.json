@@ -1,0 +1,493 @@
+[
+  {
+    "slug": "fta-symbols",
+    "title": "FTA 사상기호와 게이트 기호",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fta-symbols/",
+    "status": "우선 후보",
+    "proposedTopics": "사상기호 / 게이트 기호",
+    "reason": "사건의 종류와 논리 연결의 판별을 각각 설명할 수 있음",
+    "currentPrimaryQuestionGroups": {
+      "사상기호": [
+        "20220424_030",
+        "20210814_033",
+        "20210515_032",
+        "20180304_036",
+        "20210515_039"
+      ],
+      "게이트 기호": [
+        "20190303_023",
+        "20180428_029",
+        "20220305_037",
+        "20180819_038",
+        "20190804_036",
+        "20200926_021",
+        "20190427_037"
+      ]
+    },
+    "questions": [
+      {
+        "id": "20220424_030",
+        "body": "FTA(Fault Tree Analysis)에서 사용되는 사상 기호 중 통상의 작업이나 기계의 상태에서 재해의 발생 원인이 되는 요소가 있는 것은?",
+        "answer": 4,
+        "correctChoice": "기호그림④"
+      },
+      {
+        "id": "20210814_033",
+        "body": "FTA에서 사용되는 사상기호 중 결함사상을 나타낸 기호로 옳은 것은?",
+        "answer": 2,
+        "correctChoice": "그림②"
+      },
+      {
+        "id": "20210515_032",
+        "body": "FTA에서 사용하는 다음 사상기호에 대한 설명으로 맞는 것 은?",
+        "answer": 3,
+        "correctChoice": "불충분한 자료로 결론을 내릴 수 없어 더 이상 전개 할 수 없는 사상"
+      },
+      {
+        "id": "20180304_036",
+        "body": "FTA(Fault Tree Analysis)에 사용되는 논리 기호와 명칭이 올바르게 연결된 것은?",
+        "answer": 3,
+        "correctChoice": ": 통상사상"
+      },
+      {
+        "id": "20190303_023",
+        "body": "FT도에 사용되는 다음 게이트의 명칭은?",
+        "answer": 2,
+        "correctChoice": "억제 게이트"
+      },
+      {
+        "id": "20180428_029",
+        "body": "압력 B1과 B2의 어느 한쪽이 일어나면 출력 A가 생기는 경 우를 논리합의 관계라 한다. 이때 입력과 출력 사이에는 무 슨 게이트로 연결되는가?",
+        "answer": 1,
+        "correctChoice": "OR 게이트"
+      },
+      {
+        "id": "20220305_037",
+        "body": "FTA에서 사용되는 논리게이트 중 입력과 반대되는 현상으로 출력되는 것은?",
+        "answer": 1,
+        "correctChoice": "부정 게이트"
+      },
+      {
+        "id": "20180819_038",
+        "body": "FTA에서 사용되는 논리게이트 중 입력과 반대되는 현상으 로 출력되는 것은?",
+        "answer": 1,
+        "correctChoice": "부정 게이트"
+      },
+      {
+        "id": "20190804_036",
+        "body": "FTA에서 사용하는 수정게이트의 종류 중 3개의 입력현상 중 2개가 발생한 경우에 출력이 생기는 것은?",
+        "answer": 2,
+        "correctChoice": "조합 AND 게이트"
+      },
+      {
+        "id": "20200926_021",
+        "body": "결함수분석의 기호 중 입력사상이 어느 하나라도 발생할 경우 출력사상이 발생하는 것은?",
+        "answer": 3,
+        "correctChoice": "OR GATE"
+      },
+      {
+        "id": "20190427_037",
+        "body": "FT도에 사용하는 기호에서 3개의 입력현상 중 임의의 시간에 2개가 발생하면 출력이 생기는 기호의 명칭은?",
+        "answer": 2,
+        "correctChoice": "조합 AND 게이트"
+      },
+      {
+        "id": "20210515_039",
+        "body": "두 가지 상태 중 하나가 고장 또는 결함으로 나타나는 비정 상적인 사건은?",
+        "answer": 2,
+        "correctChoice": "결함사상"
+      }
+    ],
+    "caution": "불대수 절은 현재 주 기출이 직접 배정되어 있지 않아 별도 관계 검토 필요",
+    "implementation": "not split; no slug, metadata or question assignment changed"
+  },
+  {
+    "slug": "acetylene-properties",
+    "title": "아세틸렌 특성 (희석제·제조)",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/acetylene-properties/",
+    "status": "우선 후보",
+    "proposedTopics": "탄화칼슘 반응·저장 / 아세틸렌 용해 저장·취급 / 압축 희석제",
+    "reason": "서로 다른 반응·저장 방식·희석제 판단이 한 챕터에 있음",
+    "currentPrimaryQuestionGroups": {
+      "탄화칼슘 반응·저장": [
+        "20220424_093",
+        "20210515_088",
+        "20200606_098",
+        "20180819_088"
+      ],
+      "용해 저장·취급": [
+        "20210307_083",
+        "20190804_092",
+        "20200606_087",
+        "20200822_092"
+      ],
+      "압축 희석제": [
+        "20180428_088"
+      ]
+    },
+    "questions": [
+      {
+        "id": "20220424_093",
+        "body": "위험물의 저장방법으로 적절하지 않은 것은?",
+        "answer": 1,
+        "correctChoice": "탄화칼슘은 물 속에 저장한다."
+      },
+      {
+        "id": "20210515_088",
+        "body": "탄화칼슘이 물과 반응하였을 때 생성물을 올바르게 나타낸 것은?",
+        "answer": 1,
+        "correctChoice": "수산화칼슘 + 아세틸렌"
+      },
+      {
+        "id": "20210307_083",
+        "body": "압축하면 폭발할 위험성이 높아 아세톤 등에 용해시켜 다공성 물질과 함께 저장하는 물질은?",
+        "answer": 2,
+        "correctChoice": "아세틸렌"
+      },
+      {
+        "id": "20190804_092",
+        "body": "금속의 용접ㆍ용단 또는 가열에 사용되는 가스 등의 용기를 취급할 때의 준수사항으로 틀린 것은?",
+        "answer": 4,
+        "correctChoice": "용기의 온도를 섭씨 65도 이하로 유지한다."
+      },
+      {
+        "id": "20200606_087",
+        "body": "다음 중 분해 폭발의 위험성이 있는 아세틸렌의 용제로 가장 적절한 것은?",
+        "answer": 3,
+        "correctChoice": "아세톤"
+      },
+      {
+        "id": "20200606_098",
+        "body": "다음 중 물과 반응하여 아세틸렌을 발생시키는 물질은?",
+        "answer": 4,
+        "correctChoice": "CaC₂"
+      },
+      {
+        "id": "20200822_092",
+        "body": "다음 중 아세틸렌을 용해가스로 만들 때 사용되는 용제로 가장 적합한 것은?",
+        "answer": 1,
+        "correctChoice": "아세톤"
+      },
+      {
+        "id": "20180428_088",
+        "body": "아세틸렌 압축 시 사용되는 희석제로 적당하지 않은 것은?",
+        "answer": 3,
+        "correctChoice": "산소"
+      },
+      {
+        "id": "20180819_088",
+        "body": "위험물의 저장방법으로 적절하지 않은 것은?",
+        "answer": 1,
+        "correctChoice": "탄화칼슘은 물 속에 저장한다."
+      }
+    ],
+    "caution": "희석제 1문항은 독립 분리 또는 용해 저장과 묶을지 비교 검토 필요",
+    "implementation": "not split; no slug, metadata or question assignment changed"
+  },
+  {
+    "slug": "msd-risk-factors",
+    "title": "근골격계 유해요인 5종",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/msd-risk-factors/",
+    "status": "우선 후보",
+    "proposedTopics": "근골격계 부담작업·평가 / 진동 노출과 레이노병",
+    "reason": "부담작업·OWAS 판별과 진동성 말초혈관 장해가 별도 질문 축임",
+    "currentPrimaryQuestionGroups": {
+      "부담작업·평가": [
+        "20220424_032",
+        "20220305_032",
+        "20180819_021"
+      ],
+      "진동 노출": [
+        "20190804_039"
+      ]
+    },
+    "questions": [
+      {
+        "id": "20220424_032",
+        "body": "근골격계질환 작업분석 및 평가 방법인 OWAS의 평가요소를 모두 고른 것은?",
+        "answer": 4,
+        "correctChoice": "ㄱ, ㄴ, ㄷ, ㄹ"
+      },
+      {
+        "id": "20220305_032",
+        "body": "근골격계부담작업의 범위 및 유해요인조사 방법에 관한 고시상 근골격계부담작업에 해당하지 않는 것은? (단, 상시작업을 기준으로 한다.)",
+        "answer": 3,
+        "correctChoice": "하루에 총 2시간 이상 시간당 5회 이상 손 또는 무릎을 사용하여 반복적으로 충격을 가하는 작업"
+      },
+      {
+        "id": "20190804_039",
+        "body": "국소진동에 지속적으로 노출된 근로자에게 발생할 수 있으 며, 말초혈관 장해로 손가락이 창백해지고 동통을 느끼는 질환의 명칭은?",
+        "answer": 1,
+        "correctChoice": "레이노 병(Raynaud's phenomenon)"
+      },
+      {
+        "id": "20180819_021",
+        "body": "고용노동부 고시의 근골격계부담작업의 범위에서 근골격계 부담작업에 대한 설명으로 틀린 것은?",
+        "answer": 3,
+        "correctChoice": "하루에 총 2시간 이상 집중적으로 자료입력 등을 위해 키보드 또는 마우스를 조작하는 작업"
+      }
+    ],
+    "caution": "신체 운동 용어 절은 현재 주 기출이 직접 배정되어 있지 않음. OWAS 원본 도판을 별도 확인해야 함",
+    "implementation": "not split; no slug, metadata or question assignment changed"
+  },
+  {
+    "slug": "articulation-index",
+    "title": "음성통신 지수 — AI·SIL·PNC",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/articulation-index/",
+    "status": "기출 연결 확인 후 판단",
+    "proposedTopics": "음성통신 지수 / 소음 크기 척도",
+    "reason": "통신 방해와 dB·phon·sone의 물리량 구별은 서로 다른 설명 범위임",
+    "currentPrimaryQuestionGroups": {
+      "음성통신 지수": [
+        "20220305_028",
+        "20180428_027",
+        "20210814_036"
+      ],
+      "소음 크기 척도": []
+    },
+    "questions": [
+      {
+        "id": "20220305_028",
+        "body": "통화이해도에 영향을 주는 잡음의 영향을 추정하는 지수는?",
+        "answer": 2,
+        "correctChoice": "통화 간섭 수준"
+      },
+      {
+        "id": "20180428_027",
+        "body": "음성통신에 있어 소음환경과 관련하여 성격이 다른 지수는?",
+        "answer": 2,
+        "correctChoice": "MAA(Minimum Audible Angle) : 최소가청 각도"
+      },
+      {
+        "id": "20210814_036",
+        "body": "다음 그림에서 명료도 지수는?",
+        "answer": 3,
+        "correctChoice": "1.38"
+      }
+    ],
+    "caution": "소음 크기 척도에는 현재 직접 배정된 주 기출 없음. 다른 소음 챕터와 중복 검토 필요",
+    "implementation": "not split; no slug, metadata or question assignment changed"
+  },
+  {
+    "slug": "swain-human-error",
+    "title": "Swain 인간 실수 분류",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/swain-human-error/",
+    "status": "기출 연결 확인 후 판단",
+    "proposedTopics": "작업 수행 오류 / 심리적·물리적 발생요인",
+    "reason": "오류의 수행 형태와 오류의 발생 원인은 분류 기준이 다름",
+    "currentPrimaryQuestionGroups": {
+      "수행 오류": [
+        "20210814_021",
+        "20210307_038",
+        "20190804_023",
+        "20200822_022",
+        "20200926_022"
+      ],
+      "발생요인": []
+    },
+    "questions": [
+      {
+        "id": "20210814_021",
+        "body": "다음 상황은 인간실수의 분류 중 어느 것에 해당하는가?",
+        "answer": 2,
+        "correctChoice": "omission error"
+      },
+      {
+        "id": "20210307_038",
+        "body": "불필요한 작업을 수행함으로써 발생하는 오류로 옳은 것은?",
+        "answer": 2,
+        "correctChoice": "Extraneous error"
+      },
+      {
+        "id": "20190804_023",
+        "body": "인간의 실수 중 수행해야 할 작업 및 단계를 생략하여 발생 하는 오류는?",
+        "answer": 1,
+        "correctChoice": "omission error"
+      },
+      {
+        "id": "20200822_022",
+        "body": "인간 에러(human error)에 관한 설명으로 틀린 것은?",
+        "answer": 2,
+        "correctChoice": "commission error : 필요한 작업 또는 절차의 수행지연으로 인한 에러"
+      },
+      {
+        "id": "20200926_022",
+        "body": "가스밸브를 잠그는 것을 잊어 사고가 발생했다면 작업자는 어떤 인적오류를 범한 것인가?",
+        "answer": 1,
+        "correctChoice": "생략 오류(omission error)"
+      }
+    ],
+    "caution": "발생요인에는 현재 직접 배정된 주 기출 없음. 부주의 챕터와 경계 확인 필요",
+    "implementation": "not split; no slug, metadata or question assignment changed"
+  },
+  {
+    "slug": "static-occurrence-factors",
+    "title": "정전기 발생 요인",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/static-occurrence-factors/",
+    "status": "기출 연결 확인 후 판단",
+    "proposedTopics": "정전기 발생 요인 / 방전 형태",
+    "reason": "대전의 원인과 축적 전하가 방전되는 형태가 섞여 있음",
+    "currentPrimaryQuestionGroups": {
+      "발생 요인": [
+        "20220424_067",
+        "20210515_079",
+        "20200926_070",
+        "20200822_062",
+        "20180819_068",
+        "20190427_075",
+        "20190804_070",
+        "20210307_074"
+      ],
+      "방전 형태": []
+    },
+    "questions": [
+      {
+        "id": "20220424_067",
+        "body": "정전기 발생에 영향을 주는 요인에 대한 설명으로 틀린 것은?",
+        "answer": 1,
+        "correctChoice": "물체의 분리속도가 빠를수록 발생량은 적어진다."
+      },
+      {
+        "id": "20210515_079",
+        "body": "정전기 발생에 영향을 주는 요인이 아닌 것은?",
+        "answer": 3,
+        "correctChoice": "물체의 접촉시간"
+      },
+      {
+        "id": "20200926_070",
+        "body": "정전기 발생에 영향을 주는 요인으로 가장 적절하지 않은 것은?",
+        "answer": 2,
+        "correctChoice": "물체의 질량"
+      },
+      {
+        "id": "20200822_062",
+        "body": "다음 중 정전기의 발생 현상에 포함되지 않는 것은?",
+        "answer": 3,
+        "correctChoice": "전도 대전"
+      },
+      {
+        "id": "20180819_068",
+        "body": "정전기 발생의 일반적인 종류가 아닌 것은?",
+        "answer": 2,
+        "correctChoice": "중화"
+      },
+      {
+        "id": "20190427_075",
+        "body": "정전기 발생현상의 분류에 해당되지 않는 것은?",
+        "answer": 1,
+        "correctChoice": "유체대전"
+      },
+      {
+        "id": "20190804_070",
+        "body": "정전기의 유동대전에 가장 크게 영향을 미치는 요인은?",
+        "answer": 2,
+        "correctChoice": "액체의 유동속도"
+      },
+      {
+        "id": "20210307_074",
+        "body": "다른 두 물체가 접촉할 때 접촉 전위차가 발생하는 원인으로 옳은 것은?",
+        "answer": 4,
+        "correctChoice": "두 물체의 일함수 차"
+      }
+    ],
+    "caution": "방전 형태에는 현재 직접 배정된 주 기출 없음. 정전기 에너지 챕터와 경계 확인 필요",
+    "implementation": "not split; no slug, metadata or question assignment changed"
+  },
+  {
+    "slug": "fire-classification",
+    "title": "화재 분류 A·B·C·D급",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/fire-classification/",
+    "status": "기출 연결 확인 후 판단",
+    "proposedTopics": "화재급수 / 물질 상태별 연소 형태",
+    "reason": "무엇이 타는가와 어떤 과정으로 타는가는 별도 판별임",
+    "currentPrimaryQuestionGroups": {
+      "화재급수": [
+        "20220305_082",
+        "20200822_085",
+        "20200926_095",
+        "20180428_082",
+        "20180819_086"
+      ],
+      "연소 형태": []
+    },
+    "questions": [
+      {
+        "id": "20220305_082",
+        "body": "다음 중 전기화재의 종류에 해당하는 것은?",
+        "answer": 3,
+        "correctChoice": "C급"
+      },
+      {
+        "id": "20200822_085",
+        "body": "다음 중 유류화재의 화재급수에 해당하는 것은?",
+        "answer": 2,
+        "correctChoice": "B급"
+      },
+      {
+        "id": "20200926_095",
+        "body": "다음 중 C급 화재에 해당하는 것은?",
+        "answer": 2,
+        "correctChoice": "전기화재"
+      },
+      {
+        "id": "20180428_082",
+        "body": "다음 중 전기화재의 종류에 해당하는 것은?",
+        "answer": 3,
+        "correctChoice": "C급"
+      },
+      {
+        "id": "20180819_086",
+        "body": "다음 중 유류화재에 해당하는 화재의 급수는?",
+        "answer": 2,
+        "correctChoice": "B급"
+      }
+    ],
+    "caution": "연소 형태에는 현재 직접 배정된 주 기출 없음. 소화 원리와 중복 검토 필요",
+    "implementation": "not split; no slug, metadata or question assignment changed"
+  },
+  {
+    "slug": "safety-education-stages",
+    "title": "교육의 3단계·단계별 과정",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/safety-education-stages/",
+    "status": "기출 연결 확인 후 판단",
+    "proposedTopics": "교육 단계 / 교육계획·지도원칙",
+    "reason": "지식·기능·태도의 단계와 교육계획 구성은 별도 학습 목표임",
+    "currentPrimaryQuestionGroups": {
+      "교육 단계": [
+        "20190427_010",
+        "20190804_007",
+        "20200926_020",
+        "20210307_008"
+      ],
+      "교육계획·지도원칙": []
+    },
+    "questions": [
+      {
+        "id": "20190427_010",
+        "body": "다음 중 안전゠보건교육의 단계별 교육과정 순서로 옳은 것은?",
+        "answer": 2,
+        "correctChoice": "안전 지식교육 → 안전 기능교육 → 안전 태도교육"
+      },
+      {
+        "id": "20190804_007",
+        "body": "안전보건교육의 단계에 해당하지 않는 것은?",
+        "answer": 2,
+        "correctChoice": "기초교육"
+      },
+      {
+        "id": "20200926_020",
+        "body": "안전교육의 단계에 있어 교육대상자가 스스로 행함으로서 습득하게 하는 교육은?",
+        "answer": 2,
+        "correctChoice": "기능교육"
+      },
+      {
+        "id": "20210307_008",
+        "body": "안전교육 중 같은 것을 반복하여 개인의 시행착오에 의해서만 점차 그 사람에게 형성되는 것은?",
+        "answer": 3,
+        "correctChoice": "안전기능의 굑육"
+      }
+    ],
+    "caution": "교육계획·지도원칙에는 현재 직접 배정된 주 기출 없음. 시간·방법 챕터와 경계 확인 필요",
+    "implementation": "not split; no slug, metadata or question assignment changed"
+  }
+]

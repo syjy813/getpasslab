@@ -12,7 +12,9 @@ status: 완료
 ---
 ## 핵심 개념
 
-OJT(On the Job Training)는 실제 직무 현장에서 직속 상사나 선임자가 업무와 함께 지도하는 현장훈련임 · Off-JT(Off the Job Training)는 작업 현장을 벗어나 교육에 전념하도록 하는 집합·외부 훈련임
+OJT(On the Job Training)는 실제 직무 현장에서 직속 상사나 선임자가 업무와 함께 지도하는 현장훈련임
+
+Off-JT(Off the Job Training)는 작업 현장을 벗어나 교육에 전념하도록 하는 집합·외부 훈련임
 
 ## 판별 기준
 
