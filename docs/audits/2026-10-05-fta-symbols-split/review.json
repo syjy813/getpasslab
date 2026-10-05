@@ -1,0 +1,162 @@
+{
+  "baseCommit": "a551b3eeb227efe7d27025d017b5e3f397f7ac0f",
+  "chapters": [
+    {
+      "path": "src/content/chapters/ergonomics/fta-symbols.md",
+      "slug": "fta-symbols",
+      "title": "FTA 사상기호와 게이트 기호",
+      "subject_id": 2,
+      "questions": [],
+      "related": [
+        "fta-event-symbols",
+        "fta-logic-gates",
+        "fta-procedure",
+        "cutset-pathset"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fta-symbols/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "239af522d472f63615b765edd90cbf251fec6e76494a3a8d2b195810b36d750d",
+      "sha256": "a79af0ce87eb8b781cded32e8ded67532fef7a9bb7a8db17e4e70231abe712e9",
+      "frontmatterSha256": "29b701b1956dd48afcd8d9efb46053a0e09ed4df8cb96861176b83d9163515a5",
+      "preservedContentSha256": "ee2332aa9ceed580f73283e68c5eeab2653c7712e29475a3eb15f3f5ffb38674",
+      "articleSha256": "20898f3482a3f2884984f943baf0ed4e829889c97029aa8fe10779e8afe26128"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/fta-event-symbols.md",
+      "slug": "fta-event-symbols",
+      "title": "FTA 사상기호",
+      "subject_id": 2,
+      "questions": [
+        "20220424_030",
+        "20210814_033",
+        "20210515_032",
+        "20180304_036",
+        "20210515_039"
+      ],
+      "related": [
+        "fta-symbols",
+        "fta-logic-gates",
+        "fta-procedure"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fta-event-symbols/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "dabb4d1f458cdb9a7c4bf0c656b75fe262f6581975f152a0fbcdbdc8b5cac913",
+      "frontmatterSha256": "1cef0d6e2c14bae112f9fec8048c08292130eaad5d1ea03541be8ee23f261db0",
+      "preservedContentSha256": "570ba077841eb1fe12e95b97b4b92a0b57d4e715e731839f865165a32289bcb5",
+      "articleSha256": "82ddda1715cba74cc34eb57873acc2a973a73dc33ca61daac5ddb53ad584f7ba"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/fta-logic-gates.md",
+      "slug": "fta-logic-gates",
+      "title": "FTA 게이트 기호",
+      "subject_id": 2,
+      "questions": [
+        "20190303_023",
+        "20180428_029",
+        "20220305_037",
+        "20180819_038",
+        "20190804_036",
+        "20200926_021",
+        "20190427_037"
+      ],
+      "related": [
+        "fta-symbols",
+        "fta-event-symbols",
+        "exclusive-or-gate",
+        "cutset-pathset"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fta-logic-gates/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "2ecdea1f6bf7072adc6942a05fed5e42fd160f9764ae5bd56b4cd206410ee643",
+      "frontmatterSha256": "4b2eaab88b1e9204a6685894a2d6296304cd439fa02051e60c766961b5889015",
+      "preservedContentSha256": "dbd08be1511123c71b8908cd5db24cec2f16a12f2654b71dca5438dd13b4c915",
+      "articleSha256": "aff6064bfd5b46e787e38eab266e1e671cd59778e9d6e895df3d0564db0b78a9"
+    }
+  ],
+  "displayFiles": [
+    {
+      "path": "public/images/chapters/fta-symbols/fta-event-symbols.svg",
+      "changed": true,
+      "newFile": true,
+      "sha256": "344d545fa4a68f5a3fd585c5bd4a677ad480ed74fcc25a948727c75f014dd8a2"
+    },
+    {
+      "path": "public/images/chapters/fta-symbols/fta-logic-gates.svg",
+      "changed": true,
+      "newFile": true,
+      "sha256": "c7cbc02af4fbdfb02398282921cfd789ae593ff3e0893f351c8ab7d7d8904b37"
+    }
+  ],
+  "families": [
+    {
+      "parent": "fta-symbols",
+      "children": [
+        "fta-event-symbols",
+        "fta-logic-gates"
+      ]
+    }
+  ],
+  "sources": [
+    "https://s3vi.ndc.nasa.gov/ssri-kb/static/resources/Fault%20Tree%20Handbook_NASA.pdf"
+  ],
+  "scope": "FTA only. Preserve parent frozen title/slug/order/group/priority and all 12 primary question payloads/answers. Allocate 5 event +7 gate questions once. Keep Boolean foundation for cutset/pathset. No computer-literacy/acetylene/MSD changes.",
+  "relatedLinkChanges": [
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/cutset-pathset/",
+      "originalArticleSha256": "67e47eb758c58307c58c51bea75cfde9e562c34bcebe54a20458bff608607b8b",
+      "articleSha256": "a919bf5c8b83ccbd37562c7b87f4f0c7f07b0e9e297cf695ddad1629ed96ceed",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/fta-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호와 게이트 기호</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-procedure/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 수행 절차</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/hazop-guidewords/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">HAZOP·가이드워드</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/fta-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호와 게이트 기호</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-procedure/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 수행 절차</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-event-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/eta-event-tree/",
+      "originalArticleSha256": "f3a7dee28834c18e5b1ec33295e5d94fdade50a60f4ece563c232105f89371d2",
+      "articleSha256": "9c5e31ded34e691964870d49764204faac4c3c5ceb321b500968330f41094153",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/system-analysis-techniques/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">시스템 분석 기법 비교</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-procedure/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 수행 절차</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호와 게이트 기호</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/system-analysis-techniques/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">시스템 분석 기법 비교</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-event-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-logic-gates/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 게이트 기호</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/exclusive-or-gate/",
+      "originalArticleSha256": "872ba46616bc5c013375cce2d459c0ccc46730ab1b873bd0e272f2174b0e4f1d",
+      "articleSha256": "6290e5f25ba296bf3ca2989825dbd4ed5053b9bc93eaf659095d460d53d4abcc",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/fta-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호와 게이트 기호</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-procedure/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 수행 절차</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/hazop-guidewords/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">HAZOP·가이드워드</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/fta-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호와 게이트 기호</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-event-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-logic-gates/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 게이트 기호</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fmea/",
+      "originalArticleSha256": "ac2d157ddbe23c105bc407f4d0dce933478d49dfe3cf154f46b22d44763d0b46",
+      "articleSha256": "de4eb87c380604aa187f13b9ca13e0a96f6ce2a6d2c462e9014e2c257dd8e032",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/system-analysis-techniques/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">시스템 분석 기법 비교</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-procedure/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 수행 절차</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호와 게이트 기호</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/system-analysis-techniques/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">시스템 분석 기법 비교</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-procedure/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 수행 절차</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-event-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/hazop-guidewords/",
+      "originalArticleSha256": "6dea4a3bc99ea89ba38eddd01108d91ad02aa74c8022d1953aa40a9362558264",
+      "articleSha256": "b9f083722d1b69e03ed31f9006b12bf41dbd89139733e458a67a4af6262c427c",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/system-analysis-techniques/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">시스템 분석 기법 비교</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-procedure/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 수행 절차</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/system-analysis-techniques/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">시스템 분석 기법 비교</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-event-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/pha-preliminary-analysis/",
+      "originalArticleSha256": "59702c2fb818730004fcdde3727013b18bcd9618f203815a72e110885874ab55",
+      "articleSha256": "f0221cc94d7d0100b1b402ec588e5cc294c16d2d343b17513ba2aacba6e9d633",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/system-analysis-techniques/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">시스템 분석 기법 비교</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-procedure/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 수행 절차</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/system-analysis-techniques/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">시스템 분석 기법 비교</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-event-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/therp-human-error/",
+      "originalArticleSha256": "fca2c67cc00df081b7f1f5d557be6703a54b872cf5da101c96cea45adbb1a20f",
+      "articleSha256": "21cfd69947881adaf1bce309c9c4aea3f72681d9cdb1108400c4463b928a8f6c",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/system-analysis-techniques/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">시스템 분석 기법 비교</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-procedure/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 수행 절차</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/system-analysis-techniques/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">시스템 분석 기법 비교</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/eta-event-tree/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">사건수 분석 (ETA)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/cutset-pathset/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">컷셋·패스셋·미니멀</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/exclusive-or-gate/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">배타적 OR 게이트</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fmea/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FMEA</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/fta-event-symbols/\"><span class=\"rel-group\">FTA·시스템 분석</span><span class=\"rel-title\">FTA 사상기호</span></a></li> </ul>"
+    }
+  ]
+}

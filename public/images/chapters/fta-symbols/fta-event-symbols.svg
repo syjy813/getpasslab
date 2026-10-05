@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="340" viewBox="0 0 360 340" role="img" aria-labelledby="title desc">
+  <title id="title">FTA 사상기호 네 가지</title>
+  <desc id="desc">사각형 결함사상, 원 기본사상, 집 모양 통상사상, 마름모 생략사상을 두 줄로 비교한 학습용 도식</desc>
+  <rect width="360" height="340" rx="8" fill="#FFFFFF"/>
+  <g stroke="#526176" stroke-width="3.5" fill="none" stroke-linejoin="round">
+    <g transform="translate(90 76)"><path d="M0-31V-48M0 31V48"/><rect x="-48" y="-31" width="96" height="62"/></g>
+    <g transform="translate(270 76)"><path d="M0-38V-53"/><circle r="38"/></g>
+    <g transform="translate(90 238)"><path d="M0-37V-52"/><path d="M-48 35V-7L0-37 48-7V35Z"/></g>
+    <g transform="translate(270 238)"><path d="M0-42V-57"/><path d="M0-42 43 0 0 42-43 0Z"/></g>
+  </g>
+  <g fill="#25334B" font-family="'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="20" font-weight="700" text-anchor="middle">
+    <text x="90" y="150">결함사상</text><text x="270" y="150">기본사상</text>
+    <text x="90" y="316">통상사상</text><text x="270" y="316">생략사상</text>
+  </g>
+</svg>
