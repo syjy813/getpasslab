@@ -9,6 +9,7 @@ const audit = 'docs/audits/2026-10-03-industrial-safety-machine-tools-split';
 const evidence = JSON.parse(await readFile(`${audit}/source-verification.json`, 'utf8'));
 const review = JSON.parse(await readFile(`${audit}/review.json`, 'utf8'));
 const laterSplits = JSON.parse(await readFile('docs/audits/2026-10-04-industrial-safety-chapter-splits/review.json', 'utf8'));
+const ftaReview = JSON.parse(await readFile('docs/audits/2026-10-05-fta-symbols-split/review.json', 'utf8'));
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const parse = source => yaml.load(source.match(/^---\n([\s\S]*?)\n---\n/)[1], { schema: yaml.FAILSAFE_SCHEMA });
 const scope = '/industrial-safety/written/mechanical/';
@@ -45,7 +46,7 @@ for (const file of await walk('src/content/chapters')) {
 assert.equal(laterSplits.families.length, 12);
 assert.equal(laterSplits.chapters.filter(c => c.newFile || c.previousStatus === '미시작').length, 22);
 assert.deepEqual(laterSplits.deduplicated.map(q => q.id), ['20200822_031']);
-assert.equal(chapters.length, evidence.beforeCompleted + 4 + 22, 'unexpected industrial-safety publication count');
+assert.equal(chapters.length, evidence.beforeCompleted + 4 + 22 + ftaReview.chapters.filter(row => row.newFile).length, 'unexpected industrial-safety publication count');
 assert.equal(chapters.flatMap(c => c.questions ?? []).length, evidence.beforePrimaryReferences - 1, 'only the reviewed duplicate THERP primary reference may be removed');
 assert.equal(chapters.filter(c => c.questions?.includes('20200822_031')).length, 1);
 assert(chapters.find(c => c.slug === 'therp-human-error')?.questions.includes('20200822_031'));
@@ -93,5 +94,5 @@ for (const [slug, ids] of Object.entries(evidence.allocations)) {
   }
   if (slug !== 'machine-tools-safety') assert(fields.related.includes('machine-tools-safety'), `${slug}: missing return link`);
 }
-console.log('[Machine tools split] 5 routes + TOC/sitemap/related links passed; all 24 questions allocated once; 246 completed chapters / 1003 primary references after the reviewed 12-family split');
+console.log(`[Machine tools split] 5 routes + TOC/sitemap/related links passed; all 24 questions allocated once; ${chapters.length} completed chapters / 1003 primary references after the reviewed splits`);
 console.log(`[Machine tools split] ${Object.keys(evidence.protectedFiles).length} protected files unchanged or covered by exact reviewed chapter hashes; 1680 canonical questions and historical image registries/assets unchanged`);
