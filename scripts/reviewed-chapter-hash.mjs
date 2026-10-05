@@ -31,7 +31,7 @@ for (const file of [
     throw error;
   }
   const seen = new Set();
-  for (const chapter of review.chapters.filter(chapter => chapter.changed)) {
+  for (const chapter of [...review.chapters, ...(review.displayFiles ?? []).filter(file => !file.newFile)].filter(chapter => chapter.changed)) {
     assert(!seen.has(chapter.path), `${chapter.path}: duplicate file in one review`);
     seen.add(chapter.path);
     const chain = reviewed.get(chapter.path) ?? [];

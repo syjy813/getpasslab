@@ -22,6 +22,9 @@ for (const row of review.chapters) {
   assert.deepEqual([...html.matchAll(/data-open="(\d{8}_\d{3})"/g)].map(m => m[1]), row.questions, `${row.slug}: question buttons changed`);
   assert(!html.includes('class="katex-error"'), `${row.slug}: math parse error`);
 }
+for (const row of review.displayFiles ?? []) {
+  assert.equal(hash(await readFile(row.path, 'utf8')), row.sha256, `${row.path}: unreviewed display change`);
+}
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
   assert.equal(hash(await readFile(file)), expected, `${file}: unrelated source or asset changed`);
 }

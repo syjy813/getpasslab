@@ -33,6 +33,7 @@ let browser, current;
     const viewport = { width, pages: [] }; result.viewports.push(viewport);
     for (const row of review.chapters) {
       current = `${width}/${row.slug}`;
+      try {
       await page.goto(base + new URL(row.url).pathname, { waitUntil: 'networkidle' });
       await page.evaluate(() => document.fonts.ready);
       const layout = await page.evaluate(() => {
@@ -56,6 +57,12 @@ let browser, current;
       assert.deepEqual(await page.locator('main [data-open]').evaluateAll(els => els.map(e => e.dataset.open)), row.questions);
       if (captures.has(row.slug)) await page.screenshot({ path: path.join(out, `${width}-${row.slug}.png`), fullPage: true });
       viewport.pages.push({ slug: row.slug, layout, passed: true }); save();
+      } catch (error) {
+        result.errors.push(`${current}: ${error}`);
+        viewport.pages.push({ slug: row.slug, passed: false, error: String(error) });
+        await page.screenshot({ path: path.join(out, `failure-${width}-${row.slug}.png`), fullPage: true }).catch(() => {});
+        save();
+      }
     }
     await context.close();
   }

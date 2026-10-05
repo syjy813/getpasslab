@@ -537,7 +537,6 @@
     "src/data/questions/energy-management.json": "67ee3593e987e436f4fe051c42900baf41d162e6ad5982c10109a9950ffec336",
     "src/data/questions/industrial-safety.json": "d7da505307c790d56adbdc0fbd01cac2abe6a348a2c2023c9702e4f52470ce15",
     "src/layouts/BaseLayout.astro": "41aac3b2d4777ccc7543ec625729daceb58915228b53db2f358878252717474a",
-    "src/layouts/ChapterLayout.astro": "14547e6a85c4fa5a4c847acaa9fe61413a99834a45e1806f3f07c1dcb2aa4f30",
     "src/loaders/questions.ts": "106ff489369870b42cca416a62ed8a147a2404d53a51da8f25f714189ce7de52",
     "src/pages/[cert]/[exam]/[subject]/[slug].astro": "652f4050341024b6e937599760a06853b8f3ceaf9af58ae1316446254a6ec370",
     "src/pages/[cert]/[exam]/[subject]/index.astro": "75f0fd3dd9c5754e236a628ce8845216eb70e58bc1d0150ae4927e4586fb8aa4",
