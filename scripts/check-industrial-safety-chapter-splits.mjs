@@ -10,7 +10,8 @@ const evidence = JSON.parse(await readFile(`${audit}/source-verification.json`, 
 const review = JSON.parse(await readFile(`${audit}/review.json`, 'utf8'));
 const headingReview = JSON.parse(await readFile('docs/audits/2026-10-04-chapter-section-heading-ui/review.json', 'utf8'));
 const ftaReview = JSON.parse(await readFile('docs/audits/2026-10-05-fta-symbols-split/review.json', 'utf8'));
-const addedChapters = ftaReview.chapters.filter(row => row.newFile);
+const batchReview = JSON.parse(await readFile('docs/audits/2026-10-05-industrial-remaining-splits/review.json', 'utf8'));
+const addedChapters = [...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile);
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const parse = source => yaml.load(source.match(/^---\n([\s\S]*?)\n---\n/)[1]);
 const subjects = { 1: 'safety-management', 2: 'ergonomics', 3: 'mechanical', 4: 'electrical', 5: 'chemical', 6: 'construction' };
@@ -53,10 +54,10 @@ assert.deepEqual(files.sort(), [...beforeFiles, ...review.chapters.filter(c => c
 const chapters = await Promise.all(files.map(async file => ({ ...parse(await readFile(file, 'utf8')), file })));
 const published = chapters.filter(c => (c.cert_id ?? 'industrial-safety') === 'industrial-safety' && c.status === '완료');
 assert.equal(published.length, 246 + addedChapters.length);
-assert.equal(published.flatMap(c => c.questions ?? []).length, 1003);
+assert.equal(published.flatMap(c => c.questions ?? []).length, 1003 + batchReview.addedPrimaryQuestionIds.length);
 const beforeIds = new Set(evidence.beforePublishedChapters.flatMap(c => c.questions));
 const afterIds = new Set(published.flatMap(c => c.questions ?? []));
-assert.deepEqual([...afterIds].sort(), [...beforeIds].sort(), 'global primary question coverage must be unchanged');
+assert.deepEqual([...afterIds].sort(), [...new Set([...beforeIds, ...batchReview.addedPrimaryQuestionIds])].sort(), 'preserve all original primary coverage; add only reviewed unassigned questions');
 assert.equal(published.filter(c => c.questions.includes('20200822_031')).length, 1);
 assert(published.find(c => c.slug === 'therp-human-error').questions.includes('20200822_031'));
 assert.equal(new Set(published.map(c => `${c.subject_id}/${c.slug}`)).size, 246 + addedChapters.length);
@@ -115,5 +116,5 @@ for (const row of review.chapters) {
   const rendered = html.match(/<article\b[\s\S]*?<\/article>/)?.[0] ?? html;
   assert(!/katex-error|class="[^\"]*error/.test(rendered), `${row.slug}: math render error`);
 }
-console.log(`[Chapter splits] 12 families / 35 reviewed routes / 22 newly published chapters; ${published.length} published, 1003 primary references; all unique primary coverage preserved`);
+console.log(`[Chapter splits] 12 families / 35 reviewed routes / 22 newly published chapters; ${published.length} published, ${1003 + batchReview.addedPrimaryQuestionIds.length} primary references; all unique primary coverage preserved`);
 console.log(`[Chapter splits] ${Object.keys(evidence.protectedFiles).length} baseline files protected; 1680 canonical questions, images and unrelated chapters unchanged`);
