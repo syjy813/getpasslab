@@ -9,8 +9,9 @@ const reviewFile = `${audit}/review.json`;
 const review = JSON.parse(await readFile(reviewFile, 'utf8'));
 const evidence = JSON.parse(await readFile(`${audit}/source-verification.json`, 'utf8'));
 const ftaReview = JSON.parse(await readFile('docs/audits/2026-10-05-fta-symbols-split/review.json', 'utf8'));
-const addedFiles = [...ftaReview.chapters, ...ftaReview.displayFiles].filter(row => row.newFile);
-const publicPages = evidence.publicPages.map(row => ftaReview.chapters.find(later => later.url === row.url) ?? row).concat(ftaReview.chapters.filter(row => row.newFile));
+const batchReview = JSON.parse(await readFile('docs/audits/2026-10-05-industrial-remaining-splits/review.json', 'utf8'));
+const addedFiles = [...ftaReview.chapters, ...ftaReview.displayFiles, ...batchReview.chapters].filter(row => row.newFile);
+const publicPages = evidence.publicPages.map(row => batchReview.chapters.find(later => later.url === row.url) ?? ftaReview.chapters.find(later => later.url === row.url) ?? row).concat([...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile));
 const hash = value => createHash('sha256').update(value).digest('hex');
 async function walk(dir) {
   const files = [];
@@ -40,13 +41,16 @@ assert.deepEqual(actualRoutes.sort(), publicPages.map(row => new URL(row.url).pa
 for (const row of publicPages) {
   const html = await readFile(`dist${new URL(row.url).pathname}index.html`, 'utf8');
   const article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1];
-  const links = ftaReview.relatedLinkChanges.find(change => change.url === row.url);
-  if (links) {
-    assert.equal(links.originalArticleSha256, row.articleSha256);
-    assert.equal(hash(article), links.articleSha256);
-    assert.equal(article.split(links.after).length, 2);
-    assert.equal(hash(article.replace(links.after, links.before)), row.articleSha256, `${row.url}: only related links may change`);
-  } else assert.equal(hash(article), row.articleSha256, `${row.url}: article contents changed`);
+  let restoredArticle = article;
+  for (const release of [batchReview, ftaReview]) {
+    const links = release.relatedLinkChanges.find(change => change.url === row.url);
+    if (!links) continue;
+    assert.equal(hash(restoredArticle), links.articleSha256);
+    assert.equal(restoredArticle.split(links.after).length, 2);
+    restoredArticle = restoredArticle.replace(links.after, links.before);
+    assert.equal(hash(restoredArticle), links.originalArticleSha256, `${row.url}: only exact related links may change`);
+  }
+  assert.equal(hash(restoredArticle), row.articleSha256, `${row.url}: article contents changed`);
   assert.deepEqual([...html.matchAll(/data-open="(\d{8}_\d{3})"/g)].map(m => m[1]), row.questions, `${row.url}: questions changed`);
   assert(html.includes(`href="${row.url}"`), `${row.url}: canonical changed`);
   assert(!html.includes('formula-gray-sample'), `${row.url}: obsolete sample class`);

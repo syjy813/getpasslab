@@ -1,0 +1,613 @@
+{
+  "baseCommit": "d72421cd00db69dbe2d1fc39ccf27bee60881b9d",
+  "chapters": [
+    {
+      "path": "src/content/chapters/chemical/acetylene-properties.md",
+      "slug": "acetylene-properties",
+      "title": "아세틸렌 특성 (희석제·제조)",
+      "subject_id": 5,
+      "questions": [],
+      "related": [
+        "calcium-carbide-reaction-storage",
+        "acetylene-dissolved-storage",
+        "acetylene-dilution-gases"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/acetylene-properties/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "3cbe0e9df2581bbb25ae070509619655413f3fd3303fc92e043fa54aa0ceb63b",
+      "sha256": "0e4b23038aa937a8426d675299d6cead6cd10e1b8ea8c771cee716a12dba241d",
+      "frontmatterSha256": "e53d10f3b291431db23d30cf16b3da10c57df3ac7a35dcd9861014f4b128b8a7",
+      "preservedContentSha256": "6b2739cb4f65feb555e81c9a4d87c570ab5acfcefb62144d7adea054d3036e43",
+      "articleSha256": "52faf0db31d9528ab9f9e7064452165d5f95c81f600ea28a260309f3d9a69b84"
+    },
+    {
+      "path": "src/content/chapters/chemical/calcium-carbide-reaction-storage.md",
+      "slug": "calcium-carbide-reaction-storage",
+      "title": "탄화칼슘 반응·저장",
+      "subject_id": 5,
+      "questions": [
+        "20220424_093",
+        "20210515_088",
+        "20200606_098",
+        "20180819_088"
+      ],
+      "related": [
+        "acetylene-properties",
+        "acetylene-dissolved-storage"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/calcium-carbide-reaction-storage/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "f7f4976a46d815a4a779377f4cd87aad6ab4ec4526cb9b4e4f7ab61e19662b7a",
+      "frontmatterSha256": "83dba804f951b688653b6295190a74af306df6aae60c21ec23c28e75d83cdc68",
+      "preservedContentSha256": "c559b912c4b219f7b4f2083ef883a3c4f58bd64a2155cda49b2a741a0dcdfec3",
+      "articleSha256": "81b9e25aac2b0600e0d0b28bd932a27fefd2e8d2f90cedd0f67fc08cbc7bfb86"
+    },
+    {
+      "path": "src/content/chapters/chemical/acetylene-dissolved-storage.md",
+      "slug": "acetylene-dissolved-storage",
+      "title": "아세틸렌 용해 저장·취급",
+      "subject_id": 5,
+      "questions": [
+        "20210307_083",
+        "20190804_092",
+        "20200606_087",
+        "20200822_092"
+      ],
+      "related": [
+        "acetylene-properties",
+        "calcium-carbide-reaction-storage",
+        "acetylene-dilution-gases"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/acetylene-dissolved-storage/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "0e292d52ed49d684edf76f17c696cd479c89d97ff1cbec0b89ff9572b7309b40",
+      "frontmatterSha256": "2e699ba039d261d07e2914a4e763f8a7ac5f2b9f254c93577258b7abda5053a7",
+      "preservedContentSha256": "6ca4a22b9651ed6cc96c3dab68b113147a4512a7828669214ca975a04fec35f9",
+      "articleSha256": "0e004bc82486a23232f96f052dc7089b8339fcfb7b4c4cb4a6ea13070642a212"
+    },
+    {
+      "path": "src/content/chapters/chemical/acetylene-dilution-gases.md",
+      "slug": "acetylene-dilution-gases",
+      "title": "아세틸렌 압축 희석제",
+      "subject_id": 5,
+      "questions": [
+        "20180428_088"
+      ],
+      "related": [
+        "acetylene-properties",
+        "acetylene-dissolved-storage"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/acetylene-dilution-gases/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "267aed8c61d083553f6b18698f380f4902175d1cc01e93e99db4b643847d3449",
+      "frontmatterSha256": "13e1d2fe0d4952900e9e6499bc06edad869dfb18197b6ed8fa7534bf7d9d4581",
+      "preservedContentSha256": "2198ec30afa58ed828f41660ab828ddda5395726eed70bfaf358ed07434cc880",
+      "articleSha256": "c77048f860b394543338fdc99a2e8d0b0e7239a5c8431fc5c35f1f111fddd054"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/msd-risk-factors.md",
+      "slug": "msd-risk-factors",
+      "title": "근골격계 유해요인 5종",
+      "subject_id": 2,
+      "questions": [],
+      "related": [
+        "msd-workload-assessment",
+        "vibration-raynaud"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/msd-risk-factors/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "5e954881db8a33ed504f226c3b131ada34e52f43f9b2e698293c69e1393ca527",
+      "sha256": "ae42c391235c2f1f29fccd964ae4fc0baa7e6e7070c8b93f4809e7ceba9d9d12",
+      "frontmatterSha256": "62429e118d04e44020593bbb603f02f81f5e463d635ed5bde530920f7f954743",
+      "preservedContentSha256": "8df8fd242e84e769bbf4f2f6baae3ae247954f051d48396cfafa58a10cf8dc16",
+      "articleSha256": "1a94f653337ad4a64c1429b1277ec5a79e1ad00eec6af0ae3f621f7e7565deda"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/msd-workload-assessment.md",
+      "slug": "msd-workload-assessment",
+      "title": "근골격계 부담작업·OWAS 평가",
+      "subject_id": 2,
+      "questions": [
+        "20220424_032",
+        "20220305_032",
+        "20180819_021"
+      ],
+      "related": [
+        "msd-risk-factors",
+        "vibration-raynaud"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/msd-workload-assessment/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "922687de9e72bd0d28f6bf7de416ee4eb607bb486feca98b1ef119e4d8588242",
+      "frontmatterSha256": "e2eb0f0f62c930739bd303ac6029bebfcd5847a820611216720d2180cf804a3a",
+      "preservedContentSha256": "bc34f38c4d8ce246d32d43635e33c0565877f3ea133858e94e4e78c7872e8b60",
+      "articleSha256": "6a68f8ce7f2293938371a3d20e9d726db33ca7dd732ac55b537346948e2131ef"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/vibration-raynaud.md",
+      "slug": "vibration-raynaud",
+      "title": "진동 노출·레이노병",
+      "subject_id": 2,
+      "questions": [
+        "20190804_039"
+      ],
+      "related": [
+        "msd-risk-factors",
+        "msd-workload-assessment"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/vibration-raynaud/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "5af54f20b6b83a8c7f9108f547748ec8737d676dcea37e892077f9f8dfc97bff",
+      "frontmatterSha256": "0c83b3529974b679125b085a57f20101f372f9f213f0962ba0c4e1a74db358ff",
+      "preservedContentSha256": "4a66852ffa7c9f76872e0109a5f1174b9db19f93e69ec89f883c847b23179346",
+      "articleSha256": "d86a5bc2ea7b6cbba4543ecaed8afdf552543416cfc3f5e78c8428aae407df72"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/articulation-index.md",
+      "slug": "articulation-index",
+      "title": "음성통신 지수 — AI·SIL·PNC",
+      "subject_id": 2,
+      "questions": [
+        "20220305_028",
+        "20180428_027",
+        "20210814_036"
+      ],
+      "related": [
+        "noise-loudness-scales"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/articulation-index/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "e3173db2a1dda61dcb79ea843cd038c9c6efdf5332387cdf3896fcbf6a5f0a81",
+      "sha256": "1121287aecf579e2b6b3feb82937a5e6afbf6deacb838ac6e50f2aaec0facbcf",
+      "frontmatterSha256": "f63642f351f6d03dc73b9254343d2d4d7f67d9b0a6bbf34d5772f8ed053dc01b",
+      "preservedContentSha256": "b91f5312eb4a34038731b204b1d007cd7f035ad8a0eedde8108c43e236fdef44",
+      "articleSha256": "fb32ff234fc041b0465cc799fbf7dd8dbb2966591cdae32859c5dbe9b7b76439"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/noise-loudness-scales.md",
+      "slug": "noise-loudness-scales",
+      "title": "소음 크기 척도 — dB·phon·sone",
+      "subject_id": 2,
+      "questions": [
+        "20220424_040",
+        "20210515_026",
+        "20190303_029",
+        "20190303_031",
+        "20190427_032"
+      ],
+      "related": [
+        "articulation-index",
+        "thermal-conditions-wbgt"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/noise-loudness-scales/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "82a0dc56c03abb9b25bedaa90f8f9ad1e5a39f4daaa0c1d90b40587062a5013a",
+      "frontmatterSha256": "a5c43f8a039dd12f4a810e6e0138ca0fcdc6629d4ff219de4d6da085890cc5e0",
+      "preservedContentSha256": "3852cb59c8b6ad69d7304414cfa90da55cb18d9f83d5ef608f0e14dcc4c12287",
+      "articleSha256": "992ab5c47082891cac5d55af51e440c67cc5c0aee922260de0457238341954bf"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/swain-human-error.md",
+      "slug": "swain-human-error",
+      "title": "Swain 인간 실수 분류",
+      "subject_id": 2,
+      "questions": [
+        "20210814_021",
+        "20210307_038",
+        "20190804_023",
+        "20200822_022",
+        "20200926_022"
+      ],
+      "related": [
+        "human-error-factors",
+        "therp-human-error"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/swain-human-error/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "1b54c2f0febd671d0fb9705eb915d8f15e490f59db805d6b30c000dfea456b6d",
+      "sha256": "3e411f06c6395556e1f7f01b3782e1f6bb71e55adda86b71f3fd74152bd1c105",
+      "frontmatterSha256": "9cec75b111d2f64eb41086821b23e1fe0f11c887535d2b7ae171850b1393bbcd",
+      "preservedContentSha256": "c566585f58c8deec430547aee0f927248a1a588caf3c358ed0ec35d2b6dc3ee8",
+      "articleSha256": "dc4283fe1cacadbcb0288fd2b6a2c6e0bc90a1d96e64adf3a323837e898747b7"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/human-error-factors.md",
+      "slug": "human-error-factors",
+      "title": "휴먼에러의 심리적·물리적 요인",
+      "subject_id": 2,
+      "questions": [
+        "20200606_037"
+      ],
+      "related": [
+        "swain-human-error"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/human-error-factors/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "44cbb48d19f4be01b42a46dec4cdb573bb92f8a2dec7d9b15c7d787a89ac1295",
+      "frontmatterSha256": "958af6f1efc75feada133f9da215a04e3bcd0f3828347c8b8d4d7cc438564396",
+      "preservedContentSha256": "ab357dba0920e9d61aeac383a6b7ff9f9cac5f844201087cd7f55b6d057be058",
+      "articleSha256": "fefecdf3b9285521350714370f1d4c64f8d595a7203ca8770a2382fe609dcb2c"
+    },
+    {
+      "path": "src/content/chapters/electrical/static-occurrence-factors.md",
+      "slug": "static-occurrence-factors",
+      "title": "정전기 발생 요인",
+      "subject_id": 4,
+      "questions": [
+        "20220424_067",
+        "20210515_079",
+        "20200926_070",
+        "20200822_062",
+        "20180819_068",
+        "20190427_075",
+        "20190804_070",
+        "20210307_074"
+      ],
+      "related": [
+        "static-discharge-types",
+        "static-prevention",
+        "static-energy",
+        "pipe-flow-limit"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/static-occurrence-factors/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "969b726ee82139cd8c231eb87889cf2062c7ed18401d1f178e0009c3a9f82597",
+      "sha256": "9f229d27d17d17011e993dbb6791275a1a1aed785b0d665648426aec2e7735dc",
+      "frontmatterSha256": "7b3fd9f9733b2cc8e200a81f3703a38278708882b6d7f358d01515d7134d896f",
+      "preservedContentSha256": "a35abdb1081d14f1a90c1c0f652b58e02808278940fbcdc60abc8fac0e5b3986",
+      "articleSha256": "29ed58fd0deb09dbfc2c0d5f923a389134e81cfd16a01f3f04ddaf4a59b8cbc4"
+    },
+    {
+      "path": "src/content/chapters/electrical/static-discharge-types.md",
+      "slug": "static-discharge-types",
+      "title": "정전기 방전 형태",
+      "subject_id": 4,
+      "questions": [
+        "20200822_072",
+        "20200926_074"
+      ],
+      "related": [
+        "static-occurrence-factors",
+        "static-prevention",
+        "static-energy"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/static-discharge-types/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "9b189a3f2713f2b7281a70bc951d518487be5335a664a2f793b7243caffe671e",
+      "frontmatterSha256": "2e2311ab7b725d81a866f7ff71f2a408413a839c575e9482a9547ff8ff7e3306",
+      "preservedContentSha256": "26cd1e167fa7c66c90861baa2ec654ca9ec1dea1745521cbf43bcabe1da19dd4",
+      "articleSha256": "999087582635b8d2281692ddde32545b2ea306240f38c7f2c418cecff28fb237"
+    },
+    {
+      "path": "src/content/chapters/chemical/fire-classification.md",
+      "slug": "fire-classification",
+      "title": "화재 분류 A·B·C·D급",
+      "subject_id": 5,
+      "questions": [
+        "20220305_082",
+        "20200822_085",
+        "20200926_095",
+        "20180428_082",
+        "20180819_086"
+      ],
+      "related": [
+        "combustion-forms"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/fire-classification/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "c293c8f0699d3cd8a85157514343c78e52f7586f3e1d3e860b569a20f118ac60",
+      "sha256": "8b7859c8fab3de9ce3b9341bae06b3cbcfd4bf668d8a299024376f3fc842d2bb",
+      "frontmatterSha256": "4c4ee748fef8051426e01e81fa27658307d9cbf7ae3239f2419a681feb38286f",
+      "preservedContentSha256": "d4b3530da41c1e3bdd512ebfb1246c0b3a6d88982a7b469200508b08b3fea66e",
+      "articleSha256": "8b86ce06790f18763850a5d05854052ed4037c0370eb9a9469beb1911cff0f2f"
+    },
+    {
+      "path": "src/content/chapters/chemical/combustion-forms.md",
+      "slug": "combustion-forms",
+      "title": "물질 상태별 연소 형태",
+      "subject_id": 5,
+      "questions": [
+        "20210814_081",
+        "20190804_081",
+        "20200926_097",
+        "20180304_090",
+        "20180819_094"
+      ],
+      "related": [
+        "fire-classification"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/combustion-forms/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "b55e093dbd09714b6929d88c08552af04ca5d75a3769d19cf646eaca00f7f2d6",
+      "frontmatterSha256": "effab5dbb315fa93c438204e29f3ebbe33d030c069e5e37e1d0eca19cc1e3ab9",
+      "preservedContentSha256": "4ed4eb1fcdb511f7745dc1ebb35d335c035efd67cf4a446f2b97add99028b589",
+      "articleSha256": "1f41118deffbe144e001b3063c42d915e80cb68ab15b35bf1882a79e329a934d"
+    },
+    {
+      "path": "src/content/chapters/safety-management/safety-education-stages.md",
+      "slug": "safety-education-stages",
+      "title": "교육의 3단계·단계별 과정",
+      "subject_id": 1,
+      "questions": [
+        "20190427_010",
+        "20190804_007",
+        "20200926_020",
+        "20210307_008"
+      ],
+      "related": [
+        "safety-education-plan"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/safety-education-stages/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "f6bfd196a043d8727ae6393838f387187606243765f1b70678ed51856c13618e",
+      "sha256": "751400ddc11d60b52157cc53fc80641e67af2e675e9d94f65afd56fc6465b0f7",
+      "frontmatterSha256": "482b0b97bd35e2c01808530107649e11822fdd472f5ad15a20b9749ec5fe1d46",
+      "preservedContentSha256": "4df7be31289fd43189db33cb220a692f7778c9c66d18b7d3973e378bb65a3b9d",
+      "articleSha256": "72af2659891761320c3da8c6f4150cd69ba8db54e88a1c14b1f10daf921c0fe0"
+    },
+    {
+      "path": "src/content/chapters/safety-management/safety-education-plan.md",
+      "slug": "safety-education-plan",
+      "title": "안전교육 계획 수립",
+      "subject_id": 1,
+      "questions": [
+        "20200606_008",
+        "20180428_017",
+        "20190303_011"
+      ],
+      "related": [
+        "safety-education-stages"
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/safety-education-plan/",
+      "certification": "industrial-safety",
+      "changed": true,
+      "newFile": true,
+      "originalSha256": null,
+      "sha256": "d1e20e7cd1fa06a96419120364f83ad840cbedaedda8b8a5f8f0fd0ec91115e5",
+      "frontmatterSha256": "8d32cf8fb70c61b10914046854da7c82d1ea31481be073191354698a053fcd76",
+      "preservedContentSha256": "c36b3373d3667f7a65fdc90fa981718790ad641a0f1c671d8bc3bbca84e04550",
+      "articleSha256": "e14c2d27df22da76ca1b65c7037931a9052cc836e248fa6460549bf548da88e8"
+    }
+  ],
+  "families": [
+    {
+      "parent": "acetylene-properties",
+      "folder": "chemical",
+      "children": [
+        "calcium-carbide-reaction-storage",
+        "acetylene-dissolved-storage",
+        "acetylene-dilution-gases"
+      ]
+    },
+    {
+      "parent": "msd-risk-factors",
+      "folder": "ergonomics",
+      "children": [
+        "msd-workload-assessment",
+        "vibration-raynaud"
+      ]
+    },
+    {
+      "parent": "articulation-index",
+      "folder": "ergonomics",
+      "children": [
+        "noise-loudness-scales"
+      ]
+    },
+    {
+      "parent": "swain-human-error",
+      "folder": "ergonomics",
+      "children": [
+        "human-error-factors"
+      ]
+    },
+    {
+      "parent": "static-occurrence-factors",
+      "folder": "electrical",
+      "children": [
+        "static-discharge-types"
+      ]
+    },
+    {
+      "parent": "fire-classification",
+      "folder": "chemical",
+      "children": [
+        "combustion-forms"
+      ]
+    },
+    {
+      "parent": "safety-education-stages",
+      "folder": "safety-management",
+      "children": [
+        "safety-education-plan"
+      ]
+    }
+  ],
+  "addedPrimaryQuestionIds": [
+    "20220424_040",
+    "20210515_026",
+    "20190303_029",
+    "20190303_031",
+    "20190427_032",
+    "20200606_037",
+    "20200822_072",
+    "20200926_074",
+    "20210814_081",
+    "20190804_081",
+    "20200926_097",
+    "20180304_090",
+    "20180819_094",
+    "20200606_008",
+    "20180428_017",
+    "20190303_011"
+  ],
+  "relatedLinkChanges": [
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/co2-extinguisher/",
+      "originalArticleSha256": "3514616c86cc86656b1e46fd1af91c167b41e99931e1d0537f495255f2561b62",
+      "articleSha256": "fa7c13a43a884690a688a3339ff72e005e9d04375a8af57df2e592aa103bdd7a",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/extinguisher-effects/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">소화약제별 주 소화효과</span></a></li><li><a href=\"/industrial-safety/written/chemical/fire-classification/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">화재 분류 A·B·C·D급</span></a></li><li><a href=\"/industrial-safety/written/chemical/fire-suppression-principles/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">소화 원리 4가지</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/combustion-forms/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">물질 상태별 연소 형태</span></a></li><li><a href=\"/industrial-safety/written/chemical/extinguisher-effects/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">소화약제별 주 소화효과</span></a></li><li><a href=\"/industrial-safety/written/chemical/fire-classification/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">화재 분류 A·B·C·D급</span></a></li><li><a href=\"/industrial-safety/written/chemical/fire-suppression-principles/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">소화 원리 4가지</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/endothermic-substances/",
+      "originalArticleSha256": "8cb2acca37dbcf62dae2ef00fffe37a495e9d2590c1bf11eb979cadd5a5bf4b7",
+      "articleSha256": "8e637e04a3c7eaa880f3c54e0a4ecc917c81c481ce0835f7622adcf6c8c4a872",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/acetylene-properties/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 특성 (희석제·제조)</span></a></li><li><a href=\"/industrial-safety/written/chemical/reactive-dangerous-gases/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">위험물 반응 가스 발생</span></a></li><li><a href=\"/industrial-safety/written/chemical/safe-explosion-combinations/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">폭발 위험 낮은 조합</span></a></li><li><a href=\"/industrial-safety/written/chemical/water-prohibited-extinguishers/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">금수성 물질 소화기</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/acetylene-dilution-gases/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 압축 희석제</span></a></li><li><a href=\"/industrial-safety/written/chemical/acetylene-dissolved-storage/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 용해 저장·취급</span></a></li><li><a href=\"/industrial-safety/written/chemical/acetylene-properties/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 특성 (희석제·제조)</span></a></li><li><a href=\"/industrial-safety/written/chemical/calcium-carbide-reaction-storage/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">탄화칼슘 반응·저장</span></a></li><li><a href=\"/industrial-safety/written/chemical/reactive-dangerous-gases/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">위험물 반응 가스 발생</span></a></li><li><a href=\"/industrial-safety/written/chemical/safe-explosion-combinations/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">폭발 위험 낮은 조합</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/extinguisher-effects/",
+      "originalArticleSha256": "489167c60c88ff218400fbc7d26636ae46b454e3230ac92623831c2ecec27b1d",
+      "articleSha256": "274ffea504a4876b3858084b8fcb9cc556076bcc0d97ff24c72911600256975f",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/co2-extinguisher/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">CO₂ 소화약제 특성</span></a></li><li><a href=\"/industrial-safety/written/chemical/fire-classification/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">화재 분류 A·B·C·D급</span></a></li><li><a href=\"/industrial-safety/written/chemical/fire-suppression-principles/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">소화 원리 4가지</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/co2-extinguisher/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">CO₂ 소화약제 특성</span></a></li><li><a href=\"/industrial-safety/written/chemical/combustion-forms/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">물질 상태별 연소 형태</span></a></li><li><a href=\"/industrial-safety/written/chemical/fire-classification/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">화재 분류 A·B·C·D급</span></a></li><li><a href=\"/industrial-safety/written/chemical/fire-suppression-principles/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">소화 원리 4가지</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/fire-suppression-principles/",
+      "originalArticleSha256": "0bab789abbc81900d246b95c3b03e825fcac80e836fbee60a97f0d15fcfd4b2c",
+      "articleSha256": "25b7151d18171a46b8921204bd39895d1f8e61293cbe55c24de16d1e24ca96ed",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/co2-extinguisher/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">CO₂ 소화약제 특성</span></a></li><li><a href=\"/industrial-safety/written/chemical/extinguisher-effects/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">소화약제별 주 소화효과</span></a></li><li><a href=\"/industrial-safety/written/chemical/fire-classification/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">화재 분류 A·B·C·D급</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/co2-extinguisher/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">CO₂ 소화약제 특성</span></a></li><li><a href=\"/industrial-safety/written/chemical/combustion-forms/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">물질 상태별 연소 형태</span></a></li><li><a href=\"/industrial-safety/written/chemical/extinguisher-effects/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">소화약제별 주 소화효과</span></a></li><li><a href=\"/industrial-safety/written/chemical/fire-classification/\"><span class=\"rel-group\">화재·소화</span><span class=\"rel-title\">화재 분류 A·B·C·D급</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/reactive-dangerous-gases/",
+      "originalArticleSha256": "abf045cf281ddc6a8b060861ac4ee81f07e810b2412c4e1dae1a93da0345bd66",
+      "articleSha256": "1d038727f2b523e8f474b1412eff5c745e1f18f7f1049ac52ab0d709ba02c23d",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/acetylene-properties/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 특성 (희석제·제조)</span></a></li><li><a href=\"/industrial-safety/written/chemical/endothermic-substances/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">흡열반응 물질</span></a></li><li><a href=\"/industrial-safety/written/chemical/safe-explosion-combinations/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">폭발 위험 낮은 조합</span></a></li><li><a href=\"/industrial-safety/written/chemical/water-prohibited-extinguishers/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">금수성 물질 소화기</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/acetylene-dilution-gases/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 압축 희석제</span></a></li><li><a href=\"/industrial-safety/written/chemical/acetylene-dissolved-storage/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 용해 저장·취급</span></a></li><li><a href=\"/industrial-safety/written/chemical/acetylene-properties/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 특성 (희석제·제조)</span></a></li><li><a href=\"/industrial-safety/written/chemical/calcium-carbide-reaction-storage/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">탄화칼슘 반응·저장</span></a></li><li><a href=\"/industrial-safety/written/chemical/endothermic-substances/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">흡열반응 물질</span></a></li><li><a href=\"/industrial-safety/written/chemical/safe-explosion-combinations/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">폭발 위험 낮은 조합</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/safe-explosion-combinations/",
+      "originalArticleSha256": "994e9564efbf84c18eb41f50c9658a26ac184e39c43364399daca2efaf012cbf",
+      "articleSha256": "4c84587f4f08f8f55238600782514f1ebf7c16c4e44488083cd4c09177e10e54",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/acetylene-properties/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 특성 (희석제·제조)</span></a></li><li><a href=\"/industrial-safety/written/chemical/endothermic-substances/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">흡열반응 물질</span></a></li><li><a href=\"/industrial-safety/written/chemical/reactive-dangerous-gases/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">위험물 반응 가스 발생</span></a></li><li><a href=\"/industrial-safety/written/chemical/water-prohibited-extinguishers/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">금수성 물질 소화기</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/acetylene-dilution-gases/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 압축 희석제</span></a></li><li><a href=\"/industrial-safety/written/chemical/acetylene-dissolved-storage/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 용해 저장·취급</span></a></li><li><a href=\"/industrial-safety/written/chemical/acetylene-properties/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 특성 (희석제·제조)</span></a></li><li><a href=\"/industrial-safety/written/chemical/calcium-carbide-reaction-storage/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">탄화칼슘 반응·저장</span></a></li><li><a href=\"/industrial-safety/written/chemical/endothermic-substances/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">흡열반응 물질</span></a></li><li><a href=\"/industrial-safety/written/chemical/reactive-dangerous-gases/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">위험물 반응 가스 발생</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/water-prohibited-extinguishers/",
+      "originalArticleSha256": "0e81279060739a60ad8e7b4fed584845d5dbd0f926ebd879a29999a115c688d3",
+      "articleSha256": "c3613f4303c9160bfb408c5c520c99b45308ab02902da469a52b27a6c25d24c6",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/acetylene-properties/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 특성 (희석제·제조)</span></a></li><li><a href=\"/industrial-safety/written/chemical/endothermic-substances/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">흡열반응 물질</span></a></li><li><a href=\"/industrial-safety/written/chemical/reactive-dangerous-gases/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">위험물 반응 가스 발생</span></a></li><li><a href=\"/industrial-safety/written/chemical/safe-explosion-combinations/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">폭발 위험 낮은 조합</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/chemical/acetylene-dilution-gases/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 압축 희석제</span></a></li><li><a href=\"/industrial-safety/written/chemical/acetylene-dissolved-storage/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 용해 저장·취급</span></a></li><li><a href=\"/industrial-safety/written/chemical/acetylene-properties/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">아세틸렌 특성 (희석제·제조)</span></a></li><li><a href=\"/industrial-safety/written/chemical/calcium-carbide-reaction-storage/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">탄화칼슘 반응·저장</span></a></li><li><a href=\"/industrial-safety/written/chemical/endothermic-substances/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">흡열반응 물질</span></a></li><li><a href=\"/industrial-safety/written/chemical/reactive-dangerous-gases/\"><span class=\"rel-group\">위험물 반응</span><span class=\"rel-title\">위험물 반응 가스 발생</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/electrostatic-induction/",
+      "originalArticleSha256": "fc3f2c1a5f5048b9600ac7de0b587314d9a1b316e47e99cb7fac59ddbee30567",
+      "articleSha256": "2ec4191a5f66da5e7fd1165fdc57cf900260cfda960d5a1579f82a93ecfc0a23",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/electrical/charge-capacitance/\"><span class=\"rel-group\">기초 전기 공식</span><span class=\"rel-title\">전하량·정전용량</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-energy/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 축적 에너지</span></a></li><li><a href=\"/industrial-safety/written/electrical/pipe-flow-limit/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 방지 배관 유속 제한</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-occurrence-factors/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 발생 요인</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-prevention/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 재해 방지 대책</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/electrical/charge-capacitance/\"><span class=\"rel-group\">기초 전기 공식</span><span class=\"rel-title\">전하량·정전용량</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-energy/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 축적 에너지</span></a></li><li><a href=\"/industrial-safety/written/electrical/pipe-flow-limit/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 방지 배관 유속 제한</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-discharge-types/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 방전 형태</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-occurrence-factors/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 발생 요인</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-prevention/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 재해 방지 대책</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/pipe-flow-limit/",
+      "originalArticleSha256": "1e1e3c43876284f2f643908476e2155b9da9ebfafc22cf80202b8dcdbb3be760",
+      "articleSha256": "2530453cb52c5de1be61f77bb21ed4fb456c35f67711771ac32602304f8fc0bd",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/electrical/static-prevention/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 재해 방지 대책</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-occurrence-factors/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 발생 요인</span></a></li><li><a href=\"/industrial-safety/written/electrical/electrostatic-induction/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전유도 분배 전압</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-energy/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 축적 에너지</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/electrical/static-prevention/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 재해 방지 대책</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-occurrence-factors/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 발생 요인</span></a></li><li><a href=\"/industrial-safety/written/electrical/electrostatic-induction/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전유도 분배 전압</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-discharge-types/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 방전 형태</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-energy/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 축적 에너지</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/static-energy/",
+      "originalArticleSha256": "4ddac9b0bac1b4c4c431f17132b61f31048fe995d281a291f0b511f08a9b0f79",
+      "articleSha256": "70b0b31c644518f7bd488b599d63b5b1ca8b8324af86b69abd914e540c622205",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/electrical/charge-capacitance/\"><span class=\"rel-group\">기초 전기 공식</span><span class=\"rel-title\">전하량·정전용량</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-prevention/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 재해 방지 대책</span></a></li><li><a href=\"/industrial-safety/written/electrical/electrostatic-induction/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전유도 분배 전압</span></a></li><li><a href=\"/industrial-safety/written/electrical/pipe-flow-limit/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 방지 배관 유속 제한</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-occurrence-factors/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 발생 요인</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/electrical/charge-capacitance/\"><span class=\"rel-group\">기초 전기 공식</span><span class=\"rel-title\">전하량·정전용량</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-prevention/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 재해 방지 대책</span></a></li><li><a href=\"/industrial-safety/written/electrical/electrostatic-induction/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전유도 분배 전압</span></a></li><li><a href=\"/industrial-safety/written/electrical/pipe-flow-limit/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 방지 배관 유속 제한</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-discharge-types/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 방전 형태</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-occurrence-factors/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 발생 요인</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/static-prevention/",
+      "originalArticleSha256": "a850b105ad09a8156d90f864a3a57ad9cb1e1651a764cb624c7c4967fa0b258d",
+      "articleSha256": "e62b599cc2efa9e37fcffd4344d1e2d51d748b41c68f9c8016414365ec049b4d",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/electrical/static-occurrence-factors/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 발생 요인</span></a></li><li><a href=\"/industrial-safety/written/electrical/pipe-flow-limit/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 방지 배관 유속 제한</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-energy/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 축적 에너지</span></a></li><li><a href=\"/industrial-safety/written/electrical/electrostatic-induction/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전유도 분배 전압</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/electrical/static-occurrence-factors/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 발생 요인</span></a></li><li><a href=\"/industrial-safety/written/electrical/pipe-flow-limit/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 방지 배관 유속 제한</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-energy/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 축적 에너지</span></a></li><li><a href=\"/industrial-safety/written/electrical/electrostatic-induction/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전유도 분배 전압</span></a></li><li><a href=\"/industrial-safety/written/electrical/static-discharge-types/\"><span class=\"rel-group\">정전기</span><span class=\"rel-title\">정전기 방전 형태</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/cr-ratio/",
+      "originalArticleSha256": "8de6be6631ab68069734216556cceae3e681ffa54f9e04be9050f3afab892214",
+      "articleSha256": "7e9614b647d0d6d238ed63e92400d871ea0e861ce0bd47ef2c30435239a0123e",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/man-machine-system-design/\"><span class=\"rel-group\">시스템 설계</span><span class=\"rel-title\">인간-기계 시스템 설계 6단계</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/workplace-layout-principles/\"><span class=\"rel-group\">시스템 설계</span><span class=\"rel-title\">작업장 배치 원칙</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/signal-detection-theory/\"><span class=\"rel-group\">신호·인간실수</span><span class=\"rel-title\">신호검출이론 (SDT)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/swain-human-error/\"><span class=\"rel-group\">신호·인간실수</span><span class=\"rel-title\">Swain 인간 실수 분류</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/man-machine-system-design/\"><span class=\"rel-group\">시스템 설계</span><span class=\"rel-title\">인간-기계 시스템 설계 6단계</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/workplace-layout-principles/\"><span class=\"rel-group\">시스템 설계</span><span class=\"rel-title\">작업장 배치 원칙</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/human-error-factors/\"><span class=\"rel-group\">신호·인간실수</span><span class=\"rel-title\">휴먼에러의 심리적·물리적 요인</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/signal-detection-theory/\"><span class=\"rel-group\">신호·인간실수</span><span class=\"rel-title\">신호검출이론 (SDT)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/swain-human-error/\"><span class=\"rel-group\">신호·인간실수</span><span class=\"rel-title\">Swain 인간 실수 분류</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/information-entropy/",
+      "originalArticleSha256": "026d41f04ef124f35f4a51ec3a95aa99e289e24e388cabc7766770e2dbe16700",
+      "articleSha256": "77af9256b5603b53079cc4ad68e64db824f0d07395443e65097d76c65e7bbfac",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/articulation-index/\"><span class=\"rel-group\">정보·청각</span><span class=\"rel-title\">음성통신 지수 — AI·SIL·PNC</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/weber-fechner-law/\"><span class=\"rel-group\">정보·청각</span><span class=\"rel-title\">웨버-페히너 법칙</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/articulation-index/\"><span class=\"rel-group\">정보·청각</span><span class=\"rel-title\">음성통신 지수 — AI·SIL·PNC</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/noise-loudness-scales/\"><span class=\"rel-group\">정보·청각</span><span class=\"rel-title\">소음 크기 척도 — dB·phon·sone</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/weber-fechner-law/\"><span class=\"rel-group\">정보·청각</span><span class=\"rel-title\">웨버-페히너 법칙</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/signal-detection-theory/",
+      "originalArticleSha256": "23515a2896d60bfbb6a4cd3facf8692abbbcf7cd99891946904822d69e1b79e5",
+      "articleSha256": "32383b7cdcc086a2fdcd0c22203f0bf74363559ed55012317787dc679d5590ec",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/cr-ratio/\"><span class=\"rel-group\">신호·인간실수</span><span class=\"rel-title\">C/R비 (Control-Response)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/swain-human-error/\"><span class=\"rel-group\">신호·인간실수</span><span class=\"rel-title\">Swain 인간 실수 분류</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/cr-ratio/\"><span class=\"rel-group\">신호·인간실수</span><span class=\"rel-title\">C/R비 (Control-Response)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/human-error-factors/\"><span class=\"rel-group\">신호·인간실수</span><span class=\"rel-title\">휴먼에러의 심리적·물리적 요인</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/swain-human-error/\"><span class=\"rel-group\">신호·인간실수</span><span class=\"rel-title\">Swain 인간 실수 분류</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/weber-fechner-law/",
+      "originalArticleSha256": "67766b1c963c87cb17155e0941186e2d72e68e01f6a77187938dc3fe6728585f",
+      "articleSha256": "affa62c2ba03f2dc143d7e66034281a04d4e3127743d4a324c2322504a074423",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/articulation-index/\"><span class=\"rel-group\">정보·청각</span><span class=\"rel-title\">음성통신 지수 — AI·SIL·PNC</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/information-entropy/\"><span class=\"rel-group\">정보·청각</span><span class=\"rel-title\">정보량 (엔트로피 H)</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/ergonomics/articulation-index/\"><span class=\"rel-group\">정보·청각</span><span class=\"rel-title\">음성통신 지수 — AI·SIL·PNC</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/information-entropy/\"><span class=\"rel-group\">정보·청각</span><span class=\"rel-title\">정보량 (엔트로피 H)</span></a></li><li><a href=\"/industrial-safety/written/ergonomics/noise-loudness-scales/\"><span class=\"rel-group\">정보·청각</span><span class=\"rel-title\">소음 크기 척도 — dB·phon·sone</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/group-discussion-methods/",
+      "originalArticleSha256": "9dfe4ee54d113e443bdd40290d96030c77e785f3921b6e4c1ebe5036987a7d82",
+      "articleSha256": "90f86f047be11fabf43836e851025a8f39c714d5b40defd6cb3142cf7f8b105b",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/safety-management/ojt-offjt/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">OJT·Off-JT</span></a></li><li><a href=\"/industrial-safety/written/safety-management/safety-education-stages/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">교육의 3단계·단계별 과정</span></a></li><li><a href=\"/industrial-safety/written/safety-management/twi-supervisor-training/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">TWI 등 관리감독자 훈련</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/safety-management/ojt-offjt/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">OJT·Off-JT</span></a></li><li><a href=\"/industrial-safety/written/safety-management/safety-education-plan/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">안전교육 계획 수립</span></a></li><li><a href=\"/industrial-safety/written/safety-management/safety-education-stages/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">교육의 3단계·단계별 과정</span></a></li><li><a href=\"/industrial-safety/written/safety-management/twi-supervisor-training/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">TWI 등 관리감독자 훈련</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/ojt-offjt/",
+      "originalArticleSha256": "ddcce9aedab4dcc1c274870f32a19c5c01b442cc54ce2dad9139290af6e14a09",
+      "articleSha256": "3b7ce58b9c7f48c7a52b2d4771bc6abd167e0bbf092ada687281736c79cca2c9",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/safety-management/group-discussion-methods/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">집단토의법 종류</span></a></li><li><a href=\"/industrial-safety/written/safety-management/safety-education-stages/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">교육의 3단계·단계별 과정</span></a></li><li><a href=\"/industrial-safety/written/safety-management/twi-supervisor-training/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">TWI 등 관리감독자 훈련</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/safety-management/group-discussion-methods/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">집단토의법 종류</span></a></li><li><a href=\"/industrial-safety/written/safety-management/safety-education-plan/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">안전교육 계획 수립</span></a></li><li><a href=\"/industrial-safety/written/safety-management/safety-education-stages/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">교육의 3단계·단계별 과정</span></a></li><li><a href=\"/industrial-safety/written/safety-management/twi-supervisor-training/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">TWI 등 관리감독자 훈련</span></a></li> </ul>"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/twi-supervisor-training/",
+      "originalArticleSha256": "e5b16b9ae3af1bbfdaea1dbe2439301001db356894438f443beef94ef968d6fc",
+      "articleSha256": "80c87efb0b5817df03c9d4349f6aa863bb7b7683131a0d8628e563f23c3bc8d3",
+      "before": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/safety-management/group-discussion-methods/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">집단토의법 종류</span></a></li><li><a href=\"/industrial-safety/written/safety-management/ojt-offjt/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">OJT·Off-JT</span></a></li><li><a href=\"/industrial-safety/written/safety-management/safety-education-stages/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">교육의 3단계·단계별 과정</span></a></li> </ul>",
+      "after": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/safety-management/group-discussion-methods/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">집단토의법 종류</span></a></li><li><a href=\"/industrial-safety/written/safety-management/ojt-offjt/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">OJT·Off-JT</span></a></li><li><a href=\"/industrial-safety/written/safety-management/safety-education-plan/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">안전교육 계획 수립</span></a></li><li><a href=\"/industrial-safety/written/safety-management/safety-education-stages/\"><span class=\"rel-group\">교육 방법론</span><span class=\"rel-title\">교육의 3단계·단계별 과정</span></a></li> </ul>"
+    }
+  ]
+}

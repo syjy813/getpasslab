@@ -27,6 +27,7 @@ for (const file of [
   'docs/audits/2026-10-05-concentration-bold-formula/review.json',
   'docs/audits/2026-10-05-all-chapter-gray-formulas/review.json',
   'docs/audits/2026-10-05-fta-symbols-split/review.json',
+  'docs/audits/2026-10-05-industrial-remaining-splits/review.json',
 ]) {
   let review;
   try {

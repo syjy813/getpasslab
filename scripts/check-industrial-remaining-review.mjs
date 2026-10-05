@@ -6,12 +6,13 @@ import { reviewedChapterHash, restoreDisplayReview } from './reviewed-chapter-ha
 const audit = 'docs/audits/2026-10-05-industrial-remaining-review';
 const review = JSON.parse(await readFile(`${audit}/review.json`, 'utf8'));
 const ftaReview = JSON.parse(await readFile('docs/audits/2026-10-05-fta-symbols-split/review.json', 'utf8'));
+const batchReview = JSON.parse(await readFile('docs/audits/2026-10-05-industrial-remaining-splits/review.json', 'utf8'));
 const evidence = JSON.parse(await readFile(`${audit}/source-verification.json`, 'utf8'));
 const hash = source => createHash('sha256').update(source).digest('hex');
 const normalize = source => source.replace(/\s+/gu, '').replaceAll('·', '');
 assert.equal(review.chapters.length, 211);
 assert.equal(review.chapters.filter(c => c.changed).length, evidence.changedChapterCount);
-for (const row of review.chapters.map(row => ftaReview.chapters.find(later => later.path === row.path) ?? row)) {
+for (const row of review.chapters.map(row => batchReview.chapters.find(later => later.path === row.path) ?? ftaReview.chapters.find(later => later.path === row.path) ?? row)) {
   const source = await readFile(row.path, 'utf8');
   assert.equal(hash(source), row.sha256, `${row.slug}: unreviewed changes`);
   const end = source.indexOf('---', 3) + 3;
