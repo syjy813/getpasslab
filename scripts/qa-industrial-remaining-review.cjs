@@ -47,6 +47,7 @@ let browser;
           mathErrors: article.querySelectorAll('.katex-error').length,
           formulaColors: [...article.querySelectorAll('.katex-display, p>.katex:only-child')].map(e => ({background:getComputedStyle(e).backgroundColor,border:getComputedStyle(e).borderTopColor,color:getComputedStyle(e).color})),
           h2Colors: [...article.querySelectorAll('h2')].map(e => getComputedStyle(e).backgroundColor),
+          formulaTextWeights: [...article.querySelectorAll('.katex-display, p>.katex:only-child')].map(card => [...card.querySelectorAll('.katex-html span')].filter(e => [...e.childNodes].some(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim())).map(e => getComputedStyle(e).fontWeight)),
           tablesWithInternalScroll: [...article.querySelectorAll('table')].filter(e => e.scrollWidth > e.clientWidth + 2).length,
           formulasWithInternalScroll: [...article.querySelectorAll('.katex-display')].filter(e => e.scrollWidth > e.clientWidth + 2).length,
         };
@@ -55,7 +56,10 @@ let browser;
       assert(layout.tableFontSizes.every(n => n >= 13), `${current}: small table font`);
       assert.equal(layout.mathErrors, 0, `${current}: math parse error`);
       const sample = row.slug === 'concentration-conversion';
-      if (sample) assert(layout.formulaColors.length > 0, `${current}: formula cards missing`);
+      if (sample) {
+        assert(layout.formulaColors.length > 0, `${current}: formula cards missing`);
+        assert(layout.formulaTextWeights.every(weights => weights.length && weights.every(w => w === '700')), `${current}: formula glyphs are not all bold`);
+      }
       for (const colors of layout.formulaColors) {
         assert.equal(colors.background, sample ? 'rgb(242, 244, 246)' : 'rgb(239, 246, 255)', `${current}: formula color scope`);
         if (sample) { assert.equal(colors.border, 'rgb(229, 232, 235)'); assert.equal(colors.color, 'rgb(51, 61, 75)'); }
@@ -65,7 +69,7 @@ let browser;
       assert.equal(await page.locator('h1').count(), 1);
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), row.url);
       assert.deepEqual(await page.locator('main [data-open]').evaluateAll(els => els.map(e => e.dataset.open)), row.questions);
-      if (sample) await page.screenshot({ path: path.join(out, `${width}-concentration-gray-preview.png`), fullPage: false });
+      if (sample) await page.screenshot({ path: path.join(out, `${width}-concentration-bold-preview.png`), fullPage: false });
       if (captures.has(row.slug)) await page.screenshot({ path: path.join(out, `${width}-${row.slug}.png`), fullPage: true });
       viewport.pages.push({ slug: row.slug, layout, passed: true }); save();
       } catch (error) {

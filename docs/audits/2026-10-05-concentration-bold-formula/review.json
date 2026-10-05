@@ -1,0 +1,14 @@
+{
+  "baseCommit": "1909b7e64b24d153081363d7f42709789b0a35b8",
+  "chapters": [],
+  "displayFiles": [
+    {
+      "path": "src/styles/industrialReadability.css",
+      "changed": true,
+      "originalSha256": "637958683a4e4cf81d31607bbf3a76eb62a3870562ec682a6104045c96e636d2",
+      "sha256": "7e0c1abd174d958969705ad931fb8cdeb88e9dfeb68c3fe928d0527ff2fb8d2a",
+      "insertedCss": "\n/* Bold only the math glyphs inside the one-chapter gray formula cards. */\narticle.formula-gray-sample .katex-display>.katex,\narticle.formula-gray-sample p>.katex:only-child{font-weight:var(--fw-bold)}\n"
+    }
+  ],
+  "scope": "Only glyphs in concentration conversion gray formula cards. CSS font-weight uses existing fw-bold token and native KaTeX bold faces; original math source and contents unchanged."
+}
