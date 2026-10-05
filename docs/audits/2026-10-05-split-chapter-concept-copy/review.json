@@ -1,0 +1,830 @@
+{
+  "baseCommit": "1d78ad2102e8a8e6a813c6900b66900bd88cdfb6",
+  "chapters": [
+    {
+      "path": "src/content/chapters/ergonomics/system-analysis-techniques.md",
+      "slug": "system-analysis-techniques",
+      "title": "시스템 분석 기법 비교",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/system-analysis-techniques/",
+      "originalSha256": "3cb97645d6837832a50e6b0a4eca3befee6a6d252dce760d7444b9df62bf6257",
+      "sha256": "28b9b4bd53006b321995a63a8aec40b71b68ede751bea432b24a206f67e6c198",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 2,
+      "questions": [
+        "20190804_030"
+      ],
+      "related": [
+        "hazop-guidewords",
+        "pha-preliminary-analysis",
+        "eta-event-tree",
+        "therp-human-error",
+        "fmea",
+        "fta-procedure"
+      ],
+      "parent": null,
+      "frontmatterSha256": "eeb67d97a6bc49853d3efe06814f93b9f8b8eb32da7fd7c811b3a6a795df7e68"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/hazop-guidewords.md",
+      "slug": "hazop-guidewords",
+      "title": "HAZOP·가이드워드",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/hazop-guidewords/",
+      "originalSha256": "e499f2ecc243520d4ecc6aa03d57489f65d5b854b62a3947bb9fd029ad705082",
+      "sha256": "9873ff458d30d070a03774efd91464e96c0e167a6445fb78cdb334e287cb5451",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "미시작",
+      "subject_id": 2,
+      "questions": [
+        "20220305_035",
+        "20220424_027",
+        "20200822_034",
+        "20180304_037",
+        "20200926_038"
+      ],
+      "related": [
+        "system-analysis-techniques"
+      ],
+      "parent": "system-analysis-techniques",
+      "frontmatterSha256": "5b410d3a6037317611550f2e332fe1a7907d53b66a60fb7870287e32c32ba8f8"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/pha-preliminary-analysis.md",
+      "slug": "pha-preliminary-analysis",
+      "title": "예비위험분석 (PHA)",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/pha-preliminary-analysis/",
+      "originalSha256": "da100f6dda26bc6560533d3c6c2cf95084b6043dd4af453a7b653a6a37e54229",
+      "sha256": "02d611ba88aa3c76943124bb71403692eb9957850dcc812ae4bb4771ce45976a",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 2,
+      "questions": [
+        "20220305_029",
+        "20200926_024",
+        "20200606_033"
+      ],
+      "related": [
+        "system-analysis-techniques"
+      ],
+      "parent": "system-analysis-techniques",
+      "frontmatterSha256": "a6b5fd3c7d1172b28ed4ecae2f4b87bd50470ea70f3efa0483863fbedcf66bd6"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/eta-event-tree.md",
+      "slug": "eta-event-tree",
+      "title": "사건수 분석 (ETA)",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/eta-event-tree/",
+      "originalSha256": "57d552b09028cc4be6a31cba54e8d3605918de4c0ba2d7d8055e2105d38c51d8",
+      "sha256": "4304a73d0c7a4e85cf8f3942dd1dc9fc330e493c752c6772223c829e99cb1554",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 2,
+      "questions": [
+        "20210814_031"
+      ],
+      "related": [
+        "system-analysis-techniques"
+      ],
+      "parent": "system-analysis-techniques",
+      "frontmatterSha256": "d93144bd25beb87c7fb0ebb7f507998d508e301fd92cec270dbbf162ac28bc0e"
+    },
+    {
+      "path": "src/content/chapters/ergonomics/therp-human-error.md",
+      "slug": "therp-human-error",
+      "title": "THERP·휴먼에러 정량화",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/therp-human-error/",
+      "originalSha256": "c6035c726ee99f4b1d70a6dbb80be66ce6b4ed59945586a28b32e0a2c57dec63",
+      "sha256": "e8b751736487e35d24fbaf37771b01daf82f519f694456aa1df4bc45f228d556",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 2,
+      "questions": [
+        "20200822_031",
+        "20180428_026"
+      ],
+      "related": [
+        "system-analysis-techniques",
+        "eta-event-tree"
+      ],
+      "parent": null,
+      "frontmatterSha256": "cd57cd8d62123c6904f984e613e26def39a2ab99a3810ffe10f1c4252c743bda"
+    },
+    {
+      "path": "src/content/chapters/construction/tunnel-blasting.md",
+      "slug": "tunnel-blasting",
+      "title": "터널·발파 안전",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tunnel-blasting/",
+      "originalSha256": "7043a59ed3d5e1993aff0f1a4631c3fa618c95ed8b44bf575e69152538eb6642",
+      "sha256": "fa1f1978900a6555ccd21674568f52f748f9e136b26d676a609b94ab69b94a1e",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 6,
+      "questions": [],
+      "related": [
+        "blasting-safety",
+        "tunnel-support-safety",
+        "tunnel-survey-monitoring",
+        "excavation-slope-standard",
+        "earth-retaining-components"
+      ],
+      "parent": null,
+      "frontmatterSha256": "8c24849ff762c3979210db2c8be175679ac6914f122f65c303103bc8075847ae"
+    },
+    {
+      "path": "src/content/chapters/construction/blasting-safety.md",
+      "slug": "blasting-safety",
+      "title": "발파 작업 안전",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/blasting-safety/",
+      "originalSha256": "4e7bb0eb5e592762044d0e3dac667d109cc4eb5d2b805bd11b1dee958a782363",
+      "sha256": "7a67638fcfd70702e7759d398589b3dc0f9b0591ccaeaf51c7ddc40c1746d8a6",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 6,
+      "questions": [
+        "20220424_116",
+        "20180304_104",
+        "20210307_108",
+        "20210814_120",
+        "20210307_110"
+      ],
+      "related": [
+        "tunnel-blasting"
+      ],
+      "parent": "tunnel-blasting",
+      "frontmatterSha256": "b79ed6ce65db8cbc9b79f7fabfd87899c8e10371e2c8cf283bde1561e1150011"
+    },
+    {
+      "path": "src/content/chapters/construction/tunnel-support-safety.md",
+      "slug": "tunnel-support-safety",
+      "title": "터널 지보공 조립·점검",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tunnel-support-safety/",
+      "originalSha256": "c02f9ec9710204f35289d71e01128fed6ccbcfa7b46b6be8952b2af371cb7586",
+      "sha256": "9bf7b38c757fb7824849ff8bbe7e7660d070537b0164dec46f4f7b5ae155b9b0",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 6,
+      "questions": [
+        "20200822_111",
+        "20180304_109",
+        "20210307_103",
+        "20180428_110",
+        "20210515_115",
+        "20180304_118",
+        "20190427_120"
+      ],
+      "related": [
+        "tunnel-blasting"
+      ],
+      "parent": "tunnel-blasting",
+      "frontmatterSha256": "44806a39a1759d07cce8d38e0162a44ff1feed5088cf824d6150468b064340e6"
+    },
+    {
+      "path": "src/content/chapters/construction/tunnel-survey-monitoring.md",
+      "slug": "tunnel-survey-monitoring",
+      "title": "터널 조사·작업계획·계측",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tunnel-survey-monitoring/",
+      "originalSha256": "9ab6120b5b5e2d1d17d01705e308eb1ef938b3434f6694a247f1c1924d40f2d4",
+      "sha256": "49c2b4c412c0be14ac9edd2aec4a5d841812b9fed1d0c42aab6bc373b5478b16",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 6,
+      "questions": [
+        "20200822_106",
+        "20190427_111",
+        "20200822_120",
+        "20200926_110"
+      ],
+      "related": [
+        "tunnel-blasting"
+      ],
+      "parent": "tunnel-blasting",
+      "frontmatterSha256": "1d55479d8fbffbaa5237833565a3dad781d69de36ce29e3487c992e25ef380c1"
+    },
+    {
+      "path": "src/content/chapters/safety-management/motivation-theories.md",
+      "slug": "motivation-theories",
+      "title": "동기부여 이론 (매슬로·맥그리거·허즈버그)",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/motivation-theories/",
+      "originalSha256": "316a4f64b7cb6d1896ee8d99e594e4b84578d7dd03c1a8cc0b081289e78edae2",
+      "sha256": "600133c2b925bc851cc638d59d0f1d036bd8eccef692917ac514d794c5f7c386",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 1,
+      "questions": [],
+      "related": [
+        "maslow-needs",
+        "herzberg-two-factor",
+        "mcgregor-xy",
+        "davis-motivation"
+      ],
+      "parent": null,
+      "frontmatterSha256": "1dfbb4431eb827490c7790bcc7bd97c1856b5bf930b7ba3f5c2793462f4599e2"
+    },
+    {
+      "path": "src/content/chapters/safety-management/maslow-needs.md",
+      "slug": "maslow-needs",
+      "title": "매슬로 욕구 5단계",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/maslow-needs/",
+      "originalSha256": "7e656827e060acd05ee185cfea4f9f6286fb80d489723fd3fa4fdc60d947a3ea",
+      "sha256": "9b4f2c859d9ea2d03e7721cc7e7ee2a4cd47602e7c82d93983b252c7b3ff9295",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 1,
+      "questions": [
+        "20180428_011",
+        "20190427_006",
+        "20200822_008",
+        "20210814_014",
+        "20220424_001"
+      ],
+      "related": [
+        "motivation-theories"
+      ],
+      "parent": "motivation-theories",
+      "frontmatterSha256": "b43887c630daa77f2803da40b382e6d0a7c2bd3510255189fde9b3f49114c48e"
+    },
+    {
+      "path": "src/content/chapters/safety-management/herzberg-two-factor.md",
+      "slug": "herzberg-two-factor",
+      "title": "허즈버그 위생·동기요인",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/herzberg-two-factor/",
+      "originalSha256": "58342ab1a3eacf921aadc5efa86d50b0f6ca3efd63b6ca58b22cca5e72073c67",
+      "sha256": "48e01524503cb17fc2c12bea3e11c6e2128d4107be833e40350cea846fccb87e",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 1,
+      "questions": [
+        "20200822_015",
+        "20190427_016"
+      ],
+      "related": [
+        "motivation-theories"
+      ],
+      "parent": "motivation-theories",
+      "frontmatterSha256": "52aef404e0acc14d4f380a9d885c1f223819ad804926a6808e08ac67af7c9bbc"
+    },
+    {
+      "path": "src/content/chapters/safety-management/mcgregor-xy.md",
+      "slug": "mcgregor-xy",
+      "title": "맥그리거 X·Y 이론",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/mcgregor-xy/",
+      "originalSha256": "f56279e9269eb8cfd01ce1cc20b118a6914689f3fc88b9bb4d97ca39a16fa82e",
+      "sha256": "39a4ca8e9ffd417be7aaae7947203e58498e3e37938e460da1f10aed20967c7d",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 1,
+      "questions": [
+        "20200606_014"
+      ],
+      "related": [
+        "motivation-theories"
+      ],
+      "parent": "motivation-theories",
+      "frontmatterSha256": "c07bee4f88515b916cfff32ff137a06f494a69035743da111bc7eb69ccd92bd1"
+    },
+    {
+      "path": "src/content/chapters/safety-management/davis-motivation.md",
+      "slug": "davis-motivation",
+      "title": "데이비스 동기부여 관계식",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/davis-motivation/",
+      "originalSha256": "66060d52809ae81aaaa6387fed25f510fecd4286aeffb727f2a86f332c47074c",
+      "sha256": "179375fc3fce8560690749220dc53101f31bba53e1a5590bce721a840594a8e0",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 1,
+      "questions": [
+        "20180304_009",
+        "20210515_006"
+      ],
+      "related": [
+        "motivation-theories"
+      ],
+      "parent": "motivation-theories",
+      "frontmatterSha256": "fd17120c9d24af9b53052ec1b108d6b9593c32b25a9fff0fc780c581d1f95272"
+    },
+    {
+      "path": "src/content/chapters/chemical/reactor-distillation-equipment.md",
+      "slug": "reactor-distillation-equipment",
+      "title": "반응기·증류탑·열교환기",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/reactor-distillation-equipment/",
+      "originalSha256": "c9bef7890d57b0cf3093dcde32cc59d8f3246355d2873ef898c4482b391abc78",
+      "sha256": "24911c2a3db41b46c558b466c3630b4d0b82f944780b6aaf4c7a53bd34d448dc",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 5,
+      "questions": [],
+      "related": [
+        "reactor-classification",
+        "heat-exchanger-inspection",
+        "safety-valve-shutoff-exception"
+      ],
+      "parent": null,
+      "frontmatterSha256": "bc3d5abe1f18616d2a9d5aef63fc1c24213294df1b35cb9380cf961184f77a21"
+    },
+    {
+      "path": "src/content/chapters/chemical/reactor-classification.md",
+      "slug": "reactor-classification",
+      "title": "반응기 분류·설계 요인",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/reactor-classification/",
+      "originalSha256": "a6eeed212f34bb518760d3b616403d64217a4943c5b1cb7f2a8b786b0825bf9e",
+      "sha256": "d9dd0de9f35d9d3da5c99933c1bfcd8cc3b57710eea4f3ee32d3325ffe36d68f",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 5,
+      "questions": [
+        "20220424_095",
+        "20210814_099",
+        "20190303_083",
+        "20220305_090"
+      ],
+      "related": [
+        "reactor-distillation-equipment"
+      ],
+      "parent": "reactor-distillation-equipment",
+      "frontmatterSha256": "96b04b34123e5bea05e134cf71c46ae75811c3b35bcde93527a572714b25a38c"
+    },
+    {
+      "path": "src/content/chapters/chemical/heat-exchanger-inspection.md",
+      "slug": "heat-exchanger-inspection",
+      "title": "열교환기 점검·열교환 능률",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/heat-exchanger-inspection/",
+      "originalSha256": "0092f473330deac2b90a75623030364dc8026c1244bafe0637cfcd46033a6007",
+      "sha256": "7bbaa44574002b854fc64ff25397ae606e267fd737851a0b3bae07bc29df4ae7",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 5,
+      "questions": [
+        "20220424_094",
+        "20190303_086",
+        "20200926_092",
+        "20220305_086",
+        "20180819_093"
+      ],
+      "related": [
+        "reactor-distillation-equipment"
+      ],
+      "parent": "reactor-distillation-equipment",
+      "frontmatterSha256": "f332eb651626e54efea57c3fede691ed0dd34ee6689563c746599fe04534bc08"
+    },
+    {
+      "path": "src/content/chapters/mechanical/test-types.md",
+      "slug": "test-types",
+      "title": "재료 시험 종류",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/test-types/",
+      "originalSha256": "1e90023b1431d3f8ffed698da5487aa1e35682baa42450b3ab10da332fdcb73a",
+      "sha256": "8269b7edcc51819bb9fa58896120fd10dc5e79fbc53584bfaf48a3546b3bf89a",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 3,
+      "questions": [
+        "20210307_060",
+        "20190427_044",
+        "20200822_048",
+        "20200606_056",
+        "20190303_055"
+      ],
+      "related": [
+        "ndt-types",
+        "penetrant-test-procedure",
+        "welding-defects"
+      ],
+      "parent": null,
+      "frontmatterSha256": "b42008910821418d5042dd212519411d6e51158b087d767c92fcd3ef85a75674"
+    },
+    {
+      "path": "src/content/chapters/mechanical/ndt-types.md",
+      "slug": "ndt-types",
+      "title": "비파괴검사 종류",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/ndt-types/",
+      "originalSha256": "a292545dd14a9e899593971f49ac59ebdefd30d6ff0239f58f4103db45b840c5",
+      "sha256": "c9e8a98ebbff579131b9ef6980104d26d59a42c7e1a8ddc74cf50946d726b14c",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "미시작",
+      "subject_id": 3,
+      "questions": [
+        "20210307_053",
+        "20180819_051",
+        "20220305_049",
+        "20210814_053",
+        "20190804_046",
+        "20180304_052",
+        "20190303_057",
+        "20180304_042",
+        "20180428_047"
+      ],
+      "related": [
+        "test-types",
+        "penetrant-test-procedure",
+        "welding-defects"
+      ],
+      "parent": "test-types",
+      "frontmatterSha256": "5f05224cd16990b2801bdb1551c1ec5a22384b45310cdfdf8c4e32a5b5de8ffc"
+    },
+    {
+      "path": "src/content/chapters/safety-management/carelessness-misjudgment.md",
+      "slug": "carelessness-misjudgment",
+      "title": "부주의 발생 원인·사고방지대책",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/carelessness-misjudgment/",
+      "originalSha256": "b5954d7f0ad0ce3c4d693b2ebed759292097d01ac4e814afd570018627366ef1",
+      "sha256": "119389f663018a96e2e786b388332b974c17cf7e45c7d87ab0853d1954bb7c1d",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 1,
+      "questions": [
+        "20190804_012",
+        "20180819_012"
+      ],
+      "related": [
+        "attention-consciousness",
+        "human-error-by-process"
+      ],
+      "parent": null,
+      "frontmatterSha256": "5053fde765e1bf80cd130e3c2d57cb4d2a73acf39c13dd9a19e09e90b8d24f9f"
+    },
+    {
+      "path": "src/content/chapters/safety-management/attention-consciousness.md",
+      "slug": "attention-consciousness",
+      "title": "주의의 특성·의식 단계",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/attention-consciousness/",
+      "originalSha256": "546fe8b5d85c6d040d3085364793bc3aeed570fd73a699190e69029eaeb24602",
+      "sha256": "7e461d7c743361d23ebd94fdfe79c56f70523fe02488c123e53f8d2ce949ad90",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 1,
+      "questions": [
+        "20180428_013",
+        "20180819_015",
+        "20190303_006",
+        "20200606_003",
+        "20210814_017",
+        "20220305_012"
+      ],
+      "related": [
+        "carelessness-misjudgment",
+        "human-error-by-process"
+      ],
+      "parent": "carelessness-misjudgment",
+      "frontmatterSha256": "e21055dcd648e7d4c10b86d5cf494df2e688159dc97b94c7fd3409cd5c9ea1bd"
+    },
+    {
+      "path": "src/content/chapters/electrical/leakage-breaker-types.md",
+      "slug": "leakage-breaker-types",
+      "title": "누전차단기 구조·정격·시설기준",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-breaker-types/",
+      "originalSha256": "8c057fa67bec622923fead569c54ccce26e11720a4ae837c7466d60edf2b3084",
+      "sha256": "ff1076af6d11cdd8445d67a4be404f448088d28019a2b615e8e1cca42c358bb3",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 4,
+      "questions": [],
+      "related": [
+        "leakage-breaker-operation",
+        "leakage-breaker-ratings",
+        "leakage-breaker-exception"
+      ],
+      "parent": null,
+      "frontmatterSha256": "67430d815072b2f98279edf339e85986df3e6a73645b7f47e48ce86c81174d4a"
+    },
+    {
+      "path": "src/content/chapters/electrical/leakage-breaker-operation.md",
+      "slug": "leakage-breaker-operation",
+      "title": "누전차단기 구조·동작",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-breaker-operation/",
+      "originalSha256": "be61a9f20b36ce0533305e141a9f031b66bc671633ee812dd7659354aa78c9b5",
+      "sha256": "1804b52d669530bae034524203e1f07830fc2c8a4b9060e3774183ac96e54c76",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 4,
+      "questions": [
+        "20190303_076",
+        "20200926_065",
+        "20180428_073"
+      ],
+      "related": [
+        "leakage-breaker-types",
+        "leakage-breaker-ratings"
+      ],
+      "parent": "leakage-breaker-types",
+      "frontmatterSha256": "01a65c11cbc71a235522d2ea98128c8c0e54bee8df99b88024b2b097023d7484"
+    },
+    {
+      "path": "src/content/chapters/electrical/leakage-breaker-ratings.md",
+      "slug": "leakage-breaker-ratings",
+      "title": "누전차단기 정격·설치 기준",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-breaker-ratings/",
+      "originalSha256": "46773b4c43f7cc3b5f933074a2e091032f7afe323eece255d16fdfa88134719d",
+      "sha256": "755a80b01ed89f24db31e5e69b13332438e1a6a039247cdfc9073a2662a08b19",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 4,
+      "questions": [
+        "20210814_075",
+        "20210307_071",
+        "20200926_078",
+        "20210515_065",
+        "20180304_065",
+        "20190303_072",
+        "20190427_068",
+        "20220424_065",
+        "20190303_073"
+      ],
+      "related": [
+        "leakage-breaker-types",
+        "leakage-breaker-operation",
+        "leakage-breaker-exception"
+      ],
+      "parent": "leakage-breaker-types",
+      "frontmatterSha256": "57ec3cdb14c1695447c39352d7dda3eedebff0a8b6a54777092740f6b414839e"
+    },
+    {
+      "path": "src/content/chapters/construction/temporary-passage-stairs.md",
+      "slug": "temporary-passage-stairs",
+      "title": "가설통로·계단 기준",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/temporary-passage-stairs/",
+      "originalSha256": "f26fbbdd5abb907013d6089a1024990536a232e2ca94ffbb27c9b7b4a7153a48",
+      "sha256": "11c139543d995a32d9a0c7f5c833ef13cddf8cc1ebdedee2b33462ff6804d041",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 6,
+      "questions": [
+        "20220424_115",
+        "20220305_120",
+        "20210307_105",
+        "20200606_114",
+        "20180428_109",
+        "20190427_118",
+        "20210515_117"
+      ],
+      "related": [
+        "stairs-landings",
+        "work-platform-standards",
+        "steel-pipe-scaffold"
+      ],
+      "parent": null,
+      "frontmatterSha256": "d0248a8606fa76d6a9cf20f453216dd786a26208b39905a9a14d6538563d69cb"
+    },
+    {
+      "path": "src/content/chapters/construction/stairs-landings.md",
+      "slug": "stairs-landings",
+      "title": "계단·계단참 강도 기준",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/stairs-landings/",
+      "originalSha256": "ea8a30c448f45094ab4fc49adb6a12020062fbfa76d5c984cd9f84982d9f6838",
+      "sha256": "e6afbf82cff0ac0df9df741dac0f5b70b5d29c97f32e8fb2870f02608f76e08e",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 6,
+      "questions": [
+        "20200606_110",
+        "20190427_110"
+      ],
+      "related": [
+        "temporary-passage-stairs"
+      ],
+      "parent": "temporary-passage-stairs",
+      "frontmatterSha256": "571f03e9dd754ea5e9d87af580d284bbc1c85e3054a79a4e9066aae5176ea12b"
+    },
+    {
+      "path": "src/content/chapters/safety-management/leadership-headship.md",
+      "slug": "leadership-headship",
+      "title": "리더십·헤드십",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/leadership-headship/",
+      "originalSha256": "24fe73110cef6be6099b89bc8e3771a432ec3f37da0dc28c37d6aff9152816df",
+      "sha256": "8282c4953b80c1297e7aba9520b49a7d45a6ef592f7c6437d3f0e516cf676f6f",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 1,
+      "questions": [
+        "20220424_020",
+        "20200926_018",
+        "20210515_002"
+      ],
+      "related": [
+        "managerial-grid",
+        "motivation-theories"
+      ],
+      "parent": null,
+      "frontmatterSha256": "cd50b3e2e3665b5203d9bf62eb415b1f84cddae5c25a3646199b339eb3c5c133"
+    },
+    {
+      "path": "src/content/chapters/safety-management/managerial-grid.md",
+      "slug": "managerial-grid",
+      "title": "관리격자 리더십 5유형",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/managerial-grid/",
+      "originalSha256": "7697e4fb002cc4b0f881a4f696159035b27a016dda514f9310e21c3cd60bc2bf",
+      "sha256": "30d2a64d140510874c666f692703be9e0dd646073fd6c703871730d537c4f87b",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 1,
+      "questions": [
+        "20180819_020"
+      ],
+      "related": [
+        "leadership-headship"
+      ],
+      "parent": "leadership-headship",
+      "frontmatterSha256": "56e568aae62f031cdeed191c5b7570817e4f21cf00033301cb45d7df7d5bb4ff"
+    },
+    {
+      "path": "src/content/chapters/construction/demolition-safety-measures.md",
+      "slug": "demolition-safety-measures",
+      "title": "해체 작업 안전 조치",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/demolition-safety-measures/",
+      "originalSha256": "4aa84a3a4bb3f6df73cca9acea7b8efb4e21a0944ee4f1cb104ac890b7ce0d6b",
+      "sha256": "0e198ed8af4522e607264f39ac48db57b322960e931eaa1eb7706a00c999adca",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 6,
+      "questions": [
+        "20200822_102",
+        "20200606_113",
+        "20200926_109",
+        "20180428_116"
+      ],
+      "related": [
+        "formwork-removal"
+      ],
+      "parent": null,
+      "frontmatterSha256": "ddb78dada141b683c7b1d1e0962d0efa7a7f5ff741f98e5064ede1753f53d50e"
+    },
+    {
+      "path": "src/content/chapters/construction/formwork-removal.md",
+      "slug": "formwork-removal",
+      "title": "거푸집 해체 작업",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/formwork-removal/",
+      "originalSha256": "d7b7191e7c7b27c5c19e599a86fe35947506de4c1e9b2aa56256501df3e93161",
+      "sha256": "4e7deb6117d2358de5759466abc0ed5650cb72aa9f2822e30158950d15d0d84f",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 6,
+      "questions": [
+        "20190427_113",
+        "20220305_102"
+      ],
+      "related": [
+        "demolition-safety-measures"
+      ],
+      "parent": "demolition-safety-measures",
+      "frontmatterSha256": "e07316bc97012419445891634d65ff19ed8d047318b285ff74a4eec18e5ec4f8"
+    },
+    {
+      "path": "src/content/chapters/construction/shore-safety-standard.md",
+      "slug": "shore-safety-standard",
+      "title": "동바리 안전기준",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/shore-safety-standard/",
+      "originalSha256": "272502ede759cc0a7373da7d978b712aa1aca54c985ef7479ed8dba0964845c2",
+      "sha256": "a89a9c6ebfde480c434d7620afa41eb0ba7c48e018624cc2e31d0a32290dd97f",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 6,
+      "questions": [
+        "20220424_101",
+        "20220424_119",
+        "20210515_110",
+        "20210307_104",
+        "20200822_101",
+        "20200822_103",
+        "20200926_111",
+        "20190303_101",
+        "20180819_103",
+        "20190804_109",
+        "20180304_114"
+      ],
+      "related": [
+        "euler-buckling-load"
+      ],
+      "parent": null,
+      "frontmatterSha256": "4167d37233d7def1f6e4235886c8bd4edb325bfe92e68c45b8c7ab279601f7b3"
+    },
+    {
+      "path": "src/content/chapters/construction/euler-buckling-load.md",
+      "slug": "euler-buckling-load",
+      "title": "오일러 좌굴하중 (Pcr)",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/euler-buckling-load/",
+      "originalSha256": "f55c4c3d3fda11527c873750c5667c38a98fe576423c13aee8e3702428507206",
+      "sha256": "040c947e7b5080e9b2dca019d0a221443e4e2b7367bb51b23b4e7ee2138d1af9",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "미시작",
+      "subject_id": 6,
+      "questions": [
+        "20210814_110"
+      ],
+      "related": [
+        "shore-safety-standard"
+      ],
+      "parent": "shore-safety-standard",
+      "frontmatterSha256": "ddf2796b8e592ad0802432b78958ad71fd96e883045edc2dcbda73ddce5def83"
+    },
+    {
+      "path": "src/content/chapters/chemical/combustion-range-risk.md",
+      "slug": "combustion-range-risk",
+      "title": "연소 범위와 위험성",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/combustion-range-risk/",
+      "originalSha256": "10c03122e88ce8bf6490882f71ed54aa86d3ee6b83f97d84a49ffc0b0ce66b54",
+      "sha256": "6e5b1c1c3160fd893efc8f46372d603230a4921c268b1475d000f558bcfa8381",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "완료",
+      "subject_id": 5,
+      "questions": [
+        "20220424_091",
+        "20210814_085",
+        "20210307_097",
+        "20200926_091",
+        "20180304_097",
+        "20180428_090",
+        "20190427_099",
+        "20220305_083"
+      ],
+      "related": [
+        "hazard-index",
+        "mixed-gas-explosion-limits"
+      ],
+      "parent": null,
+      "frontmatterSha256": "3f0d1f47889ab8cb2720ae54feedb0d4c9d9ddbfcd36e54f8bb7c5501dd5f75b"
+    },
+    {
+      "path": "src/content/chapters/chemical/hazard-index.md",
+      "slug": "hazard-index",
+      "title": "위험도 (H)",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/hazard-index/",
+      "originalSha256": "c64399a14e1e0a3f3b875dd959a85eaadca5fae915a8782f008c60a21c35218b",
+      "sha256": "c481ca67c8876dcc373a7a0d7bd14afceb2691575eb2ce5515a32c70bde744fb",
+      "changed": true,
+      "newFile": false,
+      "previousStatus": "미시작",
+      "subject_id": 5,
+      "questions": [
+        "20210307_099",
+        "20210515_090",
+        "20200606_094",
+        "20180304_089"
+      ],
+      "related": [
+        "combustion-range-risk"
+      ],
+      "parent": "combustion-range-risk",
+      "frontmatterSha256": "f75feacf067c069d6b55e2b2fac77a0ba4355d02193d1e960259e8d239b96917"
+    },
+    {
+      "path": "src/content/chapters/chemical/mixed-gas-explosion-limits.md",
+      "slug": "mixed-gas-explosion-limits",
+      "title": "혼합가스 폭발하한·상한 계산",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/mixed-gas-explosion-limits/",
+      "originalSha256": "7504db99f1497b523f9716dc987cbd4d5a62e98251c956a5545034be90912010",
+      "sha256": "74b30a5bd8127050ee8c9f2891efe37ecdd4ff98eeea3fc58c67b78e0e27ffb9",
+      "changed": true,
+      "newFile": true,
+      "previousStatus": null,
+      "subject_id": 5,
+      "questions": [
+        "20220424_099",
+        "20210515_085",
+        "20200606_099",
+        "20200822_098",
+        "20180819_097",
+        "20190303_087",
+        "20190427_081",
+        "20190804_099",
+        "20220305_084"
+      ],
+      "related": [
+        "combustion-range-risk",
+        "hazard-index"
+      ],
+      "parent": "combustion-range-risk",
+      "frontmatterSha256": "50d11857e5e144758465fb588a373eddf5afa821fc82dbe67fb82ba677d785f5"
+    }
+  ]
+}

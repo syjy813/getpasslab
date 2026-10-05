@@ -15,7 +15,7 @@ const save = () => fs.writeFileSync(path.join(out, 'results.json'), JSON.stringi
 const url = row => `/industrial-safety/written/${subjects[row.subject_id]}/${row.slug}/`;
 const bySlug = new Map(review.chapters.map(c => [c.slug, c]));
 const parents = new Set(review.families.map(f => f.parent));
-const captureTargets = new Set(['hazop-guidewords', 'tunnel-support-safety', 'maslow-needs', 'leakage-breaker-ratings', 'euler-buckling-load', 'mixed-gas-explosion-limits', 'ndt-types']);
+const captureTargets = new Set(['hazop-guidewords', 'tunnel-support-safety', 'maslow-needs', 'mcgregor-xy', 'therp-human-error', 'leakage-breaker-ratings', 'euler-buckling-load', 'mixed-gas-explosion-limits', 'ndt-types']);
 let browser, current;
 async function layout(page) {
   const state = await page.evaluate(() => {

@@ -3,6 +3,7 @@ import { readFile, readdir, access } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import yaml from 'js-yaml';
+import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
 
 const audit = 'docs/audits/2026-10-04-industrial-safety-chapter-splits';
 const evidence = JSON.parse(await readFile(`${audit}/source-verification.json`, 'utf8'));
@@ -31,7 +32,9 @@ for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
   }
   const row = changed.get(file);
   if (row) assert.equal(row.originalSha256, expected, `${file}: baseline review hash`);
-  assert.equal(hash(await readFile(file)), row ? row.sha256 : expected, `${file}: unreviewed baseline change`);
+  const baselineHash = row ? row.sha256 : expected;
+  const actualHash = hash(await readFile(file));
+  if (actualHash !== baselineHash) assert.equal(actualHash, reviewedChapterHash(file, baselineHash), `${file}: unreviewed baseline change`);
 }
 async function walk(dir) {
   const files = [];
@@ -74,7 +77,8 @@ for (const before of evidence.beforePublishedChapters) {
 const sitemap = await readFile('dist/sitemap-0.xml', 'utf8');
 for (const row of review.chapters) {
   const source = await readFile(row.path, 'utf8');
-  assert.equal(hash(source), row.sha256, `${row.slug}: exact reviewed copy`);
+  const sourceHash = hash(source);
+  if (sourceHash !== row.sha256) assert.equal(sourceHash, reviewedChapterHash(row.path, row.sha256), `${row.slug}: exact reviewed copy`);
   const fields = parse(source), original = evidence.originals[row.path]?.frontmatter;
   if (original) {
     for (const key of ['slug', 'subject_id', 'title', 'group', 'order', 'priority']) assert.equal(fields[key], original[key], `${row.slug}: frozen existing ${key}`);
