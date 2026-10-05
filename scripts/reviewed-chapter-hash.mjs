@@ -23,6 +23,7 @@ for (const file of [
   'docs/audits/2026-10-05-split-chapter-concept-copy/review.json',
   'docs/audits/2026-10-05-industrial-remaining-review/review.json',
   'docs/audits/2026-10-05-concentration-gray-formula/review.json',
+  'docs/audits/2026-10-05-concentration-bold-formula/review.json',
 ]) {
   let review;
   try {

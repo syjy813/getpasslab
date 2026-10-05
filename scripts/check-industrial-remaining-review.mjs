@@ -31,10 +31,21 @@ for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
 }
 console.log(`[Remaining chapter review] ${review.chapters.length} pages / ${evidence.changedChapterCount} edited; metadata, learning tokens and ${Object.keys(evidence.protectedFiles).length} other source/assets preserved`);
 
+// Verify the bold-only CSS insertion, then reconstruct the preceding color preview.
+const bold = JSON.parse(await readFile('docs/audits/2026-10-05-concentration-bold-formula/review.json', 'utf8'));
+const beforeBold = new Map();
+for (const row of bold.displayFiles) {
+  const source = await readFile(row.path, 'utf8');
+  assert.equal(hash(source), row.sha256);
+  assert.equal(source.split(row.insertedCss).length, 2);
+  const restored = source.replace(row.insertedCss, '');
+  assert.equal(hash(restored), row.originalSha256, `${row.path}: bold preview must preserve all other CSS`);
+  beforeBold.set(row.path, restored);
+}
 // A later one-chapter color preview must reproduce the preceding display files exactly.
 const sample = JSON.parse(await readFile('docs/audits/2026-10-05-concentration-gray-formula/review.json', 'utf8'));
 for (const row of sample.displayFiles) {
-  let source = await readFile(row.path, 'utf8');
+  let source = beforeBold.get(row.path) ?? await readFile(row.path, 'utf8');
   assert.equal(hash(source), row.sha256);
   if (row.insertedCss) {
     assert.equal(source.split(row.insertedCss).length, 2);
