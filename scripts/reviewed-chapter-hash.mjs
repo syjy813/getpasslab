@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 
 // Keep the release's historical snapshot immutable. Permit only the exact files
@@ -24,6 +25,7 @@ for (const file of [
   'docs/audits/2026-10-05-industrial-remaining-review/review.json',
   'docs/audits/2026-10-05-concentration-gray-formula/review.json',
   'docs/audits/2026-10-05-concentration-bold-formula/review.json',
+  'docs/audits/2026-10-05-all-chapter-gray-formulas/review.json',
 ]) {
   let review;
   try {
@@ -49,4 +51,19 @@ export function reviewedChapterHash(file, originalHash) {
   if (!chain) return originalHash;
   assert(chain.some(chapter => chapter.originalSha256 === originalHash), `${file}: review must refer to a verified release hash`);
   return chain.at(-1).sha256;
+}
+
+// Reconstruct a prior display snapshot without weakening its historical checks.
+export async function restoreDisplayReview(file, source, reviewFile) {
+  const review = JSON.parse(await readFile(reviewFile, 'utf8'));
+  const row = review.displayFiles.find(row => row.path === file);
+  if (!row) return source;
+  const hash = value => createHash('sha256').update(value).digest('hex');
+  assert.equal(hash(source), row.sha256, `${file}: exact later display review`);
+  for (const edit of [...row.edits].reverse()) {
+    assert.equal(source.split(edit.after).length, 2, `${file}: one exact display edit`);
+    source = source.replace(edit.after, edit.before);
+  }
+  assert.equal(hash(source), row.originalSha256, `${file}: all other display source preserved`);
+  return source;
 }

@@ -3,7 +3,7 @@ import { readFile, readdir, access } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import yaml from 'js-yaml';
-import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
+import { reviewedChapterHash, restoreDisplayReview } from './reviewed-chapter-hash.mjs';
 
 const audit = 'docs/audits/2026-10-04-industrial-safety-chapter-splits';
 const evidence = JSON.parse(await readFile(`${audit}/source-verification.json`, 'utf8'));
@@ -22,7 +22,7 @@ assert.deepEqual(review.deduplicated.map(q => q.id), ['20200822_031']);
 
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
   if (file === 'src/styles/global.css') {
-    const css = await readFile(file, 'utf8');
+    const css = await restoreDisplayReview(file, await readFile(file, 'utf8'), 'docs/audits/2026-10-05-all-chapter-gray-formulas/review.json');
     assert.equal(headingReview.path, file);
     assert.equal(headingReview.originalSha256, expected, 'heading style: preserve the historical baseline');
     assert.equal(hash(css), headingReview.sha256, 'heading style: exact reviewed CSS');
