@@ -5,6 +5,7 @@ const assert = require('node:assert/strict');
 const { createHash } = require('node:crypto');
 const review = JSON.parse(fs.readFileSync('docs/audits/2026-10-05-fta-symbols-split/review.json'));
 const canonical = new Map(JSON.parse(fs.readFileSync('src/data/questions/industrial-safety.json')).map(q => [q.id, q]));
+// 20210814_033 uses the existing figure-choice label substitution; its source choices remain protected.
 const assetIds = new Set(JSON.parse(fs.readFileSync('src/data/question-assets/industrial-safety.json')).map(q => q.id));
 const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/, '');
 const out = path.resolve('qa-results/fta-symbols-split'); fs.mkdirSync(out, { recursive: true });
@@ -52,7 +53,7 @@ let browser;
         await page.locator(`[data-open="${id}"]`).click(); await dialog.locator('[data-reveal]').waitFor({state:'visible'});
         assert.equal(await dialog.getAttribute('data-revealed'), 'false');
         assert.equal(await dialog.locator('[data-question-body]').textContent(), q.body);
-        assert.deepEqual(await dialog.locator('.q-choices li').evaluateAll(els => els.map(e => [...e.childNodes].filter(n => n.nodeType === Node.TEXT_NODE).map(n => n.textContent).join('').trim())), q.choices.map((c,i)=>`${['①','②','③','④'][i]} ${c}`));
+        assert.deepEqual(await dialog.locator('.q-choices li').evaluateAll(els => els.map(e => [...e.childNodes].filter(n => n.nodeType === Node.TEXT_NODE).map(n => n.textContent).join('').trim())), q.choices.map((c,i)=>`${['①','②','③','④'][i]} ${id === '20210814_033' ? '위 이미지에 제시된 보기' : c}`));
         if (assetIds.has(id)) {
           const img = dialog.locator('img.q-image'); await img.waitFor({state:'visible'}); await img.evaluate(img => img.decode());
           assert(await img.evaluate(img => img.naturalWidth > 0 && img.getBoundingClientRect().width <= document.documentElement.clientWidth));
