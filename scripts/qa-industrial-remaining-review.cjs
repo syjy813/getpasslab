@@ -11,7 +11,7 @@ const captures = new Set(['concentration-conversion', 'murrell-rest-formula', 'r
 const result = { base, startedAt: new Date().toISOString(), device: 'Chromium viewport emulation', exactHtmlMatches: 0, viewports: [], errors: [] };
 const save = () => fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(result, null, 2) + '\n');
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
-let browser, current;
+let browser;
 (async () => {
   for (const row of review.chapters) {
     const route = new URL(row.url).pathname;
@@ -21,7 +21,8 @@ let browser, current;
     result.exactHtmlMatches++;
   }
   browser = await chromium.launch();
-  for (const width of [320, 390, 1440]) {
+  await Promise.all([320, 390, 1440].map(async width => {
+    let current;
     const context = await browser.newContext({ viewport: { width, height: 844 }, isMobile: width < 768, hasTouch: width < 768 });
     await context.route('**/*', route => {
       const u = new URL(route.request().url());
@@ -65,7 +66,7 @@ let browser, current;
       }
     }
     await context.close();
-  }
+  }));
   result.passed = result.errors.length === 0; result.finishedAt = new Date().toISOString(); save();
   await browser.close(); assert(result.passed, JSON.stringify(result.errors));
 })().catch(async e => { result.passed = false; result.errors.push(String(e)); save(); if (browser) await browser.close().catch(() => {}); console.error(e); process.exitCode = 1; });

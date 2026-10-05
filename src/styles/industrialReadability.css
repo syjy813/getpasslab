@@ -2,3 +2,4 @@
 .industrial-safety-chapter article table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .industrial-safety-chapter article p .katex:not(:only-child),
 .industrial-safety-chapter article li .katex{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;-webkit-overflow-scrolling:touch}
+@media(min-width:768px){.industrial-safety-chapter article table{display:table}}
