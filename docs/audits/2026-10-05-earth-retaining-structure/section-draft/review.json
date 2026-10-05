@@ -1,0 +1,71 @@
+{
+  "chapters": [
+    {
+      "path": "src/content/chapters/construction/earth-retaining-components.md",
+      "slug": "earth-retaining-components",
+      "title": "흙막이 지보공 구성요소",
+      "subject_id": 6,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/earth-retaining-components/",
+      "changed": true,
+      "originalSha256": "193a9a42514438cf8d0c28abc55effc8a0fda98e0215f5164154b9c86def0444",
+      "sha256": "fbe7385f86e454e3ce2feb87ff133825ebb28e871897750475cd32690cf4ac7d",
+      "frontmatterSha256": "1a9270acecc77269577037f49b5940da0e9d6bba336b4a704b89d4709888c667",
+      "questions": [
+        "20220424_112",
+        "20190804_118",
+        "20200606_120",
+        "20200926_113",
+        "20190303_119",
+        "20180304_102"
+      ],
+      "paragraphBreaks": 0,
+      "strayCellSeparators": 0,
+      "manualEdits": [],
+      "reviewLevel": "soil cross-section diagram + previously scoped answer mismatch warning; canonical six objects unchanged",
+      "preservedContentSha256": "5c7e3104a7352eed04fd55a3c520fa694264636fd316f6ead87958baac1dd7f0",
+      "articleSha256": "6b7516af50620ef69389afa5c888f631963baafe9757357aca607f4b599a1cef",
+      "originalArticleSha256": "bb518227f7444aa196efd66185ca2ab3405e1eeda577ddf19ce181258df1635f"
+    }
+  ],
+  "displayFiles": [
+    {
+      "path": "src/styles/learningFigures.css",
+      "changed": true,
+      "originalSha256": "fb35c2c97bac4dc7f9f348392dfc40c550f8b11ed732ac0432ce026b4d32dfee",
+      "sha256": "7a874f8332bd794bb0d88ccb35068e3b2c1de403e563c93ba5e12e55477f09e7",
+      "edits": [
+        {
+          "before": "",
+          "after": "/* Retaining structure uses the approved left alignment and image clearance. */\narticle .learning-visuals--earth figure{width:100%;max-width:424px;box-sizing:border-box;margin-inline:0}\narticle .learning-visuals--earth img{width:calc(100% - 32px);max-width:390px;margin:24px auto 12px}\n"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/images/industrial-safety/earth-retaining-structure-v1.svg",
+      "newFile": true,
+      "sha256": "edc932478f8b48459e9fe564e5233fac45e169ba7bde7fea91a673daf229da66",
+      "width": 390,
+      "height": 460,
+      "active": false
+    },
+    {
+      "path": "public/images/industrial-safety/earth-retaining-section-v2.svg",
+      "newFile": true,
+      "active": true,
+      "sha256": "9966cd0b47bc194502500cfcc320182706bdc67112bae1fbb73e1dba16519dbb",
+      "width": 390,
+      "height": 500
+    }
+  ],
+  "questionIds": [
+    "20220424_112",
+    "20190804_118",
+    "20200606_120",
+    "20200926_113",
+    "20190303_119",
+    "20180304_102"
+  ],
+  "canonicalSha256": "d7da505307c790d56adbdc0fbd01cac2abe6a348a2c2023c9702e4f52470ce15"
+}

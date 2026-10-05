@@ -28,6 +28,7 @@ for (const file of [
   'docs/audits/2026-10-05-all-chapter-gray-formulas/review.json',
   'docs/audits/2026-10-05-fta-symbols-split/review.json',
   'docs/audits/2026-10-05-industrial-remaining-splits/review.json',
+  'docs/audits/2026-10-05-earth-retaining-structure/review.json',
 ]) {
   let review;
   try {
@@ -61,6 +62,13 @@ export async function restoreDisplayReview(file, source, reviewFile) {
   const row = review.displayFiles.find(row => row.path === file);
   if (!row) return source;
   const hash = value => createHash('sha256').update(value).digest('hex');
+  // Reverse this later figure-only addition before checking older display snapshots.
+  if (hash(source) !== row.sha256 && reviewFile !== 'docs/audits/2026-10-05-earth-retaining-structure/review.json') {
+    const later = JSON.parse(await readFile('docs/audits/2026-10-05-earth-retaining-structure/review.json', 'utf8'));
+    if (later.displayFiles.some(entry => entry.path === file)) {
+      source = await restoreDisplayReview(file, source, 'docs/audits/2026-10-05-earth-retaining-structure/review.json');
+    }
+  }
   assert.equal(hash(source), row.sha256, `${file}: exact later display review`);
   for (const edit of [...row.edits].reverse()) {
     assert.equal(source.split(edit.after).length, 2, `${file}: one exact display edit`);

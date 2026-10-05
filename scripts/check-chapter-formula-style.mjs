@@ -10,8 +10,9 @@ const review = JSON.parse(await readFile(reviewFile, 'utf8'));
 const evidence = JSON.parse(await readFile(`${audit}/source-verification.json`, 'utf8'));
 const ftaReview = JSON.parse(await readFile('docs/audits/2026-10-05-fta-symbols-split/review.json', 'utf8'));
 const batchReview = JSON.parse(await readFile('docs/audits/2026-10-05-industrial-remaining-splits/review.json', 'utf8'));
-const addedFiles = [...ftaReview.chapters, ...ftaReview.displayFiles, ...batchReview.chapters].filter(row => row.newFile);
-const publicPages = evidence.publicPages.map(row => batchReview.chapters.find(later => later.url === row.url) ?? ftaReview.chapters.find(later => later.url === row.url) ?? row).concat([...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile));
+const earthReview = JSON.parse(await readFile('docs/audits/2026-10-05-earth-retaining-structure/review.json', 'utf8'));
+const addedFiles = [...ftaReview.chapters, ...ftaReview.displayFiles, ...batchReview.chapters, ...earthReview.assets].filter(row => row.newFile);
+const publicPages = evidence.publicPages.map(row => earthReview.chapters.find(later => later.url === row.url) ?? batchReview.chapters.find(later => later.url === row.url) ?? ftaReview.chapters.find(later => later.url === row.url) ?? row).concat([...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile));
 const hash = value => createHash('sha256').update(value).digest('hex');
 async function walk(dir) {
   const files = [];
