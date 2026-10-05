@@ -28,6 +28,9 @@ article .learning-visuals--drill img{width:calc(100% - 32px);margin:24px auto 12
 /* Planer full/detail figure follows the approved left-aligned machine cards. */
 article .learning-visuals--planer figure{width:100%;max-width:424px;box-sizing:border-box;margin-inline:0}
 article .learning-visuals--planer img{width:calc(100% - 32px);margin:24px auto 12px}
+/* Retaining structure uses the approved left alignment and image clearance. */
+article .learning-visuals--earth figure{width:100%;max-width:424px;box-sizing:border-box;margin-inline:0}
+article .learning-visuals--earth img{width:calc(100% - 32px);max-width:390px;margin:24px auto 12px}
 /* Statistical comparisons retain exact geometry and the approved left alignment. */
 article .learning-visuals--analysis{grid-template-columns:minmax(0,1fr)}
 article .learning-visuals--analysis figure{width:100%;max-width:424px;box-sizing:border-box;margin-inline:0}

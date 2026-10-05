@@ -3,6 +3,8 @@ import {createHash} from 'node:crypto';
 import {readFile,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import yaml from 'js-yaml';
+import {reviewedChapterHash} from './reviewed-chapter-hash.mjs';
+const earthReview=JSON.parse(await readFile('docs/audits/2026-10-05-earth-retaining-structure/review.json','utf8'));
 
 const audit='docs/audits/2026-10-05-industrial-remaining-splits';
 const review=JSON.parse(await readFile(`${audit}/review.json`,'utf8'));
@@ -13,10 +15,11 @@ async function walk(dir){const files=[];for(const e of await readdir(dir,{withFi
 assert.equal(review.families.length,7);assert.equal(review.chapters.length,17);
 assert.equal(review.chapters.filter(c=>c.newFile).length,10);
 const actualFiles=[...await walk('src'),...await walk('public')];
-assert.deepEqual(actualFiles.sort(),[...Object.keys(baseline.protectedFiles),...review.chapters.filter(c=>c.newFile).map(c=>c.path)].sort());
+assert.deepEqual(actualFiles.sort(),[...Object.keys(baseline.protectedFiles),...review.chapters.filter(c=>c.newFile).map(c=>c.path),...earthReview.assets.map(c=>c.path)].sort());
 for(const [file,original] of Object.entries(baseline.protectedFiles)){
  const row=review.chapters.find(c=>c.path===file);if(row)assert.equal(row.originalSha256,original);
- assert.equal(hash(await readFile(file)),row?.sha256??original,`${file}: unrelated source or asset changed`);
+ const actual=hash(await readFile(file)),expected=row?.sha256??original;
+ if(actual!==expected)assert.equal(actual,reviewedChapterHash(file,expected),`${file}: unrelated source or asset changed`);
 }
 const canonical=new Map(JSON.parse(await readFile('src/data/questions/industrial-safety.json','utf8')).map(q=>[q.id,q]));
 assert.equal(hash(await readFile('src/data/questions/industrial-safety.json')),baseline.canonicalSha256);

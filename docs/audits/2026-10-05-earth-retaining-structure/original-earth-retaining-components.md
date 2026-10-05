@@ -25,19 +25,6 @@ examComment: 부재가 아닌 것 소거형과 정기 점검사항 4종 고르�
 | 버팀대(스트럿) | 띠장을 반대편으로 지지하는 압축재 |
 | 앵커 | 버팀대 대신 지반에 정착하는 인장재 |
 
-<div class="learning-visuals learning-visuals--single learning-visuals--earth">
-<figure>
-<figcaption><strong>흙막이 지보공과 주변 지반</strong><span>학습용 입체 절개도 · 버팀대식 예시<br />치수·접합 상세 생략</span></figcaption>
-<img src="/images/industrial-safety/earth-retaining-cutaway-v4.svg" alt="양쪽에 흙이 남아 있고 가운데가 굴착된 흙막이 지보공을 위에서 내려다본 입체 절개도. 흙막이판 앞의 엄지말뚝이 바닥 아래로 이어지고, 양쪽 벽을 따라 놓인 짙은 회청색 띠장 사이를 밝은 회청색 버팀대가 가로지름. 치수·접합 상세 생략" width="390" height="480" loading="lazy" decoding="async" />
-</figure>
-</div>
-
-흙을 막는 **흙막이판**을 **엄지말뚝**이 받침
-
-벽을 따라 이어지는 **띠장**이 힘을 분산하고, 굴착부를 가로지르는 **버팀대**가 양쪽 띠장을 지지함 · 앵커식은 그림에서 생략함
-
-> **답안 확인 주의**: 2019년 8월 118번의 수록 답안은 **② 버팀대**로, 위 표의 띠장 역할 설명과 불일치함 · 공식 원문·정정 여부가 확인되지 않아 수록 답안은 그대로 표시함
-
 조립도 명시사항 — 부재의 배치·치수·재질·설치방법과 순서
 
 정기 점검·보수 사항 (설치 후)

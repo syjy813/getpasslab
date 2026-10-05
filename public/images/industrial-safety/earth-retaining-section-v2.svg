@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="500" viewBox="0 0 390 500" role="img" aria-labelledby="title desc">
+<title id="title">지반을 포함한 흙막이 지보공 단면</title>
+<desc id="desc">양쪽에 흙이 남아 있고 가운데가 굴착된 버팀대식 흙막이 지보공의 학습용 수직 단면. 지반에 접한 흙막이판 안쪽의 엄지말뚝이 굴착바닥 아래로 이어진다. 양쪽 벽을 따라 놓인 띠장의 단면 사이를 버팀대가 가로지른다. 치수와 접합 상세는 생략했다.</desc>
+<defs>
+<pattern id="soil" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="28" height="28" fill="#E1D1BB"/><path d="M4 8l4 1M18 19l4-1" stroke="#AD9475" stroke-width="1.4" stroke-linecap="round"/><circle cx="20" cy="5" r="1.4" fill="#AD9475"/><circle cx="7" cy="22" r="1" fill="#AD9475"/></pattern>
+<linearGradient id="steel" x2="1" y2="0"><stop stop-color="#A5B6C8"/><stop offset=".5" stop-color="#E2E9F0"/><stop offset="1" stop-color="#8195AA"/></linearGradient>
+</defs>
+<rect width="390" height="500" fill="#FFFFFF"/>
+<g stroke-linejoin="round" stroke-linecap="round">
+<!-- Ground remains beside the excavation and below its base. No geology or dimensions implied. -->
+<path d="M14 124H102V352H288V124H376V420H14Z" fill="url(#soil)" stroke="#9E896C" stroke-width="2"/>
+<path d="M14 124H102M288 124H376" stroke="#526176" stroke-width="4"/>
+<!-- Lagging is outside the soldiers, in contact with the retained earth. -->
+<path d="M102 124H109V352H102Z M281 124H288V352H281Z" fill="#B9A383" stroke="#526176" stroke-width="2"/>
+<!-- Soldier piles extend below the excavation base; depth is only schematic. -->
+<path d="M109 116H121V402H109Z M269 116H281V402H269Z" fill="url(#steel)" stroke="#526176" stroke-width="2.5"/>
+<path d="M114 118V400M276 118V400" stroke="#526176" stroke-width="2"/>
+<!-- Wale end sections: longitudinal wales continue out of this section plane. -->
+<path d="M121 232H137V238H130V252H137V258H121Z M253 232H269V258H253V252H260V238H253Z" fill="#25334B" stroke="#25334B" stroke-width="2"/>
+<!-- Strut bears against the inner faces of the wales. -->
+<rect x="137" y="238" width="116" height="14" fill="url(#steel)" stroke="#526176" stroke-width="2.5"/>
+<path d="M138 241H252" stroke="#FFFFFF" stroke-width="2"/>
+<!-- Each leader identifies one specific member, with no flow arrow. -->
+<path d="M58 54V82L105 211" stroke="#526176" stroke-width="3.4" fill="none"/>
+<path d="M270 54V82L275 195" stroke="#526176" stroke-width="3.4" fill="none"/>
+<path d="M58 446V430L128 255" stroke="#526176" stroke-width="3.4" fill="none"/>
+<path d="M292 446V430L205 247" stroke="#526176" stroke-width="3.4" fill="none"/>
+<g fill="#25334B" stroke="#FFFFFF" stroke-width="2"><circle cx="105" cy="211" r="4.5"/><circle cx="275" cy="195" r="4.5"/><circle cx="128" cy="255" r="4.5"/><circle cx="205" cy="247" r="4.5"/></g>
+</g>
+<g font-family="Noto Sans KR,Apple SD Gothic Neo,Malgun Gothic,sans-serif" font-size="24" fill="#25334B">
+<g font-weight="700"><text x="12" y="39">흙막이판</text><text x="230" y="39">엄지말뚝</text><text x="12" y="476">띠장</text><text x="264" y="476">버팀대</text></g>
+<text x="27" y="306">흙</text><text x="339" y="306">흙</text><text x="159" y="185">굴착부</text>
+<text x="285" y="105">지표면</text>
+<rect x="139" y="326" width="112" height="31" fill="#FFFFFF"/>
+<text x="147" y="349">굴착바닥</text>
+</g>
+</svg>

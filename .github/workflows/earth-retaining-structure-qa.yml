@@ -1,0 +1,59 @@
+name: Earth retaining structure QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/content/chapters/construction/earth-retaining-components.md'
+      - 'src/styles/learningFigures.css'
+      - 'public/images/industrial-safety/earth-retaining-*.svg'
+      - 'docs/audits/2026-10-05-earth-retaining-structure/**'
+      - 'scripts/*earth-retaining-structure*'
+      - '.github/workflows/earth-retaining-structure-qa.yml'
+  workflow_run:
+    workflows: ['Deploy to GitHub Pages']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  browser-qa:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/check-earth-retaining-structure.mjs
+      - name: Prepare browser and Korean SVG fonts
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+          sudo apt-get install -y fonts-noto-cjk
+      - name: Check structure and all six questions at three widths
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = workflow_run ]; then
+            export QA_BASE_URL=https://getpasslab.co.kr
+          else
+            npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-earth-preview.log 2>&1 &
+            for attempt in $(seq 1 30); do
+              if curl -fsS http://127.0.0.1:4321/ >/dev/null; then break; fi
+              sleep 1
+            done
+            export QA_BASE_URL=http://127.0.0.1:4321
+          fi
+          node scripts/qa-earth-retaining-structure.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: earth-retaining-structure-qa
+          path: qa-results/earth-retaining-structure/
+          retention-days: 14

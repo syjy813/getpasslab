@@ -1,0 +1,251 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "startedAt": "2026-10-05T13:41:45.519Z",
+  "device": "Chromium viewport emulation",
+  "viewports": [
+    {
+      "width": 320,
+      "layout": {
+        "viewport": 320,
+        "scroll": 320,
+        "imageWidth": 238,
+        "imageHeight": 280.703125,
+        "imageLeft": 41,
+        "figureLeft": 24,
+        "figureWidth": 272,
+        "containerLeft": 24,
+        "topGap": 24,
+        "minLabel": 14.646153846153846,
+        "naturalWidth": 390,
+        "naturalHeight": 460,
+        "currentSrc": "http://127.0.0.1:4321/images/industrial-safety/earth-retaining-structure-v1.svg"
+      },
+      "dialogs": [
+        {
+          "id": "20220424_112",
+          "recordedAnswer": 3,
+          "passed": true
+        },
+        {
+          "id": "20190804_118",
+          "recordedAnswer": 2,
+          "passed": true
+        },
+        {
+          "id": "20200606_120",
+          "recordedAnswer": 1,
+          "passed": true
+        },
+        {
+          "id": "20200926_113",
+          "recordedAnswer": 4,
+          "passed": true
+        },
+        {
+          "id": "20190303_119",
+          "recordedAnswer": 1,
+          "passed": true
+        },
+        {
+          "id": "20180304_102",
+          "recordedAnswer": 3,
+          "passed": true
+        }
+      ],
+      "labels": [
+        {
+          "text": "흙막이판",
+          "x": 12,
+          "y": 23,
+          "width": 89,
+          "height": 28
+        },
+        {
+          "text": "엄지말뚝",
+          "x": 230,
+          "y": 23,
+          "width": 88,
+          "height": 28
+        },
+        {
+          "text": "띠장",
+          "x": 12,
+          "y": 383,
+          "width": 45,
+          "height": 28
+        },
+        {
+          "text": "버팀대",
+          "x": 264,
+          "y": 383,
+          "width": 66,
+          "height": 28
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "layout": {
+        "viewport": 390,
+        "scroll": 390,
+        "imageWidth": 308,
+        "imageHeight": 363.28125,
+        "imageLeft": 41,
+        "figureLeft": 24,
+        "figureWidth": 342,
+        "containerLeft": 24,
+        "topGap": 24,
+        "minLabel": 18.953846153846154,
+        "naturalWidth": 390,
+        "naturalHeight": 460,
+        "currentSrc": "http://127.0.0.1:4321/images/industrial-safety/earth-retaining-structure-v1.svg"
+      },
+      "dialogs": [
+        {
+          "id": "20220424_112",
+          "recordedAnswer": 3,
+          "passed": true
+        },
+        {
+          "id": "20190804_118",
+          "recordedAnswer": 2,
+          "passed": true
+        },
+        {
+          "id": "20200606_120",
+          "recordedAnswer": 1,
+          "passed": true
+        },
+        {
+          "id": "20200926_113",
+          "recordedAnswer": 4,
+          "passed": true
+        },
+        {
+          "id": "20190303_119",
+          "recordedAnswer": 1,
+          "passed": true
+        },
+        {
+          "id": "20180304_102",
+          "recordedAnswer": 3,
+          "passed": true
+        }
+      ],
+      "labels": [
+        {
+          "text": "흙막이판",
+          "x": 12,
+          "y": 23,
+          "width": 89,
+          "height": 28
+        },
+        {
+          "text": "엄지말뚝",
+          "x": 230,
+          "y": 23,
+          "width": 88,
+          "height": 28
+        },
+        {
+          "text": "띠장",
+          "x": 12,
+          "y": 383,
+          "width": 45,
+          "height": 28
+        },
+        {
+          "text": "버팀대",
+          "x": 264,
+          "y": 383,
+          "width": 66,
+          "height": 28
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "imageWidth": 390,
+        "imageHeight": 460,
+        "imageLeft": 433,
+        "figureLeft": 416,
+        "figureWidth": 424,
+        "containerLeft": 416,
+        "topGap": 24,
+        "minLabel": 24,
+        "naturalWidth": 390,
+        "naturalHeight": 460,
+        "currentSrc": "http://127.0.0.1:4321/images/industrial-safety/earth-retaining-structure-v1.svg"
+      },
+      "dialogs": [
+        {
+          "id": "20220424_112",
+          "recordedAnswer": 3,
+          "passed": true
+        },
+        {
+          "id": "20190804_118",
+          "recordedAnswer": 2,
+          "passed": true
+        },
+        {
+          "id": "20200606_120",
+          "recordedAnswer": 1,
+          "passed": true
+        },
+        {
+          "id": "20200926_113",
+          "recordedAnswer": 4,
+          "passed": true
+        },
+        {
+          "id": "20190303_119",
+          "recordedAnswer": 1,
+          "passed": true
+        },
+        {
+          "id": "20180304_102",
+          "recordedAnswer": 3,
+          "passed": true
+        }
+      ],
+      "labels": [
+        {
+          "text": "흙막이판",
+          "x": 12,
+          "y": 23,
+          "width": 89,
+          "height": 28
+        },
+        {
+          "text": "엄지말뚝",
+          "x": 230,
+          "y": 23,
+          "width": 88,
+          "height": 28
+        },
+        {
+          "text": "띠장",
+          "x": 12,
+          "y": 383,
+          "width": 45,
+          "height": 28
+        },
+        {
+          "text": "버팀대",
+          "x": 264,
+          "y": 383,
+          "width": 66,
+          "height": 28
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "exactHtmlAndAssetMatch": true,
+  "passed": true,
+  "finishedAt": "2026-10-05T13:41:50.353Z"
+}
