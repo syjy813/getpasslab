@@ -205,7 +205,7 @@ const structuredData = [
       </>}
       <h1 class="gpl-display">{title}</h1>
       <p class="gpl-body-lg" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">{summary}</p>
-      <article><slot /></article>
+      <article class:list={{ 'formula-gray-sample': cert_id === 'industrial-safety' && slug === 'concentration-conversion' }}><slot /></article>
     </main>
   </div>
   <nav class="chapter-mobile-nav" aria-label="이전 및 다음 챕터">

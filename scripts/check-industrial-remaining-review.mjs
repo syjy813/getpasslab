@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
+import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
 
 const audit = 'docs/audits/2026-10-05-industrial-remaining-review';
 const review = JSON.parse(await readFile(`${audit}/review.json`, 'utf8'));
@@ -23,9 +24,27 @@ for (const row of review.chapters) {
   assert(!html.includes('class="katex-error"'), `${row.slug}: math parse error`);
 }
 for (const row of review.displayFiles ?? []) {
-  assert.equal(hash(await readFile(row.path, 'utf8')), row.sha256, `${row.path}: unreviewed display change`);
+  assert.equal(hash(await readFile(row.path, 'utf8')), reviewedChapterHash(row.path, row.sha256), `${row.path}: unreviewed display change`);
 }
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
   assert.equal(hash(await readFile(file)), expected, `${file}: unrelated source or asset changed`);
 }
 console.log(`[Remaining chapter review] ${review.chapters.length} pages / ${evidence.changedChapterCount} edited; metadata, learning tokens and ${Object.keys(evidence.protectedFiles).length} other source/assets preserved`);
+
+// A later one-chapter color preview must reproduce the preceding display files exactly.
+const sample = JSON.parse(await readFile('docs/audits/2026-10-05-concentration-gray-formula/review.json', 'utf8'));
+for (const row of sample.displayFiles) {
+  let source = await readFile(row.path, 'utf8');
+  assert.equal(hash(source), row.sha256);
+  if (row.insertedCss) {
+    assert.equal(source.split(row.insertedCss).length, 2);
+    source = source.replace(row.insertedCss, '');
+  }
+  for (const edit of [...(row.edits ?? [])].reverse()) {
+    assert.equal(source.split(edit.after).length, 2);
+    source = source.replace(edit.after, edit.before);
+  }
+  assert.equal(hash(source), row.originalSha256, `${row.path}: color sample must preserve all other source`);
+}
+const sampleProtection = JSON.parse(await readFile('docs/audits/2026-10-05-concentration-gray-formula/source-verification.json', 'utf8'));
+for (const [file, expected] of Object.entries(sampleProtection.protectedFiles)) assert.equal(hash(await readFile(file)), expected, `${file}: one-chapter preview changed unrelated source`);

@@ -17,9 +17,17 @@
 > | `ROADMAP.md` | 다음에 뭘 할지 |
 > | `UI_UX_GUIDE.md` | UI를 만들 때 |
 >
-> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-05 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.47
+> **최초 작성일**: 2026-07-14 / **최종 갱신일**: 2026-10-05 / **작성자**: Claude·ChatGPT·Codex / **버전**: v1.48
 
 ---
+
+## 농도 환산 수식 박스 회색 예시 — 2026-10-05
+
+- 사용자 한 챕터 예시 적용 요청. 기준 main `a1268dce75e4b365f4f49dab175b23d4c623e69a`, 브랜치 `codex/concentration-gray-formula-20261005`
+- 농도 환산의 수식 카드만 gray-100/gray-200/gray-800로 변경. 조건부 article 클래스와 scoped CSS 사용. h2 파란 배경·본문·수식 내용·기출 및 다른 챕터 불변
+- 기존 보호 검사의 표시 파일 SHA는 정확한 후속 리뷰 chain으로 승계. 삽입 CSS/클래스 선언을 되돌리면 이전 원문 hash로 정확히 복원
+- 자료 `docs/audits/2026-10-05-concentration-gray-formula/`. 최종 CI/배포/Production QA는 이번 PR 설명 확인
+- 직전 PR #141은 main `a1268dc`로 배포 완료. Pages37263332828, Production211 QA37263391076/기존35 QA37263391049 success. 211+35개 HTML 일치, 3화면폭 검사 및 기존133문항 팝업 PASS
 
 ## 나머지 산업안전 가독성 검수 — 2026-10-05
 
