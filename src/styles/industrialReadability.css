@@ -3,11 +3,3 @@
 .industrial-safety-chapter article p .katex:not(:only-child),
 .industrial-safety-chapter article li .katex{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;-webkit-overflow-scrolling:touch}
 @media(min-width:768px){.industrial-safety-chapter article table{display:table}}
-
-/* One-chapter preview: concentration conversion formula cards. */
-article.formula-gray-sample .katex-display,
-article.formula-gray-sample p>.katex:only-child{background:var(--gray-100);border-color:var(--gray-200);color:var(--gray-800)}
-
-/* Bold only the math glyphs inside the one-chapter gray formula cards. */
-article.formula-gray-sample .katex-display>.katex,
-article.formula-gray-sample p>.katex:only-child{font-weight:var(--fw-bold)}

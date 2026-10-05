@@ -58,11 +58,11 @@ let browser;
       const sample = row.slug === 'concentration-conversion';
       if (sample) {
         assert(layout.formulaColors.length > 0, `${current}: formula cards missing`);
-        assert(layout.formulaTextWeights.every(weights => weights.length && weights.every(w => w === '700')), `${current}: formula glyphs are not all bold`);
       }
+      assert(layout.formulaTextWeights.every(weights => weights.length && weights.every(w => w === '700')), `${current}: formula glyphs are not all bold`);
       for (const colors of layout.formulaColors) {
-        assert.equal(colors.background, sample ? 'rgb(242, 244, 246)' : 'rgb(239, 246, 255)', `${current}: formula color scope`);
-        if (sample) { assert.equal(colors.border, 'rgb(229, 232, 235)'); assert.equal(colors.color, 'rgb(51, 61, 75)'); }
+        assert.equal(colors.background, 'rgb(242, 244, 246)', `${current}: formula color scope`);
+        assert.equal(colors.border, 'rgb(229, 232, 235)'); assert.equal(colors.color, 'rgb(51, 61, 75)');
       }
       assert(layout.h2Colors.every(color => color === 'rgb(239, 246, 255)'), `${current}: heading color changed`);
       assert.equal(layout.rawLatex.length, 0, `${current}: unrendered math command ${JSON.stringify(layout.rawLatex)}`);

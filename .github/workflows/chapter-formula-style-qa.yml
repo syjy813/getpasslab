@@ -1,0 +1,58 @@
+name: All chapter formula style QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/styles/global.css'
+      - 'src/styles/industrialReadability.css'
+      - 'src/layouts/ChapterLayout.astro'
+      - 'docs/audits/2026-10-05-all-chapter-gray-formulas/**'
+      - 'scripts/*chapter-formula-style*'
+      - '.github/workflows/chapter-formula-style-qa.yml'
+  workflow_run:
+    workflows: ['Deploy to GitHub Pages']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  browser-qa:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/check-chapter-formula-style.mjs
+      - name: Prepare temporary browser tooling
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Check all public chapters at 320px, 390px and 1440px
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = workflow_run ]; then
+            export QA_BASE_URL=https://getpasslab.co.kr
+          else
+            npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-formula-preview.log 2>&1 &
+            for attempt in $(seq 1 30); do
+              if curl -fsS http://127.0.0.1:4321/ >/dev/null; then break; fi
+              sleep 1
+            done
+            export QA_BASE_URL=http://127.0.0.1:4321
+          fi
+          node scripts/qa-chapter-formula-style.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: chapter-formula-style-qa
+          path: qa-results/chapter-formula-style/
+          retention-days: 14

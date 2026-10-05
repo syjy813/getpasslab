@@ -252,6 +252,11 @@ article code{font-family:var(--font-sans)}
 .katex-display,
 article p>.katex:only-child{display:block;max-width:none;background:var(--primary-50);border:1px solid var(--primary-100);border-radius:var(--radius-lg);padding:var(--space-6);color:var(--primary-800);margin:var(--space-4) 0;overflow-x:auto;overflow-y:hidden;text-align:center;-webkit-overflow-scrolling:touch}
 article>p:has(>.katex:only-child){max-width:none}
+/* All chapter formula cards share the reviewed gray and bold treatment. */
+.chapter-page article .katex-display,
+.chapter-page article p>.katex:only-child{background:var(--gray-100);border-color:var(--gray-200);color:var(--gray-800)}
+.chapter-page article .katex-display>.katex,
+.chapter-page article p>.katex:only-child{font-weight:var(--fw-bold)}
 .katex{font-size:1.06em}
 .katex .hangul_fallback{font-family:var(--font-sans)}
 

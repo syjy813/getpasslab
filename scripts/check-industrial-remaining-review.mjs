@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
-import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
+import { reviewedChapterHash, restoreDisplayReview } from './reviewed-chapter-hash.mjs';
 
 const audit = 'docs/audits/2026-10-05-industrial-remaining-review';
 const review = JSON.parse(await readFile(`${audit}/review.json`, 'utf8'));
@@ -27,7 +27,8 @@ for (const row of review.displayFiles ?? []) {
   assert.equal(hash(await readFile(row.path, 'utf8')), reviewedChapterHash(row.path, row.sha256), `${row.path}: unreviewed display change`);
 }
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
-  assert.equal(hash(await readFile(file)), expected, `${file}: unrelated source or asset changed`);
+  const actual = hash(await readFile(file));
+  if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: unrelated source or asset changed`);
 }
 console.log(`[Remaining chapter review] ${review.chapters.length} pages / ${evidence.changedChapterCount} edited; metadata, learning tokens and ${Object.keys(evidence.protectedFiles).length} other source/assets preserved`);
 
@@ -35,7 +36,7 @@ console.log(`[Remaining chapter review] ${review.chapters.length} pages / ${evid
 const bold = JSON.parse(await readFile('docs/audits/2026-10-05-concentration-bold-formula/review.json', 'utf8'));
 const beforeBold = new Map();
 for (const row of bold.displayFiles) {
-  const source = await readFile(row.path, 'utf8');
+  const source = await restoreDisplayReview(row.path, await readFile(row.path, 'utf8'), 'docs/audits/2026-10-05-all-chapter-gray-formulas/review.json');
   assert.equal(hash(source), row.sha256);
   assert.equal(source.split(row.insertedCss).length, 2);
   const restored = source.replace(row.insertedCss, '');
@@ -45,7 +46,7 @@ for (const row of bold.displayFiles) {
 // A later one-chapter color preview must reproduce the preceding display files exactly.
 const sample = JSON.parse(await readFile('docs/audits/2026-10-05-concentration-gray-formula/review.json', 'utf8'));
 for (const row of sample.displayFiles) {
-  let source = beforeBold.get(row.path) ?? await readFile(row.path, 'utf8');
+  let source = beforeBold.get(row.path) ?? await restoreDisplayReview(row.path, await readFile(row.path, 'utf8'), 'docs/audits/2026-10-05-all-chapter-gray-formulas/review.json');
   assert.equal(hash(source), row.sha256);
   if (row.insertedCss) {
     assert.equal(source.split(row.insertedCss).length, 2);
@@ -58,4 +59,7 @@ for (const row of sample.displayFiles) {
   assert.equal(hash(source), row.originalSha256, `${row.path}: color sample must preserve all other source`);
 }
 const sampleProtection = JSON.parse(await readFile('docs/audits/2026-10-05-concentration-gray-formula/source-verification.json', 'utf8'));
-for (const [file, expected] of Object.entries(sampleProtection.protectedFiles)) assert.equal(hash(await readFile(file)), expected, `${file}: one-chapter preview changed unrelated source`);
+for (const [file, expected] of Object.entries(sampleProtection.protectedFiles)) {
+  const actual = hash(await readFile(file));
+  if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: color preview changed unrelated source`);
+}

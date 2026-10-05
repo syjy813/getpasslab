@@ -1,0 +1,43 @@
+{
+  "baseCommit": "5291ebd5734175600f264495286f8cfe4e9bbe1e",
+  "chapters": [],
+  "displayFiles": [
+    {
+      "path": "src/styles/industrialReadability.css",
+      "changed": true,
+      "originalSha256": "7e0c1abd174d958969705ad931fb8cdeb88e9dfeb68c3fe928d0527ff2fb8d2a",
+      "sha256": "5945062a0d010fe2ca84c998c7e5741f85b43fdb255bc6132be929569ac66958",
+      "edits": [
+        {
+          "before": "/* Keep long industrial-safety tables and inline equations inside the article. */\n.industrial-safety-chapter article table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}\n.industrial-safety-chapter article p .katex:not(:only-child),\n.industrial-safety-chapter article li .katex{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;-webkit-overflow-scrolling:touch}\n@media(min-width:768px){.industrial-safety-chapter article table{display:table}}\n\n/* One-chapter preview: concentration conversion formula cards. */\narticle.formula-gray-sample .katex-display,\narticle.formula-gray-sample p>.katex:only-child{background:var(--gray-100);border-color:var(--gray-200);color:var(--gray-800)}\n\n/* Bold only the math glyphs inside the one-chapter gray formula cards. */\narticle.formula-gray-sample .katex-display>.katex,\narticle.formula-gray-sample p>.katex:only-child{font-weight:var(--fw-bold)}\n",
+          "after": "/* Keep long industrial-safety tables and inline equations inside the article. */\n.industrial-safety-chapter article table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}\n.industrial-safety-chapter article p .katex:not(:only-child),\n.industrial-safety-chapter article li .katex{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;-webkit-overflow-scrolling:touch}\n@media(min-width:768px){.industrial-safety-chapter article table{display:table}}\n"
+        }
+      ]
+    },
+    {
+      "path": "src/layouts/ChapterLayout.astro",
+      "changed": true,
+      "originalSha256": "5d462c3c865baa6e13f0e1eafae8467a59ac2eff1db569fe8e16b1d599fb28ad",
+      "sha256": "e4684c86c85209a8d6f7978ba04b095d526c585834b91f48942594f9489955d2",
+      "edits": [
+        {
+          "before": "<article class:list={{ 'formula-gray-sample': cert_id === 'industrial-safety' && slug === 'concentration-conversion' }}><slot /></article>",
+          "after": "<article><slot /></article>"
+        }
+      ]
+    },
+    {
+      "path": "src/styles/global.css",
+      "changed": true,
+      "originalSha256": "bd59a608398395d78ef6be7b34f700c8b9843838bfbc1a6ccff373056ce7e449",
+      "sha256": "664dcea37f32250d55ade6fa0cb248b5a6a8c8356f227415887f8eb92936571c",
+      "edits": [
+        {
+          "before": ".katex{font-size:1.06em}",
+          "after": "/* All chapter formula cards share the reviewed gray and bold treatment. */\n.chapter-page article .katex-display,\n.chapter-page article p>.katex:only-child{background:var(--gray-100);border-color:var(--gray-200);color:var(--gray-800)}\n.chapter-page article .katex-display>.katex,\n.chapter-page article p>.katex:only-child{font-weight:var(--fw-bold)}\n.katex{font-size:1.06em}"
+        }
+      ]
+    }
+  ],
+  "scope": "All public chapter article formula cards across every certification: existing gray-100/gray-200/gray-800 and fw-bold(700). Original source, math, questions, blue headings, inline/table math, box geometry and question dialogs preserved."
+}
