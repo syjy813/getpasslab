@@ -3,7 +3,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import yaml from 'js-yaml';
-import { restoreQuestionSourceAssetRefs } from './reviewed-chapter-hash.mjs';
+import { restoreQuestionSourceAssetRefs, restoreFTAOriginalAssetAttrs, reviewedAssetAdditions, reviewedChapterHash } from './reviewed-chapter-hash.mjs';
 
 const audit = 'docs/audits/2026-10-06-industrial-question-source-repair';
 const review = JSON.parse(await readFile(`${audit}/review.json`, 'utf8'));
@@ -19,13 +19,14 @@ async function walk(dir) {
   }
   return files;
 }
-assert.deepEqual([...await walk('src'), ...await walk('public')].sort(), Object.keys(baseline.protectedFiles).sort());
+assert.deepEqual([...await walk('src'), ...await walk('public')].sort(), [...Object.keys(baseline.protectedFiles), ...reviewedAssetAdditions.map(row => row.path)].sort());
 const changed = new Map([...review.chapters, ...review.canonicalFiles].map(row => [row.path, row]));
 assert.equal(changed.size, 5);
 for (const [file, before] of Object.entries(baseline.protectedFiles)) {
   const row = changed.get(file);
   if (row) assert.equal(row.originalSha256, before);
-  assert.equal(hash(await readFile(file)), row?.sha256 ?? before, `${file}: only exact reviewed edits allowed`);
+  const actual = hash(await readFile(file)), expected = row?.sha256 ?? before;
+  if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: only exact reviewed edits allowed`);
 }
 const canonicalRow = review.canonicalFiles[0];
 let restored = await readFile(canonicalRow.path, 'utf8');
@@ -73,7 +74,7 @@ assert.equal(review.unchangedArticles.length, 438);
 for (const row of review.unchangedArticles) {
   const html = await readFile(`dist${new URL(row.url).pathname}index.html`, 'utf8');
   const article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1];
-  assert.equal(hash(article), row.articleSha256);
+  assert.equal(hash(restoreFTAOriginalAssetAttrs(article)), row.articleSha256);
   assert.equal(hash(restoreQuestionSourceAssetRefs(article)), row.originalArticleSha256, `${row.url}: only generated loader filename changed`);
 }
 const loader = review.generatedLoader;

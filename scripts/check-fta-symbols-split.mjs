@@ -12,7 +12,7 @@ const parse = source => yaml.load(source.match(/^---\n([\s\S]*?)\n---\n/)[1]);
 const original = await readFile(`${audit}/original.md`, 'utf8');
 assert.equal(hash(original), baseline.parentBeforeSha256);
 assert.equal(hash(await readFile('src/data/questions/industrial-safety.json')), reviewedChapterHash('src/data/questions/industrial-safety.json', baseline.canonicalSha256));
-assert.equal(hash(await readFile('src/data/question-assets/industrial-safety.json')), baseline.questionAssetsSha256);
+assert.equal(hash(await readFile('src/data/question-assets/industrial-safety.json')), reviewedChapterHash('src/data/question-assets/industrial-safety.json', baseline.questionAssetsSha256));
 assert.equal(hash(await readFile('public/images/chapters/fta-symbols/fta-symbols.svg')), baseline.originalFigureSha256);
 assert.equal(review.chapters.length, 3);
 const assigned = review.chapters.flatMap(row => row.questions);

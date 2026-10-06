@@ -30,6 +30,7 @@ for (const file of [
   'docs/audits/2026-10-05-industrial-remaining-splits/review.json',
   'docs/audits/2026-10-05-earth-retaining-structure/review.json',
   'docs/audits/2026-10-06-industrial-question-source-repair/review.json',
+  'docs/audits/2026-10-06-fta-original-options/review.json',
 ]) {
   let review;
   try {
@@ -39,7 +40,7 @@ for (const file of [
     throw error;
   }
   const seen = new Set();
-  for (const chapter of [...review.chapters, ...(review.canonicalFiles ?? []), ...(review.displayFiles ?? []).filter(file => !file.newFile)].filter(chapter => chapter.changed)) {
+  for (const chapter of [...review.chapters, ...(review.canonicalFiles ?? []), ...(review.assetRegistries ?? []), ...(review.displayFiles ?? []).filter(file => !file.newFile)].filter(chapter => chapter.changed)) {
     assert(!seen.has(chapter.path), `${chapter.path}: duplicate file in one review`);
     seen.add(chapter.path);
     const chain = reviewed.get(chapter.path) ?? [];
@@ -60,7 +61,19 @@ export function reviewedChapterHash(file, originalHash) {
 // A canonical question correction changes Astro's shared loader filename. Reverse
 // only that exact reference so historical article snapshots remain meaningful.
 const questionSourceReview = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-question-source-repair/review.json', 'utf8'));
+// This later restoration adds only the reviewed image attributes to one button.
+const ftaOriginalReview = JSON.parse(await readFile('docs/audits/2026-10-06-fta-original-options/review.json', 'utf8'));
+export const reviewedAssetAdditions = ftaOriginalReview.assets;
+export function restoreFTAOriginalAssetAttrs(article) {
+  for (const edit of ftaOriginalReview.articleEdits) {
+    const occurrences = article.split(edit.after).length - 1;
+    assert(occurrences <= 1, 'one exact FTA question image button');
+    if (occurrences) article = article.replace(edit.after, edit.before);
+  }
+  return article;
+}
 export function restoreQuestionSourceAssetRefs(article) {
+  article = restoreFTAOriginalAssetAttrs(article);
   for (const edit of questionSourceReview.articleAssetReferenceEdits) {
     const occurrences = article.split(edit.after).length - 1;
     assert(occurrences <= 1, 'at most one exact question loader reference per article');
