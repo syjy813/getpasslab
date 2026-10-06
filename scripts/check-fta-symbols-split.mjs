@@ -1,3 +1,4 @@
+import { reviewedChapterHash, restoreQuestionSourceAssetRefs } from './reviewed-chapter-hash.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
@@ -10,7 +11,7 @@ const hash = value => createHash('sha256').update(value).digest('hex');
 const parse = source => yaml.load(source.match(/^---\n([\s\S]*?)\n---\n/)[1]);
 const original = await readFile(`${audit}/original.md`, 'utf8');
 assert.equal(hash(original), baseline.parentBeforeSha256);
-assert.equal(hash(await readFile('src/data/questions/industrial-safety.json')), baseline.canonicalSha256);
+assert.equal(hash(await readFile('src/data/questions/industrial-safety.json')), reviewedChapterHash('src/data/questions/industrial-safety.json', baseline.canonicalSha256));
 assert.equal(hash(await readFile('src/data/question-assets/industrial-safety.json')), baseline.questionAssetsSha256);
 assert.equal(hash(await readFile('public/images/chapters/fta-symbols/fta-symbols.svg')), baseline.originalFigureSha256);
 assert.equal(review.chapters.length, 3);
@@ -35,7 +36,7 @@ for (const row of review.chapters) {
     assert.equal(canonical.get(id)?.subject_id, 2); assert.equal(canonical.get(id)?.review, '');
   }
   const html = await readFile(`dist${new URL(row.url).pathname}index.html`, 'utf8');
-  assert.equal(hash(html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1]), row.articleSha256);
+  assert.equal(hash(restoreQuestionSourceAssetRefs(html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1])), row.articleSha256);
   assert.deepEqual([...html.matchAll(/data-open="(\d{8}_\d{3})"/g)].map(m => m[1]), row.questions);
   assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
   assert(!/katex-error|noindex|http-equiv="refresh"/.test(html));

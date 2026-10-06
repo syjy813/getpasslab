@@ -1,0 +1,2382 @@
+{
+  "date": "2026-10-06",
+  "scope": "Restore three miscopied 2019-08-04 questions from publisher PDF; move only 117/118 existing primary assignments",
+  "source": {
+    "publisher": "전자문제집 CBT",
+    "filename": "산업안전기사20190804(학생용).pdf",
+    "page": 8,
+    "url": "https://img.comcbt.com/xe/download/822fabe365db4a9bcfc05597b00ea22a/8976275/%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EA%B8%B0%EC%82%AC20190804%28%ED%95%99%EC%83%9D%EC%9A%A9%29.pdf",
+    "sha256": "b03996ec40a2c3d9b163b75c0f4287b37557e331d2ddbeb110e36688915af861",
+    "officialQnetAnswerVerified": false,
+    "pageAndAnswerTableVisuallyVerified": true
+  },
+  "chapters": [
+    {
+      "path": "src/content/chapters/construction/earth-retaining-components.md",
+      "slug": "earth-retaining-components",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/earth-retaining-components/",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "fcfa6d8cd435be0101297d11783541127a31fd27c00a1d3e1af60d5a08a7d60b",
+      "sha256": "a13e353608ce2db16892607040eb1b2cb51a990237da19b2e1edf2682e88c0aa",
+      "frontmatterSha256": "13c379290475e2073c364fcdfaa7c50f79d459b6249112f048c027bc57685d96",
+      "preservedContentSha256": "d99d1db0fa5a17fd60841f8ac382b61c01e8c52c2112fc9ba87604f4aebbe823",
+      "beforeQuestions": [
+        "20220424_112",
+        "20190804_118",
+        "20200606_120",
+        "20200926_113",
+        "20190303_119",
+        "20180304_102"
+      ],
+      "questions": [
+        "20220424_112",
+        "20200606_120",
+        "20200926_113",
+        "20190303_119",
+        "20180304_102"
+      ],
+      "articleSha256": "88d773483d568ab1c99b77b0f33729f23cd5a05921e19f27e83e35090f62021e"
+    },
+    {
+      "path": "src/content/chapters/construction/steel-frame-work.md",
+      "slug": "steel-frame-work",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/steel-frame-work/",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "1b0fc28122f849385fed848548af6cbd1892826453fca782dc241259ebb3f60f",
+      "sha256": "13ff06cd9ee650e7eb85bb5579e78fff05f503d4325480954ad61b9156eeac58",
+      "frontmatterSha256": "80a057136bbfaab479551807842c5962ed0190a83e94b3baf3f93f4bcc78127c",
+      "preservedContentSha256": "60d6edb92e7e26c7241c7b881c210a1f962f28096f4f41b37ce5bab515e44d8b",
+      "beforeQuestions": [
+        "20220424_104",
+        "20190303_108",
+        "20210307_116",
+        "20190804_106",
+        "20220305_111",
+        "20180819_107",
+        "20180304_107",
+        "20190427_108",
+        "20200606_102",
+        "20180428_115"
+      ],
+      "questions": [
+        "20190804_118",
+        "20220424_104",
+        "20190303_108",
+        "20210307_116",
+        "20190804_106",
+        "20220305_111",
+        "20180819_107",
+        "20180304_107",
+        "20190427_108",
+        "20200606_102",
+        "20180428_115"
+      ],
+      "articleSha256": "a69e4623eb4e60db69a94788fffcbc588597c652205c47e03302d1d507f0d04a"
+    },
+    {
+      "path": "src/content/chapters/construction/work-platform-standards.md",
+      "slug": "work-platform-standards",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/work-platform-standards/",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "63084c49a58dfd5a69897f4d7a7272bf5a3039e96ae72c117f35c833a71e7185",
+      "sha256": "b9a9c20b241dbd4b6ba27515c774f5b70b891a3c48001bbc2c5759b1ed6f427b",
+      "frontmatterSha256": "7e0fa482bd423268ea79a43a9f3a6abcbda7e5d0af574f3638f0d49736cc2e5b",
+      "preservedContentSha256": "e7f938c7ea45b589ab8ac76ef213344f64b9c9d2cb13910f4e06af3348e8f20d",
+      "beforeQuestions": [
+        "20220305_116",
+        "20200926_112",
+        "20190427_114",
+        "20190804_103",
+        "20190804_117",
+        "20220305_104"
+      ],
+      "questions": [
+        "20220305_116",
+        "20200926_112",
+        "20190427_114",
+        "20190804_103",
+        "20220305_104"
+      ],
+      "articleSha256": "98d99bd5789c797a130e76f17d3b44a02244f61850a0781e620b6c387c597237"
+    },
+    {
+      "path": "src/content/chapters/construction/soil-test-types.md",
+      "slug": "soil-test-types",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/soil-test-types/",
+      "changed": true,
+      "newFile": false,
+      "originalSha256": "32853d6b62c35edcd74606902b96ec3e20eba03680772fe7e2e87ef37c5693fb",
+      "sha256": "383d3c3fc74375220be55f3c2fd756c21efba4dc0df7045591b5e010bf34a670",
+      "frontmatterSha256": "e38083987a2b9b8424cc25d3d4b83613080a19bb26a2dc5aacaf859b231fb142",
+      "preservedContentSha256": "b1808042606ba727e4c73c4313a0cf5f5d703e64f2197303d574b98f49ebbf23",
+      "beforeQuestions": [
+        "20200822_116",
+        "20200926_104"
+      ],
+      "questions": [
+        "20190804_117",
+        "20200822_116",
+        "20200926_104"
+      ],
+      "articleSha256": "2c897a98cbd7492a1217607a92108dfc4675a726a337d6e8bf3e235b8e917696"
+    }
+  ],
+  "canonicalFiles": [
+    {
+      "path": "src/data/questions/industrial-safety.json",
+      "changed": true,
+      "originalSha256": "d7da505307c790d56adbdc0fbd01cac2abe6a348a2c2023c9702e4f52470ce15",
+      "sha256": "393e4a7c418567c9aa984cc5c12888954089fba84c3d57feceac1a388616e57d",
+      "edits": [
+        {
+          "id": "20190804_118",
+          "before": " {\n  \"id\": \"20190804_118\",\n  \"subject_id\": 6,\n  \"date\": \"2019-08-04\",\n  \"label\": \"2019년 8월 시행\",\n  \"number\": 118,\n  \"body\": \"굴착공사에서 사용되는 흙막이 지보공의 부재로서 토압에 의한 흙막이판의 변형을 방지하는 역할을 하는 것은?\",\n  \"choices\": [\n   \"띠장\",\n   \"버팀대\",\n   \"말뚝\",\n   \"굴착기\"\n  ],\n  \"answer\": 2,\n  \"review\": \"\"\n }",
+          "after": " {\n  \"id\": \"20190804_118\",\n  \"subject_id\": 6,\n  \"date\": \"2019-08-04\",\n  \"label\": \"2019년 8월 시행\",\n  \"number\": 118,\n  \"body\": \"철골 건립기계 선정 시 사전 검토사항과 가장 거리가 먼 것은?\",\n  \"choices\": [\n   \"건립기계의 소음영향\",\n   \"건립기계로 인한 일조권 침해\",\n   \"건물형태\",\n   \"작업반경\"\n  ],\n  \"answer\": 2,\n  \"review\": \"\"\n }"
+        },
+        {
+          "id": "20190804_120",
+          "before": " {\n  \"id\": \"20190804_120\",\n  \"subject_id\": 6,\n  \"date\": \"2019-08-04\",\n  \"label\": \"2019년 8월 시행\",\n  \"number\": 120,\n  \"body\": \"굴착기계의 종류 중 드래그라인(drag line)에 대한 설명으로 틀린 것은?\",\n  \"choices\": [\n   \"기체보다 낮은 위치의 지반굴착에 적합하다.\",\n   \"굴착반경이 크기 때문에 넓은 범위의 굴착에 적합하다.\",\n   \"수중굴착이 가능하다.\",\n   \"단단한 지반의 작업도 가능하며 작업속도가 빠르고 특히 암반굴착에 적합하다.\"\n  ],\n  \"answer\": 4,\n  \"review\": \"\"\n }",
+          "after": " {\n  \"id\": \"20190804_120\",\n  \"subject_id\": 6,\n  \"date\": \"2019-08-04\",\n  \"label\": \"2019년 8월 시행\",\n  \"number\": 120,\n  \"body\": \"클램쉘(Clam shell)의 용도로 옳지 않은 것은?\",\n  \"choices\": [\n   \"잠함안의 굴착에 사용된다.\",\n   \"수면아래의 자갈, 모래를 굴착하고 준설선에 많이 사용된다.\",\n   \"건축구조물의 기초 등 정해진 범위의 깊은 굴착에 적합하다.\",\n   \"단단한 지반의 작업도 가능하며 작업속도가 빠르고 특히 암반굴착에 적합하다.\"\n  ],\n  \"answer\": 4,\n  \"review\": \"\"\n }"
+        },
+        {
+          "id": "20190804_117",
+          "before": " {\n  \"id\": \"20190804_117\",\n  \"subject_id\": 6,\n  \"date\": \"2019-08-04\",\n  \"label\": \"2019년 8월 시행\",\n  \"number\": 117,\n  \"body\": \"산업안전보건법령상 높이가 2m 이상인 작업장소에서 작업발판을 설치하기 곤란한 경우 추락재해 방지를 위한 조치사항이 아닌 것은?\",\n  \"choices\": [\n   \"추락방호망 설치\",\n   \"보호구 착용\",\n   \"안전대 부착설비 설치 후 안전대 착용\",\n   \"울 또는 방호막 설치\"\n  ],\n  \"answer\": 4,\n  \"review\": \"\"\n }",
+          "after": " {\n  \"id\": \"20190804_117\",\n  \"subject_id\": 6,\n  \"date\": \"2019-08-04\",\n  \"label\": \"2019년 8월 시행\",\n  \"number\": 117,\n  \"body\": \"토질시험(soil test)방법 중 전단시험에 해당하지 않는 것은?\",\n  \"choices\": [\n   \"1면 전단 시험\",\n   \"베인 테스트\",\n   \"일축 압축 시험\",\n   \"투수시험\"\n  ],\n  \"answer\": 4,\n  \"review\": \"\"\n }"
+        }
+      ]
+    }
+  ],
+  "allocations": [
+    {
+      "id": "20190804_117",
+      "from": "work-platform-standards",
+      "to": "soil-test-types"
+    },
+    {
+      "id": "20190804_118",
+      "from": "earth-retaining-components",
+      "to": "steel-frame-work"
+    }
+  ],
+  "unchangedUnassignedIds": [
+    "20190804_120"
+  ],
+  "displayFiles": [],
+  "questionPayload": {
+    "path": "/_astro/industrial-safety.CYy0QzfI.js",
+    "sha256": "97ac8858a9ea843399a8bba51abfb8c96672eed981b5bb692556d41dff4c5ac6"
+  },
+  "articleAssetReferenceEdits": [
+    {
+      "before": "/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.DIPINcy-.js",
+      "after": "/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.Br4EoIld.js"
+    }
+  ],
+  "unchangedArticles": [
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/safety-management-organization/",
+      "originalArticleSha256": "bfe3075a01bbde6efce5195b69a9444acce52b3b7f366d9e70bff80039b0fd04",
+      "articleSha256": "4701ec2dce1ad10f0b77893a8edd2cb2ec80516ddf975f386c60341be1920096"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/industrial-accident-insurance/",
+      "originalArticleSha256": "f321cc57f2b45d3c91e2b5f0b617114348fa9a1004fc7d86c0518a6401de72a7",
+      "articleSha256": "7a9b730ebc3cf41a437afbb83aa0c0e62696a303178090a4831c8ada5d6fb0b5"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/ojt-offjt/",
+      "originalArticleSha256": "3b7ce58b9c7f48c7a52b2d4771bc6abd167e0bbf092ada687281736c79cca2c9",
+      "articleSha256": "f3559a0156d68187daea2f4babf364e7dda99d901fbfde5e95e2b4cb4c491a51"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/social-behavior-types/",
+      "originalArticleSha256": "7e572a2c35ec50caf0628012113b7d903eb6f7d1d915a25785989fb3ff338784",
+      "articleSha256": "3d2c0016659f6acfccae323c1106c54bbadd2f7362f6047004d931b4096f9be3"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/maslow-needs/",
+      "originalArticleSha256": "99e78a303634ab749e770f11f055926e32a09c3c8360ea237515ae4f8324ac1b",
+      "articleSha256": "5efe56465fc388e177060e9c48172d9b700a8fe2adc886506118dc8ff8aafb34"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/managerial-grid/",
+      "originalArticleSha256": "c0be9aa20a6ef5ac755e19e1a4aae735ecdae3fdc3a8c959739dbf6d3b196ef1",
+      "articleSha256": "87bdd0479e304f6f82a0ac6d15d33965a02d6bbe91698252a1823e6bad47b1b0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/mcgregor-xy/",
+      "originalArticleSha256": "ae99cf1623587a501aa8fba6a6f32e5d52268d5fa5d888f37b4d4a68e3969cc4",
+      "articleSha256": "ac5bc8f057a304cd4fb055feaf1db8026f06d1b1415d86b3df63c190fb87cd8e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/safety-education-hours/",
+      "originalArticleSha256": "fc8a625d95b7701ce5df71dd5d925425978234cc8b15243d0c245f61f5e3cdc1",
+      "articleSha256": "83da0ae9eb838aaa346e69e83c54adf389fc95e3b8386234d39896f8807e14dd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/davis-motivation/",
+      "originalArticleSha256": "7463e15f0c1c53df7a9c989910e26013fc7b0a90fe14441b187f0fd243ab16b1",
+      "articleSha256": "8cf835b0a152d04a285e08ca727b53965cd6f01e91dff83bb3b369fa79cf7371"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/motivation-theories/",
+      "originalArticleSha256": "73664ca4ac11b718ab2bb2e0453503c6005fe863cd2c399c5cfc39762156c32d",
+      "articleSha256": "3937a70af18b12e13de2475eb5a08effc695bb647bf1ddc5561e3a138c1683be"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/annual-1000-rate/",
+      "originalArticleSha256": "c7f847f8dbac92b775e82fec5b6c9e8c1d16ca6e34d8cf0b8375b491c89cf350",
+      "articleSha256": "a5c3c82e3a19747c982090d902f307fbea8014d545f7ee43759beb7114086566"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/risk-reduction-priority/",
+      "originalArticleSha256": "4f4feee4177b19de48de91414421aae679628708a9fa10816a198c3ff9bf3136",
+      "articleSha256": "6b9cceae2a2c31ddd90e7ef9147e5b9fad2cae137ff9e7ac23629d915e08d118"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/bird-domino-theory/",
+      "originalArticleSha256": "959e7a8579c97473ffa688e58fe46290b2bd7df44e41f1cb7f62f0832345df30",
+      "articleSha256": "1766d15eddd82beecf16a1732529ae93a7702fc92557083d361a3d0e88be36bf"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/herzberg-two-factor/",
+      "originalArticleSha256": "bdf4118ca1096889fda2da2e75fe41520eade71dde47fb1d50025c9e9f049d6e",
+      "articleSha256": "5759bc22f71f0abb5cf04c5f66a44dbf493a13d02ea07aa1b48b974cbe29af3c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/protective-equipment-types/",
+      "originalArticleSha256": "e416b5b54012e97fc6463fa8ee4473c0ff3de815bfea92f697967fd65dd29259",
+      "articleSha256": "8e333679caa8658cb05007522fe576ff5d22b56b1a73dd4efae7516fc13cf549"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/severity-rate/",
+      "originalArticleSha256": "31f47b9db67f89d768079c2c1cf59ca774787c48bd6f7c1a5e9ead05c1d18df8",
+      "articleSha256": "5cb7bf4cb513276247c09c33a96a2a98c6c6260029e2ca6536814ef97e5781d3"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/hazard-prediction-training/",
+      "originalArticleSha256": "76c4085a9e918a28f0db9a8c5ca46fa12516a0fd40ff1bd7734005c55bf4ebdc",
+      "articleSha256": "ac06cf7babd982edf79e2784b7be568b2a253f1cdd52f5a602ece2d358968803"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/frequency-severity-indicator/",
+      "originalArticleSha256": "f94c5a82719d5781de03ac50d77c9baf8d7618ec517e63ce9b5f95e769ef51ee",
+      "articleSha256": "c01b66e619bc36a04319cdc0fd9ffefaf0e264c988de2499a651ef5145d96a29"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/safety-signs/",
+      "originalArticleSha256": "b0651ac3f5124a3a6fc10a615c12d1b0ac39cd0a6f71e25dd8b30078f4cdec00",
+      "articleSha256": "60d1f0ec4a355d07851ace8d78022428a40a168a6df867855146aa6c8ed023ee"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/accident-prevention-principles/",
+      "originalArticleSha256": "1f3b0584d52ecec817a598f7ce51e50fa10e8ccf4ce68a07161a277edb4c0caa",
+      "articleSha256": "a43faf3dc2abd8a57f56d2bc954884538c77068d2966811f097c90f6c4df9aa4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/safety-manager-appointment/",
+      "originalArticleSha256": "f5c85cb6bf78d48a58a5c9ccd5a16d59451253a6ef2bb6d3b67b4de38b3eac47",
+      "articleSha256": "51b65429ad8942901a4d36b6faf789b89eb2fde9a51539ea662566753f9d50e9"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/accident-ratio-law/",
+      "originalArticleSha256": "2cddd3cc2f756939336b9742b8b5051d19d94b8fe4a403bc0afc0cc87ef4e549",
+      "articleSha256": "81e00a38ae269ebc6f43fe00568d67ac6d20e48567c65aa270378a734599c35d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/product-liability-defects/",
+      "originalArticleSha256": "1083b5c5520897ecad5be2718734e2f41fc5d3c1d1570223f0b63205f273d289",
+      "articleSha256": "43df7fb846c6aa045ceecf52c00f921360f11ecdc39fa53ffab734b2bbd3a305"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/human-error-by-process/",
+      "originalArticleSha256": "fca7b574eb36e03ffc03a8a2b1cd23f342f6b97d6451aa97ea6e41854d92d797",
+      "articleSha256": "8e4009ea5c1668486931cfb8f0164214de0649582edfc8e43bc289830e30ffc0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/accident-analysis-tools/",
+      "originalArticleSha256": "04c018e5d35823ce8f36fa4c250c9be2b2432740709bb5a74351d92985d47166",
+      "articleSha256": "14c688e7f3b00c2e0af139077bf65eaa9dd747dd0dc8061c0d7a145ddf62a29a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/learning-theories/",
+      "originalArticleSha256": "ce39916e99e07b5102f4706e0c2ea425d7b8dd1bcdcfb646c1037e7dac7dc982",
+      "articleSha256": "354b7696c41438a63a5fbd5807fa983e23e4e32f1b4ef3699212b6deadc3435c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/twi-supervisor-training/",
+      "originalArticleSha256": "80c87efb0b5817df03c9d4349f6aa863bb7b7683131a0d8628e563f23c3bc8d3",
+      "articleSha256": "1b9c5a3f4762b2ecbb670bdde4dc949405362e6b03f947905bfb0f10ee33bad3"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/serious-accident-criteria/",
+      "originalArticleSha256": "72f8e7222b8cee94a74fd20b44d7244996b79050c72d3f89077eace04217c473",
+      "articleSha256": "48ccae52daa32735f68ea8585c42ae4d03ef59aeaf49ea36cca66bf079fe3975"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/accident-occurrence-theories/",
+      "originalArticleSha256": "07da8706aa8508395771f88d0c7ab4109f2170128b90a7384e9f88e6c0d1fd5c",
+      "articleSha256": "d3a8a062372cdba7aeff2e1d5587d8032de8059c481866cb4c49b99b495b8abd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/fatality-per-10k/",
+      "originalArticleSha256": "bcb7282bfdc61fe0ab6a3e183ac52bd819227aa969bd7e9d0b222a76ff7aaf11",
+      "articleSha256": "cb38e27a7dbc4b867cd36b28c8e4fe28654d6e19c9d0c465d7559738ee0fb3c8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/attention-consciousness/",
+      "originalArticleSha256": "579ccfa156bdf785df317ca8d0fe4bcb3413785b2e26ef67bef550fd44a9d71f",
+      "articleSha256": "225a23eab062d8c1a233aead0d0425015b3b4207c4878762d4d14bb73e95ba70"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/leadership-headship/",
+      "originalArticleSha256": "f837ff2f797797cb82607c5bccf9be0e26b8c34013bb627c60250ae383e4b74f",
+      "articleSha256": "e2579f7f4f89058628d75feddff90c125d0abcb556df6d0ae771d6de33aba758"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/frequency-rate/",
+      "originalArticleSha256": "9b63f09798a326be69ac94a7d1847118d469677aacdeefd349f496077d31af80",
+      "articleSha256": "7daea231970bf9c45766404c2bf7e993b4f4af74b7783998146304daa67f4d98"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/human-relations-mechanism/",
+      "originalArticleSha256": "475dbf73a59caffaca596a085c4ebec3b96a0eb029cbc6470188b4df12f84294",
+      "articleSha256": "fef837d3dabe7e0754fc9bdb06e51007e4081944da8b4d989d2dfab1eaee030b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/safety-education-stages/",
+      "originalArticleSha256": "72af2659891761320c3da8c6f4150cd69ba8db54e88a1c14b1f10daf921c0fe0",
+      "articleSha256": "632ca352324df099e4a09b1d65625462d994b06cce705cd389b9ebd30403e29c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/group-discussion-methods/",
+      "originalArticleSha256": "90f86f047be11fabf43836e851025a8f39c714d5b40defd6cb3142cf7f8b105b",
+      "articleSha256": "29cc7a50173bbfbe340165e66fbf6f5b5fd1cc0892457f91c5a2dee58fb781e6"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/zero-accident-movement/",
+      "originalArticleSha256": "f07e869b049c1947909d9d36cca6d17deda07b4d3f71291cbd3826091aa33b12",
+      "articleSha256": "cc0af6c2fee4f6e35127f98637deaea16c67bb011105460e3da828da48e70220"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/accident-cause-classification/",
+      "originalArticleSha256": "5f802156fb4cd8ed61cb5e038efc33dfb782a5b9cd7e9147768a26cbd51a3ddf",
+      "articleSha256": "9f28d06d551bab3108759d2d572a37bb4f67dc7d8f37b6ab6a02719d9d11a47c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/carelessness-misjudgment/",
+      "originalArticleSha256": "3d517345d3abb0f21034ab4dbe02d1ad1b173f99733b2adae4cc23be3267c049",
+      "articleSha256": "9d2eb5fed57c8b5ae050bc4e3a918f85295f94fef7a86f2423b3c3408bf61ce2"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/heinrich-domino-theory/",
+      "originalArticleSha256": "dac40c96fff4e785a74c11b45652af7a97c81465e2947cebccc7552da7beacdc",
+      "articleSha256": "c8a472e5f783ad0bd424c8d5beb0ee9886030e66888987b5c729c2f32382ad27"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/safety-inspection-types/",
+      "originalArticleSha256": "b71db65609f56429655a0c67c961902a07d2d414767b96db39836240ffaa548a",
+      "articleSha256": "87ff787df02c29ad63c8482c942cf8e1a6fed7730543a8a9407b518f5f28c58a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/safety-education-plan/",
+      "originalArticleSha256": "e14c2d27df22da76ca1b65c7037931a9052cc836e248fa6460549bf548da88e8",
+      "articleSha256": "0bbd60a93f506365d0a1e314482cc748126664f841e334d63a5c0d2fc6cec756"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/safety-management/tyler-learning-principles/",
+      "originalArticleSha256": "9ce93a9b672f15b14968855667967621305523c647079386f4f99343b40bd562",
+      "articleSha256": "faf00cd3d3d376132a674112156901d04834d6abacadffbd5d78b4f15c4407d1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/overload-prevention-device/",
+      "originalArticleSha256": "32fdc7ba15084281f27898f647299f47d8b295ea318789114edfe38a2c2e0396",
+      "articleSha256": "add96ed1f2621f8dcb7c039a2a0b1c7f8757a8d8e6e74884e2be1968d43ea6a0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/wire-rope-twist-types/",
+      "originalArticleSha256": "804184921184c57fd504dbc42d76fc06265dbc6d609ded88efa3afd764e3d4dd",
+      "articleSha256": "3fb560411213e8a1f60b810da2fbea4a14facf2b546125aff463b5b5960dfccf"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/press-safety-distance/",
+      "originalArticleSha256": "d4fd45c7c1d3999f5bc6bfd13a54ef7de11ddbced68468dd17d3a7d1d0c7a24b",
+      "articleSha256": "58d1a7cd0b09ad40b0917732a9c654931312b353df3b7596d94cb03f1c0c0c63"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/roller-stopping-distance/",
+      "originalArticleSha256": "1a4a9668352c95c868f2ae03cd68149b3f6fdd9ab1795526f600d0750cdeb189",
+      "articleSha256": "12497be3e29e62497bbaccd3c36bac3c9897e78756b8dd2a8a5c5f650a535dd9"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/ilo-guard-opening/",
+      "originalArticleSha256": "c8604bc90ed4bea9caa0f11ce3b6e5c6a578df3d82e60da59c6bb25967c42ac7",
+      "articleSha256": "adabc1d5e29ef1f49198634298850b14c7649bd19b8c255473d2f244384f4bbd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/safety-certification-8/",
+      "originalArticleSha256": "e3a3c728aacdae273db7e5272934a6c2f5470d068ef2a7b796fbd3ccffaf1c54",
+      "articleSha256": "8ee23169bb4b0b03cef9f45004e21437b15493a3b7421880faee12d025f95628"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/welding-defects/",
+      "originalArticleSha256": "8aa376c5c820aed87c9da0f863da8c01f7f1585ed4ef2cc57c6c466d29805cdb",
+      "articleSha256": "887b60e549d1af1383be72249d987c961a3867a6f14a30b0aa748576757343a2"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/shaper-structure/",
+      "originalArticleSha256": "2e396af75d9e03da0eede68c30aa193c271ce3f40c5114a17db4a098e03e5b8f",
+      "articleSha256": "b4929d98714892716516bb6ac00ef4ac8c2cbc7f3032652515a9f27d6aa38bc2"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/ndt-types/",
+      "originalArticleSha256": "23a16049ab97dcd47d947e3ccd11f62c7b522b1157a4e8d69a1a4972b1dc321c",
+      "articleSha256": "4e2c0f24a614e73dac92c2c6d0e0b1db2c3eb809a24124633553419d685f38ae"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/press-pre-work-checklist/",
+      "originalArticleSha256": "2aa0b7fba5517ad91c49d1eddc9eb44291bf6fe53e8e4adf3a380b45e1b9d7b7",
+      "articleSha256": "2b834a50f52e469ae0f5fc39c5748a304b8c7a5e6ae3d5ceb022752aa0b5e9dd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/test-types/",
+      "originalArticleSha256": "ad05bb493804c88b07470c431cbee39992234927cda5de5373e0395dd6f6ca79",
+      "articleSha256": "57efbf1d754ee8552a6edda89bbee243cdd2a9f5310fb5e8bbbdf66b48bd67b0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/roller-stop-rope-standard/",
+      "originalArticleSha256": "6709b0decd3600fa82bc6b29641911dffe44800ad2368db09823f62dc0f9b8f7",
+      "articleSha256": "89afb70905388057ba554ca03ee0e2e06c4f517363567fb0efe9d7f5377782fb"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/mold-safety/",
+      "originalArticleSha256": "26e48ed29311007c36df8a8ed7ee113f2352e6c31b723af45d710b8ae187cc2b",
+      "articleSha256": "baa2e8712f9006564b539b3929d19e797401b41216ad339902083591125136ab"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/grinder-rotation-speed/",
+      "originalArticleSha256": "b2546ff70ad8872c8262129c947b78330552fa406030a77520cf3588381d0031",
+      "articleSha256": "71864139b95da9069a4ba8dcdbf531ba45985a9045dee530ed52f6970fc217f1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/conveyor-safety/",
+      "originalArticleSha256": "32b42fd9baebe3cc2a94944e279f493cd5094374136a85f13a9b7d86d03c54e7",
+      "articleSha256": "d95643f5e94e5e5752960dd04a45167b1abefcaa94bebf4f07b7bd800ed11156"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/five-pinch-points/",
+      "originalArticleSha256": "ce34ab77a4eee9d8bd0ebe4048d92943df37e06396a62acaefd8e08bb068451a",
+      "articleSha256": "63298f54d0320274208ec7515fb84f4a2948157c590390a854344d33d6c24ea6"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/penetrant-test-procedure/",
+      "originalArticleSha256": "abda8b7a7a1e9ba6407a06ee5b491b55cbce3ab5bb1c50c8c6b0166234a2f417",
+      "articleSha256": "786bf6582bab219822ccb47fa42737b62335f21017ae61d9abf1f1cc19b8633a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/sling-wire-tension/",
+      "originalArticleSha256": "d3e608bf3ad08b971b56b5441eea6eabfd87d95ba399cd3014a755b6c60d5b54",
+      "articleSha256": "969574eaaeebfb2cb63ec21d9b7ccd3e30e32a673f10498b80d048c1aed363cf"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/vibration-diagnosis/",
+      "originalArticleSha256": "58d8383db8a6cab05b96b0758ede89b61967c492f653cc7ff06eddcc3e7ecbe0",
+      "articleSha256": "6bb12060e869f219239573f71cb19e96b4d7652716c5dce3cd38343820f78c4a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/boiler-safety-devices/",
+      "originalArticleSha256": "c56e38bb0008e8060d139ace66824f4492e60dab886085e0eefe61f0fc66d045",
+      "articleSha256": "91969df67751c39d762cb525a1ed7c9e6216d7114f9d2ce6e4384d9a900cb910"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/machine-tools-safety/",
+      "originalArticleSha256": "f0ccf2ec902e83536a31242fa86ae8b6af627fad9d042ea468dc10150cc21735",
+      "articleSha256": "498658c7cb1bf675aa49833bf5a9567a48aa0b46ab4632ce2650054aa625bf97"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/safety-factor/",
+      "originalArticleSha256": "53cfab3ab45bbced34fdce9af3d32f6550c3df13c4d2cdfc9cdb53df46249f92",
+      "articleSha256": "fa496094d5e87bb590534fa02ddd4c828700651bc27add94c0e872187a3b444d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/crane-rope-load/",
+      "originalArticleSha256": "44831f59fcf03aa85f6fc45fe2afe81dac2034d6a17dcd03a9ceb8553e191e58",
+      "articleSha256": "0a420a4d7ce46f7575fbe1563b239111b57648007d4c487ea858f535df6e0027"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/circular-saw-devices/",
+      "originalArticleSha256": "da3405fc74970128999900b34375d4701ab72650f8a31989d97274bc9ed89510",
+      "articleSha256": "ef86ff354352e3aa1f9d5304a87d0fe5f918a114914aada8a796b18b8517af1e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/press-safety-devices/",
+      "originalArticleSha256": "d3c69b7064ee7c1104d03654e7404e55ee8ef49b35b3bee5992e63bdc6600f9c",
+      "articleSha256": "07e69d2c35de609b40430d68f285abe4a26e6ce15aaf8bf3b67dc684d9a5ff5f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/balance-flange-diameter/",
+      "originalArticleSha256": "bbfa74a5554278d90332b5237c9fb801792e5bfa4e152c7871a60fde2db91918",
+      "articleSha256": "38b64de470662757788543cdab42d342f9df7e583eeecd4ea0232a2f6299ec91"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/lathe-safety/",
+      "originalArticleSha256": "28dba85fca33a62b893eb6fa8a9bab930e558d017987c3bd6e276a78944b64ad",
+      "articleSha256": "22d1a3489863c2b08ad9fc2b682d9f2e1011f5bd60ab1a9ff1727d99cd2aef38"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/equipment-safety-three/",
+      "originalArticleSha256": "68515b651ddb5b615c90b87a4d7f5ab22d0feb972c84726f36108e4307bfd667",
+      "articleSha256": "de5da861b9019eebc64fb75157d6039d3da9c598517eaaec4db49f920c64becb"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/crane-passenger-safety/",
+      "originalArticleSha256": "70e765816be3223256122724da9ddc3e0d015609d8e3706d00fa4fed5c81efae",
+      "articleSha256": "eadce290b4bf5889c4aae42076a628774334f0a068ef3e5a1575168c98afe58a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/forklift-safety/",
+      "originalArticleSha256": "dde29fd58cca684fe35c0de211747a194514c16b795548ed9169d4e9d0961fae",
+      "articleSha256": "74e494d82dd338ef09dbd55b3846199596e5ad0c92fdd0de18e15a028f586476"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/grinder-exposure-angle/",
+      "originalArticleSha256": "ff0b9e4a69e511041b5c19e626a45be66f9c14b7f1ba516c4a7c4301cbd4e5e2",
+      "articleSha256": "972ddb7cfef4f56dd5ace2ffd6b110f574bfe1e3e6274abab666217eb8867b81"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/drill-safety/",
+      "originalArticleSha256": "1387b4da309c9044579b40d02d39c4fc01725751d1b17cf2f2957742a38c2e30",
+      "articleSha256": "9fd94582e1f1864e02e4e6616062003b0b7fa670c7d2bffbb5d533f008cd3dd8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/industrial-robot-safety/",
+      "originalArticleSha256": "10c94e92e283bf9813dd992b89e2a38bdb2712d0d27bcc2b49863f8a3253c95a",
+      "articleSha256": "f1ccb229c6ac4dae2c5cec2766c72c7813267b981ea1dd7b1c4aa827d7492f06"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/crane-safety-devices/",
+      "originalArticleSha256": "b761cacee27af1dcd57e1b84b552cfb32cbfea29dc8d52c3720d6c3a69015cba",
+      "articleSha256": "32cde0dddc0086f942900e9b974741cad9d2960f398aa210c46bb33cb7cf8567"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/planer-safety/",
+      "originalArticleSha256": "bac35dc15c80b1769fc5c5dd786ad6ddc87b87383e1ba13a19064d01bcd857f2",
+      "articleSha256": "76b5c60d8fe2b955d6328e8928b54688828381e5723ae8f177624f80a3de4bb9"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/milling-safety/",
+      "originalArticleSha256": "255517203592f22bde53d6cd3a96ac4101e351129a9a09065f04e763f0dd9201",
+      "articleSha256": "a35ec2366e5a91c353d9df0033b6558a0f6a5b384eb01b82dae05306d903bb7d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/hand-pull-device-structure/",
+      "originalArticleSha256": "b850551621d3ae3c26044a96688360428bf9425fc0a65d22a026b80846afd3e0",
+      "articleSha256": "c99475951967ea960d83ab35d028f7ba94cd39e06269eed0121e14973eaa3447"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/press-device-conditions/",
+      "originalArticleSha256": "9b2a00044346d2eab907998e84cb131eb16e2a599ad6d5df91a71eca63de53b5",
+      "articleSha256": "51d5e2c572c27dd3d32a378e1c93ac040ec11f4327dc99267da52d7ce419c223"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/lightning-arrester-conditions/",
+      "originalArticleSha256": "49ca4eb5b1109883d0b97af4cc73c05c33bd685b73ebf6bcee5b612f47bb1fd5",
+      "articleSha256": "a1362cb639b3d7a57d93325abb3a1ce3368124621beb616258d080d3017e8ad5"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-breaker-ratings/",
+      "originalArticleSha256": "617a660b0c7c090695563b3a5a02ab41264f0c170e36c9e46f8bc2409fc96c94",
+      "articleSha256": "b9bad8508f8aef61979985bb309a84abb6ec624103fd241a07033e9cdd38cd38"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/gas-group-distance/",
+      "originalArticleSha256": "996581479ac2bfe869028bd0140f04441aca238b88e759bb08dbcac2bd3a5ccd",
+      "articleSha256": "f9413df3650b212c8f362744031939ed7631dd23dd39aa4e6ab7cdd250fe0f3f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/electrostatic-induction/",
+      "originalArticleSha256": "2ec4191a5f66da5e7fd1165fdc57cf900260cfda960d5a1579f82a93ecfc0a23",
+      "articleSha256": "ccbdf2b9a0aace6a6f342e751ce07d293d8c51fae048ca1657a09f9c2af60d53"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/wire-ignition-stages/",
+      "originalArticleSha256": "93d6a7e5c2190782fae84aa9649ea35b493f46e7632abd8ae7900d8ba78cbcb8",
+      "articleSha256": "bf63f693efdd666561fd987ac71d5d7c125dd2ebecedb2553ab035af5aab8f7d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/body-current/",
+      "originalArticleSha256": "6308d3bcf7a7d20121bf17d06f9eb286bf47e036b324c5607feb7e2201f23d9f",
+      "articleSha256": "e17a09f5199ae8f095b281b52a3b98902e0a9fec7f3eb9e34bf01b451d7307a0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/body-current-effect/",
+      "originalArticleSha256": "6518f79afde7d7241346a7abe1335a829c3ea1caf61319c47778f8ca8e0fdcd3",
+      "articleSha256": "bbd87b91b91b9dc71e88c8ab035181ba1ca4021ab3906d0e0bbd2f8fcb82794a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/pipe-flow-limit/",
+      "originalArticleSha256": "2530453cb52c5de1be61f77bb21ed4fb456c35f67711771ac32602304f8fc0bd",
+      "articleSha256": "65d243d6ae85e04a76a359ad37b8d33e6fe143d75a7ccec50a8ade011cc8082e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/ventricular-fibrillation-current/",
+      "originalArticleSha256": "bb8b537d2a919f7992ce5eec1a03eb2a7826b7b9c8adb2de917c4e7285bb9eb0",
+      "articleSha256": "92802747cae82296805a510c8164a170a827c409ce328058203e26095d21e8d8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/low-voltage-insulation/",
+      "originalArticleSha256": "da97178445f7c5536cb88a87a31f28535c0e7203e412c14aa0648facee4071fc",
+      "articleSha256": "bad0367ea1b28b770a8f2dac88ee8fb95e2a0d1870f1181236ce324cc4c7eccd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/explosion-grade-vessel/",
+      "originalArticleSha256": "11ab16742eb335b5747d07a4787e7a588b4848cd3859d972ca02b7bc9e3c872c",
+      "articleSha256": "ca37dac438dbc9cb2dbd8804685c81affb42f58332ed477a02b8c04f9143b6f0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/explosion-proof-fittings/",
+      "originalArticleSha256": "9ea57b9129c6931080f5c22fe843a9502e1b84933e99e0d90963270a04190a56",
+      "articleSha256": "520c527412d61c82b87de555ea225c8c55d1d6de7382906c9fbce91dd51555d4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/power-current/",
+      "originalArticleSha256": "5b85b48236a2bd4ce6ad9503e126875ba2ac2dda00e3691efed07e4bfb7e17de",
+      "articleSha256": "201fb1f90ae4be4c5b8690508dbcc37b58573129faec37cc89cdf2d499f1bf8b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/max-leakage-current/",
+      "originalArticleSha256": "df530234f2d59e143da0559c26b9b57359e7fe38a565a7140398c482983f4988",
+      "articleSha256": "48f74903a4b7a2262556759f79798ea4582a2317f282dc751b889824829347ac"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/step-touch-voltage/",
+      "originalArticleSha256": "cbb8f8762c374dea99ef1c13972c31a20b0a2ca6d787400f8a5be55b9a4e0605",
+      "articleSha256": "a256d281b9b92628bd71e1c24d3996178588195f127d68bab7c92e25a62be1ef"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/combined-resistance/",
+      "originalArticleSha256": "b88184b164b472f4ffc2e589fe881a81305d58efabd7048483eff608771fe9aa",
+      "articleSha256": "533d636d319e8a1343047d708e659081e75171f8c52e865bdeac59a97db9c5d1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/explosion-temperature-class/",
+      "originalArticleSha256": "85e6df3696f7a8879d8fbd7018d26f36f66f1e40793f17bd00b6017cb2f0124e",
+      "articleSha256": "a27a9e0658a79af150b4633c210901a3133c6d439d4fec23f03a507e5059e992"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/insulation-temperature/",
+      "originalArticleSha256": "a01d7bc9e0c657501f5a97667a65d8a47ffd801881edb56cf635bb6338111ecd",
+      "articleSha256": "f3b30cb94f9d29e5ccea0e49d2027d9ec18989f96b6c8276088f227f72dc7e42"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/welder-efficiency/",
+      "originalArticleSha256": "eb3444787448a0469aed80c435d0b4ba4f557647c72e1392cdb1cd96e590a480",
+      "articleSha256": "00d5deed4fcec211d10ac0656e5ed1ca6886a9c17f2e8fed8beccfac63bd3558"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/grounding-targets/",
+      "originalArticleSha256": "f2a6e1a9d37088cfa59bb7bfc472118007b3319b65b282bdc91c57971b033d7d",
+      "articleSha256": "27baf0bfae6b9dd748d2f20ebf64122ae80402814b5a09e629a9cd146734ecf4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/vf-danger-energy/",
+      "originalArticleSha256": "51c16a0adee836c8102d556e76b693e05611da5e66d6daf8c21bc965733d88bf",
+      "articleSha256": "7e81b911f08e6e79acd35f998dec6a7abc3edacd970c2fad0ed2dd147458f21f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/breaker-types/",
+      "originalArticleSha256": "553deea8b5ed9230ad64cba241ed352bec30cbee8db317e73166bcd1a8cd04f6",
+      "articleSha256": "ef55a0fac5c1fb845af31d09768745f8fca69f63b85d5063882729ebe60301d7"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/explosion-proof-types/",
+      "originalArticleSha256": "f609f1b9f6e84b63a688367e1cd08c66cc1fb6aec8e7a0a960e8f96c2ef00352",
+      "articleSha256": "b71440e56038c10653135267dfdcc94691ec5595a874401b1e6374180c6226fc"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/grounding-types/",
+      "originalArticleSha256": "2d04a0bbde7ccf6d9a684ef88426ac670c8aea2851e66519814422c53163620d",
+      "articleSha256": "a086f76b2cee066e9f474f64f04dcbc27a0e4c372e0895bb705d366b84bf141a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/welder-shock-protector/",
+      "originalArticleSha256": "a948e93dbc5654c9aa3b80a401dc652e582618812b629d77e8b76e9783cb5ef6",
+      "articleSha256": "28558dc45f8e740bfdae1ab6593ea0b15ae01e9135f9b8ed66f2fef8e8a11a02"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/explosion-proof-basics/",
+      "originalArticleSha256": "58dad53d1b68b606a71c094453615b19c4ca4b476b8901886a46a7dab4c9483f",
+      "articleSha256": "2930f25d529ad582b5bf40bbc2d45613b924fc92e98556e3e10838df81db7bac"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-breaker-types/",
+      "originalArticleSha256": "048f4b21324d6633a326cb05a62fa90cb383a78322a0d42df63c25b16d13a41f",
+      "articleSha256": "558e137f7a3334987ef4675346a11f093304de8e61ed6da12582c0b61b1ee50c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/power-off-procedure/",
+      "originalArticleSha256": "e37d392e1477f5d96e2c6b80be42d535f081691239fee5fd3fcf1708e9546304",
+      "articleSha256": "69ee7e97053556371561927e3cc49d8c33980fbe5584a9721c95d2ae9556debd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/static-energy/",
+      "originalArticleSha256": "70b0b31c644518f7bd488b599d63b5b1ca8b8324af86b69abd914e540c622205",
+      "articleSha256": "a85b4a3c6668b0f75ee9251e04a74a272a84fda6fe977c461c748c335405f6fe"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/static-prevention/",
+      "originalArticleSha256": "e62b599cc2efa9e37fcffd4344d1e2d51d748b41c68f9c8016414365ec049b4d",
+      "articleSha256": "3338aec471c5c65ea2f4cf179ef26c5926b1dc545a9a9634487cb0b77b2f0619"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/static-discharge-types/",
+      "originalArticleSha256": "999087582635b8d2281692ddde32545b2ea306240f38c7f2c418cecff28fb237",
+      "articleSha256": "270ff83cafe8174956512040c7576e22d1dfa3d0295d307bc21627ee0bacd731"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/static-occurrence-factors/",
+      "originalArticleSha256": "29ed58fd0deb09dbfc2c0d5f923a389134e81cfd16a01f3f04ddaf4a59b8cbc4",
+      "articleSha256": "ffa27360c1fb023f2997844c837cc5c11c090c10c25f320e759aa2c09b9e2053"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/body-resistance-factors/",
+      "originalArticleSha256": "22648846bbdeb3cad8821840e2625859eca7a4edd9942ce86ded2652abcc8527",
+      "articleSha256": "e0bd46b3a16835b3cb7e5635a1a11ea929b272de5837838b3b4977b266f517ef"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/shock-prevention/",
+      "originalArticleSha256": "d74d7a073abe6763eb98806e826f4956904876eb44216f4ffd1c7d1f47aaa62c",
+      "articleSha256": "0efa2e63772c31f7a6a8792ed65db7c8f3a0e5dfab47519d8740a377633eb42d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/charge-capacitance/",
+      "originalArticleSha256": "481b7e82f729a55b6f43fcd0f6a12f197870f92191db4e3951120acee1bbf548",
+      "articleSha256": "7f7d18f241432edd21e41635196f2e2a7d83cad9848fedf4fc13fb04acb38e2a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/lightning-protection-standard/",
+      "originalArticleSha256": "8b2deb1d0dbc3f3699bfb81523290b8f777732049e40261cabfae5898333953e",
+      "articleSha256": "2d76ddfb171675d64caedfefaef794606cdb7b39874ca299453ed5090114563d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/electrical-fire-causes/",
+      "originalArticleSha256": "10c62c96ed70abc779c38cd2920b0a966da87a5b92202072e1f3f88142a25e4a",
+      "articleSha256": "2332915716adfe19c35653c1b5c23b5e4da1aa13017fb4d166a1108d213c2119"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/grounding-exemption/",
+      "originalArticleSha256": "ece842255e0f06a04104542769c81c22159ef025a50d2cbb21ce6dc0c3b19e21",
+      "articleSha256": "87d35d1e8ed8a95eabb9dd24798c3f7fe9eba851196bde6755c79dabc4745cef"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/gas-group-classification/",
+      "originalArticleSha256": "5399845ac2fcae7439806ad315b54501afb928c9855d3247658970b4951abde2",
+      "articleSha256": "3ab602fe1275fea591155585e17cc10a5db05d51344b9e8d6e9bb4122335b27b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/explosion-zones/",
+      "originalArticleSha256": "cf1710f02ab8140dc703600f2fe8ec7ec2a1673b923e73b71d7d288345415349",
+      "articleSha256": "6f7034cf1facf917675838864d1c81a82b634f75bac6db79a32e36d5ef0fb131"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/ohms-law/",
+      "originalArticleSha256": "5050f52ae7fc5cc47a4ec5852eefad8fc34c90f3fdf58c1a10bb201f8193b42c",
+      "articleSha256": "c372f9145c545530aa45977775bc76b5072235024334dfc8c1c34e22e17caf98"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/welder-duty-cycle/",
+      "originalArticleSha256": "2529a68b09c4940fae76a32c0c1e412e02c70bf44044ef464bdbcba45d07dea0",
+      "articleSha256": "4985f3625aa9553004c6fe483172a26a0c5d286d14bb83566ca089afaa0a5b33"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/explosion-proof-code/",
+      "originalArticleSha256": "740babbd9e7503824a99ef385bbf022b92a84afb4404d2cf9e6b1d795b3b3692",
+      "articleSha256": "09f13a59fd25d7d85c93b649329932ee30446a015c4fdd528ae0cdba3c21fc6e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-breaker-operation/",
+      "originalArticleSha256": "f67f0c6742e2d40b6131b323da2a76bb62bafb8961f6cdd2c7add1e7a2bd5a3b",
+      "articleSha256": "094d108e4004735c53f3d75e0d2433aa056b99b9c81238d005b16f896c944abe"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-breaker-exception/",
+      "originalArticleSha256": "46d62a19be07a0193684fabc14d1c1b9b8dac09741902d30c9fe8d742ea8a5ed",
+      "articleSha256": "51aadc77bac2ecbed10713421728f31a6ae6aff882b87e2cd89a83b329948928"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/power-formula/",
+      "originalArticleSha256": "7c4a5ca9a96ce26f4b74866225f69e8628d6eff1b9b2f1b2139c082460d257e1",
+      "articleSha256": "7653e933e228b462e872220e56e46e1f1c7bf14ddc28d535d347c47d144d5eb5"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/electrical/leakage-vulnerable-points/",
+      "originalArticleSha256": "40fd66060de1b9c9092284d0132a474dd25449aea37ea220c9a6efbedc457789",
+      "articleSha256": "f613ca13b71a50fc9498454303ba6f07e3ca9dd692dd6c2301f6fb78bef88d57"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/ideal-gas-law/",
+      "originalArticleSha256": "b2d800852cebcf6eea7e732a59edb1f1ad305a91511e793e78b6bf5caf4c6966",
+      "articleSha256": "174f95d59910f0a698d00adab948270ce35361262a4cc795df1732a7f2e6fe24"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/drying-equipment/",
+      "originalArticleSha256": "e849368c9000380bc15617e2eb6df27eb5226ca37f34341b57ef739b6cad0540",
+      "articleSha256": "9928d492df754e6cceef3728dcdb8e855429193bae1413bc3f55de8e36d0fe15"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/reactor-classification/",
+      "originalArticleSha256": "e3808d13429fc27bf2475b3dab73f275b79d253ccc1cbac1eaee63739afaf348",
+      "articleSha256": "77c44cf6cb3e396892db817d24c588ee6bed511e92c646789496850564795283"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/lechatelier-law/",
+      "originalArticleSha256": "8b27e93d247d36d3ca7cd1632eb379f77f542590ca40f5b423d87cb741b1a569",
+      "articleSha256": "01dc4bcd7b55811f1dcd8af2e8591011a64115225e9c92df532580e7f34249c2"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/acetylene-properties/",
+      "originalArticleSha256": "52faf0db31d9528ab9f9e7064452165d5f95c81f600ea28a260309f3d9a69b84",
+      "articleSha256": "63c3bf0fce5ca83691b3078789e3595549663de34608b690e03886ad9490e255"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/extinguisher-effects/",
+      "originalArticleSha256": "274ffea504a4876b3858084b8fcb9cc556076bcc0d97ff24c72911600256975f",
+      "articleSha256": "5ac0ee7c7ee92025d9e3a780d4ccbad4d3afa1c1ee384e3bd97d837d87a006c1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/flash-vs-ignition-point/",
+      "originalArticleSha256": "efb5803c88bed6875835c2573e07348a97f0664ab033e66f113bed5d165fd490",
+      "articleSha256": "5cc822af6bfe064302612105bb39b5c84758d289e44c8f91adb26e5670731bd0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/acetylene-dilution-gases/",
+      "originalArticleSha256": "c77048f860b394543338fdc99a2e8d0b0e7239a5c8431fc5c35f1f111fddd054",
+      "articleSha256": "5d3ffb114f52cae6e686f350cf72bbf57c73d118258d65a969f1539b883a26dd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/hazard-index/",
+      "originalArticleSha256": "08aeb3ad0cdfc5c6facfeee8b74f2e106d1cdc9879b9b74c18d4b0a7811a7930",
+      "articleSha256": "3baaa6fe59749ccb7930eb6f2c47fb7dece1cc59bb11abc131422c640901750d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/theoretical-air/",
+      "originalArticleSha256": "437ad71d143c45e6c33d81c2222074680ea681a3dd0280eb9e7e7683cc533a19",
+      "articleSha256": "e3e4a7b333694d63bda6734e25ac5801f92558e3e49c28e7d8f60183a97305f0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/acetylene-dissolved-storage/",
+      "originalArticleSha256": "0e004bc82486a23232f96f052dc7089b8339fcfb7b4c4cb4a6ea13070642a212",
+      "articleSha256": "0f7b65ca2f3f7b11197bfb8107588c47c937c3988e3f526426452eae4d42e3ee"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/purge-inerting/",
+      "originalArticleSha256": "63b8502592d1392736b93c246d8335459dc441693708e5f46d81cb66db0e4d84",
+      "articleSha256": "426b7225afdaa498ebd540eea97782a264745403becb7e89a6d4d034994c0a1d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/reactor-distillation-equipment/",
+      "originalArticleSha256": "9303ec5e3d7e028d88eacc0f216702d2968b86fbd5fd1872666ec75d79454d38",
+      "articleSha256": "196683bcfac87bc463673c097cc65e8af91bc89f2a2a9ec655791213e32c934b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/bleve/",
+      "originalArticleSha256": "8102b60b2ba50c9ec48b0afbd3a14d48eda5a62b93e2e90f2cbfb5c8582a0bd2",
+      "articleSha256": "235bb539ed37eeffceeb74a3a952cdab71861479bd954736d42d750c540a8a42"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/fire-classification/",
+      "originalArticleSha256": "8b86ce06790f18763850a5d05854052ed4037c0370eb9a9469beb1911cff0f2f",
+      "articleSha256": "cb7dc32155fc3c3b62367736cb788caab84f85a15a09dea6b762f5f24cf4f83c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/mixed-solution-concentration/",
+      "originalArticleSha256": "91ad75c8815439238be8e0ad7e29bb6c36a5a0bac43d01791c76f0cbf9095c59",
+      "articleSha256": "ee86d80ea184e412985f041a90440705c47365db1a2f997b54716fe6c640d66d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/water-prohibited-extinguishers/",
+      "originalArticleSha256": "c3613f4303c9160bfb408c5c520c99b45308ab02902da469a52b27a6c25d24c6",
+      "articleSha256": "5e0a3b1eda01350799c65d5894543cec901284029c428796a686645af4391021"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/concentration-conversion/",
+      "originalArticleSha256": "3022356e327c0bf6f3e79e3cc5042ffbd3f3b05126a0fb2ff7ee662341086c37",
+      "articleSha256": "64b0ad783ab27ae6d2080aae1c22555fbce72c983766831b0c46679277c3d9b6"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/fourier-heat-law/",
+      "originalArticleSha256": "e2aae348641cf40dd211d90e66fdbbd2e984cd5eab2753d9035a292c53298501",
+      "articleSha256": "06d5b83ddcd579af7e7bc1361e09b523347f13eba00841354ba5641efce70226"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/dust-explosion-factors/",
+      "originalArticleSha256": "32198fbf691287eda791ce2dd78a47d4fafb08351445a8592c36f9c161b6e3aa",
+      "articleSha256": "8c8fa6dde4c1b32eaf6619a7d7d83ef252fffbc4fc6fcf5049df1d4b2c255546"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/safe-explosion-combinations/",
+      "originalArticleSha256": "4c84587f4f08f8f55238600782514f1ebf7c16c4e44488083cd4c09177e10e54",
+      "articleSha256": "566fa1613c57cf62a035999e006bfef39bda32c9b667eeed5d29377882a727ec"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/combustion-forms/",
+      "originalArticleSha256": "1f41118deffbe144e001b3063c42d915e80cb68ab15b35bf1882a79e329a934d",
+      "articleSha256": "03d3bbf7eb1ab6bf780b76c0dae7e72a915cceb80973c4b849a1ce1777e8a55b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/safety-valve-shutoff-exception/",
+      "originalArticleSha256": "960c62bfe145cd9cf9080f42949a31903a67105a2fe26f01ab7b8eaae4b47ef6",
+      "articleSha256": "5e2b441c36cf051f6b3498d8248e9d9d23ef495410c6f72f903a0115a0c80a50"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/heat-exchanger-inspection/",
+      "originalArticleSha256": "4a854762835853bcd14845b9b1403db01f2e4051a5e051ec52c2bd3513e98f0f",
+      "articleSha256": "514c214118c2f15f671dd41e671e902e840edfa57b900bfeba88584a2849d30c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/fire-suppression-principles/",
+      "originalArticleSha256": "25b7151d18171a46b8921204bd39895d1f8e61293cbe55c24de16d1e24ca96ed",
+      "articleSha256": "c03e91774c47f61e12e6677e01eab70556eb051c255cb84268a9fbe054930354"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/calcium-carbide-reaction-storage/",
+      "originalArticleSha256": "81b9e25aac2b0600e0d0b28bd932a27fefd2e8d2f90cedd0f67fc08cbc7bfb86",
+      "articleSha256": "6489046187f8849f30230c6d9fdf5a035be3c40741098ffd1d55c5af2b383936"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/vessel-charge-amount/",
+      "originalArticleSha256": "3fd2b38a45bc4c7b80ae4fed0b215493572cd715af14e5e5e95230268c368d77",
+      "articleSha256": "ecd55da55bd8c7db4c9f8541ff7a468198437834aa8d2d6bf110ae2f5df79ace"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/cavitation/",
+      "originalArticleSha256": "1c5a2d3780ec41c8fb85bc5f19a48328bfb6f1d400cc305290e14f3304c09ac3",
+      "articleSha256": "499f538f757d4e1092804d6a07d3df4ea0f6ff8178c0b59ea9bb7431a5287056"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/surging-phenomenon/",
+      "originalArticleSha256": "302819b368720229bb42ae92adc25c0c738bc83f3a27cd29d7731a893b3a1782",
+      "articleSha256": "54dc30b840e1d809bb52af66753515b337f1c192336a5d132b7ebfc66ec231ce"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/reactive-dangerous-gases/",
+      "originalArticleSha256": "1d038727f2b523e8f474b1412eff5c745e1f18f7f1049ac52ab0d709ba02c23d",
+      "articleSha256": "f635c7fcb2fad1a8c7f350636bbf0ebcaa47f9dd06bad3fb3a9f1f803ae06254"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/co2-extinguisher/",
+      "originalArticleSha256": "fa7c13a43a884690a688a3339ff72e005e9d04375a8af57df2e592aa103bdd7a",
+      "articleSha256": "533a0e6a74d10c84d7c91e5963b93bf51361c9c9a743eb03cbc23e730bc9f032"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/complete-combustion-cst/",
+      "originalArticleSha256": "9a509cff57eef5741c56286ca3e93c103b7925499377f3162ebb20c23fee7ab4",
+      "articleSha256": "73a52bfa221474fd4619f1d6dc40efd47df7e8fe54d6f4a64ae7a9abc2969411"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/burgess-wheeler/",
+      "originalArticleSha256": "c611b45f805b70f4c3dea24bf5d7b16e110d29fa94ff0d9ed78e809a1ceef09b",
+      "articleSha256": "019d101f86ba84d69563a83614a98fb3240ca42cee46032502a17e769a545bef"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/jones-formula/",
+      "originalArticleSha256": "c540528691126eba06c8d23c798c6a615ea7bca9b2f0830a9b7c4f96a081ee71",
+      "articleSha256": "630ccbd5e86872cbb694736f71db29cee87aca51253048e0d71be814c06ec5fb"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/toxicity-indices/",
+      "originalArticleSha256": "99e7d10d884c4845333cfc94727192527865e35b41159b7a16dbc99534fc0001",
+      "articleSha256": "c5cb4add3d04b86590a3ccec950ecb25944095fb2f6b8b56dad1e62482459ef5"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/endothermic-substances/",
+      "originalArticleSha256": "8e637e04a3c7eaa880f3c54e0a4ecc917c81c481ce0835f7622adcf6c8c4a872",
+      "articleSha256": "e7d558c4c43611163693241aeaa9b9db9efab725226387befcabf85ddc79b4a8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/mixed-gas-explosion-limits/",
+      "originalArticleSha256": "1aeeea68d13f54c840b14b7a5830ede301af798b1cafcd14590a5e34777cc28d",
+      "articleSha256": "31b1a445492ae6747c5fd66fce2fe9ae1973ff598da70b6deba4a8b6ab8d3bd1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/combustion-range-risk/",
+      "originalArticleSha256": "35a864640dbba48db6edbb6bf1d3f1d1acc0ed7e3a8e2727b510745961a3f4bb",
+      "articleSha256": "45a9edee6ff8b15634ef6d73d3a0d767ec8af6824f2073143b7b69eebc899955"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/chemical-classification/",
+      "originalArticleSha256": "1805c5077c2a622d451061417f2c52d2a5897bc98a640361f7d53141b92d96de",
+      "articleSha256": "c9f156219a759ade27477a5666449f7f07e1de31037d47a2b83987e6f5dee265"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/spontaneous-combustion/",
+      "originalArticleSha256": "56ce8821372951aae1366fbcb297c59580dd425b989e0c9d2f107db5e9780bcb",
+      "articleSha256": "694026b87cdc474d1be199e700ce336a881aaa14e6bbe26074c23193f5d9971b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/explosion-types/",
+      "originalArticleSha256": "c5fc2ebc7e4e79109e4c27bb6422abe2bdd95feb7143052c004f2ccdb1629df3",
+      "articleSha256": "cf230d927d28f39d47ff487bd5ac8084520eddb4da99fff9a8601bde1504bb8d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/chemical/adiabatic-compression/",
+      "originalArticleSha256": "97bdb929206742349f2b51c7b950f30a4454f52bef39e28850aa060b630ae76f",
+      "articleSha256": "e5715bd6d93e26d67ccc28e9197082b54f6e1ffa593a56aafa3147ccd08f3549"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/availability/",
+      "originalArticleSha256": "7b08b6e945cce37cf2480aa7640bf00f6f1a8162e0e1ab723cf17b03f857472d",
+      "articleSha256": "601f1ecda35b61350c035483df7f4cb35778853a09f301310e7b71f14bcb069d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/point-source-illuminance/",
+      "originalArticleSha256": "303e3684bfa0b2f7d93accce315057f6a08cc8a47903aaf54264d79ff0b4b50e",
+      "articleSha256": "d0e9a7a2645d5badb2b3d870b04bcd3ede14252ac976a261c28692e90cc00429"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/maintenance-types/",
+      "originalArticleSha256": "4d13b3d519fdeea3489f249fa06f96ab00688f16c4a6cf39c025895aa5f8867a",
+      "articleSha256": "749ce9939f2e459e054acf84fab54e88671d48aada7e8ef1832f45adf10b0bfe"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/ecrs-principle/",
+      "originalArticleSha256": "40fc5258c4479f13722f0a3bbcb8c805dde2bbcf8cde9f88168930b7486e658f",
+      "articleSha256": "3b234933f431388b9f4a61e1a9c2a073afae01f8962bd805c180d56c7e1ad8be"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/weber-fechner-law/",
+      "originalArticleSha256": "affa62c2ba03f2dc143d7e66034281a04d4e3127743d4a324c2322504a074423",
+      "articleSha256": "5e45d77783ac10a2c4cd706381e289afd298842f79970ea29907f067fb01ebd8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/compatibility/",
+      "originalArticleSha256": "d014373946932fa556efadafcceb8a34d3471d19dd27ec0d43582f55f6309bd1",
+      "articleSha256": "1f6fe0284519d160d67e29f160ff97d473de84a1aec8d2e90fb8a8ec1f901744"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/signal-detection-theory/",
+      "originalArticleSha256": "32383b7cdcc086a2fdcd0c22203f0bf74363559ed55012317787dc679d5590ec",
+      "articleSha256": "4451e62d364f964876b6f3b4696808556fa5a2f05dfad41a081e71a531d3990c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/system-lifecycle/",
+      "originalArticleSha256": "2c6d5014d57e1a73c1419182cd8b2d53ad68f3aeb7f63e1142c1f0e58faba8cc",
+      "articleSha256": "edfeb338e2f22b84e98606150d311c33b6efae091ca4a2b56081ad42f17a4ae0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/quantitative-assessment-items/",
+      "originalArticleSha256": "38183a886912f5930fa94b9e231a367087b77da85de25d46e908b737d16f1cb5",
+      "articleSha256": "09b6f1f148412916fe496c013e39e111dbe2b86590a486107de1f795a877f00f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/msd-workload-assessment/",
+      "originalArticleSha256": "6a68f8ce7f2293938371a3d20e9d726db33ca7dd732ac55b537346948e2131ef",
+      "articleSha256": "4edd3d676d2a1b2f84a0bd2098fdee1c795371cd9503f98033e68bb7e30532f9"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/anthropometry-design/",
+      "originalArticleSha256": "375034258d52825d341af2561919f88a12d3cec0fd17baba266e2e0fd62c9143",
+      "articleSha256": "801c5faf93e7dce789b020eed072d2dc86676c2489d2d6df3ea269ac8638aa3a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/eta-event-tree/",
+      "originalArticleSha256": "9c5e31ded34e691964870d49764204faac4c3c5ceb321b500968330f41094153",
+      "articleSha256": "29187e695e9539474dd70b6bdb83199067627f4e73def5dc8f58f4243e2e36ec"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/system-analysis-techniques/",
+      "originalArticleSha256": "7e708458d4cc49c2557cffd1416d90a1868c4b1a1fed7bff439bd31af971d197",
+      "articleSha256": "7ab9cea4310d58efe5ff734fc8f2aaf70586b0a30f3b5860beaa2055249e16d0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/z-score/",
+      "originalArticleSha256": "27b4be1ebaca1232e75a9cec6be7f966664d6f7182339e47ffe9c1601806e11f",
+      "articleSha256": "67e7019ba0936aed0094d73c39f69cff51736c86accb91951578342a7960520a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/risk-assessment-procedure/",
+      "originalArticleSha256": "84aa48709a3aac3f1a99867ee9a84898d36bf611911ceea1667702833f8c19f5",
+      "articleSha256": "b58b7bc991159093371d2847ce0c8db548cabafe83b027c5c508d86e5b068306"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/articulation-index/",
+      "originalArticleSha256": "fb32ff234fc041b0465cc799fbf7dd8dbb2966591cdae32859c5dbe9b7b76439",
+      "articleSha256": "3e4dd7f63eef4264967a393fda96846476d34bd6ad23394e440db2128f874615"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/cutset-pathset/",
+      "originalArticleSha256": "a919bf5c8b83ccbd37562c7b87f4f0c7f07b0e9e297cf695ddad1629ed96ceed",
+      "articleSha256": "f266f873cd43b091c3127a53c9f51cdd836c8f3a0e62943056835de519f13959"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/vibration-raynaud/",
+      "originalArticleSha256": "d86a5bc2ea7b6cbba4543ecaed8afdf552543416cfc3f5e78c8428aae407df72",
+      "articleSha256": "08dc0097058e85d9db6fea0d17e9f0e1c00ee9af7162ab930d4cc4956f0cb09d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/information-entropy/",
+      "originalArticleSha256": "77af9256b5603b53079cc4ad68e64db824f0d07395443e65097d76c65e7bbfac",
+      "articleSha256": "0607d4630fab81583d92e0bb4b0dcd57b491e0f98ded532448bafa1a5488706b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/illuminance-luminance-reflectance/",
+      "originalArticleSha256": "0362d36733a2ea0b5e1616599c01848816df1860c8dccd31e0adb03b120aef05",
+      "articleSha256": "88db68481c17d9e11ec24eb4e056b03d60111ba8fa511cd99831ce673c93d127"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/rmr-energy-metabolism/",
+      "originalArticleSha256": "cb7051d39e86ac0440fa42bfcab6af460acc833ef0e579b2f01f20c493a9ef6c",
+      "articleSha256": "4ad74b89f283769e3f7575da5a33753b147e7a9ed2d3cd5e9447a9b5d042c27e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/exclusive-or-gate/",
+      "originalArticleSha256": "6290e5f25ba296bf3ca2989825dbd4ed5053b9bc93eaf659095d460d53d4abcc",
+      "articleSha256": "5d663ff9ebd6960f99254bcba8c0e63a9372c15dc40fd5ce378870b3e505e11d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/msd-risk-factors/",
+      "originalArticleSha256": "1a94f653337ad4a64c1429b1277ec5a79e1ad00eec6af0ae3f621f7e7565deda",
+      "articleSha256": "7da8d1c482157bc3ea761b806431600742d536ac1d7a5aa4888f5be2855eeda8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/workplace-layout-principles/",
+      "originalArticleSha256": "2012d294a03bd710aafbb88ce208e060f0ee4c6c0cb08e76a56ca4274a26acd3",
+      "articleSha256": "6c6172a2975df184b6b407c78c08278a019e34793eca6ba89cb1ce98d580b278"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/pha-preliminary-analysis/",
+      "originalArticleSha256": "f0221cc94d7d0100b1b402ec588e5cc294c16d2d343b17513ba2aacba6e9d633",
+      "articleSha256": "5693ace283b9e731055e6445a0fc3b039eab94225a3feec7dcb3a56db7ea5446"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fta-symbols/",
+      "originalArticleSha256": "20898f3482a3f2884984f943baf0ed4e829889c97029aa8fe10779e8afe26128",
+      "articleSha256": "c9e51b247e1fb7c1f24fae8ee3dc3c14e1a7a51dd7166ccde3e3c3d87453950e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/safety-assessment-basic-principles/",
+      "originalArticleSha256": "4b3b2b940404e71955c96b118d31465c7f3458e254dab66cbba8ddb3cc820855",
+      "articleSha256": "73d63310ccca9a74bef8f91ec8379176223fa397efd48ca992832247539fb3a8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/hazard-prevention-plan-qualification/",
+      "originalArticleSha256": "3dad3bd14b2747bcc3af2a1aea966cef855863a1e18f9c7a1990e47ca1510aaf",
+      "articleSha256": "9e52bc37e5e7bd981610f08f20964c5fbd83a828dce2c99b8fa712c019d8c990"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/murrell-rest-formula/",
+      "originalArticleSha256": "0fa18df4fe0c86a91608e8d8d4fb40f181b40c700be7324186d3a0c3c098a400",
+      "articleSha256": "176dd904295d8d5d01af6c154c624068da47eb7229ccec07b37fc8c3013c07c9"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/cr-ratio/",
+      "originalArticleSha256": "7e9614b647d0d6d238ed63e92400d871ea0e861ce0bd47ef2c30435239a0123e",
+      "articleSha256": "cbc863301b2eddce43a1a3139ca4c262b5ec5a2d7e5c660f39dc6b535ef4c16f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/composite-noise/",
+      "originalArticleSha256": "c27c2a50bef542afb6e798f951384eab1c94dff1a3a1f531060bb99b8cbb78ec",
+      "articleSha256": "890b9d89f59b8a689167c6a888d3fd3d67b79616334e6f015ff7c03b1aa594d4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/noise-loudness-scales/",
+      "originalArticleSha256": "992ab5c47082891cac5d55af51e440c67cc5c0aee922260de0457238341954bf",
+      "articleSha256": "873e20e68de88fdfa525c0f096a5dd7f8725efd77a310d18dab6ce974443d342"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/hazop-guidewords/",
+      "originalArticleSha256": "b9f083722d1b69e03ed31f9006b12bf41dbd89139733e458a67a4af6262c427c",
+      "articleSha256": "87428d021cbf72059375b0d8a1dffcbf57ba1297c63a0a95d807613a77463ae5"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/thermal-conditions-wbgt/",
+      "originalArticleSha256": "06a5329ade3421a8b72c596cacc93e24dc415582e2156f4b47140c0bfd7299f9",
+      "articleSha256": "cf970836d2be311fa9f739448e650e3a59e674646035177a0492c12befd097d4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fta-procedure/",
+      "originalArticleSha256": "788babcb1c9ceae93424eae29bf427308da452a476621ce5796bd41a00c18936",
+      "articleSha256": "883247855540790f8bc7ab19963d3d497591d83ccec27f96c3d3b4ad19081ee1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/luminance/",
+      "originalArticleSha256": "39e1ee565798de7ff5aa414c6030b3ebe1232b3c26f67f38dbe22e19be52d6a8",
+      "articleSha256": "5df5582c76baf0df02e4d3111a346a8738b00efa20626c00cf249864796874f1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/swain-human-error/",
+      "originalArticleSha256": "dc4283fe1cacadbcb0288fd2b6a2c6e0bc90a1d96e64adf3a323837e898747b7",
+      "articleSha256": "7c91ca817f49a245cfc3f76d48ec973a7b2646222aca3d706c66ee137d89acd7"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/therp-human-error/",
+      "originalArticleSha256": "21cfd69947881adaf1bce309c9c4aea3f72681d9cdb1108400c4463b928a8f6c",
+      "articleSha256": "8ef0c810539a79e67831519f463a6728a8341c76430af259dd846aa984388ad9"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/vdt-contrast/",
+      "originalArticleSha256": "594af7cbe04bb82e4bc790888fbf2e81d2c86d97dfeb31329d7bfa7d6d3ecd23",
+      "articleSha256": "f13a0d0f968fa5fe9c4fa2f3a2543c9bf998efbb54eaffde359babb2f38ab9ee"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/safety-improvement-plan-items/",
+      "originalArticleSha256": "9fb9b6e546dde640c646617b8205c97ed5c5e0f866a2ec433dbcec9f790e252e",
+      "articleSha256": "c10500443a52869af56e795e9e49a7f75a6754681aa2653a1378de23829399f4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fmea/",
+      "originalArticleSha256": "de4eb87c380604aa187f13b9ca13e0a96f6ce2a6d2c462e9014e2c257dd8e032",
+      "articleSha256": "8d33c8b2ee1d212ed988ae41725c2971e8736e75a8ca70cd96e772ca0770fe3e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/mil-std-882b-frequency/",
+      "originalArticleSha256": "b609ad0cd120a024bc628369b7292c1cddde16249dceec0bd5a4eb8811c8e042",
+      "articleSha256": "8ff42ac90cea8d79bf079ed8cfe83f931dfbdf258c24e1fa7ec7e904ed4a2fca"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fta-logic-gates/",
+      "originalArticleSha256": "aff6064bfd5b46e787e38eab266e1e671cd59778e9d6e895df3d0564db0b78a9",
+      "articleSha256": "7550f6fcb36b176c3698dca333febd4794220b4bddf90bff832be68070e0b152"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/oxygen-consumption/",
+      "originalArticleSha256": "bd8b54b022f12132390c5dac063532ac722924e1aeae57fe406743775031602c",
+      "articleSha256": "5d72d0313453356bbe00dd9237b61937e30798cad3357f3bb0d774f4c820d457"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/human-error-factors/",
+      "originalArticleSha256": "fefecdf3b9285521350714370f1d4c64f8d595a7203ca8770a2382fe609dcb2c",
+      "articleSha256": "6a05e0e42be250537320aabc6ba9e3bb52a9cb62c9048275c0b86caaf13036c1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/reliability-rt/",
+      "originalArticleSha256": "7b1065214a4ba22d6ef449386599fc96ca602b546324741ff952205c3637d1fb",
+      "articleSha256": "d711987705927566ee9ce4c87201eb03d90edbf639ebe64fec84fbde4bea0999"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/man-machine-system-design/",
+      "originalArticleSha256": "df832653bbd8c99f05590d22d66c088ca63465fc616d259661e439c2d3ad58c6",
+      "articleSha256": "94cef42cdafa56b220dfe7ede74fcce367236313675e7e3e7a8fc97acb36ba1b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/series-parallel-reliability/",
+      "originalArticleSha256": "aaee9005d1dee7666e7725bedd244310f63e546c3131994ec780dd6ba6d430a6",
+      "articleSha256": "0e56f52354aaecb8bd26d8969d07d674b30e7faa3d3be1babf75df5765178d51"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/qualitative-assessment-items/",
+      "originalArticleSha256": "ea02f63bb5e7da25df85695ccb20ffb147661fc2d0e41fd1056d0de133706e97",
+      "articleSha256": "de8c7d97f2d7610d7264fd58569c654e5a88aea072a430f9c39f51ba0d808749"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fta-event-symbols/",
+      "originalArticleSha256": "82ddda1715cba74cc34eb57873acc2a973a73dc33ca61daac5ddb53ad584f7ba",
+      "articleSha256": "d2bcd8b336863c1afc4ec8cf7dd7241baa1dfbc9a21c8396d7ac84bb35a15913"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/mttf/",
+      "originalArticleSha256": "3a8a06acfb1b59ae0799f4ea242290670f769f7b6a8088ee451560a4fe609b17",
+      "articleSha256": "f67498f72e06cc694208d9d05ac5a502cfcc537e582d25e1b7e17111b54574b4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/total-noise-dose/",
+      "originalArticleSha256": "e36df02475377183b1e89281f2511f7f1bb3357c79cfac30943e358321987c1d",
+      "articleSha256": "5706edf647605ffb3e59b6c00d02e027adb198f801e2f5d775abd3e19daa9fdb"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/vehicle-overturn-prevention/",
+      "originalArticleSha256": "603f178162c3999b6529dee6b28d20b2be19ecd037e2d9bf4f5e94fd2b737326",
+      "articleSha256": "d35956393557da86d4e4e4ce91cea35792209968d074e47c684386211200eb3f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/construction-hazard-plan-documents/",
+      "originalArticleSha256": "13fb908c7a5706333e21a56316d08c7eecde2f3c6f921e45289d56d92a1c8b10",
+      "articleSha256": "2f2f3baa8cd2fc9bbefd82fb3e0a3520df1c5bab8182b4a88e499ea51fd0db92"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tunnel-blasting/",
+      "originalArticleSha256": "a3e26c3c555073968baf1e4726f26c7f18d503c70e53bf01807a8d5e3be97679",
+      "articleSha256": "6f1f129be532dd445bf135ff966002537f4c44fcea85eb6cb5d9777e70cbf7bc"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/fall-prevention-equipment/",
+      "originalArticleSha256": "5920b346bd258a6af409795559474f133fe661f22f0751e51ac9463f7fef895f",
+      "articleSha256": "d9148ee6f4554b2619ed1ef1262ab0a5e494c33340241bb52bbf22db7999369a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/safety-management-cost/",
+      "originalArticleSha256": "a1b66fc6bda876b5bbf1e329bb35d83d5a5c5f607d386b942cd0815917c1efaa",
+      "articleSha256": "117e17eab1965d9c721692ca5bb32d0eb194f2dd48c3e6aea2ed1b3a9a68f5a4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tunnel-support-safety/",
+      "originalArticleSha256": "5bea6dbaa50af7e5a211f8d01bbe1dd79dbee3238b51736865324f9d6f7281e5",
+      "articleSha256": "1fd19d8f6028db882251eb3d91e54159d885b5cdbe4d8faeea3925220341df6c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/hanging-scaffold-safety-factor/",
+      "originalArticleSha256": "f49b584f2cff05bcb78d2b2aa8c8823259c58ba6d37ed3e0790b196f99688cf6",
+      "articleSha256": "c52f04863a7589d5d6dea6928cb02497ef7d19ea66ef6ea1cb735c14ae4e425e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/ladder-cage-standard/",
+      "originalArticleSha256": "a19872b81611ef654337515f0d3aa537f1e4739a4f71a704a3d1d168c1f67302",
+      "articleSha256": "db3afab18a4e6f497ea3be9c8461f4f068fc158094e57a8277fc4477c6beb909"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/steel-frame-scaffold/",
+      "originalArticleSha256": "2848427a5706e76d8e8315f7ed0515a5de6594c019160b2d370f68980ed1c1ed",
+      "articleSha256": "25767aaee3a72fb0e8e372cc26f83891b88572a4b41c4ee854ba250dc6d2ae7f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tower-crane-wind-limits/",
+      "originalArticleSha256": "aba4315570bbb842d18e899d102e687d3bce0e6d787c96a9c2707188fc47e9fc",
+      "articleSha256": "6e5aec932b220c0953ee9e95422da3c88a7bb257cd32d53e8304ecea91dcf69f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/euler-buckling-load/",
+      "originalArticleSha256": "b64f9b3258a8c52b8a8c3b8b184f165f0b7c10d7b8427563060198e752be41a0",
+      "articleSha256": "dec4fa2e600f907a7a60d20accb6efd2c55afef054a26ed9364aeff813621b5e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/safety-handrail-structure/",
+      "originalArticleSha256": "18a4840c50c32313582e429549f173206f951d3c69f5fd2bf3b1dbdb8dcc43c1",
+      "articleSha256": "192ce7d22cd5aef4e146105dd6d383511998057f9a08272dc2931d05e9dc84de"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/gangway-ladder-standard/",
+      "originalArticleSha256": "8546b65cd3f985bc97590dd4e5192ece926a1d795ab4c57e5dc7daa406453e5d",
+      "articleSha256": "c7c44538fe1eda9935324278c207144513153b470b87ad47f4c3d4373ab23787"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/pile-driver-stability/",
+      "originalArticleSha256": "a079e6fb9a2329436f4954a28b40f36c65a0305f727322d2a8be4291a1ca50af",
+      "articleSha256": "cff4a6256f8e49b77181066b3057e061363d32a1846d6dadf567a69f1697bc51"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/blasting-safety/",
+      "originalArticleSha256": "0ef3eaf80afd91b04aaef01b69c1bbeb4921b499c5f308cb2f1866dcb499e7c2",
+      "articleSha256": "8ffa36cae003725aabda0aa8668f134a90d14897b97214d3d9a8fea32aa4c8e7"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/excavation-slope-standard/",
+      "originalArticleSha256": "5ef3d7b319817758279a36ad04b93a06088c1000605d72b9768c2d91ec2f3176",
+      "articleSha256": "736dc6b0d30bbd97affdfb04522a5905ae092d4ab06f75025d1babe09369b936"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/stairs-landings/",
+      "originalArticleSha256": "da90d24778b77318a163fbbcc7386b6bb3d4665cfbc91f6d47ee3858f1b23059",
+      "articleSha256": "970d119c906394771641cf45fdc276c3d4620088116d5fe0ff89bd9c816bf86e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/steel-pipe-scaffold/",
+      "originalArticleSha256": "20748e53107115c0e69140085e9192c437fbcfd7b29b8fae67c9ce16b27aec7d",
+      "articleSha256": "75863a1d79b92c26607f2d9343c6e7b1e10860d97cadb65a0a851c2de4bf5bfa"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/soil-collapse-prevention/",
+      "originalArticleSha256": "0133671e2fb43edf9a7ae3d0edad8f2ed3cedf5e8e617ee616bd404af65406b3",
+      "articleSha256": "e42f1c81ab8189e0bf9054b67d6bfb9b62e73cf62818e3e58a0de256c503efb3"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tower-crane-rope-support/",
+      "originalArticleSha256": "aacbd2bb0a5e15be2270bd8666cdf0343df12c82417c5bdf839cb60ecedb14a2",
+      "articleSha256": "189206fa63e6b5cdd530cd54fa5eab84299d3c6c869014ffa4344bbf94f7a69b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/formwork-removal/",
+      "originalArticleSha256": "514fdf6e39ae76530054e2df63982f277be9008f6131b045622a1ce56e8d75ca",
+      "articleSha256": "8c9efd6ae9de550cf2144f977a1e1f805e3a964663c3746f363a72f9091d194d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/slope-stabilization-methods/",
+      "originalArticleSha256": "5b75582591d965f37a68a656b9c5a4485f6b6d71df094ccf1219acb845070713",
+      "articleSha256": "ba9e47ce05433f889afd41e97ecf774aadd096f01e2dc4736efff38009dff077"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/temporary-structure-defects/",
+      "originalArticleSha256": "0be896349d8003ed7454dc4e93e579a9fda307e99f80cac67fe03195b733aff0",
+      "articleSha256": "9269b9986355a398de1e114c3b3e0d98a7fcda7b38e8b2639d79b523674e38df"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/slope-collapse-prevention/",
+      "originalArticleSha256": "c0ebdfbf15e7e6879190f4dc6432a8d8fd83318f13d8d0cd83eacccd616cc15a",
+      "articleSha256": "689f5f8a1a84b2d759ec958ab17fedb4745f5eac26abdcc6c1288eb7b05bbb6d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/safety-net-standards/",
+      "originalArticleSha256": "beff0a73613d7d18bccecb7fceb89d8247ff168f640f2c1e1029bd422ed98235",
+      "articleSha256": "8344ced4829d296c348f13487463f0f383cffd79331c756eb2d2df021590b1e1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/walkway-board-standard/",
+      "originalArticleSha256": "5ef56677050f6b89828d537ca385857b8a68d009a8a46e5d4215d823d6146761",
+      "articleSha256": "b45397b7d797c6cbcefd65be568f75a869d120f0f30dd6d610aa86908b0daffb"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/shore-safety-standard/",
+      "originalArticleSha256": "cf78ad1f7fcb1bddf914d857f2b7ab9159d120a495c656120f9827b05ed08675",
+      "articleSha256": "c298e250b28b0d9818797aca29f8f8b3e94c1e2b3a85d17ff7b5b06cd180e7e4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/temporary-passage-stairs/",
+      "originalArticleSha256": "5c2eaaa9798fe95c378577c58c67c7015a86ed27e5f9d1905c4364caa7366f49",
+      "articleSha256": "6fae1016e9057d3393d3b04e5f4134b7541f8d00796ae86d0da5ab19c11b14cd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tunnel-survey-monitoring/",
+      "originalArticleSha256": "91f13e26290edf7d891559f03ab7919b7120c050f9aa3ef0fa8c095b85f38689",
+      "articleSha256": "bc049acc9351a0cbaed75bf3dbafef602c19c9416c8a6a617fc0e4ac0c5f9a2f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/demolition-safety-measures/",
+      "originalArticleSha256": "650a7add6c1efaa6019f3188424b2e54feaf8419872eec8f808c0307ae065b9d",
+      "articleSha256": "d1879c6d6f97d5fe2051c8229c22626397f1ac4ddbeba6f8c32d2c85bd11fbc0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/construction-illuminance/",
+      "originalArticleSha256": "fedbb6fae4d6d2291ee84d36aa6e2d17a1d9591ceedf7793c2f58c9a51a94932",
+      "articleSha256": "5c6ebeb06c028bf5200730a621700c9046e65aba2f8e048f5438b70d1a115307"
+    },
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/soil-permeability-factors/",
+      "originalArticleSha256": "7b1474c6aa1a7d2ca1819771c286f92b92c85820914dc5912064a58d10c2cefb",
+      "articleSha256": "a1ad392f99771d5535cbc409836ba0af595794a5432acc0a27a5ba07fe25e32e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-efficiency-heat-balance/",
+      "originalArticleSha256": "a1334157cf1c6856a4bb27ac4a01aedb1d9affd47d084502f9b1fd978cc906a7",
+      "articleSha256": "ce14b1cb4bd6218627536bcac2a7583c7fe7e0299be0f8c1e1944c99f05a88ba"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/insulation-materials/",
+      "originalArticleSha256": "06c9cc7c242960d09108acbb15cede94b547cb38df8926f34dae10278dd37247",
+      "articleSha256": "72ed2797f3932a5dbcdf75dc888352a91e0567119e84f3ab997149574f844107"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-piping-insulation/",
+      "originalArticleSha256": "8697461985e469448f54572f1f60c93ba31e392ebb3a10678f79c9e726d6c880",
+      "articleSha256": "e0a164e94ae4ef293c7ff626148da121c298e0290c11e575ca795b9d2ad272e0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-work-safety/",
+      "originalArticleSha256": "10bfffbc67b12f03e2d9bdabec4a1b31831eb807a137a8b5c6efa1c91307a6b0",
+      "articleSha256": "b19604709ee4306e38347779f62473e36f0b85292edbcf6e835a48cc095f286c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-protection-devices/",
+      "originalArticleSha256": "92dd5d1c7aae81db6443e0e50a60712a260cc772e68b82d24aa6f5810d2017c0",
+      "articleSha256": "fd3db1fbe921dd6932bc0093c71359e762547ce974b950ee0cf5059e49cc0780"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-water-treatment/",
+      "originalArticleSha256": "6d484140de37e4e40d895add4ed3e525ef02911f1798f1848cf6280a50dabe4d",
+      "articleSha256": "455c54912b770655898e35a0be3e50e569aef22669438a7e57c77801c87e0eb8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-control-systems/",
+      "originalArticleSha256": "bca2d5d2fd6bf0be8deac2f42ca2d7ea7144a0b86a6d4578c8b39a4d9a002223",
+      "articleSha256": "30dd69ddf589e9949bee5999cf36de6c8b6f78c36585246f5a418f2e0b25385f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/draft-flue-gas/",
+      "originalArticleSha256": "6dce52083a361f7fa0c7121d8052caee6e38ec858e42945938bdb5e27b84f176",
+      "articleSha256": "8edac4951f8490990de4fba6555cd56a8db9fd8aed6141aa2d8c6fd22aa69fdb"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-types-construction/",
+      "originalArticleSha256": "5471a327dcc5c1990d50489e8200baac7dc5e9c3a938613ce5c7731636845a61",
+      "articleSha256": "4157d0ab7b5775f473487a2e57de4434557f7264b5763127eeb29758ee6ec7f0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-accessory-equipment/",
+      "originalArticleSha256": "79da7f59cab2f7e6befe6d2abcf324e2e6e28439d258375867f6f1688bafc439",
+      "articleSha256": "c1c5eb31c7c81654f1155f2d57e1a02bc3121fababfb1c241ad7bcf8da95f7ec"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/burners-furnaces-atomization/",
+      "originalArticleSha256": "9800d37350aefd74a2c40b33ebca748b7a82de1f522032f0caa77db1a952c8b4",
+      "articleSha256": "f173dd646d3b3c890cc049a7211dcfdbf85348d03b1ec65d8902a36cad4e76a2"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-installation-combustion/",
+      "originalArticleSha256": "63f633896ed7c3418c44a37735e4ea95c6d90a1f1f5943dd9a500b5be540a0a9",
+      "articleSha256": "2f31a85223e815c17cfaebbf2051707fbadc6e2da399819eef561e05a03c08c9"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-auxiliary-equipment/",
+      "originalArticleSha256": "48e4a989a94b0cba1eb20a2163b2f4d35476cf7b61ab1499f6bdc6455de59401",
+      "articleSha256": "968d768f57450c85caf08cb2510c7e5bcdbbfd9f5c2b663837124dd58592dd97"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/heating-systems/",
+      "originalArticleSha256": "e762578d3cc6c1608003e288077940162ea3407ac03a542a90b048d99c8c144d",
+      "articleSha256": "c7b9de0ce3007a77561a3e445c93feaf67d128d1e4e5c8fb608c58a490a233f4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/fuel-properties/",
+      "originalArticleSha256": "ed4cb68636cf88f32a240545181cfdabbc0c55874c37187176f762a68b48da2a",
+      "articleSha256": "5be9692126bf0ffd8611cd4a51e85ddb88e401635194aa68dbfe5534064c7298"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-operation-basics/",
+      "originalArticleSha256": "50c63b0f7e07ffd28d7f288e2f7188929fd1dfa9f63818eb12cf705330f72384",
+      "articleSha256": "2a5213309a62bfc574b9fca6dc8dc79fc50abc8c0741a06af8f56a0dc9748e0e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/steam-traps-condensate/",
+      "originalArticleSha256": "0e52cdaa38f9c6903b3dfe640e0432555cd3a1af1f582be1c755be888c7aa15e",
+      "articleSha256": "ab5fa2255b3bd5c8170d3ba0797ea64b36bca0ed42a8936b51d877391898e5da"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/heating-load-radiators/",
+      "originalArticleSha256": "d3afd2869965adb96e6481323f0b682c2bfbf4118af531a6886f7c71939f75b6",
+      "articleSha256": "28889a45606ca01a39173268202e3bc53835dc6f4c2dc61215dae7810ccd4a17"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/environmental-pollution-control/",
+      "originalArticleSha256": "cf00fb33b32871067c244b20cff23273cd216a728627e7ac850b6a0c766211a3",
+      "articleSha256": "2fb7390f3bd19cd7849e8ac2aa3f1e7c5481f7049a9f183065faa6de9f969b60"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/boiler-operation-maintenance/",
+      "originalArticleSha256": "feb7cdd3531dc84bca36049ecf9a578d74fb97e053ed58449ec33d810ead5bcb",
+      "articleSha256": "fb7af49954ade7f6564ec94f516cdd8ffb594a2fb384fb383ada716bcf29411b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/energy-laws-and-inspection/",
+      "originalArticleSha256": "83e4ec51b2cdfa4e1fef2e70acd6ef58b0b918abd5914ede499ea9b48344ef33",
+      "articleSha256": "cd35408ac76359cf16946f8fa5472ac5054f9ba460ee30c64d0ff83d928b845a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/spreadsheets/excel-interface-view/",
+      "originalArticleSha256": "5449f318493233cc4869d8e8e2ba719da1494fc05b328f8460e7d3064452a53b",
+      "articleSha256": "fd05a4f849c3036476e1693b025b0698918e8dedb15ecc9e5004e48fe09f6cd8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/spreadsheets/worksheet-selection-groups/",
+      "originalArticleSha256": "be5eea1b8135edb2577bf2543846f146465c8a3eb1ff6ec23f84b404e87ffe96",
+      "articleSha256": "617691d7d3551bdd4422e45c81d191871c1ac852b2fb24073b21d6d8f8a21270"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/spreadsheets/worksheet-rename-move-copy-delete/",
+      "originalArticleSha256": "2853651eaeacefc3a91a70a24520233b074bdde82e39979976ba1aac6442288b",
+      "articleSha256": "1d0df2f219b98e0b8d38aba9199145008ba9cd5726b1b824616cb7c4077a76e7"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/spreadsheets/workbook-worksheet-creation/",
+      "originalArticleSha256": "8b85713ea007bcece43d417915dc79a0cf0188cea30763559414d7f4f09fc17f",
+      "articleSha256": "16f788a5fc3a55a8b9564650fffb91a31d1edd2f99500e15b25a32de0e1d22f5"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/spreadsheets/function-arguments-nesting/",
+      "originalArticleSha256": "147e75672785c9c4f8fa2afa64ea4a0937647b73a71891a97f6cf0c31747f386",
+      "articleSha256": "60c18e0ffb286db371ee78925f21574e8e24208b2f021e01bd81e33e15d7bc16"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/spreadsheets/excel-option-scope/",
+      "originalArticleSha256": "ef29fa300d73620b3bef69e0ec02147e6f106eaf0bd3660f02e857a9748bd616",
+      "articleSha256": "d767e313609c0dc8533ffd6d41e521d30c6dc112074e3263beeef2a6f08d219a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/spreadsheets/goal-seek/",
+      "originalArticleSha256": "af9a6c543a3eb36c6802826d51ad88f69e244e1ade69808f23ca105e624ffdf9",
+      "articleSha256": "c024512f2738f3eadc60c567b74aa6b398f23eae03c7cf30b7ab4007ce4f6123"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/spreadsheets/operator-precedence/",
+      "originalArticleSha256": "d5f16931ff221ba0dfdb659e513ead735d24b6777fe5c38c6b1705d0c2c4d76c",
+      "articleSha256": "b45a424a2970e350db6f723e951658486ea99fb2828d9021dca677406de4c8d6"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/spreadsheets/named-range-calculations/",
+      "originalArticleSha256": "3145e50b5b8361121169dac06cdbec37ca3c61dbe1bb5a0b392a43f7df4e8232",
+      "articleSha256": "deb556df8613f12e33fedd854201acd8ea6f1b2671dbf5dc77eff379bbc77d64"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/spreadsheets/cell-entry-edit-navigation/",
+      "originalArticleSha256": "f4714631982c5b9e99a3af9ac2a9aa01c132446845d3b8920547f4075b0cdb4d",
+      "articleSha256": "6dd135d7de0e007c5de81872a763f268dd77cd1d4c6ee4bbcb1fd15c41d8edd1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/file-extension-types/",
+      "originalArticleSha256": "e0e0f89735df5967b94c2b7a27afab603395b06887c97d6105816262096af895",
+      "articleSha256": "67cfd93d27e3f6aa73d91815825e540dc8570d9fd0375223426abb48075de57d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/wifi-bluetooth-ethernet/",
+      "originalArticleSha256": "9fbe8daae5a3a99cea853db383f10fab2fb7d7315ba060672dff1cb477b1f0a4",
+      "articleSha256": "b70e412475f571a7b263850a3d6197bdf2ea974bb2f6e1b184e3feeb42ecb0ba"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/wearable-computers/",
+      "originalArticleSha256": "0eb45fe6a151c1b73328bf6536fcc6079750a7897045f6a614e49197f0418e28",
+      "articleSha256": "9d113ebde97840e0ccb4107f62b40ca6ff39cc12f670b0e78d25ca1498f2ea40"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/modeling-rendering/",
+      "originalArticleSha256": "755c8bd08966e5c68f06d5dadb5a756ccbb03e49a7f2928017ae32d1dfdd9ec5",
+      "articleSha256": "df45e0c1d83bd6f5b61f021fb6ad966a6063402b8bfeaf37ac5255274fb29514"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/media-playback-editing/",
+      "originalArticleSha256": "f3bed1f74e5329e1b6ccff0d441f735ad97fb846a5db3cf5917942f32513183d",
+      "articleSha256": "fb5eebe2465c4b7015d21afc16397bd4e0732e3328e0adf13fdbcaa34039aa3b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/domain-name-hierarchy/",
+      "originalArticleSha256": "8242b62a4bdbdee8a01e83c75b1e2dd7a4c3b6e86b1d05c0a713f9a931e0ce9f",
+      "articleSha256": "9d42250f64cd03f78fcccf68a059f4dd9c7b147cde41ef721d833f7b2068a2c0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/network-operating-structures/",
+      "originalArticleSha256": "5fabf5aacd837bfa0e7ef4fd99c0c1f4c5f81551c205e83b85b368775312fad0",
+      "articleSha256": "66222f0089088cc2d61ec15e9fb354d2011df8efcd9b55e8926107f1b0ed79cb"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/selecting-files-folders/",
+      "originalArticleSha256": "48f45475681c78dba030e6e90aa9bcbc4b4e572fffb4f2e275f58a04ee686b79",
+      "articleSha256": "47fd84ed203fa93d1860d2addfe5f885e8ea7def24cdfb78f15dd14288e2cbb7"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/network-device-roles/",
+      "originalArticleSha256": "b52e4c765c6a41e50f82a06d366f83c38e98388a1c93687e1899ef728045232f",
+      "articleSha256": "9b991716077db774fa9a4d66e5ca90da01745b34de09bc395a72435c904fac3b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/default-apps/",
+      "originalArticleSha256": "bb839ed78f39fe78302c0b5e7821a5717737d4f2320b0e908d4cb377d51a6705",
+      "articleSha256": "3340b7357d9cec29b9bef5d69fbadfeba600f63a0e7f7830e618153785885720"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/personal-information-handling/",
+      "originalArticleSha256": "844ca399d7c0470a694c9a84d84d3a7d7813afc6194a781cca694ceaf8aa4d4b",
+      "articleSha256": "7a4aceab84c82be9b15a5e118dffcfe9d156987626ce43718f3b355c1bcfab7f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/firmware-bios/",
+      "originalArticleSha256": "f53576bcbbdaca54ec8d1466fa7262b37b711257f2b1e4ce254cbf0451023245",
+      "articleSha256": "3d6536d2fa9cd31093363e55d5b9943e64ba25efc550cf2b47ff7bf9cbdec287"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/processing-time-units/",
+      "originalArticleSha256": "2fe5d9d8bceb6fbd082f963a3861b6e9ee322134a9b8a150546c7f12dd1adf83",
+      "articleSha256": "645e8e8f41839c6caeba739e1628e6ed2e59ba9a42302996bfe2488084aacccd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/backgrounds-and-themes/",
+      "originalArticleSha256": "848fe2b618a2c1a16e6e2e239e9e065b587e6cc0092ea722f58108f3f6b31f6a",
+      "articleSha256": "cfdeda27cba6322706cb1bb48c43609481297f89b0c5dd08de7e7a23d689cf8b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/windows-shortcuts/",
+      "originalArticleSha256": "09e99fd2bd89ff88ab8fba9837d6f15905fa39b3bdfd56a8b2c621553288f352",
+      "articleSha256": "d257ba0b01a196d3f46eb7569a4d042155d544bc116662684bd0381f2e607238"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/disk-cleanup/",
+      "originalArticleSha256": "2f0a11bc1ae21241d71959db8740ff3fe66a5d3a479ffdde9ec140425e2c546b",
+      "articleSha256": "6d9348bb85686a2c2cd7d9781eb2ad72f7e9adeace18aea5c7bc115164f0e32b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/print-spooling-queue/",
+      "originalArticleSha256": "9e03b4cc73dac3db1312d6c70f76c694d9cd6c7a9f26e30e4dd866fda6fbad15",
+      "articleSha256": "7f56f91cd126b16b3da7300aacda1719221667145a88a16228f24b07f03ce33e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/bluetooth-pairing/",
+      "originalArticleSha256": "2ed0b8f0ec5a50a6ce3243833fc4dc6728df37e789bc524fe9e6a878e08dbef6",
+      "articleSha256": "0c62bd668a7580c6701d244835933bac672699eb0d73112680108b5214963b75"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/sign-in-and-account-types/",
+      "originalArticleSha256": "6708a8bfd6111839ba7f8029368fcd586bb4b09195b9379b1f52aae4fc9642dd",
+      "articleSha256": "272d31808a504e99a65f3b5107d4254c61daf85b11ada626a70caece19f04b8b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-classification/",
+      "originalArticleSha256": "d0da2a8df31705d45c4527dfd046225f655ed72aaa915d30d17494c177c14d29",
+      "articleSha256": "4af63b280ebaa51789a2023050af4c422a492641de7c4218f0e242494740ac2c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/device-manager/",
+      "originalArticleSha256": "29a58b81b86aade772c3023922d80e24f683eee19103367a5ac97bedb3fe827f",
+      "articleSha256": "c2173d83bbcdc386a6b9501059ff63166ca2e852fb26e6c17b2e556bf108462f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ai-machine-learning-deep-learning/",
+      "originalArticleSha256": "93b9e6d8bb53f9742c4811bd6fb8b5132c2209a542982bec9b491f096bd27d65",
+      "articleSha256": "229cfb99edd2008faf0ed03855f199ce2dcf83b3e15cf8c9b5ced1fb1f891154"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/software-release-versions/",
+      "originalArticleSha256": "2d416ba6ffa857ba9d201931d33cf50c7b6cc099b38e0000a1ca3202fdcb483a",
+      "articleSha256": "c901bc5c42fa0d19149d6980dabe205543cf043a7efdb2476e27a40502a3a8ba"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/jump-lists/",
+      "originalArticleSha256": "9aec24cf99d614175e7176ddf66441e2d48331a4d70ed43ec764c55d19d00096",
+      "articleSha256": "129e691973916371dd3c4db9cf9baf81284cc7bb1f07b295efbb8372d2d1232a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/task-manager/",
+      "originalArticleSha256": "585445282fc427da39f1aebcd28eed8c51f842d2669004edb042c3f3de491e1a",
+      "articleSha256": "6ee7d288a68f61b9df9eb8d2c12ba943d202b77be650197d4d1f710bf36e7fc8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/piggybacking-access/",
+      "originalArticleSha256": "9a0e92d2708642d7dcd9f99da4b7b75bbc0bf4bc1384a66ffd27c8da8d0b3d43",
+      "articleSha256": "67f3e662905047cfa6284b493978b16e74e86f91a572d71921554047bb32234f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/system-information-categories/",
+      "originalArticleSha256": "e3fd043a584beb7c3a7c6fefe01e3a204cf2ef379d86a5b72ac48078d4228c8b",
+      "articleSha256": "867af23bb85fad4f3c4dd88771b38809ed563e91170db778724a97bbbf8c69ef"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/printer-installation-default/",
+      "originalArticleSha256": "b20783f1e4ca198d22775d9c832f212c773a9e34450f94e375975767b71ad571",
+      "articleSha256": "580b31c30c428d93cfb1b09b6309f911e342355c329daebce8e49fdcb739542f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/storage-devices/",
+      "originalArticleSha256": "e8b462c550858612288897e81b643ee87902a6534788d459cf6a4202b4d607bb",
+      "articleSha256": "0087be8bf85d9f8a003fde19e66d7811b2b23adf52d6f56390488d0f35f7ecc5"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/copying-moving-files/",
+      "originalArticleSha256": "30858ba50885318a73234fa84e55216b6965a12193aac165b9b22f4879d28e83",
+      "articleSha256": "30d8512fc69281bb52dceb18e9d3f99a9676c7808ef3957c524b88dfc23bd532"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/html5-dhtml-legacy-web/",
+      "originalArticleSha256": "34a8604546390bacbb6e2fa65c74b781e0d5604e1eaf2ea7559555b9543c85d0",
+      "articleSha256": "9dbc8515b738a71d41b842f54f2053b4ccb874a5577ad237d8ffa18bbcc72f96"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/vod-mod-services/",
+      "originalArticleSha256": "91f61915dc7e943ccad86f0e764b95b3ad6be2789129e930aa38955cb9dc446d",
+      "articleSha256": "cfed7526481b5412b919c178c4e57cd118fb6a7e51c01bb190a499d0bfb6ca8f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ai-input-output/",
+      "originalArticleSha256": "a05cc12867edd008cd2158a6f37d14a33f412a6172d63e02f7ac171340545c4a",
+      "articleSha256": "9fc3c08d9d4fbda9754f47901771a22a0b3e5a441943fb68e3a7c4d716751fca"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/printer-principles/",
+      "originalArticleSha256": "16c19157f44816065dc376e8429a9f07d6be547a31dd27451e2e0914b25b93eb",
+      "articleSha256": "5a64d79c63404f214d12abb303cc55cae7aae202b0a6bd7f11629ee4727bfbb1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/pc-maintenance-backup/",
+      "originalArticleSha256": "32263e5f0127bec7069bb95959e5691943b0dc99f7aa99697cf583a17fb2533e",
+      "articleSha256": "17562acfdd3dec44efe49e791be4d1f9fe290df5daf45e7b523d8292f082d38f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/http-url-structure/",
+      "originalArticleSha256": "f5a2db82ef5b92f5f247a3408e87f764f41e188f11ec184baacb53bc945ecbba",
+      "articleSha256": "5ad1cbfdc5d14d29f4bb0f25642c27fd5e1b22345a85310d0c60bcda68d9f30c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/cache-buffer/",
+      "originalArticleSha256": "1bd74df37cf60ab49d34a5c5ccceead8fe075b24b5008de1d9920504098d9366",
+      "articleSha256": "6950370d2049bddaccab1c6b1144e4967481b3648fe40c41f25ac66d3fcacded"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/memory-speed-hierarchy/",
+      "originalArticleSha256": "def4a22516230f4e319e254ed1226b0bfdf8362b9b2038f787d4117616e77b12",
+      "articleSha256": "b0d8e316e5e47b779881a01272a9ab5bc4a171ea0eadf55f8280e41534f680a4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/hdmi-interface/",
+      "originalArticleSha256": "2b80557ea9578b8551f228db8762231c34b31da4260e5ebee6d6a167b6bc2cdd",
+      "articleSha256": "23890f9cf1bf32ee3e5b5e94079012cf78e814b1c7e3b4728346460cafc93d1c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/malware-prevention/",
+      "originalArticleSha256": "4bd5aa9a14345ec84e6d64259d96bece624feade2505fe517e7e9a6cd25b9174",
+      "articleSha256": "bcf562338fc04add62b660086b9690c64734cb39365cc6b58145246952575195"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/programs-and-windows-features/",
+      "originalArticleSha256": "be0a73616134ed8b73bd801b192fb171618fc0be221fc2ce9c9eaa0e3bf5ccda",
+      "articleSha256": "60881ad1fce3273b089ae6326de6e32ef61aae5eaa59d42d6a7dc7073b86079c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/language-and-region/",
+      "originalArticleSha256": "49a0b06cbfaf957fae715ff28c4bd1777707f554aa59b667425636bc71bc558d",
+      "articleSha256": "89a93a1ed01b5a13fed55b579b7363d583f15df386d79bf6e426e1e18d5b31be"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/bits-bytes-data-units/",
+      "originalArticleSha256": "5054590157eb4224b8e208c94ec258283b6ad566a1c6cf27f6cb3a3972603d7a",
+      "articleSha256": "2752be165b2e1b0883a2b4a972c64b29535ad7953f921ebbd12c5d13c435b5bc"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/printer-troubleshooting/",
+      "originalArticleSha256": "6e613ba001314d5c6354871be96318112b5558d0ef529e368e0f092cdd9d9b39",
+      "articleSha256": "600244f22344587f39d2cfce195806be3327b2b37d1d99d8ffcd9d318026cb54"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/parity-bit/",
+      "originalArticleSha256": "4d805b2b80a3035ef2e2e751132d7de36611d196f2c05d70cdaa3e41c35d5b5b",
+      "articleSha256": "0d47bf8e125e3f195e2715d98cedb0b75706265cd50f899f08bc9ef1ee422476"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/shortcuts-and-originals/",
+      "originalArticleSha256": "19aea75295d462eebb2ee8bf79fa73c20bb6c561139ee62eeb553b90dc26cbc4",
+      "articleSha256": "030f43ca7bbba04b07d7bba993b7d65a1cf1200854e6c84fc72724c5653f0e27"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/network-scope-types/",
+      "originalArticleSha256": "e5c791d1a598cade10b8ab9ff6ea5b1f9ec44dbfe1e33c591b08b79f2579fc41",
+      "articleSha256": "d4008674a5a78f626bfd3f84c58151aaed4eac6bcb709d137f2d1e1397e6c7fa"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/sampling-pcm-sequencing/",
+      "originalArticleSha256": "514401cbaf85d054c63711b90bf21a5674432c9f686acc1bf94051ebd69ef78f",
+      "articleSha256": "e49a28d940c06af29eb96a3d6f1e2a605e29b9e02d656ca75810ae46b4e4b943"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/cpu-registers/",
+      "originalArticleSha256": "1ecd73fd251f32ad96a956a257d00da586aa23034aac1fcd242781554d8689f2",
+      "articleSha256": "f9ce7622cda795ca9dc5b5ddf5cffac50176c9c658cc54f563d5640cfc9692bd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ftp-file-transfer/",
+      "originalArticleSha256": "8fd726e54ec8f67181bc1c663b941aa8a8863853b3c38b50a5bcbd492dabfeba",
+      "articleSha256": "fcea2ec0a66fe4ab4d110c2731defc877e2d41ccf70559274623cdbfe045465f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/drive-optimization/",
+      "originalArticleSha256": "bd9c8e7ad7a6eec23a48f66da086695980a44da936a1130944c77edfd3fe6ea0",
+      "articleSha256": "9f4485b7244710067b8aecd3a1b9127eec9c9569627dda876b42538a81341ad6"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/email-address-reply-forward/",
+      "originalArticleSha256": "85461541d886458be0565434b7336d99bf8b3e0e473b0853d38346cd451c0f16",
+      "articleSha256": "e301b6ce1b68b4ab0fd80fd9a97427caa2de1654e12fef5291682002f1ff1866"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/disk-format-file-systems/",
+      "originalArticleSha256": "0782c079974c2e6bb6e3bb3fa7b4aafb34c34c9de2b2c6fc3eb36048f6e3d1db",
+      "articleSha256": "926cf8f47e161826037b1b697d87172928d64b78be51edba200fb6e63d57b9d1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/operating-system-resources/",
+      "originalArticleSha256": "e789942aa010f9785453f5a847db38a40b0042c825ff8c324e6474f5c43b0405",
+      "articleSha256": "8118bf90bec13756efcb8a8857a16fd43661eaffe2e177d051bad595726530cf"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/browser-internet-options/",
+      "originalArticleSha256": "fbe642e29ed1aad0f267dea72a289f1d1756985b882262a30a70e940cb144984",
+      "articleSha256": "7fc6c6de8fe49ca88e04f2ce607fcc809e8a6c7554a2e10c7aa6d83f7622c026"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/aero-peek/",
+      "originalArticleSha256": "9899f9f5cb0fc403cd45bb89bf7d72174d972b99286bff18f03cd66d23b532ec",
+      "articleSha256": "8240e4097adfb302e3e914341dfc1944385b1e30118ffb145feeaee5f77d394d"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ipv4-ipv6-addresses/",
+      "originalArticleSha256": "556475cd451e58ec06122f57bd8670f4cff67fd665dbbe28b69adbf6368b6fc9",
+      "articleSha256": "5c9601a0bd2b8ea026eb026103a72245063f0fd627528f0544e2f060919938ae"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/wav-midi-audio/",
+      "originalArticleSha256": "eaaba36055ed4e298a8269f1416c6e8c216fc7fb23d2123232a018ff666bc65d",
+      "articleSha256": "57ac66db02b83228509ba518ac14fb551983fcf31839cb44e89de567e1e91bf3"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/network-topology-failures/",
+      "originalArticleSha256": "ed6d9a47bdb691b758addb33fb90cae744c940ae0c5ede34209b65576d7e35e3",
+      "articleSha256": "d66350065603e3ed9590694ad16804b6902ab8ffd33651f5e83a13cebc661491"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/spoofing-phishing/",
+      "originalArticleSha256": "3b6309d7abfea1063debd1a826d54daf986b67aded8db886a4adff6eaefa21d0",
+      "articleSha256": "268c09256907510b1941f75e27aff20d97c96088a132b21bc3ef90235e657c3a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/data-information-informatization/",
+      "originalArticleSha256": "609f6dd31411523b5211988f53392bc739389db10a89526114303cb1f0a319bd",
+      "articleSha256": "e1c534e4216baf83d710c6c5f2e5d0317d38f94206354dd56bf6c501955caaea"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/spam-suspicious-email/",
+      "originalArticleSha256": "23082f1ae2fe2b633065e8ea8c094e86e2a1c400732db4d0067dce07441f658b",
+      "articleSha256": "f22a12d7475b62d812b07df9dbaccd70c9a7598d5c253e8e5b28f77744288d41"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/patches-and-updates/",
+      "originalArticleSha256": "1973836b6296691260677b163b08d9a7410bcd3322d32ae816a4f0cdb1927e29",
+      "articleSha256": "e64aa7aa3cfa8a9f4f29f8772b796fe5897a58173e7c5c33f941aefafd2882e8"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/sharing-facts-rights/",
+      "originalArticleSha256": "c7beaf5b3620ddbbb14a5c66421de7c210455334f8312f9fc3caf2b9839305eb",
+      "articleSha256": "b1bd78d483555bfb2e0b9615c16dce97017b6d5589c997c2e09e1da11735672f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/recycle-bin-recovery/",
+      "originalArticleSha256": "b77a12f9252884655b74fdf860f4402683d2e8f2cca069ef3635901c84a5e6ba",
+      "articleSha256": "34a3031d3fa5734c39f6db9bd21a2a90c4821319631b84e390fd17ce5294a6d0"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/learning-data-reliability/",
+      "originalArticleSha256": "3241c22e3c0a1b55a6d009a0ba649d33df6ece9da2b7890b3e7942c0109e61fc",
+      "articleSha256": "cffa67fbfb13f788d15a1203715ac4d90cf08d31d69d09344c83cba8145c6d01"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/morphing-animation/",
+      "originalArticleSha256": "4f640d2f2f9d6936524f6eed7d7ffccf8bbd36945470c5e04c678e79845629f1",
+      "articleSha256": "96eec371e4777735ec861cab48bd582dc0c0bcd777d6dbac4aab15e6fa6a1441"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/cookies-cache-history/",
+      "originalArticleSha256": "b41cbad5a20d45a1154a3b8611338e51b476c8e42987390c5bf89ee854dfb00f",
+      "articleSha256": "0684d0a911050638f59b5a16a05a2db55e460fc413e05bdc648d0cc2d3e3c79c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/system-restore-file-backup/",
+      "originalArticleSha256": "3f41cebc0f03c5f72637200cdbbd2988b948db4c8b9253652b46b2de3103f2b5",
+      "articleSha256": "d66ac9accd49c93eb0911f8084c14bfaa3b12e898e94ea4db2448ffb30bbf94f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/pc-upgrade-compatibility/",
+      "originalArticleSha256": "f6e1c0438ee904035108dddeab77afb15ca206ee08f668054171e55cc750a83e",
+      "articleSha256": "78e6dbf7da0b4cd7a62a1b4cbaba013fca5f441c13eab009fe13b7857316a054"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/email-smtp-pop3-mime/",
+      "originalArticleSha256": "025448b63e0fdcc03e1cf78911d342ca3c13b545f406ad0cd102ae66af1ad0e9",
+      "articleSha256": "335419243777ff2939e219ed7234cf5363ad5958026e57e4f8bd915b10b99867"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-specifications/",
+      "originalArticleSha256": "17f13b7a337f7215941cc4aac9d9d1dbd2b6ea81b130b82cd761932694f486ef",
+      "articleSha256": "133c6eee1d07e5d79a5b66f99f4d19a9cdbe1c6a7242a573e03c1aee97fad014"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/security-protection-roles/",
+      "originalArticleSha256": "416c00d462162ca6f899cdb7f03df6eccbfc04e19b70f1a3270b8138c869f6f3",
+      "articleSha256": "e9bd906ec6f9b681e85828eb7ea38374b03231f64172851f56c69bbad7535d56"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/usb-interface/",
+      "originalArticleSha256": "ad2ce74b7b5c0d9305fbb180d4fad5b91b88f56a7878bf10a913b2a2f2b02a3e",
+      "articleSha256": "64adad9f6e892e0e7f0829a23338c754b5d01cf050c4f562085484095476c4f4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/sound-input-output/",
+      "originalArticleSha256": "e14e6e0d83fa739a00cbb668b0528b575cd360036f21aa58a54ef3a010d4881f",
+      "articleSha256": "15586248c2da2e39010121e2e31933b79be8b4b32177c2440674cd1905936c55"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/manual-ip-dhcp/",
+      "originalArticleSha256": "212b10d88d534cae948fe53b5f477c2d3901cbd3732d3c136114e81db9444c73",
+      "articleSha256": "061318d89ca0a0ffabb410919d180fbcdd1b2fbc39f3779ae6c147c01f124dd7"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/game-bar-and-game-mode/",
+      "originalArticleSha256": "3ed24b05bf1d5f6b4437a4fd5d4f3f3f83954ea171fc6ef1de717906b8cbb129",
+      "articleSha256": "b126ed81378b9a9939967dd3d698de71eed361b14ce46fc9e60fb3a2f35b3096"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/multimedia-boards/",
+      "originalArticleSha256": "d7e67bc54d8aba45b1271bddcac6c75b34f01ec502fae80cf059692521e831dc",
+      "articleSha256": "6f9f236dcaffa95f7c00eaa68d84371b878a957a178da4d9c653433c56e978da"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/internet-interconnection/",
+      "originalArticleSha256": "d813479ebf7019d4b81a059c8b543b1b78d39080abb13b5cf30bb6dff8a89845",
+      "articleSha256": "09137f51eb7397d1b60fbb0e2f955731a9593e5da8ad9ed17927bfe40e0682fe"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/file-search-and-run/",
+      "originalArticleSha256": "d02354b38f481ae04dc7424e7a9631b05c11ddb072fdb9c69c3c3214a6d22996",
+      "articleSha256": "2a5d64b8ae1fd9fdf51fb34164c2c859ba42547a60ca5a24a7de93c37ffda550"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/input-output-devices/",
+      "originalArticleSha256": "489a250b3a6bae2f77f0181e4da69c613ba0c9c4a369cbffb7281a73e4cc67a3",
+      "articleSha256": "8462f50d3d963b278f456ff20080447112d2516d3d6910900f32161fa1ce7aab"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-development/",
+      "originalArticleSha256": "0608b41128e18d78e861923bf1b4e8059c64b0e948a410bac70ed3d43754adf1",
+      "articleSha256": "b125588a2ff45a70b0697ba3e5622ed4bfdc3ac04e7ab2c08388ba3f5956d6c6"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ram-rom-flash/",
+      "originalArticleSha256": "82d75ce86d0a8c67db4f54b47be832ca74bf2943b9def984f3323fc9206cc5d7",
+      "articleSha256": "7bcb74f4ff10f496fe7f1b09c03dcf7f9a1bf18681e06aaacf1f8827b6126137"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/osi-reference-model/",
+      "originalArticleSha256": "67d9ffbb811dd80386465825b7d5496b3abfa9fc2d63ce0c85ebe076979ec7ae",
+      "articleSha256": "5eaab3f5064816b84bc5ebd73d7ab506c5bd7d3c1a7893c66fbbf79c08fc9d5b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/windows-file-printer-sharing/",
+      "originalArticleSha256": "aeaa3eef164c9980907db68adfc66e8e4d7a58642846a1b64248da098ea3a33b",
+      "articleSha256": "b683192504787fb6b9016604f02e17965805b658777b4f3d72d26ad42f56ba66"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ram-shortage-response/",
+      "originalArticleSha256": "fd4c9f1f7a4745ffc55dac221252b16966283551718a6072cca9ace2a4a642c8",
+      "articleSha256": "ecb2e2c9c7e62ba9f6188da004c74e389eb9764d40444fa31a218b0daf90972c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/sniffing-keyloggers/",
+      "originalArticleSha256": "45286c1cb37c94adda10e73b87522f0aa955b7b35f6032acaa68b6c00525c0a5",
+      "articleSha256": "bd88c7a1d99b78b7fc412e154197d276e7e8c4f47948c6ebca84da0448f34bce"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/software-license-types/",
+      "originalArticleSha256": "b7e6c8c0ba56e94670dee9917fbad4b6d0350e7152d364ff7d7372f5a0860d76",
+      "articleSha256": "0d5a4f85f83f12f9e1230c32ced5d2f39211b676b9711ce45bca646ed4868f3c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/notepad-features/",
+      "originalArticleSha256": "a687708b3966b6a4a4ab53b8c460ff191dd8a7f6a0e80cec9b5ac4d90644673a",
+      "articleSha256": "4267855d5e3ee6bf5daef627e5a19aa692c145ead26ef4edf07f64d1b4cac9d7"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/malware-infection-propagation/",
+      "originalArticleSha256": "b2c9c925711389b653a19ff2032f7b71961af70021da8db1d1963f2d8cda5b48",
+      "articleSha256": "21e31728cd92264cfcfc002ade3d4340b2102df8e801cd780d757a2b3eb480c4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/time-and-time-zones/",
+      "originalArticleSha256": "e8c891ec63dc47fb99ac5e190088d9268bf0517477b50c55303ad3ab0b15e6d0",
+      "articleSha256": "168a729e1e6fd5262d28b8512f06f76b0a1eca67a8baa49a7c4628eee7a80bc7"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/bitmap-vector-resolution/",
+      "originalArticleSha256": "3eb29c0df9e3161ddcf23d44446a456107de17c03ffd5c946d612faeb939f666",
+      "articleSha256": "42ae65cfb8c23946eb748645f4a1668888990c2d5c96deff94065557f47d3c03"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ai-result-verification/",
+      "originalArticleSha256": "d48efba0be867d89b03fa6dc901b1c9320f7c1aa364baa51140c322fd844620c",
+      "articleSha256": "11ec40d9d6aa96eac18ce8a5748ae27c6e87b70c864e930997305b6a2eec8e05"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/archive-file-formats/",
+      "originalArticleSha256": "d60e1fbdf905e5f0fd52fba281df0f1bfaaad6cd349458240bb34294f620cea0",
+      "articleSha256": "47b35390f79971f0ed68378c5d2986e25064d1fa0c546a561c18867313129bea"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/machine-learning-training-inference/",
+      "originalArticleSha256": "5c8e260c319a6201aefb81fdceea597ac902e43d4a0559b3d7218f5e249a1b85",
+      "articleSha256": "cceaa75753997963d804a8a0b71db446de1ce2082a96798ba9291c4ba0c5d1de"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/windows-registry/",
+      "originalArticleSha256": "b58401e378fcf37552136b4da176b14a3d718253fa9c09506404ed9509145945",
+      "articleSha256": "e7688534eac2c8554f982aebeccfb48406482af1c233801ce7621bee3f6d001e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ddos-service-disruption/",
+      "originalArticleSha256": "16a022ea39837b3c3bca01a23ee12da17e0d6681ca6cab8c984013cd57f4796e",
+      "articleSha256": "8380a22bc0678a43738ab14b9c869f09160c35a417155b881fca03bcc138287a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/intranet-extranet/",
+      "originalArticleSha256": "084793eabd9303b5b742b8b7ed8c1576b5d017c767e4abeaf717579d6c434496",
+      "articleSha256": "7039d588d2c96edbd7219d088017d543ebd1274c8be574dbaa3603b4db2844e1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/storage-sense/",
+      "originalArticleSha256": "fd76566f1c44e6fa1bdd54fa6a770e37f065cad4aa648c8d631bad25941b51f6",
+      "articleSha256": "31d6bf48683cae7387b9cad5fac5da6d9a718c0bffac02125c6192d646a3b003"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/location-based-services/",
+      "originalArticleSha256": "f911076d15202ef237ae47bbafd95ddbba6c7f99f9c7d8b5556f745cbb25b044",
+      "articleSha256": "7c4487979d7405d3b354ea43caafc114b6c498f523bb45abfcb23781420b7d14"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/system-about-information/",
+      "originalArticleSha256": "f88d9127bfecff1a577a2fa0f0c44efafb83be7ea403ad40e08507a8e8395c8b",
+      "articleSha256": "c7403ccffb9d915851cc1dcdc94a94691d4545f53f6a7e3ee552f59e7791cc1c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/display-settings/",
+      "originalArticleSha256": "52663e700196a76c31034ef045a9bf4a6a9ad983a7e31bc0b1c91bfdcb516427",
+      "articleSha256": "e4702753ca1c40bdb40ed28c2f1541da847ecd3e3cc31f45d806b15ddfa14b8b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/compiler-interpreter/",
+      "originalArticleSha256": "f85b896fa8982f4601dc9452329a6fe947b749b90766ac7b4f7dd99cae6f9a3d",
+      "articleSha256": "8164bc9bfd6624a367914e16200b3ba1e40351aad4cf1adc76c21e8e60e3e47a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/iptv-smart-tv/",
+      "originalArticleSha256": "a46cdf6978c02ced6f8cc1f90b18fc139889e9bc00bb6912a15decb5ddba090d",
+      "articleSha256": "78067ff020741325f207c0a9741ae71c255365284d2c02489a73c47dbe659a91"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/taskbar-settings/",
+      "originalArticleSha256": "1464acece6eae9651dd8308ca43121429cc3d8ff1d7da4ca1cbf96072632ee16",
+      "articleSha256": "4fdb7c1996cb4acc816f91e84cb203b2e2e08d6bec461c655be3207261cb03c6"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ai-rights-fairness-responsibility/",
+      "originalArticleSha256": "5d18fb904adaf08de54c170aa4fd9fc9872f6fccb972961c6a6d6fc09845d081",
+      "articleSha256": "4eb6a47889754745a32dd5e24153cc44b6f156cb7efb334303f1de736b928f91"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/boot-failure-causes/",
+      "originalArticleSha256": "faa387da1fd0f3ba3418d372fc1bc3488e007da5ebcb38d75125f858d2667a5c",
+      "articleSha256": "198a3f51784c82730dc523888bf9e6f2f2d95eec0d7a5f7475bf725943b6a201"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/dns-name-resolution/",
+      "originalArticleSha256": "99768a79d498c5cb8e728f8b9c36a8d2594a307168765dfa094ef75684251ecc",
+      "articleSha256": "eee7a75f60fcc967eca52e0d38f8373c415ba2cd7ff353e05c1ee70c8e943529"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/performance-metrics/",
+      "originalArticleSha256": "cd0727463b84c8512d9dcc12606df4b58d4df8567f2be28e65b7986392fa39fb",
+      "articleSha256": "2c2c2d71a8cb035a5396592c521028d82db9c14f4f5ca116de54708c694feef9"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/virtual-memory/",
+      "originalArticleSha256": "f49e3ee93bdf03475ec1c72409ae0c021ac30612de9899ac696fee2b2e4dd308",
+      "articleSha256": "aef6a8d9982683f813a2c058a9664ca04ba273463776cc5f7db1c5adf2cd4cf4"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/remote-assistance-consent/",
+      "originalArticleSha256": "afa7786d27cc6f7be4bfba6107ad52433bed1181432ce942fb068782d4e02179",
+      "articleSha256": "244194960146f3acaa589fd2e317781d8afa6c3c8c70f52d68b3313465a06d0b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/character-codes/",
+      "originalArticleSha256": "c05b0dfa934d61a886d6c645529a29248c4fc0e60bedb5a9dfab85cd1a3c1b66",
+      "articleSha256": "0921b5e17d337e62aa80f51662d855c8fb1236648638de7b26e6dec77f858ce5"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/information-society-challenges/",
+      "originalArticleSha256": "8f00474302f47776431471a6aef032dc4f9d3925da73257326af1d224ec6ea82",
+      "articleSha256": "a36e14babb067966a359ebc4507b71a3364bb34b980569a29e936d8839705321"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/copyright-protection/",
+      "originalArticleSha256": "dbe602e78a923a4afa707ff46c991bfc7061c4bbcae3c7993a1fca69aebcc464",
+      "articleSha256": "10f9bc2f40a1be64f140cacf84a0169db247053d593a3878de541ba344b4da12"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/simplex-half-full-duplex/",
+      "originalArticleSha256": "7186fd7d1ec08622a8855bc3e1e0e34ea829263a58619428c72dca52992b5a67",
+      "articleSha256": "8501cd4780e0e3e539bd268c20261485bed7bad477701dd669fb7396f296f5a5"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/video-standards-codecs/",
+      "originalArticleSha256": "13c6a7e85a56e196798ee2a835c80512690475e5b9f7d76b8aecaa710e023288",
+      "articleSha256": "cd4f523fcacd6df280af984db32358a00585aeb0e07ef0acba7a22c5699764e1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/multimedia-integration/",
+      "originalArticleSha256": "977fecff02dc136d399bab6bf40ba6cfef63002fd835a3437b4477eea5f842c5",
+      "articleSha256": "8a26ebc773c2a8aad27e4983e91493bc33eb9c4c704750cc417f18a82e61ab84"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/phone-pc-link/",
+      "originalArticleSha256": "2aaf36e2f9cf17e9ab4ad01db4d427bd0d20ae21f59ab9f23e9481e7e919ecd7",
+      "articleSha256": "e4d21686e5ba14fadb6b015c6515180ddf48efc58ee71f5b05cbe4f16826c5c1"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/virtual-reality/",
+      "originalArticleSha256": "a117f17ebfd0c59aaa9bd31967fa30662ed0faec90e699a88e69b52360f8982f",
+      "articleSha256": "cc040050918ab6526914fe65d38a647865926a4938d5f31e16f73e4b501d1359"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/html-css-javascript/",
+      "originalArticleSha256": "1d3e0838db355b662db66361f76ff20341f416760f2e81a50b42fb8f72b1de21",
+      "articleSha256": "a89aad7f75ab943039e216479f523c3e08fbcf6693efbec2393483912e26c21a"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/antialiasing-dithering/",
+      "originalArticleSha256": "1a157ba9438c3351b2524cb046d6e132ab220dd97345e1ecddd988fc7f9d9bce",
+      "articleSha256": "c646a561cdcab8550789cfe33537a93f7877d7336f00f23fd61f71df80b27125"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/disk-error-checking/",
+      "originalArticleSha256": "7d62f1b2a56efbbec024a9259cfcc9657e6037f18f449edfd4761b71d5f58c98",
+      "articleSha256": "332965b13cda544f0187c80ff582b09b143c47a82d6434d2444be403ab394ade"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/windows-accessibility/",
+      "originalArticleSha256": "505f8e2135ed533faad6a6557116db5a3e9bc75f1a089195a46875b00a51e836",
+      "articleSha256": "7203a028e7eeb34acbfa2618ee9db11dfdc5dfaddd719ee34b1e0637df36d165"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/file-folder-properties/",
+      "originalArticleSha256": "8f9da676c7b68e63a9d975cdb03062bed844674d69d26c095b317b770d29950a",
+      "articleSha256": "b8b647e7e60f7bf1d6a55e574d2f34468873e031efdfe300977869ca14795705"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/update-restart-states/",
+      "originalArticleSha256": "674f862fc411c5f54e24dee8d51ba1ebcf2887660e4b2fbf5014d7fc201af02f",
+      "articleSha256": "7beb97061be92a4e03477a2ee849625f4ad50064331b726fdb720daebe12224e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/object-oriented-features/",
+      "originalArticleSha256": "85f02b3e248ae20e47e8182cdd026dd08721198f8349735e863c40ffcb3cac9a",
+      "articleSha256": "45797f5afcc39a31791ee65c601b6d48c6419af398a9abce1a0945bb4c9c83c5"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/sleep-hibernate-shutdown/",
+      "originalArticleSha256": "30c7e7dfa5abbbc20d557734280b1f31df19a4c3caaa0e987874d3a3c1a6c78d",
+      "articleSha256": "8bf323fd9f686b6459835afabee35184ee0cc5acbdd1dc1babd33182741c93af"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/camera-microphone-permissions/",
+      "originalArticleSha256": "eca70b95f44e8b7ce133202b7b1e38aa645bb2e49ce9785d8ff9a719f5099e3b",
+      "articleSha256": "23d02ea10b241d9e7b6c7dd83c0bacf1f84c8fd0b6c664a617392b90a8c7a18c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/operating-system-environments/",
+      "originalArticleSha256": "9ff50aa72476a8808e9019fd587a533f0739245094a369e1cfa2c78e39deb662",
+      "articleSha256": "3eb5788f279a2a3b8381528837b27e71f8885dab0eab87c50bde15bd4bcd822c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/keyboard-mouse-properties/",
+      "originalArticleSha256": "8774177b658e4f367de86fcf656ee8b9aad710ec0bc1f62a7aca44d049288a74",
+      "articleSha256": "75d5894fc5e892b782239ca27ad8ab5cafcebe5eedfe102f2dd0376be9abc655"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/windows-libraries/",
+      "originalArticleSha256": "77d7bae0ed6020fa8dd0ee590d4ab20a6154f5ddee2dd918da9dcd48f9475915",
+      "articleSha256": "f06cde6829c1e61cb52ba2b65ebd794585b0ed9ac601435230c89cd8202ad7fd"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/portal-mirror-sites/",
+      "originalArticleSha256": "5d45a424d5754009b00b4384e67bda2cf978b5f81771d681d3fb8d7ef6595c1b",
+      "articleSha256": "9f2ec4867dfd42c1c38ac800ab26123c416451f69abe901bb4c33f5993be3edf"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/storage-capacity-conversion/",
+      "originalArticleSha256": "1d66cd84f964cdd6d4655c00eb288ae7c0cbb96ab6cf61075afd2c8c8be7dfb1",
+      "articleSha256": "5e654b956c9b85ff8a14d4041d656e46dd07ad229edab3a88430bc682df4fb0b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/user-accounts-uac/",
+      "originalArticleSha256": "432e645d1d4abb6f7344653b6dad3ce990a5d401eec2b599205f60027e9008b6",
+      "articleSha256": "eaa0fab0428e58a75858c2bcf8f077f7456b4f32640a0550b6edf6062c30a721"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/window-states/",
+      "originalArticleSha256": "d608fef7e2447d5713f6b58095bcca169f60564a1e9f77c8aa7358cf3fc331a6",
+      "articleSha256": "5f5cf47e321dc4e1f02bffc9254e9f6947dde737e003618a0430bb2b4985f0aa"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/cpu-operations-control/",
+      "originalArticleSha256": "ebcabdc214b4450ea41837d95c60cd07b1ddfab9699d0ffd75c4868d419fe3f4",
+      "articleSha256": "fd800a4ecbfc9679e664b20e0a91a6a3c0dd6eac02c5a673c584edb751c2209f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/rfid-tag-identification/",
+      "originalArticleSha256": "978c974da0425b29c206378949ac3b802cbec65c359a555747ade0ae1101dd8e",
+      "articleSha256": "dbcdb9ce4176600a160288f685315e4e7163644ff1c9a177a4a2e5033cdb8ec9"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/operating-system-performance/",
+      "originalArticleSha256": "747907716a5002394b2e95a3695ca4bdb74cd814fb81cda734d2e3ca161669b4",
+      "articleSha256": "87cc3f9df3ae15252e8c1aad0ec574cbfd4ddfa6261ae76f1515b2c67ecde89c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/security-cia-threats/",
+      "originalArticleSha256": "dbc50fd7675d2c203d2256070ef843cdcd59a418043228792ecef08b3722111e",
+      "articleSha256": "a89e9ca8bcc2a4841325fb39333373b8476dafe7787ac5a43f431baa0218461c"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/ping-connectivity/",
+      "originalArticleSha256": "bea3e11a2e1362615f13d864e6caa019f83884e086e8ddeb3e3c1a57568e4fc3",
+      "articleSha256": "722ff579f3ca82f800b6eeede89bac26d0a2c529ebc8e6b244f5e6dac7a7fb5f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/software-types/",
+      "originalArticleSha256": "d139baf7da55d2d31a313bbd6269e5f4ed938a16eb895331f0ff59a1c925f5e7",
+      "articleSha256": "287424854926597674cb083730ae7c3b9fd6c1076ef07b0880bed6301002e121"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/iot-information-flow/",
+      "originalArticleSha256": "7e74c531298ad759ccfaf16659f1681e319167666e616d54c4dc95b0643e3cca",
+      "articleSha256": "0083f240c0643064b55753a95f8d6c7fd8596067c714854ab1b5ecb17898da85"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/data-processing-methods/",
+      "originalArticleSha256": "b5817ed68de1f88111027b617b0594fe00a9b6127636fcfb9b813e344282ac38",
+      "articleSha256": "93ef66dc3967f046d8c0a83a6acd98b595f8be2cfbb0c15acee2d93f50cfcd37"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/plug-and-play-hot-swap/",
+      "originalArticleSha256": "5088bf48f2591f10c82c187b0c5d475f63e5f7c08250de68f136d04f7328ce98",
+      "articleSha256": "f4bae9f3b6c0161c33e336b40097db0df7fa3f500e950686538db0f7c78a2c0b"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/hidden-files-extensions/",
+      "originalArticleSha256": "4ab828d470e0980690d3e5ea770249069a616d225648962c1b7a70dfcfc6cb5c",
+      "articleSha256": "0303de4fceff57409f339f878427e52401dda30c6313cb46909851adc6615e8f"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/file-explorer-hierarchy/",
+      "originalArticleSha256": "f0e1700e6699fa7274b372e94b21e32e8615d93d6cfd03e72a1bb2eb5e535277",
+      "articleSha256": "1fe039902f25392b68d95619dee2f4e5062ed7f9f9a2a5f0fcedff7214ee5206"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/monitor-white-screen/",
+      "originalArticleSha256": "5bfeae477acae6386fb6ba6529fa0b3481ee13f52eaaae5bec9d27a8a1872e3a",
+      "articleSha256": "4120f23dc2d5e805d30d7079fe48f64e6c45119a39307182cd38ff78cf3fb9aa"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/sata-interface/",
+      "originalArticleSha256": "7198bbb586e113abb5f227591680d8004113cce1c8edb5f94f904d1b7dc676b4",
+      "articleSha256": "06d1822db043fc823d82915016e12ee21b0d5835946941fa882a1186f992e2a3"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/internet-communication-services/",
+      "originalArticleSha256": "0edcba3c209b9e8c9036d73a9cb5d01e92fde50b87ecbd5b9a11ab326f936b88",
+      "articleSha256": "fbfa5f0ebdf6ba0415d7f493c44e33d942339871154285ee725cb3741213a484"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/windows-accessories/",
+      "originalArticleSha256": "939638efcecb77bed5e95ebc410f89efb96f3c49fdc345610a1bf40891950956",
+      "articleSha256": "8f0b2130f729e72d8e816b5646348084bb136d27d9898bd8da99fb472415074e"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/windows-apps-files-windows/",
+      "originalArticleSha256": "da85ed1d5909a07c3b10c9c1c8643e82169cb88735149d27a7300e5a5272feb9",
+      "articleSha256": "5f1657edc1ed54b7656fc13c07dbb70edfe6dc5ee31c214aa2ccda1140d0d0ca"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/kiosk-information-terminals/",
+      "originalArticleSha256": "525e301385c9e68aaef29bf97ba31887f14495744ec8425f9a5880cfd0cec9d9",
+      "articleSha256": "5958e652f45da5e7e8c4140603eb75b21cb608c69556f667551bf0f1e368c276"
+    },
+    {
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/image-file-compression/",
+      "originalArticleSha256": "39177db680b13c51643d298d1f7c60777896e5af82d2b0365620324d8d4215f4",
+      "articleSha256": "d1a7a9162f590e90e139fbb5907ede1370851019bee102efacf836e3b8742ba4"
+    }
+  ],
+  "generatedLoader": {
+    "path": "/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.Br4EoIld.js",
+    "originalPath": "/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.DIPINcy-.js",
+    "originalSha256": "d80a9ad4016d329f31745a5ec49a3378ed1d681dff2611cf1043fcc7e58c64e3",
+    "sha256": "159dca5f5164e34e52dde02744b6176c5145f3fdbfeb10304cd39a42a81d1223",
+    "edits": [
+      {
+        "before": "./industrial-safety.BCJqXpTI.js",
+        "after": "./industrial-safety.CYy0QzfI.js"
+      }
+    ]
+  }
+}

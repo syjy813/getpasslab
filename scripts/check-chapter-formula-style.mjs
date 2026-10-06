@@ -2,7 +2,9 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
-import { restoreDisplayReview, reviewedChapterHash } from './reviewed-chapter-hash.mjs';
+import { restoreDisplayReview, reviewedChapterHash, restoreQuestionSourceAssetRefs } from './reviewed-chapter-hash.mjs';
+
+const sourceReview = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-question-source-repair/review.json', 'utf8'));
 
 const audit = 'docs/audits/2026-10-05-all-chapter-gray-formulas';
 const reviewFile = `${audit}/review.json`;
@@ -12,7 +14,7 @@ const ftaReview = JSON.parse(await readFile('docs/audits/2026-10-05-fta-symbols-
 const batchReview = JSON.parse(await readFile('docs/audits/2026-10-05-industrial-remaining-splits/review.json', 'utf8'));
 const earthReview = JSON.parse(await readFile('docs/audits/2026-10-05-earth-retaining-structure/review.json', 'utf8'));
 const addedFiles = [...ftaReview.chapters, ...ftaReview.displayFiles, ...batchReview.chapters, ...earthReview.assets].filter(row => row.newFile);
-const publicPages = evidence.publicPages.map(row => earthReview.chapters.find(later => later.url === row.url) ?? batchReview.chapters.find(later => later.url === row.url) ?? ftaReview.chapters.find(later => later.url === row.url) ?? row).concat([...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile));
+const publicPages = evidence.publicPages.map(row => sourceReview.chapters.find(later => later.url === row.url) ?? earthReview.chapters.find(later => later.url === row.url) ?? batchReview.chapters.find(later => later.url === row.url) ?? ftaReview.chapters.find(later => later.url === row.url) ?? row).concat([...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile));
 const hash = value => createHash('sha256').update(value).digest('hex');
 async function walk(dir) {
   const files = [];
@@ -42,8 +44,8 @@ assert.deepEqual(actualRoutes.sort(), publicPages.map(row => new URL(row.url).pa
 for (const row of publicPages) {
   const html = await readFile(`dist${new URL(row.url).pathname}index.html`, 'utf8');
   const article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1];
-  let restoredArticle = article;
-  for (const release of [batchReview, ftaReview]) {
+  let restoredArticle = sourceReview.chapters.some(chapter => chapter.url === row.url) ? article : restoreQuestionSourceAssetRefs(article);
+  for (const release of sourceReview.chapters.some(chapter => chapter.url === row.url) ? [] : [batchReview, ftaReview]) {
     const links = release.relatedLinkChanges.find(change => change.url === row.url);
     if (!links) continue;
     assert.equal(hash(restoredArticle), links.articleSha256);

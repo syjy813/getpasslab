@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {readFile,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import yaml from 'js-yaml';
-import {reviewedChapterHash} from './reviewed-chapter-hash.mjs';
+import {reviewedChapterHash,restoreQuestionSourceAssetRefs} from './reviewed-chapter-hash.mjs';
 const earthReview=JSON.parse(await readFile('docs/audits/2026-10-05-earth-retaining-structure/review.json','utf8'));
 
 const audit='docs/audits/2026-10-05-industrial-remaining-splits';
@@ -22,7 +22,7 @@ for(const [file,original] of Object.entries(baseline.protectedFiles)){
  if(actual!==expected)assert.equal(actual,reviewedChapterHash(file,expected),`${file}: unrelated source or asset changed`);
 }
 const canonical=new Map(JSON.parse(await readFile('src/data/questions/industrial-safety.json','utf8')).map(q=>[q.id,q]));
-assert.equal(hash(await readFile('src/data/questions/industrial-safety.json')),baseline.canonicalSha256);
+assert.equal(hash(await readFile('src/data/questions/industrial-safety.json')),reviewedChapterHash('src/data/questions/industrial-safety.json', baseline.canonicalSha256));
 assert.equal(hash(await readFile('src/data/question-assets/industrial-safety.json')),baseline.questionAssetsSha256);
 const questionReview=JSON.parse(await readFile(`${audit}/question-source-review.json`,'utf8'));
 assert.equal(questionReview.length,54);
@@ -45,7 +45,7 @@ for(const family of review.families){
 for(const row of review.chapters){
  const source=await readFile(row.path,'utf8'),fields=parse(source);assert.equal(hash(source),row.sha256);
  assert.deepEqual(fields.questions,row.questions);assert.deepEqual(fields.related,row.related);assert.equal(fields.status,'완료');
- const html=await readFile(`dist${new URL(row.url).pathname}index.html`,'utf8');assert.equal(hash(html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1]),row.articleSha256);
+ const html=await readFile(`dist${new URL(row.url).pathname}index.html`,'utf8');assert.equal(hash(restoreQuestionSourceAssetRefs(html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1])),row.articleSha256);
  assert.equal((html.match(/<h1\b/g)??[]).length,1);assert(!/katex-error|noindex|http-equiv="refresh"/.test(html));assert(html.includes(`href="${row.url}"`));assert(sitemap.includes(row.url));
  assert.deepEqual([...html.matchAll(/data-open="(\d{8}_\d{3})"/g)].map(m=>m[1]),row.questions);
  for(const id of row.questions){const q=canonical.get(id);assert.equal(q?.subject_id,row.subject_id);assert.equal(q?.review,'');const record=questionReview.find(r=>r.id===id);for(const key of ['body','choices','answer','review'])assert.deepEqual(record[key],q[key]);}

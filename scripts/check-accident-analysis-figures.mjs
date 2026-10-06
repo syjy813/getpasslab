@@ -1,3 +1,4 @@
+import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
@@ -11,7 +12,7 @@ const frontmatter = source.split('\n---\n')[0] + '\n---\n';
 assert.equal(hash(frontmatter), review.chapters[0].frontmatterSha256);
 const fields = yaml.load(source.match(/^---\n([\s\S]*?)\n---/)[1]);
 assert.deepEqual(fields.questions, review.questionIds);
-assert.equal(hash(await readFile('src/data/questions/industrial-safety.json')), review.canonicalSha256);
+assert.equal(hash(await readFile('src/data/questions/industrial-safety.json')), reviewedChapterHash('src/data/questions/industrial-safety.json', review.canonicalSha256));
 const scope = '/industrial-safety/written/safety-management/';
 const url = scope + 'accident-analysis-tools/';
 const html = await readFile(`dist${url}index.html`, 'utf8');
