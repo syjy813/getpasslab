@@ -1,6 +1,7 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile, readdir } from 'node:fs/promises';
+import { readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { restoreDisplayReview, reviewedChapterHash, restoreQuestionSourceAssetRefs, reviewedAssetAdditions } from './reviewed-chapter-hash.mjs';
 
@@ -58,4 +59,4 @@ for (const row of publicPages) {
   assert(html.includes(`href="${row.url}"`), `${row.url}: canonical changed`);
   assert(!html.includes('formula-gray-sample'), `${row.url}: obsolete sample class`);
 }
-console.log(`[Chapter formula style] ${publicPages.length} public articles/routes and ${Object.keys(evidence.protectedFiles).length} source/assets preserved; 3 display edits reverse exactly`);
+console.log(`[Historical release: Chapter formula style] ${publicPages.length} public articles/routes and ${Object.keys(evidence.protectedFiles).length} source/assets preserved; 3 display edits reverse exactly`);

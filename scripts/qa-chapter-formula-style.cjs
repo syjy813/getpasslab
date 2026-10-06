@@ -7,7 +7,8 @@ const { publicPages: baselinePages } = JSON.parse(fs.readFileSync('docs/audits/2
 const ftaReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-05-fta-symbols-split/review.json'));
 const sourceReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-06-industrial-question-source-repair/review.json'));
 const batchReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-05-industrial-remaining-splits/review.json'));
-const publicPages = baselinePages.map(row => sourceReview.chapters.find(later => later.url === row.url) ?? batchReview.chapters.find(later => later.url === row.url) ?? ftaReview.chapters.find(later => later.url === row.url) ?? row).concat([...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile));
+const reviewedPages = baselinePages.map(row => sourceReview.chapters.find(later => later.url === row.url) ?? batchReview.chapters.find(later => later.url === row.url) ?? ftaReview.chapters.find(later => later.url === row.url) ?? row).concat([...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile));
+const publicPages = require('./current-20190804-review.cjs').chapters(reviewedPages);
 const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/, '');
 const out = path.resolve('qa-results/chapter-formula-style');
 fs.mkdirSync(out, { recursive: true });

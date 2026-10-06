@@ -1,7 +1,8 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import { reviewedChapterHash, restoreQuestionSourceAssetRefs } from './reviewed-chapter-hash.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile } from 'node:fs/promises';
+
 import yaml from 'js-yaml';
 
 const audit = 'docs/audits/2026-10-05-fta-symbols-split';
@@ -57,4 +58,4 @@ for (const a of [false, true]) for (const b of [false, true]) for (const c of [f
   assert.equal(!(a || b), !a && !b); assert.equal(!(a && b), !a || !b);
   assert.equal(a || (a && b), a); assert.equal(a && (a || b), a); assert.equal(a || (!a && b), a || b);
 }
-console.log('[FTA split] 3 routes, 5+7 unique primary questions, original payloads/figures and Boolean foundation preserved; TOC/sitemap/return links pass');
+console.log('[Historical release: FTA split] 3 routes, 5+7 unique primary questions, original payloads/figures and Boolean foundation preserved; TOC/sitemap/return links pass');

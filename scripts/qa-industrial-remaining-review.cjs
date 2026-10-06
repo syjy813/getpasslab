@@ -8,6 +8,7 @@ const ftaReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-05-fta-symbols
 const sourceReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-06-industrial-question-source-repair/review.json'));
 const batchReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-05-industrial-remaining-splits/review.json'));
 review.chapters = review.chapters.map(row => sourceReview.chapters.find(later => later.path === row.path) ?? batchReview.chapters.find(later => later.path === row.path) ?? ftaReview.chapters.find(later => later.path === row.path) ?? row);
+review.chapters = require('./current-20190804-review.cjs').chapters(review.chapters);
 const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/, '');
 const out = path.resolve('qa-results/industrial-remaining-review');
 fs.mkdirSync(out, { recursive: true });

@@ -1,5 +1,6 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
-import { readFile, readdir, access } from 'node:fs/promises';
+import { readdir, access } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import yaml from 'js-yaml';
@@ -116,5 +117,5 @@ for (const row of review.chapters) {
   const rendered = html.match(/<article\b[\s\S]*?<\/article>/)?.[0] ?? html;
   assert(!/katex-error|class="[^\"]*error/.test(rendered), `${row.slug}: math render error`);
 }
-console.log(`[Chapter splits] 12 families / 35 reviewed routes / 22 newly published chapters; ${published.length} published, ${1003 + batchReview.addedPrimaryQuestionIds.length} primary references; all unique primary coverage preserved`);
-console.log(`[Chapter splits] ${Object.keys(evidence.protectedFiles).length} baseline files protected; 1680 canonical questions, images and unrelated chapters unchanged`);
+console.log(`[Historical release: Chapter splits] 12 families / 35 reviewed routes / 22 newly published chapters; ${published.length} published, ${1003 + batchReview.addedPrimaryQuestionIds.length} primary references; all unique primary coverage preserved`);
+console.log(`[Historical release: Chapter splits] ${Object.keys(evidence.protectedFiles).length} baseline files protected; 1680 canonical questions, images and unrelated chapters unchanged`);

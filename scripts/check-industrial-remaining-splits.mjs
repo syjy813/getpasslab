@@ -1,6 +1,7 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {readFile,readdir} from 'node:fs/promises';
+import {readdir} from 'node:fs/promises';
 import path from 'node:path';
 import yaml from 'js-yaml';
 import {reviewedChapterHash,restoreQuestionSourceAssetRefs,reviewedAssetAdditions} from './reviewed-chapter-hash.mjs';
@@ -61,4 +62,4 @@ for(const id of review.addedPrimaryQuestionIds)assert.equal(ids.filter(q=>q===id
 // Independent check of the retained graph sum and the balanced reaction.
 assert(Math.abs(-.7+.18+.6*2+.7-1.38)<1e-12);
 assert.deepEqual({Ca:1,C:2,H:2*2,O:2},{Ca:1,C:2,H:2+2,O:2});
-console.log('[Remaining splits] 7 families / 17 routes / 10 new chapters; 38 moved or retained + 16 reviewed unassigned questions; 258 industrial chapters / 1019 primary references; originals and 4 figures preserved');
+console.log('[Historical release: Remaining splits] 7 families / 17 routes / 10 new chapters; 38 moved or retained + 16 reviewed unassigned questions; 258 industrial chapters / 1019 primary references; originals and 4 figures preserved');

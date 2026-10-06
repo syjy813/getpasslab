@@ -8,7 +8,7 @@ status: 완료
 group: 추락 방지
 tags: [개념, 법령]
 summary: 폭 40cm 이상·틈 3cm 이하, 설치 곤란 시 추락방호망 → 안전대
-questions: [20220305_116, 20200926_112, 20190427_114, 20190804_103, 20220305_104]
+questions: ["20220305_116","20200926_112","20190427_114","20220305_104"]
 related: [temporary-passage-stairs, steel-pipe-scaffold]
 examComment: 폭 40cm·틈 3cm 수치 변조형이 표준 · 작업발판 설치 곤란 시 대체 조치(추락방호망·안전대) 결합 출제
 ---

@@ -1,6 +1,7 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile, readdir, access } from 'node:fs/promises';
+import { readdir, access } from 'node:fs/promises';
 import path from 'node:path';
 import yaml from 'js-yaml';
 import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
@@ -95,5 +96,5 @@ for (const [slug, ids] of Object.entries(evidence.allocations)) {
   }
   if (slug !== 'machine-tools-safety') assert(fields.related.includes('machine-tools-safety'), `${slug}: missing return link`);
 }
-console.log(`[Machine tools split] 5 routes + TOC/sitemap/related links passed; all 24 questions allocated once; ${chapters.length} completed chapters / ${1003 + batchReview.addedPrimaryQuestionIds.length} primary references after the reviewed splits`);
-console.log(`[Machine tools split] ${Object.keys(evidence.protectedFiles).length} protected files unchanged or covered by exact reviewed chapter hashes; 1680 canonical questions and historical image registries/assets unchanged`);
+console.log(`[Historical release: Machine tools split] 5 routes + TOC/sitemap/related links passed; all 24 questions allocated once; ${chapters.length} completed chapters / ${1003 + batchReview.addedPrimaryQuestionIds.length} primary references after the reviewed splits`);
+console.log(`[Historical release: Machine tools split] ${Object.keys(evidence.protectedFiles).length} protected files unchanged or covered by exact reviewed chapter hashes; 1680 canonical questions and historical image registries/assets unchanged`);

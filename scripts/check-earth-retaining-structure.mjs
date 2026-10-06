@@ -1,5 +1,6 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
-import { readFile, readdir } from 'node:fs/promises';
+import { readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { restoreDisplayReview, reviewedChapterHash, reviewedAssetAdditions } from './reviewed-chapter-hash.mjs';
@@ -50,4 +51,4 @@ for (const asset of review.assets) {
   for (const part of ['흙막이판', '엄지말뚝', '띠장', '버팀대']) assert(svg.includes(`>${part}</text>`));
   assert((await readFile('dist/sitemap-0.xml', 'utf8')).includes(chapter.url));
 }
-console.log('[Earth retaining] one structure SVG and five matching primary questions; exact reviewed source restoration and all other assets preserved');
+console.log('[Historical release: Earth retaining] one structure SVG and five matching primary questions; exact reviewed source restoration and all other assets preserved');

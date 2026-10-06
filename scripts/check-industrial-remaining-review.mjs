@@ -1,6 +1,7 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile } from 'node:fs/promises';
+
 import { reviewedChapterHash, restoreDisplayReview } from './reviewed-chapter-hash.mjs';
 
 const sourceReview = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-question-source-repair/review.json', 'utf8'));
@@ -35,7 +36,7 @@ for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
   const actual = hash(await readFile(file));
   if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: unrelated source or asset changed`);
 }
-console.log(`[Remaining chapter review] ${review.chapters.length} pages / ${evidence.changedChapterCount} edited; metadata, learning tokens and ${Object.keys(evidence.protectedFiles).length} other source/assets preserved`);
+console.log(`[Historical release: Remaining chapter review] ${review.chapters.length} pages / ${evidence.changedChapterCount} edited; metadata, learning tokens and ${Object.keys(evidence.protectedFiles).length} other source/assets preserved`);
 
 // Verify the bold-only CSS insertion, then reconstruct the preceding color preview.
 const bold = JSON.parse(await readFile('docs/audits/2026-10-05-concentration-bold-formula/review.json', 'utf8'));

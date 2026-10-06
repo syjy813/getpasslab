@@ -63,7 +63,8 @@ export function reviewedChapterHash(file, originalHash) {
 const questionSourceReview = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-question-source-repair/review.json', 'utf8'));
 // This later restoration adds only the reviewed image attributes to one button.
 const ftaOriginalReview = JSON.parse(await readFile('docs/audits/2026-10-06-fta-original-options/review.json', 'utf8'));
-export const reviewedAssetAdditions = ftaOriginalReview.assets;
+const source2019Review = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-20190804-full-review/review.json', 'utf8'));
+export const reviewedAssetAdditions = [...ftaOriginalReview.assets, ...source2019Review.assets];
 export function restoreFTAOriginalAssetAttrs(article) {
   for (const edit of ftaOriginalReview.articleEdits) {
     const occurrences = article.split(edit.after).length - 1;

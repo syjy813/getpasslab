@@ -530,5 +530,26 @@
     "width": 720,
     "height": 792,
     "alt": "FTA 논리 기호와 명칭의 네 선택지. ① 마름모: 전이기호, ② 사각형: 기본사상, ③ 집 모양: 통상사상, ④ 원: 결함사상. 원본 기호 유지, 선택지 세로 재배치"
+  },
+  {
+    "id": "20190804_033",
+    "asset_path": "src/assets/questions/industrial-safety/20190804_033.png",
+    "width": 202,
+    "height": 155,
+    "alt": "FT 도의 상부 T와 중간 A·B, 아래 입력 X1·X2 및 X1·X3 연결"
+  },
+  {
+    "id": "20190804_051",
+    "asset_path": "src/assets/questions/industrial-safety/20190804_051.png",
+    "width": 198,
+    "height": 195,
+    "alt": "Ta·Tb 와이어로프의 사이각 120°와 매달린 물체 질량 100kg"
+  },
+  {
+    "id": "20190804_061",
+    "asset_path": "src/assets/questions/industrial-safety/20190804_061.png",
+    "width": 286,
+    "height": 180,
+    "alt": "220V 전기설비 외함 접촉 회로, R2 20Ω·R3 80Ω와 인체저항 3000Ω"
   }
 ]

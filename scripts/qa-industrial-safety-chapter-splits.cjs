@@ -7,6 +7,7 @@ const review = JSON.parse(fs.readFileSync('docs/audits/2026-10-04-industrial-saf
 const questions = new Map(JSON.parse(fs.readFileSync('src/data/questions/industrial-safety.json')).map(q => [q.id, q]));
 const images = new Set(JSON.parse(fs.readFileSync('src/data/question-assets/industrial-safety.json')).map(q => q.id));
 const subjects = { 1: 'safety-management', 2: 'ergonomics', 3: 'mechanical', 4: 'electrical', 5: 'chemical', 6: 'construction' };
+review.chapters = require('./current-20190804-review.cjs').chapters(review.chapters);
 const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/, '');
 const out = path.resolve(process.env.QA_OUTPUT_DIR || 'qa-results/industrial-safety-chapter-splits');
 fs.mkdirSync(out, { recursive: true });

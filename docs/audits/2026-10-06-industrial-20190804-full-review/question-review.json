@@ -1,0 +1,1123 @@
+{
+  "scope": 120,
+  "newlyReviewed": 116,
+  "records": [
+    {
+      "id": "20190804_001",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_002",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_003",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_004",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_005",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_006",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_007",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_008",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_009",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_010",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_011",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_012",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_013",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_014",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_015",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_016",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_017",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_018",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_019",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_020",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_021",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_022",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_023",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_024",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_025",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_026",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_027",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_028",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_029",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_030",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_031",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_032",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_033",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": "src/assets/questions/industrial-safety/20190804_033.png"
+    },
+    {
+      "id": "20190804_034",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_035",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_036",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_037",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_038",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_039",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_040",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_041",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_042",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_043",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_044",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_045",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_046",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_047",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_048",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_049",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_050",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_051",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": "src/assets/questions/industrial-safety/20190804_051.png"
+    },
+    {
+      "id": "20190804_052",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_053",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_054",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_055",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_056",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_057",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_058",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_059",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_060",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_061",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": "src/assets/questions/industrial-safety/20190804_061.png"
+    },
+    {
+      "id": "20190804_062",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_063",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_064",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_065",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_066",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_067",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_068",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_069",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_070",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_071",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_072",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_073",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_074",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_075",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_076",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_077",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_078",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_079",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_080",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_081",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_082",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_083",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_084",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_085",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_086",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_087",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_088",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_089",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_090",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_091",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_092",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_093",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_094",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_095",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_096",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_097",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_098",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_099",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_100",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_101",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_102",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_103",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_104",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_105",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_106",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_107",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_108",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_109",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_110",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_111",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_112",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_113",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_114",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_115",
+      "sourceAnswer": 3,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_116",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": true,
+      "previouslyReviewed": false,
+      "diagram": null
+    },
+    {
+      "id": "20190804_117",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": true,
+      "diagram": null
+    },
+    {
+      "id": "20190804_118",
+      "sourceAnswer": 2,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": true,
+      "diagram": null
+    },
+    {
+      "id": "20190804_119",
+      "sourceAnswer": 1,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": true,
+      "diagram": null
+    },
+    {
+      "id": "20190804_120",
+      "sourceAnswer": 4,
+      "answerMatches": true,
+      "textReviewed": true,
+      "changed": false,
+      "previouslyReviewed": true,
+      "diagram": null
+    }
+  ],
+  "transcriptionExceptions": [
+    {
+      "ids": [
+        "20190804_063",
+        "20190804_068"
+      ],
+      "reason": "개정 전 안내 유지; 정답 노출·외부 서비스 조작 지시 제거"
+    },
+    {
+      "ids": [
+        "20190804_090"
+      ],
+      "reason": "기존 CS₂ 아래첨자 유지"
+    },
+    {
+      "ids": [
+        "20190804_092",
+        "20190804_093"
+      ],
+      "reason": "원본 떄·중기는 기존 정상 표기 때·증기로 유지"
+    },
+    {
+      "ids": [
+        "20190804_064"
+      ],
+      "reason": "선택지 분수는 검증한 기존 이미지에 표시"
+    },
+    {
+      "ids": [
+        "20190804_021",
+        "20190804_043",
+        "20190804_105",
+        "20190804_112"
+      ],
+      "reason": "분류 기간·기분무부하·떄·토증수 등 원본의 표현은 보류 기록; 추정 교정 없음"
+    }
+  ]
+}

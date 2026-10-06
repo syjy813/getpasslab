@@ -7,6 +7,10 @@ on:
       - 'src/content/chapters/construction/**'
       - 'docs/audits/2026-10-06-industrial-question-source-repair/**'
       - 'scripts/*industrial-question-source-repair*'
+      - 'scripts/*industrial-20190804-review*'
+      - 'scripts/read-before-20190804-review.mjs'
+      - 'scripts/current-20190804-review.cjs'
+      - 'docs/audits/2026-10-06-industrial-20190804-full-review/**'
       - '.github/workflows/industrial-question-source-repair-qa.yml'
   workflow_run:
     workflows: ['Deploy to GitHub Pages']
@@ -30,6 +34,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: node scripts/check-industrial-question-source-repair.mjs
+      - run: node scripts/check-industrial-20190804-review.mjs
       - name: Prepare browser
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
@@ -50,9 +55,12 @@ jobs:
             export QA_BASE_URL=http://127.0.0.1:4321
           fi
           node scripts/qa-industrial-question-source-repair.cjs
+          node scripts/qa-industrial-20190804-review.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: industrial-question-source-repair-qa
-          path: qa-results/industrial-question-source-repair/
+          path: |
+            qa-results/industrial-question-source-repair/
+            qa-results/industrial-20190804-review/
           retention-days: 14

@@ -7,6 +7,7 @@ const review = JSON.parse(fs.readFileSync('docs/audits/2026-10-05-industrial-rem
 const canonical = new Map(JSON.parse(fs.readFileSync('src/data/questions/industrial-safety.json')).map(q => [q.id, q]));
 // All four registered question figures are reused without changes.
 const assetIds = new Set(JSON.parse(fs.readFileSync('src/data/question-assets/industrial-safety.json')).map(q => q.id));
+review.chapters = require('./current-20190804-review.cjs').chapters(review.chapters);
 const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/, '');
 const out = path.resolve('qa-results/industrial-remaining-splits'); fs.mkdirSync(out, { recursive: true });
 const result = { base, startedAt: new Date().toISOString(), device: 'Chromium viewport emulation', exactHtmlMatches: 0, viewports: [], errors: [] };

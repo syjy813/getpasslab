@@ -1,5 +1,6 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
-import { readFile, readdir } from 'node:fs/promises';
+import { readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import yaml from 'js-yaml';
@@ -99,4 +100,4 @@ for (const row of review.chapters) {
   assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
   assert(html.includes(`href="${row.url}"`) && !/noindex|katex-error/.test(html));
 }
-console.log('[Question source repair] 117/118/120 restored; 1677 other records, all answers/IDs/assets unchanged; only two primary assignments moved; 258 chapters / 1019 primary references');
+console.log('[Historical release: Question source repair] 117/118/120 restored; 1677 other records, all answers/IDs/assets unchanged; only two primary assignments moved; 258 chapters / 1019 primary references');
