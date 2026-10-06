@@ -29,6 +29,7 @@ for (const file of [
   'docs/audits/2026-10-05-fta-symbols-split/review.json',
   'docs/audits/2026-10-05-industrial-remaining-splits/review.json',
   'docs/audits/2026-10-05-earth-retaining-structure/review.json',
+  'docs/audits/2026-10-06-industrial-question-source-repair/review.json',
 ]) {
   let review;
   try {
@@ -38,7 +39,7 @@ for (const file of [
     throw error;
   }
   const seen = new Set();
-  for (const chapter of [...review.chapters, ...(review.displayFiles ?? []).filter(file => !file.newFile)].filter(chapter => chapter.changed)) {
+  for (const chapter of [...review.chapters, ...(review.canonicalFiles ?? []), ...(review.displayFiles ?? []).filter(file => !file.newFile)].filter(chapter => chapter.changed)) {
     assert(!seen.has(chapter.path), `${chapter.path}: duplicate file in one review`);
     seen.add(chapter.path);
     const chain = reviewed.get(chapter.path) ?? [];
@@ -54,6 +55,18 @@ export function reviewedChapterHash(file, originalHash) {
   if (!chain) return originalHash;
   assert(chain.some(chapter => chapter.originalSha256 === originalHash), `${file}: review must refer to a verified release hash`);
   return chain.at(-1).sha256;
+}
+
+// A canonical question correction changes Astro's shared loader filename. Reverse
+// only that exact reference so historical article snapshots remain meaningful.
+const questionSourceReview = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-question-source-repair/review.json', 'utf8'));
+export function restoreQuestionSourceAssetRefs(article) {
+  for (const edit of questionSourceReview.articleAssetReferenceEdits) {
+    const occurrences = article.split(edit.after).length - 1;
+    assert(occurrences <= 1, 'at most one exact question loader reference per article');
+    if (occurrences) article = article.replace(edit.after, edit.before);
+  }
+  return article;
 }
 
 // Reconstruct a prior display snapshot without weakening its historical checks.
