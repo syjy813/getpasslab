@@ -3532,3 +3532,16 @@ Owner는 기존 사이트 화면에서 설명 흐름·분량·표·기출 연결
 - 계획·로컬 구현·Test·Build 완료. Commit·Push·Deploy 미실행, Production 미반영. 기존 이름 범위·Windows 7 UI의 조건부 상태와 실제 학습자 검증 미실시 상태 유지
 - 다음 작업은 Owner의 본문 검토와 조건부 항목의 대상 환경 검증. 미작성 269개를 이번에 집필한 것으로 해석하지 않음
 - 변경 전 백업·적용본·검증 자료: 현재 작업 공간 `work/all-chapters/`
+
+
+### 2026-10-06 · 20190804 전체 원문 대조
+
+- baseline main cfeac874 · `docs/audits/2026-10-06-industrial-20190804-full-review/README.md` 참조
+- CBT 학생용 PDF SHA b03996… 직접 8쪽/120문항 대조 · 116문항 신규 검수
+- 본문/선택지 42개 수정, 101~116번 16개 잘못 이관된 문제 복원, 박스 지문 7개, 원본 도형 3개 · 답안120개/IDs/과목/일자 모두 유지
+- 잘못 연결된 10개: 5개 이동·5개 해제(102/103/105/106/109) · 공개 산업안전258 / 전체442 유지 · primary1014
+- 기존 source/FTA/formula/분리 QA는 정확한 이번 승인 변경 역복원으로 과거 snapshot을 보존 · 신규 guard는 실제 최신 소스/자산/배정을 별도 확인
+- 로컬 Build/public-content/SEO/deferred-content/source guards 통과 · 320/390/1440 브라우저360팝업+21실제연결+12HTML 비교 오류0
+- CI/Deploy/Production 최종 상태는 이번 PR 기록 확인 · 배포 확인 전 완료로 주장하지 않음
+- Q-Net 공식 원문/정오표/현행 법령 전수 대조 미실행 · 원본 자체 오탈자 예외는 question-review.json
+- 다음: 클램셸 STUB 집필 후 원문 복원 문항의 미배정 범위 검토 · 컴활 보류 유지

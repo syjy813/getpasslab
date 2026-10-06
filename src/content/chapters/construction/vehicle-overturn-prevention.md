@@ -5,7 +5,7 @@ subject_id: 6
 group: 지게차·차량계
 tags: [개념, 법령]
 summary: 지반·갓길·유도자·운행경로 중심 전도 예방
-questions: [20190427_103, 20180428_101, 20190804_102]
+questions: ["20190427_103","20180428_101"]
 order: 3
 priority: 1차
 status: 완료

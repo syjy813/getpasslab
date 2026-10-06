@@ -1,0 +1,526 @@
+{
+  "chapters": [
+    {
+      "path": "src/content/chapters/construction/excavation-slope-standard.md",
+      "slug": "excavation-slope-standard",
+      "originalSha256": "edbb5c27cd5bf8aee4d64f06a86c5ee44996bd49daedfee9eb4f48e5545177c9",
+      "sha256": "49abac9c3326db1884cb302d240253f65a063d0380fe3c0093418f2ed45a0679",
+      "questions": [
+        "20220305_110",
+        "20200606_104",
+        "20200822_108",
+        "20200926_115",
+        "20190427_104",
+        "20180304_101"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/excavation-slope-standard/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/excavation-slope-standard.md",
+      "frontmatterSha256": "fb52ea7f292630928461ef848ddc61484dd983d9d137a69e8f99e79ca1dd88f9",
+      "articleSha256": "ff72f80463a99f3855b0cdfb11ad33775ffa63e4d295ec2d1dfa97e9248dd4fc"
+    },
+    {
+      "path": "src/content/chapters/construction/shore-safety-standard.md",
+      "slug": "shore-safety-standard",
+      "originalSha256": "a89a9c6ebfde480c434d7620afa41eb0ba7c48e018624cc2e31d0a32290dd97f",
+      "sha256": "60ce3566935ea8c4ace4107c7678e607f4065fb7af65ab3ffba54e7d2bce022b",
+      "questions": [
+        "20220424_101",
+        "20220424_119",
+        "20210515_110",
+        "20210307_104",
+        "20200822_101",
+        "20200822_103",
+        "20200926_111",
+        "20190303_101",
+        "20180819_103",
+        "20180304_114",
+        "20190804_101"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/shore-safety-standard/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/shore-safety-standard.md",
+      "frontmatterSha256": "17b885b7b835a3420eb28bc2c3b40747d00502b8e548b4ef9acea10a368ff319",
+      "articleSha256": "35f4e81f37e9ed09edb3a2a28044dca173c9ae8f66304dd0604c9010ecb70a9b"
+    },
+    {
+      "path": "src/content/chapters/construction/vehicle-overturn-prevention.md",
+      "slug": "vehicle-overturn-prevention",
+      "originalSha256": "de273d32b9cf53ab62a8b18d15a9b3489679aa247d0de7a5ded2dfc5717a03c1",
+      "sha256": "cc184e889ab386b001c96f3bd7c33605b8fdf53fc815e348a189cd19fac9115a",
+      "questions": [
+        "20190427_103",
+        "20180428_101"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/vehicle-overturn-prevention/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/vehicle-overturn-prevention.md",
+      "frontmatterSha256": "5b72aea513115414e17ed92b690cb91983ac6895654f076fb32d0e8a72123f58",
+      "articleSha256": "ef6ca9180b9968c6e1d6c0543bb29a553147ddcc3fb66ebad7e6e204811982a0"
+    },
+    {
+      "path": "src/content/chapters/construction/work-platform-standards.md",
+      "slug": "work-platform-standards",
+      "originalSha256": "b9a9c20b241dbd4b6ba27515c774f5b70b891a3c48001bbc2c5759b1ed6f427b",
+      "sha256": "270e9697ef790081e2eb1d8c3f59e99f61da2e6110656341e4a6727c09078e8f",
+      "questions": [
+        "20220305_116",
+        "20200926_112",
+        "20190427_114",
+        "20220305_104"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/work-platform-standards/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/work-platform-standards.md",
+      "frontmatterSha256": "73c7658335245a74fe82797df70662e56d7fed499c86a8366719c941c8d03124",
+      "articleSha256": "3efc75d29ca26484975c306c5d5fd5ee9776765b436bae1d92ce656d1739261c"
+    },
+    {
+      "path": "src/content/chapters/construction/tunnel-support-safety.md",
+      "slug": "tunnel-support-safety",
+      "originalSha256": "9bf7b38c757fb7824849ff8bbe7e7660d070537b0164dec46f4f7b5ae155b9b0",
+      "sha256": "3e7e1b932b43adc1d3483a93ee1b3ae1daf4016f8f0021497ab04cba08593137",
+      "questions": [
+        "20200822_111",
+        "20180304_109",
+        "20210307_103",
+        "20180428_110",
+        "20210515_115",
+        "20180304_118",
+        "20190427_120",
+        "20190804_104"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tunnel-support-safety/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/tunnel-support-safety.md",
+      "frontmatterSha256": "f74487e2d5608ce3229df0485957b0ddf6681071ebde334dc97d5d49ab73735e",
+      "articleSha256": "2ac22d540db56efa552dc9445812b406f18533c392dac19c8d4d6dc1ba92c890"
+    },
+    {
+      "path": "src/content/chapters/construction/tower-crane-rope-support.md",
+      "slug": "tower-crane-rope-support",
+      "originalSha256": "818aa55082006636b64407a5fe846ae2fc58d1b1c9c51d0433c8230cdc0d4c60",
+      "sha256": "cfc469170e03d150f98529c06f3091995ef1e8fba708f43c279a29785063393c",
+      "questions": [
+        "20200822_115",
+        "20180304_117"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tower-crane-rope-support/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/tower-crane-rope-support.md",
+      "frontmatterSha256": "267954fb020ec6a8afd842a7bc2a3610b5a32f42f26c1f2bfda724f67800457e",
+      "articleSha256": "cd3c7ce502d32ab3b7b0fbb17bb04cfb7a961648b971a449f13d75af5cf221fd"
+    },
+    {
+      "path": "src/content/chapters/construction/steel-frame-work.md",
+      "slug": "steel-frame-work",
+      "originalSha256": "13ff06cd9ee650e7eb85bb5579e78fff05f503d4325480954ad61b9156eeac58",
+      "sha256": "c30fc494afd063b6941c4076d2463870211b5731b93ca40b9518911977c787d9",
+      "questions": [
+        "20190804_118",
+        "20220424_104",
+        "20190303_108",
+        "20210307_116",
+        "20220305_111",
+        "20180819_107",
+        "20180304_107",
+        "20190427_108",
+        "20200606_102",
+        "20180428_115"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/steel-frame-work/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/steel-frame-work.md",
+      "frontmatterSha256": "3ae1c36b7c65efa273dcf739b6aa415f5ca205069eb40a8c0584dd2a8de9ee8e",
+      "articleSha256": "57de1326ffbc58a513e55a699afabb978ffdef2065d07266b2d08b4bb96fec25"
+    },
+    {
+      "path": "src/content/chapters/construction/safety-net-standards.md",
+      "slug": "safety-net-standards",
+      "originalSha256": "36db04d871f246fe6880ce7f2b89426a6002ed46e32a94b3daf48cbe25d85d45",
+      "sha256": "80935fb9785757eee8080a44083fcb7c89e2415530a2fcdd11626c1eec32aea7",
+      "questions": [
+        "20210814_112",
+        "20200606_109",
+        "20200822_114",
+        "20200926_116",
+        "20180819_117",
+        "20190303_112",
+        "20190303_113",
+        "20190427_101",
+        "20190804_108"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/safety-net-standards/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/safety-net-standards.md",
+      "frontmatterSha256": "cf991da7c1781f6ab47a8e54d8c787dde62d097f9a13ccf5be2137aa3daae67e",
+      "articleSha256": "bd96b5414e234cd9308e1e229837721c29175c077ca8c61b36b0a3a08ddbe73c"
+    },
+    {
+      "path": "src/content/chapters/construction/soil-collapse-prevention.md",
+      "slug": "soil-collapse-prevention",
+      "originalSha256": "8955d7874ba46323b2c7d2d6a0e7a12d20ad3cebc928eacb911a002bc15e1cd1",
+      "sha256": "836e0103e78fe7f300db5af427ba2f84f8573a0329b834522700f4c9ced86492",
+      "questions": [
+        "20220424_110",
+        "20210814_106",
+        "20210515_105",
+        "20210515_103",
+        "20200606_111",
+        "20190804_107"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/soil-collapse-prevention/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/soil-collapse-prevention.md",
+      "frontmatterSha256": "005c660c191e0abe1e3e07415f7d389aa8fa1100607b6df253c51530072825ea",
+      "articleSha256": "7e443be01907b10116c90953045a81bf0cdbccd0d76d10935de12dad032af18a"
+    },
+    {
+      "path": "src/content/chapters/construction/steel-pipe-scaffold.md",
+      "slug": "steel-pipe-scaffold",
+      "originalSha256": "54b7ea43a71d2287a8c2ed82c5105cd6e4f120cf436635dbf3a7c62333947cc1",
+      "sha256": "a3bb749fccfef0b4bba2d2a432d45dd63bbaa7ddc11b4d333f7d3d7e8b0c9352",
+      "questions": [
+        "20210814_117",
+        "20210307_112",
+        "20210515_106",
+        "20180304_110",
+        "20190427_106",
+        "20190303_114",
+        "20210814_113",
+        "20180819_101"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/steel-pipe-scaffold/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/steel-pipe-scaffold.md",
+      "frontmatterSha256": "55a33b1fa33ed175f6e1d2b50dc16f80ee09426e3aa436dcf925a13e298460b1",
+      "articleSha256": "6e5486bddf35880a591519b9c861d2b24980b9afb00658225014e9e16557567e"
+    },
+    {
+      "path": "src/content/chapters/construction/steel-frame-scaffold.md",
+      "slug": "steel-frame-scaffold",
+      "originalSha256": "8e8ed1a2780a8b0bca6ab98d8f2bed10c6e5b9a9c2e0d8289591fd8b8f32a58a",
+      "sha256": "e9b60727333a29aab9610ab973e814ca0387921981cc72d87d873f5ed56ad991",
+      "questions": [
+        "20220305_115",
+        "20210515_119",
+        "20200822_107",
+        "20180428_114",
+        "20210515_104",
+        "20200606_106",
+        "20190804_113"
+      ],
+      "changed": true,
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/steel-frame-scaffold/",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/steel-frame-scaffold.md",
+      "frontmatterSha256": "82da1adf2c3d1c4b5c8e52b9d80d7a29b7b6ef5cf495a97f95b7b0dfc4543e0b",
+      "articleSha256": "e1cb6e532d48d5d1de67c53eb579a43441230788687505e5443ba2e096bde988"
+    }
+  ],
+  "canonicalFiles": [
+    {
+      "path": "src/data/questions/industrial-safety.json",
+      "changed": true,
+      "originalSha256": "393e4a7c418567c9aa984cc5c12888954089fba84c3d57feceac1a388616e57d",
+      "sha256": "a22687b033c59608154bcdadc2f5b35f0ffbb5df2a3e01bdce7c3f0dd63b2829",
+      "editsFile": "docs/audits/2026-10-06-industrial-20190804-full-review/canonical-edits.json"
+    }
+  ],
+  "assetRegistries": [
+    {
+      "path": "src/data/question-assets/industrial-safety.json",
+      "changed": true,
+      "originalSha256": "4cb0217f159562aba5b3bd4af4ec0bc1fc543aa92e97259ee02394eb3e2e6c6e",
+      "sha256": "81565b5c30e623577a70a3add7b93847608467b6d0c61eff5b72851e8d359728",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/asset-registry.json",
+      "addedEntries": [
+        {
+          "id": "20190804_033",
+          "asset_path": "src/assets/questions/industrial-safety/20190804_033.png",
+          "width": 202,
+          "height": 155,
+          "alt": "FT 도의 상부 T와 중간 A·B, 아래 입력 X1·X2 및 X1·X3 연결"
+        },
+        {
+          "id": "20190804_051",
+          "asset_path": "src/assets/questions/industrial-safety/20190804_051.png",
+          "width": 198,
+          "height": 195,
+          "alt": "Ta·Tb 와이어로프의 사이각 120°와 매달린 물체 질량 100kg"
+        },
+        {
+          "id": "20190804_061",
+          "asset_path": "src/assets/questions/industrial-safety/20190804_061.png",
+          "width": 286,
+          "height": 180,
+          "alt": "220V 전기설비 외함 접촉 회로, R2 20Ω·R3 80Ω와 인체저항 3000Ω"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "20190804_033",
+      "asset_path": "src/assets/questions/industrial-safety/20190804_033.png",
+      "width": 202,
+      "height": 155,
+      "alt": "FT 도의 상부 T와 중간 A·B, 아래 입력 X1·X2 및 X1·X3 연결",
+      "sourcePage": 2,
+      "sourceBBox": [
+        322.6260070800781,
+        546.7219848632812,
+        474.343994140625,
+        662.9949951171875
+      ],
+      "sourceEmbeddedSha256": "558dc0675fff6c89bf6ef9c8831d47b4ba74694a9c2652d0892ea692a88b2d88",
+      "sha256": "d3c227c87912b7b5a63bcbfb60d1bf4d94452e00092e52af5a03b9da50264a1c",
+      "path": "src/assets/questions/industrial-safety/20190804_033.png",
+      "newFile": true
+    },
+    {
+      "id": "20190804_051",
+      "asset_path": "src/assets/questions/industrial-safety/20190804_051.png",
+      "width": 198,
+      "height": 195,
+      "alt": "Ta·Tb 와이어로프의 사이각 120°와 매달린 물체 질량 100kg",
+      "sourcePage": 4,
+      "sourceBBox": [
+        40.77799987792969,
+        65.08897399902344,
+        189.4980010986328,
+        211.3289794921875
+      ],
+      "sourceEmbeddedSha256": "a1ea204d6be71d0bdd0d886870308d7d13d79c3eaa42d8d70d7f477c0c45d0ed",
+      "sha256": "141dce3297d19a8c9aed365b584baa218218d257ede98f8e07bad9c0f041a064",
+      "path": "src/assets/questions/industrial-safety/20190804_051.png",
+      "newFile": true
+    },
+    {
+      "id": "20190804_061",
+      "asset_path": "src/assets/questions/industrial-safety/20190804_061.png",
+      "width": 286,
+      "height": 180,
+      "alt": "220V 전기설비 외함 접촉 회로, R2 20Ω·R3 80Ω와 인체저항 3000Ω",
+      "sourcePage": 4,
+      "sourceBBox": [
+        322.6260070800781,
+        638.9020385742188,
+        537.31103515625,
+        773.7540283203125
+      ],
+      "sourceEmbeddedSha256": "c5654aaefb3df2fdc7d6174ff06d51a733605f067d9d1678ccea496611bb9cec",
+      "sha256": "6a281e3c439d18d746a4e66f05d2897115328d7cb4aa43bf7026a6198e388d5a",
+      "path": "src/assets/questions/industrial-safety/20190804_061.png",
+      "newFile": true
+    }
+  ],
+  "displayFiles": [
+    {
+      "path": "src/styles/global.css",
+      "originalSha256": "664dcea37f32250d55ade6fa0cb248b5a6a8c8356f227415887f8eb92936571c",
+      "sha256": "08fddbacd4146de81f33ba87c6bcf675e053b8d3077c6fa136d1218a9bb87e44",
+      "edits": [
+        {
+          "before": ".q-body{font-size:",
+          "after": ".q-body{white-space:pre-line;font-size:"
+        }
+      ],
+      "changed": true
+    }
+  ],
+  "articles": [
+    {
+      "path": "dist/industrial-safety/written/construction/excavation-slope-standard/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/excavation-slope-standard/",
+      "articleSha256": "ff72f80463a99f3855b0cdfb11ad33775ffa63e4d295ec2d1dfa97e9248dd4fc",
+      "originalArticleSha256": "736dc6b0d30bbd97affdfb04522a5905ae092d4ab06f75025d1babe09369b936",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/fe95cd589b27742c.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/safety-net-standards/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/safety-net-standards/",
+      "articleSha256": "bd96b5414e234cd9308e1e229837721c29175c077ca8c61b36b0a3a08ddbe73c",
+      "originalArticleSha256": "8344ced4829d296c348f13487463f0f383cffd79331c756eb2d2df021590b1e1",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/1020e501c664f9ca.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/shore-safety-standard/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/shore-safety-standard/",
+      "articleSha256": "35f4e81f37e9ed09edb3a2a28044dca173c9ae8f66304dd0604c9010ecb70a9b",
+      "originalArticleSha256": "c298e250b28b0d9818797aca29f8f8b3e94c1e2b3a85d17ff7b5b06cd180e7e4",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/1566f424244ccd99.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/soil-collapse-prevention/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/soil-collapse-prevention/",
+      "articleSha256": "7e443be01907b10116c90953045a81bf0cdbccd0d76d10935de12dad032af18a",
+      "originalArticleSha256": "e42f1c81ab8189e0bf9054b67d6bfb9b62e73cf62818e3e58a0de256c503efb3",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/fe44054611f387eb.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/steel-frame-scaffold/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/steel-frame-scaffold/",
+      "articleSha256": "e1cb6e532d48d5d1de67c53eb579a43441230788687505e5443ba2e096bde988",
+      "originalArticleSha256": "25767aaee3a72fb0e8e372cc26f83891b88572a4b41c4ee854ba250dc6d2ae7f",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/55930d8796882db2.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/steel-frame-work/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/steel-frame-work/",
+      "articleSha256": "57de1326ffbc58a513e55a699afabb978ffdef2065d07266b2d08b4bb96fec25",
+      "originalArticleSha256": "a69e4623eb4e60db69a94788fffcbc588597c652205c47e03302d1d507f0d04a",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/fa5c2388ca494f2e.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/steel-pipe-scaffold/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/steel-pipe-scaffold/",
+      "articleSha256": "6e5486bddf35880a591519b9c861d2b24980b9afb00658225014e9e16557567e",
+      "originalArticleSha256": "75863a1d79b92c26607f2d9343c6e7b1e10860d97cadb65a0a851c2de4bf5bfa",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/7fbf25cfa9c6c324.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/tower-crane-rope-support/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tower-crane-rope-support/",
+      "articleSha256": "cd3c7ce502d32ab3b7b0fbb17bb04cfb7a961648b971a449f13d75af5cf221fd",
+      "originalArticleSha256": "189206fa63e6b5cdd530cd54fa5eab84299d3c6c869014ffa4344bbf94f7a69b",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/4a5d4d83abe4c5c1.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/tunnel-support-safety/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/tunnel-support-safety/",
+      "articleSha256": "2ac22d540db56efa552dc9445812b406f18533c392dac19c8d4d6dc1ba92c890",
+      "originalArticleSha256": "1fd19d8f6028db882251eb3d91e54159d885b5cdbe4d8faeea3925220341df6c",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/c7f81b7b5a786c91.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/vehicle-overturn-prevention/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/vehicle-overturn-prevention/",
+      "articleSha256": "ef6ca9180b9968c6e1d6c0543bb29a553147ddcc3fb66ebad7e6e204811982a0",
+      "originalArticleSha256": "d35956393557da86d4e4e4ce91cea35792209968d074e47c684386211200eb3f",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/ea696634b5ad737f.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/work-platform-standards/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/work-platform-standards/",
+      "articleSha256": "3efc75d29ca26484975c306c5d5fd5ee9776765b436bae1d92ce656d1739261c",
+      "originalArticleSha256": "98d99bd5789c797a130e76f17d3b44a02244f61850a0781e620b6c387c597237",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/e0119e6b49967bb1.html"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/cutset-pathset/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/cutset-pathset/",
+      "articleSha256": "0f96f7a6adfed781847942a202ea1b8bdb348c7bcd29c5568c152a1d71e1fcad",
+      "originalArticleSha256": "f266f873cd43b091c3127a53c9f51cdd836c8f3a0e62943056835de519f13959",
+      "originalFile": "docs/audits/2026-10-06-industrial-20190804-full-review/originals/6dc0052c6ecf8eb1.html"
+    }
+  ],
+  "articleAssetReferenceEdits": [
+    {
+      "before": "/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.Br4EoIld.js",
+      "after": "/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js"
+    }
+  ],
+  "generatedLoader": {
+    "path": "/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+    "originalPath": "/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.Br4EoIld.js",
+    "sha256": "710f7d4be3711e93b5132757d789b9598f13ed0f329302d4ba56447c2220056a",
+    "originalSha256": "159dca5f5164e34e52dde02744b6176c5145f3fdbfeb10304cd39a42a81d1223",
+    "edits": [
+      {
+        "before": "./industrial-safety.CYy0QzfI.js",
+        "after": "./industrial-safety.D3rsEAtl.js"
+      }
+    ]
+  },
+  "questionPayload": {
+    "path": "/_astro/industrial-safety.D3rsEAtl.js",
+    "sha256": "8a34459bbbae5f350cb18800df5ce6a11f81164960f086573882221b07cc4158"
+  },
+  "allocations": [
+    {
+      "id": "20190804_101",
+      "from": "excavation-slope-standard",
+      "to": "shore-safety-standard",
+      "reason": "원본 문항의 질문 범위로 정정; 전용 공개 챕터 범위와 맞지 않으면 미배정으로 되돌림"
+    },
+    {
+      "id": "20190804_102",
+      "from": "vehicle-overturn-prevention",
+      "to": null,
+      "reason": "원본 문항의 질문 범위로 정정; 전용 공개 챕터 범위와 맞지 않으면 미배정으로 되돌림"
+    },
+    {
+      "id": "20190804_103",
+      "from": "work-platform-standards",
+      "to": null,
+      "reason": "원본 문항의 질문 범위로 정정; 전용 공개 챕터 범위와 맞지 않으면 미배정으로 되돌림"
+    },
+    {
+      "id": "20190804_104",
+      "from": "excavation-slope-standard",
+      "to": "tunnel-support-safety",
+      "reason": "원본 문항의 질문 범위로 정정; 전용 공개 챕터 범위와 맞지 않으면 미배정으로 되돌림"
+    },
+    {
+      "id": "20190804_105",
+      "from": "tower-crane-rope-support",
+      "to": null,
+      "reason": "원본 문항의 질문 범위로 정정; 전용 공개 챕터 범위와 맞지 않으면 미배정으로 되돌림"
+    },
+    {
+      "id": "20190804_106",
+      "from": "steel-frame-work",
+      "to": null,
+      "reason": "원본 문항의 질문 범위로 정정; 전용 공개 챕터 범위와 맞지 않으면 미배정으로 되돌림"
+    },
+    {
+      "id": "20190804_107",
+      "from": "safety-net-standards",
+      "to": "soil-collapse-prevention",
+      "reason": "원본 문항의 질문 범위로 정정; 전용 공개 챕터 범위와 맞지 않으면 미배정으로 되돌림"
+    },
+    {
+      "id": "20190804_108",
+      "from": "soil-collapse-prevention",
+      "to": "safety-net-standards",
+      "reason": "원본 문항의 질문 범위로 정정; 전용 공개 챕터 범위와 맞지 않으면 미배정으로 되돌림"
+    },
+    {
+      "id": "20190804_109",
+      "from": "shore-safety-standard",
+      "to": null,
+      "reason": "원본 문항의 질문 범위로 정정; 전용 공개 챕터 범위와 맞지 않으면 미배정으로 되돌림"
+    },
+    {
+      "id": "20190804_113",
+      "from": "steel-pipe-scaffold",
+      "to": "steel-frame-scaffold",
+      "reason": "원본 문항의 질문 범위로 정정; 전용 공개 챕터 범위와 맞지 않으면 미배정으로 되돌림"
+    }
+  ],
+  "source": {
+    "filename": "산업안전기사20190804(학생용).pdf",
+    "url": "https://img.comcbt.com/xe/download/822fabe365db4a9bcfc05597b00ea22a/8976275/%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EA%B8%B0%EC%82%AC20190804%28%ED%95%99%EC%83%9D%EC%9A%A9%29.pdf",
+    "sha256": "b03996ec40a2c3d9b163b75c0f4287b37557e331d2ddbeb110e36688915af861",
+    "pagesReviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "answerKeyPage": 8,
+    "officialQNetVerified": false
+  },
+  "before": {
+    "publishedIndustrial": 258,
+    "primaryReferences": 1019
+  },
+  "after": {
+    "publishedIndustrial": 258,
+    "primaryReferences": 1014
+  }
+}

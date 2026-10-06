@@ -1,6 +1,7 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile, readdir, access } from 'node:fs/promises';
+import { readdir, access } from 'node:fs/promises';
 import path from 'node:path';
 import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
 
@@ -122,5 +123,5 @@ for (const id of ['20190302_027','20190302_034','20200704_024']) assert(!evidenc
 const before = JSON.parse(await readFile('docs/audits/2026-09-30-computer-literacy-001-081/source-verification.json','utf8')).chapters.at(-1);
 const boundary = await readFile(`dist/computer-literacy/written/computer-basics/${before.slug}/index.html`, 'utf8');
 assert(boundary.includes(`class="chapter-mobile-link next" href="/computer-literacy/written/computer-basics/${evidence.chapters[0].slug}/"`), '81 → 82 boundary');
-console.log(`[082–159] 78 chapters; 149 primary + ${support} supporting links; ${dialogs} dialogs; 7 original images / ${images} occurrences passed`);
-console.log('[082–159] 134 canonical additions; all prior chapter/image/payload hashes preserved; IDs, subjects, slugs, support owners, TOC, 81→82, final 159 and BLOCKED 160 passed');
+console.log(`[Historical release: 082–159] 78 chapters; 149 primary + ${support} supporting links; ${dialogs} dialogs; 7 original images / ${images} occurrences passed`);
+console.log('[Historical release: 082–159] 134 canonical additions; all prior chapter/image/payload hashes preserved; IDs, subjects, slugs, support owners, TOC, 81→82, final 159 and BLOCKED 160 passed');

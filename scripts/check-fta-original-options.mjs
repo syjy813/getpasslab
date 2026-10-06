@@ -1,8 +1,9 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
-import {readFile,readdir} from 'node:fs/promises';
+import {readdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
-import {restoreFTAOriginalAssetAttrs} from './reviewed-chapter-hash.mjs';
+import {restoreFTAOriginalAssetAttrs, reviewedAssetAdditions} from './reviewed-chapter-hash.mjs';
 const audit='docs/audits/2026-10-06-fta-original-options';
 const review=JSON.parse(await readFile(`${audit}/review.json`,'utf8'));
 const baseline=JSON.parse(await readFile(`${audit}/source-verification.json`,'utf8'));
@@ -12,7 +13,7 @@ assert.equal(review.assetRegistries.length,1);assert.equal(review.assets.length,
 const registry=review.assetRegistries[0],asset=review.assets[0],edit=review.articleEdits[0];
 assert.equal(registry.path,'src/data/question-assets/industrial-safety.json');
 assert.equal(asset.path,'src/assets/questions/industrial-safety/20180304_036.png');
-assert.deepEqual([...await walk('src'),...await walk('public')].sort(),[...Object.keys(baseline.protectedFiles),asset.path].sort());
+assert.deepEqual([...await walk('src'),...await walk('public')].sort(),[...Object.keys(baseline.protectedFiles),...reviewedAssetAdditions.map(row=>row.path)].sort());
 for(const [file,expected] of Object.entries(baseline.protectedFiles))assert.equal(hash(await readFile(file)),file===registry.path?registry.sha256:expected,`${file}: only one reviewed registry addition allowed`);
 assert.equal(registry.originalSha256,baseline.protectedFiles[registry.path]);
 const original=await readFile(`${audit}/original-registry.json`);
@@ -38,4 +39,4 @@ for(const row of baseline.publicPages){
   assert(edit.after.includes('data-question-image-src=')&&edit.after.includes('data-question-image-width="720"'));
  }else assert.equal(hash(article),row.articleSha256,`${row.url}: unrelated article changed`);
 }
-console.log('[FTA original options] one original-symbol image / one registry addition; canonical questions, all chapter sources, CSS, popup code and 444 unrelated articles preserved');
+console.log('[Historical release: FTA original options] one original-symbol image / one registry addition; canonical questions, all chapter sources, CSS, popup code and 444 unrelated articles preserved');

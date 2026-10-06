@@ -1,0 +1,4772 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "startedAt": "2026-10-06T14:30:04.680Z",
+  "exactHtmlMatches": 12,
+  "viewports": [
+    {
+      "width": 320,
+      "pages": [
+        "excavation-slope-standard",
+        "shore-safety-standard",
+        "vehicle-overturn-prevention",
+        "work-platform-standards",
+        "tunnel-support-safety",
+        "tower-crane-rope-support",
+        "steel-frame-work",
+        "safety-net-standards",
+        "soil-collapse-prevention",
+        "steel-pipe-scaffold",
+        "steel-frame-scaffold"
+      ],
+      "publicPopups": [
+        "20190804_101",
+        "20190804_104",
+        "20190804_118",
+        "20190804_108",
+        "20190804_107",
+        "20190804_113",
+        "20190804_033"
+      ],
+      "fixturePopups": [
+        {
+          "id": "20190804_001",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_002",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_003",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_004",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_005",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_006",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_007",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_008",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_009",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_010",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_011",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_012",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_013",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_014",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_015",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_016",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_017",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_018",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_019",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_020",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_021",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_022",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_023",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_024",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_025",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_026",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_027",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_028",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_029",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_030",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_031",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_032",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_033",
+          "answer": 1,
+          "image": true,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_034",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_035",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_036",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_037",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_038",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_039",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_040",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_041",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_042",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_043",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_044",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_045",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_046",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_047",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_048",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_049",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_050",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_051",
+          "answer": 4,
+          "image": true,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_052",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_053",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_054",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_055",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_056",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_057",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_058",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_059",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_060",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_061",
+          "answer": 3,
+          "image": true,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_062",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_063",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_064",
+          "answer": 3,
+          "image": true,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_065",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_066",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_067",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_068",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_069",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_070",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_071",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_072",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_073",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_074",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_075",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_076",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_077",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_078",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_079",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_080",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_081",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_082",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_083",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_084",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_085",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_086",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_087",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_088",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_089",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_090",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_091",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_092",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_093",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_094",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_095",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_096",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_097",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_098",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_099",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_100",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_101",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_102",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_103",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_104",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_105",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_106",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_107",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_108",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_109",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_110",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_111",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_112",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_113",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_114",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_115",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_116",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_117",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_118",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_119",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_120",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 282,
+            "scroll": 282,
+            "bodyLeft": 35,
+            "bodyRight": 285,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "pages": [
+        "excavation-slope-standard",
+        "shore-safety-standard",
+        "vehicle-overturn-prevention",
+        "work-platform-standards",
+        "tunnel-support-safety",
+        "tower-crane-rope-support",
+        "steel-frame-work",
+        "safety-net-standards",
+        "soil-collapse-prevention",
+        "steel-pipe-scaffold",
+        "steel-frame-scaffold"
+      ],
+      "publicPopups": [
+        "20190804_101",
+        "20190804_104",
+        "20190804_118",
+        "20190804_108",
+        "20190804_107",
+        "20190804_113",
+        "20190804_033"
+      ],
+      "fixturePopups": [
+        {
+          "id": "20190804_001",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_002",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_003",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_004",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_005",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_006",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_007",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_008",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_009",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_010",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_011",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_012",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_013",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_014",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_015",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_016",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_017",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_018",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_019",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_020",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_021",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_022",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_023",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_024",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_025",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_026",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_027",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_028",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_029",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_030",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_031",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_032",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_033",
+          "answer": 1,
+          "image": true,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_034",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_035",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_036",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_037",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_038",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_039",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_040",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_041",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_042",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_043",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_044",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_045",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_046",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_047",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_048",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_049",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_050",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_051",
+          "answer": 4,
+          "image": true,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_052",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_053",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_054",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_055",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_056",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_057",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_058",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_059",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_060",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_061",
+          "answer": 3,
+          "image": true,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_062",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_063",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_064",
+          "answer": 3,
+          "image": true,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_065",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_066",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_067",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_068",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_069",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_070",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_071",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_072",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_073",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_074",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_075",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_076",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_077",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_078",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_079",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_080",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_081",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_082",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_083",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_084",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_085",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_086",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_087",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_088",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_089",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_090",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_091",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_092",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_093",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_094",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_095",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_096",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_097",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_098",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_099",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_100",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_101",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_102",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_103",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_104",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_105",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_106",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_107",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_108",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_109",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_110",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_111",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_112",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_113",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_114",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_115",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_116",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_117",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_118",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_119",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_120",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 352,
+            "scroll": 352,
+            "bodyLeft": 35,
+            "bodyRight": 355,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "pages": [
+        "excavation-slope-standard",
+        "shore-safety-standard",
+        "vehicle-overturn-prevention",
+        "work-platform-standards",
+        "tunnel-support-safety",
+        "tower-crane-rope-support",
+        "steel-frame-work",
+        "safety-net-standards",
+        "soil-collapse-prevention",
+        "steel-pipe-scaffold",
+        "steel-frame-scaffold"
+      ],
+      "publicPopups": [
+        "20190804_101",
+        "20190804_104",
+        "20190804_118",
+        "20190804_108",
+        "20190804_107",
+        "20190804_113",
+        "20190804_033"
+      ],
+      "fixturePopups": [
+        {
+          "id": "20190804_001",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_002",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_003",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_004",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_005",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_006",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_007",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_008",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_009",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_010",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_011",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_012",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_013",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_014",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_015",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_016",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_017",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_018",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_019",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_020",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_021",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_022",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_023",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_024",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_025",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_026",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_027",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_028",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_029",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_030",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_031",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_032",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_033",
+          "answer": 1,
+          "image": true,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_034",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_035",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_036",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_037",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_038",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_039",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_040",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_041",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_042",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_043",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_044",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_045",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_046",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_047",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_048",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_049",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_050",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_051",
+          "answer": 4,
+          "image": true,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_052",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_053",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_054",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_055",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_056",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_057",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_058",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_059",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_060",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_061",
+          "answer": 3,
+          "image": true,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_062",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_063",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_064",
+          "answer": 3,
+          "image": true,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_065",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_066",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_067",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_068",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_069",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_070",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_071",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_072",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_073",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_074",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_075",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_076",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_077",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_078",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_079",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_080",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_081",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_082",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_083",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_084",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_085",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_086",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_087",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_088",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_089",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_090",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_091",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_092",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_093",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_094",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_095",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_096",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_097",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_098",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_099",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_100",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_101",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_102",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_103",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_104",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_105",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_106",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_107",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_108",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_109",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_110",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_111",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_112",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_113",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_114",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_115",
+          "answer": 3,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_116",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_117",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_118",
+          "answer": 2,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_119",
+          "answer": 1,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        },
+        {
+          "id": "20190804_120",
+          "answer": 4,
+          "image": false,
+          "layout": {
+            "width": 680,
+            "scroll": 680,
+            "bodyLeft": 404,
+            "bodyRight": 1036,
+            "whiteSpace": "pre-line"
+          },
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "fixtureScope": "All 120 payloads use the existing real popup button/listener with temporary browser-only data attributes. Unassigned questions are not claimed as published chapter links.",
+  "passed": true,
+  "finishedAt": "2026-10-06T14:30:30.708Z"
+}

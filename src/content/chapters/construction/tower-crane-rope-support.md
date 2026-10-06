@@ -5,7 +5,7 @@ subject_id: 6
 group: 건설 와이어로프
 tags: [개념, 법령]
 summary: 각도60°·지지점 4개소·견고하게 고정
-questions: [20200822_115, 20180304_117, 20190804_105]
+questions: ["20200822_115","20180304_117"]
 order: 3
 priority: 2차
 status: 완료

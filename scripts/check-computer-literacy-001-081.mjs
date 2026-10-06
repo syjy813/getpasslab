@@ -1,6 +1,7 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile, access } from 'node:fs/promises';
+import { access } from 'node:fs/promises';
 import path from 'node:path';
 import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
 
@@ -108,5 +109,5 @@ for (const [i, chapter] of evidence.chapters.entries()) {
 assert.equal(slugs.size, 81);
 assert.equal(newChapters, 50);
 assert.equal(evidence.newQuestionIds.length, 70);
-console.log(`[001–081] ${slugs.size} chapters (50 new, 31 preserved); ${primary.size} primary + ${supportingCount} supporting links; ${dialogs} rendered dialogs/answers; ${imageIds.size} original images / ${imageOccurrences} occurrences passed`);
-console.log('[001–081] Canonical hashes, all prior chapter files, URLs, IDs, sequence, scoped support links, 6 caution questions, and editorial separation passed');
+console.log(`[Historical release: 001–081] ${slugs.size} chapters (50 new, 31 preserved); ${primary.size} primary + ${supportingCount} supporting links; ${dialogs} rendered dialogs/answers; ${imageIds.size} original images / ${imageOccurrences} occurrences passed`);
+console.log('[Historical release: 001–081] Canonical hashes, all prior chapter files, URLs, IDs, sequence, scoped support links, 6 caution questions, and editorial separation passed');

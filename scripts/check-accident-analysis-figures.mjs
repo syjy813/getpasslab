@@ -1,6 +1,7 @@
+import { readFile } from './read-before-20190804-review.mjs';
 import { reviewedChapterHash } from './reviewed-chapter-hash.mjs';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+
 import { createHash } from 'node:crypto';
 import yaml from 'js-yaml';
 const audit = 'docs/audits/2026-10-04-accident-analysis-table';
@@ -38,4 +39,4 @@ for (const asset of historical.assets) {
 }
 assert(!/<figure|<img|learning-visuals/.test(source), 'user requested table-only learning copy');
 assert.equal((html.match(/<table\b/g) || []).length, 1);
-console.log('[Accident analysis] one comparison table, no displayed diagrams; historical assets unchanged; canonical dataset, 5 questions and public route links passed');
+console.log('[Historical release: Accident analysis] one comparison table, no displayed diagrams; historical assets unchanged; canonical dataset, 5 questions and public route links passed');
