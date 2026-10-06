@@ -19,7 +19,7 @@ let browser;
     assert.equal(response.status, 200); assert.equal(hash(Buffer.from(await response.arrayBuffer())), hash(fs.readFileSync(`dist${route}index.html`)));
     result.exactHtmlMatches++;
   }
-  browser = await chromium.launch();
+  browser = await chromium.launch(process.env.QA_BROWSER_EXECUTABLE ? { executablePath: process.env.QA_BROWSER_EXECUTABLE } : {});
   await Promise.all([320, 390, 1440].map(async width => {
     let current;
     const context = await browser.newContext({ viewport: { width, height: 844 }, isMobile: width < 768, hasTouch: width < 768 });
@@ -57,6 +57,20 @@ let browser;
         if (assetIds.has(id)) {
           const img = dialog.locator('img.q-image'); await img.waitFor({state:'visible'}); await img.evaluate(img => img.decode());
           assert(await img.evaluate(img => img.naturalWidth > 0 && img.getBoundingClientRect().width <= document.documentElement.clientWidth));
+          if (id === '20180304_036') {
+            const info = await img.evaluate(img => ({src:img.getAttribute('src'),alt:img.alt,width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight}));
+            const entry = JSON.parse(fs.readFileSync('docs/audits/2026-10-06-fta-original-options/review.json'));
+            assert.equal(info.naturalWidth,720); assert.equal(info.naturalHeight,792);
+            assert(info.alt.includes('2018년 3월') && info.alt.includes('36번') && info.alt.includes('도형'));
+            assert(Math.abs(info.width/info.height-720/792)<0.01);
+            const response = await context.request.get(base+info.src); assert.equal(response.status(),200);
+            assert.equal(hash(await response.body()),entry.assets[0].sha256);
+            const labelCssPx = 22*info.width/360;
+            if(width<768) assert(labelCssPx>=14);
+            record.restoredQuestionImage={...info,labelCssPx,http:200,sha256:entry.assets[0].sha256};
+            await dialog.locator('.q-inner').evaluate(el=>{el.scrollTop=0});
+            await page.screenshot({path:path.join(out, `${width}-${id}-restored.png`)});
+          }
           if (width === 390) await page.screenshot({path:path.join(out, `${width}-${id}.png`)});
         }
         await dialog.locator('[data-reveal]').click();

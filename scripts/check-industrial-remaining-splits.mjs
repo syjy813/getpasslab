@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {readFile,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import yaml from 'js-yaml';
-import {reviewedChapterHash,restoreQuestionSourceAssetRefs} from './reviewed-chapter-hash.mjs';
+import {reviewedChapterHash,restoreQuestionSourceAssetRefs,reviewedAssetAdditions} from './reviewed-chapter-hash.mjs';
 const earthReview=JSON.parse(await readFile('docs/audits/2026-10-05-earth-retaining-structure/review.json','utf8'));
 
 const audit='docs/audits/2026-10-05-industrial-remaining-splits';
@@ -15,7 +15,7 @@ async function walk(dir){const files=[];for(const e of await readdir(dir,{withFi
 assert.equal(review.families.length,7);assert.equal(review.chapters.length,17);
 assert.equal(review.chapters.filter(c=>c.newFile).length,10);
 const actualFiles=[...await walk('src'),...await walk('public')];
-assert.deepEqual(actualFiles.sort(),[...Object.keys(baseline.protectedFiles),...review.chapters.filter(c=>c.newFile).map(c=>c.path),...earthReview.assets.map(c=>c.path)].sort());
+assert.deepEqual(actualFiles.sort(),[...Object.keys(baseline.protectedFiles),...review.chapters.filter(c=>c.newFile).map(c=>c.path),...earthReview.assets.map(c=>c.path),...reviewedAssetAdditions.map(c=>c.path)].sort());
 for(const [file,original] of Object.entries(baseline.protectedFiles)){
  const row=review.chapters.find(c=>c.path===file);if(row)assert.equal(row.originalSha256,original);
  const actual=hash(await readFile(file)),expected=row?.sha256??original;
@@ -23,7 +23,7 @@ for(const [file,original] of Object.entries(baseline.protectedFiles)){
 }
 const canonical=new Map(JSON.parse(await readFile('src/data/questions/industrial-safety.json','utf8')).map(q=>[q.id,q]));
 assert.equal(hash(await readFile('src/data/questions/industrial-safety.json')),reviewedChapterHash('src/data/questions/industrial-safety.json', baseline.canonicalSha256));
-assert.equal(hash(await readFile('src/data/question-assets/industrial-safety.json')),baseline.questionAssetsSha256);
+assert.equal(hash(await readFile('src/data/question-assets/industrial-safety.json')),reviewedChapterHash('src/data/question-assets/industrial-safety.json', baseline.questionAssetsSha256));
 const questionReview=JSON.parse(await readFile(`${audit}/question-source-review.json`,'utf8'));
 assert.equal(questionReview.length,54);
 const assigned=review.chapters.flatMap(c=>c.questions);assert.equal(assigned.length,54);assert.equal(new Set(assigned).size,54);

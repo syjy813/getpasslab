@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
-import { restoreDisplayReview, reviewedChapterHash } from './reviewed-chapter-hash.mjs';
+import { restoreDisplayReview, reviewedChapterHash, reviewedAssetAdditions } from './reviewed-chapter-hash.mjs';
 
 const sourceReview = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-question-source-repair/review.json', 'utf8'));
 
@@ -19,11 +19,12 @@ async function walk(dir) {
   }
   return files;
 }
-assert.deepEqual([...await walk('src'), ...await walk('public')].sort(), [...Object.keys(baseline.protectedFiles), ...review.assets.map(a => a.path)].sort());
+assert.deepEqual([...await walk('src'), ...await walk('public')].sort(), [...Object.keys(baseline.protectedFiles), ...review.assets.map(a => a.path), ...reviewedAssetAdditions.map(a => a.path)].sort());
 for (const [file, original] of Object.entries(baseline.protectedFiles)) {
   const row = [...sourceReview.chapters, ...sourceReview.canonicalFiles, ...review.chapters, ...review.displayFiles].find(row => row.path === file);
   if (row && !sourceReview.chapters.includes(row)) assert.equal(row.originalSha256, original);
-  assert.equal(hash(await readFile(file)), row?.sha256 ?? original, `${file}: only reviewed changes permitted`);
+  const actual = hash(await readFile(file)), expected = row?.sha256 ?? original;
+  if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: only reviewed changes permitted`);
 }
 for (const row of review.displayFiles) await restoreDisplayReview(row.path, await readFile(row.path, 'utf8'), `${audit}/review.json`);
 const source = await readFile(chapter.path, 'utf8');

@@ -1,0 +1,1343 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "startedAt": "2026-10-06T13:07:08.072Z",
+  "device": "Chromium viewport emulation",
+  "exactHtmlMatches": 3,
+  "viewports": [
+    {
+      "width": 320,
+      "pages": [
+        {
+          "slug": "fta-symbols",
+          "layout": {
+            "width": 320,
+            "scroll": 320,
+            "mathErrors": 0,
+            "cells": [
+              {
+                "font": 13,
+                "width": 76,
+                "scroll": 76
+              },
+              {
+                "font": 13,
+                "width": 194,
+                "scroll": 194
+              },
+              {
+                "font": 13,
+                "width": 76,
+                "scroll": 76
+              },
+              {
+                "font": 13,
+                "width": 194,
+                "scroll": 194
+              },
+              {
+                "font": 13,
+                "width": 76,
+                "scroll": 76
+              },
+              {
+                "font": 13,
+                "width": 194,
+                "scroll": 194
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 121,
+                "scroll": 121
+              },
+              {
+                "font": 13,
+                "width": 103,
+                "scroll": 103
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 121,
+                "scroll": 121
+              },
+              {
+                "font": 13,
+                "width": 103,
+                "scroll": 103
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 121,
+                "scroll": 121
+              },
+              {
+                "font": 13,
+                "width": 103,
+                "scroll": 103
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 121,
+                "scroll": 121
+              },
+              {
+                "font": 13,
+                "width": 103,
+                "scroll": 103
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 121,
+                "scroll": 121
+              },
+              {
+                "font": 13,
+                "width": 103,
+                "scroll": 103
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 121,
+                "scroll": 121
+              },
+              {
+                "font": 13,
+                "width": 103,
+                "scroll": 103
+              }
+            ]
+          },
+          "figures": [],
+          "dialogs": [],
+          "passed": true
+        },
+        {
+          "slug": "fta-event-symbols",
+          "layout": {
+            "width": 320,
+            "scroll": 320,
+            "mathErrors": 0,
+            "cells": [
+              {
+                "font": 13,
+                "width": 58,
+                "scroll": 58
+              },
+              {
+                "font": 13,
+                "width": 79,
+                "scroll": 79
+              },
+              {
+                "font": 13,
+                "width": 133,
+                "scroll": 133
+              },
+              {
+                "font": 13,
+                "width": 58,
+                "scroll": 58
+              },
+              {
+                "font": 13,
+                "width": 79,
+                "scroll": 79
+              },
+              {
+                "font": 13,
+                "width": 133,
+                "scroll": 133
+              },
+              {
+                "font": 13,
+                "width": 58,
+                "scroll": 58
+              },
+              {
+                "font": 13,
+                "width": 79,
+                "scroll": 79
+              },
+              {
+                "font": 13,
+                "width": 133,
+                "scroll": 133
+              },
+              {
+                "font": 13,
+                "width": 58,
+                "scroll": 58
+              },
+              {
+                "font": 13,
+                "width": 79,
+                "scroll": 79
+              },
+              {
+                "font": 13,
+                "width": 133,
+                "scroll": 133
+              },
+              {
+                "font": 13,
+                "width": 58,
+                "scroll": 58
+              },
+              {
+                "font": 13,
+                "width": 79,
+                "scroll": 79
+              },
+              {
+                "font": 13,
+                "width": 133,
+                "scroll": 133
+              }
+            ]
+          },
+          "figures": [
+            {
+              "src": "/images/chapters/fta-symbols/fta-event-symbols.svg",
+              "alt": "사각형 결함사상, 원 기본사상, 집 모양 통상사상, 마름모 생략사상을 비교한 그림",
+              "naturalWidth": 360,
+              "naturalHeight": 340,
+              "width": 246,
+              "coreLabelCssPx": 13.666666666666666,
+              "zoom": true
+            }
+          ],
+          "dialogs": [
+            {
+              "id": "20220424_030",
+              "answer": 4,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20210814_033",
+              "answer": 2,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20210515_032",
+              "answer": 3,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20180304_036",
+              "answer": 3,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20210515_039",
+              "answer": 2,
+              "image": false,
+              "passed": true
+            }
+          ],
+          "restoredQuestionImage": {
+            "src": "/_astro/20180304_036.Q5RQbhbT.png",
+            "alt": "2018년 3월 시험 · 36번 문항의 표·수식·도형",
+            "width": 232,
+            "height": 255.1875,
+            "naturalWidth": 720,
+            "naturalHeight": 792,
+            "labelCssPx": 14.177777777777777,
+            "http": 200,
+            "sha256": "447884f3c58d16ced9e160e4a484238345a639c7f0f7ee0a55159e5d7013223f"
+          },
+          "passed": true
+        },
+        {
+          "slug": "fta-logic-gates",
+          "layout": {
+            "width": 320,
+            "scroll": 320,
+            "mathErrors": 0,
+            "cells": [
+              {
+                "font": 13,
+                "width": 81,
+                "scroll": 81
+              },
+              {
+                "font": 13,
+                "width": 190,
+                "scroll": 190
+              },
+              {
+                "font": 13,
+                "width": 81,
+                "scroll": 81
+              },
+              {
+                "font": 13,
+                "width": 190,
+                "scroll": 190
+              },
+              {
+                "font": 13,
+                "width": 81,
+                "scroll": 81
+              },
+              {
+                "font": 13,
+                "width": 190,
+                "scroll": 190
+              },
+              {
+                "font": 13,
+                "width": 81,
+                "scroll": 81
+              },
+              {
+                "font": 13,
+                "width": 190,
+                "scroll": 190
+              },
+              {
+                "font": 13,
+                "width": 81,
+                "scroll": 81
+              },
+              {
+                "font": 13,
+                "width": 190,
+                "scroll": 190
+              },
+              {
+                "font": 13,
+                "width": 87,
+                "scroll": 87
+              },
+              {
+                "font": 13,
+                "width": 179,
+                "scroll": 179
+              },
+              {
+                "font": 13,
+                "width": 87,
+                "scroll": 87
+              },
+              {
+                "font": 13,
+                "width": 179,
+                "scroll": 179
+              },
+              {
+                "font": 13,
+                "width": 87,
+                "scroll": 87
+              },
+              {
+                "font": 13,
+                "width": 179,
+                "scroll": 179
+              },
+              {
+                "font": 13,
+                "width": 87,
+                "scroll": 87
+              },
+              {
+                "font": 13,
+                "width": 179,
+                "scroll": 179
+              }
+            ]
+          },
+          "figures": [
+            {
+              "src": "/images/chapters/fta-symbols/fta-logic-gates.svg",
+              "alt": "두 입력을 연결한 AND와 OR, 한 입력과 옆 조건 P를 가진 육각형 억제 게이트를 비교한 그림",
+              "naturalWidth": 360,
+              "naturalHeight": 400,
+              "width": 246,
+              "coreLabelCssPx": 13.666666666666666,
+              "zoom": true
+            }
+          ],
+          "dialogs": [
+            {
+              "id": "20190303_023",
+              "answer": 2,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20180428_029",
+              "answer": 1,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20220305_037",
+              "answer": 1,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20180819_038",
+              "answer": 1,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20190804_036",
+              "answer": 2,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20200926_021",
+              "answer": 3,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20190427_037",
+              "answer": 2,
+              "image": false,
+              "passed": true
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "navigation": [
+        {
+          "child": "fta-event-symbols",
+          "roundTrip": true
+        },
+        {
+          "child": "fta-logic-gates",
+          "roundTrip": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "pages": [
+        {
+          "slug": "fta-symbols",
+          "layout": {
+            "width": 390,
+            "scroll": 390,
+            "mathErrors": 0,
+            "cells": [
+              {
+                "font": 13,
+                "width": 81,
+                "scroll": 81
+              },
+              {
+                "font": 13,
+                "width": 259,
+                "scroll": 259
+              },
+              {
+                "font": 13,
+                "width": 81,
+                "scroll": 81
+              },
+              {
+                "font": 13,
+                "width": 259,
+                "scroll": 259
+              },
+              {
+                "font": 13,
+                "width": 81,
+                "scroll": 81
+              },
+              {
+                "font": 13,
+                "width": 259,
+                "scroll": 259
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 158,
+                "scroll": 158
+              },
+              {
+                "font": 13,
+                "width": 136,
+                "scroll": 136
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 158,
+                "scroll": 158
+              },
+              {
+                "font": 13,
+                "width": 136,
+                "scroll": 136
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 158,
+                "scroll": 158
+              },
+              {
+                "font": 13,
+                "width": 136,
+                "scroll": 136
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 158,
+                "scroll": 158
+              },
+              {
+                "font": 13,
+                "width": 136,
+                "scroll": 136
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 158,
+                "scroll": 158
+              },
+              {
+                "font": 13,
+                "width": 136,
+                "scroll": 136
+              },
+              {
+                "font": 13,
+                "width": 46,
+                "scroll": 46
+              },
+              {
+                "font": 13,
+                "width": 158,
+                "scroll": 158
+              },
+              {
+                "font": 13,
+                "width": 136,
+                "scroll": 136
+              }
+            ]
+          },
+          "figures": [],
+          "dialogs": [],
+          "passed": true
+        },
+        {
+          "slug": "fta-event-symbols",
+          "layout": {
+            "width": 390,
+            "scroll": 390,
+            "mathErrors": 0,
+            "cells": [
+              {
+                "font": 13,
+                "width": 58,
+                "scroll": 58
+              },
+              {
+                "font": 13,
+                "width": 79,
+                "scroll": 79
+              },
+              {
+                "font": 13,
+                "width": 203,
+                "scroll": 203
+              },
+              {
+                "font": 13,
+                "width": 58,
+                "scroll": 58
+              },
+              {
+                "font": 13,
+                "width": 79,
+                "scroll": 79
+              },
+              {
+                "font": 13,
+                "width": 203,
+                "scroll": 203
+              },
+              {
+                "font": 13,
+                "width": 58,
+                "scroll": 58
+              },
+              {
+                "font": 13,
+                "width": 79,
+                "scroll": 79
+              },
+              {
+                "font": 13,
+                "width": 203,
+                "scroll": 203
+              },
+              {
+                "font": 13,
+                "width": 58,
+                "scroll": 58
+              },
+              {
+                "font": 13,
+                "width": 79,
+                "scroll": 79
+              },
+              {
+                "font": 13,
+                "width": 203,
+                "scroll": 203
+              },
+              {
+                "font": 13,
+                "width": 58,
+                "scroll": 58
+              },
+              {
+                "font": 13,
+                "width": 79,
+                "scroll": 79
+              },
+              {
+                "font": 13,
+                "width": 203,
+                "scroll": 203
+              }
+            ]
+          },
+          "figures": [
+            {
+              "src": "/images/chapters/fta-symbols/fta-event-symbols.svg",
+              "alt": "사각형 결함사상, 원 기본사상, 집 모양 통상사상, 마름모 생략사상을 비교한 그림",
+              "naturalWidth": 360,
+              "naturalHeight": 340,
+              "width": 316,
+              "coreLabelCssPx": 17.555555555555557,
+              "zoom": true
+            }
+          ],
+          "dialogs": [
+            {
+              "id": "20220424_030",
+              "answer": 4,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20210814_033",
+              "answer": 2,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20210515_032",
+              "answer": 3,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20180304_036",
+              "answer": 3,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20210515_039",
+              "answer": 2,
+              "image": false,
+              "passed": true
+            }
+          ],
+          "restoredQuestionImage": {
+            "src": "/_astro/20180304_036.Q5RQbhbT.png",
+            "alt": "2018년 3월 시험 · 36번 문항의 표·수식·도형",
+            "width": 302,
+            "height": 332.1875,
+            "naturalWidth": 720,
+            "naturalHeight": 792,
+            "labelCssPx": 18.455555555555556,
+            "http": 200,
+            "sha256": "447884f3c58d16ced9e160e4a484238345a639c7f0f7ee0a55159e5d7013223f"
+          },
+          "passed": true
+        },
+        {
+          "slug": "fta-logic-gates",
+          "layout": {
+            "width": 390,
+            "scroll": 390,
+            "mathErrors": 0,
+            "cells": [
+              {
+                "font": 13,
+                "width": 88,
+                "scroll": 88
+              },
+              {
+                "font": 13,
+                "width": 252,
+                "scroll": 252
+              },
+              {
+                "font": 13,
+                "width": 88,
+                "scroll": 88
+              },
+              {
+                "font": 13,
+                "width": 252,
+                "scroll": 252
+              },
+              {
+                "font": 13,
+                "width": 88,
+                "scroll": 88
+              },
+              {
+                "font": 13,
+                "width": 252,
+                "scroll": 252
+              },
+              {
+                "font": 13,
+                "width": 88,
+                "scroll": 88
+              },
+              {
+                "font": 13,
+                "width": 252,
+                "scroll": 252
+              },
+              {
+                "font": 13,
+                "width": 88,
+                "scroll": 88
+              },
+              {
+                "font": 13,
+                "width": 252,
+                "scroll": 252
+              },
+              {
+                "font": 13,
+                "width": 87,
+                "scroll": 87
+              },
+              {
+                "font": 13,
+                "width": 179,
+                "scroll": 179
+              },
+              {
+                "font": 13,
+                "width": 87,
+                "scroll": 87
+              },
+              {
+                "font": 13,
+                "width": 179,
+                "scroll": 179
+              },
+              {
+                "font": 13,
+                "width": 87,
+                "scroll": 87
+              },
+              {
+                "font": 13,
+                "width": 179,
+                "scroll": 179
+              },
+              {
+                "font": 13,
+                "width": 87,
+                "scroll": 87
+              },
+              {
+                "font": 13,
+                "width": 179,
+                "scroll": 179
+              }
+            ]
+          },
+          "figures": [
+            {
+              "src": "/images/chapters/fta-symbols/fta-logic-gates.svg",
+              "alt": "두 입력을 연결한 AND와 OR, 한 입력과 옆 조건 P를 가진 육각형 억제 게이트를 비교한 그림",
+              "naturalWidth": 360,
+              "naturalHeight": 400,
+              "width": 316,
+              "coreLabelCssPx": 17.555555555555557,
+              "zoom": true
+            }
+          ],
+          "dialogs": [
+            {
+              "id": "20190303_023",
+              "answer": 2,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20180428_029",
+              "answer": 1,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20220305_037",
+              "answer": 1,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20180819_038",
+              "answer": 1,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20190804_036",
+              "answer": 2,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20200926_021",
+              "answer": 3,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20190427_037",
+              "answer": 2,
+              "image": false,
+              "passed": true
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "navigation": [
+        {
+          "child": "fta-event-symbols",
+          "roundTrip": true
+        },
+        {
+          "child": "fta-logic-gates",
+          "roundTrip": true
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "pages": [
+        {
+          "slug": "fta-symbols",
+          "layout": {
+            "width": 1440,
+            "scroll": 1440,
+            "mathErrors": 0,
+            "cells": [
+              {
+                "font": 14,
+                "width": 195,
+                "scroll": 195
+              },
+              {
+                "font": 14,
+                "width": 683,
+                "scroll": 683
+              },
+              {
+                "font": 14,
+                "width": 195,
+                "scroll": 195
+              },
+              {
+                "font": 14,
+                "width": 683,
+                "scroll": 683
+              },
+              {
+                "font": 14,
+                "width": 195,
+                "scroll": 195
+              },
+              {
+                "font": 14,
+                "width": 683,
+                "scroll": 683
+              },
+              {
+                "font": 14,
+                "width": 96,
+                "scroll": 96
+              },
+              {
+                "font": 14,
+                "width": 418,
+                "scroll": 418
+              },
+              {
+                "font": 14,
+                "width": 365,
+                "scroll": 365
+              },
+              {
+                "font": 14,
+                "width": 96,
+                "scroll": 96
+              },
+              {
+                "font": 14,
+                "width": 418,
+                "scroll": 418
+              },
+              {
+                "font": 14,
+                "width": 365,
+                "scroll": 365
+              },
+              {
+                "font": 14,
+                "width": 96,
+                "scroll": 96
+              },
+              {
+                "font": 14,
+                "width": 418,
+                "scroll": 418
+              },
+              {
+                "font": 14,
+                "width": 365,
+                "scroll": 365
+              },
+              {
+                "font": 14,
+                "width": 96,
+                "scroll": 96
+              },
+              {
+                "font": 14,
+                "width": 418,
+                "scroll": 418
+              },
+              {
+                "font": 14,
+                "width": 365,
+                "scroll": 365
+              },
+              {
+                "font": 14,
+                "width": 96,
+                "scroll": 96
+              },
+              {
+                "font": 14,
+                "width": 418,
+                "scroll": 418
+              },
+              {
+                "font": 14,
+                "width": 365,
+                "scroll": 365
+              },
+              {
+                "font": 14,
+                "width": 96,
+                "scroll": 96
+              },
+              {
+                "font": 14,
+                "width": 418,
+                "scroll": 418
+              },
+              {
+                "font": 14,
+                "width": 365,
+                "scroll": 365
+              }
+            ]
+          },
+          "figures": [],
+          "dialogs": [],
+          "passed": true
+        },
+        {
+          "slug": "fta-event-symbols",
+          "layout": {
+            "width": 1440,
+            "scroll": 1440,
+            "mathErrors": 0,
+            "cells": [
+              {
+                "font": 14,
+                "width": 105,
+                "scroll": 105
+              },
+              {
+                "font": 14,
+                "width": 138,
+                "scroll": 138
+              },
+              {
+                "font": 14,
+                "width": 636,
+                "scroll": 636
+              },
+              {
+                "font": 14,
+                "width": 105,
+                "scroll": 105
+              },
+              {
+                "font": 14,
+                "width": 138,
+                "scroll": 138
+              },
+              {
+                "font": 14,
+                "width": 636,
+                "scroll": 636
+              },
+              {
+                "font": 14,
+                "width": 105,
+                "scroll": 105
+              },
+              {
+                "font": 14,
+                "width": 138,
+                "scroll": 138
+              },
+              {
+                "font": 14,
+                "width": 636,
+                "scroll": 636
+              },
+              {
+                "font": 14,
+                "width": 105,
+                "scroll": 105
+              },
+              {
+                "font": 14,
+                "width": 138,
+                "scroll": 138
+              },
+              {
+                "font": 14,
+                "width": 636,
+                "scroll": 636
+              },
+              {
+                "font": 14,
+                "width": 105,
+                "scroll": 105
+              },
+              {
+                "font": 14,
+                "width": 138,
+                "scroll": 138
+              },
+              {
+                "font": 14,
+                "width": 636,
+                "scroll": 636
+              }
+            ]
+          },
+          "figures": [
+            {
+              "src": "/images/chapters/fta-symbols/fta-event-symbols.svg",
+              "alt": "사각형 결함사상, 원 기본사상, 집 모양 통상사상, 마름모 생략사상을 비교한 그림",
+              "naturalWidth": 360,
+              "naturalHeight": 340,
+              "width": 614,
+              "coreLabelCssPx": 34.111111111111114,
+              "zoom": true
+            }
+          ],
+          "dialogs": [
+            {
+              "id": "20220424_030",
+              "answer": 4,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20210814_033",
+              "answer": 2,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20210515_032",
+              "answer": 3,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20180304_036",
+              "answer": 3,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20210515_039",
+              "answer": 2,
+              "image": false,
+              "passed": true
+            }
+          ],
+          "restoredQuestionImage": {
+            "src": "/_astro/20180304_036.Q5RQbhbT.png",
+            "alt": "2018년 3월 시험 · 36번 문항의 표·수식·도형",
+            "width": 381.8125,
+            "height": 420,
+            "naturalWidth": 720,
+            "naturalHeight": 792,
+            "labelCssPx": 23.33298611111111,
+            "http": 200,
+            "sha256": "447884f3c58d16ced9e160e4a484238345a639c7f0f7ee0a55159e5d7013223f"
+          },
+          "passed": true
+        },
+        {
+          "slug": "fta-logic-gates",
+          "layout": {
+            "width": 1440,
+            "scroll": 1440,
+            "mathErrors": 0,
+            "cells": [
+              {
+                "font": 14,
+                "width": 218,
+                "scroll": 218
+              },
+              {
+                "font": 14,
+                "width": 660,
+                "scroll": 660
+              },
+              {
+                "font": 14,
+                "width": 218,
+                "scroll": 218
+              },
+              {
+                "font": 14,
+                "width": 660,
+                "scroll": 660
+              },
+              {
+                "font": 14,
+                "width": 218,
+                "scroll": 218
+              },
+              {
+                "font": 14,
+                "width": 660,
+                "scroll": 660
+              },
+              {
+                "font": 14,
+                "width": 218,
+                "scroll": 218
+              },
+              {
+                "font": 14,
+                "width": 660,
+                "scroll": 660
+              },
+              {
+                "font": 14,
+                "width": 218,
+                "scroll": 218
+              },
+              {
+                "font": 14,
+                "width": 660,
+                "scroll": 660
+              },
+              {
+                "font": 14,
+                "width": 283,
+                "scroll": 283
+              },
+              {
+                "font": 14,
+                "width": 595,
+                "scroll": 595
+              },
+              {
+                "font": 14,
+                "width": 283,
+                "scroll": 283
+              },
+              {
+                "font": 14,
+                "width": 595,
+                "scroll": 595
+              },
+              {
+                "font": 14,
+                "width": 283,
+                "scroll": 283
+              },
+              {
+                "font": 14,
+                "width": 595,
+                "scroll": 595
+              },
+              {
+                "font": 14,
+                "width": 283,
+                "scroll": 283
+              },
+              {
+                "font": 14,
+                "width": 595,
+                "scroll": 595
+              }
+            ]
+          },
+          "figures": [
+            {
+              "src": "/images/chapters/fta-symbols/fta-logic-gates.svg",
+              "alt": "두 입력을 연결한 AND와 OR, 한 입력과 옆 조건 P를 가진 육각형 억제 게이트를 비교한 그림",
+              "naturalWidth": 360,
+              "naturalHeight": 400,
+              "width": 614,
+              "coreLabelCssPx": 34.111111111111114,
+              "zoom": true
+            }
+          ],
+          "dialogs": [
+            {
+              "id": "20190303_023",
+              "answer": 2,
+              "image": true,
+              "passed": true
+            },
+            {
+              "id": "20180428_029",
+              "answer": 1,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20220305_037",
+              "answer": 1,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20180819_038",
+              "answer": 1,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20190804_036",
+              "answer": 2,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20200926_021",
+              "answer": 3,
+              "image": false,
+              "passed": true
+            },
+            {
+              "id": "20190427_037",
+              "answer": 2,
+              "image": false,
+              "passed": true
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "navigation": [
+        {
+          "child": "fta-event-symbols",
+          "roundTrip": true
+        },
+        {
+          "child": "fta-logic-gates",
+          "roundTrip": true
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "finishedAt": "2026-10-06T13:07:21.256Z"
+}

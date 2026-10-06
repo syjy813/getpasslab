@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
-import { restoreDisplayReview, reviewedChapterHash, restoreQuestionSourceAssetRefs } from './reviewed-chapter-hash.mjs';
+import { restoreDisplayReview, reviewedChapterHash, restoreQuestionSourceAssetRefs, reviewedAssetAdditions } from './reviewed-chapter-hash.mjs';
 
 const sourceReview = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-question-source-repair/review.json', 'utf8'));
 
@@ -13,7 +13,7 @@ const evidence = JSON.parse(await readFile(`${audit}/source-verification.json`, 
 const ftaReview = JSON.parse(await readFile('docs/audits/2026-10-05-fta-symbols-split/review.json', 'utf8'));
 const batchReview = JSON.parse(await readFile('docs/audits/2026-10-05-industrial-remaining-splits/review.json', 'utf8'));
 const earthReview = JSON.parse(await readFile('docs/audits/2026-10-05-earth-retaining-structure/review.json', 'utf8'));
-const addedFiles = [...ftaReview.chapters, ...ftaReview.displayFiles, ...batchReview.chapters, ...earthReview.assets].filter(row => row.newFile);
+const addedFiles = [...ftaReview.chapters, ...ftaReview.displayFiles, ...batchReview.chapters, ...earthReview.assets, ...reviewedAssetAdditions].filter(row => row.newFile);
 const publicPages = evidence.publicPages.map(row => sourceReview.chapters.find(later => later.url === row.url) ?? earthReview.chapters.find(later => later.url === row.url) ?? batchReview.chapters.find(later => later.url === row.url) ?? ftaReview.chapters.find(later => later.url === row.url) ?? row).concat([...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile));
 const hash = value => createHash('sha256').update(value).digest('hex');
 async function walk(dir) {

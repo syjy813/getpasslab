@@ -1,0 +1,53 @@
+{
+  "chapters": [],
+  "assetRegistries": [
+    {
+      "path": "src/data/question-assets/industrial-safety.json",
+      "changed": true,
+      "originalSha256": "f619421de04e4ff972c6a02addfe9706948cf1d5845e72b678928285a5d0a25a",
+      "sha256": "4cb0217f159562aba5b3bd4af4ec0bc1fc543aa92e97259ee02394eb3e2e6c6e",
+      "addedEntry": {
+        "id": "20180304_036",
+        "asset_path": "src/assets/questions/industrial-safety/20180304_036.png",
+        "width": 720,
+        "height": 792,
+        "alt": "FTA 논리 기호와 명칭의 네 선택지. ① 마름모: 전이기호, ② 사각형: 기본사상, ③ 집 모양: 통상사상, ④ 원: 결함사상. 원본 기호 유지, 선택지 세로 재배치"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "path": "src/assets/questions/industrial-safety/20180304_036.png",
+      "newFile": true,
+      "sha256": "447884f3c58d16ced9e160e4a484238345a639c7f0f7ee0a55159e5d7013223f",
+      "width": 720,
+      "height": 792
+    }
+  ],
+  "articleEdits": [
+    {
+      "url": "https://getpasslab.co.kr/industrial-safety/written/ergonomics/fta-event-symbols/",
+      "before": "<button class=\"round-badge\" data-open=\"20180304_036\" data-deferred-question=\"true\" aria-haspopup=\"dialog\" aria-controls=\"deferred-question-dialog\">",
+      "after": "<button class=\"round-badge\" data-open=\"20180304_036\" data-deferred-question=\"true\" data-question-image-src=\"/_astro/20180304_036.Q5RQbhbT.png\" data-question-image-width=\"720\" data-question-image-height=\"792\" aria-haspopup=\"dialog\" aria-controls=\"deferred-question-dialog\">",
+      "originalArticleSha256": "d2bcd8b336863c1afc4ec8cf7dd7241baa1dfbc9a21c8396d7ac84bb35a15913",
+      "articleSha256": "a647bcf8148415224a16ee96a7640ad0e85b032304bd8fbdee95f7ca6042edd8"
+    }
+  ],
+  "source": {
+    "publisher": "전자문제집 CBT",
+    "retrieval": "CBT 발행 PDF 재게시본",
+    "landingUrl": "https://studyupgrade.tistory.com/entry/2023년-산업안전기사-필기-대비-과년도-총-망라-2",
+    "pdfName": "산업안전기사20180304(해설집).pdf",
+    "pdfSha256": "bbe16026d14349f56a7ba7732179301ab0580167d6097c3d7207bb38b1edad7f",
+    "questionPage": 7,
+    "answerPage": 21,
+    "answer": 3,
+    "officialQnetVerified": false,
+    "symbolImageSha256": [
+      "3dcbd2a0da051e8290186a50ef00b3e7370d79340b0db78eb209ee7977e51704",
+      "718deb6fdc5576074c69ac2186b363adc489e62474fd1e3298dbfc215dd294de",
+      "8698d4c517ecedbeaf268aefc3fb3e7907e4d6b2eda0f31bb29185d5de8158fa",
+      "7da2ae99b75a6fd547f67623ecf0ff53bc1b87c9d94f54b61b6927b8a7391624"
+    ]
+  }
+}
