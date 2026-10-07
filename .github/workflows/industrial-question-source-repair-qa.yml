@@ -10,6 +10,8 @@ on:
       - 'scripts/*industrial-20190804-review*'
       - 'scripts/read-before-20190804-review.mjs'
       - 'scripts/read-before-clam-shell.mjs'
+      - 'scripts/*industrial-unassigned-links*'
+      - 'docs/audits/2026-10-07-industrial-unassigned-links/**'
       - 'scripts/*clam-shell-chapter*'
       - 'docs/audits/2026-10-07-clam-shell-chapter/**'
       - 'scripts/current-20190804-review.cjs'
@@ -39,6 +41,7 @@ jobs:
       - run: node scripts/check-industrial-question-source-repair.mjs
       - run: node scripts/check-industrial-20190804-review.mjs
       - run: node scripts/check-clam-shell-chapter.mjs
+      - run: node scripts/check-industrial-unassigned-links.mjs
       - name: Prepare browser
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
@@ -61,6 +64,7 @@ jobs:
           node scripts/qa-industrial-question-source-repair.cjs
           node scripts/qa-industrial-20190804-review.cjs
           node scripts/qa-clam-shell-chapter.cjs
+          node scripts/qa-industrial-unassigned-links.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -69,4 +73,5 @@ jobs:
             qa-results/industrial-question-source-repair/
             qa-results/industrial-20190804-review/
             qa-results/clam-shell-chapter/
+            qa-results/industrial-unassigned-links/
           retention-days: 14

@@ -3,6 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const {createHash}=require('node:crypto'),{pathToFileURL}=require('node:url');
 const audit='docs/audits/2026-10-06-industrial-20190804-full-review';
 const review=JSON.parse(fs.readFileSync(audit+'/review.json'));
+review.chapters=require('./current-20190804-review.cjs').chapters(review.chapters);
 const questions=JSON.parse(fs.readFileSync('src/data/questions/industrial-safety.json')).filter(q=>q.id.startsWith('20190804_')).sort((a,b)=>a.number-b.number);
 const registry=JSON.parse(fs.readFileSync('src/data/question-assets/industrial-safety.json'));
 const base=(process.env.QA_BASE_URL||'http://127.0.0.1:4321').replace(/\/$/,'');
