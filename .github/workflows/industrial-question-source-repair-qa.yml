@@ -12,6 +12,8 @@ on:
       - 'scripts/read-before-clam-shell.mjs'
       - 'scripts/*industrial-unassigned-links*'
       - 'scripts/*formwork-lateral-pressure*'
+      - 'scripts/*port-cargo-passages*'
+      - 'docs/audits/2026-10-07-port-cargo-passages/**'
       - 'docs/audits/2026-10-07-formwork-lateral-pressure/**'
       - 'docs/audits/2026-10-07-industrial-unassigned-links/**'
       - 'scripts/*clam-shell-chapter*'
@@ -45,6 +47,7 @@ jobs:
       - run: node scripts/check-clam-shell-chapter.mjs
       - run: node scripts/check-industrial-unassigned-links.mjs
       - run: node scripts/check-formwork-lateral-pressure.mjs
+      - run: node scripts/check-port-cargo-passages.mjs
       - name: Prepare browser
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
@@ -69,6 +72,7 @@ jobs:
           node scripts/qa-clam-shell-chapter.cjs
           node scripts/qa-industrial-unassigned-links.cjs
           node scripts/qa-formwork-lateral-pressure.cjs
+          node scripts/qa-port-cargo-passages.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -79,4 +83,5 @@ jobs:
             qa-results/clam-shell-chapter/
             qa-results/industrial-unassigned-links/
             qa-results/formwork-lateral-pressure/
+            qa-results/port-cargo-passages/
           retention-days: 14

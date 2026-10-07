@@ -11,6 +11,8 @@ on:
       - 'scripts/current-20190804-review.cjs'
       - 'scripts/read-before-industrial-unassigned-links.mjs'
       - 'scripts/*formwork-lateral-pressure*'
+      - 'scripts/*port-cargo-passages*'
+      - 'docs/audits/2026-10-07-port-cargo-passages/**'
       - 'docs/audits/2026-10-07-formwork-lateral-pressure/**'
       - 'docs/audits/2026-10-07-industrial-unassigned-links/**'
       - '.github/workflows/chapter-formula-style-qa.yml'

@@ -1,0 +1,35 @@
+{
+  "head": "b2e95245527cc321cc0a87005d94b0f49e480ff3",
+  "baselineAudits": [
+    "docs/audits/2026-10-07-clam-shell-chapter",
+    "docs/audits/2026-10-07-industrial-unassigned-links",
+    "docs/audits/2026-10-07-formwork-lateral-pressure"
+  ],
+  "before": {
+    "industrial": 260,
+    "all": 444,
+    "references": 1023
+  },
+  "after": {
+    "industrial": 261,
+    "all": 445,
+    "references": 1028
+  },
+  "chapter": {
+    "path": "src/content/chapters/construction/port-cargo-passages.md",
+    "slug": "port-cargo-passages",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/construction/port-cargo-passages/",
+    "articlePath": "dist/industrial-safety/written/construction/port-cargo-passages/index.html",
+    "certification": "industrial-safety",
+    "questions": [
+      "20210515_101",
+      "20190804_105",
+      "20190804_109",
+      "20190303_116",
+      "20180428_118"
+    ],
+    "sha256": "4b90b9b706d0ff3ae0845b7856fc9847165005dcf4d7757a3201b272d9266ff1",
+    "articleSha256": "6bcd4f69465beee73a3530ebffcd74658b8cf69a72693a59c4439768b42b0009"
+  },
+  "relatedArticleChanges": []
+}
