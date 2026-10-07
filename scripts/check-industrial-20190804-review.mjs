@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readdir} from 'node:fs/promises';
+import { readdir } from './read-before-formwork-lateral-pressure.mjs';
 import {readFile,publication} from './read-before-clam-shell.mjs';
 import {createHash} from 'node:crypto';
 import path from 'node:path';

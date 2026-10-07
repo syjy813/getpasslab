@@ -1,7 +1,7 @@
 import { readFile } from './read-before-20190804-review.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {readdir} from 'node:fs/promises';
+import { readdir } from './read-before-formwork-lateral-pressure.mjs';
 import path from 'node:path';
 import yaml from 'js-yaml';
 import {reviewedChapterHash,restoreQuestionSourceAssetRefs,reviewedAssetAdditions} from './reviewed-chapter-hash.mjs';

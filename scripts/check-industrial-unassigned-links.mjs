@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile, readdir } from 'node:fs/promises';
+import { readFile, readdir } from './read-before-formwork-lateral-pressure.mjs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import yaml from 'js-yaml';
@@ -73,4 +73,4 @@ for (const page of pages) {
   assert.deepEqual([...html.matchAll(/data-open="(\d{8}_\d{3})"/g)].map(m => m[1]), chapter.questions);
   assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
 }
-console.log(`[Current unassigned links] ${industrial} industrial / ${all} all chapters; ${references} primary references; 6 new links; 5 remaining unassigned; 725 source/assets protected; 440 other articles unchanged`);
+console.log(`[Historical release: Unassigned links] ${industrial} industrial / ${all} all chapters; ${references} primary references; 6 new links; 5 remaining unassigned; 725 source/assets protected; 440 other articles unchanged`);

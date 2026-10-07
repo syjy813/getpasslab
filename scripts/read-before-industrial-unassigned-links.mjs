@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile as readActualFile } from 'node:fs/promises';
+import { readFile as readActualFile } from './read-before-formwork-lateral-pressure.mjs';
 import { createHash } from 'node:crypto';
 
 // Only the exact six approved source/article revisions can be restored for
