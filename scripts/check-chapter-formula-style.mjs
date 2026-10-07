@@ -1,4 +1,5 @@
 import { readFile } from './read-before-20190804-review.mjs';
+import { publication } from './read-before-clam-shell.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readdir } from 'node:fs/promises';
@@ -41,7 +42,7 @@ for (const file of await walk('dist')) {
   const html = await readFile(file, 'utf8');
   if (html.includes('chapter-page') && /<article\b/.test(html)) actualRoutes.push(file.slice(4, -10));
 }
-assert.deepEqual(actualRoutes.sort(), publicPages.map(row => new URL(row.url).pathname).sort(), 'all public chapter routes preserved');
+assert.deepEqual(actualRoutes.sort(), [...publicPages.map(row => new URL(row.url).pathname), new URL(publication.chapter.url).pathname].sort(), 'all historical routes plus approved clamshell publication');
 for (const row of publicPages) {
   const html = await readFile(`dist${new URL(row.url).pathname}index.html`, 'utf8');
   const article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1];
