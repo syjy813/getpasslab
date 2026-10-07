@@ -1,0 +1,25 @@
+{
+  "chapter": {
+    "path": "src/content/chapters/construction/clam-shell.md",
+    "slug": "clam-shell",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/construction/clam-shell/",
+    "articlePath": "dist/industrial-safety/written/construction/clam-shell/index.html",
+    "certification": "industrial-safety",
+    "questions": [
+      "20190804_120"
+    ],
+    "sha256": "79ce73b5e343b52623a09a17e0d77ab8bcfe03d65a82718196d6feb715ad6a71",
+    "originalSha256": "159661ae4e42b3f32e1a5f8e3295f11e573b07d9bb3fa2aa71617094802813f6",
+    "originalFile": "docs/audits/2026-10-07-clam-shell-chapter/original-clam-shell.md",
+    "articleSha256": "7f07b124358f4b19e5c9be5d33342ec914f96d9aba24a9b66565e21a41831f44"
+  },
+  "relatedArticleChanges": [
+    {
+      "path": "dist/industrial-safety/written/construction/tower-crane-wind-limits/index.html",
+      "articleSha256": "f30e986eb0be6819e591b48b760a208d2048a58b22de2a5ab2a5e22af13e978b",
+      "sha256": "f0346a5a349deb70132c75411010ff5201ad2648959d1c616537524b268d1516",
+      "originalFile": "docs/audits/2026-10-07-clam-shell-chapter/tower-crane-wind-limits-original-article.json",
+      "insertedHtml": "<h2>관련 챕터</h2> <ul class=\"related-list\"> <li><a href=\"/industrial-safety/written/construction/clam-shell/\"><span class=\"rel-group\">건설 장비</span><span class=\"rel-title\">클램셸 (Clam Shell) 용도</span></a></li> </ul>  "
+    }
+  ]
+}

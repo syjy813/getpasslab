@@ -1,0 +1,52 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "startedAt": "2026-10-07T00:11:42.136Z",
+  "exactHtmlMatches": 3,
+  "viewports": [
+    {
+      "width": 320,
+      "layout": {
+        "viewport": 320,
+        "scroll": 320,
+        "h2Background": "rgb(239, 246, 255)",
+        "mathErrors": 0
+      },
+      "questionId": "20190804_120",
+      "answer": 4,
+      "resetAndEscape": true,
+      "tocAndRelatedRoundTrip": true,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "layout": {
+        "viewport": 390,
+        "scroll": 390,
+        "h2Background": "rgb(239, 246, 255)",
+        "mathErrors": 0
+      },
+      "questionId": "20190804_120",
+      "answer": 4,
+      "resetAndEscape": true,
+      "tocAndRelatedRoundTrip": true,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "h2Background": "rgb(239, 246, 255)",
+        "mathErrors": 0
+      },
+      "questionId": "20190804_120",
+      "answer": 4,
+      "resetAndEscape": true,
+      "tocAndRelatedRoundTrip": true,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "finishedAt": "2026-10-07T00:11:44.755Z"
+}

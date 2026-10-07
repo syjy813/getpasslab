@@ -1,4 +1,5 @@
 import { readFile } from './read-before-20190804-review.mjs';
+import { publication } from './read-before-clam-shell.mjs';
 import assert from 'node:assert/strict';
 import {readdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
@@ -28,7 +29,7 @@ const question=JSON.parse(await readFile('src/data/questions/industrial-safety.j
 assert.equal(question.answer,3);assert.deepEqual(question.choices,[': 전이기호',': 기본사상',': 통상사상',': 결함사상']);
 const paths=[];
 for(const file of await walk('dist'))if(file.endsWith('/index.html')){const s=await readFile(file,'utf8');if(/<article\b/.test(s))paths.push('https://getpasslab.co.kr/'+file.slice(5,-10))}
-assert.deepEqual(paths.sort(),baseline.publicPages.map(row=>row.url).sort());
+assert.deepEqual(paths.sort(),[...baseline.publicPages.map(row=>row.url),publication.chapter.url].sort());
 assert.equal(baseline.publicPages.length,445); // 442 public chapters + 3 existing other article pages.
 for(const row of baseline.publicPages){
  const html=await readFile(`dist${new URL(row.url).pathname}index.html`,'utf8'),article=html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1];

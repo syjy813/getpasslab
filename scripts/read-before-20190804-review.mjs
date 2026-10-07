@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile as readActualFile } from 'node:fs/promises';
+import { readFile as readActualFile } from './read-before-clam-shell.mjs';
 import { createHash } from 'node:crypto';
 
 // Historical release checks operate on their original snapshot. Undo only this

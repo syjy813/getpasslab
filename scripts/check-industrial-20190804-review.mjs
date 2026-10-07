@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import {readFile,readdir} from 'node:fs/promises';
+import {readdir} from 'node:fs/promises';
+import {readFile,publication} from './read-before-clam-shell.mjs';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import yaml from 'js-yaml';
@@ -31,7 +32,7 @@ assert.equal(published,258);assert.equal([...oldAllocations.values()].flat().len
 for(const [id,old] of oldAllocations){const move=review.allocations.find(r=>r.id===id);if(move){assert.deepEqual(old,[move.from]);assert.deepEqual(allocations.get(id)??[],move.to?[move.to]:[])}else assert.deepEqual(allocations.get(id),old,`${id}: assignment preserved`)}
 assert.deepEqual([...allocations.keys()].filter(id=>!oldAllocations.has(id)),[]);
 const routes=[];for(const file of await walk('dist'))if(file.endsWith('/index.html')&&/<article\b/.test(await readFile(file,'utf8')))routes.push(file);
-assert.deepEqual(routes.sort(),baseline.pages.map(r=>r.path).sort());
+assert.deepEqual(routes.sort(),[...baseline.pages.map(r=>r.path),publication.chapter.articlePath].sort());
 for(const row of baseline.pages){const html=await readFile(row.path,'utf8'),article=html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1],change=review.articles.find(r=>r.path===row.path);if(change){assert.equal(hash(article),change.articleSha256);assert.equal(hash(await readFile(change.originalFile)),row.articleSha256)}else{let restored=article;for(const edit of review.articleAssetReferenceEdits){assert(restored.split(edit.after).length<=2);restored=restored.replace(edit.after,edit.before)}assert.equal(hash(restored),row.articleSha256,`${row.url}: all other article bytes unchanged`)}}
 const loader=review.generatedLoader;let code=await readFile(`dist${loader.path}`,'utf8');assert.equal(hash(code),loader.sha256);for(const edit of loader.edits){assert.equal(code.split(edit.after).length,2);code=code.replace(edit.after,edit.before)}assert.equal(hash(code),loader.originalSha256);
 assert.equal(hash(await readFile(`dist${review.questionPayload.path}`)),review.questionPayload.sha256);

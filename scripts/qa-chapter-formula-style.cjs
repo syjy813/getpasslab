@@ -8,7 +8,8 @@ const ftaReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-05-fta-symbols
 const sourceReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-06-industrial-question-source-repair/review.json'));
 const batchReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-05-industrial-remaining-splits/review.json'));
 const reviewedPages = baselinePages.map(row => sourceReview.chapters.find(later => later.url === row.url) ?? batchReview.chapters.find(later => later.url === row.url) ?? ftaReview.chapters.find(later => later.url === row.url) ?? row).concat([...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile));
-const publicPages = require('./current-20190804-review.cjs').chapters(reviewedPages);
+const publication = JSON.parse(fs.readFileSync('docs/audits/2026-10-07-clam-shell-chapter/review.json'));
+const publicPages = require('./current-20190804-review.cjs').chapters(reviewedPages).concat(publication.chapter);
 const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/, '');
 const out = path.resolve('qa-results/chapter-formula-style');
 fs.mkdirSync(out, { recursive: true });
@@ -24,7 +25,7 @@ let browser;
     assert.equal(hash(Buffer.from(await response.arrayBuffer())), hash(fs.readFileSync('dist' + route + 'index.html')), `${route}: served HTML mismatch`);
     result.exactHtmlMatches++;
   }
-  browser = await chromium.launch();
+  browser = await chromium.launch({ executablePath: process.env.QA_BROWSER_EXECUTABLE });
   await Promise.all([320, 390, 1440].map(async width => {
     let current;
     const context = await browser.newContext({ viewport: { width, height: 844 }, isMobile: width < 768, hasTouch: width < 768 });
