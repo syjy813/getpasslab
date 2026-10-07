@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile as readActualFile, readdir as readActualDirectory } from 'node:fs/promises';
+import { readFile as readActualFile, readdir as readActualDirectory } from './read-before-port-cargo-passages.mjs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 
