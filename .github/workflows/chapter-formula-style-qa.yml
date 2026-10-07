@@ -8,6 +8,9 @@ on:
       - 'src/layouts/ChapterLayout.astro'
       - 'docs/audits/2026-10-05-all-chapter-gray-formulas/**'
       - 'scripts/*chapter-formula-style*'
+      - 'scripts/current-20190804-review.cjs'
+      - 'scripts/read-before-industrial-unassigned-links.mjs'
+      - 'docs/audits/2026-10-07-industrial-unassigned-links/**'
       - '.github/workflows/chapter-formula-style-qa.yml'
   workflow_run:
     workflows: ['Deploy to GitHub Pages']

@@ -18,7 +18,6 @@ questions:
 - '20180428_109'
 - '20190427_118'
 - '20210515_117'
-- '20190804_111'
 related:
 - stairs-landings
 - work-platform-standards

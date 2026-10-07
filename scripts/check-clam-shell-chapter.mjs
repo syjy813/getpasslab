@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import { readFile, readdir } from 'node:fs/promises';
+import { readdir } from 'node:fs/promises';
+import { readFile } from './read-before-industrial-unassigned-links.mjs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import yaml from 'js-yaml';
@@ -70,4 +71,4 @@ assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
 assert(html.includes(`href="${review.chapter.url}"`));
 const route = new URL(review.chapter.url).pathname;
 for (const file of ['dist/industrial-safety/written/construction/index.html', 'dist/sitemap-0.xml']) assert((await readFile(file, 'utf8')).includes(route));
-console.log(`[Clam shell publication] ${industrial} industrial / ${all} total chapters; ${references} primary references; one newly assigned original question; ${baseline.pages.length} prior articles preserved except ${review.relatedArticleChanges.length} exact related link addition`);
+console.log(`[Historical release: Clam shell publication] ${industrial} industrial / ${all} total chapters; ${references} primary references; one newly assigned original question; ${baseline.pages.length} prior articles preserved except ${review.relatedArticleChanges.length} exact related link addition`);

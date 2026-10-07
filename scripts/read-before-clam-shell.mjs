@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile as readActualFile } from 'node:fs/promises';
+import { readFile as readActualFile } from './read-before-industrial-unassigned-links.mjs';
 import { createHash } from 'node:crypto';
 
 // Restore the exact unpublished stub for historical release assertions. The

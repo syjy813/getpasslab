@@ -1,0 +1,206 @@
+{
+  "head": "22e57b360a492c69596a72bee590b8cf3c38214a",
+  "baselineAudit": "docs/audits/2026-10-07-clam-shell-chapter",
+  "chapters": [
+    {
+      "path": "src/content/chapters/mechanical/safety-factor.md",
+      "slug": "safety-factor",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/safety-factor/",
+      "questions": [
+        "20220424_049",
+        "20210814_049",
+        "20200606_055",
+        "20200926_042",
+        "20180304_055",
+        "20180819_059",
+        "20190804_103"
+      ],
+      "addedQuestion": "20190804_103",
+      "subject_id": 3,
+      "sha256": "39988f3ff71fe7806899a3c29b68ac4bfc7a4945a70298c4a63b7d680baf40dc",
+      "originalSha256": "c14d62e497b958e18279fc4642da8b69c5e2c9a7b916dbb9519eba8ded7af51f",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/safety-factor-original.md"
+    },
+    {
+      "path": "src/content/chapters/construction/safety-management-cost.md",
+      "slug": "safety-management-cost",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/safety-management-cost/",
+      "questions": [
+        "20220424_117",
+        "20220305_108",
+        "20180428_103",
+        "20210814_115",
+        "20180304_108",
+        "20210307_119",
+        "20200606_112",
+        "20200822_105",
+        "20190303_110",
+        "20200926_108",
+        "20180819_102",
+        "20190427_119",
+        "20190804_110"
+      ],
+      "addedQuestion": "20190804_110",
+      "subject_id": 6,
+      "sha256": "a7de4a93bab55fb00a570a4a6817f1d43ce6f7c2449f540b0f68fb7106650f6d",
+      "originalSha256": "c48b8896f98991d2288c0cd5e16da92f59d34d988ec0d1c95d66fd8762edb19d",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/safety-management-cost-original.md"
+    },
+    {
+      "path": "src/content/chapters/construction/temporary-passage-stairs.md",
+      "slug": "temporary-passage-stairs",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/temporary-passage-stairs/",
+      "questions": [
+        "20220424_115",
+        "20220305_120",
+        "20210307_105",
+        "20200606_114",
+        "20180428_109",
+        "20190427_118",
+        "20210515_117",
+        "20190804_111"
+      ],
+      "addedQuestion": "20190804_111",
+      "subject_id": 6,
+      "sha256": "c622e4ead5df12ccdee46b130f5f966ba9fac6ff2b3f4283d48318a9527b0faf",
+      "originalSha256": "11c139543d995a32d9a0c7f5c833ef13cddf8cc1ebdedee2b33462ff6804d041",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/temporary-passage-stairs-original.md"
+    },
+    {
+      "path": "src/content/chapters/construction/soil-collapse-prevention.md",
+      "slug": "soil-collapse-prevention",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/soil-collapse-prevention/",
+      "questions": [
+        "20220424_110",
+        "20210814_106",
+        "20210515_105",
+        "20210515_103",
+        "20200606_111",
+        "20190804_107",
+        "20190804_112"
+      ],
+      "addedQuestion": "20190804_112",
+      "subject_id": 6,
+      "sha256": "7552f6664ea647c5bedc63f0073cca6c4a83f721469bd7b5f4d4d292f168b02b",
+      "originalSha256": "836e0103e78fe7f300db5af427ba2f84f8573a0329b834522700f4c9ced86492",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/soil-collapse-prevention-original.md"
+    },
+    {
+      "path": "src/content/chapters/construction/safety-handrail-structure.md",
+      "slug": "safety-handrail-structure",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/safety-handrail-structure/",
+      "questions": [
+        "20210814_105",
+        "20200926_105",
+        "20190303_103",
+        "20190427_112",
+        "20190804_114"
+      ],
+      "addedQuestion": "20190804_114",
+      "subject_id": 6,
+      "sha256": "ad274c227665a2bae28ead5362d0139789091808fc6cd96461e011519a387f98",
+      "originalSha256": "2b72706796830cd16dd5d67fe024788a36bf40e8b31b022c863ac1757ec2f8ae",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/safety-handrail-structure-original.md"
+    },
+    {
+      "path": "src/content/chapters/construction/construction-hazard-plan-documents.md",
+      "slug": "construction-hazard-plan-documents",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/construction-hazard-plan-documents/",
+      "questions": [
+        "20220424_103",
+        "20220424_107",
+        "20220305_101",
+        "20210814_108",
+        "20200606_101",
+        "20200822_119",
+        "20200926_119",
+        "20180428_102",
+        "20180819_110",
+        "20190303_106",
+        "20190427_107",
+        "20210307_118",
+        "20210515_116",
+        "20190804_115"
+      ],
+      "addedQuestion": "20190804_115",
+      "subject_id": 6,
+      "sha256": "e3ce68e855fa35b6e60e56d7538f9620da84d0233e654e958a3736fc18aa64f3",
+      "originalSha256": "a8a58145663d473808d2f04efb5e9d7b07727339d57e676f57d55c88b43e72e1",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/construction-hazard-plan-documents-original.md"
+    }
+  ],
+  "articles": [
+    {
+      "path": "dist/industrial-safety/written/mechanical/safety-factor/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/safety-factor/",
+      "originalSha256": "9fca0156f75e3f32b2026ae1eeecc5fb2f56949ba5d7bf8ef725aa7cd2d1d194",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/safety-factor-original-article.json",
+      "sha256": "c8ba5d20f8f515607d41d21b04b3611fc2793ea351fff00fa650f335e20f1305"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/safety-management-cost/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/safety-management-cost/",
+      "originalSha256": "1dc4c4c75a6ad7225fea6fcd5dc8129773e6b356111f31023fe18b337adfd671",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/safety-management-cost-original-article.json",
+      "sha256": "438c44cca0d3ab98ae63bd093cb369f58aa404ac315cdab2982698e638772270"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/temporary-passage-stairs/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/temporary-passage-stairs/",
+      "originalSha256": "5ec61090c07a3421af359bf234ffb6aec134ce13fb3020b24303fe7e5ef13912",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/temporary-passage-stairs-original-article.json",
+      "sha256": "60a93a08fa79b4511ac10ba0b1c674448a6037ad5fca4f44b749efdc9e0efff4"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/soil-collapse-prevention/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/soil-collapse-prevention/",
+      "originalSha256": "7e443be01907b10116c90953045a81bf0cdbccd0d76d10935de12dad032af18a",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/soil-collapse-prevention-original-article.json",
+      "sha256": "6fd9244e89efca8b0070566761a3007a7cd07fbfd701927022e3bb9f4e973e49"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/safety-handrail-structure/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/safety-handrail-structure/",
+      "originalSha256": "4b7eb13a761b261cc7884ff27e3941f685dc598e5335a60c9129d89eb8e46170",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/safety-handrail-structure-original-article.json",
+      "sha256": "c102c63d52bbd80d62902545b8d1d6c9a204cbbb684307684d62e7fb6a6619bf"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/construction-hazard-plan-documents/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/construction-hazard-plan-documents/",
+      "originalSha256": "d4f7ac06aaee0350f08a96ac1ef458e35455928ff73a6bac8898d9ae8a5e0609",
+      "originalFile": "docs/audits/2026-10-07-industrial-unassigned-links/construction-hazard-plan-documents-original-article.json",
+      "sha256": "0aa228ac4b07e9926d815418bdcce2936902acc6fd4364c977fc339753b11d09"
+    }
+  ],
+  "unassigned": [
+    102,
+    105,
+    106,
+    109,
+    116
+  ],
+  "source": {
+    "url": "https://img.comcbt.com/xe/download/822fabe365db4a9bcfc05597b00ea22a/8976275/산업안전기사20190804(학생용).pdf",
+    "sha256": "b03996ec40a2c3d9b163b75c0f4287b37557e331d2ddbeb110e36688915af861",
+    "pages": [
+      7,
+      8
+    ],
+    "authority": "CBT updated student PDF, not Q-Net official original",
+    "exceptions": {
+      "105": "떄 source typo preserved",
+      "112": "토증수 source typo preserved"
+    }
+  },
+  "before": {
+    "industrial": 259,
+    "all": 443,
+    "references": 1015
+  },
+  "after": {
+    "industrial": 259,
+    "all": 443,
+    "references": 1021
+  }
+}
