@@ -1,0 +1,48 @@
+{
+  "head": "e5cd7765d366dcc0079debce8d5f408d1b6d2282",
+  "baselineAudits": [
+    "docs/audits/2026-10-07-clam-shell-chapter",
+    "docs/audits/2026-10-07-industrial-unassigned-links"
+  ],
+  "before": {
+    "industrial": 259,
+    "all": 443,
+    "references": 1021
+  },
+  "after": {
+    "industrial": 260,
+    "all": 444,
+    "references": 1023
+  },
+  "chapter": {
+    "path": "src/content/chapters/construction/formwork-lateral-pressure.md",
+    "slug": "formwork-lateral-pressure",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/construction/formwork-lateral-pressure/",
+    "articlePath": "dist/industrial-safety/written/construction/formwork-lateral-pressure/index.html",
+    "certification": "industrial-safety",
+    "questions": [
+      "20200606_105",
+      "20190804_102"
+    ],
+    "sha256": "4335d3486fdfbed0408a65daaa405f745b7208e45cb01abae5c10af5290e6289",
+    "articleSha256": "16d8d980ecee9125141d582e42a914a0ddf7e45b860baefee3c64608980e878f"
+  },
+  "relatedArticleChanges": [
+    {
+      "path": "dist/industrial-safety/written/construction/shore-safety-standard/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/shore-safety-standard/",
+      "originalFile": "docs/audits/2026-10-07-formwork-lateral-pressure/shore-safety-standard-original-article.json",
+      "originalSha256": "35f4e81f37e9ed09edb3a2a28044dca173c9ae8f66304dd0604c9010ecb70a9b",
+      "sha256": "38c142fbe0c7f7975b1637235bcfea2f62c9a792f940fa344c768b904f85e46e",
+      "insertedHtml": "<li><a href=\"/industrial-safety/written/construction/formwork-lateral-pressure/\"><span class=\"rel-group\">거푸집·동바리</span><span class=\"rel-title\">거푸집 측압</span></a></li>"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/walkway-board-standard/index.html",
+      "url": "https://getpasslab.co.kr/industrial-safety/written/construction/walkway-board-standard/",
+      "originalFile": "docs/audits/2026-10-07-formwork-lateral-pressure/walkway-board-standard-original-article.json",
+      "originalSha256": "6c57b566bc89d83f62484eeb69fc81d00faa85c7c3c5587425756abee0b7dd1e",
+      "sha256": "daaa57300496ce2c5994be8974aa2a47e64ec6c387733197a915ab864a6ff69b",
+      "insertedHtml": "<li><a href=\"/industrial-safety/written/construction/formwork-lateral-pressure/\"><span class=\"rel-group\">거푸집·동바리</span><span class=\"rel-title\">거푸집 측압</span></a></li>"
+    }
+  ]
+}

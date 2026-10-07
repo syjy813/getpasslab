@@ -1,7 +1,7 @@
 import { readFile } from './read-before-20190804-review.mjs';
 import { publication } from './read-before-clam-shell.mjs';
 import assert from 'node:assert/strict';
-import {readdir} from 'node:fs/promises';
+import { readdir } from './read-before-formwork-lateral-pressure.mjs';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {restoreFTAOriginalAssetAttrs, reviewedAssetAdditions} from './reviewed-chapter-hash.mjs';

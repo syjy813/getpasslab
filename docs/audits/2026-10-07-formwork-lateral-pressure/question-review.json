@@ -1,0 +1,54 @@
+[
+  {
+    "record": {
+      "id": "20200606_105",
+      "subject_id": 6,
+      "date": "2020-06-06",
+      "label": "2020년 6월 시행",
+      "number": 105,
+      "body": "콘크리트 타설 시 거푸집 측압에 관한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "기온이 높을수록 측압은 크다.",
+        "타설속도가 클수록 측압은 크다.",
+        "슬럼프가 클수록 측압은 크다.",
+        "다짐이 과할수록 측압은 크다."
+      ],
+      "answer": 1,
+      "review": ""
+    },
+    "sourceAnswer": 1,
+    "sourceQuestionPage": 7,
+    "sourceAnswerPage": 9,
+    "sourcePdfSha256": "ea84ad7d0e1f986f91a599acab1a80d34cd7124e8479b53d0230e3f67bc1438a",
+    "application": "온도 상승 → 응결 빨라짐 → 측압 감소로 옳지 않은 보기를 판별 · 나머지 조건은 6행 표 대조",
+    "sourceTextVerified": true,
+    "sourceFigure": "none",
+    "sourceAuthority": "CBT publisher updated student PDF; Q-Net official original/corrections not verified"
+  },
+  {
+    "record": {
+      "id": "20190804_102",
+      "subject_id": 6,
+      "date": "2019-08-04",
+      "label": "2019년 8월 시행",
+      "number": 102,
+      "body": "콘크리트 타설 시 거푸집 측압에 관한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "타설속도가 빠를수록 측압이 커진다.",
+        "거푸집의 투수성이 낮을수록 측압은 커진다.",
+        "타설높이가 높을수록 측압이 커진다.",
+        "콘크리트의 온도가 높을수록 측압이 커진다."
+      ],
+      "answer": 4,
+      "review": ""
+    },
+    "sourceAnswer": 4,
+    "sourceQuestionPage": 7,
+    "sourceAnswerPage": 8,
+    "sourcePdfSha256": "b03996ec40a2c3d9b163b75c0f4287b37557e331d2ddbeb110e36688915af861",
+    "application": "온도 상승 → 응결 빨라짐 → 측압 감소로 옳지 않은 보기를 판별 · 나머지 조건은 6행 표 대조",
+    "sourceTextVerified": true,
+    "sourceFigure": "none",
+    "sourceAuthority": "CBT publisher updated student PDF; Q-Net official original/corrections not verified"
+  }
+]
