@@ -1,0 +1,32 @@
+{
+  "head": "a1f029198bf8ebda6babf65eb5b736552e9e0e91",
+  "baselineAudits": [
+    "docs/audits/2026-10-07-clam-shell-chapter",
+    "docs/audits/2026-10-07-industrial-unassigned-links",
+    "docs/audits/2026-10-07-formwork-lateral-pressure",
+    "docs/audits/2026-10-07-port-cargo-passages"
+  ],
+  "before": {
+    "industrial": 261,
+    "all": 445,
+    "references": 1028
+  },
+  "after": {
+    "industrial": 262,
+    "all": 446,
+    "references": 1029
+  },
+  "chapter": {
+    "path": "src/content/chapters/construction/excavator-operation-safety.md",
+    "slug": "excavator-operation-safety",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/construction/excavator-operation-safety/",
+    "articlePath": "dist/industrial-safety/written/construction/excavator-operation-safety/index.html",
+    "certification": "industrial-safety",
+    "questions": [
+      "20190804_106"
+    ],
+    "sha256": "22c5969abb84e769b8e8b4079f1d73e7c10062b9ad4bead240f8ee0125feeeaa",
+    "articleSha256": "923c383c894d4e04fd01018521a89a91c7f314e1370470c2ae33ee3380e8ca1f"
+  },
+  "relatedArticleChanges": []
+}

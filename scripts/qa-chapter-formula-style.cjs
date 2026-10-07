@@ -9,7 +9,7 @@ const sourceReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-06-industri
 const batchReview = JSON.parse(fs.readFileSync('docs/audits/2026-10-05-industrial-remaining-splits/review.json'));
 const reviewedPages = baselinePages.map(row => sourceReview.chapters.find(later => later.url === row.url) ?? batchReview.chapters.find(later => later.url === row.url) ?? ftaReview.chapters.find(later => later.url === row.url) ?? row).concat([...ftaReview.chapters, ...batchReview.chapters].filter(row => row.newFile));
 const publication = JSON.parse(fs.readFileSync('docs/audits/2026-10-07-clam-shell-chapter/review.json'));
-const publicPages = require('./current-20190804-review.cjs').chapters(reviewedPages).concat(publication.chapter, JSON.parse(fs.readFileSync('docs/audits/2026-10-07-formwork-lateral-pressure/review.json')).chapter, JSON.parse(fs.readFileSync('docs/audits/2026-10-07-port-cargo-passages/review.json')).chapter);
+const publicPages = require('./current-20190804-review.cjs').chapters(reviewedPages).concat(publication.chapter, JSON.parse(fs.readFileSync('docs/audits/2026-10-07-formwork-lateral-pressure/review.json')).chapter, JSON.parse(fs.readFileSync('docs/audits/2026-10-07-port-cargo-passages/review.json')).chapter, JSON.parse(fs.readFileSync('docs/audits/2026-10-07-excavator-operation-safety/review.json')).chapter);
 const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/, '');
 const out = path.resolve('qa-results/chapter-formula-style');
 fs.mkdirSync(out, { recursive: true });
