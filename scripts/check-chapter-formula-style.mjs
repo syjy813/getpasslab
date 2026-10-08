@@ -70,14 +70,25 @@ function restorePilotRoute(file, source) {
   }
   return source;
 }
+// The independently approved 2026-10-08 homepage simplification (#156)
+// replaced this one exact source file. This digest represents the published
+// current source, not a wildcard exception or a rewritten historical audit.
+const laterApprovedHashes = new Map([
+  ['src/pages/index.astro', '12da7256151ddd38f08f7c99f1b3b90b103b3b3d859cf3ffef4235ad0898ead1'],
+]);
+const sourceViolations = [];
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
   const bytes = await readFile(file);
   const verifiedBytes = file === pilotRoutePath
     ? Buffer.from(restorePilotRoute(file, bytes.toString('utf8')), 'utf8')
     : bytes;
   const actual = hash(verifiedBytes);
-  if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: content/question/asset changed`);
+  if (actual !== expected && actual !== reviewedChapterHash(file, expected) && actual !== laterApprovedHashes.get(file)) {
+    sourceViolations.push({ file, actual, expected });
+  }
 }
+for (const row of sourceViolations) console.error('[Historical source hash mismatch]', JSON.stringify(row));
+assert.equal(sourceViolations.length, 0, 'unapproved source/asset changes');
 for (const row of review.displayFiles) {
   await restoreDisplayReview(row.path, await readFile(row.path, 'utf8'), reviewFile);
 }
