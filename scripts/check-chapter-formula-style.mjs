@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readdir } from './read-before-formwork-lateral-pressure.mjs';
 import path from 'node:path';
+import { readFile as nativeReadFile } from 'node:fs/promises';
 import { restoreDisplayReview, reviewedChapterHash, restoreQuestionSourceAssetRefs, reviewedAssetAdditions } from './reviewed-chapter-hash.mjs';
 
 const sourceReview = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-question-source-repair/review.json', 'utf8'));
@@ -92,6 +93,21 @@ assert.equal(sourceViolations.length, 0, 'unapproved source/asset changes');
 for (const row of review.displayFiles) {
   await restoreDisplayReview(row.path, await readFile(row.path, 'utf8'), reviewFile);
 }
+const pilotDebugFile = 'dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html';
+const pilotDebugHtml = await nativeReadFile(pilotDebugFile, 'utf8');
+const pilotDebugArticle = pilotDebugHtml.match(/<article\\b[^>]*>([\\s\\S]*?)<\\/article>/)?.[1] ?? '';
+const pilotDebugAt = pilotDebugArticle.indexOf('data-instant-practice');
+const pilotDebugStart = pilotDebugArticle.lastIndexOf('<div', pilotDebugAt);
+const pilotDebugRelated = pilotDebugArticle.indexOf('<h2>관련 챕터</h2>', pilotDebugAt);
+console.log('[Formula historical pilot debug]', JSON.stringify({
+  articleLength: pilotDebugArticle.length,
+  insertionIndex: pilotDebugStart,
+  relatedIndex: pilotDebugRelated,
+  start: pilotDebugArticle.slice(pilotDebugStart-180,pilotDebugStart+500),
+  beforeRelated: pilotDebugArticle.slice(pilotDebugRelated-500,pilotDebugRelated+180),
+  scripts: [...pilotDebugArticle.matchAll(/<script\\b[^>]*>/g)].map(x=>x[0]),
+}));
+
 const actualRoutes = [];
 for (const file of await walk('dist')) {
   if (!file.endsWith('/index.html')) continue;
