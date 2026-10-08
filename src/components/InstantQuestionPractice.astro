@@ -48,14 +48,15 @@ const displayChoice = (choice: string, hasImage: boolean) => {
     >
       <div class="practice-dialog-inner">
         <div class="practice-modal-header">
-          <div class="practice-heading">
-      <div>
-        <h2 id="instant-practice-heading">기출 한 문제씩 풀기</h2>
-        <p>답을 선택한 뒤 정답을 확인하세요. 정오답과 해설을 바로 확인할 수 있습니다.</p>
-      </div>
-      <strong class="practice-progress" data-practice-progress>1 / {practiceQuestions.length}</strong>
-          </div>
-          <button type="button" class="practice-close" data-practice-close aria-label="문제 풀이 닫기">닫기 <span aria-hidden="true">×</span></button>
+          <h2 id="instant-practice-heading">기출 한 문제씩 풀기</h2>
+          <button type="button" class="practice-close" data-practice-close aria-label="문제 풀이 닫기">
+            닫기 <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <p class="practice-intro">답을 선택하고 정답을 확인하면 해설이 바로 표시됩니다.</p>
+        <div class="practice-status-row">
+          <span>연결 기출 {practiceQuestions.length}문항</span>
+          <strong class="practice-progress" data-practice-progress>1 / {practiceQuestions.length}</strong>
         </div>
     {practiceQuestions.map((question, questionIndex) => (
       <section
@@ -105,9 +106,14 @@ const displayChoice = (choice: string, hasImage: boolean) => {
       </section>
     ))}
     <div class="practice-complete" data-practice-complete hidden aria-live="polite">
+      <div class="practice-complete-symbol" aria-hidden="true">✓</div>
       <h3>연결 기출 풀이 완료</h3>
-      <p data-practice-score></p>
-      <button type="button" class="practice-button" data-practice-restart>다시 풀기</button>
+      <p class="practice-score" data-practice-score></p>
+      <p class="practice-complete-description">틀린 문제도 다시 풀면서 개념을 복습해 보세요.</p>
+      <div class="practice-complete-actions">
+        <button type="button" class="practice-button" data-practice-restart>다시 풀기</button>
+        <button type="button" class="practice-exit-button" data-practice-finish>학습으로 돌아가기</button>
+      </div>
     </div>
       </div>
     </dialog>
@@ -120,6 +126,7 @@ const displayChoice = (choice: string, hasImage: boolean) => {
     const complete = root.querySelector<HTMLElement>('[data-practice-complete]');
     const score = root.querySelector<HTMLElement>('[data-practice-score]');
     const restart = root.querySelector<HTMLButtonElement>('[data-practice-restart]');
+    const finish = root.querySelector<HTMLButtonElement>('[data-practice-finish]');
     const opener = document.querySelector<HTMLButtonElement>('[data-practice-open][aria-controls="instant-practice-dialog"]');
     const dialog = root.querySelector<HTMLDialogElement>('[data-practice-dialog]');
     const close = root.querySelector<HTMLButtonElement>('[data-practice-close]');
@@ -131,6 +138,9 @@ const displayChoice = (choice: string, hasImage: boolean) => {
     const history = document.querySelector<HTMLElement>('[data-question-role="primary"]');
     const entry = root.querySelector<HTMLElement>('[data-practice-entry]');
     if (history && entry) history.append(entry);
+    // Native dialogs stay in a browser top layer, but remain CSS descendants
+    // of <article> unless moved. Keep the modal outside chapter typography.
+    document.body.append(root);
 
     opener?.addEventListener('click', () => {
       if (!dialog || dialog.open) return;
@@ -139,6 +149,7 @@ const displayChoice = (choice: string, hasImage: boolean) => {
     });
 
     close?.addEventListener('click', () => dialog?.close());
+    finish?.addEventListener('click', () => dialog?.close());
     // A click on the backdrop is delivered to the dialog itself.
     dialog?.addEventListener('click', event => {
       if (event.target === dialog) dialog.close();
@@ -232,20 +243,21 @@ const displayChoice = (choice: string, hasImage: boolean) => {
   :global(.practice-entry){display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-4)}
   :global(.practice-entry span){font-size:var(--fs-caption);color:var(--gray-600)}
   :global(.practice-launch),.practice-button{min-height:44px;padding:10px 16px;border:0;border-radius:var(--radius-md);background:var(--primary-600);color:var(--white);font:inherit;font-weight:var(--fw-semibold);cursor:pointer}
-  :global(.practice-launch:focus-visible),.practice-button:focus-visible,.practice-close:focus-visible{outline:3px solid var(--primary-100);outline-offset:3px}
-  .instant-practice-dialog{width:min(720px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid var(--gray-200);border-radius:var(--radius-xl);box-shadow:var(--shadow-md);background:var(--white);color:var(--gray-800)}
-  .instant-practice-dialog::backdrop{background:rgba(25,31,40,.65)}
-  .practice-dialog-inner{padding:var(--space-6);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain}
-  .practice-modal-header{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-3);margin-bottom:var(--space-6)}
-  .practice-heading{display:flex;flex:1;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:var(--space-3);min-width:0}
-  .practice-heading h2{margin:0 0 var(--space-2);font-size:var(--fs-h2);color:var(--gray-900)}
-  .practice-heading p{margin:0;color:var(--gray-600);font-size:var(--fs-caption);line-height:1.6}
-  .practice-close{flex:none;min-height:44px;min-width:64px;padding:8px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white);font:inherit;cursor:pointer}
-  .practice-close span{font-size:20px;vertical-align:middle}
-  .practice-progress{white-space:nowrap;padding:4px 10px;border-radius:var(--radius-full);background:var(--primary-50);color:var(--primary-700);font-size:var(--fs-caption)}
+  :global(.practice-launch:focus-visible),.practice-button:focus-visible,.practice-close:focus-visible,.practice-exit-button:focus-visible{outline:3px solid var(--primary-100);outline-offset:3px}
+  .instant-practice-dialog{box-sizing:border-box;width:min(720px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid var(--gray-200);border-radius:var(--radius-xl);box-shadow:0 16px 48px rgba(25,31,40,.2);background:var(--white);color:var(--gray-800);font-family:var(--font-sans)}
+  .instant-practice-dialog::backdrop{background:rgba(25,31,40,.6)}
+  .practice-dialog-inner{box-sizing:border-box;padding:var(--space-6);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain}
+  .practice-modal-header{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3)}
+  .practice-modal-header h2{display:block;flex:1;min-width:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:var(--gray-900);font-size:var(--fs-h3);font-weight:var(--fw-bold);line-height:1.4;letter-spacing:-.02em;word-break:keep-all}
+  .practice-modal-header h2::before{display:none;content:none}
+  .practice-close{display:inline-flex;flex:none;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px 12px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white);color:var(--gray-800);font:inherit;font-size:var(--fs-caption);cursor:pointer}
+  .practice-close span{font-size:18px;line-height:1}
+  .practice-intro{margin:var(--space-3) 0 var(--space-4);font-size:var(--fs-caption);line-height:1.6;color:var(--gray-600)}
+  .practice-status-row{display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);padding:var(--space-3) 0;margin-bottom:var(--space-5,20px);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:var(--fs-caption);color:var(--gray-600)}
+  .practice-progress{flex:none;white-space:nowrap;padding:4px 10px;border-radius:var(--radius-full);background:var(--primary-50);color:var(--primary-700);font-size:var(--fs-caption);font-weight:var(--fw-semibold)}
   .practice-item[hidden],.practice-feedback[hidden],.practice-complete[hidden]{display:none!important}
   .practice-meta{color:var(--gray-600);font-size:var(--fs-caption);margin:0 0 var(--space-3)}
-  .practice-item h3{font-size:var(--fs-h3);line-height:1.55;color:var(--gray-900);margin:0 0 var(--space-4);overflow-wrap:anywhere}
+  .practice-item h3{margin:0 0 var(--space-4);font-size:var(--fs-h3);line-height:1.55;color:var(--gray-900);overflow-wrap:anywhere}
   .practice-item h3:focus-visible{outline:2px solid var(--primary-600);outline-offset:4px}
   .practice-figure{margin:0 0 var(--space-4)}
   .practice-figure img{display:block;max-width:100%;height:auto}
@@ -264,13 +276,23 @@ const displayChoice = (choice: string, hasImage: boolean) => {
   .practice-feedback .practice-button{margin-top:var(--space-3)}
   .result-correct{color:#047857}
   .result-incorrect{color:#B91C1C}
-  .practice-complete h3{margin:0 0 var(--space-2);font-size:var(--fs-h3)}
-  .practice-complete p{margin:0 0 var(--space-4)}
+  .practice-complete{padding:var(--space-6) var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-lg);background:var(--gray-50);text-align:center}
+  .practice-complete-symbol{display:grid;place-items:center;width:48px;height:48px;margin:0 auto var(--space-3);border-radius:50%;background:var(--success-bg);color:#047857;font-size:26px;font-weight:var(--fw-bold)}
+  .practice-complete h3{margin:0 0 var(--space-2);font-size:var(--fs-h3);color:var(--gray-900);line-height:1.5}
+  .practice-score{margin:0;color:var(--primary-700);font-size:var(--fs-h3);font-weight:var(--fw-bold)}
+  .practice-complete-description{margin:var(--space-3) 0 var(--space-6);font-size:var(--fs-caption);color:var(--gray-600)}
+  .practice-complete-actions{display:flex;justify-content:center;gap:var(--space-2);flex-wrap:wrap}
+  .practice-exit-button{min-height:44px;padding:10px 16px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white);color:var(--gray-800);font:inherit;font-weight:var(--fw-semibold);cursor:pointer}
   @media(max-width:480px){
-    .practice-dialog-inner{padding:var(--space-4)}
+    .instant-practice-dialog{width:calc(100vw - 24px);max-height:calc(100dvh - 24px)}
+    .practice-dialog-inner{padding:var(--space-4);max-height:calc(100dvh - 24px)}
     .practice-modal-header{gap:var(--space-2)}
-    .practice-heading{gap:var(--space-2)}
+    .practice-modal-header h2{font-size:18px}
+    .practice-close{padding:8px 10px}
     .practice-button{width:100%}
+    .practice-complete{padding:var(--space-6) var(--space-3)}
+    .practice-complete-actions{flex-direction:column}
+    .practice-exit-button{width:100%}
     :global(.practice-entry){align-items:stretch}
   }
 </style>
