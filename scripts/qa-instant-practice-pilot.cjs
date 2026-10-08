@@ -43,6 +43,31 @@ async function check(width) {
   assert(await dialog.isVisible());
   assert.equal(await dialog.getAttribute('aria-modal'), 'true');
   assert(await root.locator('[data-practice-close]').evaluate(element => element === document.activeElement));
+  const modalVisuals = await dialog.evaluate(element => {
+    const heading = element.querySelector('#instant-practice-heading');
+    const close = element.querySelector('[data-practice-close]');
+    const headingStyle = getComputedStyle(heading);
+    const headingBefore = getComputedStyle(heading, '::before');
+    const headingRect = heading.getBoundingClientRect();
+    const closeRect = close.getBoundingClientRect();
+    const dialogRect = element.getBoundingClientRect();
+    return {
+      outsideArticle: !element.closest('article'),
+      rootedInBody: element.parentElement?.parentElement === document.body,
+      titleBackground: headingStyle.backgroundColor,
+      titlePadding: headingStyle.paddingTop,
+      titleMarker: headingBefore.content,
+      titleMarkerDisplay: headingBefore.display,
+      headerNotOverlapping: headingRect.right <= closeRect.left + 2,
+      dialogInsideViewport: dialogRect.left >= 0 && dialogRect.right <= document.documentElement.clientWidth + 1,
+      dialogWidth: dialogRect.width,
+    };
+  });
+  assert(modalVisuals.outsideArticle && modalVisuals.rootedInBody, width + 'px: modal must be outside chapter article');
+  assert(['rgba(0, 0, 0, 0)', 'transparent'].includes(modalVisuals.titleBackground), width + 'px: chapter title background leaked: ' + JSON.stringify(modalVisuals));
+  assert.equal(modalVisuals.titlePadding, '0px', width + 'px: chapter title padding leaked');
+  assert.equal(modalVisuals.titleMarkerDisplay, 'none', width + 'px: chapter title marker leaked');
+  assert(modalVisuals.headerNotOverlapping && modalVisuals.dialogInsideViewport, width + 'px: modal header geometry: ' + JSON.stringify(modalVisuals));
 
   const questions = dialog.locator('[data-practice-item]');
   assert.equal(await questions.count(), 6);
@@ -97,6 +122,21 @@ async function check(width) {
   const completed = dialog.locator('[data-practice-complete]');
   assert(await completed.isVisible());
   assert((await completed.textContent()).includes('6문제 중 ' + expectedCorrect + '문제 정답'));
+  assert(await completed.locator('[data-practice-finish]').isVisible());
+  const resultVisuals = await completed.evaluate(element => {
+    const rect = element.getBoundingClientRect();
+    const score = element.querySelector('[data-practice-score]').getBoundingClientRect();
+    const style = getComputedStyle(element);
+    return {
+      width: rect.width,
+      centered: Math.abs((score.left + score.right) / 2 - (rect.left + rect.right) / 2) < 12,
+      padded: parseFloat(style.paddingTop) >= 12,
+      background: style.backgroundColor,
+      onScreen: rect.left >= 0 && rect.right <= document.documentElement.clientWidth + 1,
+    };
+  });
+  assert(resultVisuals.centered && resultVisuals.padded && resultVisuals.onScreen, width + 'px: result UI is broken: ' + JSON.stringify(resultVisuals));
+  await dialog.screenshot({ path: path.join(output, width + '-complete.png') });
   await completed.locator('[data-practice-restart]').click();
   assert(!(await completed.isVisible()));
   assert(await questions.first().isVisible());
@@ -110,7 +150,9 @@ async function check(width) {
   await opener.click();
   assert(await questions.first().isVisible());
   assert(await questions.first().locator('[data-practice-check]').isDisabled());
-  await dialog.locator('[data-practice-close]').click();
+  await dialog.locator('[data-practice-finish]').click();
+  assert(!(await dialog.isVisible()), width + 'px: return to learning failed');
+  assert(await opener.evaluate(element => element === document.activeElement));
 
   // Other chapters do not expose this pilot button.
   const unrelated = await page.goto(base + '/industrial-safety/written/safety-management/heinrich-domino-theory/', { waitUntil: 'networkidle', timeout: 45000 });
@@ -130,7 +172,7 @@ async function check(width) {
   await oldDialog.locator('[data-close]').click();
   assert(!(await oldDialog.isVisible()));
 
-  report.viewports.push({ width, questions: answers.length, deliberatelyIncorrect: 3, correct: expectedCorrect, modalOpenCloseEscapeAndFocus: 'PASS', reset: 'PASS', legacyPopup: 'PASS', otherChapterUnchanged: 'PASS', horizontalOverflow: 'NONE' });
+  report.viewports.push({ width, questions: answers.length, deliberatelyIncorrect: 3, correct: expectedCorrect, modalOpenCloseEscapeAndFocus: 'PASS', reset: 'PASS', resultLayout: 'PASS', titleStyleIsolation: 'PASS', legacyPopup: 'PASS', otherChapterUnchanged: 'PASS', horizontalOverflow: 'NONE' });
   await context.close();
 }
 
