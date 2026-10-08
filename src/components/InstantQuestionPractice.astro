@@ -1,0 +1,212 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface PracticeQuestion {
+  id: string;
+  label: string;
+  number: number;
+  body: string;
+  choices: string[];
+  answer: number;
+  image?: { src: ImageMetadata; alt: string };
+}
+interface Props {
+  questions: PracticeQuestion[];
+  explanations: Record<string, string>;
+}
+
+const { questions, explanations } = Astro.props;
+const practiceQuestions = questions.filter(question => Boolean(explanations[question.id]));
+const symbols = ['①', '②', '③', '④'];
+const imageChoicePattern = /^(수식|그림)[①②③④]$/;
+const displayChoice = (choice: string, hasImage: boolean) => {
+  if (!hasImage) return choice;
+  const match = choice.match(imageChoicePattern);
+  if (!match) return choice;
+  return match[1] === '수식' ? '위 이미지에 제시된 수식' : '위 이미지에 제시된 보기';
+};
+---
+{practiceQuestions.length > 0 && (
+  <section class="instant-practice" data-instant-practice aria-labelledby="instant-practice-heading">
+    <div class="practice-heading">
+      <div>
+        <h2 id="instant-practice-heading">기출 한 문제씩 풀기</h2>
+        <p>답을 선택한 뒤 정답을 확인하세요. 정오답과 해설을 바로 확인할 수 있습니다.</p>
+      </div>
+      <strong class="practice-progress" data-practice-progress>1 / {practiceQuestions.length}</strong>
+    </div>
+    {practiceQuestions.map((question, questionIndex) => (
+      <section
+        class="practice-item"
+        data-practice-item
+        data-answer={question.answer}
+        hidden={questionIndex !== 0}
+        aria-labelledby={'instant-question-' + questionIndex}
+      >
+        <p class="practice-meta">{question.label.replace(/ 시행$/, ' 시험')} · {question.number}번</p>
+        <h3 id={'instant-question-' + questionIndex} tabindex="-1">{questionIndex + 1}. {question.body}</h3>
+        {question.image && (
+          <figure class="practice-figure">
+            <Image
+              src={question.image.src}
+              alt={question.image.alt}
+              width={question.image.src.width}
+              height={question.image.src.height}
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        )}
+        <fieldset class="practice-choices">
+          <legend class="sr-only">정답을 선택하세요</legend>
+          {question.choices.map((choice, choiceIndex) => (
+            <label class="practice-choice">
+              <input
+                type="radio"
+                name={'instant-answer-' + questionIndex}
+                value={choiceIndex + 1}
+              />
+              <span class="choice-symbol" aria-hidden="true">{symbols[choiceIndex]}</span>
+              <span>{displayChoice(choice, Boolean(question.image))}</span>
+            </label>
+          ))}
+        </fieldset>
+        <button type="button" class="practice-button" data-practice-check disabled>정답 확인</button>
+        <div class="practice-feedback" data-practice-feedback hidden aria-live="polite">
+          <strong data-practice-result></strong>
+          <p>정답: {symbols[question.answer - 1]} {displayChoice(question.choices[question.answer - 1], Boolean(question.image))}</p>
+          <p><strong>해설</strong> — {explanations[question.id]}</p>
+          <button type="button" class="practice-button" data-practice-next>
+            {questionIndex === practiceQuestions.length - 1 ? '풀이 마치기' : '다음 문제 풀기 →'}
+          </button>
+        </div>
+      </section>
+    ))}
+    <div class="practice-complete" data-practice-complete hidden aria-live="polite">
+      <h3>연결 기출 풀이 완료</h3>
+      <p data-practice-score></p>
+      <button type="button" class="practice-button" data-practice-restart>다시 풀기</button>
+    </div>
+  </section>
+)}
+<script>
+  document.querySelectorAll<HTMLElement>('[data-instant-practice]').forEach(root => {
+    const items = [...root.querySelectorAll<HTMLElement>('[data-practice-item]')];
+    const progress = root.querySelector<HTMLElement>('[data-practice-progress]');
+    const complete = root.querySelector<HTMLElement>('[data-practice-complete]');
+    const score = root.querySelector<HTMLElement>('[data-practice-score]');
+    const restart = root.querySelector<HTMLButtonElement>('[data-practice-restart]');
+    let correctCount = 0;
+
+    items.forEach((item, index) => {
+      const radios = [...item.querySelectorAll<HTMLInputElement>('input[type="radio"]')];
+      const check = item.querySelector<HTMLButtonElement>('[data-practice-check]');
+      const feedback = item.querySelector<HTMLElement>('[data-practice-feedback]');
+      const result = item.querySelector<HTMLElement>('[data-practice-result]');
+      const next = item.querySelector<HTMLButtonElement>('[data-practice-next]');
+
+      radios.forEach(radio => radio.addEventListener('change', () => {
+        if (check && !item.dataset.graded) check.disabled = false;
+      }));
+
+      check?.addEventListener('click', () => {
+        const selected = radios.find(radio => radio.checked);
+        if (!selected || item.dataset.graded || !feedback || !result) return;
+
+        const correctAnswer = Number(item.dataset.answer);
+        const isCorrect = Number(selected.value) === correctAnswer;
+        if (isCorrect) correctCount++;
+        item.dataset.graded = 'true';
+
+        radios.forEach(radio => {
+          radio.disabled = true;
+          if (Number(radio.value) === correctAnswer) radio.closest('label')?.classList.add('is-correct');
+        });
+        if (!isCorrect) selected.closest('label')?.classList.add('is-incorrect');
+        result.textContent = isCorrect
+          ? '정답입니다. 다음 문제를 풀어보세요.'
+          : '오답입니다. 정답과 해설을 확인하세요.';
+        result.className = isCorrect ? 'result-correct' : 'result-incorrect';
+        check.hidden = true;
+        feedback.hidden = false;
+        next?.focus();
+      });
+
+      next?.addEventListener('click', () => {
+        item.hidden = true;
+        const following = items[index + 1];
+        if (following) {
+          following.hidden = false;
+          if (progress) progress.textContent = String(index + 2) + ' / ' + String(items.length);
+          following.querySelector<HTMLElement>('h3')?.focus();
+        } else {
+          if (progress) progress.textContent = '완료';
+          if (score) score.textContent = String(items.length) + '문제 중 ' + String(correctCount) + '문제 정답';
+          if (complete) complete.hidden = false;
+          restart?.focus();
+        }
+      });
+    });
+
+    restart?.addEventListener('click', () => {
+      correctCount = 0;
+      items.forEach((item, index) => {
+        item.hidden = index !== 0;
+        delete item.dataset.graded;
+        item.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach(radio => {
+          radio.checked = false;
+          radio.disabled = false;
+          radio.closest('label')?.classList.remove('is-correct', 'is-incorrect');
+        });
+        const check = item.querySelector<HTMLButtonElement>('[data-practice-check]');
+        if (check) {
+          check.hidden = false;
+          check.disabled = true;
+        }
+        const feedback = item.querySelector<HTMLElement>('[data-practice-feedback]');
+        if (feedback) feedback.hidden = true;
+      });
+      if (complete) complete.hidden = true;
+      if (progress) progress.textContent = '1 / ' + String(items.length);
+      items[0]?.querySelector<HTMLElement>('h3')?.focus();
+    });
+  });
+</script>
+<style>
+  .instant-practice{margin:var(--space-8) 0;padding:var(--space-6);border:1px solid var(--primary-100);border-radius:var(--radius-xl);background:var(--white);min-width:0}
+  .practice-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-3);margin-bottom:var(--space-6)}
+  .practice-heading h2{margin:0 0 var(--space-2);font-size:var(--fs-h2);color:var(--gray-900)}
+  .practice-heading p{margin:0;color:var(--gray-600);font-size:var(--fs-caption);line-height:1.6}
+  .practice-progress{white-space:nowrap;padding:4px 10px;border-radius:var(--radius-full);background:var(--primary-50);color:var(--primary-700);font-size:var(--fs-caption)}
+  .practice-item[hidden],.practice-feedback[hidden],.practice-complete[hidden]{display:none!important}
+  .practice-meta{color:var(--gray-600);font-size:var(--fs-caption);margin:0 0 var(--space-3)}
+  .practice-item h3{font-size:var(--fs-h3);line-height:1.55;color:var(--gray-900);margin:0 0 var(--space-4);overflow-wrap:anywhere}
+  .practice-item h3:focus-visible{outline:2px solid var(--primary-600);outline-offset:4px}
+  .practice-figure{margin:0 0 var(--space-4)}
+  .practice-figure img{display:block;max-width:100%;height:auto}
+  .practice-choices{padding:0;margin:0 0 var(--space-4);border:0;display:grid;gap:var(--space-2);min-width:0}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+  .practice-choice{display:flex;gap:var(--space-3);align-items:flex-start;border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:var(--space-3);font-size:var(--fs-body);line-height:1.6;cursor:pointer;min-width:0;overflow-wrap:anywhere}
+  .practice-choice:has(input:checked){border-color:var(--primary-600);background:var(--primary-50)}
+  .practice-choice:has(input:focus-visible){outline:2px solid var(--primary-600);outline-offset:2px}
+  .practice-choice input{margin:5px 0 0;accent-color:var(--primary-600);flex:none}
+  .choice-symbol{flex:none;font-weight:var(--fw-semibold)}
+  .practice-choice.is-correct{border-color:var(--success);background:var(--success-bg)}
+  .practice-choice.is-incorrect{border-color:var(--error);background:var(--error-bg)}
+  .practice-button{padding:10px 16px;border:0;border-radius:var(--radius-md);background:var(--primary-600);color:var(--white);font:inherit;font-weight:var(--fw-semibold);cursor:pointer;min-height:44px}
+  .practice-button:disabled{background:var(--gray-200);color:var(--gray-600);cursor:not-allowed}
+  .practice-button:focus-visible{outline:3px solid var(--primary-100);outline-offset:3px}
+  .practice-feedback{margin-top:var(--space-4);padding:var(--space-4);border-radius:var(--radius-lg);background:var(--gray-50);overflow-wrap:anywhere}
+  .practice-feedback p{margin:var(--space-2) 0;font-size:var(--fs-body)}
+  .practice-feedback .practice-button{margin-top:var(--space-3)}
+  .result-correct{color:#047857}
+  .result-incorrect{color:#B91C1C}
+  .practice-complete h3{margin:0 0 var(--space-2);font-size:var(--fs-h3)}
+  .practice-complete p{margin:0 0 var(--space-4)}
+  @media(max-width:480px){
+    .instant-practice{padding:var(--space-4)}
+    .practice-heading{flex-wrap:wrap}
+    .practice-button{width:100%}
+  }
+</style>
