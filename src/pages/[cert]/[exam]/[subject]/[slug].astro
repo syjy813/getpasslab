@@ -3,7 +3,6 @@ import { getCollection, render } from 'astro:content';
 import ChapterLayout from '../../../../layouts/ChapterLayout.astro';
 import AdFitResponsive from '../../../../components/AdFitResponsive.astro';
 import QuestionHistory from '../../../../components/QuestionHistory.astro';
-import InstantQuestionPractice from '../../../../components/InstantQuestionPractice.astro';
 import { INSTANT_PRACTICE_PILOT_SLUG, INSTANT_PRACTICE_PILOT_EXPLANATIONS } from '../../../../config/instantPracticeExplanations.js';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
 import { getSubject } from '../../../../config/certifications';
@@ -180,11 +179,9 @@ const sideChapters = orderedSideChapters
 >
   <Content />
   <AdFitResponsive />
-  {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (
-    <InstantQuestionPractice questions={linked as any} explanations={INSTANT_PRACTICE_PILOT_EXPLANATIONS} />
-  )}
   {(linked.length > 0 || supporting.length === 0) && <QuestionHistory
     questions={linked as any}
+    instantPracticeExplanations={chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG ? INSTANT_PRACTICE_PILOT_EXPLANATIONS : undefined}
     examComment={chapter.data.examComment}
     headingText={isComputerBasics ? '개념을 확인하는 기출문제' : undefined}
     introText={isComputerBasics ? '문제 버튼을 눌러 배운 개념을 적용해 보기' : chapter.data.cert_id === 'computer-literacy' ? '연결 기출로 개념의 출제 방식 확인' : undefined}

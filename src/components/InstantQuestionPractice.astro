@@ -28,14 +28,35 @@ const displayChoice = (choice: string, hasImage: boolean) => {
 };
 ---
 {practiceQuestions.length > 0 && (
-  <section class="instant-practice" data-instant-practice aria-labelledby="instant-practice-heading">
-    <div class="practice-heading">
+  <div class="instant-practice" data-instant-practice>
+    <div class="practice-entry">
+      <button
+        type="button"
+        class="practice-launch"
+        data-practice-open
+        aria-haspopup="dialog"
+        aria-controls="instant-practice-dialog"
+      >문제 풀기 ({practiceQuestions.length}문항)</button>
+      <span>한 문제씩 풀이 · 즉시 채점과 해설</span>
+    </div>
+    <dialog
+      id="instant-practice-dialog"
+      class="instant-practice-dialog"
+      data-practice-dialog
+      aria-labelledby="instant-practice-heading"
+      aria-modal="true"
+    >
+      <div class="practice-dialog-inner">
+        <div class="practice-modal-header">
+          <div class="practice-heading">
       <div>
         <h2 id="instant-practice-heading">기출 한 문제씩 풀기</h2>
         <p>답을 선택한 뒤 정답을 확인하세요. 정오답과 해설을 바로 확인할 수 있습니다.</p>
       </div>
       <strong class="practice-progress" data-practice-progress>1 / {practiceQuestions.length}</strong>
-    </div>
+          </div>
+          <button type="button" class="practice-close" data-practice-close aria-label="문제 풀이 닫기">닫기 <span aria-hidden="true">×</span></button>
+        </div>
     {practiceQuestions.map((question, questionIndex) => (
       <section
         class="practice-item"
@@ -88,7 +109,9 @@ const displayChoice = (choice: string, hasImage: boolean) => {
       <p data-practice-score></p>
       <button type="button" class="practice-button" data-practice-restart>다시 풀기</button>
     </div>
-  </section>
+      </div>
+    </dialog>
+  </div>
 )}
 <script>
   document.querySelectorAll<HTMLElement>('[data-instant-practice]').forEach(root => {
@@ -97,7 +120,23 @@ const displayChoice = (choice: string, hasImage: boolean) => {
     const complete = root.querySelector<HTMLElement>('[data-practice-complete]');
     const score = root.querySelector<HTMLElement>('[data-practice-score]');
     const restart = root.querySelector<HTMLButtonElement>('[data-practice-restart]');
+    const opener = root.querySelector<HTMLButtonElement>('[data-practice-open]');
+    const dialog = root.querySelector<HTMLDialogElement>('[data-practice-dialog]');
+    const close = root.querySelector<HTMLButtonElement>('[data-practice-close]');
+    const scrollArea = root.querySelector<HTMLElement>('.practice-dialog-inner');
     let correctCount = 0;
+
+    opener?.addEventListener('click', () => {
+      if (!dialog || dialog.open) return;
+      dialog.showModal();
+      close?.focus();
+    });
+
+    close?.addEventListener('click', () => dialog?.close());
+    // A click on the backdrop is delivered to the dialog itself.
+    dialog?.addEventListener('click', event => {
+      if (event.target === dialog) dialog.close();
+    });
 
     items.forEach((item, index) => {
       const radios = [...item.querySelectorAll<HTMLInputElement>('input[type="radio"]')];
@@ -135,6 +174,7 @@ const displayChoice = (choice: string, hasImage: boolean) => {
 
       next?.addEventListener('click', () => {
         item.hidden = true;
+        if (scrollArea) scrollArea.scrollTop = 0;
         const following = items[index + 1];
         if (following) {
           following.hidden = false;
@@ -149,7 +189,7 @@ const displayChoice = (choice: string, hasImage: boolean) => {
       });
     });
 
-    restart?.addEventListener('click', () => {
+    const resetPractice = () => {
       correctCount = 0;
       items.forEach((item, index) => {
         item.hidden = index !== 0;
@@ -169,15 +209,33 @@ const displayChoice = (choice: string, hasImage: boolean) => {
       });
       if (complete) complete.hidden = true;
       if (progress) progress.textContent = '1 / ' + String(items.length);
+      if (scrollArea) scrollArea.scrollTop = 0;
       items[0]?.querySelector<HTMLElement>('h3')?.focus();
+    };
+
+    restart?.addEventListener('click', resetPractice);
+    // Escape, close button and backdrop click all restore focus and start a fresh session.
+    dialog?.addEventListener('close', () => {
+      resetPractice();
+      opener?.focus({ preventScroll: true });
     });
   });
 </script>
 <style>
-  .instant-practice{margin:var(--space-8) 0;padding:var(--space-6);border:1px solid var(--primary-100);border-radius:var(--radius-xl);background:var(--white);min-width:0}
-  .practice-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-3);margin-bottom:var(--space-6)}
+  .instant-practice{min-width:0}
+  .practice-entry{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-4)}
+  .practice-entry span{font-size:var(--fs-caption);color:var(--gray-600)}
+  .practice-launch,.practice-button{min-height:44px;padding:10px 16px;border:0;border-radius:var(--radius-md);background:var(--primary-600);color:var(--white);font:inherit;font-weight:var(--fw-semibold);cursor:pointer}
+  .practice-launch:focus-visible,.practice-button:focus-visible,.practice-close:focus-visible{outline:3px solid var(--primary-100);outline-offset:3px}
+  .instant-practice-dialog{width:min(720px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid var(--gray-200);border-radius:var(--radius-xl);box-shadow:var(--shadow-md);background:var(--white);color:var(--gray-800)}
+  .instant-practice-dialog::backdrop{background:rgba(25,31,40,.65)}
+  .practice-dialog-inner{padding:var(--space-6);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain}
+  .practice-modal-header{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-3);margin-bottom:var(--space-6)}
+  .practice-heading{display:flex;flex:1;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:var(--space-3);min-width:0}
   .practice-heading h2{margin:0 0 var(--space-2);font-size:var(--fs-h2);color:var(--gray-900)}
   .practice-heading p{margin:0;color:var(--gray-600);font-size:var(--fs-caption);line-height:1.6}
+  .practice-close{flex:none;min-height:44px;min-width:64px;padding:8px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white);font:inherit;cursor:pointer}
+  .practice-close span{font-size:20px;vertical-align:middle}
   .practice-progress{white-space:nowrap;padding:4px 10px;border-radius:var(--radius-full);background:var(--primary-50);color:var(--primary-700);font-size:var(--fs-caption)}
   .practice-item[hidden],.practice-feedback[hidden],.practice-complete[hidden]{display:none!important}
   .practice-meta{color:var(--gray-600);font-size:var(--fs-caption);margin:0 0 var(--space-3)}
@@ -194,9 +252,7 @@ const displayChoice = (choice: string, hasImage: boolean) => {
   .choice-symbol{flex:none;font-weight:var(--fw-semibold)}
   .practice-choice.is-correct{border-color:var(--success);background:var(--success-bg)}
   .practice-choice.is-incorrect{border-color:var(--error);background:var(--error-bg)}
-  .practice-button{padding:10px 16px;border:0;border-radius:var(--radius-md);background:var(--primary-600);color:var(--white);font:inherit;font-weight:var(--fw-semibold);cursor:pointer;min-height:44px}
   .practice-button:disabled{background:var(--gray-200);color:var(--gray-600);cursor:not-allowed}
-  .practice-button:focus-visible{outline:3px solid var(--primary-100);outline-offset:3px}
   .practice-feedback{margin-top:var(--space-4);padding:var(--space-4);border-radius:var(--radius-lg);background:var(--gray-50);overflow-wrap:anywhere}
   .practice-feedback p{margin:var(--space-2) 0;font-size:var(--fs-body)}
   .practice-feedback .practice-button{margin-top:var(--space-3)}
@@ -205,8 +261,10 @@ const displayChoice = (choice: string, hasImage: boolean) => {
   .practice-complete h3{margin:0 0 var(--space-2);font-size:var(--fs-h3)}
   .practice-complete p{margin:0 0 var(--space-4)}
   @media(max-width:480px){
-    .instant-practice{padding:var(--space-4)}
-    .practice-heading{flex-wrap:wrap}
+    .practice-dialog-inner{padding:var(--space-4)}
+    .practice-modal-header{gap:var(--space-2)}
+    .practice-heading{gap:var(--space-2)}
     .practice-button{width:100%}
+    .practice-entry{align-items:stretch}
   }
 </style>
