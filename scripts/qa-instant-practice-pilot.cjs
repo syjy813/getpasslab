@@ -150,8 +150,8 @@ async function check(width) {
   await opener.click();
   assert(await questions.first().isVisible());
   assert(await questions.first().locator('[data-practice-check]').isDisabled());
-  await dialog.locator('[data-practice-finish]').click();
-  assert(!(await dialog.isVisible()), width + 'px: return to learning failed');
+  await dialog.locator('[data-practice-close]').click();
+  assert(!(await dialog.isVisible()), width + 'px: close control failed');
   assert(await opener.evaluate(element => element === document.activeElement));
 
   // Other chapters do not expose this pilot button.
