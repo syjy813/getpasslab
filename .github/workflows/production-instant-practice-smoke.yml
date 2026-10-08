@@ -1,0 +1,39 @@
+name: Production instant practice smoke QA
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/production-instant-practice-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  live-browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout test code
+        uses: actions/checkout@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Install isolated Playwright browser
+        run: |
+          mkdir -p /tmp/getpasslab-live-browser
+          npm install --prefix /tmp/getpasslab-live-browser --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-live-browser/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify deployed live instant-practice UI (read-only)
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-live-browser/node_modules/playwright
+          QA_BASE_URL: https://getpasslab.co.kr
+        run: node scripts/qa-instant-practice-pilot.cjs
+      - name: Publish live QA screenshots and report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: production-instant-practice-smoke
+          path: qa-results/instant-practice-pilot/
+          retention-days: 7
