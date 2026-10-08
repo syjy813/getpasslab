@@ -71,7 +71,11 @@ function restorePilotRoute(file, source) {
   return source;
 }
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
-  const actual = hash(restorePilotRoute(file, await readFile(file, 'utf8')));
+  const bytes = await readFile(file);
+  const verifiedBytes = file === pilotRoutePath
+    ? Buffer.from(restorePilotRoute(file, bytes.toString('utf8')), 'utf8')
+    : bytes;
+  const actual = hash(verifiedBytes);
   if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: content/question/asset changed`);
 }
 for (const row of review.displayFiles) {
