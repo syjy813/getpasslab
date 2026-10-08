@@ -1,4 +1,4 @@
-name: Instant practice pilot browser QA
+name: All chapter instant practice browser QA
 
 on:
   pull_request:
@@ -8,6 +8,8 @@ on:
       - 'src/config/instantPracticeExplanations.js'
       - 'src/pages/[cert]/[exam]/[subject]/[slug].astro'
       - 'scripts/qa-instant-practice-pilot.cjs'
+      - 'scripts/check-instant-practice-coverage.mjs'
+      - 'src/layouts/ChapterLayout.astro'
       - '.github/workflows/instant-practice-pilot-qa.yml'
 
 permissions:
@@ -26,6 +28,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: node scripts/check-instant-practice-pilot.mjs
+      - run: node scripts/check-instant-practice-coverage.mjs
       - name: Prepare temporary Chromium browser
         run: |
           mkdir -p /tmp/getpasslab-browser-tools
@@ -45,6 +48,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: instant-practice-pilot-qa
-          path: qa-results/instant-practice-pilot/
+          name: all-chapter-instant-practice-qa
+          path: qa-results/instant-practice-coverage/
           retention-days: 14
