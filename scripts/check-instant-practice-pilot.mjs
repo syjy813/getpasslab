@@ -35,7 +35,9 @@ ids.forEach(id => {
 const page = readFileSync('src/pages/[cert]/[exam]/[subject]/[slug].astro', 'utf8');
 assert.ok(page.includes("linked.some(question => !question.review"), 'Practice must be enabled for chapters with eligible canonical questions');
 assert.ok(!page.includes('instantPracticeCount='), 'Other chapter question-history HTML must remain unchanged');
-assert.ok(page.includes('<InstantQuestionPractice slot="practice-overlay"'), 'Practice overlay must render outside article');
+const layout = readFileSync('src/layouts/ChapterLayout.astro', 'utf8');
+assert.ok(layout.includes('<InstantQuestionPractice questions={practiceQuestions}'), 'Practice overlay must render outside chapter article');
+assert.ok(page.includes('practiceQuestions='), 'Page must pass eligible linked questions through layout props');
 const history = readFileSync('src/components/QuestionHistory.astro', 'utf8');
 assert.ok(!history.includes('data-practice-open'), 'Shared question-history component must not be modified for other chapters');
 const practice = readFileSync('src/components/InstantQuestionPractice.astro', 'utf8');
