@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { INSTANT_PRACTICE_PILOT_EXPLANATIONS } from '../config/instantPracticeExplanations.js';
 import type { ImageMetadata } from 'astro';
 
 interface PracticeQuestion {
@@ -9,43 +9,46 @@ interface PracticeQuestion {
   body: string;
   choices: string[];
   answer: number;
+  review?: string;
+  caution?: string;
   image?: { src: ImageMetadata; alt: string };
 }
 interface Props {
   questions: PracticeQuestion[];
-  explanations: Record<string, string>;
+  certificationId: string;
+  chapterSlug: string;
 }
 
-const { questions, explanations } = Astro.props;
-const practiceQuestions = questions.filter(question => Boolean(explanations[question.id]));
-const symbols = ['①', '②', '③', '④'];
-const imageChoicePattern = /^(수식|그림)[①②③④]$/;
-const displayChoice = (choice: string, hasImage: boolean) => {
-  if (!hasImage) return choice;
-  const match = choice.match(imageChoicePattern);
-  if (!match) return choice;
-  return match[1] === '수식' ? '위 이미지에 제시된 수식' : '위 이미지에 제시된 보기';
-};
+const { questions, certificationId, chapterSlug } = Astro.props;
+// A question with an unresolved review must not be graded as a verified answer.
+// Caution-marked questions remain available with an explicit source-answer warning.
+const practiceQuestions = questions.filter(q => !q.review && q.choices.length === 4 && q.answer >= 1 && q.answer <= 4);
+const explanations = chapterSlug === 'accident-prevention-principles' && certificationId === 'industrial-safety'
+  ? INSTANT_PRACTICE_PILOT_EXPLANATIONS
+  : {};
 ---
 {practiceQuestions.length > 0 && (
-  <div class="instant-practice" data-instant-practice>
+  <div class="instant-practice" data-instant-practice data-practice-cert={certificationId}>
     <div class="practice-entry" data-practice-entry>
-      <button
-        type="button"
-        class="practice-launch"
-        data-practice-open
-        aria-haspopup="dialog"
-        aria-controls="instant-practice-dialog"
-      >문제 풀기 ({practiceQuestions.length}문항)</button>
-      <span>한 문제씩 풀이 · 즉시 채점과 해설</span>
+      <button type="button" class="practice-launch" data-practice-open
+        aria-haspopup="dialog" aria-controls="instant-practice-dialog">
+        문제 풀기 ({practiceQuestions.length}문항)
+      </button>
+      <span>한 문제씩 풀이 · 즉시 채점 및 해설 확인</span>
     </div>
-    <dialog
-      id="instant-practice-dialog"
-      class="instant-practice-dialog"
-      data-practice-dialog
-      aria-labelledby="instant-practice-heading"
-      aria-modal="true"
-    >
+    <div class="practice-meta-store" hidden aria-hidden="true">
+      {practiceQuestions.map(q => (
+        <span data-practice-meta data-id={q.id}
+          data-image-src={q.image?.src.src}
+          data-image-width={q.image?.src.width}
+          data-image-height={q.image?.src.height}
+          data-image-alt={q.image?.alt}
+          data-caution={q.caution}
+          data-explanation={explanations[q.id as keyof typeof explanations] ?? ''}></span>
+      ))}
+    </div>
+    <dialog id="instant-practice-dialog" class="instant-practice-dialog"
+      data-practice-dialog aria-labelledby="instant-practice-heading" aria-modal="true">
       <div class="practice-dialog-inner">
         <div class="practice-modal-header">
           <h2 id="instant-practice-heading">기출 한 문제씩 풀기</h2>
@@ -53,189 +56,252 @@ const displayChoice = (choice: string, hasImage: boolean) => {
             닫기 <span aria-hidden="true">×</span>
           </button>
         </div>
-        <p class="practice-intro">답을 선택하고 정답을 확인하면 해설이 바로 표시됩니다.</p>
+        <p class="practice-intro">답을 선택한 뒤 정답을 확인하세요. 검증된 해설이 없는 문항은 별도로 표시됩니다.</p>
         <div class="practice-status-row">
           <span>연결 기출 {practiceQuestions.length}문항</span>
           <strong class="practice-progress" data-practice-progress>1 / {practiceQuestions.length}</strong>
         </div>
-    {practiceQuestions.map((question, questionIndex) => (
-      <section
-        class="practice-item"
-        data-practice-item
-        data-answer={question.answer}
-        hidden={questionIndex !== 0}
-        aria-labelledby={'instant-question-' + questionIndex}
-      >
-        <p class="practice-meta">{question.label.replace(/ 시행$/, ' 시험')} · {question.number}번</p>
-        <h3 id={'instant-question-' + questionIndex} tabindex="-1">{questionIndex + 1}. {question.body}</h3>
-        {question.image && (
-          <figure class="practice-figure">
-            <Image
-              src={question.image.src}
-              alt={question.image.alt}
-              width={question.image.src.width}
-              height={question.image.src.height}
-              loading="lazy"
-              decoding="async"
-            />
+        <p class="practice-loading" data-practice-loading hidden role="status"></p>
+        <section class="practice-item" data-practice-item hidden aria-labelledby="instant-practice-question">
+          <p class="practice-meta" data-practice-source></p>
+          <h3 id="instant-practice-question" tabindex="-1" data-practice-body></h3>
+          <figure class="practice-figure" data-practice-figure hidden>
+            <img data-practice-image alt="" loading="lazy" decoding="async" />
           </figure>
-        )}
-        <fieldset class="practice-choices">
-          <legend class="sr-only">정답을 선택하세요</legend>
-          {question.choices.map((choice, choiceIndex) => (
-            <label class="practice-choice">
-              <input
-                type="radio"
-                name={'instant-answer-' + questionIndex}
-                value={choiceIndex + 1}
-              />
-              <span class="choice-symbol" aria-hidden="true">{symbols[choiceIndex]}</span>
-              <span>{displayChoice(choice, Boolean(question.image))}</span>
-            </label>
-          ))}
-        </fieldset>
-        <button type="button" class="practice-button" data-practice-check disabled>정답 확인</button>
-        <div class="practice-feedback" data-practice-feedback hidden aria-live="polite">
-          <strong data-practice-result></strong>
-          <p>정답: {symbols[question.answer - 1]} {displayChoice(question.choices[question.answer - 1], Boolean(question.image))}</p>
-          <p><strong>해설</strong> — {explanations[question.id]}</p>
-          <button type="button" class="practice-button" data-practice-next>
-            {questionIndex === practiceQuestions.length - 1 ? '풀이 마치기' : '다음 문제 풀기 →'}
-          </button>
+          <p class="practice-caution" data-practice-caution hidden></p>
+          <fieldset class="practice-choices" data-practice-choices>
+            <legend class="sr-only">정답을 선택하세요</legend>
+          </fieldset>
+          <button type="button" class="practice-button" data-practice-check disabled>정답 확인</button>
+          <div class="practice-feedback" data-practice-feedback hidden aria-live="polite">
+            <strong data-practice-result></strong>
+            <p data-practice-answer></p>
+            <p><strong data-practice-explanation-label>해설</strong> — <span data-practice-explanation></span></p>
+            <button type="button" class="practice-button" data-practice-next>다음 문제 풀기 →</button>
+          </div>
+        </section>
+        <div class="practice-complete" data-practice-complete hidden aria-live="polite">
+          <div class="practice-complete-symbol" aria-hidden="true">✓</div>
+          <h3>연결 기출 풀이 완료</h3>
+          <p class="practice-score" data-practice-score></p>
+          <p class="practice-complete-description">틀린 문제는 다시 풀면서 학습 내용을 복습해 보세요.</p>
+          <div class="practice-complete-actions">
+            <button type="button" class="practice-button" data-practice-restart>다시 풀기</button>
+            <button type="button" class="practice-exit-button" data-practice-finish>학습으로 돌아가기</button>
+          </div>
         </div>
-      </section>
-    ))}
-    <div class="practice-complete" data-practice-complete hidden aria-live="polite">
-      <div class="practice-complete-symbol" aria-hidden="true">✓</div>
-      <h3>연결 기출 풀이 완료</h3>
-      <p class="practice-score" data-practice-score></p>
-      <p class="practice-complete-description">틀린 문제도 다시 풀면서 개념을 복습해 보세요.</p>
-      <div class="practice-complete-actions">
-        <button type="button" class="practice-button" data-practice-restart>다시 풀기</button>
-        <button type="button" class="practice-exit-button" data-practice-finish>학습으로 돌아가기</button>
-      </div>
-    </div>
       </div>
     </dialog>
   </div>
 )}
 <script>
-  document.querySelectorAll<HTMLElement>('[data-instant-practice]').forEach(root => {
-    const items = [...root.querySelectorAll<HTMLElement>('[data-practice-item]')];
-    const progress = root.querySelector<HTMLElement>('[data-practice-progress]');
-    const complete = root.querySelector<HTMLElement>('[data-practice-complete]');
-    const score = root.querySelector<HTMLElement>('[data-practice-score]');
-    const restart = root.querySelector<HTMLButtonElement>('[data-practice-restart]');
-    const finish = root.querySelector<HTMLButtonElement>('[data-practice-finish]');
-    const opener = document.querySelector<HTMLButtonElement>('[data-practice-open][aria-controls="instant-practice-dialog"]');
-    const dialog = root.querySelector<HTMLDialogElement>('[data-practice-dialog]');
-    const close = root.querySelector<HTMLButtonElement>('[data-practice-close]');
-    const scrollArea = root.querySelector<HTMLElement>('.practice-dialog-inner');
-    let correctCount = 0;
+  interface PracticeQuestionData {
+    id: string;
+    label: string;
+    number: number;
+    body: string;
+    choices: string[];
+    answer: number;
+  }
+  const symbols = ['①', '②', '③', '④'];
+  const imageChoicePattern = /^(수식|그림)[①②③④]$/;
+  type Certification = 'industrial-safety' | 'energy-management' | 'computer-literacy';
+  const cachedDatasets = new Map<Certification, Promise<Map<string, PracticeQuestionData>>>();
+  const loadDataset = (cert: Certification) => {
+    const cached = cachedDatasets.get(cert);
+    if (cached) return cached;
+    const promise = (cert === 'industrial-safety'
+      ? import('../data/questions/industrial-safety.json')
+      : cert === 'energy-management'
+        ? import('../data/questions/energy-management.json')
+        : import('../data/questions/computer-literacy.json')
+    ).then(module => new Map((module.default as PracticeQuestionData[]).map(question => [question.id, question])))
+      .catch(error => { cachedDatasets.delete(cert); throw error; });
+    cachedDatasets.set(cert, promise);
+    return promise;
+  };
+  const displayChoice = (choice: string, hasImage: boolean) => {
+    if (!hasImage) return choice;
+    const match = choice.match(imageChoicePattern);
+    return match ? (match[1] === '수식' ? '위 이미지에 제시된 수식' : '위 이미지에 제시된 보기') : choice;
+  };
 
-    // Rendered only for the pilot chapter. Move its launch control into the
-    // existing question-history region without changing that shared component.
+  document.querySelectorAll<HTMLElement>('[data-instant-practice]').forEach(root => {
+    const cert = root.dataset.practiceCert as Certification;
+    if (!['industrial-safety', 'energy-management', 'computer-literacy'].includes(cert)) return;
+    const meta = [...root.querySelectorAll<HTMLElement>('[data-practice-meta]')];
     const history = document.querySelector<HTMLElement>('[data-question-role="primary"]');
     const entry = root.querySelector<HTMLElement>('[data-practice-entry]');
-    if (history && entry) history.append(entry);
-    // Native dialogs stay in a browser top layer, but remain CSS descendants
-    // of <article> unless moved. Keep the modal outside chapter typography.
-    document.body.append(root);
+    const opener = root.querySelector<HTMLButtonElement>('[data-practice-open]');
+    const dialog = root.querySelector<HTMLDialogElement>('[data-practice-dialog]');
+    const close = root.querySelector<HTMLButtonElement>('[data-practice-close]');
+    const finish = root.querySelector<HTMLButtonElement>('[data-practice-finish]');
+    const restart = root.querySelector<HTMLButtonElement>('[data-practice-restart]');
+    const progress = root.querySelector<HTMLElement>('[data-practice-progress]');
+    const loading = root.querySelector<HTMLElement>('[data-practice-loading]');
+    const item = root.querySelector<HTMLElement>('[data-practice-item]');
+    const source = root.querySelector<HTMLElement>('[data-practice-source]');
+    const body = root.querySelector<HTMLElement>('[data-practice-body]');
+    const figure = root.querySelector<HTMLElement>('[data-practice-figure]');
+    const image = root.querySelector<HTMLImageElement>('[data-practice-image]');
+    const caution = root.querySelector<HTMLElement>('[data-practice-caution]');
+    const choices = root.querySelector<HTMLFieldSetElement>('[data-practice-choices]');
+    const check = root.querySelector<HTMLButtonElement>('[data-practice-check]');
+    const feedback = root.querySelector<HTMLElement>('[data-practice-feedback]');
+    const result = root.querySelector<HTMLElement>('[data-practice-result]');
+    const answerText = root.querySelector<HTMLElement>('[data-practice-answer]');
+    const explanation = root.querySelector<HTMLElement>('[data-practice-explanation]');
+    const explanationLabel = root.querySelector<HTMLElement>('[data-practice-explanation-label]');
+    const next = root.querySelector<HTMLButtonElement>('[data-practice-next]');
+    const complete = root.querySelector<HTMLElement>('[data-practice-complete]');
+    const score = root.querySelector<HTMLElement>('[data-practice-score]');
+    const scrollArea = root.querySelector<HTMLElement>('.practice-dialog-inner');
+    if (!history || !entry || !opener || !dialog || !item || !body || !choices || !check || !feedback || !next || meta.length === 0) return;
 
-    opener?.addEventListener('click', () => {
-      if (!dialog || dialog.open) return;
+    history.append(entry);
+    // Keep the modal outside the chapter article; chapter heading styles must not leak in.
+    document.body.append(root);
+    let currentIndex = 0;
+    let correctCount = 0;
+    let questionMap: Map<string, PracticeQuestionData> | undefined;
+    let graded = false;
+    let activeQuestion: PracticeQuestionData | undefined;
+
+    const clear = () => {
+      currentIndex = 0;
+      correctCount = 0;
+      graded = false;
+      activeQuestion = undefined;
+      if (item) item.hidden = true;
+      if (complete) complete.hidden = true;
+      if (feedback) feedback.hidden = true;
+      if (loading) loading.hidden = true;
+      if (progress) progress.textContent = '1 / ' + meta.length;
+      if (scrollArea) scrollArea.scrollTop = 0;
+    };
+    const render = () => {
+      const info = meta[currentIndex];
+      const q = questionMap?.get(info.dataset.id ?? '');
+      if (!q || !Array.isArray(q.choices) || q.choices.length !== 4 || q.answer < 1 || q.answer > 4) {
+        if (loading) { loading.textContent = '문제 데이터를 확인할 수 없습니다. 창을 닫았다가 다시 열어 주세요.'; loading.hidden = false; }
+        item.hidden = true;
+        return;
+      }
+      activeQuestion = q;
+      graded = false;
+      if (loading) loading.hidden = true;
+      if (complete) complete.hidden = true;
+      item.hidden = false;
+      if (progress) progress.textContent = (currentIndex + 1) + ' / ' + meta.length;
+      if (source) source.textContent = q.label.replace(/ 시행$/, ' 시험') + ' · ' + q.number + '번';
+      body.textContent = (currentIndex + 1) + '. ' + q.body;
+      const hasImage = Boolean(info.dataset.imageSrc);
+      if (image && figure) {
+        figure.hidden = !hasImage;
+        if (hasImage) {
+          image.src = info.dataset.imageSrc ?? '';
+          image.alt = info.dataset.imageAlt || (q.label + ' ' + q.number + '번 이미지');
+          const w = Number(info.dataset.imageWidth), h = Number(info.dataset.imageHeight);
+          if (w > 0) image.width = w;
+          if (h > 0) image.height = h;
+        } else {
+          image.removeAttribute('src'); image.removeAttribute('width'); image.removeAttribute('height');
+          image.alt = '';
+        }
+      }
+      if (caution) {
+        caution.hidden = !info.dataset.caution;
+        caution.textContent = info.dataset.caution ? '풀이 주의 · ' + info.dataset.caution : '';
+      }
+      choices.replaceChildren();
+      q.choices.forEach((choice, index) => {
+        const label = document.createElement('label');
+        label.className = 'practice-choice';
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = 'instant-practice-answer';
+        radio.value = String(index + 1);
+        radio.addEventListener('change', () => { if (!graded) check.disabled = false; });
+        const symbol = document.createElement('span');
+        symbol.className = 'choice-symbol';
+        symbol.setAttribute('aria-hidden', 'true');
+        symbol.textContent = symbols[index];
+        const content = document.createElement('span');
+        content.textContent = displayChoice(choice, hasImage);
+        label.append(radio, symbol, content);
+        choices.append(label);
+      });
+      check.hidden = false;
+      check.disabled = true;
+      feedback.hidden = true;
+      next.textContent = currentIndex + 1 === meta.length ? '풀이 마치기' : '다음 문제 풀기 →';
+      if (scrollArea) scrollArea.scrollTop = 0;
+      body.focus({ preventScroll: true });
+    };
+    opener.addEventListener('click', async () => {
+      if (dialog.open) return;
+      clear();
       dialog.showModal();
       close?.focus();
+      if (loading) { loading.textContent = '문항을 불러오는 중입니다.'; loading.hidden = false; }
+      try {
+        questionMap = await loadDataset(cert);
+        if (!dialog.open) return;
+        render();
+      } catch (error) {
+        console.error('[instant-practice] loading failed', error);
+        if (loading) { loading.textContent = '문항을 불러오지 못했습니다. 연결 상태를 확인한 뒤 다시 시도해 주세요.'; loading.hidden = false; }
+      }
     });
-
-    close?.addEventListener('click', () => dialog?.close());
-    finish?.addEventListener('click', () => dialog?.close());
-    // A click on the backdrop is delivered to the dialog itself.
-    dialog?.addEventListener('click', event => {
-      if (event.target === dialog) dialog.close();
-    });
-
-    items.forEach((item, index) => {
-      const radios = [...item.querySelectorAll<HTMLInputElement>('input[type="radio"]')];
-      const check = item.querySelector<HTMLButtonElement>('[data-practice-check]');
-      const feedback = item.querySelector<HTMLElement>('[data-practice-feedback]');
-      const result = item.querySelector<HTMLElement>('[data-practice-result]');
-      const next = item.querySelector<HTMLButtonElement>('[data-practice-next]');
-
-      radios.forEach(radio => radio.addEventListener('change', () => {
-        if (check && !item.dataset.graded) check.disabled = false;
-      }));
-
-      check?.addEventListener('click', () => {
-        const selected = radios.find(radio => radio.checked);
-        if (!selected || item.dataset.graded || !feedback || !result) return;
-
-        const correctAnswer = Number(item.dataset.answer);
-        const isCorrect = Number(selected.value) === correctAnswer;
-        if (isCorrect) correctCount++;
-        item.dataset.graded = 'true';
-
-        radios.forEach(radio => {
-          radio.disabled = true;
-          if (Number(radio.value) === correctAnswer) radio.closest('label')?.classList.add('is-correct');
-        });
-        if (!isCorrect) selected.closest('label')?.classList.add('is-incorrect');
-        result.textContent = isCorrect
-          ? '정답입니다. 다음 문제를 풀어보세요.'
-          : '오답입니다. 정답과 해설을 확인하세요.';
+    check.addEventListener('click', () => {
+      const selected = choices.querySelector<HTMLInputElement>('input:checked');
+      if (!selected || !activeQuestion || graded) return;
+      const info = meta[currentIndex];
+      const sourceAnswer = activeQuestion.answer;
+      const isCorrect = Number(selected.value) === sourceAnswer;
+      graded = true;
+      if (isCorrect) correctCount++;
+      choices.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach(radio => {
+        radio.disabled = true;
+        if (Number(radio.value) === sourceAnswer) radio.closest('label')?.classList.add('is-correct');
+      });
+      if (!isCorrect) selected.closest('label')?.classList.add('is-incorrect');
+      const hasCaution = Boolean(info.dataset.caution);
+      if (result) {
+        result.textContent = hasCaution
+          ? (isCorrect ? '수록 답안과 일치합니다.' : '수록 답안과 다릅니다.')
+          : (isCorrect ? '정답입니다. 다음 문제를 풀어보세요.' : '오답입니다. 정답과 해설을 확인하세요.');
         result.className = isCorrect ? 'result-correct' : 'result-incorrect';
-        check.hidden = true;
-        feedback.hidden = false;
-        next?.focus();
-      });
-
-      next?.addEventListener('click', () => {
+      }
+      if (answerText) answerText.textContent = (hasCaution ? '수록 답안: ' : '정답: ') + symbols[sourceAnswer - 1] + ' ' + displayChoice(activeQuestion.choices[sourceAnswer - 1], Boolean(info.dataset.imageSrc));
+      const verifiedExplanation = info.dataset.explanation;
+      if (explanationLabel) explanationLabel.textContent = verifiedExplanation ? '해설' : '해설 상태';
+      if (explanation) explanation.textContent = verifiedExplanation || '검증된 문항별 해설이 아직 없습니다. 위 챕터의 개념 설명을 참고해 주세요.';
+      check.hidden = true;
+      feedback.hidden = false;
+      next.focus();
+    });
+    next.addEventListener('click', () => {
+      if (!graded) return;
+      currentIndex++;
+      if (currentIndex < meta.length) render();
+      else {
         item.hidden = true;
+        if (complete) complete.hidden = false;
+        if (score) score.textContent = meta.length + '문제 중 ' + correctCount + '문제 수록 답안과 일치';
+        if (progress) progress.textContent = '완료';
         if (scrollArea) scrollArea.scrollTop = 0;
-        const following = items[index + 1];
-        if (following) {
-          following.hidden = false;
-          if (progress) progress.textContent = String(index + 2) + ' / ' + String(items.length);
-          following.querySelector<HTMLElement>('h3')?.focus();
-        } else {
-          if (progress) progress.textContent = '완료';
-          if (score) score.textContent = String(items.length) + '문제 중 ' + String(correctCount) + '문제 정답';
-          if (complete) complete.hidden = false;
-          restart?.focus();
-        }
-      });
+        restart?.focus();
+      }
     });
-
-    const resetPractice = () => {
-      correctCount = 0;
-      items.forEach((item, index) => {
-        item.hidden = index !== 0;
-        delete item.dataset.graded;
-        item.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach(radio => {
-          radio.checked = false;
-          radio.disabled = false;
-          radio.closest('label')?.classList.remove('is-correct', 'is-incorrect');
-        });
-        const check = item.querySelector<HTMLButtonElement>('[data-practice-check]');
-        if (check) {
-          check.hidden = false;
-          check.disabled = true;
-        }
-        const feedback = item.querySelector<HTMLElement>('[data-practice-feedback]');
-        if (feedback) feedback.hidden = true;
-      });
-      if (complete) complete.hidden = true;
-      if (progress) progress.textContent = '1 / ' + String(items.length);
-      if (scrollArea) scrollArea.scrollTop = 0;
-      items[0]?.querySelector<HTMLElement>('h3')?.focus();
-    };
-
-    restart?.addEventListener('click', resetPractice);
-    // Escape, close button and backdrop click all restore focus and start a fresh session.
-    dialog?.addEventListener('close', () => {
-      resetPractice();
-      opener?.focus({ preventScroll: true });
+    restart?.addEventListener('click', () => {
+      currentIndex = 0; correctCount = 0;
+      render();
     });
+    close?.addEventListener('click', () => dialog.close());
+    finish?.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+    dialog.addEventListener('close', () => { clear(); opener.focus({ preventScroll: true }); });
   });
 </script>
 <style>
@@ -255,7 +321,9 @@ const displayChoice = (choice: string, hasImage: boolean) => {
   .practice-intro{margin:var(--space-3) 0 var(--space-4);font-size:var(--fs-caption);line-height:1.6;color:var(--gray-600)}
   .practice-status-row{display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);padding:var(--space-3) 0;margin-bottom:var(--space-5,20px);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:var(--fs-caption);color:var(--gray-600)}
   .practice-progress{flex:none;white-space:nowrap;padding:4px 10px;border-radius:var(--radius-full);background:var(--primary-50);color:var(--primary-700);font-size:var(--fs-caption);font-weight:var(--fw-semibold)}
-  .practice-item[hidden],.practice-feedback[hidden],.practice-complete[hidden]{display:none!important}
+  .practice-item[hidden],.practice-feedback[hidden],.practice-complete[hidden],.practice-loading[hidden],.practice-figure[hidden],.practice-caution[hidden]{display:none!important}
+  .practice-caution{margin:0 0 var(--space-4);padding:var(--space-3);border:1px solid var(--warning);border-radius:var(--radius-md);background:var(--warning-bg);font-size:var(--fs-caption);line-height:1.65}
+  .practice-loading{margin:var(--space-4) 0;color:var(--gray-600);font-size:var(--fs-body)}
   .practice-meta{color:var(--gray-600);font-size:var(--fs-caption);margin:0 0 var(--space-3)}
   .practice-item h3{margin:0 0 var(--space-4);font-size:var(--fs-h3);line-height:1.55;color:var(--gray-900);overflow-wrap:anywhere}
   .practice-item h3:focus-visible{outline:2px solid var(--primary-600);outline-offset:4px}
