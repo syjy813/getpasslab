@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
-import industrialQuestions from '../../../data/questions/industrial-safety.json';
-import energyQuestions from '../../../data/questions/energy-management.json';
-import computerQuestions from '../../../data/questions/computer-literacy.json';
+import industrialQuestions from '../../data/questions/industrial-safety.json';
+import energyQuestions from '../../data/questions/energy-management.json';
+import computerQuestions from '../../data/questions/computer-literacy.json';
 
 // Static, read-only snapshots of existing canonical question records.
 // Keep original question IDs, choices, source answer indices and body text.
