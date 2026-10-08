@@ -93,30 +93,51 @@ assert.equal(sourceViolations.length, 0, 'unapproved source/asset changes');
 for (const row of review.displayFiles) {
   await restoreDisplayReview(row.path, await readFile(row.path, 'utf8'), reviewFile);
 }
-const pilotDebugFile = 'dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html';
-const pilotDebugHtml = await nativeReadFile(pilotDebugFile, 'utf8');
-const pilotDebugArticle = pilotDebugHtml.split('<article>')[1]?.split('</article>')[0] ?? '';
-const pilotDebugAt = pilotDebugArticle.indexOf('data-instant-practice');
-const pilotDebugStart = pilotDebugArticle.lastIndexOf('<div', pilotDebugAt);
-const pilotDebugRelated = pilotDebugArticle.indexOf('<h2>관련 챕터</h2>', pilotDebugAt);
-console.log('[Formula historical pilot debug]', JSON.stringify({
-  articleLength: pilotDebugArticle.length,
-  insertionIndex: pilotDebugStart,
-  relatedIndex: pilotDebugRelated,
-  start: pilotDebugArticle.slice(pilotDebugStart-180,pilotDebugStart+500),
-  beforeRelated: pilotDebugArticle.slice(pilotDebugRelated-500,pilotDebugRelated+180),
-  scripts: pilotDebugArticle.split('<script').slice(1).map(s => '<script' + s.split('>')[0] + '>'),
-}));
+
+const postPilotPath = 'dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html';
+const source2019Audit = 'docs/audits/2026-10-06-industrial-20190804-full-review/';
+const source2019Review = JSON.parse(await nativeReadFile(source2019Audit + 'review.json', 'utf8'));
+const source2019Baseline = JSON.parse(await nativeReadFile(source2019Audit + 'baseline.json', 'utf8'));
+const originalPilotPage = source2019Baseline.pages.find(row => row.path === postPilotPath);
+assert(originalPilotPage, 'pilot chapter must be covered by the historical baseline');
+async function readHistoricalBuildHtml(file) {
+  if (file !== postPilotPath) return readFile(file, 'utf8');
+
+  // The 2026-10-08 pilot introduces precisely one quiz block after the old
+  // question-history script and before "관련 챕터". The block is not historical
+  // course content; remove it only for the old snapshot comparison.
+  const html = await nativeReadFile(file, 'utf8');
+  const match = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/);
+  assert(match, 'pilot public article must exist');
+  const article = match[1];
+  const marker = article.indexOf('data-instant-practice');
+  const start = article.lastIndexOf('<div', marker);
+  const end = article.indexOf('<h2>관련 챕터</h2>', marker);
+  assert(marker > 0 && start >= 0 && end > start, 'one bounded pilot modal insertion');
+  const inserted = article.slice(start, end);
+  assert(inserted.startsWith('<div class="instant-practice"'), 'only the pilot component may be stripped');
+  assert(inserted.includes('data-practice-dialog') && inserted.includes('data-practice-item'), 'practice structure verified');
+  assert(inserted.includes('<script type="module">') && inserted.trimEnd().endsWith('</script>'), 'pilot script boundary verified');
+
+  let restored = article.slice(0, start) + ' ' + article.slice(end);
+  // Retain the original 2019 source audit's exact JS-asset reference reversal.
+  for (const edit of source2019Review.articleAssetReferenceEdits) {
+    assert(restored.split(edit.after).length <= 2, 'at most one approved loader asset');
+    restored = restored.replace(edit.after, edit.before);
+  }
+  assert.equal(hash(restored), originalPilotPage.articleSha256, 'pilot: all historical article bytes preserved');
+  return html.replace(article, restored);
+}
 
 const actualRoutes = [];
 for (const file of await walk('dist')) {
   if (!file.endsWith('/index.html')) continue;
-  const html = await readFile(file, 'utf8');
+  const html = await readHistoricalBuildHtml(file);
   if (html.includes('chapter-page') && /<article\b/.test(html)) actualRoutes.push(file.slice(4, -10));
 }
 assert.deepEqual(actualRoutes.sort(), [...publicPages.map(row => new URL(row.url).pathname), new URL(publication.chapter.url).pathname].sort(), 'all historical routes plus approved clamshell publication');
 for (const row of publicPages) {
-  const html = await readFile(`dist${new URL(row.url).pathname}index.html`, 'utf8');
+  const html = await readHistoricalBuildHtml(`dist${new URL(row.url).pathname}index.html`);
   const article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1];
   let restoredArticle = sourceReview.chapters.some(chapter => chapter.url === row.url) ? article : restoreQuestionSourceAssetRefs(article);
   for (const release of sourceReview.chapters.some(chapter => chapter.url === row.url) ? [] : [batchReview, ftaReview]) {
