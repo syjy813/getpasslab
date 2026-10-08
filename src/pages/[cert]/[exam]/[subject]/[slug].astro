@@ -3,6 +3,8 @@ import { getCollection, render } from 'astro:content';
 import ChapterLayout from '../../../../layouts/ChapterLayout.astro';
 import AdFitResponsive from '../../../../components/AdFitResponsive.astro';
 import QuestionHistory from '../../../../components/QuestionHistory.astro';
+import InstantQuestionPractice from '../../../../components/InstantQuestionPractice.astro';
+import { INSTANT_PRACTICE_PILOT_SLUG } from '../../../../config/instantPracticeExplanations.js';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
 import { getSubject } from '../../../../config/certifications';
 import { getQuestionImage } from '../../../../config/questionImages';
@@ -175,7 +177,7 @@ const sideChapters = orderedSideChapters
   badges={badgeSummary.badges}
   sideChapters={sideChapters}
   subjectStartChapters={subjectStartChapters}
-  practiceQuestions={linked.some(question => !question.review && question.choices.length === 4 && question.answer >= 1 && question.answer <= 4) ? linked as any : undefined}
+  practiceQuestions={chapter.data.cert_id === 'industrial-safety' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG ? undefined : linked.some(question => !question.review && question.choices.length === 4 && question.answer >= 1 && question.answer <= 4) ? linked as any : undefined}
 >
   <Content />
   <AdFitResponsive />
@@ -187,6 +189,9 @@ const sideChapters = orderedSideChapters
     emptyText={isComputerBasics ? '이 챕터에 직접 연결된 기출은 없음 · 기초 개념부터 학습' : chapter.data.cert_id === 'computer-literacy' ? '기출 미배정 · 기초 개념 학습' : undefined}
     deferredQuestionDataset={deferredQuestionDataset}
   />}
+  {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (
+    <InstantQuestionPractice questions={linked as any} certificationId={chapter.data.cert_id} chapterSlug={chapter.data.slug} />
+  )}
   {supporting.length > 0 && <QuestionHistory
     questions={supporting}
     supporting
