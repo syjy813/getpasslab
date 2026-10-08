@@ -1,5 +1,6 @@
 ---
 import { INSTANT_PRACTICE_PILOT_EXPLANATIONS } from '../config/instantPracticeExplanations.js';
+import { withBase } from '../config/url';
 import type { ImageMetadata } from 'astro';
 
 interface PracticeQuestion {
@@ -28,7 +29,7 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
   : {};
 ---
 {practiceQuestions.length > 0 && (
-  <div class="instant-practice" data-instant-practice data-practice-cert={certificationId}>
+  <div class="instant-practice" data-instant-practice data-practice-cert={certificationId} data-practice-src={withBase('/practice-data/' + certificationId + '.json')}>
     <div class="practice-entry" data-practice-entry>
       <button type="button" class="practice-launch" data-practice-open
         aria-haspopup="dialog" aria-controls="instant-practice-dialog">
@@ -107,15 +108,15 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
   const imageChoicePattern = /^(수식|그림)[①②③④]$/;
   type Certification = 'industrial-safety' | 'energy-management' | 'computer-literacy';
   const cachedDatasets = new Map<Certification, Promise<Map<string, PracticeQuestionData>>>();
-  const loadDataset = (cert: Certification) => {
+  const loadDataset = (cert: Certification, src: string) => {
     const cached = cachedDatasets.get(cert);
     if (cached) return cached;
-    const promise = (cert === 'industrial-safety'
-      ? import('../data/questions/industrial-safety.json')
-      : cert === 'energy-management'
-        ? import('../data/questions/energy-management.json')
-        : import('../data/questions/computer-literacy.json')
-    ).then(module => new Map((module.default as PracticeQuestionData[]).map(question => [question.id, question])))
+    const promise = fetch(src)
+      .then(response => {
+        if (!response.ok) throw new Error('Practice dataset HTTP '+response.status);
+        return response.json() as Promise<PracticeQuestionData[]>;
+      })
+      .then(questions => new Map(questions.map(question => [question.id, question])))
       .catch(error => { cachedDatasets.delete(cert); throw error; });
     cachedDatasets.set(cert, promise);
     return promise;
@@ -245,7 +246,7 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
       close?.focus();
       if (loading) { loading.textContent = '문항을 불러오는 중입니다.'; loading.hidden = false; }
       try {
-        questionMap = await loadDataset(cert);
+        questionMap = await loadDataset(cert, root.dataset.practiceSrc ?? '');
         if (!dialog.open) return;
         render();
       } catch (error) {

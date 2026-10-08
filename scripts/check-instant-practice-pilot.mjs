@@ -43,7 +43,7 @@ assert.ok(!history.includes('data-practice-open'), 'Shared question-history comp
 const practice = readFileSync('src/components/InstantQuestionPractice.astro', 'utf8');
 assert.ok(practice.includes('data-practice-dialog') && practice.includes('data-practice-entry') && practice.includes('history.append(entry)'), 'Practice must move only its launch control into question history');
 assert.ok(practice.includes('dialog.showModal()') && practice.includes("dialog.addEventListener('close'"), 'Dialog must open modally and reset on close');
-assert.ok(practice.includes("import('../data/questions/computer-literacy.json')"), 'All certifications must load on demand');
+assert.ok(practice.includes('fetch(src)') && practice.includes('data-practice-src='), 'All certifications must load canonical practice data on demand without changing existing question-history bundles');
 assert.ok(practice.includes('검증된 문항별 해설이 아직 없습니다'), 'Unverified explanations must be clearly marked');
 assert.ok(practice.includes('document.body.append(root)'), 'Practice dialog must be isolated from the chapter article CSS');
 assert.ok(practice.includes('.practice-modal-header h2::before') && practice.includes('content:none'), 'Practice title must not inherit chapter heading decoration');
