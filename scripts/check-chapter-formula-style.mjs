@@ -56,10 +56,12 @@ assert.deepEqual(files.sort(), expectedFiles.sort(), 'source/asset inventory pre
 // rewrite audit snapshots or ignore arbitrary source changes.
 const pilotRoutePath = 'src/pages/[cert]/[exam]/[subject]/[slug].astro';
 const pilotRouteInsertions = [
-  "import InstantQuestionPractice from '../../../../components/InstantQuestionPractice.astro';\\n",
-  "import { INSTANT_PRACTICE_PILOT_SLUG, INSTANT_PRACTICE_PILOT_EXPLANATIONS } from '../../../../config/instantPracticeExplanations.js';\\n",
-  "  {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (\\n    <InstantQuestionPractice questions={linked as any} explanations={INSTANT_PRACTICE_PILOT_EXPLANATIONS} />\\n  )}\\n",
-].map(fragment => fragment.replaceAll('\\\\n', '\\n'));
+  "import InstantQuestionPractice from '../../../../components/InstantQuestionPractice.astro';",
+  "import { INSTANT_PRACTICE_PILOT_SLUG, INSTANT_PRACTICE_PILOT_EXPLANATIONS } from '../../../../config/instantPracticeExplanations.js';",
+  `  {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (
+    <InstantQuestionPractice questions={linked as any} explanations={INSTANT_PRACTICE_PILOT_EXPLANATIONS} />
+  )}`,
+].map(fragment => fragment + String.fromCharCode(10));
 function restorePilotRoute(file, source) {
   if (file !== pilotRoutePath) return source;
   for (const addition of pilotRouteInsertions) {
