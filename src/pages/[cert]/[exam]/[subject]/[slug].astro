@@ -188,7 +188,7 @@ const sideChapters = orderedSideChapters
     deferredQuestionDataset={deferredQuestionDataset}
   />}
   {linked.some(question => !question.review && question.choices.length === 4 && question.answer >= 1 && question.answer <= 4) && (
-    <InstantQuestionPractice questions={linked as any} certificationId={chapter.data.cert_id} chapterSlug={chapter.data.slug} />
+    <InstantQuestionPractice slot="practice-overlay" questions={linked as any} certificationId={chapter.data.cert_id} chapterSlug={chapter.data.slug} />
   )}
   {supporting.length > 0 && <QuestionHistory
     questions={supporting}
