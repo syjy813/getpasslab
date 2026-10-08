@@ -140,7 +140,10 @@ async function readHistoricalBuildHtml(file) {
   const inserted = article.slice(start, end);
   assert(inserted.startsWith('<div class="instant-practice"'), 'only the pilot component may be stripped');
   assert(inserted.includes('data-practice-dialog') && inserted.includes('data-practice-item'), 'practice structure verified');
-  assert(inserted.includes('<script type="module">') && inserted.trimEnd().endsWith('</script>'), 'pilot script boundary verified');
+  // Astro may inline this module or emit a separate bundled script as the
+  // component grows. Its insertion boundary is validated by the historical
+  // article SHA-256 below; either complete ending is allowed.
+  assert(inserted.trimEnd().endsWith('</script>') || inserted.trimEnd().endsWith('</div>'), 'complete pilot overlay boundary');
 
   let restored = article.slice(0, start) + ' ' + article.slice(end);
   // Retain the original 2019 source audit's exact JS-asset reference reversal.
