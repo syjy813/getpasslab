@@ -28,7 +28,28 @@ async function walk(dir) {
   return files;
 }
 const files = [...await walk('src'), ...await walk('public')];
-assert.deepEqual(files.sort(), [...Object.keys(evidence.protectedFiles), ...review.displayFiles.map(row => row.path), ...addedFiles.map(row => row.path)].sort(), 'source/asset inventory preserved');
+
+// This historical release predates the instant-practice pilot. These two
+// paths were added by that separately reviewed feature after the snapshot.
+// The all-chapter rollout additionally introduces one static JSON endpoint.
+// Keep the allowlist exact; every other unexpected source/asset addition,
+// deletion or rename must still fail this inventory guard.
+const laterApprovedSources = [
+  'src/components/InstantQuestionPractice.astro',
+  'src/config/instantPracticeExplanations.js',
+];
+const optionalRolloutSources = [
+  'src/pages/practice-data/[cert].json.ts',
+];
+const presentRolloutSources = optionalRolloutSources.filter(file => files.includes(file));
+const expectedFiles = [
+  ...Object.keys(evidence.protectedFiles),
+  ...review.displayFiles.map(row => row.path),
+  ...addedFiles.map(row => row.path),
+  ...laterApprovedSources,
+  ...presentRolloutSources,
+];
+assert.deepEqual(files.sort(), expectedFiles.sort(), 'source/asset inventory preserved');
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
   const actual = hash(await readFile(file));
   if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: content/question/asset changed`);
