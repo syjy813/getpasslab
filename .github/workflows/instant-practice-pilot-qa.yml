@@ -27,6 +27,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - run: node scripts/debug-practice-article-diff.mjs
       - run: node scripts/check-instant-practice-pilot.mjs
       - run: node scripts/check-instant-practice-coverage.mjs
       - name: Prepare temporary Chromium browser
