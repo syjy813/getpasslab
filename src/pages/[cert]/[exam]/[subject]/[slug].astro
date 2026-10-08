@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import ChapterLayout from '../../../../layouts/ChapterLayout.astro';
 import AdFitResponsive from '../../../../components/AdFitResponsive.astro';
 import QuestionHistory from '../../../../components/QuestionHistory.astro';
+import InstantQuestionPractice from '../../../../components/InstantQuestionPractice.astro';
 import { INSTANT_PRACTICE_PILOT_SLUG, INSTANT_PRACTICE_PILOT_EXPLANATIONS } from '../../../../config/instantPracticeExplanations.js';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
 import { getSubject } from '../../../../config/certifications';
@@ -181,13 +182,16 @@ const sideChapters = orderedSideChapters
   <AdFitResponsive />
   {(linked.length > 0 || supporting.length === 0) && <QuestionHistory
     questions={linked as any}
-    instantPracticeExplanations={chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG ? INSTANT_PRACTICE_PILOT_EXPLANATIONS : undefined}
+    instantPracticeCount={chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG ? linked.filter(question => Boolean(INSTANT_PRACTICE_PILOT_EXPLANATIONS[question.id as keyof typeof INSTANT_PRACTICE_PILOT_EXPLANATIONS])).length : undefined}
     examComment={chapter.data.examComment}
     headingText={isComputerBasics ? '개념을 확인하는 기출문제' : undefined}
     introText={isComputerBasics ? '문제 버튼을 눌러 배운 개념을 적용해 보기' : chapter.data.cert_id === 'computer-literacy' ? '연결 기출로 개념의 출제 방식 확인' : undefined}
     emptyText={isComputerBasics ? '이 챕터에 직접 연결된 기출은 없음 · 기초 개념부터 학습' : chapter.data.cert_id === 'computer-literacy' ? '기출 미배정 · 기초 개념 학습' : undefined}
     deferredQuestionDataset={deferredQuestionDataset}
   />}
+  {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (
+    <InstantQuestionPractice questions={linked as any} explanations={INSTANT_PRACTICE_PILOT_EXPLANATIONS} />
+  )}
   {supporting.length > 0 && <QuestionHistory
     questions={supporting}
     supporting

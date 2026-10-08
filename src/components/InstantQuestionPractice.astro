@@ -29,16 +29,6 @@ const displayChoice = (choice: string, hasImage: boolean) => {
 ---
 {practiceQuestions.length > 0 && (
   <div class="instant-practice" data-instant-practice>
-    <div class="practice-entry">
-      <button
-        type="button"
-        class="practice-launch"
-        data-practice-open
-        aria-haspopup="dialog"
-        aria-controls="instant-practice-dialog"
-      >문제 풀기 ({practiceQuestions.length}문항)</button>
-      <span>한 문제씩 풀이 · 즉시 채점과 해설</span>
-    </div>
     <dialog
       id="instant-practice-dialog"
       class="instant-practice-dialog"
@@ -120,7 +110,7 @@ const displayChoice = (choice: string, hasImage: boolean) => {
     const complete = root.querySelector<HTMLElement>('[data-practice-complete]');
     const score = root.querySelector<HTMLElement>('[data-practice-score]');
     const restart = root.querySelector<HTMLButtonElement>('[data-practice-restart]');
-    const opener = root.querySelector<HTMLButtonElement>('[data-practice-open]');
+    const opener = document.querySelector<HTMLButtonElement>('[data-practice-open][aria-controls="instant-practice-dialog"]');
     const dialog = root.querySelector<HTMLDialogElement>('[data-practice-dialog]');
     const close = root.querySelector<HTMLButtonElement>('[data-practice-close]');
     const scrollArea = root.querySelector<HTMLElement>('.practice-dialog-inner');
@@ -223,10 +213,10 @@ const displayChoice = (choice: string, hasImage: boolean) => {
 </script>
 <style>
   .instant-practice{min-width:0}
-  .practice-entry{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-4)}
-  .practice-entry span{font-size:var(--fs-caption);color:var(--gray-600)}
-  .practice-launch,.practice-button{min-height:44px;padding:10px 16px;border:0;border-radius:var(--radius-md);background:var(--primary-600);color:var(--white);font:inherit;font-weight:var(--fw-semibold);cursor:pointer}
-  .practice-launch:focus-visible,.practice-button:focus-visible,.practice-close:focus-visible{outline:3px solid var(--primary-100);outline-offset:3px}
+  :global(.practice-entry){display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-4)}
+  :global(.practice-entry span){font-size:var(--fs-caption);color:var(--gray-600)}
+  :global(.practice-launch),.practice-button{min-height:44px;padding:10px 16px;border:0;border-radius:var(--radius-md);background:var(--primary-600);color:var(--white);font:inherit;font-weight:var(--fw-semibold);cursor:pointer}
+  :global(.practice-launch:focus-visible),.practice-button:focus-visible,.practice-close:focus-visible{outline:3px solid var(--primary-100);outline-offset:3px}
   .instant-practice-dialog{width:min(720px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid var(--gray-200);border-radius:var(--radius-xl);box-shadow:var(--shadow-md);background:var(--white);color:var(--gray-800)}
   .instant-practice-dialog::backdrop{background:rgba(25,31,40,.65)}
   .practice-dialog-inner{padding:var(--space-6);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain}
@@ -265,6 +255,6 @@ const displayChoice = (choice: string, hasImage: boolean) => {
     .practice-modal-header{gap:var(--space-2)}
     .practice-heading{gap:var(--space-2)}
     .practice-button{width:100%}
-    .practice-entry{align-items:stretch}
+    :global(.practice-entry){align-items:stretch}
   }
 </style>

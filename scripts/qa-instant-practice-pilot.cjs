@@ -28,19 +28,21 @@ async function check(width) {
   const response = await page.goto(target, { waitUntil: 'networkidle', timeout: 45000 });
   assert.equal(response.status(), 200, width + 'px: pilot page is not available');
   const history = page.locator('[data-question-role="primary"]');
-  const root = history.locator('[data-instant-practice]');
-  assert.equal(await root.count(), 1, 'Launch button must be inside the existing question history');
-  const opener = root.locator('[data-practice-open]');
+  const opener = history.locator('[data-practice-open]');
+  const root = page.locator('[data-instant-practice]');
   const dialog = root.locator('[data-practice-dialog]');
+  assert.equal(await root.count(), 1);
+  assert.equal(await opener.count(), 1, 'Launch button must be inside the existing question history');
+  assert.equal(await history.locator('[data-practice-dialog]').count(), 0, 'Quiz dialog must not be embedded in the question history article');
   assert(await opener.isVisible());
   assert.equal((await opener.textContent()).trim(), '문제 풀기 (6문항)');
   assert(!(await dialog.isVisible()), 'Quiz must not be visible in the article until opened');
-  assert.equal(await page.locator('main > [data-instant-practice]').count(), 0);
+  assert.equal(await history.locator('.practice-item').count(), 0);
 
   await opener.click();
   assert(await dialog.isVisible());
   assert.equal(await dialog.getAttribute('aria-modal'), 'true');
-  assert(await root.locator('[data-practice-close]').isFocused());
+  assert(await root.locator('[data-practice-close]').evaluate(element => element === document.activeElement));
 
   const questions = dialog.locator('[data-practice-item]');
   assert.equal(await questions.count(), 6);
@@ -51,7 +53,7 @@ async function check(width) {
   await questions.first().locator('input[value="2"]').check();
   await page.keyboard.press('Escape');
   assert(!(await dialog.isVisible()));
-  assert(await opener.isFocused());
+  assert(await opener.evaluate(element => element === document.activeElement));
   await opener.click();
   assert(await dialog.isVisible());
   assert(!(await questions.first().locator('input[value="2"]').isChecked()));
@@ -104,7 +106,7 @@ async function check(width) {
   // Closing with the visible control restores focus; reopening always starts from question 1.
   await dialog.locator('[data-practice-close]').click();
   assert(!(await dialog.isVisible()));
-  assert(await opener.isFocused());
+  assert(await opener.evaluate(element => element === document.activeElement));
   await opener.click();
   assert(await questions.first().isVisible());
   assert(await questions.first().locator('[data-practice-check]').isDisabled());

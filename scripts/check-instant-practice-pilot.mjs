@@ -34,11 +34,12 @@ ids.forEach(id => {
 
 const page = readFileSync('src/pages/[cert]/[exam]/[subject]/[slug].astro', 'utf8');
 assert.ok(page.includes("chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG"), 'Pilot activation must be restricted to one chapter');
-assert.ok(page.includes('instantPracticeExplanations='), 'Pilot must be passed into the existing question-history block');
-assert.ok(!page.includes('<InstantQuestionPractice'), 'Quiz must not be rendered separately in the article');
+assert.ok(page.includes('instantPracticeCount='), 'Pilot count must be passed into question history');
+assert.ok(page.includes('<InstantQuestionPractice'), 'Pilot dialog must be rendered only on the selected chapter');
 const history = readFileSync('src/components/QuestionHistory.astro', 'utf8');
-assert.ok(history.includes('<InstantQuestionPractice questions={questions}'), 'Question history must own the pilot entry');
+assert.ok(history.includes('data-practice-open'), 'Question history must own the pilot launch button');
+assert.ok(!history.includes("import InstantQuestionPractice"), 'Question history must not import the quiz dialog for every chapter');
 const practice = readFileSync('src/components/InstantQuestionPractice.astro', 'utf8');
-assert.ok(practice.includes('data-practice-open') && practice.includes('data-practice-dialog'), 'Practice must use an explicit dialog trigger');
+assert.ok(practice.includes('data-practice-dialog') && practice.includes('document.querySelector<HTMLButtonElement>'), 'Practice must use the existing question-history trigger');
 assert.ok(practice.includes('dialog.showModal()') && practice.includes("dialog?.addEventListener('close'"), 'Dialog must open modally and reset on close');
 console.log('Instant practice pilot: 6 canonical questions, answer indices, explanations and chapter gating verified');
