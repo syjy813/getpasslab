@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readdir } from './read-before-formwork-lateral-pressure.mjs';
 import path from 'node:path';
+import { readFile as nativeReadFile } from 'node:fs/promises';
 import { restoreDisplayReview, reviewedChapterHash, restoreQuestionSourceAssetRefs, reviewedAssetAdditions } from './reviewed-chapter-hash.mjs';
 
 const sourceReview = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-question-source-repair/review.json', 'utf8'));
@@ -50,22 +51,107 @@ const expectedFiles = [
   ...presentRolloutSources,
 ];
 assert.deepEqual(files.sort(), expectedFiles.sort(), 'source/asset inventory preserved');
-for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
-  const actual = hash(await readFile(file));
-  if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: content/question/asset changed`);
+// The previously approved instant-practice pilot added only two imports and
+// one conditional component mount to the shared chapter route. Undo precisely
+// those insertions before checking the older reviewed source hash. Do not
+// rewrite audit snapshots or ignore arbitrary source changes.
+const pilotRoutePath = 'src/pages/[cert]/[exam]/[subject]/[slug].astro';
+const chapterLayoutPath = 'src/layouts/ChapterLayout.astro';
+// Only the exact Git-reviewed additions are reversible; every other edit
+// must still match historical source hashes. Pilot and rollout forms are
+// separately enumerated so this guard can validate both release stages.
+const pilotRouteInsertions = [
+  "import InstantQuestionPractice from '../../../../components/InstantQuestionPractice.astro';\n",
+  "import { INSTANT_PRACTICE_PILOT_SLUG, INSTANT_PRACTICE_PILOT_EXPLANATIONS } from '../../../../config/instantPracticeExplanations.js';\n",
+  "  {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (\n    <InstantQuestionPractice questions={linked as any} explanations={INSTANT_PRACTICE_PILOT_EXPLANATIONS} />\n  )}\n"
+];
+const rolloutRouteInsertions = [
+  "import InstantQuestionPractice from '../../../../components/InstantQuestionPractice.astro';\n",
+  "import { INSTANT_PRACTICE_PILOT_SLUG } from '../../../../config/instantPracticeExplanations.js';\n",
+  "  practiceQuestions={chapter.data.cert_id === 'industrial-safety' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG ? undefined : linked.some(question => !question.review && question.choices.length === 4 && question.answer >= 1 && question.answer <= 4) ? linked as any : undefined}\n",
+  "  {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (\n    <InstantQuestionPractice questions={linked as any} certificationId={chapter.data.cert_id} chapterSlug={chapter.data.slug} />\n  )}\n"
+];
+const rolloutLayoutInsertions = [
+  "import InstantQuestionPractice from '../components/InstantQuestionPractice.astro';\n",
+  "  practiceQuestions?: any[];\n",
+  "  practiceQuestions,\n",
+  "  {practiceQuestions && <InstantQuestionPractice questions={practiceQuestions} certificationId={cert_id} chapterSlug={slug} />}\n"
+];
+function restorePilotRoute(file, source) {
+  let insertions = [];
+  if (file === pilotRoutePath) {
+    insertions = source.includes('  practiceQuestions=')
+      ? rolloutRouteInsertions
+      : pilotRouteInsertions;
+  } else if (file === chapterLayoutPath && source.includes('  practiceQuestions?: any[];')) {
+    insertions = rolloutLayoutInsertions;
+  }
+  for (const addition of insertions) {
+    assert.equal(source.split(addition).length, 2, `${file}: expected one exact approved insertion`);
+    source = source.replace(addition, '');
+  }
+  return source;
 }
+for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
+  const bytes = await readFile(file);
+  const verifiedBytes = (file === pilotRoutePath || file === chapterLayoutPath)
+    ? Buffer.from(restorePilotRoute(file, bytes.toString('utf8')), 'utf8')
+    : bytes;
+  const actual = hash(verifiedBytes);
+  if (actual !== expected && actual !== reviewedChapterHash(file, expected) && actual !== laterApprovedHashes.get(file)) {
+    sourceViolations.push({ file, actual, expected });
+  }
+}
+for (const row of sourceViolations) console.error('[Historical source hash mismatch]', JSON.stringify(row));
+assert.equal(sourceViolations.length, 0, 'unapproved source/asset changes');
 for (const row of review.displayFiles) {
   await restoreDisplayReview(row.path, await readFile(row.path, 'utf8'), reviewFile);
 }
+
+const postPilotPath = 'dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html';
+const source2019Audit = 'docs/audits/2026-10-06-industrial-20190804-full-review/';
+const source2019Review = JSON.parse(await nativeReadFile(source2019Audit + 'review.json', 'utf8'));
+const source2019Baseline = JSON.parse(await nativeReadFile(source2019Audit + 'baseline.json', 'utf8'));
+const originalPilotPage = source2019Baseline.pages.find(row => row.path === postPilotPath);
+assert(originalPilotPage, 'pilot chapter must be covered by the historical baseline');
+async function readHistoricalBuildHtml(file) {
+  if (file !== postPilotPath) return readFile(file, 'utf8');
+
+  // The 2026-10-08 pilot introduces precisely one quiz block after the old
+  // question-history script and before "관련 챕터". The block is not historical
+  // course content; remove it only for the old snapshot comparison.
+  const html = await nativeReadFile(file, 'utf8');
+  const match = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/);
+  assert(match, 'pilot public article must exist');
+  const article = match[1];
+  const marker = article.indexOf('data-instant-practice');
+  const start = article.lastIndexOf('<div', marker);
+  const end = article.indexOf('<h2>관련 챕터</h2>', marker);
+  assert(marker > 0 && start >= 0 && end > start, 'one bounded pilot modal insertion');
+  const inserted = article.slice(start, end);
+  assert(inserted.startsWith('<div class="instant-practice"'), 'only the pilot component may be stripped');
+  assert(inserted.includes('data-practice-dialog') && inserted.includes('data-practice-item'), 'practice structure verified');
+  assert(inserted.includes('<script type="module">') && inserted.trimEnd().endsWith('</script>'), 'pilot script boundary verified');
+
+  let restored = article.slice(0, start) + ' ' + article.slice(end);
+  // Retain the original 2019 source audit's exact JS-asset reference reversal.
+  for (const edit of source2019Review.articleAssetReferenceEdits) {
+    assert(restored.split(edit.after).length <= 2, 'at most one approved loader asset');
+    restored = restored.replace(edit.after, edit.before);
+  }
+  assert.equal(hash(restored), originalPilotPage.articleSha256, 'pilot: all historical article bytes preserved');
+  return html.replace(article, restored);
+}
+
 const actualRoutes = [];
 for (const file of await walk('dist')) {
   if (!file.endsWith('/index.html')) continue;
-  const html = await readFile(file, 'utf8');
+  const html = await readHistoricalBuildHtml(file);
   if (html.includes('chapter-page') && /<article\b/.test(html)) actualRoutes.push(file.slice(4, -10));
 }
 assert.deepEqual(actualRoutes.sort(), [...publicPages.map(row => new URL(row.url).pathname), new URL(publication.chapter.url).pathname].sort(), 'all historical routes plus approved clamshell publication');
 for (const row of publicPages) {
-  const html = await readFile(`dist${new URL(row.url).pathname}index.html`, 'utf8');
+  const html = await readHistoricalBuildHtml(`dist${new URL(row.url).pathname}index.html`);
   const article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1];
   let restoredArticle = sourceReview.chapters.some(chapter => chapter.url === row.url) ? article : restoreQuestionSourceAssetRefs(article);
   for (const release of sourceReview.chapters.some(chapter => chapter.url === row.url) ? [] : [batchReview, ftaReview]) {
