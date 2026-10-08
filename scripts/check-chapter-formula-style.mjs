@@ -92,6 +92,11 @@ function restorePilotRoute(file, source) {
   }
   return source;
 }
+// Exact separately reviewed homepage source from 2026-10-08 PR #156.
+const laterApprovedHashes = new Map([
+  ['src/pages/index.astro', '12da7256151ddd38f08f7c99f1b3b90b103b3b3d859cf3ffef4235ad0898ead1'],
+]);
+const sourceViolations = [];
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
   const bytes = await readFile(file);
   const verifiedBytes = (file === pilotRoutePath || file === chapterLayoutPath)
