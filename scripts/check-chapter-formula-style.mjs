@@ -95,7 +95,7 @@ for (const row of review.displayFiles) {
 }
 const pilotDebugFile = 'dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html';
 const pilotDebugHtml = await nativeReadFile(pilotDebugFile, 'utf8');
-const pilotDebugArticle = pilotDebugHtml.match(/<article\\b[^>]*>([\\s\\S]*?)<\\/article>/)?.[1] ?? '';
+const pilotDebugArticle = pilotDebugHtml.split('<article>')[1]?.split('</article>')[0] ?? '';
 const pilotDebugAt = pilotDebugArticle.indexOf('data-instant-practice');
 const pilotDebugStart = pilotDebugArticle.lastIndexOf('<div', pilotDebugAt);
 const pilotDebugRelated = pilotDebugArticle.indexOf('<h2>관련 챕터</h2>', pilotDebugAt);
@@ -105,7 +105,7 @@ console.log('[Formula historical pilot debug]', JSON.stringify({
   relatedIndex: pilotDebugRelated,
   start: pilotDebugArticle.slice(pilotDebugStart-180,pilotDebugStart+500),
   beforeRelated: pilotDebugArticle.slice(pilotDebugRelated-500,pilotDebugRelated+180),
-  scripts: [...pilotDebugArticle.matchAll(/<script\\b[^>]*>/g)].map(x=>x[0]),
+  scripts: pilotDebugArticle.split('<script').slice(1).map(s => '<script' + s.split('>')[0] + '>'),
 }));
 
 const actualRoutes = [];
