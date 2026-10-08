@@ -110,7 +110,11 @@ for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
 for (const row of sourceViolations) console.error('[Historical source hash mismatch]', JSON.stringify(row));
 assert.equal(sourceViolations.length, 0, 'unapproved source/asset changes');
 for (const row of review.displayFiles) {
-  await restoreDisplayReview(row.path, await readFile(row.path, 'utf8'), reviewFile);
+  // The formula release's exact layout snapshot predates the approved
+  // all-chapter practice overlay. Reverse only those four reviewed additions
+  // before passing bytes to the existing strict display snapshot verifier.
+  const current = await readFile(row.path, 'utf8');
+  await restoreDisplayReview(row.path, restorePilotRoute(row.path, current), reviewFile);
 }
 
 const postPilotPath = 'dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html';
