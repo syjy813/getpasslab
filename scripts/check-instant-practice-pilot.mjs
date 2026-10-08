@@ -34,5 +34,11 @@ ids.forEach(id => {
 
 const page = readFileSync('src/pages/[cert]/[exam]/[subject]/[slug].astro', 'utf8');
 assert.ok(page.includes("chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG"), 'Pilot activation must be restricted to one chapter');
-assert.ok(page.includes('<InstantQuestionPractice'), 'Pilot component must be mounted');
+assert.ok(!page.includes('instantPracticeCount='), 'Other chapter question-history HTML must remain unchanged');
+assert.ok(page.includes('<InstantQuestionPractice'), 'Pilot dialog must be rendered only on the selected chapter');
+const history = readFileSync('src/components/QuestionHistory.astro', 'utf8');
+assert.ok(!history.includes('data-practice-open'), 'Shared question-history component must not be modified for other chapters');
+const practice = readFileSync('src/components/InstantQuestionPractice.astro', 'utf8');
+assert.ok(practice.includes('data-practice-dialog') && practice.includes('data-practice-entry') && practice.includes('history.append(entry)'), 'Pilot must move only its launch control into question history');
+assert.ok(practice.includes('dialog.showModal()') && practice.includes("dialog?.addEventListener('close'"), 'Dialog must open modally and reset on close');
 console.log('Instant practice pilot: 6 canonical questions, answer indices, explanations and chapter gating verified');

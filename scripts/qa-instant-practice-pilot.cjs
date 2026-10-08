@@ -27,14 +27,38 @@ async function check(width) {
 
   const response = await page.goto(target, { waitUntil: 'networkidle', timeout: 45000 });
   assert.equal(response.status(), 200, width + 'px: pilot page is not available');
+  const history = page.locator('[data-question-role="primary"]');
+  const opener = history.locator('[data-practice-open]');
   const root = page.locator('[data-instant-practice]');
+  const dialog = root.locator('[data-practice-dialog]');
   assert.equal(await root.count(), 1);
-  const questions = root.locator('[data-practice-item]');
-  assert.equal(await questions.count(), 6);
-  assert.equal(await root.locator('[data-practice-item]:visible').count(), 1);
-  assert.equal((await root.locator('[data-practice-progress]').textContent()).trim(), '1 / 6');
+  assert.equal(await opener.count(), 1, 'Launch button must be inside the existing question history');
+  assert.equal(await history.locator('[data-practice-dialog]').count(), 0, 'Quiz dialog must not be embedded in the question history article');
+  assert(await opener.isVisible());
+  assert.equal((await opener.textContent()).trim(), '문제 풀기 (6문항)');
+  assert(!(await dialog.isVisible()), 'Quiz must not be visible in the article until opened');
+  assert.equal(await history.locator('.practice-item').count(), 0);
 
-  await root.screenshot({ path: path.join(output, width + '-initial.png') });
+  await opener.click();
+  assert(await dialog.isVisible());
+  assert.equal(await dialog.getAttribute('aria-modal'), 'true');
+  assert(await root.locator('[data-practice-close]').evaluate(element => element === document.activeElement));
+
+  const questions = dialog.locator('[data-practice-item]');
+  assert.equal(await questions.count(), 6);
+  assert.equal(await dialog.locator('[data-practice-item]:visible').count(), 1);
+  assert.equal((await dialog.locator('[data-practice-progress]').textContent()).trim(), '1 / 6');
+
+  // Closing with Escape must restore focus and discard partial progress on reopen.
+  await questions.first().locator('input[value="2"]').check();
+  await page.keyboard.press('Escape');
+  assert(!(await dialog.isVisible()));
+  assert(await opener.evaluate(element => element === document.activeElement));
+  await opener.click();
+  assert(await dialog.isVisible());
+  assert(!(await questions.first().locator('input[value="2"]').isChecked()));
+  assert(await questions.first().locator('[data-practice-check]').isDisabled());
+  await dialog.screenshot({ path: path.join(output, width + '-initial.png') });
   const answers = [2, 4, 2, 1, 2, 4];
   let expectedCorrect = 0;
 
@@ -60,7 +84,7 @@ async function check(width) {
     assert(await current.locator('input[value="' + chosenAnswer + '"]').isDisabled());
     assert(!(await checkButton.isVisible()));
 
-    if (index === 1) await root.screenshot({ path: path.join(output, width + '-incorrect.png') });
+    if (index === 1) await dialog.screenshot({ path: path.join(output, width + '-incorrect.png') });
     const dimensions = await page.evaluate(() => ({
       width: document.documentElement.clientWidth,
       scroll: document.documentElement.scrollWidth,
@@ -70,15 +94,29 @@ async function check(width) {
     assert(!(await current.isVisible()));
   }
 
-  const completed = root.locator('[data-practice-complete]');
+  const completed = dialog.locator('[data-practice-complete]');
   assert(await completed.isVisible());
   assert((await completed.textContent()).includes('6문제 중 ' + expectedCorrect + '문제 정답'));
   await completed.locator('[data-practice-restart]').click();
   assert(!(await completed.isVisible()));
   assert(await questions.first().isVisible());
   assert(await questions.first().locator('[data-practice-check]').isDisabled());
-  assert.equal(await root.locator('.practice-choice.is-correct').count(), 0);
-  assert.equal(await root.locator('.practice-choice.is-incorrect').count(), 0);
+  assert.equal(await dialog.locator('.practice-choice.is-correct').count(), 0);
+  assert.equal(await dialog.locator('.practice-choice.is-incorrect').count(), 0);
+  // Closing with the visible control restores focus; reopening always starts from question 1.
+  await dialog.locator('[data-practice-close]').click();
+  assert(!(await dialog.isVisible()));
+  assert(await opener.evaluate(element => element === document.activeElement));
+  await opener.click();
+  assert(await questions.first().isVisible());
+  assert(await questions.first().locator('[data-practice-check]').isDisabled());
+  await dialog.locator('[data-practice-close]').click();
+
+  // Other chapters do not expose this pilot button.
+  const unrelated = await page.goto(base + '/industrial-safety/written/safety-management/heinrich-domino-theory/', { waitUntil: 'networkidle', timeout: 45000 });
+  assert.equal(unrelated.status(), 200);
+  assert.equal(await page.locator('[data-practice-open]').count(), 0);
+  await page.goto(target, { waitUntil: 'networkidle', timeout: 45000 });
 
   // Existing public question-history popups must remain functional.
   const oldButton = page.locator('[data-open="20220424_010"]');
@@ -92,7 +130,7 @@ async function check(width) {
   await oldDialog.locator('[data-close]').click();
   assert(!(await oldDialog.isVisible()));
 
-  report.viewports.push({ width, questions: answers.length, deliberatelyIncorrect: 3, correct: expectedCorrect, reset: 'PASS', legacyPopup: 'PASS', horizontalOverflow: 'NONE' });
+  report.viewports.push({ width, questions: answers.length, deliberatelyIncorrect: 3, correct: expectedCorrect, modalOpenCloseEscapeAndFocus: 'PASS', reset: 'PASS', legacyPopup: 'PASS', otherChapterUnchanged: 'PASS', horizontalOverflow: 'NONE' });
   await context.close();
 }
 
@@ -108,7 +146,7 @@ async function check(width) {
   await browser.close();
   fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify(report, null, 2));
   assert.deepEqual(report.failures, [], 'Instant practice browser QA failures: ' + JSON.stringify(report.failures));
-  console.log('Instant practice pilot browser QA passed at 320px, 390px and 1440px');
+  console.log('Instant practice modal browser QA passed at 320px, 390px and 1440px');
 })().catch(error => {
   console.error(error);
   process.exitCode = 1;

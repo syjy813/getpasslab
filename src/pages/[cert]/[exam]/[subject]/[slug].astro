@@ -180,9 +180,6 @@ const sideChapters = orderedSideChapters
 >
   <Content />
   <AdFitResponsive />
-  {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (
-    <InstantQuestionPractice questions={linked as any} explanations={INSTANT_PRACTICE_PILOT_EXPLANATIONS} />
-  )}
   {(linked.length > 0 || supporting.length === 0) && <QuestionHistory
     questions={linked as any}
     examComment={chapter.data.examComment}
@@ -191,6 +188,9 @@ const sideChapters = orderedSideChapters
     emptyText={isComputerBasics ? '이 챕터에 직접 연결된 기출은 없음 · 기초 개념부터 학습' : chapter.data.cert_id === 'computer-literacy' ? '기출 미배정 · 기초 개념 학습' : undefined}
     deferredQuestionDataset={deferredQuestionDataset}
   />}
+  {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (
+    <InstantQuestionPractice questions={linked as any} explanations={INSTANT_PRACTICE_PILOT_EXPLANATIONS} />
+  )}
   {supporting.length > 0 && <QuestionHistory
     questions={supporting}
     supporting
