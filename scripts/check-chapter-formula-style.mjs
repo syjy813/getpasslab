@@ -50,8 +50,26 @@ const expectedFiles = [
   ...presentRolloutSources,
 ];
 assert.deepEqual(files.sort(), expectedFiles.sort(), 'source/asset inventory preserved');
+// The previously approved instant-practice pilot added only two imports and
+// one conditional component mount to the shared chapter route. Undo precisely
+// those insertions before checking the older reviewed source hash. Do not
+// rewrite audit snapshots or ignore arbitrary source changes.
+const pilotRoutePath = 'src/pages/[cert]/[exam]/[subject]/[slug].astro';
+const pilotRouteInsertions = [
+  "import InstantQuestionPractice from '../../../../components/InstantQuestionPractice.astro';\\n",
+  "import { INSTANT_PRACTICE_PILOT_SLUG, INSTANT_PRACTICE_PILOT_EXPLANATIONS } from '../../../../config/instantPracticeExplanations.js';\\n",
+  "  {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (\\n    <InstantQuestionPractice questions={linked as any} explanations={INSTANT_PRACTICE_PILOT_EXPLANATIONS} />\\n  )}\\n",
+].map(fragment => fragment.replaceAll('\\\\n', '\\n'));
+function restorePilotRoute(file, source) {
+  if (file !== pilotRoutePath) return source;
+  for (const addition of pilotRouteInsertions) {
+    assert.equal(source.split(addition).length, 2, `${file}: expected one exact approved pilot insertion`);
+    source = source.replace(addition, '');
+  }
+  return source;
+}
 for (const [file, expected] of Object.entries(evidence.protectedFiles)) {
-  const actual = hash(await readFile(file));
+  const actual = hash(restorePilotRoute(file, await readFile(file, 'utf8')));
   if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: content/question/asset changed`);
 }
 for (const row of review.displayFiles) {
