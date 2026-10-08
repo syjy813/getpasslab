@@ -25,7 +25,6 @@ interface Props {
   supporting?: boolean;
   deferQuestionContent?: boolean;
   deferredQuestionDataset?: DeferredQuestionDataset;
-  instantPracticeCount?: number;
 }
 const {
   questions,
@@ -37,7 +36,6 @@ const {
   supporting = false,
   deferQuestionContent = false,
   deferredQuestionDataset,
-  instantPracticeCount,
 } = Astro.props;
 const deferredDataset = deferredQuestionDataset ?? (deferQuestionContent ? 'energy-management' : undefined);
 const isDeferred = Boolean(deferredDataset);
@@ -92,18 +90,6 @@ const yearRange = sortedYears.length === 0
           </button>
         ))}
       </div>
-      {!supporting && Boolean(instantPracticeCount) && (
-        <div class="practice-entry">
-          <button
-            type="button"
-            class="practice-launch"
-            data-practice-open
-            aria-haspopup="dialog"
-            aria-controls="instant-practice-dialog"
-          >문제 풀기 ({instantPracticeCount}문항)</button>
-          <span>한 문제씩 풀이 · 즉시 채점과 해설</span>
-        </div>
-      )}
     </>
   ) : (
     <>

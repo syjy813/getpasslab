@@ -182,7 +182,6 @@ const sideChapters = orderedSideChapters
   <AdFitResponsive />
   {(linked.length > 0 || supporting.length === 0) && <QuestionHistory
     questions={linked as any}
-    instantPracticeCount={chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG ? linked.filter(question => Boolean(INSTANT_PRACTICE_PILOT_EXPLANATIONS[question.id as keyof typeof INSTANT_PRACTICE_PILOT_EXPLANATIONS])).length : undefined}
     examComment={chapter.data.examComment}
     headingText={isComputerBasics ? '개념을 확인하는 기출문제' : undefined}
     introText={isComputerBasics ? '문제 버튼을 눌러 배운 개념을 적용해 보기' : chapter.data.cert_id === 'computer-literacy' ? '연결 기출로 개념의 출제 방식 확인' : undefined}
