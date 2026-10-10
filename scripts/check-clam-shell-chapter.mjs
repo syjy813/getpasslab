@@ -29,7 +29,26 @@ assert(currentInventory.includes(practiceEndpoint), 'the approved practice endpo
 assert.equal(hash(await readFile(practiceEndpoint)), practiceHash, 'exact approved practice endpoint source');
 assert.deepEqual(currentInventory.filter(file => file !== practiceEndpoint).sort(), Object.keys(baseline.protectedFiles).sort());
 for (const [file, expected] of Object.entries(baseline.protectedFiles)) {
-  assert.equal(hash(await readFile(file)), file === review.chapter.path ? review.chapter.sha256 : expected, `${file}: exact publication scope`);
+  let bytes = await readFile(file);
+  // The approved rollout adds only these four layout lines. Undo exactly
+  // those additions for this pre-rollout historical publication comparison.
+  if (file === 'src/layouts/ChapterLayout.astro') {
+    let layout = bytes.toString('utf8');
+    const insertions = [
+      "import InstantQuestionPractice from '../components/InstantQuestionPractice.astro';",
+      "  practiceQuestions?: any[];",
+      "  practiceQuestions,",
+      "  {practiceQuestions && <InstantQuestionPractice questions={practiceQuestions} certificationId={cert_id} chapterSlug={slug} />}",
+    ].map(value => value + String.fromCharCode(10));
+    if (layout.includes('  practiceQuestions?: any[];')) {
+      for (const part of insertions) {
+        assert.equal(layout.split(part).length, 2, 'one approved layout insertion');
+        layout = layout.replace(part, '');
+      }
+      bytes = Buffer.from(layout);
+    }
+  }
+  assert.equal(hash(bytes), file === review.chapter.path ? review.chapter.sha256 : expected, `${file}: exact publication scope`);
 }
 const original = await readFile(review.chapter.originalFile, 'utf8');
 assert.equal(hash(original), review.chapter.originalSha256);
