@@ -20,7 +20,12 @@ async function walk(dir) {
   }
   return files;
 }
-assert.deepEqual([...await walk('src'), ...await walk('public')].sort(), [...Object.keys(baseline.protectedFiles), ...reviewedAssetAdditions.map(row => row.path)].sort());
+// The practice rollout adds one read-only endpoint, separately checked against
+// all canonical JSON data by check-instant-practice-datasets.mjs.
+const newPracticeEndpoint = 'src/pages/practice-data/[cert].json.ts';
+const sourceInventory = [...await walk('src'), ...await walk('public')];
+assert(sourceInventory.includes(newPracticeEndpoint), 'approved practice endpoint must exist');
+assert.deepEqual(sourceInventory.sort(), [...Object.keys(baseline.protectedFiles), ...reviewedAssetAdditions.map(row => row.path), newPracticeEndpoint].sort());
 const changed = new Map([...review.chapters, ...review.canonicalFiles].map(row => [row.path, row]));
 assert.equal(changed.size, 5);
 for (const [file, before] of Object.entries(baseline.protectedFiles)) {

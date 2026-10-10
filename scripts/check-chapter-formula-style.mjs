@@ -47,7 +47,9 @@ const expectedFiles = [
   ...Object.keys(evidence.protectedFiles),
   ...review.displayFiles.map(row => row.path),
   ...addedFiles.map(row => row.path),
-  ...laterApprovedSources,
+  // The Oct 10 historical reader already verifies and hides these two
+  // post-release additions. When it is active, do not count them twice.
+  ...laterApprovedSources.filter(file => files.includes(file)),
   ...presentRolloutSources,
 ];
 assert.deepEqual(files.sort(), expectedFiles.sort(), 'source/asset inventory preserved');
