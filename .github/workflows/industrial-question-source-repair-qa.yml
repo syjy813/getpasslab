@@ -14,6 +14,8 @@ on:
       - 'scripts/*formwork-lateral-pressure*'
       - 'scripts/*port-cargo-passages*'
       - 'scripts/*excavator-operation-safety*'
+      - 'scripts/*hanging-scaffold-wire-rope*'
+      - 'docs/audits/2026-10-10-hanging-scaffold-wire-rope/**'
       - 'docs/audits/2026-10-07-excavator-operation-safety/**'
       - 'docs/audits/2026-10-07-port-cargo-passages/**'
       - 'docs/audits/2026-10-07-formwork-lateral-pressure/**'
@@ -51,6 +53,8 @@ jobs:
       - run: node scripts/check-formwork-lateral-pressure.mjs
       - run: node scripts/check-port-cargo-passages.mjs
       - run: node scripts/check-excavator-operation-safety.mjs
+      - run: node scripts/check-hanging-scaffold-wire-rope.mjs
+      - run: node scripts/check-instant-practice-pilot.mjs
       - name: Prepare browser
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
@@ -77,6 +81,8 @@ jobs:
           node scripts/qa-formwork-lateral-pressure.cjs
           node scripts/qa-port-cargo-passages.cjs
           node scripts/qa-excavator-operation-safety.cjs
+          node scripts/qa-hanging-scaffold-wire-rope.cjs
+          node scripts/qa-instant-practice-pilot.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -89,4 +95,6 @@ jobs:
             qa-results/formwork-lateral-pressure/
             qa-results/port-cargo-passages/
             qa-results/excavator-operation-safety/
+            qa-results/hanging-scaffold-wire-rope/
+            qa-results/instant-practice-pilot/
           retention-days: 14

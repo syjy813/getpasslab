@@ -13,6 +13,8 @@ on:
       - 'scripts/*formwork-lateral-pressure*'
       - 'scripts/*port-cargo-passages*'
       - 'scripts/*excavator-operation-safety*'
+      - 'scripts/*hanging-scaffold-wire-rope*'
+      - 'docs/audits/2026-10-10-hanging-scaffold-wire-rope/**'
       - 'docs/audits/2026-10-07-excavator-operation-safety/**'
       - 'docs/audits/2026-10-07-port-cargo-passages/**'
       - 'docs/audits/2026-10-07-formwork-lateral-pressure/**'

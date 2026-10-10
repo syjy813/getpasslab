@@ -1,0 +1,54 @@
+{
+  "head": "2d205b93ad3b758ffdd8f122a6158b1c6c08d7cc",
+  "baselineAudits": [
+    "docs/audits/2026-10-07-clam-shell-chapter",
+    "docs/audits/2026-10-07-industrial-unassigned-links",
+    "docs/audits/2026-10-07-formwork-lateral-pressure",
+    "docs/audits/2026-10-07-port-cargo-passages",
+    "docs/audits/2026-10-07-excavator-operation-safety"
+  ],
+  "before": {
+    "industrial": 262,
+    "all": 446,
+    "references": 1029
+  },
+  "after": {
+    "industrial": 263,
+    "all": 447,
+    "references": 1032
+  },
+  "chapter": {
+    "path": "src/content/chapters/construction/hanging-scaffold-wire-rope.md",
+    "slug": "hanging-scaffold-wire-rope",
+    "url": "https://getpasslab.co.kr/industrial-safety/written/construction/hanging-scaffold-wire-rope/",
+    "articlePath": "dist/industrial-safety/written/construction/hanging-scaffold-wire-rope/index.html",
+    "certification": "industrial-safety",
+    "questions": [
+      "20220424_120",
+      "20200606_119",
+      "20190804_116"
+    ],
+    "sha256": "792c163b5eff3bc9106ea9abbcd2532700aa11a7d66f41decdf774ad2185ee90",
+    "articleSha256": "e32adb716be21f8610b7fb89dc713793efd309c0e9277880cdf5ab3f2199a977"
+  },
+  "relatedArticleChanges": [
+    {
+      "path": "dist/industrial-safety/written/construction/tower-crane-rope-support/index.html",
+      "originalSha256": "cd3c7ce502d32ab3b7b0fbb17bb04cfb7a961648b971a449f13d75af5cf221fd",
+      "sha256": "1071e74a03b5e07836334900ed0bf7be294585c58ace81ed136bf9b2aee9fb39",
+      "insertedHtml": "hanging-scaffold-wire-rope/\"><span class=\"rel-group\">건설 와이어로프</span><span class=\"rel-title\">달비계 와이어로프 사용 기준</span></a></li><li><a href=\"/industrial-safety/written/construction/"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/hanging-scaffold-safety-factor/index.html",
+      "originalSha256": "3931cb29ec352fb4eb3934a1ca313ecda65d3afe40096ac3395d2ed6660f7538",
+      "sha256": "d11e3a0d67f0b6e6157de9f089725b773c2eaec9a8b9db6dba593c2ced1fc7eb",
+      "insertedHtml": "hanging-scaffold-wire-rope/\"><span class=\"rel-group\">건설 와이어로프</span><span class=\"rel-title\">달비계 와이어로프 사용 기준</span></a></li><li><a href=\"/industrial-safety/written/construction/"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/pile-driver-stability/index.html",
+      "originalSha256": "b6edadecfc3c103d38ccf09c1da1035972769f3c45f40706b9b4a22abacd4405",
+      "sha256": "d8e1c045c49b6b0a39a6b37c5b516db50472005d62cada7d5c598e9f385dc491",
+      "insertedHtml": "hanging-scaffold-wire-rope/\"><span class=\"rel-group\">건설 와이어로프</span><span class=\"rel-title\">달비계 와이어로프 사용 기준</span></a></li><li><a href=\"/industrial-safety/written/construction/"
+    }
+  ]
+}

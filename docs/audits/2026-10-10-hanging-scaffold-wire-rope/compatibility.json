@@ -1,0 +1,36 @@
+{
+  "sourceChanges": [
+    {
+      "path": "src/components/InstantQuestionPractice.astro",
+      "sha256": "d85238b629c4c1815319f2cf4c4de5212d1530b1b71f52ac7950b4b40921ed81",
+      "newFile": true
+    },
+    {
+      "path": "src/config/instantPracticeExplanations.js",
+      "sha256": "66fd27a74c73db5336b64704e0edcc194b51abe9131b871693c28728be1ea68b",
+      "newFile": true
+    },
+    {
+      "path": "src/pages/[cert]/[exam]/[subject]/[slug].astro",
+      "sha256": "16feb39b7bbb2576b831668a23989c741b281622e81c307b197a1d7a8fb39f93",
+      "newFile": false,
+      "originalSha256": "652f4050341024b6e937599760a06853b8f3ceaf9af58ae1316446254a6ec370",
+      "originalFile": "docs/audits/2026-10-10-hanging-scaffold-wire-rope/originals/src/pages/[cert]/[exam]/[subject]/[slug].astro"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "sha256": "12da7256151ddd38f08f7c99f1b3b90b103b3b3d859cf3ffef4235ad0898ead1",
+      "newFile": false,
+      "originalSha256": "386d63fe59eb2b65df7de31dfb21a71e35b8bfeb7ae2901aa451572cb8354991",
+      "originalFile": "docs/audits/2026-10-10-hanging-scaffold-wire-rope/originals/src/pages/index.astro"
+    }
+  ],
+  "articleChanges": [
+    {
+      "path": "dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html",
+      "sha256": "04811f32382d6da24e25c4956f1b6fd39a12b707b92cb95b5daf3b12d1e5f6de",
+      "originalSha256": "388832df03f2807ca27f927eeaa8b75dadb6e36b36947ef3b5215c9c3cd39306",
+      "originalFile": "docs/audits/2026-10-10-hanging-scaffold-wire-rope/originals/industrial-safety/written/safety-management/accident-prevention-principles/index.article.json"
+    }
+  ]
+}
