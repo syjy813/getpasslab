@@ -13,6 +13,7 @@ const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const rolloutHashes = new Map([
   ['src/components/InstantQuestionPractice.astro', 'cc622a10bf43b49e2c1a2c17fc2412da06bf831c308317f65555d1b1c2e6edc3'],
   ['src/pages/[cert]/[exam]/[subject]/[slug].astro', '346dc57256093c0a8171aed740362981ac2d6f9c461b19b53dee845e7bb55087'],
+  ['dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html', 'fab31075f68fd4d161b9dbe4f6f13a4e4cea4f769220a072d7c5bf58812b11b5'],
 ]);
 const matchesApprovedHash = (row, actual) => actual === row.sha256 || actual === rolloutHashes.get(row.path);
 async function approvedOriginal(row, bytes, articleOnly = false) {
