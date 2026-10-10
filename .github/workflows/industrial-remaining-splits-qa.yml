@@ -3,6 +3,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - 'scripts/read-before-hanging-scaffold-wire-rope.mjs'
       - 'src/content/chapters/chemical/**'
       - 'src/content/chapters/ergonomics/**'
       - 'src/content/chapters/electrical/**'

@@ -3,6 +3,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - 'scripts/read-before-hanging-scaffold-wire-rope.mjs'
       - 'src/content/chapters/construction/earth-retaining-components.md'
       - 'src/styles/learningFigures.css'
       - 'public/images/industrial-safety/earth-retaining-*.svg'
