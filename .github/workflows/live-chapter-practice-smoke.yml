@@ -1,0 +1,36 @@
+name: Live chapter practice smoke QA
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/live-chapter-practice-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  production-browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Install isolated Chromium
+        run: |
+          mkdir -p /tmp/live-chapter-practice
+          npm install --prefix /tmp/live-chapter-practice --no-package-lock playwright@1.62.1
+          /tmp/live-chapter-practice/node_modules/.bin/playwright install --with-deps chromium
+      - name: Validate deployed production quiz UI (read-only)
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/live-chapter-practice/node_modules/playwright
+          QA_BASE_URL: https://getpasslab.co.kr
+        run: node scripts/qa-instant-practice-pilot.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-chapter-practice-smoke
+          path: qa-results/instant-practice-coverage/
+          retention-days: 7
