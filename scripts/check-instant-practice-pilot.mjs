@@ -33,14 +33,18 @@ ids.forEach(id => {
 });
 
 const page = readFileSync('src/pages/[cert]/[exam]/[subject]/[slug].astro', 'utf8');
-assert.ok(page.includes("chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG"), 'Pilot activation must be restricted to one chapter');
+assert.ok(page.includes("linked.some(question => !question.review"), 'Practice must be enabled for chapters with eligible canonical questions');
 assert.ok(!page.includes('instantPracticeCount='), 'Other chapter question-history HTML must remain unchanged');
-assert.ok(page.includes('<InstantQuestionPractice'), 'Pilot dialog must be rendered only on the selected chapter');
+const layout = readFileSync('src/layouts/ChapterLayout.astro', 'utf8');
+assert.ok(layout.includes('<InstantQuestionPractice questions={practiceQuestions}'), 'Practice overlay must render outside chapter article');
+assert.ok(page.includes('practiceQuestions='), 'Page must pass eligible linked questions through layout props');
 const history = readFileSync('src/components/QuestionHistory.astro', 'utf8');
 assert.ok(!history.includes('data-practice-open'), 'Shared question-history component must not be modified for other chapters');
 const practice = readFileSync('src/components/InstantQuestionPractice.astro', 'utf8');
-assert.ok(practice.includes('data-practice-dialog') && practice.includes('data-practice-entry') && practice.includes('history.append(entry)'), 'Pilot must move only its launch control into question history');
-assert.ok(practice.includes('dialog.showModal()') && practice.includes("dialog?.addEventListener('close'"), 'Dialog must open modally and reset on close');
+assert.ok(practice.includes('data-practice-dialog') && practice.includes('data-practice-entry') && practice.includes('history.append(entry)'), 'Practice must move only its launch control into question history');
+assert.ok(practice.includes('dialog.showModal()') && practice.includes("dialog.addEventListener('close'"), 'Dialog must open modally and reset on close');
+assert.ok(practice.includes('fetch(src)') && practice.includes('data-practice-src='), 'All certifications must load canonical practice data on demand without changing existing question-history bundles');
+assert.ok(practice.includes('검증된 문항별 해설이 아직 없습니다'), 'Unverified explanations must be clearly marked');
 assert.ok(practice.includes('document.body.append(root)'), 'Practice dialog must be isolated from the chapter article CSS');
 assert.ok(practice.includes('.practice-modal-header h2::before') && practice.includes('content:none'), 'Practice title must not inherit chapter heading decoration');
 console.log('Instant practice pilot: 6 canonical questions, answer indices, explanations and chapter gating verified');
