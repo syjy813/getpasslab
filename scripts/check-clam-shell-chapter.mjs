@@ -19,7 +19,15 @@ async function walk(dir) {
   }
   return files;
 }
-assert.deepEqual([...await walk('src'), ...await walk('public')].sort(), Object.keys(baseline.protectedFiles).sort());
+// One immutable, read-only practice-data endpoint was introduced after this
+// historical publication. Match its exact reviewed source hash; retain strict
+// inventory and hash checks for every source file from this release.
+const practiceEndpoint = 'src/pages/practice-data/[cert].json.ts';
+const practiceHash = 'e4bc7aa1d9a7edd5c6f0bd8026c94ad38abc7679b138875be6af667540f4990a';
+const currentInventory = [...await walk('src'), ...await walk('public')];
+assert(currentInventory.includes(practiceEndpoint), 'the approved practice endpoint is present');
+assert.equal(hash(await readFile(practiceEndpoint)), practiceHash, 'exact approved practice endpoint source');
+assert.deepEqual(currentInventory.filter(file => file !== practiceEndpoint).sort(), Object.keys(baseline.protectedFiles).sort());
 for (const [file, expected] of Object.entries(baseline.protectedFiles)) {
   assert.equal(hash(await readFile(file)), file === review.chapter.path ? review.chapter.sha256 : expected, `${file}: exact publication scope`);
 }
