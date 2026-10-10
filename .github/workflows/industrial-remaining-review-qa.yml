@@ -3,6 +3,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - 'scripts/read-before-hanging-scaffold-wire-rope.mjs'
       - 'docs/audits/2026-10-05-industrial-remaining-review/**'
       - 'scripts/*industrial-remaining-review*'
       - '.github/workflows/industrial-remaining-review-qa.yml'

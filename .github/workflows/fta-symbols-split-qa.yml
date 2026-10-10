@@ -3,6 +3,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - 'scripts/read-before-hanging-scaffold-wire-rope.mjs'
       - 'src/content/chapters/ergonomics/fta*.md'
       - 'src/assets/questions/industrial-safety/20180304_036.png'
       - 'src/data/question-assets/industrial-safety.json'

@@ -8,6 +8,19 @@ const audit = 'docs/audits/2026-10-10-hanging-scaffold-wire-rope';
 const review = JSON.parse(await readActualFile(`${audit}/review.json`, 'utf8'));
 const compatibility = JSON.parse(await readActualFile(`${audit}/compatibility.json`, 'utf8'));
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+const rolloutLayout = 'src/layouts/ChapterLayout.astro';
+const rolloutLayoutHash = '120b96e6a2b914eb66e447782f29937e974d35597b1ff3b3b036b2d87b992ff3';
+const originalLayoutHash = 'e4684c86c85209a8d6f7978ba04b095d526c585834b91f48942594f9489955d2';
+const rolloutEndpoint = 'src/pages/practice-data/[cert].json.ts';
+const rolloutEndpointHash = 'e4bc7aa1d9a7edd5c6f0bd8026c94ad38abc7679b138875be6af667540f4990a';
+// PR #164 added exactly these four lines to the unchanged shared layout.
+// Validate both versions, reversing only this approved overlay for older audits.
+const layoutInsertions = [
+  "import InstantQuestionPractice from '../components/InstantQuestionPractice.astro';\n",
+  '  practiceQuestions?: any[];\n',
+  '  practiceQuestions,\n',
+  '  {practiceQuestions && <InstantQuestionPractice questions={practiceQuestions} certificationId={cert_id} chapterSlug={slug} />}\n',
+];
 // Exact, Git-reviewed rollout content. The 2026-10-10 source snapshot must
 // remain immutable; it predates the all-chapter practice rollout (#161).
 const rolloutHashes = new Map([
@@ -26,6 +39,16 @@ async function approvedOriginal(row, bytes, articleOnly = false) {
 export async function readFile(file, encoding) {
   let bytes = await readActualFile(file);
   const key = path.normalize(String(file));
+  if (key === rolloutLayout && hash(bytes) !== originalLayoutHash) {
+    assert.equal(hash(bytes), rolloutLayoutHash, 'exact PR #164 layout overlay');
+    let source = bytes.toString('utf8');
+    for (const addition of layoutInsertions) {
+      assert.equal(source.split(addition).length, 2, 'one exact approved layout insertion');
+      source = source.replace(addition, '');
+    }
+    assert.equal(hash(source), originalLayoutHash, 'all historical layout bytes preserved');
+    bytes = Buffer.from(source);
+  }
   const related = review.relatedArticleChanges.find(r => r.path === key);
   if (related) {
     const html = bytes.toString('utf8'), article = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1];
@@ -56,4 +79,12 @@ export async function readdir(dir, options) {
   const name = source ? path.basename(review.chapter.path) : review.chapter.slug;
   assert(entries.some(e => (typeof e === 'string' ? e : e.name) === name));
   return entries.filter(e => (typeof e === 'string' ? e : e.name) !== name);
+}
+
+// Only audits that predate the endpoint opt into this inventory projection.
+// Newer guards still see it and verify its existence and delivered data.
+export async function beforePracticeEndpointInventory(files) {
+  assert(files.includes(rolloutEndpoint), 'approved endpoint must be present');
+  assert.equal(hash(await readActualFile(rolloutEndpoint)), rolloutEndpointHash, 'exact PR #164 static endpoint');
+  return files.filter(file => file !== rolloutEndpoint);
 }

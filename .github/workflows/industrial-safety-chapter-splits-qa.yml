@@ -7,6 +7,8 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - 'scripts/read-before-hanging-scaffold-wire-rope.mjs'
+      - 'scripts/check-historical-practice-guard.mjs'
       - 'src/content/chapters/**'
       - 'src/styles/global.css'
       - 'docs/audits/2026-10-04-chapter-section-heading-ui/**'
@@ -39,6 +41,7 @@ jobs:
       - run: npm run build
       - name: Check split invariants and site regressions
         run: |
+          node scripts/check-historical-practice-guard.mjs
           node scripts/check-industrial-safety-chapter-splits.mjs
           node scripts/check-industrial-safety-machine-tools-split.mjs
           npm run check:contrast

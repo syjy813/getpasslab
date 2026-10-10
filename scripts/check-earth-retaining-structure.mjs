@@ -1,4 +1,5 @@
 import { readFile } from './read-before-20190804-review.mjs';
+import { beforePracticeEndpointInventory } from './read-before-hanging-scaffold-wire-rope.mjs';
 import assert from 'node:assert/strict';
 import { readdir } from './read-before-formwork-lateral-pressure.mjs';
 import { createHash } from 'node:crypto';
@@ -20,7 +21,7 @@ async function walk(dir) {
   }
   return files;
 }
-assert.deepEqual([...await walk('src'), ...await walk('public')].sort(), [...Object.keys(baseline.protectedFiles), ...review.assets.map(a => a.path), ...reviewedAssetAdditions.map(a => a.path)].sort());
+assert.deepEqual((await beforePracticeEndpointInventory([...await walk('src'), ...await walk('public')])).sort(), [...Object.keys(baseline.protectedFiles), ...review.assets.map(a => a.path), ...reviewedAssetAdditions.map(a => a.path)].sort());
 for (const [file, original] of Object.entries(baseline.protectedFiles)) {
   const row = [...sourceReview.chapters, ...sourceReview.canonicalFiles, ...review.chapters, ...review.displayFiles].find(row => row.path === file);
   if (row && !sourceReview.chapters.includes(row)) assert.equal(row.originalSha256, original);
