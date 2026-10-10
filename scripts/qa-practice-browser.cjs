@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {chromium}=require(process.env.QA_PLAYWRIGHT_MODULE||'playwright');
 const base=process.env.QA_BASE_URL||'https://getpasslab.co.kr';
-const dir='qa-results/practice-production';fs.mkdirSync(dir,{recursive:true});
+const dir=process.env.QA_OUTPUT_DIR||'qa-results/practice-production';fs.mkdirSync(dir,{recursive:true});
 const previousPath=process.env.QA_COMPLETE_LARGE_REPORT||process.env.QA_RETRY_REPORT;
 const previous=previousPath?JSON.parse(fs.readFileSync(previousPath,'utf8')):undefined;
 const retryKeys=new Set((process.env.QA_COMPLETE_LARGE_REPORT?previous.samples.filter(s=>s.total>50&&!s.completed):previous?.errors??[]).map(e=>e.url+'|'+e.width));
@@ -56,7 +56,7 @@ async function verify(row,width,target){
   if(Math.abs(afterY-y)>2)report.findings.push({severity:'medium',kind:'background-scroll',url:base+row.route,width,beforeY:y,afterY,expected:'background scroll stays fixed while dialog is open',actual:'background page moved on backdrop wheel',screenshot:`${row.cert}-${width}-initial.png`});
   await dialog.screenshot({path:dir+'/'+row.cert+'-'+width+'-'+row.route.split('/').at(-2)+'-initial.png'});
   let correct=0,answered=0,images=0,cautions=0,longChoiceHeight=0,minChoiceHeight=Infinity,feedbackStyles;
-  const max=target&&!process.env.QA_COMPLETE_LARGE_REPORT?row.ids.indexOf(target)+1:row.ids.length;assert(max>0,'target is assigned');
+  const max=target&&!process.env.QA_FULL_RUN&&!process.env.QA_COMPLETE_LARGE_REPORT?row.ids.indexOf(target)+1:row.ids.length;assert(max>0,'target is assigned');
   for(let i=0;i<max;i++){
    const q=questions[row.cert].get(row.ids[i]);
    assert.equal(await item.locator('[data-practice-body]').innerText(),(i+1)+'. '+q.body,'canonical question body '+q.id);
@@ -106,7 +106,7 @@ async function verify(row,width,target){
   const dom=await page.evaluate(()=>document.getElementsByTagName('*').length);
   if(minChoiceHeight<44)report.findings.push({severity:'medium',kind:'choice-touch-area',url:base+row.route,width,minHeight:minChoiceHeight,expected:'at least 44px clickable choice row',actual:'dynamic choice row has no scoped padding/border styles'});
   if(feedbackStyles?.filter(s=>s.correct||s.incorrect).some(s=>s.background==='rgba(0, 0, 0, 0)'&&s.borderStyle==='none'))report.findings.push({severity:'medium',kind:'choice-color-feedback',url:base+row.route,width,feedbackStyles,expected:'correct/incorrect rows display colored backgrounds and borders',actual:'classes are added but Astro scoped selectors do not match dynamically created labels'});
-  report.samples.push({url:base+row.route,width,answered,total:row.ids.length,completed,correct,images,cautions,firstLoadMs,longChoiceHeight,minChoiceHeight,feedbackStyles,domNodes:dom,geometry:geom,navigationCancellations,result:'PASS with separately recorded UI findings'});
+  report.samples.push({url:base+row.route,width,answered,total:row.ids.length,completed,correct,images,cautions,firstLoadMs,longChoiceHeight,minChoiceHeight,feedbackStyles,domNodes:dom,geometry:geom,navigationCancellations,result:report.findings.some(f=>f.url===base+row.route&&f.width===width)?'PARTIAL PASS':'PASS'});
   console.log('Browser PASS',width,row.route,answered,'/',row.ids.length);
  }catch(e){const slug=row.route.split('/').at(-2);await page.screenshot({path:dir+'/failure-'+width+'-'+slug+'.png'}).catch(()=>{});report.errors.push({url:base+row.route,width,target,error:String(e),stack:e.stack,errors,networkFailures});console.error('Browser FAIL',width,row.route,String(e))}
  finally{await context.close()}

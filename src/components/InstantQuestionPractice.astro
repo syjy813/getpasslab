@@ -167,6 +167,44 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
     let questionMap: Map<string, PracticeQuestionData> | undefined;
     let graded = false;
     let activeQuestion: PracticeQuestionData | undefined;
+    let restorePageScroll: (() => void) | undefined;
+
+    const lockPageScroll = () => {
+      if (restorePageScroll) return;
+      const page = document.documentElement;
+      const body = document.body;
+      const x = window.scrollX, y = window.scrollY;
+      const scrollbarWidth = window.innerWidth - page.clientWidth;
+      const paddingRight = parseFloat(getComputedStyle(body).paddingRight) || 0;
+      const save = (style: CSSStyleDeclaration, properties: string[]) => properties.map(property => ({
+        style, property, value: style.getPropertyValue(property), priority: style.getPropertyPriority(property),
+      }));
+      const savedStyles = [
+        ...save(page.style, ['overflow-x', 'overflow-y']),
+        ...save(body.style, ['position', 'top', 'left', 'right', 'overflow-x', 'overflow-y', 'padding-right']),
+      ];
+      page.style.overflowX = 'hidden';
+      page.style.overflowY = 'hidden';
+      // Fixed positioning also prevents background touch scrolling on mobile.
+      body.style.position = 'fixed';
+      body.style.top = -y + 'px';
+      body.style.left = -x + 'px';
+      body.style.right = '0';
+      body.style.overflowX = 'hidden';
+      body.style.overflowY = 'hidden';
+      if (scrollbarWidth > 0) body.style.paddingRight = paddingRight + scrollbarWidth + 'px';
+      restorePageScroll = () => {
+        for (const { style, property, value, priority } of savedStyles) {
+          if (value) style.setProperty(property, value, priority);
+          else style.removeProperty(property);
+        }
+        window.scrollTo(x, y);
+      };
+    };
+    const unlockPageScroll = () => {
+      restorePageScroll?.();
+      restorePageScroll = undefined;
+    };
 
     const clear = () => {
       currentIndex = 0;
@@ -242,7 +280,9 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
     opener.addEventListener('click', async () => {
       if (dialog.open) return;
       clear();
-      dialog.showModal();
+      lockPageScroll();
+      try { dialog.showModal(); }
+      catch (error) { unlockPageScroll(); throw error; }
       close?.focus();
       if (loading) { loading.textContent = '문항을 불러오는 중입니다.'; loading.hidden = false; }
       try {
@@ -302,7 +342,7 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
     close?.addEventListener('click', () => dialog.close());
     finish?.addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
-    dialog.addEventListener('close', () => { clear(); opener.focus({ preventScroll: true }); });
+    dialog.addEventListener('close', () => { clear(); unlockPageScroll(); opener.focus({ preventScroll: true }); });
   });
 </script>
 <style>
@@ -332,13 +372,14 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
   .practice-figure img{display:block;max-width:100%;height:auto}
   .practice-choices{padding:0;margin:0 0 var(--space-4);border:0;display:grid;gap:var(--space-2);min-width:0}
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-  .practice-choice{display:flex;gap:var(--space-3);align-items:flex-start;border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:var(--space-3);font-size:var(--fs-body);line-height:1.6;cursor:pointer;min-width:0;overflow-wrap:anywhere}
-  .practice-choice:has(input:checked){border-color:var(--primary-600);background:var(--primary-50)}
-  .practice-choice:has(input:focus-visible){outline:2px solid var(--primary-600);outline-offset:2px}
-  .practice-choice input{margin:5px 0 0;accent-color:var(--primary-600);flex:none}
-  .choice-symbol{flex:none;font-weight:var(--fw-semibold)}
-  .practice-choice.is-correct{border-color:var(--success);background:var(--success-bg)}
-  .practice-choice.is-incorrect{border-color:var(--error);background:var(--error-bg)}
+  /* The fieldset is Astro-scoped; its JS-created descendants are not. */
+  .practice-choices :global(.practice-choice){box-sizing:border-box;display:flex;gap:var(--space-3);align-items:flex-start;border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:var(--space-3);font-size:var(--fs-body);line-height:1.6;cursor:pointer;min-width:0;min-height:44px;overflow-wrap:anywhere}
+  .practice-choices :global(.practice-choice:has(input:checked:not(:disabled))){border-color:var(--primary-600);background:var(--primary-50)}
+  .practice-choices :global(.practice-choice:has(input:focus-visible)){outline:2px solid var(--primary-600);outline-offset:2px}
+  .practice-choices :global(.practice-choice input){margin:5px 0 0;accent-color:var(--primary-600);flex:none}
+  .practice-choices :global(.choice-symbol){flex:none;font-weight:var(--fw-semibold)}
+  .practice-choices :global(.practice-choice.is-correct){border-color:var(--success);background:var(--success-bg)}
+  .practice-choices :global(.practice-choice.is-incorrect){border-color:var(--error);background:var(--error-bg)}
   .practice-button:disabled{background:var(--gray-200);color:var(--gray-600);cursor:not-allowed}
   .practice-feedback{margin-top:var(--space-4);padding:var(--space-4);border-radius:var(--radius-lg);background:var(--gray-50);overflow-wrap:anywhere}
   .practice-feedback p{margin:var(--space-2) 0;font-size:var(--fs-body)}

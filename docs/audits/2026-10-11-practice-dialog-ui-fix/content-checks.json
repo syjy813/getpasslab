@@ -1,0 +1,34 @@
+[
+  {
+    "check": "contrast",
+    "exitCode": 0
+  },
+  {
+    "check": "seo",
+    "exitCode": 0
+  },
+  {
+    "check": "public-content",
+    "exitCode": 0
+  },
+  {
+    "check": "deferred-question-content",
+    "exitCode": 0
+  },
+  {
+    "check": "computer-literacy",
+    "exitCode": 0
+  },
+  {
+    "check": "computer-literacy-c1",
+    "exitCode": 0
+  },
+  {
+    "check": "computer-literacy-001-081",
+    "exitCode": 0
+  },
+  {
+    "check": "computer-literacy-082-159",
+    "exitCode": 0
+  }
+]

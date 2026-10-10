@@ -3,6 +3,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import yaml from 'js-yaml';
+import { isApprovedPracticeUIRepair } from './read-before-hanging-scaffold-wire-rope.mjs';
 
 const audit = 'docs/audits/2026-10-10-hanging-scaffold-wire-rope';
 const review = JSON.parse(await readFile(`${audit}/review.json`, 'utf8'));
@@ -40,7 +41,7 @@ const newEndpoint = inventory.includes(endpoint);
 assert.deepEqual(inventory.sort(), [...Object.keys(protectedFiles), review.chapter.path, ...(newEndpoint ? [endpoint] : [])].sort());
 for (const [file, expected] of Object.entries(protectedFiles)) {
   const actual = hash(await readFile(file));
-  assert(actual === expected || actual === rolloutHashes.get(file), `${file}: prior or exact approved rollout source only`);
+  assert(actual === expected || actual === rolloutHashes.get(file) || isApprovedPracticeUIRepair(file, actual), `${file}: prior or exact approved practice source only`);
 }
 if (newEndpoint) assert.equal(hash(await readFile(endpoint)), endpointSha256, 'practice endpoint source exact hash');
 assert.equal(hash(await readFile(review.chapter.path)), review.chapter.sha256);
@@ -91,7 +92,7 @@ for (const page of previousPages) {
     const actual = hash(article);
     const approvedPilot = page.path === 'dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html'
       ? 'fab31075f68fd4d161b9dbe4f6f13a4e4cea4f769220a072d7c5bf58812b11b5' : undefined;
-    assert(actual === page.articleSha256 || actual === approvedPilot, `${page.path}: prior article or exact approved practice rollout only`);
+    assert(actual === page.articleSha256 || actual === approvedPilot || isApprovedPracticeUIRepair(page.path, actual), `${page.path}: prior article or exact approved practice UI only`);
   }
 }
 const html = await readFile(review.chapter.articlePath, 'utf8');

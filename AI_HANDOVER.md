@@ -1,3 +1,12 @@
+## 2026-10-11 전체 문제풀이 팝업 UI 수정 검토본
+
+- 사용자 UI 결함 2건 수정 요청. 기준은 미병합 CI/QA PR #166 HEAD `b4901a3`, 별도 브랜치 `codex/practice-dialog-ui-fix-20261011`. 수정 PR은 #166 기반이며 병합/배포 승인 전 main/Production 유지
+- `InstantQuestionPractice.astro`: 정적 fieldset로 범위를 제한한 동적 선택지 global CSS, 채점 전 선택 강조, 터치 영역/포커스/정답·오답 색상 복구. body fixed 스크롤 잠금 및 close 공통 경로에서 기존 inline style/priority·위치·포커스 복원
+- 제품 파일 1개 외 src/public 731개 불변, 정본 3,621문항/447공개/406적용/41미노출/2,921연결 유지. 시범 본문은 공용 script src 파일명 한 곳만 변경
+- 과거 증거/해시는 보존하고 정확한 승인 source/시범 본문 SHA만 helper에 추가 허용. 최신 달비계 검사도 같은 허용 함수 재사용, 격리 변조/삭제 거부 검사 12개
+- 로컬 Build/18개 보호·정본/8개 기존 회귀 PASS. 브라우저 26조건 모두 완료·1,154회 채점/이동·오류/결함0, 별도 4화면×4닫기 경로 위치/스타일/포커스 복원 PASS. 실물 Safari/iOS/Android 미검증
+- 자료: `docs/audits/2026-10-11-practice-dialog-ui-fix/`. 신규 Practice dialog UI QA의 최종 commit/CI는 수정 PR 실제 Checks 확인. Merge·Deploy·수정본 Production QA 미실행
+
 ## 2026-10-06 FTA 원본 선택지 도형 복원
 
 - 사용자 이어서 진행 요청. 컴활 보류. 기준 main `c64fbbb`, 브랜치 `codex/fta-original-options-20261006`
