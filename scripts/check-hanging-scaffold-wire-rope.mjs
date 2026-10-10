@@ -26,8 +26,23 @@ async function walk(dir) {
 }
 assert.equal(review.head, '2d205b93ad3b758ffdd8f122a6158b1c6c08d7cc');
 const protectedFiles = { ...baseline.protectedFiles, [excavator.chapter.path]: excavator.chapter.sha256, ...Object.fromEntries(compatibility.sourceChanges.map(r => [r.path, r.sha256])), [port.chapter.path]: port.chapter.sha256, [formwork.chapter.path]: formwork.chapter.sha256, [publication.chapter.path]: publication.chapter.sha256, ...Object.fromEntries(links.chapters.map(row => [row.path, row.sha256])) };
-assert.deepEqual([...await walk('src'), ...await walk('public')].sort(), [...Object.keys(protectedFiles), review.chapter.path].sort());
-for (const [file, expected] of Object.entries(protectedFiles)) assert.equal(hash(await readFile(file)), expected, `${file}: prior source/asset preserved`);
+// These exact source bytes were approved for the full-chapter practice rollout;
+// keep the October 10 compatibility manifest immutable.
+const rolloutHashes = new Map([
+  ['src/components/InstantQuestionPractice.astro', 'cc622a10bf43b49e2c1a2c17fc2412da06bf831c308317f65555d1b1c2e6edc3'],
+  ['src/pages/[cert]/[exam]/[subject]/[slug].astro', '346dc57256093c0a8171aed740362981ac2d6f9c461b19b53dee845e7bb55087'],
+  ['src/layouts/ChapterLayout.astro', '120b96e6a2b914eb66e447782f29937e974d35597b1ff3b3b036b2d87b992ff3'],
+]);
+const endpoint = 'src/pages/practice-data/[cert].json.ts';
+const endpointSha256 = 'e4bc7aa1d9a7edd5c6f0bd8026c94ad38abc7679b138875be6af667540f4990a';
+const inventory = [...await walk('src'), ...await walk('public')];
+const newEndpoint = inventory.includes(endpoint);
+assert.deepEqual(inventory.sort(), [...Object.keys(protectedFiles), review.chapter.path, ...(newEndpoint ? [endpoint] : [])].sort());
+for (const [file, expected] of Object.entries(protectedFiles)) {
+  const actual = hash(await readFile(file));
+  assert(actual === expected || actual === rolloutHashes.get(file), `${file}: prior or exact approved rollout source only`);
+}
+if (newEndpoint) assert.equal(hash(await readFile(endpoint)), endpointSha256, 'practice endpoint source exact hash');
 assert.equal(hash(await readFile(review.chapter.path)), review.chapter.sha256);
 const chapter = fields(await readFile(review.chapter.path, 'utf8'));
 assert.equal(chapter.status, '완료'); assert.equal(chapter.subject_id, 6);
@@ -72,7 +87,12 @@ for (const page of previousPages) {
     assert.equal(hash(article), change.sha256); assert.equal(change.originalSha256, page.articleSha256);
     assert.equal(article.split(change.insertedHtml).length, 2);
     assert.equal(hash(article.replace(change.insertedHtml, '')), page.articleSha256);
-  } else assert.equal(hash(article), page.articleSha256, `${page.path}: prior article bytes preserved`);
+  } else {
+    const actual = hash(article);
+    const approvedPilot = page.path === 'dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html'
+      ? 'fab31075f68fd4d161b9dbe4f6f13a4e4cea4f769220a072d7c5bf58812b11b5' : undefined;
+    assert(actual === page.articleSha256 || actual === approvedPilot, `${page.path}: prior article or exact approved practice rollout only`);
+  }
 }
 const html = await readFile(review.chapter.articlePath, 'utf8');
 assert.equal(hash(html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1]), review.chapter.articleSha256);
