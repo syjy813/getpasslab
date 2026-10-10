@@ -1,0 +1,75 @@
+name: Practice dialog UI QA
+on:
+  pull_request:
+    paths:
+      - 'src/components/InstantQuestionPractice.astro'
+      - 'scripts/read-before-hanging-scaffold-wire-rope.mjs'
+      - 'scripts/check-historical-practice-guard.mjs'
+      - 'scripts/qa-practice-browser.cjs'
+      - 'scripts/qa-practice-dialog-state.cjs'
+      - '.github/workflows/practice-dialog-ui-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Canonical, historical and existing-content regressions
+        shell: bash
+        run: |
+          for check in \
+            industrial-safety-chapter-splits industrial-safety-machine-tools-split \
+            industrial-remaining-splits industrial-remaining-review fta-original-options \
+            earth-retaining-structure industrial-question-source-repair industrial-20190804-review \
+            clam-shell-chapter industrial-unassigned-links formwork-lateral-pressure \
+            port-cargo-passages excavator-operation-safety hanging-scaffold-wire-rope \
+            historical-practice-guard instant-practice-pilot instant-practice-coverage instant-practice-datasets; do
+            node "scripts/check-$check.mjs"
+          done
+          npm run check:contrast
+          npm run check:seo
+          npm run check:public-content
+          npm run check:deferred-question-content
+          npm run check:computer-literacy
+          npm run check:computer-literacy-c1
+          npm run check:computer-literacy-001-081
+          npm run check:computer-literacy-082-159
+      - name: Prepare temporary browser tooling
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify styles, scroll lifecycle and all 26 practice cases
+        shell: bash
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: http://127.0.0.1:4321
+          QA_OUTPUT_DIR: qa-results/practice-dialog-ui
+          QA_FULL_RUN: '1'
+          QA_JOBS: '3'
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-ui-preview.log 2>&1 &
+          qa_preview_pid=$!
+          trap 'kill "$qa_preview_pid" 2>/dev/null || true' EXIT
+          for qa_attempt in $(seq 1 30); do
+            if curl -fsS "$QA_BASE_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS "$QA_BASE_URL/" > /dev/null
+          mkdir -p "$QA_OUTPUT_DIR"
+          node scripts/qa-practice-dialog-state.cjs | tee "$QA_OUTPUT_DIR/dialog-state.log"
+          node scripts/qa-practice-browser.cjs | tee "$QA_OUTPUT_DIR/browser.log"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: practice-dialog-ui-qa
+          path: qa-results/practice-dialog-ui/
+          retention-days: 14

@@ -1,0 +1,1711 @@
+{
+  "base": "http://127.0.0.1:4322",
+  "startedAt": "2026-10-10T15:36:35.363Z",
+  "samples": [
+    {
+      "url": "http://127.0.0.1:4322/industrial-safety/written/safety-management/accident-prevention-principles/",
+      "width": 768,
+      "answered": 6,
+      "total": 6,
+      "completed": true,
+      "correct": 3,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 104,
+      "longChoiceHeight": 51.59375,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 380,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 592,
+        "clientHeight": 592,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/industrial-safety/written/safety-management/accident-prevention-principles/",
+      "width": 390,
+      "answered": 6,
+      "total": 6,
+      "completed": true,
+      "correct": 3,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 162,
+      "longChoiceHeight": 74,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 380,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 366,
+        "scrollHeight": 635,
+        "clientHeight": 635,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/industrial-safety/written/safety-management/accident-prevention-principles/",
+      "width": 320,
+      "answered": 6,
+      "total": 6,
+      "completed": true,
+      "correct": 3,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 116,
+      "longChoiceHeight": 98,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 380,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 296,
+        "scrollHeight": 683,
+        "clientHeight": 683,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/industrial-safety/written/safety-management/accident-prevention-principles/",
+      "width": 1440,
+      "answered": 6,
+      "total": 6,
+      "completed": true,
+      "correct": 3,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 147,
+      "longChoiceHeight": 51.59375,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 380,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 592,
+        "clientHeight": 592,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/energy-management/written/thermal-equipment/energy-laws-and-inspection/",
+      "width": 320,
+      "answered": 167,
+      "total": 167,
+      "completed": true,
+      "correct": 84,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 225,
+      "longChoiceHeight": 122,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 674,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 296,
+        "scrollHeight": 694,
+        "clientHeight": 694,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/_slug_.DRTBlOnl.css",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/global.WZ8bl9Nf.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/energy-management/written/thermal-equipment/energy-laws-and-inspection/",
+      "width": 390,
+      "answered": 167,
+      "total": 167,
+      "completed": true,
+      "correct": 84,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 78,
+      "longChoiceHeight": 98,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 674,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 366,
+        "scrollHeight": 666,
+        "clientHeight": 666,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/computer-literacy/written/spreadsheets/cell-entry-edit-navigation/",
+      "width": 320,
+      "answered": 6,
+      "total": 6,
+      "completed": true,
+      "correct": 3,
+      "images": 1,
+      "cautions": 0,
+      "firstLoadMs": 149,
+      "longChoiceHeight": 146,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 427,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 296,
+        "scrollHeight": 875,
+        "clientHeight": 820,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/energy-management/written/thermal-equipment/energy-laws-and-inspection/",
+      "width": 768,
+      "answered": 167,
+      "total": 167,
+      "completed": true,
+      "correct": 84,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 177,
+      "longChoiceHeight": 77.1875,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 674,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 654,
+        "clientHeight": 654,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/computer-literacy/written/spreadsheets/cell-entry-edit-navigation/",
+      "width": 390,
+      "answered": 6,
+      "total": 6,
+      "completed": true,
+      "correct": 3,
+      "images": 1,
+      "cautions": 0,
+      "firstLoadMs": 204,
+      "longChoiceHeight": 122,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 427,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 366,
+        "scrollHeight": 779,
+        "clientHeight": 779,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/computer-literacy/written/spreadsheets/cell-entry-edit-navigation/",
+      "width": 768,
+      "answered": 6,
+      "total": 6,
+      "completed": true,
+      "correct": 3,
+      "images": 1,
+      "cautions": 0,
+      "firstLoadMs": 212,
+      "longChoiceHeight": 77.1875,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 427,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 669,
+        "clientHeight": 669,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/industrial-safety/written/ergonomics/quantitative-assessment-items/",
+      "width": 320,
+      "answered": 4,
+      "total": 4,
+      "completed": true,
+      "correct": 2,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 132,
+      "longChoiceHeight": 74,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 346,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 296,
+        "scrollHeight": 638,
+        "clientHeight": 638,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/computer-literacy/written/spreadsheets/cell-entry-edit-navigation/",
+      "width": 1440,
+      "answered": 6,
+      "total": 6,
+      "completed": true,
+      "correct": 3,
+      "images": 1,
+      "cautions": 0,
+      "firstLoadMs": 103,
+      "longChoiceHeight": 77.1875,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 427,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 669,
+        "clientHeight": 669,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/global.WZ8bl9Nf.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/industrial-safety/written/ergonomics/quantitative-assessment-items/",
+      "width": 1440,
+      "answered": 4,
+      "total": 4,
+      "completed": true,
+      "correct": 2,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 452,
+      "longChoiceHeight": 51.59375,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 346,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 592,
+        "clientHeight": 592,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/industrial-safety/written/mechanical/press-safety-devices/",
+      "width": 320,
+      "answered": 12,
+      "total": 12,
+      "completed": true,
+      "correct": 6,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 181,
+      "longChoiceHeight": 194,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 427,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 296,
+        "scrollHeight": 1002,
+        "clientHeight": 820,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/industrial-safety/written/mechanical/press-safety-devices/",
+      "width": 1440,
+      "answered": 12,
+      "total": 12,
+      "completed": true,
+      "correct": 6,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 425,
+      "longChoiceHeight": 102.78125,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 427,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 726,
+        "clientHeight": 726,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/industrial-safety/written/ergonomics/fta-event-symbols/",
+      "width": 320,
+      "answered": 5,
+      "total": 5,
+      "completed": true,
+      "correct": 3,
+      "images": 4,
+      "cautions": 0,
+      "firstLoadMs": 109,
+      "longChoiceHeight": 122,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 353,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 296,
+        "scrollHeight": 852,
+        "clientHeight": 820,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/industrial-safety/written/ergonomics/fta-event-symbols/",
+      "width": 1440,
+      "answered": 5,
+      "total": 5,
+      "completed": true,
+      "correct": 3,
+      "images": 4,
+      "cautions": 0,
+      "firstLoadMs": 181,
+      "longChoiceHeight": 51.59375,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 353,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 1074,
+        "clientHeight": 812,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/energy-management/written/thermal-equipment/energy-laws-and-inspection/",
+      "width": 1440,
+      "answered": 167,
+      "total": 167,
+      "completed": true,
+      "correct": 84,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 192,
+      "longChoiceHeight": 77.1875,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 674,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 654,
+        "clientHeight": 654,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/energy-management/written/thermal-equipment/heating-systems/",
+      "width": 320,
+      "answered": 116,
+      "total": 116,
+      "completed": true,
+      "correct": 58,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 80,
+      "longChoiceHeight": 146,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 790,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 296,
+        "scrollHeight": 638,
+        "clientHeight": 638,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/energy-management/written/thermal-equipment/heating-systems/",
+      "width": 1440,
+      "answered": 116,
+      "total": 116,
+      "completed": true,
+      "correct": 58,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 134,
+      "longChoiceHeight": 77.1875,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 790,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 592,
+        "clientHeight": 592,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/images/energy-management/heating-load-paths-v1.svg",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/images/energy-management/radiator-mean-temperature-v1.svg",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/images/energy-management/radiator-sections-v1.svg",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/energy-management/written/thermal-equipment/boiler-protection-devices/",
+      "width": 320,
+      "answered": 74,
+      "total": 74,
+      "completed": true,
+      "correct": 37,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 143,
+      "longChoiceHeight": 266,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 490,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 296,
+        "scrollHeight": 750,
+        "clientHeight": 750,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/computer-literacy/written/computer-basics/iptv-smart-tv/",
+      "width": 320,
+      "answered": 2,
+      "total": 2,
+      "completed": true,
+      "correct": 1,
+      "images": 0,
+      "cautions": 1,
+      "firstLoadMs": 138,
+      "longChoiceHeight": 50,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 613,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 296,
+        "scrollHeight": 961,
+        "clientHeight": 820,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/computer-literacy/written/computer-basics/iptv-smart-tv/",
+      "width": 1440,
+      "answered": 2,
+      "total": 2,
+      "completed": true,
+      "correct": 1,
+      "images": 0,
+      "cautions": 1,
+      "firstLoadMs": 101,
+      "longChoiceHeight": 51.59375,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 613,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 773,
+        "clientHeight": 773,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/computer-literacy/written/computer-basics/network-device-roles/",
+      "width": 320,
+      "answered": 6,
+      "total": 6,
+      "completed": true,
+      "correct": 3,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 436,
+      "longChoiceHeight": 170,
+      "minChoiceHeight": 50,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 721,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 296,
+        "scrollHeight": 758,
+        "clientHeight": 758,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/computer-literacy/written/computer-basics/network-device-roles/",
+      "width": 1440,
+      "answered": 6,
+      "total": 6,
+      "completed": true,
+      "correct": 3,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 332,
+      "longChoiceHeight": 77.1875,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 721,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 592,
+        "clientHeight": 592,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "url": "http://127.0.0.1:4322/energy-management/written/thermal-equipment/boiler-protection-devices/",
+      "width": 1440,
+      "answered": 74,
+      "total": 74,
+      "completed": true,
+      "correct": 37,
+      "images": 0,
+      "cautions": 0,
+      "firstLoadMs": 133,
+      "longChoiceHeight": 128.375,
+      "minChoiceHeight": 51.59375,
+      "feedbackStyles": [
+        {
+          "correct": false,
+          "incorrect": true,
+          "background": "rgb(254, 242, 242)",
+          "border": "rgb(239, 68, 68)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": false,
+          "incorrect": false,
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(229, 232, 235)",
+          "borderStyle": "solid"
+        },
+        {
+          "correct": true,
+          "incorrect": false,
+          "background": "rgb(236, 253, 245)",
+          "border": "rgb(16, 185, 129)",
+          "borderStyle": "solid"
+        }
+      ],
+      "domNodes": 490,
+      "geometry": {
+        "fit": true,
+        "overlap": false,
+        "dialogWidth": 720,
+        "scrollHeight": 654,
+        "clientHeight": 654,
+        "horizontalOverflow": false,
+        "docOverflow": false,
+        "bodyOverflow": "hidden"
+      },
+      "navigationCancellations": [
+        {
+          "url": "http://127.0.0.1:4322/fonts/PretendardVariable.woff2",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "findings": [],
+  "errors": [],
+  "faultInjection": [
+    {
+      "kind": "503 then close/reopen retry",
+      "result": "PASS"
+    },
+    {
+      "kind": "400ms latency / 50KiB per second",
+      "loadMs": 1356,
+      "result": "PASS"
+    }
+  ],
+  "limitations": [
+    "Chromium desktop and touch emulation; no physical iOS/Android device",
+    "Advertising/analytics requests blocked to avoid test traffic; font requests retained"
+  ],
+  "finishedAt": "2026-10-10T15:38:37.393Z",
+  "overall": "PASS"
+}

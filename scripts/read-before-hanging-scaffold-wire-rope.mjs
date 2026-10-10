@@ -28,7 +28,17 @@ const rolloutHashes = new Map([
   ['src/pages/[cert]/[exam]/[subject]/[slug].astro', '346dc57256093c0a8171aed740362981ac2d6f9c461b19b53dee845e7bb55087'],
   ['dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html', 'fab31075f68fd4d161b9dbe4f6f13a4e4cea4f769220a072d7c5bf58812b11b5'],
 ]);
-const matchesApprovedHash = (row, actual) => actual === row.sha256 || actual === rolloutHashes.get(row.path);
+// The user-authorized dialog UI repair preserves all data/layout bytes.
+// Keep the rollout allowlist and archived evidence unchanged; accept only
+// this exact additional component version, never arbitrary future edits.
+const repairedPracticeHashes = new Map([
+  ['src/components/InstantQuestionPractice.astro', '43f7428d6c43cc1b0492b54b56dc29425fb382afa485d3984770b33c62e3f9e3'],
+  // This pilot article changes only the compiled practice script filename.
+  ['dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html', '5936242ddc2698e50b49dd83dbd6b9ee6281f0dd1dccd832ac89ae5bc73b76de'],
+]);
+export const isApprovedPracticeUIRepair = (file, actual) => actual === repairedPracticeHashes.get(file);
+const matchesApprovedHash = (row, actual) => actual === row.sha256 || actual === rolloutHashes.get(row.path)
+  || isApprovedPracticeUIRepair(row.path, actual);
 async function approvedOriginal(row, bytes, articleOnly = false) {
   const actual = articleOnly ? bytes.toString('utf8').match(/<article\b[^>]*>([\s\S]*?)<\/article>/)[1] : bytes;
   assert(matchesApprovedHash(row, hash(actual)), `${row.path}: exact already-approved change, got ${hash(actual)}`);

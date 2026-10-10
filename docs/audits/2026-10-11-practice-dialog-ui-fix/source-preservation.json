@@ -1,0 +1,42 @@
+{
+  "baseCommit": "b4901a3d73eaed1ab0de6768731778cdb3284967",
+  "productionCommit": "9fea932bb8c46d3d65fb7291cf29612a0a67dcf3",
+  "sourceAndPublicFiles": 732,
+  "modifiedProductFiles": [
+    "src/components/InstantQuestionPractice.astro"
+  ],
+  "unchangedProductFiles": 731,
+  "publicChapterRoutes": 447,
+  "identicalArticles": 446,
+  "articleScriptOnlyChanges": [
+    {
+      "path": "dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html",
+      "oldSha256": "fab31075f68fd4d161b9dbe4f6f13a4e4cea4f769220a072d7c5bf58812b11b5",
+      "newSha256": "5936242ddc2698e50b49dd83dbd6b9ee6281f0dd1dccd832ac89ae5bc73b76de",
+      "onlyChangedScript": {
+        "before": "/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.BgvjTz7n.js",
+        "after": "/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.DWjhNYN0.js"
+      }
+    }
+  ],
+  "canonicalDatasets": [
+    {
+      "cert": "industrial-safety",
+      "records": 1680,
+      "sha256": "a22687b033c59608154bcdadc2f5b35f0ffbb5df2a3e01bdce7c3f0dd63b2829",
+      "unchanged": true
+    },
+    {
+      "cert": "energy-management",
+      "records": 1620,
+      "sha256": "67ee3593e987e436f4fe051c42900baf41d162e6ad5982c10109a9950ffec336",
+      "unchanged": true
+    },
+    {
+      "cert": "computer-literacy",
+      "records": 321,
+      "sha256": "39486f7dbaa7966aa114ca823cd499568530733ba8310b0afca88b4c20f368a0",
+      "unchanged": true
+    }
+  ]
+}

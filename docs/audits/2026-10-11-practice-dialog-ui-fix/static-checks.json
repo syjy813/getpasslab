@@ -1,0 +1,74 @@
+[
+  {
+    "check": "check-industrial-safety-chapter-splits",
+    "exitCode": 0
+  },
+  {
+    "check": "check-industrial-safety-machine-tools-split",
+    "exitCode": 0
+  },
+  {
+    "check": "check-industrial-remaining-splits",
+    "exitCode": 0
+  },
+  {
+    "check": "check-industrial-remaining-review",
+    "exitCode": 0
+  },
+  {
+    "check": "check-fta-original-options",
+    "exitCode": 0
+  },
+  {
+    "check": "check-earth-retaining-structure",
+    "exitCode": 0
+  },
+  {
+    "check": "check-industrial-question-source-repair",
+    "exitCode": 0
+  },
+  {
+    "check": "check-industrial-20190804-review",
+    "exitCode": 0
+  },
+  {
+    "check": "check-clam-shell-chapter",
+    "exitCode": 0
+  },
+  {
+    "check": "check-industrial-unassigned-links",
+    "exitCode": 0
+  },
+  {
+    "check": "check-formwork-lateral-pressure",
+    "exitCode": 0
+  },
+  {
+    "check": "check-port-cargo-passages",
+    "exitCode": 0
+  },
+  {
+    "check": "check-excavator-operation-safety",
+    "exitCode": 0
+  },
+  {
+    "check": "check-hanging-scaffold-wire-rope",
+    "exitCode": 0
+  },
+  {
+    "check": "check-historical-practice-guard",
+    "exitCode": 0
+  },
+  {
+    "check": "check-instant-practice-pilot",
+    "exitCode": 0
+  },
+  {
+    "check": "check-instant-practice-coverage",
+    "exitCode": 0
+  },
+  {
+    "check": "check-instant-practice-datasets",
+    "exitCode": 0
+  }
+]
