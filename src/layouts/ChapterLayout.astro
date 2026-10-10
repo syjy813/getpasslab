@@ -11,6 +11,7 @@ import {
 } from '../config/certifications';
 import { withBase } from '../config/url';
 import ChapterBadges from '../components/ChapterBadges.astro';
+import InstantQuestionPractice from '../components/InstantQuestionPractice.astro';
 import type { ChapterBadge } from '../utils/chapterBadges';
 import { SITE } from '../config/site';
 interface SideCh { slug: string; title: string; group: string; }
@@ -21,6 +22,7 @@ interface Props {
   badges: ChapterBadge[];
   sideChapters: SideCh[];
   subjectStartChapters: SubjectStartChapter[];
+  practiceQuestions?: any[];
 }
 const {
   title,
@@ -33,6 +35,7 @@ const {
   badges,
   sideChapters,
   subjectStartChapters,
+  practiceQuestions,
 } = Astro.props;
 const certification = getCertification(cert_id);
 const examDefinition = getExam(cert_id, exam);
@@ -208,6 +211,7 @@ const structuredData = [
       <article><slot /></article>
     </main>
   </div>
+  {practiceQuestions && <InstantQuestionPractice questions={practiceQuestions} certificationId={cert_id} chapterSlug={slug} />}
   <nav class="chapter-mobile-nav" aria-label="이전 및 다음 챕터">
     <div class="chapter-mobile-nav-inner">
       {previousChapter ? (

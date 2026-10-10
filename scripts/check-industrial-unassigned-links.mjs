@@ -22,10 +22,34 @@ async function walk(dir) {
 assert.equal(review.head, '22e57b360a492c69596a72bee590b8cf3c38214a');
 assert.deepEqual(review.chapters.map(r => r.addedQuestion), ['20190804_103', '20190804_110', '20190804_111', '20190804_112', '20190804_114', '20190804_115']);
 const protectedFiles = { ...baseline.protectedFiles, [publication.chapter.path]: publication.chapter.sha256 };
-assert.deepEqual([...await walk('src'), ...await walk('public')].sort(), Object.keys(protectedFiles).sort());
+// The practice endpoint is a post-audit, read-only generated JSON route.
+// Preserve the exact archived file inventory and verify this addition by hash.
+const practiceEndpoint = 'src/pages/practice-data/[cert].json.ts';
+const practiceHash = 'e4bc7aa1d9a7edd5c6f0bd8026c94ad38abc7679b138875be6af667540f4990a';
+const currentInventory = [...await walk('src'), ...await walk('public')];
+assert(currentInventory.includes(practiceEndpoint));
+assert.equal(hash(await readFile(practiceEndpoint)), practiceHash, 'exact new practice route');
+assert.deepEqual(currentInventory.filter(file => file !== practiceEndpoint).sort(), Object.keys(protectedFiles).sort());
 for (const [file, expected] of Object.entries(protectedFiles)) {
   const row = review.chapters.find(row => row.path === file);
-  assert.equal(hash(await readFile(file)), row?.sha256 ?? expected, `${file}: exact approved scope`);
+  let bytes = await readFile(file);
+  if (file === 'src/layouts/ChapterLayout.astro') {
+    let layout = bytes.toString('utf8');
+    const lines = [
+      "import InstantQuestionPractice from '../components/InstantQuestionPractice.astro';",
+      "  practiceQuestions?: any[];",
+      "  practiceQuestions,",
+      "  {practiceQuestions && <InstantQuestionPractice questions={practiceQuestions} certificationId={cert_id} chapterSlug={slug} />}",
+    ].map(value => value + String.fromCharCode(10));
+    if (layout.includes('  practiceQuestions?: any[];')) {
+      for (const addition of lines) {
+        assert.equal(layout.split(addition).length, 2, 'one exactly approved practice layout insertion');
+        layout = layout.replace(addition, '');
+      }
+      bytes = Buffer.from(layout);
+    }
+  }
+  assert.equal(hash(bytes), row?.sha256 ?? expected, `${file}: exact approved scope`);
   if (!row) continue;
   const original = await readFile(row.originalFile, 'utf8');
   assert.equal(hash(original), row.originalSha256); assert.equal(hash(original), expected);

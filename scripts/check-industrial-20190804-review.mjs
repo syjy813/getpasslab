@@ -12,9 +12,35 @@ const source=JSON.parse(await readFile(`${audit}/question-review.json`,'utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const fields=t=>yaml.load(t.match(/^---\n([\s\S]*?)\n---/)[0].slice(4,-4));
 async function walk(dir){const result=[];for(const e of await readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())result.push(...await walk(p));else result.push(p)}return result}
-assert.deepEqual([...await walk('src'),...await walk('public')].sort(),[...Object.keys(baseline.protectedFiles),...review.assets.map(r=>r.path)].sort());
+// One exactly named read-only endpoint was added by the approved practice
+// rollout. The generated payload is verified against canonical JSON in CI.
+const practiceEndpoint = 'src/pages/practice-data/[cert].json.ts';
+const inventory = [...await walk('src'), ...await walk('public')];
+assert(inventory.includes(practiceEndpoint), 'canonical practice endpoint present');
+assert.deepEqual(inventory.sort(), [...Object.keys(baseline.protectedFiles), ...review.assets.map(r=>r.path), practiceEndpoint].sort());
 const changed=new Map([...review.chapters,...review.canonicalFiles,...review.assetRegistries,...review.displayFiles].map(r=>[r.path,r]));
-for(const [file,before] of Object.entries(baseline.protectedFiles)){const row=changed.get(file);if(row)assert.equal(row.originalSha256,before);assert.equal(hash(await readFile(file)),row?.sha256??before,`${file}: reviewed scope only`)}
+for(const [file,before] of Object.entries(baseline.protectedFiles)){
+  const row=changed.get(file);
+  if(row) assert.equal(row.originalSha256,before);
+  let bytes=await readFile(file);
+  if (file === 'src/layouts/ChapterLayout.astro') {
+    const additions=[
+      "import InstantQuestionPractice from '../components/InstantQuestionPractice.astro';",
+      "  practiceQuestions?: any[];",
+      "  practiceQuestions,",
+      "  {practiceQuestions && <InstantQuestionPractice questions={practiceQuestions} certificationId={cert_id} chapterSlug={slug} />}",
+    ].map(x=>x+String.fromCharCode(10));
+    let layout=bytes.toString('utf8');
+    if(layout.includes('  practiceQuestions?: any[];')){
+      for(const part of additions){
+        assert.equal(layout.split(part).length,2,`${file}: one exact approved rollout addition`);
+        layout=layout.replace(part,'');
+      }
+      bytes=Buffer.from(layout,'utf8');
+    }
+  }
+  assert.equal(hash(bytes),row?.sha256??before,`${file}: reviewed scope only`);
+}
 let original=await readFile(review.canonicalFiles[0].path,'utf8');assert.equal(edits.length,42);
 for(const edit of [...edits].reverse()){assert.equal(original.split(edit.after).length,2);original=original.replace(edit.after,edit.before)}
 assert.equal(hash(original),baseline.protectedFiles[review.canonicalFiles[0].path],'all other 1638 records and formatting preserved');

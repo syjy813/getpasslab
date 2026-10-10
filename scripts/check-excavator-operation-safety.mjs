@@ -24,8 +24,34 @@ async function walk(dir) {
 }
 assert.equal(review.head, 'a1f029198bf8ebda6babf65eb5b736552e9e0e91');
 const protectedFiles = { ...baseline.protectedFiles, [port.chapter.path]: port.chapter.sha256, [formwork.chapter.path]: formwork.chapter.sha256, [publication.chapter.path]: publication.chapter.sha256, ...Object.fromEntries(links.chapters.map(row => [row.path, row.sha256])) };
-assert.deepEqual([...await walk('src'), ...await walk('public')].sort(), [...Object.keys(protectedFiles), review.chapter.path].sort());
-for (const [file, expected] of Object.entries(protectedFiles)) assert.equal(hash(await readFile(file)), expected, `${file}: prior source/asset preserved`);
+// This snapshot predates the canonical static practice route. Match exactly
+// the reviewed endpoint bytes while preserving the frozen source inventory.
+const practiceEndpoint = 'src/pages/practice-data/[cert].json.ts';
+const practiceHash = 'e4bc7aa1d9a7edd5c6f0bd8026c94ad38abc7679b138875be6af667540f4990a';
+const inventory = [...await walk('src'), ...await walk('public')];
+assert(inventory.includes(practiceEndpoint));
+assert.equal(hash(await readFile(practiceEndpoint)), practiceHash);
+assert.deepEqual(inventory.filter(file => file !== practiceEndpoint).sort(), [...Object.keys(protectedFiles), review.chapter.path].sort());
+for (const [file, expected] of Object.entries(protectedFiles)) {
+  let bytes = await readFile(file);
+  if (file === 'src/layouts/ChapterLayout.astro') {
+    let layout = bytes.toString('utf8');
+    const additions = [
+      "import InstantQuestionPractice from '../components/InstantQuestionPractice.astro';",
+      "  practiceQuestions?: any[];",
+      "  practiceQuestions,",
+      "  {practiceQuestions && <InstantQuestionPractice questions={practiceQuestions} certificationId={cert_id} chapterSlug={slug} />}",
+    ].map(line => line + String.fromCharCode(10));
+    if (layout.includes('  practiceQuestions?: any[];')) {
+      for (const addition of additions) {
+        assert.equal(layout.split(addition).length, 2, 'only the approved rollout layout insertion');
+        layout = layout.replace(addition, '');
+      }
+      bytes = Buffer.from(layout);
+    }
+  }
+  assert.equal(hash(bytes), expected, `${file}: prior source/asset preserved`);
+}
 assert.equal(hash(await readFile(review.chapter.path)), review.chapter.sha256);
 const chapter = fields(await readFile(review.chapter.path, 'utf8'));
 assert.equal(chapter.status, '완료'); assert.equal(chapter.subject_id, 6);

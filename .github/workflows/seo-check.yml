@@ -45,3 +45,9 @@ jobs:
 
       - name: Validate instant practice pilot
         run: node scripts/check-instant-practice-pilot.mjs
+
+      - name: Validate all chapter instant practice coverage
+        run: node scripts/check-instant-practice-coverage.mjs
+
+      - name: Validate canonical instant-practice JSON endpoints
+        run: node scripts/check-instant-practice-datasets.mjs
