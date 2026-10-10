@@ -1,4 +1,5 @@
 import { readFile } from './read-before-20190804-review.mjs';
+import { beforePracticeEndpointInventory } from './read-before-hanging-scaffold-wire-rope.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import { readdir } from './read-before-formwork-lateral-pressure.mjs';
@@ -15,7 +16,7 @@ const parse=s=>yaml.load(s.match(/^---\n([\s\S]*?)\n---\n/)[1]);
 async function walk(dir){const files=[];for(const e of await readdir(dir,{withFileTypes:true})){const f=path.join(dir,e.name);if(e.isDirectory())files.push(...await walk(f));else files.push(f);}return files;}
 assert.equal(review.families.length,7);assert.equal(review.chapters.length,17);
 assert.equal(review.chapters.filter(c=>c.newFile).length,10);
-const actualFiles=[...await walk('src'),...await walk('public')];
+const actualFiles=await beforePracticeEndpointInventory([...await walk('src'),...await walk('public')]);
 assert.deepEqual(actualFiles.sort(),[...Object.keys(baseline.protectedFiles),...review.chapters.filter(c=>c.newFile).map(c=>c.path),...earthReview.assets.map(c=>c.path),...reviewedAssetAdditions.map(c=>c.path)].sort());
 for(const [file,original] of Object.entries(baseline.protectedFiles)){
  const row=review.chapters.find(c=>c.path===file);if(row)assert.equal(row.originalSha256,original);

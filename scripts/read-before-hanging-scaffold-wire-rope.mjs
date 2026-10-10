@@ -65,14 +65,6 @@ export async function readFile(file, encoding) {
 export async function readdir(dir, options) {
   let entries = await readActualDirectory(dir, options);
   const key = path.normalize(String(dir));
-  if (key === path.dirname(rolloutEndpoint)) {
-    assert.equal(hash(await readActualFile(rolloutEndpoint)), rolloutEndpointHash, 'exact PR #164 static endpoint');
-    const name = path.basename(rolloutEndpoint);
-    assert(entries.some(e => (typeof e === 'string' ? e : e.name) === name));
-    entries = entries.filter(e => (typeof e === 'string' ? e : e.name) !== name);
-    // Omit the new directory only when its sole entry is the verified endpoint.
-    return entries;
-  }
   for (const row of compatibility.sourceChanges.filter(r => r.newFile && path.dirname(r.path) === key)) {
     const actualHash = hash(await readActualFile(row.path));
     assert(matchesApprovedHash(row, actualHash), `${row.path}: only approved source versions allowed, got ${actualHash}`);
@@ -87,4 +79,12 @@ export async function readdir(dir, options) {
   const name = source ? path.basename(review.chapter.path) : review.chapter.slug;
   assert(entries.some(e => (typeof e === 'string' ? e : e.name) === name));
   return entries.filter(e => (typeof e === 'string' ? e : e.name) !== name);
+}
+
+// Only audits that predate the endpoint opt into this inventory projection.
+// Newer guards still see it and verify its existence and delivered data.
+export async function beforePracticeEndpointInventory(files) {
+  assert(files.includes(rolloutEndpoint), 'approved endpoint must be present');
+  assert.equal(hash(await readActualFile(rolloutEndpoint)), rolloutEndpointHash, 'exact PR #164 static endpoint');
+  return files.filter(file => file !== rolloutEndpoint);
 }

@@ -1,4 +1,5 @@
 import { readFile } from './read-before-20190804-review.mjs';
+import { beforePracticeEndpointInventory } from './read-before-hanging-scaffold-wire-rope.mjs';
 import { publication } from './read-before-clam-shell.mjs';
 import assert from 'node:assert/strict';
 import { readdir } from './read-before-formwork-lateral-pressure.mjs';
@@ -14,7 +15,7 @@ assert.equal(review.assetRegistries.length,1);assert.equal(review.assets.length,
 const registry=review.assetRegistries[0],asset=review.assets[0],edit=review.articleEdits[0];
 assert.equal(registry.path,'src/data/question-assets/industrial-safety.json');
 assert.equal(asset.path,'src/assets/questions/industrial-safety/20180304_036.png');
-assert.deepEqual([...await walk('src'),...await walk('public')].sort(),[...Object.keys(baseline.protectedFiles),...reviewedAssetAdditions.map(row=>row.path)].sort());
+assert.deepEqual((await beforePracticeEndpointInventory([...await walk('src'),...await walk('public')])).sort(),[...Object.keys(baseline.protectedFiles),...reviewedAssetAdditions.map(row=>row.path)].sort());
 for(const [file,expected] of Object.entries(baseline.protectedFiles))assert.equal(hash(await readFile(file)),file===registry.path?registry.sha256:expected,`${file}: only one reviewed registry addition allowed`);
 assert.equal(registry.originalSha256,baseline.protectedFiles[registry.path]);
 const original=await readFile(`${audit}/original-registry.json`);
