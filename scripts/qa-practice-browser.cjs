@@ -3,7 +3,10 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {chromium}=require(process.env.QA_PLAYWRIGHT_MODULE||'playwright');
 const base=process.env.QA_BASE_URL||'https://getpasslab.co.kr';
 const dir='qa-results/practice-production';fs.mkdirSync(dir,{recursive:true});
-const report={base,startedAt:new Date().toISOString(),samples:[],findings:[],errors:[],faultInjection:[],limitations:['Chromium desktop and touch emulation; no physical iOS/Android device','Advertising/analytics requests blocked to avoid test traffic; font requests retained']};
+const previousPath=process.env.QA_COMPLETE_LARGE_REPORT||process.env.QA_RETRY_REPORT;
+const previous=previousPath?JSON.parse(fs.readFileSync(previousPath,'utf8')):undefined;
+const retryKeys=new Set((process.env.QA_COMPLETE_LARGE_REPORT?previous.samples.filter(s=>s.total>50&&!s.completed):previous?.errors??[]).map(e=>e.url+'|'+e.width));
+const report=previous?{...previous,samples:previous.samples.filter(s=>!retryKeys.has(s.url+'|'+s.width)),errors:[],findings:previous.findings.filter(f=>!retryKeys.has(f.url+'|'+f.width))}:{base,startedAt:new Date().toISOString(),samples:[],findings:[],errors:[],faultInjection:[],limitations:['Chromium desktop and touch emulation; no physical iOS/Android device','Advertising/analytics requests blocked to avoid test traffic; font requests retained']};
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
 const certs=['industrial-safety','energy-management','computer-literacy'];
 const questions=Object.fromEntries(certs.map(c=>[c,new Map(JSON.parse(fs.readFileSync('src/data/questions/'+c+'.json')).map(q=>[q.id,q]))]));
@@ -53,7 +56,7 @@ async function verify(row,width,target){
   if(Math.abs(afterY-y)>2)report.findings.push({severity:'medium',kind:'background-scroll',url:base+row.route,width,beforeY:y,afterY,expected:'background scroll stays fixed while dialog is open',actual:'background page moved on backdrop wheel',screenshot:`${row.cert}-${width}-initial.png`});
   await dialog.screenshot({path:dir+'/'+row.cert+'-'+width+'-'+row.route.split('/').at(-2)+'-initial.png'});
   let correct=0,answered=0,images=0,cautions=0,longChoiceHeight=0,minChoiceHeight=Infinity,feedbackStyles;
-  const max=target?row.ids.indexOf(target)+1:row.ids.length;assert(max>0,'target is assigned');
+  const max=target&&!process.env.QA_COMPLETE_LARGE_REPORT?row.ids.indexOf(target)+1:row.ids.length;assert(max>0,'target is assigned');
   for(let i=0;i<max;i++){
    const q=questions[row.cert].get(row.ids[i]);
    assert.equal(await item.locator('[data-practice-body]').innerText(),(i+1)+'. '+q.body,'canonical question body '+q.id);
@@ -95,7 +98,9 @@ async function verify(row,width,target){
   await dialog.locator('[data-practice-close]').click();assert(!(await dialog.isVisible()));
   await opener.click();await item.waitFor({state:'visible'});await page.mouse.click(2,420);assert(!(await dialog.isVisible()),'backdrop close');
   assert.equal(requests.filter(u=>u.includes('/practice-data/')).length,1,'cached reopen no repeated dataset');
-  const old=page.locator('[data-question-role="primary"] [data-open]').first();await old.click();const oldDialog=page.locator('#deferred-question-dialog');await oldDialog.waitFor({state:'visible'});await oldDialog.locator('[data-reveal]').waitFor({state:'visible'});await page.keyboard.press('Escape');
+  const old=page.locator('[data-question-role="primary"] [data-open]').first();
+  const oldId=await old.getAttribute('aria-controls');assert(oldId,'original popup aria-controls');
+  await old.click();const oldDialog=page.locator('[id="'+oldId+'"]');await oldDialog.waitFor({state:'visible'});await oldDialog.locator('[data-reveal]').waitFor({state:'visible'});await page.keyboard.press('Escape');
   const link=page.locator('article a[href^="/'+row.cert+'/written/"]').first();if(await link.count()){const dest=await link.getAttribute('href');await link.click();assert.equal(new URL(page.url()).pathname,dest);await page.goBack({waitUntil:'domcontentloaded'})}
   assert.equal(errors.length,0,JSON.stringify(errors));assert.equal(networkFailures.length,0,JSON.stringify(networkFailures));
   const dom=await page.evaluate(()=>document.getElementsByTagName('*').length);
@@ -121,9 +126,11 @@ async function faults(){
 }
 (async()=>{
  const proxy=process.env.QA_PROXY;browser=await chromium.launch({headless:true,...(process.env.QA_CHROMIUM_EXECUTABLE?{executablePath:process.env.QA_CHROMIUM_EXECUTABLE}:{}),args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu'],...(proxy?{proxy:{server:proxy}}:{})});
- try{for(const row of reps)for(const width of [320,390,768,1440])await verify(row,width);
- for(const [slug,id]of special)for(const width of [320,1440])await verify(get(slug),width,id);
- await faults();}finally{await browser.close();report.finishedAt=new Date().toISOString();fs.writeFileSync(dir+'/browser-report.json',JSON.stringify(report,null,2))}
+ const jobs=[...reps.flatMap(row=>[320,390,768,1440].map(width=>({row,width}))),...special.flatMap(([slug,id])=>[320,1440].map(width=>({row:get(slug),width,target:id})))].filter(j=>!previous||retryKeys.has(base+j.row.route+'|'+j.width));
+ let jobIndex=0;
+ try{await Promise.all(Array.from({length:Math.min(Number(process.env.QA_JOBS||1),jobs.length)},async()=>{while(jobIndex<jobs.length){const j=jobs[jobIndex++];await verify(j.row,j.width,j.target)}}));
+ if(!previous||previous.errors.some(e=>e.kind==='fault-injection'))await faults();}finally{await browser.close();report.finishedAt=new Date().toISOString();report.overall=report.errors.length||report.findings.length?'PARTIAL PASS':'PASS';fs.writeFileSync(dir+'/browser-report.json',JSON.stringify(report,null,2))}
  console.log(JSON.stringify({samples:report.samples.length,answered:report.samples.reduce((s,r)=>s+r.answered,0),findings:report.findings,errors:report.errors},null,2));
  assert.equal(report.errors.length,0,'browser functional errors');
+ assert.equal(report.findings.length,0,'browser UI findings require correction; see browser-report.json');
 })().catch(e=>{console.error(e);process.exitCode=1});

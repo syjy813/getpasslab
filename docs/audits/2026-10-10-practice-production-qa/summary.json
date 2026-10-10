@@ -1,0 +1,112 @@
+{
+  "overall": "부분 PASS",
+  "productionCommit": "9fea932bb8c46d3d65fb7291cf29612a0a67dcf3",
+  "validatedCiCommit": "a4d287a82b8cf98a0e8a21f0bf5d970e26f3e6cd",
+  "pr": 166,
+  "http": {
+    "chapters": 447,
+    "resources": 124,
+    "errors": [],
+    "totals": {
+      "industrial-safety": {
+        "chapters": 263,
+        "withPractice": 253,
+        "withoutPractice": 10,
+        "linkedQuestions": 1032
+      },
+      "energy-management": {
+        "chapters": 21,
+        "withPractice": 21,
+        "withoutPractice": 0,
+        "linkedQuestions": 1588
+      },
+      "computer-literacy": {
+        "chapters": 163,
+        "withPractice": 132,
+        "withoutPractice": 31,
+        "linkedQuestions": 301
+      }
+    }
+  },
+  "browser": {
+    "conditions": 26,
+    "chapters": 10,
+    "answered": 1126,
+    "completionConditions": 18,
+    "findingsByKind": {
+      "choice-color-feedback": 26,
+      "choice-touch-area": 25,
+      "background-scroll": 26
+    },
+    "errors": [],
+    "faultInjection": [
+      {
+        "kind": "503 then close/reopen retry",
+        "result": "PASS"
+      },
+      {
+        "kind": "400ms latency / 50KiB per second",
+        "loadMs": 1331,
+        "result": "PASS"
+      }
+    ]
+  },
+  "ci": [
+    {
+      "id": 38061327733,
+      "name": "Industrial remaining splits QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/38061327733"
+    },
+    {
+      "id": 38061327803,
+      "name": "Earth retaining structure QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/38061327803"
+    },
+    {
+      "id": 38061327735,
+      "name": "Industrial safety chapter splits QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/38061327735"
+    },
+    {
+      "id": 38061327760,
+      "name": "Industrial remaining chapter review QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/38061327760"
+    },
+    {
+      "id": 38061327739,
+      "name": "FTA symbols split QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/38061327739"
+    },
+    {
+      "id": 38061327777,
+      "name": "Industrial question source repair QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/38061327777"
+    },
+    {
+      "id": 38061327734,
+      "name": "All chapter formula style QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/38061327734"
+    },
+    {
+      "id": 38061327758,
+      "name": "SEO validation",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/38061327758"
+    }
+  ]
+}
