@@ -36,11 +36,11 @@ for (const [file, before] of Object.entries(baseline.protectedFiles)) {
     // The approved rollout adds only this fixed, checked UI mounting code.
     // Older question-source audits must still compare the original layout.
     const additions = [
-      "import InstantQuestionPractice from '../components/InstantQuestionPractice.astro';\\n",
-      "  practiceQuestions?: any[];\\n",
-      "  practiceQuestions,\\n",
-      "  {practiceQuestions && <InstantQuestionPractice questions={practiceQuestions} certificationId={cert_id} chapterSlug={slug} />}\\n",
-    ].map(part => part.replaceAll('\\\\n', '\\n'));
+      "import InstantQuestionPractice from '../components/InstantQuestionPractice.astro';",
+      "  practiceQuestions?: any[];",
+      "  practiceQuestions,",
+      "  {practiceQuestions && <InstantQuestionPractice questions={practiceQuestions} certificationId={cert_id} chapterSlug={slug} />}",
+    ].map(part => part + String.fromCharCode(10));
     let layout = bytes.toString('utf8');
     if (layout.includes('  practiceQuestions?: any[];')) {
       for (const addition of additions) {
