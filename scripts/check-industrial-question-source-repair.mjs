@@ -31,7 +31,26 @@ assert.equal(changed.size, 5);
 for (const [file, before] of Object.entries(baseline.protectedFiles)) {
   const row = changed.get(file);
   if (row) assert.equal(row.originalSha256, before);
-  const actual = hash(await readFile(file)), expected = row?.sha256 ?? before;
+  let bytes = await readFile(file);
+  if (file === 'src/layouts/ChapterLayout.astro') {
+    // The approved rollout adds only this fixed, checked UI mounting code.
+    // Older question-source audits must still compare the original layout.
+    const additions = [
+      "import InstantQuestionPractice from '../components/InstantQuestionPractice.astro';\\n",
+      "  practiceQuestions?: any[];\\n",
+      "  practiceQuestions,\\n",
+      "  {practiceQuestions && <InstantQuestionPractice questions={practiceQuestions} certificationId={cert_id} chapterSlug={slug} />}\\n",
+    ].map(part => part.replaceAll('\\\\n', '\\n'));
+    let layout = bytes.toString('utf8');
+    if (layout.includes('  practiceQuestions?: any[];')) {
+      for (const addition of additions) {
+        assert.equal(layout.split(addition).length, 2, `${file}: exactly one approved rollout insertion`);
+        layout = layout.replace(addition, '');
+      }
+      bytes = Buffer.from(layout, 'utf8');
+    }
+  }
+  const actual = hash(bytes), expected = row?.sha256 ?? before;
   if (actual !== expected) assert.equal(actual, reviewedChapterHash(file, expected), `${file}: only exact reviewed edits allowed`);
 }
 const canonicalRow = review.canonicalFiles[0];

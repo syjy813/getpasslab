@@ -82,9 +82,12 @@ const rolloutLayoutInsertions = [
 function restorePilotRoute(file, source) {
   let insertions = [];
   if (file === pilotRoutePath) {
+    // The Oct 10 source audit can already restore the pre-pilot bytes after
+    // validating the current rollout hash. Leave that verified baseline alone.
     insertions = source.includes('  practiceQuestions=')
       ? rolloutRouteInsertions
-      : pilotRouteInsertions;
+      : source.includes('INSTANT_PRACTICE_PILOT_EXPLANATIONS')
+        ? pilotRouteInsertions : [];
   } else if (file === chapterLayoutPath && source.includes('  practiceQuestions?: any[];')) {
     insertions = rolloutLayoutInsertions;
   }
