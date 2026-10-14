@@ -1,0 +1,797 @@
+{
+  "chapterId": "FSM2-037",
+  "title": "스프링클러 방식과 작동 순서",
+  "date": "2026-10-13",
+  "mainSHA": "429018e32bd21a8e85daa79fc8bfb58656583920",
+  "scope": "첫 샘플 1챕터의 집필본·그림·독립 HTML 검토본",
+  "primaryQuestionReview": [
+    {
+      "sourceQuestionId": "moducbt-27774-q38",
+      "setLabel": "2026-2",
+      "number": 38,
+      "pdfPage": 68,
+      "sourceMarkedAnswer": 3,
+      "independentJudgment": "③",
+      "clue": "습식 알람밸브 + 기동용수압개폐장치",
+      "section": "wet-detail",
+      "application": "헤드 개방·방수 → 2차측 압력 저하 → 클래퍼 개방 → 경보용 압력스위치 → 문제에서 정한 펌프 기동",
+      "wrongChoiceElimination": "클래퍼 개방보다 경보용 압력스위치가 먼저인 배열, 2차측 압력 저하가 헤드 개방보다 먼저인 배열 제거",
+      "status": "원본 PDF 지문·선택지·표시답 대조 + 수록 조건의 근거 확인",
+      "officialAnswerVerified": false,
+      "limit": "실제 시행 기출 연도·공식 정답 인증 아님. 습식 순서 문제는 수록된 알람밸브와 압력 기동 조건에 한정"
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q23",
+      "setLabel": "2026-1",
+      "number": 23,
+      "pdfPage": 96,
+      "sourceMarkedAnswer": 2,
+      "independentJudgment": "②",
+      "clue": "동결 우려가 있는 비난방 창고",
+      "section": "method-dry",
+      "application": "평상시 2차측이 물인지 기체인지 확인. 건식·준비작동식의 특징 적용",
+      "wrongChoiceElimination": "습식에 동결 우려가 없다는 설명, 일제살수식의 폐쇄형 주장, 감지기 없는 준비작동식 즉시 방수 주장 제거",
+      "status": "원본 PDF 지문·선택지·표시답 대조 + 수록 조건의 근거 확인",
+      "officialAnswerVerified": false,
+      "limit": "실제 시행 기출 연도·공식 정답 인증 아님. 습식 순서 문제는 수록된 알람밸브와 압력 기동 조건에 한정"
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q23",
+      "setLabel": "2025",
+      "number": 23,
+      "pdfPage": 137,
+      "sourceMarkedAnswer": 4,
+      "independentJudgment": "④",
+      "clue": "방식별 특징 중 옳지 않은 설명",
+      "section": "method-deluge",
+      "application": "일제살수식은 개방형 헤드 + 일제개방밸브 기동",
+      "wrongChoiceElimination": "폐쇄형·감열체가 녹은 헤드에서만 방수한다는 선택지의 오류 확인",
+      "status": "원본 PDF 지문·선택지·표시답 대조 + 수록 조건의 근거 확인",
+      "officialAnswerVerified": false,
+      "limit": "실제 시행 기출 연도·공식 정답 인증 아님. 습식 순서 문제는 수록된 알람밸브와 압력 기동 조건에 한정"
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q23",
+      "setLabel": "2024",
+      "number": 23,
+      "pdfPage": 181,
+      "sourceMarkedAnswer": 4,
+      "independentJudgment": "④",
+      "clue": "1차측 물 + 2차측 대기압/저압 + 감지기",
+      "section": "method-preaction",
+      "application": "준비작동식의 평상시 상태와 밸브 기동 조건 적용",
+      "wrongChoiceElimination": "습식/건식의 배관 상태 반전, 건식의 개방형/감지기 주장, 일제살수식의 열 개방 주장 제거",
+      "status": "원본 PDF 지문·선택지·표시답 대조 + 수록 조건의 근거 확인",
+      "officialAnswerVerified": false,
+      "limit": "실제 시행 기출 연도·공식 정답 인증 아님. 습식 순서 문제는 수록된 알람밸브와 압력 기동 조건에 한정"
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q25",
+      "setLabel": "2024",
+      "number": 25,
+      "pdfPage": 183,
+      "sourceMarkedAnswer": 1,
+      "independentJudgment": "①",
+      "clue": "계통도: 2차측 압축공기 + 공기압축기 + 폐쇄형",
+      "section": "method-dry",
+      "application": "PDF183쪽 그림 직접 확인. 압축기 관이 밸브 2차측에 연결된 건식",
+      "wrongChoiceElimination": "1·2차측 물인 습식, 감지기 기동을 특징으로 하는 준비작동식·일제살수식과 구별",
+      "status": "원본 PDF 지문·선택지·표시답 대조 + 수록 조건의 근거 확인",
+      "officialAnswerVerified": false,
+      "limit": "실제 시행 기출 연도·공식 정답 인증 아님. 습식 순서 문제는 수록된 알람밸브와 압력 기동 조건에 한정"
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q36",
+      "setLabel": "2023",
+      "number": 36,
+      "pdfPage": 236,
+      "sourceMarkedAnswer": 3,
+      "independentJudgment": "③",
+      "clue": "습식 현상 ㉠~㉥ 배열 + 압력에 따른 펌프 기동",
+      "section": "wet-detail",
+      "application": "수록 조건에서 ㉢ → ㉠ → ㉤ → ㉥ → ㉡ → ㉣",
+      "wrongChoiceElimination": "헤드 개방보다 펌프가 먼저인 배열, 알람밸브 개방보다 경보가 먼저인 배열 제거",
+      "status": "원본 PDF 지문·선택지·표시답 대조 + 수록 조건의 근거 확인",
+      "officialAnswerVerified": false,
+      "limit": "실제 시행 기출 연도·공식 정답 인증 아님. 습식 순서 문제는 수록된 알람밸브와 압력 기동 조건에 한정"
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q39",
+      "setLabel": "2022",
+      "number": 39,
+      "pdfPage": 276,
+      "sourceMarkedAnswer": 2,
+      "independentJudgment": "②",
+      "clue": "습식 빈칸: 압력·경보·펌프 기동장치",
+      "section": "wet-detail",
+      "application": "2차측 압력 저하 / 경보용 압력스위치 / 기동용수압개폐장치 구분",
+      "wrongChoiceElimination": "2차측 압력 상승, 준비작동식의 교차회로·전자밸브, 도통시험·물올림장치로 대체한 설명 제거",
+      "status": "원본 PDF 지문·선택지·표시답 대조 + 수록 조건의 근거 확인",
+      "officialAnswerVerified": false,
+      "limit": "실제 시행 기출 연도·공식 정답 인증 아님. 습식 순서 문제는 수록된 알람밸브와 압력 기동 조건에 한정"
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q33",
+      "setLabel": "2021",
+      "number": 33,
+      "pdfPage": 308,
+      "sourceMarkedAnswer": 4,
+      "independentJudgment": "④",
+      "clue": "습식에서 사이렌·밸브개방 표시의 직접 원인",
+      "section": "two-signals",
+      "application": "클래퍼 개방 뒤 경보 경로에 물이 들어가 경보용 압력스위치 작동",
+      "wrongChoiceElimination": "감지기 교차회로, 준비작동식의 전자밸브, 펌프 기동을 직접 경보 원인으로 대체한 설명 제거",
+      "status": "원본 PDF 지문·선택지·표시답 대조 + 수록 조건의 근거 확인",
+      "officialAnswerVerified": false,
+      "limit": "실제 시행 기출 연도·공식 정답 인증 아님. 습식 순서 문제는 수록된 알람밸브와 압력 기동 조건에 한정"
+    }
+  ],
+  "primaryCount": 8,
+  "secondaryCount": 19,
+  "secondaryReview": "기존 주제 배정 목록 유지. 이번 샘플의 보조 문항 19개 정답/이미지 전수 검수는 미실행",
+  "sourceRecordsModified": false,
+  "sources": [
+    {
+      "id": "NFTC103",
+      "name": "스프링클러설비의 화재안전기술기준(NFTC 103)",
+      "version": "국립소방연구원공고 제2026-35호, 시행 2026-07-01",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000281674&chrClsCd=010201",
+      "readURL": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000281674&admRulId=83616&joTpYn=N&languageType=KO&chrClsCd=010201",
+      "sections": [
+        "1.7.1.9",
+        "1.7.1.23",
+        "1.7.1.25",
+        "1.7.1.26",
+        "1.7.1.27",
+        "2.6.1.1",
+        "2.6.2.1",
+        "2.6.3.1",
+        "2.6.3.2",
+        "2.6.3.3"
+      ],
+      "verified": "국가법령정보센터가 본문에 사용하는 공개 endpoint의 현행 본문 직접 내려받아 확인"
+    },
+    {
+      "id": "VIKING-J1",
+      "name": "Viking Model J-1 Alarm Check Valve technical data",
+      "version": "2014-01-09, §5 Operation, p4",
+      "url": "https://www.vikinggroupinc.com/sites/default/files/databook/wetsystems/062293.pdf",
+      "verified": "클래퍼 개방 → 시트 경로/알람 포트로 물 유입 → 경보 장치 작동의 물리적 관계 확인. 국내 공통 제품 사양이나 펌프 설정의 근거로 사용하지 않음"
+    },
+    {
+      "id": "USER-PDF",
+      "name": "사용자 제공 소방안전관리자 2급 기출 복원.pdf",
+      "version": "모두CBT의 묶음 제목을 그대로 사용",
+      "pdfPages": [
+        68,
+        96,
+        137,
+        181,
+        183,
+        236,
+        276,
+        308
+      ],
+      "verified": "8문항 원본 PDF 화면 및 지문·보기·표시 답 확인. 2024 Q25의 계통도 확인. 공식 공개 기출/정답 인증 아님"
+    }
+  ],
+  "image": {
+    "file": "sprinkler-standby-v1.png",
+    "sha256": "bcb8ec8240aff402b30643b9065fc9c181342b1e7c4b30b724695d55fae2a892",
+    "origin": "built-in image_gen. user image-gen-2.png was style reference only",
+    "purpose": "4방식 평상시 배관 상태 비교",
+    "level": "L1 학습용 재구성",
+    "checked": [
+      "습식 1·2차측 물",
+      "건식 1차 물/2차 압축공기/압축기 2차 연결",
+      "준비작동식 1차 물/2차 대기압·저압/폐쇄형",
+      "일제살수식 1차 물/2차 대기압/개방형 감열체 없음",
+      "평상시 방수 없음",
+      "감지기 신호 점선과 배관 구분"
+    ],
+    "omitted": [
+      "가압송수장치",
+      "개폐밸브·체크밸브·시험배관·알람트림의 상세 계통",
+      "실제 밸브 내부 단면·정확한 시공 치수"
+    ],
+    "unverified": [
+      "생성된 외관의 볼트·노즐·게이지 형상은 실제 제품 사양이 아님"
+    ],
+    "sourceFileChanges": "없음. PNG 바이트 편집 없이 CSS에서 사분면 표시",
+    "designStandard": "저장소 학습 이미지 정본 v1.2 §§1–9",
+    "prompt": "Use case: scientific-educational. New project illustration using the attached image as a STYLE REFERENCE ONLY. Create ONE square educational illustration with four equal square quadrants, no gutters, no outside header, no footer, no method titles. The four square panels occupy exactly the four quarters of the canvas. Pale blue backgrounds, clearly recognizable subtly rendered metal pipes and sprinkler heads, crisp large Korean direct labels. Focus strictly on NORMAL STANDBY STATE, not active fire. No fire, no water spray, no arrows showing water movement. Water is dark emerald green (#15785C), gas is blue (#1769AA), metal structures neutral grey. The four panels must retain the following exact topology and meaning:\n\nTop-left (wet): green-filled supply pipe below a neutral grey alarm check valve and green-filled upper distribution pipe continuing to three closed sprinkler heads. Closed heads visibly contain a red glass bulb. Label supply and upper piping '물', heads '폐쇄형', valve '알람밸브'.\n\nTop-right (dry): green supply BELOW a neutral grey dry valve, blue gas distribution piping ABOVE it to three CLOSED heads with glass bulbs. One recognisable air compressor to the right, a BLUE air feed line connected ONLY to the UPPER gas pipe downstream of the valve, never to green supply. Label '물', '압축공기', '폐쇄형', '건식밸브'.\n\nBottom-left (preaction): green supply BELOW a neutral grey preaction valve. Upper distribution pipe empty grey with light blue interior denoting air at atmospheric or low pressure, three CLOSED heads with glass bulbs. A separate detector and compact control box with a dashed electrical signal line to the valve actuator. Label '물', '대기압·저압', '폐쇄형', '준비작동밸브'. No water in the upper pipe. Valve closed in this standby scene.\n\nBottom-right (deluge): green supply BELOW a neutral grey deluge valve. Empty grey upper pipe at atmospheric pressure connected to three OPEN heads WITHOUT GLASS BULBS or heat closure. Detector/control signal can be indicated unobtrusively with a dashed electrical line to the valve, clearly labelled '신호'. Label '물', '대기압', '개방형', '일제개방밸브'. No water in upper piping and no spray in this standby scene.\n\nEach quadrant presents the same viewing angle and scale. Pipes must not have ambiguous connections, the valve separates supply from the downstream system, upstream/downstream boundary is visually clear. Supply and distribution are connected through the respective valve body. Keep labels and essential structure inside their quadrant with generous inset margins, readable at small display size. No brand, no decorative paragraphs, no extra test values, no repeated titles, no contradictory labels. Do not import technical errors from the style reference.\n"
+  },
+  "corrections": [
+    "사용자 비교 안내도에서 일제살수식 평상시 배관 물 표기를 새 그림에서는 1차측 물/2차측 대기압으로 명확히 구분",
+    "펌프 기동은 NFTC103 2.6.2.1의 여러 방식을 인정. 경보용 압력스위치와 기동용수압개폐장치를 구별",
+    "준비작동식의 감지기→밸브→물 공급과 헤드 열 개방을 구별. 실제 두 조건의 선후는 현장 상황에 따라 달라질 수 있음"
+  ],
+  "boundaries": [
+    "헤드 세부 설치기준·수원량·수신기 시험·교차회로 상세·시험밸브 점검은 인접 챕터 범위",
+    "엘보 배관 절단 길이 이미지는 이 챕터에 삽입하지 않음",
+    "그림의 제목·설명을 긴 이미지 포스터로 반복하지 않음"
+  ],
+  "repositoryChanges": false,
+  "commit": null,
+  "PR": null,
+  "merge": false,
+  "deploy": false,
+  "tests": {
+    "contentReview": "8 primary source questions reviewed under their printed conditions",
+    "browser": {
+      "result": "PASS",
+      "viewports": [
+        320,
+        390,
+        768,
+        1440
+      ],
+      "conditions": [
+        {
+          "width": 320,
+          "result": "PASS",
+          "existingChapterStyleComparison": {
+            "gnb": {
+              "position": "sticky",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "borderBottomColor": "rgb(229, 232, 235)"
+            },
+            "gnb-inner": {
+              "height": "56px",
+              "maxWidth": "1200px",
+              "paddingLeft": "16px"
+            },
+            "chapter-wrap": {
+              "maxWidth": "1200px",
+              "padding": "32px 24px",
+              "gap": "32px",
+              "gridTemplateColumns": "272px"
+            },
+            "sidebar": {
+              "display": "none"
+            },
+            "breadcrumb": {
+              "fontSize": "13px",
+              "color": "rgb(98, 109, 122)",
+              "gap": "8px"
+            },
+            "title": {
+              "fontSize": "28px",
+              "fontWeight": "700",
+              "lineHeight": "36.4px",
+              "color": "rgb(25, 31, 40)",
+              "margin": "0px",
+              "letterSpacing": "-0.56px"
+            },
+            "summary": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "color": "rgb(98, 109, 122)",
+              "margin": "8px 0px 24px"
+            },
+            "section": {
+              "fontSize": "18px",
+              "fontWeight": "600",
+              "backgroundColor": "rgb(239, 246, 255)",
+              "color": "rgb(25, 31, 40)",
+              "padding": "12px 16px 12px 34px",
+              "margin": "32px 0px 12px",
+              "borderRadius": "8px"
+            },
+            "paragraph": {
+              "fontSize": "15px",
+              "lineHeight": "24px",
+              "color": "rgb(51, 61, 75)",
+              "wordBreak": "keep-all"
+            },
+            "figure": {
+              "backgroundColor": "rgb(255, 255, 255)",
+              "border": "1px solid rgb(229, 232, 235)",
+              "borderRadius": "12px"
+            },
+            "caption": {
+              "padding": "12px 16px",
+              "borderBottom": "1px solid rgb(229, 232, 235)",
+              "gap": "4px"
+            },
+            "table": {
+              "fontSize": "13px",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "border": "1px solid rgb(229, 232, 235)",
+              "borderRadius": "12px"
+            },
+            "table-header": {
+              "backgroundColor": "rgb(242, 244, 246)",
+              "fontWeight": "600",
+              "color": "rgb(25, 31, 40)",
+              "padding": "10px 12px"
+            }
+          },
+          "imageDisplayWidths": [
+            270,
+            270,
+            270,
+            270
+          ],
+          "noDocumentOverflow": true,
+          "oldCustomWidgets": 0,
+          "zoomCases": 4,
+          "referenceDialogCases": 0,
+          "downloads": 3,
+          "consoleErrors": [],
+          "networkFailures": []
+        },
+        {
+          "width": 390,
+          "result": "PASS",
+          "existingChapterStyleComparison": {
+            "gnb": {
+              "position": "sticky",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "borderBottomColor": "rgb(229, 232, 235)"
+            },
+            "gnb-inner": {
+              "height": "56px",
+              "maxWidth": "1200px",
+              "paddingLeft": "16px"
+            },
+            "chapter-wrap": {
+              "maxWidth": "1200px",
+              "padding": "32px 24px",
+              "gap": "32px",
+              "gridTemplateColumns": "342px"
+            },
+            "sidebar": {
+              "display": "none"
+            },
+            "breadcrumb": {
+              "fontSize": "13px",
+              "color": "rgb(98, 109, 122)",
+              "gap": "8px"
+            },
+            "title": {
+              "fontSize": "28px",
+              "fontWeight": "700",
+              "lineHeight": "36.4px",
+              "color": "rgb(25, 31, 40)",
+              "margin": "0px",
+              "letterSpacing": "-0.56px"
+            },
+            "summary": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "color": "rgb(98, 109, 122)",
+              "margin": "8px 0px 24px"
+            },
+            "section": {
+              "fontSize": "18px",
+              "fontWeight": "600",
+              "backgroundColor": "rgb(239, 246, 255)",
+              "color": "rgb(25, 31, 40)",
+              "padding": "12px 16px 12px 34px",
+              "margin": "32px 0px 12px",
+              "borderRadius": "8px"
+            },
+            "paragraph": {
+              "fontSize": "15px",
+              "lineHeight": "24px",
+              "color": "rgb(51, 61, 75)",
+              "wordBreak": "keep-all"
+            },
+            "figure": {
+              "backgroundColor": "rgb(255, 255, 255)",
+              "border": "1px solid rgb(229, 232, 235)",
+              "borderRadius": "12px"
+            },
+            "caption": {
+              "padding": "12px 16px",
+              "borderBottom": "1px solid rgb(229, 232, 235)",
+              "gap": "4px"
+            },
+            "table": {
+              "fontSize": "13px",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "border": "1px solid rgb(229, 232, 235)",
+              "borderRadius": "12px"
+            },
+            "table-header": {
+              "backgroundColor": "rgb(242, 244, 246)",
+              "fontWeight": "600",
+              "color": "rgb(25, 31, 40)",
+              "padding": "10px 12px"
+            }
+          },
+          "imageDisplayWidths": [
+            340,
+            340,
+            340,
+            340
+          ],
+          "noDocumentOverflow": true,
+          "oldCustomWidgets": 0,
+          "zoomCases": 4,
+          "referenceDialogCases": 0,
+          "downloads": 3,
+          "consoleErrors": [],
+          "networkFailures": []
+        },
+        {
+          "width": 768,
+          "result": "PASS",
+          "existingChapterStyleComparison": {
+            "gnb": {
+              "position": "sticky",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "borderBottomColor": "rgb(229, 232, 235)"
+            },
+            "gnb-inner": {
+              "height": "64px",
+              "maxWidth": "1200px",
+              "paddingLeft": "16px"
+            },
+            "chapter-wrap": {
+              "maxWidth": "1200px",
+              "padding": "32px 24px",
+              "gap": "32px",
+              "gridTemplateColumns": "720px"
+            },
+            "sidebar": {
+              "display": "none"
+            },
+            "breadcrumb": {
+              "fontSize": "14px",
+              "color": "rgb(98, 109, 122)",
+              "gap": "8px"
+            },
+            "title": {
+              "fontSize": "40px",
+              "fontWeight": "700",
+              "lineHeight": "52px",
+              "color": "rgb(25, 31, 40)",
+              "margin": "0px",
+              "letterSpacing": "-0.8px"
+            },
+            "summary": {
+              "fontSize": "17px",
+              "lineHeight": "27.2px",
+              "color": "rgb(98, 109, 122)",
+              "margin": "8px 0px 24px"
+            },
+            "section": {
+              "fontSize": "20px",
+              "fontWeight": "600",
+              "backgroundColor": "rgb(239, 246, 255)",
+              "color": "rgb(25, 31, 40)",
+              "padding": "12px 16px 12px 34px",
+              "margin": "32px 0px 12px",
+              "borderRadius": "8px"
+            },
+            "paragraph": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "color": "rgb(51, 61, 75)",
+              "wordBreak": "keep-all"
+            },
+            "figure": {
+              "backgroundColor": "rgb(255, 255, 255)",
+              "border": "1px solid rgb(229, 232, 235)",
+              "borderRadius": "12px"
+            },
+            "caption": {
+              "padding": "12px 16px",
+              "borderBottom": "1px solid rgb(229, 232, 235)",
+              "gap": "4px"
+            },
+            "table": {
+              "fontSize": "14px",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "border": "1px solid rgb(229, 232, 235)",
+              "borderRadius": "12px"
+            },
+            "table-header": {
+              "backgroundColor": "rgb(242, 244, 246)",
+              "fontWeight": "600",
+              "color": "rgb(25, 31, 40)",
+              "padding": "10px 12px"
+            }
+          },
+          "imageDisplayWidths": [
+            350,
+            350,
+            350,
+            350
+          ],
+          "noDocumentOverflow": true,
+          "oldCustomWidgets": 0,
+          "zoomCases": 4,
+          "referenceDialogCases": 0,
+          "downloads": 3,
+          "consoleErrors": [],
+          "networkFailures": []
+        },
+        {
+          "width": 1440,
+          "result": "PASS",
+          "existingChapterStyleComparison": {
+            "gnb": {
+              "position": "sticky",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "borderBottomColor": "rgb(229, 232, 235)"
+            },
+            "gnb-inner": {
+              "height": "64px",
+              "maxWidth": "1200px",
+              "paddingLeft": "16px"
+            },
+            "chapter-wrap": {
+              "maxWidth": "1200px",
+              "padding": "32px 24px",
+              "gap": "32px",
+              "gridTemplateColumns": "240px 880px"
+            },
+            "sidebar": {
+              "display": "block"
+            },
+            "breadcrumb": {
+              "fontSize": "14px",
+              "color": "rgb(98, 109, 122)",
+              "gap": "8px"
+            },
+            "title": {
+              "fontSize": "40px",
+              "fontWeight": "700",
+              "lineHeight": "52px",
+              "color": "rgb(25, 31, 40)",
+              "margin": "0px",
+              "letterSpacing": "-0.8px"
+            },
+            "summary": {
+              "fontSize": "17px",
+              "lineHeight": "27.2px",
+              "color": "rgb(98, 109, 122)",
+              "margin": "8px 0px 24px"
+            },
+            "section": {
+              "fontSize": "20px",
+              "fontWeight": "600",
+              "backgroundColor": "rgb(239, 246, 255)",
+              "color": "rgb(25, 31, 40)",
+              "padding": "12px 16px 12px 34px",
+              "margin": "32px 0px 12px",
+              "borderRadius": "8px"
+            },
+            "paragraph": {
+              "fontSize": "16px",
+              "lineHeight": "25.6px",
+              "color": "rgb(51, 61, 75)",
+              "wordBreak": "keep-all"
+            },
+            "figure": {
+              "backgroundColor": "rgb(255, 255, 255)",
+              "border": "1px solid rgb(229, 232, 235)",
+              "borderRadius": "12px"
+            },
+            "caption": {
+              "padding": "12px 16px",
+              "borderBottom": "1px solid rgb(229, 232, 235)",
+              "gap": "4px"
+            },
+            "table": {
+              "fontSize": "14px",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "border": "1px solid rgb(229, 232, 235)",
+              "borderRadius": "12px"
+            },
+            "table-header": {
+              "backgroundColor": "rgb(242, 244, 246)",
+              "fontWeight": "600",
+              "color": "rgb(25, 31, 40)",
+              "padding": "10px 12px"
+            }
+          },
+          "imageDisplayWidths": [
+            430,
+            430,
+            430,
+            430
+          ],
+          "noDocumentOverflow": true,
+          "oldCustomWidgets": 0,
+          "zoomCases": 4,
+          "referenceDialogCases": 0,
+          "downloads": 3,
+          "consoleErrors": [],
+          "networkFailures": []
+        }
+      ],
+      "comparison": "computed common styles compared with actual built energy-management chapter from unchanged main",
+      "imageBytes": "unchanged",
+      "repoIntegration": "not performed",
+      "limitations": [
+        "Chromium local files only; no real iOS/Android/Safari test",
+        "Astro integration and production not performed",
+        "planned chapter links remain pending"
+      ]
+    },
+    "astroBuild": "미실행 — 저장소 코드 미변경",
+    "productionQA": "미실행 — 배포 없음",
+    "realIOSAndroid": "미검증"
+  },
+  "priorBrowserQA": {
+    "result": "PASS",
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "conditions": [
+      {
+        "width": 320,
+        "result": "PASS",
+        "noDocumentOverflow": true,
+        "methodCount": 4,
+        "imageSource": "same embedded PNG, CSS viewport quadrant; no raster edits",
+        "imageDimensions": [
+          1254,
+          1254
+        ],
+        "coreFontMinimum": 16,
+        "displayWidths": [
+          290,
+          290,
+          290,
+          290
+        ],
+        "imageZoomOpenClose": 4,
+        "closePaths": [
+          "button",
+          "Escape",
+          "backdrop"
+        ],
+        "scrollPositionAndFocusRestored": true,
+        "learningExamplesExpanded": 3,
+        "downloadsVerified": 3,
+        "consoleErrors": [],
+        "requestFailures": []
+      },
+      {
+        "width": 390,
+        "result": "PASS",
+        "noDocumentOverflow": true,
+        "methodCount": 4,
+        "imageSource": "same embedded PNG, CSS viewport quadrant; no raster edits",
+        "imageDimensions": [
+          1254,
+          1254
+        ],
+        "coreFontMinimum": 16,
+        "displayWidths": [
+          360,
+          360,
+          360,
+          360
+        ],
+        "imageZoomOpenClose": 4,
+        "closePaths": [
+          "button",
+          "Escape",
+          "backdrop"
+        ],
+        "scrollPositionAndFocusRestored": true,
+        "learningExamplesExpanded": 3,
+        "downloadsVerified": 3,
+        "consoleErrors": [],
+        "requestFailures": []
+      },
+      {
+        "width": 768,
+        "result": "PASS",
+        "noDocumentOverflow": true,
+        "methodCount": 4,
+        "imageSource": "same embedded PNG, CSS viewport quadrant; no raster edits",
+        "imageDimensions": [
+          1254,
+          1254
+        ],
+        "coreFontMinimum": 16,
+        "displayWidths": [
+          350,
+          350,
+          350,
+          350
+        ],
+        "imageZoomOpenClose": 4,
+        "closePaths": [
+          "button",
+          "Escape",
+          "backdrop"
+        ],
+        "scrollPositionAndFocusRestored": true,
+        "learningExamplesExpanded": 3,
+        "downloadsVerified": 3,
+        "consoleErrors": [],
+        "requestFailures": []
+      },
+      {
+        "width": 1440,
+        "result": "PASS",
+        "noDocumentOverflow": true,
+        "methodCount": 4,
+        "imageSource": "same embedded PNG, CSS viewport quadrant; no raster edits",
+        "imageDimensions": [
+          1254,
+          1254
+        ],
+        "coreFontMinimum": 16,
+        "displayWidths": [
+          466,
+          466,
+          466,
+          466
+        ],
+        "imageZoomOpenClose": 4,
+        "closePaths": [
+          "button",
+          "Escape",
+          "backdrop"
+        ],
+        "scrollPositionAndFocusRestored": true,
+        "learningExamplesExpanded": 3,
+        "downloadsVerified": 3,
+        "consoleErrors": [],
+        "requestFailures": []
+      }
+    ],
+    "consoleErrors": [],
+    "scope": "independent local HTML in Chromium; not Astro integration or production",
+    "screenshots": "internal only; not included in saved deliverable",
+    "limitations": [
+      "real iOS/Android and Safari not tested",
+      "production not deployed",
+      "no learning-outcome study"
+    ],
+    "visualReview": {
+      "result": "PASS",
+      "checked": [
+        "390px 습식·준비작동식",
+        "320px 일제살수식",
+        "390px 습식 상세 흐름",
+        "1440px 참고문항 표·검토 기록",
+        "1440px 첫 화면·습식/건식 2열 배치"
+      ]
+    },
+    "finalMetadataAndEmbeddedImageSmoke": "PASS"
+  },
+  "revision": "기존 챕터 구성 유지 · 사용자 요청으로 복원문제 참고 섹션 제거",
+  "layoutReview": {
+    "references": [
+      "src/layouts/ChapterLayout.astro",
+      "src/styles/global.css",
+      "src/styles/learningFigures.css",
+      "src/content/chapters/energy-management/thermal-equipment/draft-flue-gas.md",
+      "src/content/chapters/mechanical/lathe-safety.md",
+      "src/content/chapters/chemical/concentration-conversion.md"
+    ],
+    "sharedStyles": {
+      "global.css": "08fddbacd4146de81f33ba87c6bcf675e053b8d3077c6fa136d1218a9bb87e44",
+      "learningFigures.css": "7a874f8332bd794bb0d88ccb35068e3b2c1de403e563c93ba5e12e55477f09e7"
+    },
+    "changes": [
+      "기존 GNB·chapter-wrap·breadcrumb·gpl-display와 요약 사용",
+      "본문 h2/h3·문단·표·목록을 공통 CSS로 렌더링",
+      "learning-visuals에는 그림과 캡션만 배치",
+      "번호 카드·탭·단계별 독립 박스·답 펼치기 카드를 제거",
+      "작동 순서를 기존 문단·표·목록 구조로 정리",
+      "시험 포인트와 자주 틀리는 포인트 추가",
+      "사용자 요청에 따라 본문의 복원문제 참고 섹션·자료 버튼·팝업 제거",
+      "검수/다운로드는 학습 article 밖 별도 접힌 영역으로 이동"
+    ],
+    "limits": [
+      "독립 HTML이며 Astro 공통 컴포넌트의 실제 실행/저장소 통합은 미실행",
+      "미집필 챕터는 준비 중으로 표시하고 가짜 공개 URL을 연결하지 않음",
+      "독립 파일에는 폰트 파일을 동봉하지 않으며 서비스의 시스템 폰트 fallback 사용",
+      "내용·정답·식별자·원본/생성 이미지 바이트는 변경하지 않음"
+    ]
+  }
+}

@@ -22,12 +22,12 @@ const totalQuestionCount = Object.values(questionCountByCertification).reduce((s
 const formatCount = (count: number) => count.toLocaleString('ko-KR');
 ---
 <BaseLayout
-  title="GetPassLab — 기출 데이터 기반 국가기술자격 핵심요약"
+  title="GetPassLab — 자격증 핵심요약과 학습 그림"
   description={`국가기술자격 필기 기출 ${formatCount(totalQuestionCount)}문항의 출제 이력을 챕터별로 연결해 핵심 개념, 계산 공식, 법령 기준과 반복 출제 포인트를 정리한 학습 서비스입니다.`}
 >
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-badge">기출 데이터 기반 · 국가기술자격 필기</span>
+      <span class="hero-badge">국가기술자격 · 소방안전관리자</span>
       <h1 class="gpl-display" style="max-width:760px;margin:0 auto">기출을 풀기 전에,<br/>무엇이 반복 출제되는지부터</h1>
       <p class="gpl-body-lg" style="max-width:720px;margin:var(--space-4) auto 0;color:var(--gray-600)">
         GetPassLab은 기출문제를 회차별로 나열하는 대신, 각 문항을 학습 주제에 연결해
@@ -39,7 +39,7 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
   <section class="section container">
     <div style="margin-bottom:var(--space-6)">
       <h2 class="gpl-h1">자격증 선택</h2>
-      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">준비 중인 자격증을 선택해 핵심 이론과 실제 출제 이력을 함께 확인해 보세요.</p>
+      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">준비 중인 자격증을 선택해 핵심 이론과 학습 그림을 확인해 보세요. 기출이 연결된 챕터에서는 실제 문제도 풀 수 있습니다.</p>
     </div>
     <div class="grid grid-3">
       {certifications.map((certification) => (

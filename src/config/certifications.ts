@@ -1,6 +1,7 @@
 import {
   COMPUTER_LITERACY_SUBJECTS,
   ENERGY_MANAGEMENT_SUBJECTS,
+  FIRE_SAFETY_LEVEL2_SUBJECTS,
   INDUSTRIAL_SAFETY_SUBJECTS,
   type SubjectDefinition,
 } from './subjects';
@@ -26,6 +27,23 @@ export interface CertificationDefinition {
 }
 
 export const CERTIFICATIONS = {
+  'fire-safety-manager-level2': {
+    slug: 'fire-safety-manager-level2',
+    name: '소방안전관리자 2급',
+    englishName: 'Fire Safety Manager Level 2',
+    category: '소방안전관리자 자격 · 2급',
+    summary: '소방설비의 구조와 작동 순서를 그림으로 학습 · 일부 챕터 공개',
+    description: '소방안전관리자 2급의 소방설비 구조와 작동 순서, 소방안전관리 이론과 점검·대응을 핵심 설명과 학습 그림으로 정리합니다.',
+    exams: {
+      written: {
+        slug: 'written', name: '자격시험', title: '소방안전관리자 2급 핵심요약',
+        description: '소방안전관리자 2급의 공개 챕터에서 설비 구조, 작동 순서와 시험 판단 기준을 학습합니다.',
+        format: '객관식 4지 택일형 · 과목별 25문항, 총 50문항 · 60분 · 각 과목 40점 이상, 평균 70점 이상 합격',
+        releaseNotice: '스프링클러 챕터 1개 공개 · 문제풀이는 준비 중',
+        subjects: FIRE_SAFETY_LEVEL2_SUBJECTS,
+      },
+    },
+  },
   'computer-literacy': {
     slug: 'computer-literacy',
     name: '컴퓨터활용능력 2급',
@@ -89,6 +107,7 @@ export const FEATURED_CERTIFICATION_IDS: readonly CertificationId[] = [
   DEFAULT_CERTIFICATION_ID,
   'energy-management',
   'computer-literacy',
+  'fire-safety-manager-level2',
 ];
 
 export function getFeaturedCertifications() {

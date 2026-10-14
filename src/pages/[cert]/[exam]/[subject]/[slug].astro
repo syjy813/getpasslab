@@ -181,7 +181,7 @@ const sideChapters = orderedSideChapters
 >
   <Content />
   <AdFitResponsive />
-  {(linked.length > 0 || supporting.length === 0) && <QuestionHistory
+  {chapter.data.cert_id !== 'fire-safety-manager-level2' && (linked.length > 0 || supporting.length === 0) && <QuestionHistory
     questions={linked as any}
     examComment={chapter.data.examComment}
     headingText={isComputerBasics ? '개념을 확인하는 기출문제' : undefined}

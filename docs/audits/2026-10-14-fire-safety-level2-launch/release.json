@@ -1,0 +1,74 @@
+{
+  "sourceChanges": [
+    {
+      "path": "src/config/certifications.ts",
+      "sha256": "0bf1426785cd0fd0cfef90aad4e8122c5131af79e673cd33d4359cf5b2bc3e50",
+      "originalSha256": "79c8e5da9a974c3dc0d5553f4b4af4206a86d15ad9a1f52a9285e02a8ee4af19",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-launch/originals/src/config/certifications.ts"
+    },
+    {
+      "path": "src/config/subjects.ts",
+      "sha256": "430f78bb720341e2ed98c07023dd4aef4bddd6c17e7ccaf31bfcd1b8a006a74d",
+      "originalSha256": "914dc098ee6d28ef1441cc4bb0f98610f4975ebc065b7dd254e8795f3cad1dec",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-launch/originals/src/config/subjects.ts"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-types-operation.md",
+      "sha256": "f2a7653c24967cf6485496a46e7fd33a203633a3d87faf4c787e3cecd2bc4880",
+      "originalSha256": null,
+      "originalFile": null
+    },
+    {
+      "path": "src/pages/[cert]/[exam]/[subject]/[slug].astro",
+      "sha256": "4fc9bd78492b00112b3e0b9364625e73290ba1febd48667a2d4d5de1f88e6b09",
+      "originalSha256": "346dc57256093c0a8171aed740362981ac2d6f9c461b19b53dee845e7bb55087",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-launch/originals/src/pages/[cert]/[exam]/[subject]/[slug].astro"
+    },
+    {
+      "path": "src/pages/[cert]/[exam]/[subject]/index.astro",
+      "sha256": "9a3c5b513997c1e4dd094211d83d328915e6f8812ebd4b9d80d94a40cc8f5454",
+      "originalSha256": "75f0fd3dd9c5754e236a628ce8845216eb70e58bc1d0150ae4927e4586fb8aa4",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-launch/originals/src/pages/[cert]/[exam]/[subject]/index.astro"
+    },
+    {
+      "path": "src/pages/[cert]/[exam]/index.astro",
+      "sha256": "af83f00462336c5583572424c627344565252f54f24423c20839403ae7d9ce85",
+      "originalSha256": "1ad64fa47102ca3b75324096a0ea2d6036c531746bec2bbe39c543dc4c91e786",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-launch/originals/src/pages/[cert]/[exam]/index.astro"
+    },
+    {
+      "path": "src/pages/[cert]/index.astro",
+      "sha256": "a119bda6a270f44b6a6d8308e0c75ea237b8fb7ea06b884f2b2f1d5f2f8f5472",
+      "originalSha256": "15cb845aa73985d89986e63f4acfac90bcc00491593223b059dd1e4ddba72e8a",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-launch/originals/src/pages/[cert]/index.astro"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "sha256": "88b15baafcfbd70a6dc758aa1ee9e11ba3ab1ea56e9c8c809333c2c2de34edab",
+      "originalSha256": "12da7256151ddd38f08f7c99f1b3b90b103b3b3d859cf3ffef4235ad0898ead1",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-launch/originals/src/pages/index.astro"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/sprinkler-standby-v1.png",
+      "sha256": "bcb8ec8240aff402b30643b9065fc9c181342b1e7c4b30b724695d55fae2a892",
+      "originalSha256": null,
+      "originalFile": null
+    },
+    {
+      "path": "public/scripts/fire-sprinkler-zoom.js",
+      "sha256": "f7551a28c2fe5c83d90d4ea1ef0d48c765eac9b2c95697d1b3c83a133c169d96",
+      "originalSha256": null,
+      "originalFile": null
+    },
+    {
+      "path": "public/styles/fire-sprinkler-visual.css",
+      "sha256": "a63b4524ec7940323c6a510c5f96c4061456ffffb4feb2e5da60c15500f9df78",
+      "originalSha256": null,
+      "originalFile": null
+    }
+  ],
+  "newArticles": {
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/index.html": "fc99687708fe833be1cc20edb9ba01458c5bc5263a65a3308862585be9c88802"
+  },
+  "certId": "fire-safety-manager-level2"
+}

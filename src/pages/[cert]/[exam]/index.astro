@@ -23,6 +23,7 @@ export function getStaticPaths() {
 }
 
 const { certification, examDefinition } = Astro.props;
+const isFireSafety = certification.slug === 'fire-safety-manager-level2';
 const chapters = (await getCollection('chapters')).filter(
   chapter => chapter.data.cert_id === certification.slug
     && chapter.data.exam === examDefinition.slug
@@ -105,8 +106,8 @@ const subjectTooltip = subjects.length > 0
     <div class="learning-summary">
       <dl class="learning-stats">
         <div class="learning-stat"><dt>공개 챕터</dt><dd>{chapters.length}개</dd></div>
-        <div class="learning-stat"><dt>안내 기출 문제</dt><dd>{linkedQuestions.length}문항</dd></div>
-        <div class="learning-stat">
+        {!isFireSafety && <div class="learning-stat"><dt>안내 기출 문제</dt><dd>{linkedQuestions.length}문항</dd></div>}
+        {!isFireSafety && <div class="learning-stat">
           <dt class="stat-label-with-help">
             <span>기출 회차</span>
             <span class="info-tooltip">
@@ -115,7 +116,7 @@ const subjectTooltip = subjects.length > 0
             </span>
           </dt>
           <dd>{sessionCount}회</dd>
-        </div>
+        </div>}
         <div class="learning-stat">
           <dt class="stat-label-with-help">
             <span>과목</span>
@@ -149,14 +150,14 @@ const subjectTooltip = subjects.length > 0
 
     <div class="section-heading compact">
       <h2 class="gpl-h2">과목별 학습 범위</h2>
-      <p class="gpl-body">각 과목에서 현재 공개된 챕터와 연결 기출 수를 함께 표시합니다.</p>
+      <p class="gpl-body">{isFireSafety ? '과목 이름은 공식 시험 범위를 요약한 학습 구분이며, 현재 공개된 챕터 수를 표시합니다.' : '각 과목에서 현재 공개된 챕터와 연결 기출 수를 함께 표시합니다.'}</p>
     </div>
     <div class="grid grid-3">
       {subjectCards.map(({ subjectId, subject, chapterCount, questionCount }) => (
         <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/`)}>
           <span class="card-label">{getSubjectLabel(subjectId, subject)}</span>
           <div class="card-title">{subject.name}</div>
-          <div class="card-meta">공개 챕터 {chapterCount}개 · 연결 기출 {questionCount}문항</div>
+          <div class="card-meta">공개 챕터 {chapterCount}개{!isFireSafety && ` · 연결 기출 ${questionCount}문항`}</div>
         </a>
       ))}
     </div>
