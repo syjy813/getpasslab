@@ -1,3 +1,13 @@
+## 2026-10-14 소방안전관리자 2급 최초 공개 준비
+
+- 사용자 신규 자격증·스프링클러 1챕터·실서버 배포 명시 승인. 기준 main429018e, 기존 launch 브랜치는 변경 없음/PR 없음. 복구한 검토 HTML v2를 재통합
+- 신규 `fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/`, FSM2-037. 기존 ChapterLayout·learning-visuals 재사용, PNG 원본/4방식 확대 유지
+- 요청한 복원문제 참고·검수 판단 UI 제외, questions 빈 배열. 자체 예상문제·모의고사·나머지73챕터는 이번 미구현
+- 공식KFSI26.1 시험범위·형식 및 NFTC103시행2026-07-01 정의/기동조건 재확인. 2과목 학습표시명은 공식범위 요약
+- 기존 src/public732개 중 source7개만 수정/새4파일, 기존450article 바이트 유지. 새guard는 실제전체 검사, 역사적helper는 정확한승인변경만 역복원; 격리변이7개/기존12개유지
+- Build471페이지/보호·기출·콘텐츠·SEO 통과. `docs/audits/2026-10-14-fire-safety-level2-launch/`의 최신 결과 참조
+- 실제 Commit/Push/CI/Merge/Deploy/Production 완료 상태는 PR/workflow 증거를 확인. 실물iOS/Android/Safari 미검증
+
 ## 2026-10-11 전체 문제풀이 팝업 UI 수정 검토본
 
 - 사용자 UI 결함 2건 수정 요청. 기준은 미병합 CI/QA PR #166 HEAD `b4901a3`, 별도 브랜치 `codex/practice-dialog-ui-fix-20261011`. 수정 PR은 #166 기반이며 병합/배포 승인 전 main/Production 유지

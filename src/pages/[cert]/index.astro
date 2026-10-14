@@ -12,6 +12,7 @@ export function getStaticPaths() {
 }
 
 const { certification } = Astro.props;
+const isFireSafety = certification.slug === 'fire-safety-manager-level2';
 const exams = Object.values(certification.exams);
 const chapters = (await getCollection('chapters')).filter(
   chapter => chapter.data.cert_id === certification.slug
@@ -66,13 +67,13 @@ const examScopes = exams.map((exam) => {
   <section class="section container">
     <div class="section-heading">
       <h2 class="gpl-h1">현재 학습 데이터</h2>
-      <p class="gpl-body">공개된 학습 콘텐츠와 연결 기출을 기준으로 현재 제공 범위를 요약했습니다.</p>
+      <p class="gpl-body">{isFireSafety ? '현재 공개된 학습 콘텐츠의 범위를 확인하세요.' : '공개된 학습 콘텐츠와 연결 기출을 기준으로 현재 제공 범위를 요약했습니다.'}</p>
     </div>
     <div class="learning-summary">
       <dl class="learning-stats">
         <div class="learning-stat"><dt>공개 챕터</dt><dd>{chapters.length}개</dd></div>
-        <div class="learning-stat"><dt>연결 기출</dt><dd>{linkedQuestions.length}문항</dd></div>
-        <div class="learning-stat"><dt>시험 회차</dt><dd>{sessionCount}개</dd></div>
+        {!isFireSafety && <div class="learning-stat"><dt>연결 기출</dt><dd>{linkedQuestions.length}문항</dd></div>}
+        {!isFireSafety && <div class="learning-stat"><dt>시험 회차</dt><dd>{sessionCount}개</dd></div>}
         <div class="learning-stat"><dt>공개 과목</dt><dd>{publicSubjectCount}개</dd></div>
       </dl>
     </div>
@@ -89,7 +90,7 @@ const examScopes = exams.map((exam) => {
           <span class="card-label">{exam.name}</span>
           <div class="card-title">{exam.name} 핵심요약</div>
           <div class="card-description">{exam.format}</div>
-          <div class="scope-meta">공개 챕터 {chapterCount}개 · 연결 기출 {questionCount}문항 · 시험 회차 {examSessionCount}개</div>
+          <div class="scope-meta">공개 챕터 {chapterCount}개{!isFireSafety && ` · 연결 기출 ${questionCount}문항 · 시험 회차 ${examSessionCount}개`}</div>
           {publicSubjects.length > 0 && <div class="scope-subjects">{publicSubjects.join(' · ')}</div>}
         </a>
       ))}

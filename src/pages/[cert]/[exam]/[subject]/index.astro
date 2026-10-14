@@ -33,6 +33,7 @@ export function getStaticPaths() {
 }
 
 const { certification, examDefinition, subjectId, subject } = Astro.props;
+const isFireSafety = certification.slug === 'fire-safety-manager-level2';
 const subjectLabel = getSubjectLabel(subjectId, subject);
 const isSingleSubjectExam = Object.keys(examDefinition.subjects).length === 1;
 const chapters = (await getCollection('chapters')).filter(
@@ -96,13 +97,13 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
     </nav>
     {!isSingleSubjectExam && <span class="card-label">{subjectLabel}</span>}
     <h1 class="gpl-h1" style="margin-top:var(--space-2)">{subject.name}</h1>
-    <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">공개된 챕터를 학습 범위와 기출 출제 이력에 따라 탐색할 수 있습니다.</p>
+    <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">{isFireSafety ? '공개된 챕터에서 그림과 핵심 설명으로 학습합니다.' : '공개된 챕터를 학습 범위와 기출 출제 이력에 따라 탐색할 수 있습니다.'}</p>
 
     <div class="learning-summary">
       <dl class="learning-stats">
         <div class="learning-stat"><dt>공개 챕터</dt><dd>{chapters.length}개</dd></div>
-        <div class="learning-stat"><dt>연결 기출</dt><dd>{linkedQuestions.length}문항</dd></div>
-        <div class="learning-stat"><dt>시험 회차</dt><dd>{sessionCount}개</dd></div>
+        {!isFireSafety && <div class="learning-stat"><dt>연결 기출</dt><dd>{linkedQuestions.length}문항</dd></div>}
+        {!isFireSafety && <div class="learning-stat"><dt>시험 회차</dt><dd>{sessionCount}개</dd></div>}
         <div class="learning-stat"><dt>학습 그룹</dt><dd>{groups.length}개</dd></div>
       </dl>
     </div>

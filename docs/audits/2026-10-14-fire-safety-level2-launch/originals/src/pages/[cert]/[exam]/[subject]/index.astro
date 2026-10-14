@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import {
+  CERTIFICATIONS,
+  getSubjectLabel,
+} from '../../../../config/certifications';
+import { withBase } from '../../../../config/url';
+import ChapterBadges from '../../../../components/ChapterBadges.astro';
+import {
+  createChapterBadgeContext,
+  getChapterBadgeSummary,
+} from '../../../../utils/chapterBadges';
+
+export function getStaticPaths() {
+  return Object.values(CERTIFICATIONS).flatMap((certification) =>
+    Object.values(certification.exams).flatMap((exam) =>
+      Object.entries(exam.subjects).map(([id, subject]) => ({
+        params: {
+          cert: certification.slug,
+          exam: exam.slug,
+          subject: subject.slug,
+        },
+        props: {
+          certification,
+          examDefinition: exam,
+          subjectId: Number(id),
+          subject,
+        },
+      })),
+    ),
+  );
+}
+
+const { certification, examDefinition, subjectId, subject } = Astro.props;
+const subjectLabel = getSubjectLabel(subjectId, subject);
+const isSingleSubjectExam = Object.keys(examDefinition.subjects).length === 1;
+const chapters = (await getCollection('chapters')).filter(
+  chapter => chapter.data.cert_id === certification.slug
+    && chapter.data.exam === examDefinition.slug
+    && chapter.data.subject_id === subjectId
+    && chapter.data.status === '완료',
+);
+// Legacy subjects reuse order values inside each group. Apply subject-wide
+// ordering only when the completed chapter set has unique order values.
+const hasSubjectWideOrder = new Set(chapters.map(chapter => chapter.data.order)).size === chapters.length;
+const orderedChapters = hasSubjectWideOrder
+  ? [...chapters].sort((a, b) => a.data.order - b.data.order || a.data.slug.localeCompare(b.data.slug))
+  : chapters;
+const questions = (await getCollection('questions'))
+  .filter(question => question.data.cert_id === certification.slug && question.data.exam === examDefinition.slug)
+  .map(question => question.data);
+const badgeContext = createChapterBadgeContext(questions, certification.slug !== 'computer-literacy');
+const chapterCards = orderedChapters.map(chapter => ({
+  chapter,
+  badgeSummary: getChapterBadgeSummary(
+    chapter.data.tags,
+    chapter.data.questions,
+    badgeContext,
+  ),
+  questionCount: new Set(
+    chapter.data.questions.filter(questionId => badgeContext.questionsById.has(questionId)),
+  ).size,
+}));
+const groups = [...new Set(orderedChapters.map(chapter => chapter.data.group))];
+const linkedQuestionIds = new Set(orderedChapters.flatMap(chapter => chapter.data.questions));
+const linkedQuestions = [...linkedQuestionIds]
+  .map(questionId => badgeContext.questionsById.get(questionId))
+  .filter((question): question is { id: string; date: string } => Boolean(question));
+const featuredChapters = chapterCards
+  .filter(({ badgeSummary }) => badgeSummary.frequency !== null)
+  .sort((a, b) =>
+    b.badgeSummary.sessionCount - a.badgeSummary.sessionCount
+    || b.questionCount - a.questionCount
+    || a.chapter.data.title.localeCompare(b.chapter.data.title, 'ko')
+  )
+  .slice(0, 3);
+const sessionCount = new Set(linkedQuestions.map(question => question.date)).size;
+---
+<BaseLayout
+  title={`${subject.name} — ${certification.name} ${examDefinition.name} — GetPassLab`}
+  description={`${certification.name} ${examDefinition.name} ${subject.name}의 공개 챕터와 핵심 개념, 계산·판별 기준, 시험 포인트를 정리합니다.`}
+>
+  <section class="section container" style="padding-top:var(--space-8)">
+    <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
+      <a href={withBase('/')}>홈</a><span class="sep">/</span>
+      <span>{certification.name}</span><span class="sep">/</span>
+      {isSingleSubjectExam ? (
+        <span class="current">{examDefinition.name}</span>
+      ) : (
+        <>
+          <a href={withBase(`/${certification.slug}/${examDefinition.slug}/`)}>{examDefinition.name}</a><span class="sep">/</span>
+          <span class="current">{subjectLabel}</span>
+        </>
+      )}
+    </nav>
+    {!isSingleSubjectExam && <span class="card-label">{subjectLabel}</span>}
+    <h1 class="gpl-h1" style="margin-top:var(--space-2)">{subject.name}</h1>
+    <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">공개된 챕터를 학습 범위와 기출 출제 이력에 따라 탐색할 수 있습니다.</p>
+
+    <div class="learning-summary">
+      <dl class="learning-stats">
+        <div class="learning-stat"><dt>공개 챕터</dt><dd>{chapters.length}개</dd></div>
+        <div class="learning-stat"><dt>연결 기출</dt><dd>{linkedQuestions.length}문항</dd></div>
+        <div class="learning-stat"><dt>시험 회차</dt><dd>{sessionCount}개</dd></div>
+        <div class="learning-stat"><dt>학습 그룹</dt><dd>{groups.length}개</dd></div>
+      </dl>
+    </div>
+
+    {chapters.length === 0 && (
+      <div class="card" style="cursor:default"><div class="card-title">콘텐츠 준비 중</div><div class="card-description">챕터가 순차적으로 공개됩니다.</div></div>
+    )}
+
+    {featuredChapters.length > 0 && (
+      <section class="subject-section">
+        <div class="section-heading compact">
+          <h2 class="gpl-h2">빈출 챕터</h2>
+          <p class="gpl-body">현재 수록 기출의 시험 회차 기준으로 자주 확인된 챕터입니다.</p>
+        </div>
+        <div class="grid grid-3">
+          {featuredChapters.map(({ chapter, badgeSummary, questionCount }) => (
+            <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/${chapter.data.slug}/`)}>
+              <ChapterBadges badges={badgeSummary.badges} class="card-badges" />
+              <div class="card-title">{chapter.data.title}</div>
+              <div class="card-meta">수록 기출 {questionCount}문항 · {badgeSummary.sessionCount}개 시험 회차</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {groups.length > 0 && (
+      <div class="section-heading compact">
+        <h2 class="gpl-h2">전체 챕터</h2>
+        <p class="gpl-body">그룹별로 정리된 전체 공개 챕터를 확인하세요.</p>
+      </div>
+    )}
+    {groups.map((group, index) => (
+      <section
+        id={`chapter-group-${index + 1}`}
+        class="chapter-group"
+        aria-labelledby={`chapter-group-heading-${index + 1}`}
+      >
+        <h2 id={`chapter-group-heading-${index + 1}`} class="gpl-h3" style="margin-bottom:var(--space-4)">{group}</h2>
+        <div class="grid grid-2">
+          {chapterCards.filter(({ chapter }) => chapter.data.group === group).map(({ chapter, badgeSummary }) => (
+            <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/${chapter.data.slug}/`)}>
+              <ChapterBadges badges={badgeSummary.badges} class="card-badges" />
+              <div class="card-title">{chapter.data.title}</div>
+              <div class="card-description">{chapter.data.summary}</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </section>
+</BaseLayout>

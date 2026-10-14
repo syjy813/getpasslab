@@ -27,6 +27,12 @@ export const COMPUTER_LITERACY_SUBJECTS = {
   2: { slug: 'spreadsheets', name: '스프레드시트 일반' },
 } as const satisfies Record<number, SubjectDefinition>;
 
+// Display names summarize the official two-subject scope (KFSI Ver 26.1).
+export const FIRE_SAFETY_LEVEL2_SUBJECTS = {
+  1: { slug: 'fire-safety-theory', name: '소방안전관리 이론·소방시설 구조' },
+  2: { slug: 'fire-safety-practice', name: '소방시설 점검·계획·대응' },
+} as const satisfies Record<number, SubjectDefinition>;
+
 // 기존 import 호환용. 산업안전기사 전용 코드는 단계적으로 자격증 스코프를 사용한다.
 export const SUBJECTS = INDUSTRIAL_SAFETY_SUBJECTS;
 export type SubjectId = keyof typeof SUBJECTS;
