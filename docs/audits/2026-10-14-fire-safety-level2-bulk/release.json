@@ -1,0 +1,538 @@
+{
+  "baseCommit": "4a00736b7ad4eb8f6e1acac189c44069167cc164",
+  "certId": "fire-safety-manager-level2",
+  "newChapterCount": 73,
+  "svgCount": 32,
+  "sourceChanges": [
+    {
+      "path": "src/config/certifications.ts",
+      "sha256": "b0db03f073cb9cecf096cbe8544dae1cadbc995faaf66a20e96b93b1fed66ed5",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-bulk/originals/src__config__certifications.ts",
+      "originalSha256": "0bf1426785cd0fd0cfef90aad4e8122c5131af79e673cd33d4359cf5b2bc3e50"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md",
+      "sha256": "b499ed64abf23c44742baea9551f648853dd4ba7b8310a72db9bb499a26646ce"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/conduction-convection-radiation.md",
+      "sha256": "8bba13bf87b45e9265ae12873fe0f20ea9d972fbcf49692e50ce1d58b3d6cf08"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md",
+      "sha256": "8375929c78b8836fab71008eeb5d80cc5e38cf6a327a47246f7ed1cc0ee9136d"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/smoke-spread-combustion-products.md",
+      "sha256": "be97afd3e0a9035ad11f098d1002e09e2d2bb68b024d86aea4d10083970c0605"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-safety-investigation-orders.md",
+      "sha256": "9043d6b394422dc83cc616a5037a1e4357631f994954942a561a7f4ceb474946"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hazardous-material-manager-deputy.md",
+      "sha256": "e809eb0d6637ed9592861f482115e06349700a6709e5d99abfadeb7628545498"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-types-ratings.md",
+      "sha256": "cd34e5f2b2f5bc9efa40bbca947e1429e3fbe82f2ea10147ab3a83e3d57ce231"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flammable-range-explosion.md",
+      "sha256": "2f50bacb125e9847aa304f82352ec8803bf24f92d70f053ad4de6068878a5234"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/alarm-zones-priority-alarm.md",
+      "sha256": "69f8d74c4e0e41e4009dea056f3d1b29b4c7548fb44677768fe698fe4c2ce9b7"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md",
+      "sha256": "d55242f643f44730061d4bc3aeb9d124ed75df3d685e353a5b52b15859bc7af8"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-layout-count.md",
+      "sha256": "575b7cd6186cd5a1efcb2545e79df61536bffd02e749ebf3e7ce195bdaebbf39"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md",
+      "sha256": "39b583e0e5e0fbefd2dd9713ab4214a202fc5b5d9a6d73381033568abda88b7f"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/inspection-report-repair-records.md",
+      "sha256": "0dea24e83afb8ba33bfe0fe61cb455421f1fa322aaa6fd0716d0344780de70a6"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-pumps-piping-components.md",
+      "sha256": "bee9c06be21082906d9f089f40bef8cf1bd2f9504a018a6045fcfdead8c94ed1"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-head-water-performance.md",
+      "sha256": "9a474a227d42a7f4a457b8add48ab8a2a9b893e1842f3576826c6be5e4899eef"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hot-work-permit-fire-watch.md",
+      "sha256": "3ad66f95733d60922893e904531c3538537d983f82b0d52f025e5a5594df1e7d"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/gas-suppression-components-discharge.md",
+      "sha256": "3412626e11a5c27ee452b89fa88cd3c5ac9bac1198d620155e17c314e60bfa9b"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/outsourced-management-supervision.md",
+      "sha256": "45d186e7dfba13e35fc7481567ea4c720bf5f326a1b54b380c46260f01a56380"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-facility-categories.md",
+      "sha256": "376aad14e0c8d95676d024a63c789676cc7d3f0291f67dd8debac778adf779dd"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/vapor-density-leak-location.md",
+      "sha256": "947ff469d7e6adde25430810fbd2f72144f65cdce869d5cbaaebe9a67e7fa517"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flame-retardant-target-test.md",
+      "sha256": "9cb04677966a8577d6da196c4fba8b3444dad15b9a95da453e3cbc3fc38ee0f3"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/assistant-appointment-count.md",
+      "sha256": "bd13377017c18aa9813c84ca96c04c5e4039307fe6c95f1136537f73fe0df4d5"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-compartments-doors-egress.md",
+      "sha256": "a2f3dd69a8828060cf7c698b9000f0ec7fef2ef8c0700c094a7c734c35628e30"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md",
+      "sha256": "fae9d86215f183ee98d80dce0d476f7125a912ec85d0a3f50ce3a288bd24c0a8"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flash-fire-autoignition-points.md",
+      "sha256": "d7f25238bc8cd8d7fa1bcf96e6f0eb9a61c624b2a04bb1f05a0b11013a7041b7"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hazardous-materials-classes.md",
+      "sha256": "e44d3379d4230905a39d949296765d94427a9f45176880ddaf5e3e3c4c784d46"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-qualification-appointment.md",
+      "sha256": "ef288a08238b7d50fa0d3b3956ef28cdf69cc379ca9fe547df083ae67c4afe01"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/escape-stairs-special-stairs.md",
+      "sha256": "0e812bfe82b61e02c9f9f3b448ebdd38556f9e3b4333027cb553947509613a9a"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/building-area-height-floors.md",
+      "sha256": "f7f9be4346bfd2da169fd258bcf66a0239cac62cecd7c4a49720411fcc17aabe"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/outdoor-hydrant-water-performance.md",
+      "sha256": "baf00941c4b4c051c4c76e1ba4fcb290bf6d35cd844ae4c1d20687c81030ace5"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/windowless-floor-openings.md",
+      "sha256": "fbaa0c527f7353b3c997f6e993827846e0c8ee27cb55f4c3e79457d61d3e164e"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-duties-owner-responsibility.md",
+      "sha256": "ae5292f9ad239fdfe6cab270934c655324ea20108d4ba615891b9475714abc1d"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/exit-guide-light-types-wiring.md",
+      "sha256": "f5d16446a1391dd210dce3b63d8eb9c8621886a5a58962d0d3501dda66eab9b5"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-placement-count.md",
+      "sha256": "38815e75b524676fa918c911dc360de09f0f993c48583d71b113ec84479ffe63"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/evacuation-device-types-conditions.md",
+      "sha256": "1252037440bf37b39996e3b0dd91a40d6e2e93eba4cabbdbe893f26b8d1e0102"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/electrical-fire-static-prevention.md",
+      "sha256": "c8c94734119636767d4644ce85f7174242299999d6073af96cf8e124be618373"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-wiring-end-resistor-transmitter.md",
+      "sha256": "059b816b3998c3b05959ebd704618f53b01436665cb0f5c0ed805332925b21ec"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-types-operation.md",
+      "sha256": "df07051b4dfac815bb5e0c0bf383780e47cc64b0395fcf5ae1bfea7e579286ce",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-bulk/originals/src__content__chapters__fire-safety-manager-level2__fire-safety-theory__sprinkler-types-operation.md",
+      "originalSha256": "f2a7653c24967cf6485496a46e7fd33a203633a3d87faf4c787e3cecd2bc4880"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-classes-extinguishing-principles.md",
+      "sha256": "83e719912efb3303c81cd84586f410c3848e9b755578c7bc53f5aa51de041a23"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/boiler-heater-fire-prevention.md",
+      "sha256": "09e8276e8230eaaf1d64ff6c27884722838e39456e90b8f6f40f4ea227fa70b3"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md",
+      "sha256": "806198b61fd98a1b94462ebcbb99a518eaf63eb313aab8dfeb80bd599e1c6a48"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguishing-agents-properties.md",
+      "sha256": "270be6e2017089e3e6947409a491c130ee2b086800bb04ff66cbf6fbb3e8446e"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/lpg-lng-gas-detectors.md",
+      "sha256": "e2189552a5183c11bca267c1db29edb4f798d0f9bbf2fdf5fdf6d6de146d3b7c"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/indoor-hydrant-water-performance.md",
+      "sha256": "fc9c3c458a319c73cd763e305aaebd7f0b81b1e3b2c07281c371b3c081a389df"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/designated-quantity-multiples.md",
+      "sha256": "d2cf3136806481bf07ff52d7191ad90b1805174da5b12d8823d24c9e8c3e28c4"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/combustion-elements.md",
+      "sha256": "3e737010bb5fafeae8fcb7ae5ae52d6bd63db4008162a9d587abcdfa91330a76"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/auditorium-guide-light-count.md",
+      "sha256": "be83ed8a601cdd6595883b89bd7396c19c35111bc0bb09afdb3557e2713b0704"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-types-principles.md",
+      "sha256": "a598e999dce84752d3d142ce5930133d56e14bc9a421f16ba5bb0bf15152f61b"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/stored-pressure-extinguisher-gauge.md",
+      "sha256": "2a691135bc4197eab019b7f8fde08ff4bf766a301ba1402e2114a12d34616c92"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/self-fire-brigade-initial-response.md",
+      "sha256": "c0af780eb5cfc357080ee4fbece9b1929508142e4eba0bea86ff980ef50d3ba8"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-education-training-principles.md",
+      "sha256": "67e5b4d12bacf35f08b80d0c5315cfcf887f160c75a276c67de4295e33d858e0"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-emergency-plan-contents.md",
+      "sha256": "dca542083bca0a533c64a7f26cfda6bb7965fbde2868b21d6583cfa1e0bb7405"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/first-aid-assessment.md",
+      "sha256": "c64954817d06656e048b5322406bfab9bd9628156770cd9641402ea914695dd2"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/receiver-backup-power-test.md",
+      "sha256": "5b46d89dc62c5ec17ddf487ebe1a1f31e4109b76e80f748dfd1c777f6cd23cb2"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-plan-development-process.md",
+      "sha256": "c1041ed1f4b072fea18404fc10b55e0efa469a25f99262e06cd58d93436f5939"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/burns-types-first-aid.md",
+      "sha256": "c88372f1405764e13069885485e78b6321e09fa55615535df830547657433eb9"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/p-receiver-indicators-switches.md",
+      "sha256": "b056d00d4905239af0371dc999df5af87b54d05392a0cfcb09aa5ff69d76aaa3"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pump-performance-tests.md",
+      "sha256": "533b654b4f2a263458ac69aea0a75fb71a852e35b63068b4f1dc7139141e8230"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/bleeding-shock-first-aid.md",
+      "sha256": "f0215060fdc5678cf00bbd2d656e37c7ff2732b3b70df286d23e76c50b0b54d7"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-drill-plan-execute-evaluate.md",
+      "sha256": "8c5049eb677cd852a96068d01b11fb56dbc5b323d0a47b7805aaa2dd7f964a46"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md",
+      "sha256": "723b6d9e3d3fa6d2c08d317fb2c98d80f4e9e4439984992a0f2205a35d3d7504"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md",
+      "sha256": "65eadba2ef3d1974f6463c17048f775c620566826f89b207bb3d382082f3e2a2"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pump-control-panels-states.md",
+      "sha256": "a52b37ebc9d047f665e07a2e4fcd468c1d7a94bc9f7d1f7f737fbcc4211c8c08"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/receiver-circuit-continuity-test.md",
+      "sha256": "4a70923763988e3690e201f3f50a3e676a80caf4740acebca38b5605d82eb270"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/false-alarm-confirm-reset.md",
+      "sha256": "0ba6b37a508d1465cf1d5bdf333b69d1412244df1a1668d833260ee1628c5a8b"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/adult-cpr-compressions.md",
+      "sha256": "c7e6ee9b15d628b75bb59dc1e4b7a8030e7ddce1c2aafd709ec0114a7e773ba9"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/management-duty-records.md",
+      "sha256": "b4345299d8634b2ea09ded593ad8a189edc79e5c8960082f85fdaada73d31772"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/wet-sprinkler-test-valve.md",
+      "sha256": "b46bfa540ffe08eb49758e0eb79e289d86ec1db971deb6cd13f4f7026d448389"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/vulnerable-evacuees-assistance.md",
+      "sha256": "38e6a7f0bd808cdb2d06caab5bed4222f2df3a5b289109fe7f6dfe3d190a92fa"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/gas-system-pretest-safety.md",
+      "sha256": "913ff82d7987814562a5a1cb38b0f1958e2d0df1eb60f91732473e60cd90668f"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pitot-nozzle-pressure-test.md",
+      "sha256": "999c9b7cf04b3df3060ce65eed51f2a53ca94024fc5667afa9d9f66fe5b168d9"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/aed-pads-use-sequence.md",
+      "sha256": "baaf6957890c991e0ddb3a6711d133b97ab903877abf986810142d0ec3c5ecb8"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-discovery-report-initial-action.md",
+      "sha256": "e3c0ee18c4d94d85182f480ffa977e9cb5667e735f7bdf162726e5f5a5a1e2f9"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/preaction-cross-zone-test.md",
+      "sha256": "f29ebb93b7f923cd0b2a9ab248546f9772edd51703cf1f90d770617ec1c533c6"
+    },
+    {
+      "path": "public/styles/fire-sprinkler-visual.css",
+      "sha256": "a1dc1dac13a37a660966db7a752a3fda4d8003570ee1250e13b11c67b5d66649",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-bulk/originals/public__styles__fire-sprinkler-visual.css",
+      "originalSha256": "a63b4524ec7940323c6a510c5f96c4061456ffffb4feb2e5da60c15500f9df78"
+    },
+    {
+      "path": "public/styles/fire-bulk-visual.css",
+      "sha256": "687669282e6b99ad2a7f13f121c9f390df0bfbe13a41c2daecb6d21d90a4a08f"
+    },
+    {
+      "path": "public/scripts/fire-bulk-zoom.js",
+      "sha256": "e74a4bf3326ba571c38af7c92033e49e1e6e5050f08404ab1159f3ea2cfddcec"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/gas-detector-heights-v1.svg",
+      "sha256": "4042ab280c08d5e994bbd6dcce02f650e1963cc96d6ba5d56759bad74ab0e579"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/valid-window-opening-v1.svg",
+      "sha256": "b7d10a2d0c2e108e37fff2e476e3cf832da96ae5d29f2712da62b3b87acbe43a"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/pump-performance-curve-v1.svg",
+      "sha256": "10246e5d589169f25521170a0b857be7b4e70baf28853df653a166a63d8bef30"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/cross-zone-and-condition-v1.svg",
+      "sha256": "9239c3d1f9299024ca4aa8d6a098d468c683d5b4027682e15e2207bae6f8ed36"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/gas-discharge-path-v1.svg",
+      "sha256": "8dbba9f3b59da8849a912dbb7dbc6bc7b400621e019609bd8b84c7faa8a0e542"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/pump-test-pipe-v1.svg",
+      "sha256": "57453a00f2153d88027af4468de8f5543739fb380043a725be1a1cd4ca797654"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg",
+      "sha256": "f6cc65a1c331c66d03af0bdda2abd8bf557ac4fa22aa0afc895d63a0aa6c3e82"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/wet-test-valve-branch-v1.svg",
+      "sha256": "04a2f8fe9b3bafa2010912f33a23151236b2c5d3890dda158727b5bd92882a1d"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/extinguisher-pressure-gauge-v1.svg",
+      "sha256": "113c4a0626ccfb5ca019ad2934883731cfb1765a75ebabb64905f3dbcabba0cf"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/fire-compartment-plan-v1.svg",
+      "sha256": "5a8afa724ce36bc70931ba253fa439da2765472a5a6ff3ee01e3061520c398b7"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/first-aid-sequence-v1.svg",
+      "sha256": "d3014996a871e6d50558b6a348d345ce4ac55a3a183feaacf213445b9d575ab6"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/appointment-timeline-v1.svg",
+      "sha256": "c627b6e41b8a241d1565ee172126abc301b5eeb7294f77eadc6c165908131472"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/control-panel-normal-v1.svg",
+      "sha256": "7424d07a91dabb79a402c8fe0d6a3a9805216ff0ee00827e4b0b7426ab96d50e"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/guide-light-locations-v1.svg",
+      "sha256": "aeb3425e3eb009f973277ee8cfe2d4a850ca8e10d05b690784163c16c1eaf98f"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/end-of-line-resistor-circuit-v1.svg",
+      "sha256": "af7591943eec74e65c6db5fe07298c2fda9ccb0d98e6f1952d092159c1ce66b9"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg",
+      "sha256": "54bcc4d459a5674a3ee82be4d137f7b0747cefa223b0774e023fc199f9d20a6e"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/heat-detector-diaphragm-v1.svg",
+      "sha256": "5a415c0a97f5c918e0df5955e20c3137f21eca0a32694c7a7d9ad9abc37d550a"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/closed-sprinkler-head-v1.svg",
+      "sha256": "079197429cebd7662e7ef9853fca9e41c562adf4657ed7edbe2e40e57d03c276"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/special-escape-stair-v1.svg",
+      "sha256": "9d60c5a825ebf963f71a627dd80769d4b427178892f25bbb287b0cf2153d2fb1"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/optical-detector-principles-v1.svg",
+      "sha256": "86f55f20aa5a536a674a8ad760f548bec8efd68b928fcba83ee110adb8585f77"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/auditorium-aisle-spacing-v1.svg",
+      "sha256": "694925faf40b2604d4fdbaa11ef9bb7d78f4485dbeb13ae6256c1883cea329e0"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/apartment-evacuation-decision-v1.svg",
+      "sha256": "c1afb880465a908eb08589fe62052d421a76b49464220756497c495d55cc0c2f"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/flammability-range-v1.svg",
+      "sha256": "63ec3c4ab8264048e4f896de1acfe08cd9fc4145a0f406f9af6e1bb7cc3a608c"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/inspection-report-timeline-v1.svg",
+      "sha256": "574cd765a77ce66397c65b07ab01c8439dde1b124d4291ac17e825a95b636582"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/combustion-triangle-v1.svg",
+      "sha256": "1cb6f1cec39676904b12141cd990faae77b0887d0e4ea8d8a9eb76455783606a"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/pump-main-components-v1.svg",
+      "sha256": "e23491c5cb72d91d2741690fb7d23e7fb6827d054f0a618bf15de0f9ce690d06"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/detector-grid-placement-v1.svg",
+      "sha256": "7994b071881cbd12f3b69ce2aa42dae1cbd32c377bac1ac47a0247ae6de06206"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/extinguisher-walk-distance-v1.svg",
+      "sha256": "45c93e625ae5a57a23b6fd2bc94fa54934dcc7537fe8f549af1c6c3d08fddfaa"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/priority-alarm-floor-range-v1.svg",
+      "sha256": "241325a8f3b4913c95d8386bbedf444e84e1523c31cf3e31bc326847b4c7e49a"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/pitot-nozzle-position-v1.svg",
+      "sha256": "8615e16c9e03d1f2ca0d0bd288ade700f47b3fcd1100e964503dffdc6304d6f9"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/aed-adult-pad-positions-v1.svg",
+      "sha256": "ad2f0ef7b6293a69e01be9a063fdf4f96b31e6c3a2cf4ead46c03752a3621a20"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/cpr-compression-point-v1.svg",
+      "sha256": "be246633c9173b836674e939d69bfcf8d16e4fd23ae8027741d6df11f0388274"
+    }
+  ],
+  "newArticles": {
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/index.html": "5860e2229ae8bf065c42ae564ac86adcb9e2e40fc678f2c7feb1bebcbe73fc3d",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/index.html": "1d1461424aefa0e014f76e905c84bb68bd2fd456dde0a8f44e11d8604531c5dc",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/index.html": "bb377ad94e14ac7f4353de8242c9bd714a070ffa24a55ad670e71ddf8e26d999",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/index.html": "6cd900c08e010586f76cfe4ba0ba4ef6539db866e2d39cd19360621055ee75a3",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/evacuation-device-types-conditions/index.html": "e11807f7a358b4282751b06b3cb2b56eed582252107288ce9bceb142b07de0ef",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/detector-types-principles/index.html": "698989a0b3c8e0f119ac965cf6d50e77b37bb3496e506e89e203acb1b699c96c",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/index.html": "9136ed82f055228ce729a6ba34a501f163a6e9c9dc4be9d8b47b9ba04ad5f118",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/building-area-height-floors/index.html": "b8ba65bdbc581937b240aa3c7856664967d0687b69a35c084f1af0059659161c",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/index.html": "d4fa7d605ef235564ed54fddd18dea096dc0501efa494c568bc067e174d462c5",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/alarm-zones-priority-alarm/index.html": "c115339b15f2f58c56403b73a3f073ed0e02a17cb72b3d5ee00f5f94f3f19ad2",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/detector-placement-count/index.html": "01045851cb1720b801516a020b6a69d24b8adcd82bacb87eb5e8357a51baef3c",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguishing-agents-properties/index.html": "1113a7e7468dd0953aba4d001d661c8c071c9b4128026d51f73caa8901c4e71b",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/conduction-convection-radiation/index.html": "21bb6ad247fa4fb3ed4e67c2cb4bc0b0ec39d86ce2afcdbdd7ae36d686fae493",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/index.html": "40ab391850d49aed9dd31454c70a6d91296dd947e9ee9dbecda3965e5072e40e",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/index.html": "bf1516ec08a61884f72d3ea45ffca5c437b7b6d9945e509b41dbd1681da81af3",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/index.html": "3ea8c19b910694d64284d91867c3b1f15494bcb1b2384f225d260b53b5b82f28",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/boiler-heater-fire-prevention/index.html": "60b84f544fcb921173f13dcc056935aa7edac0d2893559a1d1513dcd5b049cfc",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/outsourced-management-supervision/index.html": "9b69ebf5a48bd98739eca541a8bd99d6141d09fc74d3d97a73802a04e430e253",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/index.html": "c9e7688a6ed91aef4a0b8bab77b89ec8f315912eea6fac122945384528ca9dbe",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-layout-count/index.html": "6bcb73a5128ce1d9f5f1231fa8d6956710b5c85d62eb1b5ae290a6428781dcd8",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/auditorium-guide-light-count/index.html": "0e450b53a742b2f93cb4514a8305d48aae3592bb4f8147fb93b7de30acdeef97",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/index.html": "ebdf74b69e7f63d811e920e7d59da11b03c086ca107c17a06ea3496aac736434",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/index.html": "67347f30fa6614146de2f8da209bf6ec68002c07562ca32c62297c770857fed5",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/index.html": "81edb8c39155676bd86275d016e026e07f7d4fe62d064b8ed96d9edf7e25fbc4",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/index.html": "c5dd4c258313a1d9cb41de72beb06b59fdd6fdbc071005f7edd674a09c688147",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/flammable-range-explosion/index.html": "86b4ef63b97dd46ffed49e45cd12806d23f4b0e2eaf7d7ee01db3a0c6f2e68b2",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/vapor-density-leak-location/index.html": "542cec7ae0c6bba08b1b57b671965bd934f01d25d9ea8408ffe1b970c20a6f23",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/index.html": "6f5244aac591170c68bfef4baf81aaee331383ffbb0824770ba5a4580d568ee1",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/index.html": "e111ebc49a9a771c9c5d4d0390d3577ade7953c727ead386843a7711e898458a",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/index.html": "c9495925dbbb3811980b1ef1e14144de5c3d8b428ab0c6020ee855f5f7de3b8a",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/index.html": "e944fd83fc3a49dae348c8d867c8ec346ccb05a99c11018b7c94f8270684542b",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/exit-guide-light-types-wiring/index.html": "c5fc1b44bb35f3e056df18ce30c2e134dd9c02d6aa77f34cfb4af58bff4fb5b0",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/smoke-spread-combustion-products/index.html": "0685be2cc2093c62ecb5441e1a0b1cd74022ae4b2233654037964ecc76c461d8",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/stored-pressure-extinguisher-gauge/index.html": "28a2c71d4d46b2f53270999fb91aac1d70ab6a8c41cd31b3df67682dbd665563",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/index.html": "f48bc13a13a01e957a14224b5ef96a1bd300435808742702f8ecf5e923828cda",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/hazardous-material-manager-deputy/index.html": "b414cd9dcf5e50a395f51762548c6edc786ec9c5aa7a22be03296a847b30d282",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/manager-qualification-appointment/index.html": "b86e3adcba74360f676c970ed7d206f54822f0518af17ea4558a4faf1e4bc600",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/index.html": "38422332cbf277e715cfd9b41b61fb0d00f997d84e9212ed6a65bb22529f495f",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/hot-work-permit-fire-watch/index.html": "d17cdfc87f91461efa60ef97d2eadd07867c06e4a2e7569c980b473a350e1367",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/index.html": "e3cd8898282293727ce40d490cf0f08d23921fb914b4cf404583c1a4f9b3234d",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/index.html": "4b91423063073a13cdc410096da3e9ab823259ce1544cda841f08d65f4da5b1c",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/inspection-report-repair-records/index.html": "30302cb4283c483a2dda8aae6d0aa31bed09a7fe6e45f4920ced30932f440f6b",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/designated-quantity-multiples/index.html": "0e8f41631659018ef8f2bd51c95584137b873d9ba3b7694ea7775cf16e17e3de",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/index.html": "89fa84d394547dcc4f13d9a3f9b2a63bd8f2eff4d6f090758a2a5fb6ed1bdde0",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/index.html": "f40c18d66450e71c3b40a888abbf5f1ae112ffbd73f4a8668d114083b3115e01",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/assistant-appointment-count/index.html": "ca5dd79e22e22cae4f523ba7d9482daebf91b86f598091bb16fc11fb7396d112",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-types-ratings/index.html": "1724e9ea0d289343725ed537c39f7b3c2aec0bfd4b57797eac90628379958259",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/index.html": "ade9a84cc9748f56b0b85a37399359b74d9060aea8149eb2f34a04d4f15c3872",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-plan-development-process/index.html": "b9206110c4c305a89c67b38b37b5e397b9b7aa58f78decef006719545cb1311a",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/management-duty-records/index.html": "951770a24f7ca50f0a8f4258c5e983e644a8d9d19f4d3af7f4a89fb183e7872f",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/index.html": "e82d1631a0abee674f88120b000eb5efdfa946ea48e6d38c4d630885bb90d8d9",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/adult-cpr-compressions/index.html": "d399218b640a92ce6fa6f30bb7c8b4a2def619b2dfc1bce93a6974a024da80cf",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/index.html": "318faf9172ab18b1a332078defff2abb2377fa5e0c705cc1c6638d92becac5a7",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-drill-plan-execute-evaluate/index.html": "08f0360cf5263ff444757ca86070deb4c55f0902d69e0f81d3ee276c414639b3",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-discovery-report-initial-action/index.html": "e1ad450bdffc5655370834437407a69d76ea9998855ecb352d82fddb8afc8a35",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/index.html": "f376b6f7454e75b52e8d6a3a705a026b873e2ed2ae4b7fad9a4c7c991423ebf2",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/index.html": "bc9fe725f02e67f6757607fb976d35aeff191838e4200533b1adac43983915b1",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/index.html": "eabec1c5c93fb3ccde88491781cc6dd50fadda0ba4a0b00a05bba9147cb2d293",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/index.html": "1bee9b935e2dda9571b6fbbbeb1d8f75e627663118c3114e1a422f44696d3bfb",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/index.html": "328071006a83452eefddb993bbf93a093874fc70742f235dd7c0f18f60bad31e",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/index.html": "4d057b70ec5f42ab7637e732957e91008671841d7e16e9a5b9e9cc4f2b22bbd6",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/vulnerable-evacuees-assistance/index.html": "47f61ffdfc23e3eb311cf231e9c9ae90bd6d08a91b62964ab315f07a64d6c003",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/index.html": "aec48d98bd227a70e7694bd872209b4dacc72833cbe371c3f6efc35715b6f35b",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-education-training-principles/index.html": "a3782554a41ca4d5e1f45b2a635c38016441f618dd2e1e07556023954b847053",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/index.html": "7ed225f315bc4109810de18fc5dfcc32b87cf718a8f8942fdfd24fd2e70ee166",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/burns-types-first-aid/index.html": "c1c0343863ee27b33143f84341a8b09e7ca5141003a1f1873e18005c1ac04519",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/index.html": "d9b98dac79fddf4c5246ecf2df81b76dffebdb762229f6340dc0f4621a3d5a40",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/aed-pads-use-sequence/index.html": "c275e39d5ebf288ed9d57dec98a305d6ca079b0d3f65d4633e5b71fc321ec42c",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/index.html": "b0a62db214f110b93b1938dafd1866f0a83cc31510157ec604ae64e94dbc412a",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/index.html": "0ab6850043d00fc0ad065223bd37acaeedc715986e643f4d44382ea550835470",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/index.html": "5e11cc3ce6f3db201faa302e771ce724e5a245a3f0b5cad473430a13fc920e2a",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/index.html": "b554b085c67c787408ce134788d5203583bdcabd1a6e76fee6fa775aecace19a",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/index.html": "14f204ec84f7ea1bddc4e322e45e98cb63a5205df5f24960236929f2b14a2888"
+  },
+  "articleChanges": [
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/index.html",
+      "sha256": "8dd418ae695ef3e4c754d41d3bc12beded1754af70583095a00b4587dfda6c2c",
+      "originalSha256": "fc99687708fe833be1cc20edb9ba01458c5bc5263a65a3308862585be9c88802",
+      "originalFile": "docs/audits/2026-10-14-fire-safety-level2-bulk/originals/sprinkler-original.html",
+      "reason": "새 챕터 추가로 자동 관련 링크 6개 생성 · 기존 본문 바이트 유지"
+    }
+  ]
+}

@@ -1,0 +1,3584 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "cases": [
+    {
+      "chapterId": "FSM2-001",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-002",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-qualification-appointment/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-003",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/assistant-appointment-count/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-004",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-069",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outsourced-management-supervision/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-005",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/appointment-timeline-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 327,
+          "alt": "사유 발생 → 30일 이내 선임 → 선임 후 14일 신고 → 선임 후 6개월 교육",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-006",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-007",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-008",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-009",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-010",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/inspection-report-repair-records/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/inspection-report-timeline-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 327,
+          "alt": "점검 종료 → 15일 이내 보고 → 보고 후 10·20일 조치 → 완료 후 10일 보고",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-011",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-012",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/building-area-height-floors/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-013",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/valid-window-opening-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 300,
+          "alt": "지름 50cm 원이 통과하는 개구부, 바닥에서 하단까지 1.2m 이내",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-014",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/fire-compartment-plan-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 290,
+          "alt": "방화구획 벽과 문으로 나뉜 두 구역 · 통로의 문 닫힘 기능 유지",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-015",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/special-escape-stair-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 405,
+          "alt": "실내 → 방화문 → 부속실·노대 → 방화문 → 계단실",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-016",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/combustion-triangle-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 230,
+          "alt": "가연물·산소공급원·점화원이 이루는 연소의 3요소",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-017",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flammable-range-explosion/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/flammability-range-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 250,
+          "alt": "하한계 미만은 연료 부족, 범위 안은 연소 가능, 상한계 초과는 산소 부족",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-068",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/vapor-density-leak-location/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-018",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-019",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/conduction-convection-radiation/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-067",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/smoke-spread-combustion-products/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-020",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-021",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hot-work-permit-fire-watch/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-074",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/boiler-heater-fire-prevention/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-022",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-023",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/designated-quantity-multiples/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-024",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-material-manager-deputy/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-025",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-detector-heights-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 270,
+          "alt": "메탄 탐지부는 천장에서 30cm 이하, LPG 탐지부는 바닥에서 30cm 이하 · 주방자동소화장치 기준",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-065",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-026",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-027",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-types-ratings/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-028",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguishing-agents-properties/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-029",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-layout-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/extinguisher-walk-distance-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 285,
+          "alt": "벽을 돌아 이동하는 경로로 소형소화기까지 보행거리 20m 이내 판정",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-030",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/stored-pressure-extinguisher-gauge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/extinguisher-pressure-gauge-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 260,
+          "alt": "저압과 정상 및 과압 세 구간 중 정상 범위를 가리키는 압력계 바늘",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-071",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-031",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 310,
+          "alt": "일반급수 흡수구보다 아래 소방 흡수구까지의 부분을 소화용 유효수량으로 판정하는 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-032",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-033",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-main-components-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 410,
+          "alt": "수조에서 펌프를 지나 체크밸브·개폐밸브로 물 공급 · 압력 신호 장치는 공급 배관에 연결",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-038",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/closed-sprinkler-head-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 270,
+          "alt": "폐쇄형 헤드의 감열체와 디플렉터 역할을 구분하는 단순 단면, 상세 제품 형상은 생략",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-041",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-discharge-path-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 327,
+          "alt": "저장용기 → 용기밸브·집합관 → 선택밸브 → 방호구역 분사헤드",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-043",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-types-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/optical-detector-principles-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 300,
+          "alt": "위는 연기 입자에 산란된 빛을 옆 수광부가 감지, 아래는 송광부와 수광부 사이 연기에 의한 감쇠",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-044",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-placement-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/detector-grid-placement-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 280,
+          "alt": "구획된 평면 안의 감지기 4개, 벽과 감지기의 이격 및 급기구 주변 제외를 확인하는 배치 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-045",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/alarm-zones-priority-alarm/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/priority-alarm-floor-range-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 355,
+          "alt": "12층 화재에서는 발화층과 직상 4개 층인 13·14·15·16층에 경보",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-046",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/end-of-line-resistor-circuit-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 320,
+          "alt": "수신기에서 나간 두 선 사이에 감지기가 병렬로 연결되고 종단저항이 말단에 연결된 감시회로 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-051",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/exit-guide-light-types-wiring/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/guide-light-locations-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 300,
+          "alt": "피난구유도등은 문 위 1.5m 이상, 복도통로유도등은 바닥 1m 이하 위치를 보여주는 공간 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-052",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/auditorium-guide-light-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/auditorium-aisle-spacing-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 300,
+          "alt": "객석 사이 독립 통로 A와 B의 길이를 각각 사용, 유도등 개수는 통로별로 올림 후 합산",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-053",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/evacuation-device-types-conditions/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-034",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/control-panel-normal-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 310,
+          "alt": "감시제어반은 연동과 수동 정지 명령, 동력제어반은 자동으로 선택되고 전원 표시가 켜진 정상 예시",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-curve-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 330,
+          "alt": "체절 Q0은 정격압력의 140% 이하, 정격 Q100은 정격압력, 최대 Q150은 정격압력의 65% 이상",
+          "close": "button",
+          "restore": "PASS"
+        },
+        {
+          "src": "/images/fire-safety-manager-level2/pump-test-pipe-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 385,
+          "alt": "펌프 토출에서 시험 분기로 유량계와 조절밸브를 거쳐 수조로 환수, 설비 공급관은 별도로 연결",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-036",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pitot-nozzle-position-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 300,
+          "alt": "직사형 노즐에서 D/2 떨어진 물줄기 중심에 피토관 입구 위치, 물의 흐름을 마주 보는 입구",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-039",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/wet-test-valve-branch-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 390,
+          "alt": "유수검지장치의 2차측 배관에서 말단 시험밸브와 시험용 방수구를 거쳐 배수, 폐쇄형 헤드 경로와 구별",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/cross-zone-and-condition-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 305,
+          "alt": "감지회로 A와 B가 AND 조건으로 밸브를 기동, 방수에는 별도로 헤드 열 개방 필요",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-042",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-050",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-054",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-070",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-plan-development-process/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-055",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-056",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/vulnerable-evacuees-assistance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-057",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-066",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/management-duty-records/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-063",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-education-training-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-072",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-drill-plan-execute-evaluate/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-064",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/apartment-evacuation-decision-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 327,
+          "alt": "불·연기와 경로 확인 → 대피 가능 → 안전 대피 → 대피 불가 → 안전 공간 → 문 닫기·119 구조 요청",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-073",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-discovery-report-initial-action/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-058",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/first-aid-sequence-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 327,
+          "alt": "현장 안전 → 반응 확인 → 119·AED 요청 → 호흡 확인·필요 처치",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-059",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/adult-cpr-compressions/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/cpr-compression-point-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 320,
+          "alt": "누운 성인의 앞가슴 개념도에 흉골 아래쪽 절반의 가슴압박 위치 표시, 실제 체형 비율과 술기 자세는 본문 적용",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-060",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/aed-pads-use-sequence/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/aed-adult-pad-positions-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 350,
+          "alt": "성인 정면도에서 환자 오른쪽 쇄골 아래는 그림 왼쪽, 환자 왼쪽 겨드랑이 아래 옆가슴은 그림 오른쪽",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-061",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/burns-types-first-aid/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 327,
+          "alt": "안전한 곳으로 이동 → 시원한 물 20분 이상 → 장신구·붙지 않은 옷 제거 → 깨끗하게 덮고 진료",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-062",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-001",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-002",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-qualification-appointment/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-003",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/assistant-appointment-count/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-004",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-069",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outsourced-management-supervision/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-005",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/appointment-timeline-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 327,
+          "alt": "사유 발생 → 30일 이내 선임 → 선임 후 14일 신고 → 선임 후 6개월 교육",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-006",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-007",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-008",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-009",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-010",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/inspection-report-repair-records/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/inspection-report-timeline-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 327,
+          "alt": "점검 종료 → 15일 이내 보고 → 보고 후 10·20일 조치 → 완료 후 10일 보고",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-011",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-012",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/building-area-height-floors/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-013",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/valid-window-opening-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 300,
+          "alt": "지름 50cm 원이 통과하는 개구부, 바닥에서 하단까지 1.2m 이내",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-014",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/fire-compartment-plan-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 290,
+          "alt": "방화구획 벽과 문으로 나뉜 두 구역 · 통로의 문 닫힘 기능 유지",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-015",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/special-escape-stair-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 405,
+          "alt": "실내 → 방화문 → 부속실·노대 → 방화문 → 계단실",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-016",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/combustion-triangle-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 230,
+          "alt": "가연물·산소공급원·점화원이 이루는 연소의 3요소",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-017",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flammable-range-explosion/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/flammability-range-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 250,
+          "alt": "하한계 미만은 연료 부족, 범위 안은 연소 가능, 상한계 초과는 산소 부족",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-068",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/vapor-density-leak-location/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-018",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-019",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/conduction-convection-radiation/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-067",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/smoke-spread-combustion-products/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-020",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-021",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hot-work-permit-fire-watch/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-074",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/boiler-heater-fire-prevention/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-022",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-023",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/designated-quantity-multiples/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-024",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-material-manager-deputy/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-025",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-detector-heights-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 270,
+          "alt": "메탄 탐지부는 천장에서 30cm 이하, LPG 탐지부는 바닥에서 30cm 이하 · 주방자동소화장치 기준",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-065",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-026",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-027",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-types-ratings/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-028",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguishing-agents-properties/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-029",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-layout-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/extinguisher-walk-distance-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 285,
+          "alt": "벽을 돌아 이동하는 경로로 소형소화기까지 보행거리 20m 이내 판정",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-030",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/stored-pressure-extinguisher-gauge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/extinguisher-pressure-gauge-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 260,
+          "alt": "저압과 정상 및 과압 세 구간 중 정상 범위를 가리키는 압력계 바늘",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-071",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-031",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 310,
+          "alt": "일반급수 흡수구보다 아래 소방 흡수구까지의 부분을 소화용 유효수량으로 판정하는 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-032",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-033",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-main-components-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 410,
+          "alt": "수조에서 펌프를 지나 체크밸브·개폐밸브로 물 공급 · 압력 신호 장치는 공급 배관에 연결",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-038",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/closed-sprinkler-head-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 270,
+          "alt": "폐쇄형 헤드의 감열체와 디플렉터 역할을 구분하는 단순 단면, 상세 제품 형상은 생략",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-041",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-discharge-path-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 327,
+          "alt": "저장용기 → 용기밸브·집합관 → 선택밸브 → 방호구역 분사헤드",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-043",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-types-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/optical-detector-principles-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 300,
+          "alt": "위는 연기 입자에 산란된 빛을 옆 수광부가 감지, 아래는 송광부와 수광부 사이 연기에 의한 감쇠",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-044",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-placement-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/detector-grid-placement-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 280,
+          "alt": "구획된 평면 안의 감지기 4개, 벽과 감지기의 이격 및 급기구 주변 제외를 확인하는 배치 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-045",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/alarm-zones-priority-alarm/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/priority-alarm-floor-range-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 355,
+          "alt": "12층 화재에서는 발화층과 직상 4개 층인 13·14·15·16층에 경보",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-046",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/end-of-line-resistor-circuit-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 320,
+          "alt": "수신기에서 나간 두 선 사이에 감지기가 병렬로 연결되고 종단저항이 말단에 연결된 감시회로 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-051",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/exit-guide-light-types-wiring/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/guide-light-locations-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 300,
+          "alt": "피난구유도등은 문 위 1.5m 이상, 복도통로유도등은 바닥 1m 이하 위치를 보여주는 공간 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-052",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/auditorium-guide-light-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/auditorium-aisle-spacing-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 300,
+          "alt": "객석 사이 독립 통로 A와 B의 길이를 각각 사용, 유도등 개수는 통로별로 올림 후 합산",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-053",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/evacuation-device-types-conditions/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-034",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/control-panel-normal-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 310,
+          "alt": "감시제어반은 연동과 수동 정지 명령, 동력제어반은 자동으로 선택되고 전원 표시가 켜진 정상 예시",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-curve-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 330,
+          "alt": "체절 Q0은 정격압력의 140% 이하, 정격 Q100은 정격압력, 최대 Q150은 정격압력의 65% 이상",
+          "close": "button",
+          "restore": "PASS"
+        },
+        {
+          "src": "/images/fire-safety-manager-level2/pump-test-pipe-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 385,
+          "alt": "펌프 토출에서 시험 분기로 유량계와 조절밸브를 거쳐 수조로 환수, 설비 공급관은 별도로 연결",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-036",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pitot-nozzle-position-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 300,
+          "alt": "직사형 노즐에서 D/2 떨어진 물줄기 중심에 피토관 입구 위치, 물의 흐름을 마주 보는 입구",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-039",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/wet-test-valve-branch-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 390,
+          "alt": "유수검지장치의 2차측 배관에서 말단 시험밸브와 시험용 방수구를 거쳐 배수, 폐쇄형 헤드 경로와 구별",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/cross-zone-and-condition-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 305,
+          "alt": "감지회로 A와 B가 AND 조건으로 밸브를 기동, 방수에는 별도로 헤드 열 개방 필요",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-042",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-050",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-054",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-070",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-plan-development-process/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-055",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-056",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/vulnerable-evacuees-assistance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-057",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-066",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/management-duty-records/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-063",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-education-training-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-072",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-drill-plan-execute-evaluate/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-064",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/apartment-evacuation-decision-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 327,
+          "alt": "불·연기와 경로 확인 → 대피 가능 → 안전 대피 → 대피 불가 → 안전 공간 → 문 닫기·119 구조 요청",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-073",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-discovery-report-initial-action/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-058",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/first-aid-sequence-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 327,
+          "alt": "현장 안전 → 반응 확인 → 119·AED 요청 → 호흡 확인·필요 처치",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-059",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/adult-cpr-compressions/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/cpr-compression-point-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 320,
+          "alt": "누운 성인의 앞가슴 개념도에 흉골 아래쪽 절반의 가슴압박 위치 표시, 실제 체형 비율과 술기 자세는 본문 적용",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-060",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/aed-pads-use-sequence/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/aed-adult-pad-positions-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 350,
+          "alt": "성인 정면도에서 환자 오른쪽 쇄골 아래는 그림 왼쪽, 환자 왼쪽 겨드랑이 아래 옆가슴은 그림 오른쪽",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-061",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/burns-types-first-aid/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 327,
+          "alt": "안전한 곳으로 이동 → 시원한 물 20분 이상 → 장신구·붙지 않은 옷 제거 → 깨끗하게 덮고 진료",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-062",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-001",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-002",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-qualification-appointment/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-003",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/assistant-appointment-count/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-004",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-069",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outsourced-management-supervision/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-005",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/appointment-timeline-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "사유 발생 → 30일 이내 선임 → 선임 후 14일 신고 → 선임 후 6개월 교육",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-006",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-007",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-008",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-009",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-010",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/inspection-report-repair-records/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/inspection-report-timeline-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "점검 종료 → 15일 이내 보고 → 보고 후 10·20일 조치 → 완료 후 10일 보고",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-011",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-012",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/building-area-height-floors/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-013",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/valid-window-opening-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 300,
+          "alt": "지름 50cm 원이 통과하는 개구부, 바닥에서 하단까지 1.2m 이내",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-014",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/fire-compartment-plan-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 290,
+          "alt": "방화구획 벽과 문으로 나뉜 두 구역 · 통로의 문 닫힘 기능 유지",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-015",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/special-escape-stair-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 405,
+          "alt": "실내 → 방화문 → 부속실·노대 → 방화문 → 계단실",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-016",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/combustion-triangle-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 230,
+          "alt": "가연물·산소공급원·점화원이 이루는 연소의 3요소",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-017",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flammable-range-explosion/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/flammability-range-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 250,
+          "alt": "하한계 미만은 연료 부족, 범위 안은 연소 가능, 상한계 초과는 산소 부족",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-068",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/vapor-density-leak-location/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-018",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-019",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/conduction-convection-radiation/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-067",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/smoke-spread-combustion-products/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-020",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-021",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hot-work-permit-fire-watch/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-074",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/boiler-heater-fire-prevention/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-022",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-023",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/designated-quantity-multiples/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-024",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-material-manager-deputy/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-025",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-detector-heights-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 270,
+          "alt": "메탄 탐지부는 천장에서 30cm 이하, LPG 탐지부는 바닥에서 30cm 이하 · 주방자동소화장치 기준",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-065",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-026",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-027",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-types-ratings/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-028",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguishing-agents-properties/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-029",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-layout-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/extinguisher-walk-distance-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 285,
+          "alt": "벽을 돌아 이동하는 경로로 소형소화기까지 보행거리 20m 이내 판정",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-030",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/stored-pressure-extinguisher-gauge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/extinguisher-pressure-gauge-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 260,
+          "alt": "저압과 정상 및 과압 세 구간 중 정상 범위를 가리키는 압력계 바늘",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-071",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-031",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 310,
+          "alt": "일반급수 흡수구보다 아래 소방 흡수구까지의 부분을 소화용 유효수량으로 판정하는 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-032",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-033",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-main-components-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 410,
+          "alt": "수조에서 펌프를 지나 체크밸브·개폐밸브로 물 공급 · 압력 신호 장치는 공급 배관에 연결",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-038",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/closed-sprinkler-head-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 270,
+          "alt": "폐쇄형 헤드의 감열체와 디플렉터 역할을 구분하는 단순 단면, 상세 제품 형상은 생략",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-041",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-discharge-path-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "저장용기 → 용기밸브·집합관 → 선택밸브 → 방호구역 분사헤드",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-043",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-types-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/optical-detector-principles-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 300,
+          "alt": "위는 연기 입자에 산란된 빛을 옆 수광부가 감지, 아래는 송광부와 수광부 사이 연기에 의한 감쇠",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-044",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-placement-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/detector-grid-placement-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 280,
+          "alt": "구획된 평면 안의 감지기 4개, 벽과 감지기의 이격 및 급기구 주변 제외를 확인하는 배치 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-045",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/alarm-zones-priority-alarm/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/priority-alarm-floor-range-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 355,
+          "alt": "12층 화재에서는 발화층과 직상 4개 층인 13·14·15·16층에 경보",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-046",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/end-of-line-resistor-circuit-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 320,
+          "alt": "수신기에서 나간 두 선 사이에 감지기가 병렬로 연결되고 종단저항이 말단에 연결된 감시회로 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-051",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/exit-guide-light-types-wiring/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/guide-light-locations-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 300,
+          "alt": "피난구유도등은 문 위 1.5m 이상, 복도통로유도등은 바닥 1m 이하 위치를 보여주는 공간 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-052",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/auditorium-guide-light-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/auditorium-aisle-spacing-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 300,
+          "alt": "객석 사이 독립 통로 A와 B의 길이를 각각 사용, 유도등 개수는 통로별로 올림 후 합산",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-053",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/evacuation-device-types-conditions/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-034",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/control-panel-normal-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 310,
+          "alt": "감시제어반은 연동과 수동 정지 명령, 동력제어반은 자동으로 선택되고 전원 표시가 켜진 정상 예시",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-curve-v1.svg",
+          "w": 350,
+          "nw": 320,
+          "nh": 330,
+          "alt": "체절 Q0은 정격압력의 140% 이하, 정격 Q100은 정격압력, 최대 Q150은 정격압력의 65% 이상",
+          "close": "button",
+          "restore": "PASS"
+        },
+        {
+          "src": "/images/fire-safety-manager-level2/pump-test-pipe-v1.svg",
+          "w": 350,
+          "nw": 320,
+          "nh": 385,
+          "alt": "펌프 토출에서 시험 분기로 유량계와 조절밸브를 거쳐 수조로 환수, 설비 공급관은 별도로 연결",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-036",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pitot-nozzle-position-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 300,
+          "alt": "직사형 노즐에서 D/2 떨어진 물줄기 중심에 피토관 입구 위치, 물의 흐름을 마주 보는 입구",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-039",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/wet-test-valve-branch-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 390,
+          "alt": "유수검지장치의 2차측 배관에서 말단 시험밸브와 시험용 방수구를 거쳐 배수, 폐쇄형 헤드 경로와 구별",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/cross-zone-and-condition-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 305,
+          "alt": "감지회로 A와 B가 AND 조건으로 밸브를 기동, 방수에는 별도로 헤드 열 개방 필요",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-042",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-050",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-054",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-070",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-plan-development-process/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-055",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-056",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/vulnerable-evacuees-assistance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-057",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-066",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/management-duty-records/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-063",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-education-training-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-072",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-drill-plan-execute-evaluate/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-064",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/apartment-evacuation-decision-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "불·연기와 경로 확인 → 대피 가능 → 안전 대피 → 대피 불가 → 안전 공간 → 문 닫기·119 구조 요청",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-073",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-discovery-report-initial-action/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-058",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/first-aid-sequence-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "현장 안전 → 반응 확인 → 119·AED 요청 → 호흡 확인·필요 처치",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-059",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/adult-cpr-compressions/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/cpr-compression-point-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 320,
+          "alt": "누운 성인의 앞가슴 개념도에 흉골 아래쪽 절반의 가슴압박 위치 표시, 실제 체형 비율과 술기 자세는 본문 적용",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-060",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/aed-pads-use-sequence/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/aed-adult-pad-positions-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 350,
+          "alt": "성인 정면도에서 환자 오른쪽 쇄골 아래는 그림 왼쪽, 환자 왼쪽 겨드랑이 아래 옆가슴은 그림 오른쪽",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-061",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/burns-types-first-aid/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "안전한 곳으로 이동 → 시원한 물 20분 이상 → 장신구·붙지 않은 옷 제거 → 깨끗하게 덮고 진료",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-062",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-001",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-002",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-qualification-appointment/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-003",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/assistant-appointment-count/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-004",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-069",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outsourced-management-supervision/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-005",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/appointment-timeline-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "사유 발생 → 30일 이내 선임 → 선임 후 14일 신고 → 선임 후 6개월 교육",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-006",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-007",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-008",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-009",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-010",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/inspection-report-repair-records/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/inspection-report-timeline-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "점검 종료 → 15일 이내 보고 → 보고 후 10·20일 조치 → 완료 후 10일 보고",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-011",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-012",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/building-area-height-floors/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-013",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/valid-window-opening-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 300,
+          "alt": "지름 50cm 원이 통과하는 개구부, 바닥에서 하단까지 1.2m 이내",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-014",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/fire-compartment-plan-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 290,
+          "alt": "방화구획 벽과 문으로 나뉜 두 구역 · 통로의 문 닫힘 기능 유지",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-015",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/special-escape-stair-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 405,
+          "alt": "실내 → 방화문 → 부속실·노대 → 방화문 → 계단실",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-016",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/combustion-triangle-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 230,
+          "alt": "가연물·산소공급원·점화원이 이루는 연소의 3요소",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-017",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flammable-range-explosion/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/flammability-range-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 250,
+          "alt": "하한계 미만은 연료 부족, 범위 안은 연소 가능, 상한계 초과는 산소 부족",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-068",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/vapor-density-leak-location/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-018",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-019",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/conduction-convection-radiation/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-067",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/smoke-spread-combustion-products/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-020",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-021",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hot-work-permit-fire-watch/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-074",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/boiler-heater-fire-prevention/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-022",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-023",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/designated-quantity-multiples/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-024",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-material-manager-deputy/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-025",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-detector-heights-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 270,
+          "alt": "메탄 탐지부는 천장에서 30cm 이하, LPG 탐지부는 바닥에서 30cm 이하 · 주방자동소화장치 기준",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-065",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-026",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-027",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-types-ratings/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-028",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguishing-agents-properties/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-029",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-layout-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/extinguisher-walk-distance-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 285,
+          "alt": "벽을 돌아 이동하는 경로로 소형소화기까지 보행거리 20m 이내 판정",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-030",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/stored-pressure-extinguisher-gauge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/extinguisher-pressure-gauge-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 260,
+          "alt": "저압과 정상 및 과압 세 구간 중 정상 범위를 가리키는 압력계 바늘",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-071",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-031",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 310,
+          "alt": "일반급수 흡수구보다 아래 소방 흡수구까지의 부분을 소화용 유효수량으로 판정하는 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-032",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-033",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-main-components-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 410,
+          "alt": "수조에서 펌프를 지나 체크밸브·개폐밸브로 물 공급 · 압력 신호 장치는 공급 배관에 연결",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-038",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/closed-sprinkler-head-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 270,
+          "alt": "폐쇄형 헤드의 감열체와 디플렉터 역할을 구분하는 단순 단면, 상세 제품 형상은 생략",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-041",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-discharge-path-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "저장용기 → 용기밸브·집합관 → 선택밸브 → 방호구역 분사헤드",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-043",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-types-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/optical-detector-principles-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 300,
+          "alt": "위는 연기 입자에 산란된 빛을 옆 수광부가 감지, 아래는 송광부와 수광부 사이 연기에 의한 감쇠",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-044",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-placement-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/detector-grid-placement-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 280,
+          "alt": "구획된 평면 안의 감지기 4개, 벽과 감지기의 이격 및 급기구 주변 제외를 확인하는 배치 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-045",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/alarm-zones-priority-alarm/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/priority-alarm-floor-range-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 355,
+          "alt": "12층 화재에서는 발화층과 직상 4개 층인 13·14·15·16층에 경보",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-046",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/end-of-line-resistor-circuit-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 320,
+          "alt": "수신기에서 나간 두 선 사이에 감지기가 병렬로 연결되고 종단저항이 말단에 연결된 감시회로 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-051",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/exit-guide-light-types-wiring/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/guide-light-locations-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 300,
+          "alt": "피난구유도등은 문 위 1.5m 이상, 복도통로유도등은 바닥 1m 이하 위치를 보여주는 공간 개념도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-052",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/auditorium-guide-light-count/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/auditorium-aisle-spacing-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 300,
+          "alt": "객석 사이 독립 통로 A와 B의 길이를 각각 사용, 유도등 개수는 통로별로 올림 후 합산",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-053",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/evacuation-device-types-conditions/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-034",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/control-panel-normal-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 310,
+          "alt": "감시제어반은 연동과 수동 정지 명령, 동력제어반은 자동으로 선택되고 전원 표시가 켜진 정상 예시",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-curve-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 330,
+          "alt": "체절 Q0은 정격압력의 140% 이하, 정격 Q100은 정격압력, 최대 Q150은 정격압력의 65% 이상",
+          "close": "button",
+          "restore": "PASS"
+        },
+        {
+          "src": "/images/fire-safety-manager-level2/pump-test-pipe-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 385,
+          "alt": "펌프 토출에서 시험 분기로 유량계와 조절밸브를 거쳐 수조로 환수, 설비 공급관은 별도로 연결",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-036",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pitot-nozzle-position-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 300,
+          "alt": "직사형 노즐에서 D/2 떨어진 물줄기 중심에 피토관 입구 위치, 물의 흐름을 마주 보는 입구",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-039",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/wet-test-valve-branch-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 390,
+          "alt": "유수검지장치의 2차측 배관에서 말단 시험밸브와 시험용 방수구를 거쳐 배수, 폐쇄형 헤드 경로와 구별",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/cross-zone-and-condition-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 305,
+          "alt": "감지회로 A와 B가 AND 조건으로 밸브를 기동, 방수에는 별도로 헤드 열 개방 필요",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-042",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-050",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-054",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-070",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-plan-development-process/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-055",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-056",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/vulnerable-evacuees-assistance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-057",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-066",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/management-duty-records/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-063",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-education-training-principles/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-072",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-drill-plan-execute-evaluate/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-064",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/apartment-evacuation-decision-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "불·연기와 경로 확인 → 대피 가능 → 안전 대피 → 대피 불가 → 안전 공간 → 문 닫기·119 구조 요청",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-073",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-discovery-report-initial-action/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-058",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/first-aid-sequence-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "현장 안전 → 반응 확인 → 119·AED 요청 → 호흡 확인·필요 처치",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-059",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/adult-cpr-compressions/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/cpr-compression-point-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 320,
+          "alt": "누운 성인의 앞가슴 개념도에 흉골 아래쪽 절반의 가슴압박 위치 표시, 실제 체형 비율과 술기 자세는 본문 적용",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-060",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/aed-pads-use-sequence/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/aed-adult-pad-positions-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 350,
+          "alt": "성인 정면도에서 환자 오른쪽 쇄골 아래는 그림 왼쪽, 환자 왼쪽 겨드랑이 아래 옆가슴은 그림 오른쪽",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-061",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/burns-types-first-aid/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg",
+          "w": 420,
+          "nw": 320,
+          "nh": 327,
+          "alt": "안전한 곳으로 이동 → 시원한 물 20분 이상 → 장신구·붙지 않은 옷 제거 → 깨끗하게 덮고 진료",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-062",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical iOS/Android and Safari not tested"
+  ],
+  "startedAt": "2026-10-14T14:39:24.450Z",
+  "result": "PASS",
+  "finishedAt": "2026-10-14T14:42:08.040Z"
+}

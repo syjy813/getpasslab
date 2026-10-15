@@ -10,7 +10,9 @@ const root = await mkdtemp(path.join(tmpdir(),'getpasslab-fire-history-'));
 const run = code => spawnSync(process.execPath,['--input-type=module','-e',`import assert from 'node:assert/strict';import {readFile,readdir} from './${helper}';${code}`],{cwd:root,encoding:'utf8'});
 async function put(file,bytes){await mkdir(path.dirname(path.join(root,file)),{recursive:true});await writeFile(path.join(root,file),bytes)}
 try {
-  const files=[helper,audit+'/release.json',audit+'/baseline.json',...release.sourceChanges.flatMap(row=>[row.path,...(row.originalFile?[row.originalFile]:[])])];
+  const bulkAudit='docs/audits/2026-10-14-fire-safety-level2-bulk';
+  const bulk=JSON.parse(await readFile(bulkAudit+'/release.json','utf8'));
+  const files=['scripts/read-before-fire-safety-level2-bulk.mjs',bulkAudit+'/release.json',bulkAudit+'/baseline.json',...bulk.sourceChanges.flatMap(row=>[row.path,...(row.originalFile?[row.originalFile]:[])]),helper,audit+'/release.json',audit+'/baseline.json',...release.sourceChanges.flatMap(row=>[row.path,...(row.originalFile?[row.originalFile]:[])])];
   for(const file of files){await mkdir(path.dirname(path.join(root,file)),{recursive:true});await copyFile(file,path.join(root,file))}
   const source=release.sourceChanges.find(row=>row.originalFile);
   const read=`assert.equal(await readFile('${source.path}','utf8'),${JSON.stringify(await readFile(source.originalFile,'utf8'))});`;

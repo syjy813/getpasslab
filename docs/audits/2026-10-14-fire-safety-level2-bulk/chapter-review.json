@@ -1,0 +1,2902 @@
+[
+  {
+    "chapterId": "FSM2-001",
+    "title": "소방안전관리대상물의 등급",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+    "group": "제도·법령",
+    "order": 1,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q03",
+      "moducbt-27777-q01",
+      "moducbt-27779-q02",
+      "moducbt-27780-q03",
+      "moducbt-27782-q02"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "등급을 판별하는 순서",
+      "조건에 붙는 단서"
+    ],
+    "contentSha256": "d55242f643f44730061d4bc3aeb9d124ed75df3d685e353a5b52b15859bc7af8"
+  },
+  {
+    "chapterId": "FSM2-002",
+    "title": "소방안전관리자의 자격과 선임",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-qualification-appointment.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-qualification-appointment/",
+    "group": "제도·법령",
+    "order": 2,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q03",
+      "moducbt-27775-q01",
+      "moducbt-27776-q01",
+      "moducbt-27781-q01"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "자격과 선임을 구분",
+      "응시자격과 선임자격"
+    ],
+    "contentSha256": "ef288a08238b7d50fa0d3b3956ef28cdf69cc379ca9fe547df083ae67c4afe01"
+  },
+  {
+    "chapterId": "FSM2-003",
+    "title": "소방안전관리보조자의 선임 기준",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/assistant-appointment-count.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/assistant-appointment-count/",
+    "group": "제도·법령",
+    "order": 3,
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q03",
+      "moducbt-27776-q03",
+      "moducbt-27778-q01",
+      "moducbt-27781-q02",
+      "moducbt-27782-q01"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "최소 인원을 구하는 기준",
+      "면적 계산의 예외"
+    ],
+    "contentSha256": "bd13377017c18aa9813c84ca96c04c5e4039307fe6c95f1136537f73fe0df4d5"
+  },
+  {
+    "chapterId": "FSM2-004",
+    "title": "소방안전관리자의 업무와 관계인의 책임",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-duties-owner-responsibility.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+    "group": "제도·법령",
+    "order": 4,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q01",
+      "moducbt-27777-q02"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27774-q01",
+      "moducbt-27776-q02"
+    ],
+    "sources": [
+      "prevention-law"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "업무를 묶어서 판단",
+      "관계인의 책임"
+    ],
+    "contentSha256": "ae5292f9ad239fdfe6cab270934c655324ea20108d4ba615891b9475714abc1d"
+  },
+  {
+    "chapterId": "FSM2-069",
+    "title": "소방안전관리 업무대행과 감독",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/outsourced-management-supervision.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/outsourced-management-supervision/",
+    "group": "제도·법령",
+    "order": 5,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q01"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "대행 가능한 업무",
+      "대행과 책임의 관계"
+    ],
+    "contentSha256": "45d186e7dfba13e35fc7481567ea4c720bf5f326a1b54b380c46260f01a56380"
+  },
+  {
+    "chapterId": "FSM2-005",
+    "title": "선임신고·현황표 게시·실무교육",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+    "group": "제도·법령",
+    "order": 6,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q02",
+      "moducbt-27774-q02",
+      "moducbt-27777-q03",
+      "moducbt-27778-q02",
+      "moducbt-27779-q01",
+      "moducbt-27780-q01",
+      "moducbt-27781-q03",
+      "moducbt-27782-q03"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27775-q02"
+    ],
+    "sources": [
+      "prevention-rule"
+    ],
+    "visuals": [
+      {
+        "file": "appointment-timeline-v1.svg",
+        "caption": "선임·신고·교육의 서로 다른 기한",
+        "alt": "사유 발생 → 30일 이내 선임 → 선임 후 14일 신고 → 선임 후 6개월 교육",
+        "height": 327
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "선임부터 교육까지",
+      "교육 예외를 읽는 법"
+    ],
+    "contentSha256": "8375929c78b8836fab71008eeb5d80cc5e38cf6a327a47246f7ed1cc0ee9136d"
+  },
+  {
+    "chapterId": "FSM2-006",
+    "title": "소방관계법령의 벌칙과 과태료",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+    "group": "제도·법령",
+    "order": 7,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q08",
+      "moducbt-27775-q02",
+      "moducbt-27775-q07",
+      "moducbt-27776-q06",
+      "moducbt-27778-q03",
+      "moducbt-27778-q08",
+      "moducbt-27779-q03",
+      "moducbt-27779-q05",
+      "moducbt-27780-q02",
+      "moducbt-27780-q04",
+      "moducbt-27781-q04",
+      "moducbt-27782-q04"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-law",
+      "facilities-law",
+      "fire-law"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "벌금과 과태료의 구별",
+      "선택지 비교",
+      "화재예방법 위반의 구별"
+    ],
+    "contentSha256": "b499ed64abf23c44742baea9551f648853dd4ba7b8310a72db9bb499a26646ce"
+  },
+  {
+    "chapterId": "FSM2-007",
+    "title": "소방기본법의 용어·조직·한국소방안전원",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+    "group": "제도·법령",
+    "order": 8,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q05",
+      "moducbt-27775-q05",
+      "moducbt-27776-q04",
+      "moducbt-27776-q08",
+      "moducbt-27777-q05",
+      "moducbt-27778-q04",
+      "moducbt-27779-q04",
+      "moducbt-27780-q05",
+      "moducbt-27781-q07",
+      "moducbt-27782-q07"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "fire-law"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "법의 목적과 대상",
+      "기관의 역할",
+      "한국소방안전원 조직·재원"
+    ],
+    "contentSha256": "39b583e0e5e0fbefd2dd9713ab4214a202fc5b5d9a6d73381033568abda88b7f"
+  },
+  {
+    "chapterId": "FSM2-008",
+    "title": "화재안전조사와 조치명령",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-safety-investigation-orders.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+    "group": "제도·법령",
+    "order": 9,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q04",
+      "moducbt-27774-q04",
+      "moducbt-27774-q07",
+      "moducbt-27776-q05",
+      "moducbt-27778-q06",
+      "moducbt-27780-q06"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-law",
+      "prevention-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "조사와 자체점검의 차이",
+      "조사 절차의 단서",
+      "조치명령"
+    ],
+    "contentSha256": "9043d6b394422dc83cc616a5037a1e4357631f994954942a561a7f4ceb474946"
+  },
+  {
+    "chapterId": "FSM2-009",
+    "title": "자체점검의 종류·대상·실시 시기",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+    "group": "제도·법령",
+    "order": 10,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q06",
+      "moducbt-27774-q06",
+      "moducbt-27775-q04",
+      "moducbt-27775-q06",
+      "moducbt-27777-q06",
+      "moducbt-27777-q07",
+      "moducbt-27778-q07",
+      "moducbt-27779-q07",
+      "moducbt-27781-q05",
+      "moducbt-27781-q08"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "facilities-rule"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "점검의 두 종류",
+      "종합점검 대상의 대표 조건",
+      "점검 주체와 제외 대상"
+    ],
+    "contentSha256": "806198b61fd98a1b94462ebcbb99a518eaf63eb313aab8dfeb80bd599e1c6a48"
+  },
+  {
+    "chapterId": "FSM2-010",
+    "title": "자체점검 결과 보고·이행·기록",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/inspection-report-repair-records.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/inspection-report-repair-records/",
+    "group": "제도·법령",
+    "order": 11,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q08",
+      "moducbt-27778-q05",
+      "moducbt-27780-q07",
+      "moducbt-27782-q05"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "facilities-rule"
+    ],
+    "visuals": [
+      {
+        "file": "inspection-report-timeline-v1.svg",
+        "caption": "점검 종료와 보고일을 각각 출발점으로 확인",
+        "alt": "점검 종료 → 15일 이내 보고 → 보고 후 10·20일 조치 → 완료 후 10일 보고",
+        "height": 327
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "결과 보고와 보수의 흐름",
+      "중대위반사항과 연기"
+    ],
+    "contentSha256": "0dea24e83afb8ba33bfe0fe61cb455421f1fa322aaa6fd0716d0344780de70a6"
+  },
+  {
+    "chapterId": "FSM2-011",
+    "title": "방염 대상과 방염성능검사",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flame-retardant-target-test.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+    "group": "제도·법령",
+    "order": 12,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q05",
+      "moducbt-27777-q08",
+      "moducbt-27780-q08",
+      "moducbt-27782-q06"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "facilities-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "방염은 불에 타지 않는 재료라는 뜻이 아님",
+      "성능검사에서 보는 항목",
+      "시험 수치와 제외 대상"
+    ],
+    "contentSha256": "9cb04677966a8577d6da196c4fba8b3444dad15b9a95da453e3cbc3fc38ee0f3"
+  },
+  {
+    "chapterId": "FSM2-012",
+    "title": "건축 용어와 면적·높이·층수 산정",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/building-area-height-floors.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/building-area-height-floors/",
+    "group": "건축·방화·피난",
+    "order": 13,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q07",
+      "moducbt-27775-q08",
+      "moducbt-27776-q07",
+      "moducbt-27777-q04",
+      "moducbt-27779-q06",
+      "moducbt-27779-q08",
+      "moducbt-27781-q06",
+      "moducbt-27782-q08"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "building-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "면적의 종류",
+      "층수·지하층·높이",
+      "건축행위의 구별",
+      "산정 예외와 계산"
+    ],
+    "contentSha256": "f7f9be4346bfd2da169fd258bcf66a0239cac62cecd7c4a49720411fcc17aabe"
+  },
+  {
+    "chapterId": "FSM2-013",
+    "title": "무창층의 판단과 개구부 면적",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/windowless-floor-openings.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/",
+    "group": "건축·방화·피난",
+    "order": 14,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q16",
+      "moducbt-27774-q15",
+      "moducbt-27775-q15",
+      "moducbt-27779-q15"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "facilities-decree"
+    ],
+    "visuals": [
+      {
+        "file": "valid-window-opening-v1.svg",
+        "caption": "유효 개구부의 크기와 하단 높이",
+        "alt": "지름 50cm 원이 통과하는 개구부, 바닥에서 하단까지 1.2m 이내",
+        "height": 300
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "무창층의 판단",
+      "면적에 포함하는 개구부",
+      "계산 예"
+    ],
+    "contentSha256": "fbaa0c527f7353b3c997f6e993827846e0c8ee27cb55f4c3e79457d61d3e164e"
+  },
+  {
+    "chapterId": "FSM2-014",
+    "title": "방화구획·방화문·피난시설 관리",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-compartments-doors-egress.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/",
+    "group": "건축·방화·피난",
+    "order": 15,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q15",
+      "moducbt-27775-q16",
+      "moducbt-27776-q15",
+      "moducbt-27777-q16",
+      "moducbt-27778-q16",
+      "moducbt-27780-q16",
+      "moducbt-27781-q15",
+      "moducbt-27781-q16",
+      "moducbt-27782-q16"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "building-decree",
+      "facilities-law",
+      "building-fire-rule"
+    ],
+    "visuals": [
+      {
+        "file": "fire-compartment-plan-v1.svg",
+        "caption": "닫힌 방화문이 두 구역 사이의 확산을 억제",
+        "alt": "방화구획 벽과 문으로 나뉜 두 구역 · 통로의 문 닫힘 기능 유지",
+        "height": 290
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "방화구획의 역할",
+      "방화문 관리",
+      "피난시설의 관리",
+      "면적별 구획 기준"
+    ],
+    "contentSha256": "a2f3dd69a8828060cf7c698b9000f0ec7fef2ef8c0700c094a7c734c35628e30"
+  },
+  {
+    "chapterId": "FSM2-015",
+    "title": "피난계단과 특별피난계단",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/escape-stairs-special-stairs.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+    "group": "건축·방화·피난",
+    "order": 16,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q16",
+      "moducbt-27777-q15",
+      "moducbt-27780-q15"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "building-decree"
+    ],
+    "visuals": [
+      {
+        "file": "special-escape-stair-v1.svg",
+        "caption": "특별피난계단은 부속실·노대를 거쳐 계단실로 진입",
+        "alt": "실내 → 방화문 → 부속실·노대 → 방화문 → 계단실",
+        "height": 405
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "두 계단의 차이",
+      "설치 조건을 읽는 단서"
+    ],
+    "contentSha256": "0e812bfe82b61e02c9f9f3b448ebdd38556f9e3b4333027cb553947509613a9a"
+  },
+  {
+    "chapterId": "FSM2-016",
+    "title": "연소의 조건과 가연물·산소공급원",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/combustion-elements.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+    "group": "연소·위험물·화기",
+    "order": 17,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q10",
+      "moducbt-27775-q09",
+      "moducbt-27779-q10",
+      "moducbt-27779-q11",
+      "moducbt-27780-q10",
+      "moducbt-27781-q10",
+      "moducbt-27782-q09"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [],
+    "visuals": [
+      {
+        "file": "combustion-triangle-v1.svg",
+        "caption": "연소의 3요소 중 하나를 제거하면 연소 억제",
+        "alt": "가연물·산소공급원·점화원이 이루는 연소의 3요소",
+        "height": 230
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "연소의 3요소와 4요소",
+      "잘 타는 물질의 조건",
+      "산소공급원과 가연물 조건"
+    ],
+    "contentSha256": "3e737010bb5fafeae8fcb7ae5ae52d6bd63db4008162a9d587abcdfa91330a76"
+  },
+  {
+    "chapterId": "FSM2-017",
+    "title": "연소범위와 폭발 위험 판단",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flammable-range-explosion.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/flammable-range-explosion/",
+    "group": "연소·위험물·화기",
+    "order": 18,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q09",
+      "moducbt-27779-q09"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [],
+    "visuals": [
+      {
+        "file": "flammability-range-v1.svg",
+        "caption": "농도가 낮아지거나 높아질 때 연소범위 진입 가능",
+        "alt": "하한계 미만은 연료 부족, 범위 안은 연소 가능, 상한계 초과는 산소 부족",
+        "height": 250
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "연소범위의 두 경계",
+      "수치의 단위와 위험도"
+    ],
+    "contentSha256": "2f50bacb125e9847aa304f82352ec8803bf24f92d70f053ad4de6068878a5234"
+  },
+  {
+    "chapterId": "FSM2-068",
+    "title": "증기비중의 계산과 누설 시 체류 위치",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/vapor-density-leak-location.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/vapor-density-leak-location/",
+    "group": "연소·위험물·화기",
+    "order": 19,
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q11"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27773-q09",
+      "moducbt-27779-q09"
+    ],
+    "sources": [],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "공기를 1로 놓고 비교",
+      "계산 예"
+    ],
+    "contentSha256": "947ff469d7e6adde25430810fbd2f72144f65cdce869d5cbaaebe9a67e7fa517"
+  },
+  {
+    "chapterId": "FSM2-018",
+    "title": "인화점·연소점·발화점",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flash-fire-autoignition-points.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+    "group": "연소·위험물·화기",
+    "order": 20,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q11",
+      "moducbt-27776-q10",
+      "moducbt-27777-q09",
+      "moducbt-27778-q09"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "danger-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "외부 점화원의 유무로 구별",
+      "위험물 분류에 쓰는 인화점"
+    ],
+    "contentSha256": "d7f25238bc8cd8d7fa1bcf96e6f0eb9a61c624b2a04bb1f05a0b11013a7041b7"
+  },
+  {
+    "chapterId": "FSM2-019",
+    "title": "전도·대류·복사에 의한 열전달",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/conduction-convection-radiation.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/conduction-convection-radiation/",
+    "group": "연소·위험물·화기",
+    "order": 21,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q11",
+      "moducbt-27777-q11",
+      "moducbt-27780-q09"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "열이 전달되는 경로",
+      "상황을 분해해 판단"
+    ],
+    "contentSha256": "8bba13bf87b45e9265ae12873fe0f20ea9d972fbcf49692e50ce1d58b3d6cf08"
+  },
+  {
+    "chapterId": "FSM2-067",
+    "title": "연기의 확산과 연소생성물의 위험",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/smoke-spread-combustion-products.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/smoke-spread-combustion-products/",
+    "group": "연소·위험물·화기",
+    "order": 22,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q09",
+      "moducbt-27778-q10",
+      "moducbt-27782-q10"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "연기가 먼저 위험해지는 이유",
+      "피난에 적용",
+      "연기 확산 속도의 비교"
+    ],
+    "contentSha256": "be97afd3e0a9035ad11f098d1002e09e2d2bb68b024d86aea4d10083970c0605"
+  },
+  {
+    "chapterId": "FSM2-020",
+    "title": "화재의 분류와 소화 원리",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-classes-extinguishing-principles.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+    "group": "연소·위험물·화기",
+    "order": 23,
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q10",
+      "moducbt-27776-q09",
+      "moducbt-27776-q11",
+      "moducbt-27777-q10",
+      "moducbt-27780-q11",
+      "moducbt-27781-q09",
+      "moducbt-27782-q11"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc101"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "화재 종류를 먼저 판별",
+      "소화의 네 원리"
+    ],
+    "contentSha256": "83e719912efb3303c81cd84586f410c3848e9b755578c7bc53f5aa51de041a23"
+  },
+  {
+    "chapterId": "FSM2-021",
+    "title": "화기작업 허가와 화재감시자",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hot-work-permit-fire-watch.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/hot-work-permit-fire-watch/",
+    "group": "연소·위험물·화기",
+    "order": 24,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q12",
+      "moducbt-27774-q12",
+      "moducbt-27775-q12",
+      "moducbt-27776-q12",
+      "moducbt-27777-q12",
+      "moducbt-27778-q12",
+      "moducbt-27779-q12",
+      "moducbt-27780-q12",
+      "moducbt-27781-q12",
+      "moducbt-27782-q12"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-law",
+      "prevention-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "허가에서 감시까지",
+      "화재감시자의 역할",
+      "허가서의 판단 항목",
+      "작업 종료 후 감시"
+    ],
+    "contentSha256": "3ad66f95733d60922893e904531c3538537d983f82b0d52f025e5a5594df1e7d"
+  },
+  {
+    "chapterId": "FSM2-074",
+    "title": "보일러·난방기기의 화재 예방",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/boiler-heater-fire-prevention.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/boiler-heater-fire-prevention/",
+    "group": "연소·위험물·화기",
+    "order": 25,
+    "primarySourceQuestionIds": [
+      "moducbt-27781-q13"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "열원과 가연물을 분리",
+      "이상 징후의 판단",
+      "연료별 설치 수치"
+    ],
+    "contentSha256": "09e8276e8230eaaf1d64ff6c27884722838e39456e90b8f6f40f4ea227fa70b3"
+  },
+  {
+    "chapterId": "FSM2-022",
+    "title": "위험물 유별 성질과 제4류 안전관리",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hazardous-materials-classes.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+    "group": "연소·위험물·화기",
+    "order": 26,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q14",
+      "moducbt-27775-q13",
+      "moducbt-27776-q14",
+      "moducbt-27777-q13",
+      "moducbt-27778-q14",
+      "moducbt-27779-q14",
+      "moducbt-27780-q14",
+      "moducbt-27782-q13"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27781-q14"
+    ],
+    "sources": [
+      "danger-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "6개 유별 성질",
+      "제4류의 안전관리"
+    ],
+    "contentSha256": "e44d3379d4230905a39d949296765d94427a9f45176880ddaf5e3e3c4c784d46"
+  },
+  {
+    "chapterId": "FSM2-023",
+    "title": "위험물 지정수량과 배수 계산",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/designated-quantity-multiples.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/designated-quantity-multiples/",
+    "group": "연소·위험물·화기",
+    "order": 27,
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q14",
+      "moducbt-27781-q14",
+      "moducbt-27782-q14"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "danger-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "지정수량의 배수",
+      "합산 예"
+    ],
+    "contentSha256": "d2cf3136806481bf07ff52d7191ad90b1805174da5b12d8823d24c9e8c3e28c4"
+  },
+  {
+    "chapterId": "FSM2-024",
+    "title": "위험물안전관리자의 선임과 대리자",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hazardous-material-manager-deputy.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-material-manager-deputy/",
+    "group": "연소·위험물·화기",
+    "order": 28,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q13",
+      "moducbt-27774-q13"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "danger-law"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "선임과 신고",
+      "대리자를 두는 이유"
+    ],
+    "contentSha256": "e809eb0d6637ed9592861f482115e06349700a6709e5d99abfadeb7628545498"
+  },
+  {
+    "chapterId": "FSM2-025",
+    "title": "LPG·LNG와 가스누설 탐지기",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/lpg-lng-gas-detectors.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/",
+    "group": "연소·위험물·화기",
+    "order": 29,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q14",
+      "moducbt-27776-q13",
+      "moducbt-27778-q13",
+      "moducbt-27779-q13",
+      "moducbt-27780-q13"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc101",
+      "nftc206"
+    ],
+    "visuals": [
+      {
+        "file": "gas-detector-heights-v1.svg",
+        "caption": "가스 비중에 따라 천장·바닥 가까이 설치",
+        "alt": "메탄 탐지부는 천장에서 30cm 이하, LPG 탐지부는 바닥에서 30cm 이하 · 주방자동소화장치 기준",
+        "height": 270
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "주성분과 누설 위치",
+      "누설 시 행동",
+      "경보기의 거리·높이"
+    ],
+    "contentSha256": "e2189552a5183c11bca267c1db29edb4f798d0f9bbf2fdf5fdf6d6de146d3b7c"
+  },
+  {
+    "chapterId": "FSM2-065",
+    "title": "전기화재와 정전기의 예방",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/electrical-fire-static-prevention.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/",
+    "group": "연소·위험물·화기",
+    "order": 30,
+    "primarySourceQuestionIds": [
+      "moducbt-27777-q14"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "전기화재 원인을 구별",
+      "정전기 예방"
+    ],
+    "contentSha256": "c8c94734119636767d4644ce85f7174242299999d6073af96cf8e124be618373"
+  },
+  {
+    "chapterId": "FSM2-026",
+    "title": "소방시설의 분류와 피난구조기구",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-facility-categories.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/",
+    "group": "소방시설 구조·기준",
+    "order": 31,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q18",
+      "moducbt-27775-q19",
+      "moducbt-27775-q22",
+      "moducbt-27776-q19",
+      "moducbt-27778-q18",
+      "moducbt-27780-q20",
+      "moducbt-27781-q19",
+      "moducbt-27781-q20",
+      "moducbt-27782-q19"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "facilities-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "시설의 목적별 분류",
+      "이름보다 사용하는 목적",
+      "소화기구 안의 구별"
+    ],
+    "contentSha256": "376aad14e0c8d95676d024a63c789676cc7d3f0291f67dd8debac778adf779dd"
+  },
+  {
+    "chapterId": "FSM2-027",
+    "title": "소화기의 종류·능력단위·적응 화재",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-types-ratings.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-types-ratings/",
+    "group": "소방시설 구조·기준",
+    "order": 32,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q17",
+      "moducbt-27778-q22",
+      "moducbt-27779-q21"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27776-q22",
+      "moducbt-27780-q11"
+    ],
+    "sources": [
+      "nftc101"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "적응 화재와 능력단위",
+      "사용 순서",
+      "간이소화용구의 능력단위"
+    ],
+    "contentSha256": "cd34e5f2b2f5bc9efa40bbca947e1429e3fbe82f2ea10147ab3a83e3d57ce231"
+  },
+  {
+    "chapterId": "FSM2-028",
+    "title": "소화약제의 성질과 적용",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguishing-agents-properties.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguishing-agents-properties/",
+    "group": "소방시설 구조·기준",
+    "order": 33,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q24",
+      "moducbt-27774-q10",
+      "moducbt-27778-q11",
+      "moducbt-27781-q11"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc101",
+      "extinguisher-approval",
+      "unep-halons"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "약제의 작용과 한계",
+      "분말 1~4종의 비교",
+      "분말 착색과 가스계 비교"
+    ],
+    "contentSha256": "270be6e2017089e3e6947409a491c130ee2b086800bb04ff66cbf6fbb3e8446e"
+  },
+  {
+    "chapterId": "FSM2-029",
+    "title": "소화기 배치와 필요한 개수 계산",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-layout-count.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-layout-count/",
+    "group": "소방시설 구조·기준",
+    "order": 34,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q18",
+      "moducbt-27775-q21",
+      "moducbt-27776-q22",
+      "moducbt-27777-q17",
+      "moducbt-27778-q20",
+      "moducbt-27780-q21",
+      "moducbt-27782-q17",
+      "moducbt-27782-q21"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc101"
+    ],
+    "visuals": [
+      {
+        "file": "extinguisher-walk-distance-v1.svg",
+        "caption": "직선이 아니라 장애물을 우회하는 보행거리",
+        "alt": "벽을 돌아 이동하는 경로로 소형소화기까지 보행거리 20m 이내 판정",
+        "height": 285
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "개수와 배치를 따로 계산",
+      "배치 조건",
+      "다른 설비가 있을 때 감소"
+    ],
+    "contentSha256": "575b7cd6186cd5a1efcb2545e79df61536bffd02e749ebf3e7ce195bdaebbf39"
+  },
+  {
+    "chapterId": "FSM2-030",
+    "title": "축압식 소화기 지시압력계와 상태 판단",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/stored-pressure-extinguisher-gauge.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/stored-pressure-extinguisher-gauge/",
+    "group": "소방시설 구조·기준",
+    "order": 35,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q24",
+      "moducbt-27778-q23",
+      "moducbt-27781-q25"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27773-q43",
+      "moducbt-27775-q43",
+      "moducbt-27776-q43",
+      "moducbt-27779-q43",
+      "moducbt-27780-q43"
+    ],
+    "sources": [],
+    "visuals": [
+      {
+        "file": "extinguisher-pressure-gauge-v1.svg",
+        "caption": "저압·정상·과압을 제품 눈금과 함께 판독",
+        "alt": "저압과 정상 및 과압 세 구간 중 정상 범위를 가리키는 압력계 바늘",
+        "height": 260
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "지시압력계로 보는 상태",
+      "함께 확인할 항목",
+      "압력 수치의 적용"
+    ],
+    "contentSha256": "2a691135bc4197eab019b7f8fde08ff4bf766a301ba1402e2114a12d34616c92"
+  },
+  {
+    "chapterId": "FSM2-071",
+    "title": "소화기 내용연수와 교체 판단",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+    "group": "소방시설 구조·기준",
+    "order": 36,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q21",
+      "moducbt-27774-q17",
+      "moducbt-27779-q22"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27773-q43",
+      "moducbt-27775-q43",
+      "moducbt-27776-q43",
+      "moducbt-27779-q43",
+      "moducbt-27780-q43"
+    ],
+    "sources": [
+      "facilities-decree",
+      "facilities-rule",
+      "product-quality-rule"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "10년 기준의 대상",
+      "교체와 성능확인검사"
+    ],
+    "contentSha256": "fae9d86215f183ee98d80dce0d476f7125a912ec85d0a3f50ce3a288bd24c0a8"
+  },
+  {
+    "chapterId": "FSM2-031",
+    "title": "옥내소화전의 수원·수조·방수 성능",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/indoor-hydrant-water-performance.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+    "group": "소방시설 구조·기준",
+    "order": 37,
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q18",
+      "moducbt-27776-q18",
+      "moducbt-27777-q19",
+      "moducbt-27778-q17",
+      "moducbt-27778-q21",
+      "moducbt-27781-q21",
+      "moducbt-27781-q33"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27773-q36",
+      "moducbt-27774-q33",
+      "moducbt-27774-q37",
+      "moducbt-27774-q43",
+      "moducbt-27775-q26",
+      "moducbt-27775-q37",
+      "moducbt-27776-q30",
+      "moducbt-27776-q39",
+      "moducbt-27777-q34",
+      "moducbt-27777-q35",
+      "moducbt-27778-q30",
+      "moducbt-27779-q31",
+      "moducbt-27780-q38",
+      "moducbt-27781-q31",
+      "moducbt-27782-q38"
+    ],
+    "sources": [
+      "nftc102"
+    ],
+    "visuals": [
+      {
+        "file": "hydrant-water-tank-v1.svg",
+        "caption": "일반급수와 겸용할 때 소화용 유효수량 분리",
+        "alt": "일반급수 흡수구보다 아래 소방 흡수구까지의 부분을 소화용 유효수량으로 판정하는 개념도",
+        "height": 310
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "수원과 성능",
+      "옥상수조·유효수량"
+    ],
+    "contentSha256": "fc9c3c458a319c73cd763e305aaebd7f0b81b1e3b2c07281c371b3c081a389df"
+  },
+  {
+    "chapterId": "FSM2-032",
+    "title": "옥외소화전의 설치·수원·방수 성능",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/outdoor-hydrant-water-performance.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/",
+    "group": "소방시설 구조·기준",
+    "order": 38,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q19",
+      "moducbt-27773-q22",
+      "moducbt-27774-q19",
+      "moducbt-27779-q18",
+      "moducbt-27780-q17",
+      "moducbt-27782-q20",
+      "moducbt-27782-q22"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc109"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "옥내와 숫자를 구별",
+      "소화전함의 개수",
+      "설치 대상의 단서"
+    ],
+    "contentSha256": "baf00941c4b4c051c4c76e1ba4fcb290bf6d35cd844ae4c1d20687c81030ace5"
+  },
+  {
+    "chapterId": "FSM2-033",
+    "title": "소방펌프와 배관의 구성요소",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-pumps-piping-components.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+    "group": "소방시설 구조·기준",
+    "order": 39,
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q25",
+      "moducbt-27776-q26",
+      "moducbt-27780-q24",
+      "moducbt-27781-q23",
+      "moducbt-27782-q23"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27773-q29",
+      "moducbt-27773-q32",
+      "moducbt-27774-q28",
+      "moducbt-27777-q29",
+      "moducbt-27778-q25",
+      "moducbt-27778-q32",
+      "moducbt-27780-q28",
+      "moducbt-27781-q27",
+      "moducbt-27782-q30"
+    ],
+    "sources": [
+      "nftc102"
+    ],
+    "visuals": [
+      {
+        "file": "pump-main-components-v1.svg",
+        "caption": "주 공급관과 압력 신호 장치의 역할 구분",
+        "alt": "수조에서 펌프를 지나 체크밸브·개폐밸브로 물 공급 · 압력 신호 장치는 공급 배관에 연결",
+        "height": 410
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "공급 계통의 구성",
+      "서로 다른 배관"
+    ],
+    "contentSha256": "bee9c06be21082906d9f089f40bef8cf1bd2f9504a018a6045fcfdead8c94ed1"
+  },
+  {
+    "chapterId": "FSM2-038",
+    "title": "스프링클러 헤드·수원·방수 성능",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-head-water-performance.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/",
+    "group": "소방시설 구조·기준",
+    "order": 41,
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q20",
+      "moducbt-27777-q20",
+      "moducbt-27779-q19"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc103"
+    ],
+    "visuals": [
+      {
+        "file": "closed-sprinkler-head-v1.svg",
+        "caption": "감열체가 열리면 방수구를 통과한 물을 분산",
+        "alt": "폐쇄형 헤드의 감열체와 디플렉터 역할을 구분하는 단순 단면, 상세 제품 형상은 생략",
+        "height": 270
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "헤드의 구성과 방향",
+      "수원·방수 기준",
+      "기준개수로 송수량 계산"
+    ],
+    "contentSha256": "9a474a227d42a7f4a457b8add48ab8a2a9b893e1842f3576826c6be5e4899eef"
+  },
+  {
+    "chapterId": "FSM2-041",
+    "title": "가스계 소화설비의 구성·방출 방식·안전성",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/gas-suppression-components-discharge.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+    "group": "소방시설 구조·기준",
+    "order": 42,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q25",
+      "moducbt-27775-q24",
+      "moducbt-27777-q24",
+      "moducbt-27778-q24",
+      "moducbt-27779-q23",
+      "moducbt-27779-q24",
+      "moducbt-27782-q24"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27773-q27",
+      "moducbt-27773-q31",
+      "moducbt-27774-q27",
+      "moducbt-27775-q29",
+      "moducbt-27775-q33",
+      "moducbt-27776-q34",
+      "moducbt-27777-q37",
+      "moducbt-27778-q31",
+      "moducbt-27778-q37",
+      "moducbt-27779-q26",
+      "moducbt-27779-q29",
+      "moducbt-27780-q35",
+      "moducbt-27781-q36",
+      "moducbt-27781-q38",
+      "moducbt-27782-q28"
+    ],
+    "sources": [
+      "nftc106"
+    ],
+    "visuals": [
+      {
+        "file": "gas-discharge-path-v1.svg",
+        "caption": "약제는 선택된 방호구역으로 방출",
+        "alt": "저장용기 → 용기밸브·집합관 → 선택밸브 → 방호구역 분사헤드",
+        "height": 327
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "약제 흐름과 기동 신호",
+      "방출 전후의 안전",
+      "호스릴 CO₂의 수치"
+    ],
+    "contentSha256": "3412626e11a5c27ee452b89fa88cd3c5ac9bac1198d620155e17c314e60bfa9b"
+  },
+  {
+    "chapterId": "FSM2-043",
+    "title": "감지기의 종류와 작동 원리",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-types-principles.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-types-principles/",
+    "group": "소방시설 구조·기준",
+    "order": 43,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q25",
+      "moducbt-27776-q24",
+      "moducbt-27779-q25"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27773-q23",
+      "moducbt-27773-q37",
+      "moducbt-27774-q23",
+      "moducbt-27774-q34",
+      "moducbt-27775-q31",
+      "moducbt-27775-q36",
+      "moducbt-27775-q38",
+      "moducbt-27776-q31",
+      "moducbt-27776-q36",
+      "moducbt-27777-q32",
+      "moducbt-27778-q28",
+      "moducbt-27778-q34",
+      "moducbt-27779-q28",
+      "moducbt-27779-q34",
+      "moducbt-27780-q25",
+      "moducbt-27780-q27",
+      "moducbt-27780-q31",
+      "moducbt-27781-q35",
+      "moducbt-27781-q37",
+      "moducbt-27782-q26",
+      "moducbt-27782-q39",
+      "moducbt-27782-q43"
+    ],
+    "sources": [
+      "nftc203",
+      "heat-detector-patent"
+    ],
+    "visuals": [
+      {
+        "file": "heat-detector-diaphragm-v1.svg",
+        "caption": "급격한 가열로 공기가 팽창하면 막이 접점을 닫음",
+        "alt": "감열실 공기의 팽창이 막을 위로 밀어 접점을 닫는 상태와 옆의 압력 평형용 리크구멍",
+        "height": 330
+      },
+      {
+        "file": "optical-detector-principles-v1.svg",
+        "caption": "스포트형은 산란, 분리형은 빛의 감쇠를 감지",
+        "alt": "위는 연기 입자에 산란된 빛을 옆 수광부가 감지, 아래는 송광부와 수광부 사이 연기에 의한 감쇠",
+        "height": 300
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "무엇을 감지하는가",
+      "열감지기의 판별 부품",
+      "장소에 맞는 선택"
+    ],
+    "contentSha256": "a598e999dce84752d3d142ce5930133d56e14bc9a421f16ba5bb0bf15152f61b"
+  },
+  {
+    "chapterId": "FSM2-044",
+    "title": "감지기 설치 기준과 필요한 개수",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-placement-count.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-placement-count/",
+    "group": "소방시설 구조·기준",
+    "order": 44,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q22",
+      "moducbt-27777-q21",
+      "moducbt-27780-q18",
+      "moducbt-27781-q24"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc203"
+    ],
+    "visuals": [
+      {
+        "file": "detector-grid-placement-v1.svg",
+        "caption": "담당 면적만 계산하지 않고 구획·이격도 확인",
+        "alt": "구획된 평면 안의 감지기 4개, 벽과 감지기의 이격 및 급기구 주변 제외를 확인하는 배치 개념도",
+        "height": 280
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "개수 계산의 세 조건",
+      "배치와 계산 예",
+      "열전대식 감지기"
+    ],
+    "contentSha256": "38815e75b524676fa918c911dc360de09f0f993c48583d71b113ec84479ffe63"
+  },
+  {
+    "chapterId": "FSM2-045",
+    "title": "경계구역 설정과 우선경보",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/alarm-zones-priority-alarm.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/alarm-zones-priority-alarm/",
+    "group": "소방시설 구조·기준",
+    "order": 45,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q20",
+      "moducbt-27776-q17",
+      "moducbt-27777-q22",
+      "moducbt-27779-q17",
+      "moducbt-27780-q19",
+      "moducbt-27780-q34",
+      "moducbt-27782-q18"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc203"
+    ],
+    "visuals": [
+      {
+        "file": "priority-alarm-floor-range-v1.svg",
+        "caption": "12층 발화 예시는 12~16층 우선경보",
+        "alt": "12층 화재에서는 발화층과 직상 4개 층인 13·14·15·16층에 경보",
+        "height": 355
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "경계구역은 화재 위치를 찾는 단위",
+      "우선경보의 범위"
+    ],
+    "contentSha256": "69f8d74c4e0e41e4009dea056f3d1b29b4c7548fb44677768fe698fe4c2ce9b7"
+  },
+  {
+    "chapterId": "FSM2-046",
+    "title": "감지기 배선·종단저항·발신기",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-wiring-end-resistor-transmitter.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+    "group": "소방시설 구조·기준",
+    "order": 46,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q35",
+      "moducbt-27776-q25",
+      "moducbt-27780-q23",
+      "moducbt-27782-q25",
+      "moducbt-27782-q33"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27773-q33",
+      "moducbt-27774-q30",
+      "moducbt-27774-q32",
+      "moducbt-27775-q35",
+      "moducbt-27776-q27",
+      "moducbt-27776-q29",
+      "moducbt-27777-q27",
+      "moducbt-27778-q29",
+      "moducbt-27778-q39",
+      "moducbt-27779-q30",
+      "moducbt-27779-q38",
+      "moducbt-27780-q36",
+      "moducbt-27781-q39",
+      "moducbt-27782-q31"
+    ],
+    "sources": [
+      "nftc203"
+    ],
+    "visuals": [
+      {
+        "file": "end-of-line-resistor-circuit-v1.svg",
+        "caption": "종단저항은 감지기 회로의 끝에 연결",
+        "alt": "수신기에서 나간 두 선 사이에 감지기가 병렬로 연결되고 종단저항이 말단에 연결된 감시회로 개념도",
+        "height": 320
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "종단저항의 위치",
+      "공통선과 회로",
+      "발신기"
+    ],
+    "contentSha256": "059b816b3998c3b05959ebd704618f53b01436665cb0f5c0ed805332925b21ec"
+  },
+  {
+    "chapterId": "FSM2-051",
+    "title": "유도등의 종류·설치·배선",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/exit-guide-light-types-wiring.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/exit-guide-light-types-wiring/",
+    "group": "소방시설 구조·기준",
+    "order": 47,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q20",
+      "moducbt-27775-q17",
+      "moducbt-27776-q20",
+      "moducbt-27777-q18",
+      "moducbt-27778-q19",
+      "moducbt-27780-q22",
+      "moducbt-27781-q17",
+      "moducbt-27781-q18"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc303"
+    ],
+    "visuals": [
+      {
+        "file": "guide-light-locations-v1.svg",
+        "caption": "출구 위 피난구유도등과 낮은 복도통로유도등 구분",
+        "alt": "피난구유도등은 문 위 1.5m 이상, 복도통로유도등은 바닥 1m 이하 위치를 보여주는 공간 개념도",
+        "height": 300
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "유도등의 위치로 구별",
+      "전원과 배선"
+    ],
+    "contentSha256": "f5d16446a1391dd210dce3b63d8eb9c8621886a5a58962d0d3501dda66eab9b5"
+  },
+  {
+    "chapterId": "FSM2-052",
+    "title": "객석유도등 설치와 개수 계산",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/auditorium-guide-light-count.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/auditorium-guide-light-count/",
+    "group": "소방시설 구조·기준",
+    "order": 48,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q21",
+      "moducbt-27776-q21",
+      "moducbt-27779-q20",
+      "moducbt-27781-q22"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc303"
+    ],
+    "visuals": [
+      {
+        "file": "auditorium-aisle-spacing-v1.svg",
+        "caption": "두 객석 통로는 각각 계산하고 합산",
+        "alt": "객석 사이 독립 통로 A와 B의 길이를 각각 사용, 유도등 개수는 통로별로 올림 후 합산",
+        "height": 300
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "통로마다 계산",
+      "계산 예",
+      "설치 위치"
+    ],
+    "contentSha256": "be83ed8a601cdd6595883b89bd7396c19c35111bc0bb09afdb3557e2713b0704"
+  },
+  {
+    "chapterId": "FSM2-053",
+    "title": "피난기구의 종류와 설치 조건",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/evacuation-device-types-conditions.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-theory/evacuation-device-types-conditions/",
+    "group": "소방시설 구조·기준",
+    "order": 49,
+    "primarySourceQuestionIds": [
+      "moducbt-27776-q16",
+      "moducbt-27778-q15",
+      "moducbt-27779-q16",
+      "moducbt-27782-q15"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc301"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "피난기구의 사용 방식",
+      "적응성을 결정하는 조건",
+      "기본 개수와 객실 추가"
+    ],
+    "contentSha256": "1252037440bf37b39996e3b0dd91a40d6e2e93eba4cabbdbe893f26b8d1e0102"
+  },
+  {
+    "chapterId": "FSM2-034",
+    "title": "감시제어반·동력제어반의 상태와 조작",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pump-control-panels-states.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+    "group": "소방시설 점검",
+    "order": 50,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q28",
+      "moducbt-27773-q38",
+      "moducbt-27774-q36",
+      "moducbt-27775-q27",
+      "moducbt-27775-q30",
+      "moducbt-27775-q39",
+      "moducbt-27776-q32",
+      "moducbt-27776-q37",
+      "moducbt-27777-q28",
+      "moducbt-27777-q33",
+      "moducbt-27778-q26",
+      "moducbt-27778-q35",
+      "moducbt-27778-q38",
+      "moducbt-27779-q27",
+      "moducbt-27779-q37",
+      "moducbt-27780-q37",
+      "moducbt-27780-q39",
+      "moducbt-27781-q29",
+      "moducbt-27781-q32",
+      "moducbt-27781-q34",
+      "moducbt-27782-q27",
+      "moducbt-27782-q34",
+      "moducbt-27782-q37"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc102"
+    ],
+    "visuals": [
+      {
+        "file": "control-panel-normal-v1.svg",
+        "caption": "평상시 선택 위치와 수동 명령을 구분",
+        "alt": "감시제어반은 연동과 수동 정지 명령, 동력제어반은 자동으로 선택되고 전원 표시가 켜진 정상 예시",
+        "height": 310
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "두 제어반의 역할",
+      "기동 여부 판독"
+    ],
+    "contentSha256": "a52b37ebc9d047f665e07a2e4fcd468c1d7a94bc9f7d1f7f737fbcc4211c8c08"
+  },
+  {
+    "chapterId": "FSM2-035",
+    "title": "펌프 성능시험과 체절·정격·최대운전",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pump-performance-tests.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+    "group": "소방시설 점검",
+    "order": 51,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q29",
+      "moducbt-27773-q32",
+      "moducbt-27774-q28",
+      "moducbt-27777-q29",
+      "moducbt-27778-q25",
+      "moducbt-27778-q32",
+      "moducbt-27780-q28",
+      "moducbt-27781-q27",
+      "moducbt-27782-q30"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc102"
+    ],
+    "visuals": [
+      {
+        "file": "pump-performance-curve-v1.svg",
+        "caption": "시험점의 유량과 허용 압력을 각각 비교",
+        "alt": "체절 Q0은 정격압력의 140% 이하, 정격 Q100은 정격압력, 최대 Q150은 정격압력의 65% 이상",
+        "height": 330
+      },
+      {
+        "file": "pump-test-pipe-v1.svg",
+        "caption": "성능시험배관에서 유량을 조절하고 수조로 환수",
+        "alt": "펌프 토출에서 시험 분기로 유량계와 조절밸브를 거쳐 수조로 환수, 설비 공급관은 별도로 연결",
+        "height": 385
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "세 운전점을 비교",
+      "수치 예",
+      "시험 배관의 조작"
+    ],
+    "contentSha256": "533b654b4f2a263458ac69aea0a75fb71a852e35b63068b4f1dc7139141e8230"
+  },
+  {
+    "chapterId": "FSM2-036",
+    "title": "방수압력 측정과 피토게이지",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pitot-nozzle-pressure-test.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+    "group": "소방시설 점검",
+    "order": 52,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q36",
+      "moducbt-27774-q33",
+      "moducbt-27774-q37",
+      "moducbt-27775-q26",
+      "moducbt-27775-q37",
+      "moducbt-27776-q30",
+      "moducbt-27776-q39",
+      "moducbt-27777-q34",
+      "moducbt-27777-q35",
+      "moducbt-27778-q30",
+      "moducbt-27779-q31",
+      "moducbt-27780-q38",
+      "moducbt-27781-q31",
+      "moducbt-27782-q38"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27774-q43"
+    ],
+    "sources": [
+      "nftc102",
+      "self-inspection-notice"
+    ],
+    "visuals": [
+      {
+        "file": "pitot-nozzle-position-v1.svg",
+        "caption": "피토관 입구가 봉상 물줄기를 마주 보도록 배치",
+        "alt": "직사형 노즐에서 D/2 떨어진 물줄기 중심에 피토관 입구 위치, 물의 흐름을 마주 보는 입구",
+        "height": 300
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "장비와 측정 위치",
+      "측정과 판정"
+    ],
+    "contentSha256": "999c9b7cf04b3df3060ce65eed51f2a53ca94024fc5667afa9d9f66fe5b168d9"
+  },
+  {
+    "chapterId": "FSM2-039",
+    "title": "습식 스프링클러 시험밸브함 점검",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/wet-sprinkler-test-valve.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+    "group": "소방시설 점검",
+    "order": 53,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q34",
+      "moducbt-27774-q31",
+      "moducbt-27775-q34",
+      "moducbt-27776-q28",
+      "moducbt-27777-q26",
+      "moducbt-27777-q30",
+      "moducbt-27779-q32",
+      "moducbt-27780-q30",
+      "moducbt-27782-q32"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc103"
+    ],
+    "visuals": [
+      {
+        "file": "wet-test-valve-branch-v1.svg",
+        "caption": "습식 2차측 말단에 시험밸브·방수구 연결",
+        "alt": "유수검지장치의 2차측 배관에서 말단 시험밸브와 시험용 방수구를 거쳐 배수, 폐쇄형 헤드 경로와 구별",
+        "height": 390
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "헤드 개방을 대신하는 시험",
+      "관찰하는 관계",
+      "시험 후 복구"
+    ],
+    "contentSha256": "b46bfa540ffe08eb49758e0eb79e289d86ec1db971deb6cd13f4f7026d448389"
+  },
+  {
+    "chapterId": "FSM2-040",
+    "title": "준비작동식 스프링클러와 교차회로 점검",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/preaction-cross-zone-test.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+    "group": "소방시설 점검",
+    "order": 54,
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q31",
+      "moducbt-27775-q38",
+      "moducbt-27776-q36",
+      "moducbt-27777-q32",
+      "moducbt-27778-q28",
+      "moducbt-27779-q28",
+      "moducbt-27780-q27",
+      "moducbt-27781-q35",
+      "moducbt-27781-q37",
+      "moducbt-27782-q26"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc103"
+    ],
+    "visuals": [
+      {
+        "file": "cross-zone-and-condition-v1.svg",
+        "caption": "서로 다른 감지회로가 함께 밸브 기동 조건을 만듦",
+        "alt": "감지회로 A와 B가 AND 조건으로 밸브를 기동, 방수에는 별도로 헤드 열 개방 필요",
+        "height": 305
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "밸브 기동과 헤드 방수를 분리",
+      "시험에서 보는 상태",
+      "복구"
+    ],
+    "contentSha256": "f29ebb93b7f923cd0b2a9ab248546f9772edd51703cf1f90d770617ec1c533c6"
+  },
+  {
+    "chapterId": "FSM2-042",
+    "title": "가스계 소화설비 점검 전 안전조치",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/gas-system-pretest-safety.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+    "group": "소방시설 점검",
+    "order": 55,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q27",
+      "moducbt-27773-q31",
+      "moducbt-27774-q27",
+      "moducbt-27775-q29",
+      "moducbt-27775-q33",
+      "moducbt-27776-q34",
+      "moducbt-27777-q37",
+      "moducbt-27778-q31",
+      "moducbt-27778-q37",
+      "moducbt-27779-q26",
+      "moducbt-27779-q29",
+      "moducbt-27780-q35",
+      "moducbt-27781-q36",
+      "moducbt-27781-q38",
+      "moducbt-27782-q28"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc106",
+      "self-inspection-notice"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "약제가 나오지 않도록 먼저 조치",
+      "안전조치 후 시험",
+      "위험한 선택지 제거"
+    ],
+    "contentSha256": "913ff82d7987814562a5a1cb38b0f1958e2d0df1eb60f91732473e60cd90668f"
+  },
+  {
+    "chapterId": "FSM2-047",
+    "title": "P형 수신기의 표시등·스위치·설치 기준",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/p-receiver-indicators-switches.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+    "group": "소방시설 점검",
+    "order": 56,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q39",
+      "moducbt-27774-q35",
+      "moducbt-27774-q39",
+      "moducbt-27775-q28",
+      "moducbt-27776-q35",
+      "moducbt-27776-q38",
+      "moducbt-27777-q31",
+      "moducbt-27777-q39",
+      "moducbt-27778-q27",
+      "moducbt-27779-q33",
+      "moducbt-27779-q36",
+      "moducbt-27780-q26",
+      "moducbt-27781-q26",
+      "moducbt-27781-q30",
+      "moducbt-27782-q29"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27773-q23",
+      "moducbt-27773-q26",
+      "moducbt-27773-q30",
+      "moducbt-27773-q33",
+      "moducbt-27773-q37",
+      "moducbt-27774-q23",
+      "moducbt-27774-q26",
+      "moducbt-27774-q29",
+      "moducbt-27774-q30",
+      "moducbt-27774-q32",
+      "moducbt-27774-q34",
+      "moducbt-27775-q32",
+      "moducbt-27775-q35",
+      "moducbt-27775-q36",
+      "moducbt-27776-q27",
+      "moducbt-27776-q29",
+      "moducbt-27776-q31",
+      "moducbt-27776-q33",
+      "moducbt-27777-q27",
+      "moducbt-27777-q36",
+      "moducbt-27777-q38",
+      "moducbt-27778-q29",
+      "moducbt-27778-q33",
+      "moducbt-27778-q34",
+      "moducbt-27778-q39",
+      "moducbt-27778-q43",
+      "moducbt-27779-q30",
+      "moducbt-27779-q34",
+      "moducbt-27779-q35",
+      "moducbt-27779-q38",
+      "moducbt-27780-q25",
+      "moducbt-27780-q29",
+      "moducbt-27780-q31",
+      "moducbt-27780-q32",
+      "moducbt-27780-q34",
+      "moducbt-27780-q36",
+      "moducbt-27781-q28",
+      "moducbt-27781-q39",
+      "moducbt-27781-q43",
+      "moducbt-27782-q31",
+      "moducbt-27782-q35",
+      "moducbt-27782-q36",
+      "moducbt-27782-q39",
+      "moducbt-27782-q43"
+    ],
+    "sources": [
+      "nftc203"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "표시와 정지 스위치를 구별",
+      "설치 위치"
+    ],
+    "contentSha256": "b056d00d4905239af0371dc999df5af87b54d05392a0cfcb09aa5ff69d76aaa3"
+  },
+  {
+    "chapterId": "FSM2-048",
+    "title": "수신기 회로도통시험",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/receiver-circuit-continuity-test.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+    "group": "소방시설 점검",
+    "order": 57,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q33",
+      "moducbt-27774-q30",
+      "moducbt-27774-q32",
+      "moducbt-27775-q35",
+      "moducbt-27776-q27",
+      "moducbt-27776-q29",
+      "moducbt-27777-q27",
+      "moducbt-27778-q29",
+      "moducbt-27778-q39",
+      "moducbt-27779-q30",
+      "moducbt-27779-q38",
+      "moducbt-27780-q36",
+      "moducbt-27781-q39",
+      "moducbt-27782-q31"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27777-q43",
+      "moducbt-27781-q43"
+    ],
+    "sources": [
+      "nftc203"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "회로 끝까지 이어지는지 확인",
+      "시험 순서",
+      "복구와 한계"
+    ],
+    "contentSha256": "4a70923763988e3690e201f3f50a3e676a80caf4740acebca38b5605d82eb270"
+  },
+  {
+    "chapterId": "FSM2-049",
+    "title": "수신기 예비전원 시험과 이상 표시",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/receiver-backup-power-test.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+    "group": "소방시설 점검",
+    "order": 58,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q26",
+      "moducbt-27773-q30",
+      "moducbt-27774-q26",
+      "moducbt-27774-q29",
+      "moducbt-27775-q32",
+      "moducbt-27776-q33",
+      "moducbt-27777-q36",
+      "moducbt-27777-q38",
+      "moducbt-27778-q33",
+      "moducbt-27779-q35",
+      "moducbt-27780-q29",
+      "moducbt-27780-q32",
+      "moducbt-27781-q28",
+      "moducbt-27782-q35",
+      "moducbt-27782-q36"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc203"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "예비전원 시험의 목적",
+      "판독 순서"
+    ],
+    "contentSha256": "5b46d89dc62c5ec17ddf487ebe1a1f31e4109b76e80f748dfd1c777f6cd23cb2"
+  },
+  {
+    "chapterId": "FSM2-050",
+    "title": "비화재보의 원인과 확인·복구",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/false-alarm-confirm-reset.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+    "group": "소방시설 점검",
+    "order": 59,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q23",
+      "moducbt-27773-q37",
+      "moducbt-27774-q23",
+      "moducbt-27774-q34",
+      "moducbt-27775-q36",
+      "moducbt-27776-q31",
+      "moducbt-27778-q34",
+      "moducbt-27779-q34",
+      "moducbt-27780-q25",
+      "moducbt-27780-q31",
+      "moducbt-27782-q39"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "nftc203"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "먼저 화재 여부 확인",
+      "발생 원인과 조치",
+      "정상 복구"
+    ],
+    "contentSha256": "0ba6b37a508d1465cf1d5bdf333b69d1412244df1a1668d833260ee1628c5a8b"
+  },
+  {
+    "chapterId": "FSM2-054",
+    "title": "소방계획서와 피난계획의 포함사항",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-emergency-plan-contents.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/",
+    "group": "계획·대응·기록",
+    "order": 60,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q41",
+      "moducbt-27774-q41",
+      "moducbt-27775-q41",
+      "moducbt-27777-q40",
+      "moducbt-27778-q40",
+      "moducbt-27779-q40",
+      "moducbt-27782-q41"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27775-q40",
+      "moducbt-27776-q41",
+      "moducbt-27777-q41",
+      "moducbt-27778-q41",
+      "moducbt-27780-q41",
+      "moducbt-27781-q40",
+      "moducbt-27782-q40"
+    ],
+    "sources": [
+      "prevention-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "소방계획서가 다루는 것",
+      "피난계획의 연결",
+      "피난계획에 들어갈 세부 항목"
+    ],
+    "contentSha256": "dca542083bca0a533c64a7f26cfda6bb7965fbde2868b21d6583cfa1e0bb7405"
+  },
+  {
+    "chapterId": "FSM2-070",
+    "title": "소방계획의 수립 절차",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-plan-development-process.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-plan-development-process/",
+    "group": "계획·대응·기록",
+    "order": 61,
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q40",
+      "moducbt-27776-q41",
+      "moducbt-27777-q41",
+      "moducbt-27778-q41",
+      "moducbt-27780-q41",
+      "moducbt-27781-q40",
+      "moducbt-27782-q40"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-decree"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "수립의 네 단계"
+    ],
+    "contentSha256": "c1041ed1f4b072fea18404fc10b55e0efa469a25f99262e06cd58d93436f5939"
+  },
+  {
+    "chapterId": "FSM2-055",
+    "title": "자위소방대 편성과 초기대응체계",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/self-fire-brigade-initial-response.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+    "group": "계획·대응·기록",
+    "order": 62,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q42",
+      "moducbt-27774-q42",
+      "moducbt-27775-q42",
+      "moducbt-27776-q42",
+      "moducbt-27777-q42",
+      "moducbt-27778-q42",
+      "moducbt-27779-q42",
+      "moducbt-27780-q42",
+      "moducbt-27781-q42",
+      "moducbt-27782-q42"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-rule",
+      "brigade-guidance"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 292개 전체 검사; FSM2-055 최종 보완 후 4조건 재검사"
+    },
+    "headings": [
+      "조직과 초기대응체계",
+      "공백을 줄이는 편성",
+      "규모에 따른 편성 유형",
+      "초기대응 인원과 점검"
+    ],
+    "contentSha256": "c0af780eb5cfc357080ee4fbece9b1929508142e4eba0bea86ff980ef50d3ba8"
+  },
+  {
+    "chapterId": "FSM2-056",
+    "title": "피난약자의 특성과 피난 보조",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/vulnerable-evacuees-assistance.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/vulnerable-evacuees-assistance/",
+    "group": "계획·대응·기록",
+    "order": 63,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q40",
+      "moducbt-27774-q40",
+      "moducbt-27776-q40",
+      "moducbt-27779-q41",
+      "moducbt-27780-q40",
+      "moducbt-27781-q41"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27774-q41"
+    ],
+    "sources": [
+      "prevention-decree",
+      "brigade-guidance"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 피난 보조 표 최종 구체화 후 4조건 재검사"
+    },
+    "headings": [
+      "특성이 필요한 지원을 결정",
+      "계획에 포함할 연결"
+    ],
+    "contentSha256": "38e6a7f0bd808cdb2d06caab5bed4222f2df3a5b289109fe7f6dfe3d190a92fa"
+  },
+  {
+    "chapterId": "FSM2-057",
+    "title": "점검표의 결과 표기와 불량 내용",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+    "group": "계획·대응·기록",
+    "order": 64,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q43",
+      "moducbt-27774-q43",
+      "moducbt-27775-q43",
+      "moducbt-27776-q43",
+      "moducbt-27777-q43",
+      "moducbt-27778-q43",
+      "moducbt-27779-q43",
+      "moducbt-27780-q43",
+      "moducbt-27781-q43",
+      "moducbt-27782-q43"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "self-inspection-notice"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "상태와 사실을 함께 기록",
+      "불량 내용을 쓰는 방법"
+    ],
+    "contentSha256": "65eadba2ef3d1974f6463c17048f775c620566826f89b207bb3d382082f3e2a2"
+  },
+  {
+    "chapterId": "FSM2-066",
+    "title": "소방안전관리 업무수행기록의 작성·유지",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/management-duty-records.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/management-duty-records/",
+    "group": "계획·대응·기록",
+    "order": 65,
+    "primarySourceQuestionIds": [
+      "moducbt-27776-q02"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-rule"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "작성과 보관",
+      "기록의 연결",
+      "이 기록의 법정 업무 범위"
+    ],
+    "contentSha256": "b4345299d8634b2ea09ded593ad8a189edc79e5c8960082f85fdaada73d31772"
+  },
+  {
+    "chapterId": "FSM2-063",
+    "title": "소방교육·훈련의 실시원칙",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-education-training-principles.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-education-training-principles/",
+    "group": "계획·대응·기록",
+    "order": 66,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q49",
+      "moducbt-27774-q49",
+      "moducbt-27775-q49",
+      "moducbt-27776-q49",
+      "moducbt-27777-q49",
+      "moducbt-27778-q49",
+      "moducbt-27779-q49",
+      "moducbt-27780-q49",
+      "moducbt-27781-q49",
+      "moducbt-27782-q49"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-law",
+      "prevention-rule"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "교육과 훈련의 목적",
+      "실시 원칙",
+      "결과 관리",
+      "교육 원칙을 사례에 대응"
+    ],
+    "contentSha256": "67e5b4d12bacf35f08b80d0c5315cfcf887f160c75a276c67de4295e33d858e0"
+  },
+  {
+    "chapterId": "FSM2-072",
+    "title": "소방훈련의 계획·실행·평가",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-drill-plan-execute-evaluate.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-drill-plan-execute-evaluate/",
+    "group": "계획·대응·기록",
+    "order": 67,
+    "primarySourceQuestionIds": [],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "prevention-rule"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "훈련은 평가까지 연결",
+      "실행 중 확인",
+      "평가를 개선으로 바꾸는 예"
+    ],
+    "contentSha256": "8c5049eb677cd852a96068d01b11fb56dbc5b323d0a47b7805aaa2dd7f964a46"
+  },
+  {
+    "chapterId": "FSM2-064",
+    "title": "화재 시 피난 행동과 대피 판단",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+    "group": "계획·대응·기록",
+    "order": 68,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q50",
+      "moducbt-27774-q50",
+      "moducbt-27775-q50",
+      "moducbt-27776-q50",
+      "moducbt-27778-q50",
+      "moducbt-27779-q50",
+      "moducbt-27780-q50",
+      "moducbt-27781-q50",
+      "moducbt-27782-q50"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "apartment-evacuation"
+    ],
+    "visuals": [
+      {
+        "file": "apartment-evacuation-decision-v1.svg",
+        "caption": "대피 경로가 막혔으면 무리한 진입 대신 구조 요청",
+        "alt": "불·연기와 경로 확인 → 대피 가능 → 안전 대피 → 대피 불가 → 안전 공간 → 문 닫기·119 구조 요청",
+        "height": 327
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "대피 경로가 안전한지 먼저 판단",
+      "이동 중 행동"
+    ],
+    "contentSha256": "723b6d9e3d3fa6d2c08d317fb2c98d80f4e9e4439984992a0f2205a35d3d7504"
+  },
+  {
+    "chapterId": "FSM2-073",
+    "title": "화재 발견·신고·초기대응",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-discovery-report-initial-action.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-discovery-report-initial-action/",
+    "group": "계획·대응·기록",
+    "order": 69,
+    "primarySourceQuestionIds": [
+      "moducbt-27777-q50"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "fire-law"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "발견 직후의 세 행동",
+      "초기소화의 조건",
+      "소방대에 인계"
+    ],
+    "contentSha256": "e3c0ee18c4d94d85182f480ffa977e9cb5667e735f7bdf162726e5f5a5a1e2f9"
+  },
+  {
+    "chapterId": "FSM2-058",
+    "title": "응급처치의 일반원칙과 환자 상태 판단",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/first-aid-assessment.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/",
+    "group": "응급처치",
+    "order": 70,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q44",
+      "moducbt-27773-q46",
+      "moducbt-27774-q44",
+      "moducbt-27775-q44",
+      "moducbt-27776-q44",
+      "moducbt-27777-q48",
+      "moducbt-27778-q48",
+      "moducbt-27779-q45",
+      "moducbt-27780-q46",
+      "moducbt-27781-q45",
+      "moducbt-27781-q48",
+      "moducbt-27782-q44"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "cpr2025"
+    ],
+    "visuals": [
+      {
+        "file": "first-aid-sequence-v1.svg",
+        "caption": "반응과 호흡 상태로 필요한 처치를 결정",
+        "alt": "현장 안전 → 반응 확인 → 119·AED 요청 → 호흡 확인·필요 처치",
+        "height": 327
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "현장 안전에서 시작",
+      "호흡이 있는 경우",
+      "반응이 있는 환자의 처치"
+    ],
+    "contentSha256": "c64954817d06656e048b5322406bfab9bd9628156770cd9641402ea914695dd2"
+  },
+  {
+    "chapterId": "FSM2-059",
+    "title": "성인 심폐소생술의 순서와 가슴압박",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/adult-cpr-compressions.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/adult-cpr-compressions/",
+    "group": "응급처치",
+    "order": 71,
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q47",
+      "moducbt-27774-q48",
+      "moducbt-27775-q48",
+      "moducbt-27776-q47",
+      "moducbt-27777-q44",
+      "moducbt-27778-q45",
+      "moducbt-27778-q47",
+      "moducbt-27779-q44",
+      "moducbt-27780-q44",
+      "moducbt-27780-q48",
+      "moducbt-27781-q47",
+      "moducbt-27782-q46"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "cpr2025"
+    ],
+    "visuals": [
+      {
+        "file": "cpr-compression-point-v1.svg",
+        "caption": "성인 가슴압박 위치는 흉골 아래쪽 절반",
+        "alt": "누운 성인의 앞가슴 개념도에 흉골 아래쪽 절반의 가슴압박 위치 표시, 실제 체형 비율과 술기 자세는 본문 적용",
+        "height": 320
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "심장정지 판단 후 즉시 압박",
+      "자세와 인공호흡"
+    ],
+    "contentSha256": "c7e6ee9b15d628b75bb59dc1e4b7a8030e7ddce1c2aafd709ec0114a7e773ba9"
+  },
+  {
+    "chapterId": "FSM2-060",
+    "title": "자동심장충격기의 패드와 사용 순서",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/aed-pads-use-sequence.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/aed-pads-use-sequence/",
+    "group": "응급처치",
+    "order": 72,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q45",
+      "moducbt-27774-q45",
+      "moducbt-27774-q46",
+      "moducbt-27775-q45",
+      "moducbt-27776-q48",
+      "moducbt-27777-q45",
+      "moducbt-27777-q47",
+      "moducbt-27778-q44",
+      "moducbt-27779-q46",
+      "moducbt-27780-q47",
+      "moducbt-27781-q44",
+      "moducbt-27782-q47"
+    ],
+    "secondarySourceQuestionIds": [
+      "moducbt-27775-q48"
+    ],
+    "sources": [
+      "cpr2025",
+      "aed-redcross"
+    ],
+    "visuals": [
+      {
+        "file": "aed-adult-pad-positions-v1.svg",
+        "caption": "오른쪽 위 가슴과 왼쪽 옆가슴에 패드 부착",
+        "alt": "성인 정면도에서 환자 오른쪽 쇄골 아래는 그림 왼쪽, 환자 왼쪽 겨드랑이 아래 옆가슴은 그림 오른쪽",
+        "height": 350
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "켜기부터 재압박까지",
+      "접촉을 끊는 두 시점"
+    ],
+    "contentSha256": "baaf6957890c991e0ddb3a6711d133b97ab903877abf986810142d0ec3c5ecb8"
+  },
+  {
+    "chapterId": "FSM2-061",
+    "title": "화상의 분류와 응급처치",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/burns-types-first-aid.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/burns-types-first-aid/",
+    "group": "응급처치",
+    "order": 73,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q47",
+      "moducbt-27775-q46",
+      "moducbt-27776-q45",
+      "moducbt-27778-q46",
+      "moducbt-27779-q47",
+      "moducbt-27780-q45",
+      "moducbt-27782-q45"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "burns"
+    ],
+    "visuals": [
+      {
+        "file": "burn-cooling-sequence-v1.svg",
+        "caption": "열원 분리 후 환부를 식히고 보호",
+        "alt": "안전한 곳으로 이동 → 시원한 물 20분 이상 → 장신구·붙지 않은 옷 제거 → 깨끗하게 덮고 진료",
+        "height": 327
+      }
+    ],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "깊이와 증상",
+      "열화상 응급처치",
+      "원인별 우선 조치"
+    ],
+    "contentSha256": "c88372f1405764e13069885485e78b6321e09fa55615535df830547657433eb9"
+  },
+  {
+    "chapterId": "FSM2-062",
+    "title": "출혈·쇼크의 증상과 응급처치",
+    "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/bleeding-shock-first-aid.md",
+    "route": "/fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/",
+    "group": "응급처치",
+    "order": 74,
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q48",
+      "moducbt-27775-q47",
+      "moducbt-27776-q46",
+      "moducbt-27777-q46",
+      "moducbt-27779-q48",
+      "moducbt-27781-q46",
+      "moducbt-27782-q48"
+    ],
+    "secondarySourceQuestionIds": [],
+    "sources": [
+      "cpr2025",
+      "bleeding"
+    ],
+    "visuals": [],
+    "review": {
+      "curriculumScope": "대조 완료",
+      "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
+      "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
+      "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
+      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+    },
+    "headings": [
+      "출혈은 직접 압박",
+      "쇼크의 증상과 자세"
+    ],
+    "contentSha256": "f0215060fdc5678cf00bbd2d656e37c7ff2732b3b70df286d23e76c50b0b54d7"
+  }
+]

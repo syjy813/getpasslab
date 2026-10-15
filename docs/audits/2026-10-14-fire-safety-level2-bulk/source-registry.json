@@ -1,0 +1,215 @@
+[
+  {
+    "key": "nftc203",
+    "title": "NFTC 203",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000275086&admRulId=83630&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "9240dade393fa6d0395d4b9a6be0401c4b7f03e32a11fdd6a5330fc998e6283c"
+  },
+  {
+    "key": "nftc109",
+    "title": "NFTC 109",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000275088&admRulId=83626&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "ee83e93b621b9f4b7237862614d4c6c004cf7dbc9313ba9f0afa5fe576aa929c"
+  },
+  {
+    "key": "nftc101",
+    "title": "NFTC 101",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000244810&admRulId=83614&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "23fb71b958f9423cb1e3d8329120141ffe48dc7ab570ccb235fc7da6a869f879"
+  },
+  {
+    "key": "nftc301",
+    "title": "NFTC 301",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000275090&admRulId=83634&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "0ee7f5108238a7bb971b358e5550a8887bba7be8b896b87afabb17ed757e2ef4"
+  },
+  {
+    "key": "nftc303",
+    "title": "NFTC 303",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000243378&admRulId=83636&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "84974b06fcf4483d95f5e436e1732a65890c1daba704693dbdcdee71aa4fd614"
+  },
+  {
+    "key": "nftc102",
+    "title": "NFTC 102",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000281772&admRulId=83615&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "511f95ae60ee78c5908777be374473627ccc32da073b1e82fe872e09d64e3e61"
+  },
+  {
+    "key": "prevention-decree",
+    "title": "화재예방법 시행령",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287389&efYd=20260701&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "3d3b098cf7af132605ab050dcbee77121c182365af06781db7ff85ce48dd4e89"
+  },
+  {
+    "key": "facilities-rule",
+    "title": "소방시설법 시행규칙",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287831&efYd=20260701&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "fb2a5528213e1de63b0bf08618bf17c7e87e19592b1ccc8f9d06ad679169462c"
+  },
+  {
+    "key": "cpr2025",
+    "title": "2025 한국 심폐소생술 지침",
+    "url": "https://www.kdca.go.kr/injury/biz/injury/recsroom/ruleNdManual/ruleNdManualView.do?no=213",
+    "checkedAt": "2026-10-14",
+    "sha256": "9dee00585391802a0bcb50194dae144ee08130c20bc3308d8622cbe8d06c44e9"
+  },
+  {
+    "key": "prevention-law",
+    "title": "화재예방법",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=283705&efYd=20260227&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "f5760d4cf37aa5dd7a356087ef8c9fe9e368c03a11897be2ee869c0696c89cc5"
+  },
+  {
+    "key": "facilities-decree",
+    "title": "소방시설법 시행령",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=290451&efYd=20261002&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "eb5bccffeb2d124bc3ab4b79b97d0ed20db81c57dc0f74dc90b1cfd50feabf70"
+  },
+  {
+    "key": "facilities-law",
+    "title": "소방시설법",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=236977&efYd=20241201&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "172b84358e49d9ff0be35a703dd35001f66b088b4ce10978d4b32bfaacccb3e3"
+  },
+  {
+    "key": "prevention-rule",
+    "title": "화재예방법 시행규칙",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287849&efYd=20260701&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "0c7ddfbe58808a2867071b035fcd4c0d47d398443a5c3a7d8f5976f631944b83"
+  },
+  {
+    "key": "danger-decree",
+    "title": "위험물안전관리법 시행령",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287381&efYd=20260701&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "949e9b9b2c9e2d369405fe1ebbd8917495f1043a942e8d52c296028a6843fdb3"
+  },
+  {
+    "key": "fire-law",
+    "title": "소방기본법",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=286459&efYd=20260903&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "b86320d084f7df53bb23e1460176cb7036abe9240f67e51549cd58f2f7882a85"
+  },
+  {
+    "key": "danger-law",
+    "title": "위험물안전관리법",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=259933&efYd=20250807&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "516789b232be180ebb2a355d220f9e20c11ac949ce02c1048bddab93f3c96214"
+  },
+  {
+    "key": "building-decree",
+    "title": "건축법 시행령",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=290833&efYd=20261006&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "4c076f5337aaaed8267f2272a728be3b960044cbbc773f1b481df09c8cc6c2e2"
+  },
+  {
+    "key": "self-inspection-notice",
+    "title": "소방시설 자체점검 고시",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000216342&admRulId=31146&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "8fb9f8e3e81876134a1a05158eea0f6c20d7e249ebffa0d901a4e0601291e9eb"
+  },
+  {
+    "key": "nftc106",
+    "title": "NFTC 106",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000243916&admRulId=83622&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "d9c1a334eb63846f62cddafd98f06969b82ce3a69a8f67504db31b8ceb547d45"
+  },
+  {
+    "key": "nftc103",
+    "title": "NFTC 103",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000281674&admRulId=83616&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "fa9b8e641b33503f14e4edf5cfa8e606728bf8c773bf17f0339f10324b4984e1"
+  },
+  {
+    "key": "burns",
+    "title": "질병관리청 화상 안내",
+    "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6584",
+    "checkedAt": "2026-10-14",
+    "sha256": null
+  },
+  {
+    "key": "bleeding",
+    "title": "적십자 출혈·지혈대 안내",
+    "url": "https://www.redcross.org/take-a-class/resources/articles/how-to-apply-a-tourniquet",
+    "checkedAt": "2026-10-14",
+    "sha256": null
+  },
+  {
+    "key": "apartment-evacuation",
+    "title": "소방본부 아파트 피난 안내",
+    "url": "https://js119.gwd.go.kr/cc119/service/service_guide/service_guide_form?articleSeq=11108183",
+    "checkedAt": "2026-10-14",
+    "sha256": null
+  },
+  {
+    "key": "product-quality-rule",
+    "title": "소방용품 품질관리 규칙",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287833&efYd=20260701&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-14",
+    "sha256": "fbb29c85573ae635a8e1a965d75044f8445a34432a5a4c61e3214085107f8ca7"
+  },
+  {
+    "key": "aed-redcross",
+    "title": "적십자 AED 사용 안내",
+    "url": "https://www.redcross.org/take-a-class/aed/using-an-aed/aed-steps",
+    "checkedAt": "2026-10-14"
+  },
+  {
+    "key": "nftc206",
+    "title": "가스누설경보기 NFTC206",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000216264&admRulId=83633&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "1bbd2b4a0df5101684c8b673be98e9739122dae1bcf74ba44b04a16a0fa203e2"
+  },
+  {
+    "key": "extinguisher-approval",
+    "title": "소화기 형식승인 기준",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000268792&admRulId=36997&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "checkedAt": "2026-10-14",
+    "sha256": "496b9826ad5b868e2012e2e08b6bfcaadf02731e1dc61a443af955f895796c2f"
+  },
+  {
+    "key": "unep-halons",
+    "title": "UNEP 몬트리올 의정서 할론 규제",
+    "url": "https://ozone.unep.org/treaties/montreal-protocol/summary-control-measures-under-montreal-protocol",
+    "checkedAt": "2026-10-14"
+  },
+  {
+    "key": "building-fire-rule",
+    "title": "건축물방화구조규칙 제14조",
+    "url": "https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=291033&efYd=20261006&efYn=Y&nwJoYnInfo=Y&chrClsCd=010202&ancYnChk=0",
+    "checkedAt": "2026-10-15",
+    "sha256": "c564bd2738894e5e8261429cb4a7d8557b1a0e218ae48ccc282c79cc09a5aa3b"
+  },
+  {
+    "key": "brigade-guidance",
+    "title": "공식 소방계획서 작성매뉴얼 · 자위소방대 편성",
+    "url": "https://fire.gwd.go.kr/egf/bp/board/article/download?fileSeq=1212218",
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "key": "heat-detector-patent",
+    "title": "KR20010094062A · 감열실·다이어프램·리크 작동 원리",
+    "url": "https://patents.google.com/patent/KR20010094062A/ko",
+    "checkedAt": "2026-10-15"
+  }
+]

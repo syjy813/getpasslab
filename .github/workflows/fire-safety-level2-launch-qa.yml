@@ -9,6 +9,7 @@ on:
       - 'scripts/check-hanging-scaffold-wire-rope.mjs'
       - 'scripts/check-historical-practice-guard.mjs'
       - 'docs/audits/2026-10-14-fire-safety-level2-launch/**'
+      - 'docs/audits/2026-10-14-fire-safety-level2-bulk/**'
       - '.github/workflows/fire-safety-level2-launch-qa.yml'
   push:
     branches: [main]
@@ -36,6 +37,10 @@ jobs:
           for check in scripts/check-*.mjs; do node "$check"; done
       - name: Prepare browser tooling
         run: |
+          mkdir -p "$HOME/.local/share/fonts"
+          curl -fsSL 'https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf' -o "$HOME/.local/share/fonts/NotoSansKR.ttf"
+          echo '194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252  '"$HOME/.local/share/fonts/NotoSansKR.ttf" | sha256sum -c -
+          fc-cache -f "$HOME/.local/share/fonts"
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
           /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: New certification navigation, image zoom and existing question popups
@@ -53,9 +58,23 @@ jobs:
           done
           curl -fsS "$QA_BASE_URL/" > /dev/null
           node scripts/qa-fire-safety-level2-launch.cjs
+      - name: All 73 new chapters and 32 technical SVGs at four viewport widths
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: http://127.0.0.1:4321
+          QA_OUTPUT_DIR: qa-results/fire-safety-level2-bulk
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-fire-bulk-preview.log 2>&1 &
+          qa_bulk_pid=$!
+          trap 'kill "$qa_bulk_pid" 2>/dev/null || true' EXIT
+          for qa_attempt in $(seq 1 30); do
+            if curl -fsS "$QA_BASE_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa-fire-safety-level2-bulk.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: fire-safety-level2-launch-qa
-          path: qa-results/fire-safety-level2/
+          path: qa-results/fire-safety-level2*/
           retention-days: 14

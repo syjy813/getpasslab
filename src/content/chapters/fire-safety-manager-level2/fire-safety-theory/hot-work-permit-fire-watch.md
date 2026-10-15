@@ -1,0 +1,42 @@
+---
+chapter_id: "FSM2-021"
+title: "화기작업 허가와 화재감시자"
+slug: "hot-work-permit-fire-watch"
+cert_id: "fire-safety-manager-level2"
+exam: "written"
+subject_id: 1
+group: "연소·위험물·화기"
+tags: ["절차"]
+summary: "용접·용단 작업의 사전 조치·허가·감시·작업 후 확인을 구별함"
+questions: []
+related: []
+order: 24
+priority: "출시 필수"
+status: "완료"
+---
+
+<link rel="stylesheet" href="/styles/fire-bulk-visual.css">
+
+## 허가에서 감시까지
+용접·용단 등 화기작업은 **작업 허가 → 주변 가연물 확인·제거 → 차단·소화 준비 → 작업 중 감시 → 작업 후 잔불 확인**으로 연결
+
+벽·바닥의 구멍과 틈을 통해 불티가 아래층·반대편으로 이동할 수 있으므로 작업 지점만 살피지 않음
+
+## 화재감시자의 역할
+- 불티가 닿을 수 있는 범위와 인접 구역 확인
+- 가연물·가스·증기 위험 및 소화기 위치 확인
+- 화재 징후를 감시하고 즉시 경보·작업 중지·초기대응
+- 작업 종료 후 훈소·잔불 확인
+
+작업자는 작업에 집중하며, 화재감시자는 별도로 위험을 감시하는 역할임 · 화재감시자 배치를 작업자의 보호구 착용으로 대체하지 않음
+
+## 허가서의 판단 항목
+작업 장소·내용·시간, 작업자·감시자, 위험요인, 예방 조치, 비상 연락과 승인 확인 · 가연물 제거가 불가능하면 불티 차단 등 대체 방호조치가 필요
+
+## 작업 종료 후 감시
+
+용접·용단 작업장 주변 반경 **5m 이내 소화기**, **10m 이내 가연물 적치 금지** · 제거가 곤란하면 방화포 등 방호조치 · 산업안전보건법 제38조 적용 사업장은 해당 법정 기준 적용
+
+작업 종료를 통보한 뒤에도 **30분 이상 작업구역에 상주하여 감시**하는 관리감독 절차 확인 · 예: 15:30 종료 → 최소 16:00까지 감시 · 허가서는 작업구역에 게시하고 종료 뒤 잔불 확인·허가서 회수로 연결
+
+<p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=283705&amp;efYd=20260227&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">화재예방법</a> · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287389&amp;efYd=20260701&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">화재예방법 시행령</a> · 2026-10-14 확인</p>

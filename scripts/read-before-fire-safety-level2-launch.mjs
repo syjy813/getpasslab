@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile as actualReadFile, readdir as actualReaddir } from 'node:fs/promises';
+import { readFile as actualReadFile, readdir as actualReaddir } from './read-before-fire-safety-level2-bulk.mjs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 
