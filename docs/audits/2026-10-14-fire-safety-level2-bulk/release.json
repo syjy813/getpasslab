@@ -286,7 +286,7 @@
     },
     {
       "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/vulnerable-evacuees-assistance.md",
-      "sha256": "2fec0e4ae5c74bc62dde028916e388e4bb87cf7bc25d1529994c77de88456bbe"
+      "sha256": "38e6a7f0bd808cdb2d06caab5bed4222f2df3a5b289109fe7f6dfe3d190a92fa"
     },
     {
       "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/gas-system-pretest-safety.md",
@@ -513,7 +513,7 @@
     "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/index.html": "1bee9b935e2dda9571b6fbbbeb1d8f75e627663118c3114e1a422f44696d3bfb",
     "dist/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/index.html": "328071006a83452eefddb993bbf93a093874fc70742f235dd7c0f18f60bad31e",
     "dist/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/index.html": "4d057b70ec5f42ab7637e732957e91008671841d7e16e9a5b9e9cc4f2b22bbd6",
-    "dist/fire-safety-manager-level2/written/fire-safety-practice/vulnerable-evacuees-assistance/index.html": "7e814a761f66d8391e18cb8f273ae04bf770d20b07de377845ff6055acce86ec",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/vulnerable-evacuees-assistance/index.html": "47f61ffdfc23e3eb311cf231e9c9ae90bd6d08a91b62964ab315f07a64d6c003",
     "dist/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/index.html": "aec48d98bd227a70e7694bd872209b4dacc72833cbe371c3f6efc35715b6f35b",
     "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-education-training-principles/index.html": "a3782554a41ca4d5e1f45b2a635c38016441f618dd2e1e07556023954b847053",
     "dist/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/index.html": "7ed225f315bc4109810de18fc5dfcc32b87cf718a8f8942fdfd24fd2e70ee166",

@@ -2458,7 +2458,8 @@
       "moducbt-27774-q41"
     ],
     "sources": [
-      "prevention-decree"
+      "prevention-decree",
+      "brigade-guidance"
     ],
     "visuals": [],
     "review": {
@@ -2466,13 +2467,13 @@
       "currentNumericConditions": "법령·기술기준·주어진 학습자료의 조건 대조 · 2026-10-14 기준",
       "sourceAnswerIndependence": "복원 정답을 공식 확정답안으로 취급하지 않음",
       "bodyStructure": "판별·계산·절차 설명 및 혼동 조건 확인",
-      "browser": "PASS · 320/390/768/1440px · 경로·넘침·탐색·이미지·확대/위치/포커스 복원"
+      "browser": "PASS · 320/390/768/1440px · 피난 보조 표 최종 구체화 후 4조건 재검사"
     },
     "headings": [
       "특성이 필요한 지원을 결정",
       "계획에 포함할 연결"
     ],
-    "contentSha256": "2fec0e4ae5c74bc62dde028916e388e4bb87cf7bc25d1529994c77de88456bbe"
+    "contentSha256": "38e6a7f0bd808cdb2d06caab5bed4222f2df3a5b289109fe7f6dfe3d190a92fa"
   },
   {
     "chapterId": "FSM2-057",

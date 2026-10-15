@@ -1,5 +1,5 @@
 {
-  "completedAt": "2026-10-15T11:51:51.390479+00:00",
+  "completedAt": "2026-10-15T11:54:54.608090+00:00",
   "build": {
     "command": "npm run build",
     "result": "PASS",
@@ -186,12 +186,6 @@
       "imageZoomCases": 128,
       "report": "browser-results-local.json"
     },
-    "finalTextAmendment": {
-      "chapter": "FSM2-055",
-      "result": "PASS",
-      "cases": 4,
-      "report": "browser-results-final-055.json"
-    },
     "existingRegression": {
       "result": "PASS",
       "report": "browser-results-regression.json"
@@ -206,6 +200,20 @@
       "FSM2-043-320",
       "FSM2-043-1440",
       "FSM2-034-390"
+    ],
+    "finalTextAmendments": [
+      {
+        "chapter": "FSM2-055",
+        "result": "PASS",
+        "cases": 4,
+        "report": "browser-results-final-055.json"
+      },
+      {
+        "chapter": "FSM2-056",
+        "result": "PASS",
+        "cases": 4,
+        "report": "browser-results-final-056.json"
+      }
     ]
   },
   "preservation": {
@@ -229,5 +237,11 @@
     "No physical iOS/Android or Safari testing",
     "Restored source answers are not independently verified official answer keys",
     "No learner performance study"
+  ],
+  "finalAmendmentChecks": [
+    "npm run build · 544 pages",
+    "check-fire-safety-level2-bulk.mjs · PASS",
+    "check-public-content.mjs · PASS",
+    "check-fire-bulk-history-guard.mjs · 11 cases PASS"
   ]
 }

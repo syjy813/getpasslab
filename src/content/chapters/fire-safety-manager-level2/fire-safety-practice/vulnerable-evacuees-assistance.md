@@ -18,7 +18,7 @@ status: "완료"
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
 ## 특성이 필요한 지원을 결정
-<div class="sample-table-scroll" tabindex="0" role="region" aria-label="특성이 필요한 지원을 결정 표"><table><thead><tr><th>특성</th><th>필요한 지원의 방향</th></tr></thead><tbody><tr><td>이동 곤란</td><td>보조 인력·기구·이동 경로 확보</td></tr><tr><td>시각 정보 인지 곤란</td><td>음성·접촉 안내 · 장애물 설명</td></tr><tr><td>청각 정보 인지 곤란</td><td>시각·직접 전달 · 경보 인지 확인</td></tr><tr><td>이해·판단 곤란</td><td>짧고 분명한 안내 · 반복 확인</td></tr><tr><td>영유아·고령자</td><td>이동 속도·보호자·인원 확인 고려</td></tr></tbody></table></div>
+<div class="sample-table-scroll" tabindex="0" role="region" aria-label="특성이 필요한 지원을 결정 표"><table><thead><tr><th>특성</th><th>필요한 지원의 방향</th></tr></thead><tbody><tr><td>이동 곤란</td><td>2명 이상이 한 조로 보조 · 장애 정도에 맞는 기구 활용 · 계단·경사로 균형 확인</td></tr><tr><td>시각 정보 인지 곤란</td><td>지팡이 사용 유지 · 보조자의 팔·어깨를 잡고 함께 이동 · 방향·거리·계단·문턱을 구체적으로 안내</td></tr><tr><td>청각 정보 인지 곤란</td><td>표정·몸짓·손전등·메모로 전달 · 목소리만 크게 하는 방법과 구별</td></tr><tr><td>이해·판단 곤란</td><td>차분하고 느린 어조로 도움을 주러 왔음을 먼저 알림 · 짧고 분명하게 안내</td></tr><tr><td>영유아·고령자</td><td>이동 속도·보호자·인원 확인 · 고령자의 지병 등 필요한 정보를 구조대에 인계</td></tr></tbody></table></div>
 
 피난약자를 한 종류로 묶어 동일한 방법을 적용하지 않음 · 실제 이동·의사소통 능력에 맞춰 지원
 

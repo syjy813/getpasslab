@@ -40,6 +40,6 @@
 
 ## 실제 검증 증거
 
-최종 Build·전체 `scripts/check-*.mjs`·브라우저 결과는 `validation.json`, `browser-results-local.json`을 참조. 신규73×4화면(292조건) 검사 후 자위소방대 FSM2-055의 마지막 문구 보완을 4조건으로 재검사함. `browser-results-final-055.json`에 최종 결과 보존. 신규73×4화면의 이미지 파일·오버플로·확대·복원, 과목 목록74개와 SVG 라벨 경계 검사. 기존 스프링클러·문제 팝업은 기존 회귀 스크립트로 확인
+최종 Build·전체 `scripts/check-*.mjs`·브라우저 결과는 `validation.json`, `browser-results-local.json`을 참조. 신규73×4화면(292조건) 검사 후 자위소방대 FSM2-055와 피난약자 보조 FSM2-056의 마지막 문구 보완을 각 4조건으로 재검사함. `browser-results-final-055.json`, `browser-results-final-056.json`에 최종 결과 보존. 신규73×4화면의 이미지 파일·오버플로·확대·복원, 과목 목록74개와 SVG 라벨 경계 검사. 기존 스프링클러·문제 팝업은 기존 회귀 스크립트로 확인
 
 실물 iOS/Android·Safari·실제 학습자 정답률은 검증하지 않음. Commit·Push·PR·CI와 Merge·Deploy·Production은 서로 별개 단계이며 실제 PR/워크플로 기록으로 확인
