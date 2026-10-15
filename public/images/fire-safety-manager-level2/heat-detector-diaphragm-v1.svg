@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="330" viewBox="0 0 320 330" role="img" aria-labelledby="title desc">
+<title id="title">차동식 스포트형 감지기의 작동 개념</title>
+<desc id="desc">급격한 온도 상승으로 감열실 공기가 팽창하여 위쪽의 막을 밀고 고정 접점에 닿는 상태. 오른쪽의 리크구멍은 완만한 온도 변화 때 압력을 평형시키는 통로</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#1769AA"/></marker></defs>
+<rect width="320" height="330" fill="#fff"/>
+<g font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" fill="#25334B">
+<path d="M40 140 Q160 44 280 140 V265 H40Z" fill="#F7F9FC" stroke="#526176" stroke-width="3"/>
+<path d="M40 140 Q160 44 280 140" fill="none" stroke="#1769AA" stroke-width="4"/>
+<path d="M160 50V88" stroke="#526176" stroke-width="4"/>
+<circle cx="160" cy="92" r="5" fill="#526176"/>
+<text x="160" y="32" text-anchor="middle">접점</text>
+<text x="279" y="92" text-anchor="middle">막</text>
+<path d="M278 99L265 124" stroke="#526176" stroke-width="2" fill="none"/>
+<path d="M160 199V145" stroke="#1769AA" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="160" y="244" text-anchor="middle">감열실·공기</text>
+<path d="M279 210H311" stroke="#fff" stroke-width="12"/>
+<path d="M280 204H311 M280 216H311" stroke="#526176" stroke-width="3"/>
+<path d="M295 221V278" stroke="#526176" stroke-width="2"/>
+<text x="247" y="308" text-anchor="middle">리크구멍</text>
+</g></svg>

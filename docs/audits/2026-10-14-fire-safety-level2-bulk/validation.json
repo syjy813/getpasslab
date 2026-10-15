@@ -1,0 +1,233 @@
+{
+  "completedAt": "2026-10-15T11:51:51.390479+00:00",
+  "build": {
+    "command": "npm run build",
+    "result": "PASS",
+    "pages": 544
+  },
+  "checks": [
+    {
+      "script": "scripts/check-accident-analysis-figures.mjs",
+      "exitCode": 0,
+      "seconds": 0.24
+    },
+    {
+      "script": "scripts/check-chapter-formula-style.mjs",
+      "exitCode": 0,
+      "seconds": 2.19
+    },
+    {
+      "script": "scripts/check-clam-shell-chapter.mjs",
+      "exitCode": 0,
+      "seconds": 1.49
+    },
+    {
+      "script": "scripts/check-color-contrast.mjs",
+      "exitCode": 0,
+      "seconds": 0.11
+    },
+    {
+      "script": "scripts/check-computer-literacy-001-081.mjs",
+      "exitCode": 0,
+      "seconds": 0.76
+    },
+    {
+      "script": "scripts/check-computer-literacy-082-159.mjs",
+      "exitCode": 0,
+      "seconds": 0.66
+    },
+    {
+      "script": "scripts/check-computer-literacy-c1.mjs",
+      "exitCode": 0,
+      "seconds": 0.16
+    },
+    {
+      "script": "scripts/check-computer-literacy-publication.mjs",
+      "exitCode": 0,
+      "seconds": 0.12
+    },
+    {
+      "script": "scripts/check-deferred-question-content.mjs",
+      "exitCode": 0,
+      "seconds": 0.55
+    },
+    {
+      "script": "scripts/check-earth-retaining-structure.mjs",
+      "exitCode": 0,
+      "seconds": 0.79
+    },
+    {
+      "script": "scripts/check-excavator-operation-safety.mjs",
+      "exitCode": 0,
+      "seconds": 1.5
+    },
+    {
+      "script": "scripts/check-fire-bulk-history-guard.mjs",
+      "exitCode": 0,
+      "seconds": 2.0
+    },
+    {
+      "script": "scripts/check-fire-launch-history-guard.mjs",
+      "exitCode": 0,
+      "seconds": 1.26
+    },
+    {
+      "script": "scripts/check-fire-safety-level2-bulk.mjs",
+      "exitCode": 0,
+      "seconds": 0.83
+    },
+    {
+      "script": "scripts/check-fire-safety-level2-launch.mjs",
+      "exitCode": 0,
+      "seconds": 1.04
+    },
+    {
+      "script": "scripts/check-formwork-lateral-pressure.mjs",
+      "exitCode": 0,
+      "seconds": 1.22
+    },
+    {
+      "script": "scripts/check-fta-original-options.mjs",
+      "exitCode": 0,
+      "seconds": 1.62
+    },
+    {
+      "script": "scripts/check-fta-symbols-split.mjs",
+      "exitCode": 0,
+      "seconds": 0.26
+    },
+    {
+      "script": "scripts/check-hanging-scaffold-wire-rope.mjs",
+      "exitCode": 0,
+      "seconds": 1.21
+    },
+    {
+      "script": "scripts/check-historical-practice-guard.mjs",
+      "exitCode": 0,
+      "seconds": 1.36
+    },
+    {
+      "script": "scripts/check-industrial-20190804-review.mjs",
+      "exitCode": 0,
+      "seconds": 1.63
+    },
+    {
+      "script": "scripts/check-industrial-question-source-repair.mjs",
+      "exitCode": 0,
+      "seconds": 1.38
+    },
+    {
+      "script": "scripts/check-industrial-remaining-review.mjs",
+      "exitCode": 0,
+      "seconds": 1.01
+    },
+    {
+      "script": "scripts/check-industrial-remaining-splits.mjs",
+      "exitCode": 0,
+      "seconds": 1.5
+    },
+    {
+      "script": "scripts/check-industrial-safety-chapter-splits.mjs",
+      "exitCode": 0,
+      "seconds": 1.04
+    },
+    {
+      "script": "scripts/check-industrial-safety-machine-tools-split.mjs",
+      "exitCode": 0,
+      "seconds": 1.24
+    },
+    {
+      "script": "scripts/check-industrial-unassigned-links.mjs",
+      "exitCode": 0,
+      "seconds": 2.47
+    },
+    {
+      "script": "scripts/check-instant-practice-coverage.mjs",
+      "exitCode": 0,
+      "seconds": 0.87
+    },
+    {
+      "script": "scripts/check-instant-practice-datasets.mjs",
+      "exitCode": 0,
+      "seconds": 0.23
+    },
+    {
+      "script": "scripts/check-instant-practice-pilot.mjs",
+      "exitCode": 0,
+      "seconds": 0.15
+    },
+    {
+      "script": "scripts/check-port-cargo-passages.mjs",
+      "exitCode": 0,
+      "seconds": 3.42
+    },
+    {
+      "script": "scripts/check-public-content.mjs",
+      "exitCode": 0,
+      "seconds": 4.22
+    },
+    {
+      "script": "scripts/check-seo.mjs",
+      "exitCode": 0,
+      "seconds": 1.12
+    }
+  ],
+  "browser": {
+    "allChapters": {
+      "result": "PASS",
+      "chapters": 73,
+      "widths": [
+        320,
+        390,
+        768,
+        1440
+      ],
+      "cases": 292,
+      "imageZoomCases": 128,
+      "report": "browser-results-local.json"
+    },
+    "finalTextAmendment": {
+      "chapter": "FSM2-055",
+      "result": "PASS",
+      "cases": 4,
+      "report": "browser-results-final-055.json"
+    },
+    "existingRegression": {
+      "result": "PASS",
+      "report": "browser-results-regression.json"
+    },
+    "engine": "Chromium 131 · Playwright 1.62.1",
+    "font": {
+      "name": "Noto Sans KR",
+      "sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+      "qaOnly": true
+    },
+    "manualVisualReview": [
+      "FSM2-043-320",
+      "FSM2-043-1440",
+      "FSM2-034-390"
+    ]
+  },
+  "preservation": {
+    "baselineSourceAssets": 736,
+    "unchangedPriorArticles": 450,
+    "existingSprinklerAuthoredBody": "exactly preserved; 6 automatic related links added",
+    "canonicalQuestionCount": 3621,
+    "canonicalChanges": 0
+  },
+  "newSourceAssets": 107,
+  "sourceChanges": 110,
+  "newChapters": 73,
+  "newSvgCount": 32,
+  "totalFireChapters": 74,
+  "deployment": {
+    "merged": false,
+    "productionDeployed": false,
+    "approvalRequiredBy": "AGENTS.md Git / 배포 경계"
+  },
+  "limitations": [
+    "No physical iOS/Android or Safari testing",
+    "Restored source answers are not independently verified official answer keys",
+    "No learner performance study"
+  ]
+}

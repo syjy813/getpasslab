@@ -1,0 +1,43 @@
+{
+  "plannedTotal": 74,
+  "existingChapterId": "FSM2-037",
+  "newChapters": 73,
+  "subjects": {
+    "1": 49,
+    "2": 25
+  },
+  "groups": {
+    "제도·법령": 12,
+    "건축·방화·피난": 4,
+    "연소·위험물·화기": 14,
+    "소방시설 구조·기준": 19,
+    "소방시설 점검": 10,
+    "계획·대응·기록": 10,
+    "응급처치": 5
+  },
+  "sourceQuestions": 500,
+  "newSvgCount": 32,
+  "requiredImageChaptersCovered": true,
+  "sourceFiles": [
+    {
+      "name": "소방안전관리자 2급 시험/소방안전관리자 2급 요약 정리 1(1).pdf",
+      "sha256": "016387b8d1336afb15101421906bea8bfa9dff27d914f98eeb0c040c807f04f1"
+    },
+    {
+      "name": "소방안전관리자 2급 시험/소방안전관리자 2급 요약 정리 2(1).pdf",
+      "sha256": "000ec43b0d18248901c7ebd28105c3de43a6c6f6fc850158a8057b7e67aad9be"
+    },
+    {
+      "name": "(Web) GetPassLab/GetPassLab-fire-level2-source-analysis-2026-10-12.zip",
+      "sha256": "36a15d805fa9ad96cb94d079914e86fa68ed8c15f5965505e7eeb39fb8154462"
+    },
+    {
+      "name": "(Web) GetPassLab/GetPassLab-fire-level2-chapter-plan-2026-10-12.zip",
+      "sha256": "344d299a52c957697e88727b66c44b1b79f62b17295fef4a7a5daf6e2b7c4220"
+    },
+    {
+      "name": "(Web) GetPassLab/소방안전관리자 2급 기출 복원.pdf",
+      "sha256": "0c142a0c6f90488ca2e3af394c47fd347f843c83ad1d4af53428ebf1862e5bb2"
+    }
+  ]
+}

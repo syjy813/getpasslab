@@ -10,7 +10,7 @@ tags: [개념]
 summary: 습식·건식·준비작동식·일제살수식의 배관 상태와 방수 조건
 questions: []
 related: []
-order: 37
+order: 40
 priority: 출시 필수
 status: 완료
 ---

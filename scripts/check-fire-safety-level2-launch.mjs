@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFile, readdir} from 'node:fs/promises';
+import {readFile, readdir} from './read-before-fire-safety-level2-bulk.mjs';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 const audit = 'docs/audits/2026-10-14-fire-safety-level2-launch';

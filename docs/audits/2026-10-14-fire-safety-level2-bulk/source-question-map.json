@@ -1,0 +1,6401 @@
+{
+  "source": "사용자 제공 모두CBT 복원 모의고사 500문항 · 공식 기출 아님",
+  "actualExamDateVerified": false,
+  "publicQuestionImport": false,
+  "independentOfficialAnswerVerification": false,
+  "purpose": "집필 범위·단서의 연결 추적 · 원문과 수록 정답 보존 · 공개 재게시 없음",
+  "mapping": [
+    {
+      "sourceQuestionId": "moducbt-27773-q01",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 1,
+      "displayedAnswer": 3,
+      "questionStartPage": 1,
+      "answerMarkerPage": 1,
+      "primaryChapter": "FSM2-004",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q02",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 2,
+      "displayedAnswer": 1,
+      "questionStartPage": 2,
+      "answerMarkerPage": 2,
+      "primaryChapter": "FSM2-005",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q03",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 3,
+      "displayedAnswer": 2,
+      "questionStartPage": 2,
+      "answerMarkerPage": 2,
+      "primaryChapter": "FSM2-001",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q04",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 4,
+      "displayedAnswer": 4,
+      "questionStartPage": 3,
+      "answerMarkerPage": 3,
+      "primaryChapter": "FSM2-008",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q05",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 5,
+      "displayedAnswer": 3,
+      "questionStartPage": 3,
+      "answerMarkerPage": 3,
+      "primaryChapter": "FSM2-011",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q06",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 6,
+      "displayedAnswer": 3,
+      "questionStartPage": 4,
+      "answerMarkerPage": 4,
+      "primaryChapter": "FSM2-009",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q07",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 7,
+      "displayedAnswer": 2,
+      "questionStartPage": 5,
+      "answerMarkerPage": 5,
+      "primaryChapter": "FSM2-012",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q08",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 8,
+      "displayedAnswer": 3,
+      "questionStartPage": 5,
+      "answerMarkerPage": 5,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q09",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 9,
+      "displayedAnswer": 2,
+      "questionStartPage": 6,
+      "answerMarkerPage": 6,
+      "primaryChapter": "FSM2-017",
+      "secondaryChapters": [
+        "FSM2-068"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q10",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 10,
+      "displayedAnswer": 1,
+      "questionStartPage": 6,
+      "answerMarkerPage": 6,
+      "primaryChapter": "FSM2-016",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q11",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 11,
+      "displayedAnswer": 3,
+      "questionStartPage": 7,
+      "answerMarkerPage": 7,
+      "primaryChapter": "FSM2-018",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q12",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 12,
+      "displayedAnswer": 2,
+      "questionStartPage": 8,
+      "answerMarkerPage": 8,
+      "primaryChapter": "FSM2-021",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q13",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 13,
+      "displayedAnswer": 3,
+      "questionStartPage": 9,
+      "answerMarkerPage": 9,
+      "primaryChapter": "FSM2-024",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q14",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 14,
+      "displayedAnswer": 4,
+      "questionStartPage": 10,
+      "answerMarkerPage": 10,
+      "primaryChapter": "FSM2-025",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q15",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 15,
+      "displayedAnswer": 4,
+      "questionStartPage": 11,
+      "answerMarkerPage": 11,
+      "primaryChapter": "FSM2-014",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q16",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 16,
+      "displayedAnswer": 1,
+      "questionStartPage": 12,
+      "answerMarkerPage": 12,
+      "primaryChapter": "FSM2-013",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q17",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 17,
+      "displayedAnswer": 2,
+      "questionStartPage": 12,
+      "answerMarkerPage": 12,
+      "primaryChapter": "FSM2-027",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q18",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 18,
+      "displayedAnswer": 1,
+      "questionStartPage": 13,
+      "answerMarkerPage": 13,
+      "primaryChapter": "FSM2-026",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q19",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 19,
+      "displayedAnswer": 4,
+      "questionStartPage": 14,
+      "answerMarkerPage": 14,
+      "primaryChapter": "FSM2-032",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q20",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 20,
+      "displayedAnswer": 3,
+      "questionStartPage": 15,
+      "answerMarkerPage": 15,
+      "primaryChapter": "FSM2-045",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q21",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 21,
+      "displayedAnswer": 4,
+      "questionStartPage": 16,
+      "answerMarkerPage": 16,
+      "primaryChapter": "FSM2-071",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q22",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 22,
+      "displayedAnswer": 4,
+      "questionStartPage": 17,
+      "answerMarkerPage": 17,
+      "primaryChapter": "FSM2-032",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q23",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 23,
+      "displayedAnswer": 1,
+      "questionStartPage": 18,
+      "answerMarkerPage": 18,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q24",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 24,
+      "displayedAnswer": 1,
+      "questionStartPage": 19,
+      "answerMarkerPage": 19,
+      "primaryChapter": "FSM2-028",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q25",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 25,
+      "displayedAnswer": 4,
+      "questionStartPage": 19,
+      "answerMarkerPage": 19,
+      "primaryChapter": "FSM2-043",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q26",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 26,
+      "displayedAnswer": 3,
+      "questionStartPage": 20,
+      "answerMarkerPage": 20,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q27",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 27,
+      "displayedAnswer": 2,
+      "questionStartPage": 21,
+      "answerMarkerPage": 21,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요",
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q28",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 28,
+      "displayedAnswer": 4,
+      "questionStartPage": 22,
+      "answerMarkerPage": 22,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q29",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 29,
+      "displayedAnswer": 3,
+      "questionStartPage": 23,
+      "answerMarkerPage": 23,
+      "primaryChapter": "FSM2-035",
+      "secondaryChapters": [
+        "FSM2-033"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q30",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 30,
+      "displayedAnswer": 1,
+      "questionStartPage": 24,
+      "answerMarkerPage": 24,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q31",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 31,
+      "displayedAnswer": 4,
+      "questionStartPage": 24,
+      "answerMarkerPage": 24,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요",
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q32",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 32,
+      "displayedAnswer": 2,
+      "questionStartPage": 25,
+      "answerMarkerPage": 25,
+      "primaryChapter": "FSM2-035",
+      "secondaryChapters": [
+        "FSM2-033"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q33",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 33,
+      "displayedAnswer": 3,
+      "questionStartPage": 26,
+      "answerMarkerPage": 26,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q34",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 34,
+      "displayedAnswer": 4,
+      "questionStartPage": 27,
+      "answerMarkerPage": 27,
+      "primaryChapter": "FSM2-039",
+      "secondaryChapters": [
+        "FSM2-037"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q35",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 35,
+      "displayedAnswer": 2,
+      "questionStartPage": 28,
+      "answerMarkerPage": 28,
+      "primaryChapter": "FSM2-046",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q36",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 36,
+      "displayedAnswer": 3,
+      "questionStartPage": 29,
+      "answerMarkerPage": 29,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q37",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 37,
+      "displayedAnswer": 1,
+      "questionStartPage": 29,
+      "answerMarkerPage": 29,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q38",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 38,
+      "displayedAnswer": 2,
+      "questionStartPage": 30,
+      "answerMarkerPage": 30,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q39",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 39,
+      "displayedAnswer": 4,
+      "questionStartPage": 31,
+      "answerMarkerPage": 31,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q40",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 40,
+      "displayedAnswer": 3,
+      "questionStartPage": 32,
+      "answerMarkerPage": 32,
+      "primaryChapter": "FSM2-056",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q41",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 41,
+      "displayedAnswer": 4,
+      "questionStartPage": 33,
+      "answerMarkerPage": 33,
+      "primaryChapter": "FSM2-054",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q42",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 42,
+      "displayedAnswer": 1,
+      "questionStartPage": 33,
+      "answerMarkerPage": 33,
+      "primaryChapter": "FSM2-055",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q43",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 43,
+      "displayedAnswer": 2,
+      "questionStartPage": 34,
+      "answerMarkerPage": 34,
+      "primaryChapter": "FSM2-057",
+      "secondaryChapters": [
+        "FSM2-030",
+        "FSM2-071"
+      ],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q44",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 44,
+      "displayedAnswer": 1,
+      "questionStartPage": 35,
+      "answerMarkerPage": 35,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q45",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 45,
+      "displayedAnswer": 3,
+      "questionStartPage": 36,
+      "answerMarkerPage": 36,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q46",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 46,
+      "displayedAnswer": 3,
+      "questionStartPage": 36,
+      "answerMarkerPage": 36,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q47",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 47,
+      "displayedAnswer": 2,
+      "questionStartPage": 37,
+      "answerMarkerPage": 37,
+      "primaryChapter": "FSM2-061",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q48",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 48,
+      "displayedAnswer": 1,
+      "questionStartPage": 37,
+      "answerMarkerPage": 37,
+      "primaryChapter": "FSM2-062",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q49",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 49,
+      "displayedAnswer": 4,
+      "questionStartPage": 38,
+      "answerMarkerPage": 38,
+      "primaryChapter": "FSM2-063",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27773-q50",
+      "sourceSetLabel": "2026-3",
+      "questionNumber": 50,
+      "displayedAnswer": 1,
+      "questionStartPage": 38,
+      "answerMarkerPage": 38,
+      "primaryChapter": "FSM2-064",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "OCR 원문·단위 대조 필요"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q01",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 1,
+      "displayedAnswer": 3,
+      "questionStartPage": 39,
+      "answerMarkerPage": 39,
+      "primaryChapter": "FSM2-069",
+      "secondaryChapters": [
+        "FSM2-004"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q02",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 2,
+      "displayedAnswer": 4,
+      "questionStartPage": 40,
+      "answerMarkerPage": 40,
+      "primaryChapter": "FSM2-005",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q03",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 3,
+      "displayedAnswer": 1,
+      "questionStartPage": 40,
+      "answerMarkerPage": 40,
+      "primaryChapter": "FSM2-002",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q04",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 4,
+      "displayedAnswer": 4,
+      "questionStartPage": 41,
+      "answerMarkerPage": 41,
+      "primaryChapter": "FSM2-008",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q05",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 5,
+      "displayedAnswer": 2,
+      "questionStartPage": 41,
+      "answerMarkerPage": 41,
+      "primaryChapter": "FSM2-007",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q06",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 6,
+      "displayedAnswer": 2,
+      "questionStartPage": 42,
+      "answerMarkerPage": 42,
+      "primaryChapter": "FSM2-009",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q07",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 7,
+      "displayedAnswer": 4,
+      "questionStartPage": 42,
+      "answerMarkerPage": 42,
+      "primaryChapter": "FSM2-008",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q08",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 8,
+      "displayedAnswer": 3,
+      "questionStartPage": 43,
+      "answerMarkerPage": 43,
+      "primaryChapter": "FSM2-010",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q09",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 9,
+      "displayedAnswer": 2,
+      "questionStartPage": 43,
+      "answerMarkerPage": 43,
+      "primaryChapter": "FSM2-067",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q10",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 10,
+      "displayedAnswer": 1,
+      "questionStartPage": 44,
+      "answerMarkerPage": 44,
+      "primaryChapter": "FSM2-028",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q11",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 11,
+      "displayedAnswer": 1,
+      "questionStartPage": 44,
+      "answerMarkerPage": 44,
+      "primaryChapter": "FSM2-019",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q12",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 12,
+      "displayedAnswer": 4,
+      "questionStartPage": 45,
+      "answerMarkerPage": 45,
+      "primaryChapter": "FSM2-021",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q13",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 13,
+      "displayedAnswer": 2,
+      "questionStartPage": 45,
+      "answerMarkerPage": 45,
+      "primaryChapter": "FSM2-024",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q14",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 14,
+      "displayedAnswer": 4,
+      "questionStartPage": 46,
+      "answerMarkerPage": 46,
+      "primaryChapter": "FSM2-022",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q15",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 15,
+      "displayedAnswer": 3,
+      "questionStartPage": 47,
+      "answerMarkerPage": 47,
+      "primaryChapter": "FSM2-013",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q16",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 16,
+      "displayedAnswer": 1,
+      "questionStartPage": 48,
+      "answerMarkerPage": 48,
+      "primaryChapter": "FSM2-015",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q17",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 17,
+      "displayedAnswer": 1,
+      "questionStartPage": 48,
+      "answerMarkerPage": 48,
+      "primaryChapter": "FSM2-071",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q18",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 18,
+      "displayedAnswer": 4,
+      "questionStartPage": 49,
+      "answerMarkerPage": 49,
+      "primaryChapter": "FSM2-029",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q19",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 19,
+      "displayedAnswer": 2,
+      "questionStartPage": 49,
+      "answerMarkerPage": 49,
+      "primaryChapter": "FSM2-032",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q20",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 20,
+      "displayedAnswer": 3,
+      "questionStartPage": 50,
+      "answerMarkerPage": 50,
+      "primaryChapter": "FSM2-051",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q21",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 21,
+      "displayedAnswer": 3,
+      "questionStartPage": 50,
+      "answerMarkerPage": 50,
+      "primaryChapter": "FSM2-052",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q22",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 22,
+      "displayedAnswer": 2,
+      "questionStartPage": 51,
+      "answerMarkerPage": 51,
+      "primaryChapter": "FSM2-044",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q23",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 23,
+      "displayedAnswer": 4,
+      "questionStartPage": 52,
+      "answerMarkerPage": 52,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q24",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 24,
+      "displayedAnswer": 1,
+      "questionStartPage": 53,
+      "answerMarkerPage": 53,
+      "primaryChapter": "FSM2-030",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q25",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 25,
+      "displayedAnswer": 2,
+      "questionStartPage": 54,
+      "answerMarkerPage": 54,
+      "primaryChapter": "FSM2-041",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q26",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 26,
+      "displayedAnswer": 2,
+      "questionStartPage": 55,
+      "answerMarkerPage": 55,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q27",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 27,
+      "displayedAnswer": 1,
+      "questionStartPage": 56,
+      "answerMarkerPage": 56,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q28",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 28,
+      "displayedAnswer": 2,
+      "questionStartPage": 57,
+      "answerMarkerPage": 57,
+      "primaryChapter": "FSM2-035",
+      "secondaryChapters": [
+        "FSM2-033"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q29",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 29,
+      "displayedAnswer": 1,
+      "questionStartPage": 58,
+      "answerMarkerPage": 58,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q30",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 30,
+      "displayedAnswer": 1,
+      "questionStartPage": 59,
+      "answerMarkerPage": 59,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q31",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 31,
+      "displayedAnswer": 3,
+      "questionStartPage": 60,
+      "answerMarkerPage": 60,
+      "primaryChapter": "FSM2-039",
+      "secondaryChapters": [
+        "FSM2-037"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q32",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 32,
+      "displayedAnswer": 4,
+      "questionStartPage": 61,
+      "answerMarkerPage": 61,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q33",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 33,
+      "displayedAnswer": 3,
+      "questionStartPage": 62,
+      "answerMarkerPage": 62,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q34",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 34,
+      "displayedAnswer": 4,
+      "questionStartPage": 63,
+      "answerMarkerPage": 63,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q35",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 35,
+      "displayedAnswer": 2,
+      "questionStartPage": 64,
+      "answerMarkerPage": 64,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q36",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 36,
+      "displayedAnswer": 1,
+      "questionStartPage": 65,
+      "answerMarkerPage": 65,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q37",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 37,
+      "displayedAnswer": 4,
+      "questionStartPage": 66,
+      "answerMarkerPage": 68,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q38",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 38,
+      "displayedAnswer": 3,
+      "questionStartPage": 68,
+      "answerMarkerPage": 68,
+      "primaryChapter": "FSM2-037",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q39",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 39,
+      "displayedAnswer": 1,
+      "questionStartPage": 69,
+      "answerMarkerPage": 69,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q40",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 40,
+      "displayedAnswer": 2,
+      "questionStartPage": 70,
+      "answerMarkerPage": 70,
+      "primaryChapter": "FSM2-056",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q41",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 41,
+      "displayedAnswer": 3,
+      "questionStartPage": 71,
+      "answerMarkerPage": 71,
+      "primaryChapter": "FSM2-054",
+      "secondaryChapters": [
+        "FSM2-056"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q42",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 42,
+      "displayedAnswer": 4,
+      "questionStartPage": 72,
+      "answerMarkerPage": 72,
+      "primaryChapter": "FSM2-055",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q43",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 43,
+      "displayedAnswer": 3,
+      "questionStartPage": 73,
+      "answerMarkerPage": 73,
+      "primaryChapter": "FSM2-057",
+      "secondaryChapters": [
+        "FSM2-031",
+        "FSM2-036"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q44",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 44,
+      "displayedAnswer": 3,
+      "questionStartPage": 74,
+      "answerMarkerPage": 74,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q45",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 45,
+      "displayedAnswer": 2,
+      "questionStartPage": 75,
+      "answerMarkerPage": 75,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q46",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 46,
+      "displayedAnswer": 1,
+      "questionStartPage": 76,
+      "answerMarkerPage": 77,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q47",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 47,
+      "displayedAnswer": 4,
+      "questionStartPage": 78,
+      "answerMarkerPage": 78,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q48",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 48,
+      "displayedAnswer": 2,
+      "questionStartPage": 79,
+      "answerMarkerPage": 79,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q49",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 49,
+      "displayedAnswer": 4,
+      "questionStartPage": 80,
+      "answerMarkerPage": 80,
+      "primaryChapter": "FSM2-063",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27774-q50",
+      "sourceSetLabel": "2026-2",
+      "questionNumber": 50,
+      "displayedAnswer": 3,
+      "questionStartPage": 81,
+      "answerMarkerPage": 81,
+      "primaryChapter": "FSM2-064",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q01",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 1,
+      "displayedAnswer": 3,
+      "questionStartPage": 82,
+      "answerMarkerPage": 82,
+      "primaryChapter": "FSM2-002",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q02",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 2,
+      "displayedAnswer": 1,
+      "questionStartPage": 83,
+      "answerMarkerPage": 83,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [
+        "FSM2-005"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q03",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 3,
+      "displayedAnswer": 2,
+      "questionStartPage": 83,
+      "answerMarkerPage": 83,
+      "primaryChapter": "FSM2-003",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q04",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 4,
+      "displayedAnswer": 1,
+      "questionStartPage": 84,
+      "answerMarkerPage": 84,
+      "primaryChapter": "FSM2-009",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q05",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 5,
+      "displayedAnswer": 2,
+      "questionStartPage": 84,
+      "answerMarkerPage": 84,
+      "primaryChapter": "FSM2-007",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q06",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 6,
+      "displayedAnswer": 4,
+      "questionStartPage": 85,
+      "answerMarkerPage": 85,
+      "primaryChapter": "FSM2-009",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q07",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 7,
+      "displayedAnswer": 3,
+      "questionStartPage": 85,
+      "answerMarkerPage": 85,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q08",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 8,
+      "displayedAnswer": 1,
+      "questionStartPage": 86,
+      "answerMarkerPage": 86,
+      "primaryChapter": "FSM2-012",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q09",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 9,
+      "displayedAnswer": 2,
+      "questionStartPage": 86,
+      "answerMarkerPage": 86,
+      "primaryChapter": "FSM2-016",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q10",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 10,
+      "displayedAnswer": 3,
+      "questionStartPage": 87,
+      "answerMarkerPage": 87,
+      "primaryChapter": "FSM2-020",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q11",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 11,
+      "displayedAnswer": 1,
+      "questionStartPage": 87,
+      "answerMarkerPage": 87,
+      "primaryChapter": "FSM2-068",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q12",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 12,
+      "displayedAnswer": 3,
+      "questionStartPage": 88,
+      "answerMarkerPage": 88,
+      "primaryChapter": "FSM2-021",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q13",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 13,
+      "displayedAnswer": 4,
+      "questionStartPage": 88,
+      "answerMarkerPage": 88,
+      "primaryChapter": "FSM2-022",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q14",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 14,
+      "displayedAnswer": 2,
+      "questionStartPage": 89,
+      "answerMarkerPage": 89,
+      "primaryChapter": "FSM2-023",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q15",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 15,
+      "displayedAnswer": 2,
+      "questionStartPage": 90,
+      "answerMarkerPage": 90,
+      "primaryChapter": "FSM2-013",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q16",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 16,
+      "displayedAnswer": 3,
+      "questionStartPage": 91,
+      "answerMarkerPage": 91,
+      "primaryChapter": "FSM2-014",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q17",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 17,
+      "displayedAnswer": 4,
+      "questionStartPage": 92,
+      "answerMarkerPage": 92,
+      "primaryChapter": "FSM2-051",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q18",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 18,
+      "displayedAnswer": 4,
+      "questionStartPage": 93,
+      "answerMarkerPage": 93,
+      "primaryChapter": "FSM2-031",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q19",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 19,
+      "displayedAnswer": 4,
+      "questionStartPage": 93,
+      "answerMarkerPage": 93,
+      "primaryChapter": "FSM2-026",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q20",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 20,
+      "displayedAnswer": 1,
+      "questionStartPage": 94,
+      "answerMarkerPage": 94,
+      "primaryChapter": "FSM2-038",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q21",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 21,
+      "displayedAnswer": 1,
+      "questionStartPage": 95,
+      "answerMarkerPage": 95,
+      "primaryChapter": "FSM2-029",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q22",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 22,
+      "displayedAnswer": 3,
+      "questionStartPage": 95,
+      "answerMarkerPage": 95,
+      "primaryChapter": "FSM2-026",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q23",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 23,
+      "displayedAnswer": 2,
+      "questionStartPage": 96,
+      "answerMarkerPage": 96,
+      "primaryChapter": "FSM2-037",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q24",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 24,
+      "displayedAnswer": 3,
+      "questionStartPage": 97,
+      "answerMarkerPage": 97,
+      "primaryChapter": "FSM2-041",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q25",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 25,
+      "displayedAnswer": 1,
+      "questionStartPage": 98,
+      "answerMarkerPage": 98,
+      "primaryChapter": "FSM2-033",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q26",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 26,
+      "displayedAnswer": 1,
+      "questionStartPage": 99,
+      "answerMarkerPage": 99,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q27",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 27,
+      "displayedAnswer": 3,
+      "questionStartPage": 100,
+      "answerMarkerPage": 100,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q28",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 28,
+      "displayedAnswer": 2,
+      "questionStartPage": 101,
+      "answerMarkerPage": 101,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q29",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 29,
+      "displayedAnswer": 4,
+      "questionStartPage": 102,
+      "answerMarkerPage": 102,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q30",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 30,
+      "displayedAnswer": 1,
+      "questionStartPage": 103,
+      "answerMarkerPage": 103,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q31",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 31,
+      "displayedAnswer": 3,
+      "questionStartPage": 104,
+      "answerMarkerPage": 104,
+      "primaryChapter": "FSM2-040",
+      "secondaryChapters": [
+        "FSM2-037",
+        "FSM2-043"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q32",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 32,
+      "displayedAnswer": 2,
+      "questionStartPage": 105,
+      "answerMarkerPage": 105,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q33",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 33,
+      "displayedAnswer": 2,
+      "questionStartPage": 106,
+      "answerMarkerPage": 106,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q34",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 34,
+      "displayedAnswer": 3,
+      "questionStartPage": 107,
+      "answerMarkerPage": 107,
+      "primaryChapter": "FSM2-039",
+      "secondaryChapters": [
+        "FSM2-037"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q35",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 35,
+      "displayedAnswer": 1,
+      "questionStartPage": 108,
+      "answerMarkerPage": 108,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q36",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 36,
+      "displayedAnswer": 3,
+      "questionStartPage": 109,
+      "answerMarkerPage": 109,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q37",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 37,
+      "displayedAnswer": 2,
+      "questionStartPage": 110,
+      "answerMarkerPage": 111,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q38",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 38,
+      "displayedAnswer": 1,
+      "questionStartPage": 112,
+      "answerMarkerPage": 112,
+      "primaryChapter": "FSM2-040",
+      "secondaryChapters": [
+        "FSM2-037",
+        "FSM2-043"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q39",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 39,
+      "displayedAnswer": 2,
+      "questionStartPage": 113,
+      "answerMarkerPage": 113,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q40",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 40,
+      "displayedAnswer": 4,
+      "questionStartPage": 114,
+      "answerMarkerPage": 114,
+      "primaryChapter": "FSM2-070",
+      "secondaryChapters": [
+        "FSM2-054"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q41",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 41,
+      "displayedAnswer": 3,
+      "questionStartPage": 115,
+      "answerMarkerPage": 115,
+      "primaryChapter": "FSM2-054",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q42",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 42,
+      "displayedAnswer": 3,
+      "questionStartPage": 116,
+      "answerMarkerPage": 116,
+      "primaryChapter": "FSM2-055",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q43",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 43,
+      "displayedAnswer": 4,
+      "questionStartPage": 117,
+      "answerMarkerPage": 117,
+      "primaryChapter": "FSM2-057",
+      "secondaryChapters": [
+        "FSM2-030",
+        "FSM2-071"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q44",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 44,
+      "displayedAnswer": 2,
+      "questionStartPage": 119,
+      "answerMarkerPage": 119,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q45",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 45,
+      "displayedAnswer": 1,
+      "questionStartPage": 120,
+      "answerMarkerPage": 120,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q46",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 46,
+      "displayedAnswer": 4,
+      "questionStartPage": 121,
+      "answerMarkerPage": 121,
+      "primaryChapter": "FSM2-061",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q47",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 47,
+      "displayedAnswer": 2,
+      "questionStartPage": 122,
+      "answerMarkerPage": 122,
+      "primaryChapter": "FSM2-062",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q48",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 48,
+      "displayedAnswer": 1,
+      "questionStartPage": 123,
+      "answerMarkerPage": 123,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [
+        "FSM2-060"
+      ],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q49",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 49,
+      "displayedAnswer": 4,
+      "questionStartPage": 124,
+      "answerMarkerPage": 124,
+      "primaryChapter": "FSM2-063",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27775-q50",
+      "sourceSetLabel": "2026-1",
+      "questionNumber": 50,
+      "displayedAnswer": 4,
+      "questionStartPage": 124,
+      "answerMarkerPage": 124,
+      "primaryChapter": "FSM2-064",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q01",
+      "sourceSetLabel": "2025",
+      "questionNumber": 1,
+      "displayedAnswer": 1,
+      "questionStartPage": 125,
+      "answerMarkerPage": 125,
+      "primaryChapter": "FSM2-002",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q02",
+      "sourceSetLabel": "2025",
+      "questionNumber": 2,
+      "displayedAnswer": 4,
+      "questionStartPage": 126,
+      "answerMarkerPage": 126,
+      "primaryChapter": "FSM2-066",
+      "secondaryChapters": [
+        "FSM2-004"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q03",
+      "sourceSetLabel": "2025",
+      "questionNumber": 3,
+      "displayedAnswer": 2,
+      "questionStartPage": 126,
+      "answerMarkerPage": 126,
+      "primaryChapter": "FSM2-003",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q04",
+      "sourceSetLabel": "2025",
+      "questionNumber": 4,
+      "displayedAnswer": 4,
+      "questionStartPage": 127,
+      "answerMarkerPage": 127,
+      "primaryChapter": "FSM2-007",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q05",
+      "sourceSetLabel": "2025",
+      "questionNumber": 5,
+      "displayedAnswer": 2,
+      "questionStartPage": 127,
+      "answerMarkerPage": 127,
+      "primaryChapter": "FSM2-008",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q06",
+      "sourceSetLabel": "2025",
+      "questionNumber": 6,
+      "displayedAnswer": 3,
+      "questionStartPage": 128,
+      "answerMarkerPage": 128,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q07",
+      "sourceSetLabel": "2025",
+      "questionNumber": 7,
+      "displayedAnswer": 1,
+      "questionStartPage": 128,
+      "answerMarkerPage": 128,
+      "primaryChapter": "FSM2-012",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q08",
+      "sourceSetLabel": "2025",
+      "questionNumber": 8,
+      "displayedAnswer": 2,
+      "questionStartPage": 129,
+      "answerMarkerPage": 129,
+      "primaryChapter": "FSM2-007",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q09",
+      "sourceSetLabel": "2025",
+      "questionNumber": 9,
+      "displayedAnswer": 1,
+      "questionStartPage": 129,
+      "answerMarkerPage": 129,
+      "primaryChapter": "FSM2-020",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q10",
+      "sourceSetLabel": "2025",
+      "questionNumber": 10,
+      "displayedAnswer": 4,
+      "questionStartPage": 130,
+      "answerMarkerPage": 130,
+      "primaryChapter": "FSM2-018",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q11",
+      "sourceSetLabel": "2025",
+      "questionNumber": 11,
+      "displayedAnswer": 1,
+      "questionStartPage": 130,
+      "answerMarkerPage": 130,
+      "primaryChapter": "FSM2-020",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q12",
+      "sourceSetLabel": "2025",
+      "questionNumber": 12,
+      "displayedAnswer": 4,
+      "questionStartPage": 131,
+      "answerMarkerPage": 131,
+      "primaryChapter": "FSM2-021",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q13",
+      "sourceSetLabel": "2025",
+      "questionNumber": 13,
+      "displayedAnswer": 3,
+      "questionStartPage": 132,
+      "answerMarkerPage": 132,
+      "primaryChapter": "FSM2-025",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q14",
+      "sourceSetLabel": "2025",
+      "questionNumber": 14,
+      "displayedAnswer": 2,
+      "questionStartPage": 132,
+      "answerMarkerPage": 132,
+      "primaryChapter": "FSM2-022",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q15",
+      "sourceSetLabel": "2025",
+      "questionNumber": 15,
+      "displayedAnswer": 2,
+      "questionStartPage": 133,
+      "answerMarkerPage": 133,
+      "primaryChapter": "FSM2-014",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q16",
+      "sourceSetLabel": "2025",
+      "questionNumber": 16,
+      "displayedAnswer": 4,
+      "questionStartPage": 134,
+      "answerMarkerPage": 134,
+      "primaryChapter": "FSM2-053",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q17",
+      "sourceSetLabel": "2025",
+      "questionNumber": 17,
+      "displayedAnswer": 4,
+      "questionStartPage": 134,
+      "answerMarkerPage": 134,
+      "primaryChapter": "FSM2-045",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q18",
+      "sourceSetLabel": "2025",
+      "questionNumber": 18,
+      "displayedAnswer": 2,
+      "questionStartPage": 135,
+      "answerMarkerPage": 135,
+      "primaryChapter": "FSM2-031",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q19",
+      "sourceSetLabel": "2025",
+      "questionNumber": 19,
+      "displayedAnswer": 4,
+      "questionStartPage": 135,
+      "answerMarkerPage": 135,
+      "primaryChapter": "FSM2-026",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q20",
+      "sourceSetLabel": "2025",
+      "questionNumber": 20,
+      "displayedAnswer": 3,
+      "questionStartPage": 136,
+      "answerMarkerPage": 136,
+      "primaryChapter": "FSM2-051",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q21",
+      "sourceSetLabel": "2025",
+      "questionNumber": 21,
+      "displayedAnswer": 3,
+      "questionStartPage": 136,
+      "answerMarkerPage": 136,
+      "primaryChapter": "FSM2-052",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q22",
+      "sourceSetLabel": "2025",
+      "questionNumber": 22,
+      "displayedAnswer": 1,
+      "questionStartPage": 137,
+      "answerMarkerPage": 137,
+      "primaryChapter": "FSM2-029",
+      "secondaryChapters": [
+        "FSM2-027"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q23",
+      "sourceSetLabel": "2025",
+      "questionNumber": 23,
+      "displayedAnswer": 4,
+      "questionStartPage": 137,
+      "answerMarkerPage": 137,
+      "primaryChapter": "FSM2-037",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q24",
+      "sourceSetLabel": "2025",
+      "questionNumber": 24,
+      "displayedAnswer": 1,
+      "questionStartPage": 138,
+      "answerMarkerPage": 138,
+      "primaryChapter": "FSM2-043",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q25",
+      "sourceSetLabel": "2025",
+      "questionNumber": 25,
+      "displayedAnswer": 3,
+      "questionStartPage": 139,
+      "answerMarkerPage": 139,
+      "primaryChapter": "FSM2-046",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q26",
+      "sourceSetLabel": "2025",
+      "questionNumber": 26,
+      "displayedAnswer": 3,
+      "questionStartPage": 140,
+      "answerMarkerPage": 140,
+      "primaryChapter": "FSM2-033",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q27",
+      "sourceSetLabel": "2025",
+      "questionNumber": 27,
+      "displayedAnswer": 2,
+      "questionStartPage": 141,
+      "answerMarkerPage": 141,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q28",
+      "sourceSetLabel": "2025",
+      "questionNumber": 28,
+      "displayedAnswer": 4,
+      "questionStartPage": 143,
+      "answerMarkerPage": 143,
+      "primaryChapter": "FSM2-039",
+      "secondaryChapters": [
+        "FSM2-037"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q29",
+      "sourceSetLabel": "2025",
+      "questionNumber": 29,
+      "displayedAnswer": 3,
+      "questionStartPage": 144,
+      "answerMarkerPage": 144,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q30",
+      "sourceSetLabel": "2025",
+      "questionNumber": 30,
+      "displayedAnswer": 1,
+      "questionStartPage": 145,
+      "answerMarkerPage": 145,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q31",
+      "sourceSetLabel": "2025",
+      "questionNumber": 31,
+      "displayedAnswer": 1,
+      "questionStartPage": 146,
+      "answerMarkerPage": 146,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q32",
+      "sourceSetLabel": "2025",
+      "questionNumber": 32,
+      "displayedAnswer": 4,
+      "questionStartPage": 147,
+      "answerMarkerPage": 147,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q33",
+      "sourceSetLabel": "2025",
+      "questionNumber": 33,
+      "displayedAnswer": 3,
+      "questionStartPage": 148,
+      "answerMarkerPage": 148,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q34",
+      "sourceSetLabel": "2025",
+      "questionNumber": 34,
+      "displayedAnswer": 2,
+      "questionStartPage": 149,
+      "answerMarkerPage": 149,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q35",
+      "sourceSetLabel": "2025",
+      "questionNumber": 35,
+      "displayedAnswer": 3,
+      "questionStartPage": 150,
+      "answerMarkerPage": 150,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q36",
+      "sourceSetLabel": "2025",
+      "questionNumber": 36,
+      "displayedAnswer": 4,
+      "questionStartPage": 151,
+      "answerMarkerPage": 151,
+      "primaryChapter": "FSM2-040",
+      "secondaryChapters": [
+        "FSM2-037",
+        "FSM2-043"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q37",
+      "sourceSetLabel": "2025",
+      "questionNumber": 37,
+      "displayedAnswer": 2,
+      "questionStartPage": 152,
+      "answerMarkerPage": 152,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q38",
+      "sourceSetLabel": "2025",
+      "questionNumber": 38,
+      "displayedAnswer": 1,
+      "questionStartPage": 153,
+      "answerMarkerPage": 153,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q39",
+      "sourceSetLabel": "2025",
+      "questionNumber": 39,
+      "displayedAnswer": 2,
+      "questionStartPage": 154,
+      "answerMarkerPage": 154,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q40",
+      "sourceSetLabel": "2025",
+      "questionNumber": 40,
+      "displayedAnswer": 3,
+      "questionStartPage": 155,
+      "answerMarkerPage": 155,
+      "primaryChapter": "FSM2-056",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q41",
+      "sourceSetLabel": "2025",
+      "questionNumber": 41,
+      "displayedAnswer": 1,
+      "questionStartPage": 156,
+      "answerMarkerPage": 156,
+      "primaryChapter": "FSM2-070",
+      "secondaryChapters": [
+        "FSM2-054"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q42",
+      "sourceSetLabel": "2025",
+      "questionNumber": 42,
+      "displayedAnswer": 4,
+      "questionStartPage": 157,
+      "answerMarkerPage": 157,
+      "primaryChapter": "FSM2-055",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q43",
+      "sourceSetLabel": "2025",
+      "questionNumber": 43,
+      "displayedAnswer": 4,
+      "questionStartPage": 158,
+      "answerMarkerPage": 158,
+      "primaryChapter": "FSM2-057",
+      "secondaryChapters": [
+        "FSM2-030",
+        "FSM2-071"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q44",
+      "sourceSetLabel": "2025",
+      "questionNumber": 44,
+      "displayedAnswer": 3,
+      "questionStartPage": 159,
+      "answerMarkerPage": 159,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q45",
+      "sourceSetLabel": "2025",
+      "questionNumber": 45,
+      "displayedAnswer": 2,
+      "questionStartPage": 160,
+      "answerMarkerPage": 160,
+      "primaryChapter": "FSM2-061",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q46",
+      "sourceSetLabel": "2025",
+      "questionNumber": 46,
+      "displayedAnswer": 2,
+      "questionStartPage": 161,
+      "answerMarkerPage": 161,
+      "primaryChapter": "FSM2-062",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q47",
+      "sourceSetLabel": "2025",
+      "questionNumber": 47,
+      "displayedAnswer": 4,
+      "questionStartPage": 162,
+      "answerMarkerPage": 163,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q48",
+      "sourceSetLabel": "2025",
+      "questionNumber": 48,
+      "displayedAnswer": 1,
+      "questionStartPage": 164,
+      "answerMarkerPage": 165,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q49",
+      "sourceSetLabel": "2025",
+      "questionNumber": 49,
+      "displayedAnswer": 4,
+      "questionStartPage": 166,
+      "answerMarkerPage": 166,
+      "primaryChapter": "FSM2-063",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27776-q50",
+      "sourceSetLabel": "2025",
+      "questionNumber": 50,
+      "displayedAnswer": 1,
+      "questionStartPage": 167,
+      "answerMarkerPage": 167,
+      "primaryChapter": "FSM2-064",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q01",
+      "sourceSetLabel": "2024",
+      "questionNumber": 1,
+      "displayedAnswer": 3,
+      "questionStartPage": 168,
+      "answerMarkerPage": 168,
+      "primaryChapter": "FSM2-001",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q02",
+      "sourceSetLabel": "2024",
+      "questionNumber": 2,
+      "displayedAnswer": 2,
+      "questionStartPage": 169,
+      "answerMarkerPage": 169,
+      "primaryChapter": "FSM2-004",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q03",
+      "sourceSetLabel": "2024",
+      "questionNumber": 3,
+      "displayedAnswer": 3,
+      "questionStartPage": 169,
+      "answerMarkerPage": 169,
+      "primaryChapter": "FSM2-005",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q04",
+      "sourceSetLabel": "2024",
+      "questionNumber": 4,
+      "displayedAnswer": 1,
+      "questionStartPage": 170,
+      "answerMarkerPage": 170,
+      "primaryChapter": "FSM2-012",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q05",
+      "sourceSetLabel": "2024",
+      "questionNumber": 5,
+      "displayedAnswer": 2,
+      "questionStartPage": 170,
+      "answerMarkerPage": 170,
+      "primaryChapter": "FSM2-007",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q06",
+      "sourceSetLabel": "2024",
+      "questionNumber": 6,
+      "displayedAnswer": 4,
+      "questionStartPage": 171,
+      "answerMarkerPage": 171,
+      "primaryChapter": "FSM2-009",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q07",
+      "sourceSetLabel": "2024",
+      "questionNumber": 7,
+      "displayedAnswer": 1,
+      "questionStartPage": 172,
+      "answerMarkerPage": 172,
+      "primaryChapter": "FSM2-009",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q08",
+      "sourceSetLabel": "2024",
+      "questionNumber": 8,
+      "displayedAnswer": 4,
+      "questionStartPage": 173,
+      "answerMarkerPage": 173,
+      "primaryChapter": "FSM2-011",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q09",
+      "sourceSetLabel": "2024",
+      "questionNumber": 9,
+      "displayedAnswer": 4,
+      "questionStartPage": 173,
+      "answerMarkerPage": 173,
+      "primaryChapter": "FSM2-018",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q10",
+      "sourceSetLabel": "2024",
+      "questionNumber": 10,
+      "displayedAnswer": 2,
+      "questionStartPage": 174,
+      "answerMarkerPage": 174,
+      "primaryChapter": "FSM2-020",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q11",
+      "sourceSetLabel": "2024",
+      "questionNumber": 11,
+      "displayedAnswer": 2,
+      "questionStartPage": 174,
+      "answerMarkerPage": 174,
+      "primaryChapter": "FSM2-019",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q12",
+      "sourceSetLabel": "2024",
+      "questionNumber": 12,
+      "displayedAnswer": 3,
+      "questionStartPage": 175,
+      "answerMarkerPage": 175,
+      "primaryChapter": "FSM2-021",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q13",
+      "sourceSetLabel": "2024",
+      "questionNumber": 13,
+      "displayedAnswer": 3,
+      "questionStartPage": 175,
+      "answerMarkerPage": 175,
+      "primaryChapter": "FSM2-022",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q14",
+      "sourceSetLabel": "2024",
+      "questionNumber": 14,
+      "displayedAnswer": 3,
+      "questionStartPage": 176,
+      "answerMarkerPage": 176,
+      "primaryChapter": "FSM2-065",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q15",
+      "sourceSetLabel": "2024",
+      "questionNumber": 15,
+      "displayedAnswer": 1,
+      "questionStartPage": 176,
+      "answerMarkerPage": 176,
+      "primaryChapter": "FSM2-015",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q16",
+      "sourceSetLabel": "2024",
+      "questionNumber": 16,
+      "displayedAnswer": 3,
+      "questionStartPage": 177,
+      "answerMarkerPage": 177,
+      "primaryChapter": "FSM2-014",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q17",
+      "sourceSetLabel": "2024",
+      "questionNumber": 17,
+      "displayedAnswer": 1,
+      "questionStartPage": 177,
+      "answerMarkerPage": 177,
+      "primaryChapter": "FSM2-029",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q18",
+      "sourceSetLabel": "2024",
+      "questionNumber": 18,
+      "displayedAnswer": 2,
+      "questionStartPage": 178,
+      "answerMarkerPage": 178,
+      "primaryChapter": "FSM2-051",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q19",
+      "sourceSetLabel": "2024",
+      "questionNumber": 19,
+      "displayedAnswer": 1,
+      "questionStartPage": 178,
+      "answerMarkerPage": 178,
+      "primaryChapter": "FSM2-031",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q20",
+      "sourceSetLabel": "2024",
+      "questionNumber": 20,
+      "displayedAnswer": 4,
+      "questionStartPage": 179,
+      "answerMarkerPage": 179,
+      "primaryChapter": "FSM2-038",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q21",
+      "sourceSetLabel": "2024",
+      "questionNumber": 21,
+      "displayedAnswer": 2,
+      "questionStartPage": 180,
+      "answerMarkerPage": 180,
+      "primaryChapter": "FSM2-044",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q22",
+      "sourceSetLabel": "2024",
+      "questionNumber": 22,
+      "displayedAnswer": 2,
+      "questionStartPage": 181,
+      "answerMarkerPage": 181,
+      "primaryChapter": "FSM2-045",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q23",
+      "sourceSetLabel": "2024",
+      "questionNumber": 23,
+      "displayedAnswer": 4,
+      "questionStartPage": 181,
+      "answerMarkerPage": 181,
+      "primaryChapter": "FSM2-037",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q24",
+      "sourceSetLabel": "2024",
+      "questionNumber": 24,
+      "displayedAnswer": 3,
+      "questionStartPage": 182,
+      "answerMarkerPage": 182,
+      "primaryChapter": "FSM2-041",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q25",
+      "sourceSetLabel": "2024",
+      "questionNumber": 25,
+      "displayedAnswer": 1,
+      "questionStartPage": 183,
+      "answerMarkerPage": 183,
+      "primaryChapter": "FSM2-037",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q26",
+      "sourceSetLabel": "2024",
+      "questionNumber": 26,
+      "displayedAnswer": 2,
+      "questionStartPage": 185,
+      "answerMarkerPage": 186,
+      "primaryChapter": "FSM2-039",
+      "secondaryChapters": [
+        "FSM2-037"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q27",
+      "sourceSetLabel": "2024",
+      "questionNumber": 27,
+      "displayedAnswer": 3,
+      "questionStartPage": 187,
+      "answerMarkerPage": 187,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q28",
+      "sourceSetLabel": "2024",
+      "questionNumber": 28,
+      "displayedAnswer": 2,
+      "questionStartPage": 188,
+      "answerMarkerPage": 188,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q29",
+      "sourceSetLabel": "2024",
+      "questionNumber": 29,
+      "displayedAnswer": 4,
+      "questionStartPage": 189,
+      "answerMarkerPage": 189,
+      "primaryChapter": "FSM2-035",
+      "secondaryChapters": [
+        "FSM2-033"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q30",
+      "sourceSetLabel": "2024",
+      "questionNumber": 30,
+      "displayedAnswer": 1,
+      "questionStartPage": 190,
+      "answerMarkerPage": 190,
+      "primaryChapter": "FSM2-039",
+      "secondaryChapters": [
+        "FSM2-037"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q31",
+      "sourceSetLabel": "2024",
+      "questionNumber": 31,
+      "displayedAnswer": 4,
+      "questionStartPage": 191,
+      "answerMarkerPage": 191,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q32",
+      "sourceSetLabel": "2024",
+      "questionNumber": 32,
+      "displayedAnswer": 3,
+      "questionStartPage": 192,
+      "answerMarkerPage": 192,
+      "primaryChapter": "FSM2-040",
+      "secondaryChapters": [
+        "FSM2-037",
+        "FSM2-043"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q33",
+      "sourceSetLabel": "2024",
+      "questionNumber": 33,
+      "displayedAnswer": 1,
+      "questionStartPage": 192,
+      "answerMarkerPage": 192,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q34",
+      "sourceSetLabel": "2024",
+      "questionNumber": 34,
+      "displayedAnswer": 2,
+      "questionStartPage": 193,
+      "answerMarkerPage": 193,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q35",
+      "sourceSetLabel": "2024",
+      "questionNumber": 35,
+      "displayedAnswer": 1,
+      "questionStartPage": 194,
+      "answerMarkerPage": 195,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q36",
+      "sourceSetLabel": "2024",
+      "questionNumber": 36,
+      "displayedAnswer": 4,
+      "questionStartPage": 197,
+      "answerMarkerPage": 197,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q37",
+      "sourceSetLabel": "2024",
+      "questionNumber": 37,
+      "displayedAnswer": 3,
+      "questionStartPage": 198,
+      "answerMarkerPage": 198,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q38",
+      "sourceSetLabel": "2024",
+      "questionNumber": 38,
+      "displayedAnswer": 3,
+      "questionStartPage": 199,
+      "answerMarkerPage": 199,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q39",
+      "sourceSetLabel": "2024",
+      "questionNumber": 39,
+      "displayedAnswer": 1,
+      "questionStartPage": 199,
+      "answerMarkerPage": 199,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q40",
+      "sourceSetLabel": "2024",
+      "questionNumber": 40,
+      "displayedAnswer": 2,
+      "questionStartPage": 200,
+      "answerMarkerPage": 200,
+      "primaryChapter": "FSM2-054",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q41",
+      "sourceSetLabel": "2024",
+      "questionNumber": 41,
+      "displayedAnswer": 3,
+      "questionStartPage": 201,
+      "answerMarkerPage": 201,
+      "primaryChapter": "FSM2-070",
+      "secondaryChapters": [
+        "FSM2-054"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q42",
+      "sourceSetLabel": "2024",
+      "questionNumber": 42,
+      "displayedAnswer": 1,
+      "questionStartPage": 202,
+      "answerMarkerPage": 202,
+      "primaryChapter": "FSM2-055",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q43",
+      "sourceSetLabel": "2024",
+      "questionNumber": 43,
+      "displayedAnswer": 2,
+      "questionStartPage": 203,
+      "answerMarkerPage": 203,
+      "primaryChapter": "FSM2-057",
+      "secondaryChapters": [
+        "FSM2-048"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q44",
+      "sourceSetLabel": "2024",
+      "questionNumber": 44,
+      "displayedAnswer": 3,
+      "questionStartPage": 204,
+      "answerMarkerPage": 204,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q45",
+      "sourceSetLabel": "2024",
+      "questionNumber": 45,
+      "displayedAnswer": 1,
+      "questionStartPage": 205,
+      "answerMarkerPage": 205,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q46",
+      "sourceSetLabel": "2024",
+      "questionNumber": 46,
+      "displayedAnswer": 4,
+      "questionStartPage": 205,
+      "answerMarkerPage": 205,
+      "primaryChapter": "FSM2-062",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q47",
+      "sourceSetLabel": "2024",
+      "questionNumber": 47,
+      "displayedAnswer": 2,
+      "questionStartPage": 206,
+      "answerMarkerPage": 208,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q48",
+      "sourceSetLabel": "2024",
+      "questionNumber": 48,
+      "displayedAnswer": 3,
+      "questionStartPage": 208,
+      "answerMarkerPage": 208,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q49",
+      "sourceSetLabel": "2024",
+      "questionNumber": 49,
+      "displayedAnswer": 4,
+      "questionStartPage": 209,
+      "answerMarkerPage": 209,
+      "primaryChapter": "FSM2-063",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27777-q50",
+      "sourceSetLabel": "2024",
+      "questionNumber": 50,
+      "displayedAnswer": 4,
+      "questionStartPage": 209,
+      "answerMarkerPage": 209,
+      "primaryChapter": "FSM2-073",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q01",
+      "sourceSetLabel": "2023",
+      "questionNumber": 1,
+      "displayedAnswer": 2,
+      "questionStartPage": 210,
+      "answerMarkerPage": 210,
+      "primaryChapter": "FSM2-003",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q02",
+      "sourceSetLabel": "2023",
+      "questionNumber": 2,
+      "displayedAnswer": 2,
+      "questionStartPage": 210,
+      "answerMarkerPage": 210,
+      "primaryChapter": "FSM2-005",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q03",
+      "sourceSetLabel": "2023",
+      "questionNumber": 3,
+      "displayedAnswer": 3,
+      "questionStartPage": 211,
+      "answerMarkerPage": 211,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q04",
+      "sourceSetLabel": "2023",
+      "questionNumber": 4,
+      "displayedAnswer": 3,
+      "questionStartPage": 212,
+      "answerMarkerPage": 212,
+      "primaryChapter": "FSM2-007",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q05",
+      "sourceSetLabel": "2023",
+      "questionNumber": 5,
+      "displayedAnswer": 1,
+      "questionStartPage": 213,
+      "answerMarkerPage": 213,
+      "primaryChapter": "FSM2-010",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q06",
+      "sourceSetLabel": "2023",
+      "questionNumber": 6,
+      "displayedAnswer": 1,
+      "questionStartPage": 213,
+      "answerMarkerPage": 213,
+      "primaryChapter": "FSM2-008",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q07",
+      "sourceSetLabel": "2023",
+      "questionNumber": 7,
+      "displayedAnswer": 4,
+      "questionStartPage": 214,
+      "answerMarkerPage": 214,
+      "primaryChapter": "FSM2-009",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q08",
+      "sourceSetLabel": "2023",
+      "questionNumber": 8,
+      "displayedAnswer": 4,
+      "questionStartPage": 214,
+      "answerMarkerPage": 214,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q09",
+      "sourceSetLabel": "2023",
+      "questionNumber": 9,
+      "displayedAnswer": 1,
+      "questionStartPage": 215,
+      "answerMarkerPage": 215,
+      "primaryChapter": "FSM2-018",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q10",
+      "sourceSetLabel": "2023",
+      "questionNumber": 10,
+      "displayedAnswer": 4,
+      "questionStartPage": 215,
+      "answerMarkerPage": 215,
+      "primaryChapter": "FSM2-067",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q11",
+      "sourceSetLabel": "2023",
+      "questionNumber": 11,
+      "displayedAnswer": 4,
+      "questionStartPage": 216,
+      "answerMarkerPage": 216,
+      "primaryChapter": "FSM2-028",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q12",
+      "sourceSetLabel": "2023",
+      "questionNumber": 12,
+      "displayedAnswer": 3,
+      "questionStartPage": 216,
+      "answerMarkerPage": 216,
+      "primaryChapter": "FSM2-021",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q13",
+      "sourceSetLabel": "2023",
+      "questionNumber": 13,
+      "displayedAnswer": 3,
+      "questionStartPage": 217,
+      "answerMarkerPage": 217,
+      "primaryChapter": "FSM2-025",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q14",
+      "sourceSetLabel": "2023",
+      "questionNumber": 14,
+      "displayedAnswer": 1,
+      "questionStartPage": 217,
+      "answerMarkerPage": 217,
+      "primaryChapter": "FSM2-022",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q15",
+      "sourceSetLabel": "2023",
+      "questionNumber": 15,
+      "displayedAnswer": 2,
+      "questionStartPage": 218,
+      "answerMarkerPage": 218,
+      "primaryChapter": "FSM2-053",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q16",
+      "sourceSetLabel": "2023",
+      "questionNumber": 16,
+      "displayedAnswer": 2,
+      "questionStartPage": 218,
+      "answerMarkerPage": 218,
+      "primaryChapter": "FSM2-014",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q17",
+      "sourceSetLabel": "2023",
+      "questionNumber": 17,
+      "displayedAnswer": 2,
+      "questionStartPage": 219,
+      "answerMarkerPage": 219,
+      "primaryChapter": "FSM2-031",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q18",
+      "sourceSetLabel": "2023",
+      "questionNumber": 18,
+      "displayedAnswer": 3,
+      "questionStartPage": 220,
+      "answerMarkerPage": 220,
+      "primaryChapter": "FSM2-026",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q19",
+      "sourceSetLabel": "2023",
+      "questionNumber": 19,
+      "displayedAnswer": 3,
+      "questionStartPage": 220,
+      "answerMarkerPage": 220,
+      "primaryChapter": "FSM2-051",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q20",
+      "sourceSetLabel": "2023",
+      "questionNumber": 20,
+      "displayedAnswer": 1,
+      "questionStartPage": 221,
+      "answerMarkerPage": 221,
+      "primaryChapter": "FSM2-029",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q21",
+      "sourceSetLabel": "2023",
+      "questionNumber": 21,
+      "displayedAnswer": 1,
+      "questionStartPage": 222,
+      "answerMarkerPage": 222,
+      "primaryChapter": "FSM2-031",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q22",
+      "sourceSetLabel": "2023",
+      "questionNumber": 22,
+      "displayedAnswer": 2,
+      "questionStartPage": 222,
+      "answerMarkerPage": 222,
+      "primaryChapter": "FSM2-027",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q23",
+      "sourceSetLabel": "2023",
+      "questionNumber": 23,
+      "displayedAnswer": 4,
+      "questionStartPage": 223,
+      "answerMarkerPage": 223,
+      "primaryChapter": "FSM2-030",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q24",
+      "sourceSetLabel": "2023",
+      "questionNumber": 24,
+      "displayedAnswer": 2,
+      "questionStartPage": 224,
+      "answerMarkerPage": 224,
+      "primaryChapter": "FSM2-041",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q25",
+      "sourceSetLabel": "2023",
+      "questionNumber": 25,
+      "displayedAnswer": 3,
+      "questionStartPage": 225,
+      "answerMarkerPage": 225,
+      "primaryChapter": "FSM2-035",
+      "secondaryChapters": [
+        "FSM2-033"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q26",
+      "sourceSetLabel": "2023",
+      "questionNumber": 26,
+      "displayedAnswer": 2,
+      "questionStartPage": 226,
+      "answerMarkerPage": 226,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q27",
+      "sourceSetLabel": "2023",
+      "questionNumber": 27,
+      "displayedAnswer": 1,
+      "questionStartPage": 227,
+      "answerMarkerPage": 227,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q28",
+      "sourceSetLabel": "2023",
+      "questionNumber": 28,
+      "displayedAnswer": 4,
+      "questionStartPage": 228,
+      "answerMarkerPage": 228,
+      "primaryChapter": "FSM2-040",
+      "secondaryChapters": [
+        "FSM2-037",
+        "FSM2-043"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q29",
+      "sourceSetLabel": "2023",
+      "questionNumber": 29,
+      "displayedAnswer": 1,
+      "questionStartPage": 229,
+      "answerMarkerPage": 229,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q30",
+      "sourceSetLabel": "2023",
+      "questionNumber": 30,
+      "displayedAnswer": 1,
+      "questionStartPage": 230,
+      "answerMarkerPage": 230,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q31",
+      "sourceSetLabel": "2023",
+      "questionNumber": 31,
+      "displayedAnswer": 3,
+      "questionStartPage": 231,
+      "answerMarkerPage": 231,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q32",
+      "sourceSetLabel": "2023",
+      "questionNumber": 32,
+      "displayedAnswer": 2,
+      "questionStartPage": 232,
+      "answerMarkerPage": 232,
+      "primaryChapter": "FSM2-035",
+      "secondaryChapters": [
+        "FSM2-033"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q33",
+      "sourceSetLabel": "2023",
+      "questionNumber": 33,
+      "displayedAnswer": 3,
+      "questionStartPage": 233,
+      "answerMarkerPage": 233,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q34",
+      "sourceSetLabel": "2023",
+      "questionNumber": 34,
+      "displayedAnswer": 1,
+      "questionStartPage": 234,
+      "answerMarkerPage": 234,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q35",
+      "sourceSetLabel": "2023",
+      "questionNumber": 35,
+      "displayedAnswer": 2,
+      "questionStartPage": 235,
+      "answerMarkerPage": 235,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q36",
+      "sourceSetLabel": "2023",
+      "questionNumber": 36,
+      "displayedAnswer": 3,
+      "questionStartPage": 236,
+      "answerMarkerPage": 236,
+      "primaryChapter": "FSM2-037",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q37",
+      "sourceSetLabel": "2023",
+      "questionNumber": 37,
+      "displayedAnswer": 4,
+      "questionStartPage": 237,
+      "answerMarkerPage": 237,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q38",
+      "sourceSetLabel": "2023",
+      "questionNumber": 38,
+      "displayedAnswer": 2,
+      "questionStartPage": 238,
+      "answerMarkerPage": 238,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q39",
+      "sourceSetLabel": "2023",
+      "questionNumber": 39,
+      "displayedAnswer": 3,
+      "questionStartPage": 238,
+      "answerMarkerPage": 238,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q40",
+      "sourceSetLabel": "2023",
+      "questionNumber": 40,
+      "displayedAnswer": 3,
+      "questionStartPage": 239,
+      "answerMarkerPage": 239,
+      "primaryChapter": "FSM2-054",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q41",
+      "sourceSetLabel": "2023",
+      "questionNumber": 41,
+      "displayedAnswer": 4,
+      "questionStartPage": 239,
+      "answerMarkerPage": 239,
+      "primaryChapter": "FSM2-070",
+      "secondaryChapters": [
+        "FSM2-054"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q42",
+      "sourceSetLabel": "2023",
+      "questionNumber": 42,
+      "displayedAnswer": 4,
+      "questionStartPage": 240,
+      "answerMarkerPage": 240,
+      "primaryChapter": "FSM2-055",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q43",
+      "sourceSetLabel": "2023",
+      "questionNumber": 43,
+      "displayedAnswer": 2,
+      "questionStartPage": 241,
+      "answerMarkerPage": 241,
+      "primaryChapter": "FSM2-057",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q44",
+      "sourceSetLabel": "2023",
+      "questionNumber": 44,
+      "displayedAnswer": 3,
+      "questionStartPage": 242,
+      "answerMarkerPage": 244,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q45",
+      "sourceSetLabel": "2023",
+      "questionNumber": 45,
+      "displayedAnswer": 3,
+      "questionStartPage": 244,
+      "answerMarkerPage": 244,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q46",
+      "sourceSetLabel": "2023",
+      "questionNumber": 46,
+      "displayedAnswer": 1,
+      "questionStartPage": 245,
+      "answerMarkerPage": 245,
+      "primaryChapter": "FSM2-061",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q47",
+      "sourceSetLabel": "2023",
+      "questionNumber": 47,
+      "displayedAnswer": 1,
+      "questionStartPage": 245,
+      "answerMarkerPage": 245,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q48",
+      "sourceSetLabel": "2023",
+      "questionNumber": 48,
+      "displayedAnswer": 2,
+      "questionStartPage": 246,
+      "answerMarkerPage": 246,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q49",
+      "sourceSetLabel": "2023",
+      "questionNumber": 49,
+      "displayedAnswer": 4,
+      "questionStartPage": 247,
+      "answerMarkerPage": 247,
+      "primaryChapter": "FSM2-063",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27778-q50",
+      "sourceSetLabel": "2023",
+      "questionNumber": 50,
+      "displayedAnswer": 4,
+      "questionStartPage": 248,
+      "answerMarkerPage": 248,
+      "primaryChapter": "FSM2-064",
+      "secondaryChapters": [],
+      "reviewFlags": []
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q01",
+      "sourceSetLabel": "2022",
+      "questionNumber": 1,
+      "displayedAnswer": 2,
+      "questionStartPage": 249,
+      "answerMarkerPage": 249,
+      "primaryChapter": "FSM2-005",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q02",
+      "sourceSetLabel": "2022",
+      "questionNumber": 2,
+      "displayedAnswer": 4,
+      "questionStartPage": 249,
+      "answerMarkerPage": 249,
+      "primaryChapter": "FSM2-001",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q03",
+      "sourceSetLabel": "2022",
+      "questionNumber": 3,
+      "displayedAnswer": 2,
+      "questionStartPage": 250,
+      "answerMarkerPage": 250,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q04",
+      "sourceSetLabel": "2022",
+      "questionNumber": 4,
+      "displayedAnswer": 3,
+      "questionStartPage": 250,
+      "answerMarkerPage": 250,
+      "primaryChapter": "FSM2-007",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q05",
+      "sourceSetLabel": "2022",
+      "questionNumber": 5,
+      "displayedAnswer": 1,
+      "questionStartPage": 251,
+      "answerMarkerPage": 251,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q06",
+      "sourceSetLabel": "2022",
+      "questionNumber": 6,
+      "displayedAnswer": 1,
+      "questionStartPage": 251,
+      "answerMarkerPage": 251,
+      "primaryChapter": "FSM2-012",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q07",
+      "sourceSetLabel": "2022",
+      "questionNumber": 7,
+      "displayedAnswer": 4,
+      "questionStartPage": 252,
+      "answerMarkerPage": 252,
+      "primaryChapter": "FSM2-009",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q08",
+      "sourceSetLabel": "2022",
+      "questionNumber": 8,
+      "displayedAnswer": 1,
+      "questionStartPage": 252,
+      "answerMarkerPage": 252,
+      "primaryChapter": "FSM2-012",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q09",
+      "sourceSetLabel": "2022",
+      "questionNumber": 9,
+      "displayedAnswer": 3,
+      "questionStartPage": 253,
+      "answerMarkerPage": 253,
+      "primaryChapter": "FSM2-017",
+      "secondaryChapters": [
+        "FSM2-068"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q10",
+      "sourceSetLabel": "2022",
+      "questionNumber": 10,
+      "displayedAnswer": 2,
+      "questionStartPage": 253,
+      "answerMarkerPage": 253,
+      "primaryChapter": "FSM2-016",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q11",
+      "sourceSetLabel": "2022",
+      "questionNumber": 11,
+      "displayedAnswer": 3,
+      "questionStartPage": 254,
+      "answerMarkerPage": 254,
+      "primaryChapter": "FSM2-016",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q12",
+      "sourceSetLabel": "2022",
+      "questionNumber": 12,
+      "displayedAnswer": 1,
+      "questionStartPage": 255,
+      "answerMarkerPage": 255,
+      "primaryChapter": "FSM2-021",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q13",
+      "sourceSetLabel": "2022",
+      "questionNumber": 13,
+      "displayedAnswer": 2,
+      "questionStartPage": 255,
+      "answerMarkerPage": 255,
+      "primaryChapter": "FSM2-025",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q14",
+      "sourceSetLabel": "2022",
+      "questionNumber": 14,
+      "displayedAnswer": 3,
+      "questionStartPage": 256,
+      "answerMarkerPage": 256,
+      "primaryChapter": "FSM2-022",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q15",
+      "sourceSetLabel": "2022",
+      "questionNumber": 15,
+      "displayedAnswer": 4,
+      "questionStartPage": 256,
+      "answerMarkerPage": 256,
+      "primaryChapter": "FSM2-013",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q16",
+      "sourceSetLabel": "2022",
+      "questionNumber": 16,
+      "displayedAnswer": 1,
+      "questionStartPage": 257,
+      "answerMarkerPage": 257,
+      "primaryChapter": "FSM2-053",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q17",
+      "sourceSetLabel": "2022",
+      "questionNumber": 17,
+      "displayedAnswer": 2,
+      "questionStartPage": 257,
+      "answerMarkerPage": 257,
+      "primaryChapter": "FSM2-045",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q18",
+      "sourceSetLabel": "2022",
+      "questionNumber": 18,
+      "displayedAnswer": 4,
+      "questionStartPage": 258,
+      "answerMarkerPage": 258,
+      "primaryChapter": "FSM2-032",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q19",
+      "sourceSetLabel": "2022",
+      "questionNumber": 19,
+      "displayedAnswer": 3,
+      "questionStartPage": 258,
+      "answerMarkerPage": 258,
+      "primaryChapter": "FSM2-038",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q20",
+      "sourceSetLabel": "2022",
+      "questionNumber": 20,
+      "displayedAnswer": 1,
+      "questionStartPage": 259,
+      "answerMarkerPage": 259,
+      "primaryChapter": "FSM2-052",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q21",
+      "sourceSetLabel": "2022",
+      "questionNumber": 21,
+      "displayedAnswer": 2,
+      "questionStartPage": 260,
+      "answerMarkerPage": 260,
+      "primaryChapter": "FSM2-027",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q22",
+      "sourceSetLabel": "2022",
+      "questionNumber": 22,
+      "displayedAnswer": 4,
+      "questionStartPage": 260,
+      "answerMarkerPage": 260,
+      "primaryChapter": "FSM2-071",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q23",
+      "sourceSetLabel": "2022",
+      "questionNumber": 23,
+      "displayedAnswer": 2,
+      "questionStartPage": 261,
+      "answerMarkerPage": 261,
+      "primaryChapter": "FSM2-041",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q24",
+      "sourceSetLabel": "2022",
+      "questionNumber": 24,
+      "displayedAnswer": 3,
+      "questionStartPage": 262,
+      "answerMarkerPage": 262,
+      "primaryChapter": "FSM2-041",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q25",
+      "sourceSetLabel": "2022",
+      "questionNumber": 25,
+      "displayedAnswer": 2,
+      "questionStartPage": 263,
+      "answerMarkerPage": 263,
+      "primaryChapter": "FSM2-043",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q26",
+      "sourceSetLabel": "2022",
+      "questionNumber": 26,
+      "displayedAnswer": 4,
+      "questionStartPage": 264,
+      "answerMarkerPage": 264,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q27",
+      "sourceSetLabel": "2022",
+      "questionNumber": 27,
+      "displayedAnswer": 1,
+      "questionStartPage": 265,
+      "answerMarkerPage": 265,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q28",
+      "sourceSetLabel": "2022",
+      "questionNumber": 28,
+      "displayedAnswer": 4,
+      "questionStartPage": 266,
+      "answerMarkerPage": 266,
+      "primaryChapter": "FSM2-040",
+      "secondaryChapters": [
+        "FSM2-037",
+        "FSM2-043"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q29",
+      "sourceSetLabel": "2022",
+      "questionNumber": 29,
+      "displayedAnswer": 1,
+      "questionStartPage": 267,
+      "answerMarkerPage": 267,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q30",
+      "sourceSetLabel": "2022",
+      "questionNumber": 30,
+      "displayedAnswer": 3,
+      "questionStartPage": 268,
+      "answerMarkerPage": 268,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q31",
+      "sourceSetLabel": "2022",
+      "questionNumber": 31,
+      "displayedAnswer": 2,
+      "questionStartPage": 268,
+      "answerMarkerPage": 268,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q32",
+      "sourceSetLabel": "2022",
+      "questionNumber": 32,
+      "displayedAnswer": 4,
+      "questionStartPage": 269,
+      "answerMarkerPage": 269,
+      "primaryChapter": "FSM2-039",
+      "secondaryChapters": [
+        "FSM2-037"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q33",
+      "sourceSetLabel": "2022",
+      "questionNumber": 33,
+      "displayedAnswer": 4,
+      "questionStartPage": 270,
+      "answerMarkerPage": 270,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q34",
+      "sourceSetLabel": "2022",
+      "questionNumber": 34,
+      "displayedAnswer": 2,
+      "questionStartPage": 271,
+      "answerMarkerPage": 271,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q35",
+      "sourceSetLabel": "2022",
+      "questionNumber": 35,
+      "displayedAnswer": 1,
+      "questionStartPage": 272,
+      "answerMarkerPage": 272,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q36",
+      "sourceSetLabel": "2022",
+      "questionNumber": 36,
+      "displayedAnswer": 1,
+      "questionStartPage": 273,
+      "answerMarkerPage": 273,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q37",
+      "sourceSetLabel": "2022",
+      "questionNumber": 37,
+      "displayedAnswer": 1,
+      "questionStartPage": 274,
+      "answerMarkerPage": 274,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q38",
+      "sourceSetLabel": "2022",
+      "questionNumber": 38,
+      "displayedAnswer": 2,
+      "questionStartPage": 275,
+      "answerMarkerPage": 275,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q39",
+      "sourceSetLabel": "2022",
+      "questionNumber": 39,
+      "displayedAnswer": 2,
+      "questionStartPage": 276,
+      "answerMarkerPage": 276,
+      "primaryChapter": "FSM2-037",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q40",
+      "sourceSetLabel": "2022",
+      "questionNumber": 40,
+      "displayedAnswer": 3,
+      "questionStartPage": 276,
+      "answerMarkerPage": 276,
+      "primaryChapter": "FSM2-054",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q41",
+      "sourceSetLabel": "2022",
+      "questionNumber": 41,
+      "displayedAnswer": 1,
+      "questionStartPage": 277,
+      "answerMarkerPage": 277,
+      "primaryChapter": "FSM2-056",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q42",
+      "sourceSetLabel": "2022",
+      "questionNumber": 42,
+      "displayedAnswer": 4,
+      "questionStartPage": 277,
+      "answerMarkerPage": 277,
+      "primaryChapter": "FSM2-055",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q43",
+      "sourceSetLabel": "2022",
+      "questionNumber": 43,
+      "displayedAnswer": 3,
+      "questionStartPage": 278,
+      "answerMarkerPage": 279,
+      "primaryChapter": "FSM2-057",
+      "secondaryChapters": [
+        "FSM2-030",
+        "FSM2-071"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q44",
+      "sourceSetLabel": "2022",
+      "questionNumber": 44,
+      "displayedAnswer": 2,
+      "questionStartPage": 280,
+      "answerMarkerPage": 281,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q45",
+      "sourceSetLabel": "2022",
+      "questionNumber": 45,
+      "displayedAnswer": 4,
+      "questionStartPage": 282,
+      "answerMarkerPage": 282,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q46",
+      "sourceSetLabel": "2022",
+      "questionNumber": 46,
+      "displayedAnswer": 3,
+      "questionStartPage": 283,
+      "answerMarkerPage": 283,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q47",
+      "sourceSetLabel": "2022",
+      "questionNumber": 47,
+      "displayedAnswer": 1,
+      "questionStartPage": 284,
+      "answerMarkerPage": 284,
+      "primaryChapter": "FSM2-061",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q48",
+      "sourceSetLabel": "2022",
+      "questionNumber": 48,
+      "displayedAnswer": 4,
+      "questionStartPage": 284,
+      "answerMarkerPage": 284,
+      "primaryChapter": "FSM2-062",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q49",
+      "sourceSetLabel": "2022",
+      "questionNumber": 49,
+      "displayedAnswer": 2,
+      "questionStartPage": 285,
+      "answerMarkerPage": 285,
+      "primaryChapter": "FSM2-063",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27779-q50",
+      "sourceSetLabel": "2022",
+      "questionNumber": 50,
+      "displayedAnswer": 3,
+      "questionStartPage": 285,
+      "answerMarkerPage": 285,
+      "primaryChapter": "FSM2-064",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q01",
+      "sourceSetLabel": "2021",
+      "questionNumber": 1,
+      "displayedAnswer": 2,
+      "questionStartPage": 286,
+      "answerMarkerPage": 286,
+      "primaryChapter": "FSM2-005",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q02",
+      "sourceSetLabel": "2021",
+      "questionNumber": 2,
+      "displayedAnswer": 3,
+      "questionStartPage": 286,
+      "answerMarkerPage": 286,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q03",
+      "sourceSetLabel": "2021",
+      "questionNumber": 3,
+      "displayedAnswer": 2,
+      "questionStartPage": 287,
+      "answerMarkerPage": 287,
+      "primaryChapter": "FSM2-001",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q04",
+      "sourceSetLabel": "2021",
+      "questionNumber": 4,
+      "displayedAnswer": 1,
+      "questionStartPage": 288,
+      "answerMarkerPage": 288,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q05",
+      "sourceSetLabel": "2021",
+      "questionNumber": 5,
+      "displayedAnswer": 4,
+      "questionStartPage": 288,
+      "answerMarkerPage": 288,
+      "primaryChapter": "FSM2-007",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q06",
+      "sourceSetLabel": "2021",
+      "questionNumber": 6,
+      "displayedAnswer": 4,
+      "questionStartPage": 289,
+      "answerMarkerPage": 289,
+      "primaryChapter": "FSM2-008",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q07",
+      "sourceSetLabel": "2021",
+      "questionNumber": 7,
+      "displayedAnswer": 3,
+      "questionStartPage": 289,
+      "answerMarkerPage": 289,
+      "primaryChapter": "FSM2-010",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q08",
+      "sourceSetLabel": "2021",
+      "questionNumber": 8,
+      "displayedAnswer": 2,
+      "questionStartPage": 290,
+      "answerMarkerPage": 290,
+      "primaryChapter": "FSM2-011",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q09",
+      "sourceSetLabel": "2021",
+      "questionNumber": 9,
+      "displayedAnswer": 4,
+      "questionStartPage": 290,
+      "answerMarkerPage": 290,
+      "primaryChapter": "FSM2-019",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q10",
+      "sourceSetLabel": "2021",
+      "questionNumber": 10,
+      "displayedAnswer": 1,
+      "questionStartPage": 291,
+      "answerMarkerPage": 291,
+      "primaryChapter": "FSM2-016",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q11",
+      "sourceSetLabel": "2021",
+      "questionNumber": 11,
+      "displayedAnswer": 4,
+      "questionStartPage": 292,
+      "answerMarkerPage": 292,
+      "primaryChapter": "FSM2-020",
+      "secondaryChapters": [
+        "FSM2-027"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q12",
+      "sourceSetLabel": "2021",
+      "questionNumber": 12,
+      "displayedAnswer": 1,
+      "questionStartPage": 292,
+      "answerMarkerPage": 292,
+      "primaryChapter": "FSM2-021",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q13",
+      "sourceSetLabel": "2021",
+      "questionNumber": 13,
+      "displayedAnswer": 2,
+      "questionStartPage": 293,
+      "answerMarkerPage": 293,
+      "primaryChapter": "FSM2-025",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q14",
+      "sourceSetLabel": "2021",
+      "questionNumber": 14,
+      "displayedAnswer": 3,
+      "questionStartPage": 293,
+      "answerMarkerPage": 293,
+      "primaryChapter": "FSM2-022",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q15",
+      "sourceSetLabel": "2021",
+      "questionNumber": 15,
+      "displayedAnswer": 2,
+      "questionStartPage": 294,
+      "answerMarkerPage": 294,
+      "primaryChapter": "FSM2-015",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q16",
+      "sourceSetLabel": "2021",
+      "questionNumber": 16,
+      "displayedAnswer": 3,
+      "questionStartPage": 294,
+      "answerMarkerPage": 294,
+      "primaryChapter": "FSM2-014",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q17",
+      "sourceSetLabel": "2021",
+      "questionNumber": 17,
+      "displayedAnswer": 4,
+      "questionStartPage": 295,
+      "answerMarkerPage": 295,
+      "primaryChapter": "FSM2-032",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q18",
+      "sourceSetLabel": "2021",
+      "questionNumber": 18,
+      "displayedAnswer": 1,
+      "questionStartPage": 296,
+      "answerMarkerPage": 296,
+      "primaryChapter": "FSM2-044",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q19",
+      "sourceSetLabel": "2021",
+      "questionNumber": 19,
+      "displayedAnswer": 3,
+      "questionStartPage": 297,
+      "answerMarkerPage": 297,
+      "primaryChapter": "FSM2-045",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q20",
+      "sourceSetLabel": "2021",
+      "questionNumber": 20,
+      "displayedAnswer": 1,
+      "questionStartPage": 297,
+      "answerMarkerPage": 297,
+      "primaryChapter": "FSM2-026",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q21",
+      "sourceSetLabel": "2021",
+      "questionNumber": 21,
+      "displayedAnswer": 1,
+      "questionStartPage": 298,
+      "answerMarkerPage": 298,
+      "primaryChapter": "FSM2-029",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q22",
+      "sourceSetLabel": "2021",
+      "questionNumber": 22,
+      "displayedAnswer": 4,
+      "questionStartPage": 298,
+      "answerMarkerPage": 298,
+      "primaryChapter": "FSM2-051",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q23",
+      "sourceSetLabel": "2021",
+      "questionNumber": 23,
+      "displayedAnswer": 2,
+      "questionStartPage": 299,
+      "answerMarkerPage": 299,
+      "primaryChapter": "FSM2-046",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q24",
+      "sourceSetLabel": "2021",
+      "questionNumber": 24,
+      "displayedAnswer": 4,
+      "questionStartPage": 300,
+      "answerMarkerPage": 300,
+      "primaryChapter": "FSM2-033",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q25",
+      "sourceSetLabel": "2021",
+      "questionNumber": 25,
+      "displayedAnswer": 3,
+      "questionStartPage": 301,
+      "answerMarkerPage": 301,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q26",
+      "sourceSetLabel": "2021",
+      "questionNumber": 26,
+      "displayedAnswer": 1,
+      "questionStartPage": 302,
+      "answerMarkerPage": 302,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q27",
+      "sourceSetLabel": "2021",
+      "questionNumber": 27,
+      "displayedAnswer": 4,
+      "questionStartPage": 303,
+      "answerMarkerPage": 303,
+      "primaryChapter": "FSM2-040",
+      "secondaryChapters": [
+        "FSM2-037",
+        "FSM2-043"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q28",
+      "sourceSetLabel": "2021",
+      "questionNumber": 28,
+      "displayedAnswer": 3,
+      "questionStartPage": 304,
+      "answerMarkerPage": 304,
+      "primaryChapter": "FSM2-035",
+      "secondaryChapters": [
+        "FSM2-033"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q29",
+      "sourceSetLabel": "2021",
+      "questionNumber": 29,
+      "displayedAnswer": 2,
+      "questionStartPage": 305,
+      "answerMarkerPage": 305,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q30",
+      "sourceSetLabel": "2021",
+      "questionNumber": 30,
+      "displayedAnswer": 1,
+      "questionStartPage": 306,
+      "answerMarkerPage": 306,
+      "primaryChapter": "FSM2-039",
+      "secondaryChapters": [
+        "FSM2-037"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q31",
+      "sourceSetLabel": "2021",
+      "questionNumber": 31,
+      "displayedAnswer": 2,
+      "questionStartPage": 307,
+      "answerMarkerPage": 307,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q32",
+      "sourceSetLabel": "2021",
+      "questionNumber": 32,
+      "displayedAnswer": 4,
+      "questionStartPage": 308,
+      "answerMarkerPage": 308,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q33",
+      "sourceSetLabel": "2021",
+      "questionNumber": 33,
+      "displayedAnswer": 4,
+      "questionStartPage": 308,
+      "answerMarkerPage": 308,
+      "primaryChapter": "FSM2-037",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q34",
+      "sourceSetLabel": "2021",
+      "questionNumber": 34,
+      "displayedAnswer": 3,
+      "questionStartPage": 309,
+      "answerMarkerPage": 309,
+      "primaryChapter": "FSM2-045",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q35",
+      "sourceSetLabel": "2021",
+      "questionNumber": 35,
+      "displayedAnswer": 2,
+      "questionStartPage": 310,
+      "answerMarkerPage": 310,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q36",
+      "sourceSetLabel": "2021",
+      "questionNumber": 36,
+      "displayedAnswer": 3,
+      "questionStartPage": 311,
+      "answerMarkerPage": 311,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q37",
+      "sourceSetLabel": "2021",
+      "questionNumber": 37,
+      "displayedAnswer": 1,
+      "questionStartPage": 312,
+      "answerMarkerPage": 312,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q38",
+      "sourceSetLabel": "2021",
+      "questionNumber": 38,
+      "displayedAnswer": 4,
+      "questionStartPage": 313,
+      "answerMarkerPage": 313,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q39",
+      "sourceSetLabel": "2021",
+      "questionNumber": 39,
+      "displayedAnswer": 1,
+      "questionStartPage": 314,
+      "answerMarkerPage": 314,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q40",
+      "sourceSetLabel": "2021",
+      "questionNumber": 40,
+      "displayedAnswer": 4,
+      "questionStartPage": 315,
+      "answerMarkerPage": 315,
+      "primaryChapter": "FSM2-056",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q41",
+      "sourceSetLabel": "2021",
+      "questionNumber": 41,
+      "displayedAnswer": 3,
+      "questionStartPage": 316,
+      "answerMarkerPage": 316,
+      "primaryChapter": "FSM2-070",
+      "secondaryChapters": [
+        "FSM2-054"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q42",
+      "sourceSetLabel": "2021",
+      "questionNumber": 42,
+      "displayedAnswer": 1,
+      "questionStartPage": 317,
+      "answerMarkerPage": 317,
+      "primaryChapter": "FSM2-055",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q43",
+      "sourceSetLabel": "2021",
+      "questionNumber": 43,
+      "displayedAnswer": 2,
+      "questionStartPage": 318,
+      "answerMarkerPage": 320,
+      "primaryChapter": "FSM2-057",
+      "secondaryChapters": [
+        "FSM2-030",
+        "FSM2-071"
+      ],
+      "reviewFlags": [
+        "묶음 연도·문항 상황 불일치",
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q44",
+      "sourceSetLabel": "2021",
+      "questionNumber": 44,
+      "displayedAnswer": 1,
+      "questionStartPage": 320,
+      "answerMarkerPage": 320,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q45",
+      "sourceSetLabel": "2021",
+      "questionNumber": 45,
+      "displayedAnswer": 2,
+      "questionStartPage": 321,
+      "answerMarkerPage": 321,
+      "primaryChapter": "FSM2-061",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q46",
+      "sourceSetLabel": "2021",
+      "questionNumber": 46,
+      "displayedAnswer": 3,
+      "questionStartPage": 321,
+      "answerMarkerPage": 321,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q47",
+      "sourceSetLabel": "2021",
+      "questionNumber": 47,
+      "displayedAnswer": 2,
+      "questionStartPage": 322,
+      "answerMarkerPage": 324,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q48",
+      "sourceSetLabel": "2021",
+      "questionNumber": 48,
+      "displayedAnswer": 2,
+      "questionStartPage": 324,
+      "answerMarkerPage": 324,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q49",
+      "sourceSetLabel": "2021",
+      "questionNumber": 49,
+      "displayedAnswer": 4,
+      "questionStartPage": 325,
+      "answerMarkerPage": 325,
+      "primaryChapter": "FSM2-063",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27780-q50",
+      "sourceSetLabel": "2021",
+      "questionNumber": 50,
+      "displayedAnswer": 1,
+      "questionStartPage": 325,
+      "answerMarkerPage": 325,
+      "primaryChapter": "FSM2-064",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q01",
+      "sourceSetLabel": "2020",
+      "questionNumber": 1,
+      "displayedAnswer": 2,
+      "questionStartPage": 326,
+      "answerMarkerPage": 326,
+      "primaryChapter": "FSM2-002",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q02",
+      "sourceSetLabel": "2020",
+      "questionNumber": 2,
+      "displayedAnswer": 3,
+      "questionStartPage": 327,
+      "answerMarkerPage": 327,
+      "primaryChapter": "FSM2-003",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q03",
+      "sourceSetLabel": "2020",
+      "questionNumber": 3,
+      "displayedAnswer": 4,
+      "questionStartPage": 327,
+      "answerMarkerPage": 327,
+      "primaryChapter": "FSM2-005",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q04",
+      "sourceSetLabel": "2020",
+      "questionNumber": 4,
+      "displayedAnswer": 3,
+      "questionStartPage": 328,
+      "answerMarkerPage": 328,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q05",
+      "sourceSetLabel": "2020",
+      "questionNumber": 5,
+      "displayedAnswer": 3,
+      "questionStartPage": 328,
+      "answerMarkerPage": 328,
+      "primaryChapter": "FSM2-009",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q06",
+      "sourceSetLabel": "2020",
+      "questionNumber": 6,
+      "displayedAnswer": 1,
+      "questionStartPage": 329,
+      "answerMarkerPage": 329,
+      "primaryChapter": "FSM2-012",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q07",
+      "sourceSetLabel": "2020",
+      "questionNumber": 7,
+      "displayedAnswer": 3,
+      "questionStartPage": 329,
+      "answerMarkerPage": 329,
+      "primaryChapter": "FSM2-007",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q08",
+      "sourceSetLabel": "2020",
+      "questionNumber": 8,
+      "displayedAnswer": 4,
+      "questionStartPage": 330,
+      "answerMarkerPage": 330,
+      "primaryChapter": "FSM2-009",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q09",
+      "sourceSetLabel": "2020",
+      "questionNumber": 9,
+      "displayedAnswer": 4,
+      "questionStartPage": 330,
+      "answerMarkerPage": 330,
+      "primaryChapter": "FSM2-020",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q10",
+      "sourceSetLabel": "2020",
+      "questionNumber": 10,
+      "displayedAnswer": 4,
+      "questionStartPage": 331,
+      "answerMarkerPage": 331,
+      "primaryChapter": "FSM2-016",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q11",
+      "sourceSetLabel": "2020",
+      "questionNumber": 11,
+      "displayedAnswer": 3,
+      "questionStartPage": 331,
+      "answerMarkerPage": 331,
+      "primaryChapter": "FSM2-028",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q12",
+      "sourceSetLabel": "2020",
+      "questionNumber": 12,
+      "displayedAnswer": 1,
+      "questionStartPage": 332,
+      "answerMarkerPage": 332,
+      "primaryChapter": "FSM2-021",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q13",
+      "sourceSetLabel": "2020",
+      "questionNumber": 13,
+      "displayedAnswer": 4,
+      "questionStartPage": 332,
+      "answerMarkerPage": 332,
+      "primaryChapter": "FSM2-074",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q14",
+      "sourceSetLabel": "2020",
+      "questionNumber": 14,
+      "displayedAnswer": 1,
+      "questionStartPage": 333,
+      "answerMarkerPage": 333,
+      "primaryChapter": "FSM2-023",
+      "secondaryChapters": [
+        "FSM2-022"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q15",
+      "sourceSetLabel": "2020",
+      "questionNumber": 15,
+      "displayedAnswer": 2,
+      "questionStartPage": 334,
+      "answerMarkerPage": 334,
+      "primaryChapter": "FSM2-014",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q16",
+      "sourceSetLabel": "2020",
+      "questionNumber": 16,
+      "displayedAnswer": 4,
+      "questionStartPage": 335,
+      "answerMarkerPage": 335,
+      "primaryChapter": "FSM2-014",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q17",
+      "sourceSetLabel": "2020",
+      "questionNumber": 17,
+      "displayedAnswer": 1,
+      "questionStartPage": 336,
+      "answerMarkerPage": 336,
+      "primaryChapter": "FSM2-051",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q18",
+      "sourceSetLabel": "2020",
+      "questionNumber": 18,
+      "displayedAnswer": 2,
+      "questionStartPage": 336,
+      "answerMarkerPage": 336,
+      "primaryChapter": "FSM2-051",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q19",
+      "sourceSetLabel": "2020",
+      "questionNumber": 19,
+      "displayedAnswer": 4,
+      "questionStartPage": 337,
+      "answerMarkerPage": 337,
+      "primaryChapter": "FSM2-026",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q20",
+      "sourceSetLabel": "2020",
+      "questionNumber": 20,
+      "displayedAnswer": 1,
+      "questionStartPage": 337,
+      "answerMarkerPage": 337,
+      "primaryChapter": "FSM2-026",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q21",
+      "sourceSetLabel": "2020",
+      "questionNumber": 21,
+      "displayedAnswer": 3,
+      "questionStartPage": 338,
+      "answerMarkerPage": 338,
+      "primaryChapter": "FSM2-031",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q22",
+      "sourceSetLabel": "2020",
+      "questionNumber": 22,
+      "displayedAnswer": 2,
+      "questionStartPage": 338,
+      "answerMarkerPage": 338,
+      "primaryChapter": "FSM2-052",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q23",
+      "sourceSetLabel": "2020",
+      "questionNumber": 23,
+      "displayedAnswer": 2,
+      "questionStartPage": 339,
+      "answerMarkerPage": 339,
+      "primaryChapter": "FSM2-033",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q24",
+      "sourceSetLabel": "2020",
+      "questionNumber": 24,
+      "displayedAnswer": 1,
+      "questionStartPage": 340,
+      "answerMarkerPage": 340,
+      "primaryChapter": "FSM2-044",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q25",
+      "sourceSetLabel": "2020",
+      "questionNumber": 25,
+      "displayedAnswer": 3,
+      "questionStartPage": 340,
+      "answerMarkerPage": 340,
+      "primaryChapter": "FSM2-030",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q26",
+      "sourceSetLabel": "2020",
+      "questionNumber": 26,
+      "displayedAnswer": 1,
+      "questionStartPage": 341,
+      "answerMarkerPage": 341,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q27",
+      "sourceSetLabel": "2020",
+      "questionNumber": 27,
+      "displayedAnswer": 3,
+      "questionStartPage": 342,
+      "answerMarkerPage": 342,
+      "primaryChapter": "FSM2-035",
+      "secondaryChapters": [
+        "FSM2-033"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q28",
+      "sourceSetLabel": "2020",
+      "questionNumber": 28,
+      "displayedAnswer": 2,
+      "questionStartPage": 342,
+      "answerMarkerPage": 342,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q29",
+      "sourceSetLabel": "2020",
+      "questionNumber": 29,
+      "displayedAnswer": 3,
+      "questionStartPage": 343,
+      "answerMarkerPage": 343,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q30",
+      "sourceSetLabel": "2020",
+      "questionNumber": 30,
+      "displayedAnswer": 4,
+      "questionStartPage": 343,
+      "answerMarkerPage": 343,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q31",
+      "sourceSetLabel": "2020",
+      "questionNumber": 31,
+      "displayedAnswer": 2,
+      "questionStartPage": 344,
+      "answerMarkerPage": 344,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q32",
+      "sourceSetLabel": "2020",
+      "questionNumber": 32,
+      "displayedAnswer": 2,
+      "questionStartPage": 345,
+      "answerMarkerPage": 345,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q33",
+      "sourceSetLabel": "2020",
+      "questionNumber": 33,
+      "displayedAnswer": 1,
+      "questionStartPage": 346,
+      "answerMarkerPage": 346,
+      "primaryChapter": "FSM2-031",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q34",
+      "sourceSetLabel": "2020",
+      "questionNumber": 34,
+      "displayedAnswer": 3,
+      "questionStartPage": 347,
+      "answerMarkerPage": 347,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q35",
+      "sourceSetLabel": "2020",
+      "questionNumber": 35,
+      "displayedAnswer": 1,
+      "questionStartPage": 348,
+      "answerMarkerPage": 348,
+      "primaryChapter": "FSM2-040",
+      "secondaryChapters": [
+        "FSM2-037",
+        "FSM2-043"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q36",
+      "sourceSetLabel": "2020",
+      "questionNumber": 36,
+      "displayedAnswer": 3,
+      "questionStartPage": 349,
+      "answerMarkerPage": 349,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q37",
+      "sourceSetLabel": "2020",
+      "questionNumber": 37,
+      "displayedAnswer": 4,
+      "questionStartPage": 350,
+      "answerMarkerPage": 350,
+      "primaryChapter": "FSM2-040",
+      "secondaryChapters": [
+        "FSM2-037",
+        "FSM2-043"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q38",
+      "sourceSetLabel": "2020",
+      "questionNumber": 38,
+      "displayedAnswer": 1,
+      "questionStartPage": 351,
+      "answerMarkerPage": 351,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q39",
+      "sourceSetLabel": "2020",
+      "questionNumber": 39,
+      "displayedAnswer": 1,
+      "questionStartPage": 352,
+      "answerMarkerPage": 352,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q40",
+      "sourceSetLabel": "2020",
+      "questionNumber": 40,
+      "displayedAnswer": 4,
+      "questionStartPage": 353,
+      "answerMarkerPage": 353,
+      "primaryChapter": "FSM2-070",
+      "secondaryChapters": [
+        "FSM2-054"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q41",
+      "sourceSetLabel": "2020",
+      "questionNumber": 41,
+      "displayedAnswer": 2,
+      "questionStartPage": 354,
+      "answerMarkerPage": 354,
+      "primaryChapter": "FSM2-056",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q42",
+      "sourceSetLabel": "2020",
+      "questionNumber": 42,
+      "displayedAnswer": 3,
+      "questionStartPage": 355,
+      "answerMarkerPage": 355,
+      "primaryChapter": "FSM2-055",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q43",
+      "sourceSetLabel": "2020",
+      "questionNumber": 43,
+      "displayedAnswer": 2,
+      "questionStartPage": 356,
+      "answerMarkerPage": 356,
+      "primaryChapter": "FSM2-057",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-048"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q44",
+      "sourceSetLabel": "2020",
+      "questionNumber": 44,
+      "displayedAnswer": 1,
+      "questionStartPage": 357,
+      "answerMarkerPage": 357,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q45",
+      "sourceSetLabel": "2020",
+      "questionNumber": 45,
+      "displayedAnswer": 3,
+      "questionStartPage": 359,
+      "answerMarkerPage": 359,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q46",
+      "sourceSetLabel": "2020",
+      "questionNumber": 46,
+      "displayedAnswer": 4,
+      "questionStartPage": 360,
+      "answerMarkerPage": 360,
+      "primaryChapter": "FSM2-062",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q47",
+      "sourceSetLabel": "2020",
+      "questionNumber": 47,
+      "displayedAnswer": 1,
+      "questionStartPage": 361,
+      "answerMarkerPage": 361,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q48",
+      "sourceSetLabel": "2020",
+      "questionNumber": 48,
+      "displayedAnswer": 2,
+      "questionStartPage": 362,
+      "answerMarkerPage": 362,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q49",
+      "sourceSetLabel": "2020",
+      "questionNumber": 49,
+      "displayedAnswer": 3,
+      "questionStartPage": 362,
+      "answerMarkerPage": 362,
+      "primaryChapter": "FSM2-063",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27781-q50",
+      "sourceSetLabel": "2020",
+      "questionNumber": 50,
+      "displayedAnswer": 4,
+      "questionStartPage": 363,
+      "answerMarkerPage": 363,
+      "primaryChapter": "FSM2-064",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q01",
+      "sourceSetLabel": "2019",
+      "questionNumber": 1,
+      "displayedAnswer": 2,
+      "questionStartPage": 364,
+      "answerMarkerPage": 364,
+      "primaryChapter": "FSM2-003",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q02",
+      "sourceSetLabel": "2019",
+      "questionNumber": 2,
+      "displayedAnswer": 2,
+      "questionStartPage": 364,
+      "answerMarkerPage": 364,
+      "primaryChapter": "FSM2-001",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q03",
+      "sourceSetLabel": "2019",
+      "questionNumber": 3,
+      "displayedAnswer": 4,
+      "questionStartPage": 365,
+      "answerMarkerPage": 365,
+      "primaryChapter": "FSM2-005",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q04",
+      "sourceSetLabel": "2019",
+      "questionNumber": 4,
+      "displayedAnswer": 3,
+      "questionStartPage": 365,
+      "answerMarkerPage": 365,
+      "primaryChapter": "FSM2-006",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q05",
+      "sourceSetLabel": "2019",
+      "questionNumber": 5,
+      "displayedAnswer": 3,
+      "questionStartPage": 366,
+      "answerMarkerPage": 366,
+      "primaryChapter": "FSM2-010",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q06",
+      "sourceSetLabel": "2019",
+      "questionNumber": 6,
+      "displayedAnswer": 1,
+      "questionStartPage": 366,
+      "answerMarkerPage": 366,
+      "primaryChapter": "FSM2-011",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q07",
+      "sourceSetLabel": "2019",
+      "questionNumber": 7,
+      "displayedAnswer": 2,
+      "questionStartPage": 367,
+      "answerMarkerPage": 367,
+      "primaryChapter": "FSM2-007",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q08",
+      "sourceSetLabel": "2019",
+      "questionNumber": 8,
+      "displayedAnswer": 1,
+      "questionStartPage": 367,
+      "answerMarkerPage": 367,
+      "primaryChapter": "FSM2-012",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q09",
+      "sourceSetLabel": "2019",
+      "questionNumber": 9,
+      "displayedAnswer": 3,
+      "questionStartPage": 368,
+      "answerMarkerPage": 368,
+      "primaryChapter": "FSM2-016",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q10",
+      "sourceSetLabel": "2019",
+      "questionNumber": 10,
+      "displayedAnswer": 1,
+      "questionStartPage": 368,
+      "answerMarkerPage": 368,
+      "primaryChapter": "FSM2-067",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q11",
+      "sourceSetLabel": "2019",
+      "questionNumber": 11,
+      "displayedAnswer": 4,
+      "questionStartPage": 369,
+      "answerMarkerPage": 369,
+      "primaryChapter": "FSM2-020",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q12",
+      "sourceSetLabel": "2019",
+      "questionNumber": 12,
+      "displayedAnswer": 4,
+      "questionStartPage": 369,
+      "answerMarkerPage": 369,
+      "primaryChapter": "FSM2-021",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q13",
+      "sourceSetLabel": "2019",
+      "questionNumber": 13,
+      "displayedAnswer": 3,
+      "questionStartPage": 370,
+      "answerMarkerPage": 370,
+      "primaryChapter": "FSM2-022",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q14",
+      "sourceSetLabel": "2019",
+      "questionNumber": 14,
+      "displayedAnswer": 1,
+      "questionStartPage": 370,
+      "answerMarkerPage": 370,
+      "primaryChapter": "FSM2-023",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q15",
+      "sourceSetLabel": "2019",
+      "questionNumber": 15,
+      "displayedAnswer": 4,
+      "questionStartPage": 371,
+      "answerMarkerPage": 371,
+      "primaryChapter": "FSM2-053",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q16",
+      "sourceSetLabel": "2019",
+      "questionNumber": 16,
+      "displayedAnswer": 2,
+      "questionStartPage": 371,
+      "answerMarkerPage": 371,
+      "primaryChapter": "FSM2-014",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q17",
+      "sourceSetLabel": "2019",
+      "questionNumber": 17,
+      "displayedAnswer": 4,
+      "questionStartPage": 372,
+      "answerMarkerPage": 372,
+      "primaryChapter": "FSM2-029",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q18",
+      "sourceSetLabel": "2019",
+      "questionNumber": 18,
+      "displayedAnswer": 2,
+      "questionStartPage": 372,
+      "answerMarkerPage": 372,
+      "primaryChapter": "FSM2-045",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q19",
+      "sourceSetLabel": "2019",
+      "questionNumber": 19,
+      "displayedAnswer": 3,
+      "questionStartPage": 373,
+      "answerMarkerPage": 373,
+      "primaryChapter": "FSM2-026",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q20",
+      "sourceSetLabel": "2019",
+      "questionNumber": 20,
+      "displayedAnswer": 1,
+      "questionStartPage": 373,
+      "answerMarkerPage": 373,
+      "primaryChapter": "FSM2-032",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q21",
+      "sourceSetLabel": "2019",
+      "questionNumber": 21,
+      "displayedAnswer": 3,
+      "questionStartPage": 374,
+      "answerMarkerPage": 374,
+      "primaryChapter": "FSM2-029",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q22",
+      "sourceSetLabel": "2019",
+      "questionNumber": 22,
+      "displayedAnswer": 4,
+      "questionStartPage": 374,
+      "answerMarkerPage": 374,
+      "primaryChapter": "FSM2-032",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q23",
+      "sourceSetLabel": "2019",
+      "questionNumber": 23,
+      "displayedAnswer": 1,
+      "questionStartPage": 375,
+      "answerMarkerPage": 375,
+      "primaryChapter": "FSM2-033",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q24",
+      "sourceSetLabel": "2019",
+      "questionNumber": 24,
+      "displayedAnswer": 3,
+      "questionStartPage": 375,
+      "answerMarkerPage": 375,
+      "primaryChapter": "FSM2-041",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q25",
+      "sourceSetLabel": "2019",
+      "questionNumber": 25,
+      "displayedAnswer": 2,
+      "questionStartPage": 376,
+      "answerMarkerPage": 376,
+      "primaryChapter": "FSM2-046",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q26",
+      "sourceSetLabel": "2019",
+      "questionNumber": 26,
+      "displayedAnswer": 4,
+      "questionStartPage": 377,
+      "answerMarkerPage": 377,
+      "primaryChapter": "FSM2-040",
+      "secondaryChapters": [
+        "FSM2-037",
+        "FSM2-043"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q27",
+      "sourceSetLabel": "2019",
+      "questionNumber": 27,
+      "displayedAnswer": 2,
+      "questionStartPage": 378,
+      "answerMarkerPage": 378,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q28",
+      "sourceSetLabel": "2019",
+      "questionNumber": 28,
+      "displayedAnswer": 1,
+      "questionStartPage": 379,
+      "answerMarkerPage": 379,
+      "primaryChapter": "FSM2-042",
+      "secondaryChapters": [
+        "FSM2-041"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "공식 교재·장비별 안전절차 대조"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q29",
+      "sourceSetLabel": "2019",
+      "questionNumber": 29,
+      "displayedAnswer": 2,
+      "questionStartPage": 380,
+      "answerMarkerPage": 380,
+      "primaryChapter": "FSM2-047",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q30",
+      "sourceSetLabel": "2019",
+      "questionNumber": 30,
+      "displayedAnswer": 1,
+      "questionStartPage": 381,
+      "answerMarkerPage": 381,
+      "primaryChapter": "FSM2-035",
+      "secondaryChapters": [
+        "FSM2-033"
+      ],
+      "reviewFlags": [
+        "체절운전 해설 논리 재검토",
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q31",
+      "sourceSetLabel": "2019",
+      "questionNumber": 31,
+      "displayedAnswer": 2,
+      "questionStartPage": 382,
+      "answerMarkerPage": 382,
+      "primaryChapter": "FSM2-048",
+      "secondaryChapters": [
+        "FSM2-047",
+        "FSM2-046"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q32",
+      "sourceSetLabel": "2019",
+      "questionNumber": 32,
+      "displayedAnswer": 4,
+      "questionStartPage": 383,
+      "answerMarkerPage": 383,
+      "primaryChapter": "FSM2-039",
+      "secondaryChapters": [
+        "FSM2-037"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q33",
+      "sourceSetLabel": "2019",
+      "questionNumber": 33,
+      "displayedAnswer": 3,
+      "questionStartPage": 384,
+      "answerMarkerPage": 384,
+      "primaryChapter": "FSM2-046",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q34",
+      "sourceSetLabel": "2019",
+      "questionNumber": 34,
+      "displayedAnswer": 3,
+      "questionStartPage": 384,
+      "answerMarkerPage": 384,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q35",
+      "sourceSetLabel": "2019",
+      "questionNumber": 35,
+      "displayedAnswer": 2,
+      "questionStartPage": 385,
+      "answerMarkerPage": 385,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q36",
+      "sourceSetLabel": "2019",
+      "questionNumber": 36,
+      "displayedAnswer": 4,
+      "questionStartPage": 386,
+      "answerMarkerPage": 386,
+      "primaryChapter": "FSM2-049",
+      "secondaryChapters": [
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q37",
+      "sourceSetLabel": "2019",
+      "questionNumber": 37,
+      "displayedAnswer": 1,
+      "questionStartPage": 387,
+      "answerMarkerPage": 387,
+      "primaryChapter": "FSM2-034",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q38",
+      "sourceSetLabel": "2019",
+      "questionNumber": 38,
+      "displayedAnswer": 3,
+      "questionStartPage": 388,
+      "answerMarkerPage": 388,
+      "primaryChapter": "FSM2-036",
+      "secondaryChapters": [
+        "FSM2-031"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q39",
+      "sourceSetLabel": "2019",
+      "questionNumber": 39,
+      "displayedAnswer": 2,
+      "questionStartPage": 389,
+      "answerMarkerPage": 389,
+      "primaryChapter": "FSM2-050",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q40",
+      "sourceSetLabel": "2019",
+      "questionNumber": 40,
+      "displayedAnswer": 1,
+      "questionStartPage": 390,
+      "answerMarkerPage": 390,
+      "primaryChapter": "FSM2-070",
+      "secondaryChapters": [
+        "FSM2-054"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q41",
+      "sourceSetLabel": "2019",
+      "questionNumber": 41,
+      "displayedAnswer": 3,
+      "questionStartPage": 391,
+      "answerMarkerPage": 391,
+      "primaryChapter": "FSM2-054",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q42",
+      "sourceSetLabel": "2019",
+      "questionNumber": 42,
+      "displayedAnswer": 4,
+      "questionStartPage": 391,
+      "answerMarkerPage": 391,
+      "primaryChapter": "FSM2-055",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q43",
+      "sourceSetLabel": "2019",
+      "questionNumber": 43,
+      "displayedAnswer": 1,
+      "questionStartPage": 392,
+      "answerMarkerPage": 392,
+      "primaryChapter": "FSM2-057",
+      "secondaryChapters": [
+        "FSM2-043",
+        "FSM2-047"
+      ],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q44",
+      "sourceSetLabel": "2019",
+      "questionNumber": 44,
+      "displayedAnswer": 2,
+      "questionStartPage": 393,
+      "answerMarkerPage": 393,
+      "primaryChapter": "FSM2-058",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q45",
+      "sourceSetLabel": "2019",
+      "questionNumber": 45,
+      "displayedAnswer": 3,
+      "questionStartPage": 393,
+      "answerMarkerPage": 393,
+      "primaryChapter": "FSM2-061",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q46",
+      "sourceSetLabel": "2019",
+      "questionNumber": 46,
+      "displayedAnswer": 2,
+      "questionStartPage": 394,
+      "answerMarkerPage": 395,
+      "primaryChapter": "FSM2-059",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q47",
+      "sourceSetLabel": "2019",
+      "questionNumber": 47,
+      "displayedAnswer": 3,
+      "questionStartPage": 396,
+      "answerMarkerPage": 396,
+      "primaryChapter": "FSM2-060",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q48",
+      "sourceSetLabel": "2019",
+      "questionNumber": 48,
+      "displayedAnswer": 4,
+      "questionStartPage": 397,
+      "answerMarkerPage": 397,
+      "primaryChapter": "FSM2-062",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분",
+        "응급처치 지침 판본 확인"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q49",
+      "sourceSetLabel": "2019",
+      "questionNumber": 49,
+      "displayedAnswer": 1,
+      "questionStartPage": 397,
+      "answerMarkerPage": 397,
+      "primaryChapter": "FSM2-063",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    },
+    {
+      "sourceQuestionId": "moducbt-27782-q50",
+      "sourceSetLabel": "2019",
+      "questionNumber": 50,
+      "displayedAnswer": 4,
+      "questionStartPage": 398,
+      "answerMarkerPage": 398,
+      "primaryChapter": "FSM2-064",
+      "secondaryChapters": [],
+      "reviewFlags": [
+        "과거 표기·현행 적용 기준 구분"
+      ]
+    }
+  ]
+}

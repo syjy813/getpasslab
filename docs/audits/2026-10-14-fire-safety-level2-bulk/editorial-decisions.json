@@ -1,0 +1,57 @@
+[
+  {
+    "topic": "특급·1급 구별",
+    "sourceQuestionId": "moducbt-27777-q01",
+    "finding": "복원 해설에서 비아파트30층/120m를1급으로 서술 · 현행은 특급",
+    "resolution": "시행령 별표4 기준 적용"
+  },
+  {
+    "topic": "직렬 밸브",
+    "finding": "연결 경로 확인 없이 하나만 열어도 물이 흐른다고 단정한 해설",
+    "resolution": "직렬 경로의 밸브 전부 개방 조건으로 설명",
+    "sourcePage": 381,
+    "sourceQuestionId": "moducbt-27782-q30"
+  },
+  {
+    "topic": "정상 제어반 항목",
+    "sourceQuestionId": "moducbt-27775-q27",
+    "finding": "정답 번호와 별개로 해설 정상항목 목록 일부 누락",
+    "resolution": "연동·수동정지명령·MCC자동·전원공급 각각 판독"
+  },
+  {
+    "topic": "마른모래·팽창질석",
+    "sourceQuestionId": "moducbt-27778-q22",
+    "finding": "두 용구 모두0.5단위라는 복원 해설은 현행 표와 불일치",
+    "resolution": "공식 NFTC101 표: 모래50L0.5, 질석80L1 · 독립 계산 예8단위"
+  },
+  {
+    "topic": "화기작업 종료 감시",
+    "finding": "복원 문항의30분을 법령의 일률적 최소기준으로 일반화하지 않음",
+    "resolution": "작업 관리감독 절차로 설명 · 법정5m소화기/10m가연물 조건 별도"
+  },
+  {
+    "topic": "특별피난계단",
+    "finding": "일반11층·공동주택16층, 400㎡미만 제외와 갓복도식 예외 대조",
+    "resolution": "건축법시행령35조 적용"
+  },
+  {
+    "topic": "사용기간 연장",
+    "finding": "일률3년 표현을 법령에 맞게 세분화",
+    "resolution": "경과 다음달부터, 경과후10년미만3년/10년이상1년"
+  },
+  {
+    "topic": "응급처치",
+    "finding": "일반인 맥박 확인 지연·무조건 다리올림·지혈대 주기적 이완 등을 채택하지 않음",
+    "resolution": "2025 한국CPR 지침·질병관리청·적십자 안내 적용"
+  },
+  {
+    "topic": "학습 순서",
+    "finding": "기존37의chapter_id와order를 구분 · 목차의실제learningOrder40 확인",
+    "resolution": "ID037·URL유지, order40 · 각과목 order중복 및 이전·다음 링크 검사"
+  },
+  {
+    "topic": "가스누설경보기",
+    "finding": "복원 해설의 수평거리 표현과 현행기준의 직선거리 구분",
+    "resolution": "NFTC206 탐지부8m/4m는 직선거리 · LNG하단/LPG상단 높이 적용"
+  }
+]

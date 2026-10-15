@@ -1,0 +1,76 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "startedAt": "2026-10-15T11:48:43.669Z",
+  "cases": [
+    {
+      "width": 320,
+      "menuNavigation": "PASS",
+      "imageCount": 4,
+      "displayWidths": [
+        270,
+        270,
+        270,
+        270
+      ],
+      "zoomCloseAndRestoration": 4,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "menuNavigation": "PASS",
+      "imageCount": 4,
+      "displayWidths": [
+        340,
+        340,
+        340,
+        340
+      ],
+      "zoomCloseAndRestoration": 4,
+      "noOverflow": true
+    },
+    {
+      "width": 768,
+      "menuNavigation": "PASS",
+      "imageCount": 4,
+      "displayWidths": [
+        350,
+        350,
+        350,
+        350
+      ],
+      "zoomCloseAndRestoration": 4,
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "menuNavigation": "PASS",
+      "imageCount": 4,
+      "displayWidths": [
+        430,
+        430,
+        430,
+        430
+      ],
+      "zoomCloseAndRestoration": 4,
+      "noOverflow": true
+    },
+    {
+      "route": "/industrial-safety/written/construction/hanging-scaffold-wire-rope/",
+      "existingQuestionPopup": "PASS"
+    },
+    {
+      "route": "/energy-management/written/thermal-equipment/draft-flue-gas/",
+      "existingQuestionPopup": "PASS"
+    },
+    {
+      "route": "/computer-literacy/written/spreadsheets/goal-seek/",
+      "existingQuestionPopup": "PASS"
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical iOS/Android and Safari not tested"
+  ],
+  "result": "PASS",
+  "finishedAt": "2026-10-15T11:48:57.669Z"
+}

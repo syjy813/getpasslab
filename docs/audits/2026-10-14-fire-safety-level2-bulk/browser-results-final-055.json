@@ -1,0 +1,44 @@
+{
+  "base": "http://127.0.0.1:4321",
+  "cases": [
+    {
+      "chapterId": "FSM2-055",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-055",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-055",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-055",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical iOS/Android and Safari not tested"
+  ],
+  "startedAt": "2026-10-15T11:50:58.897Z",
+  "result": "PASS",
+  "finishedAt": "2026-10-15T11:51:05.685Z"
+}
