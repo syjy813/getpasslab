@@ -1,0 +1,281 @@
+[
+  {
+    "chapterId": "FSM2-001",
+    "changedDecisionCue": "등급 판단의 호스릴 제외·도시가스 제조설비 선택 조건",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q03",
+      "moducbt-27777-q01",
+      "moducbt-27779-q02",
+      "moducbt-27780-q03",
+      "moducbt-27782-q02"
+    ],
+    "questionsPresent": 5,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-004",
+    "changedDecisionCue": "위법사항 조치요구 후 미시정 시 통보",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q01",
+      "moducbt-27777-q02"
+    ],
+    "questionsPresent": 2,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-005",
+    "changedDecisionCue": "경력지정 보조자 3개월과 일반 6개월",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q02",
+      "moducbt-27774-q02",
+      "moducbt-27777-q03",
+      "moducbt-27778-q02",
+      "moducbt-27779-q01",
+      "moducbt-27780-q01",
+      "moducbt-27781-q03",
+      "moducbt-27782-q03"
+    ],
+    "questionsPresent": 8,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-006",
+    "changedDecisionCue": "교육 미이수 상한100만원과 실제부과50만원",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q08",
+      "moducbt-27775-q02",
+      "moducbt-27775-q07",
+      "moducbt-27776-q06",
+      "moducbt-27778-q03",
+      "moducbt-27778-q08",
+      "moducbt-27779-q03",
+      "moducbt-27779-q05",
+      "moducbt-27780-q02",
+      "moducbt-27780-q04",
+      "moducbt-27781-q04",
+      "moducbt-27782-q04"
+    ],
+    "questionsPresent": 12,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-007",
+    "changedDecisionCue": "선박 건조 구조물 포함",
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q05",
+      "moducbt-27775-q05",
+      "moducbt-27776-q04",
+      "moducbt-27776-q08",
+      "moducbt-27777-q05",
+      "moducbt-27778-q04",
+      "moducbt-27779-q04",
+      "moducbt-27780-q05",
+      "moducbt-27781-q07",
+      "moducbt-27782-q07"
+    ],
+    "questionsPresent": 10,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-009",
+    "changedDecisionCue": "신설 범위·최초60일·특급 반기1회",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q06",
+      "moducbt-27774-q06",
+      "moducbt-27775-q04",
+      "moducbt-27775-q06",
+      "moducbt-27777-q06",
+      "moducbt-27777-q07",
+      "moducbt-27778-q07",
+      "moducbt-27779-q07",
+      "moducbt-27781-q05",
+      "moducbt-27781-q08"
+    ],
+    "questionsPresent": 10,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-012",
+    "changedDecisionCue": "개축의 내력벽·기둥·보·지붕틀 중 셋",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q07",
+      "moducbt-27775-q08",
+      "moducbt-27776-q07",
+      "moducbt-27777-q04",
+      "moducbt-27779-q06",
+      "moducbt-27779-q08",
+      "moducbt-27781-q06",
+      "moducbt-27782-q08"
+    ],
+    "questionsPresent": 8,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-017",
+    "changedDecisionCue": "교재의 수소4.1~75% 조건",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q09",
+      "moducbt-27779-q09"
+    ],
+    "questionsPresent": 2,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-021",
+    "changedDecisionCue": "11m 조건과 10m 규정·종료후 감시 단계",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q12",
+      "moducbt-27774-q12",
+      "moducbt-27775-q12",
+      "moducbt-27776-q12",
+      "moducbt-27777-q12",
+      "moducbt-27778-q12",
+      "moducbt-27779-q12",
+      "moducbt-27780-q12",
+      "moducbt-27781-q12",
+      "moducbt-27782-q12"
+    ],
+    "questionsPresent": 10,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-027",
+    "changedDecisionCue": "양쪽0.5단위·합계5단위",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q17",
+      "moducbt-27778-q22",
+      "moducbt-27779-q21"
+    ],
+    "questionsPresent": 3,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-029",
+    "changedDecisionCue": "아파트 감소 금지",
+    "primarySourceQuestionIds": [
+      "moducbt-27774-q18",
+      "moducbt-27775-q21",
+      "moducbt-27776-q22",
+      "moducbt-27777-q17",
+      "moducbt-27778-q20",
+      "moducbt-27780-q21",
+      "moducbt-27782-q17",
+      "moducbt-27782-q21"
+    ],
+    "questionsPresent": 8,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-031",
+    "changedDecisionCue": "기본2.6와 고층·창고 특별기준",
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q18",
+      "moducbt-27776-q18",
+      "moducbt-27777-q19",
+      "moducbt-27778-q17",
+      "moducbt-27778-q21",
+      "moducbt-27781-q21",
+      "moducbt-27781-q33"
+    ],
+    "questionsPresent": 7,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-038",
+    "changedDecisionCue": "수원계수와 기준개수의 특별기준",
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q20",
+      "moducbt-27777-q20",
+      "moducbt-27779-q19"
+    ],
+    "questionsPresent": 3,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-035",
+    "changedDecisionCue": "시험준비 토출밸브 차단·체절과 유량측정·원상복구",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q29",
+      "moducbt-27773-q32",
+      "moducbt-27774-q28",
+      "moducbt-27777-q29",
+      "moducbt-27778-q25",
+      "moducbt-27778-q32",
+      "moducbt-27780-q28",
+      "moducbt-27781-q27",
+      "moducbt-27782-q30"
+    ],
+    "questionsPresent": 9,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-040",
+    "changedDecisionCue": "시험전2차측차단·배수와 복구",
+    "primarySourceQuestionIds": [
+      "moducbt-27775-q31",
+      "moducbt-27775-q38",
+      "moducbt-27776-q36",
+      "moducbt-27777-q32",
+      "moducbt-27778-q28",
+      "moducbt-27779-q28",
+      "moducbt-27780-q27",
+      "moducbt-27781-q35",
+      "moducbt-27781-q37",
+      "moducbt-27782-q26"
+    ],
+    "questionsPresent": 10,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-058",
+    "changedDecisionCue": "기도폐쇄의 등두드리기 우선·연령·반응 분기",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q44",
+      "moducbt-27773-q46",
+      "moducbt-27774-q44",
+      "moducbt-27775-q44",
+      "moducbt-27776-q44",
+      "moducbt-27777-q48",
+      "moducbt-27778-q48",
+      "moducbt-27779-q45",
+      "moducbt-27780-q46",
+      "moducbt-27781-q45",
+      "moducbt-27781-q48",
+      "moducbt-27782-q44"
+    ],
+    "questionsPresent": 12,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  },
+  {
+    "chapterId": "FSM2-061",
+    "changedDecisionCue": "3도/4도·장신구 신속제거·의료진의 항생제 판단",
+    "primarySourceQuestionIds": [
+      "moducbt-27773-q47",
+      "moducbt-27775-q46",
+      "moducbt-27776-q45",
+      "moducbt-27778-q46",
+      "moducbt-27779-q47",
+      "moducbt-27780-q45",
+      "moducbt-27782-q45"
+    ],
+    "questionsPresent": 7,
+    "status": "변경 판단에 필요한 공식 교재·법령·지침 대조; 주제 연결 유지",
+    "limits": "복원 OCR 자료이며 공식 정답·선택지 전수검증 아님"
+  }
+]

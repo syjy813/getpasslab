@@ -21,8 +21,13 @@
   {
     "topic": "마른모래·팽창질석",
     "sourceQuestionId": "moducbt-27778-q22",
-    "finding": "두 용구 모두0.5단위라는 복원 해설은 현행 표와 불일치",
-    "resolution": "공식 NFTC101 표: 모래50L0.5, 질석80L1 · 독립 계산 예8단위"
+    "finding": "최초 집필에서 공식 표의 병합 셀을 오독하여 복원 해설의 올바른 0.5단위를 잘못 배제함",
+    "resolution": "2026-10-18 정정: 마른모래50L·팽창질석80L 각각0.5단위. 모래4포+질석6포는5단위. NFTC101 표1.7.1.6 및 교재137쪽 대조",
+    "previousDecision": {
+      "finding": "두 용구 모두0.5단위라는 복원 해설은 현행 표와 불일치",
+      "resolution": "공식 NFTC101 표: 모래50L0.5, 질석80L1 · 독립 계산 예8단위"
+    },
+    "correctionAudit": "docs/audits/2026-10-18-fire-level2-textbook-corrections/README.md"
   },
   {
     "topic": "화기작업 종료 감시",

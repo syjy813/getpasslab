@@ -6,10 +6,15 @@ import {spawnSync} from 'node:child_process';
 const helper = 'scripts/read-before-fire-safety-level2-launch.mjs';
 const audit = 'docs/audits/2026-10-14-fire-safety-level2-launch';
 const release = JSON.parse(await readFile(audit+'/release.json','utf8'));
+const correctionAudit='docs/audits/2026-10-18-fire-level2-textbook-corrections';
+const corrections=JSON.parse(await readFile(correctionAudit+'/release.json','utf8'));
+const correctionFiles=['scripts/read-before-fire-textbook-corrections.mjs',correctionAudit+'/release.json',...corrections.files.flatMap(r=>[r.path,r.originalFile])];
 const root = await mkdtemp(path.join(tmpdir(),'getpasslab-fire-history-'));
 const run = code => spawnSync(process.execPath,['--input-type=module','-e',`import assert from 'node:assert/strict';import {readFile,readdir} from './${helper}';${code}`],{cwd:root,encoding:'utf8'});
 async function put(file,bytes){await mkdir(path.dirname(path.join(root,file)),{recursive:true});await writeFile(path.join(root,file),bytes)}
 try {
+ for(const f of correctionFiles){await mkdir(path.dirname(path.join(root,f)),{recursive:true});await copyFile(f,path.join(root,f))}
+
   const bulkAudit='docs/audits/2026-10-14-fire-safety-level2-bulk';
   const bulk=JSON.parse(await readFile(bulkAudit+'/release.json','utf8'));
   const files=['scripts/read-before-fire-safety-level2-bulk.mjs',bulkAudit+'/release.json',bulkAudit+'/baseline.json',...bulk.sourceChanges.flatMap(row=>[row.path,...(row.originalFile?[row.originalFile]:[])]),helper,audit+'/release.json',audit+'/baseline.json',...release.sourceChanges.flatMap(row=>[row.path,...(row.originalFile?[row.originalFile]:[])])];

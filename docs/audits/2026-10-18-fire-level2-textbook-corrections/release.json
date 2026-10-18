@@ -1,0 +1,265 @@
+{
+  "baselineCommit": "3f4ec1b9fdd2de6b8d416e90b0fbd8323972174e",
+  "changedChapterIds": [
+    "FSM2-001",
+    "FSM2-004",
+    "FSM2-005",
+    "FSM2-006",
+    "FSM2-007",
+    "FSM2-009",
+    "FSM2-012",
+    "FSM2-017",
+    "FSM2-021",
+    "FSM2-027",
+    "FSM2-029",
+    "FSM2-031",
+    "FSM2-035",
+    "FSM2-038",
+    "FSM2-040",
+    "FSM2-058",
+    "FSM2-061"
+  ],
+  "files": [
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/preaction-cross-zone-test.md",
+      "sha256": "262474f08e754a2fe38fe4dcb6f4f24d2c281d75de562d356f3751455cc4d50a",
+      "originalSha256": "f29ebb93b7f923cd0b2a9ab248546f9772edd51703cf1f90d770617ec1c533c6",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/preaction-cross-zone-test.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pump-performance-tests.md",
+      "sha256": "313b47f50c7fc786b0060d99ba19e370260f9345548b7967301bef96295dfd84",
+      "originalSha256": "533b654b4f2a263458ac69aea0a75fb71a852e35b63068b4f1dc7139141e8230",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pump-performance-tests.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/burns-types-first-aid.md",
+      "sha256": "292a4bac0bf96c5400b5288c68afe7116ca8aeecebc2fcf38238918aee1976ce",
+      "originalSha256": "c88372f1405764e13069885485e78b6321e09fa55615535df830547657433eb9",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/burns-types-first-aid.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/first-aid-assessment.md",
+      "sha256": "1dac587a4960b8f871e20e1a2f912b17ad51dbe8b99538ddf5b0b426fcb6ecdb",
+      "originalSha256": "c64954817d06656e048b5322406bfab9bd9628156770cd9641402ea914695dd2",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/first-aid-assessment.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-head-water-performance.md",
+      "sha256": "82f1db7722297f3aba1ffb2ee5feaa59e04d7c05db94df773dc54f50697dc30b",
+      "originalSha256": "9a474a227d42a7f4a457b8add48ab8a2a9b893e1842f3576826c6be5e4899eef",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-head-water-performance.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hot-work-permit-fire-watch.md",
+      "sha256": "45328b695a74c588496a8a7932ffe7a7934bc6c40e94b1ade49b7b52e345182f",
+      "originalSha256": "3ad66f95733d60922893e904531c3538537d983f82b0d52f025e5a5594df1e7d",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hot-work-permit-fire-watch.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/building-area-height-floors.md",
+      "sha256": "68168a47fcded63b95d4ecd57ff024aaf6fee527ff9a9dba16344083868928de",
+      "originalSha256": "f7f9be4346bfd2da169fd258bcf66a0239cac62cecd7c4a49720411fcc17aabe",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/building-area-height-floors.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md",
+      "sha256": "4cb3b5e6e149ef2871333592410e3015a6526c50646830bd040aac92b2e4c937",
+      "originalSha256": "39b583e0e5e0fbefd2dd9713ab4214a202fc5b5d9a6d73381033568abda88b7f",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/indoor-hydrant-water-performance.md",
+      "sha256": "72e89eb996eb3cbfffc9d3b2705f5d04acb4582ccb1288c0921c11df13f618f7",
+      "originalSha256": "fc9c3c458a319c73cd763e305aaebd7f0b81b1e3b2c07281c371b3c081a389df",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/indoor-hydrant-water-performance.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-types-ratings.md",
+      "sha256": "d602bbef51cdce78e3fd9fcf1f1ef930123fbcf8dab95ec109982601a775b5dd",
+      "originalSha256": "cd34e5f2b2f5bc9efa40bbca947e1429e3fbe82f2ea10147ab3a83e3d57ce231",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-types-ratings.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md",
+      "sha256": "f0c0b17a353977e65066e6e952575f617b48e0a44ba27aba0645c1e66e8cff09",
+      "originalSha256": "8375929c78b8836fab71008eeb5d80cc5e38cf6a327a47246f7ed1cc0ee9136d",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flammable-range-explosion.md",
+      "sha256": "5709b811546318c600d81fd3f07bdbc87c2252c872604f97525efdb4c489daec",
+      "originalSha256": "2f50bacb125e9847aa304f82352ec8803bf24f92d70f053ad4de6068878a5234",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flammable-range-explosion.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-duties-owner-responsibility.md",
+      "sha256": "40cbdd9ad8e0f76cfb784fd958959035324f49abf8e6061cbdc7673257ac0e53",
+      "originalSha256": "ae5292f9ad239fdfe6cab270934c655324ea20108d4ba615891b9475714abc1d",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-duties-owner-responsibility.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md",
+      "sha256": "f2aeb04ab455f56cb2eb168381c01239c9f218c69de6e4d04fcf88494126b0e5",
+      "originalSha256": "806198b61fd98a1b94462ebcbb99a518eaf63eb313aab8dfeb80bd599e1c6a48",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md",
+      "sha256": "d0254349f42445b1f8572c34ab3022e76de72302c96a33fc30262d97f6fd2570",
+      "originalSha256": "d55242f643f44730061d4bc3aeb9d124ed75df3d685e353a5b52b15859bc7af8",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-layout-count.md",
+      "sha256": "d259656673882154f45927f6c702a3c0849cde47d773a84f1974fd8ab9e902b6",
+      "originalSha256": "575b7cd6186cd5a1efcb2545e79df61536bffd02e749ebf3e7ce195bdaebbf39",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-layout-count.md"
+    },
+    {
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md",
+      "sha256": "d34b518313935bf89c725cc1e570ce5fc61fab675b1ba0247892cc5a1e2f9583",
+      "originalSha256": "b499ed64abf23c44742baea9551f648853dd4ba7b8310a72db9bb499a26646ce",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/pump-test-pipe-v1.svg",
+      "sha256": "62c6ed7ee4fc8af6227fb74c8113fdb0f5b6ca27b70884fa2afcac46eb0933b2",
+      "originalSha256": "57453a00f2153d88027af4468de8f5543739fb380043a725be1a1cd4ca797654",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/public/images/fire-safety-manager-level2/pump-test-pipe-v1.svg"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg",
+      "sha256": "b757cbf0a8c38c419b94e5521f43726b5d870fcfc41eb36d44f54f13c80d168f",
+      "originalSha256": "54bcc4d459a5674a3ee82be4d137f7b0747cefa223b0774e023fc199f9d20a6e",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/public/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg"
+    },
+    {
+      "path": "public/images/fire-safety-manager-level2/guide-light-locations-v1.svg",
+      "sha256": "0d164995a885d8a3949ec9d7acdb08b20c52fbb1d5e3de60f68af7986aeb79a6",
+      "originalSha256": "aeb3425e3eb009f973277ee8cfe2d4a850ca8e10d05b690784163c16c1eaf98f",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/public/images/fire-safety-manager-level2/guide-light-locations-v1.svg"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/index.html",
+      "sha256": "f020a12e56ec1b3152dc5239807f0d260631caa8b3f2f3d646c58deffe4109af",
+      "originalSha256": "c4671567b78936ed203ee87b7b6b77e77d7fd1a023eeb7b3f1190be3a7e155d6",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/index.html",
+      "sha256": "1577de8c765fc883ef1abffd1a77e375ab7fdae6383700ae7c0a7ce12bdb4671",
+      "originalSha256": "2555009a939b30e00d64521caea710a5f3fc60e3693371c94d89482a1c63f21a",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/index.html",
+      "sha256": "fafd753ad8096614c92cb845c41ab755a0f9ef5307e1d0e4ae7343902b3a1dca",
+      "originalSha256": "53e09cb2b089f511291ef772445f81604e659101815f08940d717f69cbb58736",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/burns-types-first-aid/index.html",
+      "sha256": "50340b7a4059a28b00431e88a3e117793fc81113dbefca9fe7fb07849e5be08d",
+      "originalSha256": "fbb4dc512f3556213730290bccce8d8c4ac88d672afccda4ed104684e18a5114",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-practice/burns-types-first-aid/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/index.html",
+      "sha256": "d1b27d5b584bbdf21408a33564ddbe043abd0059e6cec5bfc85a08b4537eefea",
+      "originalSha256": "39ef74cb1a0344c93d9260fcd7ef12028594e35159cffb0b3bf12d932c4cedf6",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/building-area-height-floors/index.html",
+      "sha256": "d001295cf7437fb0bbd82ebc7fd07d5b9c5eb660b9aa7a4ba6aec59f67a678bd",
+      "originalSha256": "a14cf912dc7e78ffa7215f3acfbb1fc0f878da09bb8fb769ea69513878744b68",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/building-area-height-floors/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/index.html",
+      "sha256": "74b1fce368eebb1f37786158a093e253b02b7c5d32deaa00330a8cd252710792",
+      "originalSha256": "a8079a365b03b8788602db33828db14ec32d9719d115fe8611669ecc1eec862c",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-types-ratings/index.html",
+      "sha256": "46d9fae956cedfde901104201f0af158a2749459ba02e7be49e8560b7761f1c9",
+      "originalSha256": "21e8653f6ea09857b1782513773a6c971f049c9ebfb265a40c3355355253e8e8",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-types-ratings/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/hot-work-permit-fire-watch/index.html",
+      "sha256": "25b0949e93a3344525129100e8aadbff16a74ba8dae7dfdf5dc8daaba1f888aa",
+      "originalSha256": "5ffbaeda9cf63eaab6d1c5941ed950da2dcaef20bd6044b1552a9ec188c995d3",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/hot-work-permit-fire-watch/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/index.html",
+      "sha256": "13836ddf382105e6a571d65219d53d6d6c45e0e4492d06ca7529b652e65f8c73",
+      "originalSha256": "6566908858d99aa2e58c6a62faeef980abde4f9940e1f7dd3b1e13d2391ec35a",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/index.html",
+      "sha256": "d295d8be6b1b96b801d631224dd363cef8b82c2cb944d3b2770eaadefb3d3bd2",
+      "originalSha256": "e986d69d457b974f9bc43d08b9e28abaffe5ac972aaa53cacfe09e8770197d6f",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/index.html",
+      "sha256": "9ce2e0fc33ad73903ace7f40ffc8ce82a473ba3349924caeccd75337271a21ef",
+      "originalSha256": "69dc24bb38ac2be54b2a431a4e1eb9810d2ee103253cf48d0c9101efff6e4953",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/index.html",
+      "sha256": "6f1c81f30d721c71bc129b4756666c712c5585f079da5635808532b0f8738293",
+      "originalSha256": "c76e25a858fe597a681f62354101cbffa83448d21f114bc42ea21d26fa6adcc1",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/index.html",
+      "sha256": "1245cd23f540b56cd4b5fb1b1635c8c10d1560fd7ff3ed98010e042a6ac3c3f4",
+      "originalSha256": "b02d9a0dd27e1c4bc6c30a3a075b597ef14bd9eb6e95af1557f5a529d716ad79",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-layout-count/index.html",
+      "sha256": "a6040dc2b8b3d8c79f3c51e559ef2b5ae95f5ac08a98c14307a5094e6b89cf18",
+      "originalSha256": "a01a048b373bbf20a49f8f0f43d368b3c04851ff8b1a05e664caa17d2efcf9a2",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-layout-count/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/flammable-range-explosion/index.html",
+      "sha256": "ca2002e5fea56ee84cb8f7ac99719e93e1d2017978236baa6487910d6e5171f5",
+      "originalSha256": "1693253655d0a545eef1196f0bacca7c5cf3836666d1bfba5b28841f2800a684",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/flammable-range-explosion/index.html"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/index.html",
+      "sha256": "18527a163a2a423272da55aaf13b5ad735b4247fc666531b96313b2001765540",
+      "originalSha256": "6c9a98dcb051fd467974c871727c616072765d85761eec649e97a375ec5b61ee",
+      "originalFile": "docs/audits/2026-10-18-fire-level2-textbook-corrections/before/dist/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/index.html"
+    }
+  ],
+  "articleChanges": {
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/index.html": "46518ab09a4b15d99aead928f09c5ffe35f612dec4311d6f2c2fb2f8337a967e",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/index.html": "835c65e6e16ed2aaac2d981781f2377962451f3321b72086656aee292d52b544",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/index.html": "97857be2b857b323dcf7f57c39fb0a60cf442dab873177358ab14d3b9d4f5c2c",
+    "dist/fire-safety-manager-level2/written/fire-safety-practice/burns-types-first-aid/index.html": "7b3d34f9911959fe39da5219689cfb0f10164b7e4545ee290a524311ba1a4ce8",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/index.html": "3fa1d54da255e2df2c1f80306e3f30fe92060e5f02884f3fbf66b3d1f1ecfbf6",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/building-area-height-floors/index.html": "6d1602cf1b7dfd1879dc2c3349eeb3c0ab23c96f08b8b237aa0b9a2e0bf6f772",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/index.html": "891d076349595a3ec9caff0cdd672ed10154a308706fc5a12692163f4feeb595",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-types-ratings/index.html": "a98a4db96b9675d3bfa40f1d3ae9db2c4984e9768d6f2f0af193276843c9530f",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/hot-work-permit-fire-watch/index.html": "86f9a1762e78dd7eea210f07825bf0432b175bf98e56f97b5d490e7add8c77b7",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/index.html": "750c23ec2fc0212d9685e875c8e2f4534ad4e7e979c7b05a4453a2d42415de5f",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/index.html": "d3c5375a81bd5f691979d2baf1ee87ab62bf5e0753a3fd473b45ae0324755e0d",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/index.html": "9ed7d03609a343cc30f08e7af30830ddc8adfb4884954dd6ba418a4c8b0f864b",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/index.html": "2479986060b32f0cb55c81886366bdd3ca4d4b8956ebdd62c0281373821e7d49",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/index.html": "678f1312255afeb075a40f19825efca2105e9bd3513cf42b5d2b736ba8681e02",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-layout-count/index.html": "cbb0c0ee4938df5093858c480332d12d50ae4e2841738975cf6c3eff51e167a6",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/flammable-range-explosion/index.html": "6cc18565fa26edccceb0856a466f19c42009cda501bb15dbbfa7de0a735140d1",
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/index.html": "4e61c0dc839ad47e437d2abc868a44762befec95bb800e0d3cc6bdd1b9c8b5bd"
+  }
+}

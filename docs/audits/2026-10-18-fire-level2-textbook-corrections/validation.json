@@ -1,0 +1,177 @@
+{
+  "recordedAt": "2026-10-18T13:22:17.523086+00:00",
+  "build": {
+    "command": "npm run build",
+    "result": "PASS",
+    "htmlPages": 546
+  },
+  "checks": [
+    {
+      "script": "scripts/check-accident-analysis-figures.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-chapter-formula-style.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-clam-shell-chapter.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-color-contrast.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-computer-literacy-001-081.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-computer-literacy-082-159.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-computer-literacy-c1.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-computer-literacy-publication.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-deferred-question-content.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-earth-retaining-structure.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-excavator-operation-safety.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-fire-bulk-history-guard.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-fire-launch-history-guard.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-fire-safety-level2-bulk.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-fire-safety-level2-launch.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-fire-textbook-corrections.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-formwork-lateral-pressure.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-fta-original-options.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-fta-symbols-split.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-hanging-scaffold-wire-rope.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-historical-practice-guard.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-industrial-20190804-review.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-industrial-question-source-repair.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-industrial-remaining-review.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-industrial-remaining-splits.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-industrial-safety-chapter-splits.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-industrial-safety-machine-tools-split.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-industrial-unassigned-links.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-instant-practice-coverage.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-instant-practice-datasets.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-instant-practice-pilot.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-port-cargo-passages.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-public-content.mjs",
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/check-seo.mjs",
+      "exitCode": 0
+    }
+  ],
+  "sourceProtection": {
+    "sourcesAndAssets": 843,
+    "articles": 524,
+    "changedChapterBodies": 17,
+    "changedSVGs": 3,
+    "unchangedFrontmatter": true,
+    "canonicalQuestionsUnchanged": true
+  },
+  "visualInspection": {
+    "method": "SVG raster rendering with Noto Sans KR; manual review",
+    "files": [
+      "pump-test-pipe-v1.svg",
+      "guide-light-locations-v1.svg",
+      "burn-cooling-sequence-v1.svg"
+    ],
+    "result": "PASS"
+  },
+  "localBrowser": {
+    "result": "NOT_RUN",
+    "reason": "Connected extension timed out; cloud browser cannot reach container localhost (ERR_CONNECTION_REFUSED)."
+  },
+  "ciBrowser": {
+    "result": "PENDING",
+    "evidence": "PR Checks / Fire safety level 2 launch QA"
+  },
+  "merge": "NOT_RUN",
+  "productionDeploy": "NOT_RUN",
+  "limitations": [
+    "Physical iOS/Android and Safari not tested",
+    "Not a full verification of every textbook sentence and recovered exam option"
+  ]
+}

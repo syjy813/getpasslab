@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>시험점의 유량과 허용 압력을 각각 비교</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/pump-performance-curve-v1.svg" alt="체절 Q0은 정격압력의 140% 이하, 정격 Q100은 정격압력, 최대 Q150은 정격압력의 65% 이상" width="320" height="330" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/pump-performance-curve-v1.svg" data-fire-alt="체절 Q0은 정격압력의 140% 이하, 정격 Q100은 정격압력, 최대 Q150은 정격압력의 65% 이상" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure><figure><figcaption><strong>성능시험배관에서 유량을 조절하고 수조로 환수</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/pump-test-pipe-v1.svg" alt="펌프 토출에서 시험 분기로 유량계와 조절밸브를 거쳐 수조로 환수, 설비 공급관은 별도로 연결" width="320" height="385" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/pump-test-pipe-v1.svg" data-fire-alt="펌프 토출에서 시험 분기로 유량계와 조절밸브를 거쳐 수조로 환수, 설비 공급관은 별도로 연결" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>시험점의 유량과 허용 압력을 각각 비교</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/pump-performance-curve-v1.svg" alt="체절 Q0은 정격압력의 140% 이하, 정격 Q100은 정격압력, 최대 Q150은 정격압력의 65% 이상" width="320" height="330" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/pump-performance-curve-v1.svg" data-fire-alt="체절 Q0은 정격압력의 140% 이하, 정격 Q100은 정격압력, 최대 Q150은 정격압력의 65% 이상" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure><figure><figcaption><strong>유량 측정 시 설비측 토출밸브는 닫고 시험배관으로 환수</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/pump-test-pipe-v1.svg" alt="유량 측정 상태에서 설비측 토출밸브는 닫힘, 시험 분기에서 유량계·조절밸브를 거쳐 수조로 환수" width="320" height="385" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/pump-test-pipe-v1.svg" data-fire-alt="유량 측정 상태에서 설비측 토출밸브는 닫힘, 시험 분기에서 유량계·조절밸브를 거쳐 수조로 환수" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 수치 예
@@ -31,9 +31,11 @@ status: "완료"
 최대유량 시험에서 0.37MPa이면 불량 · 최대운전의 압력은 ‘65% 이하’가 아니라 ‘65% 이상’
 
 ## 시험 배관의 조작
-시험용 배관을 통하여 유량계를 지나 물이 돌아가게 하고 유량조절밸브로 유량 설정 · 펌프 토출 측 개폐밸브·시험용 밸브의 실제 연결 확인
+시험 준비에서 **펌프 토출측 개폐밸브를 닫아 설비측을 차단**하고 시험배관 연결·제어 상태 확인 · 유량 측정 시 시험배관을 열어 유량계·유량조절밸브를 거쳐 수조로 환수
 
-시험 완료 후 펌프 정지·밸브 원상복구·자동기동 상태 확인 · 번호가 다른 계통에 특정 밸브 번호의 개폐 순서를 그대로 적용하지 않음
+체절시험은 유량조절밸브를 닫아 유량 0에서 확인 · 정격·최대유량 시험에서는 조절밸브를 열어 각각의 유량 설정
+
+시험 후 펌프 정지 → 시험배관 밸브 원상복구 → **토출측 개폐밸브 개방** → 충압펌프·주펌프 순으로 자동기동 상태 확인 · 실제 계통도와 제조사 절차를 따르며 밸브 번호를 다른 계통에 그대로 적용하지 않음
 
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>

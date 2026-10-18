@@ -4,6 +4,9 @@ import {mkdtemp,mkdir,copyFile,readFile,writeFile,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
+const correctionAudit='docs/audits/2026-10-18-fire-level2-textbook-corrections';
+const corrections=JSON.parse(await readFile(correctionAudit+'/release.json','utf8'));
+const correctionFiles=['scripts/read-before-fire-textbook-corrections.mjs',correctionAudit+'/release.json',...corrections.files.flatMap(r=>[r.path,r.originalFile])];
 const root=await mkdtemp(path.join(tmpdir(),'getpasslab-practice-guard-'));
 const layout='src/layouts/ChapterLayout.astro',endpoint='src/pages/practice-data/[cert].json.ts';
 const audit='docs/audits/2026-10-10-hanging-scaffold-wire-rope';
@@ -15,6 +18,8 @@ const pilotOriginal=compatibility.articleChanges.find(row=>row.path===pilot).ori
 async function put(file,text){await mkdir(path.dirname(path.join(root,file)),{recursive:true});await writeFile(path.join(root,file),text)}
 const run=code=>spawnSync(process.execPath,['--input-type=module','-e',`import assert from 'node:assert/strict';import {readFile,readdir,beforePracticeEndpointInventory} from './${helper}';const inventory=async()=>beforePracticeEndpointInventory((await readdir('src/pages/practice-data')).map(f=>'src/pages/practice-data/'+f));${code}`],{cwd:root,encoding:'utf8'});
 try{
+ for(const f of correctionFiles){await mkdir(path.dirname(path.join(root,f)),{recursive:true});await copyFile(f,path.join(root,f))}
+
  for(const f of ['scripts/read-before-fire-safety-level2-bulk.mjs','docs/audits/2026-10-14-fire-safety-level2-bulk/release.json','docs/audits/2026-10-14-fire-safety-level2-bulk/baseline.json',helper,'scripts/read-before-fire-safety-level2-launch.mjs','docs/audits/2026-10-14-fire-safety-level2-launch/release.json','docs/audits/2026-10-14-fire-safety-level2-launch/baseline.json',layout,endpoint,component,pilot,pilotOriginal,audit+'/review.json',audit+'/compatibility.json']){await mkdir(path.dirname(path.join(root,f)),{recursive:true});await copyFile(f,path.join(root,f))}
  const original=await readFile(layout,'utf8'),endpointBytes=await readFile(endpoint,'utf8');
  const readLayout=`await readFile('${layout}','utf8');`;
