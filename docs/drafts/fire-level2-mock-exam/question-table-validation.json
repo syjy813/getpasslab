@@ -1,0 +1,27 @@
+{
+  "managementRows": 2480,
+  "authoredQuestions": 1980,
+  "coreOriginals": 500,
+  "subjectCounts": {
+    "1": 1488,
+    "2": 992
+  },
+  "authoredSubjectCounts": {
+    "1": 1234,
+    "2": 746
+  },
+  "originalSubjectCounts": {
+    "1": 254,
+    "2": 246
+  },
+  "originalRowsWithFourExtractedChoices": 453,
+  "originalRowsWithUnparsedChoices": 47,
+  "coreMarker": "original reconstruction rows only",
+  "originalVariantLinksUnique": 500,
+  "inputQuestionTextChoicesAnswersExplanations": "UNCHANGED",
+  "dataAndFilterChecks": "PASS",
+  "previewDomContract": "PASS",
+  "realBrowserVisualQA": "NOT_RUN",
+  "semanticAnswerReview": "PENDING",
+  "production": "NOT_DEPLOYED"
+}
