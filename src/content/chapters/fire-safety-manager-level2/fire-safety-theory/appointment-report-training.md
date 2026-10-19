@@ -30,7 +30,7 @@ status: "완료"
 ## 교육 예외를 읽는 법
 강습교육 또는 실무교육을 받은 뒤 1년 이내 선임된 경우에는 그 수료일을 실무교육 받은 날로 봄 · ‘선임 후 무조건 같은 교육을 다시 받음’으로 판단하지 않음
 
-보조자의 최초 교육도 원칙 6개월 이내이나, 관계인의 지정으로 선임되는 법정 유형은 3개월 이내 · 업무대행 감독 교육의 3개월과 일반 관리자의 6개월을 구분
+보조자의 최초 교육도 원칙 6개월 이내이나, **소방안전 관련 업무 2년 이상 경력으로 관계인이 지정한 보조자**는 3개월 이내 · 업무대행 감독 교육의 3개월과 일반 관리자의 6개월을 구분
 
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>

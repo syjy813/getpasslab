@@ -37,6 +37,8 @@ status: "완료"
 
 11층 이상 부분과 근린생활·위락·문화집회·운동·판매·운수·숙박·노유자·의료·업무(무인변전소 제외)·방송통신·교육연구·항공기 및 자동차관련·관광휴게시설에는 이 감소를 적용하지 않음
 
+공동주택 특별기준(NFTC 608)이 적용되는 **아파트등은 소화기 감소 규정을 적용하지 않음** · 세대 및 공용부(승강장·복도 등)마다 설치 조건을 확인
+
 예: 감소 제외 용도에 해당하지 않는 공장에서 필요 소형소화기 12개, 옥내소화전 유효범위 조건 충족 → 8개 감소 가능, **4개 유지** · ‘2/3 감소’와 ‘2/3만 남김’을 구별
 
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>

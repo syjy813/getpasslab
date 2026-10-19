@@ -30,4 +30,6 @@ status: "완료"
 ## 화재예방법 위반의 구별
 <div class="sample-table-scroll" tabindex="0" role="region" aria-label="화재예방법 벌칙 표"><table><thead><tr><th>위반</th><th>상한</th></tr></thead><tbody><tr><td>화재안전조사 정당한 사유 없는 거부·방해·기피</td><td>300만원 이하 벌금</td></tr><tr><td>관리자·총괄관리자·보조자 미선임</td><td>300만원 이하 벌금</td></tr><tr><td>관리자가 위법한 시설·구획에 필요한 조치를 요구하지 않음</td><td>300만원 이하 벌금</td></tr><tr><td>관계인이 관리자의 조치 요구를 이유로 불이익 처우</td><td>300만원 이하 벌금</td></tr><tr><td>자격증 대여·차용·알선</td><td>1년 이하 징역 또는 1천만원 이하 벌금</td></tr><tr><td>조사 결과 조치명령·소방안전관리 관련 조치명령의 정당한 사유 없는 불이행</td><td>3년 이하 징역 또는 3천만원 이하 벌금</td></tr></tbody></table></div>
 
+실무교육 미이수는 **법정 상한 100만원 이하 / 시행령 별표의 부과기준 50만원**을 구분 · 상한을 묻는지 실제 부과액을 묻는지 먼저 확인
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=283705&amp;efYd=20260227&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">화재예방법</a> · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=236977&amp;efYd=20241201&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">소방시설법</a> · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=286459&amp;efYd=20260903&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">소방기본법</a> · 2026-10-14 확인</p>

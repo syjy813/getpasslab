@@ -39,4 +39,11 @@ status: "완료"
 
 가압송수장치의 송수량은 기준개수 N × **80L/min 이상** · 기준개수 30개이면 수원 48㎥·송수량 2,400L/min 이상으로 각각 계산
 
+## 특별기준을 먼저 확인하는 경우
+고층건축물의 폐쇄형 수원은 30~49층 **N×3.2㎥**, 50층 이상 **N×4.8㎥** · N은 적용되는 용도·층수별 기준개수로 판단
+
+아파트등(NFTC 608)은 기준개수 **10개**(최다 설치 세대가 10개 미만이면 실제 개수), 연결된 주차장은 **30개** 조건 확인
+
+창고시설(NFTC 609)은 기준개수에 **3.2㎥**, 랙식 창고는 <strong>9.6㎥</strong>를 곱하는 특별기준 확인 · 일반 N×1.6㎥ 계산과 구분
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000281674&amp;admRulId=83616&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 103</a> · 2026-10-14 확인</p>

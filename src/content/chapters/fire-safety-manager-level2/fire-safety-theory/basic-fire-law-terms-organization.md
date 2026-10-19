@@ -20,7 +20,7 @@ status: "완료"
 ## 법의 목적과 대상
 소방기본법은 화재의 **예방·경계·진압**, 화재·재난·재해 등의 구조·구급을 통하여 국민의 생명·신체·재산을 보호하는 기본 법률임
 
-<div class="sample-table-scroll" tabindex="0" role="region" aria-label="법의 목적과 대상 표"><table><thead><tr><th>용어</th><th>구별하는 단서</th></tr></thead><tbody><tr><td>소방대상물</td><td>건축물·차량·선박·산림 및 그 밖의 인공 구조물 또는 물건</td></tr><tr><td>관계인</td><td>소유자·관리자·점유자</td></tr><tr><td>소방대</td><td>소방공무원·의무소방원·의용소방대원으로 구성되는 조직</td></tr><tr><td>소방대장</td><td>소방대의 현장활동을 지휘하는 사람</td></tr></tbody></table></div>
+<div class="sample-table-scroll" tabindex="0" role="region" aria-label="법의 목적과 대상 표"><table><thead><tr><th>용어</th><th>구별하는 단서</th></tr></thead><tbody><tr><td>소방대상물</td><td>건축물·차량·선박·선박 건조 구조물·산림 및 그 밖의 인공 구조물 또는 물건</td></tr><tr><td>관계인</td><td>소유자·관리자·점유자</td></tr><tr><td>소방대</td><td>소방공무원·의무소방원·의용소방대원으로 구성되는 조직</td></tr><tr><td>소방대장</td><td>소방대의 현장활동을 지휘하는 사람</td></tr></tbody></table></div>
 
 선박은 항구에 매어 둔 선박에 한해 소방대상물에 포함 · 특정소방대상물은 소방시설 설치·관리 법령에서 따로 정하는 범위임
 

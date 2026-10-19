@@ -31,6 +31,6 @@ ABC 분말은 A·B·C에 적응 · BC 분말을 ABC와 동일하게 읽지 않�
 
 ## 간이소화용구의 능력단위
 
-간이소화용구의 능력단위: 삽을 갖춘 마른모래 50L 이상 1포는 **0.5단위**, 삽을 갖춘 팽창질석·팽창진주암 80L 이상 1포는 **1단위** · 모래 4포와 질석 6포 → 4×0.5+6×1 = **8단위**
+간이소화용구의 능력단위: 삽을 갖춘 마른모래 50L 이상 1포는 **0.5단위**, 삽을 갖춘 팽창질석·팽창진주암 80L 이상 1포도 **0.5단위** · 모래 4포와 질석 6포 → (4+6)×0.5 = **5단위**
 
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000244810&amp;admRulId=83614&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 101</a> · 2026-10-14 확인</p>
