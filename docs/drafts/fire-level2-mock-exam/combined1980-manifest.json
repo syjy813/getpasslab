@@ -1,0 +1,715 @@
+{
+  "version": 2,
+  "createdDate": "2026-10-19",
+  "basisCommit": "c353846e7b8091e2e9f9e448ea9567eda8f1f9bf",
+  "generalBaseCount": 740,
+  "generalHardCount": 740,
+  "generalTotalCount": 1480,
+  "coreCount": 500,
+  "totalCount": 1980,
+  "chapterCount": 74,
+  "generalPerChapter": 20,
+  "hardPerChapter": 10,
+  "questionFiles": [
+    "general740.json",
+    "hard740.json",
+    "core500.json"
+  ],
+  "reviewIndex": "review-all-index.md",
+  "chapters": [
+    {
+      "chapterId": "FSM2-001",
+      "title": "소방안전관리대상물의 등급",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 5,
+      "reviewFile": "review-all/001.md"
+    },
+    {
+      "chapterId": "FSM2-002",
+      "title": "소방안전관리자의 자격과 선임",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 4,
+      "reviewFile": "review-all/002.md"
+    },
+    {
+      "chapterId": "FSM2-003",
+      "title": "소방안전관리보조자의 선임 기준",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 5,
+      "reviewFile": "review-all/003.md"
+    },
+    {
+      "chapterId": "FSM2-004",
+      "title": "소방안전관리자의 업무와 관계인의 책임",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 2,
+      "reviewFile": "review-all/004.md"
+    },
+    {
+      "chapterId": "FSM2-005",
+      "title": "선임신고·현황표 게시·실무교육",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 8,
+      "reviewFile": "review-all/005.md"
+    },
+    {
+      "chapterId": "FSM2-006",
+      "title": "소방관계법령의 벌칙과 과태료",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 12,
+      "reviewFile": "review-all/006.md"
+    },
+    {
+      "chapterId": "FSM2-007",
+      "title": "소방기본법의 용어·조직·한국소방안전원",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 10,
+      "reviewFile": "review-all/007.md"
+    },
+    {
+      "chapterId": "FSM2-008",
+      "title": "화재안전조사와 조치명령",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 6,
+      "reviewFile": "review-all/008.md"
+    },
+    {
+      "chapterId": "FSM2-009",
+      "title": "자체점검의 종류·대상·실시 시기",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 10,
+      "reviewFile": "review-all/009.md"
+    },
+    {
+      "chapterId": "FSM2-010",
+      "title": "자체점검 결과 보고·이행·기록",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 4,
+      "reviewFile": "review-all/010.md"
+    },
+    {
+      "chapterId": "FSM2-011",
+      "title": "방염 대상과 방염성능검사",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 4,
+      "reviewFile": "review-all/011.md"
+    },
+    {
+      "chapterId": "FSM2-012",
+      "title": "건축 용어와 면적·높이·층수 산정",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 8,
+      "reviewFile": "review-all/012.md"
+    },
+    {
+      "chapterId": "FSM2-013",
+      "title": "무창층의 판단과 개구부 면적",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 4,
+      "reviewFile": "review-all/013.md"
+    },
+    {
+      "chapterId": "FSM2-014",
+      "title": "방화구획·방화문·피난시설 관리",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 9,
+      "reviewFile": "review-all/014.md"
+    },
+    {
+      "chapterId": "FSM2-015",
+      "title": "피난계단과 특별피난계단",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 3,
+      "reviewFile": "review-all/015.md"
+    },
+    {
+      "chapterId": "FSM2-016",
+      "title": "연소의 조건과 가연물·산소공급원",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 7,
+      "reviewFile": "review-all/016.md"
+    },
+    {
+      "chapterId": "FSM2-017",
+      "title": "연소범위와 폭발 위험 판단",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 2,
+      "reviewFile": "review-all/017.md"
+    },
+    {
+      "chapterId": "FSM2-018",
+      "title": "인화점·연소점·발화점",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 4,
+      "reviewFile": "review-all/018.md"
+    },
+    {
+      "chapterId": "FSM2-019",
+      "title": "전도·대류·복사에 의한 열전달",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 3,
+      "reviewFile": "review-all/019.md"
+    },
+    {
+      "chapterId": "FSM2-020",
+      "title": "화재의 분류와 소화 원리",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 7,
+      "reviewFile": "review-all/020.md"
+    },
+    {
+      "chapterId": "FSM2-021",
+      "title": "화기작업 허가와 화재감시자",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 10,
+      "reviewFile": "review-all/021.md"
+    },
+    {
+      "chapterId": "FSM2-022",
+      "title": "위험물 유별 성질과 제4류 안전관리",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 8,
+      "reviewFile": "review-all/022.md"
+    },
+    {
+      "chapterId": "FSM2-023",
+      "title": "위험물 지정수량과 배수 계산",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 3,
+      "reviewFile": "review-all/023.md"
+    },
+    {
+      "chapterId": "FSM2-024",
+      "title": "위험물안전관리자의 선임과 대리자",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 2,
+      "reviewFile": "review-all/024.md"
+    },
+    {
+      "chapterId": "FSM2-025",
+      "title": "LPG·LNG와 가스누설 탐지기",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 5,
+      "reviewFile": "review-all/025.md"
+    },
+    {
+      "chapterId": "FSM2-026",
+      "title": "소방시설의 분류와 피난구조기구",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 9,
+      "reviewFile": "review-all/026.md"
+    },
+    {
+      "chapterId": "FSM2-027",
+      "title": "소화기의 종류·능력단위·적응 화재",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 3,
+      "reviewFile": "review-all/027.md"
+    },
+    {
+      "chapterId": "FSM2-028",
+      "title": "소화약제의 성질과 적용",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 4,
+      "reviewFile": "review-all/028.md"
+    },
+    {
+      "chapterId": "FSM2-029",
+      "title": "소화기 배치와 필요한 개수 계산",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 8,
+      "reviewFile": "review-all/029.md"
+    },
+    {
+      "chapterId": "FSM2-030",
+      "title": "축압식 소화기 지시압력계와 상태 판단",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 3,
+      "reviewFile": "review-all/030.md"
+    },
+    {
+      "chapterId": "FSM2-031",
+      "title": "옥내소화전의 수원·수조·방수 성능",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 7,
+      "reviewFile": "review-all/031.md"
+    },
+    {
+      "chapterId": "FSM2-032",
+      "title": "옥외소화전의 설치·수원·방수 성능",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 7,
+      "reviewFile": "review-all/032.md"
+    },
+    {
+      "chapterId": "FSM2-033",
+      "title": "소방펌프와 배관의 구성요소",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 5,
+      "reviewFile": "review-all/033.md"
+    },
+    {
+      "chapterId": "FSM2-034",
+      "title": "감시제어반·동력제어반의 상태와 조작",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 23,
+      "reviewFile": "review-all/034.md"
+    },
+    {
+      "chapterId": "FSM2-035",
+      "title": "펌프 성능시험과 체절·정격·최대운전",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 9,
+      "reviewFile": "review-all/035.md"
+    },
+    {
+      "chapterId": "FSM2-036",
+      "title": "방수압력 측정과 피토게이지",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 14,
+      "reviewFile": "review-all/036.md"
+    },
+    {
+      "chapterId": "FSM2-037",
+      "title": "스프링클러 방식과 작동 순서",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 8,
+      "reviewFile": "review-all/037.md"
+    },
+    {
+      "chapterId": "FSM2-038",
+      "title": "스프링클러 헤드·수원·방수 성능",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 3,
+      "reviewFile": "review-all/038.md"
+    },
+    {
+      "chapterId": "FSM2-039",
+      "title": "습식 스프링클러 시험밸브함 점검",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 9,
+      "reviewFile": "review-all/039.md"
+    },
+    {
+      "chapterId": "FSM2-040",
+      "title": "준비작동식 스프링클러와 교차회로 점검",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 10,
+      "reviewFile": "review-all/040.md"
+    },
+    {
+      "chapterId": "FSM2-041",
+      "title": "가스계 소화설비의 구성·방출 방식·안전성",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 7,
+      "reviewFile": "review-all/041.md"
+    },
+    {
+      "chapterId": "FSM2-042",
+      "title": "가스계 소화설비 점검 전 안전조치",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 15,
+      "reviewFile": "review-all/042.md"
+    },
+    {
+      "chapterId": "FSM2-043",
+      "title": "감지기의 종류와 작동 원리",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 3,
+      "reviewFile": "review-all/043.md"
+    },
+    {
+      "chapterId": "FSM2-044",
+      "title": "감지기 설치 기준과 필요한 개수",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 4,
+      "reviewFile": "review-all/044.md"
+    },
+    {
+      "chapterId": "FSM2-045",
+      "title": "경계구역 설정과 우선경보",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 7,
+      "reviewFile": "review-all/045.md"
+    },
+    {
+      "chapterId": "FSM2-046",
+      "title": "감지기 배선·종단저항·발신기",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 5,
+      "reviewFile": "review-all/046.md"
+    },
+    {
+      "chapterId": "FSM2-047",
+      "title": "P형 수신기의 표시등·스위치·설치 기준",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 15,
+      "reviewFile": "review-all/047.md"
+    },
+    {
+      "chapterId": "FSM2-048",
+      "title": "수신기 회로도통시험",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 14,
+      "reviewFile": "review-all/048.md"
+    },
+    {
+      "chapterId": "FSM2-049",
+      "title": "수신기 예비전원 시험과 이상 표시",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 15,
+      "reviewFile": "review-all/049.md"
+    },
+    {
+      "chapterId": "FSM2-050",
+      "title": "비화재보의 원인과 확인·복구",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 11,
+      "reviewFile": "review-all/050.md"
+    },
+    {
+      "chapterId": "FSM2-051",
+      "title": "유도등의 종류·설치·배선",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 8,
+      "reviewFile": "review-all/051.md"
+    },
+    {
+      "chapterId": "FSM2-052",
+      "title": "객석유도등 설치와 개수 계산",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 4,
+      "reviewFile": "review-all/052.md"
+    },
+    {
+      "chapterId": "FSM2-053",
+      "title": "피난기구의 종류와 설치 조건",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 4,
+      "reviewFile": "review-all/053.md"
+    },
+    {
+      "chapterId": "FSM2-054",
+      "title": "소방계획서와 피난계획의 포함사항",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 7,
+      "reviewFile": "review-all/054.md"
+    },
+    {
+      "chapterId": "FSM2-055",
+      "title": "자위소방대 편성과 초기대응체계",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 10,
+      "reviewFile": "review-all/055.md"
+    },
+    {
+      "chapterId": "FSM2-056",
+      "title": "피난약자의 특성과 피난 보조",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 6,
+      "reviewFile": "review-all/056.md"
+    },
+    {
+      "chapterId": "FSM2-057",
+      "title": "점검표의 결과 표기와 불량 내용",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 10,
+      "reviewFile": "review-all/057.md"
+    },
+    {
+      "chapterId": "FSM2-058",
+      "title": "응급처치의 일반원칙과 환자 상태 판단",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 12,
+      "reviewFile": "review-all/058.md"
+    },
+    {
+      "chapterId": "FSM2-059",
+      "title": "성인 심폐소생술의 순서와 가슴압박",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 12,
+      "reviewFile": "review-all/059.md"
+    },
+    {
+      "chapterId": "FSM2-060",
+      "title": "자동심장충격기의 패드와 사용 순서",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 12,
+      "reviewFile": "review-all/060.md"
+    },
+    {
+      "chapterId": "FSM2-061",
+      "title": "화상의 분류와 응급처치",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 7,
+      "reviewFile": "review-all/061.md"
+    },
+    {
+      "chapterId": "FSM2-062",
+      "title": "출혈·쇼크의 증상과 응급처치",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 7,
+      "reviewFile": "review-all/062.md"
+    },
+    {
+      "chapterId": "FSM2-063",
+      "title": "소방교육·훈련의 실시원칙",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 10,
+      "reviewFile": "review-all/063.md"
+    },
+    {
+      "chapterId": "FSM2-064",
+      "title": "화재 시 피난 행동과 대피 판단",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 9,
+      "reviewFile": "review-all/064.md"
+    },
+    {
+      "chapterId": "FSM2-065",
+      "title": "전기화재와 정전기의 예방",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 1,
+      "reviewFile": "review-all/065.md"
+    },
+    {
+      "chapterId": "FSM2-066",
+      "title": "소방안전관리 업무수행기록의 작성·유지",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 1,
+      "reviewFile": "review-all/066.md"
+    },
+    {
+      "chapterId": "FSM2-067",
+      "title": "연기의 확산과 연소생성물의 위험",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 3,
+      "reviewFile": "review-all/067.md"
+    },
+    {
+      "chapterId": "FSM2-068",
+      "title": "증기비중의 계산과 누설 시 체류 위치",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 1,
+      "reviewFile": "review-all/068.md"
+    },
+    {
+      "chapterId": "FSM2-069",
+      "title": "소방안전관리 업무대행과 감독",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 1,
+      "reviewFile": "review-all/069.md"
+    },
+    {
+      "chapterId": "FSM2-070",
+      "title": "소방계획의 수립 절차",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 7,
+      "reviewFile": "review-all/070.md"
+    },
+    {
+      "chapterId": "FSM2-071",
+      "title": "소화기 내용연수와 교체 판단",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 3,
+      "reviewFile": "review-all/071.md"
+    },
+    {
+      "chapterId": "FSM2-072",
+      "title": "소방훈련의 계획·실행·평가",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 0,
+      "reviewFile": "review-all/072.md"
+    },
+    {
+      "chapterId": "FSM2-073",
+      "title": "화재 발견·신고·초기대응",
+      "subjectId": 2,
+      "general": 10,
+      "hard": 10,
+      "core": 1,
+      "reviewFile": "review-all/073.md"
+    },
+    {
+      "chapterId": "FSM2-074",
+      "title": "보일러·난방기기의 화재 예방",
+      "subjectId": 1,
+      "general": 10,
+      "hard": 10,
+      "core": 1,
+      "reviewFile": "review-all/074.md"
+    }
+  ],
+  "preservedInputs": {
+    "core500.json": "9be4af283ee34c8fbce5f5254f474d65e531124e4d8ea9d0b9f985dad55fe91f",
+    "general740.json": "40e7a42ef9db1fc9ea798ce3ab513a49e5a755aee184fae0ca31341c90fcd321",
+    "editorial-review.json": "47b9a66871ebbee9a0d9160395121fd6c9b15fed1e8b5fcd4ef4af1bcfdd4311",
+    "general-editorial.json": "8809c0ba904e98306040f9d7b04ce2555645ff933d559a2eb6958c100e289f65",
+    "chapter001-sample.json": "83d15a4d15ce38e6604b1ebb5696bee9e8383a40abad593970199a0d1a0c8157",
+    "combined-manifest.json": "d2d04c1e812c042f1981b189ae7657912da7ca38046f15ec7eff39a2052f6ae1",
+    "general-validation.json": "cf325317a5594a595ccfdd6e182f6bef6b1db2eb8fcf2838bdac3e482999a9d9",
+    "validation.json": "aa35e82d7bccda85ff577b68318094ef5e750a24923be4389457d84a1a045b32",
+    "sample-review.md": "cd3fb9eec1d8a71a92f6093bfde71ae7befa602a8dcfff1ab0e8e59830d0b615"
+  },
+  "hardFormats": {
+    "compound-conclusions": 296,
+    "minimum-repair-set": 296,
+    "three-case-audit": 148
+  },
+  "hardSubjectCounts": {
+    "1": 490,
+    "2": 250
+  },
+  "hardCaseCount": 740,
+  "arithmeticCaseCount": 89,
+  "arithmeticExpressionCount": 95,
+  "sourcePath": "scripts/fire-mock-authoring/hard-cases.txt",
+  "sourceSHA256": "6eeec1677f2dfd3d6a71873d2c8606dc0a416f97ca0b214f7553d8eb5248a6ff",
+  "reviewPolicy": "one-combined-editorial-pass",
+  "reviewStatus": "draft",
+  "publicationApproved": false
+}
