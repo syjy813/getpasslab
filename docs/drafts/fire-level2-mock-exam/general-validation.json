@@ -1,0 +1,294 @@
+{
+  "generalQuestions": 740,
+  "coreQuestions": 500,
+  "combinedQuestions": 1240,
+  "generalPerChapter": 10,
+  "chapters": 74,
+  "generalSubjectCounts": {
+    "1": 490,
+    "2": 250
+  },
+  "answerDistribution0Based": {
+    "0": 185,
+    "1": 185,
+    "2": 185,
+    "3": 185
+  },
+  "uniqueIds": 1240,
+  "exactUniqueStems": 1240,
+  "readableChapterFiles": 74,
+  "renderedQuestionIdsUnique": 1240,
+  "generalFormatCounts": {
+    "case-single-best-answer": 10,
+    "single-best-answer": 418,
+    "single-incorrect-answer": 139,
+    "assertion-combination": 139,
+    "numerical-case": 34
+  },
+  "arithmeticAssertionsIndependentlyRecomputed": 35,
+  "directNumericalAnswersChecked": 34,
+  "numericalQuestionIds": [
+    "FSM2-MOCK-014-10",
+    "FSM2-MOCK-017-10",
+    "FSM2-MOCK-023-06",
+    "FSM2-MOCK-023-07",
+    "FSM2-MOCK-023-08",
+    "FSM2-MOCK-023-09",
+    "FSM2-MOCK-027-10",
+    "FSM2-MOCK-029-02",
+    "FSM2-MOCK-029-09",
+    "FSM2-MOCK-031-02",
+    "FSM2-MOCK-031-06",
+    "FSM2-MOCK-032-02",
+    "FSM2-MOCK-032-09",
+    "FSM2-MOCK-035-06",
+    "FSM2-MOCK-035-07",
+    "FSM2-MOCK-036-10",
+    "FSM2-MOCK-038-04",
+    "FSM2-MOCK-038-05",
+    "FSM2-MOCK-044-03",
+    "FSM2-MOCK-044-04",
+    "FSM2-MOCK-044-05",
+    "FSM2-MOCK-044-06",
+    "FSM2-MOCK-044-07",
+    "FSM2-MOCK-052-03",
+    "FSM2-MOCK-052-04",
+    "FSM2-MOCK-052-05",
+    "FSM2-MOCK-052-06",
+    "FSM2-MOCK-052-07",
+    "FSM2-MOCK-053-06",
+    "FSM2-MOCK-068-04",
+    "FSM2-MOCK-068-05",
+    "FSM2-MOCK-068-06",
+    "FSM2-MOCK-068-07",
+    "FSM2-MOCK-068-08"
+  ],
+  "arithmeticResults": [
+    {
+      "chapterId": "FSM2-013",
+      "card": 3,
+      "expression": "900/30",
+      "actual": "30"
+    },
+    {
+      "chapterId": "FSM2-014",
+      "card": 10,
+      "expression": "ceil(1400/500)",
+      "actual": "3"
+    },
+    {
+      "chapterId": "FSM2-017",
+      "card": 10,
+      "expression": "12-3",
+      "actual": "9"
+    },
+    {
+      "chapterId": "FSM2-023",
+      "card": 6,
+      "expression": "160/200",
+      "actual": "0.8"
+    },
+    {
+      "chapterId": "FSM2-023",
+      "card": 7,
+      "expression": "650/1000",
+      "actual": "0.65"
+    },
+    {
+      "chapterId": "FSM2-023",
+      "card": 8,
+      "expression": "160/200+650/1000",
+      "actual": "1.45"
+    },
+    {
+      "chapterId": "FSM2-023",
+      "card": 9,
+      "expression": "0.75*1000",
+      "actual": "750.00"
+    },
+    {
+      "chapterId": "FSM2-027",
+      "card": 10,
+      "expression": "(6+4)*0.5",
+      "actual": "5.0"
+    },
+    {
+      "chapterId": "FSM2-029",
+      "card": 2,
+      "expression": "ceil(ceil(1050/100)/3)",
+      "actual": "4"
+    },
+    {
+      "chapterId": "FSM2-029",
+      "card": 9,
+      "expression": "18*(1-2/3)",
+      "actual": "5.999999999999999999999999999"
+    },
+    {
+      "chapterId": "FSM2-031",
+      "card": 2,
+      "expression": "2*2.6",
+      "actual": "5.2"
+    },
+    {
+      "chapterId": "FSM2-031",
+      "card": 6,
+      "expression": "130*20/1000",
+      "actual": "2.6"
+    },
+    {
+      "chapterId": "FSM2-032",
+      "card": 2,
+      "expression": "2*7",
+      "actual": "14"
+    },
+    {
+      "chapterId": "FSM2-032",
+      "card": 9,
+      "expression": "ceil(38/3)",
+      "actual": "13"
+    },
+    {
+      "chapterId": "FSM2-035",
+      "card": 6,
+      "expression": "0.70*1.4",
+      "actual": "0.98"
+    },
+    {
+      "chapterId": "FSM2-035",
+      "card": 7,
+      "expression": "600*1.5",
+      "actual": "900.0"
+    },
+    {
+      "chapterId": "FSM2-036",
+      "card": 10,
+      "expression": "16/2",
+      "actual": "8"
+    },
+    {
+      "chapterId": "FSM2-038",
+      "card": 4,
+      "expression": "15*1.6",
+      "actual": "24.0"
+    },
+    {
+      "chapterId": "FSM2-038",
+      "card": 5,
+      "expression": "15*80",
+      "actual": "1200"
+    },
+    {
+      "chapterId": "FSM2-044",
+      "card": 3,
+      "expression": "ceil(320/90)",
+      "actual": "4"
+    },
+    {
+      "chapterId": "FSM2-044",
+      "card": 4,
+      "expression": "ceil(300/70)",
+      "actual": "5"
+    },
+    {
+      "chapterId": "FSM2-044",
+      "card": 5,
+      "expression": "ceil(200/45)",
+      "actual": "5"
+    },
+    {
+      "chapterId": "FSM2-044",
+      "card": 6,
+      "expression": "ceil(100/30)",
+      "actual": "4"
+    },
+    {
+      "chapterId": "FSM2-044",
+      "card": 7,
+      "expression": "ceil(100/90)+ceil(100/90)",
+      "actual": "4"
+    },
+    {
+      "chapterId": "FSM2-052",
+      "card": 3,
+      "expression": "ceil(18/4-1)",
+      "actual": "4"
+    },
+    {
+      "chapterId": "FSM2-052",
+      "card": 4,
+      "expression": "ceil(24/4-1)",
+      "actual": "5"
+    },
+    {
+      "chapterId": "FSM2-052",
+      "card": 5,
+      "expression": "ceil(31/4-1)",
+      "actual": "7"
+    },
+    {
+      "chapterId": "FSM2-052",
+      "card": 6,
+      "expression": "ceil(18/4-1)+ceil(24/4-1)",
+      "actual": "9"
+    },
+    {
+      "chapterId": "FSM2-052",
+      "card": 7,
+      "expression": "ceil(18/4-1)+ceil(24/4-1)+ceil(31/4-1)",
+      "actual": "16"
+    },
+    {
+      "chapterId": "FSM2-053",
+      "card": 6,
+      "expression": "ceil(1250/500)",
+      "actual": "3"
+    },
+    {
+      "chapterId": "FSM2-068",
+      "card": 4,
+      "expression": "16/29",
+      "actual": "0.5517241379310344827586206897"
+    },
+    {
+      "chapterId": "FSM2-068",
+      "card": 5,
+      "expression": "44/29",
+      "actual": "1.517241379310344827586206897"
+    },
+    {
+      "chapterId": "FSM2-068",
+      "card": 6,
+      "expression": "58/29",
+      "actual": "2"
+    },
+    {
+      "chapterId": "FSM2-068",
+      "card": 7,
+      "expression": "32/29",
+      "actual": "1.103448275862068965517241379"
+    },
+    {
+      "chapterId": "FSM2-068",
+      "card": 8,
+      "expression": "46/29",
+      "actual": "1.586206896551724137931034483"
+    }
+  ],
+  "preservedInputs": {
+    "core500.json": "9be4af283ee34c8fbce5f5254f474d65e531124e4d8ea9d0b9f985dad55fe91f",
+    "editorial-review.json": "47b9a66871ebbee9a0d9160395121fd6c9b15fed1e8b5fcd4ef4af1bcfdd4311",
+    "chapter001-sample.json": "83d15a4d15ce38e6604b1ebb5696bee9e8383a40abad593970199a0d1a0c8157"
+  },
+  "structureAndPackaging": "PASS",
+  "existingPublishedFiles": "UNCHANGED",
+  "semanticAnswerVerification": "DEFERRED_TO_ONE_COMBINED_REVIEW",
+  "textbookPageVerification": "PENDING_COMBINED_REVIEW",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "limitations": [
+    "Assertion consistency checks trace the authored key, not an independent truth proof.",
+    "Chapter hashes preserve the writing basis; per-item textbook pages and current primary authority require combined editorial review.",
+    "Near-duplicate concepts, distractor plausibility, difficulty and format repetition require editorial review."
+  ]
+}
