@@ -13,7 +13,7 @@ const floatingBlob = '5955381f94cdbd9119f5145e64bb56ff1cc6590b';
 const layoutPath = 'src/layouts/BaseLayout.astro';
 const layoutBlob = 'dd77b9dfed68859fdd0e3b659c1f71973982e211';
 const priorLayoutBlob = 'af541ce66d6102c3dc9cafd4968065ad5b7af82f';
-const blobSha = bytes => createHash('sha1').update(Buffer.from(`blob ${bytes.length}\\0`)).update(bytes).digest('hex');
+const blobSha = bytes => createHash('sha1').update(Buffer.from(`blob ${bytes.length}\0`)).update(bytes).digest('hex');
 
 async function verifyFloating() {
  const bytes = await nativeRead(floatingPath);
@@ -33,8 +33,8 @@ export async function readFile(file,encoding){
   assert.equal(blobSha(bytes), layoutBlob, 'exact approved floating AdFit layout');
   let text = bytes.toString('utf8');
   for (const addition of [
-   "import AdFitFloating from '../components/AdFitFloating.astro';\\n",
-   "    <AdFitFloating />\\n",
+   "import AdFitFloating from '../components/AdFitFloating.astro';\n",
+   "    <AdFitFloating />\n",
   ]) {
    assert.equal(text.split(addition).length, 2, 'one exact reviewed AdFit layout insertion');
    text = text.replace(addition, '');
