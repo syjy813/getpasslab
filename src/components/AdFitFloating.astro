@@ -116,7 +116,9 @@ const placements = [
   .adfit-floating {
     display: none;
     position: fixed;
-    top: calc(var(--gnb-h) + var(--space-4));
+    /* Desktop GNB is 64px: center the whole ad block below it. */
+    top: calc(50% + 32px);
+    transform: translateY(-50%);
     z-index: 30;
     width: 160px;
     margin: 0;
