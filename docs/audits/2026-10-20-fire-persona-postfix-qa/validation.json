@@ -232,5 +232,70 @@
       "seconds": 0.42,
       "output": "[SEO] HTML 547개, sitemap URL 545개 검사\n[SEO] 경고 0개, 오류 0개\n"
     }
-  ]
+  ],
+  "testedHead": "2806b24bcb8dd357698710a037c4808e2199c666",
+  "ci": {
+    "workflow_runs": [
+      {
+        "id": 39417433352,
+        "name": "Computer literacy browser QA",
+        "status": "in_progress",
+        "conclusion": null,
+        "run_number": 52,
+        "jobs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433352/jobs",
+        "logs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433352/logs",
+        "workflow_id": 372727162
+      },
+      {
+        "id": 39417433297,
+        "name": "Fire persona content browser QA",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 4,
+        "jobs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433297/jobs",
+        "logs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433297/logs",
+        "workflow_id": 390369713
+      },
+      {
+        "id": 39417433322,
+        "name": "Practice dialog UI QA",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 13,
+        "jobs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433322/jobs",
+        "logs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433322/logs",
+        "workflow_id": 380629207
+      },
+      {
+        "id": 39417433225,
+        "name": "Industrial safety chapter splits QA",
+        "status": "in_progress",
+        "conclusion": null,
+        "run_number": 71,
+        "jobs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433225/jobs",
+        "logs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433225/logs",
+        "workflow_id": 374612138
+      },
+      {
+        "id": 39417433130,
+        "name": "SEO validation",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 405,
+        "jobs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433130/jobs",
+        "logs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433130/logs",
+        "workflow_id": 323592452
+      },
+      {
+        "id": 39417433140,
+        "name": "Fire safety level 2 launch QA",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 26,
+        "jobs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433140/jobs",
+        "logs_url": "https://api.github.com/repos/syjy813/getpasslab/actions/runs/39417433140/logs",
+        "workflow_id": 384364931
+      }
+    ]
+  }
 }
