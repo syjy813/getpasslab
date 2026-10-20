@@ -18,7 +18,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
     page.on('pageerror', error => report.errors.push(String(error)));
     await page.goto(base + route);
     const payload = await page.locator('[data-fire-payload]').evaluate(element => JSON.parse(element.textContent));
-    assert.equal(payload.questions.length, 0);
+    assert.equal(payload.questions.length, 2328);
     assert.equal(payload.chapters.length, 74);
     for (const width of [320, 390, 1440]) {
       await page.setViewportSize({ width, height: 900 });
@@ -35,16 +35,16 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-fire-practice-entry]').scrollIntoViewIfNeeded();
       await page.screenshot({ path: `${output}/chapter-entry-${width}.png`, fullPage: false });
       await page.locator('[data-fire-practice-entry] a').first().click();
-      assert.equal(await page.locator('[data-start]').isDisabled(), true);
-      assert.match(await page.locator('[data-availability]').textContent(), /준비/);
+      assert.equal(await page.locator('[data-start]').isDisabled(), false);
+      assert.match(await page.locator('[data-availability]').textContent(), /공개 문제/);
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
       await page.goto(base + route);
-      assert.equal(await page.locator('[data-start]').isDisabled(), true);
-      await page.screenshot({ path: `${output}/pending-${width}.png`, fullPage: true });
+      assert.equal(await page.locator('[data-start]').isDisabled(), false);
+      await page.screenshot({ path: `${output}/published-${width}.png`, fullPage: true });
       await page.goto(base + route + '?chapter=unknown');
       assert.match(await page.locator('[data-availability]').textContent(), /찾을 수 없/);
       assert.equal(await page.locator('[data-start]').isDisabled(), true);
-      report.cases.push({ width, chapterRoutes: chapters.length, pendingAndInvalid: 'PASS', overflow: false });
+      report.cases.push({ width, chapterRoutes: chapters.length, publishedAndInvalid: 'PASS', overflow: false });
     }
     const chapterOne = payload.chapters.find(q => q.subjectId === 1);
     const questions = [];

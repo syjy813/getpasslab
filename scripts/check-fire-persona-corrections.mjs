@@ -2,13 +2,15 @@ import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
+import {beforePublication} from './fire-mock-authoring/publication.mjs';
+import {beforePublishedChapterCount} from './read-before-fire-persona-corrections.mjs';
 const dir='docs/audits/2026-10-20-fire-persona-corrections';
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
 const release=await json(dir+'/release.json');
 const corrections=await json(dir+'/question-corrections.json');
 const beforeRows=await json(dir+'/baseline-rows.json');
 const retest=await json(dir+'/retest.json');
-const rows=await json('docs/drafts/fire-level2-mock-exam/question-table.json');
+const rows=(await json('docs/drafts/fire-level2-mock-exam/question-table.json')).map(beforePublication);
 const hash=b=>createHash('sha256').update(b).digest('hex');
 // Match Python's sorted, UTF-8 JSON serialization used in the baseline.
 const canonical=v=>Array.isArray(v)?'['+v.map(canonical).join(', ')+']':v!==null&&typeof v==='object'?'{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+': '+canonical(v[k])).join(', ')+'}':JSON.stringify(v);
@@ -41,12 +43,12 @@ const files=[...await walk('src'),...await walk('public')].sort();
 assert.deepEqual(files,[...Object.keys(release.baselineSources),...release.files.filter(r=>r.added).map(r=>r.path)].sort());
 for(const f of files){const changed=release.files.find(r=>r.path===f);assert.equal(hash(await readFile(f)),changed?.sha256 ?? release.baselineSources[f],f);}
 for(const row of release.files){
-  assert.equal(hash(await readFile(row.path)),row.sha256,row.path);
+  assert.equal(hash(beforePublishedChapterCount(row.path,await readFile(row.path))),row.sha256,row.path);
   if(row.originalFile)assert.equal(hash(await readFile(row.originalFile)),row.originalSha256,row.originalFile);
   if(row.path.endsWith('.md'))assert.equal((await readFile(row.path,'utf8')).match(/^---[\s\S]*?\n---/)[0],(await readFile(row.originalFile,'utf8')).match(/^---[\s\S]*?\n---/)[0]);
 }
 const article=s=>s.match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0];
 const articles={};
-for(const f of await walk('dist'))if(f.endsWith('/index.html')){const a=article(await readFile(f,'utf8'));if(a)articles[f]=hash(a);}
+for(const f of await walk('dist'))if(f.endsWith('/index.html')){const a=article(beforePublishedChapterCount(f,await readFile(f)).toString('utf8'));if(a)articles[f]=hash(a);}
 assert.deepEqual(articles,release.currentArticles,'only the 28 reviewed lesson bodies may change');
 console.log('[Fire persona corrections] 167 re-solves, 28 chapters, 2313 untouched rows, all IDs/raw sources/keys/gates and native inventory PASS');

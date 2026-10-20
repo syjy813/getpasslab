@@ -1,10 +1,19 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { FIRE_EXAM, getPublishedFireQuestions, createFireExam, gradeFireQuestions } from '../src/utils/firePractice.ts';
+import {publication} from './fire-mock-authoring/publication.mjs';
 
 const table = JSON.parse(await readFile('docs/drafts/fire-level2-mock-exam/question-table.json', 'utf8'));
 assert.equal(table.length, 2480);
-assert.equal(getPublishedFireQuestions(table).length, 0, 'all current drafts remain private to authoring');
+const published=getPublishedFireQuestions(table);
+assert.equal(published.length,publication.approvedCount);
+assert(published.every(q=>!publication.held.includes(q.id)));
+for(let k=0;k<100;k++) {
+  const actual=createFireExam(published);
+  assert.equal(actual.length,50);
+  assert.equal(actual.filter(q=>q.subjectId===1).length,25);
+  assert.equal(new Set(actual.map(q=>q.sourceQuestionId||q.id)).size,50);
+}
 const template = {
   id: 'test', chapterId: 'FSM2-001', chapterTitle: '테스트 챕터', subjectId: 1,
   question: '테스트 전용 문항', choices: ['가', '나', '다', '라'], answerNumber: 2,

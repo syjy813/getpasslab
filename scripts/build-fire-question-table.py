@@ -2,7 +2,7 @@
 
 The core marker belongs to the user's original reconstruction rows. Existing
 variant inputs retain their historical bytes; their old tag is normalized at
-this management-table boundary. No row is approved for practice/publication.
+this management-table boundary. Publication requires an explicit pinned release.
 """
 import argparse, collections, hashlib, html, json, re
 from pathlib import Path
@@ -78,6 +78,16 @@ def main():
             assert hashlib.sha256(json.dumps(q,ensure_ascii=False,sort_keys=True).encode()).hexdigest()==patch['beforeSHA256'], f"Stale correction: {q['id']}"
             assert set(patch['set']) <= {'question','choices','explanation','sourceTextProvenance','editorialRevision'}
             q.update(patch['set'])
+    publication_path=ROOT/'docs/releases/2026-10-20-fire-practice/publication.json'
+    publication=read(publication_path)
+    assert len(publication['approved'])==publication['approvedCount']==2328
+    assert set(publication['approved']).isdisjoint(publication['held'])
+    assert set(publication['approved']) | set(publication['held']) == {q['id'] for q in rows}
+    for q in rows:
+        approval=publication['approved'].get(q['id'])
+        if approval:
+            assert hashlib.sha256(json.dumps(q,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()==approval['beforeSHA256'],f"Stale publication approval: {q['id']}"
+            q.update(reviewStatus='approved',publicationStatus='published',examEligible=True,contentStatus='draft_complete')
     save(P/'question-table.json',rows)
     names={'source_reconstruction':'핵심 원본','source_variant':'핵심 변형','general':'일반 기본','advanced':'일반 심화'}
     summary=[]
@@ -89,9 +99,9 @@ def main():
       'authoredCount':1980,'originalAdditionalReferenceCount':500,'sourceOptionExtractionCounts':dict(parse_counts),
       'subjectCounts':dict(collections.Counter(q['subjectId'] for q in rows)),'summary':summary,
       'coreDefinition':'isCore=true exactly for the 500 user-provided original reconstruction rows',
-      'answerNumberConvention':'1-based; original displayed answers and authored draft answers are unverified',
+      'answerNumberConvention':'1-based; reviewed rows explicitly approved by the publication release; held rows unverified',
       'legacyInputs':'Historical pool files are preserved; use question-table.json for current type and core flags.',
-      'editorialCorrectionsSHA256':sha(correction_path),'editorialCorrectedCount':len(corrections),'semanticReview':'model-first-pass-targeted-corrections','publicationStatus':'unpublished'}
+      'editorialCorrectionsSHA256':sha(correction_path),'editorialCorrectedCount':len(corrections),'semanticReview':'model-first-pass-targeted-corrections','publicationStatus':'partial','publicationApprovalSHA256':sha(publication_path),'publishedCount':2328,'heldCount':152}
     save(P/'question-table-manifest.json',manifest)
     lines=['# 통합 문항 관리표','',
       '[필터 가능한 관리표 열기](question-table.html) · [통합 데이터](question-table.json)','',
@@ -109,9 +119,9 @@ def main():
       '| `isCore` | 사용자 제공 원본 500행만 true. 화면에는 핵심 표시 |',
       '| `questionType` | source_reconstruction(원본), source_variant(변형), general(기본), advanced(심화) |',
       '| `difficulty` | 기본 / 심화 / 미지정. 핵심 여부와 난도를 분리 |',
-      '| `reviewStatus` | 현재 전체 pending(검수대기) |',
-      '| `contentStatus` | 초안 작성 / OCR 대조 필요 / 원문 시각 대조 필요 |',
-      '| `publicationStatus`, `examEligible` | 현재 모두 unpublished·false. 등록과 시험 출제 가능 여부를 분리 |',
+      '| `reviewStatus` | 공개 승인 approved / 보류 pending |',
+      '| `contentStatus` | 사용 가능 draft_complete / OCR 대조 필요 / 원문 시각 대조 필요 |',
+      '| `publicationStatus`, `examEligible` | 승인 2,328개 published·true / 보류 152개 unpublished·false |',
       '| `sourceQuestionId` | 원본은 자기 ID, 변형은 대응 원본 ID, 신규 기본·심화는 null |',
       '| `question`, `choices`, `answerNumber`, `explanation` | 지문·선택지·1부터 시작하는 정답번호·해설 |',
       '| `rawSourceText` | 원본 500개의 제공된 추출문. 누락된 선택지를 변형 문항으로 채우지 않음 |',
@@ -122,8 +132,9 @@ def main():
       '- 일반 기본·심화: 각각 740개. isCore=false',
       '- 이전 core500.json의 파일명과 핵심 태그는 과거 변형 풀의 제작 이력이다. 최신 관리·필터는 이 통합표의 isCore와 questionType을 사용한다. 원본과 변형을 동일 문항으로 표시하지 않는다.','',
       '## 원문 대조 상태','',
-      f"원본 500개 중 선택지 4개를 구조적으로 분리한 행은 {500-parse_counts['raw-source-only']}개, 안전하게 분리하지 못해 choices=null로 둔 행은 {parse_counts['raw-source-only']}개다. 모두 원본 표시답·OCR·그림·현행 근거의 내용 검수 전이다. 선택지 미분리를 정상 4지선다로 표시하지 않으며 rawSourceText를 보존했다.",'',
+      f"원본 500개 중 선택지 4개를 구조적으로 분리한 행은 {500-parse_counts['raw-source-only']}개, choices=null로 둔 행은 {parse_counts['raw-source-only']}개다. 공개 2,328문항은 챕터 기준 모델 검수·보완 후 사용자가 공개 승인했다. 미분리 선택지·도판 누락·근거 부족 152개는 비공개다. rawSourceText와 기존 정답 번호는 보존했다. 공식 시험 원문 복원이나 독립 블라인드 검증으로 인증하지 않는다.",'',
       '전수 1차 모델 QA 후 167문항의 지문·선택지·해설·연결 이론을 보완했다. 원본 추출문·과거 집필 풀은 보존하고 ID별 해시 고정 보완 내역을 적용한다. 공개 승인·실서버 배포는 별도다. [보완 기록](../../audits/2026-10-20-fire-persona-corrections/README.md)','',
+      '[2026-10-20 공개 승인·배포 기록](../../releases/2026-10-20-fire-practice/README.md) · 공개: 1과목 1,421개 / 2과목 907개 · 보류 152개','',
       '## 재생성','',
       '```bash','python3 scripts/build-fire-question-table.py --source /path/to/outline-data.json',
       'node scripts/verify-fire-question-table.mjs','```','']

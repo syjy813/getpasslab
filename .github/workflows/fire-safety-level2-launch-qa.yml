@@ -88,6 +88,20 @@ jobs:
             sleep 1
           done
           node scripts/qa-fire-practice.cjs
+      - name: Actual published questions, chapter feedback and full exams
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: http://127.0.0.1:4321
+          QA_OUTPUT_DIR: qa-results/fire-publication
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-publication-preview.log 2>&1 &
+          qa_publication_pid=$!
+          trap 'kill "$qa_publication_pid" 2>/dev/null || true' EXIT
+          for qa_attempt in $(seq 1 30); do
+            if curl -fsS "$QA_BASE_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa-fire-publication.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -95,4 +109,5 @@ jobs:
           path: |
             qa-results/fire-safety-level2*/
             qa-results/fire-practice/
+            qa-results/fire-publication/
           retention-days: 14

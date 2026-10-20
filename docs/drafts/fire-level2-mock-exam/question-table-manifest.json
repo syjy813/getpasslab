@@ -10,7 +10,7 @@
     "general-editorial.json": "8809c0ba904e98306040f9d7b04ce2555645ff933d559a2eb6958c100e289f65",
     "hard-editorial.json": "a5b2378a9d1d9c3eb7ffb7e6ebafd936d22c6c38ca0c161fb9252d9bab8d052b"
   },
-  "tableSHA256": "eee3184feca0b3a531cb5e713e2148ebb3f1d1e86d8e9957850d554d6baba390",
+  "tableSHA256": "5e8aff95c51806879e76211c126efe502ee9994b05a5366940d59c889590b1de",
   "rowCount": 2480,
   "coreOriginalCount": 500,
   "authoredCount": 1980,
@@ -55,10 +55,13 @@
     }
   ],
   "coreDefinition": "isCore=true exactly for the 500 user-provided original reconstruction rows",
-  "answerNumberConvention": "1-based; original displayed answers and authored draft answers are unverified",
+  "answerNumberConvention": "1-based; reviewed rows explicitly approved by the publication release; held rows unverified",
   "legacyInputs": "Historical pool files are preserved; use question-table.json for current type and core flags.",
   "editorialCorrectionsSHA256": "d4b2cca113b71c29fb2061686cde7f41b8587ea8704aad94bfd768b8f6e464bf",
   "editorialCorrectedCount": 167,
   "semanticReview": "model-first-pass-targeted-corrections",
-  "publicationStatus": "unpublished"
+  "publicationStatus": "partial",
+  "publicationApprovalSHA256": "c809775d607ec2c84762a82b7ea6309865bd7e9c82c670e1b0692033a72dd7a9",
+  "publishedCount": 2328,
+  "heldCount": 152
 }

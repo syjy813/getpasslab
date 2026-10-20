@@ -30,7 +30,7 @@ fs.mkdirSync(output,{recursive:true});
         if(['FSM2-005','FSM2-006','FSM2-057','FSM2-062'].includes(row.chapterId))await page.screenshot({path:path.join(output,row.chapterId+'-'+width+'.png')});
         result.pages.push({chapterId:row.chapterId,width,route,newSectionPresent:true,viewportOverflow:false});
       }
-      // Render the actual pending bank in its private review table. Interception
+      // Render the actual reviewed bank in its private management table. Interception
       // serves the repository file only in this test; no draft is published.
       const reviewUrl=(process.env.QA_BASE_URL||'http://127.0.0.1:4321')+'/__qa__/fire-question-review/';
       await page.route(reviewUrl,r=>r.fulfill({status:200,contentType:'text/html',body:fs.readFileSync('docs/drafts/fire-level2-mock-exam/question-table.html','utf8')}));
@@ -56,5 +56,5 @@ fs.mkdirSync(output,{recursive:true});
     fs.writeFileSync(path.join(output,'results.json'),JSON.stringify(result,null,2)+'\n');
     await browser.close();
   }
-  console.log('[Fire persona browser] 56 chapter pages and 334 actual pending question displays at 390/1440px PASS');
+  console.log('[Fire persona browser] 56 chapter pages and 334 actual reviewed question displays at 390/1440px PASS');
 })().catch(error=>{console.error(error);process.exitCode=1;});

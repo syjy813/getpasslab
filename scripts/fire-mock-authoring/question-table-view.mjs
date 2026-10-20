@@ -28,14 +28,14 @@ if (typeof document !== 'undefined') {
     const body=document.getElementById('rows'); body.replaceChildren();
     for(const q of view.rows) {
       const tr=document.createElement('tr');
-      tr.append(cell(q.id),cell(q.subjectName),cell(q.isCore?'핵심':'—'),cell(labels[q.questionType]),cell(q.chapterTitle),cell('검수대기'),cell(statusLabels[q.contentStatus]));
+      tr.append(cell(q.id),cell(q.subjectName),cell(q.isCore?'핵심':'—'),cell(labels[q.questionType]),cell(q.chapterTitle),cell(q.reviewStatus==='approved'?'공개 승인':'검수 보류'),cell(q.reviewStatus==='approved'?'검수 완료':statusLabels[q.contentStatus]));
       const detail=cell(''); const disclosure=document.createElement('details');const summary=document.createElement('summary');
       summary.textContent=q.question.replace(/\s+/g,' ').slice(0,120);disclosure.append(summary);
       const text=document.createElement('pre');
       text.textContent=[q.question,'',...(q.choices?q.choices.map((c,i)=>`${i+1}. ${c}`):['선택지 분리 미완료. 아래 제공 원문을 대조해 주세요.']),
-        '',`정답 표시: ${q.answerNumber}번 (미검수)`,q.explanation||'해설 분리 미완료',
+        '',`정답 표시: ${q.answerNumber}번 (${q.reviewStatus==='approved'?'검수 완료':'검수 보류'})`,q.explanation||'해설 분리 미완료',
         q.sourceQuestionId?`원본 연결: ${q.sourceQuestionId}`:'',q.rawSourceText?'\n제공된 추출 원문\n'+q.rawSourceText:''].join('\n');
-      disclosure.append(text);detail.append(disclosure);tr.append(detail,cell('비공개'));body.append(tr);
+      disclosure.append(text);detail.append(disclosure);tr.append(detail,cell(q.publicationStatus==='published'?'공개':'비공개'));body.append(tr);
     }
     if(!view.rows.length){const tr=document.createElement('tr');const td=cell('조건에 맞는 문항이 없습니다.');td.colSpan=9;tr.append(td);body.append(tr);}
     document.getElementById('prev').disabled=view.page===1;document.getElementById('next').disabled=view.page===view.pages;

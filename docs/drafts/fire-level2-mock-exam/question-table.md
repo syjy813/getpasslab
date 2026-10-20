@@ -25,9 +25,9 @@
 | `isCore` | 사용자 제공 원본 500행만 true. 화면에는 핵심 표시 |
 | `questionType` | source_reconstruction(원본), source_variant(변형), general(기본), advanced(심화) |
 | `difficulty` | 기본 / 심화 / 미지정. 핵심 여부와 난도를 분리 |
-| `reviewStatus` | 현재 전체 pending(검수대기) |
-| `contentStatus` | 초안 작성 / OCR 대조 필요 / 원문 시각 대조 필요 |
-| `publicationStatus`, `examEligible` | 현재 모두 unpublished·false. 등록과 시험 출제 가능 여부를 분리 |
+| `reviewStatus` | 공개 승인 approved / 보류 pending |
+| `contentStatus` | 사용 가능 draft_complete / OCR 대조 필요 / 원문 시각 대조 필요 |
+| `publicationStatus`, `examEligible` | 승인 2,328개 published·true / 보류 152개 unpublished·false |
 | `sourceQuestionId` | 원본은 자기 ID, 변형은 대응 원본 ID, 신규 기본·심화는 null |
 | `question`, `choices`, `answerNumber`, `explanation` | 지문·선택지·1부터 시작하는 정답번호·해설 |
 | `rawSourceText` | 원본 500개의 제공된 추출문. 누락된 선택지를 변형 문항으로 채우지 않음 |
@@ -42,9 +42,11 @@
 
 ## 원문 대조 상태
 
-원본 500개 중 선택지 4개를 구조적으로 분리한 행은 453개, 안전하게 분리하지 못해 choices=null로 둔 행은 47개다. 모두 원본 표시답·OCR·그림·현행 근거의 내용 검수 전이다. 선택지 미분리를 정상 4지선다로 표시하지 않으며 rawSourceText를 보존했다.
+원본 500개 중 선택지 4개를 구조적으로 분리한 행은 453개, choices=null로 둔 행은 47개다. 공개 2,328문항은 챕터 기준 모델 검수·보완 후 사용자가 공개 승인했다. 미분리 선택지·도판 누락·근거 부족 152개는 비공개다. rawSourceText와 기존 정답 번호는 보존했다. 공식 시험 원문 복원이나 독립 블라인드 검증으로 인증하지 않는다.
 
 전수 1차 모델 QA 후 167문항의 지문·선택지·해설·연결 이론을 보완했다. 원본 추출문·과거 집필 풀은 보존하고 ID별 해시 고정 보완 내역을 적용한다. 공개 승인·실서버 배포는 별도다. [보완 기록](../../audits/2026-10-20-fire-persona-corrections/README.md)
+
+[2026-10-20 공개 승인·배포 기록](../../releases/2026-10-20-fire-practice/README.md) · 공개: 1과목 1,421개 / 2과목 907개 · 보류 152개
 
 ## 재생성
 

@@ -6,11 +6,14 @@ import vm from 'node:vm';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {filterRows,pageRows} from './fire-mock-authoring/question-table-view.mjs';
+import {beforePublication,publication} from './fire-mock-authoring/publication.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const dir=path.join(root,'docs/drafts/fire-level2-mock-exam');
 const read=name=>JSON.parse(fs.readFileSync(path.join(dir,name),'utf8'));
 const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
-const rows=read('question-table.json'), meta=read('question-table-manifest.json');
+const currentRows=read('question-table.json'), rows=currentRows.map(beforePublication), meta=read('question-table-manifest.json');
+assert.equal(filterRows(currentRows,{review:'approved'}).length,2328);
+assert.equal(filterRows(currentRows,{review:'pending'}).length,152);
 const correctionsPath=path.join(root,'docs/audits/2026-10-20-fire-persona-corrections/question-corrections.json');
 const corrections=JSON.parse(fs.readFileSync(correctionsPath,'utf8')).corrections;
 const originals=rows.filter(q=>q.questionType==='source_reconstruction');
@@ -57,7 +60,7 @@ assert.equal(hash(fs.readFileSync(correctionsPath)),meta.editorialCorrectionsSHA
 const html=fs.readFileSync(path.join(dir,'question-table.html'),'utf8');
 assert(!/__DATA__|__SCRIPT__|__TOKENS__|__SUMMARY_ROWS__/.test(html));
 const embedded=JSON.parse(html.match(/<script id="question-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
-assert.deepEqual(embedded,rows);
+assert.deepEqual(embedded,currentRows);
 const code=html.match(/<script>([\s\S]*?)<\/script>/)[1];
 assert(!code.includes('innerHTML'));assert(!code.includes('fetch('));
 // Run the actual preview script against a minimal DOM contract. This tests
@@ -69,7 +72,7 @@ class Element{
   addEventListener(type,fn){this.handlers[type]=fn;}
 }
 const ids=['question-data','subject','core','type','review','query','rows','result-count','prev','next','reset'];
-const elements=Object.fromEntries(ids.map(id=>[id,new Element(id)]));elements['question-data'].textContent=JSON.stringify(rows);
+const elements=Object.fromEntries(ids.map(id=>[id,new Element(id)]));elements['question-data'].textContent=JSON.stringify(currentRows);
 const document={getElementById:id=>elements[id],createElement:tag=>new Element(tag)};
 vm.runInNewContext(code,{document,console},{timeout:5000});
 assert.equal(elements.rows.children.length,50);assert(elements['result-count'].textContent.includes('2,480'));
@@ -84,6 +87,6 @@ const summary={managementRows:2480,authoredQuestions:1980,coreOriginals:500,subj
   originalRowsWithFourExtractedChoices:453,originalRowsWithUnparsedChoices:47,
   coreMarker:'original reconstruction rows only',originalVariantLinksUnique:500,
   historicalPools:'UNCHANGED',explicitEditorialCorrections:167,dataAndFilterChecks:'PASS',
-  previewDomContract:'PASS',realBrowserVisualQA:'NOT_RUN',semanticAnswerReview:'MODEL_FIRST_PASS_AND_TARGETED_CORRECTIONS',production:'NOT_DEPLOYED'};
+  previewDomContract:'PASS',realBrowserVisualQA:'see release CI',semanticAnswerReview:'MODEL_FIRST_PASS_AND_TARGETED_CORRECTIONS',publicationApproved:publication.approvedCount,publicationHeld:publication.heldCount,production:'see release deployment record'};
 fs.writeFileSync(path.join(dir,'question-table-validation.json'),JSON.stringify(summary,null,2)+'\n');
 console.log(JSON.stringify(summary));

@@ -22,7 +22,9 @@
   "explicitEditorialCorrections": 167,
   "dataAndFilterChecks": "PASS",
   "previewDomContract": "PASS",
-  "realBrowserVisualQA": "NOT_RUN",
+  "realBrowserVisualQA": "see release CI",
   "semanticAnswerReview": "MODEL_FIRST_PASS_AND_TARGETED_CORRECTIONS",
-  "production": "NOT_DEPLOYED"
+  "publicationApproved": 2328,
+  "publicationHeld": 152,
+  "production": "see release deployment record"
 }
