@@ -17,7 +17,13 @@
     "rawSourcesPreserved": 500
   },
   "currentRevisionBrowserQA": "NOT_RUN_LOCALLY_NO_BROWSER_BINARY",
-  "CI": "PENDING_PUSH",
+  "CI": {
+    "head": "00afe940cef6c0554d6f062aef95ddcbe931c1f9",
+    "fireRegressionRun": 39401708662,
+    "result": "FAILED_ON_MERGED_BASE_ADDITIONAL_AD_COMPONENT",
+    "detail": "check-chapter-formula-style.mjs inventory has main-only src/components/AdFitFloating.astro. No check has been disabled.",
+    "independentContentBrowserJob": "added; pending run"
+  },
   "production": "NOT_DEPLOYED",
   "stillHeldFirstPassQuestions": 152
 }

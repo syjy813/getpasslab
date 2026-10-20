@@ -1,0 +1,49 @@
+name: Fire persona content browser QA
+on:
+  pull_request:
+    paths:
+      - 'src/content/chapters/fire-safety-manager-level2/**'
+      - 'docs/audits/2026-10-20-fire-persona-corrections/**'
+      - 'scripts/qa-fire-persona-corrections.cjs'
+      - '.github/workflows/fire-persona-corrections-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # This independent job supplements the existing required regression job.
+      # It does not suppress or change the failing merged-base inventory guard.
+      - name: Prepare browser
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Review all 28 changed chapters on mobile and desktop
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: http://127.0.0.1:4321
+          QA_OUTPUT_DIR: qa-results/fire-persona-corrections
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-fire-persona-preview.log 2>&1 &
+          qa_persona_pid=$!
+          trap 'kill "$qa_persona_pid" 2>/dev/null || true' EXIT
+          for qa_attempt in $(seq 1 30); do
+            if curl -fsS "$QA_BASE_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa-fire-persona-corrections.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fire-persona-content-qa
+          path: qa-results/fire-persona-corrections/
+          retention-days: 14
