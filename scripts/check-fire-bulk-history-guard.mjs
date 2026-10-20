@@ -8,7 +8,7 @@ const practiceAudit='docs/audits/2026-10-20-fire-level2-practice';
 const practiceRelease=JSON.parse(await readFile(practiceAudit+'/release.json','utf8'));
 const personaAudit='docs/audits/2026-10-20-fire-persona-corrections';
 const personaRelease=JSON.parse(await readFile(personaAudit+'/release.json','utf8'));
-const personaFiles=['scripts/read-before-fire-persona-corrections.mjs',personaAudit+'/release.json',...personaRelease.files.flatMap(r=>[r.path,r.originalFile])];
+const personaFiles=['scripts/read-before-fire-persona-corrections.mjs',personaAudit+'/release.json',...personaRelease.files.flatMap(r=>[r.path,...(r.originalFile?[r.originalFile]:[])])];
 const practiceFiles=[...personaFiles,'scripts/read-before-fire-practice.mjs',practiceAudit+'/release.json',practiceAudit+'/baseline.json',...practiceRelease.files.flatMap(r=>[r.path,...(r.originalFile?[r.originalFile]:[])])];
 const correctionFiles=[...practiceFiles,'scripts/read-before-fire-textbook-corrections.mjs',correctionAudit+'/release.json',...corrections.files.flatMap(r=>[r.path,r.originalFile])];
 const root=await mkdtemp(path.join(tmpdir(),'getpasslab-fire-bulk-guard-'));

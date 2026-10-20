@@ -38,11 +38,11 @@ assert.equal(verification.preservedRawSources,500);
 assert.equal(verification.preservedAnswerNumbers,2480);
 const walk=async d=>(await Promise.all((await readdir(d,{withFileTypes:true})).map(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]))).flat();
 const files=[...await walk('src'),...await walk('public')].sort();
-assert.deepEqual(files,Object.keys(release.baselineSources).sort());
+assert.deepEqual(files,[...Object.keys(release.baselineSources),...release.files.filter(r=>r.added).map(r=>r.path)].sort());
 for(const f of files){const changed=release.files.find(r=>r.path===f);assert.equal(hash(await readFile(f)),changed?.sha256 ?? release.baselineSources[f],f);}
 for(const row of release.files){
   assert.equal(hash(await readFile(row.path)),row.sha256,row.path);
-  assert.equal(hash(await readFile(row.originalFile)),row.originalSha256,row.originalFile);
+  if(row.originalFile)assert.equal(hash(await readFile(row.originalFile)),row.originalSha256,row.originalFile);
   if(row.path.endsWith('.md'))assert.equal((await readFile(row.path,'utf8')).match(/^---[\s\S]*?\n---/)[0],(await readFile(row.originalFile,'utf8')).match(/^---[\s\S]*?\n---/)[0]);
 }
 const article=s=>s.match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0];

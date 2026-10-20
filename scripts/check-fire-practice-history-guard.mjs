@@ -5,7 +5,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 const personaAudit='docs/audits/2026-10-20-fire-persona-corrections';
 const personaRelease=JSON.parse(await readFile(personaAudit+'/release.json','utf8'));
-const personaFiles=['scripts/read-before-fire-persona-corrections.mjs',personaAudit+'/release.json',...personaRelease.files.flatMap(r=>[r.path,r.originalFile])];
+const personaFiles=['scripts/read-before-fire-persona-corrections.mjs',personaAudit+'/release.json',...personaRelease.files.flatMap(r=>[r.path,...(r.originalFile?[r.originalFile]:[])])];
 const audit = 'docs/audits/2026-10-20-fire-level2-practice';
 const release = JSON.parse(await readFile(audit + '/release.json', 'utf8'));
 const helper = 'scripts/read-before-fire-practice.mjs';

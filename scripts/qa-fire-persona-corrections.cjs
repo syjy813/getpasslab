@@ -24,7 +24,7 @@ fs.mkdirSync(output,{recursive:true});
         await heading.scrollIntoViewIfNeeded();
         const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
         assert.equal(overflow,false,row.chapterId+' viewport overflow at '+width);
-        const linkErrors=await page.locator('article a[href^="/fire-safety-manager-level2/"]').evaluateAll(links=>links.filter(a=>!a.getAttribute('href').endsWith('/')).map(a=>a.getAttribute('href')));
+        const linkErrors=await page.locator('article a[href^="/fire-safety-manager-level2/"]').evaluateAll(links=>links.filter(a=>!new URL(a.href).pathname.endsWith('/')).map(a=>a.getAttribute('href')));
         assert.deepEqual(linkErrors,[]);
         assert.equal(await page.locator('[data-fire-practice-entry]').count(),1);
         if(['FSM2-005','FSM2-006','FSM2-057','FSM2-062'].includes(row.chapterId))await page.screenshot({path:path.join(output,row.chapterId+'-'+width+'.png')});
