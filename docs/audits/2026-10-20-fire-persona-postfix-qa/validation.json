@@ -1,0 +1,236 @@
+{
+  "build": {
+    "exitCode": 0,
+    "pages": 545
+  },
+  "checks": [
+    {
+      "check": "scripts/check-accident-analysis-figures.mjs",
+      "exitCode": 0,
+      "seconds": 0.32,
+      "output": "[Historical release: Accident analysis] one comparison table, no displayed diagrams; historical assets unchanged; canonical dataset, 5 questions and public route links passed\n"
+    },
+    {
+      "check": "scripts/check-chapter-formula-style.mjs",
+      "exitCode": 0,
+      "seconds": 1.5,
+      "output": "[Historical release: Chapter formula style] 442 public articles/routes and 700 source/assets preserved; 3 display edits reverse exactly\n"
+    },
+    {
+      "check": "scripts/check-clam-shell-chapter.mjs",
+      "exitCode": 0,
+      "seconds": 1.33,
+      "output": "[Historical release: Clam shell publication] 259 industrial / 443 total chapters; 1015 primary references; one newly assigned original question; 445 prior articles preserved except 1 exact related link addition\n"
+    },
+    {
+      "check": "scripts/check-color-contrast.mjs",
+      "exitCode": 0,
+      "seconds": 0.07,
+      "output": "[Contrast] --gray-600 #626D7A on --white #FFFFFF: 5.27:1\n[Contrast] --gray-600 #626D7A on --gray-50 #F9FAFB: 5.04:1\n[Contrast] --gray-600 #626D7A on --gray-100 #F2F4F6: 4.78:1\n[Contrast] 오류 0개\n"
+    },
+    {
+      "check": "scripts/check-computer-literacy-001-081.mjs",
+      "exitCode": 0,
+      "seconds": 0.56,
+      "output": "[Historical release: 001–081] 81 chapters (50 new, 31 preserved); 145 primary + 63 supporting links; 208 rendered dialogs/answers; 7 original images / 15 occurrences passed\n[Historical release: 001–081] Canonical hashes, all prior chapter files, URLs, IDs, sequence, scoped support links, 6 caution questions, and editorial separation passed\n"
+    },
+    {
+      "check": "scripts/check-computer-literacy-082-159.mjs",
+      "exitCode": 0,
+      "seconds": 0.73,
+      "output": "[Historical release: 082–159] 78 chapters; 149 primary + 59 supporting links; 208 dialogs; 7 original images / 8 occurrences passed\n[Historical release: 082–159] 134 canonical additions; all prior chapter/image/payload hashes preserved; IDs, subjects, slugs, support owners, TOC, 81→82, final 159 and BLOCKED 160 passed\n"
+    },
+    {
+      "check": "scripts/check-computer-literacy-c1.mjs",
+      "exitCode": 0,
+      "seconds": 0.18,
+      "output": "[C1] 27 chapters; canonical hashes for 70 questions; 63 primary + 41 supporting assignments; 104 rendered dialogs/answers; 2 original images; order, links, and editorial separation passed\n[C1] 4 caution questions across 6 primary/support dialogs; recorded answers distinguished; guidance initially hidden and consistent\n"
+    },
+    {
+      "check": "scripts/check-computer-literacy-publication.mjs",
+      "exitCode": 0,
+      "seconds": 0.11,
+      "output": "[Computer literacy] Existing 8 chapters preserved; 14 primary questions, 3 supporting links, 8 rendered question images, 4 learning SVGs passed; total scope 163 chapters\n"
+    },
+    {
+      "check": "scripts/check-deferred-question-content.mjs",
+      "exitCode": 0,
+      "seconds": 0.27,
+      "output": "[Deferred questions] 에너지관리기능사 챕터 21개 · deferred 버튼 1588개 · 공용 dialog 21개 검사\n[Deferred questions] 산업안전산업기사 챕터 263개 · deferred 버튼 1032개 · 공용 dialog 253개 · 이미지 버튼 38개 · redirect 2개 제외 검사\n[Deferred questions] 오류 0개\n"
+    },
+    {
+      "check": "scripts/check-earth-retaining-structure.mjs",
+      "exitCode": 0,
+      "seconds": 0.82,
+      "output": "[Historical release: Earth retaining] one structure SVG and five matching primary questions; exact reviewed source restoration and all other assets preserved\n"
+    },
+    {
+      "check": "scripts/check-excavator-operation-safety.mjs",
+      "exitCode": 0,
+      "seconds": 1.31,
+      "output": "[Current excavator operation publication] 262 industrial / 446 all chapters; 1029 primary references; one new route, one newly assigned question; 727 prior source/assets and 448 prior articles unchanged\n"
+    },
+    {
+      "check": "scripts/check-fire-bulk-history-guard.mjs",
+      "exitCode": 0,
+      "seconds": 1.32,
+      "output": "[Fire bulk history guard] 11 isolated positive/negative mutation checks PASS\n"
+    },
+    {
+      "check": "scripts/check-fire-launch-history-guard.mjs",
+      "exitCode": 0,
+      "seconds": 0.99,
+      "output": "[Fire launch history guard] 7 isolated positive/negative checks PASS\n"
+    },
+    {
+      "check": "scripts/check-fire-persona-corrections.mjs",
+      "exitCode": 0,
+      "seconds": 0.71,
+      "output": "[Fire persona corrections] 167 re-solves, 28 chapters, 2313 untouched rows, all IDs/raw sources/keys/gates and native inventory PASS\n"
+    },
+    {
+      "check": "scripts/check-fire-practice-history-guard.mjs",
+      "exitCode": 0,
+      "seconds": 1.12,
+      "output": "[Fire practice history guard] 10 isolated approved/prohibited source, original, article, inventory and deletion checks PASS\n"
+    },
+    {
+      "check": "scripts/check-fire-practice-logic.mjs",
+      "exitCode": 0,
+      "seconds": 0.23,
+      "output": "[Fire practice logic] approval gates, malformed data, 100 subject-balanced samples, family deduplication and score thresholds PASS\n"
+    },
+    {
+      "check": "scripts/check-fire-practice.mjs",
+      "exitCode": 0,
+      "seconds": 0.72,
+      "output": "[Fire practice] 849 native sources/assets, 74 entry sections only; all 524 original lessons and canonical questions preserved; drafts excluded\n"
+    },
+    {
+      "check": "scripts/check-fire-safety-level2-bulk.mjs",
+      "exitCode": 0,
+      "seconds": 0.99,
+      "output": "[Fire bulk] 73 chapters, 32 SVGs, 736 prior source/assets checked; 450 exact prior articles and original sprinkler content preserved; 74 fire lessons; canonical questions unchanged\n"
+    },
+    {
+      "check": "scripts/check-fire-safety-level2-launch.mjs",
+      "exitCode": 0,
+      "seconds": 0.88,
+      "output": "[Fire safety launch] 732 prior source/assets, 450 prior articles preserved; 1 new lesson; no source question data changes\n"
+    },
+    {
+      "check": "scripts/check-fire-textbook-corrections.mjs",
+      "exitCode": 0,
+      "seconds": 0.75,
+      "output": "[Fire textbook corrections] 843 sources/assets, 524 articles; 17 reviewed chapters and 3 SVGs changed; identities, other content and canonical questions preserved\n"
+    },
+    {
+      "check": "scripts/check-formwork-lateral-pressure.mjs",
+      "exitCode": 0,
+      "seconds": 1.18,
+      "output": "[Historical release: formwork publication] 260 industrial / 444 all chapters; 1023 primary references; one new route, two newly assigned original questions; 725 prior source/assets and 444 other articles unchanged; two exact automatic related links\n"
+    },
+    {
+      "check": "scripts/check-fta-original-options.mjs",
+      "exitCode": 0,
+      "seconds": 1.41,
+      "output": "[Historical release: FTA original options] one original-symbol image / one registry addition; canonical questions, all chapter sources, CSS, popup code and 444 unrelated articles preserved\n"
+    },
+    {
+      "check": "scripts/check-fta-symbols-split.mjs",
+      "exitCode": 0,
+      "seconds": 0.25,
+      "output": "[Historical release: FTA split] 3 routes, 5+7 unique primary questions, original payloads/figures and Boolean foundation preserved; TOC/sitemap/return links pass\n"
+    },
+    {
+      "check": "scripts/check-hanging-scaffold-wire-rope.mjs",
+      "exitCode": 0,
+      "seconds": 1.27,
+      "output": "[Current hanging scaffold rope publication] 263 industrial / 447 all chapters; 1032 primary references; one new route, three newly assigned questions; 730 prior source/assets unchanged, 446 prior articles unchanged and 3 exact related link additions\n"
+    },
+    {
+      "check": "scripts/check-historical-practice-guard.mjs",
+      "exitCode": 0,
+      "seconds": 1.64,
+      "output": "[Historical practice guard] 12 isolated positive/negative mutation checks PASS\n"
+    },
+    {
+      "check": "scripts/check-industrial-20190804-review.mjs",
+      "exitCode": 0,
+      "seconds": 1.76,
+      "output": "[Historical release: 20190804 source review] 120 original questions / 116 newly reviewed; 42 corrections, 16 mis-imported bodies, 7 restored contexts, 3 original diagrams; all answers/IDs preserved; 258 chapters / 1014 primary references\n"
+    },
+    {
+      "check": "scripts/check-industrial-question-source-repair.mjs",
+      "exitCode": 0,
+      "seconds": 1.54,
+      "output": "[Historical release: Question source repair] 117/118/120 restored; 1677 other records, all answers/IDs/assets unchanged; only two primary assignments moved; 258 chapters / 1019 primary references\n"
+    },
+    {
+      "check": "scripts/check-industrial-remaining-review.mjs",
+      "exitCode": 0,
+      "seconds": 1.17,
+      "output": "[Historical release: Remaining chapter review] 211 pages / 150 edited; metadata, learning tokens and 551 other source/assets preserved\n"
+    },
+    {
+      "check": "scripts/check-industrial-remaining-splits.mjs",
+      "exitCode": 0,
+      "seconds": 1.22,
+      "output": "[Historical release: Remaining splits] 7 families / 17 routes / 10 new chapters; 38 moved or retained + 16 reviewed unassigned questions; 258 industrial chapters / 1019 primary references; originals and 4 figures preserved\n"
+    },
+    {
+      "check": "scripts/check-industrial-safety-chapter-splits.mjs",
+      "exitCode": 0,
+      "seconds": 1.0,
+      "output": "[Historical release: Chapter splits] 12 families / 35 reviewed routes / 22 newly published chapters; 258 published, 1019 primary references; all unique primary coverage preserved\n[Historical release: Chapter splits] 684 baseline files protected; 1680 canonical questions, images and unrelated chapters unchanged\n"
+    },
+    {
+      "check": "scripts/check-industrial-safety-machine-tools-split.mjs",
+      "exitCode": 0,
+      "seconds": 0.83,
+      "output": "[Historical release: Machine tools split] 5 routes + TOC/sitemap/related links passed; all 24 questions allocated once; 258 completed chapters / 1019 primary references after the reviewed splits\n[Historical release: Machine tools split] 580 protected files unchanged or covered by exact reviewed chapter hashes; 1680 canonical questions and historical image registries/assets unchanged\n"
+    },
+    {
+      "check": "scripts/check-industrial-unassigned-links.mjs",
+      "exitCode": 0,
+      "seconds": 1.4,
+      "output": "[Historical release: Unassigned links] 259 industrial / 443 all chapters; 1021 primary references; 6 new links; 5 remaining unassigned; 725 source/assets protected; 440 other articles unchanged\n"
+    },
+    {
+      "check": "scripts/check-instant-practice-coverage.mjs",
+      "exitCode": 0,
+      "seconds": 0.43,
+      "output": "[Instant practice coverage] {\"industrial-safety\":{\"chapters\":263,\"withPractice\":253,\"withoutPractice\":10,\"linkedQuestions\":1032,\"withoutVerifiedExplanation\":1026},\"energy-management\":{\"chapters\":21,\"withPractice\":21,\"withoutPractice\":0,\"linkedQuestions\":1588,\"withoutVerifiedExplanation\":1588},\"computer-literacy\":{\"chapters\":163,\"withPractice\":132,\"withoutPractice\":31,\"linkedQuestions\":301,\"withoutVerifiedExplanation\":301}} errors=0\n"
+    },
+    {
+      "check": "scripts/check-instant-practice-datasets.mjs",
+      "exitCode": 0,
+      "seconds": 0.17,
+      "output": "[Instant practice endpoints] 3 static certification JSON datasets match canonical fields exactly\n"
+    },
+    {
+      "check": "scripts/check-instant-practice-pilot.mjs",
+      "exitCode": 0,
+      "seconds": 0.09,
+      "output": "Instant practice pilot: 6 canonical questions, answer indices, explanations and chapter gating verified\n"
+    },
+    {
+      "check": "scripts/check-port-cargo-passages.mjs",
+      "exitCode": 0,
+      "seconds": 1.35,
+      "output": "[Current port cargo publication] 261 industrial / 445 all chapters; 1028 primary references; one new route, five newly assigned questions; 726 prior source/assets and 447 prior articles unchanged\n"
+    },
+    {
+      "check": "scripts/check-public-content.mjs",
+      "exitCode": 0,
+      "seconds": 0.97,
+      "output": "[Public content] HTML 547개 검사\n[Public content] 오류 0개\n"
+    },
+    {
+      "check": "scripts/check-seo.mjs",
+      "exitCode": 0,
+      "seconds": 0.42,
+      "output": "[SEO] HTML 547개, sitemap URL 545개 검사\n[SEO] 경고 0개, 오류 0개\n"
+    }
+  ]
+}

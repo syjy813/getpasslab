@@ -260,11 +260,12 @@
           "신축 중인 별관의 소방시설 설계도서를 검토하고 공사 감리 결과보고서를 소방서장에게 제출하였다.",
           "옥상 물탱크실 용접작업의 화기취급을 감독하고 그 결과를 업무수행 기록부에 남겼다."
         ],
-        "explanation": "소방시설 설계도서 검토와 공사감리 결과보고 제줄은 소방안전관리자의 업무가 아니다.\n이는 「소방시설공사업법]에 따라 등록한 설계업자-감리업자가 수행하는 일이다. 소방안전관리자의 업무는 소방계\n획서의 작성:시행, 자위소방대 및 초기대응체계의 구성ㆍ운영-교육, 피난시설ㆍ방화구획 및 방화시설의 관리, 소방시\n설의 관리, 소방훈련 및 교육, 화기 취급의 감독, 업무수행에 관한 기록-유지, 화재발생 시 초기대응 등이다.\n* 자위소방대초기대응체계 편성과 교육은 제2호에 해당한다.\nㆍ 방화문 폐쇄 상태 Sole 제3호의 피난시설:방화구획 관리에 해당한다.\nㆍ 화기취급 감독과 기록-유지는 제6호-제7호에 해당한다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제24조제5항 각 호\nhttps://www.moducbt.com/exam/pdf/27773                                                                                            1/38\n\n26. 10. 6. 23 4:02                                                9378aaca-62f0-4ee5-bb8b-5206fb122a51\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+        "explanation": "소방시설 설계도서 검토와 공사감리 결과보고서 제출은 소방시설 설계·감리 업무이며, 소방안전관리자의 법정 업무와 구별한다. 자위소방대·초기대응체계의 구성·운영·교육, 피난시설·방화구획·방화시설 관리, 화기 취급 감독과 업무수행 기록·유지는 소방안전관리업무에 포함된다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제24조제5항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "OCR 잔문자 정리"
+        "OCR 잔문자 정리",
+        "후속 QA: OCR 오염·PDF 머리말 제거"
       ]
     },
     "moducbt-27777-q02": {
@@ -430,11 +431,12 @@
           "소방안전관리자 선임신고를 정해진 기간 안에 하지 않은 관계인",
           "화재안전조사를 정당한 사유 없이 거부-방해 또는 기피한 자"
         ],
-        "explanation": "기간 내에 소방안전관리자 선임신고를 하지 않은 관계인은 200만원 이하의 과태료 대상이다.\n벌금은 형벌이고 과태료는 행정질서벌이어서 부과 절차와 효과가 다르므로 두 가지를 구분해 정리해 두어야 한다.\nㆍ 자체점검을 하지 않거나 정기적으로 점검하게 하지 않은 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.\n+ 소방안전관리자에게 불이익한 HPS 한 관계인과 화재안전조사를 정당한 사유 없이 거부-방해-기피한 자는 각각 300만원 이하\n의 벌금 대상이다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제52조제2항제3호, 제50조제3항제1호-제5호, 소방시설 설치 및 관\n리에 관한 법률 제58조제1호\nhttps://www.moducbt.com/exam/pdf/27773                                                                                                      5/38\n\n26. 10. 6. 오후 4402                                                   9378aaca-62f0-4ee5-bb8b-5206fb122a51\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "explanation": "선임신고를 기간 안에 하지 않은 관계인은 200만원 이하의 과태료 대상이다. 자체점검 미실시는 1년 이하의 징역 또는 1천만원 이하의 벌금, 소방안전관리자에 대한 불이익한 처우와 정당한 사유 없는 화재안전조사 거부·방해·기피는 각각 300만원 이하의 벌금 대상이다. 벌금과 과태료를 구별한다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제50조제3항제1호·제5호, 제52조제2항제3호; 소방시설 설치 및 관리에 관한 법률 제58조제1호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "OCR 잔문자 정리"
+        "OCR 잔문자 정리",
+        "후속 QA: OCR 오염·PDF 머리말 제거"
       ]
     },
     "moducbt-27778-q08": {
@@ -717,11 +719,12 @@
     "FSM2-CORE-206": {
       "beforeSHA256": "a44eb5fbc33b5a58bced12872724fcb4c73dcb6050384b8699e0f56108e455ab",
       "set": {
-        "explanation": "작동점검과 종합점검(최초점검은 제외)이 건축물 사용승인을 받은 그 해부터 매년 실시된다고 본 설명은 옳지 않 다. 최초점검을 제외한 작동점검·종합점검은 사용승인 후 아래 해부터 실시한다. 종합점검 대상의 작동점검 시기는 종합점검(최초점검은 제외)을 받은 달부터 6개월이 되는 달이고, 종합점검 대상 이 아니면 사용승인일이 든 달의 말일까지 작동점검을 마친다. 소방시설이 신설된 경우의 최초점검은 건물을 쓸 수 있게 된 날부터 60일 안에 마쳐야 한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "explanation": "작동점검과 종합점검(최초점검은 제외)이 건축물 사용승인을 받은 그 해부터 매년 실시된다고 본 설명은 옳지 않 다. 최초점검을 제외한 작동점검·종합점검은 사용승인 후 다음 해부터 실시한다. 종합점검 대상의 작동점검 시기는 종합점검(최초점검은 제외)을 받은 달부터 6개월이 되는 달이고, 종합점검 대상 이 아니면 사용승인일이 든 달의 말일까지 작동점검을 마친다. 소방시설이 신설된 경우의 최초점검은 건물을 쓸 수 있게 된 날부터 60일 안에 마쳐야 한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 변형 해설의 잘못된 연결어 교정"
       ]
     },
     "FSM2-CORE-257": {
@@ -1024,11 +1027,12 @@
     "FSM2-CORE-160": {
       "beforeSHA256": "5c88413f4d4726972e5e636a74121b2b66960867a4b83f168e439bf3e33094cd",
       "set": {
-        "explanation": "세 온도는 인화점이 가장 낮고 그아래이 연소점, 발화점이 가장 높은 순서이므로, 연소점을 가장 낮게 배치한 설명 이 옳지 않다. 인화점은 점화원이 있어야 불이 붙는 최저온도이고, 연소점은 그 상태에서 점화원을 치워도 연소가 이어지는 온도 이므로 인화점보다 조금 높다. 발화점은 점화원 없이 축적된 열만으로 스스로 발화하는 온도여서 세 값 중 가장 높으며, 발화점이 낮은 물질일수 록 위험성이 크다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+        "explanation": "세 온도는 인화점이 가장 낮고 그다음이 연소점, 발화점이 가장 높은 순서이므로, 연소점을 가장 낮게 배치한 설명 이 옳지 않다. 인화점은 점화원이 있어야 불이 붙는 최저온도이고, 연소점은 그 상태에서 점화원을 치워도 연소가 이어지는 온도 이므로 인화점보다 조금 높다. 발화점은 점화원 없이 축적된 열만으로 스스로 발화하는 온도여서 세 값 중 가장 높으며, 발화점이 낮은 물질일수 록 위험성이 크다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 변형 해설의 잘못된 연결어 교정"
       ]
     },
     "FSM2-CORE-259": {
@@ -1206,11 +1210,12 @@
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
         "question": "알람밸브가 설치된 습식 스프링클러설비를 갖춘 사무실에서 불이 났다. 〈보기〉의 현상을 일어나는 순서대로 바르\n게 나열한 것은?\nㄱ. 배관 압력이 더 내려가 기동용수압개폐장치가 동작하고 펌프가 돌아간다.\nㄴ. 열을 받은 폐쇄형 헤드가 열려 물이 쏟아진다.\nㄷ. 시트링홀로 흘러든 물이 압력스위치를 눌러 사이렌과 밸브개방표시등을 작동시킨다.\nㄹ. 2차측 배관의 압력이 내려간다.\nㅁ. 1차측 압력에 밀려 알람밸브의 클래퍼가 열린다.\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
-        "explanation": "습식 설비는 알람밸브 1차측과 2차측 배관 모두에 물이 가압되어 있으므로, 열로 헤드가 열리면 곧바로 물이 나간\n다(ㄴ).\n물이 나가면 2차측 압력이 먼저 내려가고(ㄹ), 그 결과 1차측 압력에 밀려 클래퍼가 열린다(ㅁ). 클래퍼가 열리면\n시트링홀로 물이 흘러들어 압력스위치를 눌러 사이렌과 밸브개방표시등을 작동시킨다(ㄷ).\n방수가 이어져 배관 압력이 더 내려가면 기동용수압개폐장치가 펌프를 돌린다(ㄱ). 압력스위치 동작이 클래퍼 개\n방보다 앞설 수 없으므로 다른 배열은 성립하지 않는다.\n근거: 스프링클러설비의 화재안전기술기준(NFTC 103) 1.7.1.23·2.6.1.1·2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "explanation": "주어진 설정에서 순서는 ㄴ → ㄹ → ㅁ → ㄷ → ㄱ이다. 헤드 개방·방수로 2차측 압력이 내려가고 클래퍼가 열리면, 유수검지장치의 경보용 압력스위치가 동작한다. 이후 계속된 압력 저하로 별도의 기동용수압개폐장치가 펌프를 기동하도록 설정한 사례다. 경보용 스위치와 펌프 기동용 스위치는 구별한다. 다른 기동 방식이나 압력 설정에도 펌프가 항상 마지막이라고 일반화하지 않는다.\n근거: NFTC 103 2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "작동 순서의 설정 전제 명시"
+        "작동 순서의 설정 전제 명시",
+        "후속 QA: 작동 순서를 제시된 설정으로 한정"
       ]
     },
     "moducbt-27778-q36": {
@@ -1218,11 +1223,12 @@
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
         "question": "〈보기〉는 습식 스프링클러설비가 화재로 작동할 때 일어나는 현상을 순서 없이 나열한 것이다. 작동순서로 옳은 것\n은?\n㉠ 습식유수검지장치(알람밸브)의 2차측 압력이 떨어져 클래퍼가 개방된다.\n㉡ 계속된 방수로 배관 내 압력이 떨어져 기동용수압개폐장치의 압력스위치가 작동한다.\n㉢ 화재의 열로 폐쇄형 헤드의 감열체가 개방되어 방수가 시작된다.\n㉣ 펌프가 기동하여 가압수를 계속 공급한다.\n㉤ 유수검지장치의 압력스위치가 작동하여 화재신호를 발신한다.\n㉥ 사이렌이 울리고 감시제어반의 밸브개방 표시등이 점등된다.\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
-        "explanation": "습식 스프링클러설비는 화재의 열로 폐쇄형 헤드가 개방되면 곧바로 방수가 시작되고, 펌프 기동이 가장 나중에 일\n어난다.\n유수검지장치의 1차측과 2차측에 모두 가압수가 채워져 있어 헤드가 열리면 2차측 압력이 떨어지면서 클래퍼가\n열리고, 유수검지장치의 압력스위치가 작동해 화재신호를 보내면 음향장치가 경보하고 감시제어반에 밸브개방 표\n시가 나타난다.\n방수가 계속되어 배관 내 압력이 낮아지면 압력변동을 검지하는 기동용수압개폐장치의 압력스위치가 작동해 펌프\n가 기동한다.\n근거: 스프링클러설비의 화재안전기술기준(NFTC 103) 1.7.1.9·1.7.1.15·2.6.1.1·2.10.3.5, 소방안전관리 실무 —\n습식 스프링클러설비 작동순서\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "explanation": "주어진 설정에서 순서는 ㉢ → ㉠ → ㉤ → ㉥ → ㉡ → ㉣이다. 헤드 개방·방수, 클래퍼 개방, 유수검지장치의 경보 신호·음향 및 표시, 기동용수압개폐장치 동작·펌프 기동 순서다. 문제에서 경보 후 계속된 압력 저하로 펌프를 기동하도록 설정했기 때문에 이 순서가 된다. 습식 설비 전체에서 펌프가 항상 마지막에 기동한다는 뜻은 아니다.\n근거: NFTC 103 1.7.1.9, 2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "작동 순서의 설정 전제 명시"
+        "작동 순서의 설정 전제 명시",
+        "후속 QA: 작동 순서를 제시된 설정으로 한정"
       ]
     },
     "moducbt-27779-q39": {
@@ -1230,44 +1236,48 @@
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
         "question": "다음은 습식 스프링클러설비가 설치된 사무실에서 불이 났을 때 설비가 움직이는 흐름이다. ㉠~㉢에 들어갈 내용\n을 바르게 짝지은 것은?\n화재 발생 → 폐쇄형 헤드 개방·방수 → ( ㉠ ) → 1차측 압력에 밀려 클래퍼 개방 → ( ㉡ ) → 배관 압력이 더 내려가 ( ㉢ )\n동작 → 펌프 기동\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
-        "explanation": "㉠은 2차측 배관의 압력 저하, ㉡은 시트링홀로 흘러든 물에 의한 압력스위치 작동(사이렌·밸브개방표시등), ㉢은\n기동용수압개폐장치다.\n습식 설비는 유수검지장치 1차측과 2차측 배관에 모두 물이 가압되어 있으며, 헤드가 열려 물이 나가면 2차측 압\n력이 먼저 떨어지고(㉠) 1차측 압력에 밀려 클래퍼가 열린다.\n이때 밸브 몸통의 시트링홀로 물이 흘러들어 압력스위치를 작동시켜 사이렌과 밸브개방표시등을 켜며(㉡), 방수가\n이어져 배관 압력이 더 내려가면 기동용수압개폐장치가 동작해 펌프를 돌린다(㉢).\n근거: 스프링클러설비의 화재안전기술기준(NFTC 103) 1.7.1.23·2.6.1.1·2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "explanation": "㉠은 2차측 배관 압력 저하, ㉡은 시트링홀로 유입된 물에 의한 경보용 압력스위치 작동, ㉢은 펌프 기동용수압개폐장치다. 이 사례에서는 경보 후 압력이 더 내려갈 때 펌프가 기동하도록 설정했다. 경보용 압력스위치와 펌프 기동용 장치를 같은 장치로 보거나, 다른 설비에도 이 시간 순서를 그대로 적용해서는 안 된다.\n근거: NFTC 103 1.7.1.9, 2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "작동 순서의 설정 전제 명시"
+        "작동 순서의 설정 전제 명시",
+        "후속 QA: 작동 순서를 제시된 설정으로 한정"
       ]
     },
     "FSM2-CORE-088": {
       "beforeSHA256": "0aca68e6130f417e54ad48ecb7a6f12035f1ca4ec4620a4483639c482e0faa52",
       "set": {
         "question": "알람밸브가 설치된 습식 스프링클러설비를 갖춘 업무용 사무공간에서 불이 났다. 〈제시문〉의 현상을 일어나는 순서대로 맞는 순서로 정리한 것은? ㄱ. 배관 압력이 더 내려가 기동용수압개폐장치가 동작하고 펌프가 돌아간다. ㄴ. 열을 받은 폐쇄형 헤드가 열려 물이 쏟아진다. ㄷ. 시트링홀로 흘러든 물이 압력스위치를 눌러 사이렌과 밸브개방표시등을 작동시킨다. ㄹ. 2차측 배관의 압력이 내려간다. ㅁ. 1차측 압력에 밀려 알람밸브의 클래퍼가 열린다.\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
-        "explanation": "습식 설비는 알람밸브 1차측과 2차측 배관 모두에 물이 가압되어 있으므로, 열로 헤드가 열리면 곧바로 물이 나간 다(ㄴ). 물이 나가면 2차측 압력이 먼저 내려가고(ㄹ), 그 결과 1차측 압력에 밀려 클래퍼가 열린다(ㅁ). 클래퍼가 열리면 시트링홀로 물이 흘러들어 압력스위치를 눌러 사이렌과 밸브개방표시등을 작동시킨다(ㄷ). 방수가 이어져 배관 압력이 더 내려가면 기동용수압개폐장치가 펌프를 돌린다(ㄱ). 압력스위치 동작이 클래퍼 개 방보다 앞설 수 없으므로 다른 배열은 성립하지 않는다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "explanation": "주어진 설정에서 순서는 ㄴ → ㄹ → ㅁ → ㄷ → ㄱ이다. 헤드 개방·방수로 2차측 압력이 내려가고 클래퍼가 열리면, 유수검지장치의 경보용 압력스위치가 동작한다. 이후 계속된 압력 저하로 별도의 기동용수압개폐장치가 펌프를 기동하도록 설정한 사례다. 경보용 스위치와 펌프 기동용 스위치는 구별한다. 다른 기동 방식이나 압력 설정에도 펌프가 항상 마지막이라고 일반화하지 않는다.\n근거: NFTC 103 2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "작동 순서의 설정 전제 명시"
+        "작동 순서의 설정 전제 명시",
+        "후속 QA: 작동 순서를 제시된 설정으로 한정"
       ]
     },
     "FSM2-CORE-286": {
       "beforeSHA256": "5f1327e424d837f10ee1cd1606e97ddb29d7780c8bc363e8b520f21edf7b87e0",
       "set": {
         "question": "〈제시문〉는 습식 스프링클러설비가 화재로 작동할 때 일어나는 현상을 순서 없이 나열한 것이다. 작동순서로 맞게 설명한 것은? ㉠ 습식유수검지장치(알람밸브)의 2차측 압력이 떨어져 클래퍼가 개방된다. ㉡ 계속된 방수로 배관 내 압력이 떨어져 기동용수압개폐장치의 압력스위치가 작동한다. ㉢ 화재의 열로 폐쇄형 헤드의 감열체가 개방되어 방수가 시작된다. ㉣ 펌프가 기동하여 가압수를 계속 공급한다. ㉤ 유수검지장치의 압력스위치가 작동하여 화재신호를 발신한다. ㉥ 사이렌이 울리고 감시제어반의 밸브개방 표시등이 점등된다.\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
-        "explanation": "습식 스프링클러설비는 화재의 열로 폐쇄형 헤드가 개방되면 곧바로 방수가 시작되고, 펌프 기동이 가장 나중에 일 어난다. 유수검지장치의 1차측과 2차측에 모두 가압수가 채워져 있어 헤드가 열리면 2차측 압력이 떨어지면서 클래퍼가 열리고, 유수검지장치의 압력스위치가 작동해 화재신호를 보내면 음향장치가 경보하고 감시제어반에 밸브개방 표 시가 나타난다. 방수가 계속되어 배관 내 압력이 낮아지면 압력변동을 검지하는 기동용수압개폐장치의 압력스위치가 작동해 펌프 가 기동한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "explanation": "주어진 설정에서 순서는 ㉢ → ㉠ → ㉤ → ㉥ → ㉡ → ㉣이다. 헤드 개방·방수, 클래퍼 개방, 유수검지장치의 경보 신호·음향 및 표시, 기동용수압개폐장치 동작·펌프 기동 순서다. 문제에서 경보 후 계속된 압력 저하로 펌프를 기동하도록 설정했기 때문에 이 순서가 된다. 습식 설비 전체에서 펌프가 항상 마지막에 기동한다는 뜻은 아니다.\n근거: NFTC 103 1.7.1.9, 2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "작동 순서의 설정 전제 명시"
+        "작동 순서의 설정 전제 명시",
+        "후속 QA: 작동 순서를 제시된 설정으로 한정"
       ]
     },
     "FSM2-CORE-339": {
       "beforeSHA256": "a75e4bda8e6a9ac4e265ade149dd1005f35fda38e9de828c31c605fde1525df3",
       "set": {
         "question": "아래는 습식 스프링클러설비가 설치된 업무용 사무공간에서 불이 났을 때 설비가 움직이는 흐름이다. ㉠~㉢에 들어갈 내용 을 정확하게 연결한 것은? 화재 발생 → 폐쇄형 헤드 개방·방수 → ( ㉠ ) → 1차측 압력에 밀려 클래퍼 개방 → ( ㉡ ) → 배관 압력이 더 내려가 ( ㉢ ) 동작 → 펌프 기동\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
-        "explanation": "㉠은 2차측 배관의 압력 저하, ㉡은 시트링홀로 흘러든 물에 의한 압력스위치 작동(사이렌·밸브개방표시등), ㉢은 기동용수압개폐장치다. 습식 설비는 유수검지장치 1차측과 2차측 배관에 모두 물이 가압되어 있으며, 헤드가 열려 물이 나가면 2차측 압 력이 먼저 떨어지고(㉠) 1차측 압력에 밀려 클래퍼가 열린다. 이때 밸브 몸통의 시트링홀로 물이 흘러들어 압력스위치를 작동시켜 사이렌과 밸브개방표시등을 켜며(㉡), 방수가 이어져 배관 압력이 더 내려가면 기동용수압개폐장치가 동작해 펌프를 돌린다(㉢).\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "explanation": "㉠은 2차측 배관 압력 저하, ㉡은 시트링홀로 유입된 물에 의한 경보용 압력스위치 작동, ㉢은 펌프 기동용수압개폐장치다. 이 사례에서는 경보 후 압력이 더 내려갈 때 펌프가 기동하도록 설정했다. 경보용 압력스위치와 펌프 기동용 장치를 같은 장치로 보거나, 다른 설비에도 이 시간 순서를 그대로 적용해서는 안 된다.\n근거: NFTC 103 1.7.1.9, 2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "작동 순서의 설정 전제 명시"
+        "작동 순서의 설정 전제 명시",
+        "후속 QA: 작동 순서를 제시된 설정으로 한정"
       ]
     },
     "moducbt-27779-q19": {
@@ -1514,11 +1524,12 @@
           "관창을 떼어낸 뒤 방수구에 직접 나사로 결합하여 정지 상태의 배관 압력을 읽는다.",
           "성능시험배관의 유량측정장치와 함께 사용하며, 유량계 지시값을 그대로 방수압력으로 환산한다."
         ],
-        "explanation": "이 시험은 직사형 관창과 방수압력 측정계(피토게이지)를 함께 사용하며, 노즐 선단에서 노즐구경의 1/2만큼 떨어\n진 위치에 근접시켜 봉상주수 상태에서 직각으로 측정한다.\n그림의 계측기는 형식승인 기준에 적합한 직사형 관창과 짝을 이루는 방수압력 측정계(피토게이지)이며, 노즐구경\n(D)의 1/2 지점에서 물줄기가 봉상으로 나오는 상태로 직각을 대고 눈금을 읽는다.\n초기 방수 시에는 배관 속 이물질과 공기가 완전히 빠진 뒤 측정하며, 방수압력은 관창 선단의 피토게이지 압력으\n로 판정하므로 방수구 압력계나 유량계 지시값으로 대신할 수 없다.\n근거: 「소방시설 자체점검사항 등에 관한 고시」 별표5 옥외소화전설비 성능시험조사표 비고 제2호, 소방안전관리\n실무 — 방수압력시험 장비 구성\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+        "explanation": "이 시험은 직사형 관창과 방수압력 측정계(피토게이지)를 함께 사용하며, 노즐 선단에서 노즐구경의 1/2만큼 떨어\n진 위치에 근접시켜 봉상주수 상태에서 직각으로 측정한다.\n이 시험에 쓰는 계측기는 형식승인 기준에 적합한 직사형 관창과 짝을 이루는 방수압력 측정계(피토게이지)이며, 노즐구경\n(D)의 1/2 지점에서 물줄기가 봉상으로 나오는 상태로 직각을 대고 눈금을 읽는다.\n초기 방수 시에는 배관 속 이물질과 공기가 완전히 빠진 뒤 측정하며, 방수압력은 관창 선단의 피토게이지 압력으\n로 판정하므로 방수구 압력계나 유량계 지시값으로 대신할 수 없다.\n근거: 「소방시설 자체점검사항 등에 관한 고시」 별지 제5호서식 옥외소화전설비 성능시험조사표 비고 제2호, 소방안전관리\n실무 — 방수압력시험 장비 구성\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "장비 명칭을 텍스트로 명시"
+        "장비 명칭을 텍스트로 명시",
+        "후속 QA: 제거한 그림 참조·고시 서식 인용 교정"
       ]
     },
     "moducbt-27777-q30": {
@@ -1526,11 +1537,12 @@
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
         "question": "다음은 습식 스프링클러설비의 시험장치 개폐밸브를 개방했을 때 일어나는 현상을 순서 없이 나열한 것이다. 일어\n나는 순서대로 옳게 배열한 것은?\n㉠ 시험장치 배관 끝의 오리피스를 통해 가압수가 배출된다.\n㉡ 유수검지장치 2차측 압력이 낮아져 1차측 압력에 의해 클래퍼가 개방된다.\n㉢ 유수검지장치의 압력스위치가 작동하여 감시제어반의 화재표시등·밸브개방표시등이 점등되고 음향장치가 경보한다.\n㉣ 배관 내 압력이 계속 낮아져 기동용수압개폐장치가 작동하고 펌프가 기동한다.\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
-        "explanation": "일어나는 순서는 개폐밸브 개방 → 2차측 압력 저하 → 압력스위치 작동 → 펌프 기동 순이다.\n습식스프링클러설비의 시험장치는 유수검지장치 2차측 배관에 연결되어 있어, 개폐밸브를 열면 오리피스로 가압\n수가 빠져나가면서 2차측 압력이 떨어진다.\n헤드에 공급되는 물은 반드시 유수검지장치를 지나므로 2차측 압력이 낮아지면 1차측 압력에 밀려 클래퍼가 열리\n고, 이때 작동한 압력스위치 신호로 밸브개방표시등과 음향장치가 동작한다. 펌프는 유수검지장치의 발신이나 기\n동용수압개폐장치의 작동으로 기동하므로 배관 압력이 더 낮아진 뒤 마지막에 기동한다.\n근거: 스프링클러설비의 화재안전기술기준(NFTC 103) 2.5.12.1, 2.3.1.5, 2.6.2.1, 「소방시설 자체점검사항 등에\n관한 고시」 별표4 점검항목 3-K-020\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+        "explanation": "주어진 설정에서 ㉠ → ㉡ → ㉢ → ㉣이다. 시험장치의 오리피스로 물이 배출되면 2차측 압력이 내려가 클래퍼가 열리고, 유수검지장치의 경보용 압력스위치 신호로 표시등과 음향장치가 동작한다. 이후 압력이 더 내려가면 별도의 기동용수압개폐장치가 펌프를 기동하는 조건이다. NFTC 103은 유수검지장치 발신·기동용수압개폐장치·혼용을 허용하므로 이 사례의 순서를 모든 설비에 일반화하지 않는다.\n근거: NFTC 103 2.5.12.1, 2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "작동 순서의 설정 전제 명시"
+        "작동 순서의 설정 전제 명시",
+        "후속 QA: 작동 순서를 제시된 설정으로 한정"
       ]
     },
     "moducbt-27780-q30": {
@@ -1561,11 +1573,12 @@
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
         "question": "교차회로방식으로 감지기가 배선된 준비작동식 스프링클러설비가 설치된 창고에서 화재가 발생하였다. 다음 현상\n을 일어나는 순서대로 옳게 나열한 것은?\n㉠ 폐쇄형스프링클러헤드가 열에 의해 개방되어 방수된다.\n㉡ 교차회로 중 하나의 감지기회로가 화재를 감지하여 음향장치가 경보한다.\n㉢ 준비작동식유수검지장치가 개방된다.\n㉣ 인접한 두 감지기회로가 모두 화재를 감지한다.\n㉤ 유수검지장치 2차측 배관으로 소화수가 송수된다.\n\n두 감지기회로 감지로 밸브가 열려 2차측에 물이 공급된 뒤 폐쇄형 헤드가 열리는 사례다. 헤드가 먼저 열린 상황은 제외한다.",
-        "explanation": "일어나는 순서는 ㉡ → ㉣ → ㉢ → ㉤ → ㉠이다. 준비작동식 설비는 유수검지장치 1차측까지만 물이 가압되어\n있고 2차측 헤드까지는 대기압 또는 저압 상태다.\n교차회로방식에서는 하나의 감지기회로만 감지해도 음향장치가 먼저 경보하고(㉡), 인접한 두 감지기회로가 모두\n감지될 때(㉣) 유수검지장치가 개방된다(㉢).\n밸브가 열리면 2차측으로 소화수가 송수되고(㉤), 폐쇄형헤드가 열에 의해 개방되어야 실제 방수가 이루어진다\n(㉠).\n근거: 스프링클러설비의 화재안전기술기준(NFTC 103) 1.7.1.25, 2.6.1.2, 2.6.3.1·2.6.3.2\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+        "explanation": "제시한 사례의 순서는 ㉡ → ㉣ → ㉢ → ㉤ → ㉠이다. 한 감지기회로가 감지하여 경보한 뒤 두 회로가 모두 감지하면 준비작동식유수검지장치가 열려 2차측 배관에 물이 공급된다. 이 문제는 그 후 폐쇄형 헤드가 열리는 조건을 명시했다. 실제 화재에서 헤드 개방 시점까지 언제나 이 순서라고 일반화하지 않는다.\n근거: NFTC 103 1.7.1.25, 2.6.1.2, 2.6.3.1·2.6.3.2\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "준비작동식 사례 순서 한정"
+        "준비작동식 사례 순서 한정",
+        "후속 QA: 작동 순서를 제시된 설정으로 한정"
       ]
     },
     "moducbt-27780-q35": {
@@ -1590,11 +1603,12 @@
       "beforeSHA256": "3a46815674fc7224bd0bf3230888aa80ca9ca26cd146311280dbbbd6ec096d91",
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
-        "explanation": "공통선에 접속할 수 있는 경계구역을 12개 이하로 본 설명이 옳지 않다.\nP형 및 GP형 수신기의 감지기 회로 배선에서 하나의 공통선에 접속할 수 있는 경계구역은 7개 이하다.\n도통시험용 종단저항은 점검·관리가 쉬운 장소의 감지기 회로 끝부분에 설치하고, 종단감지기에 설치할 때는 구별\n이 쉽도록 기판이나 외부에 표시한다. 감지기 사이의 회로 배선은 송배선식으로 해야 회로 중간의 단선을 도통시험\n으로 잡아낼 수 있으며, 감지기회로의 전로저항은 50 Ω 이하여야 한다.\n근거: NFTC 203 2.8.1.3·2.8.1.4·2.8.1.7·2.8.1.8, 소방시설 자체점검사항 등에 관한 고시 별표4 자동화재탐지설\n비 점검표 15-I-003·15-I-005\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+        "explanation": "공통선에 접속할 수 있는 경계구역을 12개 이하로 본 설명이 옳지 않다.\nP형 및 GP형 수신기의 감지기 회로 배선에서 하나의 공통선에 접속할 수 있는 경계구역은 7개 이하다.\n도통시험용 종단저항은 점검·관리가 쉬운 장소의 감지기 회로 끝부분에 설치하고, 종단감지기에 설치할 때는 구별\n이 쉽도록 기판이나 외부에 표시한다. 감지기 사이의 회로 배선은 송배선식으로 해야 회로 중간의 단선을 도통시험\n으로 잡아낼 수 있으며, 감지기회로의 전로저항은 50 Ω 이하여야 한다.\n근거: NFTC 203 2.8.1.3·2.8.1.4·2.8.1.7·2.8.1.8, 소방시설 자체점검사항 등에 관한 고시 별지 제4호서식 자동화재탐지설\n비 점검표 15-I-003·15-I-005\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 고시 별표·별지 서식 인용 교정"
       ]
     },
     "FSM2-CORE-375": {
@@ -1661,11 +1675,12 @@
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
         "question": "자동화재탐지설비 작동점검을 실시한 결과가 다음과 같다. 「소방시설등 점검표」 작성방법으로 옳은 것은?\n㉠ 15-I-003 「수신기 도통시험 회로 정상 여부」: 2회로에서 단선이 확인되었고 점검 당일 종단저항 접속 불량을 조치함\n㉡ 15-F-001 「시각경보장치 설치 장소 및 높이 적정 여부」: 이 대상물에는 시각경보장치가 설치되어 있지 않음\n㉢ 15-I-001 「종단저항 설치 장소, 위치 및 높이 적정 여부」: 점검항목 앞에 “●”가 표기되어 있음\n\n없는 설비는 법정 설치대상이 아니며 미설치가 위반은 아니다. 수리한 항목은 최초 불량과 수리 후 재시험 결과·일시를 함께 보존한다.",
-        "explanation": "㉠은 “×”로 기록하며 비고란에 조치 사실을 적고, ㉡은 “/”, ㉢은 작동점검 대상이 아니다.\n점검결과란은 양호를 “○”, 불량을 “×”, 해당 없는 항목을 “/”로 표시하며, 점검항목 앞의 “●”는 종합점검에만 해\n당하는 항목을 뜻한다.\n㉠은 점검 시점에 회로가 단선되어 있었으므로 조치를 마쳤더라도 “×”로 기록하고 그 사실은 비고란에 적으며, ㉡\n은 시각경보장치가 설치되어 있지 않으므로 해당 없음인 “/”로 표시한다. ㉢은 “●” 항목이어서 작동점검에서는\n점검 대상이 아니다.\n근거: 「소방시설 자체점검사항 등에 관한 고시」 별표4 소방시설등 점검표 비고 및 자동화재탐지설비 점검표 15-F-\n001·15-I-001·15-I-003\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "㉠은 최초 단선 불량을 ×로 남기고 조치 내용과 재시험 결과·일시를 함께 기록한다. 수리 후의 양호 결과로 최초 불량 이력을 지우지 않는다. ㉡은 법정 설치대상이 아니어서 미설치가 위반이 아니라는 문제 조건에 따라 /로 표시한다. 설치 의무가 있는데 빠진 설비에는 이 판단을 적용하지 않는다. ㉢의 ●는 제시한 서식에서 종합점검 전용 항목이므로 작동점검 대상이 아니다.\n근거: 소방시설 자체점검사항 등에 관한 고시 별지 제4호서식\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "해당 없음의 전제와 수리 이력 명시"
+        "해당 없음의 전제와 수리 이력 명시",
+        "후속 QA: 해당 없음의 법정 비대상 조건·수리 이력 명시"
       ]
     },
     "moducbt-27779-q43": {
@@ -1673,11 +1688,12 @@
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
         "question": "2022년 6월에 사무실에 비치된 축압식 분말소화기를 작동점검하였다. 확인된 내용과 사진이 다음과 같을 때 점\n검표 ㉠~㉢에 들어갈 점검결과를 바르게 짝지은 것은? (점검결과는 양호 ○, 불량 ×로 표기한다)\n[확인 내용]\n· 본체 명판의 제조연월: 2011년 3월\n· 지시압력계: 사진과 같이 지침이 녹색 범위 안(0.85MPa)을 가리킴\n· 외관: 용기 하부에 부식, 노즐 쪽 호스에 균열\n[점검표]\n1-A-006 소화기의 변형·손상 또는 부식 등 외관의 이상 여부 → ㉠\n1-A-007 지시압력계(녹색범위)의 적정 여부 → ㉡\n1-A-008 수동식 분말소화기 내용연수(10년) 적정 여부 → ㉢\n\n법정 성능확인검사에 의한 사용기간 연장 이력은 없다.",
-        "explanation": "외관은 불량(㉠ ×), 지시압력계는 양호(㉡ ○), 내용연수는 불량(㉢ ×)이다.\n용기 하부 부식과 노즐 쪽 호스 균열이 있으므로 외관 이상 여부는 불량(㉠ ×)이다. 축압식 소화기의 지시압력계는\n사용압력범위가 녹색으로 표시되어 있고 지침이 그 안(0.85MPa)을 가리키므로 적정하여 양호(㉡ ○)이다.\n분말형태의 소화약제를 사용하는 소화기의 내용연수는 10년이므로 2011년 3월 제조품은 2021년 3월로 내용연\n수가 끝났고, 2022년 6월 점검 시점에는 이미 초과하여 불량(㉢ ×)이다.\n근거: 「소방시설 자체점검사항 등에 관한 고시」 별표4 제1호 소화기구 점검표 1-A-006~1-A-008, 소방시설 설치\n및 관리에 관한 법률 시행령 제19조, 소화기의 형식승인 및 제품검사의 기술기준 제28조제1호가목\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "외관은 불량(㉠ ×), 지시압력계는 양호(㉡ ○), 내용연수는 불량(㉢ ×)이다.\n용기 하부 부식과 노즐 쪽 호스 균열이 있으므로 외관 이상 여부는 불량(㉠ ×)이다. 축압식 소화기의 지시압력계는\n사용압력범위가 녹색으로 표시되어 있고 지침이 그 안(0.85MPa)을 가리키므로 적정하여 양호(㉡ ○)이다.\n분말형태의 소화약제를 사용하는 소화기의 내용연수는 10년이므로 2011년 3월 제조품은 2021년 3월로 내용연\n수가 끝났고, 2022년 6월 점검 시점에는 이미 초과하여 불량(㉢ ×)이다.\n근거: 「소방시설 자체점검사항 등에 관한 고시」 별지 제4호서식 제1호 소화기구 점검표 1-A-006~1-A-008, 소방시설 설치\n및 관리에 관한 법률 시행령 제19조, 소화기의 형식승인 및 제품검사의 기술기준 제28조제1호가목\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "연장 예외 배제"
+        "연장 예외 배제",
+        "후속 QA: 고시 별표·별지 서식 인용 교정"
       ]
     },
     "moducbt-27780-q43": {
@@ -1685,11 +1701,12 @@
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
         "question": "2026년 9월에 실시한 축압식 분말소화기 작동점검에서 다음과 같은 사실을 확인하였다. 소화기구 점검표의 점검\n결과란에 표기할 내용으로 옳은 것은? (단, 점검결과란은 양호 '○', 불량 '×', 해당 없음 '/'로 표시한다)\n㉠ 지시압력계의 바늘이 녹색범위 안에 있음\n㉡ 본체 라벨의 제조연월이 2015년 8월인 수동식 분말소화기임\n㉢ 소화기 표지가 부착되어 있고 본체에 변형·손상·부식이 없음\n\n법정 성능확인검사에 의한 사용기간 연장 이력은 없다.",
-        "explanation": "점검결과는 ㉠ ○, ㉡ ×, ㉢ ○이다.\n지시압력계의 바늘이 녹색범위 안에 있으면 충전압력이 적정하므로 ㉠은 양호 '○'다. 분말형태의 소화약제를 사용\n하는 소화기의 내용연수는 10년이므로, 2015년 8월 제조품은 2026년 9월 점검 시점에 내용연수가 지나 교체 대\n상이어서 ㉡은 불량 '×'로 표기한다.\n표지가 붙어 있고 외관에 변형·손상·부식이 없으면 ㉢도 양호 '○'다. 해당 없음 '/'는 그 대상물에 그 항목 자체가 없\n을 때 쓰는 표기이므로 여기에는 해당하지 않는다.\n근거: 소방시설 자체점검사항 등에 관한 고시 별표4 소화기구 및 자동소화장치 점검표 1-A-005~1-A-008 및 점\n검결과 표기방법, 소방시설 설치 및 관리에 관한 법률 시행령 제19조\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "㉠은 지침이 녹색범위이므로 압력 항목 ○, ㉡은 2015년 8월 제조 분말소화기가 점검 시점인 2026년 9월에 10년을 넘었고 적법한 연장 이력도 없으므로 ×, ㉢은 표지·외관 항목 ○다. 해당 없음(/)은 법정 적용 여부 등을 확인하여 해당하지 않는 항목에 사용한다. 설비나 기록이 없다는 사실만으로 /로 처리하지 않는다.\n근거: 소방시설 자체점검사항 등에 관한 고시 별지 제4호서식; 소방시설 설치 및 관리에 관한 법률 시행령 제19조\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "연장 예외 배제"
+        "연장 예외 배제",
+        "후속 QA: 해당 없음의 법정 비대상 조건·수리 이력 명시"
       ]
     },
     "moducbt-27782-q43": {
@@ -1697,123 +1714,135 @@
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
         "question": "어느 건물의 자동화재탐지설비를 작동점검한 결과가 〈보기〉와 같다. 점검표의 점검결과란에 기재할 내용으로 옳은\n것은?\n㉠ 15-B-005 경계구역 일람도 비치 여부 → 수신기 옆에 일람도가 비치되어 있었다\n㉡ 15-D-009 감지기 변형·손상 확인 및 작동시험 적합 여부 → 3층 연기감지기 1개가 시험에서 동작하지 않았다\n㉢ 15-F-002 시각경보장치 변형·손상 확인 및 정상 작동 여부 → 이 대상물에는 시각경보장치가 설치되어 있지 않다\n㉣ 15-I-001 종단저항 설치 장소, 위치 및 높이 적정 여부(●)\n\n없는 설비는 법정 설치대상이 아니며 미설치가 위반은 아니다. 수리한 항목은 최초 불량과 수리 후 재시험 결과·일시를 함께 보존한다.",
-        "explanation": "점검결과는 ㉠ ○ / ㉡ × / ㉢ /(해당 없음) / ㉣은 종합점검에서만 확인하는 항목이므로 작동점검표 기재 대상이\n아니라고 판정한다.\n점검결과란은 양호하면 ○, 불량하면 ×, 해당 없는 항목은 /로 적는다. 일람도가 비치되어 있으니 ㉠은 ○, 감지기\n가 작동하지 않았으니 ㉡은 ×, 시각경보장치 자체가 없으니 ㉢은 해당 없음(/)이다. ㉣은 항목 앞에 ●가 붙어 있\n어 종합점검에서만 확인하는 항목이다.\n• ㉡과 ㉢의 표시를 서로 뒤바꾼 조합은 옳지 않다.\n• ㉠을 불량(×)으로 본 조합은 옳지 않다.\n• 설치되지 않은 시각경보장치를 불량(×)으로 처리하고 ㉣을 작동점검 항목으로 본 조합도 옳지 않다.\n근거: 「소방시설 자체점검사항 등에 관한 고시」 별표4 서식 유의사항 및 비고, 별표4 15-B-005·15-D-009·15-\nF-002·15-I-001\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "㉠ 일람도 비치는 ○, ㉡ 동작하지 않은 감지기는 ×다. ㉢은 시각경보장치가 법정 설치대상이 아니고 미설치가 위반도 아니라는 조건이므로 /다. 설치 의무가 있는 설비의 누락을 /로 처리하면 안 된다. ㉣의 ●는 제시한 서식에서 종합점검 전용 항목이므로 작동점검 기재 대상이 아니다.\n근거: 소방시설 자체점검사항 등에 관한 고시 별지 제4호서식\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "해당 없음의 전제와 수리 이력 명시"
+        "해당 없음의 전제와 수리 이력 명시",
+        "후속 QA: 해당 없음의 법정 비대상 조건·수리 이력 명시"
       ]
     },
     "FSM2-MOCK-057-13": {
       "beforeSHA256": "410b370e86576f2b17cea68fa0e4c3c3d038c060b3aa129b16bfd963b9e617f9",
       "set": {
         "question": "[점검표의 결과 표기와 불량 내용 · 복합 사례]\n범례는 ○ 양호·× 불량·/ 해당 없음이다. 항목 앞 ●는 종합점검 전용 항목 표시인 서식을 가정한다.\n\n가. 해당 설비가 없는 항목을 × 기록\n\n나. 기준 0.17MPa·실측 0.15MPa를 기준값으로 바꿔 기록\n\n가와 나의 판단을 모두 옳게 연결한 것은?\n\n없는 설비는 법정 설치대상이 아니며 미설치가 위반은 아니다. 수리한 항목은 최초 불량과 수리 후 재시험 결과·일시를 함께 보존한다.",
-        "explanation": "가: 해당 없음 / 적용. 근거: 대상 항목과 미확인 구별.\n\n나: 실측값 보존·불량 판정. 근거: 측정과 기준 비교의 정직성.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "가: 법정 설치대상이 아니고 미설치가 위반도 아니라는 조건이므로 ×를 /로 고친다. 설치 의무가 있는 설비의 누락이나 미확인을 /로 바꾸는 뜻은 아니다.\n나: 기준 0.17MPa에 미달한 실측 0.15MPa를 보존하고 불량으로 판정한다. 기준값으로 실측값을 덮어쓰지 않는다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "해당 없음의 전제와 수리 이력 명시"
+        "해당 없음의 전제와 수리 이력 명시",
+        "후속 QA: 해당 없음의 법정 비대상 조건·수리 이력 명시"
       ]
     },
     "FSM2-MOCK-057-20": {
       "beforeSHA256": "a72495891e4571c6e522d5d8f111624afb736042b6239d7e6291adb6d6069269",
       "set": {
         "question": "[점검표의 결과 표기와 불량 내용 · 복합 사례]\n범례는 ○ 양호·× 불량·/ 해당 없음이다. 항목 앞 ●는 종합점검 전용 항목 표시인 서식을 가정한다.\n\n가. 수리 후 같은 항목을 재시험하고 값·일시를 기록\n\n나. 해당 설비가 없는 항목을 × 기록\n\n다. 기준 0.17MPa·실측 0.15MPa를 기준값으로 바꿔 기록\n\n가의 검토 의견: 최초 불량 기록은 지워야 함\n\n나의 검토 의견: 해당 없음 / 적용\n\n다의 검토 의견: 실측값 보존·불량 판정\n\n제시된 검토 의견을 각각 판단했을 때 옳은 의견은 모두 몇 개인가?\n\n없는 설비는 법정 설치대상이 아니며 미설치가 위반은 아니다. 수리한 항목은 최초 불량과 수리 후 재시험 결과·일시를 함께 보존한다.",
-        "explanation": "가: 완료 확인 근거. 근거: 발견·조치·재확인 이력 연결.\n\n나: 해당 없음 / 적용. 근거: 대상 항목과 미확인 구별.\n\n다: 실측값 보존·불량 판정. 근거: 측정과 기준 비교의 정직성.\n\n제시 기록 판정: 가 수정 필요 / 나 옳음 / 다 옳음.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "가: 최초 불량은 지우지 않고 수리 내용과 재시험 값·일시를 연결해 남긴다. 따라서 제시 의견은 수정해야 한다.\n나: 법정 설치대상이 아니고 미설치가 위반도 아니라는 조건에서 /가 맞다. 설치 의무가 있는 누락 설비에는 적용하지 않는다.\n다: 0.15MPa라는 실측값을 보존하고 기준 0.17MPa와 비교하여 불량으로 판정한다.\n옳은 의견은 나·다의 2개다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "해당 없음의 전제와 수리 이력 명시"
+        "해당 없음의 전제와 수리 이력 명시",
+        "후속 QA: 해당 없음의 법정 비대상 조건·수리 이력 명시"
       ]
     },
     "FSM2-CORE-093": {
       "beforeSHA256": "7e2ab928df529795d2e5d70f7c84193ffa344cba4dca1ba4eba15328a756fa18",
       "set": {
-        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "실측 0.12MPa는 최소 기준 0.17MPa 미만이므로 이 압력 항목은 불량 ×다. 방수량 등 다른 항목은 별도로 판정하며 압력 항목의 결과만으로 설비 전체의 양호를 확정하지 않는다.\n근거: NFTC 102 2.2.1.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 실측값별 판정·경계값 해설 명시"
       ]
     },
     "FSM2-CORE-143": {
       "beforeSHA256": "ce9477fa3b2cbdb6c2de276f8c524dbaa89dee30a857ee3ba663097a49c3f757",
       "set": {
-        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "실측 0.13MPa는 최소 기준 0.17MPa 미만이므로 이 압력 항목은 불량 ×다. 방수량 등 다른 항목은 별도로 판정하며 압력 항목의 결과만으로 설비 전체의 양호를 확정하지 않는다.\n근거: NFTC 102 2.2.1.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 실측값별 판정·경계값 해설 명시"
       ]
     },
     "FSM2-CORE-193": {
       "beforeSHA256": "edf612d6d5629ed829e33270affe5e6cc59ee879a252d4471099b90fe376e650",
       "set": {
-        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "실측 0.14MPa는 최소 기준 0.17MPa 미만이므로 이 압력 항목은 불량 ×다. 방수량 등 다른 항목은 별도로 판정하며 압력 항목의 결과만으로 설비 전체의 양호를 확정하지 않는다.\n근거: NFTC 102 2.2.1.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 실측값별 판정·경계값 해설 명시"
       ]
     },
     "FSM2-CORE-243": {
       "beforeSHA256": "fe61d3718ca3b8af11ff06afa44a62d33308a8cdfd9b9df29e5c4199dd67f45c",
       "set": {
-        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "실측 0.15MPa는 최소 기준 0.17MPa 미만이므로 이 압력 항목은 불량 ×다. 방수량 등 다른 항목은 별도로 판정하며 압력 항목의 결과만으로 설비 전체의 양호를 확정하지 않는다.\n근거: NFTC 102 2.2.1.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 실측값별 판정·경계값 해설 명시"
       ]
     },
     "FSM2-CORE-293": {
       "beforeSHA256": "f153f7615f415118a9f7cd7ca032d0ab01f3990d461d57dd73ee48b9064a2d7e",
       "set": {
-        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "실측 0.16MPa는 최소 기준 0.17MPa 미만이므로 이 압력 항목은 불량 ×다. 방수량 등 다른 항목은 별도로 판정하며 압력 항목의 결과만으로 설비 전체의 양호를 확정하지 않는다.\n근거: NFTC 102 2.2.1.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 실측값별 판정·경계값 해설 명시"
       ]
     },
     "FSM2-CORE-343": {
       "beforeSHA256": "1d85ff40491461a4843d81c30184268e686d6d5bb90e4378e835a4db404411c4",
       "set": {
-        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "실측 0.17MPa는 최소 기준 0.17MPa 이상이고 0.7MPa 이하이므로 이 압력 항목은 양호 ○다. 0.17MPa와 같은 값도 포함한다. 방수량 등 다른 항목은 별도로 판정하며 압력 항목의 결과만으로 설비 전체의 양호를 확정하지 않는다.\n근거: NFTC 102 2.2.1.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 실측값별 판정·경계값 해설 명시"
       ]
     },
     "FSM2-CORE-393": {
       "beforeSHA256": "2cc2d9b8df70312a736bc99e05cde2140a34ea414cf608e380c80cd7f0737bc9",
       "set": {
-        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "실측 0.18MPa는 최소 기준 0.17MPa 이상이고 0.7MPa 이하이므로 이 압력 항목은 양호 ○다. 0.17MPa와 같은 값도 포함한다. 방수량 등 다른 항목은 별도로 판정하며 압력 항목의 결과만으로 설비 전체의 양호를 확정하지 않는다.\n근거: NFTC 102 2.2.1.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 실측값별 판정·경계값 해설 명시"
       ]
     },
     "FSM2-CORE-443": {
       "beforeSHA256": "0ef443dcdfad77579c35eaa44f2b580da564ecb7f4120d5ef570aae321212729",
       "set": {
-        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "실측 0.19MPa는 최소 기준 0.17MPa 이상이고 0.7MPa 이하이므로 이 압력 항목은 양호 ○다. 0.17MPa와 같은 값도 포함한다. 방수량 등 다른 항목은 별도로 판정하며 압력 항목의 결과만으로 설비 전체의 양호를 확정하지 않는다.\n근거: NFTC 102 2.2.1.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 실측값별 판정·경계값 해설 명시"
       ]
     },
     "FSM2-CORE-493": {
       "beforeSHA256": "5786dcfc8f154fc37f023a59d0fd23f9ae854ca6cf3be35ef2b14695f93ded66",
       "set": {
-        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "explanation": "실측 0.20MPa는 최소 기준 0.17MPa 이상이고 0.7MPa 이하이므로 이 압력 항목은 양호 ○다. 0.17MPa와 같은 값도 포함한다. 방수량 등 다른 항목은 별도로 판정하며 압력 항목의 결과만으로 설비 전체의 양호를 확정하지 않는다.\n근거: NFTC 102 2.2.1.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강",
+        "후속 QA: 실측값별 판정·경계값 해설 명시"
       ]
     },
     "moducbt-27775-q44": {
@@ -1937,11 +1966,12 @@
           "대피하면서 지나온 방화문은 연기가 잘 빠져나가도록 열어 둔다.",
           "아래층 피난이 불가하면 옥상 경로·문 개방을 확인해 안전할 때만 옥상으로 대피하며 이동 불가 시 안전 공간에서 구조 요청한다."
         ],
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "지나온 현관문·방화문을 연기 배출을 위해 열어 두는 보기가 틀리다. 문을 닫아 연기와 불의 확산을 늦춘다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "moducbt-27775-q50": {
@@ -1955,11 +1985,12 @@
           "아래층 피난이 불가하면 옥상 경로·문 개방을 확인해 안전할 때만 옥상으로 대피하며 이동 불가 시 안전 공간에서 구조 요청한다.",
           "대피 도중 출입문 손잡이가 뜨겁더라도 그 문이 가장 가까운 경로라면 열고 빠르게 통과한다."
         ],
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "뜨거운 손잡이의 문을 열고 통과하거나 활짝 열어 두는 보기가 틀리다. 문 너머 열·연기의 위험을 의심하고 문을 열지 말고 다른 안전 경로 또는 구조 요청을 선택한다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "moducbt-27776-q50": {
@@ -1967,11 +1998,12 @@
       "set": {
         "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
         "question": "다음은 화재 시 피난행동 요령을 정리한 것이다. ㉠~㉢에 들어갈 내용으로 옳은 것은?\n• 이동할 때에는 ( ㉠ )을(를) 이용하지 않고 계단으로 옥외까지 내려간다.\n• 아래층 피난이 불가하고 옥상 경로가 안전하며 옥상문 개방을 확인했다면 ( ㉡ )(으)로 대피할 수 있다.\n• 지나온 방화문은 ( ㉢ ) 뒤따르는 사람의 피난로를 지킨다.\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "㉠ 승강기, ㉡ 옥상, ㉢ 닫아가 맞다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "moducbt-27780-q50": {
@@ -1985,11 +2017,12 @@
           "출입문을 열기 전 손잡이를 만져 보아 뜨거우면 문을 열지 말고 다른 피난경로를 찾는다.",
           "건물 밖으로 빠져나온 뒤에는 어떤 이유로도 다시 화재 건물 안으로 들어가지 않는다."
         ],
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "안전하게 지상으로 내려갈 수 있는데도 옥상을 우선하는 보기가 틀리다. 안전한 계단으로 지상까지 대피할 수 있으면 그 경로를 이용한다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "moducbt-27781-q50": {
@@ -2003,11 +2036,12 @@
           "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
           "연기가 빠져나가도록 세대 현관문과 계단실 방화문을 열어 둔 채 대피한다."
         ],
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "지나온 현관문·방화문을 연기 배출을 위해 열어 두는 보기가 틀리다. 문을 닫아 연기와 불의 확산을 늦춘다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "moducbt-27782-q50": {
@@ -2021,11 +2055,12 @@
           "경량칸막이·대피공간이 실제 설치되어 있고 접근이 안전하면 이용하며, 119에 위치를 알려 구조를 요청한다.",
           "출입문 손잡이가 뜨거우면 안쪽의 연기부터 빼내야 하므로 문을 활짝 열어 둔 뒤 그 통로로 빠져나간다."
         ],
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "뜨거운 손잡이의 문을 열고 통과하거나 활짝 열어 두는 보기가 틀리다. 문 너머 열·연기의 위험을 의심하고 문을 열지 말고 다른 안전 경로 또는 구조 요청을 선택한다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "FSM2-CORE-100": {
@@ -2038,11 +2073,12 @@
           "아래층 피난이 불가하면 옥상 경로·문 개방을 확인해 안전할 때만 옥상으로 대피하며 이동 불가 시 안전 공간에서 구조 요청한다.",
           "대피하면서 지나온 방화문은 연기가 잘 빠져나가도록 열어 둔다."
         ],
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "지나온 현관문·방화문을 연기 배출을 위해 열어 두는 보기가 틀리다. 문을 닫아 연기와 불의 확산을 늦춘다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "FSM2-CORE-150": {
@@ -2055,33 +2091,36 @@
           "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
           "아래층 피난이 불가하면 옥상 경로·문 개방을 확인해 안전할 때만 옥상으로 대피하며 이동 불가 시 안전 공간에서 구조 요청한다."
         ],
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "뜨거운 손잡이의 문을 열고 통과하거나 활짝 열어 두는 보기가 틀리다. 문 너머 열·연기의 위험을 의심하고 문을 열지 말고 다른 안전 경로 또는 구조 요청을 선택한다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "FSM2-CORE-200": {
       "beforeSHA256": "565eaacec95e4e2d4b3f01d470d6f443313ba65d64345e3d273cfb840e7cb36d",
       "set": {
         "question": "아래는 화재 시 피난행동 요령을 정리한 것이다. ㉠~㉢에 들어갈 내용으로 맞게 설명한 것은? • 이동할 때에는 ( ㉠ )을(를) 이용하지 않고 계단으로 옥외까지 내려간다. • 아래층 피난이 불가하고 옥상 경로가 안전하며 옥상문 개방을 확인했다면 ( ㉡ )(으)로 대피할 수 있다. • 지나온 방화문은 ( ㉢ ) 뒤따르는 사람의 피난로를 지킨다.\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "㉠ 승강기, ㉡ 옥상, ㉢ 닫아가 맞다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "FSM2-CORE-300": {
       "beforeSHA256": "8d80d17aa11818a4aedffd838e356230f5aaee46e9d7de088c7a9b85cf517338",
       "set": {
         "question": "화재가 난 건물에서 대피할 때 옳은 행동만을 〈제시문〉에서 빠짐없이 선택한 것은? ㉠ 계단으로 내려갈 수 있으면 옥상보다 지상 쪽으로 먼저 빠져나간다. ㉡ 지나온 방화문은 뒤따르는 사람을 위해 활짝 열어 둔다. ㉢ 유도등과 유도표지가 가리키는 방향을 따라 이동한다. ㉣ 옷에 불이 붙으면 눈·코·입을 손으로 가리고 바닥에 엎드려 뒹군다.\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다. 옷에 불이 붙으면 멈춰 바닥에 엎드려 얼굴을 보호하며 구른다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "㉠·㉢·㉣이 맞고, ㉡의 방화문을 열어 두는 행동이 틀리다. 유도등·유도표지 방향이라도 불·연기로 막혔으면 진입하지 않는다. 옷에 불이 붙으면 멈춰 바닥에 엎드려 얼굴을 보호하며 구른다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "FSM2-CORE-400": {
@@ -2094,11 +2133,12 @@
           "건물 밖으로 빠져나온 뒤에는 어떤 이유로도 다시 화재 건물 안으로 들어가지 않는다.",
           "아래층으로 내려갈 수 있는 상황이라도 옥상이 더 안전하므로 우선 옥상으로 올라간다."
         ],
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "안전하게 지상으로 내려갈 수 있는데도 옥상을 우선하는 보기가 틀리다. 안전한 계단으로 지상까지 대피할 수 있으면 그 경로를 이용한다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "FSM2-CORE-450": {
@@ -2111,11 +2151,12 @@
           "경량칸막이·대피공간이 실제 설치되어 있고 접근이 안전하면 이용하며, 119에 위치를 알려 구조를 요청한다.",
           "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다."
         ],
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "지나온 현관문·방화문을 연기 배출을 위해 열어 두는 보기가 틀리다. 문을 닫아 연기와 불의 확산을 늦춘다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "FSM2-CORE-500": {
@@ -2128,11 +2169,12 @@
           "출입문 손잡이가 뜨거우면 안쪽의 연기부터 빼내야 하므로 문을 활짝 열어 둔 뒤 그 통로로 빠져나간다.",
           "경량칸막이·대피공간이 실제 설치되어 있고 접근이 안전하면 이용하며, 119에 위치를 알려 구조를 요청한다."
         ],
-        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "explanation": "뜨거운 손잡이의 문을 열고 통과하거나 활짝 열어 두는 보기가 틀리다. 문 너머 열·연기의 위험을 의심하고 문을 열지 말고 다른 안전 경로 또는 구조 요청을 선택한다. 대피 경로의 불·연기와 문 개방 상태를 확인한다. 옥상은 경로와 출입문이 안전하게 열려 있을 때만 대안이 된다. 짙은 연기로 막힌 구간에는 진입하지 않고, 이동할 수 없으면 안전 공간에서 119에 위치를 알려 구조를 요청한다. 경량칸막이·대피공간은 실제 설치와 접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
         "editorialRevision": "2026-10-20-persona-corrections"
       },
       "reasons": [
-        "옥상·연기·대피시설의 안전 조건 명시"
+        "옥상·연기·대피시설의 안전 조건 명시",
+        "후속 QA: 문항별 정오 판단을 해설 첫머리에 명시"
       ]
     },
     "FSM2-CORE-490": {
