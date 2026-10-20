@@ -6,11 +6,25 @@ const audit='docs/audits/2026-10-18-fire-level2-textbook-corrections';
 const baseline=JSON.parse(await readFile(audit+'/baseline.json','utf8'));
 const release=JSON.parse(await readFile(audit+'/release.json','utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
+// Review #172: the only subsequent source changes are two exact Git blobs.
+const floatingPath='src/components/AdFitFloating.astro';
+const approvedBlobShas=new Map([
+ [floatingPath,'5955381f94cdbd9119f5145e64bb56ff1cc6590b'],
+ ['src/layouts/BaseLayout.astro','dd77b9dfed68859fdd0e3b659c1f71973982e211'],
+]);
+const blobSha=b=>createHash('sha1').update(Buffer.from('blob '+b.length+String.fromCharCode(0))).update(b).digest('hex');
 const walk=async d=>(await Promise.all((await readdir(d,{withFileTypes:true})).map(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]))).flat();
 const files=[...await walk('src'),...await walk('public')].sort();
-assert.deepEqual(files,Object.keys(baseline.files).sort(),'public source inventory unchanged');
+assert.deepEqual(files.filter(f=>f!==floatingPath),Object.keys(baseline.files).sort(),'only reviewed floating component added');
 const byPath=new Map(release.files.map(r=>[r.path,r]));
-for(const f of files)assert.equal(hash(await readFile(f)),byPath.get(f)?.sha256??baseline.files[f],f);
+for(const f of files){
+ const bytes=await readFile(f);
+ if(approvedBlobShas.has(f)){
+  assert.equal(blobSha(bytes),approvedBlobShas.get(f),f+': exact approved AdFit source');
+ }else{
+  assert.equal(hash(bytes),byPath.get(f)?.sha256??baseline.files[f],f);
+ }
+}
 const article=s=>s.match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0];
 const articles={};
 for(const f of await walk('dist'))if(f.endsWith('/index.html')){const a=article(await readFile(f,'utf8'));if(a!==undefined)articles[f]=hash(a)}
