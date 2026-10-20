@@ -1,86 +1,110 @@
 ---
-// 160×600 PC 세로 광고단위를 AdFit에서 생성한 후 발급된 DAN- 코드를 입력합니다.
-// ID가 없을 때 Production에서는 광고 요청·빈 광고 영역 모두 표시하지 않습니다.
-const floatingUnit = '';
+const placements = [
+  { side: 'left', unit: 'DAN-AtqVfLdSF0ScSNLm', label: '왼쪽 광고 닫기' },
+  { side: 'right', unit: 'DAN-LPCxfinNO0PuycP2', label: '오른쪽 광고 닫기' },
+];
 ---
 
-<aside
-  class="adfit-floating"
-  data-adfit-floating
-  data-adfit-unit={floatingUnit}
-  aria-label="광고"
->
-  <div class="adfit-floating-header">
-    <span>광고</span>
-    <button type="button" class="adfit-floating-close" data-adfit-close aria-label="광고 닫기">×</button>
-  </div>
-  <div class="adfit-floating-mount" data-adfit-mount>
-    <div class="adfit-floating-preview" data-adfit-preview aria-hidden="true">
-      <span>광고 영역 미리보기</span>
-      <span>160 × 600</span>
+{placements.map(({ side, unit, label }) => (
+  <aside
+    class="adfit-floating"
+    data-adfit-floating
+    data-adfit-side={side}
+    data-adfit-unit={unit}
+    aria-label={side === 'left' ? '왼쪽 광고' : '오른쪽 광고'}
+  >
+    <div class="adfit-floating-header">
+      <span>광고</span>
+      <button type="button" class="adfit-floating-close" data-adfit-close aria-label={label}>×</button>
     </div>
-  </div>
-</aside>
+    <div class="adfit-floating-mount" data-adfit-mount>
+      <div class="adfit-floating-preview" data-adfit-preview aria-hidden="true">
+        <span>광고 영역 미리보기</span>
+        <span>160 × 600</span>
+      </div>
+    </div>
+  </aside>
+))}
 
 <script is:inline>
   (() => {
-    const placement = document.querySelector('[data-adfit-floating]');
-    if (!(placement instanceof HTMLElement)) return;
+    const placements = [...document.querySelectorAll('[data-adfit-floating]')]
+      .filter((node) => node instanceof HTMLElement);
+    if (placements.length !== 2) return;
 
     const isProduction = window.location.hostname === 'getpasslab.co.kr';
-    const unit = placement.dataset.adfitUnit || '';
-    // AdFit 세로 광고단위가 발급되기 전에는 Production에 빈 배너를 표시하지 않습니다.
-    if (isProduction && !/^DAN-[A-Za-z0-9]+$/.test(unit)) return;
-
     const viewport = window.matchMedia('(min-width: 1600px) and (min-height: 760px)');
-    const storageKey = 'getpasslab-adfit-floating-dismissed';
-    const mount = placement.querySelector('[data-adfit-mount]');
-    const closeButton = placement.querySelector('[data-adfit-close]');
-    if (!(mount instanceof HTMLElement) || !(closeButton instanceof HTMLButtonElement)) return;
+    const storagePrefix = 'getpasslab-adfit-floating-dismissed-';
+    let sdkStarted = false;
 
-    let dismissed = false;
-    try {
-      dismissed = window.sessionStorage.getItem(storageKey) === '1';
-    } catch {
-      // 저장소 사용이 제한된 환경에서는 현재 페이지에서만 닫기 상태를 적용합니다.
-    }
-    if (dismissed) return;
+    for (const placement of placements) {
+      const side = placement.dataset.adfitSide;
+      const unit = placement.dataset.adfitUnit;
+      const mount = placement.querySelector('[data-adfit-mount]');
+      const closeButton = placement.querySelector('[data-adfit-close]');
+      if (
+        !['left', 'right'].includes(side) ||
+        !/^DAN-[A-Za-z0-9]+$/.test(unit || '') ||
+        !(mount instanceof HTMLElement) ||
+        !(closeButton instanceof HTMLButtonElement)
+      ) return;
 
-    closeButton.addEventListener('click', () => {
-      dismissed = true;
-      placement.dataset.adfitClosed = 'true';
+      let closed = false;
       try {
-        window.sessionStorage.setItem(storageKey, '1');
+        closed = window.sessionStorage.getItem(storagePrefix + side) === '1';
       } catch {
-        // 닫기 동작 자체는 항상 유지합니다.
+        // Storage may be restricted; closing still works on the current page.
       }
-    });
+      if (closed) placement.dataset.adfitClosed = 'true';
 
-    const initializeAd = () => {
-      if (placement.dataset.adfitMounted) return;
-      placement.dataset.adfitMounted = 'true';
-      mount.querySelector('[data-adfit-preview]')?.remove();
+      closeButton.addEventListener('click', () => {
+        placement.dataset.adfitClosed = 'true';
+        try {
+          window.sessionStorage.setItem(storagePrefix + side, '1');
+        } catch {
+          // Keep the current page closed even if storage is unavailable.
+        }
+      });
+    }
 
-      const ad = document.createElement('ins');
-      ad.className = 'kakao_ad_area';
-      ad.style.display = 'none';
-      ad.dataset.adUnit = unit;
-      ad.dataset.adWidth = '160';
-      ad.dataset.adHeight = '600';
-      mount.appendChild(ad);
+    const updateVisibility = () => {
+      if (!viewport.matches) return;
 
+      for (const placement of placements) {
+        if (placement.dataset.adfitClosed === 'true') continue;
+        placement.dataset.adfitReady = 'true';
+      }
+
+      // Don't request real ads on localhost or preview/PR domains.
+      if (!isProduction || sdkStarted) return;
+
+      const active = placements.filter((placement) => placement.dataset.adfitReady === 'true');
+      if (!active.length) return;
+
+      for (const placement of active) {
+        if (placement.dataset.adfitMounted) continue;
+        const mount = placement.querySelector('[data-adfit-mount]');
+        if (!(mount instanceof HTMLElement)) continue;
+
+        mount.querySelector('[data-adfit-preview]')?.remove();
+        const ad = document.createElement('ins');
+        ad.className = 'kakao_ad_area';
+        ad.style.display = 'none';
+        ad.dataset.adUnit = placement.dataset.adfitUnit || '';
+        ad.dataset.adWidth = '160';
+        ad.dataset.adHeight = '600';
+        mount.appendChild(ad);
+        placement.dataset.adfitMounted = 'true';
+      }
+
+      // Both INS elements are present before loading the official SDK once.
+      sdkStarted = true;
       const sdk = document.createElement('script');
       sdk.type = 'text/javascript';
       sdk.src = 'https://t1.kakaocdn.net/kas/static/ba.min.js';
       sdk.async = true;
-      mount.appendChild(sdk);
-    };
-
-    const updateVisibility = () => {
-      if (!viewport.matches || dismissed) return;
-      placement.dataset.adfitReady = 'true';
-      // 개발/미리보기 도메인에서는 실제 AdFit 요청 없이 자리만 확인합니다.
-      if (isProduction) initializeAd();
+      sdk.charset = 'utf-8';
+      document.body.appendChild(sdk);
     };
 
     viewport.addEventListener('change', updateVisibility);
@@ -93,10 +117,17 @@ const floatingUnit = '';
     display: none;
     position: fixed;
     top: calc(var(--gnb-h) + var(--space-4));
-    right: max(var(--space-4), calc((100vw - var(--container-max)) / 2 - 176px));
     z-index: 30;
     width: 160px;
     margin: 0;
+  }
+
+  .adfit-floating[data-adfit-side='left'] {
+    left: max(var(--space-4), calc((100vw - var(--container-max)) / 2 - 176px));
+  }
+
+  .adfit-floating[data-adfit-side='right'] {
+    right: max(var(--space-4), calc((100vw - var(--container-max)) / 2 - 176px));
   }
 
   .adfit-floating-header {
