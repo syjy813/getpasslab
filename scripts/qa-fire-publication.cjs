@@ -42,6 +42,7 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       await page.goto(base+chapter.href,{waitUntil:'networkidle'});
       assert.equal(await page.locator('[data-fire-practice-entry] a').count(),2);
       await page.locator('[data-fire-practice-entry] a').first().click();
+      await page.waitForFunction(()=>document.querySelector('[data-start]')?.disabled===false);
       assert.equal(await page.locator('[data-start]').isDisabled(),false);
       await page.locator('[data-start]').click();
       const q=await findQuestion();

@@ -35,13 +35,14 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-fire-practice-entry]').scrollIntoViewIfNeeded();
       await page.screenshot({ path: `${output}/chapter-entry-${width}.png`, fullPage: false });
       await page.locator('[data-fire-practice-entry] a').first().click();
+      await page.waitForFunction(()=>document.querySelector('[data-start]')?.disabled===false);
       assert.equal(await page.locator('[data-start]').isDisabled(), false);
       assert.match(await page.locator('[data-availability]').textContent(), /공개 문제/);
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
-      await page.goto(base + route);
+      await page.goto(base + route,{waitUntil:'networkidle'});
       assert.equal(await page.locator('[data-start]').isDisabled(), false);
       await page.screenshot({ path: `${output}/published-${width}.png`, fullPage: true });
-      await page.goto(base + route + '?chapter=unknown');
+      await page.goto(base + route + '?chapter=unknown',{waitUntil:'networkidle'});
       assert.match(await page.locator('[data-availability]').textContent(), /찾을 수 없/);
       assert.equal(await page.locator('[data-start]').isDisabled(), true);
       report.cases.push({ width, chapterRoutes: chapters.length, publishedAndInvalid: 'PASS', overflow: false });
