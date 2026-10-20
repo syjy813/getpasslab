@@ -1,0 +1,35 @@
+---
+import { withBase } from '../config/url';
+interface Props {
+  chapterId: string;
+  chapterQuestionCount: number;
+}
+const { chapterId, chapterQuestionCount } = Astro.props;
+const practicePath = withBase('/fire-safety-manager-level2/practice/');
+---
+<section class="fire-entry" data-fire-practice-entry aria-labelledby="fire-practice-title">
+  <h2 id="fire-practice-title">문제 풀기</h2>
+  <div class="fire-actions">
+    <a class="fire-card" href={`${practicePath}?chapter=${encodeURIComponent(chapterId)}`}>
+      <strong>이 챕터 문제 풀기 <span aria-hidden="true">→</span></strong>
+      <span>배운 내용을 문제에 적용하고 정답·해설 바로 확인</span>
+      <small>{chapterQuestionCount > 0 ? `${chapterQuestionCount}문제` : '문제 준비 중'}</small>
+    </a>
+    <a class="fire-card" href={practicePath}>
+      <strong>전체 모의고사 풀기 <span aria-hidden="true">→</span></strong>
+      <span>1·2과목 각 25문제 · 총 50문제 · 60분</span>
+      <small>제출 후 과목별 점수와 해설 확인</small>
+    </a>
+  </div>
+</section>
+<style>
+  .fire-entry{margin-top:var(--space-8)}
+  .fire-actions{display:grid;gap:var(--space-3);margin-top:var(--space-4)}
+  .fire-card{display:grid;gap:var(--space-2);padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-lg);text-decoration:none;background:var(--white);min-width:0;overflow-wrap:anywhere}
+  .fire-card strong{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2);font-size:var(--fs-body-lg);color:var(--primary-700)}
+  .fire-card span,.fire-card small{font-size:var(--fs-caption);line-height:var(--lh-caption);color:var(--gray-600)}
+  .fire-card strong span{color:inherit}
+  .fire-card:focus-visible{outline:3px solid var(--primary-600);outline-offset:3px}
+  @media(min-width:768px){.fire-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(hover:hover){.fire-card:hover{border-color:var(--primary-600);background:var(--primary-50)}}
+</style>

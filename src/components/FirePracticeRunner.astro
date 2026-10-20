@@ -1,0 +1,97 @@
+---
+interface Props { data: string; }
+const { data } = Astro.props;
+---
+<div class="fire-runner" data-fire-runner>
+  <section data-setup aria-labelledby="practice-heading">
+    <h1 class="gpl-h1" id="practice-heading" data-title>전체 모의고사 풀기</h1>
+    <p class="fire-lead" data-description>1과목 25문제 + 2과목 25문제 · 60분</p>
+    <p class="fire-notice" data-availability role="status"></p>
+    <p class="fire-muted" data-guide>제출 후 정답과 해설을 확인합니다. 각 과목 40점 이상, 평균 70점 이상이면 합격 기준을 충족합니다.</p>
+    <button type="button" class="btn btn-primary" data-start disabled>모의고사 시작</button>
+  </section>
+  <noscript><p>문제 풀기는 자바스크립트를 켠 뒤 이용할 수 있습니다.</p></noscript>
+  <section data-session hidden aria-label="문제 풀이">
+    <div class="fire-toolbar">
+      <p data-progress aria-live="polite"></p>
+      <p class="fire-clock" data-clock-wrap>남은 시간 <strong data-clock role="timer" aria-live="off">60:00</strong></p>
+    </div>
+    <p class="fire-muted" data-meta></p>
+    <h2 class="fire-question" data-question tabindex="-1"></h2>
+    <fieldset class="fire-choices" data-choices><legend class="fire-sr">정답 선택</legend></fieldset>
+    <div class="fire-feedback" data-feedback hidden role="status"></div>
+    <div class="fire-controls">
+      <button type="button" class="btn btn-secondary" data-previous>이전 문제</button>
+      <button type="button" class="btn btn-primary" data-check disabled>정답 확인</button>
+      <button type="button" class="btn btn-primary" data-next>다음 문제</button>
+      <button type="button" class="btn btn-secondary" data-submit>답안 제출</button>
+    </div>
+    <nav class="fire-navigation" data-navigation aria-label="문제 번호 이동"></nav>
+    <p class="fire-muted" data-session-help>번호를 눌러 문항 사이를 이동할 수 있습니다. 선택한 답은 제출 전까지 바꿀 수 있습니다.</p>
+    <p class="fire-muted">페이지를 나가거나 새로고침하면 풀이 기록이 초기화됩니다.</p>
+  </section>
+  <section data-results hidden aria-labelledby="result-heading">
+    <h2 class="gpl-h2" id="result-heading" tabindex="-1" data-result-title>풀이 결과</h2>
+    <p class="fire-score" data-score></p>
+    <div class="fire-subjects" data-subject-scores></div>
+    <p class="fire-notice" data-verdict></p>
+    <button type="button" class="btn btn-primary" data-restart>새 문제로 다시 풀기</button>
+    <h3 class="gpl-h3 fire-review-heading">정답·해설</h3>
+    <div class="fire-review" data-review></div>
+  </section>
+  <dialog class="fire-confirm" data-confirm aria-labelledby="fire-confirm-heading">
+    <form method="dialog">
+      <h2 class="gpl-h3" id="fire-confirm-heading">답안을 제출할까요?</h2>
+      <p data-confirm-text></p>
+      <div class="fire-controls">
+        <button class="btn btn-secondary" value="cancel" autofocus>계속 풀기</button>
+        <button class="btn btn-primary" value="submit">제출하고 채점</button>
+      </div>
+    </form>
+  </dialog>
+  <script type="application/json" data-fire-payload set:html={data} />
+</div>
+<script>
+  import '../utils/firePracticeClient';
+</script>
+<style>
+  .fire-runner{min-width:0;overflow-wrap:anywhere}
+  .fire-runner [hidden]{display:none!important}
+  [data-session],[data-results]{scroll-margin-top:calc(var(--gnb-h) + var(--space-4))}
+  .fire-lead{font-size:var(--fs-body-lg);margin:var(--space-4) 0;color:var(--gray-800)}
+  .fire-muted{font-size:var(--fs-caption);line-height:var(--lh-body);color:var(--gray-600)}
+  .fire-notice{padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-lg);background:var(--gray-50);margin:var(--space-4) 0;line-height:var(--lh-body)}
+  .btn{min-height:44px;white-space:normal}
+  .btn:disabled{background:var(--gray-100);color:var(--gray-600);cursor:not-allowed}
+  .fire-runner :global(:focus-visible){outline:3px solid var(--primary-600);outline-offset:3px}
+  .fire-toolbar{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);flex-wrap:wrap;border-bottom:1px solid var(--gray-200);margin-bottom:var(--space-4)}
+  .fire-toolbar p{margin:0 0 var(--space-3);font-size:var(--fs-caption)}
+  .fire-clock{font-variant-numeric:tabular-nums}
+  .fire-clock strong{font-size:var(--fs-h3);color:var(--primary-700)}
+  .fire-question{font-size:var(--fs-h3);line-height:var(--lh-body);white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}
+  .fire-choices{border:0;padding:0;margin:0 0 var(--space-4);min-width:0;display:grid;gap:var(--space-3)}
+  .fire-choices :global(legend){position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+  .fire-choices :global(label){display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-md);cursor:pointer;min-height:44px;white-space:pre-wrap;line-height:var(--lh-body)}
+  .fire-choices :global(label:has(input:checked)){border-color:var(--primary-600);background:var(--primary-50)}
+  .fire-choices :global(input){margin:5px 0 0;accent-color:var(--primary-600);flex:none}
+  .fire-choices :global(label:has(input:focus-visible)){outline:3px solid var(--primary-600);outline-offset:3px}
+  .fire-feedback{border:1px solid var(--primary-100);border-radius:var(--radius-lg);padding:var(--space-4);background:var(--primary-50);white-space:pre-wrap;margin-bottom:var(--space-4);line-height:var(--lh-body)}
+  .fire-controls{display:flex;flex-wrap:wrap;gap:var(--space-2);margin:var(--space-4) 0}
+  .fire-controls .btn{flex:1;padding:var(--space-3);min-width:100px}
+  .fire-navigation{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--space-2);margin-top:var(--space-6)}
+  .fire-navigation :global(button){font:inherit;min-height:44px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white);color:var(--gray-800);cursor:pointer}
+  .fire-navigation :global(button[data-answered="true"]){background:var(--primary-50);color:var(--primary-700)}
+  .fire-navigation :global(button[aria-current="step"]){outline:2px solid var(--primary-600);outline-offset:1px;font-weight:var(--fw-bold)}
+  .fire-score{font-size:var(--fs-h2);font-weight:var(--fw-bold);color:var(--primary-700);margin:var(--space-4) 0}
+  .fire-subjects{display:grid;gap:var(--space-3)}
+  .fire-subjects :global(p){margin:0;padding:var(--space-4);background:var(--gray-50);border-radius:var(--radius-lg)}
+  .fire-review-heading{margin-top:var(--space-8)}
+  .fire-review{display:grid;gap:var(--space-3);margin-top:var(--space-4)}
+  .fire-review :global(details){border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:var(--space-4);min-width:0}
+  .fire-review :global(summary){cursor:pointer;min-height:44px;font-weight:var(--fw-semibold)}
+  .fire-review :global(p){white-space:pre-wrap;line-height:var(--lh-body);margin:var(--space-3) 0}
+  .fire-review :global(a){color:var(--primary-700)}
+  .fire-confirm{width:min(480px,calc(100vw - 32px));border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:var(--space-6);background:var(--white);color:var(--gray-800)}
+  .fire-confirm::backdrop{background:var(--gray-900);opacity:.5}
+  @media(min-width:640px){.fire-navigation{grid-template-columns:repeat(10,minmax(0,1fr))}.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>

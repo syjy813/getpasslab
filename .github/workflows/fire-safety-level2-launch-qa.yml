@@ -10,6 +10,8 @@ on:
       - 'scripts/check-historical-practice-guard.mjs'
       - 'docs/audits/2026-10-14-fire-safety-level2-launch/**'
       - 'docs/audits/2026-10-14-fire-safety-level2-bulk/**'
+      - 'docs/audits/2026-10-20-fire-level2-practice/**'
+      - 'docs/drafts/fire-level2-mock-exam/question-table.json'
       - '.github/workflows/fire-safety-level2-launch-qa.yml'
   push:
     branches: [main]
@@ -72,9 +74,25 @@ jobs:
             sleep 1
           done
           node scripts/qa-fire-safety-level2-bulk.cjs
+      - name: Fire chapter practice and full mock exam
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: http://127.0.0.1:4321
+          QA_OUTPUT_DIR: qa-results/fire-practice
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-fire-practice-preview.log 2>&1 &
+          qa_practice_pid=$!
+          trap 'kill "$qa_practice_pid" 2>/dev/null || true' EXIT
+          for qa_attempt in $(seq 1 30); do
+            if curl -fsS "$QA_BASE_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa-fire-practice.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: fire-safety-level2-launch-qa
-          path: qa-results/fire-safety-level2*/
+          path: |
+            qa-results/fire-safety-level2*/
+            qa-results/fire-practice/
           retention-days: 14

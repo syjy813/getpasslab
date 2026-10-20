@@ -4,7 +4,10 @@ import {tmpdir} from 'node:os';import path from 'node:path';import {spawnSync} f
 const helper='scripts/read-before-fire-safety-level2-bulk.mjs',audit='docs/audits/2026-10-14-fire-safety-level2-bulk';const release=JSON.parse(await readFile(audit+'/release.json','utf8'));
 const correctionAudit='docs/audits/2026-10-18-fire-level2-textbook-corrections';
 const corrections=JSON.parse(await readFile(correctionAudit+'/release.json','utf8'));
-const correctionFiles=['scripts/read-before-fire-textbook-corrections.mjs',correctionAudit+'/release.json',...corrections.files.flatMap(r=>[r.path,r.originalFile])];
+const practiceAudit='docs/audits/2026-10-20-fire-level2-practice';
+const practiceRelease=JSON.parse(await readFile(practiceAudit+'/release.json','utf8'));
+const practiceFiles=['scripts/read-before-fire-practice.mjs',practiceAudit+'/release.json',practiceAudit+'/baseline.json',...practiceRelease.files.flatMap(r=>[r.path,...(r.originalFile?[r.originalFile]:[])])];
+const correctionFiles=[...practiceFiles,'scripts/read-before-fire-textbook-corrections.mjs',correctionAudit+'/release.json',...corrections.files.flatMap(r=>[r.path,r.originalFile])];
 const root=await mkdtemp(path.join(tmpdir(),'getpasslab-fire-bulk-guard-'));
 const put=async(f,b)=>{await mkdir(path.dirname(path.join(root,f)),{recursive:true});await writeFile(path.join(root,f),b)};
 const run=code=>spawnSync(process.execPath,['--input-type=module','-e',`import {readFile,readdir} from './${helper}';${code}`],{cwd:root,encoding:'utf8'});

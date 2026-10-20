@@ -20,6 +20,7 @@ export default defineConfig({
   integrations: [sitemap({
     filter: (page) =>
       !page.includes('/admin')
+      && !page.includes('/fire-safety-manager-level2/practice/')
       && !redirectSources.some(source => page.endsWith(source) || page.endsWith(`${source}/`)),
   })],
   markdown: {
