@@ -35,4 +35,7 @@ status: "완료"
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>
 
+## 대피시설과 옷에 불이 붙은 경우
+경량칸막이·대피공간은 **실제 설치되어 있고 접근이 안전한 경우** 이용 · 옷에 불이 붙으면 뛰지 말고 멈춰 바닥에 엎드려 얼굴을 보호하며 구르기 · 옥상 경로·문 개방이 안전할 때만 대안으로 판단 · 이동 불가 시 문을 닫고 119에 위치를 알려 구조 요청
+
 <p class="fire-source-note">적용 기준 · <a href="https://js119.gwd.go.kr/cc119/service/service_guide/service_guide_form?articleSeq=11108183" target="_blank" rel="noopener">소방본부 아파트 피난 안내</a> · 2026-10-14 확인</p>

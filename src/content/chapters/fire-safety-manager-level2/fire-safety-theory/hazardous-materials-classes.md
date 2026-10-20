@@ -29,4 +29,7 @@ status: "완료"
 
 제3류는 모두 물로 소화하면 된다는 선택을 제거 · 금수성 물질은 물과 반응해 발열하거나 가연성가스를 발생시킬 수 있음
 
+## 인화성고체와 액체의 구별
+제2류 인화성고체는 고형알코올 등 **1기압에서 인화점 40℃ 미만**인 고체 · 제4류 인화성 액체와 상태·지정수량 단위를 구별 · 제4류는 대체로 물보다 가볍고 물에 잘 녹지 않아 물줄기로 화재면이 넓어질 수 있으므로 포 등 적응성 있는 약제 선택 · 알코올 등 수용성 예외도 있음
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287381&amp;efYd=20260701&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">위험물안전관리법 시행령</a> · 2026-10-14 확인</p>

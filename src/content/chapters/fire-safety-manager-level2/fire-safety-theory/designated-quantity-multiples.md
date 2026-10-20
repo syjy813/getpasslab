@@ -29,4 +29,7 @@ status: "완료"
 
 1㎥ = 1,000L · kg 단위 위험물은 질량으로 계산 · 제1·2·3·5·6류는 물질에 따라 지정수량이 다르므로 유별 번호만으로 하나의 값을 적용하지 않음
 
+## 지정수량의 법정 의미
+지정수량은 위험성을 고려해 **대통령령**으로 정한 수량이며 제조소등 설치허가의 **최저 기준** · 제2류 마그네슘 **500kg** · 알코올류 400L와 질량·부피 단위 구별
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287381&amp;efYd=20260701&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">위험물안전관리법 시행령</a> · 2026-10-14 확인</p>

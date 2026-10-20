@@ -1,0 +1,44 @@
+[
+  {
+    "id": "CPR-2025",
+    "url": "https://www.kdca.go.kr/injury/biz/injury/recsroom/ruleNdManual/ruleNdManualView.do?no=213",
+    "downloadURL": "https://is.kdca.go.kr/cscdfile2/biz/ip/filecmmn/ipFileDown.do?fileDetailId=19fd023acf29:",
+    "document": "2025 한국 심폐소생술 가이드라인 2026-02-09 수정본",
+    "sha256": "10597fd94dff43df13ab02a48d1269516ab058d5b835aaebc04470d6b8f70b4b",
+    "locator": "PDF 74쪽 기본소생술 개정 개요 7) 이물에 의한 기도폐쇄",
+    "observation": "심한 폐쇄에 등5회 우선, 효과없으면 복부5회. 2020 권고 유지라고 명시하므로 2025에 처음 바뀌었다고 설명하지 않음.",
+    "retrieval": "이번 QA에서 공식 게시글 재확인 및 기존 보관 PDF 텍스트 대조. 웹 추출은16MB 본문 다운로드 크기제한."
+  },
+  {
+    "id": "EVAC",
+    "url": "https://js119.gwd.go.kr/cc119/service/service_guide/service_guide_form?articleSeq=11108183",
+    "document": "관계부처 합동 아파트 입주자 화재 피난행동요령",
+    "locator": "PDF 3쪽 및 상황별 피난 판단",
+    "observation": "집안/다른곳, 연기유입, 안전한 경로 가능여부로 대피·대기·구조요청 구별.",
+    "retrieval": "공식 게시글과 첨부 PDF 이번 QA에서 열어 확인"
+  },
+  {
+    "id": "NFTC101",
+    "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000244810&admRulId=83614&joTpYn=N&languageType=KO&chrClsCd=010201",
+    "document": "소화기구 및 자동소화장치의 화재안전기술기준 NFTC101",
+    "sha256": "23fb71b958f9423cb1e3d8329120141ffe48dc7ab570ccb235fc7da6a869f879",
+    "locator": "2.1.1.4.2 / 2.1.1.5 / 2.1.1.6",
+    "observation": "가연성 없는 작업장 보행거리 완화 예외, 간이소화용구 능력비율1/2 및 노유자예외, 표지요건이 보관 원문에 있음.",
+    "retrieval": "기존 국가법령정보센터 보관 원문 재검토. 이번 웹 페이지는 동적 본문 추출이 되지 않아 당일 현행성 전체 재검증으로 주장하지 않음"
+  },
+  {
+    "id": "PUPIL",
+    "url": "https://doi.org/10.33549/physiolres.933683",
+    "document": "Pupillary light reflex in adolescent depression, Physiological Research 66(Suppl.2), 2017",
+    "locator": "p.S278의 빛반사 정의",
+    "observation": "빛 증가에 따른 동공 수축. 출혈 환자의 모든 반사 상태에 관한 연구는 아니며 문항 표현 혼동의 대조 근거로 사용.",
+    "retrieval": "논문 PDF 열람"
+  },
+  {
+    "id": "AUTHORITY48",
+    "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0048&lsiSeq=283705&urlMode=lsScJoRltInfoR",
+    "document": "화재의 예방 및 안전관리에 관한 법률 제48조, 2026-02-27 시행",
+    "observation": "소방관서장에게 자격시험·자격증 발급 등을 안전원 위탁하는 문구가 있음. 청장과 관서장 표현만으로 오류라고 판단하지 않음.",
+    "retrieval": "이번 QA에서 공식 조문 확인"
+  }
+]

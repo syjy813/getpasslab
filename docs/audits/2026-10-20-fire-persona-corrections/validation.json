@@ -1,0 +1,46 @@
+{
+  "build": "PASS",
+  "builtRoutes": 545,
+  "allCheckScripts": 38,
+  "allCheckScriptsResult": "PASS",
+  "questionTableVerification": "PASS",
+  "modelRetest": {
+    "questions": 167,
+    "keyMatches": 167,
+    "independentBlindTest": false
+  },
+  "nativeProtection": {
+    "sourceAndAssetFiles": 850,
+    "changedChapters": 28,
+    "untouchedQuestionRows": 2313,
+    "preservedAnswerNumbers": 2480,
+    "rawSourcesPreserved": 500
+  },
+  "currentRevisionBrowserQA": {
+    "result": "PASS",
+    "commit": "bc90f2136943a0acc2c368a5674c79b65fdd963c",
+    "workflowRun": 39402540207,
+    "pages": 56,
+    "errors": [],
+    "manualCapturesReviewed": 8
+  },
+  "CI": {
+    "head": "00afe940cef6c0554d6f062aef95ddcbe931c1f9",
+    "fireRegressionRun": 39401708662,
+    "result": "PASS",
+    "detail": "check-chapter-formula-style.mjs inventory has main-only src/components/AdFitFloating.astro. No check has been disabled.",
+    "independentContentBrowserJob": "PASS",
+    "resolution": "Merged existing main advertising changes; exact source/inventory compatibility added without weakening checks. Browser test URL validation uses pathname so chapter query strings remain valid.",
+    "integratedRegressionRun": 39402539992,
+    "integratedNativeHistoricalCanonicalChecks": "PASS",
+    "integratedRegressionResult": "PASS",
+    "integratedRegressionURL": "https://github.com/syjy813/getpasslab/actions/runs/39402539992",
+    "testedCommit": "bc90f2136943a0acc2c368a5674c79b65fdd963c",
+    "independentContentBrowserURL": "https://github.com/syjy813/getpasslab/actions/runs/39402540207",
+    "practiceDialogResult": "PASS",
+    "seoResult": "PASS"
+  },
+  "production": "NOT_DEPLOYED",
+  "stillHeldFirstPassQuestions": 152,
+  "integratedMain": "991e9ad7f63a3d0814cc654ad54cc19bc4fbf18a"
+}

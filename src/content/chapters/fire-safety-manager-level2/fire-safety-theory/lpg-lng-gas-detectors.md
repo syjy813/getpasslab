@@ -41,4 +41,7 @@ status: "완료"
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>
 
+## 연소범위 수치를 비교할 때
+대표 연소범위는 **메탄 5~15vol%, 프로판 2.1~9.5vol%** · 주성분과 연결해 판단 · 혼합가스의 실제 값은 조성에 따라 달라질 수 있으므로 순수 성분 대표값과 구별
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000244810&amp;admRulId=83614&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 101</a> · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000216264&amp;admRulId=83633&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 206</a> · 2026-10-14 확인</p>

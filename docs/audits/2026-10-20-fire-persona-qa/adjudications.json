@@ -1,0 +1,26 @@
+{
+  "FSM2-CORE-469": {
+    "initialAnswer": 4,
+    "reviewAnswer": null,
+    "reason": "동일 원본 27782-q19와 같이 본문 근거 부재로 보류해야 하나 답안 문자열 마지막에 4를 전사함. 최초 기록은 보존. 정답 대조 후 정답으로 변경하지 않음.",
+    "status": "chapter_support_missing"
+  },
+  "moducbt-27777-q17": {
+    "initialAnswer": 3,
+    "reviewAnswer": 1,
+    "status": "reviewer_calculation_error",
+    "reason": "최초 풀이에서 내화구조+불연마감의 기준면적 2배를 계산에 누락. 1800/(100×2)=9단위, ceil(9/2)=5개로 1번. 수록 정답 오류 아님."
+  },
+  "FSM2-MOCK-041-17": {
+    "initialAnswer": 4,
+    "reviewAnswer": 2,
+    "status": "reviewer_judgment_error",
+    "reason": "가의 유량/총량 동일시는 수정, 나의 안전확인 전 진입금지는 맞는 기록. 가만 수정인2번. 최초 복합판정 오류이며 수록 정답 오류 아님."
+  },
+  "FSM2-MOCK-067-17": {
+    "initialAnswer": 2,
+    "reviewAnswer": 3,
+    "status": "reviewer_judgment_error",
+    "reason": "가 방향별범위·변동 구별은 맞고 나 잘보이면위험없음은 틀려 나만 수정3. 최초 복합판정 누락이며 수록 정답 오류 아님."
+  }
+}

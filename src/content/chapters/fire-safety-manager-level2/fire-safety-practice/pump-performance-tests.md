@@ -40,4 +40,7 @@ status: "완료"
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>
 
+## 기동하지 않는 경우의 선행 확인
+수동 기동 명령에도 주펌프가 돌지 않으면 **동력제어반 전원·선택 위치와 실제 기동회로** 확인 · 운전 불능을 체절시험 합격으로 판정하지 않음 · [펌프 제어반의 표시와 선택 상태](/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/)와 연결
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000281772&amp;admRulId=83615&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 102</a> · 2026-10-14 확인</p>

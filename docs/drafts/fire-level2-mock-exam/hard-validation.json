@@ -1,0 +1,636 @@
+{
+  "additionalHard": 740,
+  "generalTotal": 1480,
+  "core": 500,
+  "combinedTotal": 1980,
+  "chapters": 74,
+  "generalPerChapter": 20,
+  "hardPerChapter": 10,
+  "distinctHardCaseContexts": 740,
+  "hardSubjectCounts": {
+    "1": 490,
+    "2": 250
+  },
+  "hardAnswerPositions0Based": {
+    "0": 185,
+    "1": 185,
+    "2": 185,
+    "3": 185
+  },
+  "combinedAnswerPositions0Based": {
+    "0": 495,
+    "1": 495,
+    "2": 495,
+    "3": 495
+  },
+  "formats": {
+    "compound-conclusions": 296,
+    "minimum-repair-set": 296,
+    "three-case-audit": 148
+  },
+  "minimumApplicationJudgments": 2,
+  "caseUseCountRange": [
+    2,
+    3
+  ],
+  "arithmeticCases": 89,
+  "independentlyRecomputedExpressions": 95,
+  "questionsWithArithmeticCases": 135,
+  "calculations": [
+    {
+      "caseId": "FSM2-HCASE-005-01",
+      "expression": "29+14",
+      "computed": "43",
+      "display": "43"
+    },
+    {
+      "caseId": "FSM2-HCASE-005-03",
+      "expression": "5+14",
+      "computed": "19",
+      "display": "19"
+    },
+    {
+      "caseId": "FSM2-HCASE-012-01",
+      "expression": "500+3*400",
+      "computed": "1700",
+      "display": "1,700㎡"
+    },
+    {
+      "caseId": "FSM2-HCASE-012-09",
+      "expression": "9+21",
+      "computed": "30",
+      "display": "30층"
+    },
+    {
+      "caseId": "FSM2-HCASE-013-01",
+      "expression": "750/30",
+      "computed": "25",
+      "display": "25㎡"
+    },
+    {
+      "caseId": "FSM2-HCASE-013-03",
+      "expression": "42-15",
+      "computed": "27",
+      "display": "27㎡"
+    },
+    {
+      "caseId": "FSM2-HCASE-013-03",
+      "expression": "900/30",
+      "computed": "30",
+      "display": "30㎡"
+    },
+    {
+      "caseId": "FSM2-HCASE-013-04",
+      "expression": "50-12",
+      "computed": "38",
+      "display": "38㎡"
+    },
+    {
+      "caseId": "FSM2-HCASE-013-04",
+      "expression": "1200/30",
+      "computed": "40",
+      "display": "40㎡"
+    },
+    {
+      "caseId": "FSM2-HCASE-013-10",
+      "expression": "6*5",
+      "computed": "30",
+      "display": "30㎡"
+    },
+    {
+      "caseId": "FSM2-HCASE-014-01",
+      "expression": "ceil(2400/1000)",
+      "computed": "3",
+      "display": "3구획"
+    },
+    {
+      "caseId": "FSM2-HCASE-014-02",
+      "expression": "ceil(2400/3000)",
+      "computed": "1",
+      "display": "1구획"
+    },
+    {
+      "caseId": "FSM2-HCASE-014-03",
+      "expression": "ceil(1250/200)",
+      "computed": "7",
+      "display": "7구획"
+    },
+    {
+      "caseId": "FSM2-HCASE-014-04",
+      "expression": "ceil(1250/500)",
+      "computed": "3",
+      "display": "3구획"
+    },
+    {
+      "caseId": "FSM2-HCASE-014-05",
+      "expression": "ceil(1250/1500)",
+      "computed": "1",
+      "display": "1구획"
+    },
+    {
+      "caseId": "FSM2-HCASE-014-06",
+      "expression": "ceil(1250/600)",
+      "computed": "3",
+      "display": "3구획"
+    },
+    {
+      "caseId": "FSM2-HCASE-017-09",
+      "expression": "11-2",
+      "computed": "9",
+      "display": "9%p"
+    },
+    {
+      "caseId": "FSM2-HCASE-021-06",
+      "expression": "14*60+20+30",
+      "computed": "890",
+      "display": "14:50"
+    },
+    {
+      "caseId": "FSM2-HCASE-021-07",
+      "expression": "14*60+50+180",
+      "computed": "1070",
+      "display": "17:50"
+    },
+    {
+      "caseId": "FSM2-HCASE-023-01",
+      "expression": "180/200+250/1000",
+      "computed": "1.15",
+      "display": "1.15배"
+    },
+    {
+      "caseId": "FSM2-HCASE-023-02",
+      "expression": "300/400+200/400",
+      "computed": "1.25",
+      "display": "1.25배"
+    },
+    {
+      "caseId": "FSM2-HCASE-023-03",
+      "expression": "15/50+3000/6000",
+      "computed": "0.8",
+      "display": "0.8배"
+    },
+    {
+      "caseId": "FSM2-HCASE-023-04",
+      "expression": "0.12*1000/200+450/1000",
+      "computed": "1.05",
+      "display": "1.05배"
+    },
+    {
+      "caseId": "FSM2-HCASE-023-05",
+      "expression": "2000/4000+1200/2000",
+      "computed": "1.1",
+      "display": "1.1배"
+    },
+    {
+      "caseId": "FSM2-HCASE-023-06",
+      "expression": "(1-550/1000)*200",
+      "computed": "90.00",
+      "display": "90L"
+    },
+    {
+      "caseId": "FSM2-HCASE-023-07",
+      "expression": "160/400+6000/10000",
+      "computed": "1.0",
+      "display": "1배"
+    },
+    {
+      "caseId": "FSM2-HCASE-023-09",
+      "expression": "60/100+200/400",
+      "computed": "1.1",
+      "display": "1.1배"
+    },
+    {
+      "caseId": "FSM2-HCASE-023-10",
+      "expression": "1.4-60/200",
+      "computed": "1.1",
+      "display": "1.1배"
+    },
+    {
+      "caseId": "FSM2-HCASE-027-09",
+      "expression": "(5+3)*0.5",
+      "computed": "4.0",
+      "display": "4단위"
+    },
+    {
+      "caseId": "FSM2-HCASE-027-10",
+      "expression": "(3-3*0.5)/0.5",
+      "computed": "3",
+      "display": "3포"
+    },
+    {
+      "caseId": "FSM2-HCASE-029-01",
+      "expression": "ceil(ceil(1210/100)/3)",
+      "computed": "5",
+      "display": "5개"
+    },
+    {
+      "caseId": "FSM2-HCASE-029-02",
+      "expression": "ceil(ceil(610/50)/3)",
+      "computed": "5",
+      "display": "5개"
+    },
+    {
+      "caseId": "FSM2-HCASE-029-03",
+      "expression": "ceil(ceil(310/30)/3)",
+      "computed": "4",
+      "display": "4개"
+    },
+    {
+      "caseId": "FSM2-HCASE-029-04",
+      "expression": "ceil(ceil(1210/200)/3)",
+      "computed": "3",
+      "display": "3개"
+    },
+    {
+      "caseId": "FSM2-HCASE-029-05",
+      "expression": "ceil(ceil(1210/100)/3)",
+      "computed": "5",
+      "display": "5개"
+    },
+    {
+      "caseId": "FSM2-HCASE-029-08",
+      "expression": "21/3",
+      "computed": "7",
+      "display": "7개"
+    },
+    {
+      "caseId": "FSM2-HCASE-031-01",
+      "expression": "min(7,2)*2.6",
+      "computed": "5.2",
+      "display": "5.2㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-031-02",
+      "expression": "1*2.6",
+      "computed": "2.6",
+      "display": "2.6㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-031-03",
+      "expression": "min(6,5)*5.2",
+      "computed": "26.0",
+      "display": "26㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-031-04",
+      "expression": "4*7.8",
+      "computed": "31.2",
+      "display": "31.2㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-031-05",
+      "expression": "2*5.2",
+      "computed": "10.4",
+      "display": "10.4㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-031-06",
+      "expression": "7.8-3",
+      "computed": "4.8",
+      "display": "4.8㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-031-10",
+      "expression": "5.2/3",
+      "computed": "1.733333333333333333333333333",
+      "display": "1.733"
+    },
+    {
+      "caseId": "FSM2-HCASE-032-01",
+      "expression": "1*7",
+      "computed": "7",
+      "display": "7㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-032-04",
+      "expression": "ceil(31/3)",
+      "computed": "11",
+      "display": "11개"
+    },
+    {
+      "caseId": "FSM2-HCASE-032-05",
+      "expression": "ceil(40/3)",
+      "computed": "14",
+      "display": "14개"
+    },
+    {
+      "caseId": "FSM2-HCASE-032-08",
+      "expression": "4600+4500",
+      "computed": "9100",
+      "display": "9,100㎡"
+    },
+    {
+      "caseId": "FSM2-HCASE-035-01",
+      "expression": "0.8*1.4",
+      "computed": "1.12",
+      "display": "1.12MPa"
+    },
+    {
+      "caseId": "FSM2-HCASE-035-02",
+      "expression": "0.8*0.65",
+      "computed": "0.520",
+      "display": "0.52MPa"
+    },
+    {
+      "caseId": "FSM2-HCASE-035-04",
+      "expression": "600*1.5",
+      "computed": "900.0",
+      "display": "900L/min"
+    },
+    {
+      "caseId": "FSM2-HCASE-035-10",
+      "expression": "0.6*1.4",
+      "computed": "0.84",
+      "display": "0.84MPa"
+    },
+    {
+      "caseId": "FSM2-HCASE-035-10",
+      "expression": "0.6*0.65",
+      "computed": "0.390",
+      "display": "0.39MPa"
+    },
+    {
+      "caseId": "FSM2-HCASE-036-01",
+      "expression": "19/2",
+      "computed": "9.5",
+      "display": "9.5mm"
+    },
+    {
+      "caseId": "FSM2-HCASE-036-02",
+      "expression": "13/2",
+      "computed": "6.5",
+      "display": "6.5mm"
+    },
+    {
+      "caseId": "FSM2-HCASE-038-01",
+      "expression": "18*1.6",
+      "computed": "28.8",
+      "display": "28.8㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-038-01",
+      "expression": "18*80",
+      "computed": "1440",
+      "display": "1,440L/min"
+    },
+    {
+      "caseId": "FSM2-HCASE-038-03",
+      "expression": "20*3.2",
+      "computed": "64.0",
+      "display": "64㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-038-04",
+      "expression": "20*4.8",
+      "computed": "96.0",
+      "display": "96㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-038-07",
+      "expression": "20*3.2",
+      "computed": "64.0",
+      "display": "64㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-038-08",
+      "expression": "20*9.6",
+      "computed": "192.0",
+      "display": "192㎥"
+    },
+    {
+      "caseId": "FSM2-HCASE-043-01",
+      "expression": "45+20",
+      "computed": "65",
+      "display": "65℃"
+    },
+    {
+      "caseId": "FSM2-HCASE-044-01",
+      "expression": "ceil(145/70)+ceil(65/70)",
+      "computed": "4",
+      "display": "4개"
+    },
+    {
+      "caseId": "FSM2-HCASE-044-02",
+      "expression": "ceil(95/45)+ceil(45/45)",
+      "computed": "4",
+      "display": "4개"
+    },
+    {
+      "caseId": "FSM2-HCASE-044-03",
+      "expression": "ceil(81/40)+ceil(39/40)",
+      "computed": "4",
+      "display": "4개"
+    },
+    {
+      "caseId": "FSM2-HCASE-044-04",
+      "expression": "ceil(51/25)+ceil(25/25)",
+      "computed": "4",
+      "display": "4개"
+    },
+    {
+      "caseId": "FSM2-HCASE-044-05",
+      "expression": "ceil(61/30)",
+      "computed": "3",
+      "display": "3개"
+    },
+    {
+      "caseId": "FSM2-HCASE-044-06",
+      "expression": "ceil(31/15)",
+      "computed": "3",
+      "display": "3개"
+    },
+    {
+      "caseId": "FSM2-HCASE-044-07",
+      "expression": "2*ceil(160/150)",
+      "computed": "4",
+      "display": "4개"
+    },
+    {
+      "caseId": "FSM2-HCASE-044-08",
+      "expression": "ceil(160/75)",
+      "computed": "3",
+      "display": "3개"
+    },
+    {
+      "caseId": "FSM2-HCASE-044-10",
+      "expression": "ceil(450/22)",
+      "computed": "21",
+      "display": "21개"
+    },
+    {
+      "caseId": "FSM2-HCASE-045-01",
+      "expression": "max(ceil(480/600),ceil(120/50))",
+      "computed": "3",
+      "display": "3구역"
+    },
+    {
+      "caseId": "FSM2-HCASE-045-02",
+      "expression": "max(ceil(600/600),ceil(60/50))",
+      "computed": "2",
+      "display": "2구역"
+    },
+    {
+      "caseId": "FSM2-HCASE-045-03",
+      "expression": "max(ceil(1500/600),ceil(75/50))",
+      "computed": "3",
+      "display": "3구역"
+    },
+    {
+      "caseId": "FSM2-HCASE-045-07",
+      "expression": "260+250",
+      "computed": "510",
+      "display": "510㎡"
+    },
+    {
+      "caseId": "FSM2-HCASE-046-02",
+      "expression": "ceil(15/7)",
+      "computed": "3",
+      "display": "3개"
+    },
+    {
+      "caseId": "FSM2-HCASE-052-01",
+      "expression": "ceil(17/4-1)+ceil(23/4-1)",
+      "computed": "9",
+      "display": "9개"
+    },
+    {
+      "caseId": "FSM2-HCASE-052-02",
+      "expression": "ceil(20/4-1)+ceil(28/4-1)",
+      "computed": "10",
+      "display": "10개"
+    },
+    {
+      "caseId": "FSM2-HCASE-052-03",
+      "expression": "2*ceil(19/4-1)+ceil(27/4-1)",
+      "computed": "14",
+      "display": "14개"
+    },
+    {
+      "caseId": "FSM2-HCASE-052-04",
+      "expression": "ceil(33/4-1)+ceil(14/4-1)",
+      "computed": "11",
+      "display": "11개"
+    },
+    {
+      "caseId": "FSM2-HCASE-052-05",
+      "expression": "4*ceil(18/4-1)",
+      "computed": "16",
+      "display": "16개"
+    },
+    {
+      "caseId": "FSM2-HCASE-052-06",
+      "expression": "ceil(16/4-1)",
+      "computed": "3",
+      "display": "3개"
+    },
+    {
+      "caseId": "FSM2-HCASE-052-06",
+      "expression": "2*ceil(8/4-1)",
+      "computed": "2",
+      "display": "2개"
+    },
+    {
+      "caseId": "FSM2-HCASE-052-10",
+      "expression": "ceil(21/4-1)+ceil(25/4-1)",
+      "computed": "11",
+      "display": "11개"
+    },
+    {
+      "caseId": "FSM2-HCASE-053-01",
+      "expression": "ceil(1600/500)",
+      "computed": "4",
+      "display": "4개"
+    },
+    {
+      "caseId": "FSM2-HCASE-053-02",
+      "expression": "ceil(1400/500)",
+      "computed": "3",
+      "display": "3개"
+    },
+    {
+      "caseId": "FSM2-HCASE-053-02",
+      "expression": "2*10",
+      "computed": "20",
+      "display": "20개"
+    },
+    {
+      "caseId": "FSM2-HCASE-053-03",
+      "expression": "ceil(1650/800)",
+      "computed": "3",
+      "display": "3개"
+    },
+    {
+      "caseId": "FSM2-HCASE-053-04",
+      "expression": "ceil(2050/1000)",
+      "computed": "3",
+      "display": "3개"
+    },
+    {
+      "caseId": "FSM2-HCASE-068-01",
+      "expression": "16/29",
+      "computed": "0.5517241379310344827586206897",
+      "display": "0.55"
+    },
+    {
+      "caseId": "FSM2-HCASE-068-02",
+      "expression": "(3*12+8)/29",
+      "computed": "1.517241379310344827586206897",
+      "display": "1.52"
+    },
+    {
+      "caseId": "FSM2-HCASE-068-03",
+      "expression": "(4*12+10)/29",
+      "computed": "2",
+      "display": "2.00"
+    },
+    {
+      "caseId": "FSM2-HCASE-068-04",
+      "expression": "(12+4+16)/29",
+      "computed": "1.103448275862068965517241379",
+      "display": "1.10"
+    },
+    {
+      "caseId": "FSM2-HCASE-068-05",
+      "expression": "(2*12+6+16)/29",
+      "computed": "1.586206896551724137931034483",
+      "display": "1.59"
+    },
+    {
+      "caseId": "FSM2-HCASE-068-06",
+      "expression": "29/29",
+      "computed": "1",
+      "display": "1"
+    },
+    {
+      "caseId": "FSM2-HCASE-068-07",
+      "expression": "58/29",
+      "computed": "2",
+      "display": "2"
+    }
+  ],
+  "preservedInputs": {
+    "core500.json": "9be4af283ee34c8fbce5f5254f474d65e531124e4d8ea9d0b9f985dad55fe91f",
+    "general740.json": "40e7a42ef9db1fc9ea798ce3ab513a49e5a755aee184fae0ca31341c90fcd321",
+    "editorial-review.json": "47b9a66871ebbee9a0d9160395121fd6c9b15fed1e8b5fcd4ef4af1bcfdd4311",
+    "general-editorial.json": "8809c0ba904e98306040f9d7b04ce2555645ff933d559a2eb6958c100e289f65",
+    "chapter001-sample.json": "83d15a4d15ce38e6604b1ebb5696bee9e8383a40abad593970199a0d1a0c8157",
+    "combined-manifest.json": "d2d04c1e812c042f1981b189ae7657912da7ca38046f15ec7eff39a2052f6ae1",
+    "general-validation.json": "cf325317a5594a595ccfdd6e182f6bef6b1db2eb8fcf2838bdac3e482999a9d9",
+    "validation.json": "aa35e82d7bccda85ff577b68318094ef5e750a24923be4389457d84a1a045b32",
+    "sample-review.md": "cd3fb9eec1d8a71a92f6093bfde71ae7befa602a8dcfff1ab0e8e59830d0b615"
+  },
+  "readableChapterFiles": 74,
+  "exactUniqueQuestionStems": 1980,
+  "uniqueIds": 1980,
+  "structureCompositionArithmeticAndPreservation": "PASS",
+  "semanticAnswerVerification": "DEFERRED_TO_COMBINED_REVIEW",
+  "textbookPageVerification": "PENDING_COMBINED_REVIEW",
+  "difficultyCalibration": "NOT_MEASURED",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "limits": [
+    "Composite-key checks verify consistency with authored case conclusions, not independent truth of those conclusions.",
+    "Cases are reused across different pairings; semantic overlap, distractor quality and exam difficulty need the combined editorial pass.",
+    "No UI integration, deployment or user answer-rate measurement was performed."
+  ]
+}

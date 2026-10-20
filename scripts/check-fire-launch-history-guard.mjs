@@ -8,7 +8,13 @@ const audit = 'docs/audits/2026-10-14-fire-safety-level2-launch';
 const release = JSON.parse(await readFile(audit+'/release.json','utf8'));
 const correctionAudit='docs/audits/2026-10-18-fire-level2-textbook-corrections';
 const corrections=JSON.parse(await readFile(correctionAudit+'/release.json','utf8'));
-const correctionFiles=['scripts/read-before-fire-textbook-corrections.mjs',correctionAudit+'/release.json',...corrections.files.flatMap(r=>[r.path,r.originalFile])];
+const practiceAudit='docs/audits/2026-10-20-fire-level2-practice';
+const practiceRelease=JSON.parse(await readFile(practiceAudit+'/release.json','utf8'));
+const personaAudit='docs/audits/2026-10-20-fire-persona-corrections';
+const personaRelease=JSON.parse(await readFile(personaAudit+'/release.json','utf8'));
+const personaFiles=['scripts/read-before-fire-persona-corrections.mjs',personaAudit+'/release.json',...personaRelease.files.flatMap(r=>[r.path,...(r.originalFile?[r.originalFile]:[])])];
+const practiceFiles=[...personaFiles,'scripts/read-before-fire-practice.mjs',practiceAudit+'/release.json',practiceAudit+'/baseline.json',...practiceRelease.files.flatMap(r=>[r.path,...(r.originalFile?[r.originalFile]:[])])];
+const correctionFiles=[...practiceFiles,'scripts/read-before-fire-textbook-corrections.mjs',correctionAudit+'/release.json',...corrections.files.flatMap(r=>[r.path,r.originalFile])];
 const root = await mkdtemp(path.join(tmpdir(),'getpasslab-fire-history-'));
 const run = code => spawnSync(process.execPath,['--input-type=module','-e',`import assert from 'node:assert/strict';import {readFile,readdir} from './${helper}';${code}`],{cwd:root,encoding:'utf8'});
 async function put(file,bytes){await mkdir(path.dirname(path.join(root,file)),{recursive:true});await writeFile(path.join(root,file),bytes)}

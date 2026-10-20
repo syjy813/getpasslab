@@ -1,6 +1,6 @@
 // Exact projection for archived checks; the current checker reads native bytes.
 import assert from 'node:assert/strict';
-import {readFile as nativeRead, readdir} from 'node:fs/promises';
+import {readFile as nativeRead, readdir} from './read-before-fire-practice.mjs';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 const audit='docs/audits/2026-10-18-fire-level2-textbook-corrections';

@@ -30,4 +30,7 @@ status: "완료"
 
 한 약제가 여러 작용을 할 수 있으므로 문제에서 요구하는 주된 소화 효과 확인 · 금수성 금속이나 가열된 식용유에 물을 붓는 선택은 제거
 
+## 분류 문구와 소화방법의 동의어
+유류화재는 분류상 **타고 나서 재가 남지 않는 화재**로 일반화재와 구별 · 모든 연소 부산물이 없다는 뜻은 아님 · **억제소화는 부촉매소화**와 같은 연쇄반응 억제 원리
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000244810&amp;admRulId=83614&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 101</a> · 2026-10-14 확인</p>

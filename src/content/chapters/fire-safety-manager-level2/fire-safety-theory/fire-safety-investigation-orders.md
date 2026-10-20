@@ -33,4 +33,9 @@ status: "완료"
 
 관리자는 불량 사항을 발견했다는 사실만 기록하고 끝내지 않고 관계인 통보·조치·이행 확인으로 연결 · 조사권자와 조치를 이행하는 관계인을 뒤바꾸지 않음
 
+## 종합·부분조사와 주거 조사 조건
+항목 전부를 확인하면 **종합조사**, 일부만 확인하면 **부분조사** · 소방청은 중앙화재안전조사단, 소방본부·소방서는 지방화재안전조사단을 편성·운영할 수 있음
+
+실제 주거용 개인 주거는 **관계인 승낙 또는 화재발생 우려가 뚜렷한 긴급 필요**에 한정 · 연기 신청은 조사 시작 **3일 전까지**, 승인 여부 결정·통지는 접수 후 **3일 이내** · 연기기간 종료 시 지체 없이 조사 · 종료 전 연기사유 소멸 또는 긴급 조사 사유 발생 시 미리 알리고 조사 가능
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=283705&amp;efYd=20260227&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">화재예방법</a> · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287389&amp;efYd=20260701&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">화재예방법 시행령</a> · 2026-10-14 확인</p>

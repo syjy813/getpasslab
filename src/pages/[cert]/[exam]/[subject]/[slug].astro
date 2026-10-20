@@ -6,6 +6,8 @@ import QuestionHistory from '../../../../components/QuestionHistory.astro';
 import InstantQuestionPractice from '../../../../components/InstantQuestionPractice.astro';
 import { INSTANT_PRACTICE_PILOT_SLUG } from '../../../../config/instantPracticeExplanations.js';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
+import FirePracticeEntry from '../../../../components/FirePracticeEntry.astro';
+import { publishedFireQuestions } from '../../../../utils/firePracticeData';
 import { getSubject } from '../../../../config/certifications';
 import { getQuestionImage } from '../../../../config/questionImages';
 import { getQuestionCaution } from '../../../../config/questionCautions';
@@ -192,6 +194,10 @@ const sideChapters = orderedSideChapters
   {chapter.data.cert_id === 'industrial-safety' && chapter.data.exam === 'written' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG && (
     <InstantQuestionPractice questions={linked as any} certificationId={chapter.data.cert_id} chapterSlug={chapter.data.slug} />
   )}
+  {chapter.data.cert_id === 'fire-safety-manager-level2' && <FirePracticeEntry
+    chapterId={chapter.data.chapter_id}
+    chapterQuestionCount={publishedFireQuestions.filter(question => question.chapterId === chapter.data.chapter_id).length}
+  />}
   {supporting.length > 0 && <QuestionHistory
     questions={supporting}
     supporting

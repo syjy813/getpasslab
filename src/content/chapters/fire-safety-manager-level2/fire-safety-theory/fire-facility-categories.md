@@ -34,4 +34,7 @@ status: "완료"
 
 물분무등소화설비는 물분무·미분무·포·이산화탄소·할론·할로겐화합물 및 불활성기체·분말·강화액·고체에어로졸소화설비 등 · 사용 약제가 물인 설비만을 뜻하지 않음
 
+## 별표 1의 하위 분류
+시행령 별표 1의 피난구조설비 중 **유도등 항목에는 피난유도선·피난구유도등·통로유도등·객석유도등·유도표지**가 열거됨 · 비상조명등·휴대용비상조명등도 피난구조설비 · 연소방지설비는 소화활동설비
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=290451&amp;efYd=20261002&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">소방시설법 시행령</a> · 2026-10-14 확인</p>

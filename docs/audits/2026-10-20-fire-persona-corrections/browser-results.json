@@ -1,0 +1,415 @@
+{
+  "pages": [
+    {
+      "chapterId": "FSM2-004",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-005",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-006",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-007",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-008",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-009",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-011",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-014",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-015",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-016",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-018",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-020",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-022",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-023",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/designated-quantity-multiples/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-025",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-026",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-039",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-046",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-050",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-054",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-057",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-060",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/aed-pads-use-sequence/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-062",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-064",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-065",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-071",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-004",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-005",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-006",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-007",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-008",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-009",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-011",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-014",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-015",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-016",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-018",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-020",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-022",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-023",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/designated-quantity-multiples/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-025",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-026",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-039",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-046",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-050",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-054",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-057",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-060",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/aed-pads-use-sequence/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-062",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-064",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-065",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    },
+    {
+      "chapterId": "FSM2-071",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+      "newSectionPresent": true,
+      "viewportOverflow": false
+    }
+  ],
+  "errors": [],
+  "imageContentReview": "not repeated; unchanged assets",
+  "physicalDevices": "not tested",
+  "testedCommit": "bc90f2136943a0acc2c368a5674c79b65fdd963c",
+  "workflowRun": 39402540207,
+  "workflowURL": "https://github.com/syjy813/getpasslab/actions/runs/39402540207",
+  "artifactId": 12255921193,
+  "artifactZipSHA256": "4c9d2516f724514450d079d6a7877edd1cc24577636a11578bc7000ba5e26e12",
+  "visuallyReviewedScreenshots": {
+    "FSM2-005-1440.png": "447270336b5ee017d7bdcb9b9b9c8103adab390b23ce2781d0168c5238b9b748",
+    "FSM2-005-390.png": "4459401261e9f85ad894f0ca250444892bf61fcc7a4592e576935a9ee7565bba",
+    "FSM2-006-1440.png": "77bf89b398d9366a3538e4214c1b992221119f75a0efd97822cea5a87c0051e2",
+    "FSM2-006-390.png": "362c4d7d13abb7d3ad771956e86820309e05ad7d8e591366a5e965db2de7afc7",
+    "FSM2-057-1440.png": "4a15fc39b41394741a03b26cc5eca0283c83aeb154dd018ffd476ab1cbc92fdc",
+    "FSM2-057-390.png": "f9605a1b4907a0bc7898d9241e1d75f8b897f439a3d044dc53cdfe0c2562f1d0",
+    "FSM2-062-1440.png": "2db3ad2c32348db90728042e285714f9cbe8fc2894d037b45640d4f4c0ff705c",
+    "FSM2-062-390.png": "e1c9e0969c546cf96361941508e3009a911b165b2d2f83f5b032ecb9cba57186"
+  },
+  "visualNotes": "All 8 captures inspected. Added text and penalty table readable at 390/1440; no clipping/overlap in captured sections. No new image semantic audit."
+}

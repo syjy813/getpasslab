@@ -1,0 +1,168 @@
+id,chapterId,disposition,questionChanged,choicesChanged,selectedAnswer,theoryFile,reason
+moducbt-27777-q01,FSM2-001,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md,설치 사실과 법정 의무 구별
+moducbt-27780-q03,FSM2-001,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md,설치 사실과 법정 의무 구별
+moducbt-27782-q02,FSM2-001,wording_revised,False,True,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md,특급 제외 용도 명시
+FSM2-CORE-201,FSM2-001,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md,설치 사실과 법정 의무 구별
+FSM2-CORE-353,FSM2-001,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md,설치 사실과 법정 의무 구별
+FSM2-CORE-452,FSM2-001,wording_revised,False,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md,특급 제외 용도 명시
+moducbt-27773-q01,FSM2-004,wording_revised,True,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-duties-owner-responsibility.md,OCR 잔문자 정리 / 후속 QA: OCR 오염·PDF 머리말 제거
+moducbt-27777-q02,FSM2-004,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-duties-owner-responsibility.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-202,FSM2-004,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-duties-owner-responsibility.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27774-q02,FSM2-005,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27778-q02,FSM2-005,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,연도와 적용 기준·일수 전제 구별
+moducbt-27779-q01,FSM2-005,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,연도와 적용 기준·일수 전제 구별
+moducbt-27780-q01,FSM2-005,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,연도와 적용 기준·일수 전제 구별
+moducbt-27781-q03,FSM2-005,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27782-q03,FSM2-005,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-052,FSM2-005,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-252,FSM2-005,wording_revised,True,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,연도와 적용 기준·일수 전제 구별
+FSM2-CORE-301,FSM2-005,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,연도와 적용 기준·일수 전제 구별
+FSM2-CORE-351,FSM2-005,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,연도와 적용 기준·일수 전제 구별
+FSM2-CORE-403,FSM2-005,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-453,FSM2-005,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27773-q08,FSM2-006,wording_revised,False,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,OCR 잔문자 정리 / 후속 QA: OCR 오염·PDF 머리말 제거
+moducbt-27778-q08,FSM2-006,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27779-q05,FSM2-006,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27780-q02,FSM2-006,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27781-q04,FSM2-006,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27782-q04,FSM2-006,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-258,FSM2-006,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-305,FSM2-006,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-352,FSM2-006,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-404,FSM2-006,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-454,FSM2-006,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27775-q05,FSM2-007,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27776-q04,FSM2-007,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27779-q04,FSM2-007,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-105,FSM2-007,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-154,FSM2-007,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-304,FSM2-007,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27776-q05,FSM2-008,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-safety-investigation-orders.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27778-q06,FSM2-008,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-safety-investigation-orders.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-155,FSM2-008,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-safety-investigation-orders.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-256,FSM2-008,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-safety-investigation-orders.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27774-q06,FSM2-009,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27777-q06,FSM2-009,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27778-q07,FSM2-009,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27779-q07,FSM2-009,wording_revised,True,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md,관계인 점검 가능 설비 조건 명시
+moducbt-27781-q08,FSM2-009,wording_revised,True,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md,현행 기준 적용 연도 명시
+FSM2-CORE-056,FSM2-009,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-206,FSM2-009,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 변형 해설의 잘못된 연결어 교정
+FSM2-CORE-257,FSM2-009,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-307,FSM2-009,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md,관계인 점검 가능 설비 조건 명시
+FSM2-CORE-408,FSM2-009,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md,현행 기준 적용 연도 명시
+moducbt-27777-q08,FSM2-011,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flame-retardant-target-test.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27782-q06,FSM2-011,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flame-retardant-target-test.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-208,FSM2-011,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flame-retardant-target-test.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-456,FSM2-011,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flame-retardant-target-test.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-MOCK-013-11,FSM2-013,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/windowless-floor-openings.md,나머지 개구부의 유효 요건 명시
+FSM2-MOCK-013-13,FSM2-013,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/windowless-floor-openings.md,나머지 개구부의 유효 요건 명시
+FSM2-MOCK-013-14,FSM2-013,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/windowless-floor-openings.md,나머지 개구부의 유효 요건 명시
+FSM2-MOCK-013-18,FSM2-013,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/windowless-floor-openings.md,나머지 개구부의 유효 요건 명시
+FSM2-MOCK-013-20,FSM2-013,wording_revised,True,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/windowless-floor-openings.md,나머지 개구부의 유효 요건 명시
+moducbt-27782-q16,FSM2-014,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-compartments-doors-egress.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-466,FSM2-014,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-compartments-doors-egress.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27774-q16,FSM2-015,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/escape-stairs-special-stairs.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27777-q15,FSM2-015,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/escape-stairs-special-stairs.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-066,FSM2-015,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/escape-stairs-special-stairs.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-215,FSM2-015,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/escape-stairs-special-stairs.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27779-q11,FSM2-016,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/combustion-elements.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27780-q10,FSM2-016,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/combustion-elements.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27782-q09,FSM2-016,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/combustion-elements.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-311,FSM2-016,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/combustion-elements.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-360,FSM2-016,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/combustion-elements.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-459,FSM2-016,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/combustion-elements.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27776-q10,FSM2-018,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flash-fire-autoignition-points.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27778-q09,FSM2-018,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flash-fire-autoignition-points.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-MOCK-018-17,FSM2-018,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flash-fire-autoignition-points.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-MOCK-018-20,FSM2-018,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flash-fire-autoignition-points.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-160,FSM2-018,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flash-fire-autoignition-points.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 변형 해설의 잘못된 연결어 교정
+FSM2-CORE-259,FSM2-018,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flash-fire-autoignition-points.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27776-q09,FSM2-020,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-classes-extinguishing-principles.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27776-q11,FSM2-020,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-classes-extinguishing-principles.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-159,FSM2-020,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-classes-extinguishing-principles.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-161,FSM2-020,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-classes-extinguishing-principles.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27776-q14,FSM2-022,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hazardous-materials-classes.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27778-q14,FSM2-022,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hazardous-materials-classes.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-164,FSM2-022,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hazardous-materials-classes.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-264,FSM2-022,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hazardous-materials-classes.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-464,FSM2-023,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/designated-quantity-multiples.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27776-q13,FSM2-025,wording_revised,True,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/lpg-lng-gas-detectors.md,경보기 적용 기준과 거리 용어 통일
+FSM2-CORE-163,FSM2-025,wording_revised,True,True,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/lpg-lng-gas-detectors.md,경보기 적용 기준과 거리 용어 통일
+FSM2-CORE-363,FSM2-025,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/lpg-lng-gas-detectors.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27781-q19,FSM2-026,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-facility-categories.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-419,FSM2-026,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-facility-categories.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27774-q38,FSM2-037,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-types-operation.md,작동 순서의 설정 전제 명시 / 후속 QA: 작동 순서를 제시된 설정으로 한정
+moducbt-27778-q36,FSM2-037,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-types-operation.md,작동 순서의 설정 전제 명시 / 후속 QA: 작동 순서를 제시된 설정으로 한정
+moducbt-27779-q39,FSM2-037,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-types-operation.md,작동 순서의 설정 전제 명시 / 후속 QA: 작동 순서를 제시된 설정으로 한정
+FSM2-CORE-088,FSM2-037,wording_revised,True,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-types-operation.md,작동 순서의 설정 전제 명시 / 후속 QA: 작동 순서를 제시된 설정으로 한정
+FSM2-CORE-286,FSM2-037,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-types-operation.md,작동 순서의 설정 전제 명시 / 후속 QA: 작동 순서를 제시된 설정으로 한정
+FSM2-CORE-339,FSM2-037,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-types-operation.md,작동 순서의 설정 전제 명시 / 후속 QA: 작동 순서를 제시된 설정으로 한정
+moducbt-27779-q19,FSM2-038,wording_revised,True,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-head-water-performance.md,최소값과 실제 설계량 혼동 제거
+FSM2-CORE-319,FSM2-038,wording_revised,True,True,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/sprinkler-head-water-performance.md,최소값과 실제 설계량 혼동 제거
+moducbt-27780-q23,FSM2-046,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-wiring-end-resistor-transmitter.md,그림 없이 완결되는 기준 문항으로 정리
+moducbt-27782-q25,FSM2-046,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-wiring-end-resistor-transmitter.md,그림 없이 완결되는 기준 문항으로 정리
+moducbt-27782-q33,FSM2-046,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-wiring-end-resistor-transmitter.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-483,FSM2-046,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-wiring-end-resistor-transmitter.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27774-q21,FSM2-052,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/auditorium-guide-light-count.md,최소 필요 개수 명시
+moducbt-27777-q14,FSM2-065,wording_revised,False,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/electrical-fire-static-prevention.md,보편 근거가 없는 수치·주기 단정 제거
+FSM2-CORE-214,FSM2-065,wording_revised,False,True,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/electrical-fire-static-prevention.md,보편 근거가 없는 수치·주기 단정 제거
+FSM2-MOCK-071-13,FSM2-071,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md,적법한 연장·재검사 이력 명시
+FSM2-MOCK-071-14,FSM2-071,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md,적법한 연장·재검사 이력 명시
+FSM2-MOCK-071-15,FSM2-071,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md,적법한 연장·재검사 이력 명시
+FSM2-MOCK-071-16,FSM2-071,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md,적법한 연장·재검사 이력 명시
+FSM2-MOCK-071-17,FSM2-071,wording_revised,True,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md,적법한 연장·재검사 이력 명시
+FSM2-MOCK-071-18,FSM2-071,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md,적법한 연장·재검사 이력 명시
+FSM2-MOCK-071-20,FSM2-071,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md,적법한 연장·재검사 이력 명시
+FSM2-CORE-067,FSM2-071,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md,연장 예외 배제
+FSM2-CORE-322,FSM2-071,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-032,FSM2-035,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pump-performance-tests.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27777-q35,FSM2-036,wording_revised,True,True,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pitot-nozzle-pressure-test.md,장비 명칭을 텍스트로 명시 / 후속 QA: 제거한 그림 참조·고시 서식 인용 교정
+moducbt-27777-q30,FSM2-039,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/wet-sprinkler-test-valve.md,작동 순서의 설정 전제 명시 / 후속 QA: 작동 순서를 제시된 설정으로 한정
+moducbt-27780-q30,FSM2-039,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/wet-sprinkler-test-valve.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27782-q32,FSM2-039,wording_revised,True,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/wet-sprinkler-test-valve.md,그림 없이 완결되는 기준 문항으로 정리
+moducbt-27781-q35,FSM2-040,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/preaction-cross-zone-test.md,준비작동식 사례 순서 한정 / 후속 QA: 작동 순서를 제시된 설정으로 한정
+moducbt-27780-q35,FSM2-042,wording_revised,True,True,2,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/gas-system-pretest-safety.md,전기적 정지와 실제 방출 차단 구별
+moducbt-27780-q36,FSM2-048,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/receiver-circuit-continuity-test.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 고시 별표·별지 서식 인용 교정
+FSM2-CORE-375,FSM2-050,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/false-alarm-confirm-reset.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+FSM2-CORE-141,FSM2-054,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-emergency-plan-contents.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27780-q42,FSM2-055,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/self-fire-brigade-initial-response.md,근무 인원과 편성 인원 구별
+FSM2-CORE-392,FSM2-055,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/self-fire-brigade-initial-response.md,근무 인원과 편성 인원 구별
+FSM2-MOCK-056-04,FSM2-056,wording_revised,False,True,2,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/vulnerable-evacuees-assistance.md,시각 안내 적용 대상 명시
+moducbt-27777-q43,FSM2-057,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,해당 없음의 전제와 수리 이력 명시 / 후속 QA: 해당 없음의 법정 비대상 조건·수리 이력 명시
+moducbt-27779-q43,FSM2-057,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,연장 예외 배제 / 후속 QA: 고시 별표·별지 서식 인용 교정
+moducbt-27780-q43,FSM2-057,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,연장 예외 배제 / 후속 QA: 해당 없음의 법정 비대상 조건·수리 이력 명시
+moducbt-27782-q43,FSM2-057,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,해당 없음의 전제와 수리 이력 명시 / 후속 QA: 해당 없음의 법정 비대상 조건·수리 이력 명시
+FSM2-MOCK-057-13,FSM2-057,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,해당 없음의 전제와 수리 이력 명시 / 후속 QA: 해당 없음의 법정 비대상 조건·수리 이력 명시
+FSM2-MOCK-057-20,FSM2-057,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,해당 없음의 전제와 수리 이력 명시 / 후속 QA: 해당 없음의 법정 비대상 조건·수리 이력 명시
+FSM2-CORE-093,FSM2-057,theory_support_and_explanation_link,False,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 실측값별 판정·경계값 해설 명시
+FSM2-CORE-143,FSM2-057,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 실측값별 판정·경계값 해설 명시
+FSM2-CORE-193,FSM2-057,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 실측값별 판정·경계값 해설 명시
+FSM2-CORE-243,FSM2-057,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 실측값별 판정·경계값 해설 명시
+FSM2-CORE-293,FSM2-057,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 실측값별 판정·경계값 해설 명시
+FSM2-CORE-343,FSM2-057,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 실측값별 판정·경계값 해설 명시
+FSM2-CORE-393,FSM2-057,theory_support_and_explanation_link,False,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 실측값별 판정·경계값 해설 명시
+FSM2-CORE-443,FSM2-057,theory_support_and_explanation_link,False,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 실측값별 판정·경계값 해설 명시
+FSM2-CORE-493,FSM2-057,theory_support_and_explanation_link,False,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강 / 후속 QA: 실측값별 판정·경계값 해설 명시
+moducbt-27775-q44,FSM2-058,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/first-aid-assessment.md,기도폐쇄 중증도·순서·예외 명시
+moducbt-27777-q48,FSM2-058,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/first-aid-assessment.md,중증도·선행 처치·회복자세 조건 명시
+FSM2-MOCK-058-07,FSM2-058,wording_revised,False,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/first-aid-assessment.md,기도폐쇄 적용 조건 명시
+moducbt-27778-q44,FSM2-060,wording_revised,True,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/aed-pads-use-sequence.md,정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강
+moducbt-27779-q48,FSM2-062,wording_revised,False,True,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/bleeding-shock-first-aid.md,동공을 출혈의 확정 단서로 쓰지 않음 / 동공을 출혈의 확정 단서로 쓰지 않음 / 동공을 출혈의 확정 단서로 쓰지 않음
+moducbt-27781-q46,FSM2-062,wording_revised,True,False,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/bleeding-shock-first-aid.md,동공을 출혈의 확정 단서로 쓰지 않음 / 동공을 출혈의 확정 단서로 쓰지 않음 / 동공을 출혈의 확정 단서로 쓰지 않음
+moducbt-27782-q48,FSM2-062,wording_revised,False,True,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/bleeding-shock-first-aid.md,동공을 출혈의 확정 단서로 쓰지 않음 / 동공을 출혈의 확정 단서로 쓰지 않음 / 동공을 출혈의 확정 단서로 쓰지 않음
+moducbt-27774-q50,FSM2-064,wording_revised,True,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+moducbt-27775-q50,FSM2-064,wording_revised,True,True,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+moducbt-27776-q50,FSM2-064,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+moducbt-27780-q50,FSM2-064,wording_revised,True,True,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+moducbt-27781-q50,FSM2-064,wording_revised,True,True,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+moducbt-27782-q50,FSM2-064,wording_revised,True,True,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+FSM2-CORE-100,FSM2-064,wording_revised,True,True,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+FSM2-CORE-150,FSM2-064,wording_revised,True,True,2,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+FSM2-CORE-200,FSM2-064,wording_revised,True,False,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+FSM2-CORE-300,FSM2-064,wording_revised,True,False,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+FSM2-CORE-400,FSM2-064,wording_revised,True,True,4,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+FSM2-CORE-450,FSM2-064,wording_revised,True,True,1,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+FSM2-CORE-500,FSM2-064,wording_revised,True,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md,옥상·연기·대피시설의 안전 조건 명시 / 후속 QA: 문항별 정오 판단을 해설 첫머리에 명시
+FSM2-CORE-490,FSM2-070,wording_revised,True,False,2,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-plan-development-process.md,연결어 교정
+FSM2-MOCK-073-07,FSM2-073,wording_revised,False,True,3,src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-discovery-report-initial-action.md,구르기 적용 상황 명시

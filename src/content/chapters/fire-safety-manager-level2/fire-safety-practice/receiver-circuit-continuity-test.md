@@ -34,4 +34,7 @@ status: "완료"
 
 전압계 방식의 대표 학습 예: **4~8V 정상, 0V 단선 의심** · 확인등 방식은 기기의 녹색 정상·적색 단선 범례 확인 · 6V 회로와 0V 회로를 같은 상태로 판정하지 않음 · 시험 후 회로선택 다이얼을 정상 위치로 되돌린 다음 도통시험스위치 해제
 
+## 배선 기준과 도통시험의 연결
+[감지기 배선·종단저항·발신기](/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/)의 **1.5m·50Ω·7개 이하**를 각각 종단저항함 높이·전로저항·공통선 경계구역 수에 적용 · 도통 정상만으로 감지기 동작시험까지 합격 처리하지 않음
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000275086&amp;admRulId=83630&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 203</a> · 2026-10-14 확인</p>

@@ -35,4 +35,9 @@ status: "완료"
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>
 
+## 면적 예외와 옥외계단 수치
+주요구조부가 내화구조 또는 불연재료인 건축물은 5층 이상 층의 바닥면적 합계가 **200㎡ 이하**이거나 **200㎡ 이내마다 방화구획**된 경우 피난계단 설치 원칙의 예외 확인 · 판매시설 용도 층의 직통계단은 1개소 이상 특별피난계단으로 하는 조건도 확인
+
+옥외 피난계단 유효너비 **0.9m 이상** · 피난계단·특별피난계단은 내화구조로 하며 피난층 또는 지상까지 직접 연결 · 특별피난계단은 부속실·노대를 거치는 구조
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=290833&amp;efYd=20261006&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">건축법 시행령</a> · 2026-10-14 확인</p>

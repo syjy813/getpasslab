@@ -38,4 +38,7 @@ status: "완료"
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>
 
+## 시험장치의 배관·배수 조건
+유수검지장치 **2차측**에 연결 · 배관 구경 **25mm 이상** · 말단 개폐밸브와 개방형헤드 또는 헤드와 동등한 방수성능의 오리피스 설치 · 물받이통·배수관 등으로 바닥 유출 방지 · 경보·펌프 순서는 기동 방식·압력 설정 조건으로 판단
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000281674&amp;admRulId=83616&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 103</a> · 2026-10-14 확인</p>

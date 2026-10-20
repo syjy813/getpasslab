@@ -1,0 +1,1272 @@
+{
+  "baselineCommit": "2eb7911be71e371ca250e0bfb4f2cb57cb1e9944",
+  "method": "All 167 target stems, choices and explanations re-read against revised chapters; non-blind same-model review; not a new textbook page-by-page audit.",
+  "targets": {
+    "moducbt-27777-q01": {
+      "beforeSHA256": "291401443230bde039cba408e6d4cab9a14fdf2f55bf0237930ef2bfb294414a",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "291401443230bde039cba408e6d4cab9a14fdf2f55bf0237930ef2bfb294414a"
+    },
+    "moducbt-27780-q03": {
+      "beforeSHA256": "0d6b2febc44b04179cee9068cbeeefc5ea776ae083227dcf633c34d1249a7027",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "0d6b2febc44b04179cee9068cbeeefc5ea776ae083227dcf633c34d1249a7027"
+    },
+    "moducbt-27782-q02": {
+      "beforeSHA256": "cf541bcb27202a7cca5d494680612d73f482634c6969e7032143a1bab1f8606a",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "cf541bcb27202a7cca5d494680612d73f482634c6969e7032143a1bab1f8606a"
+    },
+    "FSM2-CORE-201": {
+      "beforeSHA256": "10d942f482a81f0fb6fbfd1b290df3fe1ac5a8a49748f0e9d0bb719015b35d84",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "10d942f482a81f0fb6fbfd1b290df3fe1ac5a8a49748f0e9d0bb719015b35d84"
+    },
+    "FSM2-CORE-353": {
+      "beforeSHA256": "2a148d0fa478b5395e7efa01f033ce8edec3ad50369d5ec0d06f38f6fb30b7b5",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "2a148d0fa478b5395e7efa01f033ce8edec3ad50369d5ec0d06f38f6fb30b7b5"
+    },
+    "FSM2-CORE-452": {
+      "beforeSHA256": "865ecac3d963c48c4290a11c5643a464fd33da0338677173c2a30489d3f5bc9e",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "865ecac3d963c48c4290a11c5643a464fd33da0338677173c2a30489d3f5bc9e"
+    },
+    "moducbt-27773-q01": {
+      "beforeSHA256": "beecfcfab323ee439cd479d9f9b4194543ff320b9e3edcccb04435c0968bb3c2",
+      "selectedAnswer": 3,
+      "findings": [
+        "OCR 오염·PDF 머리말 제거"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "b0990e145505d537c9a29f761c3153a1362f875431af2a21f516587588e57227"
+    },
+    "moducbt-27777-q02": {
+      "beforeSHA256": "d5c659eb50aee59cfb4ff2ab64f03ea5372a0f051e8a8c8c7c2a8ea5c5a2d996",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "d5c659eb50aee59cfb4ff2ab64f03ea5372a0f051e8a8c8c7c2a8ea5c5a2d996"
+    },
+    "FSM2-CORE-202": {
+      "beforeSHA256": "9808799babd450e1f3d9a0b2bd6310a4e3ff0b3f9636e45644dc9317e8fb56a0",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "9808799babd450e1f3d9a0b2bd6310a4e3ff0b3f9636e45644dc9317e8fb56a0"
+    },
+    "moducbt-27774-q02": {
+      "beforeSHA256": "54f2e4cadcf2972818a382a560c19b645844fea7649b5291a240fa549b6d46b5",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "54f2e4cadcf2972818a382a560c19b645844fea7649b5291a240fa549b6d46b5"
+    },
+    "moducbt-27778-q02": {
+      "beforeSHA256": "97dbc97d24a19d2a5e0eacba3241a7de3f90f31ccb042c1221eee961f2b06683",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "97dbc97d24a19d2a5e0eacba3241a7de3f90f31ccb042c1221eee961f2b06683"
+    },
+    "moducbt-27779-q01": {
+      "beforeSHA256": "243347711d2fe4935f24888f089a40a4dcbb344fd8e4f4729ea0421a13b81799",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "243347711d2fe4935f24888f089a40a4dcbb344fd8e4f4729ea0421a13b81799"
+    },
+    "moducbt-27780-q01": {
+      "beforeSHA256": "472e71f8acfa695c4b5c1855a54ff8416610e79acb57500e55b249a61e72fd3c",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "472e71f8acfa695c4b5c1855a54ff8416610e79acb57500e55b249a61e72fd3c"
+    },
+    "moducbt-27781-q03": {
+      "beforeSHA256": "b8a43a7b62dc3f1f9ef1d16cf469c68c784c6fbeeb6247684efe6ce30227c664",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "b8a43a7b62dc3f1f9ef1d16cf469c68c784c6fbeeb6247684efe6ce30227c664"
+    },
+    "moducbt-27782-q03": {
+      "beforeSHA256": "9e6f417e4536aaca3784ebd578e0f64b646cceb78133d6e25a64b1b20584d725",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "9e6f417e4536aaca3784ebd578e0f64b646cceb78133d6e25a64b1b20584d725"
+    },
+    "FSM2-CORE-052": {
+      "beforeSHA256": "7270e132151a834e5ed3a22afee189d47c28ba823febbee28d2b421cf5d79a90",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "7270e132151a834e5ed3a22afee189d47c28ba823febbee28d2b421cf5d79a90"
+    },
+    "FSM2-CORE-252": {
+      "beforeSHA256": "d278bef7487b4b9754bef0da5e60eb1e21a59d0360bdd2c2032980e14c2ee518",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "d278bef7487b4b9754bef0da5e60eb1e21a59d0360bdd2c2032980e14c2ee518"
+    },
+    "FSM2-CORE-301": {
+      "beforeSHA256": "9d52143177f095f0f5f6cfece7923fb004f18b287f3e63868ded346113dca8eb",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "9d52143177f095f0f5f6cfece7923fb004f18b287f3e63868ded346113dca8eb"
+    },
+    "FSM2-CORE-351": {
+      "beforeSHA256": "f0cc78ead8cdecbc72b6089fc46500a9ed068a2303a2dff594ae4099c04c82b5",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "f0cc78ead8cdecbc72b6089fc46500a9ed068a2303a2dff594ae4099c04c82b5"
+    },
+    "FSM2-CORE-403": {
+      "beforeSHA256": "3bb2b6045de50f07d0a3510b83cbe768b0c88e1a1b1fbd434d4f371b4e9aad25",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "3bb2b6045de50f07d0a3510b83cbe768b0c88e1a1b1fbd434d4f371b4e9aad25"
+    },
+    "FSM2-CORE-453": {
+      "beforeSHA256": "89ab531f8f3864026c2b43b1d296798f4e0fd61566740d2d253fd5e6bef0ddb7",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "89ab531f8f3864026c2b43b1d296798f4e0fd61566740d2d253fd5e6bef0ddb7"
+    },
+    "moducbt-27773-q08": {
+      "beforeSHA256": "ccb7b70242964a636b836587436d734a195ca4c3ab6bc94df3a5daa7c61096ea",
+      "selectedAnswer": 3,
+      "findings": [
+        "OCR 오염·PDF 머리말 제거"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "588e830bb8150e45ffac9176177bc3ddb696aaad820b95e2b856f6be1844fb74"
+    },
+    "moducbt-27778-q08": {
+      "beforeSHA256": "593d6d30ef1cde04796576420b67173f5efd19fefb59c55477d3e0e2efa67468",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "593d6d30ef1cde04796576420b67173f5efd19fefb59c55477d3e0e2efa67468"
+    },
+    "moducbt-27779-q05": {
+      "beforeSHA256": "869c2de2b944727058a3329399c22f2c9f30a7cd2614d1030072e1b7ebc6b5a0",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "869c2de2b944727058a3329399c22f2c9f30a7cd2614d1030072e1b7ebc6b5a0"
+    },
+    "moducbt-27780-q02": {
+      "beforeSHA256": "9ee101506f35900b9d2c5e52ff0648d1b79be88a29bf4a327490e89ba27d7508",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "9ee101506f35900b9d2c5e52ff0648d1b79be88a29bf4a327490e89ba27d7508"
+    },
+    "moducbt-27781-q04": {
+      "beforeSHA256": "2f84c40ba24d35abf119e9531c00cd25057ac3397612ca57173acf343a029beb",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "2f84c40ba24d35abf119e9531c00cd25057ac3397612ca57173acf343a029beb"
+    },
+    "moducbt-27782-q04": {
+      "beforeSHA256": "1f54c2e7fcc9aa054ff76d416ab15f7228ec597d6eb8c93760d3ca4ab0765e1b",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "1f54c2e7fcc9aa054ff76d416ab15f7228ec597d6eb8c93760d3ca4ab0765e1b"
+    },
+    "FSM2-CORE-258": {
+      "beforeSHA256": "1ca21fb7eab08dc2c1a17acb8f1f18f21fdf37884198bad4653f59094b1520e7",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "1ca21fb7eab08dc2c1a17acb8f1f18f21fdf37884198bad4653f59094b1520e7"
+    },
+    "FSM2-CORE-305": {
+      "beforeSHA256": "375e2d065502c5c9093965e538634e50551ec0b67e10553f5d445d69943a3ed9",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "375e2d065502c5c9093965e538634e50551ec0b67e10553f5d445d69943a3ed9"
+    },
+    "FSM2-CORE-352": {
+      "beforeSHA256": "9b4cd5e49a5347308c19140bef8f184854afbdf986253a873d3d22c263646842",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "9b4cd5e49a5347308c19140bef8f184854afbdf986253a873d3d22c263646842"
+    },
+    "FSM2-CORE-404": {
+      "beforeSHA256": "7ab21edc1b9d5b60eae37e93383bf767765688437f7d2b17aef2a0c1e27fb019",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "7ab21edc1b9d5b60eae37e93383bf767765688437f7d2b17aef2a0c1e27fb019"
+    },
+    "FSM2-CORE-454": {
+      "beforeSHA256": "82f17cf6e1f90e99d472d216a75d4732b6f303206e11f5c85cd6f25bf23d42b3",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "82f17cf6e1f90e99d472d216a75d4732b6f303206e11f5c85cd6f25bf23d42b3"
+    },
+    "moducbt-27775-q05": {
+      "beforeSHA256": "94579b0f3217be63f29aca0ea8ebe76638b19b2ebbfceed85d53e26f2d6ce3b6",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "94579b0f3217be63f29aca0ea8ebe76638b19b2ebbfceed85d53e26f2d6ce3b6"
+    },
+    "moducbt-27776-q04": {
+      "beforeSHA256": "f1b59308ebdc77dc479e9d0b855a987e46a294cf61c70e426cd9126bb5f10a61",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "f1b59308ebdc77dc479e9d0b855a987e46a294cf61c70e426cd9126bb5f10a61"
+    },
+    "moducbt-27779-q04": {
+      "beforeSHA256": "90d3119f059bd1c68b062be58fe8b0ca65806203225cc395dca1a1a651c59e4c",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "90d3119f059bd1c68b062be58fe8b0ca65806203225cc395dca1a1a651c59e4c"
+    },
+    "FSM2-CORE-105": {
+      "beforeSHA256": "0c0820fa39256c124c5bd83c2b268f365758df6549c61b45369b1d34b0481126",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "0c0820fa39256c124c5bd83c2b268f365758df6549c61b45369b1d34b0481126"
+    },
+    "FSM2-CORE-154": {
+      "beforeSHA256": "9009265574fdf62158d7ac1194afaf4505db96673386dbfaab3fc81e83ac32a0",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "9009265574fdf62158d7ac1194afaf4505db96673386dbfaab3fc81e83ac32a0"
+    },
+    "FSM2-CORE-304": {
+      "beforeSHA256": "8805767a233fcbedcb9f6a335f9c7528e90045f040da9327f90b3b129456faeb",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "8805767a233fcbedcb9f6a335f9c7528e90045f040da9327f90b3b129456faeb"
+    },
+    "moducbt-27776-q05": {
+      "beforeSHA256": "1e847888fe1d95ac1f104024c91ebbe1fb99817c09ce2b1cb2ea7af9096071dc",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "1e847888fe1d95ac1f104024c91ebbe1fb99817c09ce2b1cb2ea7af9096071dc"
+    },
+    "moducbt-27778-q06": {
+      "beforeSHA256": "81d75cffea683fa109f103ec53f7421ecbe5a8253782b29f4910269df2300b6c",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "81d75cffea683fa109f103ec53f7421ecbe5a8253782b29f4910269df2300b6c"
+    },
+    "FSM2-CORE-155": {
+      "beforeSHA256": "88f4caee6c1386dd6c99e078dd3e839268d995c0598b3814a4c49f4935deb815",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "88f4caee6c1386dd6c99e078dd3e839268d995c0598b3814a4c49f4935deb815"
+    },
+    "FSM2-CORE-256": {
+      "beforeSHA256": "8f2c50d193ea68ee787414546f14c0ecdd67397fb17350e4c9370b1dca54a86b",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "8f2c50d193ea68ee787414546f14c0ecdd67397fb17350e4c9370b1dca54a86b"
+    },
+    "moducbt-27774-q06": {
+      "beforeSHA256": "c3647d0130b3c0db1fa516ff9e65e7e99664d78787447efdc1409ea563bf9f8f",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "c3647d0130b3c0db1fa516ff9e65e7e99664d78787447efdc1409ea563bf9f8f"
+    },
+    "moducbt-27777-q06": {
+      "beforeSHA256": "af2a8d8cdb5c522545ee49d125cda200c20689bfb6b47cfa1a4e133875b35100",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "af2a8d8cdb5c522545ee49d125cda200c20689bfb6b47cfa1a4e133875b35100"
+    },
+    "moducbt-27778-q07": {
+      "beforeSHA256": "4ff98662c99d4562cec2574aef555c4579e267a64d7a7d6f224aec9767638925",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "4ff98662c99d4562cec2574aef555c4579e267a64d7a7d6f224aec9767638925"
+    },
+    "moducbt-27779-q07": {
+      "beforeSHA256": "2a2dd4871755d32483f3d47818b6d8ec5dcdb0719ab499286b3262750f0f6f99",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "2a2dd4871755d32483f3d47818b6d8ec5dcdb0719ab499286b3262750f0f6f99"
+    },
+    "moducbt-27781-q08": {
+      "beforeSHA256": "bf8402ea3cbd23697e1576e69ee09298a83fefbec0144c2e36a7bebfef95c9bb",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "bf8402ea3cbd23697e1576e69ee09298a83fefbec0144c2e36a7bebfef95c9bb"
+    },
+    "FSM2-CORE-056": {
+      "beforeSHA256": "13d63aebb72ee0e5e76fba8353b114cc0cbff3d3b904995ab0ffbc766874c4a5",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "13d63aebb72ee0e5e76fba8353b114cc0cbff3d3b904995ab0ffbc766874c4a5"
+    },
+    "FSM2-CORE-206": {
+      "beforeSHA256": "78d20bd3433cea4a39075a8db3cf79f07c42ad67c17a4c624ee8d308efde258d",
+      "selectedAnswer": 3,
+      "findings": [
+        "변형 해설의 잘못된 연결어 교정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "f53aeeedf28321c4e0cb542b93d0848b108fac3732c916bf149f7b2061245b9a"
+    },
+    "FSM2-CORE-257": {
+      "beforeSHA256": "0e91205db4f4f027217e2e4aa29f36dd6e67d0f4f4e2507b34bc266779e24973",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "0e91205db4f4f027217e2e4aa29f36dd6e67d0f4f4e2507b34bc266779e24973"
+    },
+    "FSM2-CORE-307": {
+      "beforeSHA256": "8352d0931d4df8cff246104847964d7dab4ebf48408f6fabc985c9c37759c33d",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "8352d0931d4df8cff246104847964d7dab4ebf48408f6fabc985c9c37759c33d"
+    },
+    "FSM2-CORE-408": {
+      "beforeSHA256": "2e6968d019a863588c8e955c835c4658651091d4bc0d3c2c21c07de6fc3baee9",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "2e6968d019a863588c8e955c835c4658651091d4bc0d3c2c21c07de6fc3baee9"
+    },
+    "moducbt-27777-q08": {
+      "beforeSHA256": "8e8faf0ce8cc99aaf0442d6729bae04aa27254a1f55c6b8a2ab679c899d871c4",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "8e8faf0ce8cc99aaf0442d6729bae04aa27254a1f55c6b8a2ab679c899d871c4"
+    },
+    "moducbt-27782-q06": {
+      "beforeSHA256": "6fcdd79a72b633ddb703e102051fc93f8ed05e6e146fa13a1815b48069b6a7a1",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "6fcdd79a72b633ddb703e102051fc93f8ed05e6e146fa13a1815b48069b6a7a1"
+    },
+    "FSM2-CORE-208": {
+      "beforeSHA256": "4d0d8f4f63ce06bf40ed709a54c6f44245d7f5661af852fb185090297bf8bca0",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "4d0d8f4f63ce06bf40ed709a54c6f44245d7f5661af852fb185090297bf8bca0"
+    },
+    "FSM2-CORE-456": {
+      "beforeSHA256": "f9d47019fd96cd9c8c53e11b375097bc4aec5690ed5155f04525d7a396de996d",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "f9d47019fd96cd9c8c53e11b375097bc4aec5690ed5155f04525d7a396de996d"
+    },
+    "FSM2-MOCK-013-11": {
+      "beforeSHA256": "527083adb70960744f36b11cd303a528144812404c12e5c455350dd873e055f6",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "527083adb70960744f36b11cd303a528144812404c12e5c455350dd873e055f6"
+    },
+    "FSM2-MOCK-013-13": {
+      "beforeSHA256": "acf4a3e9ebe1668f397fc71c3e2fcd3948d582825dfea8bf26d41f3c6a4b2aaf",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "acf4a3e9ebe1668f397fc71c3e2fcd3948d582825dfea8bf26d41f3c6a4b2aaf"
+    },
+    "FSM2-MOCK-013-14": {
+      "beforeSHA256": "bcb2f831a78f68a0bccef6fd26ca6efa1c94ed98288fc128dc0b16848d9d152b",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "bcb2f831a78f68a0bccef6fd26ca6efa1c94ed98288fc128dc0b16848d9d152b"
+    },
+    "FSM2-MOCK-013-18": {
+      "beforeSHA256": "ba49dcdd5559f56f068a36f27015f500b0fcf6b73ff6d90691d85170ae9573a5",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "ba49dcdd5559f56f068a36f27015f500b0fcf6b73ff6d90691d85170ae9573a5"
+    },
+    "FSM2-MOCK-013-20": {
+      "beforeSHA256": "4da1deb04816819627fd4537525041eab7b71adc1d36259f2d34e17f1638c5ab",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "4da1deb04816819627fd4537525041eab7b71adc1d36259f2d34e17f1638c5ab"
+    },
+    "moducbt-27782-q16": {
+      "beforeSHA256": "055b923d5dea042a98b67d0cf7a8ebfcd9a0f84ee3e3c24918434d14d84d58f9",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "055b923d5dea042a98b67d0cf7a8ebfcd9a0f84ee3e3c24918434d14d84d58f9"
+    },
+    "FSM2-CORE-466": {
+      "beforeSHA256": "61f36dcb3ee5c9fd1ba9c06d6f277f969ecf99e825779bcd0ddc12747dc2c223",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "61f36dcb3ee5c9fd1ba9c06d6f277f969ecf99e825779bcd0ddc12747dc2c223"
+    },
+    "moducbt-27774-q16": {
+      "beforeSHA256": "ed5d9df14eba2737c498b3c01ad3d73a8105071b57255f242ab5a5b19b97596a",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "ed5d9df14eba2737c498b3c01ad3d73a8105071b57255f242ab5a5b19b97596a"
+    },
+    "moducbt-27777-q15": {
+      "beforeSHA256": "4e79f070631d9b80ff933d3dd9ba0ed9a69ff5d5f550820fc617754516e58f61",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "4e79f070631d9b80ff933d3dd9ba0ed9a69ff5d5f550820fc617754516e58f61"
+    },
+    "FSM2-CORE-066": {
+      "beforeSHA256": "111634f8f3aa717d6b2341439177fe93ce7dbe98edc2ed7b9a21bf082dd62659",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "111634f8f3aa717d6b2341439177fe93ce7dbe98edc2ed7b9a21bf082dd62659"
+    },
+    "FSM2-CORE-215": {
+      "beforeSHA256": "4f802b95022457199ce920e8d0b83980033ef9812a51594860a861fe632ee165",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "4f802b95022457199ce920e8d0b83980033ef9812a51594860a861fe632ee165"
+    },
+    "moducbt-27779-q11": {
+      "beforeSHA256": "8df457676a6134427ec77d74c9f06ea5c348d27d40c3c99bb7786ccd9d855454",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "8df457676a6134427ec77d74c9f06ea5c348d27d40c3c99bb7786ccd9d855454"
+    },
+    "moducbt-27780-q10": {
+      "beforeSHA256": "a17bedd0e919551a5947324629b2d0aabcb10c3c75151d259934f335bee63341",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "a17bedd0e919551a5947324629b2d0aabcb10c3c75151d259934f335bee63341"
+    },
+    "moducbt-27782-q09": {
+      "beforeSHA256": "75253470ac7f368c87bf42dd077824ab35a7983b4807dad0b769bf448f03d16a",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "75253470ac7f368c87bf42dd077824ab35a7983b4807dad0b769bf448f03d16a"
+    },
+    "FSM2-CORE-311": {
+      "beforeSHA256": "4d68f44949506bcee51e776379c37d951fcd20f350945167ae0e1f297e380234",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "4d68f44949506bcee51e776379c37d951fcd20f350945167ae0e1f297e380234"
+    },
+    "FSM2-CORE-360": {
+      "beforeSHA256": "6307e78c26051362da64f3b11f66192748e9194ae202fb34332df6814076febf",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "6307e78c26051362da64f3b11f66192748e9194ae202fb34332df6814076febf"
+    },
+    "FSM2-CORE-459": {
+      "beforeSHA256": "143e52c88592c1ffc74a5be241cea5e3350018e1518223312bf8cbdda3322776",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "143e52c88592c1ffc74a5be241cea5e3350018e1518223312bf8cbdda3322776"
+    },
+    "moducbt-27776-q10": {
+      "beforeSHA256": "aaa6c598a36ea19d6592d0aa3e172029828f9a26cc64cd34f3b16af0f51fc663",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "aaa6c598a36ea19d6592d0aa3e172029828f9a26cc64cd34f3b16af0f51fc663"
+    },
+    "moducbt-27778-q09": {
+      "beforeSHA256": "2fdf407f9a4a38750cf3b7e844b3c0420386f3623946a6a1a60c7a5d22c8f333",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "2fdf407f9a4a38750cf3b7e844b3c0420386f3623946a6a1a60c7a5d22c8f333"
+    },
+    "FSM2-MOCK-018-17": {
+      "beforeSHA256": "313051ea87d6dd6c0edf4af38de13f148eb416eac121cdae6c693a5e91c21462",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "313051ea87d6dd6c0edf4af38de13f148eb416eac121cdae6c693a5e91c21462"
+    },
+    "FSM2-MOCK-018-20": {
+      "beforeSHA256": "043ec90c8b2be23de81482ba1ea1e38a0e5a8c0e8d6ad4d5af9f1f7b5f2c3728",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "043ec90c8b2be23de81482ba1ea1e38a0e5a8c0e8d6ad4d5af9f1f7b5f2c3728"
+    },
+    "FSM2-CORE-160": {
+      "beforeSHA256": "84ea0010f8eca87385b7b1a32b944ffcd3a840124051af917b85858a4b62b185",
+      "selectedAnswer": 1,
+      "findings": [
+        "변형 해설의 잘못된 연결어 교정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "d65b5925a37f912c255b10204b79fa3a047bdfae34796039c65fcea3b4cca460"
+    },
+    "FSM2-CORE-259": {
+      "beforeSHA256": "dafa8bac9ddd825db3ff96ab3aef47d3f540f9a9935f99b6ba49ce86317ecc1e",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "dafa8bac9ddd825db3ff96ab3aef47d3f540f9a9935f99b6ba49ce86317ecc1e"
+    },
+    "moducbt-27776-q09": {
+      "beforeSHA256": "68fd2abb55efe448f4722a2db79a7bb82fcb6583de3d304561dd079a8b349834",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "68fd2abb55efe448f4722a2db79a7bb82fcb6583de3d304561dd079a8b349834"
+    },
+    "moducbt-27776-q11": {
+      "beforeSHA256": "e450edcbe22388e3ed638eed3e49cffa9b7b6712c24913e4b258ac9ec9e3b617",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "e450edcbe22388e3ed638eed3e49cffa9b7b6712c24913e4b258ac9ec9e3b617"
+    },
+    "FSM2-CORE-159": {
+      "beforeSHA256": "cb971f1dfe0eb73a082579d85f08189e040ca62f824e6152a62abe6110d97fce",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "cb971f1dfe0eb73a082579d85f08189e040ca62f824e6152a62abe6110d97fce"
+    },
+    "FSM2-CORE-161": {
+      "beforeSHA256": "799de22e4f33f0ae31e28c1809adce5269e579a23b43b8c9751af01281464216",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "799de22e4f33f0ae31e28c1809adce5269e579a23b43b8c9751af01281464216"
+    },
+    "moducbt-27776-q14": {
+      "beforeSHA256": "308a0a874e39c840bb08f12033d428ba3cb3a09ebbb56a3bb45ceade395de0c4",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "308a0a874e39c840bb08f12033d428ba3cb3a09ebbb56a3bb45ceade395de0c4"
+    },
+    "moducbt-27778-q14": {
+      "beforeSHA256": "73d04edee01bb79a01d5be71d560a7d3f6ec4b7b4ed8885b9c875a213bc05878",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "73d04edee01bb79a01d5be71d560a7d3f6ec4b7b4ed8885b9c875a213bc05878"
+    },
+    "FSM2-CORE-164": {
+      "beforeSHA256": "772b3de1635bc01a12e8773744599ba3c5b911a7ffb5d266c0f97a7585267175",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "772b3de1635bc01a12e8773744599ba3c5b911a7ffb5d266c0f97a7585267175"
+    },
+    "FSM2-CORE-264": {
+      "beforeSHA256": "263bf3279fa28b5b613fd07ce85c5f6335488f256844972be7a12a9d53d95bc8",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "263bf3279fa28b5b613fd07ce85c5f6335488f256844972be7a12a9d53d95bc8"
+    },
+    "FSM2-CORE-464": {
+      "beforeSHA256": "7304dc9682b6ab77d34c9b3fddb678c0b10206c7c98a72d44d2b212ae08b5c49",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "7304dc9682b6ab77d34c9b3fddb678c0b10206c7c98a72d44d2b212ae08b5c49"
+    },
+    "moducbt-27776-q13": {
+      "beforeSHA256": "802659361e6c7e609b2fe2091d5c687da1fa1fe27e2abea62a98166d698059ce",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "802659361e6c7e609b2fe2091d5c687da1fa1fe27e2abea62a98166d698059ce"
+    },
+    "FSM2-CORE-163": {
+      "beforeSHA256": "5c54a5f876124066ef2afbe53371313408c8084c3b4e6d52c25acf2a963d0a91",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "5c54a5f876124066ef2afbe53371313408c8084c3b4e6d52c25acf2a963d0a91"
+    },
+    "FSM2-CORE-363": {
+      "beforeSHA256": "6f0ed06fff7369f00bfd7e9df763089120bf627208ee269254cf3d6a4d690a7e",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "6f0ed06fff7369f00bfd7e9df763089120bf627208ee269254cf3d6a4d690a7e"
+    },
+    "moducbt-27781-q19": {
+      "beforeSHA256": "b4711f29f72666d015cd2666cde9a2175a610139d3f0a31e00f2b2d543ff847a",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "b4711f29f72666d015cd2666cde9a2175a610139d3f0a31e00f2b2d543ff847a"
+    },
+    "FSM2-CORE-419": {
+      "beforeSHA256": "1b46c7173abd9e797c5937291853bbceb5735656cfe48a8832bf2a293a1b2b85",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "1b46c7173abd9e797c5937291853bbceb5735656cfe48a8832bf2a293a1b2b85"
+    },
+    "moducbt-27774-q38": {
+      "beforeSHA256": "be3ac420fde387501c84bbaf6de0f4f78abce76cc36d48bbcf204a711eedaa34",
+      "selectedAnswer": 3,
+      "findings": [
+        "작동 순서를 제시된 설정으로 한정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "99671bfd0d688be5c81b03fea73e55296e5d6662873edd0a5ef678258f7e7d2f"
+    },
+    "moducbt-27778-q36": {
+      "beforeSHA256": "a09b836c5afd4017b6bbd9acfc19a1e11bf10e591b5e372c54f64f95dfda71ed",
+      "selectedAnswer": 3,
+      "findings": [
+        "작동 순서를 제시된 설정으로 한정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "575dc98befff668079b0cb45f67697d6530f5abe27c2f35771daaaf2713663c6"
+    },
+    "moducbt-27779-q39": {
+      "beforeSHA256": "e93baef03574eadafc0a8d59b6f19d100df9b2c31a961bd1cda5d7cd6d251a9b",
+      "selectedAnswer": 2,
+      "findings": [
+        "작동 순서를 제시된 설정으로 한정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "972e4c6063204cb111875634a2f445601d694e0ab5b59f5adb649fafc6747a37"
+    },
+    "FSM2-CORE-088": {
+      "beforeSHA256": "eb34ce9893dc5815ce669133280430795c3e61c00b57fdd9cf626b1ae98e708a",
+      "selectedAnswer": 4,
+      "findings": [
+        "작동 순서를 제시된 설정으로 한정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "34bbb09be394bd1819573108f0bd4ae42af98c727aa34817f8d627822f5c8cc6"
+    },
+    "FSM2-CORE-286": {
+      "beforeSHA256": "a654fb08ac066025b44bd0c40e686390a0b8990c0a7f8928cb3d2cc1958f2e62",
+      "selectedAnswer": 2,
+      "findings": [
+        "작동 순서를 제시된 설정으로 한정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "7c291b7f3a653b85bf66d168ae82bb6c135aed302093fa60c8911a0544d03265"
+    },
+    "FSM2-CORE-339": {
+      "beforeSHA256": "24caed41f87aa0f4130cdc6b97d8ce1ef6bbc6f9b9af1df645eef78e132471d8",
+      "selectedAnswer": 1,
+      "findings": [
+        "작동 순서를 제시된 설정으로 한정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "bba4941ec7bef02a7132422382c5a29b604eb97c36bb6f5967d4491e99a57be3"
+    },
+    "moducbt-27779-q19": {
+      "beforeSHA256": "3aef6ca19969f22bfa7397e6d2c18e85346f83786afa23d05386c1452073c290",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "3aef6ca19969f22bfa7397e6d2c18e85346f83786afa23d05386c1452073c290"
+    },
+    "FSM2-CORE-319": {
+      "beforeSHA256": "496fbf745f9e21ebfbd16f04ea86de2b7c92e2d0a639d8f7faaf1750422b28d3",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "496fbf745f9e21ebfbd16f04ea86de2b7c92e2d0a639d8f7faaf1750422b28d3"
+    },
+    "moducbt-27780-q23": {
+      "beforeSHA256": "95d04bb128ec279f49d9049676cf743996ea577a7e034f9df06810d7cfa8c1ef",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "95d04bb128ec279f49d9049676cf743996ea577a7e034f9df06810d7cfa8c1ef"
+    },
+    "moducbt-27782-q25": {
+      "beforeSHA256": "f2df238b182de440e14a7a0dcd0571ef50447c86adf97e9e169e84e93517616b",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "f2df238b182de440e14a7a0dcd0571ef50447c86adf97e9e169e84e93517616b"
+    },
+    "moducbt-27782-q33": {
+      "beforeSHA256": "3748a3ac47c68daa92fa2fa1775d095ac93cbce1e5b322a808c69c60fc104dc6",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "3748a3ac47c68daa92fa2fa1775d095ac93cbce1e5b322a808c69c60fc104dc6"
+    },
+    "FSM2-CORE-483": {
+      "beforeSHA256": "3c254ef2a23383e4345447d03f0dcc73f9a4df1d7ffc13fdb17ca70fb9f76100",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "3c254ef2a23383e4345447d03f0dcc73f9a4df1d7ffc13fdb17ca70fb9f76100"
+    },
+    "moducbt-27774-q21": {
+      "beforeSHA256": "8a584405390e18f692ada6e5be94b55f4d69305694e489caee5fb66925f1221f",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "8a584405390e18f692ada6e5be94b55f4d69305694e489caee5fb66925f1221f"
+    },
+    "moducbt-27777-q14": {
+      "beforeSHA256": "a8933055d0018c60fcf23d9616dc2d7b870610b200bc75e81c5e69b94659afa9",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "a8933055d0018c60fcf23d9616dc2d7b870610b200bc75e81c5e69b94659afa9"
+    },
+    "FSM2-CORE-214": {
+      "beforeSHA256": "47d1eb6e4462f74aab47ae64e539f36658eee04bb32a270dc76bbce14a4ef736",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "47d1eb6e4462f74aab47ae64e539f36658eee04bb32a270dc76bbce14a4ef736"
+    },
+    "FSM2-MOCK-071-13": {
+      "beforeSHA256": "18fff8f7c4f62cc933e1d6429408ad085c4dd68c0fd2f2ea6f4444f6985d099f",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "18fff8f7c4f62cc933e1d6429408ad085c4dd68c0fd2f2ea6f4444f6985d099f"
+    },
+    "FSM2-MOCK-071-14": {
+      "beforeSHA256": "210e5a00a87c6ad9ab225030172b7b5f6a3fbdbafa26a4d354a4dc8bdb660878",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "210e5a00a87c6ad9ab225030172b7b5f6a3fbdbafa26a4d354a4dc8bdb660878"
+    },
+    "FSM2-MOCK-071-15": {
+      "beforeSHA256": "a8ced2a3c8fe10935eee50fd91b3715501bc075c54802b98e8161b9c30bda410",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "a8ced2a3c8fe10935eee50fd91b3715501bc075c54802b98e8161b9c30bda410"
+    },
+    "FSM2-MOCK-071-16": {
+      "beforeSHA256": "ec139044e1c28d116fb9cd3f0047d5e7c502f73052e1709ef3c0f2364f1b8683",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "ec139044e1c28d116fb9cd3f0047d5e7c502f73052e1709ef3c0f2364f1b8683"
+    },
+    "FSM2-MOCK-071-17": {
+      "beforeSHA256": "e212cf4515f0a1bb7f3c9950f246de9935b11fd700d85e078d0e19970d72d8a5",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "e212cf4515f0a1bb7f3c9950f246de9935b11fd700d85e078d0e19970d72d8a5"
+    },
+    "FSM2-MOCK-071-18": {
+      "beforeSHA256": "497b2d82f19fe8b47f7c50e89a815a4391112fbc41a863ec8d1916fc8d6f4da0",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "497b2d82f19fe8b47f7c50e89a815a4391112fbc41a863ec8d1916fc8d6f4da0"
+    },
+    "FSM2-MOCK-071-20": {
+      "beforeSHA256": "6ac4fb3aca355caa25dd4a63f936d85e9b5d907297f620701ca82fcd5a488fe9",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "6ac4fb3aca355caa25dd4a63f936d85e9b5d907297f620701ca82fcd5a488fe9"
+    },
+    "FSM2-CORE-067": {
+      "beforeSHA256": "d0016858d3920b787ec461166b2f2727d1a01c4bbfcc39ead1afde58dd3bf836",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "d0016858d3920b787ec461166b2f2727d1a01c4bbfcc39ead1afde58dd3bf836"
+    },
+    "FSM2-CORE-322": {
+      "beforeSHA256": "314bad10fad706779a3985453a83cdc36491fb42da0883d94cef721302cbc287",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "314bad10fad706779a3985453a83cdc36491fb42da0883d94cef721302cbc287"
+    },
+    "FSM2-CORE-032": {
+      "beforeSHA256": "3ae05b73077412a273267885045b37be84247c277d7ed94fc79b537cab0bd47f",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "3ae05b73077412a273267885045b37be84247c277d7ed94fc79b537cab0bd47f"
+    },
+    "moducbt-27777-q35": {
+      "beforeSHA256": "91e441af73cab3076163076cd1317dbbd63f9a53fceeea58c28e1282dcd8d1c9",
+      "selectedAnswer": 1,
+      "findings": [
+        "제거한 그림 참조·고시 서식 인용 교정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "83ba3903129d77b1029edd42eee29b66b75dfca38d8b8a15eaf7b8106070bba2"
+    },
+    "moducbt-27777-q30": {
+      "beforeSHA256": "a3adcfbd4fdf436b93ce799d0895f7b1ffd1072b0f0bcda3a7a9b818d2720737",
+      "selectedAnswer": 1,
+      "findings": [
+        "작동 순서를 제시된 설정으로 한정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "7b00f711e9da24eda85a58d7a4362e334322d9c3bbc7a8e5e51e153951411386"
+    },
+    "moducbt-27780-q30": {
+      "beforeSHA256": "82da55d134cb0f6a58cd62272bbbb3a24994cd51e181f33c50deda1ffd6b2670",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "82da55d134cb0f6a58cd62272bbbb3a24994cd51e181f33c50deda1ffd6b2670"
+    },
+    "moducbt-27782-q32": {
+      "beforeSHA256": "9bed371217b981a7c0e24b97784883701bc904f36a690bf3dcd9f2a62972ff96",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "9bed371217b981a7c0e24b97784883701bc904f36a690bf3dcd9f2a62972ff96"
+    },
+    "moducbt-27781-q35": {
+      "beforeSHA256": "b21c6376d0f656c1f63c83d2a6774c766774cbc270e575afab861f1cc8010575",
+      "selectedAnswer": 1,
+      "findings": [
+        "작동 순서를 제시된 설정으로 한정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "4bfafd2c3f2f0461e69e66df768d4ae767e615db446d25fb5506e3b0aaa9c389"
+    },
+    "moducbt-27780-q35": {
+      "beforeSHA256": "96c7cf66716afa4f8db4042275449ef2d778d9680dec941f9b145656d1e56e34",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "96c7cf66716afa4f8db4042275449ef2d778d9680dec941f9b145656d1e56e34"
+    },
+    "moducbt-27780-q36": {
+      "beforeSHA256": "9aef33f6324ff70ad2b2c940b8fb856c50326bc3a9c81dbd1452ba9370fd3f96",
+      "selectedAnswer": 3,
+      "findings": [
+        "고시 별표·별지 서식 인용 교정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "d3ae322a411ff0ec165fff3d58966d383ae2e330ab95a94a46e265a6744a37d8"
+    },
+    "FSM2-CORE-375": {
+      "beforeSHA256": "35cd1c5a60cd9fb49bc47af1c0c46eca0d3ba3c539d08c31d4565bc224bd5874",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "35cd1c5a60cd9fb49bc47af1c0c46eca0d3ba3c539d08c31d4565bc224bd5874"
+    },
+    "FSM2-CORE-141": {
+      "beforeSHA256": "bb46f954f18994c9953ca9fe65ef4f9d9178909cfd4533badc7c9f8279653de6",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "bb46f954f18994c9953ca9fe65ef4f9d9178909cfd4533badc7c9f8279653de6"
+    },
+    "moducbt-27780-q42": {
+      "beforeSHA256": "9bf03e4aa30a69628f7e896d93b381980623a9f4e6b202019f775d615163ac37",
+      "selectedAnswer": 1,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "9bf03e4aa30a69628f7e896d93b381980623a9f4e6b202019f775d615163ac37"
+    },
+    "FSM2-CORE-392": {
+      "beforeSHA256": "50a5635767bc163dd1f4562c6cb6d6f9e5e81683c7b691fbec9cee39d20bd966",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "50a5635767bc163dd1f4562c6cb6d6f9e5e81683c7b691fbec9cee39d20bd966"
+    },
+    "FSM2-MOCK-056-04": {
+      "beforeSHA256": "1dbc410f5e6b49fe040ddbc84640e6bfe019c26b018ea1f1cd38500cd56ece15",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "1dbc410f5e6b49fe040ddbc84640e6bfe019c26b018ea1f1cd38500cd56ece15"
+    },
+    "moducbt-27777-q43": {
+      "beforeSHA256": "bd252c8cdaa34c15f9f7e7b0719187c875c6a0e3fce1c08db13566a254e6e09e",
+      "selectedAnswer": 2,
+      "findings": [
+        "해당 없음의 법정 비대상 조건·수리 이력 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "82c7d7bccbae9eb8fdae25659605e5770c843f7cea68de7cc6d34b3ee2907a81"
+    },
+    "moducbt-27779-q43": {
+      "beforeSHA256": "17cd87571f6442e00c56749444c98c62f2eac68c01a4667a641bbf7871c8758a",
+      "selectedAnswer": 3,
+      "findings": [
+        "고시 별표·별지 서식 인용 교정"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "57c146b9032ab92feda0dbe4d0ab5b249b10a21cf480737b3732c469d9aff4e3"
+    },
+    "moducbt-27780-q43": {
+      "beforeSHA256": "505f60deb2bee256f5708bde09918260308e827e3618fa0daaa3aee5b0ddb871",
+      "selectedAnswer": 2,
+      "findings": [
+        "해당 없음의 법정 비대상 조건·수리 이력 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "a0216e6fbe118d9068d6a7e72fc215ecae3989e1143f239b865b3bc1e132fdbf"
+    },
+    "moducbt-27782-q43": {
+      "beforeSHA256": "89d25c7f657af9bb73051acd3d288cc048a0d577e389846fbb3e3dbbb78f40aa",
+      "selectedAnswer": 1,
+      "findings": [
+        "해당 없음의 법정 비대상 조건·수리 이력 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "b697967915a0b6ab61b44c23d99ca21989b7c9a21962f1fe635a93f6796cccd1"
+    },
+    "FSM2-MOCK-057-13": {
+      "beforeSHA256": "ba10408199f98f2d6d32ad0aad4015dd53dd7e2d6d2f2e780c0db134ef1b2977",
+      "selectedAnswer": 3,
+      "findings": [
+        "해당 없음의 법정 비대상 조건·수리 이력 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "210b2fbce1d2d645d9651fc451315030345ddc458fc8512d3bfba0de47ea177f"
+    },
+    "FSM2-MOCK-057-20": {
+      "beforeSHA256": "6c0f1f9c47f6ccdf2bee3c60789623acf3e1438b3fdf10fd52ba0cf544e3beab",
+      "selectedAnswer": 3,
+      "findings": [
+        "해당 없음의 법정 비대상 조건·수리 이력 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "2f47ba0c7718bbfd0b5338a9535087ad67199a2e816737a55e83b055602f7659"
+    },
+    "FSM2-CORE-093": {
+      "beforeSHA256": "8449482ecf514754317d939639c52ec7426b28073030f18f522cd2fdae45b7b6",
+      "selectedAnswer": 4,
+      "findings": [
+        "실측값별 판정·경계값 해설 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "a5ab8d4d34d23183987f3c1458723037e73c057581a42b08ec3e1632afe29858"
+    },
+    "FSM2-CORE-143": {
+      "beforeSHA256": "d91b89f042bd8bc58970028295217aac7ac568b3ca85e3b0a04989bbcb7d4e64",
+      "selectedAnswer": 1,
+      "findings": [
+        "실측값별 판정·경계값 해설 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "7e33336f0d2df4971aaec3a21fb832f4bc0594a474d4c1a76c472480ac912237"
+    },
+    "FSM2-CORE-193": {
+      "beforeSHA256": "8fc887884dfd5acb4c057d8fe41a470e41fb29a50a457c9783b66f6983d5e0ca",
+      "selectedAnswer": 1,
+      "findings": [
+        "실측값별 판정·경계값 해설 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "cdd2c1a438e94a791a699831b94c34e35f16281ecf56a0ebbebbb19c1557ad05"
+    },
+    "FSM2-CORE-243": {
+      "beforeSHA256": "c4debf61b2a4710435554efe89517df12ce01ebdde06479c1c2213ac28139fbe",
+      "selectedAnswer": 3,
+      "findings": [
+        "실측값별 판정·경계값 해설 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "7aa513990c4282bfac275e20366b7d973ca68c36a24ba0a14498eb82f79842a3"
+    },
+    "FSM2-CORE-293": {
+      "beforeSHA256": "3cdc0c1e34b79e1abcce870bdb26a1fb017cf40111a329569d7857d816da1a4d",
+      "selectedAnswer": 1,
+      "findings": [
+        "실측값별 판정·경계값 해설 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "99a8935ead883743ba8a384d6447071dc443f2ce12c1360d50135e68ccc68bb2"
+    },
+    "FSM2-CORE-343": {
+      "beforeSHA256": "fbe36d40e1213a2abfb0d0da9731ad10665c77d53eed8d40d712001bc8390977",
+      "selectedAnswer": 1,
+      "findings": [
+        "실측값별 판정·경계값 해설 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "d45e86c3a70ee82fa9f89011d55ee0376725640a30089262308bf6ec2a95184d"
+    },
+    "FSM2-CORE-393": {
+      "beforeSHA256": "ca3b3f6c4a605ae9b5a9faf83e54805d441ab7b2cb4cc195757e8a2b7f0529c6",
+      "selectedAnswer": 3,
+      "findings": [
+        "실측값별 판정·경계값 해설 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "6d0a3390be36f06ef6014c5a54dedf126e27ee44d3479b723956799f10a3dbe2"
+    },
+    "FSM2-CORE-443": {
+      "beforeSHA256": "2d3e9a3e71f1714aa73cbd8ec394e636bced4556fb2f73805075199f3f54589e",
+      "selectedAnswer": 1,
+      "findings": [
+        "실측값별 판정·경계값 해설 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "b79e93da66c3b9c7e0fb38581e7af74c3d373a5d3f7f69d4fa49580066256a2a"
+    },
+    "FSM2-CORE-493": {
+      "beforeSHA256": "6478ed5f4e7c6a6db2dd271ffe707d176edf4360282d5b044ee0853983de8f32",
+      "selectedAnswer": 2,
+      "findings": [
+        "실측값별 판정·경계값 해설 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "e165fd9905c8c0e0c535683a6d18da064d4dea21047079f9547a66911cedfd1c"
+    },
+    "moducbt-27775-q44": {
+      "beforeSHA256": "8cf392c1bd1ad7aca50ece550e9aaea273f1d7c79c4bcd7ef10b54545e7c2a22",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "8cf392c1bd1ad7aca50ece550e9aaea273f1d7c79c4bcd7ef10b54545e7c2a22"
+    },
+    "moducbt-27777-q48": {
+      "beforeSHA256": "cdc5dd7c265ba0b07911f76d9029f6a5b34a8ce0ad261f8f64cb112138b28adf",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "cdc5dd7c265ba0b07911f76d9029f6a5b34a8ce0ad261f8f64cb112138b28adf"
+    },
+    "FSM2-MOCK-058-07": {
+      "beforeSHA256": "ba944b7cccba84d3b0f80362d1f60ae16f423b613f28b013fcdf55ccf6a541b8",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "ba944b7cccba84d3b0f80362d1f60ae16f423b613f28b013fcdf55ccf6a541b8"
+    },
+    "moducbt-27778-q44": {
+      "beforeSHA256": "0c4565f1425a38904756ac9c37954b7c08f2d011be76dda19bd6d81c97f2b11a",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "0c4565f1425a38904756ac9c37954b7c08f2d011be76dda19bd6d81c97f2b11a"
+    },
+    "moducbt-27779-q48": {
+      "beforeSHA256": "bdc92829b0321be35c21c8d56e29ad72541180ce64703a5f03268304c8cff2d2",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "bdc92829b0321be35c21c8d56e29ad72541180ce64703a5f03268304c8cff2d2"
+    },
+    "moducbt-27781-q46": {
+      "beforeSHA256": "66f761e1ebcf2a7c38e91d931241a1c37dd89470b35a86b8f2111f8cdda0135c",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "66f761e1ebcf2a7c38e91d931241a1c37dd89470b35a86b8f2111f8cdda0135c"
+    },
+    "moducbt-27782-q48": {
+      "beforeSHA256": "133f677caed949524c870093bdba270c7ed20fb3dc7a913dbefa21af3ac2b263",
+      "selectedAnswer": 4,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "133f677caed949524c870093bdba270c7ed20fb3dc7a913dbefa21af3ac2b263"
+    },
+    "moducbt-27774-q50": {
+      "beforeSHA256": "ec8b32e37ed442bd829167da58118359a8f0558465a60fadef17dfc6e077c80b",
+      "selectedAnswer": 3,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "d25a824cfbb3aec188b8a7913c42de2c1744decc1208499e42041418020d6177"
+    },
+    "moducbt-27775-q50": {
+      "beforeSHA256": "e8c9a1a24b28eef4b22342c8eeb9b499f9231b0b0cd608919b2b2aab151ef437",
+      "selectedAnswer": 4,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "ce830bd6d7787fc4140d0cefe4b2741d327e75bb1e01015cfd1e45b979f46273"
+    },
+    "moducbt-27776-q50": {
+      "beforeSHA256": "b28e1f8035383c3208d0c2bfe1f0322d6143270d8dd5ed1a526fba121d5dc52a",
+      "selectedAnswer": 1,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "ca81a238b5e3d34ab0081fbceb20c29dc79776e219c251944b3d416c0bced40a"
+    },
+    "moducbt-27780-q50": {
+      "beforeSHA256": "f7a76de285ad25ff185a212354e88e7a26d521f33b06a9a656b705dd6d889a50",
+      "selectedAnswer": 1,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "9bb31563d225be88f0f7ff6ada934a9e182bfa2cfc47559492af91de5e67aec9"
+    },
+    "moducbt-27781-q50": {
+      "beforeSHA256": "9653896b152ec203208d416c676ff645cdccef0c92b207f2c16afb1d7e988fe5",
+      "selectedAnswer": 4,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "3f6ded2c3b3f8e7bc8f8f3d5145c8f2b95ca9c1199ce6955ea8e5fda78d5cbc8"
+    },
+    "moducbt-27782-q50": {
+      "beforeSHA256": "25f5b9bcf0244018b544024a7e87451ade942b8c0d0bdd64c9c856d767e79b32",
+      "selectedAnswer": 4,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "1aec48a2e8155ed7b2865c1b85811ac2dde7a49975eb43f1a5a1b10909585c6a"
+    },
+    "FSM2-CORE-100": {
+      "beforeSHA256": "cf79b9bbd8c502bf6979b90523cc728e782ac43b7d1a0a9a5516382b58532e2f",
+      "selectedAnswer": 4,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "4d9ac9154fde3f6a4a952f6391e44c1a388db5ddb10bb42bdb045209caf8e095"
+    },
+    "FSM2-CORE-150": {
+      "beforeSHA256": "07a2577c338e649742f8b22284a19b9938f3aac56cd9b68cf9a3be06aa3df353",
+      "selectedAnswer": 2,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "3518aba7610bf01751839a1b16cae70f80ac036f828b244626855236a2d9b5b6"
+    },
+    "FSM2-CORE-200": {
+      "beforeSHA256": "da9a9b4bed2bd6fc779e6d90b77964b00bddee99c34b3a99a06e2975f6c9b909",
+      "selectedAnswer": 3,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "b93b25e34aadd01e8daf186012d0ff328dad6ebffcc5cf136f7677c943dd5b79"
+    },
+    "FSM2-CORE-300": {
+      "beforeSHA256": "de87be8afaa433cc0824fca4482ebe8cbc2fcd561ec75d8b4c4fd92917f63abc",
+      "selectedAnswer": 1,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "b7f8359dd948017d99aaf91a54321b218bbf527db08ecf073258ab4d6cb7fe33"
+    },
+    "FSM2-CORE-400": {
+      "beforeSHA256": "f79abb516ea8f9257bfffc7a443d9a5cecadf3982a48c2e61618d74fce37606b",
+      "selectedAnswer": 4,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "cd9e79628c80ffa7bcd9b59d77609867c9156d293485320d0f9cdd45a22d4167"
+    },
+    "FSM2-CORE-450": {
+      "beforeSHA256": "1eca79c3842593b051a5b03e5491aa159d4ca79cb8750e9f6257eb65cc7cbf67",
+      "selectedAnswer": 1,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "7285d0225755d5b06642d793b0be932b25282dc6d5e6298fb78b01728276895f"
+    },
+    "FSM2-CORE-500": {
+      "beforeSHA256": "a2b99c5d3e9cafe8a138669b64dfe6936108c1ae859c52a7ee24ef6276d50992",
+      "selectedAnswer": 3,
+      "findings": [
+        "문항별 정오 판단을 해설 첫머리에 명시"
+      ],
+      "result": "revised_explanation",
+      "afterSHA256": "9eeffb96b8f2c54d73d7da2c1b643bd82101ba27cce9f08b3e12a1c7a4e2b4b5"
+    },
+    "FSM2-CORE-490": {
+      "beforeSHA256": "1379b367b2a2a94d7a35ec5f3fddfeaf33ec5bb76a920fdee2c941eb1e209b00",
+      "selectedAnswer": 2,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "1379b367b2a2a94d7a35ec5f3fddfeaf33ec5bb76a920fdee2c941eb1e209b00"
+    },
+    "FSM2-MOCK-073-07": {
+      "beforeSHA256": "86f684b33548c88ab19c76892d9947dfb7e3f1f5f90b18c019979bbe3c4b0796",
+      "selectedAnswer": 3,
+      "findings": [],
+      "result": "no_additional_issue_found",
+      "afterSHA256": "86f684b33548c88ab19c76892d9947dfb7e3f1f5f90b18c019979bbe3c4b0796"
+    }
+  },
+  "chapterFilesUnchanged": 28,
+  "heldOutsideScope": 152,
+  "answerKeyChanges": 0,
+  "findings": {
+    "OCR 오염·PDF 머리말 제거": 2,
+    "변형 해설의 잘못된 연결어 교정": 2,
+    "작동 순서를 제시된 설정으로 한정": 8,
+    "해당 없음의 법정 비대상 조건·수리 이력 명시": 5,
+    "고시 별표·별지 서식 인용 교정": 2,
+    "실측값별 판정·경계값 해설 명시": 9,
+    "문항별 정오 판단을 해설 첫머리에 명시": 13,
+    "제거한 그림 참조·고시 서식 인용 교정": 1
+  }
+}

@@ -31,4 +31,7 @@ status: "완료"
 
 성능확인검사는 내용연수 등이 경과한 날의 다음 달부터 **1년 이내**에 실시 · 합격 시 내용연수 등이 경과한 날의 다음 달부터 연장 · 내용연수 경과 후 10년 미만은 **3년**, 10년 이상은 **1년** · 일상 점검의 양호 판정으로 이 기간을 대신 적용하지 않음
 
+## 연장 이력과 법령의 위임 주체
+내용연수 대상과 연한은 **대통령령**으로 정함 · 연장 합격 사례는 이전 사용기간·검사 기한을 적법하게 지킨 이력을 전제 · 내용연수 경과 후 9·10·11년 사례를 최초 검사 없이 방치해도 된다는 뜻으로 읽지 않음
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=290451&amp;efYd=20261002&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">소방시설법 시행령</a> · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287833&amp;efYd=20260701&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">소방용품 품질관리 규칙</a> · 2026-10-14 확인</p>

@@ -32,4 +32,18 @@ status: "완료"
 
 실무교육 미이수는 **법정 상한 100만원 이하 / 시행령 별표의 부과기준 50만원**을 구분 · 상한을 묻는지 실제 부과액을 묻는지 먼저 확인
 
+## 함께 출제되는 다른 법률의 제재
+| 법률·행위 | 법정 상한 |
+|---|---|
+| 소방시설법 · 관리업 미등록 영업 | 3년 이하 징역 또는 3천만원 이하 벌금 |
+| 소방시설법 · 자체점검 결과 거짓 보고 | 300만원 이하 과태료 |
+| 소방기본법 · 소방자동차 출동 방해 | 5년 이하 징역 또는 5천만원 이하 벌금 |
+| 소방기본법 · 출동에 지장을 줌 | 200만원 이하 과태료 |
+| 소방기본법 · 관계인의 정당한 사유 없는 위급상황 미통보 | 500만원 이하 과태료 |
+| 소방기본법 · 한국소방안전원 유사 명칭 사용 | 200만원 이하 과태료 |
+| 화재예방법 · 법정 소방훈련·교육 미실시 | 300만원 이하 과태료 |
+| 화재예방법 · 보조자의 법정 실무교육 미이수 | 100만원 이하 과태료 |
+
+출동 **방해**의 형사처벌과 출동에 **지장을 준 경우**의 과태료를 구별
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=283705&amp;efYd=20260227&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">화재예방법</a> · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=236977&amp;efYd=20241201&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">소방시설법</a> · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=286459&amp;efYd=20260903&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">소방기본법</a> · 2026-10-14 확인</p>

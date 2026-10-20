@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "sourceIndexSHA256": "62bd8bea4fb974fed824a0695f1f9acb189e7bfe4bc4498415aabc97dd86690d",
+  "sourceIndexFilename": "outline-data.json",
+  "inputSHA256": {
+    "general740.json": "40e7a42ef9db1fc9ea798ce3ab513a49e5a755aee184fae0ca31341c90fcd321",
+    "hard740.json": "f7b317e46cf716c0a3532e2a9436b9b1b20fba6cd459de5efbeffeed8bda89af",
+    "core500.json": "9be4af283ee34c8fbce5f5254f474d65e531124e4d8ea9d0b9f985dad55fe91f",
+    "editorial-review.json": "47b9a66871ebbee9a0d9160395121fd6c9b15fed1e8b5fcd4ef4af1bcfdd4311",
+    "general-editorial.json": "8809c0ba904e98306040f9d7b04ce2555645ff933d559a2eb6958c100e289f65",
+    "hard-editorial.json": "a5b2378a9d1d9c3eb7ffb7e6ebafd936d22c6c38ca0c161fb9252d9bab8d052b"
+  },
+  "tableSHA256": "5e8aff95c51806879e76211c126efe502ee9994b05a5366940d59c889590b1de",
+  "rowCount": 2480,
+  "coreOriginalCount": 500,
+  "authoredCount": 1980,
+  "originalAdditionalReferenceCount": 500,
+  "sourceOptionExtractionCounts": {
+    "punctuated-numbers": 3,
+    "raw-source-only": 47,
+    "number-lines": 450
+  },
+  "subjectCounts": {
+    "1": 1488,
+    "2": 992
+  },
+  "summary": [
+    {
+      "type": "source_reconstruction",
+      "label": "핵심 원본",
+      "subject1": 254,
+      "subject2": 246,
+      "total": 500
+    },
+    {
+      "type": "source_variant",
+      "label": "핵심 변형",
+      "subject1": 254,
+      "subject2": 246,
+      "total": 500
+    },
+    {
+      "type": "general",
+      "label": "일반 기본",
+      "subject1": 490,
+      "subject2": 250,
+      "total": 740
+    },
+    {
+      "type": "advanced",
+      "label": "일반 심화",
+      "subject1": 490,
+      "subject2": 250,
+      "total": 740
+    }
+  ],
+  "coreDefinition": "isCore=true exactly for the 500 user-provided original reconstruction rows",
+  "answerNumberConvention": "1-based; reviewed rows explicitly approved by the publication release; held rows unverified",
+  "legacyInputs": "Historical pool files are preserved; use question-table.json for current type and core flags.",
+  "editorialCorrectionsSHA256": "d4b2cca113b71c29fb2061686cde7f41b8587ea8704aad94bfd768b8f6e464bf",
+  "editorialCorrectedCount": 167,
+  "semanticReview": "model-first-pass-targeted-corrections",
+  "publicationStatus": "partial",
+  "publicationApprovalSHA256": "c809775d607ec2c84762a82b7ea6309865bd7e9c82c670e1b0692033a72dd7a9",
+  "publishedCount": 2328,
+  "heldCount": 152
+}

@@ -35,4 +35,11 @@ status: "완료"
 
 점검표에서 **●가 종합점검만의 항목을 뜻하는 서식**은 작동점검 항목과 구분 · 결과란의 불량 ×와 항목 앞 ●는 다른 역할
 
+## 해당 없음과 수리 이력의 판정
+**법정 설치대상이 아니고 실제로도 없는 설비**의 항목에 / 적용 · 의무 설비 누락을 해당 없음으로 처리하지 않음
+
+최초 불량의 위치·현상을 기록 · 당일 수리해도 최초 불량을 지우지 않고 **수리 내용·재시험 값·일시** 추가
+
+압력은 [옥내소화전 방수성능](/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/)의 **0.17MPa 이상 0.7MPa 이하** 등 조건 적용 · 소화기는 [지시압력계](/fire-safety-manager-level2/written/fire-safety-theory/stored-pressure-extinguisher-gauge/)와 [내용연수](/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/)를 따로 판단 · 녹색 압력만으로 부식·내용연수까지 양호로 기록하지 않음
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000216342&amp;admRulId=31146&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">소방시설 자체점검 고시</a> · 2026-10-14 확인</p>

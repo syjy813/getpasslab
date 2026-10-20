@@ -48,4 +48,7 @@ status: "완료"
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>
 
+## 층별 구획의 경사로 예외
+매 층 구획 원칙에서 **지하 1층에서 지상으로 직접 연결하는 경사로 부위**는 제외 · 면적 구획 완화와 층별 구획 예외를 구분
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=291033&amp;efYd=20261006&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">건축물방화구조규칙 제14조</a> · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=290833&amp;efYd=20261006&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">건축법 시행령</a> · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=236977&amp;efYd=20241201&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">소방시설법</a> · 2026-10-14 확인</p>
