@@ -35,4 +35,7 @@ status: "완료"
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>
 
+## 두 패드를 떨어뜨려 붙이는 이유
+오른쪽 위 가슴과 왼쪽 옆가슴 패드는 **전류가 심장을 가로지르는 경로**를 형성 · 두 패드를 가슴 위쪽이나 왼쪽에 모으지 않음 · 실제 AED 패드 그림·음성 안내 우선
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.kdca.go.kr/injury/biz/injury/recsroom/ruleNdManual/ruleNdManualView.do?no=213" target="_blank" rel="noopener">2025 한국 심폐소생술 지침</a> · <a href="https://www.redcross.org/take-a-class/aed/using-an-aed/aed-steps" target="_blank" rel="noopener">적십자 AED 안내</a> · 2026-10-14 확인</p>

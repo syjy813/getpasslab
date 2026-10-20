@@ -69,6 +69,15 @@ def main():
             rows.append(q)
     assert len(rows)==2480 and len({q['id'] for q in rows})==2480
     rows.sort(key=lambda q:(q['subjectId'],q['chapterId'],not q['isCore'],q['questionType'],q['id']))
+    correction_path=ROOT/'docs/audits/2026-10-20-fire-persona-corrections/question-corrections.json'
+    corrections=read(correction_path)['corrections']
+    assert set(corrections) <= {q['id'] for q in rows}
+    for q in rows:
+        patch=corrections.get(q['id'])
+        if patch:
+            assert hashlib.sha256(json.dumps(q,ensure_ascii=False,sort_keys=True).encode()).hexdigest()==patch['beforeSHA256'], f"Stale correction: {q['id']}"
+            assert set(patch['set']) <= {'question','choices','explanation','sourceTextProvenance','editorialRevision'}
+            q.update(patch['set'])
     save(P/'question-table.json',rows)
     names={'source_reconstruction':'핵심 원본','source_variant':'핵심 변형','general':'일반 기본','advanced':'일반 심화'}
     summary=[]
@@ -82,7 +91,7 @@ def main():
       'coreDefinition':'isCore=true exactly for the 500 user-provided original reconstruction rows',
       'answerNumberConvention':'1-based; original displayed answers and authored draft answers are unverified',
       'legacyInputs':'Historical pool files are preserved; use question-table.json for current type and core flags.',
-      'semanticReview':'pending-one-combined-review','publicationStatus':'unpublished'}
+      'editorialCorrectionsSHA256':sha(correction_path),'editorialCorrectedCount':len(corrections),'semanticReview':'model-first-pass-targeted-corrections','publicationStatus':'unpublished'}
     save(P/'question-table-manifest.json',manifest)
     lines=['# 통합 문항 관리표','',
       '[필터 가능한 관리표 열기](question-table.html) · [통합 데이터](question-table.json)','',
@@ -114,7 +123,7 @@ def main():
       '- 이전 core500.json의 파일명과 핵심 태그는 과거 변형 풀의 제작 이력이다. 최신 관리·필터는 이 통합표의 isCore와 questionType을 사용한다. 원본과 변형을 동일 문항으로 표시하지 않는다.','',
       '## 원문 대조 상태','',
       f"원본 500개 중 선택지 4개를 구조적으로 분리한 행은 {500-parse_counts['raw-source-only']}개, 안전하게 분리하지 못해 choices=null로 둔 행은 {parse_counts['raw-source-only']}개다. 모두 원본 표시답·OCR·그림·현행 근거의 내용 검수 전이다. 선택지 미분리를 정상 4지선다로 표시하지 않으며 rawSourceText를 보존했다.",'',
-      '이 작업은 컬럼과 관리표 정리이며 원문 OCR 교정·정답 전수 검수·실서버 탑재가 아니다. 기존 작성 1,980개의 문제·선택지·답·해설 및 공개 src/public은 변경하지 않았다.','',
+      '전수 1차 모델 QA 후 167문항의 지문·선택지·해설·연결 이론을 보완했다. 원본 추출문·과거 집필 풀은 보존하고 ID별 해시 고정 보완 내역을 적용한다. 공개 승인·실서버 배포는 별도다. [보완 기록](../../audits/2026-10-20-fire-persona-corrections/README.md)','',
       '## 재생성','',
       '```bash','python3 scripts/build-fire-question-table.py --source /path/to/outline-data.json',
       'node scripts/verify-fire-question-table.mjs','```','']

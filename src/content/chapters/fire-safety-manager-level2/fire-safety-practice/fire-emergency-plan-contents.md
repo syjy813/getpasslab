@@ -38,4 +38,7 @@ status: "완료"
 
 소방계획서에는 공사 중 화기작업의 사전 안전조치·감독과 소방안전관리 업무수행 기록·유지도 포함 · 개인 자격 취득 일정이나 공사 계약의 하자보증 자체를 피난계획 항목으로 넣지 않음
 
+## 제연·방염 현황도 계획에 포함
+소방계획서에 **제연구획·방화구획 현황, 내부 마감재료·방염대상물품 사용 현황, 방화구조·설비 유지관리계획** 포함 · 전기·가스·위험물시설 현황도 대상물 위험 파악 자료 · 공사업자의 하자보증기간 자체와 구별
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287389&amp;efYd=20260701&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">화재예방법 시행령</a> · 2026-10-14 확인</p>

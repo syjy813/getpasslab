@@ -35,4 +35,11 @@ status: "완료"
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>
 
+## 기한 계산과 현황표 항목
+기간을 일수로 계산할 때 **사유 발생일·선임일 다음 날을 1일째**로 세고 월별 일수 적용 · 말일의 공휴일 연장 등 별도 조건 확인
+
+예: 용도변경 기재일 4월 10일 → 4월 11일부터 30일을 세어 5월 10일까지 선임 · 실제 선임일 5월 4일 → 5월 5일부터 14일을 세어 5월 18일까지 신고
+
+현황표에는 **대상물 명칭·등급 / 관리자 성명·선임일자 / 연락처 / 근무 위치(화재 수신기 또는 종합방재실)** 기재 · 자격증 발급일·최근 교육일은 이 목록에 해당하지 않음 · 게시 주체는 관계인 · 법정 현황표에 소방시설등 자체점검기록표를 함께 게시할 수 있음
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=287849&amp;efYd=20260701&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">화재예방법 시행규칙</a> · 2026-10-14 확인</p>

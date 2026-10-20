@@ -3,6 +3,9 @@ import { mkdtemp, mkdir, copyFile, readFile, writeFile, rm } from 'node:fs/promi
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
+const personaAudit='docs/audits/2026-10-20-fire-persona-corrections';
+const personaRelease=JSON.parse(await readFile(personaAudit+'/release.json','utf8'));
+const personaFiles=['scripts/read-before-fire-persona-corrections.mjs',personaAudit+'/release.json',...personaRelease.files.flatMap(r=>[r.path,r.originalFile])];
 const audit = 'docs/audits/2026-10-20-fire-level2-practice';
 const release = JSON.parse(await readFile(audit + '/release.json', 'utf8'));
 const helper = 'scripts/read-before-fire-practice.mjs';
@@ -11,7 +14,7 @@ const put = async (file, data) => { await mkdir(path.dirname(path.join(root, fil
 const run = code => spawnSync(process.execPath, ['--input-type=module', '-e', `import {readFile,readdir} from './${helper}';${code}`], { cwd: root, encoding: 'utf8' });
 try {
   const article = Object.keys(release.articles).find(file => release.articles[file].htmlShell);
-  for (const file of [helper, audit + '/release.json', audit + '/baseline.json', article, release.articles[article].htmlShell, ...release.files.flatMap(row => [row.path, ...(row.originalFile ? [row.originalFile] : [])])]) {
+  for (const file of [...personaFiles,helper, audit + '/release.json', audit + '/baseline.json', article, release.articles[article].htmlShell, ...release.files.flatMap(row => [row.path, ...(row.originalFile ? [row.originalFile] : [])])]) {
     await mkdir(path.dirname(path.join(root, file)), { recursive: true });
     await copyFile(file, path.join(root, file));
   }

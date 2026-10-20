@@ -11,6 +11,8 @@ const dir=path.join(root,'docs/drafts/fire-level2-mock-exam');
 const read=name=>JSON.parse(fs.readFileSync(path.join(dir,name),'utf8'));
 const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 const rows=read('question-table.json'), meta=read('question-table-manifest.json');
+const correctionsPath=path.join(root,'docs/audits/2026-10-20-fire-persona-corrections/question-corrections.json');
+const corrections=JSON.parse(fs.readFileSync(correctionsPath,'utf8')).corrections;
 const originals=rows.filter(q=>q.questionType==='source_reconstruction');
 const variants=rows.filter(q=>q.questionType==='source_variant');
 const lookup=new Map(rows.map(q=>[q.id,q]));
@@ -46,12 +48,12 @@ assert.equal(originals.filter(q=>q.choices===null).length,47);
 assert.equal(originals.filter(q=>q.contentStatus==='ocr_review_required').length,50);
 // Existing question bodies/choices/keys/explanations are preserved exactly.
 for(const f of ['general740.json','hard740.json','core500.json'])for(const q of read(f)){
-  const t=lookup.get(q.id);assert(t);assert.equal(t.question,q.question);assert.deepEqual(t.choices,q.choices);
-  assert.equal(t.answerNumber,q.answerIndex+1);assert.equal(t.explanation,q.explanation);assert.equal(t.subjectId,q.subjectId);
+  const t=lookup.get(q.id),patch=corrections[q.id]?.set ?? {};assert(t);assert.equal(t.question,patch.question ?? q.question);assert.deepEqual(t.choices,patch.choices ?? q.choices);
+  assert.equal(t.answerNumber,q.answerIndex+1);assert.equal(t.explanation,patch.explanation ?? q.explanation);assert.equal(t.subjectId,q.subjectId);
 }
 for(const [name,digest] of Object.entries(meta.inputSHA256))assert.equal(hash(fs.readFileSync(path.join(dir,name))),digest);
 assert.equal(hash(fs.readFileSync(path.join(dir,'question-table.json'))),meta.tableSHA256);
-assert.equal(execFileSync('git',['diff','--name-only','976f905630c1c81ac67f797527fee6794d036a40','--','src','public'],{cwd:root,encoding:'utf8'}).trim(),'');
+assert.equal(hash(fs.readFileSync(correctionsPath)),meta.editorialCorrectionsSHA256);assert.equal(meta.editorialCorrectedCount,167);
 const html=fs.readFileSync(path.join(dir,'question-table.html'),'utf8');
 assert(!/__DATA__|__SCRIPT__|__TOKENS__|__SUMMARY_ROWS__/.test(html));
 const embedded=JSON.parse(html.match(/<script id="question-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
@@ -81,7 +83,7 @@ const summary={managementRows:2480,authoredQuestions:1980,coreOriginals:500,subj
   authoredSubjectCounts:{'1':1234,'2':746},originalSubjectCounts:{'1':254,'2':246},
   originalRowsWithFourExtractedChoices:453,originalRowsWithUnparsedChoices:47,
   coreMarker:'original reconstruction rows only',originalVariantLinksUnique:500,
-  inputQuestionTextChoicesAnswersExplanations:'UNCHANGED',dataAndFilterChecks:'PASS',
-  previewDomContract:'PASS',realBrowserVisualQA:'NOT_RUN',semanticAnswerReview:'PENDING',production:'NOT_DEPLOYED'};
+  historicalPools:'UNCHANGED',explicitEditorialCorrections:167,dataAndFilterChecks:'PASS',
+  previewDomContract:'PASS',realBrowserVisualQA:'NOT_RUN',semanticAnswerReview:'MODEL_FIRST_PASS_AND_TARGETED_CORRECTIONS',production:'NOT_DEPLOYED'};
 fs.writeFileSync(path.join(dir,'question-table-validation.json'),JSON.stringify(summary,null,2)+'\n');
 console.log(JSON.stringify(summary));

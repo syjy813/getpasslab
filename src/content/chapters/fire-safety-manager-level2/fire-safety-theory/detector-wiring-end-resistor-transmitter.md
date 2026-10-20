@@ -38,4 +38,7 @@ P형 수신기의 감지기 회로배선에서 하나의 공통선에 접속 가
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="320" height="320" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>
 
+## 종단저항함과 전로저항
+점검·관리하기 쉬운 **회로 끝**에 종단저항 설치 · 전용함 높이 **1.5m 이내** · 종단감지기 설치 시 기판·외부 등에 구별 표시 · 감지기회로 **전로저항 50Ω 이하**는 종단저항 소자 자체의 정격값과 다른 기준
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000275086&amp;admRulId=83630&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 203</a> · 2026-10-14 확인</p>

@@ -35,4 +35,9 @@ status: "완료"
 
 연소 때 녹는 물품은 불꽃 접촉 시험 횟수 3회 이상 · 최대 연기밀도 400 이하 조건 확인 · 수영장은 운동시설 방염 대상 조건에서 제외
 
+## 대상 시설과 가구류의 구별
+근린생활시설 중 체력단련장, 방송국·촬영소는 방염대상 · 옥내 운동시설 중 수영장은 제외 · 다른 열거 시설에 해당하지 않아도 11층 이상 건축물은 아파트등 제외 조건으로 판단
+
+천장·벽에 부착·설치하는 법정 방염대상물품에서 **옷장·찬장 등 가구류는 제외** · 대상 건물의 모든 가구가 방염대상물품은 아님
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=290451&amp;efYd=20261002&amp;efYn=Y&amp;nwJoYnInfo=Y&amp;chrClsCd=010202&amp;ancYnChk=0" target="_blank" rel="noopener">소방시설법 시행령</a> · 2026-10-14 확인</p>

@@ -1,0 +1,23 @@
+{
+  "build": "PASS",
+  "builtRoutes": 545,
+  "allCheckScripts": 38,
+  "allCheckScriptsResult": "PASS",
+  "questionTableVerification": "PASS",
+  "modelRetest": {
+    "questions": 167,
+    "keyMatches": 167,
+    "independentBlindTest": false
+  },
+  "nativeProtection": {
+    "sourceAndAssetFiles": 849,
+    "changedChapters": 28,
+    "untouchedQuestionRows": 2313,
+    "preservedAnswerNumbers": 2480,
+    "rawSourcesPreserved": 500
+  },
+  "currentRevisionBrowserQA": "NOT_RUN_LOCALLY_NO_BROWSER_BINARY",
+  "CI": "PENDING_PUSH",
+  "production": "NOT_DEPLOYED",
+  "stillHeldFirstPassQuestions": 152
+}

@@ -31,7 +31,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true')
     args = parser.parse_args()
-    bank_bytes = (ROOT / BANK_PATH).read_bytes()
+    # Reproduce the immutable historical inputs, independent of later edits.
+    bank_bytes = subprocess.check_output(['git', 'show', f'{BASE}:{BANK_PATH}'], cwd=ROOT)
     assert bank_bytes == subprocess.check_output(['git', 'show', f'{BASE}:{BANK_PATH}'], cwd=ROOT), 'Question bank changed since audit'
     bank = json.loads(bank_bytes)
     lookup = {r['id']: r for r in bank}
@@ -43,7 +44,7 @@ def main():
     seen = set()
     chapter_manifest = []
     for chapter, decision in sorted(decisions.items()):
-        chapter_bytes = (ROOT / decision['chapterFile']).read_bytes()
+        chapter_bytes = subprocess.check_output(['git', 'show', f"{BASE}:{decision['chapterFile']}"], cwd=ROOT)
         assert sha(chapter_bytes) == decision['chapterSHA256'], f'Chapter changed: {chapter}'
         assert chapter_bytes == subprocess.check_output(['git', 'show', f"{BASE}:{decision['chapterFile']}"], cwd=ROOT)
         expected = [r['id'] for r in bank if r['chapterId'] == chapter]

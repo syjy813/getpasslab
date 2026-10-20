@@ -1,0 +1,2392 @@
+{
+  "baselineCommit": "8b4f765f2c3608d72e6e079347367339e61de424",
+  "targets": [
+    "moducbt-27777-q01",
+    "moducbt-27780-q03",
+    "moducbt-27782-q02",
+    "FSM2-CORE-201",
+    "FSM2-CORE-353",
+    "FSM2-CORE-452",
+    "moducbt-27773-q01",
+    "moducbt-27777-q02",
+    "FSM2-CORE-202",
+    "moducbt-27774-q02",
+    "moducbt-27778-q02",
+    "moducbt-27779-q01",
+    "moducbt-27780-q01",
+    "moducbt-27781-q03",
+    "moducbt-27782-q03",
+    "FSM2-CORE-052",
+    "FSM2-CORE-252",
+    "FSM2-CORE-301",
+    "FSM2-CORE-351",
+    "FSM2-CORE-403",
+    "FSM2-CORE-453",
+    "moducbt-27773-q08",
+    "moducbt-27778-q08",
+    "moducbt-27779-q05",
+    "moducbt-27780-q02",
+    "moducbt-27781-q04",
+    "moducbt-27782-q04",
+    "FSM2-CORE-258",
+    "FSM2-CORE-305",
+    "FSM2-CORE-352",
+    "FSM2-CORE-404",
+    "FSM2-CORE-454",
+    "moducbt-27775-q05",
+    "moducbt-27776-q04",
+    "moducbt-27779-q04",
+    "FSM2-CORE-105",
+    "FSM2-CORE-154",
+    "FSM2-CORE-304",
+    "moducbt-27776-q05",
+    "moducbt-27778-q06",
+    "FSM2-CORE-155",
+    "FSM2-CORE-256",
+    "moducbt-27774-q06",
+    "moducbt-27777-q06",
+    "moducbt-27778-q07",
+    "moducbt-27779-q07",
+    "moducbt-27781-q08",
+    "FSM2-CORE-056",
+    "FSM2-CORE-206",
+    "FSM2-CORE-257",
+    "FSM2-CORE-307",
+    "FSM2-CORE-408",
+    "moducbt-27777-q08",
+    "moducbt-27782-q06",
+    "FSM2-CORE-208",
+    "FSM2-CORE-456",
+    "FSM2-MOCK-013-11",
+    "FSM2-MOCK-013-13",
+    "FSM2-MOCK-013-14",
+    "FSM2-MOCK-013-18",
+    "FSM2-MOCK-013-20",
+    "moducbt-27782-q16",
+    "FSM2-CORE-466",
+    "moducbt-27774-q16",
+    "moducbt-27777-q15",
+    "FSM2-CORE-066",
+    "FSM2-CORE-215",
+    "moducbt-27779-q11",
+    "moducbt-27780-q10",
+    "moducbt-27782-q09",
+    "FSM2-CORE-311",
+    "FSM2-CORE-360",
+    "FSM2-CORE-459",
+    "moducbt-27776-q10",
+    "moducbt-27778-q09",
+    "FSM2-MOCK-018-17",
+    "FSM2-MOCK-018-20",
+    "FSM2-CORE-160",
+    "FSM2-CORE-259",
+    "moducbt-27776-q09",
+    "moducbt-27776-q11",
+    "FSM2-CORE-159",
+    "FSM2-CORE-161",
+    "moducbt-27776-q14",
+    "moducbt-27778-q14",
+    "FSM2-CORE-164",
+    "FSM2-CORE-264",
+    "FSM2-CORE-464",
+    "moducbt-27776-q13",
+    "FSM2-CORE-163",
+    "FSM2-CORE-363",
+    "moducbt-27781-q19",
+    "FSM2-CORE-419",
+    "moducbt-27774-q38",
+    "moducbt-27778-q36",
+    "moducbt-27779-q39",
+    "FSM2-CORE-088",
+    "FSM2-CORE-286",
+    "FSM2-CORE-339",
+    "moducbt-27779-q19",
+    "FSM2-CORE-319",
+    "moducbt-27780-q23",
+    "moducbt-27782-q25",
+    "moducbt-27782-q33",
+    "FSM2-CORE-483",
+    "moducbt-27774-q21",
+    "moducbt-27777-q14",
+    "FSM2-CORE-214",
+    "FSM2-MOCK-071-13",
+    "FSM2-MOCK-071-14",
+    "FSM2-MOCK-071-15",
+    "FSM2-MOCK-071-16",
+    "FSM2-MOCK-071-17",
+    "FSM2-MOCK-071-18",
+    "FSM2-MOCK-071-20",
+    "FSM2-CORE-067",
+    "FSM2-CORE-322",
+    "FSM2-CORE-032",
+    "moducbt-27777-q35",
+    "moducbt-27777-q30",
+    "moducbt-27780-q30",
+    "moducbt-27782-q32",
+    "moducbt-27781-q35",
+    "moducbt-27780-q35",
+    "moducbt-27780-q36",
+    "FSM2-CORE-375",
+    "FSM2-CORE-141",
+    "moducbt-27780-q42",
+    "FSM2-CORE-392",
+    "FSM2-MOCK-056-04",
+    "moducbt-27777-q43",
+    "moducbt-27779-q43",
+    "moducbt-27780-q43",
+    "moducbt-27782-q43",
+    "FSM2-MOCK-057-13",
+    "FSM2-MOCK-057-20",
+    "FSM2-CORE-093",
+    "FSM2-CORE-143",
+    "FSM2-CORE-193",
+    "FSM2-CORE-243",
+    "FSM2-CORE-293",
+    "FSM2-CORE-343",
+    "FSM2-CORE-393",
+    "FSM2-CORE-443",
+    "FSM2-CORE-493",
+    "moducbt-27775-q44",
+    "moducbt-27777-q48",
+    "FSM2-MOCK-058-07",
+    "moducbt-27778-q44",
+    "moducbt-27779-q48",
+    "moducbt-27781-q46",
+    "moducbt-27782-q48",
+    "moducbt-27774-q50",
+    "moducbt-27775-q50",
+    "moducbt-27776-q50",
+    "moducbt-27780-q50",
+    "moducbt-27781-q50",
+    "moducbt-27782-q50",
+    "FSM2-CORE-100",
+    "FSM2-CORE-150",
+    "FSM2-CORE-200",
+    "FSM2-CORE-300",
+    "FSM2-CORE-400",
+    "FSM2-CORE-450",
+    "FSM2-CORE-500",
+    "FSM2-CORE-490",
+    "FSM2-MOCK-073-07"
+  ],
+  "corrections": {
+    "moducbt-27777-q01": {
+      "beforeSHA256": "591d62e897bc25d7609e5e9307fb3d162d9945c5b18c04a8c78c2b2ef824d9b3",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "다음 조건을 갖춘 특정소방대상물이 해당하는 소방안전관리대상물의 등급으로 옳은 것은?\n• 용도: 판매시설\n• 규모: 지상 9층, 지하 2층 / 연면적 12,800㎡\n• 설치된 소방시설: 옥내소화전설비·스프링클러설비·자동화재탐지설비·유도등\n• 가연성 가스는 저장·취급하지 않으며, 그 밖의 조건은 고려하지 않는다.\n\n이 건물은 옥내소화전·스프링클러설비의 법정 설치대상이며, 제시한 조건 외 상위 등급 사유는 없다.",
+        "explanation": "특급·1급 조건에 해당하지 않고, 옥내소화전·스프링클러설비를 설치해야 하므로 2급이다. 비아파트 30층(지하 포함)·120m는 특급 조건이며, 1급의 지상 11층·연면적 15,000㎡와 구별한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "설치 사실과 법정 의무 구별"
+      ]
+    },
+    "moducbt-27780-q03": {
+      "beforeSHA256": "d4bd8c92e4ed3405a80a0552ab29b04b6e83ab1cb0e2ff504e27b6732167bb24",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "다음 조건의 특정소방대상물에 대한 설명으로 옳은 것은?\n용도: 판매시설\n규모: 지상 9층, 지하 2층 / 높이 38m\n연면적: 12,000㎡\n설치된 소방시설: 옥내소화전설비·스프링클러설비·자동화재탐지설비·유도등\n\n이 건물은 옥내소화전·스프링클러설비의 법정 설치대상이며, 제시한 조건 외 상위 등급 사유는 없다.",
+        "explanation": "스프링클러설비 설치대상이라는 이유로 이 건물을 2급 소방안전관리대상물로 본 설명이 옳다.\n• 특급은 지하층을 포함한 30층 이상이거나 높이 120m 이상(아파트 제외), 또는 연면적 10만제곱미터 이상인 것이어서 해당하\n지 않는다.\n• 1급은 연면적 1만5천제곱미터 이상이거나 지상층 11층 이상인 것이어서, 연면적 12,000㎡·지상 9층인 이 건물은 해당하지 않\n는다.\n• 3급은 특급·1급·2급에 해당하지 않는 것 중 간이스프링클러설비 또는 자동화재탐지설비 설치대상이므로, 이미 2급인 이 건물에\n는 적용되지 않는다.\n근거: 화재의 예방 및 안전관리에 관한 법률 시행령 별표4 제1호가목, 제2호가목, 제3호가목1), 제4호가목\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "설치 사실과 법정 의무 구별"
+      ]
+    },
+    "moducbt-27782-q02": {
+      "beforeSHA256": "ebd6c9190f273f871eaaddb6cc084f56c57ce8214ba206a5f8cc64031698c267",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "choices": [
+          "지하층을 포함한 층수가 50층 이상인 아파트는 특급 소방안전관리대상물이다.",
+          "연면적이 10만㎡ 이상인 특정소방대상물(아파트·동식물원·불연성 물품만 저장·취급하는 창고·위험물 제조소등·지하구 제외)은 특급 소방안전관리대상물이다.",
+          "지상층의 층수가 11층 이상인 아파트는 1급 소방안전관리대상물이다.",
+          "가연성 가스를 500톤 저장·취급하는 시설은 1급 소방안전관리대상물이다."
+        ],
+        "explanation": "제시한 제외 대상이 아닌 비아파트 대상물의 연면적 100,000㎡ 이상은 특급이다. 아파트 50층은 지하층 제외이며, 아파트에 비아파트 지상 11층 조건을 적용하지 않는다. 가연성가스 500t은 1,000t 미만이므로 그 양만으로 1급이 아니다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "특급 제외 용도 명시"
+      ]
+    },
+    "FSM2-CORE-201": {
+      "beforeSHA256": "c4a46c98384e2ff30c00eb78904badadd2eb843cf00847dfa8f99ef1df1fc1f9",
+      "set": {
+        "question": "제시된 조건을 갖춘 특정소방대상물이 해당하는 소방안전관리대상물의 등급으로 맞게 설명한 것은? • 용도: 판매시설 • 규모: 지상 9층, 지하 2층 / 연면적 12,800㎡ • 설치된 소방시설: 옥내소화전설비·스프링클러설비·자동화재탐지설비·유도등 • 가연성 가스는 저장·취급하지 않으며, 그 밖의 조건은 고려하지 않는다.\n\n이 건물은 옥내소화전·스프링클러설비의 법정 설치대상이며, 제시한 조건 외 상위 등급 사유는 없다.",
+        "explanation": "특급·1급 조건에 해당하지 않고, 옥내소화전·스프링클러설비를 설치해야 하므로 2급이다. 비아파트 30층(지하 포함)·120m는 특급 조건이며, 1급의 지상 11층·연면적 15,000㎡와 구별한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "설치 사실과 법정 의무 구별"
+      ]
+    },
+    "FSM2-CORE-353": {
+      "beforeSHA256": "682ea017024bd2eed4851c610ae3524ac3b69ea19f972d27e9646c835ab00bb7",
+      "set": {
+        "question": "제시된 조건의 특정소방대상물에 대한 설명 중 옳은 것은? 용도: 판매시설 규모: 지상 9층, 지하 2층 / 높이 38m 연면적: 12,000㎡ 설치된 소방시설: 옥내소화전설비·스프링클러설비·자동화재탐지설비·유도등\n\n이 건물은 옥내소화전·스프링클러설비의 법정 설치대상이며, 제시한 조건 외 상위 등급 사유는 없다.",
+        "explanation": "스프링클러설비 설치대상이라는 이유로 이 건물을 2급 소방안전관리대상물로 본 설명이 옳다. • 특급은 지하층을 포함한 30층 이상이거나 높이 120m 이상(아파트 제외), 또는 연면적 10만제곱미터 이상인 것이어서 해당하 지 않는다. • 1급은 연면적 1만5천제곱미터 이상이거나 지상층 11층 이상인 것이어서, 연면적 12,000㎡·지상 9층인 이 건물은 해당하지 않 는다. • 3급은 특급·1급·2급에 해당하지 않는 것 중 간이스프링클러설비 또는 자동화재탐지설비 설치대상이므로, 이미 2급인 이 건물에 는 적용되지 않는다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "설치 사실과 법정 의무 구별"
+      ]
+    },
+    "FSM2-CORE-452": {
+      "beforeSHA256": "18eab4277004e89c6ee6a257e135d964f016c661ec38d3ff773a55288975aa56",
+      "set": {
+        "choices": [
+          "지하층을 포함한 층수가 50층 이상인 아파트는 특급 소방안전관리대상물이다.",
+          "지상층의 층수가 11층 이상인 아파트는 1급 소방안전관리대상물이다.",
+          "연면적이 10만㎡ 이상인 특정소방대상물(아파트·동식물원·불연성 물품만 저장·취급하는 창고·위험물 제조소등·지하구 제외)은 특급 소방안전관리대상물이다.",
+          "가연성 가스를 500톤 저장·취급하는 시설은 1급 소방안전관리대상물이다."
+        ],
+        "explanation": "제시한 제외 대상이 아닌 비아파트 대상물의 연면적 100,000㎡ 이상은 특급이다. 아파트 50층은 지하층 제외이며, 아파트에 비아파트 지상 11층 조건을 적용하지 않는다. 가연성가스 500t은 1,000t 미만이므로 그 양만으로 1급이 아니다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "특급 제외 용도 명시"
+      ]
+    },
+    "moducbt-27773-q01": {
+      "beforeSHA256": "92d81eb3c0dc59a5b1c005917125ff529fdebcb61eac02fcf83cf24a90166d99",
+      "set": {
+        "sourceTextProvenance": "OCR - not canonical; numbers/units and options require visual correction; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "2급 소방안전관리대상물의 소방안전관리자가 수행하는 다음 활동 중 법정 소방안전관리업무로 볼 수 없는 것은?",
+        "choices": [
+          "자위소방대와 초기대응체계를 구성하고 대원에게 임무를 부여한 뒤 교육하였다.",
+          "복도에 쌓인 폐지 상자를 치우고 각 층 방화문의 닫힘 기능을 확인하였다.",
+          "신축 중인 별관의 소방시설 설계도서를 검토하고 공사 감리 결과보고서를 소방서장에게 제출하였다.",
+          "옥상 물탱크실 용접작업의 화기취급을 감독하고 그 결과를 업무수행 기록부에 남겼다."
+        ],
+        "explanation": "소방시설 설계도서 검토와 공사감리 결과보고 제줄은 소방안전관리자의 업무가 아니다.\n이는 「소방시설공사업법]에 따라 등록한 설계업자-감리업자가 수행하는 일이다. 소방안전관리자의 업무는 소방계\n획서의 작성:시행, 자위소방대 및 초기대응체계의 구성ㆍ운영-교육, 피난시설ㆍ방화구획 및 방화시설의 관리, 소방시\n설의 관리, 소방훈련 및 교육, 화기 취급의 감독, 업무수행에 관한 기록-유지, 화재발생 시 초기대응 등이다.\n* 자위소방대초기대응체계 편성과 교육은 제2호에 해당한다.\nㆍ 방화문 폐쇄 상태 Sole 제3호의 피난시설:방화구획 관리에 해당한다.\nㆍ 화기취급 감독과 기록-유지는 제6호-제7호에 해당한다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제24조제5항 각 호\nhttps://www.moducbt.com/exam/pdf/27773                                                                                            1/38\n\n26. 10. 6. 23 4:02                                                9378aaca-62f0-4ee5-bb8b-5206fb122a51\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "OCR 잔문자 정리"
+      ]
+    },
+    "moducbt-27777-q02": {
+      "beforeSHA256": "37aa995cf621a23407c706261a322b72afecfa0d6519cd946d15bc0cd1ad62ed",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "소방안전관리대상물이 아닌 특정소방대상물의 관계인이 수행해야 하는 업무는 ㉡·㉣·㉤이다.\n같은 항 단서는 소방계획서의 작성·시행(제1호), 자위소방대 및 초기대응체계의 구성·운영·교육(제2호), 소방훈련\n및 교육(제5호), 업무수행에 관한 기록·유지(제7호)를 소방안전관리대상물에만 해당하는 업무로 한정한다.\n따라서 관계인은 ㉡ 피난시설·방화구획·방화시설의 관리, ㉣ 화기 취급의 감독, ㉤ 화재발생 시 초기대응 등을 수\n행하며, ㉠과 ㉢은 단서에 따라 제외된다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제24조제5항 각 호 및 같은 항 단서\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-202": {
+      "beforeSHA256": "37ecbb1e2f5fdee2bd66bb96ec9d689a97322940d7d1ceb5b17406ddd89d2a61",
+      "set": {
+        "explanation": "소방안전관리대상물이 아닌 특정소방대상물의 관계인이 수행해야 하는 업무는 ㉡·㉣·㉤이다. 같은 항 단서는 소방계획서의 작성·시행(제1호), 자위소방대 및 초기대응체계의 구성·운영·교육(제2호), 소방훈련 및 교육(제5호), 업무수행에 관한 기록·유지(제7호)를 소방안전관리대상물에만 해당하는 업무로 한정한다. 따라서 관계인은 ㉡ 피난시설·방화구획·방화시설의 관리, ㉣ 화기 취급의 감독, ㉤ 화재발생 시 초기대응 등을 수 행하며, ㉠과 ㉢은 단서에 따라 제외된다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27774-q02": {
+      "beforeSHA256": "8eaa26f8193935c8e10b23bb1118c235277ff99fbaefb422cac7aa73a8bca837",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "현황표 규격을 A4 용지(가로 210밀리미터×세로 297밀리미터)로 본 설명이 옳지 않다. 현황표 서식의 비고는 규\n격을 A3 용지(가로 420밀리미터×세로 297밀리미터)로 정한다.\n다만 소방안전관리대상물의 특성을 고려해 크기·재질·글씨체는 달리 정할 수 있다. 선임 후 14일 이내 신고와 게시\n의무, 기재사항 네 가지, 자체점검기록표의 병행 게시는 모두 규정대로이며, 근무 위치는 화재 수신기 또는 종합방\n재실을 말한다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제26조제1항, 같은 법 시행규칙 제15조 및 별표2 비고 제1호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27778-q02": {
+      "beforeSHA256": "9e652298099e1cd0a4482d355eff6e21dad0d7e311480189c8ad47cf0ab806cf",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "어느 특정소방대상물이 용도변경으로 2023년 4월 10일 그 사실이 건축물관리대장에 기재되어 2급 소방안전관\n리대상물이 되었다. 관계인이 소방안전관리자를 선임해야 하는 법정 기한과, 실제로 2023년 5월 4일에 선임한\n경우의 선임신고 기한을 바르게 짝지은 것은?\n\n현행 기준을 적용하는 날짜 계산 사례이다. 초일은 산입하지 않으며 말일의 공휴일 연장 문제는 고려하지 않는다.",
+        "explanation": "용도변경 사실을 건축물관리대장에 기재한 날부터 30일 이내에 선임해야 하므로 선임기한은 2023년 5월 10일\n이고, 선임한 날부터 14일 안에 신고해야 하므로 5월 4일 선임 시 신고기한은 5월 18일이다.\n증축 또는 용도변경으로 특정소방대상물이 소방안전관리대상물이 되거나 등급이 변경된 경우에 적용되는 기준이\n며, 선임 30일과 신고 14일을 뒤바꾸거나 두 기한을 모두 30일로 계산하면 나머지 보기와 같은 오답이 된다.\n근거: 화재의 예방 및 안전관리에 관한 법률 시행규칙 제14조제1항제2호, 같은 법 제26조제1항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "연도와 적용 기준·일수 전제 구별"
+      ]
+    },
+    "moducbt-27779-q01": {
+      "beforeSHA256": "0cd2f9aec2060bf2a3ca9defbef3da5a82c43e28b5f9970ec4174fc0115f0511",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "어느 업무시설은 용도변경 사실이 2022년 3월 8일 건축물관리대장에 기재되면서 소방안전관리대상물이 되었다.\n이 경우 관계인이 소방안전관리자를 선임해야 하는 법정 기한의 마지막 날은?\n\n현행 기준을 적용하는 날짜 계산 사례이다. 초일은 산입하지 않으며 말일의 공휴일 연장 문제는 고려하지 않는다.",
+        "explanation": "기재일 다음 날부터 30일을 기산하면 4월 7일이 선임 기한의 마지막 날이다.\n용도변경으로 소방안전관리대상물이 된 경우에는 건축물관리대장에 용도변경 사실을 기재한 날을 기산일로 삼아\n30일 안에 선임해야 하며, 3월 8일의 다음 날부터 세면 3월에 23일, 4월에 7일이 되어 4월 7일이 마지막 날이다.\n• 3월 22일은 선임이 아니라 선임신고 기한인 14일을 적용한 값이다.\n• 4월 22일과 5월 8일은 각각 45일·60일가량을 적용한 값이라 근거가 없다.\n근거: 화재의 예방 및 안전관리에 관한 법률 시행규칙 제14조제1항제2호, 같은 법 제26조제1항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "연도와 적용 기준·일수 전제 구별"
+      ]
+    },
+    "moducbt-27780-q01": {
+      "beforeSHA256": "c0106cbfdf38f6ae9d8d8d59dd91e6d347281320fff819088f352e26babad9f1",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "지상 6층 업무시설의 소방안전관리자가 2021년 4월 12일자로 퇴직하였다. 관계인이 법정 선임기한의 마지막 날\n에 새 소방안전관리자를 선임했다면, 소방본부장 또는 소방서장에게 선임신고를 해야 하는 법정 기한의 마지막 날\n은? (기간 계산 시 초일은 산입하지 않는다)\n\n현행 기준을 적용하는 날짜 계산 사례이다. 초일은 산입하지 않으며 말일의 공휴일 연장 문제는 고려하지 않는다.",
+        "explanation": "선임신고 기한의 마지막 날은 5월 26일이다.\n소방안전관리자의 업무가 종료되면 관계인은 근무 종료일부터 30일 이내에 새 소방안전관리자를 선임해야 하므\n로 선임기한의 마지막 날은 5월 12일이며, 선임을 마치면 그날부터 14일 안에 소방본부장이나 소방서장에게 신고\n해야 하므로 신고기한의 마지막 날은 5월 26일이 된다.\n선임기한과 신고기한은 각각 별도로 기산하므로 두 기간을 합쳐 계산하거나 한쪽만 적용해서는 안 된다.\n근거: 화재의 예방 및 안전관리에 관한 법률 시행규칙 제14조제1항제5호, 화재의 예방 및 안전관리에 관한 법률 제\n26조제1항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "연도와 적용 기준·일수 전제 구별"
+      ]
+    },
+    "moducbt-27781-q03": {
+      "beforeSHA256": "49e41fadd743d3c6709bbd30dce4da13009088eb66c2ae94f10cab2a49e1e519",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "현황표를 게시할 때 소방시설등 자체점검기록표를 함께 붙일 수 있다.\n• 게시 의무는 관계인에게 있으므로, 소방안전관리자 본인의 몫으로 본 설명은 틀렸다.\n• 게시는 규칙 별표2 서식에 따라야 하므로, 임의 양식으로 게시해도 된다는 설명은 틀렸다.\n• 연락처도 명칭·등급, 성명·선임일자, 근무 위치와 함께 반드시 적는 항목이므로, 적지 않는다는 설명은 틀렸다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제26조제1항, 같은 법 시행규칙 제15조제1항제3호·제2항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27782-q03": {
+      "beforeSHA256": "8261f2e87a9d729efce9ff007337c312af27540efa51ea5d9c21737242eed906",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "소방안전관리자의 자격증 발급일자 및 최근 실무교육 이수일은 현황표 게시사항이 아니라는 점에서 옳지 않은 설\n명이다.\n현황표에 적어야 하는 사항은 대상물의 명칭 및 등급, 소방안전관리자의 성명 및 선임일자, 연락처, 근무 위치(화재\n수신기 또는 종합방재실) 네 가지이며, 게시는 별표2 서식의 현황표에 따르고 소방시설등 자체점검기록표를 함께\n게시할 수 있다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제26조제1항, 같은 법 시행규칙 제15조제1항·제2항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-052": {
+      "beforeSHA256": "3f3ca508af39b8aaa3f30826673ec3f83253f9d4119b616445b2bb5c6aadba58",
+      "set": {
+        "explanation": "현황표 규격을 A4 용지(가로 210밀리미터×세로 297밀리미터)로 본 설명이 옳지 않다. 현황표 서식의 비고는 규 격을 A3 용지(가로 420밀리미터×세로 297밀리미터)로 정한다. 다만 소방안전관리대상물의 특성을 고려해 크기·재질·글씨체는 달리 정할 수 있다. 선임 후 14일 이내 신고와 게시 의무, 기재사항 네 가지, 자체점검기록표의 병행 게시는 모두 규정대로이며, 근무 위치는 화재 수신기 또는 종합방 재실을 말한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-252": {
+      "beforeSHA256": "bf609af15df72a8135c104bf352270e32829baa96be2aff90330f2fc330fadd5",
+      "set": {
+        "question": "어느 특정소방대상물이 용도변경으로 2023년 4월 10일 그 사실이 건축물관리대장에 기재되어 2급 소방안전관 리대상물이 되었다. 관계인이 소방안전관리자를 선임해야 하는 법정 기한과, 실제로 2023년 5월 4일에 선임한 경우의 선임신고 기한을 정확하게 연결한 것은?\n\n현행 기준을 적용하는 날짜 계산 사례이다. 초일은 산입하지 않으며 말일의 공휴일 연장 문제는 고려하지 않는다.",
+        "explanation": "용도변경 사실을 건축물관리대장에 기재한 날부터 30일 이내에 선임해야 하므로 선임기한은 2023년 5월 10일 이고, 선임한 날부터 14일 안에 신고해야 하므로 5월 4일 선임 시 신고기한은 5월 18일이다. 증축 또는 용도변경으로 특정소방대상물이 소방안전관리대상물이 되거나 등급이 변경된 경우에 적용되는 기준이 며, 선임 30일과 신고 14일을 뒤바꾸거나 두 기한을 모두 30일로 계산하면 나머지 보기와 같은 오답이 된다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "연도와 적용 기준·일수 전제 구별"
+      ]
+    },
+    "FSM2-CORE-301": {
+      "beforeSHA256": "1084182628375c9ab9a6d50fd228e9bc4a95cc3f8af26d355d0667ee15bdcdb7",
+      "set": {
+        "question": "업무시설이 2027년 2월 10일에 소방안전관리대상물이 되었다. 30일 이내 선임하며 초일은 산입하지 않고 말일 연장 사유도 없다. 선임기한의 마지막 날은?\n\n현행 기준을 적용하는 날짜 계산 사례이다. 초일은 산입하지 않으며 말일의 공휴일 연장 문제는 고려하지 않는다.",
+        "explanation": "2027년 2월은 28일. 초일을 제외하고 30일을 더하면 3월 12일. 선임 후 14일 신고와 구별\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "연도와 적용 기준·일수 전제 구별"
+      ]
+    },
+    "FSM2-CORE-351": {
+      "beforeSHA256": "a9034a8b2b6a75b4304f5c975b756c2e7f5d756f1cb828d02dde64dbb8d56f03",
+      "set": {
+        "question": "지상 6층 업무시설의 소방안전관리 담당자가 2021년 4월 12일자로 퇴직하였다. 관계인이 법정 선임기한의 마지막 날 에 새 소방안전관리자를 선임했다면, 소방본부장 또는 소방서장에게 선임신고를 해야 하는 법정 기한의 마지막 날 은? (기간 계산 시 초일은 산입하지 않는다)\n\n현행 기준을 적용하는 날짜 계산 사례이다. 초일은 산입하지 않으며 말일의 공휴일 연장 문제는 고려하지 않는다.",
+        "explanation": "선임신고 기한의 마지막 날은 5월 26일이다. 소방안전관리자의 업무가 종료되면 관계인은 근무 종료일부터 30일 이내에 새 소방안전관리자를 선임해야 하므 로 선임기한의 마지막 날은 5월 12일이며, 선임을 마치면 그날부터 14일 안에 소방본부장이나 소방서장에게 신고 해야 하므로 신고기한의 마지막 날은 5월 26일이 된다. 선임기한과 신고기한은 각각 별도로 기산하므로 두 기간을 합쳐 계산하거나 한쪽만 적용해서는 안 된다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "연도와 적용 기준·일수 전제 구별"
+      ]
+    },
+    "FSM2-CORE-403": {
+      "beforeSHA256": "1e7aa84024db94d67099417d8360ed1190320f4503ccfaf7bee20b23f6fd3069",
+      "set": {
+        "explanation": "현황표를 게시할 때 소방시설등 자체점검기록표를 함께 붙일 수 있다. • 게시 의무는 관계인에게 있으므로, 소방안전관리자 본인의 몫으로 본 설명은 틀렸다. • 게시는 규칙 별표2 서식에 따라야 하므로, 임의 양식으로 게시해도 된다는 설명은 틀렸다. • 연락처도 명칭·등급, 성명·선임일자, 근무 위치와 함께 반드시 적는 항목이므로, 적지 않는다는 설명은 틀렸다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-453": {
+      "beforeSHA256": "c83e105b2ff3fd9cfeb5d983876dd6f618dd5c92b76c634da5cea8e8035e9372",
+      "set": {
+        "explanation": "소방안전관리자의 자격증 발급일자 및 최근 실무교육 이수일은 현황표 게시사항이 아니라는 점에서 옳지 않은 설명이다. 현황표에 적어야 하는 사항은 대상물의 명칭 및 등급, 소방안전관리자의 성명 및 선임일자, 연락처, 근무 위치(화재 수신기 또는 종합방재실) 네 가지이며, 게시는 별표2 서식의 현황표에 따르고 소방시설등 자체점검기록표를 함께 게시할 수 있다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27773-q08": {
+      "beforeSHA256": "ba45b917b51536166aaa32dded4160ca9c91e0e4dd9356fa18b04eec9b870655",
+      "set": {
+        "sourceTextProvenance": "OCR - not canonical; numbers/units and options require visual correction; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "choices": [
+          "소방시설등에 대하여 스스로 점검하지 아니하거나 관리업자등으로 하여금 정기적으로 점검하게 하지 아니한 자",
+          "소방안전관리자에게 불이익한 처우를 한 관계인",
+          "소방안전관리자 선임신고를 정해진 기간 안에 하지 않은 관계인",
+          "화재안전조사를 정당한 사유 없이 거부-방해 또는 기피한 자"
+        ],
+        "explanation": "기간 내에 소방안전관리자 선임신고를 하지 않은 관계인은 200만원 이하의 과태료 대상이다.\n벌금은 형벌이고 과태료는 행정질서벌이어서 부과 절차와 효과가 다르므로 두 가지를 구분해 정리해 두어야 한다.\nㆍ 자체점검을 하지 않거나 정기적으로 점검하게 하지 않은 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.\n+ 소방안전관리자에게 불이익한 HPS 한 관계인과 화재안전조사를 정당한 사유 없이 거부-방해-기피한 자는 각각 300만원 이하\n의 벌금 대상이다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제52조제2항제3호, 제50조제3항제1호-제5호, 소방시설 설치 및 관\n리에 관한 법률 제58조제1호\nhttps://www.moducbt.com/exam/pdf/27773                                                                                                      5/38\n\n26. 10. 6. 오후 4402                                                   9378aaca-62f0-4ee5-bb8b-5206fb122a51\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "OCR 잔문자 정리"
+      ]
+    },
+    "moducbt-27778-q08": {
+      "beforeSHA256": "cb189eb78f847b759b35e5bd256eb932b007274a60be8c3666e6f688d69f0ee2",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "소방시설관리업의 등록을 하지 않고 영업한 자는 1년 이하의 징역이 아니라 3년 이하의 징역 또는 3천만원 이하의\n벌금 대상이므로, 1년 이하의 징역으로 서술한 설명이 옳지 않다.\n소방시설 폐쇄·차단 행위는 5년 이하의 징역 또는 5천만원 이하의 벌금이고, 상해에 이르게 하면 7년 이하의 징역\n또는 7천만원 이하의 벌금, 사망에 이르게 하면 10년 이하의 징역 또는 1억원 이하의 벌금으로 가중된다. 자체점검\n을 하지 않은 자는 1년 이하의 징역 또는 1천만원 이하의 벌금 대상이다.\n근거: 소방시설 설치 및 관리에 관한 법률 제56조제1항·제2항, 제57조제2호, 제58조제1호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27779-q05": {
+      "beforeSHA256": "60d8d70151a7de8a6ef44d956f3b643dc9b63c472db4cc3d79632de5e60e05b2",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "소방시설등을 자체점검하지 않은 자는 3년이 아니라 1년 이하의 징역 또는 3천만원이 아니라 1천만원 이하의 벌\n금 대상이므로 이 연결이 옳지 않다.\n• 소방자동차의 출동을 방해한 사람은 5년 이하의 징역 또는 5천만원 이하의 벌금 대상이 맞다.\n• 소방시설에 폐쇄·차단 등의 행위를 하여 사람을 사망에 이르게 한 자는 10년 이하의 징역 또는 1억원 이하의 벌금 대상이 맞다\n(상해는 7년 이하의 징역 또는 7천만원 이하의 벌금).\n• 소방활동구역을 정당한 사유 없이 출입한 사람은 200만원 이하의 과태료 대상이 맞다.\n근거: 소방시설 설치 및 관리에 관한 법률 제56조제2항·제58조제1호, 소방기본법 제50조제2호·제56조제2항제\n4호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27780-q02": {
+      "beforeSHA256": "3e4c419bc97e27656c79c6d3b5183e00a72d9cced779a063379c613012969002",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "실무교육 미이수를 300만원 이하 과태료로 연결한 설명이 옳지 않다.\n실무교육을 받지 아니한 소방안전관리자 및 보조자에게는 100만원 이하의 과태료가 부과된다.\n선임 자체를 하지 않은 경우는 과태료가 아니라 300만원 이하의 벌금이고, 선임은 했으나 기간 내에 신고하지 않\n은 경우는 200만원 이하의 과태료로 구분되며, 소방훈련 및 교육을 실시하지 않은 경우는 300만원 이하의 과태\n료 대상이다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제50조제3항제3호, 제52조제1항제7호·제2항제3호·제3항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27781-q04": {
+      "beforeSHA256": "df81f376c42c63e7362e1b0f2407119bd5183e1da034be4a42c5aedde1914008",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "소방자동차 전용구역 방해행위의 과태료는 300만원이 아니라 100만원 이하다.\n위급한 상황을 알리지 않은 관계인과 상황을 거짓으로 알린 사람은 500만원 이하, 소방자동차 출동 지장·소방활동\n구역 무단출입·유사 명칭 사용자는 200만원 이하의 과태료를 부과한다.\n과태료는 관할 시·도지사, 소방본부장 또는 소방서장이 부과·징수한다.\n근거: 소방기본법 제56조제1항~제3항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27782-q04": {
+      "beforeSHA256": "3ec80480d70c94998864ca406f8777c36817266d98dcc0e5de0ac0b921963fdc",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "구조나 구급이 필요하다며 거짓 신고를 한 행위를 300만원 이하 과태료로 연결한 설명이 틀렸다.\n이 행위는 소방기본법상 500만원 이하의 과태료 대상이다. 실무교육 미이수(화재예방법상 100만원 이하), 소방\n활동구역 무단출입(소방기본법상 200만원 이하), 자체점검 결과 거짓보고(소방시설법상 300만원 이하)는 각각\n옳게 연결되어 있다.\n과태료는 근거 법률이 서로 다르므로 법률별로 묶어서 정리해 두는 것이 좋다.\n근거: 소방기본법 제56조제1항제1호·제2항제4호, 화재예방법 제52조제3항, 소방시설법 제61조제1항제8호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-258": {
+      "beforeSHA256": "3ef65904251aa93153fdd4540ca1e30d70a2a6cd4dd599acac7e6f5834965d4f",
+      "set": {
+        "explanation": "소방시설관리업의 등록을 하지 않고 영업한 자는 1년 이하의 징역이 아니라 3년 이하의 징역 또는 3천만원 이하의 벌금 대상이므로, 1년 이하의 징역으로 서술한 설명이 옳지 않다. 소방시설 폐쇄·차단 행위는 5년 이하의 징역 또는 5천만원 이하의 벌금이고, 상해에 이르게 하면 7년 이하의 징역 또는 7천만원 이하의 벌금, 사망에 이르게 하면 10년 이하의 징역 또는 1억원 이하의 벌금으로 가중된다. 자체점검 을 하지 않은 자는 1년 이하의 징역 또는 1천만원 이하의 벌금 대상이다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-305": {
+      "beforeSHA256": "20e9ef9d37e1ce08961841a3ad4156796482f222508e5634155e9404a7ee7697",
+      "set": {
+        "explanation": "소방시설등을 자체점검하지 않은 자는 3년이 아니라 1년 이하의 징역 또는 3천만원이 아니라 1천만원 이하의 벌 금 대상이므로 이 연결이 옳지 않다. • 소방자동차의 출동을 방해한 사람은 5년 이하의 징역 또는 5천만원 이하의 벌금 대상이 맞다. • 소방시설에 폐쇄·차단 등의 행위를 하여 사람을 사망에 이르게 한 자는 10년 이하의 징역 또는 1억원 이하의 벌금 대상이 맞다 (상해는 7년 이하의 징역 또는 7천만원 이하의 벌금). • 소방활동구역을 정당한 사유 없이 출입한 사람은 200만원 이하의 과태료 대상이 맞다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-352": {
+      "beforeSHA256": "c74017eec7950d36f7f5a9d73c1d018fd80d221a374b77fdf26cd339267113f4",
+      "set": {
+        "explanation": "실무교육 미이수를 300만원 이하 과태료로 연결한 설명이 옳지 않다. 실무교육을 받지 아니한 소방안전관리자 및 보조자에게는 100만원 이하의 과태료가 부과된다. 선임 자체를 하지 않은 경우는 과태료가 아니라 300만원 이하의 벌금이고, 선임은 했으나 기간 내에 신고하지 않 은 경우는 200만원 이하의 과태료로 구분되며, 소방훈련 및 교육을 실시하지 않은 경우는 300만원 이하의 과태 료 대상이다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-404": {
+      "beforeSHA256": "a4abf9ec8783025353cd09e2832af7eb8f7f9e73120840490cd5cf9dac1f2b7e",
+      "set": {
+        "explanation": "소방자동차 전용구역 방해행위의 과태료는 300만원이 아니라 100만원 이하다. 위급한 상황을 알리지 않은 관계인과 상황을 거짓으로 알린 사람은 500만원 이하, 소방자동차 출동 지장·소방활동 구역 무단출입·유사 명칭 사용자는 200만원 이하의 과태료를 부과한다. 과태료는 관할 시·도지사, 소방본부장 또는 소방서장이 부과·징수한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-454": {
+      "beforeSHA256": "c9eb12b648e856b7f360f95284a2a485bc0dbe1a9b5556ecc1196a7b89f4002e",
+      "set": {
+        "explanation": "구조나 구급이 필요하다며 거짓 신고를 한 행위를 300만원 이하 과태료로 연결한 설명이 틀렸다. 이 행위는 소방기본법상 500만원 이하의 과태료 대상이다. 실무교육 미이수(화재예방법상 100만원 이하), 소방 활동구역 무단출입(소방기본법상 200만원 이하), 자체점검 결과 거짓보고(소방시설법상 300만원 이하)는 각각 옳게 연결되어 있다. 과태료는 근거 법률이 서로 다르므로 법률별로 묶어서 정리해 두는 것이 좋다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27775-q05": {
+      "beforeSHA256": "f1d57175426942696edcc50c2709df639a23496fc676723d97ee7e0f1d2cf5d6",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "소방대상물에 해당하지 않는 것은 이륙하여 운항 중인 항공기이다.\n소방대상물은 건축물, 차량, 항구에 매어둔 선박, 선박 건조 구조물, 산림, 그 밖의 인공구조물이나 물건을 가리킨\n다. 선박은 항구에 매어둔 것만 해당하고, 운항 중인 항공기는 아예 열거되어 있지 않다.\n소방대상물과 헷갈리기 쉬운 '관계지역'은 소방대상물이 있는 장소와 그 이웃 지역까지를 함께 가리키는 말이다.\n근거: 소방기본법 제2조제1호·제2호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27776-q04": {
+      "beforeSHA256": "667c3a004fbca5a87b5c60dc3cd82a7a1918bd944f0078110ff2ea662305ee35",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "소방대장은 소방본부장 또는 소방서장 등 현장에서 소방대를 지휘하는 사람을 뜻하므로, 소방청장이나 시·도지사\n를 가리킨다고 한 설명은 옳지 않다.\n소방대는 소방공무원·의무소방원·의용소방대원으로 이루어진 조직체이며, 화재 진압과 위급상황에서의 구조·구급\n활동 등을 하려고 꾸린다는 목적 설명도 옳다.\n시·도지사는 소방본부장·소방서장을 지휘·감독하는 지위에 있을 뿐, 소방대장의 정의에는 포함되지 않는다.\n근거: 소방기본법 제2조제5호·제6호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27779-q04": {
+      "beforeSHA256": "e3cb81b09baf61e5f513821f6c3ff05c9167f7aae06066b8ca5473a249d56ef5",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "한국소방안전원의 운영·사업 경비를 전액 국가보조금으로 충당한다는 규정은 없으므로 이 설명이 옳지 않다.\n안전원의 경비는 교육·조사연구 및 위탁업무 수행에 따른 수입금, 회원의 회비, 자산운영수익금, 그 밖의 부대수입\n으로 충당하도록 되어 있다.\n• 간행물 발간은 안전원의 법정 업무에 해당한다.\n• 자격시험과 자격증 발급·재발급은 소방관서장이 안전원에 위탁할 수 있는 업무이다.\n• 위험물안전관리자로 선임된 사람도 안전원의 회원 관리 대상에 포함된다.\n근거: 소방기본법 제41조제2호, 제42조제2호, 제44조, 화재의 예방 및 안전관리에 관한 법률 제48조제2항제4\n호·제5호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-105": {
+      "beforeSHA256": "f7927984627909c1f6ab6a916474edf35cc56b805f7aa3bcb91fab8d82ccd30a",
+      "set": {
+        "explanation": "소방대상물에 해당하지 않는 것은 이륙하여 운항 중인 항공기이다. 소방대상물은 건축물, 차량, 항구에 매어둔 선박, 선박 건조 구조물, 산림, 그 밖의 인공구조물이나 물건을 가리킨 다. 선박은 항구에 매어둔 것만 해당하고, 운항 중인 항공기는 아예 열거되어 있지 않다. 소방대상물과 헷갈리기 쉬운 '관계지역'은 소방대상물이 있는 장소와 그 이웃 지역까지를 함께 가리키는 말이다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-154": {
+      "beforeSHA256": "82f0ae4dcde90d4fc73069fc07683a7a96a0e256032e54b64029458726140d96",
+      "set": {
+        "explanation": "소방대장은 소방본부장 또는 소방서장 등 현장에서 소방대를 지휘하는 사람을 뜻하므로, 소방청장이나 시·도지사 를 가리킨다고 한 설명은 옳지 않다. 소방대는 소방공무원·의무소방원·의용소방대원으로 이루어진 조직체이며, 화재 진압과 위급상황에서의 구조·구급 활동 등을 하려고 꾸린다는 목적 설명도 옳다. 시·도지사는 소방본부장·소방서장을 지휘·감독하는 지위에 있을 뿐, 소방대장의 정의에는 포함되지 않는다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-304": {
+      "beforeSHA256": "9c4fefb46f40c30d0f7f0bcefa55350148505a5c8c755870e73be494595943b1",
+      "set": {
+        "explanation": "한국소방안전원의 운영·사업 경비를 전액 국가보조금으로 충당한다는 규정은 없으므로 이 설명이 옳지 않다. 안전원의 경비는 교육·조사연구 및 위탁업무 수행에 따른 수입금, 회원의 회비, 자산운영수익금, 그 밖의 부대수입 으로 충당하도록 되어 있다. • 간행물 발간은 안전원의 법정 업무에 해당한다. • 자격시험과 자격증 발급·재발급은 소방관서장이 안전원에 위탁할 수 있는 업무이다. • 위험물안전관리자로 선임된 사람도 안전원의 회원 관리 대상에 포함된다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27776-q05": {
+      "beforeSHA256": "254f745462ff2245ad15a6b952e5b068f892c0ae0a8bf85994fd1a85e4548a7f",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "옳은 것은 ㉠과 ㉢이다.\n화재안전조사의 실시권자는 소방관서장, 즉 소방청장·소방본부장 또는 소방서장이므로 ㉠은 옳고, 조사방법을 종\n합조사와 부분조사로 나눈 ㉢도 옳다.\n• ㉡의 조사계획 공개기간은 3일이 아니라 7일 이상이어야 한다.\n• ㉣의 연기신청은 조사 시작 3일 전까지 제출해야 하므로 7일 전이라고 한 설명은 틀리다.\n근거: 화재의 예방 및 안전관리에 관한 법률 시행령 제8조제1항·제2항, 같은 법 시행규칙 제4조제1항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27778-q06": {
+      "beforeSHA256": "19d52f72106caf253b481a2d9d00f49e48532d97ced27d77c641a2854898f77d",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "화재 발생 우려가 뚜렷하여 긴급하게 조사할 필요가 있는 경우와 사전 통지·공개로는 조사목적을 달성할 수 없다고\n인정되는 경우에는 사전 통지·공개를 반드시 해야 하는 것은 아니므로, 긴급한 경우에도 이를 반드시 해야 한다는\n설명은 옳지 않다.\n이 중 긴급한 경우에는 관계인의 승낙 없이 공개시간이나 근무시간 외에도 조사할 수 있다. 주거에 대한 조사의 제\n한, 종합조사와 부분조사의 선택, 화재안전조사단 편성에 관한 나머지 설명은 옳다.\n근거: 화재의 예방 및 안전관리에 관한 법률 제7조제1항 단서, 제8조제1항~제3항, 제9조제1항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-155": {
+      "beforeSHA256": "86a04582d3aa72e44ec40a8b7cdbbcb922f2c71c33ada53dacf5054026443035",
+      "set": {
+        "explanation": "옳은 것은 ㉠과 ㉢이다. 화재안전조사의 실시권자는 소방관서장, 즉 소방청장·소방본부장 또는 소방서장이므로 ㉠은 옳고, 조사방법을 종 합조사와 부분조사로 나눈 ㉢도 옳다. • ㉡의 조사계획 공개기간은 3일이 아니라 7일 이상이어야 한다. • ㉣의 연기신청은 조사 시작 3일 전까지 제출해야 하므로 7일 전이라고 한 설명은 틀리다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-256": {
+      "beforeSHA256": "86e23065e163405dce0d939671fd21d1843169393de0a6e69b2d273b6c26d2c3",
+      "set": {
+        "explanation": "화재 발생 우려가 뚜렷하여 긴급하게 조사할 필요가 있는 경우와 사전 통지·공개로는 조사목적을 달성할 수 없다고 인정되는 경우에는 사전 통지·공개를 반드시 해야 하는 것은 아니므로, 긴급한 경우에도 이를 반드시 해야 한다는 설명은 옳지 않다. 이 중 긴급한 경우에는 관계인의 승낙 없이 공개시간이나 근무시간 외에도 조사할 수 있다. 주거에 대한 조사의 제 한, 종합조사와 부분조사의 선택, 화재안전조사단 편성에 관한 나머지 설명은 옳다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27774-q06": {
+      "beforeSHA256": "5ad1298227b1986d6d4d97059a87808f384ed5b1c8c7458fd02dbfc5dd13f37b",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "A동은 스프링클러설비가 설치되어 종합점검 대상이므로 사용승인일이 속하는 달인 5월에 종합점검을 하고, 그로\n부터 6개월째 되는 11월에 작동점검을 한다.\nB동은 스프링클러설비도 물분무등소화설비도 없어 종합점검 대상이 아니므로 작동점검만 하며, 그 시기는 사용승\n인일이 속하는 달의 말일인 10월 31일까지다.\n작동점검과 종합점검은 모두 연 1회 이상이 원칙이다.\n근거: 소방시설 설치 및 관리에 관한 법률 시행규칙 별표3 제2호다목·라목, 제3호가목·다목·라목\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27777-q06": {
+      "beforeSHA256": "d818cb16d01cd4914089651453b265390fcabacb87c31a224f6fac6279aad8c1",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "작동점검과 종합점검(최초점검은 제외)이 건축물 사용승인을 받은 그 해부터 매년 실시된다고 본 설명은 옳지 않\n다.\n최초점검을 제외한 작동점검·종합점검은 사용승인 후 다음 해부터 실시한다.\n종합점검 대상의 작동점검 시기는 종합점검(최초점검은 제외)을 받은 달부터 6개월이 되는 달이고, 종합점검 대상\n이 아니면 사용승인일이 든 달의 말일까지 작동점검을 마친다. 소방시설이 신설된 경우의 최초점검은 건물을 쓸 수\n있게 된 날부터 60일 안에 마쳐야 한다.\n근거: 소방시설 설치 및 관리에 관한 법률 시행규칙 별표3 제1호나목1), 제2호라목1)·2), 제3호라목1) 및 비고 제2\n호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27778-q07": {
+      "beforeSHA256": "0dce73bfa87dc21f5e997a03caf1ea98cedfc3754fdc67a0e6714f1f7b57e110",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "스프링클러설비가 설치된 특정소방대상물은 연면적 요건 없이 종합점검 대상이라는 설명이 옳다.\n• 특급 소방안전관리대상물의 종합점검은 연 1회가 아니라 반기 1회 이상 실시해야 한다.\n• 물분무등소화설비 기준은 연면적 5,000㎡ 이상일 때 적용되며, 호스릴 방식만 설치한 창고는 대상에서 제외된다.\n• 우수 대상물의 종합점검 면제는 5년이 아니라 3년의 범위이며, 면제기간 중 화재가 발생하면 제외된다.\n근거: 소방시설 설치 및 관리에 관한 법률 시행규칙 별표3 제3호가목2)·3), 같은 호 다목1)·2)\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27779-q07": {
+      "beforeSHA256": "e1ffd8f3f76aa67a56a8318df5c29125793061bfa72f7ae6cf1a760bfb1cfd34",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "연면적 3,000㎡인 업무시설에 자동화재탐지설비가 설치되어 있다. 이 건축물은 종합점검 대상이 아니고 특급 소\n방안전관리대상물도 아니다. 이 건축물의 작동점검에 관한 설명으로 옳은 것은?\n\n옥내소화전·일반 스프링클러·물분무등소화설비는 없고, 법정 소화기·유도등 외에는 자동화재탐지설비만 설치된 경우다.",
+        "explanation": "자동화재탐지설비가 설치된 이 건축물은 관계인도 직접 점검자가 될 수 있으며, 그 밖에 관리업의 소방시설관리사·\n특급점검자·선임된 소방시설관리사 및 소방기술사도 점검할 수 있다.\n• 작동점검을 하지 않아도 된다는 설명과 3년에 한 번만 하면 된다는 설명은 모두 틀렸다. 작동점검은 연 1회 이상 해야 한다.\n• '종합점검 받은 달부터 6개월'은 종합점검 대상에만 쓰는 시기 기준이며, 이 건축물처럼 종합점검 대상이 아니면 사용승인일이\n속하는 달의 말일까지 하면 된다.\n근거: 소방시설 설치 및 관리에 관한 법률 시행규칙 별표3 제2호나목1)·다목·라목\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "관계인 점검 가능 설비 조건 명시"
+      ]
+    },
+    "moducbt-27781-q08": {
+      "beforeSHA256": "404f6a26801c50eaa1c9489b2fe753558695c7e112a99ad86ed76ff27e900c9a",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "다음 조건의 건축물이 2027년에 실시해야 하는 종합점검과 작동점검의 시기를 순서대로 옳게 나열한 것은? (단,\n신설에 따른 최초점검은 이미 마쳤다)\n[조건]\n· 용도: 업무시설\n· 지상 9층, 지하 3층 / 연면적 22,000㎡\n· 스프링클러설비 설치\n· 사용승인일: 2018년 9월 18일",
+        "explanation": "현행 기준을 적용하는 2027년 정기점검이다. 사용승인월 9월에 종합점검, 그 정기 주기의 작동점검은 6개월 간격인 3월이다. 과거 2020년 법령을 묻는 문제가 아니다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "현행 기준 적용 연도 명시"
+      ]
+    },
+    "FSM2-CORE-056": {
+      "beforeSHA256": "715fc6fbd99bb7e762098bba5e703e8acde977912ccff3f1f4a1b5ec8d413236",
+      "set": {
+        "explanation": "A동은 스프링클러설비가 설치되어 종합점검 대상이므로 사용승인일이 속하는 달인 5월에 종합점검을 하고, 그로 부터 6개월째 되는 11월에 작동점검을 한다. B동은 스프링클러설비도 물분무등소화설비도 없어 종합점검 대상이 아니므로 작동점검만 하며, 그 시기는 사용승 인일이 속하는 달의 말일인 10월 31일까지다. 작동점검과 종합점검은 모두 연 1회 이상이 원칙이다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-206": {
+      "beforeSHA256": "a44eb5fbc33b5a58bced12872724fcb4c73dcb6050384b8699e0f56108e455ab",
+      "set": {
+        "explanation": "작동점검과 종합점검(최초점검은 제외)이 건축물 사용승인을 받은 그 해부터 매년 실시된다고 본 설명은 옳지 않 다. 최초점검을 제외한 작동점검·종합점검은 사용승인 후 아래 해부터 실시한다. 종합점검 대상의 작동점검 시기는 종합점검(최초점검은 제외)을 받은 달부터 6개월이 되는 달이고, 종합점검 대상 이 아니면 사용승인일이 든 달의 말일까지 작동점검을 마친다. 소방시설이 신설된 경우의 최초점검은 건물을 쓸 수 있게 된 날부터 60일 안에 마쳐야 한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-257": {
+      "beforeSHA256": "cc109e1cd0e67e00fd1dadeeda20b47677120cc2d2b4f8938eefb07921fe8a5d",
+      "set": {
+        "explanation": "스프링클러설비가 설치된 특정소방대상물은 연면적 요건 없이 종합점검 대상이라는 설명이 옳다. • 특급 소방안전관리대상물의 종합점검은 연 1회가 아니라 반기 1회 이상 실시해야 한다. • 물분무등소화설비 기준은 연면적 5,000㎡ 이상일 때 적용되며, 호스릴 방식만 설치한 창고는 대상에서 제외된다. • 우수 대상물의 종합점검 면제는 5년이 아니라 3년의 범위이며, 면제기간 중 화재가 발생하면 제외된다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-307": {
+      "beforeSHA256": "8bd0975a76c390dcd9cebe0a5a1867a882c0c990416186795d8aa206faafc74f",
+      "set": {
+        "question": "연면적 3,000㎡인 업무시설에 자동화재탐지설비가 설치되어 있다. 이 건축물은 종합점검 대상이 아니고 특급 소 방안전관리대상물도 아니다. 이 건축물의 작동점검에 대한 설명 중 옳은 것은?\n\n옥내소화전·일반 스프링클러·물분무등소화설비는 없고, 법정 소화기·유도등 외에는 자동화재탐지설비만 설치된 경우다.",
+        "explanation": "자동화재탐지설비가 설치된 이 건축물은 관계인도 직접 점검자가 될 수 있으며, 그 밖에 관리업의 소방시설관리사· 특급점검자·선임된 소방시설관리사 및 소방기술사도 점검할 수 있다. • 작동점검을 하지 않아도 된다는 설명과 3년에 한 번만 하면 된다는 설명은 모두 틀렸다. 작동점검은 연 1회 이상 해야 한다. • '종합점검 받은 달부터 6개월'은 종합점검 대상에만 쓰는 시기 기준이며, 이 건축물처럼 종합점검 대상이 아니면 사용승인일이 속하는 달의 말일까지 하면 된다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "관계인 점검 가능 설비 조건 명시"
+      ]
+    },
+    "FSM2-CORE-408": {
+      "beforeSHA256": "549b2c63dea9e8776b5c79268990889a5ed33d36e52d71aafd746f9c962b0ee7",
+      "set": {
+        "question": "제시된 조건의 건축물이 2027년에 실시해야 하는 종합점검과 작동점검의 시기를 순서대로 옳게 나열한 것은? (단, 신설에 따른 최초점검은 이미 마쳤다) [조건] · 용도: 업무시설 · 지상 9층, 지하 3층 / 연면적 22,000㎡ · 스프링클러설비 설치 · 사용승인일: 2018년 9월 18일",
+        "explanation": "현행 기준을 적용하는 2027년 정기점검이다. 사용승인월 9월에 종합점검, 그 정기 주기의 작동점검은 6개월 간격인 3월이다. 과거 2020년 법령을 묻는 문제가 아니다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "현행 기준 적용 연도 명시"
+      ]
+    },
+    "moducbt-27777-q08": {
+      "beforeSHA256": "ef41370404edba0ef16b5eee9d40488f2c3751021fea97be1f06555d3baf70ab",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "가구류는 건축물 내부의 천장·벽에 설치하는 방염대상물품에 포함된다고 본 설명은 옳지 않다.\n방염대상물품에서 가구류와 너비 10센티미터 이하인 반자돌림대, 「건축법」 제52조에 따른 내부 마감재료는 제외\n된다.\n벽지류 중 두께 2밀리미터 미만인 종이벽지도 제외되며, 탄화 면적 50㎠ 이내·탄화 길이 20㎝ 이내는 방염성\n능기준에 해당한다. 방염성능검사는 소방청장이 실시하되, 설치 현장에서 방염처리를 하는 합판·목재류는 시·도지\n사가 실시한다.\n근거: 소방시설 설치 및 관리에 관한 법률 제21조제1항, 같은 법 시행령 제31조제1항제1호다목·제2호 본문 단서,\n제31조제2항제3호, 제32조\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27782-q06": {
+      "beforeSHA256": "462a8c2b53a3a0ad42aeb58a514f468ffdeb309414ae1faa83db6b891653025d",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "건축물 옥내 운동시설 중 수영장은 방염 의무 대상에서 제외된다.\n옥내 운동시설은 원칙적으로 방염 의무 대상이지만 물을 담고 있어 화재 위험이 낮은 수영장은 명시적으로 제외된\n다.\n• 근린생활시설 중 체력단련장은 방염 의무 대상으로 열거되어 있어 제외 대상이 아니다.\n• 방송통신시설 중 방송국 및 촬영소도 방염 의무 대상에 포함된다.\n• 층수가 11층 이상인 건축물(아파트등 제외)도 방염 의무 대상에 포함된다.\n근거: 소방시설 설치 및 관리에 관한 법률 시행령 제30조제1호·제2호다목·제8호·제10호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-208": {
+      "beforeSHA256": "13f385f7cbaf1489c26b7ca3a59887e6509448995f5a50d868dcb57f98e58245",
+      "set": {
+        "explanation": "가구류는 건축물 내부의 천장·벽에 설치하는 방염대상물품에 포함된다고 본 설명은 옳지 않다. 방염대상물품에서 가구류와 너비 10센티미터 이하인 반자돌림대, 「건축법」 제52조에 따른 내부 마감재료는 제외 된다. 벽지류 중 두께 2밀리미터 미만인 종이벽지도 제외되며, 탄화 면적 50㎠ 이내·탄화 길이 20㎝ 이내는 방염성 능기준에 해당한다. 방염성능검사는 소방청장이 실시하되, 설치 현장에서 방염처리를 하는 합판·목재류는 시·도지 사가 실시한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-456": {
+      "beforeSHA256": "f4a53b08fd2a3489c54d062f0e5755b76b06c0175db5f82ab29eeef275ebc555",
+      "set": {
+        "explanation": "건축물 옥내 운동시설 중 수영장은 방염 의무 대상에서 제외된다. 옥내 운동시설은 원칙적으로 방염 의무 대상이지만 물을 담고 있어 화재 위험이 낮은 수영장은 명시적으로 제외된 다. • 근린생활시설 중 체력단련장은 방염 의무 대상으로 열거되어 있어 제외 대상이 아니다. • 방송통신시설 중 방송국 및 촬영소도 방염 의무 대상에 포함된다. • 층수가 11층 이상인 건축물(아파트등 제외)도 방염 의무 대상에 포함된다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-MOCK-013-11": {
+      "beforeSHA256": "fcbfff3ad1bf24bbf1e4848da4b4bf82a556ea35e1e8c6b98d26924fd5884080",
+      "set": {
+        "question": "[무창층의 판단과 개구부 면적 · 복합 사례]\n면적은 지상층 기준이다. 유효·적합이라고 명시한 개구부와, 창 총면적에서 별도로 부적합하다고 제시한 부분을 뺀 나머지 개구부는 다섯 요건을 모두 충족한다. 무창층 여부를 판단한다.\n\n가. 바닥 750㎡·유효 개구부 25㎡\n\n나. 바닥 1,200㎡·창 총 50㎡ 중 하단 1.4m 창 12㎡\n\n가와 나의 판단을 모두 옳게 연결한 것은?",
+        "explanation": "가: 무창층. 근거: 30분의 1과 같은 면적은 이하에 포함. 계산: 750÷30 → 25㎡.\n\n나: 무창층. 근거: 유효 38㎡·경계 40㎡. 계산: 50-12 → 38㎡; 1200÷30 → 40㎡.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "나머지 개구부의 유효 요건 명시"
+      ]
+    },
+    "FSM2-MOCK-013-13": {
+      "beforeSHA256": "1a8f840bde560c442c4afe5c664d8c858c4cccaa1e07836d00a6fc140b93a340",
+      "set": {
+        "question": "[무창층의 판단과 개구부 면적 · 복합 사례]\n면적은 지상층 기준이다. 유효·적합이라고 명시한 개구부와, 창 총면적에서 별도로 부적합하다고 제시한 부분을 뺀 나머지 개구부는 다섯 요건을 모두 충족한다. 무창층 여부를 판단한다.\n\n가. 바닥 900㎡·창 총 42㎡ 중 창살 고정 창 15㎡\n\n나. 바닥 600㎡·창 30㎡이나 모두 지름 50cm 원 통과 불가\n\n가와 나의 판단을 모두 옳게 연결한 것은?",
+        "explanation": "가: 무창층. 근거: 적합 27㎡가 경계 30㎡ 이하. 계산: 42-15 → 27㎡; 900÷30 → 30㎡.\n\n나: 무창층. 근거: 크기 요건 미충족 창은 합산 불가.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "나머지 개구부의 유효 요건 명시"
+      ]
+    },
+    "FSM2-MOCK-013-14": {
+      "beforeSHA256": "79da4e2db647cfb3098a6ddb64b1ca47fe8f2d45055ce4519f1af456aafc1682",
+      "set": {
+        "question": "[무창층의 판단과 개구부 면적 · 복합 사례]\n면적은 지상층 기준이다. 유효·적합이라고 명시한 개구부와, 창 총면적에서 별도로 부적합하다고 제시한 부분을 뺀 나머지 개구부는 다섯 요건을 모두 충족한다. 무창층 여부를 판단한다.\n\n가. 바닥 1,200㎡·창 총 50㎡ 중 하단 1.4m 창 12㎡\n\n나. 바닥 600㎡·창 30㎡이나 모두 막힌 실내 복도만 향함\n\n가와 나의 판단을 모두 옳게 연결한 것은?",
+        "explanation": "가: 무창층. 근거: 유효 38㎡·경계 40㎡. 계산: 50-12 → 38㎡; 1200÷30 → 40㎡.\n\n나: 무창층. 근거: 도로 또는 소방차 진입 빈터 요건.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "나머지 개구부의 유효 요건 명시"
+      ]
+    },
+    "FSM2-MOCK-013-18": {
+      "beforeSHA256": "9ec4356498d7e87918922f263acb79b08b6b6114bd88a263366cb63f576583df",
+      "set": {
+        "question": "[무창층의 판단과 개구부 면적 · 복합 사례]\n면적은 지상층 기준이다. 유효·적합이라고 명시한 개구부와, 창 총면적에서 별도로 부적합하다고 제시한 부분을 뺀 나머지 개구부는 다섯 요건을 모두 충족한다. 무창층 여부를 판단한다.\n\n가. 바닥 600㎡·유효 창 18㎡와 안팎 개방·파괴 불가 창 10㎡\n\n나. 바닥 750㎡·유효 개구부 25㎡\n\n가의 기록: 총 28㎡이므로 제외\n\n나의 기록: 무창층 아님\n\n사례 조건을 그대로 적용할 때 반드시 수정해야 하는 기록을 빠짐없이 고른 것은?",
+        "explanation": "가: 무창층. 근거: 쉬운 개방·파괴 가능성 요건.\n\n나: 무창층. 근거: 30분의 1과 같은 면적은 이하에 포함. 계산: 750÷30 → 25㎡.\n\n제시 기록 판정: 가 수정 필요 / 나 수정 필요.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "나머지 개구부의 유효 요건 명시"
+      ]
+    },
+    "FSM2-MOCK-013-20": {
+      "beforeSHA256": "e53271c4f126bd98b4db31e41510a4cadc3771b5486269463bb8d8aee7672be1",
+      "set": {
+        "question": "[무창층의 판단과 개구부 면적 · 복합 사례]\n면적은 지상층 기준이다. 유효·적합이라고 명시한 개구부와, 창 총면적에서 별도로 부적합하다고 제시한 부분을 뺀 나머지 개구부는 다섯 요건을 모두 충족한다. 무창층 여부를 판단한다.\n\n가. 바닥 900㎡·적합 창 각 6㎡씩 5개\n\n나. 바닥 900㎡·창 총 42㎡ 중 창살 고정 창 15㎡\n\n다. 바닥 600㎡·창 30㎡이나 모두 지름 50cm 원 통과 불가\n\n가의 검토 의견: 창 개수 5개라 제외\n\n나의 검토 의견: 무창층\n\n다의 검토 의견: 면적 30㎡이므로 제외\n\n제시된 검토 의견을 각각 판단했을 때 옳은 의견은 모두 몇 개인가?",
+        "explanation": "가: 무창층. 근거: 30㎡는 경계값과 같음. 계산: 6×5 → 30㎡.\n\n나: 무창층. 근거: 적합 27㎡가 경계 30㎡ 이하. 계산: 42-15 → 27㎡; 900÷30 → 30㎡.\n\n다: 무창층. 근거: 크기 요건 미충족 창은 합산 불가.\n\n제시 기록 판정: 가 수정 필요 / 나 옳음 / 다 수정 필요.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "나머지 개구부의 유효 요건 명시"
+      ]
+    },
+    "moducbt-27782-q16": {
+      "beforeSHA256": "14289dbe6cd9ac9e0019faf80d85a901dd7838a185bd70524a057d1db3aa72fd",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "11층 이상의 층에서 벽·반자 실내 마감을 불연재료로 한 경우의 완화 기준은 바닥면적 500㎡(자동식 소화설비\n설치 시 1,500㎡) 이내마다라는 점에서, 1,000㎡(3,000㎡)라고 한 설명이 옳지 않다.\n10층 이하는 1,000㎡(자동식 소화설비 설치 시 3,000㎡) 이내마다, 11층 이상은 원칙적으로 200㎡(자동식 소\n화설비 설치 시 600㎡) 이내마다 구획하며, 매 층마다 구획하되 지하 1층에서 지상으로 직접 연결하는 경사로 부\n위는 제외한다는 설명은 옳다.\n자동식 소화설비를 설치하면 구획 기준면적이 3배로 완화된다.\n근거: 건축물의 피난·방화구조 등의 기준에 관한 규칙 제14조제1항제1호~제3호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-466": {
+      "beforeSHA256": "60d5c13248aaf5dcbb46f4416295b4114093c4e308e6c91c68f9dabad09ff32f",
+      "set": {
+        "explanation": "11층 이상의 층에서 벽·반자 실내 마감을 불연재료로 한 경우의 완화 기준은 바닥면적 500㎡(자동식 소화설비 설치 시 1,500㎡) 이내마다라는 점에서, 1,000㎡(3,000㎡)라고 한 설명이 옳지 않다. 10층 이하는 1,000㎡(자동식 소화설비 설치 시 3,000㎡) 이내마다, 11층 이상은 원칙적으로 200㎡(자동식 소 화설비 설치 시 600㎡) 이내마다 구획하며, 매 층마다 구획하되 지하 1층에서 지상으로 직접 연결하는 경사로 부 위는 제외한다는 설명은 옳다. 자동식 소화설비를 설치하면 구획 기준면적이 3배로 완화된다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27774-q16": {
+      "beforeSHA256": "2a6e4c0ef030f5fc8dc6076f7480c8008e470b25a9ad6f34ebeb877c16ca1313",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "공동주택도 11층 이상부터 특별피난계단을 의무 설치해야 한다고 본 설명이 옳지 않다. 특별피난계단 의무 층수는\n일반 건축물이 11층 이상이지만 공동주택은 16층 이상이다.\n이 규정은 갓복도식 공동주택과 바닥면적 400제곱미터 미만인 층에는 적용하지 않는다. 5층 이상 또는 지하 2층\n이하인 층의 직통계단은 원칙적으로 피난계단이나 특별피난계단으로 하되, 주요구조부가 내화구조·불연재료이면\n서 5층 이상 층의 바닥면적 합계가 200제곱미터 이하이거나 200제곱미터 이내마다 방화구획이 되어 있으면 예\n외가 인정된다.\n근거: 건축법 시행령 제35조제1항·제2항·제3항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27777-q15": {
+      "beforeSHA256": "6690fea75829c6789dd6b1325c9ed1fb8e3568bad441068b847e7fb6778719a2",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "특별피난계단이 옥내와 계단실을 직접 연결한다고 본 설명은 옳지 않다.\n특별피난계단은 건축물의 내부와 계단실을 노대 또는 면적 3제곱미터 이상인 부속실을 거쳐 연결해야 하므로, 피\n난 시 이동경로는 옥내 → 부속실(노대) → 계단실 → 피난층이 된다.\n옥내피난계단은 옥내 → 계단실 → 피난층, 옥외피난계단은 옥내 → 옥외계단 → 지상으로 이어지며, 옥내 피난계\n단의 구획, 옥외 피난계단의 유효너비, 두 계단 공통의 내화구조 기준은 모두 옳다.\n근거: 건축물의 피난·방화구조 등의 기준에 관한 규칙 제9조제2항제1호가목·제2호다목·제3호가목·차목\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-066": {
+      "beforeSHA256": "406bf3c25813581d59ff3c068fc378d6bc0d8c4ac0b0ed62368b5a5fdcb44560",
+      "set": {
+        "explanation": "공동주택도 11층 이상부터 특별피난계단을 의무 설치해야 한다고 본 설명이 옳지 않다. 특별피난계단 의무 층수는 일반 건축물이 11층 이상이지만 공동주택은 16층 이상이다. 이 규정은 갓복도식 공동주택과 바닥면적 400제곱미터 미만인 층에는 적용하지 않는다. 5층 이상 또는 지하 2층 이하인 층의 직통계단은 원칙적으로 피난계단이나 특별피난계단으로 하되, 주요구조부가 내화구조·불연재료이면 서 5층 이상 층의 바닥면적 합계가 200제곱미터 이하이거나 200제곱미터 이내마다 방화구획이 되어 있으면 예 외가 인정된다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-215": {
+      "beforeSHA256": "19643593a71ad539e9db77fb0ab1ac1162167537422edfdb05016f096073a158",
+      "set": {
+        "explanation": "특별피난계단이 옥내와 계단실을 직접 연결한다고 본 설명은 옳지 않다. 특별피난계단은 건축물의 내부와 계단실을 노대 또는 면적 3제곱미터 이상인 부속실을 거쳐 연결해야 하므로, 피 난 시 이동경로는 옥내 → 부속실(노대) → 계단실 → 피난층이 된다. 옥내피난계단은 옥내 → 계단실 → 피난층, 옥외피난계단은 옥내 → 옥외계단 → 지상으로 이어지며, 옥내 피난계 단의 구획, 옥외 피난계단의 유효너비, 두 계단 공통의 내화구조 기준은 모두 옳다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27779-q11": {
+      "beforeSHA256": "26708deda1f90bac0da89dab21824f0417cd2ba46d693a893ed6d7ad8315c268",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "산소공급원은 공기에 그치지 않으며, 산화성 물질과 자기반응성 물질도 모두 산소공급원이 되므로 ㉠·㉡·㉢이 해\n당한다.\n스스로는 타지 않으면서 열이나 충격을 받으면 산소를 내놓는 산화성 고체(㉡)와, 분자 안에 산소를 품어 공기를\n막아도 연소가 이어지는 자기반응성 물질(㉢)이 산소공급원에 해당한다.\n㉣의 질소는 불활성 기체여서 산소를 공급하기는커녕 주위 산소 농도를 떨어뜨리는 쪽이라 질식소화에 쓰인다.\n근거: 소방학개론 일반이론 — 연소의 3요소 중 산소공급원의 범위; 유별 성질은 위험물안전관리법 시행령 별표1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27780-q10": {
+      "beforeSHA256": "64495892e18b91ae9014dc45197903e08f8e83fedd5e36b42f1ee14e7e02a33c",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "공기·산화성 고체(제1류 위험물)·자기반응성 물질(제5류 위험물)인 ㉠·㉢·㉣만 산소공급원이 될 수 있다.\n연소가 이루어지려면 가연물, 산소공급원, 점화원이 함께 있어야 하며 산소공급원은 연소에 필요한 산소를 대주는\n것을 말한다. 공기는 산소를 약 21퍼센트 지녀 통상적인 산소공급원이 되고, 산화성 고체인 제1류 위험물과 분자\n안에 산소를 지닌 자기반응성 물질인 제5류 위험물도 스스로 산소를 내놓아 산소공급원 구실을 한다.\n아르곤(㉡)은 비활성 기체여서 산소를 내놓지도 연소를 돕지도 못하고, 마찰열(㉤)은 산소공급원이 아니라 점화원\n에 해당한다.\n근거: 소방학개론 일반이론 — 연소의 정의와 3요소(가연물·산소공급원·점화원), 위험물의 유별 성질은 위험물안\n전관리법 시행령 별표1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27782-q09": {
+      "beforeSHA256": "d692f260a493ab8bb1b84c0798a856ad9581214dd2d7b5cc08ea64a0a3d818ed",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "융해열과 기화열은 점화원이 아니라는 점에서, 이를 대표적인 점화원이라고 한 설명이 옳지 않다.\n점화원은 화염, 전기불꽃, 정전기, 마찰·충격, 고온표면처럼 가연물에 활성화에너지를 공급하는 에너지원인데, 융\n해열과 기화열은 물질이 상태를 바꾸는 데 흡수되는 열이어서 점화원이 되지 못한다.\n연소의 정의와 연쇄반응을 포함한 연소의 4요소 개념은 옳고, 제1류·제6류 위험물은 자신은 불연성이지만 산소를\n내주는 산화성 물질이라 산소공급원 역할을 한다는 설명도 옳다.\n근거: 소방학개론 일반이론 — 연소의 정의와 3요소·점화원의 범위; 유별 성질은 위험물안전관리법 시행령 별표1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-311": {
+      "beforeSHA256": "cd26fafaf77f84ec4abfcb8acd20b8b5881fe2ea1adc5413c17d4db664d1ed9f",
+      "set": {
+        "explanation": "산소공급원은 공기에 그치지 않으며, 산화성 물질과 자기반응성 물질도 모두 산소공급원이 되므로 ㉠·㉡·㉢이 해당한다. 스스로는 타지 않으면서 열이나 충격을 받으면 산소를 내놓는 산화성 고체(㉡)와, 분자 안에 산소를 품어 공기를 막아도 연소가 이어지는 자기반응성 물질(㉢)이 산소공급원에 해당한다. ㉣의 질소는 불활성 기체여서 산소를 공급하기는커녕 주위 산소 농도를 떨어뜨리는 쪽이라 질식소화에 쓰인다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-360": {
+      "beforeSHA256": "953f5035613355235c453ea0d7f276a05b21629b9b5187db9ce97a1e4a69a028",
+      "set": {
+        "explanation": "공기·산화성 고체(제1류 위험물)·자기반응성 물질(제5류 위험물)인 ㉠·㉢·㉣만 산소공급원이 될 수 있다. 연소가 이루어지려면 가연물, 산소공급원, 점화원이 함께 있어야 하며 산소공급원은 연소에 필요한 산소를 대주는 것을 말한다. 공기는 산소를 약 21퍼센트 지녀 통상적인 산소공급원이 되고, 산화성 고체인 제1류 위험물과 분자 안에 산소를 지닌 자기반응성 물질인 제5류 위험물도 스스로 산소를 내놓아 산소공급원 구실을 한다. 아르곤(㉡)은 비활성 기체여서 산소를 내놓지도 연소를 돕지도 못하고, 마찰열(㉤)은 산소공급원이 아니라 점화원 에 해당한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-459": {
+      "beforeSHA256": "93335fc63f393c1900ac22b39768bf34821395faca916bd5b5da90a226475065",
+      "set": {
+        "explanation": "융해열과 기화열은 점화원이 아니라는 점에서, 이를 대표적인 점화원이라고 한 설명이 옳지 않다. 점화원은 화염, 전기불꽃, 정전기, 마찰·충격, 고온표면처럼 가연물에 활성화에너지를 공급하는 에너지원인데, 융 해열과 기화열은 물질이 상태를 바꾸는 데 흡수되는 열이어서 점화원이 되지 못한다. 연소의 정의와 연쇄반응을 포함한 연소의 4요소 개념은 옳고, 제1류·제6류 위험물은 자신은 불연성이지만 산소를 내주는 산화성 물질이라 산소공급원 역할을 한다는 설명도 옳다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27776-q10": {
+      "beforeSHA256": "9768b743d91af8160759645245f5eb7ed67f8342dbc2e4aca51590e5c5208b1d",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "세 온도는 인화점이 가장 낮고 그다음이 연소점, 발화점이 가장 높은 순서이므로, 연소점을 가장 낮게 배치한 설명\n이 옳지 않다.\n인화점은 점화원이 있어야 불이 붙는 최저온도이고, 연소점은 그 상태에서 점화원을 치워도 연소가 이어지는 온도\n이므로 인화점보다 조금 높다.\n발화점은 점화원 없이 축적된 열만으로 스스로 발화하는 온도여서 세 값 중 가장 높으며, 발화점이 낮은 물질일수\n록 위험성이 크다.\n근거: 소방학개론 일반이론 — 인화점·연소점·발화점의 정의와 대소관계\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27778-q09": {
+      "beforeSHA256": "27962579f377bbd0bd53535447eedb3afd7bebc056d894b9ffc54f1aecda0ca4",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "인화점이 낮을수록 더 낮은 온도에서 연소범위에 드는 증기를 내므로 화재 위험성은 오히려 커지는데, 증기 발생이\n적어 위험성이 낮다고 한 설명은 옳지 않다.\n법령은 특수가연물의 가연성 액체류를 인화점 섭씨 40도 이상 70도 미만이면서 연소점이 섭씨 60도 이상인 것으\n로 규정해, 같은 물질의 연소점이 인화점보다 높다는 점을 전제하고 있다. 가연성 고체류의 첫 번째 기준도 인화점\n섭씨 40도 이상 100도 미만이다.\n발화점은 점화원 없이 열의 축적만으로 발화하는 온도이므로 세 온도 중 가장 높다.\n근거: 화재의 예방 및 안전관리에 관한 법률 시행령 별표2 비고 제5호가목·제7호가목\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-MOCK-018-17": {
+      "beforeSHA256": "e8b3a87b0a930068bc6c2965ae78afe37c4a2378f4dadbf1155ef32448c695f0",
+      "set": {
+        "explanation": "가: 제3석유류. 근거: 70℃ 이상 200℃ 미만.\n\n나: 해당 온도만으로 전 위험 배제 불가. 근거: 물질·국부 가열·시험 조건을 단순화하지 않음.\n\n제시 기록 판정: 가 옳음 / 나 수정 필요.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-MOCK-018-20": {
+      "beforeSHA256": "8ded1b5f2108c136222bac1dd75f6f0b1010c77bd8b0d655465f689707efd947",
+      "set": {
+        "explanation": "가: 해당 온도만으로 전 위험 배제 불가. 근거: 물질·국부 가열·시험 조건을 단순화하지 않음.\n\n나: 발화점. 근거: 외부 점화원 유무.\n\n다: 제2석유류. 근거: 경계 직전 값.\n\n제시 기록 판정: 가 수정 필요 / 나 수정 필요 / 다 옳음.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-160": {
+      "beforeSHA256": "5c88413f4d4726972e5e636a74121b2b66960867a4b83f168e439bf3e33094cd",
+      "set": {
+        "explanation": "세 온도는 인화점이 가장 낮고 그아래이 연소점, 발화점이 가장 높은 순서이므로, 연소점을 가장 낮게 배치한 설명 이 옳지 않다. 인화점은 점화원이 있어야 불이 붙는 최저온도이고, 연소점은 그 상태에서 점화원을 치워도 연소가 이어지는 온도 이므로 인화점보다 조금 높다. 발화점은 점화원 없이 축적된 열만으로 스스로 발화하는 온도여서 세 값 중 가장 높으며, 발화점이 낮은 물질일수 록 위험성이 크다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-259": {
+      "beforeSHA256": "1fbccbbfa603ef304d2d284f8080400165889b98a2c87e12e30bce8b64cb68b1",
+      "set": {
+        "explanation": "인화점이 낮을수록 더 낮은 온도에서 연소범위에 드는 증기를 내므로 화재 위험성은 오히려 커지는데, 증기 발생이 적어 위험성이 낮다고 한 설명은 옳지 않다. 법령은 특수가연물의 가연성 액체류를 인화점 섭씨 40도 이상 70도 미만이면서 연소점이 섭씨 60도 이상인 것으로 규정해, 같은 물질의 연소점이 인화점보다 높다는 점을 전제하고 있다. 가연성 고체류의 첫 번째 기준도 인화점 섭씨 40도 이상 100도 미만이다. 발화점은 점화원 없이 열의 축적만으로 발화하는 온도이므로 세 온도 중 가장 높다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27776-q09": {
+      "beforeSHA256": "cd9ea7e541463717ae7800457ff0e434aff36c7157083a1827dc30c3e0b16452",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "유류화재(B급)는 유류가 타고 나서 재가 남지 않는 화재로 정의되므로, 재가 남는다고 한 설명이 옳지 않다.\n재가 남는 화재는 일반화재(A급)이며, 소화기의 적응 화재별 표시는 각각 'A', 'B'이다.\n전기화재(C급)와 금속화재(D급)의 정의는 기준의 문언과 같으며, 주방에서 동식물유를 취급하는 조리기구에서 일\n어나는 화재는 별도로 주방화재(K급)로 구분한다.\n근거: NFTC 101 1.7.1.7~1.7.1.11\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27776-q11": {
+      "beforeSHA256": "1f7efb44fef1281f93ae3ba799b79384746fc55ffbb5e1c89a67220ba0352d6f",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "㉠~㉢의 소화방법은 순서대로 제거소화·질식소화·억제소화이다.\n㉠은 연소 중인 곳에서 가연물 자체를 없애 연소를 끊는 조치이므로 제거소화이고, ㉡은 포가 유면을 덮어 산소 공\n급을 차단하는 것이므로 질식소화이며 일반적으로 산소농도를 약 15% 이하로 낮추어 소화한다.\n㉢은 연쇄반응을 담당하는 라디칼을 포착해 반응을 끊는 것이므로 억제소화(부촉매소화)이며, 물을 뿌려 착화온도\n아래로 온도를 낮추는 냉각소화에 해당하는 사례는 여기에 없다.\n근거: 소방학개론 일반이론 — 소화의 4가지 원리(제거·질식·냉각·억제)\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-159": {
+      "beforeSHA256": "715c3f27e7998a6aa40fd4af9fd139a3f61f4c8e35fb8a01e559c0d09817db7a",
+      "set": {
+        "explanation": "유류화재(B급)는 유류가 타고 나서 재가 남지 않는 화재로 정의되므로, 재가 남는다고 한 설명이 옳지 않다. 재가 남는 화재는 일반화재(A급)이며, 소화기의 적응 화재별 표시는 각각 'A', 'B'이다. 전기화재(C급)와 금속화재(D급)의 정의는 기준의 문언과 같으며, 주방에서 동식물유를 취급하는 조리기구에서 일 어나는 화재는 별도로 주방화재(K급)로 구분한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-161": {
+      "beforeSHA256": "9c05f99126610e52384471ec6870041190931c93ce14751dd1d2f91270ed1b42",
+      "set": {
+        "explanation": "㉠~㉢의 소화방법은 순서대로 제거소화·질식소화·억제소화이다. ㉠은 연소 중인 곳에서 가연물 자체를 없애 연소를 끊는 조치이므로 제거소화이고, ㉡은 포가 유면을 덮어 산소 공 급을 차단하는 것이므로 질식소화이며 일반적으로 산소농도를 약 15% 이하로 낮추어 소화한다. ㉢은 연쇄반응을 담당하는 라디칼을 포착해 반응을 끊는 것이므로 억제소화(부촉매소화)이며, 물을 뿌려 착화온도 아래로 온도를 낮추는 냉각소화에 해당하는 사례는 여기에 없다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27776-q14": {
+      "beforeSHA256": "ec06d75933a58f6d777cbacd40693ad92860031948ff49e65f6cef9655221996",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "제2류 위험물 중 인화성고체는 고형알코올과 그 밖에 1기압에서 인화점이 40℃ 미만인 고체로 정의된다는 설명\n이 옳다.\n• 제1류는 가연성 고체가 아니라 산화성 고체로 스스로 타기보다 산소를 내어 연소를 돕는다.\n• 제4류는 인화성 고체가 아니라 인화성 액체이며 지정수량도 리터 단위다.\n• 제6류는 자기반응성 물질이 아니라 산화성 액체이며, 자기반응성 물질은 제5류다.\n근거: 위험물안전관리법 시행령 별표1 및 같은 별표 비고 제1호·제8호·제11호\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27778-q14": {
+      "beforeSHA256": "8c7aec573c2ea388aa41bc444f31605ef09a408bd21cccb9bf01a53e81fa122a",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "제4류 위험물은 인화성 액체로 대부분 물보다 가볍고 물에 녹지 않아 주수소화를 하면 기름이 물 위로 떠 화재면이\n넓어지므로, 포·분말·이산화탄소 등에 의한 질식소화가 적합하다는 설명이 옳다.\n• 증기는 대부분 공기보다 무거워 낮은 곳에 체류하므로 천장 부근에만 머문다는 설명은 틀리다.\n• 인화점은 낮을수록 위험성이 커지므로 인화점이 높을수록 위험하다는 설명은 틀리다.\n• 분자 안에 산소를 포함해 공기 차단 없이도 자기연소하는 것은 제4류가 아니라 제5류 자기반응성 물질이다.\n근거: 위험물안전관리법 시행령 별표1 제4류 유별 성질 '인화성액체', 소방학개론 일반이론 — 제4류 위험물의 공\n통 성질과 소화방법\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-164": {
+      "beforeSHA256": "54cf04889a5568ea165b5f91a6d0a4eac2336a59c1c960396741bf856dc37f04",
+      "set": {
+        "explanation": "제2류 위험물 중 인화성고체는 고형알코올과 그 밖에 1기압에서 인화점이 40℃ 미만인 고체로 정의된다는 설명 이 옳다. • 제1류는 가연성 고체가 아니라 산화성 고체로 스스로 타기보다 산소를 내어 연소를 돕는다. • 제4류는 인화성 고체가 아니라 인화성 액체이며 지정수량도 리터 단위다. • 제6류는 자기반응성 물질이 아니라 산화성 액체이며, 자기반응성 물질은 제5류다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-264": {
+      "beforeSHA256": "59dd78916bec4cbbce3eaa9f5c59a8df5a23ed51ff3418711c231234d5a03185",
+      "set": {
+        "explanation": "제4류 위험물은 인화성 액체로 대부분 물보다 가볍고 물에 녹지 않아 주수소화를 하면 기름이 물 위로 떠 화재면이 넓어지므로, 포·분말·이산화탄소 등에 의한 질식소화가 적합하다는 설명이 옳다. • 증기는 대부분 공기보다 무거워 낮은 곳에 체류하므로 천장 부근에만 머문다는 설명은 틀리다. • 인화점은 낮을수록 위험성이 커지므로 인화점이 높을수록 위험하다는 설명은 틀리다. • 분자 안에 산소를 포함해 공기 차단 없이도 자기연소하는 것은 제4류가 아니라 제5류 자기반응성 물질이다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-464": {
+      "beforeSHA256": "863e44629b5dd449f0e49e289c20d1facf3df8d579d60c0d7b741bd5ddd5a5da",
+      "set": {
+        "explanation": "지정수량은 제조소등 설치허가 등에서 최저의 기준이 되는 수량이라는 점에서, 최고의 기준이라고 한 설명이 옳지 않다. 그 수량 이상을 저장·취급하면 허가 대상이 된다는 뜻이며, 위험물은 인화성이나 발화성 등의 성질을 지닌 물품 가 운데 대통령령으로 정한 것을 말한다. 제4류 위험물 중 알코올류의 지정수량 400L와 제2류 위험물 중 마그네슘의 지정수량 500kg은 옳다. 참고로 제 1석유류 비수용성 액체(휘발유 등)의 지정수량은 200L이다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/designated-quantity-multiples/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27776-q13": {
+      "beforeSHA256": "4c46a0f2dfe82603976015b8b113412ecdfc82f66b506e4f44ddaf7a6337bc8b",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "NFTC 206의 가연성가스 누설경보기 탐지부 설치기준으로 옳은 것은? 주방자동소화장치 기준과 혼용하지 않는다.",
+        "choices": [
+          "액화천연가스(LNG)는 증기비중이 1보다 커서 바닥 쪽에 체류하므로 탐지기의 상단을 바닥면의 상방 30cm 이내에 설치한\n다.",
+          "액화석유가스(LPG)는 증기비중이 1보다 작아 천장 쪽에 체류하므로 탐지기의 하단을 천장면의 하방 30cm 이내에 설치한\n다.",
+          "액화천연가스(LNG)를 사용하는 시설에서는 탐지기를 연소기 중심으로부터 직선거리 8m 이내에 설치한다.",
+          "액화석유가스(LPG)를 사용하는 시설에서는 탐지기를 연소기 중심으로부터 직선거리 8m 이내에 설치한다."
+        ],
+        "explanation": "LNG는 공기보다 가벼워 천장 부근, 연소기 중심에서 직선거리 8m 이내가 기준이다. LPG는 바닥 부근, 직선거리 4m 이내다. 천장은 탐지부 하단, 바닥은 상단까지 30cm 이하로 판단한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "경보기 적용 기준과 거리 용어 통일"
+      ]
+    },
+    "FSM2-CORE-163": {
+      "beforeSHA256": "2fd7b900f03702c54760ce3cac6e6c0e3bdd52e31ad7ecd424fed0331ba978a6",
+      "set": {
+        "question": "NFTC 206의 가연성가스 누설경보기 탐지부 설치기준으로 옳은 것은? 주방자동소화장치 기준과 혼용하지 않는다.",
+        "choices": [
+          "액화천연가스(LNG)는 증기비중이 1보다 커서 바닥 쪽에 체류하므로 탐지기의 상단을 바닥면의 상방 30cm 이내에 설치한 다.",
+          "액화천연가스(LNG)를 사용하는 시설에서는 탐지기를 연소기 중심으로부터 직선거리 8m 이내에 설치한다.",
+          "액화석유가스(LPG)는 증기비중이 1보다 작아 천장 쪽에 체류하므로 탐지기의 하단을 천장면의 하방 30cm 이내에 설치한 다.",
+          "액화석유가스(LPG)를 사용하는 시설에서는 탐지기를 연소기 중심으로부터 직선거리 8m 이내에 설치한다."
+        ],
+        "explanation": "LNG는 공기보다 가벼워 천장 부근, 연소기 중심에서 직선거리 8m 이내가 기준이다. LPG는 바닥 부근, 직선거리 4m 이내다. 천장은 탐지부 하단, 바닥은 상단까지 30cm 이하로 판단한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "경보기 적용 기준과 거리 용어 통일"
+      ]
+    },
+    "FSM2-CORE-363": {
+      "beforeSHA256": "64994597cad6eb812423b4fadc08cccab15922dea3fd0c765b3fa34a9e8f5c67",
+      "set": {
+        "explanation": "LNG는 증기비중이 공기보다 작아 누출되면 천장 쪽에 체류한다는 설명이 옳다. LNG의 주성분은 메탄으로 증기비중이 약 0.6이어서 공기보다 가볍고 누출되면 천장 쪽에 체류한다. LPG의 주성 분은 프로판과 부탄이며 증기비중이 약 1.5~2여서 공기보다 무겁고, 새어 나오면 바닥 같은 낮은 곳에 깔린다. 폭발범위는 프로판이 약 2.1~9.5퍼센트, LNG(메탄)가 약 5~15퍼센트인데, 두 수치를 서로 바꿔 제시한 설명은 옳지 않다. 이 성상 차이 때문에 가스용 주거용 주방자동소화장치의 탐지부도 공기보다 가벼운 가스는 천장 면으로 부터 30센티미터 이하, 무거운 가스는 바닥 면으로부터 30센티미터 이하에 설치한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27781-q19": {
+      "beforeSHA256": "0a5fbe992bb01c50eb946802cd0229210dd31cb20975a3fa5b018526436e8c9b",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "비상조명등 및 휴대용비상조명등은 경보설비가 아니라 피난구조설비에 속하므로 이 설명은 옳지 않다.\n피난구조설비는 피난기구, 인명구조기구, 유도등, 비상조명등 및 휴대용비상조명등으로 구성된다.\n완강기는 사용자가 교대하여 연속적으로 사용할 수 있고, 간이완강기는 연속적으로 사용할 수 없는 것을 말한다.\n근거: 소방시설 설치 및 관리에 관한 법률 시행령 별표1 제3호, NFTC 301 1.8.1.1·1.8.1.2\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-419": {
+      "beforeSHA256": "1fd947f1403a5ed4f5ab2e2c76b34db12e0522f1918ebb154ce341eb7d1b3d8e",
+      "set": {
+        "explanation": "비상조명등 및 휴대용비상조명등은 경보설비가 아니라 피난구조설비에 속하므로 이 설명은 옳지 않다. 피난구조설비는 피난기구, 인명구조기구, 유도등, 비상조명등 및 휴대용비상조명등으로 구성된다. 완강기는 사용자가 교대하여 연속적으로 사용할 수 있고, 간이완강기는 연속적으로 사용할 수 없는 것을 말한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27774-q38": {
+      "beforeSHA256": "ff228a9f0c153c7e21ddfaa584a2545d295391ca485ea69005ff3097ffd2775b",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "알람밸브가 설치된 습식 스프링클러설비를 갖춘 사무실에서 불이 났다. 〈보기〉의 현상을 일어나는 순서대로 바르\n게 나열한 것은?\nㄱ. 배관 압력이 더 내려가 기동용수압개폐장치가 동작하고 펌프가 돌아간다.\nㄴ. 열을 받은 폐쇄형 헤드가 열려 물이 쏟아진다.\nㄷ. 시트링홀로 흘러든 물이 압력스위치를 눌러 사이렌과 밸브개방표시등을 작동시킨다.\nㄹ. 2차측 배관의 압력이 내려간다.\nㅁ. 1차측 압력에 밀려 알람밸브의 클래퍼가 열린다.\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
+        "explanation": "습식 설비는 알람밸브 1차측과 2차측 배관 모두에 물이 가압되어 있으므로, 열로 헤드가 열리면 곧바로 물이 나간\n다(ㄴ).\n물이 나가면 2차측 압력이 먼저 내려가고(ㄹ), 그 결과 1차측 압력에 밀려 클래퍼가 열린다(ㅁ). 클래퍼가 열리면\n시트링홀로 물이 흘러들어 압력스위치를 눌러 사이렌과 밸브개방표시등을 작동시킨다(ㄷ).\n방수가 이어져 배관 압력이 더 내려가면 기동용수압개폐장치가 펌프를 돌린다(ㄱ). 압력스위치 동작이 클래퍼 개\n방보다 앞설 수 없으므로 다른 배열은 성립하지 않는다.\n근거: 스프링클러설비의 화재안전기술기준(NFTC 103) 1.7.1.23·2.6.1.1·2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "작동 순서의 설정 전제 명시"
+      ]
+    },
+    "moducbt-27778-q36": {
+      "beforeSHA256": "ca79ff22c3670a84980ced1e2dedbc3a7f8dc14fe1561f7f74d2e778d9feddaf",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "〈보기〉는 습식 스프링클러설비가 화재로 작동할 때 일어나는 현상을 순서 없이 나열한 것이다. 작동순서로 옳은 것\n은?\n㉠ 습식유수검지장치(알람밸브)의 2차측 압력이 떨어져 클래퍼가 개방된다.\n㉡ 계속된 방수로 배관 내 압력이 떨어져 기동용수압개폐장치의 압력스위치가 작동한다.\n㉢ 화재의 열로 폐쇄형 헤드의 감열체가 개방되어 방수가 시작된다.\n㉣ 펌프가 기동하여 가압수를 계속 공급한다.\n㉤ 유수검지장치의 압력스위치가 작동하여 화재신호를 발신한다.\n㉥ 사이렌이 울리고 감시제어반의 밸브개방 표시등이 점등된다.\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
+        "explanation": "습식 스프링클러설비는 화재의 열로 폐쇄형 헤드가 개방되면 곧바로 방수가 시작되고, 펌프 기동이 가장 나중에 일\n어난다.\n유수검지장치의 1차측과 2차측에 모두 가압수가 채워져 있어 헤드가 열리면 2차측 압력이 떨어지면서 클래퍼가\n열리고, 유수검지장치의 압력스위치가 작동해 화재신호를 보내면 음향장치가 경보하고 감시제어반에 밸브개방 표\n시가 나타난다.\n방수가 계속되어 배관 내 압력이 낮아지면 압력변동을 검지하는 기동용수압개폐장치의 압력스위치가 작동해 펌프\n가 기동한다.\n근거: 스프링클러설비의 화재안전기술기준(NFTC 103) 1.7.1.9·1.7.1.15·2.6.1.1·2.10.3.5, 소방안전관리 실무 —\n습식 스프링클러설비 작동순서\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "작동 순서의 설정 전제 명시"
+      ]
+    },
+    "moducbt-27779-q39": {
+      "beforeSHA256": "54f361d59828ea2e1e526d3a07e5b314513f9dc469f2954a65d2b412bf96a5b2",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "다음은 습식 스프링클러설비가 설치된 사무실에서 불이 났을 때 설비가 움직이는 흐름이다. ㉠~㉢에 들어갈 내용\n을 바르게 짝지은 것은?\n화재 발생 → 폐쇄형 헤드 개방·방수 → ( ㉠ ) → 1차측 압력에 밀려 클래퍼 개방 → ( ㉡ ) → 배관 압력이 더 내려가 ( ㉢ )\n동작 → 펌프 기동\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
+        "explanation": "㉠은 2차측 배관의 압력 저하, ㉡은 시트링홀로 흘러든 물에 의한 압력스위치 작동(사이렌·밸브개방표시등), ㉢은\n기동용수압개폐장치다.\n습식 설비는 유수검지장치 1차측과 2차측 배관에 모두 물이 가압되어 있으며, 헤드가 열려 물이 나가면 2차측 압\n력이 먼저 떨어지고(㉠) 1차측 압력에 밀려 클래퍼가 열린다.\n이때 밸브 몸통의 시트링홀로 물이 흘러들어 압력스위치를 작동시켜 사이렌과 밸브개방표시등을 켜며(㉡), 방수가\n이어져 배관 압력이 더 내려가면 기동용수압개폐장치가 동작해 펌프를 돌린다(㉢).\n근거: 스프링클러설비의 화재안전기술기준(NFTC 103) 1.7.1.23·2.6.1.1·2.6.2.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "작동 순서의 설정 전제 명시"
+      ]
+    },
+    "FSM2-CORE-088": {
+      "beforeSHA256": "0aca68e6130f417e54ad48ecb7a6f12035f1ca4ec4620a4483639c482e0faa52",
+      "set": {
+        "question": "알람밸브가 설치된 습식 스프링클러설비를 갖춘 업무용 사무공간에서 불이 났다. 〈제시문〉의 현상을 일어나는 순서대로 맞는 순서로 정리한 것은? ㄱ. 배관 압력이 더 내려가 기동용수압개폐장치가 동작하고 펌프가 돌아간다. ㄴ. 열을 받은 폐쇄형 헤드가 열려 물이 쏟아진다. ㄷ. 시트링홀로 흘러든 물이 압력스위치를 눌러 사이렌과 밸브개방표시등을 작동시킨다. ㄹ. 2차측 배관의 압력이 내려간다. ㅁ. 1차측 압력에 밀려 알람밸브의 클래퍼가 열린다.\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
+        "explanation": "습식 설비는 알람밸브 1차측과 2차측 배관 모두에 물이 가압되어 있으므로, 열로 헤드가 열리면 곧바로 물이 나간 다(ㄴ). 물이 나가면 2차측 압력이 먼저 내려가고(ㄹ), 그 결과 1차측 압력에 밀려 클래퍼가 열린다(ㅁ). 클래퍼가 열리면 시트링홀로 물이 흘러들어 압력스위치를 눌러 사이렌과 밸브개방표시등을 작동시킨다(ㄷ). 방수가 이어져 배관 압력이 더 내려가면 기동용수압개폐장치가 펌프를 돌린다(ㄱ). 압력스위치 동작이 클래퍼 개 방보다 앞설 수 없으므로 다른 배열은 성립하지 않는다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "작동 순서의 설정 전제 명시"
+      ]
+    },
+    "FSM2-CORE-286": {
+      "beforeSHA256": "5f1327e424d837f10ee1cd1606e97ddb29d7780c8bc363e8b520f21edf7b87e0",
+      "set": {
+        "question": "〈제시문〉는 습식 스프링클러설비가 화재로 작동할 때 일어나는 현상을 순서 없이 나열한 것이다. 작동순서로 맞게 설명한 것은? ㉠ 습식유수검지장치(알람밸브)의 2차측 압력이 떨어져 클래퍼가 개방된다. ㉡ 계속된 방수로 배관 내 압력이 떨어져 기동용수압개폐장치의 압력스위치가 작동한다. ㉢ 화재의 열로 폐쇄형 헤드의 감열체가 개방되어 방수가 시작된다. ㉣ 펌프가 기동하여 가압수를 계속 공급한다. ㉤ 유수검지장치의 압력스위치가 작동하여 화재신호를 발신한다. ㉥ 사이렌이 울리고 감시제어반의 밸브개방 표시등이 점등된다.\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
+        "explanation": "습식 스프링클러설비는 화재의 열로 폐쇄형 헤드가 개방되면 곧바로 방수가 시작되고, 펌프 기동이 가장 나중에 일 어난다. 유수검지장치의 1차측과 2차측에 모두 가압수가 채워져 있어 헤드가 열리면 2차측 압력이 떨어지면서 클래퍼가 열리고, 유수검지장치의 압력스위치가 작동해 화재신호를 보내면 음향장치가 경보하고 감시제어반에 밸브개방 표 시가 나타난다. 방수가 계속되어 배관 내 압력이 낮아지면 압력변동을 검지하는 기동용수압개폐장치의 압력스위치가 작동해 펌프 가 기동한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "작동 순서의 설정 전제 명시"
+      ]
+    },
+    "FSM2-CORE-339": {
+      "beforeSHA256": "a75e4bda8e6a9ac4e265ade149dd1005f35fda38e9de828c31c605fde1525df3",
+      "set": {
+        "question": "아래는 습식 스프링클러설비가 설치된 업무용 사무공간에서 불이 났을 때 설비가 움직이는 흐름이다. ㉠~㉢에 들어갈 내용 을 정확하게 연결한 것은? 화재 발생 → 폐쇄형 헤드 개방·방수 → ( ㉠ ) → 1차측 압력에 밀려 클래퍼 개방 → ( ㉡ ) → 배관 압력이 더 내려가 ( ㉢ ) 동작 → 펌프 기동\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
+        "explanation": "㉠은 2차측 배관의 압력 저하, ㉡은 시트링홀로 흘러든 물에 의한 압력스위치 작동(사이렌·밸브개방표시등), ㉢은 기동용수압개폐장치다. 습식 설비는 유수검지장치 1차측과 2차측 배관에 모두 물이 가압되어 있으며, 헤드가 열려 물이 나가면 2차측 압 력이 먼저 떨어지고(㉠) 1차측 압력에 밀려 클래퍼가 열린다. 이때 밸브 몸통의 시트링홀로 물이 흘러들어 압력스위치를 작동시켜 사이렌과 밸브개방표시등을 켜며(㉡), 방수가 이어져 배관 압력이 더 내려가면 기동용수압개폐장치가 동작해 펌프를 돌린다(㉢).\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "작동 순서의 설정 전제 명시"
+      ]
+    },
+    "moducbt-27779-q19": {
+      "beforeSHA256": "442e388c2adb1493b8d29fc0e5dbcb9d4fcd30e48d6c397c96d5354af7f1e805",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "특별기준·옥상수조 면제 조건이 적용되지 않는 일반 폐쇄형 스프링클러설비에서 기준개수 N의 법정 최소 방수·수원 기준으로 옳지 않은 것은?",
+        "choices": [
+          "가압송수장치의 정격토출압력은 하나의 헤드선단에 0.1MPa 이상 1.2MPa 이하의 방수압력이 될 수 있게 하는 크기여야 한\n다.",
+          "수원의 저수량은 설치장소별 헤드의 기준개수에 1.6㎥를 곱한 양 이상이어야 한다.",
+          "가압송수장치의 법정 최소 송수량은 N × 130L/min이다.",
+          "산출된 유효수량 외에 유효수량의 3분의 1 이상을 옥상에 설치해야 한다."
+        ],
+        "explanation": "최소 송수량은 N × 80L/min이므로 법정 최소값을 130으로 정한 보기가 틀리다. 실제 설계량이 최소값보다 큰 경우가 부적합하다는 뜻은 아니다. 일반 수원은 N × 1.6㎥ 이상, 헤드선단 압력 0.1~1.2MPa, 옥상수조는 면제 조건이 주어지지 않았다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "최소값과 실제 설계량 혼동 제거"
+      ]
+    },
+    "FSM2-CORE-319": {
+      "beforeSHA256": "45db0ae15393487347ceff8f5c537b09393728273058f60a63def3af0e5e5f77",
+      "set": {
+        "question": "특별기준·옥상수조 면제 조건이 적용되지 않는 일반 폐쇄형 스프링클러설비에서 기준개수 N의 법정 최소 방수·수원 기준으로 옳지 않은 것은?",
+        "choices": [
+          "가압송수장치의 법정 최소 송수량은 N × 130L/min이다.",
+          "가압송수장치의 정격토출압력은 하나의 헤드선단에 0.1MPa 이상 1.2MPa 이하의 방수압력이 될 수 있게 하는 크기여야 한 다.",
+          "수원의 저수량은 설치장소별 헤드의 기준개수에 1.6㎥를 곱한 양 이상이어야 한다.",
+          "산출된 유효수량 외에 유효수량의 3분의 1 이상을 옥상에 설치해야 한다."
+        ],
+        "explanation": "최소 송수량은 N × 80L/min이므로 법정 최소값을 130으로 정한 보기가 틀리다. 실제 설계량이 최소값보다 큰 경우가 부적합하다는 뜻은 아니다. 일반 수원은 N × 1.6㎥ 이상, 헤드선단 압력 0.1~1.2MPa, 옥상수조는 면제 조건이 주어지지 않았다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "최소값과 실제 설계량 혼동 제거"
+      ]
+    },
+    "moducbt-27780-q23": {
+      "beforeSHA256": "5cdc8fc7e266ead52bc4256d3a51648b1bed2532d946efc80c5bd973d8e8e9f8",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "P형 자동화재탐지설비 감지기회로의 배선기준으로 옳지 않은 것은?",
+        "explanation": "하나의 공통선에 접속할 수 있는 경계구역을 10개 이하로 본 설명이 옳지 않다.\nP형 및 G.P형 수신기의 감지기회로 배선에서 하나의 공통선에 접속할 수 있는 경계구역은 7개 이하다.\n감지기 사이의 회로 배선을 송배전식으로 하는 것은 회로 말단의 종단저항까지 전류가 흐르게 해 도통시험이 가능\n하도록 하기 위한 것이다. 종단저항은 점검·관리가 쉬운 장소에 두고 전용함에 넣는 경우 바닥으로부터 1.5미터 이\n내에 설치하며, 감지기회로의 전로저항은 50옴 이하, 종단 감지기에 접속되는 배선의 전압은 정격전압의 80퍼센\n트 이상이어야 한다.\n근거: 자동화재탐지설비 및 시각경보장치의 화재안전기술기준(NFTC 203) 2.8.1.3, 2.8.1.4, 2.8.1.7, 2.8.1.8\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "그림 없이 완결되는 기준 문항으로 정리"
+      ]
+    },
+    "moducbt-27782-q25": {
+      "beforeSHA256": "bede88dda6fa9e0a1e12b1c43783f28b03ada4de4d2ae1f142c7843f8e89374d",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "자동화재탐지설비의 구성과 배선에 관한 설명으로 옳지 않은 것은?",
+        "explanation": "P형 및 G.P형 수신기의 감지기 회로에서 하나의 공통선에 접속할 수 있는 경계구역은 7개 이하라는 점에서, 10개\n이하라고 한 설명이 옳지 않다.\n송배선식 배선은 회로 끝까지 전류가 흐르게 해 도통시험으로 단선 여부를 확인하기 위한 것이고, 종단저항은 그\n기준이 되도록 회로 끝부분에 두며 전용함을 쓰면 바닥으로부터 1.5m 이내 높이에 설치한다.\n발신기는 층마다 설치하고 수평거리 25m 이하로 배치하며, 스위치는 바닥으로부터 0.8~1.5m 높이에 설치한다.\n근거: NFTC 203 2.6.1.1, 2.6.1.2, 2.8.1.3, 2.8.1.4, 2.8.1.7\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "그림 없이 완결되는 기준 문항으로 정리"
+      ]
+    },
+    "moducbt-27782-q33": {
+      "beforeSHA256": "702dfa73f9a0ece85925fffdcc0c8420c6015bdb29b10bbd527c17b0b88a8a08",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "종단저항을 종단감지기에 설치할 때는 어느 감지기가 회로의 끝인지 알 수 있도록 별도의 표시를 해야 한다는 점에\n서, 표시를 하지 않는다고 한 설명이 옳지 않다.\n점검·관리가 쉬운 장소에 두고, 전용함을 쓰면 바닥에서 1.5m 이내 높이에 설치하며, 회로의 끝부분에 설치한다는\n설명은 옳다.\n종단저항이 빠지거나 결선이 풀리면 도통시험에서 단선으로 나타난다.\n근거: NFTC 203 2.8.1.3.1~2.8.1.3.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-483": {
+      "beforeSHA256": "b8d50a445b4d4deb9b0b5e37db8a96c0d212f69369a3cf6ec476d7d7d3a6a220",
+      "set": {
+        "explanation": "종단저항을 종단감지기에 설치할 때는 어느 감지기가 회로의 끝인지 알 수 있도록 별도의 표시를 해야 한다는 점에 서, 표시를 하지 않는다고 한 설명이 옳지 않다. 점검·관리가 쉬운 장소에 두고, 전용함을 쓰면 바닥에서 1.5m 이내 높이에 설치하며, 회로의 끝부분에 설치한다는 설명은 옳다. 종단저항이 빠지거나 결선이 풀리면 도통시험에서 단선으로 나타난다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27774-q21": {
+      "beforeSHA256": "e4ede1838dc38b5633d19430966bb28c76b46c1bce01f3af1bcfb4ff99cfb299",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "공연장 실내 객석 수평 통로 직선 부분에 필요한 객석유도등의 최소 개수가 정확히 5개이다. 이 길이로 가능한 것은? 최소 개수는 L/4 − 1을 계산해 소수점을 올려 구한다.",
+        "explanation": "4 < L/4 − 1 ≤ 5이므로 20 < L ≤ 24m다. 보기 중 23m만 해당한다. 16·19·28m의 최소 개수는 3·4·6개다. 실제 설치 수가 아닌 최소 필요 수로 판단한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/auditorium-guide-light-count/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "최소 필요 개수 명시"
+      ]
+    },
+    "moducbt-27777-q14": {
+      "beforeSHA256": "4d9db0f901534bab44af8f0147f784996bdcaa520a3dc3f58df7eaf8cd460318",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "choices": [
+          "하나의 콘센트에 여러 개의 전기기구를 문어발식으로 꽂아 사용하지 않는다.",
+          "정전기 발생 장소는 물질·설비에 적합한 습도 조절과 이온화 등 검증된 방법을 적용한다.",
+          "정전기가 축적되지 않도록 전기저항이 큰 절연성 재료를 골라 사용한다.",
+          "누전차단기는 제조사에서 정한 주기에 따라 시험버튼으로 동작을 확인한다."
+        ],
+        "explanation": "저항이 큰 절연성 재료로 전하를 축적시키는 보기가 틀리다. 접지·본딩·정전기 방지 재료를 적용한다. 습도·이온화는 장소·물질 조건에 맞추고 차단기 시험 주기는 제조사 지침을 따른다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "보편 근거가 없는 수치·주기 단정 제거"
+      ]
+    },
+    "FSM2-CORE-214": {
+      "beforeSHA256": "e41814b86017aa4695b40400806ce581c5fba20851e800d403151d32b3e48a36",
+      "set": {
+        "choices": [
+          "하나의 콘센트에 여러 개의 전기기구를 문어발식으로 꽂아 사용하지 않는다.",
+          "정전기가 축적되지 않도록 전기저항이 큰 절연성 재료를 골라 사용한다.",
+          "정전기 발생 장소는 물질·설비에 적합한 습도 조절과 이온화 등 검증된 방법을 적용한다.",
+          "누전차단기는 제조사에서 정한 주기에 따라 시험버튼으로 동작을 확인한다."
+        ],
+        "explanation": "저항이 큰 절연성 재료로 전하를 축적시키는 보기가 틀리다. 접지·본딩·정전기 방지 재료를 적용한다. 습도·이온화는 장소·물질 조건에 맞추고 차단기 시험 주기는 제조사 지침을 따른다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "보편 근거가 없는 수치·주기 단정 제거"
+      ]
+    },
+    "FSM2-MOCK-071-13": {
+      "beforeSHA256": "2037b47dcaa420f48906d831a8cc0803a72f8adb89e92d38cd2397985c526a66",
+      "set": {
+        "question": "[소화기 내용연수와 교체 판단 · 복합 사례]\n분말소화기 내용연수·성능확인검사의 제시 조건을 적용한다. 별도 검사 합격이 없으면 일상 점검으로 사용기간이 연장되지 않는다.\n\n가. 제조 6년·심한 부식·내용연수는 남음\n\n나. 내용연수 경과 후 9년인 해당 소화기 검사 합격\n\n가와 나의 판단을 모두 옳게 연결한 것은?\n\n검사 합격이 명시된 사례는 이전 성능확인검사·사용기간 연장과 이번 재검사 기한을 모두 적법하게 충족했고 합격증명서로 확인한 경우다. 최초 검사 없이 장기간 방치한 사례는 아니다.",
+        "explanation": "가: 사용 적합성·정비 교체 확인. 근거: 기간 내 결함도 별도 판단.\n\n나: 정해진 기산점부터 3년 조건. 근거: 10년 미만 구간과 연장 기산점.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "적법한 연장·재검사 이력 명시"
+      ]
+    },
+    "FSM2-MOCK-071-14": {
+      "beforeSHA256": "8fc1d874c05886c86ea17d214a10bfdd02fe464acd91b8e4044cb24c27e83474",
+      "set": {
+        "question": "[소화기 내용연수와 교체 판단 · 복합 사례]\n분말소화기 내용연수·성능확인검사의 제시 조건을 적용한다. 별도 검사 합격이 없으면 일상 점검으로 사용기간이 연장되지 않는다.\n\n가. CO₂ 제품에 분말 10년을 그대로 적용\n\n나. 내용연수 경과 후 10년인 해당 소화기 검사 합격\n\n가와 나의 판단을 모두 옳게 연결한 것은?\n\n검사 합격이 명시된 사례는 이전 성능확인검사·사용기간 연장과 이번 재검사 기한을 모두 적법하게 충족했고 합격증명서로 확인한 경우다. 최초 검사 없이 장기간 방치한 사례는 아니다.",
+        "explanation": "가: 제품별 법정 대상 확인. 근거: 내용연수 적용 약제 범위.\n\n나: 1년 연장 조건. 근거: 경과 후 10년 이상 구간.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "적법한 연장·재검사 이력 명시"
+      ]
+    },
+    "FSM2-MOCK-071-15": {
+      "beforeSHA256": "cfb9f39d8564276f761a2bb7a7338a0062000f408a2d1e4fa88670d81b265d80",
+      "set": {
+        "question": "[소화기 내용연수와 교체 판단 · 복합 사례]\n분말소화기 내용연수·성능확인검사의 제시 조건을 적용한다. 별도 검사 합격이 없으면 일상 점검으로 사용기간이 연장되지 않는다.\n\n가. 내용연수 경과일 다음 달부터 1년 넘게 검사 미실시\n\n나. 내용연수 경과 후 11년인 해당 소화기 검사 합격\n\n가의 기록: 나중에 아무 때나 검사하면 동일\n\n나의 기록: 녹색이면 영구 사용\n\n사례 조건을 그대로 적용할 때 반드시 수정해야 하는 기록을 빠짐없이 고른 것은?\n\n검사 합격이 명시된 사례는 이전 성능확인검사·사용기간 연장과 이번 재검사 기한을 모두 적법하게 충족했고 합격증명서로 확인한 경우다. 최초 검사 없이 장기간 방치한 사례는 아니다.",
+        "explanation": "가: 검사 기한 확인 필요. 근거: 성능확인검사 실시 기한.\n\n나: 1년 연장 조건. 근거: 장기 경과 구간의 별도 기간.\n\n제시 기록 판정: 가 수정 필요 / 나 수정 필요.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "적법한 연장·재검사 이력 명시"
+      ]
+    },
+    "FSM2-MOCK-071-16": {
+      "beforeSHA256": "748fbeb7439d9b6f0f347607cb64a7340a9aaef6e380c2542e2749619cd72aea",
+      "set": {
+        "question": "[소화기 내용연수와 교체 판단 · 복합 사례]\n분말소화기 내용연수·성능확인검사의 제시 조건을 적용한다. 별도 검사 합격이 없으면 일상 점검으로 사용기간이 연장되지 않는다.\n\n가. 내용연수 경과 후 9년인 해당 소화기 검사 합격\n\n나. 관리자가 육안 양호 확인을 법정 성능확인검사 합격이라 기재\n\n가의 기록: 정해진 기산점부터 3년 조건\n\n나의 기록: 육안 점검이 검사 대체\n\n사례 조건을 그대로 적용할 때 반드시 수정해야 하는 기록을 빠짐없이 고른 것은?\n\n검사 합격이 명시된 사례는 이전 성능확인검사·사용기간 연장과 이번 재검사 기한을 모두 적법하게 충족했고 합격증명서로 확인한 경우다. 최초 검사 없이 장기간 방치한 사례는 아니다.",
+        "explanation": "가: 정해진 기산점부터 3년 조건. 근거: 10년 미만 구간과 연장 기산점.\n\n나: 법정 검사와 구별. 근거: 일상 관리와 검사 절차 차이.\n\n제시 기록 판정: 가 옳음 / 나 수정 필요.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "적법한 연장·재검사 이력 명시"
+      ]
+    },
+    "FSM2-MOCK-071-17": {
+      "beforeSHA256": "fd9b1ca8d98f6eac1516738572aa43d4458dcecda7bb7a046fe46876d5fd8a8c",
+      "set": {
+        "question": "[소화기 내용연수와 교체 판단 · 복합 사례]\n분말소화기 내용연수·성능확인검사의 제시 조건을 적용한다. 별도 검사 합격이 없으면 일상 점검으로 사용기간이 연장되지 않는다.\n\n가. 내용연수 경과 후 10년인 해당 소화기 검사 합격\n\n나. 오래된 제품 제조일 확인 불가·압력 정상\n\n가의 기록: 경계라 3년 연장\n\n나의 기록: 제조·검사 이력 확인\n\n사례 조건을 그대로 적용할 때 반드시 수정해야 하는 기록을 빠짐없이 고른 것은?\n\n검사 합격이 명시된 사례는 이전 성능확인검사·사용기간 연장과 이번 재검사 기한을 모두 적법하게 충족했고 합격증명서로 확인한 경우다. 최초 검사 없이 장기간 방치한 사례는 아니다.",
+        "explanation": "가: 1년 연장 조건. 근거: 경과 후 10년 이상 구간.\n\n나: 제조·검사 이력 확인. 근거: 기산 정보 미확인을 정상으로 바꾸지 않음.\n\n제시 기록 판정: 가 수정 필요 / 나 옳음.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "적법한 연장·재검사 이력 명시"
+      ]
+    },
+    "FSM2-MOCK-071-18": {
+      "beforeSHA256": "f9e5ead074e0d445e4c540bca4b422791b3f4cd89147569649793c1b96a6ff76",
+      "set": {
+        "question": "[소화기 내용연수와 교체 판단 · 복합 사례]\n분말소화기 내용연수·성능확인검사의 제시 조건을 적용한다. 별도 검사 합격이 없으면 일상 점검으로 사용기간이 연장되지 않는다.\n\n가. 내용연수 경과 후 11년인 해당 소화기 검사 합격\n\n나. 제조 11년 된 분말소화기·녹색 압력·성능확인검사 없음\n\n가의 기록: 녹색이면 영구 사용\n\n나의 기록: 교체 또는 적법 검사 절차\n\n사례 조건을 그대로 적용할 때 반드시 수정해야 하는 기록을 빠짐없이 고른 것은?\n\n검사 합격이 명시된 사례는 이전 성능확인검사·사용기간 연장과 이번 재검사 기한을 모두 적법하게 충족했고 합격증명서로 확인한 경우다. 최초 검사 없이 장기간 방치한 사례는 아니다.",
+        "explanation": "가: 1년 연장 조건. 근거: 장기 경과 구간의 별도 기간.\n\n나: 교체 또는 적법 검사 절차. 근거: 압력과 내용연수 분리.\n\n제시 기록 판정: 가 수정 필요 / 나 옳음.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "적법한 연장·재검사 이력 명시"
+      ]
+    },
+    "FSM2-MOCK-071-20": {
+      "beforeSHA256": "956a685b0c497dbe7d8c2f6f31c1adb5db6e148bbbcf8b2cd3efe0dd166747fd",
+      "set": {
+        "question": "[소화기 내용연수와 교체 판단 · 복합 사례]\n분말소화기 내용연수·성능확인검사의 제시 조건을 적용한다. 별도 검사 합격이 없으면 일상 점검으로 사용기간이 연장되지 않는다.\n\n가. 오래된 제품 제조일 확인 불가·압력 정상\n\n나. 제조 6년·심한 부식·내용연수는 남음\n\n다. 내용연수 경과 후 9년인 해당 소화기 검사 합격\n\n가의 검토 의견: 제조·검사 이력 확인\n\n나의 검토 의견: 사용 적합성·정비 교체 확인\n\n다의 검토 의견: 검사일로부터 10년 자동 연장\n\n제시된 검토 의견을 각각 판단했을 때 옳은 의견은 모두 몇 개인가?\n\n검사 합격이 명시된 사례는 이전 성능확인검사·사용기간 연장과 이번 재검사 기한을 모두 적법하게 충족했고 합격증명서로 확인한 경우다. 최초 검사 없이 장기간 방치한 사례는 아니다.",
+        "explanation": "가: 제조·검사 이력 확인. 근거: 기산 정보 미확인을 정상으로 바꾸지 않음.\n\n나: 사용 적합성·정비 교체 확인. 근거: 기간 내 결함도 별도 판단.\n\n다: 정해진 기산점부터 3년 조건. 근거: 10년 미만 구간과 연장 기산점.\n\n제시 기록 판정: 가 옳음 / 나 옳음 / 다 수정 필요.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "적법한 연장·재검사 이력 명시"
+      ]
+    },
+    "FSM2-CORE-067": {
+      "beforeSHA256": "d017c4ac9661ef1274dc04780c69e0336e34f045f22ce73f665688126c7c2461",
+      "set": {
+        "question": "2026년 9월을 기준으로 할 때, 아래 소화기 중 내용연수가 지나 교체해야 하는 것만을 빠짐없이 선택한 것은? ㉠ 축압식 분말소화기 — 제조연월 2015년 3월 ㉡ 이산화탄소소화기 — 제조연월 2013년 7월 ㉢ 축압식 분말소화기 — 제조연월 2018년 11월 ㉣ 강화액소화기 — 제조연월 2012년 5월\n\n법정 성능확인검사에 의한 사용기간 연장 이력은 없다.",
+        "explanation": "내용연수를 설정해야 하는 소방용품은 분말형태의 소화약제를 사용하는 소화기뿐이고 그 내용연수는 10년이므로, 분말소화기인 ㉠만 내용연수 규정의 적용 대상이다. 이산화탄소소화기 ㉡과 강화액소화기 ㉣은 제조연월이 오래되었더라도 내용연수 규정의 적용 대상이 아니다. ㉠ 은 2025년 3월에 10년이 지나 교체 대상이고, ㉢(분말소화기)은 2028년 11월까지이므로 아직 교체 대상이 아니 어서, 결국 ㉠만 해당한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "연장 예외 배제"
+      ]
+    },
+    "FSM2-CORE-322": {
+      "beforeSHA256": "0f68d3e62d316c48b41e0e1eb137ff5d7f55f7401065420a81418a43f948752b",
+      "set": {
+        "explanation": "내용연수를 설정해야 하는 소방용품의 종류와 연한은 행정안전부령이 아니라 대통령령으로 정하도록 법에서 위임 하고 있다. 대통령령은 그 대상을 분말형태의 소화약제를 사용하는 소화기로, 내용연수를 10년으로 정하고 있다. 내용연수가 지난 소방용품을 교체할 의무는 관계인에게 있으며, 소화기 본체에 표시된 제조연월을 기준으로 경과 여부를 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-032": {
+      "beforeSHA256": "274734215f2ada1b3ca6fa4c8feefa4b898cfd1f09ea09340c8de4906e25ca78",
+      "set": {
+        "explanation": "감시제어반 명령과 실제 동력 공급·선택 상태를 연결해 확인\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27777-q35": {
+      "beforeSHA256": "0ec3fce408082e07730bcc54fab2cca843efc07e0be631900273d53d5413a19d",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "피토게이지로 옥내소화전의 방수압력을 측정한다. 이 시험에 필요한 장비 구성과 사용방법으로 옳은 것은?",
+        "choices": [
+          "직사형 관창과 함께 사용하며, 노즐 선단에서 노즐구경의 1/2만큼 떨어진 위치에 근접시켜 봉상주수 상태에서 직각으로 측정\n한다.",
+          "방사형(분무형) 관창과 함께 사용하며, 노즐 선단에서 노즐구경의 2배만큼 떨어뜨려 측정한다.",
+          "관창을 떼어낸 뒤 방수구에 직접 나사로 결합하여 정지 상태의 배관 압력을 읽는다.",
+          "성능시험배관의 유량측정장치와 함께 사용하며, 유량계 지시값을 그대로 방수압력으로 환산한다."
+        ],
+        "explanation": "이 시험은 직사형 관창과 방수압력 측정계(피토게이지)를 함께 사용하며, 노즐 선단에서 노즐구경의 1/2만큼 떨어\n진 위치에 근접시켜 봉상주수 상태에서 직각으로 측정한다.\n그림의 계측기는 형식승인 기준에 적합한 직사형 관창과 짝을 이루는 방수압력 측정계(피토게이지)이며, 노즐구경\n(D)의 1/2 지점에서 물줄기가 봉상으로 나오는 상태로 직각을 대고 눈금을 읽는다.\n초기 방수 시에는 배관 속 이물질과 공기가 완전히 빠진 뒤 측정하며, 방수압력은 관창 선단의 피토게이지 압력으\n로 판정하므로 방수구 압력계나 유량계 지시값으로 대신할 수 없다.\n근거: 「소방시설 자체점검사항 등에 관한 고시」 별표5 옥외소화전설비 성능시험조사표 비고 제2호, 소방안전관리\n실무 — 방수압력시험 장비 구성\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "장비 명칭을 텍스트로 명시"
+      ]
+    },
+    "moducbt-27777-q30": {
+      "beforeSHA256": "3a00c218ad0432e4aa6e4cb2a53a5236c3286653f8805e5efc3e4ed36d5f213c",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "다음은 습식 스프링클러설비의 시험장치 개폐밸브를 개방했을 때 일어나는 현상을 순서 없이 나열한 것이다. 일어\n나는 순서대로 옳게 배열한 것은?\n㉠ 시험장치 배관 끝의 오리피스를 통해 가압수가 배출된다.\n㉡ 유수검지장치 2차측 압력이 낮아져 1차측 압력에 의해 클래퍼가 개방된다.\n㉢ 유수검지장치의 압력스위치가 작동하여 감시제어반의 화재표시등·밸브개방표시등이 점등되고 음향장치가 경보한다.\n㉣ 배관 내 압력이 계속 낮아져 기동용수압개폐장치가 작동하고 펌프가 기동한다.\n\n이 사례는 유수검지장치 경보 후 계속된 압력 저하로 기동용수압개폐장치가 펌프를 기동하는 설정이다. 다른 기동 방식·압력 설정에 이 순서를 그대로 적용하지 않는다.",
+        "explanation": "일어나는 순서는 개폐밸브 개방 → 2차측 압력 저하 → 압력스위치 작동 → 펌프 기동 순이다.\n습식스프링클러설비의 시험장치는 유수검지장치 2차측 배관에 연결되어 있어, 개폐밸브를 열면 오리피스로 가압\n수가 빠져나가면서 2차측 압력이 떨어진다.\n헤드에 공급되는 물은 반드시 유수검지장치를 지나므로 2차측 압력이 낮아지면 1차측 압력에 밀려 클래퍼가 열리\n고, 이때 작동한 압력스위치 신호로 밸브개방표시등과 음향장치가 동작한다. 펌프는 유수검지장치의 발신이나 기\n동용수압개폐장치의 작동으로 기동하므로 배관 압력이 더 낮아진 뒤 마지막에 기동한다.\n근거: 스프링클러설비의 화재안전기술기준(NFTC 103) 2.5.12.1, 2.3.1.5, 2.6.2.1, 「소방시설 자체점검사항 등에\n관한 고시」 별표4 점검항목 3-K-020\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "작동 순서의 설정 전제 명시"
+      ]
+    },
+    "moducbt-27780-q30": {
+      "beforeSHA256": "431bc05190bdef0d32f1f25d98ecc03b639d93223703e77aa6de1c1b2245edcf",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "물받이 통과 배수관을 설치하지 않는다고 본 설명이 옳지 않다.\n시험배관 끝에는 물받이 통과 배수관을 설치해 시험 중 방사된 물이 바닥에 흘러내리지 않도록 해야 한다. 다만 목\n욕실·화장실처럼 배수처리가 쉬운 장소에 시험배관을 설치한 경우에는 예외로 둔다.\n습식·부압식 설비의 시험장치는 유수검지장치 2차측 배관에 연결해 설치하고, 배관 구경은 25 mm 이상으로 하\n며, 끝부분에는 개폐밸브와 개방형헤드 또는 헤드와 동등한 방수성능의 오리피스를 설치한다.\n근거: NFTC 103 2.5.12.1·2.5.12.2·2.5.12.3\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27782-q32": {
+      "beforeSHA256": "ab96a85b90e6890a99414e973a43283d9799dfbe6eb373e2712323a156011799",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "습식 스프링클러설비 시험장치의 설치기준과 점검 결과 판정에\n관한 설명으로 옳지 않은 것은?",
+        "explanation": "시험밸브를 완전히 개방하면 유수검지장치가 작동해야 정상으로 판정한다는 점에서, 작동하지 않아야 정상이라고\n한 설명이 옳지 않다.\n시험장치는 유수검지장치가 제대로 작동하는지 확인하는 설비로, 헤드가 열려 물이 흐르면 유수검지장치가 화재\n신호를 보내고 음향장치가 경보하도록 되어 있다.\n시험장치 배관은 유수검지장치 2차측 배관에 연결하고 구경은 25mm 이상으로 하며, 배관 끝에는 개폐밸브와 함\n께 개방형헤드 또는 스프링클러헤드와 동등한 방수성능을 가진 오리피스를 설치한다.\n근거: NFTC 103 2.5.12.1, 2.5.12.2, 2.6.1.1\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "그림 없이 완결되는 기준 문항으로 정리"
+      ]
+    },
+    "moducbt-27781-q35": {
+      "beforeSHA256": "559fef76fa7af3b6b0e7e281255b5897fad78b89cf984bb3a792c0fd788f877b",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "교차회로방식으로 감지기가 배선된 준비작동식 스프링클러설비가 설치된 창고에서 화재가 발생하였다. 다음 현상\n을 일어나는 순서대로 옳게 나열한 것은?\n㉠ 폐쇄형스프링클러헤드가 열에 의해 개방되어 방수된다.\n㉡ 교차회로 중 하나의 감지기회로가 화재를 감지하여 음향장치가 경보한다.\n㉢ 준비작동식유수검지장치가 개방된다.\n㉣ 인접한 두 감지기회로가 모두 화재를 감지한다.\n㉤ 유수검지장치 2차측 배관으로 소화수가 송수된다.\n\n두 감지기회로 감지로 밸브가 열려 2차측에 물이 공급된 뒤 폐쇄형 헤드가 열리는 사례다. 헤드가 먼저 열린 상황은 제외한다.",
+        "explanation": "일어나는 순서는 ㉡ → ㉣ → ㉢ → ㉤ → ㉠이다. 준비작동식 설비는 유수검지장치 1차측까지만 물이 가압되어\n있고 2차측 헤드까지는 대기압 또는 저압 상태다.\n교차회로방식에서는 하나의 감지기회로만 감지해도 음향장치가 먼저 경보하고(㉡), 인접한 두 감지기회로가 모두\n감지될 때(㉣) 유수검지장치가 개방된다(㉢).\n밸브가 열리면 2차측으로 소화수가 송수되고(㉤), 폐쇄형헤드가 열에 의해 개방되어야 실제 방수가 이루어진다\n(㉠).\n근거: 스프링클러설비의 화재안전기술기준(NFTC 103) 1.7.1.25, 2.6.1.2, 2.6.3.1·2.6.3.2\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "준비작동식 사례 순서 한정"
+      ]
+    },
+    "moducbt-27780-q35": {
+      "beforeSHA256": "b1f4b558d63d784aa9d1a2ff63fc429880d07761eec1b9d363fd59fd1df2532a",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "가스계 소화설비 신호·연동 점검 전 안전조치로 가장 적절한 것은? 실제 방출 시험은 하지 않는다.",
+        "choices": [
+          "솔레노이드 선택스위치를 '자동'에 둔 채 감지기를 동작시켜 소화약제 방출 여부를 확인한다.",
+          "승인 절차에 따라 전기·수동·기계적 경로의 실제 방출 차단·분리·확인을 완료하고, 솔레노이드 선택스위치를 정지하여 연동을 차단한 뒤 점검한다.",
+          "방호구역 출입구의 소화약제 방출표시등 배선을 분리한 뒤 점검한다.",
+          "수동식 기동장치 부근의 비상스위치를 떼어낸 뒤 점검한다."
+        ],
+        "explanation": "실제 방출 경로의 승인된 차단·분리·확인을 먼저 마친다. 솔레노이드 전기적 정지 하나만으로 수동·기계적 방출까지 차단되었다고 판단하지 않는다. 표시등 배선 제거는 방출 차단을 대신하지 못한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "전기적 정지와 실제 방출 차단 구별"
+      ]
+    },
+    "moducbt-27780-q36": {
+      "beforeSHA256": "3a46815674fc7224bd0bf3230888aa80ca9ca26cd146311280dbbbd6ec096d91",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "explanation": "공통선에 접속할 수 있는 경계구역을 12개 이하로 본 설명이 옳지 않다.\nP형 및 GP형 수신기의 감지기 회로 배선에서 하나의 공통선에 접속할 수 있는 경계구역은 7개 이하다.\n도통시험용 종단저항은 점검·관리가 쉬운 장소의 감지기 회로 끝부분에 설치하고, 종단감지기에 설치할 때는 구별\n이 쉽도록 기판이나 외부에 표시한다. 감지기 사이의 회로 배선은 송배선식으로 해야 회로 중간의 단선을 도통시험\n으로 잡아낼 수 있으며, 감지기회로의 전로저항은 50 Ω 이하여야 한다.\n근거: NFTC 203 2.8.1.3·2.8.1.4·2.8.1.7·2.8.1.8, 소방시설 자체점검사항 등에 관한 고시 별표4 자동화재탐지설\n비 점검표 15-I-003·15-I-005\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-375": {
+      "beforeSHA256": "8f528c72417e425e6b715e64d3690911b34cd53eccb8efa3ace0875df8d5bf57",
+      "set": {
+        "explanation": "축적형감지기가 설치된 장소에 감시전류를 단속적으로 차단해 화재를 판단하는 방식의 수신기를 쓴다고 본 설명이 옳지 않다. 축적형감지기가 이미 설치된 장소에는 그런 방식 '외의' 수신기를 설치해야 한다. 감지기와 수신기가 모두 축적방 식이면 축적시간이 중복되어 화재신호 전달이 지연되기 때문이다. 지하층·무창층 등으로 환기가 잘되지 않거나 실내면적이 40제곱미터 미만인 장소, 부착면과 실내 바닥의 거리가 2.3미터 이하인 장소에서 비화재보 우려가 있으면 축적기능 등이 있는 수신기를 설치하는 것이 원칙이다. 다만 불 꽃감지기·정온식감지선형감지기·분포형감지기·복합형감지기·광전식분리형감지기·아날로그방식 감지기 등 적응성 있는 감지기를 설치한 경우에는 그렇지 않다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-141": {
+      "beforeSHA256": "70132ebdaf7aafee9efcb050d8511245324e4137ce8b14683a2c4249b586cd21",
+      "set": {
+        "explanation": "소방계획서에 포함되어야 하는 것은 ㄱ·ㄴ·ㄹ이다. 소방계획서에는 대상물의 일반현황, 소방·방화·전기·가스·위험물 시설의 현황, 자체점검계획과 대응대책, 소방시설 ·피난시설·방화시설의 점검·정비계획, 피난계획, 제연구획과 방화구획·마감재료·방염물품의 사용 현황 및 유지·관 리계획(ㄹ), 소방훈련·교육계획, 자위소방대 조직과 임무, 공사 중 화기취급작업의 사전 안전조치·감독(ㄱ), 소화 및 연소방지, 위험물 저장·취급, 업무수행 기록·유지(ㄴ), 초기대응에 관한 사항 등이 들어간다. 소방시설공사업자의 하자보수 보증기간(ㄷ)은 공사업 관련 사항이어서 소방계획서에 넣는 항목이 아니다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27780-q42": {
+      "beforeSHA256": "efb194019ec61b9fd229d7f9c3f1e17b94f9e313214979400325f860d072c6ec",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "다음 조건의 소방안전관리대상물에 편성해야 할 자위소방대의 유형과 현장대응조직 구성으로 옳은 것은?\n· 소방안전관리 등급: 2급\n· 용도: 업무시설, 연면적 9,000 ㎡\n· 상시 근무인원: 18명\n\n자위소방대 편성대원은 18명이며 제시한 지침의 기본 편성 틀을 적용한다.",
+        "explanation": "이 대상물은 TYPE Ⅲ이며, 현장대응조직은 비상연락팀·초기소화팀·피난유도팀으로 구성한다.\n2급 소방안전관리대상물은 상시 근무인원이 50명 이상일 때 TYPE Ⅱ를 참고·적용하고, 그 미만이면 TYPE Ⅲ으로\n편성한다. 이 대상물은 상시 근무인원이 18명이므로 TYPE Ⅲ이며, 편성대원이 10인 이상이면 현장대응조직을 비\n상연락팀·초기소화팀·피난유도팀으로 나누어 구성한다(필요시 팀 가감).\n10인 미만일 때만 팀 구분 없이 하나의 현장대응팀으로 두며, 응급구조팀·방호안전팀까지 두는 것은 TYPE Ⅱ 이상\n의 편성이고, TYPE Ⅰ은 특급과 연면적 30,000 ㎡ 이상 1급(공동주택 제외) 대상이다. 자위소방대에는 대장과 부\n대장을 각각 1명씩 두어야 한다.\n근거: 소방안전관리 실무 — 자위소방대 조직 편성기준 TYPE Ⅰ~Ⅲ, 화재의 예방 및 안전관리에 관한 법률 시행규\n칙 제11조제2항\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "근무 인원과 편성 인원 구별"
+      ]
+    },
+    "FSM2-CORE-392": {
+      "beforeSHA256": "177add645c34a9e7a128d1ede40ba73b498c531b1528639ec326fee9ff105d0d",
+      "set": {
+        "question": "제시된 조건의 소방안전관리대상물에 편성해야 할 자위소방대의 유형과 현장대응조직 구성으로 맞게 설명한 것은? · 소방안전관리 등급: 2급 · 용도: 업무시설, 연면적 9,000 ㎡ · 상시 근무하는 인원: 18명\n\n자위소방대 편성대원은 18명이며 제시한 지침의 기본 편성 틀을 적용한다.",
+        "explanation": "이 대상물은 TYPE Ⅲ이며, 현장대응조직은 비상연락팀·초기소화팀·피난유도팀으로 구성한다. 2급 소방안전관리대상물은 상시 근무하는 인원이 50명 이상일 때 TYPE Ⅱ를 참고·적용하고, 그 미만이면 TYPE Ⅲ으로 편성한다. 이 대상물은 상시 근무하는 인원이 18명이므로 TYPE Ⅲ이며, 편성대원이 10인 이상이면 현장대응조직을 비 상연락팀·초기소화팀·피난유도팀으로 나누어 구성한다(필요시 팀 가감). 10인 미만일 때만 팀 구분 없이 하나의 현장대응팀으로 두며, 응급구조팀·방호안전팀까지 두는 것은 TYPE Ⅱ 이상 의 편성이고, TYPE Ⅰ은 특급과 연면적 30,000 ㎡ 이상 1급(공동주택 제외) 대상이다. 자위소방대에는 대장과 부 대장을 각각 1명씩 두어야 한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "근무 인원과 편성 인원 구별"
+      ]
+    },
+    "FSM2-MOCK-056-04": {
+      "beforeSHA256": "3bfda398cf8eb685a79966057192a1e2b0e1772ab25c14dbafdc197a0cb6f50c",
+      "set": {
+        "choices": [
+          "복잡한 지시를 한꺼번에 빠르게 말할수록 적절하다",
+          "청각 정보를 인지하기 어려운 사람에게 표정·몸짓·빛·짧은 글 등 시각 정보를 사용한다",
+          "계획서에 적힌 경로면 불과 연기가 가득해도 그대로 들어간다",
+          "고령자 지병은 피난·구급 인계와 어떤 관련도 없다"
+        ],
+        "explanation": "옳은 판단은 ‘표정·몸짓·빛·짧은 글 등 시각 정보를 사용한다’이다. 나머지 보기의 기준은 다음과 같이 바로잡는다: 차분한 어조와 짧고 분명한 지시로 도움을 알린다 / 필요한 지병·이동 정보를 구조대에 인계한다 / 계획 경로가 막히면 보조자도 무리한 연기 진입을 피한다\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/vulnerable-evacuees-assistance/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "시각 안내 적용 대상 명시"
+      ]
+    },
+    "moducbt-27777-q43": {
+      "beforeSHA256": "cbe977423609ec5be4576d5518490b95fcb885951212c88192940ec2208175fd",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "자동화재탐지설비 작동점검을 실시한 결과가 다음과 같다. 「소방시설등 점검표」 작성방법으로 옳은 것은?\n㉠ 15-I-003 「수신기 도통시험 회로 정상 여부」: 2회로에서 단선이 확인되었고 점검 당일 종단저항 접속 불량을 조치함\n㉡ 15-F-001 「시각경보장치 설치 장소 및 높이 적정 여부」: 이 대상물에는 시각경보장치가 설치되어 있지 않음\n㉢ 15-I-001 「종단저항 설치 장소, 위치 및 높이 적정 여부」: 점검항목 앞에 “●”가 표기되어 있음\n\n없는 설비는 법정 설치대상이 아니며 미설치가 위반은 아니다. 수리한 항목은 최초 불량과 수리 후 재시험 결과·일시를 함께 보존한다.",
+        "explanation": "㉠은 “×”로 기록하며 비고란에 조치 사실을 적고, ㉡은 “/”, ㉢은 작동점검 대상이 아니다.\n점검결과란은 양호를 “○”, 불량을 “×”, 해당 없는 항목을 “/”로 표시하며, 점검항목 앞의 “●”는 종합점검에만 해\n당하는 항목을 뜻한다.\n㉠은 점검 시점에 회로가 단선되어 있었으므로 조치를 마쳤더라도 “×”로 기록하고 그 사실은 비고란에 적으며, ㉡\n은 시각경보장치가 설치되어 있지 않으므로 해당 없음인 “/”로 표시한다. ㉢은 “●” 항목이어서 작동점검에서는\n점검 대상이 아니다.\n근거: 「소방시설 자체점검사항 등에 관한 고시」 별표4 소방시설등 점검표 비고 및 자동화재탐지설비 점검표 15-F-\n001·15-I-001·15-I-003\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "해당 없음의 전제와 수리 이력 명시"
+      ]
+    },
+    "moducbt-27779-q43": {
+      "beforeSHA256": "0562b59cd22020899db3d4ffb0aa2adc9b2ceb7da49234b3b0030a11ae45b578",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "2022년 6월에 사무실에 비치된 축압식 분말소화기를 작동점검하였다. 확인된 내용과 사진이 다음과 같을 때 점\n검표 ㉠~㉢에 들어갈 점검결과를 바르게 짝지은 것은? (점검결과는 양호 ○, 불량 ×로 표기한다)\n[확인 내용]\n· 본체 명판의 제조연월: 2011년 3월\n· 지시압력계: 사진과 같이 지침이 녹색 범위 안(0.85MPa)을 가리킴\n· 외관: 용기 하부에 부식, 노즐 쪽 호스에 균열\n[점검표]\n1-A-006 소화기의 변형·손상 또는 부식 등 외관의 이상 여부 → ㉠\n1-A-007 지시압력계(녹색범위)의 적정 여부 → ㉡\n1-A-008 수동식 분말소화기 내용연수(10년) 적정 여부 → ㉢\n\n법정 성능확인검사에 의한 사용기간 연장 이력은 없다.",
+        "explanation": "외관은 불량(㉠ ×), 지시압력계는 양호(㉡ ○), 내용연수는 불량(㉢ ×)이다.\n용기 하부 부식과 노즐 쪽 호스 균열이 있으므로 외관 이상 여부는 불량(㉠ ×)이다. 축압식 소화기의 지시압력계는\n사용압력범위가 녹색으로 표시되어 있고 지침이 그 안(0.85MPa)을 가리키므로 적정하여 양호(㉡ ○)이다.\n분말형태의 소화약제를 사용하는 소화기의 내용연수는 10년이므로 2011년 3월 제조품은 2021년 3월로 내용연\n수가 끝났고, 2022년 6월 점검 시점에는 이미 초과하여 불량(㉢ ×)이다.\n근거: 「소방시설 자체점검사항 등에 관한 고시」 별표4 제1호 소화기구 점검표 1-A-006~1-A-008, 소방시설 설치\n및 관리에 관한 법률 시행령 제19조, 소화기의 형식승인 및 제품검사의 기술기준 제28조제1호가목\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "연장 예외 배제"
+      ]
+    },
+    "moducbt-27780-q43": {
+      "beforeSHA256": "f9c86680086beb6625361e313362f3c0f9034f3a60bb9065a5b460c0145097a8",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "2026년 9월에 실시한 축압식 분말소화기 작동점검에서 다음과 같은 사실을 확인하였다. 소화기구 점검표의 점검\n결과란에 표기할 내용으로 옳은 것은? (단, 점검결과란은 양호 '○', 불량 '×', 해당 없음 '/'로 표시한다)\n㉠ 지시압력계의 바늘이 녹색범위 안에 있음\n㉡ 본체 라벨의 제조연월이 2015년 8월인 수동식 분말소화기임\n㉢ 소화기 표지가 부착되어 있고 본체에 변형·손상·부식이 없음\n\n법정 성능확인검사에 의한 사용기간 연장 이력은 없다.",
+        "explanation": "점검결과는 ㉠ ○, ㉡ ×, ㉢ ○이다.\n지시압력계의 바늘이 녹색범위 안에 있으면 충전압력이 적정하므로 ㉠은 양호 '○'다. 분말형태의 소화약제를 사용\n하는 소화기의 내용연수는 10년이므로, 2015년 8월 제조품은 2026년 9월 점검 시점에 내용연수가 지나 교체 대\n상이어서 ㉡은 불량 '×'로 표기한다.\n표지가 붙어 있고 외관에 변형·손상·부식이 없으면 ㉢도 양호 '○'다. 해당 없음 '/'는 그 대상물에 그 항목 자체가 없\n을 때 쓰는 표기이므로 여기에는 해당하지 않는다.\n근거: 소방시설 자체점검사항 등에 관한 고시 별표4 소화기구 및 자동소화장치 점검표 1-A-005~1-A-008 및 점\n검결과 표기방법, 소방시설 설치 및 관리에 관한 법률 시행령 제19조\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "연장 예외 배제"
+      ]
+    },
+    "moducbt-27782-q43": {
+      "beforeSHA256": "dd6fc21c7ec0554d23642d45ba1a9c8d62a4a99101b249803d7a390a7c0c9821",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "어느 건물의 자동화재탐지설비를 작동점검한 결과가 〈보기〉와 같다. 점검표의 점검결과란에 기재할 내용으로 옳은\n것은?\n㉠ 15-B-005 경계구역 일람도 비치 여부 → 수신기 옆에 일람도가 비치되어 있었다\n㉡ 15-D-009 감지기 변형·손상 확인 및 작동시험 적합 여부 → 3층 연기감지기 1개가 시험에서 동작하지 않았다\n㉢ 15-F-002 시각경보장치 변형·손상 확인 및 정상 작동 여부 → 이 대상물에는 시각경보장치가 설치되어 있지 않다\n㉣ 15-I-001 종단저항 설치 장소, 위치 및 높이 적정 여부(●)\n\n없는 설비는 법정 설치대상이 아니며 미설치가 위반은 아니다. 수리한 항목은 최초 불량과 수리 후 재시험 결과·일시를 함께 보존한다.",
+        "explanation": "점검결과는 ㉠ ○ / ㉡ × / ㉢ /(해당 없음) / ㉣은 종합점검에서만 확인하는 항목이므로 작동점검표 기재 대상이\n아니라고 판정한다.\n점검결과란은 양호하면 ○, 불량하면 ×, 해당 없는 항목은 /로 적는다. 일람도가 비치되어 있으니 ㉠은 ○, 감지기\n가 작동하지 않았으니 ㉡은 ×, 시각경보장치 자체가 없으니 ㉢은 해당 없음(/)이다. ㉣은 항목 앞에 ●가 붙어 있\n어 종합점검에서만 확인하는 항목이다.\n• ㉡과 ㉢의 표시를 서로 뒤바꾼 조합은 옳지 않다.\n• ㉠을 불량(×)으로 본 조합은 옳지 않다.\n• 설치되지 않은 시각경보장치를 불량(×)으로 처리하고 ㉣을 작동점검 항목으로 본 조합도 옳지 않다.\n근거: 「소방시설 자체점검사항 등에 관한 고시」 별표4 서식 유의사항 및 비고, 별표4 15-B-005·15-D-009·15-\nF-002·15-I-001\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "해당 없음의 전제와 수리 이력 명시"
+      ]
+    },
+    "FSM2-MOCK-057-13": {
+      "beforeSHA256": "410b370e86576f2b17cea68fa0e4c3c3d038c060b3aa129b16bfd963b9e617f9",
+      "set": {
+        "question": "[점검표의 결과 표기와 불량 내용 · 복합 사례]\n범례는 ○ 양호·× 불량·/ 해당 없음이다. 항목 앞 ●는 종합점검 전용 항목 표시인 서식을 가정한다.\n\n가. 해당 설비가 없는 항목을 × 기록\n\n나. 기준 0.17MPa·실측 0.15MPa를 기준값으로 바꿔 기록\n\n가와 나의 판단을 모두 옳게 연결한 것은?\n\n없는 설비는 법정 설치대상이 아니며 미설치가 위반은 아니다. 수리한 항목은 최초 불량과 수리 후 재시험 결과·일시를 함께 보존한다.",
+        "explanation": "가: 해당 없음 / 적용. 근거: 대상 항목과 미확인 구별.\n\n나: 실측값 보존·불량 판정. 근거: 측정과 기준 비교의 정직성.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "해당 없음의 전제와 수리 이력 명시"
+      ]
+    },
+    "FSM2-MOCK-057-20": {
+      "beforeSHA256": "a72495891e4571c6e522d5d8f111624afb736042b6239d7e6291adb6d6069269",
+      "set": {
+        "question": "[점검표의 결과 표기와 불량 내용 · 복합 사례]\n범례는 ○ 양호·× 불량·/ 해당 없음이다. 항목 앞 ●는 종합점검 전용 항목 표시인 서식을 가정한다.\n\n가. 수리 후 같은 항목을 재시험하고 값·일시를 기록\n\n나. 해당 설비가 없는 항목을 × 기록\n\n다. 기준 0.17MPa·실측 0.15MPa를 기준값으로 바꿔 기록\n\n가의 검토 의견: 최초 불량 기록은 지워야 함\n\n나의 검토 의견: 해당 없음 / 적용\n\n다의 검토 의견: 실측값 보존·불량 판정\n\n제시된 검토 의견을 각각 판단했을 때 옳은 의견은 모두 몇 개인가?\n\n없는 설비는 법정 설치대상이 아니며 미설치가 위반은 아니다. 수리한 항목은 최초 불량과 수리 후 재시험 결과·일시를 함께 보존한다.",
+        "explanation": "가: 완료 확인 근거. 근거: 발견·조치·재확인 이력 연결.\n\n나: 해당 없음 / 적용. 근거: 대상 항목과 미확인 구별.\n\n다: 실측값 보존·불량 판정. 근거: 측정과 기준 비교의 정직성.\n\n제시 기록 판정: 가 수정 필요 / 나 옳음 / 다 옳음.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "해당 없음의 전제와 수리 이력 명시"
+      ]
+    },
+    "FSM2-CORE-093": {
+      "beforeSHA256": "7e2ab928df529795d2e5d70f7c84193ffa344cba4dca1ba4eba15328a756fa18",
+      "set": {
+        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-143": {
+      "beforeSHA256": "ce9477fa3b2cbdb6c2de276f8c524dbaa89dee30a857ee3ba663097a49c3f757",
+      "set": {
+        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-193": {
+      "beforeSHA256": "edf612d6d5629ed829e33270affe5e6cc59ee879a252d4471099b90fe376e650",
+      "set": {
+        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-243": {
+      "beforeSHA256": "fe61d3718ca3b8af11ff06afa44a62d33308a8cdfd9b9df29e5c4199dd67f45c",
+      "set": {
+        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-293": {
+      "beforeSHA256": "f153f7615f415118a9f7cd7ca032d0ab01f3990d461d57dd73ee48b9064a2d7e",
+      "set": {
+        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-343": {
+      "beforeSHA256": "1d85ff40491461a4843d81c30184268e686d6d5bb90e4378e835a4db404411c4",
+      "set": {
+        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-393": {
+      "beforeSHA256": "2cc2d9b8df70312a736bc99e05cde2140a34ea414cf608e380c80cd7f0737bc9",
+      "set": {
+        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-443": {
+      "beforeSHA256": "0ef443dcdfad77579c35eaa44f2b580da564ecb7f4120d5ef570aae321212729",
+      "set": {
+        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "FSM2-CORE-493": {
+      "beforeSHA256": "5786dcfc8f154fc37f023a59d0fd23f9ae854ca6cf3be35ef2b14695f93ded66",
+      "set": {
+        "explanation": "0.17MPa 미만은 압력 항목 불량. 해당 없음과 구별하고 방수량 등 다른 항목은 별도 판정\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27775-q44": {
+      "beforeSHA256": "5264d79c8f4bff98d15493310768e03bc369f6b5813dd0ad3b823d4f48e1fd47",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "현장 안전을 확인하고 119 신고를 요청한 성인 환자다. (가)~(다)를 옳게 연결한 것은?\n가: 반응이 없고 정상 호흡 없이 헐떡임\n나: 반응이 있으나 말·효과적인 기침이 불가능한 심한 이물 기도폐쇄. 등 두드리기 5회에도 효과가 없고 임신·고도비만 등 복부 밀어내기 제외 조건은 없음\n다: 골절이 의심되어 무리한 교정을 피해야 함",
+        "explanation": "가는 가슴압박부터 CPR, 나는 등 두드리기에도 해소되지 않은 심한 폐쇄에 복부 밀어내기 5회, 다는 무리한 교정 없이 부목 고정이다. 가벼운 폐쇄는 기침 유도, 영아·임신 등은 별도 지침, 반응 상실 시 CPR로 전환한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "기도폐쇄 중증도·순서·예외 명시"
+      ]
+    },
+    "moducbt-27777-q48": {
+      "beforeSHA256": "e50eaa7f441465efa488df962244ce3e289d9b114988c55682b62063568df969",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "현장 안전과 119 신고 요청 후 평가한 성인 환자다. (ㄱ)~(ㄷ)의 처치로 옳은 것은?\nㄱ: 반응이 없고 정상 호흡 없이 헐떡임\nㄴ: 반응은 없으나 정상 호흡이 있고 회복자세를 금할 외상·척추손상 의심은 없음\nㄷ: 반응 있는 심한 이물 기도폐쇄로 말·효과적인 기침이 불가하며 등 두드리기 5회에도 효과가 없음. 복부 밀어내기 제외 조건은 없음",
+        "explanation": "ㄱ은 가슴압박부터 CPR, ㄴ은 회복자세로 기도 유지·지속 관찰, ㄷ은 복부 밀어내기 5회다. 입 안에 이물이 보인다는 이유만으로 복부 밀어내기를 결정하지 않는다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "중증도·선행 처치·회복자세 조건 명시"
+      ]
+    },
+    "FSM2-MOCK-058-07": {
+      "beforeSHA256": "e63b6274b192ab82f3830b41b249a554d745c820d16feebe9f4719d94812661b",
+      "set": {
+        "choices": [
+          "반응 있는 성인·1세 이상 소아가 말·효과적인 기침이 불가능한 심한 이물 기도폐쇄이고 복부 밀어내기 제외 조건이 없으면, 등 두드리기 5회 후 효과가 없을 때 복부 밀어내기 5회를 교대한다",
+          "반응 없고 정상 호흡 없이 헐떡이면 심장정지를 의심해 압박한다",
+          "효과적으로 기침하는 사람은 즉시 입안을 보지 않고 손으로 훑는다",
+          "기도폐쇄 환자가 반응을 잃으면 신고·AED 요청과 압박부터 CPR로 전환한다"
+        ],
+        "explanation": "기침이 효과적인 사람에게 보이지 않는 이물을 맹목적으로 훑는 보기가 틀리다. 가벼운 폐쇄는 기침 유도, 심한 폐쇄는 등 두드리기 후 효과가 없을 때 복부 밀어내기를 적용한다. 영아·임신·고도비만 등은 별도 지침이다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "기도폐쇄 적용 조건 명시"
+      ]
+    },
+    "moducbt-27778-q44": {
+      "beforeSHA256": "2706d5a967d7bb052b76195118d88bf375006308c9342bd65c445775afb885cf",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "그림은 성인 심정지 환자의 상반신에 네 지점을 표시한 것으로, ㉠은 오른쪽 빗장뼈 바로 아래, ㉡은 복장뼈 한가\n운데, ㉢은 왼쪽 젖꼭지 아래 중간겨드랑선, ㉣은 명치 아래 상복부이다. 자동심장충격기 패드를 붙일 두 지점과\n그 까닭을 옳게 설명한 것은?",
+        "choices": [
+          "㉠과 ㉡ — 두 패드를 가슴 위쪽에 모아야 전류가 심장에 집중되기 때문이다.",
+          "㉡과 ㉣ — 복장뼈에서 명치로 이어지는 세로 방향이 심장을 가장 짧게 지나기 때문이다.",
+          "㉠과 ㉢ — 두 패드를 잇는 선이 심장을 대각선으로 가로질러 전류가 심장을 지나기 때문이다.",
+          "㉢과 ㉣ — 심장이 왼쪽으로 치우쳐 있으므로 패드도 모두 왼쪽에 몰아 붙여야 하기 때문이다."
+        ],
+        "explanation": "자동심장충격기는 두 패드 사이로 전류를 흘려 심장 전체에 전기충격을 주는 장치이므로, 심장을 사이에 두고 대각\n선이 되도록 오른쪽 빗장뼈 바로 아래(㉠)와 왼쪽 젖꼭지 아래 중간겨드랑선(㉢)에 붙여야 한다.\n두 패드를 가슴 위쪽에 모으거나 한쪽에 몰아 붙이면 전류가 심장을 충분히 지나지 못한다.\n복장뼈 한가운데(㉡)는 가슴압박을 하는 자리이고 명치 아래(㉣)는 심장에서 벗어난 위치여서 패드를 붙이지 않는\n다.\n근거: 대한심폐소생협회 2020 가이드라인 — 자동심장충격기 패드 부착 위치\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/aed-pads-use-sequence/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "정답 판단·오답 제거의 챕터 근거 또는 선행 연결 보강"
+      ]
+    },
+    "moducbt-27779-q48": {
+      "beforeSHA256": "91fb330a2b090ddf69bb442b9d7a65cd9c1ea3c7a06f51ffe45ecfc94783b635",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "choices": [
+          "맥박과 호흡이 빠르고 약해지며 불규칙해진다.",
+          "피부가 창백해지고 차고 축축해진다.",
+          "갈증을 호소하고 의식이 흐려질 수 있다.",
+          "혈압이 점차 높아지고 체온이 올라간다."
+        ],
+        "explanation": "순환이 나빠지면 빠르고 약한 맥박·빠른 호흡·창백하고 차고 축축한 피부·갈증·의식 저하 등이 나타날 수 있다. 혈압 상승과 활력 호전을 전형적 출혈 악화로 보지 않는다. 초기 혈압이 정상일 수 있으며 동공 크기·빛반사로 출혈을 확정하지 않는다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "동공을 출혈의 확정 단서로 쓰지 않음",
+        "동공을 출혈의 확정 단서로 쓰지 않음",
+        "동공을 출혈의 확정 단서로 쓰지 않음"
+      ]
+    },
+    "moducbt-27781-q46": {
+      "beforeSHA256": "c046106b35b0682a3b4313656c7c36fc45c49850e4deec1dcd223fbca53c3f82",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "작업 중 다친 사람이 많은 양의 피를 흘리고 있다. 이 환자에게 나타날 수 있는 증상만을 모두 고른 것은?\n㉠ 맥박과 호흡이 빠르고 약하며 불규칙해진다.\n㉡ 피부가 창백해지고 차고 축축해진다.\n㉢ 출혈량이 늘어날수록 피부가 따뜻하고 붉어지며 활력이 좋아진다.\n㉣ 갈증을 호소하고 의식이 흐려질 수 있다.",
+        "explanation": "순환이 나빠지면 빠르고 약한 맥박·빠른 호흡·창백하고 차고 축축한 피부·갈증·의식 저하 등이 나타날 수 있다. 혈압 상승과 활력 호전을 전형적 출혈 악화로 보지 않는다. 초기 혈압이 정상일 수 있으며 동공 크기·빛반사로 출혈을 확정하지 않는다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "동공을 출혈의 확정 단서로 쓰지 않음",
+        "동공을 출혈의 확정 단서로 쓰지 않음",
+        "동공을 출혈의 확정 단서로 쓰지 않음"
+      ]
+    },
+    "moducbt-27782-q48": {
+      "beforeSHA256": "1235828db65f397c8b234baa12e5208be31493a2cfbc0041ec40cb17f3cae568",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "choices": [
+          "맥박이 빨라지면서 점점 약해진다.",
+          "피부가 차고 창백해지며 식은땀이 난다.",
+          "호흡이 얕고 빨라지며 갈증을 호소한다.",
+          "출혈량이 늘어날수록 혈압이 계속 상승하고 의식이 또렷해지는 것이 전형적이다."
+        ],
+        "explanation": "순환이 나빠지면 빠르고 약한 맥박·빠른 호흡·창백하고 차고 축축한 피부·갈증·의식 저하 등이 나타날 수 있다. 혈압 상승과 활력 호전을 전형적 출혈 악화로 보지 않는다. 초기 혈압이 정상일 수 있으며 동공 크기·빛반사로 출혈을 확정하지 않는다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "동공을 출혈의 확정 단서로 쓰지 않음",
+        "동공을 출혈의 확정 단서로 쓰지 않음",
+        "동공을 출혈의 확정 단서로 쓰지 않음"
+      ]
+    },
+    "moducbt-27774-q50": {
+      "beforeSHA256": "132ea3ba834de826ef09a62dd6b842ec2bfb40e78bd9bd81ee0b48478893c024",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "지상 20층 오피스텔의 12층 복도에서 연기가 나 화재경보가 울렸다. 이때 재실자가 취해야 할 피난행동으로 옳지\n않은 것은?\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "choices": [
+          "엘리베이터를 이용하지 않고 피난계단으로 내려간다.",
+          "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
+          "대피하면서 지나온 방화문은 연기가 잘 빠져나가도록 열어 둔다.",
+          "아래층 피난이 불가하면 옥상 경로·문 개방을 확인해 안전할 때만 옥상으로 대피하며 이동 불가 시 안전 공간에서 구조 요청한다."
+        ],
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "moducbt-27775-q50": {
+      "beforeSHA256": "a997a94db6b65ca551a7aa9ebad8c56a884a88c57ef70fc12b8d1e45effee0c7",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "지상 20층 아파트의 12층 세대에서 화재가 발생하여 현관을 통한 대피가 어려운 상황이다. 화재 시의 일반적인 피\n난행동으로 옳지 않은 것은?\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "choices": [
+          "경량칸막이·대피공간이 실제 설치되어 있고 접근이 안전하면 이용하며, 119에 위치를 알려 구조를 요청한다.",
+          "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
+          "아래층 피난이 불가하면 옥상 경로·문 개방을 확인해 안전할 때만 옥상으로 대피하며 이동 불가 시 안전 공간에서 구조 요청한다.",
+          "대피 도중 출입문 손잡이가 뜨겁더라도 그 문이 가장 가까운 경로라면 열고 빠르게 통과한다."
+        ],
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "moducbt-27776-q50": {
+      "beforeSHA256": "482003ab3c21a9000fb56ce123d3b081b4af2d756bce689f5e09d559af7b9e0d",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "다음은 화재 시 피난행동 요령을 정리한 것이다. ㉠~㉢에 들어갈 내용으로 옳은 것은?\n• 이동할 때에는 ( ㉠ )을(를) 이용하지 않고 계단으로 옥외까지 내려간다.\n• 아래층 피난이 불가하고 옥상 경로가 안전하며 옥상문 개방을 확인했다면 ( ㉡ )(으)로 대피할 수 있다.\n• 지나온 방화문은 ( ㉢ ) 뒤따르는 사람의 피난로를 지킨다.\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "moducbt-27780-q50": {
+      "beforeSHA256": "40f268b38dc5b8e709af9926ddcacca5980a358d16885bf951db1e1daf1d122f",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "건물에서 화재가 발생했을 때의 일반적인 피난행동으로 옳지 않은 것은?\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "choices": [
+          "아래층으로 내려갈 수 있는 상황이라도 옥상이 더 안전하므로 우선 옥상으로 올라간다.",
+          "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
+          "출입문을 열기 전 손잡이를 만져 보아 뜨거우면 문을 열지 말고 다른 피난경로를 찾는다.",
+          "건물 밖으로 빠져나온 뒤에는 어떤 이유로도 다시 화재 건물 안으로 들어가지 않는다."
+        ],
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "moducbt-27781-q50": {
+      "beforeSHA256": "509f24aedc4c1816e2760bf44119a3930d137f0c6781ded3f7b6a3ae5d79a282",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "지상 15층 아파트의 8층 세대에서 화재경보가 울려 거주자가 대피하려고 한다. 이때 거주자가 취해야 할 행동으로\n옳지 않은 것은?\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "choices": [
+          "아래층 피난이 불가하면 옥상 경로·문 개방을 확인해 안전할 때만 옥상으로 대피하며 이동 불가 시 안전 공간에서 구조 요청한다.",
+          "경량칸막이·대피공간이 실제 설치되어 있고 접근이 안전하면 이용하며, 119에 위치를 알려 구조를 요청한다.",
+          "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
+          "연기가 빠져나가도록 세대 현관문과 계단실 방화문을 열어 둔 채 대피한다."
+        ],
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "moducbt-27782-q50": {
+      "beforeSHA256": "3fbd38abc13991f59735f28eaf6aa1bb3175eb0f1a47413e6b2a0b0fae64d8c6",
+      "set": {
+        "sourceTextProvenance": "PDF text layer; original visual/image mapping not fully audited; displayed fields editorially corrected 2026-10-20; rawSourceText preserved",
+        "question": "지상 15층 아파트의 9층에서 불이 나 거주자들이 대피하고 있다. 화재 시의 일반적인 피난행동으로 옳지 않은 것\n은?\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "choices": [
+          "불·연기 없는 계단으로 지상까지 안전하게 대피할 수 있으면 그 경로를 이용한다.",
+          "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
+          "경량칸막이·대피공간이 실제 설치되어 있고 접근이 안전하면 이용하며, 119에 위치를 알려 구조를 요청한다.",
+          "출입문 손잡이가 뜨거우면 안쪽의 연기부터 빼내야 하므로 문을 활짝 열어 둔 뒤 그 통로로 빠져나간다."
+        ],
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "FSM2-CORE-100": {
+      "beforeSHA256": "1d5b3e68d7f1a6fe0b4e14f3c6593a581f8107ec88f456a0956ef7150d8fed5a",
+      "set": {
+        "question": "지상 20층 오피스텔의 12층 복도에서 연기가 나 화재경보가 울렸다. 이때 재실자가 취해야 할 피난행동으로 잘못 설명한 것은?\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "choices": [
+          "엘리베이터를 이용하지 않고 피난계단으로 내려간다.",
+          "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
+          "아래층 피난이 불가하면 옥상 경로·문 개방을 확인해 안전할 때만 옥상으로 대피하며 이동 불가 시 안전 공간에서 구조 요청한다.",
+          "대피하면서 지나온 방화문은 연기가 잘 빠져나가도록 열어 둔다."
+        ],
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "FSM2-CORE-150": {
+      "beforeSHA256": "0e5bc519c2656aebd291c760e1b6dce6a5fa84a005d90d80c92b35916c2b84a8",
+      "set": {
+        "question": "지상 20층 아파트의 12층 세대에서 화재가 발생하여 현관을 통한 대피가 어려운 상황이다. 화재 시의 일반적인 피 난행동으로 잘못 설명한 것은?\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "choices": [
+          "경량칸막이·대피공간이 실제 설치되어 있고 접근이 안전하면 이용하며, 119에 위치를 알려 구조를 요청한다.",
+          "대피 도중 출입문 손잡이가 뜨겁더라도 그 문이 가장 가까운 경로라면 열고 빠르게 통과한다.",
+          "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
+          "아래층 피난이 불가하면 옥상 경로·문 개방을 확인해 안전할 때만 옥상으로 대피하며 이동 불가 시 안전 공간에서 구조 요청한다."
+        ],
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "FSM2-CORE-200": {
+      "beforeSHA256": "565eaacec95e4e2d4b3f01d470d6f443313ba65d64345e3d273cfb840e7cb36d",
+      "set": {
+        "question": "아래는 화재 시 피난행동 요령을 정리한 것이다. ㉠~㉢에 들어갈 내용으로 맞게 설명한 것은? • 이동할 때에는 ( ㉠ )을(를) 이용하지 않고 계단으로 옥외까지 내려간다. • 아래층 피난이 불가하고 옥상 경로가 안전하며 옥상문 개방을 확인했다면 ( ㉡ )(으)로 대피할 수 있다. • 지나온 방화문은 ( ㉢ ) 뒤따르는 사람의 피난로를 지킨다.\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "FSM2-CORE-300": {
+      "beforeSHA256": "8d80d17aa11818a4aedffd838e356230f5aaee46e9d7de088c7a9b85cf517338",
+      "set": {
+        "question": "화재가 난 건물에서 대피할 때 옳은 행동만을 〈제시문〉에서 빠짐없이 선택한 것은? ㉠ 계단으로 내려갈 수 있으면 옥상보다 지상 쪽으로 먼저 빠져나간다. ㉡ 지나온 방화문은 뒤따르는 사람을 위해 활짝 열어 둔다. ㉢ 유도등과 유도표지가 가리키는 방향을 따라 이동한다. ㉣ 옷에 불이 붙으면 눈·코·입을 손으로 가리고 바닥에 엎드려 뒹군다.\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다. 옷에 불이 붙으면 멈춰 바닥에 엎드려 얼굴을 보호하며 구른다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "FSM2-CORE-400": {
+      "beforeSHA256": "929eeabb3196bf357206a782b610298151fb5d1bc5d7565e462892186ed649f1",
+      "set": {
+        "question": "건물에서 화재가 발생했을 때의 일반적인 피난행동으로 잘못 설명한 것은?\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "choices": [
+          "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
+          "출입문을 열기 전 손잡이를 만져 보아 뜨거우면 문을 열지 말고 다른 피난경로를 찾는다.",
+          "건물 밖으로 빠져나온 뒤에는 어떤 이유로도 다시 화재 건물 안으로 들어가지 않는다.",
+          "아래층으로 내려갈 수 있는 상황이라도 옥상이 더 안전하므로 우선 옥상으로 올라간다."
+        ],
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "FSM2-CORE-450": {
+      "beforeSHA256": "c20be4d9a43c866307bbe48d100968e93b6dff2ec49a1cf1f0e1851b2b0ef296",
+      "set": {
+        "question": "지상 15층 아파트의 8층 세대에서 화재경보가 울려 거주자가 대피하려고 한다. 이때 거주자가 취해야 할 행동으로 잘못 설명한 것은?\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "choices": [
+          "연기가 빠져나가도록 세대 현관문과 계단실 방화문을 열어 둔 채 대피한다.",
+          "아래층 피난이 불가하면 옥상 경로·문 개방을 확인해 안전할 때만 옥상으로 대피하며 이동 불가 시 안전 공간에서 구조 요청한다.",
+          "경량칸막이·대피공간이 실제 설치되어 있고 접근이 안전하면 이용하며, 119에 위치를 알려 구조를 요청한다.",
+          "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다."
+        ],
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "FSM2-CORE-500": {
+      "beforeSHA256": "9b7e1cb678683307b5b59515653703ab01e03b086654aa14012046c01a626e10",
+      "set": {
+        "question": "지상 15층 아파트의 9층에서 불이 나 거주자들이 대피하고 있다. 화재 시의 일반적인 피난행동으로 잘못 설명한 것은?\n안전한 대피 경로가 확인된 경우에만 이동하며, 다른 세대 화재로 불·연기 유입이 없는 실내 대기 상황과 구별한다.",
+        "choices": [
+          "불·연기 없는 계단으로 지상까지 안전하게 대피할 수 있으면 그 경로를 이용한다.",
+          "대피 경로의 안전을 확인하고 자세를 낮춰 이동하며 짙은 연기로 막힌 구간에는 진입하지 않는다. 젖은 수건이 유독가스를 막는 것은 아니다.",
+          "출입문 손잡이가 뜨거우면 안쪽의 연기부터 빼내야 하므로 문을 활짝 열어 둔 뒤 그 통로로 빠져나간다.",
+          "경량칸막이·대피공간이 실제 설치되어 있고 접근이 안전하면 이용하며, 119에 위치를 알려 구조를 요청한다."
+        ],
+        "explanation": "대피 경로의 불·연기와 문 개방 상태를 먼저 판단한다. 안전한 계단으로 이동하고 지나온 문을 닫는다. 아래층 피난 불가만으로 옥상 이동을 확정하지 않는다. 짙은 연기에는 진입하지 않으며 이동 불가 시 안전 공간에서 119에 위치를 알려 구조 요청한다. 경량칸막이·대피공간은 실제 설치·접근 안전을 확인한다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "옥상·연기·대피시설의 안전 조건 명시"
+      ]
+    },
+    "FSM2-CORE-490": {
+      "beforeSHA256": "46014bfec23178ec7911eea1b1df4fe96179199bf3746667e4a5ac5fa41815ef",
+      "set": {
+        "question": "어느 소방안전관리대상물에서 소방계획을 새로 수립하며 〈제시문〉와 같은 활동을 하였다. 소방계획의 수립절차에 따 라 순서대로 나열한 것은? ㉠ 건물 안팎의 물리적·인적 위험요인을 찾아내 분석·평가하고 위험경감대책을 마련하였다. ㉡ 완성된 계획안을 관계자들이 함께 검토·승인한 뒤 실행에 옮기고, 운영하면서 계속 보완하였다. ㉢ 계획 수립을 위한 임시조직을 꾸리고 법적 요구사항을 검토해 작성계획을 세웠다. ㉣ 대상물의 여건에 맞는 목표와 전략을 정하고 세부 실행계획을 설계하였다.",
+        "explanation": "소방계획은 사전기획(㉢) → 위험환경 분석(㉠) → 설계 및 개발(㉣) → 시행 및 유지관리(㉡)의 4단계를 거쳐 수 립한다. 목표·전략과 실행계획은 위험요인을 분석해 경감대책을 세운 결과 위에서 나오므로, 설계·개발을 위험환경 분석보 다 앞세우는 순서는 맞지 않다. 조직 구성과 작성계획 없이 위험환경 분석부터 들어가는 순서나, 계획을 이미 시행한 뒤에 실행계획을 설계하는 순 서도 옳지 않다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-plan-development-process/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "연결어 교정"
+      ]
+    },
+    "FSM2-MOCK-073-07": {
+      "beforeSHA256": "c4bec90893b4651918aaefa3eccf67df491770aedf84c4a99f5acc95dcfdd1f9",
+      "set": {
+        "choices": [
+          "옷에 불이 붙으면 멈추고 바닥에 엎드려 얼굴을 보호하며 구른다",
+          "주소·건물명·층 등 정확한 위치를 전달한다",
+          "퇴로를 잃어도 소화기 약제가 남았으면 계속 진입한다",
+          "소방차 진입로를 확보하고 임의 재진입을 하지 않는다"
+        ],
+        "explanation": "잘못된 판단은 ‘퇴로를 잃어도 소화기 약제가 남았으면 계속 진입한다’이다. 올바른 내용은 ‘연기·열로 위험하거나 확산하면 즉시 철수한다’이다. 나머지 보기는 각 조건에 맞는 설명이다.\n\n이론 연결: /fire-safety-manager-level2/written/fire-safety-practice/fire-discovery-report-initial-action/",
+        "editorialRevision": "2026-10-20-persona-corrections"
+      },
+      "reasons": [
+        "구르기 적용 상황 명시"
+      ]
+    }
+  },
+  "chapterChanges": [
+    {
+      "chapterId": "FSM2-004",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-duties-owner-responsibility.md",
+      "title": "선임 대상이 아닌 건물의 업무 범위",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-duties-owner-responsibility.md",
+      "originalSha256": "40cbdd9ad8e0f76cfb784fd958959035324f49abf8e6061cbdc7673257ac0e53",
+      "sha256": "0256e19ef6a3df3d5243341121aa3f41b44d23b6a31bfae85dc88b4e2f6b1ecf"
+    },
+    {
+      "chapterId": "FSM2-005",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md",
+      "title": "기한 계산과 현황표 항목",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/appointment-report-training.md",
+      "originalSha256": "f0c0b17a353977e65066e6e952575f617b48e0a44ba27aba0645c1e66e8cff09",
+      "sha256": "47bbc332a26367a4f2c3fbd7035a4938359482836e4f797770f6707e287cf667"
+    },
+    {
+      "chapterId": "FSM2-006",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md",
+      "title": "함께 출제되는 다른 법률의 제재",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/penalties-administrative-fines.md",
+      "originalSha256": "d34b518313935bf89c725cc1e570ce5fc61fab675b1ba0247892cc5a1e2f9583",
+      "sha256": "e9a87685c4f66de5bec50ced240fd20aedf57a8886f7c32814bb369227add8a8"
+    },
+    {
+      "chapterId": "FSM2-007",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md",
+      "title": "소방대장·항공기와 안전원 업무의 구별",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/basic-fire-law-terms-organization.md",
+      "originalSha256": "4cb3b5e6e149ef2871333592410e3015a6526c50646830bd040aac92b2e4c937",
+      "sha256": "fd7473f0dff7da99e3afedf5431e07ccd1bc3e15ebb99a56fbe9543a14ca4df5"
+    },
+    {
+      "chapterId": "FSM2-008",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-safety-investigation-orders.md",
+      "title": "종합·부분조사와 주거 조사 조건",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-safety-investigation-orders.md",
+      "originalSha256": "9043d6b394422dc83cc616a5037a1e4357631f994954942a561a7f4ceb474946",
+      "sha256": "74159a68b427bf187e274be7475585383750e735c81dc3235b54843a3496ecca"
+    },
+    {
+      "chapterId": "FSM2-009",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md",
+      "title": "정기점검의 실시월과 점검자",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/self-inspection-types-schedule.md",
+      "originalSha256": "f2aeb04ab455f56cb2eb168381c01239c9f218c69de6e4d04fcf88494126b0e5",
+      "sha256": "bcfacc09236fd2ef59620da809be42843583e0a52a0f9e2a969b6154878c8207"
+    },
+    {
+      "chapterId": "FSM2-011",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flame-retardant-target-test.md",
+      "title": "대상 시설과 가구류의 구별",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flame-retardant-target-test.md",
+      "originalSha256": "9cb04677966a8577d6da196c4fba8b3444dad15b9a95da453e3cbc3fc38ee0f3",
+      "sha256": "656d32a1bde4759bf48e238aefc936c24387394775d10dc26a487aed65ce516c"
+    },
+    {
+      "chapterId": "FSM2-014",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-compartments-doors-egress.md",
+      "title": "층별 구획의 경사로 예외",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-compartments-doors-egress.md",
+      "originalSha256": "a2f3dd69a8828060cf7c698b9000f0ec7fef2ef8c0700c094a7c734c35628e30",
+      "sha256": "c62de21bb330d05dcb4d00aebc7a0f151920f42b97d88c47e89c7a14834dd2df"
+    },
+    {
+      "chapterId": "FSM2-015",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/escape-stairs-special-stairs.md",
+      "title": "면적 예외와 옥외계단 수치",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/escape-stairs-special-stairs.md",
+      "originalSha256": "0e812bfe82b61e02c9f9f3b448ebdd38556f9e3b4333027cb553947509613a9a",
+      "sha256": "a72d6acb628200c6c2e585a2d6144ee8b5ade05ff6e31d5cb02c27c9d28e470c"
+    },
+    {
+      "chapterId": "FSM2-016",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/combustion-elements.md",
+      "title": "산소공급원과 흡수열의 구별",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/combustion-elements.md",
+      "originalSha256": "3e737010bb5fafeae8fcb7ae5ae52d6bd63db4008162a9d587abcdfa91330a76",
+      "sha256": "25fd3b11b043aca6a414542ca1badb26c6a54f71f547bae901c780f1ffc99399"
+    },
+    {
+      "chapterId": "FSM2-018",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flash-fire-autoignition-points.md",
+      "title": "세 온도의 관계와 인화점의 한계",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/flash-fire-autoignition-points.md",
+      "originalSha256": "d7f25238bc8cd8d7fa1bcf96e6f0eb9a61c624b2a04bb1f05a0b11013a7041b7",
+      "sha256": "31bf178e6a39ccd37040aba004f381cebe0dba88f458488ab8777b79f97834c3"
+    },
+    {
+      "chapterId": "FSM2-020",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-classes-extinguishing-principles.md",
+      "title": "분류 문구와 소화방법의 동의어",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-classes-extinguishing-principles.md",
+      "originalSha256": "83e719912efb3303c81cd84586f410c3848e9b755578c7bc53f5aa51de041a23",
+      "sha256": "34fe053d59cb4edca15ef61913abe19b4fa79db9a6850592793dca6245214384"
+    },
+    {
+      "chapterId": "FSM2-022",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hazardous-materials-classes.md",
+      "title": "인화성고체와 액체의 구별",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/hazardous-materials-classes.md",
+      "originalSha256": "e44d3379d4230905a39d949296765d94427a9f45176880ddaf5e3e3c4c784d46",
+      "sha256": "f4b5c7e4f4fcf6a029fd6603e99df3452ed234b96e8ab906b7d7234bbe138b23"
+    },
+    {
+      "chapterId": "FSM2-023",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/designated-quantity-multiples.md",
+      "title": "지정수량의 법정 의미",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/designated-quantity-multiples.md",
+      "originalSha256": "d2cf3136806481bf07ff52d7191ad90b1805174da5b12d8823d24c9e8c3e28c4",
+      "sha256": "ed9b2a3e5672b48f3d76be1f7f4715f2111d6c1e15e7d2bdf5dd19a801680164"
+    },
+    {
+      "chapterId": "FSM2-025",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/lpg-lng-gas-detectors.md",
+      "title": "연소범위 수치를 비교할 때",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/lpg-lng-gas-detectors.md",
+      "originalSha256": "e2189552a5183c11bca267c1db29edb4f798d0f9bbf2fdf5fdf6d6de146d3b7c",
+      "sha256": "640151e8be11b466bd22dfedf92909c3e9bca45ec976108e11bf7812dc6a7f9e"
+    },
+    {
+      "chapterId": "FSM2-026",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-facility-categories.md",
+      "title": "별표 1의 하위 분류",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-facility-categories.md",
+      "originalSha256": "376aad14e0c8d95676d024a63c789676cc7d3f0291f67dd8debac778adf779dd",
+      "sha256": "67ca0f7db0b4261de2480edda60c46b7e1331b4c9a408f6a52cd7eb774f09c32"
+    },
+    {
+      "chapterId": "FSM2-035",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pump-performance-tests.md",
+      "title": "기동하지 않는 경우의 선행 확인",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/pump-performance-tests.md",
+      "originalSha256": "313b47f50c7fc786b0060d99ba19e370260f9345548b7967301bef96295dfd84",
+      "sha256": "85cc5a687058a4dbe438f2e107d72ca510d76a6d8b7efc2cb46f0e4ce3d7d446"
+    },
+    {
+      "chapterId": "FSM2-039",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/wet-sprinkler-test-valve.md",
+      "title": "시험장치의 배관·배수 조건",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/wet-sprinkler-test-valve.md",
+      "originalSha256": "b46bfa540ffe08eb49758e0eb79e289d86ec1db971deb6cd13f4f7026d448389",
+      "sha256": "9e451db38a8d3f391189201827c482cf1f92082e8a09ee3fd26c2e9c053a1eb4"
+    },
+    {
+      "chapterId": "FSM2-046",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-wiring-end-resistor-transmitter.md",
+      "title": "종단저항함과 전로저항",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/detector-wiring-end-resistor-transmitter.md",
+      "originalSha256": "059b816b3998c3b05959ebd704618f53b01436665cb0f5c0ed805332925b21ec",
+      "sha256": "6c82b6755a2b4f2973b47e4b3d6185095308891637a28bee33dc1d78edf6431f"
+    },
+    {
+      "chapterId": "FSM2-048",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/receiver-circuit-continuity-test.md",
+      "title": "배선 기준과 도통시험의 연결",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/receiver-circuit-continuity-test.md",
+      "originalSha256": "4a70923763988e3690e201f3f50a3e676a80caf4740acebca38b5605d82eb270",
+      "sha256": "9138c2e2b2fd721d305f90e111b017b47d9fe3676556285c4386f036167eaabe"
+    },
+    {
+      "chapterId": "FSM2-050",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/false-alarm-confirm-reset.md",
+      "title": "축적기능 적용 장소의 조건",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/false-alarm-confirm-reset.md",
+      "originalSha256": "0ba6b37a508d1465cf1d5bdf333b69d1412244df1a1668d833260ee1628c5a8b",
+      "sha256": "5fd752fbf7a67dd954dae594335710d06ed81a93e3f6b4b85834171e2c9e3513"
+    },
+    {
+      "chapterId": "FSM2-054",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-emergency-plan-contents.md",
+      "title": "제연·방염 현황도 계획에 포함",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-emergency-plan-contents.md",
+      "originalSha256": "dca542083bca0a533c64a7f26cfda6bb7965fbde2868b21d6583cfa1e0bb7405",
+      "sha256": "c0a9abf3483366ad790e52c890f2ae9c61ebd23f1aaf27259bb609f31bf47427"
+    },
+    {
+      "chapterId": "FSM2-057",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md",
+      "title": "해당 없음과 수리 이력의 판정",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/inspection-form-results-defects.md",
+      "originalSha256": "65eadba2ef3d1974f6463c17048f775c620566826f89b207bb3d382082f3e2a2",
+      "sha256": "41ec4d00e4c2b5f0e53514a1260caf4224b8c0a5323aa6f87236ec5a3a8407f4"
+    },
+    {
+      "chapterId": "FSM2-060",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/aed-pads-use-sequence.md",
+      "title": "두 패드를 떨어뜨려 붙이는 이유",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/aed-pads-use-sequence.md",
+      "originalSha256": "baaf6957890c991e0ddb3a6711d133b97ab903877abf986810142d0ec3c5ecb8",
+      "sha256": "ad5592b1bb807c0edad2c9bc6a71882cb469247a3c2e4d97839a3988077aee59"
+    },
+    {
+      "chapterId": "FSM2-062",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/bleeding-shock-first-aid.md",
+      "title": "출혈 증상으로 판단할 수 있는 범위",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/bleeding-shock-first-aid.md",
+      "originalSha256": "f0215060fdc5678cf00bbd2d656e37c7ff2732b3b70df286d23e76c50b0b54d7",
+      "sha256": "d97f345ccfe029b04b752fa46d217dc4e935f91cfa8f4200136cebc0ce8a64b6"
+    },
+    {
+      "chapterId": "FSM2-064",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md",
+      "title": "대피시설과 옷에 불이 붙은 경우",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-practice/fire-evacuation-decisions.md",
+      "originalSha256": "723b6d9e3d3fa6d2c08d317fb2c98d80f4e9e4439984992a0f2205a35d3d7504",
+      "sha256": "cb304de6ccd31751638ac8bf32632d3d1505bff8f7c0d30cb945f2bca4fdce97"
+    },
+    {
+      "chapterId": "FSM2-065",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/electrical-fire-static-prevention.md",
+      "title": "예방 수단의 적용 범위",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/electrical-fire-static-prevention.md",
+      "originalSha256": "c8c94734119636767d4644ce85f7174242299999d6073af96cf8e124be618373",
+      "sha256": "d016c2aa15e374457e9becc9c03cfe7839533d24a3980ceefdf0bf274b35d7b8"
+    },
+    {
+      "chapterId": "FSM2-071",
+      "path": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md",
+      "title": "연장 이력과 법령의 위임 주체",
+      "originalFile": "docs/audits/2026-10-20-fire-persona-corrections/originals/src/content/chapters/fire-safety-manager-level2/fire-safety-theory/extinguisher-service-life.md",
+      "originalSha256": "fae9d86215f183ee98d80dce0d476f7125a912ec85d0a3f50ce3a288bd24c0a8",
+      "sha256": "a0ed5dc913db2a7dee840bdd76ef697d2296d71c71acc8a73bb604307ee70db2"
+    }
+  ]
+}

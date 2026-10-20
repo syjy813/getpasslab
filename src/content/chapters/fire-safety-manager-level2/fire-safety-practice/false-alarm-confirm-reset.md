@@ -34,4 +34,7 @@ status: "완료"
 
 축적기능은 짧게 발생한 열·연기 등에 따른 비화재보를 줄이는 방식 · 축적형감지기가 설치된 장소에는 감시전류를 단속 차단해 화재를 판단하는 수신기 방식 외의 것을 적용하는 조건 확인 · 감지기·수신기의 축적을 무조건 중복 적용하지 않음
 
+## 축적기능 적용 장소의 조건
+일시적인 열·연기·먼지로 비화재 신호 우려가 있을 때 **환기 불량 지하층·무창층, 실내면적 40㎡ 미만, 부착면 높이 2.3m 이하 장소** 등의 축적기능 조건 확인 · NFTC 203에서 정한 적응성 있는 감지기 설치 시 예외 적용
+
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000275086&amp;admRulId=83630&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 203</a> · 2026-10-14 확인</p>

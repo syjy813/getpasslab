@@ -18,10 +18,11 @@
   "originalRowsWithUnparsedChoices": 47,
   "coreMarker": "original reconstruction rows only",
   "originalVariantLinksUnique": 500,
-  "inputQuestionTextChoicesAnswersExplanations": "UNCHANGED",
+  "historicalPools": "UNCHANGED",
+  "explicitEditorialCorrections": 167,
   "dataAndFilterChecks": "PASS",
   "previewDomContract": "PASS",
   "realBrowserVisualQA": "NOT_RUN",
-  "semanticAnswerReview": "PENDING",
+  "semanticAnswerReview": "MODEL_FIRST_PASS_AND_TARGETED_CORRECTIONS",
   "production": "NOT_DEPLOYED"
 }

@@ -1,7 +1,7 @@
 // Project only this exact feature addition for archived checks. Native current checks
 // protect the complete inventory; unknown files and changed bytes are never hidden.
 import assert from 'node:assert/strict';
-import { readFile as nativeRead, readdir as nativeReaddir } from 'node:fs/promises';
+import { readFile as nativeRead, readdir as nativeReaddir } from './read-before-fire-persona-corrections.mjs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 const audit = 'docs/audits/2026-10-20-fire-level2-practice';

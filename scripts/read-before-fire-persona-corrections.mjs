@@ -1,0 +1,20 @@
+// Exact inverse used only by historical release checks; current checks use
+// native bytes. Unknown files and mutations are never projected away.
+import assert from 'node:assert/strict';
+import {readFile as nativeRead,readdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import path from 'node:path';
+const audit='docs/audits/2026-10-20-fire-persona-corrections';
+const release=JSON.parse(await nativeRead(audit+'/release.json','utf8'));
+const hash=b=>createHash('sha256').update(b).digest('hex');
+export {readdir};
+export async function readFile(file,encoding){
+  let bytes=await nativeRead(file);
+  const row=release.files.find(r=>r.path===path.normalize(String(file)));
+  if(row){
+    assert.equal(hash(bytes),row.sha256,String(file)+': exact current persona correction');
+    bytes=await nativeRead(row.originalFile);
+    assert.equal(hash(bytes),row.originalSha256,String(file)+': exact historical input');
+  }
+  return encoding?bytes.toString(encoding):bytes;
+}
