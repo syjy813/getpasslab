@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import GNB from '../components/GNB.astro';
 import Footer from '../components/Footer.astro';
+import AdFitFloating from '../components/AdFitFloating.astro';
 import { withBase } from '../config/url';
 import { SITE } from '../config/site';
 
@@ -100,5 +101,6 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
     <GNB />
     <slot />
     <Footer />
+    <AdFitFloating />
   </body>
 </html>

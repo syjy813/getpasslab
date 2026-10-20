@@ -1,0 +1,188 @@
+---
+const placements = [
+  { side: 'left', unit: 'DAN-AtqVfLdSF0ScSNLm', label: '왼쪽 광고 닫기' },
+  { side: 'right', unit: 'DAN-LPCxfinNO0PuycP2', label: '오른쪽 광고 닫기' },
+];
+---
+
+{placements.map(({ side, unit, label }) => (
+  <aside
+    class="adfit-floating"
+    data-adfit-floating
+    data-adfit-side={side}
+    data-adfit-unit={unit}
+    aria-label={side === 'left' ? '왼쪽 광고' : '오른쪽 광고'}
+  >
+    <div class="adfit-floating-header">
+      <span>광고</span>
+      <button type="button" class="adfit-floating-close" data-adfit-close aria-label={label}>×</button>
+    </div>
+    <div class="adfit-floating-mount" data-adfit-mount>
+      <div class="adfit-floating-preview" data-adfit-preview aria-hidden="true">
+        <span>광고 영역 미리보기</span>
+        <span>160 × 600</span>
+      </div>
+    </div>
+  </aside>
+))}
+
+<script is:inline>
+  (() => {
+    const placements = [...document.querySelectorAll('[data-adfit-floating]')]
+      .filter((node) => node instanceof HTMLElement);
+    if (placements.length !== 2) return;
+
+    const isProduction = window.location.hostname === 'getpasslab.co.kr';
+    const viewport = window.matchMedia('(min-width: 1600px) and (min-height: 760px)');
+    const storagePrefix = 'getpasslab-adfit-floating-dismissed-';
+    let sdkStarted = false;
+
+    for (const placement of placements) {
+      const side = placement.dataset.adfitSide;
+      const unit = placement.dataset.adfitUnit;
+      const mount = placement.querySelector('[data-adfit-mount]');
+      const closeButton = placement.querySelector('[data-adfit-close]');
+      if (
+        !['left', 'right'].includes(side) ||
+        !/^DAN-[A-Za-z0-9]+$/.test(unit || '') ||
+        !(mount instanceof HTMLElement) ||
+        !(closeButton instanceof HTMLButtonElement)
+      ) return;
+
+      let closed = false;
+      try {
+        closed = window.sessionStorage.getItem(storagePrefix + side) === '1';
+      } catch {
+        // Storage may be restricted; closing still works on the current page.
+      }
+      if (closed) placement.dataset.adfitClosed = 'true';
+
+      closeButton.addEventListener('click', () => {
+        placement.dataset.adfitClosed = 'true';
+        try {
+          window.sessionStorage.setItem(storagePrefix + side, '1');
+        } catch {
+          // Keep the current page closed even if storage is unavailable.
+        }
+      });
+    }
+
+    const updateVisibility = () => {
+      if (!viewport.matches) return;
+
+      for (const placement of placements) {
+        if (placement.dataset.adfitClosed === 'true') continue;
+        placement.dataset.adfitReady = 'true';
+      }
+
+      // Don't request real ads on localhost or preview/PR domains.
+      if (!isProduction || sdkStarted) return;
+
+      const active = placements.filter((placement) => placement.dataset.adfitReady === 'true');
+      if (!active.length) return;
+
+      for (const placement of active) {
+        if (placement.dataset.adfitMounted) continue;
+        const mount = placement.querySelector('[data-adfit-mount]');
+        if (!(mount instanceof HTMLElement)) continue;
+
+        mount.querySelector('[data-adfit-preview]')?.remove();
+        const ad = document.createElement('ins');
+        ad.className = 'kakao_ad_area';
+        ad.style.display = 'none';
+        ad.dataset.adUnit = placement.dataset.adfitUnit || '';
+        ad.dataset.adWidth = '160';
+        ad.dataset.adHeight = '600';
+        mount.appendChild(ad);
+        placement.dataset.adfitMounted = 'true';
+      }
+
+      // Both INS elements are present before loading the official SDK once.
+      sdkStarted = true;
+      const sdk = document.createElement('script');
+      sdk.type = 'text/javascript';
+      sdk.src = 'https://t1.kakaocdn.net/kas/static/ba.min.js';
+      sdk.async = true;
+      sdk.charset = 'utf-8';
+      document.body.appendChild(sdk);
+    };
+
+    viewport.addEventListener('change', updateVisibility);
+    updateVisibility();
+  })();
+</script>
+
+<style>
+  .adfit-floating {
+    display: none;
+    position: fixed;
+    top: calc(var(--gnb-h) + var(--space-4));
+    z-index: 30;
+    width: 160px;
+    margin: 0;
+  }
+
+  .adfit-floating[data-adfit-side='left'] {
+    left: max(var(--space-4), calc((100vw - var(--container-max)) / 2 - 176px));
+  }
+
+  .adfit-floating[data-adfit-side='right'] {
+    right: max(var(--space-4), calc((100vw - var(--container-max)) / 2 - 176px));
+  }
+
+  .adfit-floating-header {
+    display: flex;
+    height: 28px;
+    margin-bottom: var(--space-2);
+    justify-content: space-between;
+    align-items: center;
+    color: var(--gray-600);
+    font-size: var(--fs-label);
+  }
+
+  .adfit-floating-close {
+    display: grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    background: var(--white);
+    color: var(--gray-800);
+    font: inherit;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .adfit-floating-close:hover { background: var(--gray-100); }
+  .adfit-floating-close:focus-visible {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 2px;
+  }
+
+  .adfit-floating-mount {
+    width: 160px;
+    height: 600px;
+  }
+
+  .adfit-floating-preview {
+    display: grid;
+    width: 160px;
+    height: 600px;
+    place-content: center;
+    gap: 8px;
+    border: 1px dashed var(--gray-200);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    color: var(--gray-600);
+    font-size: var(--fs-caption);
+    text-align: center;
+  }
+
+  @media (min-width: 1600px) and (min-height: 760px) {
+    .adfit-floating[data-adfit-ready='true']:not([data-adfit-closed='true']) {
+      display: block;
+    }
+  }
+</style>
