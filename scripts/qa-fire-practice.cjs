@@ -82,9 +82,11 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       assert.equal(await page.locator('input:checked').inputValue(), '2');
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="cancel"]').click();
+      await page.waitForFunction(() => !document.querySelector('[data-confirm]').open && document.activeElement === document.querySelector('[data-submit]'));
       assert.equal(await page.locator('[data-session]').isVisible(), true);
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="submit"]').click();
+      await page.locator('[data-results]').waitFor({ state: 'visible' });
       assert.match(await page.locator('[data-score]').textContent(), /1개 정답/);
       assert.equal(await page.locator('[data-review] details').count(), 6);
       await page.locator('[data-review] summary').first().click();
@@ -105,6 +107,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-submit]').click();
       assert.match(await page.locator('[data-confirm-text]').textContent(), /49개/);
       await page.keyboard.press('Escape');
+      await page.waitForFunction(() => !document.querySelector('[data-confirm]').open && document.activeElement === document.querySelector('[data-submit]'));
       assert.equal(await page.locator('[data-session]').isVisible(), true);
       assert.equal(await page.locator('[data-submit]').evaluate(e => e === document.activeElement), true);
       for (let i = 0; i < 50; i++) {
@@ -118,6 +121,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.screenshot({ path: `${output}/mock-active-${width}.png`, fullPage: true });
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="submit"]').click();
+      await page.locator('[data-results]').waitFor({ state: 'visible' });
       assert.match(await page.locator('[data-score]').textContent(), /平均|평균 70점/);
       assert.match(await page.locator('[data-verdict]').textContent(), /합격 기준 충족/);
       assert.equal(await page.locator('[data-review] details').count(), 50);
@@ -151,7 +155,12 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
     assert.deepEqual(report.errors, []);
     report.result = 'PASS';
     await context.close();
-  } catch (error) { report.result = 'FAIL'; report.errors.push(String(error)); throw error; }
+  } catch (error) {
+    report.result = 'FAIL'; report.errors.push(String(error));
+    const page = browser.contexts()[0]?.pages()[0];
+    if (page) await page.screenshot({ path: output + '/failure.png', fullPage: true }).catch(() => {});
+    throw error;
+  }
   finally { report.finishedAt = new Date().toISOString(); fs.writeFileSync(output + '/browser-results.json', JSON.stringify(report, null, 2)); await browser.close(); }
   console.log('[Fire practice browser]', report.result, report.cases.length, 'groups');
 })().catch(error => { console.error(error); process.exitCode = 1; });
