@@ -13,6 +13,7 @@ interface Props {
   ogType?: 'website' | 'article';
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
   bodyClass?: string;
+  focusMode?: boolean;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   ogType = 'website',
   structuredData = [],
   bodyClass,
+  focusMode = false,
 } = Astro.props;
 const siteOrigin = Astro.site ?? SITE.url;
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
@@ -98,9 +100,9 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
   </head>
   <body class={bodyClass}>
-    <GNB />
+    {!focusMode && <GNB />}
     <slot />
-    <Footer />
-    <AdFitFloating />
+    {!focusMode && <Footer />}
+    {!focusMode && <AdFitFloating />}
   </body>
 </html>

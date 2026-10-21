@@ -10,18 +10,31 @@ const practicePath = withBase('/fire-safety-manager-level2/practice/');
 <section class="fire-entry" data-fire-practice-entry aria-labelledby="fire-practice-title">
   <h2 id="fire-practice-title">문제 풀기</h2>
   <div class="fire-actions">
-    <a class="fire-card" href={`${practicePath}?chapter=${encodeURIComponent(chapterId)}`}>
+    <a class="fire-card" data-fire-popup aria-description="새 창에서 문제 풀기" href={`${practicePath}?chapter=${encodeURIComponent(chapterId)}`}>
       <strong>이 챕터 문제 풀기 <span aria-hidden="true">→</span></strong>
-      <span>배운 내용을 문제에 적용하고 정답·해설 바로 확인</span>
+      <span>모두 푼 뒤 한 번에 채점하고 정답·해설 확인</span>
       <small>{chapterQuestionCount > 0 ? `${chapterQuestionCount}문제` : '문제 준비 중'}</small>
     </a>
-    <a class="fire-card" href={practicePath}>
+    <a class="fire-card" data-fire-popup aria-description="새 창에서 문제 풀기" href={practicePath}>
       <strong>전체 모의고사 풀기 <span aria-hidden="true">→</span></strong>
       <span>1·2과목 각 25문제 · 총 50문제 · 60분</span>
       <small>제출 후 과목별 점수와 해설 확인</small>
     </a>
   </div>
 </section>
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('[data-fire-popup]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      const popup = window.open('about:blank', '_blank', 'popup,width=1180,height=900,resizable=yes,scrollbars=yes');
+      if (!popup) return;
+      popup.opener = null;
+      const url = new URL(link.href); url.searchParams.set('popup', '1');
+      popup.location.replace(url.href);
+      event.preventDefault();
+    });
+  });
+</script>
 <style>
   .fire-entry{margin-top:var(--space-8)}
   .fire-actions{display:grid;gap:var(--space-3);margin-top:var(--space-4)}

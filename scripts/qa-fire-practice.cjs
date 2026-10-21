@@ -34,6 +34,17 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       }
       await page.locator('[data-fire-practice-entry]').scrollIntoViewIfNeeded();
       await page.screenshot({ path: `${output}/chapter-entry-${width}.png`, fullPage: false });
+      const popupPromise = context.waitForEvent('page');
+      await page.locator('[data-fire-practice-entry] a').first().click();
+      const popup = await popupPromise;
+      await popup.waitForLoadState('networkidle');
+      assert.equal(new URL(popup.url()).searchParams.get('popup'), '1');
+      assert.equal(await popup.evaluate(() => window.opener), null);
+      await popup.waitForFunction(() => document.querySelector('[data-start]')?.disabled === false);
+      await Promise.all([popup.waitForEvent('close'), popup.locator('[data-window-close]').click()]);
+      assert(popup.isClosed());
+      // A blocked popup follows the usable link in the current tab.
+      await page.evaluate(() => { window.open = () => null; });
       await page.locator('[data-fire-practice-entry] a').first().click();
       await page.waitForFunction(()=>document.querySelector('[data-start]')?.disabled===false);
       assert.equal(await page.locator('[data-start]').isDisabled(), false);
@@ -72,12 +83,12 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.goto(base + route + '?chapter=' + chapterOne.id);
       await page.locator('[data-start]').click();
       assert.equal(await page.locator('[data-clock-wrap]').isVisible(), false);
-      assert.equal(await page.locator('[data-check]').isDisabled(), true);
-      assert.equal(await page.locator('[data-next]').isDisabled(), true);
+      assert.equal(await page.locator('[data-check]').count(), 0);
+      assert.equal(await page.locator('[data-feedback]').count(), 0);
+      assert.equal(await page.locator('[data-next]').isDisabled(), false);
+      await page.locator('input[value="1"]').check();
       await page.locator('input[value="2"]').check();
-      await page.locator('[data-check]').click();
-      assert.match(await page.locator('[data-feedback]').textContent(), /正答|정답입니다/);
-      assert.equal(await page.locator('input:disabled').count(), 4);
+      assert.equal(await page.locator('input:disabled').count(), 0);
       await page.locator('[data-next]').click();
       await page.locator('[data-previous]').click();
       assert.equal(await page.locator('input:checked').inputValue(), '2');
@@ -92,13 +103,33 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       assert.equal(await page.locator('[data-review] details').count(), 6);
       await page.locator('[data-review] summary').first().click();
       assert.equal(await page.locator('[data-review] a').count(), 6);
+      await page.locator('[data-filter="wrong"]').click();
+      assert.equal(await page.locator('[data-review] details:visible').count(), 0);
+      await page.locator('[data-filter="unanswered"]').click();
+      assert.equal(await page.locator('[data-review] details:visible').count(), 5);
+      await page.locator('[data-filter="all"]').click();
       await page.screenshot({ path: `${output}/chapter-result-${width}.png`, fullPage: true });
+      await page.locator('[data-retry]').click();
+      assert.equal(await page.locator('[data-navigation] button').count(), 5);
+      assert.equal(await page.locator('[data-clock-wrap]').isVisible(), false);
+      await page.locator('input[value="1"]').check();
+      await page.locator('[data-clear]').click();
+      assert.equal(await page.locator('input:checked').count(), 0);
+      await page.locator('input[value="1"]').check();
+      await page.locator('[data-submit]').click();
+      await page.locator('[data-confirm] button[value="submit"]').click();
+      await page.locator('[data-results]').waitFor({ state: 'visible' });
+      assert.match(await page.locator('[data-verdict]').textContent(), /정답 0개 · 오답 1개 · 미응답 4개/);
+      await page.locator('[data-filter="wrong"]').click();
+      assert.equal(await page.locator('[data-review] details:visible').count(), 1);
+      await page.locator('[data-filter="unanswered"]').click();
+      assert.equal(await page.locator('[data-review] details:visible').count(), 4);
       await page.goto(base + route);
       await page.locator('[data-start]').click();
       assert.equal(await page.locator('[data-navigation] button').count(), 50);
       assert.equal(await page.locator('[data-clock]').textContent(), '60:00');
-      assert.equal(await page.locator('[data-check]').isVisible(), false);
-      assert.equal(await page.locator('[data-feedback]').isVisible(), false);
+      assert.equal(await page.locator('[data-check]').count(), 0);
+      assert.equal(await page.locator('[data-feedback]').count(), 0);
       await page.locator('input[value="1"]').check();
       await page.locator('[data-next]').click();
       await page.locator('[data-previous]').click();
@@ -111,6 +142,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.waitForFunction(() => !document.querySelector('[data-confirm]').open && document.activeElement === document.querySelector('[data-submit]'));
       assert.equal(await page.locator('[data-session]').isVisible(), true);
       assert.equal(await page.locator('[data-submit]').evaluate(e => e === document.activeElement), true);
+      if (!await page.locator('[data-answer-panel]').evaluate(e => e.open)) await page.locator('[data-answer-panel] summary').click();
       for (let i = 0; i < 50; i++) {
         await page.locator('[data-navigation] button').nth(i).click();
         assert.match(await page.locator('[data-meta]').textContent(), new RegExp(i < 25 ? '1과목' : '2과목'));
@@ -142,7 +174,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-results]').waitFor({ state: 'visible' });
       assert.match(await page.locator('[data-verdict]').textContent(), /자동 제출/);
       assert.match(await page.locator('[data-score]').textContent(), /평균 0점/);
-      report.cases.push({ width, chapterFeedback: 'PASS', answerPersistence: 'PASS', mock50: 'PASS', score70: 'PASS', restart: 'PASS', deadline: 'PASS', htmlInjection: 'PASS' });
+      report.cases.push({ width, chapterBatchSubmission: 'PASS', popupAndFallback: 'PASS', filtersAndRetry: 'PASS', answerPersistence: 'PASS', mock50: 'PASS', score70: 'PASS', restart: 'PASS', deadline: 'PASS', htmlInjection: 'PASS' });
     }
     await page.unroute('**/fire-safety-manager-level2/practice/**');
     for (const path of ['/industrial-safety/written/construction/hanging-scaffold-wire-rope/', '/energy-management/written/thermal-equipment/draft-flue-gas/', '/computer-literacy/written/spreadsheets/goal-seek/']) {

@@ -41,15 +41,20 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       const chapter=payload.chapters[0];
       await page.goto(base+chapter.href,{waitUntil:'networkidle'});
       assert.equal(await page.locator('[data-fire-practice-entry] a').count(),2);
-      await page.locator('[data-fire-practice-entry] a').first().click();
+      await page.goto(base + await page.locator('[data-fire-practice-entry] a').first().getAttribute('href'),{waitUntil:'networkidle'});
       await page.waitForFunction(()=>document.querySelector('[data-start]')?.disabled===false);
       assert.equal(await page.locator('[data-start]').isDisabled(),false);
       await page.locator('[data-start]').click();
       const q=await findQuestion();
       await page.locator(`input[value="${q.answerNumber}"]`).check();
-      await page.locator('[data-check]').click();
-      const feedback=await page.locator('[data-feedback]').textContent();
-      assert(feedback.startsWith('정답입니다.'));assert(feedback.includes(q.explanation));
+      assert.equal(await page.locator('[data-feedback]').count(),0,'answers hidden before submission');
+      await page.locator('[data-submit]').click();
+      await page.locator('[data-confirm] button[value="submit"]').click();
+      await page.locator('[data-results]').waitFor({state:'visible'});
+      const firstReview=page.locator('[data-review] details').first();
+      await firstReview.locator('summary').click();
+      assert.equal(await firstReview.getAttribute('data-status'),'correct');
+      assert((await firstReview.textContent()).includes(q.explanation));
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
       await page.screenshot({path:`${output}/chapter-${width}.png`,fullPage:true});
       await page.goto(url,{waitUntil:'networkidle'});
@@ -58,7 +63,7 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       assert.equal(await page.locator('[data-navigation] button').count(),50);
       assert.equal(await page.locator('[data-clock-wrap]').isVisible(),true);
       for(let n=0;n<50;n++){
-        await page.locator('[data-navigation] button').nth(n).click();
+        if(n>0)await page.locator('[data-next]').click();
         assert.match(await page.locator('[data-meta]').textContent(),new RegExp(n<25?'1과목':'2과목'));
         const actual=await findQuestion();assert.equal(actual.subjectId,n<25?1:2);
         await page.locator(`input[value="${actual.answerNumber}"]`).check();
@@ -71,6 +76,7 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       assert.match(await page.locator('[data-verdict]').textContent(),/합격 기준 충족/);
       assert.equal(await page.locator('[data-review] details').count(),50);
       assert.equal(await page.locator('[data-review] a').count(),50);
+      assert.equal(await page.locator('[data-retry]').isDisabled(),true);
       await page.screenshot({path:`${output}/mock-result-${width}.png`,fullPage:false});
       report.cases.push({width,actualChapterAnswerAndExplanation:'PASS',actualMock50:'PASS',subject25Each:'PASS',score100:'PASS',overflow:false});
     }
