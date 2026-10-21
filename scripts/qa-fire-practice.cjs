@@ -60,6 +60,62 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       report.cases.push({ width, chapterRoutes: chapters.length, publishedAndInvalid: 'PASS', overflow: false });
     }
     const chapterOne = payload.chapters.find(q => q.subjectId === 1);
+    const interceptPayload = async questions => {
+      await page.unroute('**/fire-safety-manager-level2/practice/**');
+      const fixture = JSON.stringify({chapters:payload.chapters,questions}).replace(/</g,'\\u003c');
+      await page.route('**/fire-safety-manager-level2/practice/**', async r => {
+        const response=await r.fetch();
+        const html=(await response.text()).replace(payloadPattern,(_,open,close)=>open+fixture+close);
+        await r.fulfill({response,body:html});
+      });
+    };
+    const noteQuestion=payload.questions.find(q=>q.id==='moducbt-27777-q01');
+    const advancedQuestion=payload.questions.find(q=>q.question.startsWith('[')&&q.question.includes('가.'));
+    const typographyQuestions=[noteQuestion,advancedQuestion].map(q=>({...q,chapterId:chapterOne.id,subjectId:1}));
+    await interceptPayload(typographyQuestions);
+    for(const width of [320,390,1440]){
+      await page.setViewportSize({width,height:900});
+      await page.goto(base+route+'?chapter='+chapterOne.id,{waitUntil:'networkidle'});
+      assert.equal(await page.locator('[data-guide] br').count(),2);
+      assert.equal(await page.locator('[data-chapter-back]').count(),0);
+      await page.screenshot({path:`${output}/chapter-setup-${width}.png`,fullPage:false});
+      await page.locator('[data-start]').click();
+      if(!(await page.locator('[data-question]').textContent()).includes('이 건물은 '))await page.locator('[data-next]').click();
+      assert.equal((await page.locator('[data-question]').textContent()).replace(/^\d+\. /,''),noteQuestion.question);
+      const checkHierarchy=async selector=>{
+        const styles=await page.locator(selector).evaluate(e=>{
+          const style=c=>{const s=getComputedStyle(e.querySelector(c));return {size:parseFloat(s.fontSize),color:s.color};};
+          return {title:style('.fire-stem-title'),condition:style('.fire-stem-condition'),reference:style('.fire-stem-reference'),marker:getComputedStyle(e.querySelector('.fire-stem-reference'),'::before').content};
+        });
+        assert(styles.title.size>styles.condition.size&&styles.condition.size>styles.reference.size);
+        assert.equal(styles.title.color,styles.condition.color);
+        assert.notEqual(styles.condition.color,styles.reference.color);
+        assert.equal(styles.marker,'"※"');
+        return styles;
+      };
+      const live=await checkHierarchy('[data-question]');
+      assert.equal(await page.locator('[data-clear]').count(),0);
+      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+      await page.locator('[data-question]').screenshot({path:`${output}/question-hierarchy-${width}.png`});
+      await page.locator('[data-submit]').click();
+      await page.locator('[data-confirm] button[value="submit"]').click();
+      await page.locator('[data-results]').waitFor({state:'visible'});
+      assert.deepEqual((await page.locator('.fire-review-question').allTextContents()).sort(),typographyQuestions.map(q=>q.question).sort());
+      const reviewSelector='[data-review-item]:has(.fire-stem-reference)';
+      const review=await checkHierarchy(reviewSelector);
+      assert.equal(await page.locator('[data-review] .fire-answer, [data-review] [data-answer]').count(),0);
+      await page.locator(reviewSelector).screenshot({path:`${output}/review-hierarchy-${width}.png`});
+      report.cases.push({width,questionHierarchy:{live,review},approvedQuestionTextPreserved:'PASS'});
+    }
+    // Rendering every approved stem must preserve its full text and multiplicity.
+    await interceptPayload(payload.questions.map(q=>({...q,chapterId:chapterOne.id,subjectId:1})));
+    await page.goto(base+route+'?chapter='+chapterOne.id,{waitUntil:'networkidle'});
+    await page.locator('[data-start]').click();
+    await page.locator('[data-submit]').click();
+    await page.locator('[data-confirm] button[value="submit"]').click();
+    await page.locator('[data-results]').waitFor({state:'visible'});
+    assert.deepEqual((await page.locator('.fire-review-question').allTextContents()).sort(),payload.questions.map(q=>q.question).sort());
+    report.cases.push({allApprovedStems:2328,textAndMultiplicityPreserved:'PASS'});
     const questions = [];
     for (const subjectId of [1, 2]) {
       const chapters = payload.chapters.filter(q => q.subjectId === subjectId);
@@ -73,22 +129,35 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
         if (i < 3) questions.push({ ...questions.at(-1), id: id + '-variant', isCore: false, questionType: 'source_variant' });
       }
     }
-    const fixture = JSON.stringify({ chapters: payload.chapters, questions }).replace(/</g, '\\u003c');
-    await page.route('**/fire-safety-manager-level2/practice/**', async r => {
-      const response = await r.fetch();
-      const html = (await response.text()).replace(payloadPattern, (_, open, close) => open + fixture + close);
-      await r.fulfill({ response, body: html });
-    });
+    await interceptPayload(questions);
     for (const width of [320, 390, 1440]) {
       await page.setViewportSize({ width, height: 900 });
       await page.goto(base + route + '?chapter=' + chapterOne.id);
+      assert.equal(await page.locator('[data-chapter-back]').count(), 0);
+      assert.equal(await page.locator('[data-guide] br').count(), 2);
+      assert.deepEqual(await page.locator('[data-guide]').evaluate(e=>e.innerText.split('\n')), ['모든 문제를 푼 뒤 한 번에 채점합니다.', '제출 전에는 자유롭게 이동하고 답을 바꿀 수 있습니다.', '시간 제한은 없습니다.']);
+      await page.screenshot({path:`${output}/chapter-setup-${width}.png`,fullPage:false});
       await page.locator('[data-start]').click();
+      assert.equal(await page.locator('[data-clear]').count(), 0);
       assert.equal(await page.locator('[data-clock-wrap]').isVisible(), false);
       assert.equal(await page.locator('[data-check]').count(), 0);
       assert.equal(await page.locator('[data-feedback]').count(), 0);
       assert.equal(await page.locator('[data-next]').isDisabled(), false);
-      await page.locator('input[value="1"]').check();
-      await page.locator('input[value="2"]').check();
+      await page.locator('input[value="1"]').locator('..').click();
+      await page.locator('input[value="1"]').focus();
+      await page.keyboard.press('ArrowRight');
+      assert.equal(await page.locator('input:checked').inputValue(),'2','native radio keyboard selection survives visual removal');
+      const selectionStyle=await page.locator('[data-choices]').evaluate(e=>{
+        const input=e.querySelector('input:checked'), selected=getComputedStyle(input.parentElement), other=getComputedStyle(e.querySelector('input:not(:checked)').parentElement), control=getComputedStyle(input);
+        return {selectedBackground:selected.backgroundColor,otherBackground:other.backgroundColor,selectedBorder:selected.borderColor,otherBorder:other.borderColor,clip:control.clipPath,width:control.width,focus:getComputedStyle(input.parentElement).outlineWidth};
+      });
+      assert.notEqual(selectionStyle.selectedBackground,selectionStyle.otherBackground);
+      assert.notEqual(selectionStyle.selectedBorder,selectionStyle.otherBorder);
+      assert.equal(selectionStyle.clip,'inset(50%)');
+      assert.equal(selectionStyle.width,'1px');
+      assert.equal(selectionStyle.focus,'3px');
+      await page.locator('input[value="1"]').locator('..').click();
+      await page.locator('input[value="2"]').locator('..').click();
       assert.equal(await page.locator('input:disabled').count(), 0);
       await page.locator('[data-next]').click();
       await page.locator('[data-previous]').click();
@@ -102,6 +171,8 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-results]').waitFor({ state: 'visible' });
       assert.match(await page.locator('[data-score]').textContent(), /1개 정답/);
       assert.equal(await page.locator('[data-review-item]').count(), 6);
+      assert.equal(await page.locator('[data-review] .fire-answer, [data-review] [data-answer]').count(),0);
+      assert.equal(await page.locator('[data-review-item][data-status="correct"] .fire-choice-label').textContent(),'내 선택 · 정답');
       assert.equal(await page.locator('[data-review] details, [data-review] summary').count(), 0, 'review has no disclosure toggles');
       assert.equal(await page.locator('[data-explanation]:visible').count(), 6, 'all explanations displayed at once');
       const reviewStyle = await page.locator('[data-review-item]').first().evaluate(e => ({
@@ -139,16 +210,18 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-retry]').click();
       assert.equal(await page.locator('[data-navigation] button').count(), 5);
       assert.equal(await page.locator('[data-clock-wrap]').isVisible(), false);
-      await page.locator('input[value="1"]').check();
-      await page.locator('[data-clear]').click();
-      assert.equal(await page.locator('input:checked').count(), 0);
-      await page.locator('input[value="1"]').check();
+      await page.locator('input[value="1"]').locator('..').click();
+      assert.equal(await page.locator('[data-clear]').count(), 0);
+      await page.locator('input[value="2"]').locator('..').click();
+      await page.locator('input[value="1"]').locator('..').click();
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="submit"]').click();
       await page.locator('[data-results]').waitFor({ state: 'visible' });
       assert.deepEqual(await page.locator('[data-outcomes] p').allTextContents(), ['정답0개','오답1개','미응답4개']);
       await page.locator('[data-filter="wrong"]').click();
       assert.equal(await page.locator('[data-review-item]:visible').count(), 1);
+      assert.deepEqual(await page.locator('[data-review-item]:visible .fire-choice-label').allTextContents(),['내 선택','정답']);
+      assert.equal(await page.locator('[data-review] .fire-answer, [data-review] [data-answer]').count(),0);
       await page.locator('[data-review-item]:visible').first().screenshot({path:`${output}/wrong-review-${width}.png`});
       await page.locator('[data-filter="unanswered"]').click();
       assert.equal(await page.locator('[data-review-item]:visible').count(), 4);
@@ -163,11 +236,11 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       }
       assert.equal(await page.locator('[data-check]').count(), 0);
       assert.equal(await page.locator('[data-feedback]').count(), 0);
-      await page.locator('input[value="1"]').check();
+      await page.locator('input[value="1"]').locator('..').click();
       await page.locator('[data-next]').click();
       await page.locator('[data-previous]').click();
       assert.equal(await page.locator('input:checked').inputValue(), '1');
-      await page.locator('input[value="2"]').check();
+      await page.locator('input[value="2"]').locator('..').click();
       // An unanswered submission has explicit confirmation and can be cancelled with Escape.
       await page.locator('[data-submit]').click();
       assert.match(await page.locator('[data-confirm-text]').textContent(), /49개/);
@@ -179,7 +252,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       for (let i = 0; i < 50; i++) {
         await page.locator('[data-navigation] button').nth(i).click();
         assert.match(await page.locator('[data-meta]').textContent(), new RegExp(i < 25 ? '1과목' : '2과목'));
-        if (i < 35) await page.locator('input[value="2"]').check();
+        if (i < 35) await page.locator('input[value="2"]').locator('..').click();
       }
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
       assert.equal(await page.evaluate(() => Boolean(window.fixtureXss)), false);

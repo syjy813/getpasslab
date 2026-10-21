@@ -7,7 +7,7 @@ const { data } = Astro.props;
     <h1 class="gpl-h1" id="practice-heading" data-title>전체 모의고사 풀기</h1>
     <p class="fire-lead" data-description>1과목 25문제 + 2과목 25문제 · 60분</p>
     <p class="fire-notice" data-availability role="status"></p>
-    <p class="fire-muted" data-guide>제출 후 정답과 해설을 확인합니다. 각 과목 40점 이상, 평균 70점 이상이면 합격 기준을 충족합니다.</p>
+    <p class="fire-muted fire-guide" data-guide>제출 후 정답과 해설을 확인합니다.<br />각 과목 40점 이상, 평균 70점 이상이면 합격 기준을 충족합니다.</p>
     <button type="button" class="btn btn-primary" data-start disabled>모의고사 시작</button>
   </section>
   <noscript><p>문제 풀기는 자바스크립트를 켠 뒤 이용할 수 있습니다.</p></noscript>
@@ -19,11 +19,10 @@ const { data } = Astro.props;
     <div class="fire-workspace">
       <div class="fire-paper">
         <p class="fire-muted" data-meta></p>
-        <h2 class="fire-question" data-question tabindex="-1"></h2>
+        <div class="fire-question" data-question tabindex="-1"></div>
         <fieldset class="fire-choices" data-choices><legend class="fire-sr">정답 선택</legend></fieldset>
         <div class="fire-controls">
           <button type="button" class="btn btn-secondary" data-previous>이전 문제</button>
-          <button type="button" class="btn btn-secondary" data-clear>선택 해제</button>
           <button type="button" class="btn btn-primary" data-next>다음 문제</button>
         </div>
         <p class="fire-muted" data-session-help>번호를 눌러 문항 사이를 이동할 수 있습니다. 선택한 답은 제출 전까지 바꿀 수 있습니다.</p>
@@ -86,6 +85,7 @@ const { data } = Astro.props;
   [data-session],[data-results]{scroll-margin-top:calc(var(--gnb-h) + var(--space-4))}
   .fire-lead{font-size:var(--fs-body-lg);margin:var(--space-4) 0;color:var(--gray-800)}
   .fire-muted{font-size:14px;line-height:1.7;color:var(--gray-600)}
+  .fire-guide{margin:var(--space-4) 0}
   .fire-notice{padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-lg);background:var(--gray-50);margin:var(--space-4) 0;line-height:var(--lh-body)}
   .btn{min-height:44px;white-space:normal;font-size:15px;line-height:1.5}
   .btn:disabled{background:var(--gray-100);color:var(--gray-600);cursor:not-allowed}
@@ -94,12 +94,16 @@ const { data } = Astro.props;
   .fire-toolbar p{margin:0 0 var(--space-3);font-size:14px}
   .fire-clock{font-variant-numeric:tabular-nums}
   .fire-clock strong{font-size:var(--fs-h3);color:var(--primary-700)}
-  .fire-question{font-size:20px;font-weight:var(--fw-semibold);line-height:1.7;white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}
+  .fire-question{font-size:18px;font-weight:var(--fw-semibold);line-height:1.7;white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}
+  .fire-runner :global(.fire-stem-title){font:inherit;color:var(--gray-900);white-space:pre-wrap;margin:0}
+  .fire-runner :global(.fire-stem-condition){font-size:16px;font-weight:var(--fw-regular);line-height:1.8;color:var(--gray-900);white-space:pre-wrap;margin:0}
+  .fire-runner :global(.fire-stem-reference){font-size:14px;font-weight:var(--fw-regular);line-height:1.8;color:var(--gray-700);white-space:pre-wrap;margin:0;padding-left:1.3em;position:relative}
+  .fire-runner :global(.fire-stem-reference[data-marker="true"]::before){content:'※';position:absolute;left:0}
   .fire-choices{border:0;padding:0;margin:0 0 var(--space-4);min-width:0;display:grid;gap:var(--space-3)}
   .fire-choices :global(legend){position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
-  .fire-choices :global(label){display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-md);cursor:pointer;min-height:44px;white-space:pre-wrap;line-height:1.8;font-size:16px}
+  .fire-choices :global(label){position:relative;display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-md);cursor:pointer;min-height:44px;white-space:pre-wrap;line-height:1.8;font-size:16px}
   .fire-choices :global(label:has(input:checked)){border-color:var(--primary-600);background:var(--primary-50)}
-  .fire-choices :global(input){margin:5px 0 0;accent-color:var(--primary-600);flex:none}
+  .fire-choices :global(input){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
   .fire-choices :global(label:has(input:focus-visible)){outline:3px solid var(--primary-600);outline-offset:3px}
 
   .fire-controls{display:flex;flex-wrap:wrap;gap:var(--space-2);margin:var(--space-4) 0}
@@ -134,11 +138,6 @@ const { data } = Astro.props;
   .fire-review :global(.fire-choice-label){flex-basis:100%;padding-left:32px;font-size:14px;font-weight:var(--fw-semibold)}
   .fire-review :global(li[data-correct="true"]){color:var(--fire-correct);border-color:var(--fire-correct);background:var(--success-bg)}
   .fire-review :global(li[data-wrong="true"]){color:var(--fire-wrong);border-color:var(--fire-wrong);background:var(--error-bg)}
-  .fire-review :global(.fire-answer){display:grid;gap:var(--space-3);margin-bottom:var(--space-6)}
-  .fire-review :global(.fire-answer p){display:grid;grid-template-columns:64px minmax(0,1fr);gap:var(--space-3)}
-  .fire-review :global(.fire-answer strong){font-size:14px;font-weight:var(--fw-semibold)}
-  .fire-review :global([data-answer="selected"]){color:var(--fire-tone)}
-  .fire-review :global([data-answer="correct"]){color:var(--fire-correct)}
   .fire-review :global(.fire-explanation){padding:var(--space-4);border-radius:var(--radius-md);background:var(--gray-50)}
   .fire-review :global(h5){font-size:16px;font-weight:var(--fw-semibold);line-height:1.5;color:var(--gray-900);margin:0 0 var(--space-3)}
   .fire-review :global(a){display:inline-block;color:var(--primary-700);font-size:14px;line-height:1.7;margin-top:var(--space-4);padding:var(--space-2) 0;min-height:44px}
@@ -156,7 +155,8 @@ const { data } = Astro.props;
   .fire-controls [data-filter="unanswered"]{color:var(--fire-unanswered)}
   .fire-controls [data-filter="wrong"][aria-pressed="true"]{background:var(--error-bg);border-color:var(--fire-wrong)}
   .fire-controls [data-filter="unanswered"][aria-pressed="true"]{background:var(--fire-orange-bg);border-color:var(--fire-unanswered)}
-  @media(min-width:768px){.fire-runner{font-size:17px}.fire-muted,.fire-toolbar p{font-size:15px}.btn{font-size:16px}.fire-question{font-size:22px}.fire-choices :global(label){font-size:17px}.fire-review :global(.fire-review-question){font-size:19px}}
+  @media(min-width:768px){.fire-runner{font-size:17px}.fire-muted,.fire-toolbar p{font-size:15px}.btn{font-size:16px}.fire-question{font-size:20px}.fire-choices :global(label){font-size:17px}.fire-review :global(.fire-review-question){font-size:19px}}
+  @media(min-width:768px){.fire-runner :global(.fire-stem-condition){font-size:17px}.fire-runner :global(.fire-stem-reference){font-size:15px}}
   @media(min-width:640px){.fire-review :global(.fire-choice-label){flex-basis:auto;padding-left:0}.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media(min-width:1024px){.fire-workspace{grid-template-columns:minmax(0,1fr) 280px}.fire-status{position:sticky;top:var(--space-4)}.fire-navigation{max-height:min(40dvh,480px)}.fire-status summary{list-style:none;pointer-events:none}.fire-status summary::-webkit-details-marker{display:none}}
 </style>

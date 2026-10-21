@@ -22,7 +22,6 @@ const payload = JSON.stringify({ questions: publishedFireQuestions, chapters }).
 <BaseLayout title="소방안전관리자 2급 문제 풀기 · GetPassLab" description="소방안전관리자 2급의 챕터별 문제와 실전 모의고사를 풀어보세요. 학습 내용을 적용하고, 과목별 점수와 문항별 정답·해설을 확인할 수 있습니다." robots="noindex, follow" focusMode>
   <main class="container practice-page">
     <div class="practice-toolbar"><strong>GetPassLab <span>소방안전관리자 2급</span></strong><button type="button" class="btn btn-secondary" data-window-close hidden>창 닫기</button></div>
-    <a class="practice-back" data-chapter-back href={withBase('/fire-safety-manager-level2/written/')}>← 소방안전관리자 2급 학습</a>
     <div class="practice-panel"><FirePracticeRunner data={payload} /></div>
   </main>
 </BaseLayout>
@@ -33,7 +32,6 @@ const payload = JSON.stringify({ questions: publishedFireQuestions, chapters }).
   .practice-toolbar span{font-size:14px;font-weight:var(--fw-regular);color:var(--gray-600)}
   .practice-toolbar button{min-height:44px;font-size:15px;line-height:1.5}
   .practice-toolbar [hidden]{display:none!important}
-  .practice-back{display:inline-block;margin-bottom:var(--space-4);font-size:14px;color:var(--primary-700);min-height:44px;padding:var(--space-3) 0}
   .practice-panel{padding:var(--space-4);background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl)}
   @media(min-width:768px){.practice-page{padding:var(--space-8) var(--space-6) var(--space-16)}.practice-panel{padding:var(--space-8)}}
 </style>

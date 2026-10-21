@@ -3481,5 +3481,161 @@
         }
       ]
     }
+  },
+  "practicePolishProjections": {
+    "src/components/FirePracticeRunner.astro": {
+      "sha256": "02eae2a83b8c9a6b9b704bd1d79cbf0d1d06156ef06aa4b160479a4a319b783b",
+      "beforeSHA256": "2e7a4a6c4a38ec4f0d01bec7d9022f0b8e06253288f208fdc7f3735157dc204a",
+      "patches": [
+        {
+          "at": 381,
+          "current": "    <p class=\"fire-muted fire-guide\" data-guide>제출 후 정답과 해설을 확인합니다.<br />각 과목 40점 이상, 평균 70점 이상이면 합격 기준을 충족합니다.</p>\n",
+          "before": "    <p class=\"fire-muted\" data-guide>제출 후 정답과 해설을 확인합니다. 각 과목 40점 이상, 평균 70점 이상이면 합격 기준을 충족합니다.</p>\n"
+        },
+        {
+          "at": 1024,
+          "current": "        <div class=\"fire-question\" data-question tabindex=\"-1\"></div>\n",
+          "before": "        <h2 class=\"fire-question\" data-question tabindex=\"-1\"></h2>\n"
+        },
+        {
+          "at": 1319,
+          "current": "",
+          "before": "          <button type=\"button\" class=\"btn btn-secondary\" data-clear>선택 해제</button>\n"
+        },
+        {
+          "at": 4589,
+          "current": "  .fire-guide{margin:var(--space-4) 0}\n",
+          "before": ""
+        },
+        {
+          "at": 5424,
+          "current": "  .fire-question{font-size:18px;font-weight:var(--fw-semibold);line-height:1.7;white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}\n  .fire-runner :global(.fire-stem-title){font:inherit;color:var(--gray-900);white-space:pre-wrap;margin:0}\n  .fire-runner :global(.fire-stem-condition){font-size:16px;font-weight:var(--fw-regular);line-height:1.8;color:var(--gray-900);white-space:pre-wrap;margin:0}\n  .fire-runner :global(.fire-stem-reference){font-size:14px;font-weight:var(--fw-regular);line-height:1.8;color:var(--gray-700);white-space:pre-wrap;margin:0;padding-left:1.3em;position:relative}\n  .fire-runner :global(.fire-stem-reference[data-marker=\"true\"]::before){content:'※';position:absolute;left:0}\n",
+          "before": "  .fire-question{font-size:20px;font-weight:var(--fw-semibold);line-height:1.7;white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}\n"
+        },
+        {
+          "at": 6393,
+          "current": "  .fire-choices :global(label){position:relative;display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-md);cursor:pointer;min-height:44px;white-space:pre-wrap;line-height:1.8;font-size:16px}\n",
+          "before": "  .fire-choices :global(label){display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-md);cursor:pointer;min-height:44px;white-space:pre-wrap;line-height:1.8;font-size:16px}\n"
+        },
+        {
+          "at": 6780,
+          "current": "  .fire-choices :global(input){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}\n",
+          "before": "  .fire-choices :global(input){margin:5px 0 0;accent-color:var(--primary-600);flex:none}\n"
+        },
+        {
+          "at": 10799,
+          "current": "",
+          "before": "  .fire-review :global(.fire-answer){display:grid;gap:var(--space-3);margin-bottom:var(--space-6)}\n  .fire-review :global(.fire-answer p){display:grid;grid-template-columns:64px minmax(0,1fr);gap:var(--space-3)}\n  .fire-review :global(.fire-answer strong){font-size:14px;font-weight:var(--fw-semibold)}\n  .fire-review :global([data-answer=\"selected\"]){color:var(--fire-tone)}\n  .fire-review :global([data-answer=\"correct\"]){color:var(--fire-correct)}\n"
+        },
+        {
+          "at": 12569,
+          "current": "  @media(min-width:768px){.fire-runner{font-size:17px}.fire-muted,.fire-toolbar p{font-size:15px}.btn{font-size:16px}.fire-question{font-size:20px}.fire-choices :global(label){font-size:17px}.fire-review :global(.fire-review-question){font-size:19px}}\n  @media(min-width:768px){.fire-runner :global(.fire-stem-condition){font-size:17px}.fire-runner :global(.fire-stem-reference){font-size:15px}}\n",
+          "before": "  @media(min-width:768px){.fire-runner{font-size:17px}.fire-muted,.fire-toolbar p{font-size:15px}.btn{font-size:16px}.fire-question{font-size:22px}.fire-choices :global(label){font-size:17px}.fire-review :global(.fire-review-question){font-size:19px}}\n"
+        }
+      ]
+    },
+    "src/utils/firePracticeClient.ts": {
+      "sha256": "dfa754c662b7dbe9b0ba1d754831ef70ea9c2a88c79700b21894a4b8315979f0",
+      "beforeSHA256": "85a54511da9df369ac472556618687eb6f9574b40a1d7c08e4c8420e192ec5b4",
+      "patches": [
+        {
+          "at": 492,
+          "current": "\n// Presentation only: keep every character and its order from the approved bank.\n// References need an explicit marker/prefix; a final paragraph is not enough.\nfunction renderQuestion(target: HTMLElement, text: string, prefix = '', live = false) {\n  const groups: { kind: 'title' | 'condition' | 'reference'; text: string }[] = [];\n  let body = false, reference = false;\n  const structured = /^(?:[•●▪■◆·▶※]|[ㄱ-ㅎ가-하][.)]|[㉠-㉻①-⑳]|(?:용도|규모|높이|층수|연면적|설치된 소방시설|조건|사례)\\s*[:：])/;\n  for (const line of text.match(/[^\\n]*\\n|[^\\n]+$/g) || ['']) {\n    const value = line.trim();\n    if (!value) { if (groups.length) groups[groups.length - 1].text += line; body = true; reference = false; continue; }\n    const explicitReference = /^(?:※|참고(?:사항)?\\s*[:：]|이 건물은\\s)/.test(value);\n    if (explicitReference) reference = true;\n    else if (structured.test(value) || /[?？]$/.test(value)) reference = false;\n    let kind: 'title' | 'condition' | 'reference';\n    if (reference) kind = 'reference';\n    else if (structured.test(value) || /^\\[[^\\]]+\\]$/.test(value)) { kind = 'condition'; body = true; }\n    else kind = !body || /[?？]$/.test(value) ? 'title' : 'condition';\n    const last = groups[groups.length - 1];\n    if (last?.kind === kind) last.text += line;\n    else groups.push({ kind, text: line });\n    if (kind === 'title' && /[?？]$/.test(value)) body = true;\n  }\n  target.replaceChildren();\n  groups.forEach((group, i) => {\n    const part = document.createElement(live && group.kind === 'title' ? 'h2' : 'p');\n    part.className = `fire-stem-${group.kind}`;\n    part.textContent = (i === 0 ? prefix : '') + group.text;\n    if (group.kind === 'reference') {\n      part.setAttribute('role', 'note');\n      part.dataset.marker = String(!group.text.trimStart().startsWith('※'));\n    }\n    target.append(part);\n  });\n}\n",
+          "before": ""
+        },
+        {
+          "at": 4838,
+          "current": "    const guide = get('[data-guide]');\n    guide.replaceChildren();\n    ['모든 문제를 푼 뒤 한 번에 채점합니다.', '제출 전에는 자유롭게 이동하고 답을 바꿀 수 있습니다.', '시간 제한은 없습니다.'].forEach((sentence, i) => {\n      if (i) guide.append(document.createElement('br'));\n      guide.append(document.createTextNode(sentence));\n    });\n",
+          "before": "    get('[data-guide]').textContent = '모든 문제를 푼 뒤 한 번에 채점합니다. 제출 전에는 자유롭게 이동하고 답을 바꿀 수 있습니다. 시간 제한은 없습니다.';\n"
+        },
+        {
+          "at": 5170,
+          "current": "",
+          "before": "    const back = document.querySelector<HTMLAnchorElement>('[data-chapter-back]');\n    if (back) { back.href = chapter.href; back.textContent = '← ' + chapter.title; }\n"
+        },
+        {
+          "at": 6820,
+          "current": "",
+          "before": "  function answerText(q: FirePracticeQuestion): string {\n    return `${symbols[q.answerNumber - 1]} ${q.choices[q.answerNumber - 1]}`;\n  }\n"
+        },
+        {
+          "at": 7123,
+          "current": "    renderQuestion(get('[data-question]'), q.question, `${index + 1}. `, true);\n",
+          "before": "    get('[data-question]').textContent = `${index + 1}. ${q.question}`;\n"
+        },
+        {
+          "at": 12996,
+          "current": "      const body = document.createElement('div'); body.className = 'fire-review-question'; renderQuestion(body, q.question);\n",
+          "before": "      const body = document.createElement('p'); body.className = 'fire-review-question'; body.textContent = q.question;\n"
+        },
+        {
+          "at": 14126,
+          "current": "",
+          "before": "      const answer = document.createElement('div'); answer.className = 'fire-answer';\n      for (const [label, value, key] of [['내 답안', selected ? `${symbols[selected - 1]} ${q.choices[selected - 1]}` : '미응답', 'selected'], ['정답', answerText(q), 'correct']]) {\n        const row = document.createElement('p'); row.dataset.answer = key;\n        const name = document.createElement('strong'); name.textContent = label;\n        const text = document.createElement('span'); text.textContent = value;\n        row.append(name, text); answer.append(row);\n      }\n"
+        },
+        {
+          "at": 14462,
+          "current": "      detail.append(header, body, options, explanation);\n",
+          "before": "      detail.append(header, body, options, answer, explanation);\n"
+        },
+        {
+          "at": 15566,
+          "current": "",
+          "before": "  get('[data-clear]').addEventListener('click', () => { if (!expire()) { answers.delete(questions[index].id); render(); } });\n"
+        }
+      ]
+    },
+    "src/pages/fire-safety-manager-level2/practice/index.astro": {
+      "sha256": "1900825d83a7c9912c2d9490c3a8a9e83a05243c23e970be382bafa7fbd2ce2e",
+      "beforeSHA256": "fbace3110ccf4f46aec6abcf7cbfcc5d604a4f87be95550d0c8f35a91e648e64",
+      "patches": [
+        {
+          "at": 1562,
+          "current": "",
+          "before": "    <a class=\"practice-back\" data-chapter-back href={withBase('/fire-safety-manager-level2/written/')}>← 소방안전관리자 2급 학습</a>\n"
+        },
+        {
+          "at": 2177,
+          "current": "",
+          "before": "  .practice-back{display:inline-block;margin-bottom:var(--space-4);font-size:14px;color:var(--primary-700);min-height:44px;padding:var(--space-3) 0}\n"
+        }
+      ]
+    },
+    "dist/fire-safety-manager-level2/practice/index.html": {
+      "sha256": "9447ce6ef792737a5ee7811997c1b71ef965675a994811f586a6655195ece16f",
+      "beforeSHA256": "67260fc09db62687e2324475957434f318cdf1e58174df29e805636d46f6ce5a",
+      "patches": [
+        {
+          "at": 2811,
+          "current": "<link rel=\"stylesheet\" href=\"/_astro/index.BkEnM_Y2.css\">",
+          "before": "<link rel=\"stylesheet\" href=\"/_astro/index.BKgHcGyT.css\">"
+        },
+        {
+          "at": 4816,
+          "current": "</div> <div class=\"practice-panel\" data-astro-cid-msiacnv3>",
+          "before": "</div> <a class=\"practice-back\" data-chapter-back href=\"/fire-safety-manager-level2/written/\" data-astro-cid-msiacnv3>← 소방안전관리자 2급 학습</a> <div class=\"practice-panel\" data-astro-cid-msiacnv3>"
+        },
+        {
+          "at": 5285,
+          "current": "</p> <p class=\"fire-muted fire-guide\" data-guide data-astro-cid-hmlwhorl>제출 후 정답과 해설을 확인합니다.<br data-astro-cid-hmlwhorl>각 과목 40점 이상, 평균 70점 이상이면 합격 기준을 충족합니다.</p> <button type=\"button\" class=\"btn btn-primary\" data-start disabled data-astro-cid-hmlwhorl>모의고사 시작</button> </section> <noscript>",
+          "before": "</p> <p class=\"fire-muted\" data-guide data-astro-cid-hmlwhorl>제출 후 정답과 해설을 확인합니다. 각 과목 40점 이상, 평균 70점 이상이면 합격 기준을 충족합니다.</p> <button type=\"button\" class=\"btn btn-primary\" data-start disabled data-astro-cid-hmlwhorl>모의고사 시작</button> </section> <noscript>"
+        },
+        {
+          "at": 6162,
+          "current": "</p> <div class=\"fire-question\" data-question tabindex=\"-1\" data-astro-cid-hmlwhorl></div> <fieldset class=\"fire-choices\" data-choices data-astro-cid-hmlwhorl>",
+          "before": "</p> <h2 class=\"fire-question\" data-question tabindex=\"-1\" data-astro-cid-hmlwhorl></h2> <fieldset class=\"fire-choices\" data-choices data-astro-cid-hmlwhorl>"
+        },
+        {
+          "at": 6383,
+          "current": "</fieldset> <div class=\"fire-controls\" data-astro-cid-hmlwhorl> <button type=\"button\" class=\"btn btn-secondary\" data-previous data-astro-cid-hmlwhorl>이전 문제</button> <button type=\"button\" class=\"btn btn-primary\" data-next data-astro-cid-hmlwhorl>다음 문제</button> </div> <p class=\"fire-muted\" data-session-help data-astro-cid-hmlwhorl>번호를 눌러 문항 사이를 이동할 수 있습니다. 선택한 답은 제출 전까지 바꿀 수 있습니다.</p> </div> <aside class=\"fire-status\" aria-label=\"답안 현황\" data-astro-cid-hmlwhorl> <details data-answer-panel data-astro-cid-hmlwhorl> <summary data-astro-cid-hmlwhorl>답안 현황 <span data-answer-count data-astro-cid-hmlwhorl>",
+          "before": "</fieldset> <div class=\"fire-controls\" data-astro-cid-hmlwhorl> <button type=\"button\" class=\"btn btn-secondary\" data-previous data-astro-cid-hmlwhorl>이전 문제</button> <button type=\"button\" class=\"btn btn-secondary\" data-clear data-astro-cid-hmlwhorl>선택 해제</button> <button type=\"button\" class=\"btn btn-primary\" data-next data-astro-cid-hmlwhorl>다음 문제</button> </div> <p class=\"fire-muted\" data-session-help data-astro-cid-hmlwhorl>번호를 눌러 문항 사이를 이동할 수 있습니다. 선택한 답은 제출 전까지 바꿀 수 있습니다.</p> </div> <aside class=\"fire-status\" aria-label=\"답안 현황\" data-astro-cid-hmlwhorl> <details data-answer-panel data-astro-cid-hmlwhorl> <summary data-astro-cid-hmlwhorl>답안 현황 <span data-answer-count data-astro-cid-hmlwhorl>"
+        },
+        {
+          "at": 1475625,
+          "current": "</div> <script type=\"module\" src=\"/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.Dq3bkvo9.js\">",
+          "before": "</div> <script type=\"module\" src=\"/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.B1F-csvN.js\">"
+        }
+      ]
+    }
   }
 }

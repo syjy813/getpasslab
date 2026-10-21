@@ -46,7 +46,7 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       assert.equal(await page.locator('[data-start]').isDisabled(),false);
       await page.locator('[data-start]').click();
       const q=await findQuestion();
-      await page.locator(`input[value="${q.answerNumber}"]`).check();
+      await page.locator(`input[value="${q.answerNumber}"]`).locator('..').click();
       assert.equal(await page.locator('[data-feedback]').count(),0,'answers hidden before submission');
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="submit"]').click();
@@ -68,7 +68,7 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
         if(n>0)await page.locator('[data-next]').click();
         assert.match(await page.locator('[data-meta]').textContent(),new RegExp(n<25?'1과목':'2과목'));
         const actual=await findQuestion();assert.equal(actual.subjectId,n<25?1:2);
-        await page.locator(`input[value="${actual.answerNumber}"]`).check();
+        await page.locator(`input[value="${actual.answerNumber}"]`).locator('..').click();
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
       }
       await page.locator('[data-submit]').click();
