@@ -7,6 +7,41 @@ type ReviewFilter = 'all' | 'wrong' | 'unanswered';
 const root = document.querySelector<HTMLElement>('[data-fire-runner]');
 if (root) initPractice(root);
 
+// Presentation only: keep every character and its order from the approved bank.
+// References need an explicit marker/prefix; a final paragraph is not enough.
+function renderQuestion(target: HTMLElement, text: string, prefix = '', live = false) {
+  const groups: { kind: 'title' | 'condition' | 'reference'; text: string }[] = [];
+  let body = false, reference = false;
+  const structured = /^(?:[•●▪■◆·▶※]|[ㄱ-ㅎ가-하][.)]|[㉠-㉻①-⑳]|(?:용도|규모|높이|층수|연면적|설치된 소방시설|조건|사례)\s*[:：])/;
+  for (const line of text.match(/[^\n]*\n|[^\n]+$/g) || ['']) {
+    const value = line.trim();
+    if (!value) { if (groups.length) groups[groups.length - 1].text += line; body = true; reference = false; continue; }
+    const explicitReference = /^(?:※|참고(?:사항)?\s*[:：]|이 건물은\s)/.test(value);
+    if (explicitReference) reference = true;
+    else if (structured.test(value) || /[?？]$/.test(value)) reference = false;
+    let kind: 'title' | 'condition' | 'reference';
+    if (reference) kind = 'reference';
+    else if (/^\[[^\]]+\]$/.test(value)) { kind = 'title'; body = true; }
+    else if (structured.test(value)) { kind = 'condition'; body = true; }
+    else kind = !body || /[?？]$/.test(value) ? 'title' : 'condition';
+    const last = groups[groups.length - 1];
+    if (last?.kind === kind) last.text += line;
+    else groups.push({ kind, text: line });
+    if (kind === 'title' && /[?？]$/.test(value)) body = true;
+  }
+  target.replaceChildren();
+  groups.forEach((group, i) => {
+    const part = document.createElement(live && group.kind === 'title' ? 'h2' : 'p');
+    part.className = `fire-stem-${group.kind}`;
+    part.textContent = (i === 0 ? prefix : '') + group.text;
+    if (group.kind === 'reference') {
+      part.setAttribute('role', 'note');
+      part.dataset.marker = String(!group.text.trimStart().startsWith('※'));
+    }
+    target.append(part);
+  });
+}
+
 function initPractice(root: HTMLElement) {
   const get = <T extends HTMLElement = HTMLElement>(selector: string): T => {
     const element = root.querySelector<T>(selector);
@@ -55,10 +90,13 @@ function initPractice(root: HTMLElement) {
   if (chapter) {
     get('[data-title]').textContent = '이 챕터 문제 풀기';
     get('[data-description]').textContent = `${chapter.title} · ${pool.length}문제`;
-    get('[data-guide]').textContent = '모든 문제를 푼 뒤 한 번에 채점합니다. 제출 전에는 자유롭게 이동하고 답을 바꿀 수 있습니다. 시간 제한은 없습니다.';
+    const guide = get('[data-guide]');
+    guide.replaceChildren();
+    ['모든 문제를 푼 뒤 한 번에 채점합니다.', '제출 전에는 자유롭게 이동하고 답을 바꿀 수 있습니다.', '시간 제한은 없습니다.'].forEach((sentence, i) => {
+      if (i) guide.append(document.createElement('br'));
+      guide.append(document.createTextNode(sentence));
+    });
     start.textContent = '챕터 문제 시작';
-    const back = document.querySelector<HTMLAnchorElement>('[data-chapter-back]');
-    if (back) { back.href = chapter.href; back.textContent = '← ' + chapter.title; }
   }
   get('[data-availability]').textContent = invalidChapter ? '챕터를 찾을 수 없습니다. 학습 목차에서 다시 선택해 주세요.'
     : canStart ? (isChapter ? `이 챕터의 공개 문제 ${pool.length}개를 풀어봅니다.` : '과목별로 무작위 출제합니다. 같은 원본과 그 변형은 한 시험에 함께 출제하지 않습니다.')
@@ -87,15 +125,12 @@ function initPractice(root: HTMLElement) {
       navigation.append(button);
     });
   }
-  function answerText(q: FirePracticeQuestion): string {
-    return `${symbols[q.answerNumber - 1]} ${q.choices[q.answerNumber - 1]}`;
-  }
   function render() {
     const q = questions[index];
     if (!q || !active) return;
     updateProgress();
     get('[data-meta]').textContent = `${q.subjectId}과목 · ${q.chapterTitle}${q.isCore ? ' · 핵심' : q.questionType === 'source_variant' ? ' · 핵심 변형' : q.questionType === 'advanced' ? ' · 심화' : ''}`;
-    get('[data-question]').textContent = `${index + 1}. ${q.question}`;
+    renderQuestion(get('[data-question]'), q.question, `${index + 1}. `, true);
     choices.replaceChildren();
     const legend = document.createElement('legend'); legend.textContent = '정답 선택'; choices.append(legend);
     q.choices.forEach((choice, i) => {
@@ -188,7 +223,7 @@ function initPractice(root: HTMLElement) {
       const badge = document.createElement('span'); badge.className = 'fire-review-status';
       badge.textContent = status === 'unanswered' ? '미응답' : status === 'correct' ? '정답' : '오답';
       header.append(heading, badge);
-      const body = document.createElement('p'); body.className = 'fire-review-question'; body.textContent = q.question;
+      const body = document.createElement('div'); body.className = 'fire-review-question'; renderQuestion(body, q.question);
       const options = document.createElement('ol');
       q.choices.forEach((text, n) => {
         const option = document.createElement('li');
@@ -204,18 +239,11 @@ function initPractice(root: HTMLElement) {
         }
         options.append(option);
       });
-      const answer = document.createElement('div'); answer.className = 'fire-answer';
-      for (const [label, value, key] of [['내 답안', selected ? `${symbols[selected - 1]} ${q.choices[selected - 1]}` : '미응답', 'selected'], ['정답', answerText(q), 'correct']]) {
-        const row = document.createElement('p'); row.dataset.answer = key;
-        const name = document.createElement('strong'); name.textContent = label;
-        const text = document.createElement('span'); text.textContent = value;
-        row.append(name, text); answer.append(row);
-      }
       const explanation = document.createElement('div'); explanation.className = 'fire-explanation'; explanation.dataset.explanation = '';
       const title = document.createElement('h5'); title.textContent = '해설';
       const text = document.createElement('p'); text.textContent = q.explanation;
       explanation.append(title, text);
-      detail.append(header, body, options, answer, explanation);
+      detail.append(header, body, options, explanation);
       const related = payload.chapters.find(item => item.id === q.chapterId);
       if (related) {
         const link = document.createElement('a'); link.href = related.href; link.target = '_blank'; link.rel = 'noopener';
@@ -233,7 +261,6 @@ function initPractice(root: HTMLElement) {
   root.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach(button => button.addEventListener('click', () => filterReview(button.dataset.filter as ReviewFilter)));
   previous.addEventListener('click', () => { if (!expire() && index > 0) { index--; render(); } });
   next.addEventListener('click', () => { if (!expire() && index < questions.length - 1) { index++; render(); } });
-  get('[data-clear]').addEventListener('click', () => { if (!expire()) { answers.delete(questions[index].id); render(); } });
   submit.addEventListener('click', () => {
     if (expire()) return;
     const unanswered = questions.filter(q => !answers.has(q.id)).length;

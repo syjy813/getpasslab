@@ -44,9 +44,14 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       await page.goto(base + await page.locator('[data-fire-practice-entry] a').first().getAttribute('href'),{waitUntil:'networkidle'});
       await page.waitForFunction(()=>document.querySelector('[data-start]')?.disabled===false);
       assert.equal(await page.locator('[data-start]').isDisabled(),false);
+      assert.equal(await page.locator('[data-chapter-back]').count(),0);
+      assert.equal(await page.locator('[data-guide] br').count(),2);
       await page.locator('[data-start]').click();
+      assert.equal(await page.locator('[data-clear]').count(),0);
+      assert.equal(await page.locator('[data-question]').evaluate(e=>parseFloat(getComputedStyle(e).fontSize)),width===1440?20:18);
+      assert.equal(await page.locator('[data-choices] input').first().evaluate(e=>getComputedStyle(e).clipPath),'inset(50%)');
       const q=await findQuestion();
-      await page.locator(`input[value="${q.answerNumber}"]`).check();
+      await page.locator(`input[value="${q.answerNumber}"]`).locator('..').click();
       assert.equal(await page.locator('[data-feedback]').count(),0,'answers hidden before submission');
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="submit"]').click();
@@ -55,6 +60,8 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       assert.equal(await page.locator('[data-review] details, [data-review] summary').count(),0);
       assert.equal(await page.locator('[data-explanation]:visible').count(),await page.locator('[data-review-item]').count());
       assert.equal(await firstReview.getAttribute('data-status'),'correct');
+      assert.equal(await page.locator('[data-review] .fire-answer, [data-review] [data-answer]').count(),0);
+      assert.equal(await firstReview.locator('.fire-choice-label').textContent(),'내 선택 · 정답');
       assert((await firstReview.textContent()).includes(q.explanation));
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
       await page.screenshot({path:`${output}/chapter-${width}.png`,fullPage:false});
@@ -68,7 +75,7 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
         if(n>0)await page.locator('[data-next]').click();
         assert.match(await page.locator('[data-meta]').textContent(),new RegExp(n<25?'1과목':'2과목'));
         const actual=await findQuestion();assert.equal(actual.subjectId,n<25?1:2);
-        await page.locator(`input[value="${actual.answerNumber}"]`).check();
+        await page.locator(`input[value="${actual.answerNumber}"]`).locator('..').click();
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
       }
       await page.locator('[data-submit]').click();
