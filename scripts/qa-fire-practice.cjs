@@ -51,6 +51,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       assert.match(await page.locator('[data-availability]').textContent(), /공개 문제/);
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
       await page.goto(base + route,{waitUntil:'networkidle'});
+      assert.equal(await page.locator('[data-window-close]').isVisible(), false, 'direct/fallback page has no inactive close button');
       assert.equal(await page.locator('[data-start]').isDisabled(), false);
       await page.screenshot({ path: `${output}/published-${width}.png`, fullPage: true });
       await page.goto(base + route + '?chapter=unknown',{waitUntil:'networkidle'});

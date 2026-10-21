@@ -2454,7 +2454,7 @@
       ]
     },
     "src/pages/fire-safety-manager-level2/practice/index.astro": {
-      "sha256": "c9e7e02352bcf09f3a168204af89d555166b1789459df36b508349180fc41aa4",
+      "sha256": "1f841c8f2ba2ba0cfd3057fbe15a0a398b357b97e450838cb029495a5cc8f0dd",
       "beforeSHA256": "e2b6d9e447ee04e4135c3b41de1dda5955a40824ccb7376b14f534679f2d1cc1",
       "patches": [
         {
@@ -2469,7 +2469,7 @@
         },
         {
           "at": 1793,
-          "current": "  .practice-page{max-width:1180px;padding:var(--space-6) var(--space-4) var(--space-12)}\n  .practice-toolbar{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);margin-bottom:var(--space-4)}\n  .practice-toolbar strong{display:grid;color:var(--primary-700)}\n  .practice-toolbar span{font-size:var(--fs-caption);font-weight:var(--fw-regular);color:var(--gray-600)}\n  .practice-toolbar button{min-height:44px}\n",
+          "current": "  .practice-page{max-width:1180px;padding:var(--space-6) var(--space-4) var(--space-12)}\n  .practice-toolbar{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);margin-bottom:var(--space-4)}\n  .practice-toolbar strong{display:grid;color:var(--primary-700)}\n  .practice-toolbar span{font-size:var(--fs-caption);font-weight:var(--fw-regular);color:var(--gray-600)}\n  .practice-toolbar button{min-height:44px}\n  .practice-toolbar [hidden]{display:none!important}\n",
           "before": "  .practice-page{max-width:900px;padding:var(--space-6) var(--space-4) var(--space-12)}\n"
         }
       ]
@@ -2501,12 +2501,12 @@
       ]
     },
     "dist/fire-safety-manager-level2/practice/index.html": {
-      "sha256": "c69a92fbd70960be09b56b87948da5138f0a9bdf096f2a20ef15fa3f1b94a05e",
+      "sha256": "5ceb31e1840b74bf1cd70a1e8b94655e7aed9194e4cfe98d841a8e01c551a79c",
       "beforeSHA256": "fd67a13ca74fd3955c2879b6ddcfc3a668907b05aa5426875bc5f2b5d29ef431",
       "patches": [
         {
           "at": 2811,
-          "current": "<link rel=\"stylesheet\" href=\"/_astro/index.CBGABYfD.css\">",
+          "current": "<link rel=\"stylesheet\" href=\"/_astro/index.BWbtwQHi.css\">",
           "before": "<link rel=\"stylesheet\" href=\"/_astro/index.CQ9lsKnl.css\">"
         },
         {
