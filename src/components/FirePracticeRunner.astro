@@ -16,27 +16,45 @@ const { data } = Astro.props;
       <p data-progress aria-live="polite"></p>
       <p class="fire-clock" data-clock-wrap>남은 시간 <strong data-clock role="timer" aria-live="off">60:00</strong></p>
     </div>
-    <p class="fire-muted" data-meta></p>
-    <h2 class="fire-question" data-question tabindex="-1"></h2>
-    <fieldset class="fire-choices" data-choices><legend class="fire-sr">정답 선택</legend></fieldset>
-    <div class="fire-feedback" data-feedback hidden role="status"></div>
-    <div class="fire-controls">
-      <button type="button" class="btn btn-secondary" data-previous>이전 문제</button>
-      <button type="button" class="btn btn-primary" data-check disabled>정답 확인</button>
-      <button type="button" class="btn btn-primary" data-next>다음 문제</button>
-      <button type="button" class="btn btn-secondary" data-submit>답안 제출</button>
+    <div class="fire-workspace">
+      <div class="fire-paper">
+        <p class="fire-muted" data-meta></p>
+        <h2 class="fire-question" data-question tabindex="-1"></h2>
+        <fieldset class="fire-choices" data-choices><legend class="fire-sr">정답 선택</legend></fieldset>
+        <div class="fire-controls">
+          <button type="button" class="btn btn-secondary" data-previous>이전 문제</button>
+          <button type="button" class="btn btn-secondary" data-clear>선택 해제</button>
+          <button type="button" class="btn btn-primary" data-next>다음 문제</button>
+        </div>
+        <p class="fire-muted" data-session-help>번호를 눌러 문항 사이를 이동할 수 있습니다. 선택한 답은 제출 전까지 바꿀 수 있습니다.</p>
+      </div>
+      <aside class="fire-status" aria-label="답안 현황">
+        <details data-answer-panel>
+          <summary>답안 현황 <span data-answer-count></span></summary>
+          <p class="fire-muted">선택한 번호를 표시합니다. 빈칸은 미응답입니다.</p>
+          <nav class="fire-navigation" data-navigation aria-label="문제 번호 이동"></nav>
+        </details>
+        <button type="button" class="btn btn-primary fire-submit" data-submit>답안 제출하고 채점</button>
+      </aside>
     </div>
-    <nav class="fire-navigation" data-navigation aria-label="문제 번호 이동"></nav>
-    <p class="fire-muted" data-session-help>번호를 눌러 문항 사이를 이동할 수 있습니다. 선택한 답은 제출 전까지 바꿀 수 있습니다.</p>
-    <p class="fire-muted">페이지를 나가거나 새로고침하면 풀이 기록이 초기화됩니다.</p>
+    <p class="fire-muted">창을 닫거나 새로고침하면 풀이 기록이 초기화됩니다.</p>
   </section>
   <section data-results hidden aria-labelledby="result-heading">
     <h2 class="gpl-h2" id="result-heading" tabindex="-1" data-result-title>풀이 결과</h2>
     <p class="fire-score" data-score></p>
     <div class="fire-subjects" data-subject-scores></div>
     <p class="fire-notice" data-verdict></p>
-    <button type="button" class="btn btn-primary" data-restart>새 문제로 다시 풀기</button>
+    <div class="fire-controls">
+      <button type="button" class="btn btn-primary" data-retry>오답·미응답 다시 풀기</button>
+      <button type="button" class="btn btn-secondary" data-restart>새 문제로 다시 풀기</button>
+    </div>
     <h3 class="gpl-h3 fire-review-heading">정답·해설</h3>
+    <div class="fire-controls" role="group" aria-label="결과 필터">
+      <button type="button" class="btn btn-secondary" data-filter="all" aria-pressed="true">전체</button>
+      <button type="button" class="btn btn-secondary" data-filter="wrong" aria-pressed="false">오답</button>
+      <button type="button" class="btn btn-secondary" data-filter="unanswered" aria-pressed="false">미응답</button>
+    </div>
+    <p class="fire-muted" data-review-count role="status"></p>
     <div class="fire-review" data-review></div>
   </section>
   <dialog class="fire-confirm" data-confirm aria-labelledby="fire-confirm-heading">
@@ -75,10 +93,10 @@ const { data } = Astro.props;
   .fire-choices :global(label:has(input:checked)){border-color:var(--primary-600);background:var(--primary-50)}
   .fire-choices :global(input){margin:5px 0 0;accent-color:var(--primary-600);flex:none}
   .fire-choices :global(label:has(input:focus-visible)){outline:3px solid var(--primary-600);outline-offset:3px}
-  .fire-feedback{border:1px solid var(--primary-100);border-radius:var(--radius-lg);padding:var(--space-4);background:var(--primary-50);white-space:pre-wrap;margin-bottom:var(--space-4);line-height:var(--lh-body)}
+
   .fire-controls{display:flex;flex-wrap:wrap;gap:var(--space-2);margin:var(--space-4) 0}
   .fire-controls .btn{flex:1;padding:var(--space-3);min-width:100px}
-  .fire-navigation{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--space-2);margin-top:var(--space-6)}
+  .fire-navigation{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-2);margin-top:var(--space-3);max-height:320px;overflow-y:auto;overscroll-behavior:contain;padding:var(--space-1)}
   .fire-navigation :global(button){font:inherit;min-height:44px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white);color:var(--gray-800);cursor:pointer}
   .fire-navigation :global(button[data-answered="true"]){background:var(--primary-50);color:var(--primary-700)}
   .fire-navigation :global(button[aria-current="step"]){outline:2px solid var(--primary-600);outline-offset:1px;font-weight:var(--fw-bold)}
@@ -93,5 +111,18 @@ const { data } = Astro.props;
   .fire-review :global(a){color:var(--primary-700)}
   .fire-confirm{width:min(480px,calc(100vw - 32px));border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:var(--space-6);background:var(--white);color:var(--gray-800)}
   .fire-confirm::backdrop{background:var(--gray-900);opacity:.5}
-  @media(min-width:640px){.fire-navigation{grid-template-columns:repeat(10,minmax(0,1fr))}.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .fire-workspace{display:grid;gap:var(--space-6)}
+  .fire-paper,.fire-status{min-width:0}
+  .fire-status{padding:var(--space-4);background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);align-self:start}
+  .fire-status summary{cursor:pointer;min-height:44px;font-weight:var(--fw-semibold)}
+  .fire-status summary span{font-size:var(--fs-caption);color:var(--primary-700)}
+  .fire-submit{width:100%;margin-top:var(--space-4)}
+  .fire-navigation :global(button span){display:block;font-size:var(--fs-label);font-weight:var(--fw-regular)}
+  .fire-review :global(ol){padding-left:var(--space-6);line-height:var(--lh-body)}
+  .fire-review :global(li){padding:var(--space-2);white-space:pre-wrap;border-radius:var(--radius-sm)}
+  .fire-review :global(li[data-correct="true"]){background:var(--success-bg);font-weight:var(--fw-semibold)}
+  .fire-review :global(li[data-wrong="true"]){background:var(--error-bg)}
+  .fire-controls [aria-pressed="true"]{background:var(--primary-50);border-color:var(--primary-600);color:var(--primary-700)}
+  @media(min-width:640px){.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(min-width:1024px){.fire-workspace{grid-template-columns:minmax(0,1fr) 280px}.fire-status{position:sticky;top:var(--space-4)}.fire-navigation{max-height:min(40dvh,480px)}.fire-status summary{list-style:none;pointer-events:none}.fire-status summary::-webkit-details-marker{display:none}}
 </style>
