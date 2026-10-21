@@ -10,10 +10,16 @@ if (root) initPractice(root);
 // Preserve source fragments exactly; show the complete question before its list.
 // References need an explicit marker/prefix; a final paragraph is not enough.
 function renderQuestion(target: HTMLElement, text: string, prefix = '', live = false) {
+  const sourceLines = (value: string) => value.split(/(?=[•●▪■◆▶]\s)/).flatMap(fragment => {
+    const qualifier = fragment.search(/\((?:단|다만)[,，\s]/);
+    const parts = qualifier >= 0 && /[?？]/.test(fragment.slice(0, qualifier))
+      ? [fragment.slice(0, qualifier), fragment.slice(qualifier)] : [fragment];
+    return parts.flatMap(part => part.match(/[^\n]*\n|[^\n]+$/g) || []);
+  });
   const groups: { kind: 'title' | 'condition' | 'reference'; text: string }[] = [];
   let body = false, reference = false;
   const structured = /^(?:[•●▪■◆·▶※]|[ㄱ-ㅎ가-하][.)]|[㉠-㉻①-⑳]|(?:용도|규모|높이|층수|연면적|설치된 소방시설|조건|사례)\s*[:：])/;
-  for (const line of text.match(/[^\n]*\n|[^\n]+$/g) || ['']) {
+  for (const line of sourceLines(text)) {
     const value = line.trim();
     if (!value) { if (groups.length) groups[groups.length - 1].text += line; body = true; reference = false; continue; }
     const explicitReference = /^(?:※|참고(?:사항)?\s*[:：]|이 건물은\s)/.test(value);
@@ -33,7 +39,7 @@ function renderQuestion(target: HTMLElement, text: string, prefix = '', live = f
   const conditionIndex = groups.findIndex(group => group.kind === 'condition');
   const promptIndex = groups.findLastIndex(group => group.kind === 'title' && group.text.trim().length >= 12 && /[?？]$/.test(group.text.trim()));
   const listed = groups.some(group => group.kind === 'condition' && group.text.split('\n').some(line => structured.test(line.trim())));
-  if (listed && conditionIndex >= 0 && promptIndex > conditionIndex && groups.slice(promptIndex + 1).every(group => group.kind === 'reference')) {
+  if (listed && conditionIndex >= 0 && promptIndex > conditionIndex) {
     const [prompt] = ordered.splice(promptIndex, 1);
     ordered.splice(conditionIndex, 0, prompt);
   }
@@ -46,7 +52,7 @@ function renderQuestion(target: HTMLElement, text: string, prefix = '', live = f
       const number = document.createElement('span'); number.dataset.questionNumber = ''; number.textContent = prefix; part.append(number);
     }
     if (group.kind === 'condition') {
-      for (const line of group.text.match(/[^\n]*\n|[^\n]+$/g) || ['']) {
+      for (const line of sourceLines(group.text)) {
         const item = document.createElement('span'); item.className = 'fire-stem-line'; item.dataset.empty = String(!line.trim()); item.textContent = line; part.append(item);
       }
     } else part.append(document.createTextNode(group.text));

@@ -73,7 +73,8 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
     };
     const noteQuestion=payload.questions.find(q=>q.id==='moducbt-27777-q01');
     const advancedQuestion=payload.questions.find(q=>q.id==='FSM2-MOCK-053-16');
-    const typographyQuestions=[noteQuestion,advancedQuestion].map(q=>({...q,chapterId:chapterOne.id,subjectId:1}));
+    const inlineQuestion=payload.questions.find(q=>q.id==='FSM2-CORE-056');
+    const typographyQuestions=[noteQuestion,advancedQuestion,inlineQuestion].map(q=>({...q,chapterId:chapterOne.id,subjectId:1}));
     await interceptPayload(typographyQuestions);
     for(const width of [320,390,1440]){
       await page.setViewportSize({width,height:900});
@@ -82,7 +83,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       assert.equal(await page.locator('[data-chapter-back]').count(),0);
       await page.screenshot({path:`${output}/chapter-setup-${width}.png`,fullPage:false});
       await page.locator('[data-start]').click();
-      if(!(await page.locator('[data-question]').textContent()).includes('이 건물은 '))await page.locator('[data-next]').click();
+      for(let n=0;n<typographyQuestions.length-1 && await page.locator('[data-question]').getAttribute('data-question-id')!==noteQuestion.id;n++)await page.locator('[data-next]').click();
       assert.equal((await rawStems(page.locator('[data-question]')))[0],noteQuestion.question);
       const checkHierarchy=async selector=>{
         const styles=await page.locator(selector).evaluate(e=>{
@@ -102,6 +103,20 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       assert.equal(await page.locator('[data-clear]').count(),0);
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
       await page.locator('[data-question]').screenshot({path:`${output}/question-hierarchy-${width}.png`});
+      if(!await page.locator('[data-answer-panel]').evaluate(e=>e.open))await page.locator('[data-answer-panel] summary').click();
+      for(let n=0;n<typographyQuestions.length;n++){
+        await page.locator('[data-navigation] button').nth(n).click();
+        if(await page.locator('[data-question]').getAttribute('data-question-id')===inlineQuestion.id)break;
+      }
+      assert.equal(await page.locator('[data-question] .fire-stem-title').count(),1);
+      assert.equal(await page.locator('[data-question] .fire-stem-condition .fire-stem-line').count(),3,'inline qualifier and two buildings get separate rows');
+      assert.match(await page.locator('[data-question] .fire-stem-title').textContent(),/것은\?/);
+      assert.match(await page.locator('[data-question] .fire-stem-line').nth(0).textContent(),/^\(단,/);
+      assert.match(await page.locator('[data-question] .fire-stem-line').nth(1).textContent(),/A동:/);
+      assert.match(await page.locator('[data-question] .fire-stem-line').nth(2).textContent(),/B동:/);
+      assert.equal((await rawStems(page.locator('[data-question]')))[0],inlineQuestion.question);
+      await page.locator('[data-question]').screenshot({path:`${output}/inline-conditions-${width}.png`});
+
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="submit"]').click();
       await page.locator('[data-results]').waitFor({state:'visible'});
@@ -127,7 +142,9 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
     await page.locator('[data-results]').waitFor({state:'visible'});
     assert.deepEqual((await rawStems(page.locator('.fire-review-question'))).sort(),payload.questions.map(q=>q.question).sort());
     const questionFirst=await page.locator('.fire-review-question').evaluateAll(elements=>elements.filter(e=>{const order=[...e.querySelectorAll(':scope > [data-stem-order]')].map(p=>Number(p.dataset.stemOrder));return order.some((n,i)=>i>0&&n<order[i-1]);}).length);
-    assert(questionFirst>=731,'all published advanced case questions show the complete prompt before conditions');
+    assert(questionFirst>=740,'all published advanced case questions show the complete prompt before conditions');
+    const lateQuestions=await page.locator('.fire-review-question').evaluateAll(elements=>elements.filter(e=>{const parts=[...e.querySelectorAll(':scope > [data-stem-order]')];const question=parts.findLastIndex(p=>p.className==='fire-stem-title'&&p.textContent.trim().length>=12&&/[?？]$/.test(p.textContent.trim()));const condition=parts.findIndex(p=>p.className==='fire-stem-condition');return condition>=0&&question>condition;}).length);
+    assert.equal(lateQuestions,0,'no complete question remains after the conditions, including appended clarifications');
     report.cases.push({allApprovedStems:2328,textAndMultiplicityPreserved:'PASS',questionFirst});
     const questions = [];
     for (const subjectId of [1, 2]) {
@@ -243,6 +260,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       assert.equal(await page.locator('[data-results]').isVisible(),true);
       await page.locator('[data-retry]').click();
       await page.locator('[data-confirm] [value="submit"]').click();
+      await page.locator('[data-session]').waitFor({state:'visible'});
       assert.equal(await page.locator('[data-navigation] button').count(), 5);
       assert.equal(await page.locator('[data-clock-wrap]').isVisible(), false);
       await page.locator('input[value="1"]').locator('..').click();
