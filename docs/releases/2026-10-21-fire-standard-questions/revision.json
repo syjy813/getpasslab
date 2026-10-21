@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "baselineCommit": "0510b593daab6ea652222e538056eb3c5a785aa6",
+  "beforeTableSHA256": "5e8aff95c51806879e76211c126efe502ee9994b05a5366940d59c889590b1de",
+  "tableSHA256": "8140fb7a6bd0e910fa34b67b0822a2ab28deefb3f614a4500e49be2631b2a65e",
+  "replacedCount": 740,
+  "preservedCount": 1740,
+  "publishedCount": 2328,
+  "heldCount": 152,
+  "beforeRowsSHA256": "68b7858087e9a82010709c1c68892148741baeea7409fbd50be8292d433959e9",
+  "assertionsSHA256": "c15cc889a9fbce806192c9393bc82f8009c65aa1704b3a9316be8d213a1df819",
+  "reviewSHA256": "c6dfd4349697b1ccabbf65dd88079277780622b29c1390b92caf26d12a2ecda9",
+  "historicalInputsPreserved": true,
+  "reviewMethod": "chapter-facts-and-approved-clarifications; four-option truth derivation; duplicate checks; model editorial review",
+  "textbookPageAudit": "not-repeated",
+  "humanDifficulty": "not-measured",
+  "practiceSHA256": "215fc0690cfaef20ecf6216548fa81c81f7b5483d08e28c7526e32d8a6be361d",
+  "beforePracticeSHA256": "e11d801927300dc68dbf3da62d722f282fa37bd70ae17d5298aa59239d6d52db",
+  "replacementsSHA256": "551f283f3e221bce6b71de780e457a3766b1b021e78240c5f88919aff5a41c48"
+}

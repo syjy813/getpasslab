@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {beforePopup,beforeReview} from './read-before-fire-persona-corrections.mjs';
+import {beforeStandardizedTable} from './fire-mock-authoring/standardization.mjs';
 const release=JSON.parse(await readFile('docs/audits/2026-10-20-fire-persona-corrections/release.json','utf8'));
 const rows=release.popupProjections;
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -34,5 +35,6 @@ assert(!page.includes('data-adfit-floating'),'focused runner must not load float
 assert(!page.includes('class="gnb"'),'focused runner has its own compact header');
 assert(!page.includes('data-check'),'no immediate answer reveal in batch mode');
 const table=await readFile('docs/drafts/fire-level2-mock-exam/question-table.json');
-assert.equal(hash(table),'5e8aff95c51806879e76211c126efe502ee9994b05a5366940d59c889590b1de');
-console.log('[Fire popup] five reviewed sources, 75 exact HTML inverses and tamper rejection; question table unchanged PASS');
+assert.equal(hash(beforeStandardizedTable(table)),'5e8aff95c51806879e76211c126efe502ee9994b05a5366940d59c889590b1de');
+assert.throws(()=>beforeStandardizedTable(Buffer.concat([table,Buffer.from('\n')])));
+console.log('[Fire popup] reviewed UI and exact historical content inverse; arbitrary changes rejected PASS');

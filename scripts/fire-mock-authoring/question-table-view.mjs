@@ -16,7 +16,7 @@ export function pageRows(rows, requested = 1, size = 50) {
 }
 if (typeof document !== 'undefined') {
   const rows = JSON.parse(document.getElementById('question-data').textContent);
-  const labels = {source_reconstruction:'핵심 원본', source_variant:'핵심 변형', general:'일반 기본', advanced:'일반 심화'};
+  const labels = {source_reconstruction:'핵심 원본', source_variant:'핵심 변형', general:'일반', advanced:'이전 심화(0개)'};
   const statusLabels = {draft_complete:'초안 작성',ocr_review_required:'OCR 대조 필요',source_visual_review_required:'원문 대조 필요'};
   let currentPage = 1;
   const controls = ['subject','core','type','review','query'].map(id => document.getElementById(id));

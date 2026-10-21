@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {readFile as nativeRead,readdir as nativeReaddir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
+import {beforeStandardizedPractice} from './fire-mock-authoring/standardization.mjs';
 const audit='docs/audits/2026-10-20-fire-persona-corrections';
 const release=JSON.parse(await nativeRead(audit+'/release.json','utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
@@ -11,6 +12,7 @@ const hash=b=>createHash('sha256').update(b).digest('hex');
 // Every current and restored document must match its complete SHA, so unrelated
 // edits cannot disappear behind a structural regex or a changed baseline.
 export function beforeQuestionFlow(file,bytes){
+  bytes=beforeStandardizedPractice(file,bytes);
   const row=release.questionFlowProjections?.[path.normalize(String(file))];
   if(!row)return bytes;
   assert.equal(hash(bytes),row.sha256,String(file)+': exact question flow UI document');

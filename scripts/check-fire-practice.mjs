@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import path from 'node:path';
 import {getPublishedFireQuestions} from '../src/utils/firePractice.ts';
 import {publication} from './fire-mock-authoring/publication.mjs';
+import {readFile as nativeRead} from 'node:fs/promises';
 const audit = 'docs/audits/2026-10-20-fire-level2-practice';
 const baseline = JSON.parse(await readFile(audit + '/baseline.json', 'utf8'));
 const release = JSON.parse(await readFile(audit + '/release.json', 'utf8'));
@@ -35,9 +36,9 @@ for (const file of await walk('dist')) if (file.endsWith('/index.html')) {
 }
 assert.deepEqual(articles, { ...baseline.articles, ...Object.fromEntries(Object.entries(release.articles).map(([file, row]) => [file, row.sha256])) });
 assert.equal(Object.keys(release.articles).length, 74);
-const practice = await readFile('dist/fire-safety-manager-level2/practice/index.html', 'utf8');
+const practice = await nativeRead('dist/fire-safety-manager-level2/practice/index.html', 'utf8');
 const payload = JSON.parse(practice.match(/<script[^>]*data-fire-payload[^>]*>([\s\S]*?)<\/script>/)[1]);
-const table=JSON.parse(await readFile('docs/drafts/fire-level2-mock-exam/question-table.json','utf8'));
+const table=JSON.parse(await nativeRead('docs/drafts/fire-level2-mock-exam/question-table.json','utf8'));
 assert.deepEqual(payload.questions, getPublishedFireQuestions(table), 'only explicitly approved questions are serialized');
 assert.equal(payload.questions.length,publication.approvedCount);
 assert(payload.questions.every(q=>!publication.held.includes(q.id)));

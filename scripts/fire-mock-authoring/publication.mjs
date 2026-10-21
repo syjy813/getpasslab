@@ -3,9 +3,11 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
+import {beforeStandardization} from './standardization.mjs';
 export const publication = JSON.parse(fs.readFileSync(new URL('../../docs/releases/2026-10-20-fire-practice/publication.json', import.meta.url),'utf8'));
 export const publishedIds = new Set(Object.keys(publication.approved));
 export function beforePublication(row) {
+  row=beforeStandardization(row);
   const approval=publication.approved[row.id];
   if(!approval) {
     assert.equal(row.reviewStatus,'pending',row.id);

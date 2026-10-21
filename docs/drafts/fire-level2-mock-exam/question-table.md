@@ -8,8 +8,7 @@
 |---|---:|---:|---:|
 | 핵심 원본 | 254 | 246 | 500 |
 | 핵심 변형 | 254 | 246 | 500 |
-| 일반 기본 | 490 | 250 | 740 |
-| 일반 심화 | 490 | 250 | 740 |
+| 일반 | 980 | 500 | 1,480 |
 | **관리표 전체** | **1,488** | **992** | **2,480** |
 | 기존 작성분만 | 1,234 | 746 | 1,980 |
 
@@ -23,7 +22,7 @@
 | `subjectId`, `subjectName` | 1과목 / 2과목. 모든 2,480행에 값 존재 |
 | `chapterId`, `chapterTitle` | 연결 챕터와 제목 |
 | `isCore` | 사용자 제공 원본 500행만 true. 화면에는 핵심 표시 |
-| `questionType` | source_reconstruction(원본), source_variant(변형), general(기본), advanced(심화) |
+| `questionType` | source_reconstruction(원본), source_variant(변형), general(일반); advanced는 이전 자료의 분류 |
 | `difficulty` | 기본 / 심화 / 미지정. 핵심 여부와 난도를 분리 |
 | `reviewStatus` | 공개 승인 approved / 보류 pending |
 | `contentStatus` | 사용 가능 draft_complete / OCR 대조 필요 / 원문 시각 대조 필요 |
@@ -37,7 +36,7 @@
 
 - 핵심: 전달받은 원본 500개
 - 핵심 변형: 그 원본 각각과 1:1로 연결된 별도 작성 500개. isCore=false
-- 일반 기본·심화: 각각 740개. isCore=false
+- 일반: 1,480개. isCore=false. 기존 심화 740개는 일반 4지선다형으로 교체
 - 이전 core500.json의 파일명과 핵심 태그는 과거 변형 풀의 제작 이력이다. 최신 관리·필터는 이 통합표의 isCore와 questionType을 사용한다. 원본과 변형을 동일 문항으로 표시하지 않는다.
 
 ## 원문 대조 상태
@@ -47,6 +46,8 @@
 전수 1차 모델 QA 후 167문항의 지문·선택지·해설·연결 이론을 보완했다. 원본 추출문·과거 집필 풀은 보존하고 ID별 해시 고정 보완 내역을 적용한다. 공개 승인·실서버 배포는 별도다. [보완 기록](../../audits/2026-10-20-fire-persona-corrections/README.md)
 
 [2026-10-20 공개 승인·배포 기록](../../releases/2026-10-20-fire-practice/README.md) · 공개: 1과목 1,421개 / 2과목 907개 · 보류 152개
+
+[2026-10-21 심화 740문항 일반형 교체](../../releases/2026-10-21-fire-standard-questions/README.md) · 모델 편집 검수이며 실제 수험생 난도 측정은 아님
 
 ## 재생성
 
