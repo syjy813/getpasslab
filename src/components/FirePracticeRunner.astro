@@ -43,6 +43,7 @@ const { data } = Astro.props;
     <h2 class="gpl-h2" id="result-heading" tabindex="-1" data-result-title>풀이 결과</h2>
     <p class="fire-score" data-score></p>
     <div class="fire-subjects" data-subject-scores></div>
+    <div class="fire-outcomes" data-outcomes aria-label="문항별 채점 현황"></div>
     <p class="fire-notice" data-verdict></p>
     <div class="fire-controls">
       <button type="button" class="btn btn-primary" data-retry>오답·미응답 다시 풀기</button>
@@ -73,23 +74,30 @@ const { data } = Astro.props;
   import '../utils/firePracticeClient';
 </script>
 <style>
-  .fire-runner{min-width:0;overflow-wrap:anywhere}
+  .fire-runner{
+    --fire-correct:color-mix(in srgb,var(--success) 55%,var(--gray-900));
+    --fire-wrong:color-mix(in srgb,var(--error) 70%,var(--gray-900));
+    --fire-orange:color-mix(in srgb,var(--warning),var(--error) 35%);
+    --fire-unanswered:color-mix(in srgb,var(--fire-orange) 65%,var(--gray-900));
+    --fire-orange-bg:color-mix(in srgb,var(--fire-orange) 10%,var(--white));
+    min-width:0;overflow-wrap:anywhere;word-break:keep-all;font-size:16px;line-height:1.75;color:var(--gray-800)
+  }
   .fire-runner [hidden]{display:none!important}
   [data-session],[data-results]{scroll-margin-top:calc(var(--gnb-h) + var(--space-4))}
   .fire-lead{font-size:var(--fs-body-lg);margin:var(--space-4) 0;color:var(--gray-800)}
-  .fire-muted{font-size:var(--fs-caption);line-height:var(--lh-body);color:var(--gray-600)}
+  .fire-muted{font-size:14px;line-height:1.7;color:var(--gray-600)}
   .fire-notice{padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-lg);background:var(--gray-50);margin:var(--space-4) 0;line-height:var(--lh-body)}
-  .btn{min-height:44px;white-space:normal}
+  .btn{min-height:44px;white-space:normal;font-size:15px;line-height:1.5}
   .btn:disabled{background:var(--gray-100);color:var(--gray-600);cursor:not-allowed}
   .fire-runner :global(:focus-visible){outline:3px solid var(--primary-600);outline-offset:3px}
   .fire-toolbar{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);flex-wrap:wrap;border-bottom:1px solid var(--gray-200);margin-bottom:var(--space-4)}
-  .fire-toolbar p{margin:0 0 var(--space-3);font-size:var(--fs-caption)}
+  .fire-toolbar p{margin:0 0 var(--space-3);font-size:14px}
   .fire-clock{font-variant-numeric:tabular-nums}
   .fire-clock strong{font-size:var(--fs-h3);color:var(--primary-700)}
-  .fire-question{font-size:var(--fs-h3);line-height:var(--lh-body);white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}
+  .fire-question{font-size:20px;font-weight:var(--fw-semibold);line-height:1.7;white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}
   .fire-choices{border:0;padding:0;margin:0 0 var(--space-4);min-width:0;display:grid;gap:var(--space-3)}
   .fire-choices :global(legend){position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
-  .fire-choices :global(label){display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-md);cursor:pointer;min-height:44px;white-space:pre-wrap;line-height:var(--lh-body)}
+  .fire-choices :global(label){display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-md);cursor:pointer;min-height:44px;white-space:pre-wrap;line-height:1.8;font-size:16px}
   .fire-choices :global(label:has(input:checked)){border-color:var(--primary-600);background:var(--primary-50)}
   .fire-choices :global(input){margin:5px 0 0;accent-color:var(--primary-600);flex:none}
   .fire-choices :global(label:has(input:focus-visible)){outline:3px solid var(--primary-600);outline-offset:3px}
@@ -104,11 +112,36 @@ const { data } = Astro.props;
   .fire-subjects{display:grid;gap:var(--space-3)}
   .fire-subjects :global(p){margin:0;padding:var(--space-4);background:var(--gray-50);border-radius:var(--radius-lg)}
   .fire-review-heading{margin-top:var(--space-8)}
-  .fire-review{display:grid;gap:var(--space-3);margin-top:var(--space-4)}
-  .fire-review :global(details){border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:var(--space-4);min-width:0}
-  .fire-review :global(summary){cursor:pointer;min-height:44px;font-weight:var(--fw-semibold)}
-  .fire-review :global(p){white-space:pre-wrap;line-height:var(--lh-body);margin:var(--space-3) 0}
-  .fire-review :global(a){color:var(--primary-700)}
+  [data-results]{max-width:800px;margin-inline:auto}
+  .fire-outcomes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-2);margin-top:var(--space-6)}
+  .fire-outcomes :global(p){display:grid;gap:var(--space-1);padding:var(--space-3);margin:0;border:1px solid currentColor;border-radius:var(--radius-md);text-align:center;font-size:14px}
+  .fire-outcomes :global(strong){font-size:20px;font-variant-numeric:tabular-nums}
+  .fire-runner :global([data-status="correct"]){--fire-tone:var(--fire-correct);--fire-tint:var(--success-bg)}
+  .fire-runner :global([data-status="wrong"]){--fire-tone:var(--fire-wrong);--fire-tint:var(--error-bg)}
+  .fire-runner :global([data-status="unanswered"]){--fire-tone:var(--fire-unanswered);--fire-tint:var(--fire-orange-bg)}
+  .fire-outcomes :global([data-status]){color:var(--fire-tone);background:var(--fire-tint)}
+  .fire-review{margin-top:var(--space-4)}
+  .fire-review :global([data-review-item]){border-top:1px solid var(--gray-200);padding:var(--space-8) 0;min-width:0}
+  .fire-review :global(.fire-review-header){display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);margin-bottom:var(--space-4)}
+  .fire-review :global(h4){font-size:18px;line-height:1.5;font-weight:var(--fw-semibold);color:var(--gray-900);margin:0}
+  .fire-review :global(.fire-review-status){padding:var(--space-1) var(--space-3);border-radius:var(--radius-sm);color:var(--fire-tone);background:var(--fire-tint);font-size:14px;font-weight:var(--fw-semibold);white-space:nowrap}
+  .fire-review :global(p){white-space:pre-wrap;line-height:1.8;margin:0}
+  .fire-review :global(.fire-review-question){font-size:18px;font-weight:var(--fw-medium);color:var(--gray-900);margin-bottom:var(--space-6)}
+  .fire-review :global(ol){display:grid;gap:var(--space-2);list-style:none;padding:0;margin:0 0 var(--space-6)}
+  .fire-review :global(li){display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-2);padding:var(--space-3);border:1px solid var(--gray-200);border-radius:var(--radius-md);line-height:1.8}
+  .fire-review :global(.fire-choice-number){flex:none;width:24px}
+  .fire-review :global(.fire-choice-text){flex:1;min-width:0;white-space:pre-wrap}
+  .fire-review :global(.fire-choice-label){flex-basis:100%;padding-left:32px;font-size:14px;font-weight:var(--fw-semibold)}
+  .fire-review :global(li[data-correct="true"]){color:var(--fire-correct);border-color:var(--fire-correct);background:var(--success-bg)}
+  .fire-review :global(li[data-wrong="true"]){color:var(--fire-wrong);border-color:var(--fire-wrong);background:var(--error-bg)}
+  .fire-review :global(.fire-answer){display:grid;gap:var(--space-3);margin-bottom:var(--space-6)}
+  .fire-review :global(.fire-answer p){display:grid;grid-template-columns:64px minmax(0,1fr);gap:var(--space-3)}
+  .fire-review :global(.fire-answer strong){font-size:14px;font-weight:var(--fw-semibold)}
+  .fire-review :global([data-answer="selected"]){color:var(--fire-tone)}
+  .fire-review :global([data-answer="correct"]){color:var(--fire-correct)}
+  .fire-review :global(.fire-explanation){padding:var(--space-4);border-radius:var(--radius-md);background:var(--gray-50)}
+  .fire-review :global(h5){font-size:16px;font-weight:var(--fw-semibold);line-height:1.5;color:var(--gray-900);margin:0 0 var(--space-3)}
+  .fire-review :global(a){display:inline-block;color:var(--primary-700);font-size:14px;line-height:1.7;margin-top:var(--space-4);padding:var(--space-2) 0;min-height:44px}
   .fire-confirm{width:min(480px,calc(100vw - 32px));border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:var(--space-6);background:var(--white);color:var(--gray-800)}
   .fire-confirm::backdrop{background:var(--gray-900);opacity:.5}
   .fire-workspace{display:grid;gap:var(--space-6)}
@@ -118,11 +151,12 @@ const { data } = Astro.props;
   .fire-status summary span{font-size:var(--fs-caption);color:var(--primary-700)}
   .fire-submit{width:100%;margin-top:var(--space-4)}
   .fire-navigation :global(button span){display:block;font-size:var(--fs-label);font-weight:var(--fw-regular)}
-  .fire-review :global(ol){padding-left:var(--space-6);line-height:var(--lh-body)}
-  .fire-review :global(li){padding:var(--space-2);white-space:pre-wrap;border-radius:var(--radius-sm)}
-  .fire-review :global(li[data-correct="true"]){background:var(--success-bg);font-weight:var(--fw-semibold)}
-  .fire-review :global(li[data-wrong="true"]){background:var(--error-bg)}
   .fire-controls [aria-pressed="true"]{background:var(--primary-50);border-color:var(--primary-600);color:var(--primary-700)}
-  @media(min-width:640px){.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .fire-controls [data-filter="wrong"]{color:var(--fire-wrong)}
+  .fire-controls [data-filter="unanswered"]{color:var(--fire-unanswered)}
+  .fire-controls [data-filter="wrong"][aria-pressed="true"]{background:var(--error-bg);border-color:var(--fire-wrong)}
+  .fire-controls [data-filter="unanswered"][aria-pressed="true"]{background:var(--fire-orange-bg);border-color:var(--fire-unanswered)}
+  @media(min-width:768px){.fire-runner{font-size:17px}.fire-muted,.fire-toolbar p{font-size:15px}.btn{font-size:16px}.fire-question{font-size:22px}.fire-choices :global(label){font-size:17px}.fire-review :global(.fire-review-question){font-size:19px}}
+  @media(min-width:640px){.fire-review :global(.fire-choice-label){flex-basis:auto;padding-left:0}.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media(min-width:1024px){.fire-workspace{grid-template-columns:minmax(0,1fr) 280px}.fire-status{position:sticky;top:var(--space-4)}.fire-navigation{max-height:min(40dvh,480px)}.fire-status summary{list-style:none;pointer-events:none}.fire-status summary::-webkit-details-marker{display:none}}
 </style>
