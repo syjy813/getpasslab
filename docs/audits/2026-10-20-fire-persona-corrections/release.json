@@ -2202,7 +2202,7 @@
       ]
     },
     "src/components/FirePracticeRunner.astro": {
-      "sha256": "50b96a5e74ab1294c4291ec8032d6bcb6d06ea3a108293f720ac4fb13738c326",
+      "sha256": "77519384b6ed126c06d10843458d5a5e3b9e604e3ea460ce9cd1a18d64e9c394",
       "beforeSHA256": "220f1976115ce2c5f93066cf16428be927e828e3d2ea93d15d3e4c71bd0d41a1",
       "patches": [
         {
@@ -2232,12 +2232,12 @@
         },
         {
           "at": 6038,
-          "current": "  .fire-navigation{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-2);margin-top:var(--space-3)}\n",
+          "current": "  .fire-navigation{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-2);margin-top:var(--space-3);max-height:320px;overflow-y:auto;overscroll-behavior:contain;padding:var(--space-1)}\n",
           "before": "  .fire-navigation{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--space-2);margin-top:var(--space-6)}\n"
         },
         {
-          "at": 7639,
-          "current": "  .fire-workspace{display:grid;gap:var(--space-6)}\n  .fire-paper,.fire-status{min-width:0}\n  .fire-status{padding:var(--space-4);background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);align-self:start}\n  .fire-status summary{cursor:pointer;min-height:44px;font-weight:var(--fw-semibold)}\n  .fire-status summary span{font-size:var(--fs-caption);color:var(--primary-700)}\n  .fire-submit{width:100%;margin-top:var(--space-4)}\n  .fire-navigation :global(button span){display:block;font-size:var(--fs-label);font-weight:var(--fw-regular)}\n  .fire-review :global(ol){padding-left:var(--space-6);line-height:var(--lh-body)}\n  .fire-review :global(li){padding:var(--space-2);white-space:pre-wrap;border-radius:var(--radius-sm)}\n  .fire-review :global(li[data-correct=\"true\"]){background:var(--success-bg);font-weight:var(--fw-semibold)}\n  .fire-review :global(li[data-wrong=\"true\"]){background:var(--error-bg)}\n  .fire-controls [aria-pressed=\"true\"]{background:var(--primary-50);border-color:var(--primary-600);color:var(--primary-700)}\n  @media(min-width:640px){.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}\n  @media(min-width:1024px){.fire-workspace{grid-template-columns:minmax(0,1fr) 280px}.fire-status{position:sticky;top:var(--space-4)}.fire-status summary{list-style:none;pointer-events:none}.fire-status summary::-webkit-details-marker{display:none}}\n",
+          "at": 7723,
+          "current": "  .fire-workspace{display:grid;gap:var(--space-6)}\n  .fire-paper,.fire-status{min-width:0}\n  .fire-status{padding:var(--space-4);background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);align-self:start}\n  .fire-status summary{cursor:pointer;min-height:44px;font-weight:var(--fw-semibold)}\n  .fire-status summary span{font-size:var(--fs-caption);color:var(--primary-700)}\n  .fire-submit{width:100%;margin-top:var(--space-4)}\n  .fire-navigation :global(button span){display:block;font-size:var(--fs-label);font-weight:var(--fw-regular)}\n  .fire-review :global(ol){padding-left:var(--space-6);line-height:var(--lh-body)}\n  .fire-review :global(li){padding:var(--space-2);white-space:pre-wrap;border-radius:var(--radius-sm)}\n  .fire-review :global(li[data-correct=\"true\"]){background:var(--success-bg);font-weight:var(--fw-semibold)}\n  .fire-review :global(li[data-wrong=\"true\"]){background:var(--error-bg)}\n  .fire-controls [aria-pressed=\"true\"]{background:var(--primary-50);border-color:var(--primary-600);color:var(--primary-700)}\n  @media(min-width:640px){.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}\n  @media(min-width:1024px){.fire-workspace{grid-template-columns:minmax(0,1fr) 280px}.fire-status{position:sticky;top:var(--space-4)}.fire-navigation{max-height:min(40dvh,480px)}.fire-status summary{list-style:none;pointer-events:none}.fire-status summary::-webkit-details-marker{display:none}}\n",
           "before": "  @media(min-width:640px){.fire-navigation{grid-template-columns:repeat(10,minmax(0,1fr))}.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}\n"
         }
       ]
@@ -2501,12 +2501,12 @@
       ]
     },
     "dist/fire-safety-manager-level2/practice/index.html": {
-      "sha256": "b6503b2e7ac03a5d430838e951ac626cc836a8bfd531279b466c623d3517ef96",
+      "sha256": "c69a92fbd70960be09b56b87948da5138f0a9bdf096f2a20ef15fa3f1b94a05e",
       "beforeSHA256": "fd67a13ca74fd3955c2879b6ddcfc3a668907b05aa5426875bc5f2b5d29ef431",
       "patches": [
         {
           "at": 2811,
-          "current": "<link rel=\"stylesheet\" href=\"/_astro/index.B9vvYznt.css\">",
+          "current": "<link rel=\"stylesheet\" href=\"/_astro/index.CBGABYfD.css\">",
           "before": "<link rel=\"stylesheet\" href=\"/_astro/index.CQ9lsKnl.css\">"
         },
         {

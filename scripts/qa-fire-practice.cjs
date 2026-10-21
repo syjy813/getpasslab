@@ -128,6 +128,10 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-start]').click();
       assert.equal(await page.locator('[data-navigation] button').count(), 50);
       assert.equal(await page.locator('[data-clock]').textContent(), '60:00');
+      if (width === 1440) {
+        const submitBox = await page.locator('[data-submit]').boundingBox();
+        assert(submitBox.y >= 0 && submitBox.y + submitBox.height <= 900, 'desktop submit stays in viewport with 50-question sidebar');
+      }
       assert.equal(await page.locator('[data-check]').count(), 0);
       assert.equal(await page.locator('[data-feedback]').count(), 0);
       await page.locator('input[value="1"]').check();
