@@ -7,7 +7,7 @@ type ReviewFilter = 'all' | 'wrong' | 'unanswered';
 const root = document.querySelector<HTMLElement>('[data-fire-runner]');
 if (root) initPractice(root);
 
-// Presentation only: keep every character and its order from the approved bank.
+// Preserve source fragments exactly; show the complete question before its list.
 // References need an explicit marker/prefix; a final paragraph is not enough.
 function renderQuestion(target: HTMLElement, text: string, prefix = '', live = false) {
   const groups: { kind: 'title' | 'condition' | 'reference'; text: string }[] = [];
@@ -29,11 +29,27 @@ function renderQuestion(target: HTMLElement, text: string, prefix = '', live = f
     else groups.push({ kind, text: line });
     if (kind === 'title' && /[?？]$/.test(value)) body = true;
   }
+  const ordered = groups.map((group, order) => ({ ...group, order }));
+  const conditionIndex = groups.findIndex(group => group.kind === 'condition');
+  const promptIndex = groups.findLastIndex(group => group.kind === 'title' && group.text.trim().length >= 12 && /[?？]$/.test(group.text.trim()));
+  const listed = groups.some(group => group.kind === 'condition' && group.text.split('\n').some(line => structured.test(line.trim())));
+  if (listed && conditionIndex >= 0 && promptIndex > conditionIndex && groups.slice(promptIndex + 1).every(group => group.kind === 'reference')) {
+    const [prompt] = ordered.splice(promptIndex, 1);
+    ordered.splice(conditionIndex, 0, prompt);
+  }
   target.replaceChildren();
-  groups.forEach((group, i) => {
+  ordered.forEach((group, i) => {
     const part = document.createElement(live && group.kind === 'title' ? 'h2' : 'p');
     part.className = `fire-stem-${group.kind}`;
-    part.textContent = (i === 0 ? prefix : '') + group.text;
+    part.dataset.stemOrder = String(group.order);
+    if (i === 0 && prefix) {
+      const number = document.createElement('span'); number.dataset.questionNumber = ''; number.textContent = prefix; part.append(number);
+    }
+    if (group.kind === 'condition') {
+      for (const line of group.text.match(/[^\n]*\n|[^\n]+$/g) || ['']) {
+        const item = document.createElement('span'); item.className = 'fire-stem-line'; item.dataset.empty = String(!line.trim()); item.textContent = line; part.append(item);
+      }
+    } else part.append(document.createTextNode(group.text));
     if (group.kind === 'reference') {
       part.setAttribute('role', 'note');
       part.dataset.marker = String(!group.text.trimStart().startsWith('※'));
@@ -63,6 +79,8 @@ function initPractice(root: HTMLElement) {
   const next = get<HTMLButtonElement>('[data-next]');
   const submit = get<HTMLButtonElement>('[data-submit]');
   const retry = get<HTMLButtonElement>('[data-retry]');
+  const restart = get<HTMLButtonElement>('[data-restart]');
+  restart.hidden = isChapter;
   const choices = get<HTMLFieldSetElement>('[data-choices]');
   const navigation = get('[data-navigation]');
   const panel = get<HTMLDetailsElement>('[data-answer-panel]');
@@ -79,6 +97,7 @@ function initPractice(root: HTMLElement) {
   let retryMode = false;
   let deadline = 0;
   let timer: ReturnType<typeof setInterval> | undefined;
+  let confirmAction: 'submit' | 'retry' = 'submit';
   const answers = new Map<string, number>();
   const isExam = () => !isChapter && !retryMode;
 
@@ -129,7 +148,14 @@ function initPractice(root: HTMLElement) {
     const q = questions[index];
     if (!q || !active) return;
     updateProgress();
-    get('[data-meta]').textContent = `${q.subjectId}과목 · ${q.chapterTitle}${q.isCore ? ' · 핵심' : q.questionType === 'source_variant' ? ' · 핵심 변형' : q.questionType === 'advanced' ? ' · 심화' : ''}`;
+    const meta = get('[data-meta]'); meta.replaceChildren();
+    const label = document.createElement('span');
+    label.textContent = `${q.subjectId}과목 · ${q.chapterTitle}${!q.isCore && q.questionType === 'source_variant' ? ' · 핵심 변형' : !q.isCore && q.questionType === 'advanced' ? ' · 심화' : ''}`;
+    meta.append(label);
+    if (q.isCore) {
+      const badge = document.createElement('span'); badge.dataset.coreBadge = ''; badge.textContent = '출제 유력'; meta.append(badge);
+    }
+    get('[data-question]').dataset.questionId = q.id;
     renderQuestion(get('[data-question]'), q.question, `${index + 1}. `, true);
     choices.replaceChildren();
     const legend = document.createElement('legend'); legend.textContent = '정답 선택'; choices.append(legend);
@@ -256,19 +282,35 @@ function initPractice(root: HTMLElement) {
     results.scrollIntoView({ block: 'start', behavior: 'instant' });
   }
   start.addEventListener('click', () => begin());
-  get('[data-restart]').addEventListener('click', () => begin());
-  retry.addEventListener('click', () => begin(true));
+  restart.addEventListener('click', () => begin());
+  retry.addEventListener('click', () => {
+    if (active || retryQuestions.length === 0) return;
+    confirmAction = 'retry';
+    get('#fire-confirm-heading').textContent = '오답·미응답 문제를 다시 풀까요?';
+    get('[data-confirm-text]').textContent = `오답·미응답 ${retryQuestions.length}문제를 다시 풉니다. 지금 문제풀이로 이동할까요?`;
+    get('[data-confirm] [value="cancel"]').textContent = '취소';
+    get('[data-confirm] [value="submit"]').textContent = '확인';
+    confirm.returnValue = ''; confirm.showModal();
+  });
   root.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach(button => button.addEventListener('click', () => filterReview(button.dataset.filter as ReviewFilter)));
   previous.addEventListener('click', () => { if (!expire() && index > 0) { index--; render(); } });
   next.addEventListener('click', () => { if (!expire() && index < questions.length - 1) { index++; render(); } });
   submit.addEventListener('click', () => {
     if (expire()) return;
+    confirmAction = 'submit';
+    get('#fire-confirm-heading').textContent = '답안을 제출할까요?';
+    get('[data-confirm] [value="cancel"]').textContent = '계속 풀기';
+    get('[data-confirm] [value="submit"]').textContent = '제출하고 채점';
     const unanswered = questions.filter(q => !answers.has(q.id)).length;
     get('[data-confirm-text]').textContent = unanswered ? `미응답 ${unanswered}개는 점수에 반영되지 않습니다. 제출 후에는 답안을 바꿀 수 없습니다.` : '제출 후에는 답안을 바꿀 수 없습니다.';
     confirm.returnValue = ''; confirm.showModal();
   });
   confirm.addEventListener('close', () => {
-    if (confirm.returnValue === 'submit') finish();
+    if (confirm.returnValue === 'submit') {
+      if (confirmAction === 'retry') begin(true);
+      else finish();
+    }
+    else if (confirmAction === 'retry') retry.focus();
     else if (active) submit.focus();
   });
   document.addEventListener('visibilitychange', () => { if (active && isExam()) tick(); });

@@ -60,6 +60,8 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       report.cases.push({ width, chapterRoutes: chapters.length, publishedAndInvalid: 'PASS', overflow: false });
     }
     const chapterOne = payload.chapters.find(q => q.subjectId === 1);
+    const rawStems=async locator=>locator.evaluateAll(elements=>elements.map(e=>[...e.querySelectorAll(':scope > [data-stem-order]')].sort((a,b)=>Number(a.dataset.stemOrder)-Number(b.dataset.stemOrder)).map(part=>{const copy=part.cloneNode(true);copy.querySelector('[data-question-number]')?.remove();return copy.textContent;}).join('')));
+
     const interceptPayload = async questions => {
       await page.unroute('**/fire-safety-manager-level2/practice/**');
       const fixture = JSON.stringify({chapters:payload.chapters,questions}).replace(/</g,'\\u003c');
@@ -70,7 +72,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       });
     };
     const noteQuestion=payload.questions.find(q=>q.id==='moducbt-27777-q01');
-    const advancedQuestion=payload.questions.find(q=>q.question.startsWith('[')&&q.question.includes('가.'));
+    const advancedQuestion=payload.questions.find(q=>q.id==='FSM2-MOCK-053-16');
     const typographyQuestions=[noteQuestion,advancedQuestion].map(q=>({...q,chapterId:chapterOne.id,subjectId:1}));
     await interceptPayload(typographyQuestions);
     for(const width of [320,390,1440]){
@@ -81,7 +83,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.screenshot({path:`${output}/chapter-setup-${width}.png`,fullPage:false});
       await page.locator('[data-start]').click();
       if(!(await page.locator('[data-question]').textContent()).includes('이 건물은 '))await page.locator('[data-next]').click();
-      assert.equal((await page.locator('[data-question]').textContent()).replace(/^\d+\. /,''),noteQuestion.question);
+      assert.equal((await rawStems(page.locator('[data-question]')))[0],noteQuestion.question);
       const checkHierarchy=async selector=>{
         const styles=await page.locator(selector).evaluate(e=>{
           const style=c=>{const s=getComputedStyle(e.querySelector(c));return {size:parseFloat(s.fontSize),color:s.color};};
@@ -94,15 +96,24 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
         return styles;
       };
       const live=await checkHierarchy('[data-question]');
+      assert.equal(await page.locator('[data-core-badge]').textContent(),'출제 유력');
+      await page.locator('[data-meta]').screenshot({path:`${output}/core-badge-${width}.png`});
+
       assert.equal(await page.locator('[data-clear]').count(),0);
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
       await page.locator('[data-question]').screenshot({path:`${output}/question-hierarchy-${width}.png`});
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="submit"]').click();
       await page.locator('[data-results]').waitFor({state:'visible'});
-      assert.deepEqual((await page.locator('.fire-review-question').allTextContents()).sort(),typographyQuestions.map(q=>q.question).sort());
+      assert.deepEqual((await rawStems(page.locator('.fire-review-question'))).sort(),typographyQuestions.map(q=>q.question).sort());
       const reviewSelector='[data-review-item]:has(.fire-stem-reference)';
       const review=await checkHierarchy(reviewSelector);
+      const listedReview=page.locator('[data-review-item]').filter({hasText:advancedQuestion.question.split('\n').at(-1)});
+      const display=await listedReview.locator('.fire-review-question > [data-stem-order]').evaluateAll(parts=>parts.map(p=>({order:Number(p.dataset.stemOrder),kind:p.className,text:p.textContent})));
+      assert(display.findIndex(p=>p.text.includes('반드시 수정해야'))<display.findIndex(p=>p.kind==='fire-stem-condition'),'complete question precedes explanations and case conditions');
+      assert.deepEqual(display.map(p=>p.order),[0,2,1]);
+      await listedReview.screenshot({path:`${output}/listed-conditions-${width}.png`});
+
       assert.equal(await page.locator('[data-review] .fire-answer, [data-review] [data-answer]').count(),0);
       await page.locator(reviewSelector).screenshot({path:`${output}/review-hierarchy-${width}.png`});
       report.cases.push({width,questionHierarchy:{live,review},approvedQuestionTextPreserved:'PASS'});
@@ -114,8 +125,10 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
     await page.locator('[data-submit]').click();
     await page.locator('[data-confirm] button[value="submit"]').click();
     await page.locator('[data-results]').waitFor({state:'visible'});
-    assert.deepEqual((await page.locator('.fire-review-question').allTextContents()).sort(),payload.questions.map(q=>q.question).sort());
-    report.cases.push({allApprovedStems:2328,textAndMultiplicityPreserved:'PASS'});
+    assert.deepEqual((await rawStems(page.locator('.fire-review-question'))).sort(),payload.questions.map(q=>q.question).sort());
+    const questionFirst=await page.locator('.fire-review-question').evaluateAll(elements=>elements.filter(e=>{const order=[...e.querySelectorAll(':scope > [data-stem-order]')].map(p=>Number(p.dataset.stemOrder));return order.some((n,i)=>i>0&&n<order[i-1]);}).length);
+    assert(questionFirst>=731,'all published advanced case questions show the complete prompt before conditions');
+    report.cases.push({allApprovedStems:2328,textAndMultiplicityPreserved:'PASS',questionFirst});
     const questions = [];
     for (const subjectId of [1, 2]) {
       const chapters = payload.chapters.filter(q => q.subjectId === subjectId);
@@ -162,6 +175,13 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-next]').click();
       await page.locator('[data-previous]').click();
       assert.equal(await page.locator('input:checked').inputValue(), '2');
+      if (!await page.locator('[data-answer-panel]').evaluate(e=>e.open)) await page.locator('[data-answer-panel] summary').click();
+      const chosen=page.locator('[data-navigation] button[data-answered="true"]');
+      assert.equal(await chosen.locator('span').textContent(),'②');
+      const answerStyle=await chosen.evaluate(e=>{const s=getComputedStyle(e.querySelector('span'));return {size:parseFloat(s.fontSize),weight:Number(s.fontWeight),height:e.getBoundingClientRect().height,overflow:e.scrollWidth>e.clientWidth};});
+      assert.equal(answerStyle.size,20);assert(answerStyle.weight>=600);assert(answerStyle.height>=64);assert.equal(answerStyle.overflow,false);
+      await page.locator('[data-answer-panel]').screenshot({path:`${output}/answer-status-${width}.png`});
+
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="cancel"]').click();
       await page.waitForFunction(() => !document.querySelector('[data-confirm]').open && document.activeElement === document.querySelector('[data-submit]'));
@@ -207,7 +227,22 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-filter="all"]').click();
       await page.screenshot({ path: `${output}/chapter-result-${width}.png`, fullPage: false });
       await page.locator('[data-review-item]').first().screenshot({path:`${output}/correct-review-${width}.png`});
+      assert.equal(await page.locator('[data-restart]').isVisible(),false,'chapter results have only the review action');
+      const beforeRetry=await page.locator('[data-review]').textContent();
       await page.locator('[data-retry]').click();
+      assert.equal(await page.locator('[data-results]').isVisible(),true);
+      assert.equal(await page.locator('[data-session]').isVisible(),false);
+      assert.equal(await page.locator('[data-confirm] [value="submit"]').textContent(),'확인');
+      await page.locator('[data-confirm]').screenshot({path:`${output}/retry-confirm-${width}.png`});
+      await page.locator('[data-confirm] [value="cancel"]').click();
+      await page.waitForFunction(()=>!document.querySelector('[data-confirm]').open&&document.activeElement===document.querySelector('[data-retry]'));
+      assert.equal(await page.locator('[data-review]').textContent(),beforeRetry,'cancel preserves grading results');
+      await page.locator('[data-retry]').click();
+      await page.keyboard.press('Escape');
+      await page.waitForFunction(()=>!document.querySelector('[data-confirm]').open&&document.activeElement===document.querySelector('[data-retry]'));
+      assert.equal(await page.locator('[data-results]').isVisible(),true);
+      await page.locator('[data-retry]').click();
+      await page.locator('[data-confirm] [value="submit"]').click();
       assert.equal(await page.locator('[data-navigation] button').count(), 5);
       assert.equal(await page.locator('[data-clock-wrap]').isVisible(), false);
       await page.locator('input[value="1"]').locator('..').click();
@@ -269,6 +304,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       // Same source + variant must not appear together in the selected test.
       const families = await page.locator('[data-review-item] .fire-review-question').allTextContents();
       assert.equal(new Set(families).size, 50);
+      assert.equal(await page.locator('[data-restart]').isVisible(),true,'full exam keeps new-exam action');
       await page.locator('[data-restart]').click();
       assert.equal(await page.locator('input:checked').count(), 0);
       assert.match(await page.locator('[data-progress]').textContent(), /0개 답안 선택/);

@@ -3637,5 +3637,115 @@
         }
       ]
     }
+  },
+  "questionFlowProjections": {
+    "src/components/FirePracticeRunner.astro": {
+      "sha256": "103f4e1e2435f147b285a15cba1cbf75904e04951404b1f8f9c675804a561551",
+      "beforeSHA256": "227a01a61beeda7a903601627dd728b5b849092fa7227a627cff912f3528e5e1",
+      "patches": [
+        {
+          "at": 979,
+          "current": "        <p class=\"fire-muted fire-meta\" data-meta></p>\n",
+          "before": "        <p class=\"fire-muted\" data-meta></p>\n"
+        },
+        {
+          "at": 4638,
+          "current": "  .fire-meta{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-2)}\n  .fire-meta :global([data-core-badge]){display:inline-block;padding:2px var(--space-2);border:1px solid var(--primary-600);border-radius:var(--radius-full);background:var(--primary-50);color:var(--primary-700);font-size:14px;font-weight:var(--fw-semibold);line-height:1.6;white-space:nowrap}\n",
+          "before": ""
+        },
+        {
+          "at": 6542,
+          "current": "  .fire-runner :global(.fire-stem-title + .fire-stem-condition){margin-top:var(--space-3)}\n  .fire-runner :global(.fire-stem-line){display:block;white-space:pre-wrap}\n  .fire-runner :global(.fire-stem-line + .fire-stem-line){margin-top:var(--space-2)}\n  .fire-runner :global(.fire-stem-line[data-empty=\"true\"]){display:none}\n",
+          "before": ""
+        },
+        {
+          "at": 8126,
+          "current": "  .fire-navigation :global(button){font:inherit;min-height:64px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white);color:var(--gray-800);cursor:pointer}\n",
+          "before": "  .fire-navigation :global(button){font:inherit;min-height:44px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white);color:var(--gray-800);cursor:pointer}\n"
+        },
+        {
+          "at": 12759,
+          "current": "  .fire-navigation :global(button[data-answered=\"true\"] span){font-size:20px;font-weight:var(--fw-semibold);line-height:1.25}\n",
+          "before": ""
+        }
+      ]
+    },
+    "src/utils/firePracticeClient.ts": {
+      "sha256": "609f54c098b5f7686f3ca5667fa14ad7a101f27cbaf0bc8321c8f6fb02fe1769",
+      "beforeSHA256": "878bb73b92ee25bb98ba8270642b5f8fc89411da5fb23ad85b6f28c8bb3a191c",
+      "patches": [
+        {
+          "at": 493,
+          "current": "// Preserve source fragments exactly; show the complete question before its list.\n",
+          "before": "// Presentation only: keep every character and its order from the approved bank.\n"
+        },
+        {
+          "at": 1896,
+          "current": "  const ordered = groups.map((group, order) => ({ ...group, order }));\n  const conditionIndex = groups.findIndex(group => group.kind === 'condition');\n  const promptIndex = groups.findLastIndex(group => group.kind === 'title' && group.text.trim().length >= 12 && /[?？]$/.test(group.text.trim()));\n  const listed = groups.some(group => group.kind === 'condition' && group.text.split('\\n').some(line => structured.test(line.trim())));\n  if (listed && conditionIndex >= 0 && promptIndex > conditionIndex && groups.slice(promptIndex + 1).every(group => group.kind === 'reference')) {\n    const [prompt] = ordered.splice(promptIndex, 1);\n    ordered.splice(conditionIndex, 0, prompt);\n  }\n",
+          "before": ""
+        },
+        {
+          "at": 2608,
+          "current": "  ordered.forEach((group, i) => {\n",
+          "before": "  groups.forEach((group, i) => {\n"
+        },
+        {
+          "at": 2776,
+          "current": "    part.dataset.stemOrder = String(group.order);\n    if (i === 0 && prefix) {\n      const number = document.createElement('span'); number.dataset.questionNumber = ''; number.textContent = prefix; part.append(number);\n    }\n    if (group.kind === 'condition') {\n      for (const line of group.text.match(/[^\\n]*\\n|[^\\n]+$/g) || ['']) {\n        const item = document.createElement('span'); item.className = 'fire-stem-line'; item.dataset.empty = String(!line.trim()); item.textContent = line; part.append(item);\n      }\n    } else part.append(document.createTextNode(group.text));\n",
+          "before": "    part.textContent = (i === 0 ? prefix : '') + group.text;\n"
+        },
+        {
+          "at": 4839,
+          "current": "  const restart = get<HTMLButtonElement>('[data-restart]');\n  restart.hidden = isChapter;\n",
+          "before": ""
+        },
+        {
+          "at": 5713,
+          "current": "  let confirmAction: 'submit' | 'retry' = 'submit';\n",
+          "before": ""
+        },
+        {
+          "at": 8318,
+          "current": "    const meta = get('[data-meta]'); meta.replaceChildren();\n    const label = document.createElement('span');\n    label.textContent = `${q.subjectId}과목 · ${q.chapterTitle}${!q.isCore && q.questionType === 'source_variant' ? ' · 핵심 변형' : !q.isCore && q.questionType === 'advanced' ? ' · 심화' : ''}`;\n    meta.append(label);\n    if (q.isCore) {\n      const badge = document.createElement('span'); badge.dataset.coreBadge = ''; badge.textContent = '출제 유력'; meta.append(badge);\n    }\n    get('[data-question]').dataset.questionId = q.id;\n",
+          "before": "    get('[data-meta]').textContent = `${q.subjectId}과목 · ${q.chapterTitle}${q.isCore ? ' · 핵심' : q.questionType === 'source_variant' ? ' · 핵심 변형' : q.questionType === 'advanced' ? ' · 심화' : ''}`;\n"
+        },
+        {
+          "at": 16788,
+          "current": "  restart.addEventListener('click', () => begin());\n  retry.addEventListener('click', () => {\n    if (active || retryQuestions.length === 0) return;\n    confirmAction = 'retry';\n    get('#fire-confirm-heading').textContent = '오답·미응답 문제를 다시 풀까요?';\n    get('[data-confirm-text]').textContent = `오답·미응답 ${retryQuestions.length}문제를 다시 풉니다. 지금 문제풀이로 이동할까요?`;\n    get('[data-confirm] [value=\"cancel\"]').textContent = '취소';\n    get('[data-confirm] [value=\"submit\"]').textContent = '확인';\n    confirm.returnValue = ''; confirm.showModal();\n  });\n",
+          "before": "  get('[data-restart]').addEventListener('click', () => begin());\n  retry.addEventListener('click', () => begin(true));\n"
+        },
+        {
+          "at": 17781,
+          "current": "    confirmAction = 'submit';\n    get('#fire-confirm-heading').textContent = '답안을 제출할까요?';\n    get('[data-confirm] [value=\"cancel\"]').textContent = '계속 풀기';\n    get('[data-confirm] [value=\"submit\"]').textContent = '제출하고 채점';\n",
+          "before": ""
+        },
+        {
+          "at": 18324,
+          "current": "    if (confirm.returnValue === 'submit') {\n      if (confirmAction === 'retry') begin(true);\n      else finish();\n    }\n    else if (confirmAction === 'retry') retry.focus();\n",
+          "before": "    if (confirm.returnValue === 'submit') finish();\n"
+        }
+      ]
+    },
+    "dist/fire-safety-manager-level2/practice/index.html": {
+      "sha256": "72436bcb76588663a7dcc012baea3802a4b91cc341e60e593b978a4a281f3e18",
+      "beforeSHA256": "93dd4447749d8b197e1b22268dc8f2cd4845940d777accff9715130124620b91",
+      "patches": [
+        {
+          "at": 2811,
+          "current": "<link rel=\"stylesheet\" href=\"/_astro/index.DDqrQqw2.css\">",
+          "before": "<link rel=\"stylesheet\" href=\"/_astro/index.CDgopRBn.css\">"
+        },
+        {
+          "at": 5992,
+          "current": "</p> </div> <div class=\"fire-workspace\" data-astro-cid-hmlwhorl> <div class=\"fire-paper\" data-astro-cid-hmlwhorl> <p class=\"fire-muted fire-meta\" data-meta data-astro-cid-hmlwhorl>",
+          "before": "</p> </div> <div class=\"fire-workspace\" data-astro-cid-hmlwhorl> <div class=\"fire-paper\" data-astro-cid-hmlwhorl> <p class=\"fire-muted\" data-meta data-astro-cid-hmlwhorl>"
+        },
+        {
+          "at": 1475635,
+          "current": "</div> <script type=\"module\" src=\"/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.CS_LxNNH.js\">",
+          "before": "</div> <script type=\"module\" src=\"/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.ChyMmf3N.js\">"
+        }
+      ]
+    }
   }
 }
