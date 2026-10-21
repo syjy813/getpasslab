@@ -139,7 +139,7 @@ function initPractice(root: HTMLElement) {
     render();
   }
   function filterReview(filter: ReviewFilter) {
-    const cards = get('[data-review]').querySelectorAll<HTMLElement>('details');
+    const cards = get('[data-review]').querySelectorAll<HTMLElement>('[data-review-item]');
     let visible = 0;
     cards.forEach(card => { card.hidden = filter !== 'all' && card.dataset.status !== filter; if (!card.hidden) visible++; });
     root.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === filter)));
@@ -156,7 +156,14 @@ function initPractice(root: HTMLElement) {
     const wrong = questions.length - grade.correct - grade.unanswered;
     get('[data-result-title]').textContent = retryMode ? '오답 복습 결과' : '풀이 결과';
     get('[data-score]').textContent = isExam() ? `평균 ${grade.average}점 · ${grade.correct} / 50개 정답` : `${questions.length}문제 중 ${grade.correct}개 정답`;
-    get('[data-verdict]').textContent = `${expired ? '60분이 지나 자동 제출했습니다. ' : ''}${isExam() ? (grade.passed ? '합격 기준 충족 · ' : '합격 기준 미달 · ') : ''}정답 ${grade.correct}개 · 오답 ${wrong}개 · 미응답 ${grade.unanswered}개`;
+    get('[data-verdict]').textContent = `${expired ? '60분이 지나 자동 제출했습니다. ' : ''}${isExam() ? (grade.passed ? '합격 기준 충족 · ' : '합격 기준 미달 · ') : ''}아래에서 문항별 정답과 해설을 확인하세요.`;
+    const outcomes = get('[data-outcomes]'); outcomes.replaceChildren();
+    for (const [status, label, count] of [['correct', '정답', grade.correct], ['wrong', '오답', wrong], ['unanswered', '미응답', grade.unanswered]] as const) {
+      const item = document.createElement('p'); item.dataset.status = status;
+      const name = document.createElement('span'); name.textContent = label;
+      const number = document.createElement('strong'); number.textContent = `${count}개`;
+      item.append(name, number); outcomes.append(item);
+    }
     const subjectScores = get('[data-subject-scores]'); subjectScores.replaceChildren();
     if (isExam()) grade.subjects.forEach(item => {
       const p = document.createElement('p'); p.textContent = `${item.subjectId}과목 ${item.score}점 · ${item.correct}/25개 정답${item.score < FIRE_EXAM.minimumSubjectScore ? ' · 과락' : ''}`; subjectScores.append(p);
@@ -173,21 +180,42 @@ function initPractice(root: HTMLElement) {
     questions.forEach((q, i) => {
       const selected = answers.get(q.id);
       const status = selected === undefined ? 'unanswered' : selected === q.answerNumber ? 'correct' : 'wrong';
-      const detail = document.createElement('details'); detail.dataset.status = status;
-      const summary = document.createElement('summary');
-      summary.textContent = `${i + 1}번 · ${status === 'unanswered' ? '미응답' : status === 'correct' ? '정답' : '오답'} · ${q.question.slice(0, 80)}`;
-      const body = document.createElement('p'); body.textContent = q.question;
+      const detail = document.createElement('section'); detail.dataset.reviewItem = ''; detail.dataset.status = status;
+      const headingId = `fire-review-question-${i + 1}`;
+      detail.setAttribute('aria-labelledby', headingId);
+      const header = document.createElement('div'); header.className = 'fire-review-header';
+      const heading = document.createElement('h4'); heading.id = headingId; heading.textContent = `${i + 1}번 문제`;
+      const badge = document.createElement('span'); badge.className = 'fire-review-status';
+      badge.textContent = status === 'unanswered' ? '미응답' : status === 'correct' ? '정답' : '오답';
+      header.append(heading, badge);
+      const body = document.createElement('p'); body.className = 'fire-review-question'; body.textContent = q.question;
       const options = document.createElement('ol');
       q.choices.forEach((text, n) => {
         const option = document.createElement('li');
         option.dataset.correct = String(n + 1 === q.answerNumber);
         option.dataset.wrong = String(n + 1 === selected && selected !== q.answerNumber);
-        option.textContent = `${text}${n + 1 === selected ? ' [내 선택]' : ''}${n + 1 === q.answerNumber ? ' [정답]' : ''}`;
+        const number = document.createElement('span'); number.className = 'fire-choice-number'; number.textContent = symbols[n];
+        const content = document.createElement('span'); content.className = 'fire-choice-text'; content.textContent = text;
+        option.append(number, content);
+        if (n + 1 === selected || n + 1 === q.answerNumber) {
+          const label = document.createElement('span'); label.className = 'fire-choice-label';
+          label.textContent = `${n + 1 === selected ? '내 선택' : ''}${n + 1 === selected && n + 1 === q.answerNumber ? ' · ' : ''}${n + 1 === q.answerNumber ? '정답' : ''}`;
+          option.append(label);
+        }
         options.append(option);
       });
-      const selectedText = document.createElement('p'); selectedText.textContent = `선택한 답: ${selected ? `${symbols[selected - 1]} ${q.choices[selected - 1]}` : '미응답'}\n정답: ${answerText(q)}`;
-      const explanation = document.createElement('p'); explanation.textContent = q.explanation;
-      detail.append(summary, body, options, selectedText, explanation);
+      const answer = document.createElement('div'); answer.className = 'fire-answer';
+      for (const [label, value, key] of [['내 답안', selected ? `${symbols[selected - 1]} ${q.choices[selected - 1]}` : '미응답', 'selected'], ['정답', answerText(q), 'correct']]) {
+        const row = document.createElement('p'); row.dataset.answer = key;
+        const name = document.createElement('strong'); name.textContent = label;
+        const text = document.createElement('span'); text.textContent = value;
+        row.append(name, text); answer.append(row);
+      }
+      const explanation = document.createElement('div'); explanation.className = 'fire-explanation'; explanation.dataset.explanation = '';
+      const title = document.createElement('h5'); title.textContent = '해설';
+      const text = document.createElement('p'); text.textContent = q.explanation;
+      explanation.append(title, text);
+      detail.append(header, body, options, answer, explanation);
       const related = payload.chapters.find(item => item.id === q.chapterId);
       if (related) {
         const link = document.createElement('a'); link.href = related.href; link.target = '_blank'; link.rel = 'noopener';

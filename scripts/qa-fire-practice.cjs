@@ -79,7 +79,7 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       const html = (await response.text()).replace(payloadPattern, (_, open, close) => open + fixture + close);
       await r.fulfill({ response, body: html });
     });
-    for (const width of [390, 1440]) {
+    for (const width of [320, 390, 1440]) {
       await page.setViewportSize({ width, height: 900 });
       await page.goto(base + route + '?chapter=' + chapterOne.id);
       await page.locator('[data-start]').click();
@@ -101,15 +101,41 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-confirm] button[value="submit"]').click();
       await page.locator('[data-results]').waitFor({ state: 'visible' });
       assert.match(await page.locator('[data-score]').textContent(), /1개 정답/);
-      assert.equal(await page.locator('[data-review] details').count(), 6);
-      await page.locator('[data-review] summary').first().click();
+      assert.equal(await page.locator('[data-review-item]').count(), 6);
+      assert.equal(await page.locator('[data-review] details, [data-review] summary').count(), 0, 'review has no disclosure toggles');
+      assert.equal(await page.locator('[data-explanation]:visible').count(), 6, 'all explanations displayed at once');
+      const reviewStyle = await page.locator('[data-review-item]').first().evaluate(e => ({
+        border: getComputedStyle(e).borderTopWidth, padding: parseFloat(getComputedStyle(e).paddingTop),
+        questionFont: parseFloat(getComputedStyle(e.querySelector('.fire-review-question')).fontSize),
+        bodyFont: parseFloat(getComputedStyle(e.querySelector('[data-explanation] p')).fontSize),
+        lineHeight: parseFloat(getComputedStyle(e.querySelector('[data-explanation] p')).lineHeight),
+        width: e.getBoundingClientRect().width,
+      }));
+      assert.equal(reviewStyle.border, '1px'); assert(reviewStyle.padding >= 24);
+      assert(reviewStyle.questionFont >= 18 && reviewStyle.bodyFont >= 16);
+      assert(reviewStyle.lineHeight / reviewStyle.bodyFont >= 1.75 && reviewStyle.width <= 800);
+      const tones = await page.locator('[data-outcomes] [data-status]').evaluateAll(items => {
+        const rgb = s => s.startsWith('color(') ? s.match(/[\d.]+/g).map(Number).slice(0,3) : s.match(/[\d.]+/g).map(Number).slice(0,3).map(n=>n/255);
+        const luminance = c => c.map(x => x <= .04045 ? x / 12.92 : ((x + .055) / 1.055) ** 2.4).reduce((v,x,i)=>v+x*[.2126,.7152,.0722][i],0);
+        return items.map(item => { const style=getComputedStyle(item), foreground=rgb(style.color), background=rgb(style.backgroundColor);
+          const a=luminance(foreground), b=luminance(background);
+          return {status:item.dataset.status, foreground, contrast:(Math.max(a,b)+.05)/(Math.min(a,b)+.05)};
+        });
+      });
+      for (const tone of tones) assert(tone.contrast >= 4.5, `${tone.status}: readable status color`);
+      const [green,red,orange]=tones.map(t=>t.foreground);
+      assert(green[1]>green[0] && green[1]>green[2]);
+      assert(red[0]>red[1]*1.5 && red[0]>red[2]*1.5);
+      assert(orange[0]>orange[1] && orange[1]>orange[2]);
+      report.cases.push({width,expandedExplanations:'PASS',statusColorsAndContrast:tones,typography:reviewStyle});
       assert.equal(await page.locator('[data-review] a').count(), 6);
       await page.locator('[data-filter="wrong"]').click();
-      assert.equal(await page.locator('[data-review] details:visible').count(), 0);
+      assert.equal(await page.locator('[data-review-item]:visible').count(), 0);
       await page.locator('[data-filter="unanswered"]').click();
-      assert.equal(await page.locator('[data-review] details:visible').count(), 5);
+      assert.equal(await page.locator('[data-review-item]:visible').count(), 5);
       await page.locator('[data-filter="all"]').click();
-      await page.screenshot({ path: `${output}/chapter-result-${width}.png`, fullPage: true });
+      await page.screenshot({ path: `${output}/chapter-result-${width}.png`, fullPage: false });
+      await page.locator('[data-review-item]').first().screenshot({path:`${output}/correct-review-${width}.png`});
       await page.locator('[data-retry]').click();
       assert.equal(await page.locator('[data-navigation] button').count(), 5);
       assert.equal(await page.locator('[data-clock-wrap]').isVisible(), false);
@@ -120,11 +146,13 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="submit"]').click();
       await page.locator('[data-results]').waitFor({ state: 'visible' });
-      assert.match(await page.locator('[data-verdict]').textContent(), /정답 0개 · 오답 1개 · 미응답 4개/);
+      assert.deepEqual(await page.locator('[data-outcomes] p').allTextContents(), ['정답0개','오답1개','미응답4개']);
       await page.locator('[data-filter="wrong"]').click();
-      assert.equal(await page.locator('[data-review] details:visible').count(), 1);
+      assert.equal(await page.locator('[data-review-item]:visible').count(), 1);
+      await page.locator('[data-review-item]:visible').first().screenshot({path:`${output}/wrong-review-${width}.png`});
       await page.locator('[data-filter="unanswered"]').click();
-      assert.equal(await page.locator('[data-review] details:visible').count(), 4);
+      assert.equal(await page.locator('[data-review-item]:visible').count(), 4);
+      await page.locator('[data-review-item]:visible').first().screenshot({path:`${output}/unanswered-review-${width}.png`});
       await page.goto(base + route);
       await page.locator('[data-start]').click();
       assert.equal(await page.locator('[data-navigation] button').count(), 50);
@@ -162,10 +190,11 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       await page.locator('[data-results]').waitFor({ state: 'visible' });
       assert.match(await page.locator('[data-score]').textContent(), /平均|평균 70점/);
       assert.match(await page.locator('[data-verdict]').textContent(), /합격 기준 충족/);
-      assert.equal(await page.locator('[data-review] details').count(), 50);
-      await page.screenshot({ path: `${output}/mock-result-${width}.png`, fullPage: true });
+      assert.equal(await page.locator('[data-review-item]').count(), 50);
+      assert.equal(await page.locator('[data-explanation]:visible').count(), 50);
+      await page.screenshot({ path: `${output}/mock-result-${width}.png`, fullPage: false });
       // Same source + variant must not appear together in the selected test.
-      const families = await page.locator('[data-review] details p:first-of-type').allTextContents();
+      const families = await page.locator('[data-review-item] .fire-review-question').allTextContents();
       assert.equal(new Set(families).size, 50);
       await page.locator('[data-restart]').click();
       assert.equal(await page.locator('input:checked').count(), 0);

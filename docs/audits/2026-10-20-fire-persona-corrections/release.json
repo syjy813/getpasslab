@@ -3355,5 +3355,131 @@
         }
       ]
     }
+  },
+  "reviewProjections": {
+    "src/components/FirePracticeRunner.astro": {
+      "sha256": "2e7a4a6c4a38ec4f0d01bec7d9022f0b8e06253288f208fdc7f3735157dc204a",
+      "beforeSHA256": "77519384b6ed126c06d10843458d5a5e3b9e604e3ea460ce9cd1a18d64e9c394",
+      "patches": [
+        {
+          "at": 2366,
+          "current": "    <div class=\"fire-outcomes\" data-outcomes aria-label=\"문항별 채점 현황\"></div>\n",
+          "before": ""
+        },
+        {
+          "at": 3859,
+          "current": "  .fire-runner{\n    --fire-correct:color-mix(in srgb,var(--success) 55%,var(--gray-900));\n    --fire-wrong:color-mix(in srgb,var(--error) 70%,var(--gray-900));\n    --fire-orange:color-mix(in srgb,var(--warning),var(--error) 35%);\n    --fire-unanswered:color-mix(in srgb,var(--fire-orange) 65%,var(--gray-900));\n    --fire-orange-bg:color-mix(in srgb,var(--fire-orange) 10%,var(--white));\n    min-width:0;overflow-wrap:anywhere;word-break:keep-all;font-size:16px;line-height:1.75;color:var(--gray-800)\n  }\n",
+          "before": "  .fire-runner{min-width:0;overflow-wrap:anywhere}\n"
+        },
+        {
+          "at": 4587,
+          "current": "  .fire-muted{font-size:14px;line-height:1.7;color:var(--gray-600)}\n",
+          "before": "  .fire-muted{font-size:var(--fs-caption);line-height:var(--lh-body);color:var(--gray-600)}\n"
+        },
+        {
+          "at": 4835,
+          "current": "  .btn{min-height:44px;white-space:normal;font-size:15px;line-height:1.5}\n",
+          "before": "  .btn{min-height:44px;white-space:normal}\n"
+        },
+        {
+          "at": 5272,
+          "current": "  .fire-toolbar p{margin:0 0 var(--space-3);font-size:14px}\n",
+          "before": "  .fire-toolbar p{margin:0 0 var(--space-3);font-size:var(--fs-caption)}\n"
+        },
+        {
+          "at": 5451,
+          "current": "  .fire-question{font-size:20px;font-weight:var(--fw-semibold);line-height:1.7;white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}\n",
+          "before": "  .fire-question{font-size:var(--fs-h3);line-height:var(--lh-body);white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}\n"
+        },
+        {
+          "at": 5847,
+          "current": "  .fire-choices :global(label){display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-md);cursor:pointer;min-height:44px;white-space:pre-wrap;line-height:1.8;font-size:16px}\n",
+          "before": "  .fire-choices :global(label){display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-4);border:1px solid var(--gray-200);border-radius:var(--radius-md);cursor:pointer;min-height:44px;white-space:pre-wrap;line-height:var(--lh-body)}\n"
+        },
+        {
+          "at": 7559,
+          "current": "  [data-results]{max-width:800px;margin-inline:auto}\n  .fire-outcomes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-2);margin-top:var(--space-6)}\n  .fire-outcomes :global(p){display:grid;gap:var(--space-1);padding:var(--space-3);margin:0;border:1px solid currentColor;border-radius:var(--radius-md);text-align:center;font-size:14px}\n  .fire-outcomes :global(strong){font-size:20px;font-variant-numeric:tabular-nums}\n  .fire-runner :global([data-status=\"correct\"]){--fire-tone:var(--fire-correct);--fire-tint:var(--success-bg)}\n  .fire-runner :global([data-status=\"wrong\"]){--fire-tone:var(--fire-wrong);--fire-tint:var(--error-bg)}\n  .fire-runner :global([data-status=\"unanswered\"]){--fire-tone:var(--fire-unanswered);--fire-tint:var(--fire-orange-bg)}\n  .fire-outcomes :global([data-status]){color:var(--fire-tone);background:var(--fire-tint)}\n  .fire-review{margin-top:var(--space-4)}\n  .fire-review :global([data-review-item]){border-top:1px solid var(--gray-200);padding:var(--space-8) 0;min-width:0}\n  .fire-review :global(.fire-review-header){display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);margin-bottom:var(--space-4)}\n  .fire-review :global(h4){font-size:18px;line-height:1.5;font-weight:var(--fw-semibold);color:var(--gray-900);margin:0}\n  .fire-review :global(.fire-review-status){padding:var(--space-1) var(--space-3);border-radius:var(--radius-sm);color:var(--fire-tone);background:var(--fire-tint);font-size:14px;font-weight:var(--fw-semibold);white-space:nowrap}\n  .fire-review :global(p){white-space:pre-wrap;line-height:1.8;margin:0}\n  .fire-review :global(.fire-review-question){font-size:18px;font-weight:var(--fw-medium);color:var(--gray-900);margin-bottom:var(--space-6)}\n  .fire-review :global(ol){display:grid;gap:var(--space-2);list-style:none;padding:0;margin:0 0 var(--space-6)}\n  .fire-review :global(li){display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--space-2);padding:var(--space-3);border:1px solid var(--gray-200);border-radius:var(--radius-md);line-height:1.8}\n  .fire-review :global(.fire-choice-number){flex:none;width:24px}\n  .fire-review :global(.fire-choice-text){flex:1;min-width:0;white-space:pre-wrap}\n  .fire-review :global(.fire-choice-label){flex-basis:100%;padding-left:32px;font-size:14px;font-weight:var(--fw-semibold)}\n  .fire-review :global(li[data-correct=\"true\"]){color:var(--fire-correct);border-color:var(--fire-correct);background:var(--success-bg)}\n  .fire-review :global(li[data-wrong=\"true\"]){color:var(--fire-wrong);border-color:var(--fire-wrong);background:var(--error-bg)}\n  .fire-review :global(.fire-answer){display:grid;gap:var(--space-3);margin-bottom:var(--space-6)}\n  .fire-review :global(.fire-answer p){display:grid;grid-template-columns:64px minmax(0,1fr);gap:var(--space-3)}\n  .fire-review :global(.fire-answer strong){font-size:14px;font-weight:var(--fw-semibold)}\n  .fire-review :global([data-answer=\"selected\"]){color:var(--fire-tone)}\n  .fire-review :global([data-answer=\"correct\"]){color:var(--fire-correct)}\n  .fire-review :global(.fire-explanation){padding:var(--space-4);border-radius:var(--radius-md);background:var(--gray-50)}\n  .fire-review :global(h5){font-size:16px;font-weight:var(--fw-semibold);line-height:1.5;color:var(--gray-900);margin:0 0 var(--space-3)}\n  .fire-review :global(a){display:inline-block;color:var(--primary-700);font-size:14px;line-height:1.7;margin-top:var(--space-4);padding:var(--space-2) 0;min-height:44px}\n",
+          "before": "  .fire-review{display:grid;gap:var(--space-3);margin-top:var(--space-4)}\n  .fire-review :global(details){border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:var(--space-4);min-width:0}\n  .fire-review :global(summary){cursor:pointer;min-height:44px;font-weight:var(--fw-semibold)}\n  .fire-review :global(p){white-space:pre-wrap;line-height:var(--lh-body);margin:var(--space-3) 0}\n  .fire-review :global(a){color:var(--primary-700)}\n"
+        },
+        {
+          "at": 11869,
+          "current": "",
+          "before": "  .fire-review :global(ol){padding-left:var(--space-6);line-height:var(--lh-body)}\n  .fire-review :global(li){padding:var(--space-2);white-space:pre-wrap;border-radius:var(--radius-sm)}\n  .fire-review :global(li[data-correct=\"true\"]){background:var(--success-bg);font-weight:var(--fw-semibold)}\n  .fire-review :global(li[data-wrong=\"true\"]){background:var(--error-bg)}\n"
+        },
+        {
+          "at": 11995,
+          "current": "  .fire-controls [data-filter=\"wrong\"]{color:var(--fire-wrong)}\n  .fire-controls [data-filter=\"unanswered\"]{color:var(--fire-unanswered)}\n  .fire-controls [data-filter=\"wrong\"][aria-pressed=\"true\"]{background:var(--error-bg);border-color:var(--fire-wrong)}\n  .fire-controls [data-filter=\"unanswered\"][aria-pressed=\"true\"]{background:var(--fire-orange-bg);border-color:var(--fire-unanswered)}\n  @media(min-width:768px){.fire-runner{font-size:17px}.fire-muted,.fire-toolbar p{font-size:15px}.btn{font-size:16px}.fire-question{font-size:22px}.fire-choices :global(label){font-size:17px}.fire-review :global(.fire-review-question){font-size:19px}}\n  @media(min-width:640px){.fire-review :global(.fire-choice-label){flex-basis:auto;padding-left:0}.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}\n",
+          "before": "  @media(min-width:640px){.fire-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}}\n"
+        }
+      ]
+    },
+    "src/utils/firePracticeClient.ts": {
+      "sha256": "85a54511da9df369ac472556618687eb6f9574b40a1d7c08e4c8420e192ec5b4",
+      "beforeSHA256": "8b3863459ad6488ae6c6565c6b023aa66150483f64b0bb537985d8e5d886f5aa",
+      "patches": [
+        {
+          "at": 7565,
+          "current": "    const cards = get('[data-review]').querySelectorAll<HTMLElement>('[data-review-item]');\n",
+          "before": "    const cards = get('[data-review]').querySelectorAll<HTMLElement>('details');\n"
+        },
+        {
+          "at": 8773,
+          "current": "    get('[data-verdict]').textContent = `${expired ? '60분이 지나 자동 제출했습니다. ' : ''}${isExam() ? (grade.passed ? '합격 기준 충족 · ' : '합격 기준 미달 · ') : ''}아래에서 문항별 정답과 해설을 확인하세요.`;\n    const outcomes = get('[data-outcomes]'); outcomes.replaceChildren();\n    for (const [status, label, count] of [['correct', '정답', grade.correct], ['wrong', '오답', wrong], ['unanswered', '미응답', grade.unanswered]] as const) {\n      const item = document.createElement('p'); item.dataset.status = status;\n      const name = document.createElement('span'); name.textContent = label;\n      const number = document.createElement('strong'); number.textContent = `${count}개`;\n      item.append(name, number); outcomes.append(item);\n    }\n",
+          "before": "    get('[data-verdict]').textContent = `${expired ? '60분이 지나 자동 제출했습니다. ' : ''}${isExam() ? (grade.passed ? '합격 기준 충족 · ' : '합격 기준 미달 · ') : ''}정답 ${grade.correct}개 · 오답 ${wrong}개 · 미응답 ${grade.unanswered}개`;\n"
+        },
+        {
+          "at": 10631,
+          "current": "      const detail = document.createElement('section'); detail.dataset.reviewItem = ''; detail.dataset.status = status;\n      const headingId = `fire-review-question-${i + 1}`;\n      detail.setAttribute('aria-labelledby', headingId);\n      const header = document.createElement('div'); header.className = 'fire-review-header';\n      const heading = document.createElement('h4'); heading.id = headingId; heading.textContent = `${i + 1}번 문제`;\n      const badge = document.createElement('span'); badge.className = 'fire-review-status';\n      badge.textContent = status === 'unanswered' ? '미응답' : status === 'correct' ? '정답' : '오답';\n      header.append(heading, badge);\n      const body = document.createElement('p'); body.className = 'fire-review-question'; body.textContent = q.question;\n",
+          "before": "      const detail = document.createElement('details'); detail.dataset.status = status;\n      const summary = document.createElement('summary');\n      summary.textContent = `${i + 1}번 · ${status === 'unanswered' ? '미응답' : status === 'correct' ? '정답' : '오답'} · ${q.question.slice(0, 80)}`;\n      const body = document.createElement('p'); body.textContent = q.question;\n"
+        },
+        {
+          "at": 11718,
+          "current": "        const number = document.createElement('span'); number.className = 'fire-choice-number'; number.textContent = symbols[n];\n        const content = document.createElement('span'); content.className = 'fire-choice-text'; content.textContent = text;\n        option.append(number, content);\n        if (n + 1 === selected || n + 1 === q.answerNumber) {\n          const label = document.createElement('span'); label.className = 'fire-choice-label';\n          label.textContent = `${n + 1 === selected ? '내 선택' : ''}${n + 1 === selected && n + 1 === q.answerNumber ? ' · ' : ''}${n + 1 === q.answerNumber ? '정답' : ''}`;\n          option.append(label);\n        }\n",
+          "before": "        option.textContent = `${text}${n + 1 === selected ? ' [내 선택]' : ''}${n + 1 === q.answerNumber ? ' [정답]' : ''}`;\n"
+        },
+        {
+          "at": 12422,
+          "current": "      const answer = document.createElement('div'); answer.className = 'fire-answer';\n      for (const [label, value, key] of [['내 답안', selected ? `${symbols[selected - 1]} ${q.choices[selected - 1]}` : '미응답', 'selected'], ['정답', answerText(q), 'correct']]) {\n        const row = document.createElement('p'); row.dataset.answer = key;\n        const name = document.createElement('strong'); name.textContent = label;\n        const text = document.createElement('span'); text.textContent = value;\n        row.append(name, text); answer.append(row);\n      }\n      const explanation = document.createElement('div'); explanation.className = 'fire-explanation'; explanation.dataset.explanation = '';\n      const title = document.createElement('h5'); title.textContent = '해설';\n      const text = document.createElement('p'); text.textContent = q.explanation;\n      explanation.append(title, text);\n      detail.append(header, body, options, answer, explanation);\n",
+          "before": "      const selectedText = document.createElement('p'); selectedText.textContent = `선택한 답: ${selected ? `${symbols[selected - 1]} ${q.choices[selected - 1]}` : '미응답'}\\n정답: ${answerText(q)}`;\n      const explanation = document.createElement('p'); explanation.textContent = q.explanation;\n      detail.append(summary, body, options, selectedText, explanation);\n"
+        }
+      ]
+    },
+    "src/pages/fire-safety-manager-level2/practice/index.astro": {
+      "sha256": "fbace3110ccf4f46aec6abcf7cbfcc5d604a4f87be95550d0c8f35a91e648e64",
+      "beforeSHA256": "1f841c8f2ba2ba0cfd3057fbe15a0a398b357b97e450838cb029495a5cc8f0dd",
+      "patches": [
+        {
+          "at": 2079,
+          "current": "  .practice-toolbar span{font-size:14px;font-weight:var(--fw-regular);color:var(--gray-600)}\n  .practice-toolbar button{min-height:44px;font-size:15px;line-height:1.5}\n",
+          "before": "  .practice-toolbar span{font-size:var(--fs-caption);font-weight:var(--fw-regular);color:var(--gray-600)}\n  .practice-toolbar button{min-height:44px}\n"
+        },
+        {
+          "at": 2300,
+          "current": "  .practice-back{display:inline-block;margin-bottom:var(--space-4);font-size:14px;color:var(--primary-700);min-height:44px;padding:var(--space-3) 0}\n",
+          "before": "  .practice-back{display:inline-block;margin-bottom:var(--space-4);font-size:var(--fs-caption);color:var(--primary-700);min-height:44px;padding:var(--space-3) 0}\n"
+        }
+      ]
+    },
+    "dist/fire-safety-manager-level2/practice/index.html": {
+      "sha256": "67260fc09db62687e2324475957434f318cdf1e58174df29e805636d46f6ce5a",
+      "beforeSHA256": "5ceb31e1840b74bf1cd70a1e8b94655e7aed9194e4cfe98d841a8e01c551a79c",
+      "patches": [
+        {
+          "at": 2811,
+          "current": "<link rel=\"stylesheet\" href=\"/_astro/index.BKgHcGyT.css\">",
+          "before": "<link rel=\"stylesheet\" href=\"/_astro/index.BWbtwQHi.css\">"
+        },
+        {
+          "at": 7925,
+          "current": "</div> <div class=\"fire-outcomes\" data-outcomes aria-label=\"문항별 채점 현황\" data-astro-cid-hmlwhorl>",
+          "before": ""
+        },
+        {
+          "at": 1475814,
+          "current": "</div> <script type=\"module\" src=\"/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.B1F-csvN.js\">",
+          "before": "</div> <script type=\"module\" src=\"/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.CkoNoWXs.js\">"
+        }
+      ]
+    }
   }
 }

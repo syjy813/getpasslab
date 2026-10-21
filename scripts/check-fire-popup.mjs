@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {beforePopup} from './read-before-fire-persona-corrections.mjs';
+import {beforePopup,beforeReview} from './read-before-fire-persona-corrections.mjs';
 const release=JSON.parse(await readFile('docs/audits/2026-10-20-fire-persona-corrections/release.json','utf8'));
 const rows=release.popupProjections;
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -12,11 +12,12 @@ assert.deepEqual(sources.sort(),[
   'src/utils/firePracticeClient.ts',
 ].sort());
 for(const [file,row] of Object.entries(rows)){
-  const bytes=await readFile(file);
+  const native=await readFile(file);
+  const bytes=beforeReview(file,native);
   assert.equal(hash(bytes),row.sha256,file+': reviewed current UI');
-  const before=beforePopup(file,bytes);
+  const before=beforePopup(file,native);
   assert.equal(hash(before),row.beforeSHA256,file+': preserved pre-popup bytes');
-  assert.throws(()=>beforePopup(file,Buffer.concat([bytes,Buffer.from('\n')])),file+': arbitrary mutation rejected');
+  assert.throws(()=>beforePopup(file,Buffer.concat([native,Buffer.from('\n')])),file+': arbitrary mutation rejected');
   if(file.startsWith('src/')){
     const old=release.files.find(r=>r.path===file)?.sha256??release.baselineSources[file];
     assert.equal(row.beforeSHA256,old,file+': linked to existing pinned source');

@@ -51,12 +51,14 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="submit"]').click();
       await page.locator('[data-results]').waitFor({state:'visible'});
-      const firstReview=page.locator('[data-review] details').first();
-      await firstReview.locator('summary').click();
+      const firstReview=page.locator('[data-review-item]').first();
+      assert.equal(await page.locator('[data-review] details, [data-review] summary').count(),0);
+      assert.equal(await page.locator('[data-explanation]:visible').count(),await page.locator('[data-review-item]').count());
       assert.equal(await firstReview.getAttribute('data-status'),'correct');
       assert((await firstReview.textContent()).includes(q.explanation));
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
-      await page.screenshot({path:`${output}/chapter-${width}.png`,fullPage:true});
+      await page.screenshot({path:`${output}/chapter-${width}.png`,fullPage:false});
+      await firstReview.screenshot({path:`${output}/chapter-explanation-${width}.png`});
       await page.goto(url,{waitUntil:'networkidle'});
       assert.equal(await page.locator('[data-start]').isDisabled(),false);
       await page.locator('[data-start]').click();
@@ -74,7 +76,7 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       await page.locator('[data-results]').waitFor({state:'visible'});
       assert.match(await page.locator('[data-score]').textContent(),/평균 100점/);
       assert.match(await page.locator('[data-verdict]').textContent(),/합격 기준 충족/);
-      assert.equal(await page.locator('[data-review] details').count(),50);
+      assert.equal(await page.locator('[data-review-item]').count(),50);
       assert.equal(await page.locator('[data-review] a').count(),50);
       assert.equal(await page.locator('[data-retry]').isDisabled(),true);
       await page.screenshot({path:`${output}/mock-result-${width}.png`,fullPage:false});
