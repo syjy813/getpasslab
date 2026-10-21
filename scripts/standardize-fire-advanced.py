@@ -85,8 +85,6 @@ def main():
             new['choices']=[o['text'] for o in options]
             new['explanation']=f"{row['answerNumber']}번이 {'옳은' if positive else '옳지 않은'} 설명이다.\n\n"+'\n'.join(f"{j+1}번: {facts[o['card']]['supported']}." for j,o in enumerate(options))
             evidence={'format':'single-correct' if positive else 'single-incorrect','options':options}
-        href='/fire-safety-manager-level2/written/'+str(Path(chapters[n]['path']).relative_to('src/content/chapters/fire-safety-manager-level2')).removesuffix('.md')+'/'
-        new['explanation']+='\n\n이론 연결: '+href
         assert len(new['choices'])==len(set(new['choices']))==4
         rows.append(new)
         reviews[new['id']]={**evidence,'chapter':chapters[n]['path'],'chapterSHA256':chapters[n]['sha256'], 'answerNumber':new['answerNumber'], 'afterSHA256':digest(compact(new).encode()),'difficultyTarget':'ordinary-practice','humanCalibration':'not-measured'}
