@@ -29,9 +29,21 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
     assert(payload.questions.every(q=>!release.held.includes(q.id)));
     assert.equal(payload.chapters.length,74);
     const findQuestion=async()=>{
-      const text=(await page.locator('[data-question]').textContent()).replace(/^\d+\. /,'');
+      const text=await page.locator('[data-question]').evaluate(e=>[...e.querySelectorAll(':scope > [data-stem-order]')].sort((a,b)=>Number(a.dataset.stemOrder)-Number(b.dataset.stemOrder)).map(part=>{const copy=part.cloneNode(true);copy.querySelector('[data-question-number]')?.remove();return copy.textContent;}).join(''));
       const choices=(await page.locator('[data-choices] label span').allTextContents()).map(s=>s.replace(/^[①②③④] /,''));
-      const matches=expected.filter(q=>q.question===text&&JSON.stringify(q.choices)===JSON.stringify(choices));
+      const questionId=await page.locator('[data-question]').getAttribute('data-question-id');
+      const matches=expected.filter(q=>q.id===questionId&&q.question===text&&JSON.stringify(q.choices)===JSON.stringify(choices));
+      assert(matches.length>0,'visible source fragments match the approved bank');
+      assert.equal(await page.locator('[data-core-badge]').count(),matches[0].isCore?1:0,'only original core questions receive the likelihood badge');
+      if(matches[0].isCore)assert.equal(await page.locator('[data-core-badge]').textContent(),'출제 유력');
+      if(text.startsWith('[')&&text.trim().endsWith('?')){
+        const flow=await page.locator('[data-question] > [data-stem-order]').evaluateAll(parts=>parts.map(p=>({kind:p.className,text:p.textContent})));
+        const prompt=flow.findLastIndex(p=>p.kind==='fire-stem-title'&&p.text.trim().endsWith('?'));
+        const condition=flow.findIndex(p=>p.kind==='fire-stem-condition');
+        assert(prompt>=0&&prompt<condition,'complete question precedes conditions in production');
+      }
+
+
       assert(matches.length>0,'visible question and all choices match approved content');
       assert.equal(new Set(matches.map(q=>q.answerNumber)).size,1,'duplicate display has consistent key');
       return matches[0];
@@ -52,10 +64,15 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       assert.equal(await page.locator('[data-choices] input').first().evaluate(e=>getComputedStyle(e).clipPath),'inset(50%)');
       const q=await findQuestion();
       await page.locator(`input[value="${q.answerNumber}"]`).locator('..').click();
+      const answerText=page.locator('[data-navigation] button[data-answered="true"] span').first();
+      assert.equal(await answerText.evaluate(e=>parseFloat(getComputedStyle(e).fontSize)),20);
+      assert(await answerText.evaluate(e=>Number(getComputedStyle(e).fontWeight)>=600));
+
       assert.equal(await page.locator('[data-feedback]').count(),0,'answers hidden before submission');
       await page.locator('[data-submit]').click();
       await page.locator('[data-confirm] button[value="submit"]').click();
       await page.locator('[data-results]').waitFor({state:'visible'});
+      assert.equal(await page.locator('[data-restart]').isVisible(),false);
       const firstReview=page.locator('[data-review-item]').first();
       assert.equal(await page.locator('[data-review] details, [data-review] summary').count(),0);
       assert.equal(await page.locator('[data-explanation]:visible').count(),await page.locator('[data-review-item]').count());
@@ -63,6 +80,15 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       assert.equal(await page.locator('[data-review] .fire-answer, [data-review] [data-answer]').count(),0);
       assert.equal(await firstReview.locator('.fire-choice-label').textContent(),'내 선택 · 정답');
       assert((await firstReview.textContent()).includes(q.explanation));
+      await page.locator('[data-retry]').click();
+      assert.equal(await page.locator('[data-results]').isVisible(),true);
+      assert.equal(await page.locator('[data-session]').isVisible(),false);
+      assert.equal(await page.locator('[data-confirm] [value="submit"]').textContent(),'확인');
+      await page.locator('[data-confirm]').screenshot({path:`${output}/retry-confirm-${width}.png`});
+      await page.locator('[data-confirm] [value="cancel"]').click();
+      await page.waitForFunction(()=>!document.querySelector('[data-confirm]').open);
+      assert.equal(await page.locator('[data-results]').isVisible(),true);
+
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
       await page.screenshot({path:`${output}/chapter-${width}.png`,fullPage:false});
       await firstReview.screenshot({path:`${output}/chapter-explanation-${width}.png`});
@@ -86,6 +112,7 @@ const report={base,published:expected.length,subjects:[1421,907],held:release.he
       assert.equal(await page.locator('[data-review-item]').count(),50);
       assert.equal(await page.locator('[data-review] a').count(),50);
       assert.equal(await page.locator('[data-retry]').isDisabled(),true);
+      assert.equal(await page.locator('[data-restart]').isVisible(),true);
       await page.screenshot({path:`${output}/mock-result-${width}.png`,fullPage:false});
       report.cases.push({width,actualChapterAnswerAndExplanation:'PASS',actualMock50:'PASS',subject25Each:'PASS',score100:'PASS',overflow:false});
     }

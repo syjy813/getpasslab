@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {beforeReview,beforePracticePolish} from './read-before-fire-persona-corrections.mjs';
+import {beforeReview,beforePracticePolish,beforeQuestionFlow} from './read-before-fire-persona-corrections.mjs';
 const release=JSON.parse(await readFile('docs/audits/2026-10-20-fire-persona-corrections/release.json','utf8'));
 const rows=release.reviewProjections;
 const hash=b=>createHash('sha256').update(b).digest('hex');
@@ -24,9 +24,20 @@ const polish=release.practicePolishProjections;
 assert.deepEqual(Object.keys(polish).sort(),Object.keys(rows).sort(),'polish touches only the same 3 UI sources and practice HTML');
 for(const [file,row] of Object.entries(polish)){
   const native=await readFile(file);
-  assert.equal(hash(native),row.sha256,file+': current practice polish bytes');
+  assert.equal(hash(beforeQuestionFlow(file,native)),row.sha256,file+': preserved practice polish bytes');
   assert.equal(row.beforeSHA256,rows[file].sha256,file+': deployed readability baseline unchanged');
   assert.equal(hash(beforePracticePolish(file,native)),row.beforeSHA256);
   assert.throws(()=>beforePracticePolish(file,Buffer.concat([native,Buffer.from('\n')])));
 }
 console.log('[Fire practice polish] 3 UI sources and practice HTML; exact inverse and mutation rejection PASS');
+
+const questionFlow=release.questionFlowProjections;
+assert.deepEqual(Object.keys(questionFlow).sort(),['src/components/FirePracticeRunner.astro','src/utils/firePracticeClient.ts','dist/fire-safety-manager-level2/practice/index.html'].sort());
+for(const [file,row] of Object.entries(questionFlow)){
+  const native=await readFile(file);
+  assert.equal(hash(native),row.sha256,file+': exact question flow release');
+  assert.equal(row.beforeSHA256,polish[file].sha256,file+': deployed polish baseline unchanged');
+  assert.equal(hash(beforeQuestionFlow(file,native)),row.beforeSHA256);
+  assert.throws(()=>beforeQuestionFlow(file,Buffer.concat([native,Buffer.from('\n')])));
+}
+console.log('[Fire question flow] runner, question presentation and practice HTML only; exact inverse and mutation rejection PASS');
