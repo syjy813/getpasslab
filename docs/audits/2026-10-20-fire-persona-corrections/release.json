@@ -3484,7 +3484,7 @@
   },
   "practicePolishProjections": {
     "src/components/FirePracticeRunner.astro": {
-      "sha256": "02eae2a83b8c9a6b9b704bd1d79cbf0d1d06156ef06aa4b160479a4a319b783b",
+      "sha256": "227a01a61beeda7a903601627dd728b5b849092fa7227a627cff912f3528e5e1",
       "beforeSHA256": "2e7a4a6c4a38ec4f0d01bec7d9022f0b8e06253288f208fdc7f3735157dc204a",
       "patches": [
         {
@@ -3509,7 +3509,7 @@
         },
         {
           "at": 5424,
-          "current": "  .fire-question{font-size:18px;font-weight:var(--fw-semibold);line-height:1.7;white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}\n  .fire-runner :global(.fire-stem-title){font:inherit;color:var(--gray-900);white-space:pre-wrap;margin:0}\n  .fire-runner :global(.fire-stem-condition){font-size:16px;font-weight:var(--fw-regular);line-height:1.8;color:var(--gray-900);white-space:pre-wrap;margin:0}\n  .fire-runner :global(.fire-stem-reference){font-size:14px;font-weight:var(--fw-regular);line-height:1.8;color:var(--gray-700);white-space:pre-wrap;margin:0;padding-left:1.3em;position:relative}\n  .fire-runner :global(.fire-stem-reference[data-marker=\"true\"]::before){content:'※';position:absolute;left:0}\n",
+          "current": "  .fire-question{font-size:18px;font-weight:var(--fw-semibold);line-height:1.7;white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}\n  .fire-runner :global(.fire-stem-title){font:inherit;color:var(--gray-900);white-space:pre-wrap;margin:0}\n  .fire-runner :global(.fire-stem-condition){font-size:16px;font-weight:var(--fw-regular);line-height:1.8;color:var(--gray-900);white-space:pre-wrap;margin:0}\n  .fire-runner :global(.fire-stem-reference){font-size:14px;font-weight:var(--fw-regular);line-height:1.8;color:var(--gray-800);white-space:pre-wrap;margin:0;padding-left:1.3em;position:relative}\n  .fire-runner :global(.fire-stem-reference[data-marker=\"true\"]::before){content:'※';position:absolute;left:0}\n",
           "before": "  .fire-question{font-size:20px;font-weight:var(--fw-semibold);line-height:1.7;white-space:pre-wrap;margin:var(--space-3) 0 var(--space-6);color:var(--gray-900)}\n"
         },
         {
@@ -3535,51 +3535,51 @@
       ]
     },
     "src/utils/firePracticeClient.ts": {
-      "sha256": "dfa754c662b7dbe9b0ba1d754831ef70ea9c2a88c79700b21894a4b8315979f0",
+      "sha256": "878bb73b92ee25bb98ba8270642b5f8fc89411da5fb23ad85b6f28c8bb3a191c",
       "beforeSHA256": "85a54511da9df369ac472556618687eb6f9574b40a1d7c08e4c8420e192ec5b4",
       "patches": [
         {
           "at": 492,
-          "current": "\n// Presentation only: keep every character and its order from the approved bank.\n// References need an explicit marker/prefix; a final paragraph is not enough.\nfunction renderQuestion(target: HTMLElement, text: string, prefix = '', live = false) {\n  const groups: { kind: 'title' | 'condition' | 'reference'; text: string }[] = [];\n  let body = false, reference = false;\n  const structured = /^(?:[•●▪■◆·▶※]|[ㄱ-ㅎ가-하][.)]|[㉠-㉻①-⑳]|(?:용도|규모|높이|층수|연면적|설치된 소방시설|조건|사례)\\s*[:：])/;\n  for (const line of text.match(/[^\\n]*\\n|[^\\n]+$/g) || ['']) {\n    const value = line.trim();\n    if (!value) { if (groups.length) groups[groups.length - 1].text += line; body = true; reference = false; continue; }\n    const explicitReference = /^(?:※|참고(?:사항)?\\s*[:：]|이 건물은\\s)/.test(value);\n    if (explicitReference) reference = true;\n    else if (structured.test(value) || /[?？]$/.test(value)) reference = false;\n    let kind: 'title' | 'condition' | 'reference';\n    if (reference) kind = 'reference';\n    else if (structured.test(value) || /^\\[[^\\]]+\\]$/.test(value)) { kind = 'condition'; body = true; }\n    else kind = !body || /[?？]$/.test(value) ? 'title' : 'condition';\n    const last = groups[groups.length - 1];\n    if (last?.kind === kind) last.text += line;\n    else groups.push({ kind, text: line });\n    if (kind === 'title' && /[?？]$/.test(value)) body = true;\n  }\n  target.replaceChildren();\n  groups.forEach((group, i) => {\n    const part = document.createElement(live && group.kind === 'title' ? 'h2' : 'p');\n    part.className = `fire-stem-${group.kind}`;\n    part.textContent = (i === 0 ? prefix : '') + group.text;\n    if (group.kind === 'reference') {\n      part.setAttribute('role', 'note');\n      part.dataset.marker = String(!group.text.trimStart().startsWith('※'));\n    }\n    target.append(part);\n  });\n}\n",
+          "current": "\n// Presentation only: keep every character and its order from the approved bank.\n// References need an explicit marker/prefix; a final paragraph is not enough.\nfunction renderQuestion(target: HTMLElement, text: string, prefix = '', live = false) {\n  const groups: { kind: 'title' | 'condition' | 'reference'; text: string }[] = [];\n  let body = false, reference = false;\n  const structured = /^(?:[•●▪■◆·▶※]|[ㄱ-ㅎ가-하][.)]|[㉠-㉻①-⑳]|(?:용도|규모|높이|층수|연면적|설치된 소방시설|조건|사례)\\s*[:：])/;\n  for (const line of text.match(/[^\\n]*\\n|[^\\n]+$/g) || ['']) {\n    const value = line.trim();\n    if (!value) { if (groups.length) groups[groups.length - 1].text += line; body = true; reference = false; continue; }\n    const explicitReference = /^(?:※|참고(?:사항)?\\s*[:：]|이 건물은\\s)/.test(value);\n    if (explicitReference) reference = true;\n    else if (structured.test(value) || /[?？]$/.test(value)) reference = false;\n    let kind: 'title' | 'condition' | 'reference';\n    if (reference) kind = 'reference';\n    else if (/^\\[[^\\]]+\\]$/.test(value)) { kind = 'title'; body = true; }\n    else if (structured.test(value)) { kind = 'condition'; body = true; }\n    else kind = !body || /[?？]$/.test(value) ? 'title' : 'condition';\n    const last = groups[groups.length - 1];\n    if (last?.kind === kind) last.text += line;\n    else groups.push({ kind, text: line });\n    if (kind === 'title' && /[?？]$/.test(value)) body = true;\n  }\n  target.replaceChildren();\n  groups.forEach((group, i) => {\n    const part = document.createElement(live && group.kind === 'title' ? 'h2' : 'p');\n    part.className = `fire-stem-${group.kind}`;\n    part.textContent = (i === 0 ? prefix : '') + group.text;\n    if (group.kind === 'reference') {\n      part.setAttribute('role', 'note');\n      part.dataset.marker = String(!group.text.trimStart().startsWith('※'));\n    }\n    target.append(part);\n  });\n}\n",
           "before": ""
         },
         {
-          "at": 4838,
+          "at": 4882,
           "current": "    const guide = get('[data-guide]');\n    guide.replaceChildren();\n    ['모든 문제를 푼 뒤 한 번에 채점합니다.', '제출 전에는 자유롭게 이동하고 답을 바꿀 수 있습니다.', '시간 제한은 없습니다.'].forEach((sentence, i) => {\n      if (i) guide.append(document.createElement('br'));\n      guide.append(document.createTextNode(sentence));\n    });\n",
           "before": "    get('[data-guide]').textContent = '모든 문제를 푼 뒤 한 번에 채점합니다. 제출 전에는 자유롭게 이동하고 답을 바꿀 수 있습니다. 시간 제한은 없습니다.';\n"
         },
         {
-          "at": 5170,
+          "at": 5214,
           "current": "",
           "before": "    const back = document.querySelector<HTMLAnchorElement>('[data-chapter-back]');\n    if (back) { back.href = chapter.href; back.textContent = '← ' + chapter.title; }\n"
         },
         {
-          "at": 6820,
+          "at": 6864,
           "current": "",
           "before": "  function answerText(q: FirePracticeQuestion): string {\n    return `${symbols[q.answerNumber - 1]} ${q.choices[q.answerNumber - 1]}`;\n  }\n"
         },
         {
-          "at": 7123,
+          "at": 7167,
           "current": "    renderQuestion(get('[data-question]'), q.question, `${index + 1}. `, true);\n",
           "before": "    get('[data-question]').textContent = `${index + 1}. ${q.question}`;\n"
         },
         {
-          "at": 12996,
+          "at": 13040,
           "current": "      const body = document.createElement('div'); body.className = 'fire-review-question'; renderQuestion(body, q.question);\n",
           "before": "      const body = document.createElement('p'); body.className = 'fire-review-question'; body.textContent = q.question;\n"
         },
         {
-          "at": 14126,
+          "at": 14170,
           "current": "",
           "before": "      const answer = document.createElement('div'); answer.className = 'fire-answer';\n      for (const [label, value, key] of [['내 답안', selected ? `${symbols[selected - 1]} ${q.choices[selected - 1]}` : '미응답', 'selected'], ['정답', answerText(q), 'correct']]) {\n        const row = document.createElement('p'); row.dataset.answer = key;\n        const name = document.createElement('strong'); name.textContent = label;\n        const text = document.createElement('span'); text.textContent = value;\n        row.append(name, text); answer.append(row);\n      }\n"
         },
         {
-          "at": 14462,
+          "at": 14506,
           "current": "      detail.append(header, body, options, explanation);\n",
           "before": "      detail.append(header, body, options, answer, explanation);\n"
         },
         {
-          "at": 15566,
+          "at": 15610,
           "current": "",
           "before": "  get('[data-clear]').addEventListener('click', () => { if (!expire()) { answers.delete(questions[index].id); render(); } });\n"
         }
@@ -3602,12 +3602,12 @@
       ]
     },
     "dist/fire-safety-manager-level2/practice/index.html": {
-      "sha256": "9447ce6ef792737a5ee7811997c1b71ef965675a994811f586a6655195ece16f",
+      "sha256": "93dd4447749d8b197e1b22268dc8f2cd4845940d777accff9715130124620b91",
       "beforeSHA256": "67260fc09db62687e2324475957434f318cdf1e58174df29e805636d46f6ce5a",
       "patches": [
         {
           "at": 2811,
-          "current": "<link rel=\"stylesheet\" href=\"/_astro/index.BkEnM_Y2.css\">",
+          "current": "<link rel=\"stylesheet\" href=\"/_astro/index.CDgopRBn.css\">",
           "before": "<link rel=\"stylesheet\" href=\"/_astro/index.BKgHcGyT.css\">"
         },
         {
@@ -3632,7 +3632,7 @@
         },
         {
           "at": 1475625,
-          "current": "</div> <script type=\"module\" src=\"/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.Dq3bkvo9.js\">",
+          "current": "</div> <script type=\"module\" src=\"/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.ChyMmf3N.js\">",
           "before": "</div> <script type=\"module\" src=\"/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.B1F-csvN.js\">"
         }
       ]

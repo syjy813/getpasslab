@@ -21,7 +21,8 @@ function renderQuestion(target: HTMLElement, text: string, prefix = '', live = f
     else if (structured.test(value) || /[?？]$/.test(value)) reference = false;
     let kind: 'title' | 'condition' | 'reference';
     if (reference) kind = 'reference';
-    else if (structured.test(value) || /^\[[^\]]+\]$/.test(value)) { kind = 'condition'; body = true; }
+    else if (/^\[[^\]]+\]$/.test(value)) { kind = 'title'; body = true; }
+    else if (structured.test(value)) { kind = 'condition'; body = true; }
     else kind = !body || /[?？]$/.test(value) ? 'title' : 'condition';
     const last = groups[groups.length - 1];
     if (last?.kind === kind) last.text += line;
