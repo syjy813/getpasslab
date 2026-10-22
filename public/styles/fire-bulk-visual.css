@@ -55,3 +55,8 @@ article:has(>.fire-grade-lesson)>h2:has(+.related-list){margin:var(--grade-secti
 article:has(>.fire-grade-lesson)>h2:has(+.related-list)::after{content:'';position:absolute;left:0;right:0;top:calc(0px - var(--grade-section-half-gap));height:1px;background:var(--gray-200)}
 article:has(>.fire-grade-lesson)>.related-list{margin:0}
 @media(max-width:767px){article:has(>.fire-grade-lesson){--grade-section-gap:32px;--grade-section-half-gap:16px}}
+
+/* FSM2-001 editorial pass: separate shared prerequisites from alternatives. */
+article .fire-grade-lesson tbody th{vertical-align:top;white-space:nowrap;background:var(--white);font-weight:var(--fw-semibold)}
+article .fire-grade-lesson td{vertical-align:top}
+article .fire-grade-lesson .fire-grade-prerequisite{display:table;margin:0 0 8px;padding:3px 8px;border-radius:4px;background:var(--gray-100);color:var(--gray-800);font-size:13px;line-height:1.5;font-weight:var(--fw-semibold)}

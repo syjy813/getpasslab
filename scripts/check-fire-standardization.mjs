@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {hash,revision,standardReview,previousRows,beforeStandardization,beforeStandardizedTable,beforeStandardizedPractice} from './fire-mock-authoring/standardization.mjs';
 import {getPublishedFireQuestions} from '../src/utils/firePractice.ts';
-import {beforeGradeTableFormatting,beforeGradeHierarchy} from './read-before-fire-persona-corrections.mjs';
+import {beforeGradeTableFormatting,beforeGradeHierarchy,beforeGradeCopyEdit} from './read-before-fire-persona-corrections.mjs';
 const release='docs/releases/2026-10-21-fire-standard-questions/';
 const tableBytes=fs.readFileSync('docs/drafts/fire-level2-mock-exam/question-table.json');
 const table=JSON.parse(tableBytes);
@@ -18,7 +18,8 @@ const direct=sourcePool.filter(q=>q.chapterId==='FSM2-001');assert.equal(direct.
 const approved=direct.filter(q=>q.reviewStatus==='approved');assert.equal(approved.length,4);
 assert.deepEqual(gradeAudit.usedSources,approved.map(q=>Object.fromEntries(['id','sourceSet','sourcePDFPage','question','choices','answerNumber','reviewStatus'].map(k=>[k,q[k]]))));
 assert.deepEqual(gradeAudit.excludedSources.map(q=>q.id),direct.filter(q=>q.reviewStatus!=='approved').map(q=>q.id));
-const gradeChapter=fs.readFileSync(gradeAudit.chapter,'utf8');
+const currentGradeChapter=fs.readFileSync(gradeAudit.chapter,'utf8');
+const gradeChapter=beforeGradeCopyEdit(gradeAudit.chapter,Buffer.from(currentGradeChapter)).toString('utf8');
 assert(!gradeChapter.includes('조건에 붙는 단서'));
 assert.equal(gradeAudit.points.length,5);
 for(const point of gradeAudit.points){
@@ -26,6 +27,31 @@ for(const point of gradeAudit.points){
  assert(point.sourceIds.length>0&&point.sourceIds.every(id=>approved.some(q=>q.id===id)),'only approved original reconstruction sources');
 }
 for(const [file,entry]of Object.entries(gradeFiles))assert.equal(hash(beforeGradeHierarchy(file,fs.readFileSync(file))),entry.sha256,file+': original reviewed grade content with exact layout inverse');
+
+// Independently verify the native copy-edited chapter and its original-source
+// map; only archived reviews read the exact restored five-point edition.
+const copyAudit=JSON.parse(fs.readFileSync('docs/audits/2026-10-22-fire-grade-copy-edit/source-review.json','utf8'));
+const copyFiles=JSON.parse(fs.readFileSync('docs/audits/2026-10-22-fire-grade-copy-edit/native-files.json','utf8'));
+assert.equal(hash(tableBytes),copyAudit.questionTableSHA256);
+assert.equal(copyAudit.sourcePoolCount,500);
+assert.deepEqual(copyAudit.usedSourceIds,approved.map(q=>q.id));
+assert.deepEqual(copyAudit.excludedSourceIds,gradeAudit.excludedSources.map(q=>q.id));
+assert.equal(copyAudit.points.length,3);
+const used=new Set();
+for(const point of copyAudit.points){
+ const html='<li><strong>'+point.title+'</strong>'+point.paragraphs.map(p=>'<p>'+p+'</p>').join('')+'</li>';
+ assert(currentGradeChapter.includes(html),'native reviewed point '+point.title);
+ assert(point.sourceIds.length>0);
+ for(const id of point.sourceIds){assert(approved.some(q=>q.id===id),'approved original source');used.add(id);}
+}
+assert.deepEqual([...used].sort(),approved.map(q=>q.id).sort(),'all four approved source questions remain covered');
+assert.deepEqual(copyAudit.tableRows.map(r=>r.conditions.length),[3,4,5,2]);
+for(const row of copyAudit.tableRows){
+ const html='<tr><th scope="row">'+row.grade+'</th><td>'+(row.prerequisite?'<p class="fire-grade-prerequisite">'+row.prerequisite+'</p>':'')+'<ul class="fire-grade-conditions">'+row.conditions.map(c=>'<li>'+c+'</li>').join('')+'</ul></td></tr>';
+ assert(currentGradeChapter.includes(html),'native reviewed grade row '+row.grade);
+}
+assert(!/비아파트|지상층만 셈|면적과 별도 대상을 함께 확인/.test(currentGradeChapter));
+for(const [file,row]of Object.entries(copyFiles))assert.equal(hash(fs.readFileSync(file)),row.sha256,file+': reviewed native editorial bytes');
 
 const assertions=JSON.parse(fs.readFileSync(release+'assertions.json','utf8'));
 const revised=table.filter(q=>previousRows[q.id]);

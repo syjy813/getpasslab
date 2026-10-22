@@ -28,11 +28,20 @@ try{
  }
  if(row.chapterId==='FSM2-001'){
  const table=page.locator('.sample-table-scroll').first();
- assert.equal(await page.locator('link[href="/styles/fire-bulk-visual.css?v=fire-grade-footer-20261022"]').count(),1,'versioned grade stylesheet');
- assert.deepEqual(await table.locator('.fire-grade-conditions').evaluateAll(es=>es.map(e=>e.children.length)),[3,4,4,2]);
+ assert.equal(await page.locator('link[href="/styles/fire-bulk-visual.css?v=fire-grade-copy-20261022"]').count(),1,'versioned grade stylesheet');
+ assert.deepEqual(await table.locator('.fire-grade-conditions').evaluateAll(es=>es.map(e=>e.children.length)),[3,4,5,2]);
  assert.equal(await page.getByRole('heading',{name:'조건에 붙는 단서',exact:true}).count(),0);
  assert.equal(await page.getByRole('heading',{name:'시험 포인트',exact:true}).count(),1);
- const points=page.locator('.fire-grade-exam-points');assert.equal(await points.locator('li').count(),5);
+ const points=page.locator('.fire-grade-exam-points');assert.equal(await points.locator('li').count(),3);
+ assert.equal(await table.locator('p.fire-grade-prerequisite').count(),3);
+ assert.deepEqual(await table.locator('tbody th[scope="row"]').allTextContents(),['특급','1급','2급','3급']);
+ assert.deepEqual(await points.locator('li>strong').allTextContents(),['지하층 포함 여부','설비별 등급이 겹치는 경우','가연성 가스 저장·취급량']);
+ const nativeText=await page.locator('article').innerText();assert(!/비아파트|지상층만 셈|면적과 별도 대상을 함께 확인/.test(nativeText));
+ if(width<768)for(let i=0;i<4;i++){
+   const gradeRow=table.locator('tbody tr').nth(i);
+   await gradeRow.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));
+   await gradeRow.screenshot({path:`${dir}/${row.chapterId}-grade-row-${i}-${width}.png`});
+ }
  const marker=await table.locator('li').first().evaluate(e=>({text:parseFloat(getComputedStyle(e).fontSize),marker:parseFloat(getComputedStyle(e,'::marker').fontSize)}));
  assert(marker.marker<marker.text,'small condition bullet');
  hierarchy=await page.locator('.fire-grade-lesson').evaluate(root=>{
