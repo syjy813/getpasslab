@@ -37,6 +37,8 @@ assert.equal(copyAudit.sourcePoolCount,500);
 assert.deepEqual(copyAudit.usedSourceIds,approved.map(q=>q.id));
 assert.deepEqual(copyAudit.excludedSourceIds,gradeAudit.excludedSources.map(q=>q.id));
 assert.equal(copyAudit.points.length,3);
+assert.equal(copyAudit.tableRule,'하나 이상 해당');
+assert(currentGradeChapter.includes('주요 판정 기준('+copyAudit.tableRule+')'));
 const used=new Set();
 for(const point of copyAudit.points){
  const html='<li><strong>'+point.title+'</strong>'+point.paragraphs.map(p=>'<p>'+p+'</p>').join('')+'</li>';
