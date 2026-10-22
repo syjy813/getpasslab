@@ -1,0 +1,10 @@
+{
+  "articleTextUnchanged": true,
+  "existingHeadingAnchorsUnchanged": true,
+  "changedHtml": [
+    "dist/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/index.html"
+  ],
+  "otherHtmlUnchanged": 546,
+  "questionTableSHA256": "d424ac984eb8066fbdc257b54eec8455b462f03465b014cedc12d0a49ebe072e",
+  "baselineCommit": "269e0d61a268edc9cb53d9fee538ee9d7d46e636"
+}

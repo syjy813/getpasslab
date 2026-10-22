@@ -1,0 +1,18 @@
+{
+  "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md": {
+    "sha256": "99fc973c7845f85b91d6311226398f5d94af2eb446d2f5db7a4fef180d6d068a",
+    "beforeSHA256": "720281f8ffb60da5808abf2ac94fd17045f26f711e340363289ebc4a4affa2e4"
+  },
+  "public/styles/fire-bulk-visual.css": {
+    "sha256": "9bae3240da1af7de0c9007e235fef1f0c4ca96b7f28428a4e6c18839c9564cc3",
+    "beforeSHA256": "23756959cc8aaf174348482f97a06500e251fd98bbcd2219deb408e793745769"
+  },
+  "dist/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/index.html": {
+    "sha256": "f58427f64f96cf46d1876603dba8a1eb965025782e650aa0eb7571892cb3ab3a",
+    "beforeSHA256": "dad443251af3a2a6eef04d81e0aa5a115961a745907dd1b3e5df88b224ab66fb"
+  },
+  "dist/styles/fire-bulk-visual.css": {
+    "sha256": "9bae3240da1af7de0c9007e235fef1f0c4ca96b7f28428a4e6c18839c9564cc3",
+    "beforeSHA256": "23756959cc8aaf174348482f97a06500e251fd98bbcd2219deb408e793745769"
+  }
+}

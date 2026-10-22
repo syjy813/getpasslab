@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {hash,revision,standardReview,previousRows,beforeStandardization,beforeStandardizedTable,beforeStandardizedPractice} from './fire-mock-authoring/standardization.mjs';
 import {getPublishedFireQuestions} from '../src/utils/firePractice.ts';
-import {beforeGradeTableFormatting} from './read-before-fire-persona-corrections.mjs';
+import {beforeGradeTableFormatting,beforeGradeHierarchy} from './read-before-fire-persona-corrections.mjs';
 const release='docs/releases/2026-10-21-fire-standard-questions/';
 const tableBytes=fs.readFileSync('docs/drafts/fire-level2-mock-exam/question-table.json');
 const table=JSON.parse(tableBytes);
@@ -25,7 +25,7 @@ for(const point of gradeAudit.points){
  assert(gradeChapter.includes('<strong>'+point.title+'</strong><p>'+point.text+'</p>'));
  assert(point.sourceIds.length>0&&point.sourceIds.every(id=>approved.some(q=>q.id===id)),'only approved original reconstruction sources');
 }
-for(const [file,entry]of Object.entries(gradeFiles))assert.equal(hash(fs.readFileSync(file)),entry.sha256,file+': reviewed native grade content');
+for(const [file,entry]of Object.entries(gradeFiles))assert.equal(hash(beforeGradeHierarchy(file,fs.readFileSync(file))),entry.sha256,file+': original reviewed grade content with exact layout inverse');
 
 const assertions=JSON.parse(fs.readFileSync(release+'assertions.json','utf8'));
 const revised=table.filter(q=>previousRows[q.id]);
