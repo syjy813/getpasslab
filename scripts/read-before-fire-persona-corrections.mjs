@@ -40,7 +40,28 @@ const gradeCopyEditFiles = {
     "before": ""
   }
 };
+// Restore only the exact user-approved shared reading stylesheet/reference delta.
+// Native all-chapter checks independently protect current sources and articles.
+const hierarchyEdits=JSON.parse(await nativeRead('docs/audits/2026-10-22-all-chapter-hierarchy/review.json','utf8')).changes;
+export function beforeChapterHierarchy(file,bytes){
+  const row=hierarchyEdits[path.normalize(String(file))];
+  if(!row||hash(bytes)===row.beforeSHA256)return bytes;
+  assert.equal(hash(bytes),row.sha256,String(file)+': exact shared hierarchy bytes');
+  let source=bytes.toString('utf8');
+  if(row.at!==undefined){
+    assert.equal(source.slice(row.at),row.current);
+    source=source.slice(0,row.at)+row.before;
+  }else{
+    assert.equal(source.split(row.current).length,2,String(file)+': one stylesheet reference');
+    source=source.replace(row.current,row.before);
+  }
+  const original=Buffer.from(source);
+  assert.equal(hash(original),row.beforeSHA256,String(file)+': exact pre-hierarchy bytes');
+  return original;
+}
+
 export function beforeGradeCopyEdit(file,bytes){
+  bytes=beforeChapterHierarchy(file,bytes);
  const row=gradeCopyEditFiles[path.normalize(String(file))];
  if(!row)return bytes;
  assert.equal(hash(bytes),row.sha256,String(file)+': exact approved grade copy edit');
