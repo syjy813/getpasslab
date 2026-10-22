@@ -15,3 +15,16 @@ article .fire-bulk-zoom-scroll img{display:block;width:640px;min-width:640px;max
 .sample-table-scroll:focus-visible{outline:2px solid var(--primary-500);outline-offset:2px}
 
 @media(max-width:767px){.breadcrumb{position:relative}.breadcrumb .subject-switcher{position:static}.breadcrumb .subject-switcher-menu{left:0;right:0;top:calc(100% + 8px);transform:none;width:auto;min-width:0;max-width:none}}
+
+article ul.fire-grade-conditions{margin:0;padding-left:1em;list-style-type:disc}
+article ul.fire-grade-conditions>li{padding-left:.1em;margin:0;font-size:inherit;color:inherit}
+article ul.fire-grade-conditions>li+li{margin-top:.4em}
+article ul.fire-grade-conditions>li::marker{font-size:.65em;color:var(--gray-600)}
+article .fire-grade-scope-note{font-size:var(--fs-caption);color:var(--gray-700);line-height:1.7}
+article .fire-grade-exam-points{padding:18px 20px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--gray-50)}
+article .fire-grade-exam-points ul{margin:0;padding-left:1em;list-style-type:disc}
+article .fire-grade-exam-points li{margin:0;padding-left:.15em}
+article .fire-grade-exam-points li+li{margin-top:16px;padding-top:16px;border-top:1px solid var(--gray-200)}
+article .fire-grade-exam-points li::marker{font-size:.65em;color:var(--gray-600)}
+article .fire-grade-exam-points strong{color:var(--gray-900)}
+article .fire-grade-exam-points p{margin:6px 0 0;color:var(--gray-700);line-height:1.75}

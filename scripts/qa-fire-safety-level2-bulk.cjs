@@ -26,7 +26,19 @@ try{
  const close=(Number(row.chapterId.slice(-3))+i)%3===0?'button':(Number(row.chapterId.slice(-3))+i)%3===1?'escape':'backdrop';if(close==='button')await page.locator('[data-fire-close]').click();else if(close==='escape')await page.keyboard.press('Escape');else await page.mouse.click(1,1);
  await page.waitForFunction(b=>!document.getElementById('fire-bulk-image-dialog').open&&Math.abs(scrollY-b.y)<=1,before);assert.equal(await button.evaluate(e=>e===document.activeElement),true);assert.equal(await page.evaluate(()=>document.body.getAttribute('style')||''),before.style);images.push({...detail,close,restore:'PASS'});
  }
- if(row.chapterId==='FSM2-001')await page.locator('.sample-table-scroll').first().screenshot({path:`${dir}/${row.chapterId}-table-${width}.png`});
+ if(row.chapterId==='FSM2-001'){
+ const table=page.locator('.sample-table-scroll').first();
+ assert.deepEqual(await table.locator('.fire-grade-conditions').evaluateAll(es=>es.map(e=>e.children.length)),[3,4,4,2]);
+ assert.equal(await page.getByRole('heading',{name:'조건에 붙는 단서',exact:true}).count(),0);
+ assert.equal(await page.getByRole('heading',{name:'시험 포인트',exact:true}).count(),1);
+ const points=page.locator('.fire-grade-exam-points');assert.equal(await points.locator('li').count(),5);
+ const marker=await table.locator('li').first().evaluate(e=>({text:parseFloat(getComputedStyle(e).fontSize),marker:parseFloat(getComputedStyle(e,'::marker').fontSize)}));
+ assert(marker.marker<marker.text,'small condition bullet');
+ for(const [target,label]of [[table,'table'],[points,'exam-points']]){
+   await target.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));
+   await target.screenshot({path:`${dir}/${row.chapterId}-${label}-${width}.png`});
+ }
+ }
  if([13,34,35,36,43,44,45,60].includes(Number(row.chapterId.slice(-3)))){await page.evaluate(()=>scrollTo(0,0));await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(resolve)));await page.screenshot({path:`${dir}/${row.chapterId}-${width}.png`,fullPage:true});}
  report.cases.push({chapterId:row.chapterId,width,route:row.route,status:response.status(),overflow:false,images});
  }
