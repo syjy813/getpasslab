@@ -72,9 +72,9 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       });
     };
     const noteQuestion=payload.questions.find(q=>q.id==='moducbt-27777-q01');
-    const advancedQuestion=payload.questions.find(q=>q.id==='FSM2-MOCK-053-16');
+    const standardQuestion=payload.questions.find(q=>q.id==='FSM2-MOCK-053-16');
     const inlineQuestion=payload.questions.find(q=>q.id==='FSM2-CORE-056');
-    const typographyQuestions=[noteQuestion,advancedQuestion,inlineQuestion].map(q=>({...q,chapterId:chapterOne.id,subjectId:1}));
+    const typographyQuestions=[noteQuestion,standardQuestion,inlineQuestion].map(q=>({...q,chapterId:chapterOne.id,subjectId:1}));
     await interceptPayload(typographyQuestions);
     for(const width of [320,390,1440]){
       await page.setViewportSize({width,height:900});
@@ -123,11 +123,13 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       assert.deepEqual((await rawStems(page.locator('.fire-review-question'))).sort(),typographyQuestions.map(q=>q.question).sort());
       const reviewSelector='[data-review-item]:has(.fire-stem-reference)';
       const review=await checkHierarchy(reviewSelector);
-      const listedReview=page.locator('[data-review-item]').filter({hasText:advancedQuestion.question.split('\n').at(-1)});
+      const listedReview=page.locator('[data-review-item]').filter({hasText:standardQuestion.question});
       const display=await listedReview.locator('.fire-review-question > [data-stem-order]').evaluateAll(parts=>parts.map(p=>({order:Number(p.dataset.stemOrder),kind:p.className,text:p.textContent})));
-      assert(display.findIndex(p=>p.text.includes('반드시 수정해야'))<display.findIndex(p=>p.kind==='fire-stem-condition'),'complete question precedes explanations and case conditions');
-      assert.deepEqual(display.map(p=>p.order),[0,2,1]);
-      await listedReview.screenshot({path:`${output}/listed-conditions-${width}.png`});
+      assert.deepEqual(display.map(p=>p.order),[0]);
+      assert.equal(display[0].kind,'fire-stem-title');
+      assert(!/복합 사례|가의 기록|나의 기록/.test(display[0].text));
+      assert.equal(standardQuestion.questionType,'general');
+      await listedReview.screenshot({path:`${output}/standard-question-${width}.png`});
 
       assert.equal(await page.locator('[data-review] .fire-answer, [data-review] [data-answer]').count(),0);
       await page.locator(reviewSelector).screenshot({path:`${output}/review-hierarchy-${width}.png`});
@@ -142,7 +144,8 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
     await page.locator('[data-results]').waitFor({state:'visible'});
     assert.deepEqual((await rawStems(page.locator('.fire-review-question'))).sort(),payload.questions.map(q=>q.question).sort());
     const questionFirst=await page.locator('.fire-review-question').evaluateAll(elements=>elements.filter(e=>{const order=[...e.querySelectorAll(':scope > [data-stem-order]')].map(p=>Number(p.dataset.stemOrder));return order.some((n,i)=>i>0&&n<order[i-1]);}).length);
-    assert(questionFirst>=740,'all published advanced case questions show the complete prompt before conditions');
+    assert.equal(payload.questions.filter(q=>q.questionType==='advanced').length,0,'all advanced items replaced');
+    assert(!payload.questions.some(q=>/복합 사례|[가나다]의 (?:기록|검토 의견)/.test(q.question)),'no compound-case scaffolding remains');
     const lateQuestions=await page.locator('.fire-review-question').evaluateAll(elements=>elements.filter(e=>{const parts=[...e.querySelectorAll(':scope > [data-stem-order]')];const question=parts.findLastIndex(p=>p.className==='fire-stem-title'&&p.textContent.trim().length>=12&&/[?？]$/.test(p.textContent.trim()));const condition=parts.findIndex(p=>p.className==='fire-stem-condition');return condition>=0&&question>condition;}).length);
     assert.equal(lateQuestions,0,'no complete question remains after the conditions, including appended clarifications');
     report.cases.push({allApprovedStems:2328,textAndMultiplicityPreserved:'PASS',questionFirst});

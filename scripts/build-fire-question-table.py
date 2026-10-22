@@ -88,8 +88,21 @@ def main():
         if approval:
             assert hashlib.sha256(json.dumps(q,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()==approval['beforeSHA256'],f"Stale publication approval: {q['id']}"
             q.update(reviewStatus='approved',publicationStatus='published',examEligible=True,contentStatus='draft_complete')
+    standard_dir=ROOT/'docs/releases/2026-10-21-fire-standard-questions'
+    revision=read(standard_dir/'revision.json')
+    previous=read(standard_dir/'before-rows.json')
+    replacements=read(standard_dir/'replacements.json')
+    reviews=read(standard_dir/'review.json')
+    assert sha(standard_dir/'replacements.json')==revision['replacementsSHA256']
+    assert set(previous)==set(replacements)==set(reviews) and len(previous)==740
+    for q in rows:
+        if q['id'] in replacements:
+            assert q==previous[q['id']],f"Stale standardization baseline: {q['id']}"
+            q.update(replacements[q['id']])
+            assert hashlib.sha256(json.dumps(q,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()==reviews[q['id']]['afterSHA256']
     save(P/'question-table.json',rows)
-    names={'source_reconstruction':'핵심 원본','source_variant':'핵심 변형','general':'일반 기본','advanced':'일반 심화'}
+    assert sha(P/'question-table.json')==revision['tableSHA256']
+    names={'source_reconstruction':'핵심 원본','source_variant':'핵심 변형','general':'일반'}
     summary=[]
     for kind,label in names.items():
         counts=collections.Counter(q['subjectId'] for q in rows if q['questionType']==kind)
@@ -102,6 +115,7 @@ def main():
       'answerNumberConvention':'1-based; reviewed rows explicitly approved by the publication release; held rows unverified',
       'legacyInputs':'Historical pool files are preserved; use question-table.json for current type and core flags.',
       'editorialCorrectionsSHA256':sha(correction_path),'editorialCorrectedCount':len(corrections),'semanticReview':'model-first-pass-targeted-corrections','publicationStatus':'partial','publicationApprovalSHA256':sha(publication_path),'publishedCount':2328,'heldCount':152}
+    manifest['standardizationRevision']='docs/releases/2026-10-21-fire-standard-questions/revision.json'
     save(P/'question-table-manifest.json',manifest)
     lines=['# 통합 문항 관리표','',
       '[필터 가능한 관리표 열기](question-table.html) · [통합 데이터](question-table.json)','',
@@ -117,7 +131,7 @@ def main():
       '| `subjectId`, `subjectName` | 1과목 / 2과목. 모든 2,480행에 값 존재 |',
       '| `chapterId`, `chapterTitle` | 연결 챕터와 제목 |',
       '| `isCore` | 사용자 제공 원본 500행만 true. 화면에는 핵심 표시 |',
-      '| `questionType` | source_reconstruction(원본), source_variant(변형), general(기본), advanced(심화) |',
+      '| `questionType` | source_reconstruction(원본), source_variant(변형), general(일반); advanced는 이전 자료의 분류 |',
       '| `difficulty` | 기본 / 심화 / 미지정. 핵심 여부와 난도를 분리 |',
       '| `reviewStatus` | 공개 승인 approved / 보류 pending |',
       '| `contentStatus` | 사용 가능 draft_complete / OCR 대조 필요 / 원문 시각 대조 필요 |',
@@ -129,12 +143,13 @@ def main():
       '## 원본과 변형의 표시','',
       '- 핵심: 전달받은 원본 500개',
       '- 핵심 변형: 그 원본 각각과 1:1로 연결된 별도 작성 500개. isCore=false',
-      '- 일반 기본·심화: 각각 740개. isCore=false',
+      '- 일반: 1,480개. isCore=false. 기존 심화 740개는 일반 4지선다형으로 교체',
       '- 이전 core500.json의 파일명과 핵심 태그는 과거 변형 풀의 제작 이력이다. 최신 관리·필터는 이 통합표의 isCore와 questionType을 사용한다. 원본과 변형을 동일 문항으로 표시하지 않는다.','',
       '## 원문 대조 상태','',
       f"원본 500개 중 선택지 4개를 구조적으로 분리한 행은 {500-parse_counts['raw-source-only']}개, choices=null로 둔 행은 {parse_counts['raw-source-only']}개다. 공개 2,328문항은 챕터 기준 모델 검수·보완 후 사용자가 공개 승인했다. 미분리 선택지·도판 누락·근거 부족 152개는 비공개다. rawSourceText와 기존 정답 번호는 보존했다. 공식 시험 원문 복원이나 독립 블라인드 검증으로 인증하지 않는다.",'',
       '전수 1차 모델 QA 후 167문항의 지문·선택지·해설·연결 이론을 보완했다. 원본 추출문·과거 집필 풀은 보존하고 ID별 해시 고정 보완 내역을 적용한다. 공개 승인·실서버 배포는 별도다. [보완 기록](../../audits/2026-10-20-fire-persona-corrections/README.md)','',
       '[2026-10-20 공개 승인·배포 기록](../../releases/2026-10-20-fire-practice/README.md) · 공개: 1과목 1,421개 / 2과목 907개 · 보류 152개','',
+      '[2026-10-21 심화 740문항 일반형 교체](../../releases/2026-10-21-fire-standard-questions/README.md) · 모델 편집 검수이며 실제 수험생 난도 측정은 아님','',
       '## 재생성','',
       '```bash','python3 scripts/build-fire-question-table.py --source /path/to/outline-data.json',
       'node scripts/verify-fire-question-table.mjs','```','']

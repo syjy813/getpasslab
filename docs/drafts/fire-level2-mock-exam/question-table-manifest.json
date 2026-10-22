@@ -10,7 +10,7 @@
     "general-editorial.json": "8809c0ba904e98306040f9d7b04ce2555645ff933d559a2eb6958c100e289f65",
     "hard-editorial.json": "a5b2378a9d1d9c3eb7ffb7e6ebafd936d22c6c38ca0c161fb9252d9bab8d052b"
   },
-  "tableSHA256": "5e8aff95c51806879e76211c126efe502ee9994b05a5366940d59c889590b1de",
+  "tableSHA256": "d424ac984eb8066fbdc257b54eec8455b462f03465b014cedc12d0a49ebe072e",
   "rowCount": 2480,
   "coreOriginalCount": 500,
   "authoredCount": 1980,
@@ -41,17 +41,10 @@
     },
     {
       "type": "general",
-      "label": "일반 기본",
-      "subject1": 490,
-      "subject2": 250,
-      "total": 740
-    },
-    {
-      "type": "advanced",
-      "label": "일반 심화",
-      "subject1": 490,
-      "subject2": 250,
-      "total": 740
+      "label": "일반",
+      "subject1": 980,
+      "subject2": 500,
+      "total": 1480
     }
   ],
   "coreDefinition": "isCore=true exactly for the 500 user-provided original reconstruction rows",
@@ -63,5 +56,6 @@
   "publicationStatus": "partial",
   "publicationApprovalSHA256": "c809775d607ec2c84762a82b7ea6309865bd7e9c82c670e1b0692033a72dd7a9",
   "publishedCount": 2328,
-  "heldCount": 152
+  "heldCount": 152,
+  "standardizationRevision": "docs/releases/2026-10-21-fire-standard-questions/revision.json"
 }
