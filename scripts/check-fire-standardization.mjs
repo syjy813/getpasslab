@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {hash,revision,standardReview,previousRows,beforeStandardization,beforeStandardizedTable,beforeStandardizedPractice} from './fire-mock-authoring/standardization.mjs';
 import {getPublishedFireQuestions} from '../src/utils/firePractice.ts';
-import {beforeGradeTableFormatting,beforeGradeHierarchy,beforeGradeCopyEdit} from './read-before-fire-persona-corrections.mjs';
+import {beforeGradeTableFormatting,beforeGradeHierarchy,beforeGradeCopyEdit,beforeChapterHierarchy} from './read-before-fire-persona-corrections.mjs';
 const release='docs/releases/2026-10-21-fire-standard-questions/';
 const tableBytes=fs.readFileSync('docs/drafts/fire-level2-mock-exam/question-table.json');
 const table=JSON.parse(tableBytes);
@@ -53,7 +53,7 @@ for(const row of copyAudit.tableRows){
  assert(currentGradeChapter.includes(html),'native reviewed grade row '+row.grade);
 }
 assert(!/비아파트|지상층만 셈|면적과 별도 대상을 함께 확인/.test(currentGradeChapter));
-for(const [file,row]of Object.entries(copyFiles))assert.equal(hash(fs.readFileSync(file)),row.sha256,file+': reviewed native editorial bytes');
+for(const [file,row]of Object.entries(copyFiles))assert.equal(hash(beforeChapterHierarchy(file,fs.readFileSync(file))),row.sha256,file+': reviewed editorial bytes after exact stylesheet-reference inverse');
 
 const assertions=JSON.parse(fs.readFileSync(release+'assertions.json','utf8'));
 const revised=table.filter(q=>previousRows[q.id]);
@@ -122,8 +122,8 @@ const published=getPublishedFireQuestions(table);
 assert.equal(published.length,2328);assert.equal(table.length-published.length,152);
 assert(!published.some(q=>q.question.startsWith('[')||/복합 사례|[가나다]의 (?:기록|검토 의견)/.test(q.question)));
 const practice=fs.readFileSync('dist/fire-safety-manager-level2/practice/index.html');
-beforeStandardizedPractice('dist/fire-safety-manager-level2/practice/index.html',practice);
-assert.throws(()=>beforeStandardizedPractice('dist/fire-safety-manager-level2/practice/index.html',Buffer.concat([practice,Buffer.from('\n')])));
+beforeStandardizedPractice('dist/fire-safety-manager-level2/practice/index.html',beforeChapterHierarchy('dist/fire-safety-manager-level2/practice/index.html',practice));
+assert.throws(()=>beforeStandardizedPractice('dist/fire-safety-manager-level2/practice/index.html',beforeChapterHierarchy('dist/fire-safety-manager-level2/practice/index.html',Buffer.concat([practice,Buffer.from('\n')]))));
 const payload=JSON.parse(practice.toString().match(/<script[^>]*data-fire-payload[^>]*>([\s\S]*?)<\/script>/)[1]);
 assert.deepEqual(payload.questions,published,'actual built native payload, without any inverse');
 const summary={replaced:740,chapters:74,perChapter:10,simpleGradeQuestions:10,singleCorrectQuestions:ordinary,singleIncorrectQuestions:incorrect,untouched:1740,originalReconstructionRowsPreserved:500,currentGeneralCount:1480,currentAdvancedCount:0,published:2328,held:152,sourceKeysAndProvenance:'PASS',fourOptionTruthAndExplanations:'PASS',exactDuplicates:'NONE',historicalEvidenceAndTamperRejection:'PASS',humanDifficulty:'NOT_MEASURED',textbookPageAudit:'NOT_REPEATED'};

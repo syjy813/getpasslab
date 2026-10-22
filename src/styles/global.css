@@ -346,3 +346,57 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 }
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Chapter reading hierarchy — shared by every certification.
+   Major sections: 32px mobile / 48px desktop, with a quiet midpoint rule.
+   Keep these selectors out of question dialogs and the exam runner. */
+.chapter-page article{
+  --chapter-section-gap:var(--space-8);
+  --chapter-section-half-gap:var(--space-4);
+  --chapter-table-font-size:14px;
+}
+.chapter-page article>h2{margin:var(--chapter-section-gap) 0 var(--space-4)}
+.chapter-page article>h2:first-of-type{margin-top:0}
+.chapter-page article>h2:not(:first-of-type)::after,
+.chapter-page article>[data-fire-practice-entry]~h2::after,
+.chapter-page article>h2:has(+.exam-history)::after,
+.chapter-page article>h2:has(+.related-list)::after{
+  content:'';position:absolute;left:0;right:0;
+  top:calc(0px - var(--chapter-section-half-gap));height:1px;background:var(--gray-200);
+}
+.chapter-page article>h3{margin:var(--space-6) 0 var(--space-2)}
+.chapter-page article>h2+h3{margin-top:0}
+.chapter-page article>:is(p,ul,ol,table,blockquote):not(.related-list){margin-block:var(--space-4)}
+.chapter-page article>:is(p,ul,ol):not(.related-list){line-height:1.7}
+.chapter-page article>:is(h2,h3)+:is(p,ul,ol,table,blockquote){margin-top:0}
+.chapter-page article>:is(ul,ol):not(.related-list){padding-left:1.25em}
+.chapter-page article>ul:not(.related-list)>li::marker,
+.chapter-page article td ul>li::marker{font-size:.65em;color:var(--gray-600)}
+.chapter-page article>:is(ul,ol):not(.related-list)>li+li{margin-top:var(--space-2)}
+.chapter-page article table{font-size:var(--chapter-table-font-size);line-height:1.7}
+.chapter-page article :is(th,td){vertical-align:top}
+.chapter-page article td :is(p,li){font-size:inherit;line-height:inherit;color:inherit}
+.chapter-page article td :is(p,ul,ol){margin:0}
+.chapter-page article td :is(p,ul,ol)+:is(p,ul,ol),
+.chapter-page article td li+li{margin-top:var(--space-2)}
+.chapter-page article>.sample-table-scroll{margin-block:var(--space-4)}
+.chapter-page article>.sample-table-scroll>table{margin:0}
+.chapter-page article>:is(h2,h3)+.sample-table-scroll{margin-top:0}
+.chapter-page article>h2:has(+.exam-history),
+.chapter-page article>h2:has(+.related-list){margin-top:var(--chapter-section-gap)}
+.chapter-page article>h2+.exam-history{margin:0;padding:var(--space-4)}
+.chapter-page article>.related-list{margin:0}
+.chapter-page article>[data-fire-practice-entry]{
+  margin-top:var(--chapter-section-half-gap);
+  padding-top:calc(var(--chapter-section-half-gap) - 1px);
+  border-top:1px solid var(--gray-200);
+}
+.chapter-page article>[data-fire-practice-entry]>h2{margin:0 0 var(--space-4)}
+.chapter-page article>[data-fire-practice-entry]>.fire-actions{margin-top:0}
+.chapter-page article>[data-fire-practice-entry]~h2{margin-top:var(--chapter-section-gap)}
+.chapter-page article>[data-fire-practice-entry]~h2+.related-list{margin-top:0}
+.chapter-page article:has(>[data-fire-practice-entry])>.adfit-placement{margin-bottom:0}
+@media(min-width:768px){
+  .chapter-page article{--chapter-section-gap:var(--space-12);--chapter-section-half-gap:var(--space-6)}
+  .chapter-page article>h2+.exam-history{padding:var(--space-6)}
+}

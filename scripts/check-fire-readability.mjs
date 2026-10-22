@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {beforeReview,beforePracticePolish,beforeQuestionFlow} from './read-before-fire-persona-corrections.mjs';
+import {beforeReview,beforePracticePolish,beforeQuestionFlow,beforeChapterHierarchy} from './read-before-fire-persona-corrections.mjs';
 import {beforeStandardizedPractice} from './fire-mock-authoring/standardization.mjs';
 const release=JSON.parse(await readFile('docs/audits/2026-10-20-fire-persona-corrections/release.json','utf8'));
 const rows=release.reviewProjections;
@@ -36,7 +36,7 @@ const questionFlow=release.questionFlowProjections;
 assert.deepEqual(Object.keys(questionFlow).sort(),['src/components/FirePracticeRunner.astro','src/utils/firePracticeClient.ts','dist/fire-safety-manager-level2/practice/index.html'].sort());
 for(const [file,row] of Object.entries(questionFlow)){
   const native=await readFile(file);
-  assert.equal(hash(beforeStandardizedPractice(file,native)),row.sha256,file+': exact question flow release');
+  assert.equal(hash(beforeStandardizedPractice(file,beforeChapterHierarchy(file,native))),row.sha256,file+': exact question flow release');
   assert.equal(row.beforeSHA256,polish[file].sha256,file+': deployed polish baseline unchanged');
   assert.equal(hash(beforeQuestionFlow(file,native)),row.beforeSHA256);
   assert.throws(()=>beforeQuestionFlow(file,Buffer.concat([native,Buffer.from('\n')])));
