@@ -358,11 +358,14 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .chapter-page article>h2{margin:var(--chapter-section-gap) 0 var(--space-4)}
 .chapter-page article>h2:first-of-type{margin-top:0}
 .chapter-page article>h2:not(:first-of-type)::after,
-.chapter-page article>[data-fire-practice-entry]~h2::after{
+.chapter-page article>[data-fire-practice-entry]~h2::after,
+.chapter-page article>h2:has(+.exam-history)::after,
+.chapter-page article>h2:has(+.related-list)::after{
   content:'';position:absolute;left:0;right:0;
   top:calc(0px - var(--chapter-section-half-gap));height:1px;background:var(--gray-200);
 }
 .chapter-page article>h3{margin:var(--space-6) 0 var(--space-2)}
+.chapter-page article>h2+h3{margin-top:0}
 .chapter-page article>:is(p,ul,ol,table,blockquote):not(.related-list){margin-block:var(--space-4)}
 .chapter-page article>:is(p,ul,ol):not(.related-list){line-height:1.7}
 .chapter-page article>:is(h2,h3)+:is(p,ul,ol,table,blockquote){margin-top:0}
@@ -379,6 +382,8 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .chapter-page article>.sample-table-scroll{margin-block:var(--space-4)}
 .chapter-page article>.sample-table-scroll>table{margin:0}
 .chapter-page article>:is(h2,h3)+.sample-table-scroll{margin-top:0}
+.chapter-page article>h2:has(+.exam-history),
+.chapter-page article>h2:has(+.related-list){margin-top:var(--chapter-section-gap)}
 .chapter-page article>h2+.exam-history{margin:0;padding:var(--space-4)}
 .chapter-page article>.related-list{margin:0}
 .chapter-page article>[data-fire-practice-entry]{

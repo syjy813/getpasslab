@@ -41,7 +41,7 @@ let browser;
             sections:headings.map((e,i)=>{const p=previousVisible(e),n=nextVisible(e),s=getComputedStyle(e,'::after');return {
               title:e.textContent,font:parseFloat(getComputedStyle(e).fontSize),divider:s.height,dividerContent:s.content,
               dividerTop:parseFloat(s.top),previousGap:p?rect(e).top-rect(p).bottom:null,nextTag:n?.tagName,
-              nextGap:n?rect(n).top-rect(e).bottom:null,needsDivider:i>0||Boolean(a.querySelector('[data-fire-practice-entry]')),
+              nextGap:n?rect(n).top-rect(e).bottom:null,needsDivider:i>0||Boolean(a.querySelector('[data-fire-practice-entry]'))||Boolean(n?.matches('.exam-history,.related-list')),
             };}),
             tables:[...a.querySelectorAll('table')].filter(visible).map(e=>({font:parseFloat(getComputedStyle(e).fontSize),cells:[...e.querySelectorAll('th,td')].map(c=>getComputedStyle(c).verticalAlign)})),
             related:[...a.querySelectorAll(':scope>.related-list')].map(e=>({margin:getComputedStyle(e).marginTop,style:getComputedStyle(e).listStyleType})),
