@@ -28,3 +28,19 @@ article .fire-grade-exam-points li+li{margin-top:16px;padding-top:16px;border-to
 article .fire-grade-exam-points li::marker{font-size:.65em;color:var(--gray-600)}
 article .fire-grade-exam-points strong{color:var(--gray-900)}
 article .fire-grade-exam-points p{margin:6px 0 0;color:var(--gray-700);line-height:1.75}
+
+/* FSM2-001 trial: section hierarchy and relationship-based vertical spacing. */
+article .fire-grade-lesson{--grade-section-half-gap:24px;display:grid;grid-template-columns:minmax(0,1fr);min-width:0}
+article .fire-grade-lesson .fire-grade-section{display:flex;flex-direction:column;min-width:0}
+article .fire-grade-lesson .fire-grade-section+.fire-grade-section{margin-top:var(--grade-section-half-gap);padding-top:calc(var(--grade-section-half-gap) - 1px);border-top:1px solid var(--gray-200)}
+article .fire-grade-lesson .fire-grade-section>h2{margin:0 0 16px}
+article .fire-grade-lesson p{margin:0;line-height:1.7}
+article .fire-grade-lesson .sample-table-scroll{margin-top:16px}
+article .fire-grade-lesson table{margin:0;font-size:14px}
+article .fire-grade-lesson .fire-grade-scope-note{margin-top:8px;color:var(--gray-600);font-size:var(--fs-caption);line-height:1.6}
+article .fire-grade-lesson .fire-grade-exam-points{padding:24px}
+article .fire-grade-lesson .fire-grade-exam-points li+li{margin-top:16px;padding-top:15px}
+article .fire-grade-lesson .fire-grade-exam-points strong{display:block}
+article .fire-grade-lesson .fire-grade-exam-points p{margin-top:8px;color:var(--gray-800)}
+article .fire-grade-lesson>.fire-source-note{margin-top:24px;font-size:var(--fs-caption);color:var(--gray-600);line-height:1.6}
+@media(max-width:767px){article .fire-grade-lesson{--grade-section-half-gap:16px}article .fire-grade-lesson .fire-grade-exam-points{padding:16px}}
