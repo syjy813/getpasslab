@@ -8,10 +8,35 @@ import {beforeStandardizedPractice} from './fire-mock-authoring/standardization.
 const audit='docs/audits/2026-10-20-fire-persona-corrections';
 const release=JSON.parse(await nativeRead(audit+'/release.json','utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
+// This layout-only revision changes nine separators to line breaks in one
+// grade table. Both complete native files and restored files are fingerprinted.
+const gradeTableBefore = "<div class=\"sample-table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"등급을 판별하는 순서 표\"><table><thead><tr><th>등급</th><th>대표적인 대상 조건</th></tr></thead><tbody><tr><td>특급</td><td>아파트 50층 이상 또는 높이 200m 이상 · 아파트 외 30층 이상 또는 120m 이상 · 아파트 외 연면적 10만㎡ 이상</td></tr><tr><td>1급</td><td>특급 제외 · 아파트 30층 이상 또는 120m 이상 · 아파트 외 연면적 1만5천㎡ 이상 또는 지상 11층 이상 · 가연성가스 1천t 이상</td></tr><tr><td>2급</td><td>상위 등급 제외 · 옥내소화전·스프링클러·물분무등소화설비 설치 대상(호스릴 방식만 설치할 수 있는 경우 제외) · 도시가스사업 허가 대상 가스 제조설비 또는 가연성가스 100t 이상 1천t 미만 · 지하구 등</td></tr><tr><td>3급</td><td>상위 등급 제외 · 간이스프링클러 또는 자동화재탐지설비 설치 대상</td></tr></tbody></table></div>";
+const gradeTableCurrent = gradeTableBefore.replaceAll(' · ','<br>');
+const gradeTableFiles = {
+  "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md": {
+    "sha256": "486522ab372d0b135e8bed5bd185a2320c83b6dfa4443a81904fc173fa409e4c",
+    "beforeSHA256": "d0254349f42445b1f8572c34ab3022e76de72302c96a33fc30262d97f6fd2570"
+  },
+  "dist/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/index.html": {
+    "sha256": "b9b4c69b4b72d0a01dc0612b91adffc29c47f07673ddb8539c2fc45f7e4072dd",
+    "beforeSHA256": "7999e5b35f0f7957cfccfeaffacf3260ecdd5d985a30726d8e29ce2573b938ab"
+  }
+};
+export function beforeGradeTableFormatting(file,bytes){
+  const row=gradeTableFiles[path.normalize(String(file))];
+  if(!row)return bytes;
+  assert.equal(hash(bytes),row.sha256,String(file)+': exact grade table formatting');
+  const text=bytes.toString('utf8');
+  assert.equal(text.split(gradeTableCurrent).length,2,'exactly one formatted grade table');
+  const before=Buffer.from(text.replace(gradeTableCurrent,gradeTableBefore));
+  assert.equal(hash(before),row.beforeSHA256,String(file)+': exact pre-formatting text and document');
+  return before;
+}
 // Fingerprinted UI deltas are reversed before archived source/HTML checks.
 // Every current and restored document must match its complete SHA, so unrelated
 // edits cannot disappear behind a structural regex or a changed baseline.
 export function beforeQuestionFlow(file,bytes){
+  bytes=beforeGradeTableFormatting(file,bytes);
   // Remove only the stale preparation notice; preserve archived config hashes.
   if(path.normalize(String(file))==='src/config/certifications.ts'){
     assert.equal(hash(bytes),'8c3cdee1b7bdf3bfe37c03a9bf4586875d82676bb385ffb2b46aedb98e6def07','exact fire notice removal');

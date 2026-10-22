@@ -26,6 +26,7 @@ try{
  const close=(Number(row.chapterId.slice(-3))+i)%3===0?'button':(Number(row.chapterId.slice(-3))+i)%3===1?'escape':'backdrop';if(close==='button')await page.locator('[data-fire-close]').click();else if(close==='escape')await page.keyboard.press('Escape');else await page.mouse.click(1,1);
  await page.waitForFunction(b=>!document.getElementById('fire-bulk-image-dialog').open&&Math.abs(scrollY-b.y)<=1,before);assert.equal(await button.evaluate(e=>e===document.activeElement),true);assert.equal(await page.evaluate(()=>document.body.getAttribute('style')||''),before.style);images.push({...detail,close,restore:'PASS'});
  }
+ if(row.chapterId==='FSM2-001')await page.locator('.sample-table-scroll').first().screenshot({path:`${dir}/${row.chapterId}-table-${width}.png`});
  if([13,34,35,36,43,44,45,60].includes(Number(row.chapterId.slice(-3)))){await page.evaluate(()=>scrollTo(0,0));await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(resolve)));await page.screenshot({path:`${dir}/${row.chapterId}-${width}.png`,fullPage:true});}
  report.cases.push({chapterId:row.chapterId,width,route:row.route,status:response.status(),overflow:false,images});
  }

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {hash,revision,standardReview,previousRows,beforeStandardization,beforeStandardizedTable,beforeStandardizedPractice} from './fire-mock-authoring/standardization.mjs';
 import {getPublishedFireQuestions} from '../src/utils/firePractice.ts';
+import {beforeGradeTableFormatting} from './read-before-fire-persona-corrections.mjs';
 const release='docs/releases/2026-10-21-fire-standard-questions/';
 const tableBytes=fs.readFileSync('docs/drafts/fire-level2-mock-exam/question-table.json');
 const table=JSON.parse(tableBytes);
@@ -25,7 +26,7 @@ for(const q of revised){
   assert.equal(old.questionType,'advanced');
   assert.equal(q.questionType,'general');assert.equal(q.difficulty,'basic');assert.deepEqual(q.tags,[]);
   for(const key of Object.keys(old))if(!allowed.has(key))assert.deepEqual(q[key],old[key],q.id+': unchanged '+key);
-  assert.equal(hash(fs.readFileSync(review.chapter)),review.chapterSHA256,q.id+': actual chapter basis');
+  assert.equal(hash(beforeGradeTableFormatting(review.chapter,fs.readFileSync(review.chapter))),review.chapterSHA256,q.id+': exact chapter basis, permitting only the fingerprinted table line breaks');
   assert.equal(q.answerNumber,old.answerNumber,q.id+': stable key');
   assert.equal(q.reviewStatus,'approved');assert.equal(q.publicationStatus,'published');assert.equal(q.examEligible,true);
   assert(!/복합 사례|[가나다]의 (?:기록|검토 의견)|수정해야 하는 기록|몇 개인가/.test(q.question+q.explanation));
