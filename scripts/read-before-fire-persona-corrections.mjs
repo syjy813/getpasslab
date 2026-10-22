@@ -8,6 +8,48 @@ import {beforeStandardizedPractice} from './fire-mock-authoring/standardization.
 const audit='docs/audits/2026-10-20-fire-persona-corrections';
 const release=JSON.parse(await nativeRead(audit+'/release.json','utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
+// Complete the FSM2-001 boundaries through practice and related chapters.
+// Restore only exact reviewed footer CSS/link bytes before previous releases.
+const gradeFooterFiles = {
+  "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md": {
+    "sha256": "cbe3d626b853e00f8f8a193cf71d2f3466eecde505f5085ea062354ff5d013c1",
+    "beforeSHA256": "99fc973c7845f85b91d6311226398f5d94af2eb446d2f5db7a4fef180d6d068a",
+    "at": 366,
+    "current": "footer",
+    "before": "hierarchy"
+  },
+  "public/styles/fire-bulk-visual.css": {
+    "sha256": "d5e4fb64fe48fcf5a518b0110162bcdaf469b52e106bc83da09a6f3cf62b7aa3",
+    "beforeSHA256": "9bae3240da1af7de0c9007e235fef1f0c4ca96b7f28428a4e6c18839c9564cc3",
+    "at": 4656,
+    "current": "\n/* Continue the FSM2-001 section rhythm through practice and related chapters. */\narticle:has(>.fire-grade-lesson){--grade-section-gap:48px;--grade-section-half-gap:24px}\narticle:has(>.fire-grade-lesson)>.adfit-placement{margin-bottom:0}\narticle:has(>.fire-grade-lesson)>[data-fire-practice-entry]{margin-top:var(--grade-section-half-gap);padding-top:calc(var(--grade-section-half-gap) - 1px);border-top:1px solid var(--gray-200)}\narticle:has(>.fire-grade-lesson)>[data-fire-practice-entry]>h2{margin:0 0 16px}\narticle:has(>.fire-grade-lesson)>[data-fire-practice-entry]>.fire-actions{margin-top:0}\narticle:has(>.fire-grade-lesson)>h2:has(+.related-list){margin:var(--grade-section-gap) 0 16px}\narticle:has(>.fire-grade-lesson)>h2:has(+.related-list)::after{content:'';position:absolute;left:0;right:0;top:calc(0px - var(--grade-section-half-gap));height:1px;background:var(--gray-200)}\narticle:has(>.fire-grade-lesson)>.related-list{margin:0}\n@media(max-width:767px){article:has(>.fire-grade-lesson){--grade-section-gap:32px;--grade-section-half-gap:16px}}\n",
+    "before": ""
+  },
+  "dist/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/index.html": {
+    "sha256": "7500ac1c475513c0bc0b2cfa214454c3f5a06fdf74308899900539040a9ad5c7",
+    "beforeSHA256": "f58427f64f96cf46d1876603dba8a1eb965025782e650aa0eb7571892cb3ab3a",
+    "at": 21822,
+    "current": "footer",
+    "before": "hierarchy"
+  },
+  "dist/styles/fire-bulk-visual.css": {
+    "sha256": "d5e4fb64fe48fcf5a518b0110162bcdaf469b52e106bc83da09a6f3cf62b7aa3",
+    "beforeSHA256": "9bae3240da1af7de0c9007e235fef1f0c4ca96b7f28428a4e6c18839c9564cc3",
+    "at": 4656,
+    "current": "\n/* Continue the FSM2-001 section rhythm through practice and related chapters. */\narticle:has(>.fire-grade-lesson){--grade-section-gap:48px;--grade-section-half-gap:24px}\narticle:has(>.fire-grade-lesson)>.adfit-placement{margin-bottom:0}\narticle:has(>.fire-grade-lesson)>[data-fire-practice-entry]{margin-top:var(--grade-section-half-gap);padding-top:calc(var(--grade-section-half-gap) - 1px);border-top:1px solid var(--gray-200)}\narticle:has(>.fire-grade-lesson)>[data-fire-practice-entry]>h2{margin:0 0 16px}\narticle:has(>.fire-grade-lesson)>[data-fire-practice-entry]>.fire-actions{margin-top:0}\narticle:has(>.fire-grade-lesson)>h2:has(+.related-list){margin:var(--grade-section-gap) 0 16px}\narticle:has(>.fire-grade-lesson)>h2:has(+.related-list)::after{content:'';position:absolute;left:0;right:0;top:calc(0px - var(--grade-section-half-gap));height:1px;background:var(--gray-200)}\narticle:has(>.fire-grade-lesson)>.related-list{margin:0}\n@media(max-width:767px){article:has(>.fire-grade-lesson){--grade-section-gap:32px;--grade-section-half-gap:16px}}\n",
+    "before": ""
+  }
+};
+export function beforeGradeFooter(file,bytes){
+  const row=gradeFooterFiles[path.normalize(String(file))];
+  if(!row)return bytes;
+  assert.equal(hash(bytes),row.sha256,String(file)+': exact single-chapter footer boundaries');
+  const text=bytes.toString('utf8');
+  assert.equal(text.slice(row.at,row.at+row.current.length),row.current,'exact footer delta');
+  const before=Buffer.from(text.slice(0,row.at)+row.before+text.slice(row.at+row.current.length));
+  assert.equal(hash(before),row.beforeSHA256,String(file)+': exact pre-footer document');
+  return before;
+}
 // Layout-only FSM2-001 trial: restore the exact previously reviewed source,
 // shared CSS and single HTML page. No other chapter may use these new rules.
 const gradeHierarchyFiles = {
@@ -41,6 +83,7 @@ const gradeHierarchyFiles = {
   }
 };
 export function beforeGradeHierarchy(file,bytes){
+  bytes=beforeGradeFooter(file,bytes);
   const row=gradeHierarchyFiles[path.normalize(String(file))];
   if(!row)return bytes;
   assert.equal(hash(bytes),row.sha256,String(file)+': exact single-chapter hierarchy');

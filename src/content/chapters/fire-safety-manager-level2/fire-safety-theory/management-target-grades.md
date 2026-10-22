@@ -15,7 +15,7 @@ priority: "출시 필수"
 status: "완료"
 ---
 
-<link rel="stylesheet" href="/styles/fire-bulk-visual.css?v=fire-grade-hierarchy-20261022">
+<link rel="stylesheet" href="/styles/fire-bulk-visual.css?v=fire-grade-footer-20261022">
 
 <div class="fire-grade-lesson">
 <section class="fire-grade-section" aria-labelledby="등급을-판별하는-순서">

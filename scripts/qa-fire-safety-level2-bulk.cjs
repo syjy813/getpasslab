@@ -28,7 +28,7 @@ try{
  }
  if(row.chapterId==='FSM2-001'){
  const table=page.locator('.sample-table-scroll').first();
- assert.equal(await page.locator('link[href="/styles/fire-bulk-visual.css?v=fire-grade-hierarchy-20261022"]').count(),1,'versioned grade stylesheet');
+ assert.equal(await page.locator('link[href="/styles/fire-bulk-visual.css?v=fire-grade-footer-20261022"]').count(),1,'versioned grade stylesheet');
  assert.deepEqual(await table.locator('.fire-grade-conditions').evaluateAll(es=>es.map(e=>e.children.length)),[3,4,4,2]);
  assert.equal(await page.getByRole('heading',{name:'조건에 붙는 단서',exact:true}).count(),0);
  assert.equal(await page.getByRole('heading',{name:'시험 포인트',exact:true}).count(),1);
@@ -50,6 +50,24 @@ try{
  assert.equal(hierarchy.sections,2);assert.equal(hierarchy.divider,'1px');
  for(const [key,value]of Object.entries({titleToBody:16,bodyToTable:16,tableToNote:8,titleToBox:16,sectionGap:width<768?32:48,boxPadding:width<768?16:24,tableFont:14}))close(hierarchy[key],value,key+' '+width);
  for(const value of hierarchy.pointTextGaps)close(value,8,'point title/body gap');
+ const footer=await page.locator('.fire-grade-lesson').evaluate(root=>{
+   const article=root.parentElement,entry=article.querySelector(':scope>[data-fire-practice-entry]');
+   const heading=entry.querySelector('h2'),cards=entry.querySelector('.fire-actions');
+   const ad=article.querySelector(':scope>.adfit-placement');
+   const related=article.querySelector(':scope>h2:has(+.related-list)'),list=related.nextElementSibling;
+   const gap=(a,b)=>b.getBoundingClientRect().top-a.getBoundingClientRect().bottom;
+   return {adToPractice:gap(ad,heading),practiceDivider:getComputedStyle(entry).borderTopWidth,practiceTitleToCards:gap(heading,cards),practiceToRelated:gap(entry,related),relatedDivider:getComputedStyle(related,'::after').height,relatedDividerOffset:getComputedStyle(related,'::after').top,relatedTitleToList:gap(related,list)};
+ });
+ hierarchy.footer=footer;
+ assert.equal(footer.practiceDivider,'1px');assert.equal(footer.relatedDivider,'1px');
+ close(parseFloat(footer.relatedDividerOffset),width<768?-16:-24,'related divider position');
+ for(const key of ['adToPractice','practiceToRelated'])close(footer[key],width<768?32:48,key+' '+width);
+ for(const key of ['practiceTitleToCards','relatedTitleToList'])close(footer[key],16,key+' '+width);
+ for(const [name,label]of [['문제 풀기','practice-boundary'],['관련 챕터','related-boundary']]){
+   await page.getByRole('heading',{name,exact:true}).evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));
+   await page.screenshot({path:`${dir}/${row.chapterId}-${label}-${width}.png`});
+ }
+
  await page.getByRole('heading',{name:'시험 포인트',exact:true}).evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));
  await page.screenshot({path:`${dir}/${row.chapterId}-section-boundary-${width}.png`});
 
