@@ -44,3 +44,14 @@ article .fire-grade-lesson .fire-grade-exam-points strong{display:block}
 article .fire-grade-lesson .fire-grade-exam-points p{margin-top:8px;color:var(--gray-800)}
 article .fire-grade-lesson>.fire-source-note{margin-top:24px;font-size:var(--fs-caption);color:var(--gray-600);line-height:1.6}
 @media(max-width:767px){article .fire-grade-lesson{--grade-section-half-gap:16px}article .fire-grade-lesson .fire-grade-exam-points{padding:16px}}
+
+/* Continue the FSM2-001 section rhythm through practice and related chapters. */
+article:has(>.fire-grade-lesson){--grade-section-gap:48px;--grade-section-half-gap:24px}
+article:has(>.fire-grade-lesson)>.adfit-placement{margin-bottom:0}
+article:has(>.fire-grade-lesson)>[data-fire-practice-entry]{margin-top:var(--grade-section-half-gap);padding-top:calc(var(--grade-section-half-gap) - 1px);border-top:1px solid var(--gray-200)}
+article:has(>.fire-grade-lesson)>[data-fire-practice-entry]>h2{margin:0 0 16px}
+article:has(>.fire-grade-lesson)>[data-fire-practice-entry]>.fire-actions{margin-top:0}
+article:has(>.fire-grade-lesson)>h2:has(+.related-list){margin:var(--grade-section-gap) 0 16px}
+article:has(>.fire-grade-lesson)>h2:has(+.related-list)::after{content:'';position:absolute;left:0;right:0;top:calc(0px - var(--grade-section-half-gap));height:1px;background:var(--gray-200)}
+article:has(>.fire-grade-lesson)>.related-list{margin:0}
+@media(max-width:767px){article:has(>.fire-grade-lesson){--grade-section-gap:32px;--grade-section-half-gap:16px}}
