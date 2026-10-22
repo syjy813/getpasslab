@@ -1,0 +1,107 @@
+{
+  "chapter": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/management-target-grades.md",
+  "questionTableSHA256": "d424ac984eb8066fbdc257b54eec8455b462f03465b014cedc12d0a49ebe072e",
+  "sourcePoolCount": 500,
+  "usedSourceIds": [
+    "moducbt-27777-q01",
+    "moducbt-27779-q02",
+    "moducbt-27780-q03",
+    "moducbt-27782-q02"
+  ],
+  "excludedSourceIds": [
+    "moducbt-27773-q03"
+  ],
+  "tableRows": [
+    {
+      "grade": "특급",
+      "prerequisite": null,
+      "conditions": [
+        "아파트 지상 50층 이상 또는 높이 200m 이상",
+        "아파트 외 30층 이상(지하층 포함) 또는 높이 120m 이상",
+        "아파트 외 연면적 10만㎡ 이상"
+      ]
+    },
+    {
+      "grade": "1급",
+      "prerequisite": "특급 제외",
+      "conditions": [
+        "아파트 지상 30층 이상 또는 높이 120m 이상",
+        "연면적 1만5천㎡ 이상(아파트·연립주택 제외)",
+        "지상 11층 이상(아파트 제외)",
+        "가연성 가스 1천t 이상 저장·취급"
+      ]
+    },
+    {
+      "grade": "2급",
+      "prerequisite": "특급·1급 제외",
+      "conditions": [
+        "옥내소화전 또는 스프링클러 설치 대상",
+        "물분무등소화설비 설치 대상(호스릴 방식만 설치할 수 있는 경우 제외)",
+        "도시가스사업 허가 대상 가스 제조설비",
+        "가연성 가스 100t 이상 1천t 미만 저장·취급",
+        "지하구, 국보·보물로 지정된 목조건축물 등"
+      ]
+    },
+    {
+      "grade": "3급",
+      "prerequisite": "특급·1급·2급 제외",
+      "conditions": [
+        "간이스프링클러 설치 대상(주택전용 제외)",
+        "자동화재탐지설비 설치 대상"
+      ]
+    }
+  ],
+  "points": [
+    {
+      "title": "지하층 포함 여부",
+      "paragraphs": [
+        "아파트의 50층·30층 기준: 지상층만 계산",
+        "아파트 외 대상물: 특급의 30층은 지하층 포함, 1급의 11층은 지상층만 계산",
+        "상위 등급 조건이 없는 판매시설의 예<br>지상 9층·지하 2층 / 연면적 12,800㎡<br>옥내소화전·스프링클러 법정 설치 대상 → 2급"
+      ],
+      "sourceIds": [
+        "moducbt-27777-q01",
+        "moducbt-27780-q03",
+        "moducbt-27782-q02"
+      ]
+    },
+    {
+      "title": "설비별 등급이 겹치는 경우",
+      "paragraphs": [
+        "옥내소화전 또는 스프링클러의 법정 설치 대상이면 2급 조건",
+        "자동화재탐지설비가 함께 있어도 3급으로 판단하지 않음",
+        "특급·1급·2급 조건 없이 자동화재탐지설비만 설치 대상이면 3급"
+      ],
+      "sourceIds": [
+        "moducbt-27779-q02",
+        "moducbt-27780-q03"
+      ]
+    },
+    {
+      "title": "가연성 가스 저장·취급량",
+      "paragraphs": [
+        "2급: 100t 이상 1천t 미만<br>1급: 1천t 이상",
+        "400t·500t은 2급 구간"
+      ],
+      "sourceIds": [
+        "moducbt-27779-q02",
+        "moducbt-27782-q02"
+      ]
+    }
+  ],
+  "legalCrosscheck": {
+    "checkedAt": "2026-10-22",
+    "currentLaw": "https://www.law.go.kr/LSW/lsInfoP.do?lsId=014353",
+    "currentLawEffectiveDate": "2026-07-01",
+    "appendixReference": "https://www.law.go.kr/flDownload.do?flSeq=123023533",
+    "limitation": "별표 PDF는 구판(문화재보호법 명칭)이므로 현행 판본 전체 재검증으로 표현하지 않음. 기존 검수된 등급 수치·예외와 대조하는 보조 근거로 사용함. 본 개정은 새로운 법적 기준을 도입하지 않음"
+  },
+  "changes": [
+    "기존 1·2번 층수 설명과 사례를 통합",
+    "기존 5번의 면적·대상 요약은 표와 중복돼 삭제, 숫자·예외·별도 대상은 표에 유지",
+    "상위 등급 제외를 공통 전제로 분리, 면적·층수 및 설비·가스 조건을 개별 줄로 표시",
+    "가스 저장·취급 표현 및 설치 대상 띄어쓰기 통일, 불필요한 임·함·셈 어미 정리",
+    "호스릴 제외 조건을 물분무등소화설비 항목에 붙여 적용 범위를 명확히 표시"
+  ],
+  "tableRule": "하나 이상 해당"
+}
