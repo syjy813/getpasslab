@@ -7,6 +7,26 @@ const release='docs/releases/2026-10-21-fire-standard-questions/';
 const tableBytes=fs.readFileSync('docs/drafts/fire-level2-mock-exam/question-table.json');
 const table=JSON.parse(tableBytes);
 const baseline=JSON.parse(beforeStandardizedTable(tableBytes));
+// Check the new native chapter against the approved reconstruction evidence
+// before projecting its older bytes for archived 740-question reviews.
+const gradeAudit=JSON.parse(fs.readFileSync('docs/audits/2026-10-22-fire-grade-exam-points/source-review.json','utf8'));
+const gradeFiles=JSON.parse(fs.readFileSync('docs/audits/2026-10-22-fire-grade-exam-points/native-files.json','utf8'));
+assert.equal(hash(tableBytes),gradeAudit.questionTableSHA256,'question pool remains unchanged');
+const sourcePool=table.filter(q=>q.questionType==='source_reconstruction');
+assert.equal(sourcePool.length,500);assert.equal(gradeAudit.sourcePoolCount,500);
+const direct=sourcePool.filter(q=>q.chapterId==='FSM2-001');assert.equal(direct.length,5);
+const approved=direct.filter(q=>q.reviewStatus==='approved');assert.equal(approved.length,4);
+assert.deepEqual(gradeAudit.usedSources,approved.map(q=>Object.fromEntries(['id','sourceSet','sourcePDFPage','question','choices','answerNumber','reviewStatus'].map(k=>[k,q[k]]))));
+assert.deepEqual(gradeAudit.excludedSources.map(q=>q.id),direct.filter(q=>q.reviewStatus!=='approved').map(q=>q.id));
+const gradeChapter=fs.readFileSync(gradeAudit.chapter,'utf8');
+assert(!gradeChapter.includes('조건에 붙는 단서'));
+assert.equal(gradeAudit.points.length,5);
+for(const point of gradeAudit.points){
+ assert(gradeChapter.includes('<strong>'+point.title+'</strong><p>'+point.text+'</p>'));
+ assert(point.sourceIds.length>0&&point.sourceIds.every(id=>approved.some(q=>q.id===id)),'only approved original reconstruction sources');
+}
+for(const [file,entry]of Object.entries(gradeFiles))assert.equal(hash(fs.readFileSync(file)),entry.sha256,file+': reviewed native grade content');
+
 const assertions=JSON.parse(fs.readFileSync(release+'assertions.json','utf8'));
 const revised=table.filter(q=>previousRows[q.id]);
 assert.equal(revised.length,740);assert.equal(Object.keys(standardReview).length,740);
@@ -26,7 +46,7 @@ for(const q of revised){
   assert.equal(old.questionType,'advanced');
   assert.equal(q.questionType,'general');assert.equal(q.difficulty,'basic');assert.deepEqual(q.tags,[]);
   for(const key of Object.keys(old))if(!allowed.has(key))assert.deepEqual(q[key],old[key],q.id+': unchanged '+key);
-  assert.equal(hash(beforeGradeTableFormatting(review.chapter,fs.readFileSync(review.chapter))),review.chapterSHA256,q.id+': exact chapter basis, permitting only the fingerprinted table line breaks');
+  assert.equal(hash(beforeGradeTableFormatting(review.chapter,fs.readFileSync(review.chapter))),review.chapterSHA256,q.id+': exact chapter basis, with the separately verified source-grounded grade revision');
   assert.equal(q.answerNumber,old.answerNumber,q.id+': stable key');
   assert.equal(q.reviewStatus,'approved');assert.equal(q.publicationStatus,'published');assert.equal(q.examEligible,true);
   assert(!/복합 사례|[가나다]의 (?:기록|검토 의견)|수정해야 하는 기록|몇 개인가/.test(q.question+q.explanation));
