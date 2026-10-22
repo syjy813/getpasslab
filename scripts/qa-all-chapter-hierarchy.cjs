@@ -22,7 +22,7 @@ let browser;
   browser=await chromium.launch({executablePath:process.env.QA_BROWSER_EXECUTABLE});
   await Promise.all([320,390,768,1440].map(async width=>{
     const context=await browser.newContext({viewport:{width,height:900},isMobile:width<768,hasTouch:width<768});
-    await context.route('**/*',r=>new URL(r.request().url()).origin===new URL(base).origin?r.continue():r.abort());
+    await context.route('**/*',r=>(new URL(r.request().url()).origin===new URL(base).origin||new URL(r.request().url()).hostname==='cdn.jsdelivr.net')?r.continue():r.abort());
     const page=await context.newPage();let current='';const captured=new Set();
     page.on('pageerror',e=>report.errors.push(current+': '+e));
     for(const row of pages){
@@ -41,7 +41,7 @@ let browser;
             sections:headings.map((e,i)=>{const p=previousVisible(e),n=nextVisible(e),s=getComputedStyle(e,'::after');return {
               title:e.textContent,font:parseFloat(getComputedStyle(e).fontSize),divider:s.height,dividerContent:s.content,
               dividerTop:parseFloat(s.top),previousGap:p?rect(e).top-rect(p).bottom:null,nextTag:n?.tagName,
-              nextGap:n?rect(n).top-rect(e).bottom:null,needsDivider:i>0||Boolean(a.querySelector('[data-fire-practice-entry]'))||Boolean(n?.matches('.exam-history,.related-list')),
+              nextGap:n?rect(n).top-rect(e).bottom:null,needsDivider:i>0||Boolean(n?.matches('.exam-history,.related-list')),
             };}),
             tables:[...a.querySelectorAll('table')].filter(visible).map(e=>({font:parseFloat(getComputedStyle(e).fontSize),cells:[...e.querySelectorAll('th,td')].map(c=>getComputedStyle(c).verticalAlign)})),
             related:[...a.querySelectorAll(':scope>.related-list')].map(e=>({margin:getComputedStyle(e).marginTop,style:getComputedStyle(e).listStyleType})),
@@ -57,6 +57,7 @@ let browser;
             // A divider must have breathing room above the preceding content.
             assert(h.previousGap>= (width<768?32:48)-1,current+': section gap '+h.title+' '+h.previousGap);
           }
+          if(!h.needsDivider)assert.notEqual(h.divider,'1px',current+': no duplicate divider before the first section');
           if(['P','UL','OL','TABLE'].includes(h.nextTag))assert(Math.abs(h.nextGap-16)<=1,current+': heading/content '+h.title+' '+h.nextGap);
         }
         for(const t of layout.tables){assert.equal(t.font,14,current+': table typography');assert(t.cells.every(v=>v==='top'),current+': cell alignment');}

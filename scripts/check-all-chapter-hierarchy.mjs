@@ -24,6 +24,7 @@ assert.deepEqual(html.sort(),Object.keys(baseline.html).sort());
 let chapters=0,articles=0;const counts={};
 for(const file of html){
   const bytes=fs.readFileSync(file),row=baseline.html[file];
+  if(review.changes[file])assert.equal(hash(bytes),review.changes[file].sha256,file+': exact native stylesheet reference');
   const restored=beforeChapterHierarchy(file,bytes);
   assert.equal(hash(restored),row.sha256,file+': only the stylesheet reference changes');
   const article=bytes.toString().match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0];
