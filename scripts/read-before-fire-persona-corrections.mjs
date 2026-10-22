@@ -12,6 +12,13 @@ const hash=b=>createHash('sha256').update(b).digest('hex');
 // Every current and restored document must match its complete SHA, so unrelated
 // edits cannot disappear behind a structural regex or a changed baseline.
 export function beforeQuestionFlow(file,bytes){
+  // Remove only the stale preparation notice; preserve archived config hashes.
+  if(path.normalize(String(file))==='src/config/certifications.ts'){
+    assert.equal(hash(bytes),'8c3cdee1b7bdf3bfe37c03a9bf4586875d82676bb385ffb2b46aedb98e6def07','exact fire notice removal');
+    const before=Buffer.from(bytes.toString('utf8').replace("releaseNotice: '이론·실무 74개 챕터',","releaseNotice: '이론·실무 74개 챕터 · 문제풀이는 준비 중',"));
+    assert.equal(hash(before),'b0db03f073cb9cecf096cbe8544dae1cadbc995faaf66a20e96b93b1fed66ed5','exact pre-notice config');
+    return before;
+  }
   bytes=beforeStandardizedPractice(file,bytes);
   const row=release.questionFlowProjections?.[path.normalize(String(file))];
   if(!row)return bytes;
