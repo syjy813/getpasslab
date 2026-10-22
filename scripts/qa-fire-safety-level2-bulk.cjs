@@ -28,6 +28,7 @@ try{
  }
  if(row.chapterId==='FSM2-001'){
  const table=page.locator('.sample-table-scroll').first();
+ assert.equal(await page.locator('link[href="/styles/fire-bulk-visual.css?v=fire-grade-20261022"]').count(),1,'versioned grade stylesheet');
  assert.deepEqual(await table.locator('.fire-grade-conditions').evaluateAll(es=>es.map(e=>e.children.length)),[3,4,4,2]);
  assert.equal(await page.getByRole('heading',{name:'조건에 붙는 단서',exact:true}).count(),0);
  assert.equal(await page.getByRole('heading',{name:'시험 포인트',exact:true}).count(),1);

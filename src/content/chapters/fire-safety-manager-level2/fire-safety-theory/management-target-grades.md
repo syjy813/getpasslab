@@ -15,7 +15,7 @@ priority: "출시 필수"
 status: "완료"
 ---
 
-<link rel="stylesheet" href="/styles/fire-bulk-visual.css">
+<link rel="stylesheet" href="/styles/fire-bulk-visual.css?v=fire-grade-20261022">
 
 ## 등급을 판별하는 순서
 용도 → 층수·높이·연면적 → 설치해야 하는 소방시설 순서로 확인함 · 여러 등급 조건에 해당하면 **가장 높은 등급** 적용
