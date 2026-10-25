@@ -40,10 +40,36 @@ const gradeCopyEditFiles = {
     "before": ""
   }
 };
+// User-approved FSM2-002 label and requirement line breaks (2026-10-25).
+// Validate complete current documents before restoring this table for archives.
+export const qualificationTableFiles={
+  "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-qualification-appointment.md": {
+    "sha256": "4c0d4628506f87c8c90310cc3daaf920e393958b3d2a4169f1be88a1b157370d",
+    "beforeSHA256": "ef288a08238b7d50fa0d3b3956ef28cdf69cc379ca9fe547df083ae67c4afe01"
+  },
+  "dist/fire-safety-manager-level2/written/fire-safety-theory/manager-qualification-appointment/index.html": {
+    "sha256": "3be1fc7481f699e83040fe846f49e8bb6a9f2db2a074fec04fdbce7ca8516de6",
+    "beforeSHA256": "761aa78230b2de8051189eddef612aa8982526e114bf2b0b1825f6295ba6cafd"
+  }
+};
+const qualificationTableBefore="<div class=\"sample-table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"자격과 선임을 구분 표\"><table><thead><tr><th>등급</th><th>자격을 판단하는 대표 단서</th></tr></thead><tbody><tr><td>특급</td><td>소방기술사·소방시설관리사 · 그 밖의 법정 자격과 경력 조합 · 특급 시험 합격</td></tr><tr><td>1급</td><td>소방설비기사·소방설비산업기사 · 소방공무원 7년 이상 · 1급 시험 합격</td></tr><tr><td>2급</td><td>위험물기능장·위험물산업기사·위험물기능사 · 소방공무원 3년 이상 · 2급 시험 합격</td></tr><tr><td>3급</td><td>소방공무원 1년 이상 · 3급 시험 합격</td></tr></tbody></table></div>";
+const qualificationTableCurrent="<div class=\"sample-table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"자격과 선임을 구분 표\"><table><thead><tr><th>등급</th><th>자격 요건</th></tr></thead><tbody><tr><td>특급</td><td><ul class=\"fire-grade-conditions\"><li>소방기술사·소방시설관리사</li><li>그 밖의 법정 자격과 경력 조합</li><li>특급 시험 합격</li></ul></td></tr><tr><td>1급</td><td><ul class=\"fire-grade-conditions\"><li>소방설비기사·소방설비산업기사</li><li>소방공무원 7년 이상</li><li>1급 시험 합격</li></ul></td></tr><tr><td>2급</td><td><ul class=\"fire-grade-conditions\"><li>위험물기능장·위험물산업기사·위험물기능사</li><li>소방공무원 3년 이상</li><li>2급 시험 합격</li></ul></td></tr><tr><td>3급</td><td><ul class=\"fire-grade-conditions\"><li>소방공무원 1년 이상</li><li>3급 시험 합격</li></ul></td></tr></tbody></table></div>";
+export function beforeQualificationTable(file,bytes){
+  const row=qualificationTableFiles[path.normalize(String(file))];
+  if(!row||hash(bytes)===row.beforeSHA256)return bytes;
+  assert.equal(hash(bytes),row.sha256,String(file)+': exact qualification table revision');
+  const text=bytes.toString('utf8');
+  assert.equal(text.split(qualificationTableCurrent).length,2);
+  const original=Buffer.from(text.replace(qualificationTableCurrent,qualificationTableBefore));
+  assert.equal(hash(original),row.beforeSHA256,String(file)+': all other chapter bytes preserved');
+  return original;
+}
+
 // Restore only the exact user-approved shared reading stylesheet/reference delta.
 // Native all-chapter checks independently protect current sources and articles.
 const hierarchyEdits=JSON.parse(await nativeRead('docs/audits/2026-10-22-all-chapter-hierarchy/review.json','utf8')).changes;
 export function beforeChapterHierarchy(file,bytes){
+  bytes=beforeQualificationTable(file,bytes);
   const row=hierarchyEdits[path.normalize(String(file))];
   if(!row||hash(bytes)===row.beforeSHA256)return bytes;
   assert.equal(hash(bytes),row.sha256,String(file)+': exact shared hierarchy bytes');

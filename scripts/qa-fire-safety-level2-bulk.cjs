@@ -26,6 +26,23 @@ try{
  const close=(Number(row.chapterId.slice(-3))+i)%3===0?'button':(Number(row.chapterId.slice(-3))+i)%3===1?'escape':'backdrop';if(close==='button')await page.locator('[data-fire-close]').click();else if(close==='escape')await page.keyboard.press('Escape');else await page.mouse.click(1,1);
  await page.waitForFunction(b=>!document.getElementById('fire-bulk-image-dialog').open&&Math.abs(scrollY-b.y)<=1,before);assert.equal(await button.evaluate(e=>e===document.activeElement),true);assert.equal(await page.evaluate(()=>document.body.getAttribute('style')||''),before.style);images.push({...detail,close,restore:'PASS'});
  }
+ if(row.chapterId==='FSM2-002'){
+ const qualification=page.locator('.sample-table-scroll').first();
+ assert.deepEqual(await qualification.locator('thead th').allTextContents(),['등급','자격 요건']);
+ const expected=[
+ ['소방기술사·소방시설관리사','그 밖의 법정 자격과 경력 조합','특급 시험 합격'],
+ ['소방설비기사·소방설비산업기사','소방공무원 7년 이상','1급 시험 합격'],
+ ['위험물기능장·위험물산업기사·위험물기능사','소방공무원 3년 이상','2급 시험 합격'],
+ ['소방공무원 1년 이상','3급 시험 합격']
+ ];
+ for(let i=0;i<expected.length;i++){
+   const items=qualification.locator('tbody tr').nth(i).locator('td').nth(1).locator('li');
+   assert.deepEqual(await items.allTextContents(),expected[i],'unchanged requirement wording');
+   const bounds=await items.evaluateAll(es=>es.map(e=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom})));
+   assert(bounds.every((b,j)=>!j||b.top>bounds[j-1].bottom),'separate requirement lines');
+ }
+ await qualification.screenshot({path:`${dir}/${row.chapterId}-qualification-table-${width}.png`});
+ }
  if(row.chapterId==='FSM2-001'){
  const table=page.locator('.sample-table-scroll').first();
  assert.equal(await page.locator('link[href="/styles/fire-bulk-visual.css?v=fire-grade-copy-20261022"]').count(),1,'versioned grade stylesheet');

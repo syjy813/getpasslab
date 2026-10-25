@@ -20,7 +20,7 @@ status: "완료"
 ## 자격과 선임을 구분
 **자격 취득은 선임할 수 있는 요건**, 선임은 특정 건물의 담당자로 지정하는 절차임 · 강습교육 수료만으로 시험 합격이나 선임이 완료되지는 않음
 
-<div class="sample-table-scroll" tabindex="0" role="region" aria-label="자격과 선임을 구분 표"><table><thead><tr><th>등급</th><th>자격을 판단하는 대표 단서</th></tr></thead><tbody><tr><td>특급</td><td>소방기술사·소방시설관리사 · 그 밖의 법정 자격과 경력 조합 · 특급 시험 합격</td></tr><tr><td>1급</td><td>소방설비기사·소방설비산업기사 · 소방공무원 7년 이상 · 1급 시험 합격</td></tr><tr><td>2급</td><td>위험물기능장·위험물산업기사·위험물기능사 · 소방공무원 3년 이상 · 2급 시험 합격</td></tr><tr><td>3급</td><td>소방공무원 1년 이상 · 3급 시험 합격</td></tr></tbody></table></div>
+<div class="sample-table-scroll" tabindex="0" role="region" aria-label="자격과 선임을 구분 표"><table><thead><tr><th>등급</th><th>자격 요건</th></tr></thead><tbody><tr><td>특급</td><td><ul class="fire-grade-conditions"><li>소방기술사·소방시설관리사</li><li>그 밖의 법정 자격과 경력 조합</li><li>특급 시험 합격</li></ul></td></tr><tr><td>1급</td><td><ul class="fire-grade-conditions"><li>소방설비기사·소방설비산업기사</li><li>소방공무원 7년 이상</li><li>1급 시험 합격</li></ul></td></tr><tr><td>2급</td><td><ul class="fire-grade-conditions"><li>위험물기능장·위험물산업기사·위험물기능사</li><li>소방공무원 3년 이상</li><li>2급 시험 합격</li></ul></td></tr><tr><td>3급</td><td><ul class="fire-grade-conditions"><li>소방공무원 1년 이상</li><li>3급 시험 합격</li></ul></td></tr></tbody></table></div>
 
 등급별 선임은 법정 **소방안전관리자 자격증을 발급받은 사람**을 기준으로 확인 · 상위 등급 자격증으로 하위 등급 선임 가능
 
