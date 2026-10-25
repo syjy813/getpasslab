@@ -26,6 +26,12 @@ try{
  const close=(Number(row.chapterId.slice(-3))+i)%3===0?'button':(Number(row.chapterId.slice(-3))+i)%3===1?'escape':'backdrop';if(close==='button')await page.locator('[data-fire-close]').click();else if(close==='escape')await page.keyboard.press('Escape');else await page.mouse.click(1,1);
  await page.waitForFunction(b=>!document.getElementById('fire-bulk-image-dialog').open&&Math.abs(scrollY-b.y)<=1,before);assert.equal(await button.evaluate(e=>e===document.activeElement),true);assert.equal(await page.evaluate(()=>document.body.getAttribute('style')||''),before.style);images.push({...detail,close,restore:'PASS'});
  }
+ if(row.chapterId==='FSM2-003'){
+ assert.equal(await page.locator('article del,article s').count(),0,'no unintended range strikethrough');
+ const range=page.locator('article>p').filter({hasText:'아파트 300~599세대 1명, 600~899세대 2명, 900~1,199세대 3명'});
+ assert.equal(await range.count(),1,'three original numeric ranges remain visible');
+ await range.screenshot({path:`${dir}/${row.chapterId}-range-${width}.png`});
+ }
  if(row.chapterId==='FSM2-002'){
  const qualification=page.locator('.sample-table-scroll').first();
  assert.deepEqual(await qualification.locator('thead th').allTextContents(),['등급','자격 요건']);

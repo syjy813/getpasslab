@@ -2,18 +2,18 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
-import {beforeChapterHierarchy,beforeQualificationTable,qualificationTableFiles} from './read-before-fire-persona-corrections.mjs';
+import {beforeChapterHierarchy,beforeFireRequirementsReadability,fireRequirementsFiles} from './read-before-fire-persona-corrections.mjs';
 
 const audit='docs/audits/2026-10-22-all-chapter-hierarchy/';
 const baseline=JSON.parse(fs.readFileSync(audit+'baseline.json'));
 const review=JSON.parse(fs.readFileSync(audit+'review.json'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
-// This archived layout snapshot predates the separately reviewed FSM2-002 edit.
-// Check the actual latest document hash before restoring only its one table.
+// This archived layout snapshot predates the separately reviewed FSM2-002/003 readability edits.
+// Check the actual latest document hash before restoring only the approved text/markup.
 const readCurrent=file=>{
-  const bytes=fs.readFileSync(file),row=qualificationTableFiles[file];
-  if(row)assert.equal(hash(bytes),row.sha256,file+': native qualification revision');
-  return beforeQualificationTable(file,bytes);
+  const bytes=fs.readFileSync(file),row=fireRequirementsFiles[file];
+  if(row)assert.equal(hash(bytes),row.sha256,file+': native requirements revision');
+  return beforeFireRequirementsReadability(file,bytes);
 };
 const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);
 assert.deepEqual([...walk('src'),...walk('public')].sort(),Object.keys(baseline.files).sort());
@@ -35,7 +35,7 @@ for(const file of html){
   const restored=beforeChapterHierarchy(file,bytes);
   assert.equal(hash(restored),row.sha256,file+': only the stylesheet reference changes');
   const article=bytes.toString().match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0];
-  assert.equal(article?hash(article):null,row.articleSHA256,file+': article unchanged after exact qualification-table inverse');
+  assert.equal(article?hash(article):null,row.articleSHA256,file+': article unchanged after exact requirements formatting inverse');
   if(article)articles++;
   if(row.chapter){chapters++;const cert=file.split('/')[1];counts[cert]=(counts[cert]||0)+1;}
   if(review.changes[file])assert.throws(()=>beforeChapterHierarchy(file,Buffer.concat([bytes,Buffer.from(' mutation')])));

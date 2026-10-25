@@ -40,27 +40,45 @@ const gradeCopyEditFiles = {
     "before": ""
   }
 };
-// User-approved FSM2-002 label and requirement line breaks (2026-10-25).
-// Validate complete current documents before restoring this table for archives.
-export const qualificationTableFiles={
+// User-approved qualification table and assistant-count range formatting.
+// Current full documents are fingerprinted before exact archived restoration.
+export const fireRequirementsFiles={
   "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/manager-qualification-appointment.md": {
     "sha256": "4c0d4628506f87c8c90310cc3daaf920e393958b3d2a4169f1be88a1b157370d",
-    "beforeSHA256": "ef288a08238b7d50fa0d3b3956ef28cdf69cc379ca9fe547df083ae67c4afe01"
+    "beforeSHA256": "ef288a08238b7d50fa0d3b3956ef28cdf69cc379ca9fe547df083ae67c4afe01",
+    "at": 589,
+    "current": " 요건</th></tr></thead><tbody><tr><td>특급</td><td><ul class=\"fire-grade-conditions\"><li>소방기술사·소방시설관리사</li><li>그 밖의 법정 자격과 경력 조합</li><li>특급 시험 합격</li></ul></td></tr><tr><td>1급</td><td><ul class=\"fire-grade-conditions\"><li>소방설비기사·소방설비산업기사</li><li>소방공무원 7년 이상</li><li>1급 시험 합격</li></ul></td></tr><tr><td>2급</td><td><ul class=\"fire-grade-conditions\"><li>위험물기능장·위험물산업기사·위험물기능사</li><li>소방공무원 3년 이상</li><li>2급 시험 합격</li></ul></td></tr><tr><td>3급</td><td><ul class=\"fire-grade-conditions\"><li>소방공무원 1년 이상</li><li>3급 시험 합격</li></ul>",
+    "before": "을 판단하는 대표 단서</th></tr></thead><tbody><tr><td>특급</td><td>소방기술사·소방시설관리사 · 그 밖의 법정 자격과 경력 조합 · 특급 시험 합격</td></tr><tr><td>1급</td><td>소방설비기사·소방설비산업기사 · 소방공무원 7년 이상 · 1급 시험 합격</td></tr><tr><td>2급</td><td>위험물기능장·위험물산업기사·위험물기능사 · 소방공무원 3년 이상 · 2급 시험 합격</td></tr><tr><td>3급</td><td>소방공무원 1년 이상 · 3급 시험 합격"
   },
   "dist/fire-safety-manager-level2/written/fire-safety-theory/manager-qualification-appointment/index.html": {
     "sha256": "3be1fc7481f699e83040fe846f49e8bb6a9f2db2a074fec04fdbce7ca8516de6",
-    "beforeSHA256": "761aa78230b2de8051189eddef612aa8982526e114bf2b0b1825f6295ba6cafd"
+    "beforeSHA256": "761aa78230b2de8051189eddef612aa8982526e114bf2b0b1825f6295ba6cafd",
+    "at": 22144,
+    "current": " 요건</th></tr></thead><tbody><tr><td>특급</td><td><ul class=\"fire-grade-conditions\"><li>소방기술사·소방시설관리사</li><li>그 밖의 법정 자격과 경력 조합</li><li>특급 시험 합격</li></ul></td></tr><tr><td>1급</td><td><ul class=\"fire-grade-conditions\"><li>소방설비기사·소방설비산업기사</li><li>소방공무원 7년 이상</li><li>1급 시험 합격</li></ul></td></tr><tr><td>2급</td><td><ul class=\"fire-grade-conditions\"><li>위험물기능장·위험물산업기사·위험물기능사</li><li>소방공무원 3년 이상</li><li>2급 시험 합격</li></ul></td></tr><tr><td>3급</td><td><ul class=\"fire-grade-conditions\"><li>소방공무원 1년 이상</li><li>3급 시험 합격</li></ul>",
+    "before": "을 판단하는 대표 단서</th></tr></thead><tbody><tr><td>특급</td><td>소방기술사·소방시설관리사 · 그 밖의 법정 자격과 경력 조합 · 특급 시험 합격</td></tr><tr><td>1급</td><td>소방설비기사·소방설비산업기사 · 소방공무원 7년 이상 · 1급 시험 합격</td></tr><tr><td>2급</td><td>위험물기능장·위험물산업기사·위험물기능사 · 소방공무원 3년 이상 · 2급 시험 합격</td></tr><tr><td>3급</td><td>소방공무원 1년 이상 · 3급 시험 합격"
+  },
+  "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/assistant-appointment-count.md": {
+    "sha256": "6e5b62b1ebea003f2fe3ba83132c6dd654dcb134410602e6adde908404e25327",
+    "beforeSHA256": "bd13377017c18aa9813c84ca96c04c5e4039307fe6c95f1136537f73fe0df4d5",
+    "at": 829,
+    "current": "\\~599세대 1명, 600\\~899세대 2명, 900\\",
+    "before": "~599세대 1명, 600~899세대 2명, 900"
+  },
+  "dist/fire-safety-manager-level2/written/fire-safety-theory/assistant-appointment-count/index.html": {
+    "sha256": "2777606e4af3fa99a8720c54563ea31319cc08f088522cb369b825d3e86bb5c4",
+    "beforeSHA256": "df99737156b7a87676698e66459adc7d45b0407c3c7d0dcb1f07229dba15f753",
+    "at": 22377,
+    "current": "~599세대 1명, 600~",
+    "before": "<del>599세대 1명, 600</del>"
   }
 };
-const qualificationTableBefore="<div class=\"sample-table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"자격과 선임을 구분 표\"><table><thead><tr><th>등급</th><th>자격을 판단하는 대표 단서</th></tr></thead><tbody><tr><td>특급</td><td>소방기술사·소방시설관리사 · 그 밖의 법정 자격과 경력 조합 · 특급 시험 합격</td></tr><tr><td>1급</td><td>소방설비기사·소방설비산업기사 · 소방공무원 7년 이상 · 1급 시험 합격</td></tr><tr><td>2급</td><td>위험물기능장·위험물산업기사·위험물기능사 · 소방공무원 3년 이상 · 2급 시험 합격</td></tr><tr><td>3급</td><td>소방공무원 1년 이상 · 3급 시험 합격</td></tr></tbody></table></div>";
-const qualificationTableCurrent="<div class=\"sample-table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"자격과 선임을 구분 표\"><table><thead><tr><th>등급</th><th>자격 요건</th></tr></thead><tbody><tr><td>특급</td><td><ul class=\"fire-grade-conditions\"><li>소방기술사·소방시설관리사</li><li>그 밖의 법정 자격과 경력 조합</li><li>특급 시험 합격</li></ul></td></tr><tr><td>1급</td><td><ul class=\"fire-grade-conditions\"><li>소방설비기사·소방설비산업기사</li><li>소방공무원 7년 이상</li><li>1급 시험 합격</li></ul></td></tr><tr><td>2급</td><td><ul class=\"fire-grade-conditions\"><li>위험물기능장·위험물산업기사·위험물기능사</li><li>소방공무원 3년 이상</li><li>2급 시험 합격</li></ul></td></tr><tr><td>3급</td><td><ul class=\"fire-grade-conditions\"><li>소방공무원 1년 이상</li><li>3급 시험 합격</li></ul></td></tr></tbody></table></div>";
-export function beforeQualificationTable(file,bytes){
-  const row=qualificationTableFiles[path.normalize(String(file))];
+export function beforeFireRequirementsReadability(file,bytes){
+  const row=fireRequirementsFiles[path.normalize(String(file))];
   if(!row||hash(bytes)===row.beforeSHA256)return bytes;
-  assert.equal(hash(bytes),row.sha256,String(file)+': exact qualification table revision');
+  assert.equal(hash(bytes),row.sha256,String(file)+': exact requirements readability revision');
   const text=bytes.toString('utf8');
-  assert.equal(text.split(qualificationTableCurrent).length,2);
-  const original=Buffer.from(text.replace(qualificationTableCurrent,qualificationTableBefore));
+  assert.equal(text.slice(row.at,row.at+row.current.length),row.current);
+  const original=Buffer.from(text.slice(0,row.at)+row.before+text.slice(row.at+row.current.length));
   assert.equal(hash(original),row.beforeSHA256,String(file)+': all other chapter bytes preserved');
   return original;
 }
@@ -69,7 +87,7 @@ export function beforeQualificationTable(file,bytes){
 // Native all-chapter checks independently protect current sources and articles.
 const hierarchyEdits=JSON.parse(await nativeRead('docs/audits/2026-10-22-all-chapter-hierarchy/review.json','utf8')).changes;
 export function beforeChapterHierarchy(file,bytes){
-  bytes=beforeQualificationTable(file,bytes);
+  bytes=beforeFireRequirementsReadability(file,bytes);
   const row=hierarchyEdits[path.normalize(String(file))];
   if(!row||hash(bytes)===row.beforeSHA256)return bytes;
   assert.equal(hash(bytes),row.sha256,String(file)+': exact shared hierarchy bytes');
