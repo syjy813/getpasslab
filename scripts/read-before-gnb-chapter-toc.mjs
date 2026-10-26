@@ -1,3 +1,4 @@
+import {beforeGNBTOCHeight} from './read-before-gnb-toc-height.mjs';
 // Historical release checks only: invert the exact reviewed UI delta.
 // Current source, HTML, article and asset integrity is checked independently.
 import fs from 'node:fs';
@@ -9,6 +10,7 @@ export const gnbTOCReview=JSON.parse(gunzipSync(fs.readFileSync('docs/audits/202
 const previousMobileReview=JSON.parse(gunzipSync(fs.readFileSync('docs/audits/2026-10-26-mobile-learning-ux/review.json.gz')).toString('utf8'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 export function beforeGNBChapterTOC(file,bytes){
+  bytes=beforeGNBTOCHeight(file,bytes);
   const key=path.normalize(String(file)),row=gnbTOCReview.files[key];
   if(!row||hash(bytes)===row.beforeSHA256||hash(bytes)===previousMobileReview.files[key]?.beforeSHA256)return bytes;
   assert.equal(hash(bytes),row.sha256,key+': exact GNB chapter TOC revision');

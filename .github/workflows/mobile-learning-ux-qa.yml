@@ -9,6 +9,8 @@ on:
       - 'src/styles/global.css'
       - 'scripts/*mobile-learning-ux*'
       - 'scripts/*gnb-chapter-toc*'
+      - 'scripts/*gnb-toc-height*'
+      - 'docs/audits/2026-10-26-gnb-toc-height/**'
       - 'docs/audits/2026-10-26-gnb-chapter-toc/**'
       - 'scripts/read-before-global-chapter-readability.mjs'
       - 'scripts/check-global-chapter-readability.mjs'
@@ -28,6 +30,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - run: node scripts/check-gnb-toc-height.mjs
       - run: node scripts/check-gnb-chapter-toc.mjs
       - run: node scripts/check-mobile-learning-ux.mjs
       - run: node scripts/check-global-chapter-readability.mjs
