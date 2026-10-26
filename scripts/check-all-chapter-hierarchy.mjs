@@ -8,7 +8,7 @@ const audit='docs/audits/2026-10-22-all-chapter-hierarchy/';
 const baseline=JSON.parse(fs.readFileSync(audit+'baseline.json'));
 const review=JSON.parse(fs.readFileSync(audit+'review.json'));
 const hash=b=>createHash('sha256').update(b).digest('hex');
-// This archived layout snapshot predates the separately reviewed FSM2-002/003 readability edits.
+// This archived layout snapshot predates the separately reviewed FSM2-002/003/004 readability edits.
 // Check the actual latest document hash before restoring only the approved text/markup.
 const readCurrent=file=>{
   const bytes=fs.readFileSync(file),row=fireRequirementsFiles[file];
