@@ -26,23 +26,30 @@ let browser;
         await page.evaluate(()=>document.fonts.ready);
         assert(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1),'page overflow');
         assert.equal(await page.locator('h1').count(),1);
-        const list=page.locator('.learning-chapters');
-        if(width<1024){
-          await list.locator('summary').click();
-          const selection=await list.evaluate(e=>{
-            const panel=e.querySelector('.side-nav'),current=panel.querySelector('[aria-current="page"]');
-            const p=panel.getBoundingClientRect(),c=current.getBoundingClientRect();
-            return {open:e.open,current:current.getAttribute('href'),visible:c.bottom>p.top&&c.top<p.bottom,touch:[...panel.querySelectorAll('a')].every(a=>a.getBoundingClientRect().height>=44),panelHeight:p.height};
-          });
-          assert(selection.open&&selection.visible&&selection.touch,'current chapter is visible in bounded touch list');
-          assert.equal(selection.current,route);
-          assert(selection.panelHeight<=844*.4+2);
-          await list.locator('summary').click();
-          const index=page.locator('.chapter-mobile-index');
-          const href=await index.getAttribute('href');
-          assert.equal((await context.request.get(base+href)).status(),200);
-          assert((await index.boundingBox()).height>=44);
-        }else assert(!await list.isVisible());
+        assert.equal(await page.locator('.learning-chapters,.chapter-mobile-index').count(),0,'no body or bottom TOC');
+        const alignment=await page.evaluate(()=>{
+          const n=document.querySelector('.gnb-inner').getBoundingClientRect(),l=document.querySelector('.gnb-logo').getBoundingClientRect(),r=document.querySelector('.gnb-menu summary svg').getBoundingClientRect();
+          return {left:l.left-n.left,right:n.right-r.right};
+        });
+        assert(Math.abs(alignment.left-24)<=1&&Math.abs(alignment.right-24)<=1,'symmetric GNB visible edges');
+        const gnb=page.locator('.gnb-menu');
+        assert.equal((await gnb.locator('summary').innerText()).trim(),'챕터 목차');
+        await gnb.locator('summary').click();
+        const toc=gnb.locator('.gnb-chapter-dropdown');
+        const selection=await toc.evaluate(e=>{
+          const current=e.querySelector('[aria-current="page"]'),p=e.getBoundingClientRect(),c=current.getBoundingClientRect();
+          return {current:current.getAttribute('href'),visible:c.bottom>p.top&&c.top<p.bottom,touch:[...e.querySelectorAll('a')].every(a=>a.getBoundingClientRect().height>=44),left:p.left,right:p.right,bottom:p.bottom};
+        });
+        assert(selection.visible&&selection.touch,'current chapter visible in touch TOC');assert.equal(selection.current,route);
+        assert(selection.left>=0&&selection.right<=width+1&&selection.bottom<=844,'bounded TOC');
+        const sidebarLinks=await page.locator('.chapter-side .side-nav a').evaluateAll(es=>es.map(e=>e.getAttribute('href')));
+        assert.deepEqual(await toc.locator('a').evaluateAll(es=>es.map(e=>e.getAttribute('href'))),sidebarLinks);
+        if(width===390)await page.screenshot({path:`${out}/${width}-${route.split('/').at(-2)}-toc.png`});
+        const destination=toc.locator('a:not([aria-current])').first();
+        const destinationURL=await destination.getAttribute('href');
+        await destination.click();assert(new URL(page.url()).pathname===destinationURL,'TOC link navigation');
+        await page.goBack();assert.equal(new URL(page.url()).pathname,route);
+        if(await page.locator('.gnb-menu').getAttribute('open')!==null)await page.locator('.gnb-menu>summary').click();
         const switcher=page.locator('.subject-switcher');
         if(await switcher.count()){
           await switcher.locator('summary').click();
@@ -91,6 +98,14 @@ let browser;
         }
         report.cases.push({width,route,passed:true,questions:await badges.count(),imageButtons:await zoom.count()});
       }catch(e){report.errors.push(`${width} ${route}: ${e}`);report.cases.push({width,route,passed:false});await page.screenshot({path:out+`/failure-${width}-${route.split('/').at(-2)}.png`}).catch(()=>{});}
+    }
+    for(const ordinary of ['/', '/computer-literacy/written/']){
+      await page.goto(base+ordinary);
+      assert.equal((await page.locator('.gnb-menu>summary').innerText()).trim(),'자격증 · 과목');
+      assert.equal(await page.locator('.gnb-chapter-dropdown').count(),0);
+      const edges=await page.evaluate(()=>{const n=document.querySelector('.gnb-inner').getBoundingClientRect(),l=document.querySelector('.gnb-logo').getBoundingClientRect(),r=document.querySelector('.gnb-menu summary svg').getBoundingClientRect();return [l.left-n.left,n.right-r.right];});
+      assert(edges.every(v=>Math.abs(v-24)<=1),'ordinary GNB symmetry');
+      report.cases.push({width,route:ordinary,case:'ordinary page GNB',passed:true});
     }
     // Long GNB must remain scrollable on a short mobile screen.
     if(width===320||width===390){
