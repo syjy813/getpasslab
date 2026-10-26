@@ -33,5 +33,11 @@ const certifications = getFeaturedCertifications();
     document.addEventListener('click', e => {
       if (d instanceof HTMLDetailsElement && d.open && !d.contains(e.target as Node)) d.open = false;
     });
+    d.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && d instanceof HTMLDetailsElement && d.open) {
+        d.open = false;
+        d.querySelector('summary')?.focus();
+      }
+    });
   });
 </script>

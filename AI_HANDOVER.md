@@ -1,3 +1,12 @@
+## 2026-10-26 모바일 학습 UX 개선 검토본
+
+- 사용자 WEB 진단·수정·검증·작업 브랜치/PR 승인. 기준 main `dbd9f1e68b03c9a00c03bd58e23e3f5a915da945`, 브랜치 `codex/mobile-learning-ux-20261026`
+- Production에서 과목 전환 메뉴 오른쪽 잘림(390px에서 right402.59), 기출 버튼29px, releaseNotice가 없는 과목의 모바일 챕터 목록 부재 확인
+- 제품3파일: ChapterLayout/GNB/global.css. 전 과목 그룹별 목록·현재 항목 표시·하단 목차, 메뉴 경계·높이 제한·44px 터치, 기존 확대 기능/오버레이 없는 학습 그림 원본 크기 viewer
+- 521챕터 학습 article·문제 payload·수식·이미지·데이터·URL 보존을 native guard에서 검사. 과거 검수 기록은 변경하지 않고 정확한 이번 UI delta만 역사 검사에서 역복원. gzip review는 반복되는 목록·HTML 역복원 패치의 무손실 압축
+- WEB Build545페이지/SEO547HTML·545URL/공개콘텐츠/대비/deferred검사 오류0. 최종 native·역사검사/브라우저 QA/Commit·Push·PR·CI는 감사 보고서와 실제 PR Checks 확인
+- 연결된 브라우저는 Production 사전 점검에 사용. WEB 컨테이너 localhost 접근 불가로 수정본 브라우저 QA는 GitHub Actions 사용. 실제 기기/Safari 및 수정본 Production 미검증. main 병합·배포 미실행
+
 ## 2026-10-21 소방 심화 740문항 일반 난도로 교체
 
 - 사용자 요청: 복합 사례 대괄호 제목과 가·나의 기록 판정 제거, 심화 전체를 일반 기출형 수준으로 조정. 기준 main `0510b59` / `codex/fire-standardize-advanced-20261021`

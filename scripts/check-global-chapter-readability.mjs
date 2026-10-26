@@ -1,3 +1,4 @@
+import { beforeMobileLearningUX } from './read-before-mobile-learning-ux.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -13,14 +14,14 @@ const added=Object.entries(readabilityReview.files).filter(([,r])=>r.added).map(
 assert.deepEqual([...walk('src'),...walk('public')].sort(),[...Object.keys(baseline.files),...added.filter(f=>f.startsWith('src/')||f.startsWith('public/'))].sort());
 assert.deepEqual(walk('dist').filter(f=>f.endsWith('.html')).sort(),Object.keys(baseline.html).sort());
 for(const[file,row]of Object.entries(readabilityReview.files)){
-  const bytes=fs.readFileSync(file);assert.equal(hash(bytes),row.sha256,file+': reviewed native bytes');
+  const bytes=beforeMobileLearningUX(file,fs.readFileSync(file));assert.equal(hash(bytes),row.sha256,file+': reviewed native bytes');
   if(!row.added){
     assert.equal(hash(beforeGlobalChapterReadability(file,bytes)),row.beforeSHA256);
     assert.throws(()=>beforeGlobalChapterReadability(file,Buffer.concat([bytes,Buffer.from(' mutation')])));
   }
 }
 for(const[file,expected]of Object.entries({...baseline.files,...baseline.html})){
-  assert.equal(hash(beforeGlobalChapterReadability(file,fs.readFileSync(file))),expected,file+': only approved presentation changes');
+  assert.equal(hash(beforeGlobalChapterReadability(file,beforeMobileLearningUX(file,fs.readFileSync(file)))),expected,file+': only approved presentation changes');
 }
 const region=html=>{
   const begin=html.indexOf('>',html.indexOf('<article'))+1,end=html.indexOf('<aside class="adfit-placement"',begin);
@@ -39,7 +40,7 @@ const protectedParts=html=>{
 };
 const report={chapters:0,changed:0,byCertification:{},cells:0,sentenceBreaks:0,copyRules:copyRules.length,reviewedCellRules:cellLists.length};
 for(const row of baseline.chapters){
-  const bytes=fs.readFileSync(row.file),after=bytes.toString(),before=beforeGlobalChapterReadability(row.file,bytes).toString();
+  const bytes=beforeMobileLearningUX(row.file,fs.readFileSync(row.file)),after=bytes.toString(),before=beforeGlobalChapterReadability(row.file,bytes).toString();
   const old=region(before),current=region(after),scope={slug:row.slug,certId:row.cert};
   assert.equal(formatChapterHtml(old.html,scope),current.html,row.file+': complete slot transformation');
   assert.equal(formatChapterHtml(current.html,scope),current.html,row.file+': idempotent');
