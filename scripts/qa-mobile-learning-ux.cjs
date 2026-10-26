@@ -68,7 +68,7 @@ let browser;
           for(const method of ['button','escape','backdrop']){
             await zoom.first().scrollIntoViewIfNeeded();
             const before=await page.evaluate(()=>({x:scrollX,y:scrollY,style:document.body.getAttribute('style')}));
-            const original=await page.locator('article .learning-visuals figure').filter({has:zoom.first()}).locator('img').evaluate(e=>({src:e.currentSrc,alt:e.alt,width:Number(e.getAttribute('width'))}));
+            const original=await zoom.first().evaluate(button=>{const e=button.closest('figure').querySelector('img');return {src:e.currentSrc,alt:e.alt,width:Number(e.getAttribute('width'))};});
             await zoom.first().click();
             const dialog=page.locator('.learning-image-dialog');
             assert(await dialog.isVisible());
