@@ -31,6 +31,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: node scripts/check-all-chapter-hierarchy.mjs
+      - run: node scripts/check-global-chapter-readability.mjs
       - name: Prepare browser
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1

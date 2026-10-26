@@ -379,6 +379,7 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .chapter-page article td :is(p,ul,ol){margin:0}
 .chapter-page article td :is(p,ul,ol)+:is(p,ul,ol),
 .chapter-page article td li+li{margin-top:var(--space-2)}
+.chapter-page article td ul.chapter-cell-items{padding-left:1.1em;list-style-type:disc}
 .chapter-page article>.sample-table-scroll{margin-block:var(--space-4)}
 .chapter-page article>.sample-table-scroll>table{margin:0}
 .chapter-page article>:is(h2,h3)+.sample-table-scroll{margin-top:0}

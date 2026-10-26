@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { readdir } from './read-before-formwork-lateral-pressure.mjs';
 import path from 'node:path';
 import { readFile as nativeReadFile } from 'node:fs/promises';
+import { beforeGlobalChapterReadability } from './read-before-global-chapter-readability.mjs';
 import { restoreDisplayReview, reviewedChapterHash, restoreQuestionSourceAssetRefs, reviewedAssetAdditions } from './reviewed-chapter-hash.mjs';
 
 const sourceReview = JSON.parse(await readFile('docs/audits/2026-10-06-industrial-question-source-repair/review.json', 'utf8'));
@@ -134,7 +135,7 @@ async function readHistoricalBuildHtml(file) {
   // The 2026-10-08 pilot introduces precisely one quiz block after the old
   // question-history script and before "관련 챕터". The block is not historical
   // course content; remove it only for the old snapshot comparison.
-  const html = await nativeReadFile(file, 'utf8');
+  const html = beforeGlobalChapterReadability(file, await nativeReadFile(file)).toString('utf8');
   const match = html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/);
   assert(match, 'pilot public article must exist');
   const article = match[1];

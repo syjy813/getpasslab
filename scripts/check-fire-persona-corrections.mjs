@@ -4,6 +4,7 @@ import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {beforePublication} from './fire-mock-authoring/publication.mjs';
 import {beforePublishedChapterCount,beforePopup} from './read-before-fire-persona-corrections.mjs';
+import {isReadabilityAddition} from './read-before-global-chapter-readability.mjs';
 const dir='docs/audits/2026-10-20-fire-persona-corrections';
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
 const release=await json(dir+'/release.json');
@@ -39,7 +40,7 @@ assert.equal(verification.untouchedQuestions,2313);
 assert.equal(verification.preservedRawSources,500);
 assert.equal(verification.preservedAnswerNumbers,2480);
 const walk=async d=>(await Promise.all((await readdir(d,{withFileTypes:true})).map(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]))).flat();
-const files=[...await walk('src'),...await walk('public')].sort();
+const files=[...await walk('src'),...await walk('public')].filter(f=>!isReadabilityAddition(f)).sort();
 assert.deepEqual(files,[...Object.keys(release.baselineSources),...release.files.filter(r=>r.added).map(r=>r.path)].sort());
 for(const f of files){const changed=release.files.find(r=>r.path===f);assert.equal(hash(beforePopup(f,await readFile(f))),changed?.sha256 ?? release.baselineSources[f],f);}
 for(const row of release.files){

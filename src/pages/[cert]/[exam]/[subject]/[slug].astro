@@ -6,6 +6,7 @@ import QuestionHistory from '../../../../components/QuestionHistory.astro';
 import InstantQuestionPractice from '../../../../components/InstantQuestionPractice.astro';
 import { INSTANT_PRACTICE_PILOT_SLUG } from '../../../../config/instantPracticeExplanations.js';
 import RelatedChapters from '../../../../components/RelatedChapters.astro';
+import ReadableChapter from '../../../../components/ReadableChapter.astro';
 import FirePracticeEntry from '../../../../components/FirePracticeEntry.astro';
 import { publishedFireQuestions } from '../../../../utils/firePracticeData';
 import { getSubject } from '../../../../config/certifications';
@@ -181,7 +182,7 @@ const sideChapters = orderedSideChapters
   subjectStartChapters={subjectStartChapters}
   practiceQuestions={chapter.data.cert_id === 'industrial-safety' && chapter.data.slug === INSTANT_PRACTICE_PILOT_SLUG ? undefined : linked.some(question => !question.review && question.choices.length === 4 && question.answer >= 1 && question.answer <= 4) ? linked as any : undefined}
 >
-  <Content />
+  <ReadableChapter slug={chapter.data.slug} certId={chapter.data.cert_id}><Content /></ReadableChapter>
   <AdFitResponsive />
   {chapter.data.cert_id !== 'fire-safety-manager-level2' && (linked.length > 0 || supporting.length === 0) && <QuestionHistory
     questions={linked as any}
