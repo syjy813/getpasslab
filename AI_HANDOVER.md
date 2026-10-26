@@ -1,3 +1,10 @@
+## 2026-10-26 챕터 목차/하단 바 겹침 수정 검토본
+
+- PR192 main fb92caac 배포 후 사용자 긴 목차가 하단 고정 바와 겹치는 화면 제공. `codex/gnb-toc-height-20261026`
+- 제품은 global.css만 변경: body의72px+safe-area 확보 공간을 변수로 공유하고 모바일/태블릿 목차 max-height에서 그 공간+8px 제외. 위치·좌우24px·목록/링크·기출·본문·그림 확대 유지
+- `docs/audits/2026-10-26-gnb-toc-height/` native전체보호/정확한CSS참조역복원/실제고정바경계·마지막링크·모사safe-area QA 참조
+- 이번 수정의 main 병합·Production 배포 미실행. 실제 브라우저/CI 최종 결과는 PR Checks 확인
+
 ## 2026-10-26 챕터 목차 GNB 이동 검토본
 
 - 직전 PR191은 main e23ba369로 배포 완료, Production521챕터/2084화면 및11워크플로 성공. 사용자가 본문/하단 목차 위치를 수정 요청

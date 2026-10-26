@@ -1,3 +1,4 @@
+import {beforeGNBTOCHeight} from './read-before-gnb-toc-height.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -9,9 +10,9 @@ const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?
 assert.deepEqual([...walk('src'),...walk('public')].sort(),Object.keys(baseline.files).sort());
 assert.deepEqual(walk('dist').filter(f=>f.endsWith('.html')).sort(),Object.keys(baseline.html).sort());
 assert.deepEqual(gnbTOCReview.productFiles.sort(),['src/components/GNB.astro','src/layouts/BaseLayout.astro','src/layouts/ChapterLayout.astro','src/styles/global.css']);
-for(const [file,expected]of Object.entries(baseline.files))assert.equal(hash(beforeGNBChapterTOC(file,fs.readFileSync(file))),expected,file+': exact source preservation');
+for(const [file,expected]of Object.entries(baseline.files))assert.equal(hash(beforeGNBChapterTOC(file,beforeGNBTOCHeight(file,fs.readFileSync(file)))),expected,file+': exact source preservation');
 for(const [file,row]of Object.entries(gnbTOCReview.files)){
- const bytes=fs.readFileSync(file);assert.equal(hash(bytes),row.sha256,file+': native current bytes');
+ const bytes=beforeGNBTOCHeight(file,fs.readFileSync(file));assert.equal(hash(bytes),row.sha256,file+': native current bytes');
  assert.equal(hash(beforeGNBChapterTOC(file,bytes)),row.beforeSHA256);
  assert.throws(()=>beforeGNBChapterTOC(file,Buffer.concat([bytes,Buffer.from(' mutation')])));
 }
@@ -21,7 +22,7 @@ const text=n=>n.nodeName==='#text'?n.value:(n.childNodes||[]).map(text).join('')
 const descendants=n=>{const a=[];const visit=x=>{a.push(x);for(const c of x.childNodes||[])visit(c);};visit(n);return a;};
 let chapters=0,ordinary=0,articles=0;const certs={};
 for(const [file,row]of Object.entries(baseline.html)){
- const bytes=fs.readFileSync(file),html=bytes.toString();assert.equal(hash(beforeGNBChapterTOC(file,bytes)),row.sha256,file+': exact allowed HTML changes');
+ const bytes=beforeGNBTOCHeight(file,fs.readFileSync(file)),html=bytes.toString();assert.equal(hash(beforeGNBChapterTOC(file,bytes)),row.sha256,file+': exact allowed HTML changes');
  const article=html.match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0];assert.equal(article?hash(article):null,row.articleSHA256,file+': native lesson/question/formula/image bytes');if(article)articles++;
  const nodes=descendants(parse(html)),gnb=nodes.find(n=>has(n,'gnb-menu'));
  if(!gnb)continue;
