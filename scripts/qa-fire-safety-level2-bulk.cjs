@@ -26,6 +26,29 @@ try{
  const close=(Number(row.chapterId.slice(-3))+i)%3===0?'button':(Number(row.chapterId.slice(-3))+i)%3===1?'escape':'backdrop';if(close==='button')await page.locator('[data-fire-close]').click();else if(close==='escape')await page.keyboard.press('Escape');else await page.mouse.click(1,1);
  await page.waitForFunction(b=>!document.getElementById('fire-bulk-image-dialog').open&&Math.abs(scrollY-b.y)<=1,before);assert.equal(await button.evaluate(e=>e===document.activeElement),true);assert.equal(await page.evaluate(()=>document.body.getAttribute('style')||''),before.style);images.push({...detail,close,restore:'PASS'});
  }
+ if(row.chapterId==='FSM2-004'){
+ const table=page.locator('.sample-table-scroll').first();
+ const expected=[
+ ['피난계획을 포함한 소방계획서 작성 및 시행','자위소방대 및 초기대응체계의 구성, 운영 및 교육'],
+ ['피난시설, 방화구획 및 방화시설 관리','소방시설이나 그 밖의 소방 관련 시설 관리'],
+ ['소방훈련 및 교육','화기 취급 감독'],
+ ['업무수행 기록 및 유지','화재 발생 시 초기대응','그 밖에 소방안전관리에 필요한 업무']
+ ];
+ for(let i=0;i<expected.length;i++){
+   const items=table.locator('tbody tr').nth(i).locator('td').nth(1).locator('li');
+   assert.deepEqual(await items.allTextContents(),expected[i],'nine duties remain distinct');
+   const bounds=await items.evaluateAll(es=>es.map(e=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom})));
+   assert(bounds.every((b,j)=>!j||b.top>bounds[j-1].bottom),'separate duty lines');
+ }
+ const prose=page.locator('article>p:not(.fire-source-note)');
+ assert(!(await prose.allTextContents()).join('\n').includes('·'),'no ambiguous prose separators');
+ assert.equal(await prose.filter({hasText:'소유자, 관리자 또는 점유자'}).count(),1,'definition alternatives');
+ assert.equal(await prose.filter({hasText:'소방안전관리자 선임과 시설 유지'}).count(),1,'parallel obligations');
+ assert.equal(await prose.filter({hasText:'소방본부장 또는 소방서장'}).count(),1,'notification alternatives preserved');
+ await table.screenshot({path:`${dir}/${row.chapterId}-duties-table-${width}.png`});
+ await page.getByRole('heading',{name:'관계인의 책임',exact:true}).evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));
+ await page.screenshot({path:`${dir}/${row.chapterId}-responsibilities-${width}.png`});
+ }
  if(row.chapterId==='FSM2-003'){
  assert.equal(await page.locator('article del,article s').count(),0,'no unintended range strikethrough');
  const range=page.locator('article>p').filter({hasText:'아파트 300~599세대 1명, 600~899세대 2명, 900~1,199세대 3명'});
