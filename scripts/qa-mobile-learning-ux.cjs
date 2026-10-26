@@ -36,6 +36,13 @@ let browser;
         assert.equal((await gnb.locator('summary').innerText()).trim(),'챕터 목차');
         await gnb.locator('summary').click();
         const toc=gnb.locator('.gnb-chapter-dropdown');
+        // Native details queues its toggle event; wait for the existing auto-scroll.
+        await page.waitForFunction(()=>{
+          const details=document.querySelector('.gnb-menu'),menu=details?.querySelector('.gnb-chapter-dropdown'),current=menu?.querySelector('[aria-current="page"]');
+          if(!details?.open||!menu||!current)return false;
+          const panel=menu.getBoundingClientRect(),item=current.getBoundingClientRect();
+          return panel.height>0&&item.bottom>panel.top&&item.top<panel.bottom;
+        });
         const selection=await toc.evaluate(e=>{
           const current=e.querySelector('[aria-current="page"]'),p=e.getBoundingClientRect(),c=current.getBoundingClientRect();
           return {current:current.getAttribute('href'),visible:c.bottom>p.top&&c.top<p.bottom,touch:[...e.querySelectorAll('a')].every(a=>a.getBoundingClientRect().height>=44),left:p.left,right:p.right,bottom:p.bottom};
