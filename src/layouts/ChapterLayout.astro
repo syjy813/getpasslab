@@ -198,14 +198,19 @@ const structuredData = [
         <span class="current">{title}</span>
       </nav>
       <ChapterBadges badges={badges} class="chapter-title-badges" />
-      {examDefinition.releaseNotice && <>
-        <details class="learning-chapters">
-          <summary>이 과목의 챕터 {sideChapters.length}개</summary>
-          <nav class="side-nav" aria-label="모바일 챕터 목록">
-            {sideChapters.map(c => <a href={chapterUrl(c)} aria-current={c.slug === slug ? 'page' : undefined}>{c.title}</a>)}
-          </nav>
-        </details>
-      </>}
+      <details class="learning-chapters">
+        <summary>이 과목의 챕터 {sideChapters.length}개</summary>
+        <nav class="side-nav" aria-label="모바일 챕터 목록">
+          {groups.map(g => (
+            <>
+              <div class="side-group">{g}</div>
+              {sideChapters.filter(c => c.group === g).map(c => (
+                <a href={chapterUrl(c)} class={c.slug === slug ? 'active' : ''} aria-current={c.slug === slug ? 'page' : undefined}>{c.title}</a>
+              ))}
+            </>
+          ))}
+        </nav>
+      </details>
       <h1 class="gpl-display">{title}</h1>
       <p class="gpl-body-lg" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">{summary}</p>
       <article><slot /></article>
@@ -236,6 +241,10 @@ const structuredData = [
           </span>
         </span>
       )}
+      <a class="chapter-mobile-index" href={subjectUrl} aria-label={`${subjectLabel} 전체 목차`}>
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" /></svg>
+        <span>목차</span>
+      </a>
       {nextChapter ? (
         <a
           class="chapter-mobile-link next"
@@ -260,7 +269,27 @@ const structuredData = [
       )}
     </div>
   </nav>
+  <dialog class="learning-image-dialog" aria-labelledby="learning-image-title">
+    <div class="learning-image-header">
+      <h2 id="learning-image-title">학습 그림 확대</h2>
+      <button type="button" data-learning-image-close autofocus>닫기</button>
+    </div>
+    <p class="learning-image-hint" id="learning-image-hint">그림을 좌우로 밀어 전체를 확인하세요</p>
+    <div class="learning-image-scroll" tabindex="0" role="region" aria-label="확대한 학습 그림" aria-describedby="learning-image-hint">
+      <img alt="" />
+    </div>
+  </dialog>
   <script>
+    const mobileChapterList = document.querySelector('.learning-chapters');
+    mobileChapterList?.addEventListener('toggle', () => {
+      if (!(mobileChapterList instanceof HTMLDetailsElement) || !mobileChapterList.open) return;
+      const list = mobileChapterList.querySelector('.side-nav');
+      const current = list?.querySelector('[aria-current="page"]');
+      if (list instanceof HTMLElement && current instanceof HTMLElement) {
+        list.scrollTop = current.offsetTop - list.clientHeight / 2 + current.clientHeight / 2;
+      }
+    });
+
     const desktopSubjectHover = window.matchMedia('(hover: hover) and (pointer: fine)');
 
     document.querySelectorAll('.subject-switcher').forEach((switcher) => {
@@ -283,5 +312,75 @@ const structuredData = [
         }
       });
     });
+
+    // Progressive enhancement: preserve the original figure, caption and image asset.
+    // Figures with their own controls or overlays keep their existing viewer.
+    const imageDialog = document.querySelector('.learning-image-dialog');
+    const enlargedImage = imageDialog?.querySelector('img');
+    const enlargedTitle = imageDialog?.querySelector('h2');
+    const imageScroll = imageDialog?.querySelector('.learning-image-scroll');
+    if (imageDialog instanceof HTMLDialogElement && enlargedImage instanceof HTMLImageElement && enlargedTitle && imageScroll) {
+      let opener: HTMLButtonElement | undefined;
+      let saved: { x: number; y: number; styles: [string, string, string][] } | undefined;
+      const properties = ['position', 'top', 'left', 'right', 'overflow', 'padding-right'];
+      const restore = () => {
+        if (!saved) return;
+        const previous = saved;
+        saved = undefined;
+        for (const [key, value, priority] of previous.styles) {
+          if (value) document.body.style.setProperty(key, value, priority);
+          else document.body.style.removeProperty(key);
+        }
+        window.scrollTo(previous.x, previous.y);
+        opener?.focus({ preventScroll: true });
+        opener = undefined;
+      };
+      imageDialog.querySelector('[data-learning-image-close]')?.addEventListener('click', () => imageDialog.close());
+      imageDialog.addEventListener('close', restore);
+      imageDialog.addEventListener('cancel', event => {
+        event.preventDefault();
+        imageDialog.close();
+      });
+      imageDialog.addEventListener('click', event => {
+        if (event.target !== imageDialog) return;
+        const rect = imageDialog.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) imageDialog.close();
+      });
+      document.querySelectorAll('article .learning-visuals figure').forEach(figure => {
+        if (figure.querySelector('button, a, svg') || figure.closest('.learning-visuals--boiler-circulation')) return;
+        const original = figure.querySelector('img');
+        if (!(original instanceof HTMLImageElement)) return;
+        const label = figure.querySelector('figcaption strong')?.textContent?.trim() || '학습 그림';
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'learning-image-open';
+        button.textContent = '그림 확대';
+        button.setAttribute('aria-label', `${label} 확대 보기`);
+        button.setAttribute('aria-haspopup', 'dialog');
+        figure.appendChild(button);
+        button.addEventListener('click', () => {
+          if (imageDialog.open) return;
+          enlargedImage.src = original.currentSrc || original.src;
+          enlargedImage.alt = original.alt;
+          enlargedImage.width = Number(original.getAttribute('width')) || original.naturalWidth || original.width;
+          enlargedTitle.textContent = label;
+          opener = button;
+          saved = {
+            x: scrollX, y: scrollY,
+            styles: properties.map(key => [key, document.body.style.getPropertyValue(key), document.body.style.getPropertyPriority(key)]),
+          };
+          const scrollbar = innerWidth - document.documentElement.clientWidth;
+          const padding = parseFloat(getComputedStyle(document.body).paddingRight) || 0;
+          document.body.style.setProperty('position', 'fixed');
+          document.body.style.setProperty('top', `-${saved.y}px`);
+          document.body.style.setProperty('left', `-${saved.x}px`);
+          document.body.style.setProperty('right', '0');
+          document.body.style.setProperty('overflow', 'hidden');
+          document.body.style.setProperty('padding-right', `${padding + scrollbar}px`);
+          imageDialog.showModal();
+          imageScroll.scrollTo(0, 0);
+        });
+      });
+    }
   </script>
 </BaseLayout>

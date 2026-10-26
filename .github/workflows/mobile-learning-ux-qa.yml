@@ -1,0 +1,52 @@
+name: Mobile learning UX QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/layouts/ChapterLayout.astro'
+      - 'src/components/GNB.astro'
+      - 'src/styles/global.css'
+      - 'scripts/*mobile-learning-ux*'
+      - 'scripts/read-before-global-chapter-readability.mjs'
+      - 'scripts/check-global-chapter-readability.mjs'
+      - 'docs/audits/2026-10-26-mobile-learning-ux/**'
+      - '.github/workflows/mobile-learning-ux-qa.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/check-mobile-learning-ux.mjs
+      - run: node scripts/check-global-chapter-readability.mjs
+      - run: node scripts/check-all-chapter-hierarchy.mjs
+      - run: npm run check:seo && npm run check:public-content && npm run check:contrast && npm run check:deferred-question-content
+      - name: Prepare temporary browser tooling
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Responsive navigation, questions and image lifecycle
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_COMMIT: ${{ github.event.pull_request.head.sha }}
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-mobile-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4321/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa-mobile-learning-ux.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mobile-learning-ux-qa
+          path: qa-results/mobile-learning-ux/
+          retention-days: 14

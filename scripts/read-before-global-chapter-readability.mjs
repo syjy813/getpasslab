@@ -1,3 +1,4 @@
+import { beforeMobileLearningUX } from './read-before-mobile-learning-ux.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -6,6 +7,7 @@ import { createHash } from 'node:crypto';
 export const readabilityReview=JSON.parse(fs.readFileSync('docs/audits/2026-10-26-global-chapter-readability/review.json','utf8'));
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 export function beforeGlobalChapterReadability(file,bytes){
+  bytes=beforeMobileLearningUX(file,bytes);
   const key=path.normalize(String(file)),row=readabilityReview.files[key];
   if(!row || row.added || hash(bytes)===row.beforeSHA256)return bytes;
   assert.equal(hash(bytes),row.sha256,key+': exact global readability release');
