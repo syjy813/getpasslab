@@ -1,6 +1,12 @@
 ---
 import { getCertificationEntryPath, getFeaturedCertifications } from '../config/certifications';
 import { withBase } from '../config/url';
+export interface ChapterNavigationGroup {
+  group: string;
+  chapters: { title: string; href: string; current: boolean }[];
+}
+interface Props { chapterNavigation?: ChapterNavigationGroup[]; }
+const { chapterNavigation } = Astro.props;
 const certifications = getFeaturedCertifications();
 ---
 <header class="gnb">
@@ -8,9 +14,21 @@ const certifications = getFeaturedCertifications();
     <a href={withBase('/')} class="gnb-logo">GetPassLab</a>
     <div class="gnb-spacer"></div>
     <details class="gnb-menu">
-      <summary>자격증 · 과목
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      <summary>{chapterNavigation ? '챕터 목차' : '자격증 · 과목'}
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
       </summary>
+      {chapterNavigation ? (
+        <nav class="gnb-dropdown gnb-chapter-dropdown" aria-label="챕터 목차">
+          {chapterNavigation.map(({ group, chapters }) => (
+            <div class="gnb-chapter-group">
+              <div class="gnb-chapter-group-title">{group}</div>
+              {chapters.map(chapter => (
+                <a href={chapter.href} aria-current={chapter.current ? 'page' : undefined}>{chapter.title}</a>
+              ))}
+            </div>
+          ))}
+        </nav>
+      ) : (
       <div class="gnb-dropdown">
         {certifications.map((certification) => (
           <div class="gnb-certification">
@@ -25,6 +43,7 @@ const certifications = getFeaturedCertifications();
           </div>
         ))}
       </div>
+      )}
     </details>
   </nav>
 </header>
@@ -32,6 +51,14 @@ const certifications = getFeaturedCertifications();
   document.querySelectorAll('.gnb-menu').forEach(d => {
     document.addEventListener('click', e => {
       if (d instanceof HTMLDetailsElement && d.open && !d.contains(e.target as Node)) d.open = false;
+    });
+    d.addEventListener('toggle', () => {
+      if (!(d instanceof HTMLDetailsElement) || !d.open) return;
+      const menu = d.querySelector('.gnb-chapter-dropdown');
+      const current = menu?.querySelector('[aria-current="page"]');
+      if (menu instanceof HTMLElement && current instanceof HTMLElement) {
+        menu.scrollTop += current.getBoundingClientRect().top - menu.getBoundingClientRect().top - (menu.clientHeight - current.clientHeight) / 2;
+      }
     });
     d.addEventListener('keydown', e => {
       if (e.key === 'Escape' && d instanceof HTMLDetailsElement && d.open) {

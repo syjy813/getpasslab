@@ -135,6 +135,14 @@ const structuredData = [
   description={seoDescription}
   ogType="article"
   structuredData={structuredData}
+  chapterNavigation={groups.map(group => ({
+    group,
+    chapters: sideChapters.filter(c => c.group === group).map(c => ({
+      title: c.title,
+      href: chapterUrl(c),
+      current: c.slug === slug,
+    })),
+  }))}
   bodyClass={cert_id === 'industrial-safety' ? 'chapter-page industrial-safety-chapter' : 'chapter-page'}
 >
   <div class="chapter-wrap">
@@ -198,19 +206,6 @@ const structuredData = [
         <span class="current">{title}</span>
       </nav>
       <ChapterBadges badges={badges} class="chapter-title-badges" />
-      <details class="learning-chapters">
-        <summary>이 과목의 챕터 {sideChapters.length}개</summary>
-        <nav class="side-nav" aria-label="모바일 챕터 목록">
-          {groups.map(g => (
-            <>
-              <div class="side-group">{g}</div>
-              {sideChapters.filter(c => c.group === g).map(c => (
-                <a href={chapterUrl(c)} class={c.slug === slug ? 'active' : ''} aria-current={c.slug === slug ? 'page' : undefined}>{c.title}</a>
-              ))}
-            </>
-          ))}
-        </nav>
-      </details>
       <h1 class="gpl-display">{title}</h1>
       <p class="gpl-body-lg" style="color:var(--gray-600);margin:var(--space-2) 0 var(--space-6)">{summary}</p>
       <article><slot /></article>
@@ -241,10 +236,6 @@ const structuredData = [
           </span>
         </span>
       )}
-      <a class="chapter-mobile-index" href={subjectUrl} aria-label={`${subjectLabel} 전체 목차`}>
-        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" /></svg>
-        <span>목차</span>
-      </a>
       {nextChapter ? (
         <a
           class="chapter-mobile-link next"
@@ -280,16 +271,6 @@ const structuredData = [
     </div>
   </dialog>
   <script>
-    const mobileChapterList = document.querySelector('.learning-chapters');
-    mobileChapterList?.addEventListener('toggle', () => {
-      if (!(mobileChapterList instanceof HTMLDetailsElement) || !mobileChapterList.open) return;
-      const list = mobileChapterList.querySelector('.side-nav');
-      const current = list?.querySelector('[aria-current="page"]');
-      if (list instanceof HTMLElement && current instanceof HTMLElement) {
-        list.scrollTop = current.offsetTop - list.clientHeight / 2 + current.clientHeight / 2;
-      }
-    });
-
     const desktopSubjectHover = window.matchMedia('(hover: hover) and (pointer: fine)');
 
     document.querySelectorAll('.subject-switcher').forEach((switcher) => {

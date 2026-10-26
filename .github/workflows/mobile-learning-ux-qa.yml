@@ -4,9 +4,12 @@ on:
     branches: [main]
     paths:
       - 'src/layouts/ChapterLayout.astro'
+      - 'src/layouts/BaseLayout.astro'
       - 'src/components/GNB.astro'
       - 'src/styles/global.css'
       - 'scripts/*mobile-learning-ux*'
+      - 'scripts/*gnb-chapter-toc*'
+      - 'docs/audits/2026-10-26-gnb-chapter-toc/**'
       - 'scripts/read-before-global-chapter-readability.mjs'
       - 'scripts/check-global-chapter-readability.mjs'
       - 'docs/audits/2026-10-26-mobile-learning-ux/**'
@@ -25,6 +28,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - run: node scripts/check-gnb-chapter-toc.mjs
       - run: node scripts/check-mobile-learning-ux.mjs
       - run: node scripts/check-global-chapter-readability.mjs
       - run: node scripts/check-all-chapter-hierarchy.mjs

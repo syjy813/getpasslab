@@ -52,6 +52,16 @@ fs.mkdirSync(dir, {recursive:true});
         assert.equal(await page.evaluate(()=>document.body.getAttribute('style')||''),before.style||'');
       }
       await page.locator('.gnb-menu summary').click();
+      assert.equal((await page.locator('.gnb-menu summary').innerText()).trim(),'챕터 목차');
+      const chapterLink=page.locator('.gnb-chapter-dropdown a:not([aria-current])').first();
+      const chapterHref=await chapterLink.getAttribute('href');
+      await chapterLink.click();
+      await page.waitForURL(base+chapterHref);
+      assert.equal(await page.locator('h1').count(),1);
+      // General pages retain certification navigation; chapter pages use the TOC.
+      await page.goto(base);
+      await page.locator('.gnb-menu summary').click();
+      assert.equal((await page.locator('.gnb-menu summary').innerText()).trim(),'자격증 · 과목');
       assert.equal(await page.locator('.gnb-certification-link',{hasText:'소방안전관리자 2급'}).count(),1);
       await page.locator('.gnb-certification-link',{hasText:'소방안전관리자 2급'}).click();
       await page.waitForURL(base+prefix);

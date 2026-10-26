@@ -1,3 +1,4 @@
+import {beforeGNBChapterTOC} from './read-before-gnb-chapter-toc.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -11,17 +12,17 @@ assert.deepEqual([...walk('src'),...walk('public')].sort(),Object.keys(baseline.
 assert.deepEqual(walk('dist').filter(f=>f.endsWith('.html')).sort(),Object.keys(baseline.html).sort());
 assert.deepEqual(mobileUXReview.productFiles.sort(),['src/components/GNB.astro','src/layouts/ChapterLayout.astro','src/styles/global.css']);
 for(const [file,expected]of Object.entries(baseline.files)){
-  const bytes=fs.readFileSync(file);
+  const bytes=beforeGNBChapterTOC(file,fs.readFileSync(file));
   assert.equal(hash(beforeMobileLearningUX(file,bytes)),expected,file+': source/content/asset preservation');
 }
 for(const [file,row]of Object.entries(mobileUXReview.files)){
-  const bytes=fs.readFileSync(file);assert.equal(hash(bytes),row.sha256,file+': exact current bytes');
+  const bytes=beforeGNBChapterTOC(file,fs.readFileSync(file));assert.equal(hash(bytes),row.sha256,file+': exact current bytes');
   assert.equal(hash(beforeMobileLearningUX(file,bytes)),row.beforeSHA256);
   assert.throws(()=>beforeMobileLearningUX(file,Buffer.concat([bytes,Buffer.from(' mutation')])));
 }
 let chapters=0,articles=0;const certs={};
 for(const [file,row]of Object.entries(baseline.html)){
-  const bytes=fs.readFileSync(file),html=bytes.toString();
+  const bytes=beforeGNBChapterTOC(file,fs.readFileSync(file)),html=bytes.toString();
   assert.equal(hash(beforeMobileLearningUX(file,bytes)),row.sha256,file+': complete original HTML restored');
   const article=html.match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0];
   assert.equal(article?hash(article):null,row.articleSHA256,file+': exact native article, question payload and figure markup');

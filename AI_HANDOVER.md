@@ -1,3 +1,10 @@
+## 2026-10-26 챕터 목차 GNB 이동 검토본
+
+- 직전 PR191은 main e23ba369로 배포 완료, Production521챕터/2084화면 및11워크플로 성공. 사용자가 본문/하단 목차 위치를 수정 요청
+- 기준 e23ba369, `codex/gnb-chapter-toc-20261026`. GNB/BaseLayout/ChapterLayout/global.css4개: 상세 우측을 챕터 목차로 변경, 본문/하단 중앙 목차 제거, 이전/다음2열 복원. 일반 페이지 기존 메뉴·PC사이드바·기출/그림확대 유지
+- 실제 Production390px 좌16/우28px 확인. 로고/우측화살표 양끝24px로 정렬. GNB는 기존 sideChapters를 그대로 전달하며 현재항목 강조/내부스크롤
+- `docs/audits/2026-10-26-gnb-chapter-toc/` native전체보호/정확한역복원/CI기준 참조. 이번 수정의 main 병합·배포 미실행
+
 ## 2026-10-26 모바일 학습 UX 개선 검토본
 
 - 사용자 WEB 진단·수정·검증·작업 브랜치/PR 승인. 기준 main `dbd9f1e68b03c9a00c03bd58e23e3f5a915da945`, 브랜치 `codex/mobile-learning-ux-20261026`
