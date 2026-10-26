@@ -1,0 +1,6 @@
+---
+import { formatChapterHtml } from '../../scripts/chapter-readability.mjs';
+const { slug, certId } = Astro.props;
+const html = formatChapterHtml(await Astro.slots.render('default'), { slug, certId });
+---
+<Fragment set:html={html} />

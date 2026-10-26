@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {readFile as nativeRead,readdir as nativeReaddir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
+import { beforeGlobalChapterReadability, isReadabilityAddition } from './read-before-global-chapter-readability.mjs';
 import {beforeStandardizedPractice} from './fire-mock-authoring/standardization.mjs';
 const audit='docs/audits/2026-10-20-fire-persona-corrections';
 const release=JSON.parse(await nativeRead(audit+'/release.json','utf8'));
@@ -101,6 +102,7 @@ export function beforeFireRequirementsReadability(file,bytes){
 // Native all-chapter checks independently protect current sources and articles.
 const hierarchyEdits=JSON.parse(await nativeRead('docs/audits/2026-10-22-all-chapter-hierarchy/review.json','utf8')).changes;
 export function beforeChapterHierarchy(file,bytes){
+  bytes=beforeGlobalChapterReadability(file,bytes);
   bytes=beforeFireRequirementsReadability(file,bytes);
   const row=hierarchyEdits[path.normalize(String(file))];
   if(!row||hash(bytes)===row.beforeSHA256)return bytes;
@@ -372,6 +374,7 @@ export async function readdir(dir,options){
   const result=[];
   for(const entry of entries){
     const name=typeof entry==='string'?entry:entry.name;
+    if(isReadabilityAddition(path.join(String(dir),name)))continue;
     const row=release.files.find(r=>r.added&&r.path===path.join(String(dir),name));
     if(row)assert.equal(hash(await nativeRead(row.path)),row.sha256,row.path+': exact integrated main addition');
     else result.push(entry);
