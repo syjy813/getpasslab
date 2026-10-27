@@ -33,6 +33,12 @@ jobs:
           QA_COMMIT: ${{ github.event.workflow_run.head_sha }}
           QA_OUTPUT_DIR: qa-results/fire-production
         run: node scripts/qa-fire-publication.cjs
+      - name: Full-panel lessons on the actual production site
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: https://getpasslab.co.kr
+          QA_OUTPUT_DIR: qa-results/fire-production/full-panels
+        run: node scripts/qa-fire-full-panels.cjs
       - name: Five priority chapters on the actual production site
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright

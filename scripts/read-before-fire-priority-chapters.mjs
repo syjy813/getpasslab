@@ -1,7 +1,7 @@
 // Historical checks see the exact previous release, only after the current
 // document/addition is fingerprinted. Current native checks never use this FS.
-import fs from 'node:fs';
-import fsp from 'node:fs/promises';
+import fs, {beforeFireFullPanels} from './read-before-fire-full-panels.mjs';
+import {readFile as readFullPanelFile,readdir as readdirFullPanelFiles} from './read-before-fire-full-panels.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -12,6 +12,7 @@ const previousFiles=[...Object.keys(baseline.files),...Object.keys(baseline.html
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const keyFor=p=>path.normalize(path.isAbsolute(String(p))?path.relative(process.cwd(),String(p)):String(p));
 export function beforeFirePriorityChapters(file,bytes){
+  bytes=beforeFireFullPanels(file,bytes);
   const key=keyFor(file),row=priorityReview.files[key];
   if(!row||hash(bytes)!==row.sha256)return bytes;
   const source=bytes.toString('utf8');
@@ -41,8 +42,8 @@ export const historicalFS={...fs,
 };
 export default historicalFS;
 export async function readFile(file,options){
-  const data=beforeFirePriorityChapters(file,await fsp.readFile(file));
+  const data=beforeFirePriorityChapters(file,await readFullPanelFile(file));
   const encoding=typeof options==='string'?options:options?.encoding;
   return encoding?data.toString(encoding):data;
 }
-export async function readdir(dir,options){return filter(dir,await fsp.readdir(dir,options));}
+export async function readdir(dir,options){return filter(dir,await readdirFullPanelFiles(dir,options));}

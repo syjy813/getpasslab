@@ -1,0 +1,29 @@
+[
+  {
+    "file": "public/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "bytes": 1088538,
+    "approvedPngPixelEquality": true
+  },
+  {
+    "file": "public/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "bytes": 1099678,
+    "approvedPngPixelEquality": true
+  },
+  {
+    "file": "public/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+    "size": [
+      1536,
+      1024
+    ],
+    "bytes": 1028294,
+    "approvedPngPixelEquality": true
+  }
+]

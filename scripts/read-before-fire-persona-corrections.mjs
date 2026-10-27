@@ -1,7 +1,7 @@
 // Exact inverse used only by historical release checks; current checks use
 // native bytes. Unknown files and mutations are never projected away.
 import assert from 'node:assert/strict';
-import {readFile as nativeRead,readdir as nativeReaddir} from 'node:fs/promises';
+import {readFile as nativeRead,readdir as nativeReaddir} from './read-before-fire-full-panels.mjs';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {isFirePriorityAddition} from './read-before-fire-priority-chapters.mjs';

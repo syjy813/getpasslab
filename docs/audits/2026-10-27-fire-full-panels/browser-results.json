@@ -1,0 +1,493 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "id": "FSM2-048",
+      "width": 320,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 270,
+          "height": 181.953125,
+          "imageWidth": 1803.125,
+          "visibleX": 1115.203125,
+          "visibleY": 686.71875
+        },
+        {
+          "width": 270,
+          "height": 305.203125,
+          "imageWidth": 1803.125,
+          "visibleX": 1408.6875,
+          "visibleY": 228.890625
+        },
+        {
+          "width": 270,
+          "height": 158.140625,
+          "imageWidth": 1184.90625,
+          "visibleX": 640.28125,
+          "visibleY": 266.125
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-048"
+    },
+    {
+      "id": "FSM2-049",
+      "width": 320,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 270,
+          "height": 209.25,
+          "imageWidth": 2073.59375,
+          "visibleX": 1046.25,
+          "visibleY": 789.75
+        },
+        {
+          "width": 270,
+          "height": 115.3125,
+          "imageWidth": 864,
+          "visibleX": 194.0625,
+          "visibleY": 194.0625
+        },
+        {
+          "width": 270,
+          "height": 238.234375,
+          "imageWidth": 2439.515625,
+          "visibleX": 1032.34375,
+          "visibleY": 635.28125
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-049"
+    },
+    {
+      "id": "FSM2-034",
+      "width": 320,
+      "steps": 2,
+      "geometry": [
+        {
+          "width": 270,
+          "height": 124.046875,
+          "imageWidth": 1120.859375,
+          "visibleX": 127.6875,
+          "visibleY": 156.875
+        },
+        {
+          "width": 270,
+          "height": 342,
+          "imageWidth": 1382.390625,
+          "visibleX": 751.5,
+          "visibleY": 315
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-077",
+      "width": 320,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 270,
+          "height": 124.046875,
+          "imageWidth": 1120.859375,
+          "visibleX": 127.6875,
+          "visibleY": 156.875
+        },
+        {
+          "width": 270,
+          "height": 342,
+          "imageWidth": 1382.390625,
+          "visibleX": 751.5,
+          "visibleY": 315
+        },
+        {
+          "width": 270,
+          "height": 342,
+          "imageWidth": 1382.390625,
+          "visibleX": 1026,
+          "visibleY": 315
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-048",
+      "width": 390,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 340,
+          "height": 229.125,
+          "imageWidth": 2270.59375,
+          "visibleX": 1404.34375,
+          "visibleY": 864.75
+        },
+        {
+          "width": 340,
+          "height": 384.34375,
+          "imageWidth": 2270.59375,
+          "visibleX": 1773.90625,
+          "visibleY": 288.25
+        },
+        {
+          "width": 340,
+          "height": 199.140625,
+          "imageWidth": 1492.109375,
+          "visibleX": 806.28125,
+          "visibleY": 335.125
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-048"
+    },
+    {
+      "id": "FSM2-049",
+      "width": 390,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 340,
+          "height": 263.5,
+          "imageWidth": 2611.1875,
+          "visibleX": 1317.5,
+          "visibleY": 994.5
+        },
+        {
+          "width": 340,
+          "height": 145.203125,
+          "imageWidth": 1088,
+          "visibleX": 244.375,
+          "visibleY": 244.359375
+        },
+        {
+          "width": 340,
+          "height": 300,
+          "imageWidth": 3072,
+          "visibleX": 1300,
+          "visibleY": 800
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-049"
+    },
+    {
+      "id": "FSM2-034",
+      "width": 390,
+      "steps": 2,
+      "geometry": [
+        {
+          "width": 340,
+          "height": 156.203125,
+          "imageWidth": 1411.453125,
+          "visibleX": 160.796875,
+          "visibleY": 197.546875
+        },
+        {
+          "width": 340,
+          "height": 430.65625,
+          "imageWidth": 1740.796875,
+          "visibleX": 946.328125,
+          "visibleY": 396.65625
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-077",
+      "width": 390,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 340,
+          "height": 156.203125,
+          "imageWidth": 1411.453125,
+          "visibleX": 160.796875,
+          "visibleY": 197.546875
+        },
+        {
+          "width": 340,
+          "height": 430.65625,
+          "imageWidth": 1740.796875,
+          "visibleX": 946.328125,
+          "visibleY": 396.65625
+        },
+        {
+          "width": 340,
+          "height": 430.65625,
+          "imageWidth": 1740.796875,
+          "visibleX": 1292,
+          "visibleY": 396.65625
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-048",
+      "width": 768,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 418,
+          "height": 281.6875,
+          "imageWidth": 2791.5,
+          "visibleX": 1726.515625,
+          "visibleY": 1063.140625
+        },
+        {
+          "width": 418,
+          "height": 472.515625,
+          "imageWidth": 2791.5,
+          "visibleX": 2180.859375,
+          "visibleY": 354.375
+        },
+        {
+          "width": 418,
+          "height": 244.828125,
+          "imageWidth": 1834.421875,
+          "visibleX": 991.25,
+          "visibleY": 412.015625
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-048"
+    },
+    {
+      "id": "FSM2-049",
+      "width": 768,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 418,
+          "height": 323.9375,
+          "imageWidth": 3210.234375,
+          "visibleX": 1619.75,
+          "visibleY": 1222.59375
+        },
+        {
+          "width": 418,
+          "height": 178.515625,
+          "imageWidth": 1337.59375,
+          "visibleX": 300.4375,
+          "visibleY": 300.421875
+        },
+        {
+          "width": 418,
+          "height": 368.8125,
+          "imageWidth": 3776.75,
+          "visibleX": 1598.234375,
+          "visibleY": 983.5
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-049"
+    },
+    {
+      "id": "FSM2-034",
+      "width": 768,
+      "steps": 2,
+      "geometry": [
+        {
+          "width": 418,
+          "height": 192.046875,
+          "imageWidth": 1735.25,
+          "visibleX": 197.6875,
+          "visibleY": 242.875
+        },
+        {
+          "width": 418,
+          "height": 529.453125,
+          "imageWidth": 2140.15625,
+          "visibleX": 1163.421875,
+          "visibleY": 487.640625
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-077",
+      "width": 768,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 418,
+          "height": 192.046875,
+          "imageWidth": 1735.25,
+          "visibleX": 197.6875,
+          "visibleY": 242.875
+        },
+        {
+          "width": 418,
+          "height": 529.453125,
+          "imageWidth": 2140.15625,
+          "visibleX": 1163.421875,
+          "visibleY": 487.640625
+        },
+        {
+          "width": 418,
+          "height": 529.453125,
+          "imageWidth": 2140.15625,
+          "visibleX": 1588.390625,
+          "visibleY": 487.640625
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-048",
+      "width": 1440,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 280.65625,
+          "height": 189.125,
+          "imageWidth": 1874.28125,
+          "visibleX": 1159.21875,
+          "visibleY": 713.78125
+        },
+        {
+          "width": 280.671875,
+          "height": 317.28125,
+          "imageWidth": 1874.390625,
+          "visibleX": 1464.375,
+          "visibleY": 237.953125
+        },
+        {
+          "width": 280.65625,
+          "height": 164.375,
+          "imageWidth": 1231.671875,
+          "visibleX": 665.546875,
+          "visibleY": 276.625
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-048"
+    },
+    {
+      "id": "FSM2-049",
+      "width": 1440,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 280.65625,
+          "height": 217.5,
+          "imageWidth": 2155.4375,
+          "visibleX": 1087.53125,
+          "visibleY": 820.875
+        },
+        {
+          "width": 280.671875,
+          "height": 119.859375,
+          "imageWidth": 898.140625,
+          "visibleX": 201.71875,
+          "visibleY": 201.703125
+        },
+        {
+          "width": 280.65625,
+          "height": 247.625,
+          "imageWidth": 2535.796875,
+          "visibleX": 1073.09375,
+          "visibleY": 660.328125
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-049"
+    },
+    {
+      "id": "FSM2-034",
+      "width": 1440,
+      "steps": 2,
+      "geometry": [
+        {
+          "width": 430,
+          "height": 197.5625,
+          "imageWidth": 1785.078125,
+          "visibleX": 203.375,
+          "visibleY": 249.84375
+        },
+        {
+          "width": 430,
+          "height": 544.65625,
+          "imageWidth": 2201.59375,
+          "visibleX": 1196.828125,
+          "visibleY": 501.65625
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-077",
+      "width": 1440,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 280.65625,
+          "height": 128.9375,
+          "imageWidth": 1165.09375,
+          "visibleX": 132.734375,
+          "visibleY": 163.0625
+        },
+        {
+          "width": 280.671875,
+          "height": 355.515625,
+          "imageWidth": 1437.03125,
+          "visibleX": 781.203125,
+          "visibleY": 327.4375
+        },
+        {
+          "width": 280.65625,
+          "height": 355.484375,
+          "imageWidth": 1436.953125,
+          "visibleX": 1066.484375,
+          "visibleY": 327.40625
+        }
+      ],
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical devices and Safari not tested"
+  ]
+}

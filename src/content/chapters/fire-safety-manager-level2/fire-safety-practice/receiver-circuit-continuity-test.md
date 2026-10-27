@@ -7,34 +7,36 @@ exam: "written"
 subject_id: 2
 group: "소방시설 점검"
 tags: ["절차"]
-summary: "버튼·로터리 방식의 조작·판정·종료 후 복구를 구별함"
+summary: "전체 수신기에서 시험 선택, 회로 선택, 정상·단선 표시를 순서대로 판독함"
 questions: []
-related: []
+related: ["p-receiver-indicators-switches", "receiver-backup-power-test", "receiver-operation-auto-reset", "detector-wiring-end-resistor-transmitter"]
 order: 57
 priority: "출시 필수"
 status: "완료"
 ---
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
+<link rel="stylesheet" href="/styles/fire-panel-lessons.css">
 
-## 회로 끝까지 이어지는지 확인
-회로도통시험은 감지기 회로 배선과 종단저항을 통한 경로가 정상인지 확인 · 감지기의 화재 감지 성능이나 배터리 용량을 재는 시험과 구별
+<div class="fire-panel-lesson">
+<section class="fire-panel-section"><h2>도통시험은 감지기 회로의 연결 상태를 확인</h2>
+<p>감지기 회로 배선과 종단저항을 통한 감시 경로가 이어지는지 확인하는 시험<br>감지기의 화재 감지 성능을 확인하는 동작시험, 축전지 상태를 확인하는 예비전원 시험과 구분</p>
+</section>
 
-## 시험 순서
-시험 기능 선택 → 해당 회로 선택 → 표시·계기 확인 → 다른 회로 확인 → 시험 선택을 원위치로 복구
+<section class="fire-panel-section"><h2>전체 판에서 ① → ② → ③ 순서로 읽기</h2>
+<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>도통시험의 선택 위치와 결과 위치</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp" alt="P형 5회로 수신기 전체 판. ① 도통시험 버튼 선택, ② 회로선택 1, ③ 도통시험 정상 켜짐과 단선 꺼짐. 화재 및 지구 표시등은 꺼져 있음" width="1536" height="1024" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp" data-fire-alt="P형 5회로 수신기 전체 판. ① 도통시험 버튼 선택, ② 회로선택 1, ③ 도통시험 정상 켜짐과 단선 꺼짐. 화재 및 지구 표시등은 꺼져 있음" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">전체 판 확대 ↗</button></figure></div><div class="fire-panel-steps"><section class="fire-panel-step"><h3><span class="fire-panel-number">①</span>시험 종류 확인</h3><div class="fire-panel-detail" style="--detail-ratio:230/155;--detail-width:667.826087%;--detail-left:-413.043478%;--detail-top:-377.419355%"><img src="/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp" alt="선택된 파란 도통시험 버튼" width="1536" height="1024" loading="lazy" decoding="async"></div><p>아래 조작부의 <strong>도통시험</strong>이 선택된 상태<br>옆의 동작시험이나 예비전원시험을 읽지 않음</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">②</span>시험 대상 회로 확인</h3><div class="fire-panel-detail" style="--detail-ratio:230/260;--detail-width:667.826087%;--detail-left:-521.739130%;--detail-top:-75.000000%"><img src="/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp" alt="회로선택 다이얼이 숫자 1을 가리킴" width="1536" height="1024" loading="lazy" decoding="async"></div><p>오른쪽 <strong>회로선택</strong> 다이얼이 1을 가리키므로 1회로의 결과를 읽음<br>회로 번호와 층수는 문제에 대응 조건이 주어진 경우에만 연결</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">③</span>정상 또는 단선 표시 판독</h3><div class="fire-panel-detail" style="--detail-ratio:350/205;--detail-width:438.857143%;--detail-left:-237.142857%;--detail-top:-168.292683%"><img src="/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp" alt="도통시험 구역의 정상 켜짐과 단선 꺼짐" width="1536" height="1024" loading="lazy" decoding="async"></div><p>가운데 <strong>도통시험</strong> 구역에서 정상은 켜지고 단선은 꺼진 상태<br>전압지시 구역의 정상 표시와 구분해 1회로의 도통이 정상이라고 판독</p></section></div>
+</section>
 
-<div class="sample-table-scroll" tabindex="0" role="region" aria-label="시험 순서 표"><table><thead><tr><th>결과</th><th>해석</th></tr></thead><tbody><tr><td>정상 범위</td><td>회로 감시 경로가 이어짐</td></tr><tr><td>단선 표시·정상 범위 이탈</td><td>배선 단선·종단저항 미접속 등 확인</td></tr><tr><td>단락·비정상 표시</td><td>배선 접촉·회로 이상 등 확인</td></tr></tbody></table></div>
+<section class="fire-panel-section"><h2>표시등 방식과 전압계 방식을 구분</h2>
+<div class="sample-table-scroll" tabindex="0" role="region" aria-label="도통시험의 표시 방식별 판독"><table><thead><tr><th scope="col">제시 방식</th><th scope="col">판독 기준</th></tr></thead><tbody><tr><th scope="row">표시등</th><td>도통시험 구역의 정상 또는 단선 표시 확인<br>색상과 함께 표시 이름 및 기기 범례 확인</td></tr><tr><th scope="row">전압계</th><td>정상 범위가 <strong>4~8V</strong>로 제시된 학습 예에서는 6V는 정상<br>0V는 단선을 의심하고 배선과 종단저항 접속 확인</td></tr><tr><th scope="row">회로 선택</th><td>로터리식은 다이얼로 회로 선택<br>버튼식은 해당 회로 버튼으로 선택</td></tr></tbody></table></div><p>정상 범위와 표시 방법은 제시된 기기의 눈금 및 범례를 적용<br>위 그림에는 전압 수치가 없으므로 다이얼 방향이나 표시등 밝기로 전압값을 추정하지 않음</p>
+</section>
 
-계기의 정상 범위와 표시 방법은 수신기별로 다르므로 문제에 제시한 눈금·범례 적용 · 바늘이 오른쪽이라고 모든 기기에서 정상으로 판단하지 않음
-
-## 복구와 한계
-시험 후 회로 선택·시험 스위치를 평상시 상태로 복구 · 도통이 정상이어도 감지기 오염·부착 위치·경보장치 불량은 별도 점검 대상
-
-
-
-전압계 방식의 대표 학습 예: **4~8V 정상, 0V 단선 의심** · 확인등 방식은 기기의 녹색 정상·적색 단선 범례 확인 · 6V 회로와 0V 회로를 같은 상태로 판정하지 않음 · 시험 후 회로선택 다이얼을 정상 위치로 되돌린 다음 도통시험스위치 해제
-
-## 배선 기준과 도통시험의 연결
-[감지기 배선·종단저항·발신기](/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/)의 **1.5m·50Ω·7개 이하**를 각각 종단저항함 높이·전로저항·공통선 경계구역 수에 적용 · 도통 정상만으로 감지기 동작시험까지 합격 처리하지 않음
+<section class="fire-panel-section"><h2>시험 종료와 오답 구분</h2>
+<p>각 회로 확인 후 <strong>회로선택을 정상 위치로 되돌린 다음 도통시험 선택 해제</strong><br>문제에 제시된 기기의 조작 순서와 평상시 표시를 확인</p><div class="fire-grade-exam-points"><ul><li><strong>도통 정상과 감지기 정상은 다름</strong><p>도통이 정상이어도 감지기의 감지 성능, 오염, 부착 위치 및 음향장치 상태는 별도 확인</p></li><li><strong>화재 표시와 도통 결과는 다름</strong><p>화재 및 지구 표시등 대신 도통시험 결과 구역을 읽음<br>단락 또는 그 밖의 이상이 제시되면 해당 기기의 범례로 판정</p></li></ul></div><p>배선 기준의 <strong>1.5m, 50Ω, 7개 이하</strong>는 각각 종단저항함 설치 높이, 감지기회로 전로저항, 공통선에 접속하는 경계구역 수에 적용<br>자세한 연결은 <a href="/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/">감지기 배선과 종단저항</a>에서 확인</p>
+</section>
 
 <p class="fire-source-note">적용 기준 · <a href="https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000275086&amp;admRulId=83630&amp;joTpYn=N&amp;languageType=KO&amp;chrClsCd=010201" target="_blank" rel="noopener">NFTC 203</a> · 2026-10-14 확인</p>
+</div>
+
+<dialog id="fire-bulk-image-dialog" class="sample-image-layer fire-panel-dialog" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">전체 판 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="1536" height="1024" alt=""></div></dialog>
+<script src="/scripts/fire-bulk-zoom.js" defer></script>
