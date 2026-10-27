@@ -45,15 +45,18 @@ const report={result:'RUNNING',cases:[],errors:[],limitations:['Chromium emulati
     assert.equal(await overview.getAttribute('src'),src);
     assert.equal(await overview.evaluate(e=>e.naturalWidth),1536);
     assert.equal(await page.locator('.fire-panel-step').count(),steps);
-    const details=page.locator('.fire-panel-detail');const geometry=[];
+    const stepElements=page.locator('.fire-panel-step');const geometry=[];
     for(let i=0;i<steps;i++){
-     const detail=details.nth(i);await detail.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await detail.locator('img').evaluate(e=>e.decode());
-     assert.equal(await detail.locator('img').getAttribute('src'),src,'detail and whole panel use identical asset');
-     const g=await detail.evaluate(e=>{const b=e.getBoundingClientRect(),i=e.querySelector('img').getBoundingClientRect();return {width:b.width,height:b.height,imageWidth:i.width,visibleX:b.x-i.x,visibleY:b.y-i.y};});
-     assert(g.width>200&&g.height>90,id+' meaningful enlargement');assert(g.imageWidth>g.width*3,id+' detail crop');
+     const step=stepElements.nth(i);
+     await step.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));
+     assert(await step.locator('.fire-panel-detail').isHidden(),'detail image replaced by text');
+     assert(await step.locator('h3').isVisible());assert(await step.locator('p').isVisible());
+     const g=await step.evaluate(e=>{const b=e.getBoundingClientRect(),s=getComputedStyle(e);return {width:b.width,height:b.height,top:b.top,bottom:b.bottom,border:s.borderTopWidth};});
+     assert.equal(g.border,'0px','no oversized image card');
+     if(i){const previous=await stepElements.nth(i-1).boundingBox();const current=await step.boundingBox();assert(current.y>=previous.y+previous.height,'numbered explanations stack vertically');}
      geometry.push(g);
-     await detail.screenshot({path:`${output}/${id}-detail-${i+1}-${width}.png`});
     }
+    await page.locator('.fire-panel-steps').screenshot({path:`${output}/${id}-text-steps-${width}.png`});
     await figure.screenshot({path:`${output}/${id}-overview-${width}.png`});
     const button=figure.locator('.fire-bulk-zoom');await button.evaluate(e=>e.scrollIntoView({block:'center'}));
     const before=await page.evaluate(()=>({y:scrollY,style:document.body.getAttribute('style')||''}));

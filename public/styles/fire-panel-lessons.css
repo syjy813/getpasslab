@@ -4,18 +4,17 @@ article .fire-panel-section+.fire-panel-section{margin-top:32px;padding-top:32px
 article .fire-panel-section>h2{margin-top:0}
 article .fire-panel-lesson .fire-panel-overview figure:only-child{max-width:none}
 article .fire-panel-lesson .fire-panel-overview img{max-width:none;width:100%;height:auto}
-article .fire-panel-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}
-article .fire-panel-steps.fire-panel-two{grid-template-columns:repeat(2,minmax(0,1fr))}
-article .fire-panel-step{min-width:0;overflow:hidden;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white)}
-article .fire-panel-step h3{display:flex;align-items:baseline;gap:8px;margin:0;padding:14px 14px 10px;font-size:16px;line-height:1.6}
+article .fire-panel-steps{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:24px 0}
+article .fire-panel-steps.fire-panel-two{grid-template-columns:minmax(0,1fr)}
+article .fire-panel-step{min-width:0}
+article .fire-panel-step h3{display:flex;align-items:baseline;gap:8px;margin:0;font-size:16px;line-height:1.6}
 article .fire-panel-number{color:var(--primary-600);flex:none}
-article .fire-panel-step p{margin:0;padding:12px 14px 16px;font-size:14px;line-height:1.8}
-article .fire-panel-detail{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:var(--detail-ratio);width:100%;background:#f7f9fc}
+article .fire-panel-step p{margin:6px 0 0;padding-left:24px;font-size:14px;line-height:1.8}
+article .fire-panel-detail{display:none}
 article .fire-panel-detail img{position:absolute;display:block;width:var(--detail-width);max-width:none;height:auto;left:var(--detail-left);top:var(--detail-top);margin:0}
 article .fire-panel-scope{color:var(--gray-600);font-size:14px;line-height:1.7}
 article .fire-panel-lesson table{font-size:14px}
 article .fire-panel-lesson tbody th,article .fire-panel-lesson td{vertical-align:top}
 article .fire-panel-lesson tbody th{min-width:85px}
 article .fire-panel-dialog .fire-bulk-zoom-scroll img{width:1280px;min-width:1280px;max-width:none;height:auto}
-@media(max-width:1100px){article .fire-panel-steps,article .fire-panel-steps.fire-panel-two{grid-template-columns:minmax(0,1fr)}article .fire-panel-step{width:100%;max-width:420px;margin-inline:auto}}
 @media(max-width:767px){article .fire-panel-section+.fire-panel-section{margin-top:24px;padding-top:24px}}

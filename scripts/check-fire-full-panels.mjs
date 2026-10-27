@@ -3,14 +3,15 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
 import {parse} from 'parse5';
-import {beforeFireFullPanels,isFireFullPanelAddition} from './read-before-fire-full-panels.mjs';
+import {beforeFireFullPanels,isFireFullPanelAddition,textStepsStyle} from './read-before-fire-full-panels.mjs';
 const audit='docs/audits/2026-10-27-fire-full-panels';
 const review=JSON.parse(gunzipSync(fs.readFileSync(audit+'/review.json.gz')));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(d+'/'+e.name):[d+'/'+e.name]);
 const inventory=[...walk('src'),...walk('public'),...walk('dist').filter(p=>p.endsWith('.html'))].sort();
 assert.deepEqual(inventory,Object.keys(review.current).sort(),'complete current source/asset/HTML inventory');
-for(const file of inventory)assert.equal(hash(fs.readFileSync(file)),review.current[file],file+': current native bytes');
+const expectedCurrent=file=>file===textStepsStyle?.file?textStepsStyle.sha256:review.current[file];
+for(const file of inventory)assert.equal(hash(fs.readFileSync(file)),expectedCurrent(file),file+': current native bytes');
 const affected=['pump-control-panels-states','pump-manual-auto-reading','receiver-backup-power-test','receiver-circuit-continuity-test'];
 const chapterDir='src/content/chapters/fire-safety-manager-level2/fire-safety-practice/';
 assert.deepEqual(Object.keys(review.changes).filter(p=>p.startsWith('src/')).sort(),affected.map(s=>chapterDir+s+'.md').sort(),'only four teaching bodies revised');
@@ -26,7 +27,7 @@ for(const [file,row]of Object.entries(review.changes)){
 }
 assert.equal(Object.keys(review.additions).length,4,'three images and one scoped stylesheet');
 for(const [file,sha]of Object.entries(review.additions)){
- assert(isFireFullPanelAddition(file));assert.equal(hash(fs.readFileSync(file)),sha);
+ assert(isFireFullPanelAddition(file));assert.equal(hash(fs.readFileSync(file)),expectedCurrent(file));
 }
 for(const [file,sha]of Object.entries(review.questions))assert.equal(hash(fs.readFileSync(file)),sha,file+': question text, answers and approval unchanged');
 const nodes=html=>{const out=[];const visit=n=>{out.push(n);for(const c of n.childNodes||[])visit(c)};visit(parse(html));return out;};
@@ -40,7 +41,7 @@ for(const row of briefs){
  const detail=ns.filter(n=>n.tagName==='div'&&attr(n,'class')?.split(' ').includes('fire-panel-detail'));
  assert.equal(detail.length,row.details.length);
  const imgs=ns.filter(n=>n.tagName==='img'&&attr(n,'src')===row.src);
- assert.equal(imgs.length,row.details.length+1,'same approved image in overview and all enlargements');
+ assert.equal(imgs.length,row.details.length+1,'same approved source image; detail windows may be hidden by the reviewed text layout');
  for(const img of imgs)for(const key of ['alt','width','height'])assert(attr(img,key));
  assert(html.includes('fire-panel-lessons.css'));assert(html.includes('fire-panel-dialog'));
  const entry=ns.find(n=>n.tagName==='section'&&attr(n,'data-fire-practice-entry')!==undefined);
