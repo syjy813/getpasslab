@@ -1,3 +1,11 @@
+## 2026-10-27 모바일 필기 메인·과목 목록 상단 광고
+
+- 사용자 제공 공통320×50 단위 `DAN-aX4OBdYehvddWlai`. 산업안전7·컴활3·에너지2·소방3, 총15개 필기 메인/과목 목록에 적용. 상세·홈·자격증 허브·정책·모의고사는 이번 추가 대상 아님
+- BaseLayout 선택 prop + 두 공통 목록 템플릿 + global.css4파일. GNB 다음에 일반 흐름으로82px예약,320~767px만 표시. PC 최초 로딩에서 광고 ins/SDK를 생성하지 않고 모바일 진입 시1회 초기화
+- local/preview는 실제 광고 호출하지 않음. production hostname 분기는 CI에서 HTML을 로컬로 연결하고 SDK stub으로 검증, 실제 광고 노출/수익 검증으로 주장하지 않음
+- 기존851소스/자산·547HTML·521챕터/524article 보호. 이전 snapshot은 유지하며 최신 네이티브 guard가 전체 현재 바이트를 검증한 후 정확한 광고/CSS참조/렌더링 공백만 역사 검사에서 역복원
+- 감사자료 `docs/audits/2026-10-27-mobile-top-ad/`. Build/CI/QA·PR·배포의 실제 상태는 PR Checks 확인. 이번 main 병합/Production 배포 미실행
+
 ## 2026-10-26 챕터 목차/하단 바 겹침 수정 검토본
 
 - PR192 main fb92caac 배포 후 사용자 긴 목차가 하단 고정 바와 겹치는 화면 제공. `codex/gnb-toc-height-20261026`

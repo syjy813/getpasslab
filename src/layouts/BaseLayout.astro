@@ -16,6 +16,7 @@ interface Props {
   bodyClass?: string;
   focusMode?: boolean;
   chapterNavigation?: ChapterNavigationGroup[];
+  mobileTopAd?: boolean;
 }
 
 const {
@@ -27,6 +28,7 @@ const {
   bodyClass,
   focusMode = false,
   chapterNavigation,
+  mobileTopAd = false,
 } = Astro.props;
 const siteOrigin = Astro.site ?? SITE.url;
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
@@ -104,6 +106,42 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
   </head>
   <body class={bodyClass}>
     {!focusMode && <GNB chapterNavigation={chapterNavigation} />}
+    {!focusMode && mobileTopAd && (
+      <aside class="mobile-top-ad" aria-label="광고" data-mobile-top-ad>
+        <span class="mobile-top-ad-label">광고</span>
+        <div class="mobile-top-ad-mount" data-mobile-top-ad-mount></div>
+        <script is:inline>
+          (() => {
+            const placement = document.querySelector('[data-mobile-top-ad]');
+            const mount = placement?.querySelector('[data-mobile-top-ad-mount]');
+            if (!(placement instanceof HTMLElement) || !(mount instanceof HTMLElement)) return;
+            const mobile = window.matchMedia('(min-width:320px) and (max-width:767px)');
+            const initialize = () => {
+              if (!mobile.matches || placement.dataset.adfitReady || mount.getBoundingClientRect().width < 320) return;
+              if (window.location.hostname !== 'getpasslab.co.kr') {
+                placement.dataset.adfitReady = 'preview';
+                return;
+              }
+              placement.dataset.adfitReady = 'true';
+              const ad = document.createElement('ins');
+              ad.className = 'kakao_ad_area';
+              ad.style.display = 'none';
+              ad.dataset.adUnit = 'DAN-aX4OBdYehvddWlai';
+              ad.dataset.adWidth = '320';
+              ad.dataset.adHeight = '50';
+              mount.appendChild(ad);
+              const sdk = document.createElement('script');
+              sdk.type = 'text/javascript';
+              sdk.src = '//t1.kakaocdn.net/kas/static/ba.min.js';
+              sdk.async = true;
+              mount.appendChild(sdk);
+            };
+            initialize();
+            mobile.addEventListener('change', initialize);
+          })();
+        </script>
+      </aside>
+    )}
     <slot />
     {!focusMode && <Footer />}
     {!focusMode && <AdFitFloating />}
