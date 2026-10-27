@@ -1,5 +1,5 @@
 import {beforeMobileTopAd} from './read-before-mobile-top-ad.mjs';
-import fs from 'node:fs';
+import fs from './read-before-fire-priority-chapters.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {gnbTOCHeightReview as review,beforeGNBTOCHeight} from './read-before-gnb-toc-height.mjs';

@@ -3,16 +3,17 @@ import { withBase } from '../config/url';
 interface Props {
   chapterId: string;
   chapterQuestionCount: number;
+  linkedChapterTitle?: string;
 }
-const { chapterId, chapterQuestionCount } = Astro.props;
+const { chapterId, chapterQuestionCount, linkedChapterTitle } = Astro.props;
 const practicePath = withBase('/fire-safety-manager-level2/practice/');
 ---
 <section class="fire-entry" data-fire-practice-entry aria-labelledby="fire-practice-title">
   <h2 id="fire-practice-title">문제 풀기</h2>
   <div class="fire-actions">
     <a class="fire-card" data-fire-popup aria-description="새 창에서 문제 풀기" href={`${practicePath}?chapter=${encodeURIComponent(chapterId)}`}>
-      <strong>이 챕터 문제 풀기 <span aria-hidden="true">→</span></strong>
-      <span>모두 푼 뒤 한 번에 채점하고 정답·해설 확인</span>
+      <strong>{linkedChapterTitle ? '연결 챕터 문제 풀기' : '이 챕터 문제 풀기'} <span aria-hidden="true">→</span></strong>
+      <span>{linkedChapterTitle ? `${linkedChapterTitle}의 문제로 함께 연습` : '모두 푼 뒤 한 번에 채점하고 정답·해설 확인'}</span>
       <small>{chapterQuestionCount > 0 ? `${chapterQuestionCount}문제` : '문제 준비 중'}</small>
     </a>
     <a class="fire-card" data-fire-popup aria-description="새 창에서 문제 풀기" href={practicePath}>

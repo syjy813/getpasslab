@@ -7,7 +7,8 @@ import { getSubject } from '../../../config/certifications';
 import { withBase } from '../../../config/url';
 
 const chapters = (await getCollection('chapters'))
-  .filter(chapter => chapter.data.cert_id === 'fire-safety-manager-level2' && chapter.data.exam === 'written' && chapter.data.status === '완료')
+  .filter(chapter => chapter.data.cert_id === 'fire-safety-manager-level2' && chapter.data.exam === 'written' && chapter.data.status === '완료'
+    && publishedFireQuestions.some(question => question.chapterId === chapter.data.chapter_id))
   .map(({ data }) => ({
     id: data.chapter_id, title: data.title, subjectId: data.subject_id,
     href: withBase(`/fire-safety-manager-level2/written/${getSubject(data.cert_id, data.exam, data.subject_id)?.slug}/${data.slug}/`),

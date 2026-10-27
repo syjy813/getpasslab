@@ -1,5 +1,5 @@
 import {beforeMobileChapterTopAd} from './read-before-mobile-chapter-top-ad.mjs';
-import fs from 'node:fs';
+import fs from './read-before-fire-priority-chapters.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {mobileTopAdReview as review,beforeMobileTopAd} from './read-before-mobile-top-ad.mjs';

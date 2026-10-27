@@ -39,7 +39,7 @@ export const CERTIFICATIONS = {
         slug: 'written', name: '자격시험', title: '소방안전관리자 2급 핵심요약',
         description: '소방안전관리자 2급의 공개 챕터에서 설비 구조, 작동 순서와 시험 판단 기준을 학습합니다.',
         format: '객관식 4지 택일형 · 과목별 25문항, 총 50문항 · 60분 · 각 과목 40점 이상, 평균 70점 이상 합격',
-        releaseNotice: '이론·실무 74개 챕터',
+        releaseNotice: '이론·실무 79개 챕터',
         subjects: FIRE_SAFETY_LEVEL2_SUBJECTS,
       },
     },

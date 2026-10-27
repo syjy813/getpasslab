@@ -106,6 +106,14 @@ const allChapters = (await getCollection('chapters')).filter(
     && candidate.data.cert_id === chapter.data.cert_id
     && candidate.data.exam === chapter.data.exam,
 );
+const practiceChapter = chapter.data.practiceChapter
+  ? allChapters.find(candidate => candidate.data.slug === chapter.data.practiceChapter)
+  : chapter;
+if (chapter.data.practiceChapter && (chapter.data.cert_id !== 'fire-safety-manager-level2'
+  || !practiceChapter || practiceChapter.data.subject_id !== chapter.data.subject_id
+  || !publishedFireQuestions.some(question => question.chapterId === practiceChapter.data.chapter_id))) {
+  throw new Error(`Invalid linked practice chapter: ${chapter.data.slug}/${chapter.data.practiceChapter}`);
+}
 const supporting = chapter.data.supportingQuestions.map(reference => {
   const question = questionsById.get(reference.id);
   const target = reference.chapter
@@ -196,8 +204,9 @@ const sideChapters = orderedSideChapters
     <InstantQuestionPractice questions={linked as any} certificationId={chapter.data.cert_id} chapterSlug={chapter.data.slug} />
   )}
   {chapter.data.cert_id === 'fire-safety-manager-level2' && <FirePracticeEntry
-    chapterId={chapter.data.chapter_id}
-    chapterQuestionCount={publishedFireQuestions.filter(question => question.chapterId === chapter.data.chapter_id).length}
+    chapterId={practiceChapter?.data.chapter_id}
+    chapterQuestionCount={publishedFireQuestions.filter(question => question.chapterId === practiceChapter?.data.chapter_id).length}
+    linkedChapterTitle={chapter.data.practiceChapter ? practiceChapter?.data.title : undefined}
   />}
   {supporting.length > 0 && <QuestionHistory
     questions={supporting}

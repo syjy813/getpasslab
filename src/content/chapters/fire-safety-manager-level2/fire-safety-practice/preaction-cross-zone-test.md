@@ -9,7 +9,7 @@ group: "소방시설 점검"
 tags: ["절차"]
 summary: "감지기 회로·수동 조작·밸브 개방·표시 상태를 연결함"
 questions: []
-related: []
+related: ["preaction-panel-state-reading", "pump-manual-auto-reading"]
 order: 54
 priority: "출시 필수"
 status: "완료"

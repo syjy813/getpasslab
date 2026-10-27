@@ -1,5 +1,5 @@
 import { beforeMobileLearningUX } from './read-before-mobile-learning-ux.mjs';
-import fs from 'node:fs';
+import fs from './read-before-fire-priority-chapters.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parseFragment} from 'parse5';

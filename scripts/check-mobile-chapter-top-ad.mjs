@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+import fs from './read-before-fire-priority-chapters.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';

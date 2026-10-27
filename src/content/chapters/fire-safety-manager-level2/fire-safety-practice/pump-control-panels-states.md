@@ -9,7 +9,7 @@ group: "소방시설 점검"
 tags: ["절차"]
 summary: "자동·수동·정지 상태와 펌프별 표시등·기동 관계를 판독함"
 questions: []
-related: []
+related: ["pump-manual-auto-reading", "pump-test-piping-valves"]
 order: 50
 priority: "출시 필수"
 status: "완료"

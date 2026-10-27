@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import fs from './read-before-fire-priority-chapters.mjs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {beforeChapterHierarchy,beforeFireRequirementsReadability,fireRequirementsFiles} from './read-before-fire-persona-corrections.mjs';

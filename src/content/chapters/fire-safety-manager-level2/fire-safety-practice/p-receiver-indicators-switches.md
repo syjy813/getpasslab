@@ -9,7 +9,7 @@ group: "소방시설 점검"
 tags: ["개념"]
 summary: "패널의 표시와 회로 번호를 읽고 스위치 기능을 구별함"
 questions: []
-related: []
+related: ["receiver-operation-auto-reset", "detector-transmitter-signal-reading", "receiver-circuit-continuity-test"]
 order: 56
 priority: "출시 필수"
 status: "완료"
