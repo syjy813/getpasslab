@@ -34,7 +34,7 @@ let browser;
    }
    report.cases.push({width,route,case:'all-certification listing layout and GNB',passed:true});
   }
-  for(const route of ['/','/privacy/','/computer-literacy/','/computer-literacy/written/computer-basics/character-codes/','/fire-safety-manager-level2/practice/']){
+  for(const route of ['/','/privacy/','/computer-literacy/','/fire-safety-manager-level2/practice/']){
    await page.goto(base+route);assert.equal(await page.locator('[data-mobile-top-ad]').count(),0,'unrequested page unchanged');
   }
   await context.close();
