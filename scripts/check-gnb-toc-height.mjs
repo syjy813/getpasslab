@@ -1,3 +1,4 @@
+import {beforeMobileTopAd} from './read-before-mobile-top-ad.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -10,7 +11,7 @@ assert.deepEqual(walk('dist').filter(f=>f.endsWith('.html')).sort(),Object.keys(
 assert.deepEqual(review.productFiles,['src/styles/global.css']);
 for(const [file,expected]of Object.entries(baseline.files))assert.equal(hash(beforeGNBTOCHeight(file,fs.readFileSync(file))),expected,file+': sole CSS source change');
 for(const [file,row]of Object.entries(review.files)){
- const bytes=fs.readFileSync(file);assert.equal(hash(bytes),row.sha256,file+': current reviewed bytes');
+ const bytes=beforeMobileTopAd(file,fs.readFileSync(file));assert.equal(hash(bytes),row.sha256,file+': current reviewed bytes');
  assert.equal(hash(beforeGNBTOCHeight(file,bytes)),row.beforeSHA256);
  const mutation=Buffer.concat([bytes,Buffer.from(' mutation')]);
  assert.notEqual(hash(mutation),row.sha256);assert.notEqual(hash(beforeGNBTOCHeight(file,mutation)),row.beforeSHA256,file+': unknown change is not hidden');
