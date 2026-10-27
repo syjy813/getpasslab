@@ -17,6 +17,9 @@ status: "완료"
 ---
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
+<link rel="stylesheet" href="/styles/fire-panel-lessons.css">
+
+<div class="fire-panel-lesson">
 
 ## 동작시험은 수신기 자체에 시험 신호를 넣는 것
 동작시험은 수신기에 화재 신호를 수동으로 입력해 화재 표시, 지구 표시 및 음향장치의 작동을 확인하는 시험
@@ -26,11 +29,10 @@ status: "완료"
 ## 시험 상태를 읽는 순서
 아래는 동작시험과 자동복구를 함께 선택하고 1회로를 시험하는 학습 예시
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>동작시험과 자동복구를 선택한 시험 예시</strong><span>학습용 재구성 · 표시 명칭과 배치는 기기별로 다름</span></figcaption><img src="/images/fire-safety-manager-level2/receiver-operation-state-v1.svg" alt="동작시험과 자동복구가 선택되고 도통시험은 해제된 개념 수신기. 화재 표시와 1회로 지구 표시가 켜진 시험 상태" width="380" height="535" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/receiver-operation-state-v1.svg" data-fire-alt="동작시험과 자동복구가 선택되고 도통시험은 해제된 개념 수신기. 화재 표시와 1회로 지구 표시가 켜진 시험 상태" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>시험 선택과 화재 표시를 전체 판에서 확인</strong><span>학습용 재구성 · 표시와 배치는 기기별로 다름</span></figcaption><img src="/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp" alt="동작시험과 자동복구가 선택된 P형 5회로 수신기 전체 판. 회로선택 1, 화재 및 1회로 표시 켜짐, 발신기 및 도통시험 결과 표시는 꺼짐" width="1536" height="1024" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp" data-fire-alt="동작시험과 자동복구가 선택된 P형 5회로 수신기 전체 판. 회로선택 1, 화재 및 1회로 표시 켜짐, 발신기 및 도통시험 결과 표시는 꺼짐" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">전체 판 확대 ↗</button></figure></div>
 
-1. **동작시험 선택**: 현장 화재 신호가 아니라 수신기에서 만든 시험 신호인지 확인
-2. **시험 회로 확인**: 회로 선택 번호와 켜진 지구 표시가 대응하는지 확인
-3. **표시와 음향 확인**: 화재 표시, 해당 지구 표시 및 시험 조건에 따른 음향 작동을 확인
+<div class="fire-panel-steps"><section class="fire-panel-step"><h3><span class="fire-panel-number">①</span>동작시험과 자동복구 선택</h3><p>아래 조작부의 동작시험과 자동복구가 선택된 상태<br>현장 화재 신호와 구분하기 위해 시험 선택부터 확인</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">②</span>1회로 선택 확인</h3><p>오른쪽 회로선택이 1을 가리키므로 1회로의 표시와 대응시킴</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">③</span>화재와 지구 표시 확인</h3><p>화재 표시와 1회로 지구 표시가 함께 켜진 시험 예시<br>표시 및 음향 작동은 제시된 시험 조건에 따라 확인</p></section></div>
+
 
 회로 번호가 곧 층수인 것은 아님<br>‘1회로=1층’처럼 대응 조건이 주어진 경우에만 해당 층으로 판단
 
@@ -48,5 +50,7 @@ status: "완료"
 
 <p class="fire-source-note">확인 근거 · 제공 자막 05:00–11:14, 30:34–32:09 및 기존 수신기 챕터와 대조 · <a href="https://www.youtube.com/watch?v=yMdCM9geWIc" target="_blank" rel="noopener">참고 강의</a> / <a href="https://jngjsobang.go.kr/yeosu/minwon/counsel/counsel_list/index.jsp?boardId=bbs_0000000000000151&amp;cntId=213&amp;mode=view" target="_blank" rel="noopener">소방관서 자동복구 기능 설명</a></p>
 
-<dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="380" height="380" alt=""></div></dialog>
+</div>
+
+<dialog id="fire-bulk-image-dialog" class="sample-image-layer fire-panel-dialog" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="1536" height="1024" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>

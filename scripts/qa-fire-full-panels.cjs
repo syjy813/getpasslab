@@ -8,6 +8,10 @@ const rows=[
  ['FSM2-049','receiver-backup-power-test','receiver-backup-full-panel-v2.webp',3,'FSM2-049'],
  ['FSM2-034','pump-control-panels-states','pump-control-full-panel-v2.webp',2,'FSM2-034'],
  ['FSM2-077','pump-manual-auto-reading','pump-control-full-panel-v2.webp',3,'FSM2-034'],
+ ['FSM2-075','receiver-operation-auto-reset','receiver-operation-full-panel-v2.webp',3,'FSM2-047'],
+ ['FSM2-076','detector-transmitter-signal-reading','receiver-transmitter-full-panel-v2.webp',3,'FSM2-047'],
+ ['FSM2-078','pump-test-piping-valves','pump-test-system-full-v2.webp',3,'FSM2-035'],
+ ['FSM2-079','preaction-panel-state-reading','preaction-full-panel-v2.webp',3,'FSM2-040'],
 ];
 const output=process.env.QA_OUTPUT_DIR||'qa-results/fire-full-panels';
 fs.mkdirSync(output,{recursive:true});

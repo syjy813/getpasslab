@@ -1,4 +1,5 @@
-import fs from 'node:fs';
+// Earlier full-panel release contract; current native coverage is check-fire-five-full-panels.mjs.
+import fs from './read-before-fire-five-full-panels.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
