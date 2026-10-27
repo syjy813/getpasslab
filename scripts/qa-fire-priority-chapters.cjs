@@ -6,7 +6,8 @@ const briefs=JSON.parse(fs.readFileSync('docs/audits/2026-10-27-fire-priority-ch
 const chapters=fs.readdirSync('src/content/chapters/fire-safety-manager-level2/fire-safety-practice').map(n=>fs.readFileSync('src/content/chapters/fire-safety-manager-level2/fire-safety-practice/'+n,'utf8')).sort((a,b)=>Number(a.match(/^order: ([\d.]+)/m)[1])-Number(b.match(/^order: ([\d.]+)/m)[1]));
 const slugs=chapters.map(s=>s.match(/^slug: "([^"]+)"/m)[1]);
 const cases=briefs.map(b=>{const s=chapters.find(s=>s.includes('chapter_id: "'+b.chapterId+'"'));return{...b,slug:s.match(/^slug: "([^"]+)"/m)[1]}});
-for(const row of cases)if(row.chapterId==='FSM2-077'){row.file='pump-control-full-panel-v2.webp';row.sourceWidth=1536;}
+const fullPanelFiles={'FSM2-075':'receiver-operation-full-panel-v2.webp','FSM2-076':'receiver-transmitter-full-panel-v2.webp','FSM2-077':'pump-control-full-panel-v2.webp','FSM2-078':'pump-test-system-full-v2.webp','FSM2-079':'preaction-full-panel-v2.webp'};
+for(const row of cases){row.file=fullPanelFiles[row.chapterId];row.sourceWidth=1536;}
 const prefix='/fire-safety-manager-level2/written/fire-safety-practice/';
 const report={result:'RUNNING',cases:[],errors:[],limitations:['Chromium emulation; physical devices and Safari not tested']};
 fs.mkdirSync(dir,{recursive:true});

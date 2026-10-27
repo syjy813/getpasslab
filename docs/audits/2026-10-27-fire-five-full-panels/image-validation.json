@@ -1,0 +1,42 @@
+[
+  {
+    "chapter": "FSM2-075",
+    "file": "public/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp",
+    "pixelsEqualToGeneratedOriginal": true,
+    "bytes": 1099534,
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "chapter": "FSM2-076",
+    "file": "public/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp",
+    "pixelsEqualToGeneratedOriginal": true,
+    "bytes": 1120346,
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "chapter": "FSM2-078",
+    "file": "public/images/fire-safety-manager-level2/pump-test-system-full-v2.webp",
+    "pixelsEqualToGeneratedOriginal": true,
+    "bytes": 977426,
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "chapter": "FSM2-079",
+    "file": "public/images/fire-safety-manager-level2/preaction-full-panel-v2.webp",
+    "pixelsEqualToGeneratedOriginal": true,
+    "bytes": 1371192,
+    "size": [
+      1536,
+      1024
+    ]
+  }
+]

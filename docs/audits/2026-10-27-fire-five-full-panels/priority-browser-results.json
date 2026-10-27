@@ -1,0 +1,289 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "chapterId": "FSM2-075",
+      "width": 320,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp",
+        "width": 270,
+        "alt": "동작시험과 자동복구가 선택된 P형 5회로 수신기 전체 판. 회로선택 1, 화재 및 1회로 표시 켜짐, 발신기 및 도통시험 결과 표시는 꺼짐",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-076",
+      "width": 320,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp",
+        "width": 270,
+        "alt": "동작시험 등 시험 선택이 해제된 수신기 전체 판. 회로선택 OFF, 화재 및 3회로 지구 표시와 발신기 표시가 켜져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-077",
+      "width": 320,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+        "width": 270,
+        "alt": "① 감시제어반 연동, ② 동력제어반 주펌프 수동 선택과 정지 표시 켜짐, ③ 충압펌프 자동 선택과 정지 표시 켜짐. 두 펌프의 기동 표시 및 감시제어반 기동 표시는 꺼져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-078",
+      "width": 320,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp",
+        "width": 270,
+        "alt": "수조에서 펌프로 흡입한 물이 설비측 토출밸브 앞에서 시험배관으로 분기. 1번 닫힘, 2번 열림, 유량계 뒤 3번 조절 후 별도 환수관으로 수조에 돌아가는 학습 계통",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-079",
+      "width": 320,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/preaction-full-panel-v2.webp",
+        "width": 270,
+        "alt": "준비작동식 학습용 감시제어반 전체 판. 감지기 A와 B는 켜지고 SVP 입력은 꺼져 있으며 밸브 기동 명령 있음과 개방 확인이 각각 표시된 상태",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-075",
+      "width": 390,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp",
+        "width": 340,
+        "alt": "동작시험과 자동복구가 선택된 P형 5회로 수신기 전체 판. 회로선택 1, 화재 및 1회로 표시 켜짐, 발신기 및 도통시험 결과 표시는 꺼짐",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-076",
+      "width": 390,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp",
+        "width": 340,
+        "alt": "동작시험 등 시험 선택이 해제된 수신기 전체 판. 회로선택 OFF, 화재 및 3회로 지구 표시와 발신기 표시가 켜져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-077",
+      "width": 390,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+        "width": 340,
+        "alt": "① 감시제어반 연동, ② 동력제어반 주펌프 수동 선택과 정지 표시 켜짐, ③ 충압펌프 자동 선택과 정지 표시 켜짐. 두 펌프의 기동 표시 및 감시제어반 기동 표시는 꺼져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-078",
+      "width": 390,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp",
+        "width": 340,
+        "alt": "수조에서 펌프로 흡입한 물이 설비측 토출밸브 앞에서 시험배관으로 분기. 1번 닫힘, 2번 열림, 유량계 뒤 3번 조절 후 별도 환수관으로 수조에 돌아가는 학습 계통",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-079",
+      "width": 390,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/preaction-full-panel-v2.webp",
+        "width": 340,
+        "alt": "준비작동식 학습용 감시제어반 전체 판. 감지기 A와 B는 켜지고 SVP 입력은 꺼져 있으며 밸브 기동 명령 있음과 개방 확인이 각각 표시된 상태",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-075",
+      "width": 768,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp",
+        "width": 718,
+        "alt": "동작시험과 자동복구가 선택된 P형 5회로 수신기 전체 판. 회로선택 1, 화재 및 1회로 표시 켜짐, 발신기 및 도통시험 결과 표시는 꺼짐",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-076",
+      "width": 768,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp",
+        "width": 718,
+        "alt": "동작시험 등 시험 선택이 해제된 수신기 전체 판. 회로선택 OFF, 화재 및 3회로 지구 표시와 발신기 표시가 켜져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-077",
+      "width": 768,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+        "width": 718,
+        "alt": "① 감시제어반 연동, ② 동력제어반 주펌프 수동 선택과 정지 표시 켜짐, ③ 충압펌프 자동 선택과 정지 표시 켜짐. 두 펌프의 기동 표시 및 감시제어반 기동 표시는 꺼져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-078",
+      "width": 768,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp",
+        "width": 718,
+        "alt": "수조에서 펌프로 흡입한 물이 설비측 토출밸브 앞에서 시험배관으로 분기. 1번 닫힘, 2번 열림, 유량계 뒤 3번 조절 후 별도 환수관으로 수조에 돌아가는 학습 계통",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-079",
+      "width": 768,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/preaction-full-panel-v2.webp",
+        "width": 718,
+        "alt": "준비작동식 학습용 감시제어반 전체 판. 감지기 A와 B는 켜지고 SVP 입력은 꺼져 있으며 밸브 기동 명령 있음과 개방 확인이 각각 표시된 상태",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-075",
+      "width": 1440,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp",
+        "width": 878,
+        "alt": "동작시험과 자동복구가 선택된 P형 5회로 수신기 전체 판. 회로선택 1, 화재 및 1회로 표시 켜짐, 발신기 및 도통시험 결과 표시는 꺼짐",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-076",
+      "width": 1440,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp",
+        "width": 878,
+        "alt": "동작시험 등 시험 선택이 해제된 수신기 전체 판. 회로선택 OFF, 화재 및 3회로 지구 표시와 발신기 표시가 켜져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-077",
+      "width": 1440,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+        "width": 878,
+        "alt": "① 감시제어반 연동, ② 동력제어반 주펌프 수동 선택과 정지 표시 켜짐, ③ 충압펌프 자동 선택과 정지 표시 켜짐. 두 펌프의 기동 표시 및 감시제어반 기동 표시는 꺼져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-078",
+      "width": 1440,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp",
+        "width": 878,
+        "alt": "수조에서 펌프로 흡입한 물이 설비측 토출밸브 앞에서 시험배관으로 분기. 1번 닫힘, 2번 열림, 유량계 뒤 3번 조절 후 별도 환수관으로 수조에 돌아가는 학습 계통",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-079",
+      "width": 1440,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/preaction-full-panel-v2.webp",
+        "width": 878,
+        "alt": "준비작동식 학습용 감시제어반 전체 판. 감지기 A와 B는 켜지고 SVP 입력은 꺼져 있으며 밸브 기동 명령 있음과 개방 확인이 각각 표시된 상태",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical devices and Safari not tested"
+  ]
+}

@@ -17,20 +17,20 @@ status: "완료"
 ---
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
+<link rel="stylesheet" href="/styles/fire-panel-lessons.css">
+
+<div class="fire-panel-lesson">
 
 ## 설비로 보내는 길과 시험하는 길을 구별
 성능시험배관은 **펌프 토출측 개폐밸브 앞에서 분기**<br>유량계 앞에는 개폐밸브, 뒤에는 유량조절밸브를 두어 시험 유량을 설정
 
 설비측 토출밸브를 닫아도 그 앞에서 갈라진 시험배관을 통해 물을 보낼 수 있음
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>시험 분기는 설비측 토출밸브 앞에서 갈라짐</strong><span>학습용 재구성 · 표시 명칭과 배치는 기기별로 다름</span></figcaption><img src="/images/fire-safety-manager-level2/pump-test-valves-v1.svg" alt="펌프 토출에서 설비측 토출밸브 앞의 접속점으로 시험배관이 분기. 설비측 1번 밸브 닫힘, 시험측 2번 밸브 열림, 유량계 뒤 3번 밸브로 유량 조절 후 수조로 환수" width="380" height="650" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/pump-test-valves-v1.svg" data-fire-alt="펌프 토출에서 설비측 토출밸브 앞의 접속점으로 시험배관이 분기. 설비측 1번 밸브 닫힘, 시험측 2번 밸브 열림, 유량계 뒤 3번 밸브로 유량 조절 후 수조로 환수" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>분기 위치와 세 밸브의 역할을 함께 확인</strong><span>학습용 재구성 · 표시와 배치는 기기별로 다름</span></figcaption><img src="/images/fire-safety-manager-level2/pump-test-system-full-v2.webp" alt="수조에서 펌프로 흡입한 물이 설비측 토출밸브 앞에서 시험배관으로 분기. 1번 닫힘, 2번 열림, 유량계 뒤 3번 조절 후 별도 환수관으로 수조에 돌아가는 학습 계통" width="1536" height="1024" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/pump-test-system-full-v2.webp" data-fire-alt="수조에서 펌프로 흡입한 물이 설비측 토출밸브 앞에서 시험배관으로 분기. 1번 닫힘, 2번 열림, 유량계 뒤 3번 조절 후 별도 환수관으로 수조에 돌아가는 학습 계통" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">전체 판 확대 ↗</button></figure></div>
 
-유량 측정 상태를 단순화한 부분 계통도<br>흡입밸브, 체크밸브, 순환배관 및 압력계는 생략했으며 실제 시공도나 밸브 번호를 재현한 그림은 아님
+<div class="fire-panel-steps"><section class="fire-panel-step"><h3><span class="fire-panel-number">①</span>설비측 토출밸브는 닫힘</h3><p>①은 설비측으로 가는 경로를 차단<br>시험배관은 이 밸브 앞에서 분기하므로 시험측 경로와 구분</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">②</span>시험배관 개폐밸브는 열림</h3><p>②는 시험 유량계로 가는 경로를 개방<br>수조 → 펌프 → 분기점 → ② → 유량계 순서로 확인</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">③</span>유량조절밸브로 시험 유량 설정</h3><p>③은 유량계 뒤에서 시험 유량을 조절<br>유량계 → ③ → 수조로 이어지는 환수 경로를 확인</p></section></div>
 
-## 세 밸브의 역할
-- **① 설비측 토출밸브**: 펌프에서 설비측으로 가는 경로를 개폐
-- **② 시험배관 개폐밸브**: 시험 유량계로 가는 경로를 개폐
-- **③ 유량조절밸브**: 유량계 뒤에서 시험 유량을 조절
+성능시험에 필요한 구성과 환수 경로를 단순화한 학습용 계통도<br>흡입밸브, 체크밸브, 순환배관 및 압력계는 생략했으며 실제 시공도나 밸브 번호를 재현한 그림은 아님
 
 ②와 ③은 모두 시험배관에 있지만 역할이 다름<br>체절·정격·최대유량의 차이를 읽을 때는 특히 **③의 조절 상태와 유량계 값**을 확인
 
@@ -50,5 +50,7 @@ status: "완료"
 
 <p class="fire-source-note">확인 근거 · NFTC 102 2.3.7.1의 배치와 기존 성능시험 챕터의 시험·복구 조건을 대조 · <a href="https://www.law.go.kr/admRulInfoP.do?admRulSeq=2100000281772" target="_blank" rel="noopener">NFTC 102</a> / <a href="https://www.youtube.com/watch?v=WxX2_BLszbg" target="_blank" rel="noopener">참고 강의 08:13–15:50</a></p>
 
-<dialog id="fire-bulk-image-dialog" class="sample-image-layer" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="380" height="380" alt=""></div></dialog>
+</div>
+
+<dialog id="fire-bulk-image-dialog" class="sample-image-layer fire-panel-dialog" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="1536" height="1024" alt=""></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>
