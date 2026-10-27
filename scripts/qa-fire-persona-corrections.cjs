@@ -7,7 +7,7 @@ const changes=JSON.parse(fs.readFileSync(audit+'/question-corrections.json','utf
 const output=process.env.QA_OUTPUT_DIR||'qa-results/fire-persona-corrections';
 fs.mkdirSync(output,{recursive:true});
 (async()=>{
-  const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+  const browser=await chromium.launch({headless:true,...(process.env.QA_CHROMIUM_EXECUTABLE?{executablePath:process.env.QA_CHROMIUM_EXECUTABLE}:{}),args:['--no-sandbox','--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader']});
   const result={pages:[],questionDisplays:[],errors:[],imageContentReview:'not repeated; unchanged assets',physicalDevices:'not tested'};
   try{
     for(const width of [390,1440]){
@@ -19,9 +19,16 @@ fs.mkdirSync(output,{recursive:true});
         const route='/fire-safety-manager-level2/written/'+path.basename(path.dirname(row.path))+'/'+slug+'/';
         const response=await page.goto((process.env.QA_BASE_URL||'http://127.0.0.1:4321')+route,{waitUntil:'networkidle'});
         assert.equal(response.status(),200,route);
-        const heading=page.getByRole('heading',{name:row.title,exact:true});
+        // FSM2-048's former standalone wiring section is now integrated with
+        // the test conclusion; retain its three distinct wiring judgments.
+        const headingName=row.chapterId==='FSM2-048'?'시험 종료와 오답 구분':row.title;
+        const heading=page.getByRole('heading',{name:headingName,exact:true});
         assert.equal(await heading.count(),1,row.chapterId+' addition present');
         await heading.scrollIntoViewIfNeeded();
+        if(row.chapterId==='FSM2-048'){
+          const section=await heading.locator('..').innerText();
+          for(const term of ['1.5m','종단저항함','50Ω','전로저항','7개 이하','경계구역'])assert(section.includes(term),'FSM2-048 preserves wiring judgment '+term);
+        }
         const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
         assert.equal(overflow,false,row.chapterId+' viewport overflow at '+width);
         const linkErrors=await page.locator('article a[href^="/fire-safety-manager-level2/"]').evaluateAll(links=>links.filter(a=>!new URL(a.href).pathname.endsWith('/')).map(a=>a.getAttribute('href')));
