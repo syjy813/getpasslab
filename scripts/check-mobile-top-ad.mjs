@@ -1,3 +1,4 @@
+import {beforeMobileChapterTopAd} from './read-before-mobile-chapter-top-ad.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -10,13 +11,13 @@ assert.deepEqual(walk('dist').filter(f=>f.endsWith('.html')).sort(),Object.keys(
 assert.deepEqual(review.productFiles.slice().sort(),['src/layouts/BaseLayout.astro','src/pages/[cert]/[exam]/index.astro','src/pages/[cert]/[exam]/[subject]/index.astro','src/styles/global.css'].sort());
 for(const [file,expected]of Object.entries(baseline.files))assert.equal(hash(beforeMobileTopAd(file,fs.readFileSync(file))),expected,file+': exact product scope');
 for(const [file,row]of Object.entries(review.files)){
- const bytes=fs.readFileSync(file);assert.equal(hash(bytes),row.sha256,file+': native approved bytes');
+ const bytes=beforeMobileChapterTopAd(file,fs.readFileSync(file));assert.equal(hash(bytes),row.sha256,file+': native approved bytes');
  assert.equal(hash(beforeMobileTopAd(file,bytes)),row.beforeSHA256);
  const mutated=Buffer.concat([bytes,Buffer.from(' mutation')]);assert.notEqual(hash(beforeMobileTopAd(file,mutated)),row.beforeSHA256,file+': unknown mutation rejected');
 }
 let chapters=0,articles=0;const routes=[],certs={};
 for(const [file,row]of Object.entries(baseline.html)){
- const bytes=fs.readFileSync(file),html=bytes.toString();
+ const bytes=beforeMobileChapterTopAd(file,fs.readFileSync(file)),html=bytes.toString();
  assert.equal(hash(beforeMobileTopAd(file,bytes)),row.sha256,file+': complete previous build preserved');
  const article=html.match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0];assert.equal(article?hash(article):null,row.articleSHA256,file+': native lesson unchanged');
  if(row.chapter)chapters++;if(article)articles++;
