@@ -26,6 +26,7 @@ const chapters = defineCollection({
       chapter: z.string().optional(), // 연결 설명이 구현된 경우에만 slug 지정
     })).default([]), // 기초 개념 적용용. 주 기출·빈도 집계에서 제외
     related: z.array(z.string()).default([]),    // 관련 챕터 slug (섹션 5 수동 지정분)
+    practiceChapter: z.string().optional(), // 세분화 챕터에서 연결할 기존 소방 문제 챕터 slug
     examComment: z.string().optional(),          // 섹션 4 출제 경향 코멘트 (챕터당 1줄)
     order: z.number().default(0),                 // 그룹 내 정렬 순서 (노션 매핑 DB 이관)
     priority: z.enum(['출시 필수', '1차', '2차']).default('1차'), // 작성 우선순위

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import fs from './read-before-fire-priority-chapters.mjs';
 import {hash,revision,standardReview,previousRows,beforeStandardization,beforeStandardizedTable,beforeStandardizedPractice} from './fire-mock-authoring/standardization.mjs';
 import {getPublishedFireQuestions} from '../src/utils/firePractice.ts';
 import {beforeGradeTableFormatting,beforeGradeHierarchy,beforeGradeCopyEdit,beforeChapterHierarchy} from './read-before-fire-persona-corrections.mjs';

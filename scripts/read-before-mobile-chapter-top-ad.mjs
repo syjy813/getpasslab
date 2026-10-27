@@ -5,9 +5,11 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
+import {beforeFirePriorityChapters} from './read-before-fire-priority-chapters.mjs';
 export const mobileChapterAdReview=JSON.parse(gunzipSync(fs.readFileSync('docs/audits/2026-10-27-mobile-chapter-top-ad/review.json.gz')));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 export function beforeMobileChapterTopAd(file,bytes){
+ bytes=beforeFirePriorityChapters(file,bytes);
  const key=path.normalize(String(file)),row=mobileChapterAdReview.files[key];
  if(!row||hash(bytes)!==row.sha256)return bytes;
  let text=bytes.toString();

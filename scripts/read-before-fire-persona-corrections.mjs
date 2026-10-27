@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {readFile as nativeRead,readdir as nativeReaddir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
+import {isFirePriorityAddition} from './read-before-fire-priority-chapters.mjs';
 import { beforeGlobalChapterReadability, isReadabilityAddition } from './read-before-global-chapter-readability.mjs';
 import {beforeStandardizedPractice} from './fire-mock-authoring/standardization.mjs';
 const audit='docs/audits/2026-10-20-fire-persona-corrections';
@@ -374,6 +375,7 @@ export async function readdir(dir,options){
   const result=[];
   for(const entry of entries){
     const name=typeof entry==='string'?entry:entry.name;
+    if(isFirePriorityAddition(path.join(String(dir),name)))continue;
     if(isReadabilityAddition(path.join(String(dir),name)))continue;
     const row=release.files.find(r=>r.added&&r.path===path.join(String(dir),name));
     if(row)assert.equal(hash(await nativeRead(row.path)),row.sha256,row.path+': exact integrated main addition');

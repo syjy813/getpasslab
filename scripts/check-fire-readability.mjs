@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFile} from 'node:fs/promises';
+import {readFile} from './read-before-fire-priority-chapters.mjs';
 import {createHash} from 'node:crypto';
 import {beforeReview,beforePracticePolish,beforeQuestionFlow,beforeChapterHierarchy} from './read-before-fire-persona-corrections.mjs';
 import {beforeStandardizedPractice} from './fire-mock-authoring/standardization.mjs';

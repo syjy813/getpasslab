@@ -60,7 +60,7 @@ jobs:
           done
           curl -fsS "$QA_BASE_URL/" > /dev/null
           node scripts/qa-fire-safety-level2-launch.cjs
-      - name: All 73 new chapters and 32 technical SVGs at four viewport widths
+      - name: Existing 73 chapters and 32 technical SVGs at four viewport widths
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_BASE_URL: http://127.0.0.1:4321
@@ -74,6 +74,20 @@ jobs:
             sleep 1
           done
           node scripts/qa-fire-safety-level2-bulk.cjs
+      - name: Priority five chapters, diagrams, navigation and linked practice
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: http://127.0.0.1:4321
+          QA_OUTPUT_DIR: qa-results/fire-priority-chapters
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-fire-priority-preview.log 2>&1 &
+          qa_priority_pid=$!
+          trap 'kill "$qa_priority_pid" 2>/dev/null || true' EXIT
+          for qa_attempt in $(seq 1 30); do
+            if curl -fsS "$QA_BASE_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa-fire-priority-chapters.cjs
       - name: Fire chapter practice and full mock exam
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
@@ -110,4 +124,5 @@ jobs:
             qa-results/fire-safety-level2*/
             qa-results/fire-practice/
             qa-results/fire-publication/
+            qa-results/fire-priority-chapters/
           retention-days: 14

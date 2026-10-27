@@ -1,5 +1,5 @@
 import {beforeGNBChapterTOC} from './read-before-gnb-chapter-toc.mjs';
-import fs from 'node:fs';
+import fs from './read-before-fire-priority-chapters.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';

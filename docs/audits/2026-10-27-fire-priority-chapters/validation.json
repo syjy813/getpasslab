@@ -1,0 +1,297 @@
+{
+  "checkedAt": "2026-10-27T12:25:49.398328+00:00",
+  "baseCommit": "68e8e3696d50b28bb12078caffde27edd6e01b0c",
+  "implementationCommit": "8c4f4457a486d946d6c4b39564f5d0aa7f1ef057",
+  "build": {
+    "status": "PASS",
+    "astroPages": 550,
+    "htmlFiles": 552
+  },
+  "nativeProtection": {
+    "status": "PASS",
+    "sourceAssets": 861,
+    "articles": 529,
+    "newChapters": 5,
+    "newSVGs": 5,
+    "existingLearningBodies": "exact before related links",
+    "questionTableRows": 2480,
+    "publishedQuestions": 2328,
+    "questionAssignmentChanges": 0
+  },
+  "checks": [
+    {
+      "file": "scripts/check-accident-analysis-figures.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-all-chapter-hierarchy.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-chapter-formula-style.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-clam-shell-chapter.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-color-contrast.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-computer-literacy-001-081.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-computer-literacy-082-159.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-computer-literacy-c1.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-computer-literacy-publication.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-deferred-question-content.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-earth-retaining-structure.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-excavator-operation-safety.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-bulk-history-guard.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-launch-history-guard.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-persona-corrections.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-popup.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-practice-history-guard.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-practice-logic.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-practice.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-priority-chapters.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-publication.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-readability.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-safety-level2-bulk.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-safety-level2-launch.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-standardization.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fire-textbook-corrections.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-formwork-lateral-pressure.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fta-original-options.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-fta-symbols-split.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-global-chapter-readability.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-gnb-chapter-toc.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-gnb-toc-height.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-hanging-scaffold-wire-rope.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-historical-practice-guard.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-industrial-20190804-review.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-industrial-question-source-repair.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-industrial-remaining-review.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-industrial-remaining-splits.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-industrial-safety-chapter-splits.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-industrial-safety-machine-tools-split.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-industrial-unassigned-links.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-instant-practice-coverage.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-instant-practice-datasets.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-instant-practice-pilot.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-mobile-chapter-top-ad.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-mobile-learning-ux.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-mobile-top-ad.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-port-cargo-passages.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-public-content.mjs",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "file": "scripts/check-seo.mjs",
+      "exit": 0,
+      "error": ""
+    }
+  ],
+  "visualAssetInspection": {
+    "status": "PASS",
+    "method": "Korean-font SVG to PNG render and visual inspection",
+    "figures": 5,
+    "correction": "Moved pipe labels away from lines"
+  },
+  "responsiveBrowserQA": {
+    "status": "NOT_RUN",
+    "reason": "Local Chrome and headless-shell ZIP downloads failed. CI prepared but push approval is required.",
+    "plannedWidths": [
+      320,
+      390,
+      768,
+      1440
+    ]
+  },
+  "remoteUpload": {
+    "status": "BLOCKED_BY_AUTO_REVIEW",
+    "reason": "Explicit authorization for remote branch upload and sharing was not established for the current chapter-production request."
+  },
+  "draftPR": "NOT_CREATED",
+  "merge": "NOT_PERFORMED",
+  "deployment": "NOT_PERFORMED",
+  "productionQA": "NOT_RUN"
+}
