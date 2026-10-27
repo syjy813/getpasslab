@@ -28,7 +28,9 @@ let browser;
    await page.locator('.gnb-menu>summary').press('Escape');assert(!await page.locator('.gnb-dropdown').isVisible());
    if(width===390&&route.split('/').length===4){
     await page.screenshot({path:`${out}/390-${route.split('/')[1]}-preview.png`});
-    await page.mouse.wheel(0,350);assert((await page.locator('[data-mobile-top-ad]').boundingBox()).y<0,'banner scrolls away');
+    await page.mouse.wheel(0,350);
+    await page.waitForFunction(()=>document.querySelector('[data-mobile-top-ad]').getBoundingClientRect().bottom<0);
+    assert((await page.locator('[data-mobile-top-ad]').boundingBox()).y<0,'banner scrolls away');
    }
    report.cases.push({width,route,case:'all-certification listing layout and GNB',passed:true});
   }
