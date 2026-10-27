@@ -1,0 +1,228 @@
+{
+  "base": "http://127.0.0.1:32947",
+  "cases": [
+    {
+      "chapterId": "FSM2-034",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+          "w": 270,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "감시제어반은 연동, 두 펌프의 수동 명령 스위치는 정지. 동력제어반 주펌프는 수동, 충압펌프는 자동 선택이며 두 펌프의 기동 표시는 꺼지고 정지 표시는 켜진 상태",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+          "w": 270,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 도통시험 버튼 선택, ② 회로선택 1, ③ 도통시험 정상 켜짐과 단선 꺼짐. 화재 및 지구 표시등은 꺼져 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+          "w": 270,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 예비전원시험 선택, ② 전압지시 구역 확인, ③ 낮음 켜짐. 예비전원감시와 도통시험 정상 및 단선 표시는 모두 꺼져 있고 회로선택은 OFF인 학습 예시",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-034",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+          "w": 340,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "감시제어반은 연동, 두 펌프의 수동 명령 스위치는 정지. 동력제어반 주펌프는 수동, 충압펌프는 자동 선택이며 두 펌프의 기동 표시는 꺼지고 정지 표시는 켜진 상태",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+          "w": 340,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 도통시험 버튼 선택, ② 회로선택 1, ③ 도통시험 정상 켜짐과 단선 꺼짐. 화재 및 지구 표시등은 꺼져 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+          "w": 340,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 예비전원시험 선택, ② 전압지시 구역 확인, ③ 낮음 켜짐. 예비전원감시와 도통시험 정상 및 단선 표시는 모두 꺼져 있고 회로선택은 OFF인 학습 예시",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-034",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+          "w": 718,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "감시제어반은 연동, 두 펌프의 수동 명령 스위치는 정지. 동력제어반 주펌프는 수동, 충압펌프는 자동 선택이며 두 펌프의 기동 표시는 꺼지고 정지 표시는 켜진 상태",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+          "w": 718,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 도통시험 버튼 선택, ② 회로선택 1, ③ 도통시험 정상 켜짐과 단선 꺼짐. 화재 및 지구 표시등은 꺼져 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+          "w": 718,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 예비전원시험 선택, ② 전압지시 구역 확인, ③ 낮음 켜짐. 예비전원감시와 도통시험 정상 및 단선 표시는 모두 꺼져 있고 회로선택은 OFF인 학습 예시",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-034",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+          "w": 878,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "감시제어반은 연동, 두 펌프의 수동 명령 스위치는 정지. 동력제어반 주펌프는 수동, 충압펌프는 자동 선택이며 두 펌프의 기동 표시는 꺼지고 정지 표시는 켜진 상태",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+          "w": 878,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 도통시험 버튼 선택, ② 회로선택 1, ③ 도통시험 정상 켜짐과 단선 꺼짐. 화재 및 지구 표시등은 꺼져 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+          "w": 878,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 예비전원시험 선택, ② 전압지시 구역 확인, ③ 낮음 켜짐. 예비전원감시와 도통시험 정상 및 단선 표시는 모두 꺼져 있고 회로선택은 OFF인 학습 예시",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical iOS/Android and Safari not tested"
+  ],
+  "startedAt": "2026-10-27T13:52:27.201Z",
+  "result": "PASS",
+  "finishedAt": "2026-10-27T13:53:00.787Z"
+}

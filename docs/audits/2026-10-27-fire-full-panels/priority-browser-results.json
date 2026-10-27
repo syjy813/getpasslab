@@ -1,0 +1,289 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "chapterId": "FSM2-075",
+      "width": 320,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-operation-state-v1.svg",
+        "width": 270,
+        "alt": "동작시험과 자동복구가 선택되고 도통시험은 해제된 개념 수신기. 화재 표시와 1회로 지구 표시가 켜진 시험 상태",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-076",
+      "width": 320,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-detector-transmitter-v1.svg",
+        "width": 270,
+        "alt": "동작시험이 해제된 정상 예시에서 감지기 신호는 화재와 3회로 표시 점등, 발신기 신호는 발신기 표시까지 추가 점등",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-077",
+      "width": 320,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+        "width": 270,
+        "alt": "① 감시제어반 연동, ② 동력제어반 주펌프 수동 선택과 정지 표시 켜짐, ③ 충압펌프 자동 선택과 정지 표시 켜짐. 두 펌프의 기동 표시 및 감시제어반 기동 표시는 꺼져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-078",
+      "width": 320,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-test-valves-v1.svg",
+        "width": 270,
+        "alt": "펌프 토출에서 설비측 토출밸브 앞의 접속점으로 시험배관이 분기. 설비측 1번 밸브 닫힘, 시험측 2번 밸브 열림, 유량계 뒤 3번 밸브로 유량 조절 후 수조로 환수",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-079",
+      "width": 320,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/preaction-panel-inputs-v1.svg",
+        "width": 270,
+        "alt": "교차회로 A만 감지하면 자동 기동 조건 미충족, A와 B가 모두 감지하면 충족. SVP 조작은 감지기 두 회로와 별도의 수동 기동 명령인 비교 패널",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-075",
+      "width": 390,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-operation-state-v1.svg",
+        "width": 340,
+        "alt": "동작시험과 자동복구가 선택되고 도통시험은 해제된 개념 수신기. 화재 표시와 1회로 지구 표시가 켜진 시험 상태",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-076",
+      "width": 390,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-detector-transmitter-v1.svg",
+        "width": 340,
+        "alt": "동작시험이 해제된 정상 예시에서 감지기 신호는 화재와 3회로 표시 점등, 발신기 신호는 발신기 표시까지 추가 점등",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-077",
+      "width": 390,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+        "width": 340,
+        "alt": "① 감시제어반 연동, ② 동력제어반 주펌프 수동 선택과 정지 표시 켜짐, ③ 충압펌프 자동 선택과 정지 표시 켜짐. 두 펌프의 기동 표시 및 감시제어반 기동 표시는 꺼져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-078",
+      "width": 390,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-test-valves-v1.svg",
+        "width": 340,
+        "alt": "펌프 토출에서 설비측 토출밸브 앞의 접속점으로 시험배관이 분기. 설비측 1번 밸브 닫힘, 시험측 2번 밸브 열림, 유량계 뒤 3번 밸브로 유량 조절 후 수조로 환수",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-079",
+      "width": 390,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/preaction-panel-inputs-v1.svg",
+        "width": 340,
+        "alt": "교차회로 A만 감지하면 자동 기동 조건 미충족, A와 B가 모두 감지하면 충족. SVP 조작은 감지기 두 회로와 별도의 수동 기동 명령인 비교 패널",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-075",
+      "width": 768,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-operation-state-v1.svg",
+        "width": 420,
+        "alt": "동작시험과 자동복구가 선택되고 도통시험은 해제된 개념 수신기. 화재 표시와 1회로 지구 표시가 켜진 시험 상태",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-076",
+      "width": 768,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-detector-transmitter-v1.svg",
+        "width": 420,
+        "alt": "동작시험이 해제된 정상 예시에서 감지기 신호는 화재와 3회로 표시 점등, 발신기 신호는 발신기 표시까지 추가 점등",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-077",
+      "width": 768,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+        "width": 718,
+        "alt": "① 감시제어반 연동, ② 동력제어반 주펌프 수동 선택과 정지 표시 켜짐, ③ 충압펌프 자동 선택과 정지 표시 켜짐. 두 펌프의 기동 표시 및 감시제어반 기동 표시는 꺼져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-078",
+      "width": 768,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-test-valves-v1.svg",
+        "width": 420,
+        "alt": "펌프 토출에서 설비측 토출밸브 앞의 접속점으로 시험배관이 분기. 설비측 1번 밸브 닫힘, 시험측 2번 밸브 열림, 유량계 뒤 3번 밸브로 유량 조절 후 수조로 환수",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-079",
+      "width": 768,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/preaction-panel-inputs-v1.svg",
+        "width": 420,
+        "alt": "교차회로 A만 감지하면 자동 기동 조건 미충족, A와 B가 모두 감지하면 충족. SVP 조작은 감지기 두 회로와 별도의 수동 기동 명령인 비교 패널",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-075",
+      "width": 1440,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-operation-state-v1.svg",
+        "width": 420,
+        "alt": "동작시험과 자동복구가 선택되고 도통시험은 해제된 개념 수신기. 화재 표시와 1회로 지구 표시가 켜진 시험 상태",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-076",
+      "width": 1440,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/receiver-detector-transmitter-v1.svg",
+        "width": 420,
+        "alt": "동작시험이 해제된 정상 예시에서 감지기 신호는 화재와 3회로 표시 점등, 발신기 신호는 발신기 표시까지 추가 점등",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-077",
+      "width": 1440,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+        "width": 878,
+        "alt": "① 감시제어반 연동, ② 동력제어반 주펌프 수동 선택과 정지 표시 켜짐, ③ 충압펌프 자동 선택과 정지 표시 켜짐. 두 펌프의 기동 표시 및 감시제어반 기동 표시는 꺼져 있음",
+        "naturalWidth": 1536
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-078",
+      "width": 1440,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/pump-test-valves-v1.svg",
+        "width": 420,
+        "alt": "펌프 토출에서 설비측 토출밸브 앞의 접속점으로 시험배관이 분기. 설비측 1번 밸브 닫힘, 시험측 2번 밸브 열림, 유량계 뒤 3번 밸브로 유량 조절 후 수조로 환수",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "chapterId": "FSM2-079",
+      "width": 1440,
+      "image": {
+        "src": "/images/fire-safety-manager-level2/preaction-panel-inputs-v1.svg",
+        "width": 420,
+        "alt": "교차회로 A만 감지하면 자동 기동 조건 미충족, A와 B가 모두 감지하면 충족. SVP 조작은 감지기 두 회로와 별도의 수동 기동 명령인 비교 패널",
+        "naturalWidth": 380
+      },
+      "practice": "existing approved pool opens",
+      "zoomAndRestore": "PASS",
+      "navigation": "PASS",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical devices and Safari not tested"
+  ]
+}

@@ -1,0 +1,86 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const http=require('node:http');
+const {chromium}=require(process.env.QA_PLAYWRIGHT_MODULE||'playwright');
+const rows=[
+ ['FSM2-048','receiver-circuit-continuity-test','receiver-continuity-full-panel-v2.webp',3,'FSM2-048'],
+ ['FSM2-049','receiver-backup-power-test','receiver-backup-full-panel-v2.webp',3,'FSM2-049'],
+ ['FSM2-034','pump-control-panels-states','pump-control-full-panel-v2.webp',2,'FSM2-034'],
+ ['FSM2-077','pump-manual-auto-reading','pump-control-full-panel-v2.webp',3,'FSM2-034'],
+];
+const output=process.env.QA_OUTPUT_DIR||'qa-results/fire-full-panels';
+fs.mkdirSync(output,{recursive:true});
+const report={result:'RUNNING',cases:[],errors:[],limitations:['Chromium emulation; physical devices and Safari not tested']};
+(async()=>{
+ let server;
+ let base=process.env.QA_BASE_URL||'http://127.0.0.1:4321';
+ if(process.env.QA_SERVE_DIST==='1'){
+  server=http.createServer((req,res)=>{
+   const url=new URL(req.url,'http://localhost');let file=path.resolve('dist','.'+decodeURIComponent(url.pathname));
+   if(!file.startsWith(path.resolve('dist')+path.sep)){res.writeHead(403).end();return;}
+   if(fs.existsSync(file)&&fs.statSync(file).isDirectory())file=path.join(file,'index.html');
+   if(!fs.existsSync(file)){res.writeHead(404).end();return;}
+   const type={'.html':'text/html','.css':'text/css','.js':'text/javascript','.webp':'image/webp','.svg':'image/svg+xml','.json':'application/json'}[path.extname(file)]||'application/octet-stream';
+   res.writeHead(200,{'Content-Type':type});fs.createReadStream(file).pipe(res);
+  });
+  await new Promise(r=>server.listen(0,'127.0.0.1',r));base='http://127.0.0.1:'+server.address().port;
+ }
+ const options={headless:true,args:JSON.parse(process.env.QA_CHROMIUM_ARGS||'["--no-sandbox","--disable-dev-shm-usage"]')};
+ if(process.env.QA_CHROMIUM_EXECUTABLE)options.executablePath=process.env.QA_CHROMIUM_EXECUTABLE;
+ const browser=await chromium.launch(options);
+ try{
+  for(const width of [320,390,768,1440]){
+   const context=await browser.newContext({viewport:{width,height:900}});
+   const page=await context.newPage();page.on('pageerror',e=>report.errors.push(String(e)));
+   await page.route('**/*',r=>new URL(r.request().url()).origin===new URL(base).origin?r.continue():r.abort());
+   for(const [id,slug,file,steps,pool]of rows){
+    const response=await page.goto(base+'/fire-safety-manager-level2/written/fire-safety-practice/'+slug+'/');
+    assert.equal(response.status(),200);await page.evaluate(()=>document.fonts.ready);
+    assert.equal(await page.locator('h1').count(),1);
+    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),id+' horizontal overflow '+width);
+    const figure=page.locator('.fire-panel-overview figure');
+    const overview=figure.locator('img');await overview.scrollIntoViewIfNeeded();await overview.evaluate(e=>e.decode());
+    const src='/images/fire-safety-manager-level2/'+file;
+    assert.equal(await overview.getAttribute('src'),src);
+    assert.equal(await overview.evaluate(e=>e.naturalWidth),1536);
+    assert.equal(await page.locator('.fire-panel-step').count(),steps);
+    const details=page.locator('.fire-panel-detail');const geometry=[];
+    for(let i=0;i<steps;i++){
+     const detail=details.nth(i);await detail.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await detail.locator('img').evaluate(e=>e.decode());
+     assert.equal(await detail.locator('img').getAttribute('src'),src,'detail and whole panel use identical asset');
+     const g=await detail.evaluate(e=>{const b=e.getBoundingClientRect(),i=e.querySelector('img').getBoundingClientRect();return {width:b.width,height:b.height,imageWidth:i.width,visibleX:b.x-i.x,visibleY:b.y-i.y};});
+     assert(g.width>200&&g.height>90,id+' meaningful enlargement');assert(g.imageWidth>g.width*3,id+' detail crop');
+     geometry.push(g);
+     await detail.screenshot({path:`${output}/${id}-detail-${i+1}-${width}.png`});
+    }
+    await figure.screenshot({path:`${output}/${id}-overview-${width}.png`});
+    const button=figure.locator('.fire-bulk-zoom');await button.evaluate(e=>e.scrollIntoView({block:'center'}));
+    const before=await page.evaluate(()=>({y:scrollY,style:document.body.getAttribute('style')||''}));
+    await button.click();const dialog=page.locator('#fire-bulk-image-dialog');await dialog.locator('img').evaluate(e=>e.decode());
+    assert(await dialog.evaluate(e=>e.open));assert.equal(await dialog.locator('img').getAttribute('src'),src);
+    assert(await dialog.locator('img').evaluate(e=>e.getBoundingClientRect().width)>=1280,'readable expanded panel');
+    assert(await dialog.locator('.fire-bulk-zoom-scroll').evaluate(e=>e.scrollWidth>e.clientWidth),'expanded panel is scrollable');
+    await dialog.screenshot({path:`${output}/${id}-dialog-${width}.png`});
+    await page.keyboard.press('Escape');await page.waitForFunction(b=>!document.getElementById('fire-bulk-image-dialog').open&&Math.abs(scrollY-b.y)<=1,before);
+    assert.equal(await page.evaluate(()=>document.body.getAttribute('style')||''),before.style);
+    assert(await button.evaluate(e=>e===document.activeElement));
+    const entry=page.locator('[data-fire-practice-entry]');const link=entry.locator('a').first();
+    assert((await link.getAttribute('href')).includes('chapter='+pool),'original question pool retained');
+    if(width===390){
+     const popupPromise=page.waitForEvent('popup');await link.click();const popup=await popupPromise;
+     popup.on('pageerror',e=>report.errors.push(String(e)));await popup.waitForLoadState('domcontentloaded');
+     await popup.waitForFunction(()=>document.querySelector('[data-start]')?.disabled===false);
+     await popup.locator('[data-start]').click();assert(await popup.locator('[data-session]').isVisible());await popup.close();
+    }
+    await page.evaluate(()=>{scrollTo(0,0);return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));});
+    if(width===390||width===1440)await page.screenshot({path:`${output}/${id}-page-${width}.png`,fullPage:true});
+    report.cases.push({id,width,steps,geometry,asset:src,overflow:false,zoomAndRestore:'PASS',practicePool:pool});
+   }
+   await context.close();
+  }
+  assert.deepEqual(report.errors,[]);report.result='PASS';
+ }catch(e){report.result='FAIL';report.errors.push(String(e));throw e;}
+ finally{fs.writeFileSync(output+'/browser-results.json',JSON.stringify(report,null,2));await browser.close();if(server)server.close();}
+ console.log('[Fire full panels browser] PASS',report.cases.length,'chapter/viewport cases');
+})().catch(e=>{console.error(e);process.exitCode=1});

@@ -6,11 +6,12 @@ const briefs=JSON.parse(fs.readFileSync('docs/audits/2026-10-27-fire-priority-ch
 const chapters=fs.readdirSync('src/content/chapters/fire-safety-manager-level2/fire-safety-practice').map(n=>fs.readFileSync('src/content/chapters/fire-safety-manager-level2/fire-safety-practice/'+n,'utf8')).sort((a,b)=>Number(a.match(/^order: ([\d.]+)/m)[1])-Number(b.match(/^order: ([\d.]+)/m)[1]));
 const slugs=chapters.map(s=>s.match(/^slug: "([^"]+)"/m)[1]);
 const cases=briefs.map(b=>{const s=chapters.find(s=>s.includes('chapter_id: "'+b.chapterId+'"'));return{...b,slug:s.match(/^slug: "([^"]+)"/m)[1]}});
+for(const row of cases)if(row.chapterId==='FSM2-077'){row.file='pump-control-full-panel-v2.webp';row.sourceWidth=1536;}
 const prefix='/fire-safety-manager-level2/written/fire-safety-practice/';
 const report={result:'RUNNING',cases:[],errors:[],limitations:['Chromium emulation; physical devices and Safari not tested']};
 fs.mkdirSync(dir,{recursive:true});
 (async()=>{
- const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+ const browser=await chromium.launch({headless:true,...(process.env.QA_CHROMIUM_EXECUTABLE?{executablePath:process.env.QA_CHROMIUM_EXECUTABLE}:{}),args:['--no-sandbox','--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader']});
  try{
  for(const width of [320,390,768,1440]){
   const context=await browser.newContext({viewport:{width,height:900}});const page=await context.newPage();
@@ -22,8 +23,8 @@ fs.mkdirSync(dir,{recursive:true});
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),row.chapterId+' page overflow '+width);
    const img=page.locator('article figure img').first();await img.scrollIntoViewIfNeeded();await img.evaluate(e=>e.decode());
    const image=await img.evaluate(e=>({src:new URL(e.currentSrc).pathname,width:e.getBoundingClientRect().width,alt:e.alt,naturalWidth:e.naturalWidth}));
-   assert.equal(image.src,'/images/fire-safety-manager-level2/'+row.file);assert.equal(image.naturalWidth,380);assert(image.alt);
-   assert(image.width*22/380>=13,'secondary label size '+image.width);assert(image.width*24/380>=14,'core label size '+image.width);
+   assert.equal(image.src,'/images/fire-safety-manager-level2/'+row.file);assert.equal(image.naturalWidth,row.sourceWidth||380);assert(image.alt);
+   if(row.sourceWidth===1536){assert.equal(await page.locator('.fire-panel-step').count(),3,'full-panel detail windows');}else{assert(image.width*22/380>=13,'secondary label size '+image.width);assert(image.width*24/380>=14,'core label size '+image.width);}
    await page.locator('article figure').screenshot({path:`${dir}/${row.chapterId}-figure-${width}.png`});
    const button=page.locator('.fire-bulk-zoom').first();await button.evaluate(e=>e.scrollIntoView({block:'center'}));
    const before=await page.evaluate(()=>({y:scrollY,style:document.body.getAttribute('style')||''}));await button.click();
@@ -55,7 +56,7 @@ fs.mkdirSync(dir,{recursive:true});
   await context.close();
  }
  const page=await browser.newPage();
- for(const row of cases){
+ for(const row of cases.filter(row=>!row.sourceWidth)){
   await page.goto(base+'/images/fire-safety-manager-level2/'+row.file);await page.evaluate(()=>document.fonts.ready);
   const bad=await page.locator('svg text').evaluateAll(es=>es.flatMap(e=>{const b=e.getBBox(),h=e.ownerSVGElement.viewBox.baseVal.height;return b.x<0||b.x+b.width>380.5||b.y<0||b.y+b.height>h?[e.textContent]:[]}));
   assert.deepEqual(bad,[],row.file+' label bounds');

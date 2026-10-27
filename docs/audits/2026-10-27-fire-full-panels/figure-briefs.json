@@ -1,0 +1,97 @@
+{
+  "designSystem": "docs/standards/learning-image-design-system-v1.md v1.2 §§1–9",
+  "chapters": [
+    {
+      "id": "FSM2-048",
+      "slug": "receiver-circuit-continuity-test",
+      "src": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+      "details": [
+        "도통시험 버튼",
+        "1회로 선택",
+        "도통시험 결과"
+      ],
+      "requiredText": [
+        "4~8V",
+        "6V",
+        "0V",
+        "1.5m",
+        "50Ω",
+        "7개 이하"
+      ],
+      "forbiddenText": [],
+      "practicePool": "FSM2-048",
+      "caption": "전체 판에서 선택과 상태를 읽기",
+      "type": "L2 전체 패널 재구성 및 동일 이미지 부분 확대",
+      "learningQuestion": "도통시험 버튼; 1회로 선택; 도통시험 결과의 위치와 상태를 어떻게 구분하는가?",
+      "mobile": "320/390px에서 전체 판과 확대부를 함께 제공, 전체 판 확대 1280px와 스크롤 제공"
+    },
+    {
+      "id": "FSM2-049",
+      "slug": "receiver-backup-power-test",
+      "src": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+      "details": [
+        "예비전원시험 버튼",
+        "전압지시",
+        "낮음 표시"
+      ],
+      "requiredText": [
+        "19~29V",
+        "23V",
+        "17V",
+        "감시 60분 후 경보 10분 이상"
+      ],
+      "forbiddenText": [],
+      "practicePool": "FSM2-049",
+      "caption": "전체 판에서 선택과 상태를 읽기",
+      "type": "L2 전체 패널 재구성 및 동일 이미지 부분 확대",
+      "learningQuestion": "예비전원시험 버튼; 전압지시; 낮음 표시의 위치와 상태를 어떻게 구분하는가?",
+      "mobile": "320/390px에서 전체 판과 확대부를 함께 제공, 전체 판 확대 1280px와 스크롤 제공"
+    },
+    {
+      "id": "FSM2-034",
+      "slug": "pump-control-panels-states",
+      "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "details": [
+        "감시제어반 선택",
+        "주펌프 선택과 표시"
+      ],
+      "requiredText": [
+        "평상시",
+        "자동",
+        "수동",
+        "기동버튼"
+      ],
+      "forbiddenText": [],
+      "practicePool": "FSM2-034",
+      "caption": "전체 판에서 선택과 상태를 읽기",
+      "type": "L2 전체 패널 재구성 및 동일 이미지 부분 확대",
+      "learningQuestion": "감시제어반 선택; 주펌프 선택과 표시의 위치와 상태를 어떻게 구분하는가?",
+      "mobile": "320/390px에서 전체 판과 확대부를 함께 제공, 전체 판 확대 1280px와 스크롤 제공"
+    },
+    {
+      "id": "FSM2-077",
+      "slug": "pump-manual-auto-reading",
+      "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "details": [
+        "연동",
+        "주펌프 수동·정지",
+        "충압펌프 자동·정지"
+      ],
+      "requiredText": [
+        "수동으로 선택했지만 현재 정지 중",
+        "자동 대기이며 현재 정지 중"
+      ],
+      "forbiddenText": [
+        "주펌프를 수동으로 기동한 상태",
+        "주펌프 수동 운전과"
+      ],
+      "practicePool": "FSM2-034",
+      "caption": "전체 판에서 선택과 상태를 읽기",
+      "type": "L2 전체 패널 재구성 및 동일 이미지 부분 확대",
+      "learningQuestion": "연동; 주펌프 수동·정지; 충압펌프 자동·정지의 위치와 상태를 어떻게 구분하는가?",
+      "mobile": "320/390px에서 전체 판과 확대부를 함께 제공, 전체 판 확대 1280px와 스크롤 제공"
+    }
+  ],
+  "scope": "사용자가 승인한 이미지 3장. 배관·결선·설정압력 생략. 기기별 실제 배치와 연동 사양을 일반화하지 않음",
+  "titleException": "승인한 원본 이미지의 제목은 보존, HTML 캡션은 판독할 위치를 안내하며 이미지 제목을 반복하지 않음"
+}

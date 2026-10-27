@@ -1,5 +1,5 @@
-// Native current files only. Archived checks separately reconstruct old releases.
-import fs from 'node:fs';
+// Archived priority-release contract. Current native checks live in check-fire-full-panels.mjs.
+import fs from './read-before-fire-full-panels.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
