@@ -8,8 +8,20 @@ import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
 const review=JSON.parse(gunzipSync(fs.readFileSync('docs/audits/2026-10-27-fire-full-panels/review.json.gz')));
 const hash=b=>createHash('sha256').update(b).digest('hex');
+const styleReviewPath='docs/audits/2026-10-27-fire-full-panels/text-steps-style.json';
+export const textStepsStyle=fs.existsSync(styleReviewPath)?JSON.parse(fs.readFileSync(styleReviewPath,'utf8')):null;
+if(textStepsStyle){
+  assert.equal(textStepsStyle.file,'public/styles/fire-panel-lessons.css');
+  assert.equal(textStepsStyle.beforeSHA256,review.current[textStepsStyle.file]);
+  assert.equal(hash(Buffer.from(textStepsStyle.before,'base64')),textStepsStyle.beforeSHA256);
+}
+export function beforePanelTextStyle(file,bytes){
+  if(!textStepsStyle||keyFor(file)!==textStepsStyle.file||hash(bytes)!==textStepsStyle.sha256)return bytes;
+  return Buffer.from(textStepsStyle.before,'base64');
+}
 const keyFor=file=>path.normalize(path.isAbsolute(String(file))?path.relative(process.cwd(),String(file)):String(file));
 export function beforeFireFullPanels(file,bytes){
+  bytes=beforePanelTextStyle(file,bytes);
   const key=keyFor(file),row=review.changes[key];
   if(!row||hash(bytes)!==row.sha256)return bytes;
   const before=Buffer.from(row.before,'base64');
@@ -19,7 +31,7 @@ export function beforeFireFullPanels(file,bytes){
 export function isFireFullPanelAddition(file){
   const key=keyFor(file),expected=review.additions[key];
   if(!expected)return false;
-  assert.equal(hash(fs.readFileSync(file)),expected,key+': fingerprinted full-panel addition');
+  assert.equal(hash(beforePanelTextStyle(file,fs.readFileSync(file))),expected,key+': fingerprinted full-panel addition');
   return true;
 }
 const filter=(dir,entries)=>entries.filter(e=>!isFireFullPanelAddition(path.join(String(dir),typeof e==='string'?e:e.name)));
