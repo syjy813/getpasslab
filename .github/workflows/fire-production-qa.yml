@@ -18,7 +18,12 @@ jobs:
         with:
           node-version: 24
       - name: Prepare browser
+        timeout-minutes: 5
         run: |
+          mkdir -p "$HOME/.local/share/fonts"
+          curl -fsSL --connect-timeout 15 --max-time 60 --retry 2 --retry-delay 3 'https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf' -o "$HOME/.local/share/fonts/NotoSansKR.ttf"
+          echo '194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252  '"$HOME/.local/share/fonts/NotoSansKR.ttf" | sha256sum -c -
+          fc-cache -f "$HOME/.local/share/fonts"
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
           /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: Actual production chapter and 50-question mock exams
