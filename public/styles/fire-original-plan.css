@@ -1,0 +1,6 @@
+/* Original 22-unit plan: shared SVGs with readable mobile labels and optional enlargement. */
+article .fire-plan-lesson .fire-panel-overview figure:only-child{max-width:480px;margin-inline:auto}
+article .fire-plan-lesson .fire-panel-overview img{display:block;width:100%;max-width:none;height:auto}
+article .fire-original-dialog .fire-bulk-zoom-scroll img{width:760px;min-width:760px;max-width:none;height:auto}
+article .fire-plan-lesson .learning-visuals figcaption strong{font-size:17px}
+@media(max-width:767px){article .fire-plan-lesson .learning-visuals figcaption strong{font-size:16px}}

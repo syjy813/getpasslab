@@ -1,5 +1,5 @@
 // Restore only the two fingerprinted copy-edit files for historical audits.
-import fs from 'node:fs';
+import fs, {beforeFireOriginalPlan} from './read-before-fire-original-plan.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -7,6 +7,7 @@ import {gunzipSync} from 'node:zlib';
 export const preactionCopyReview=JSON.parse(gunzipSync(fs.readFileSync('docs/audits/2026-10-28-fire-preaction-copy/review.json.gz')));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 export function beforeFirePreactionCopy(file,bytes){
+ bytes=beforeFireOriginalPlan(file,bytes);
  const key=path.normalize(path.isAbsolute(String(file))?path.relative(process.cwd(),String(file)):String(file));
  const row=preactionCopyReview.changes[key];
  if(!row||hash(bytes)!==row.sha256)return bytes;

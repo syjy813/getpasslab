@@ -1,0 +1,130 @@
+{
+  "standard": "learning-image-design-system-v1.md v1.3 §§1–9",
+  "level": "L2 functional parts for relief/chamber/tank; other diagrams are L1 comparisons. No specific manufacturer port layout is claimed.",
+  "mobile": "380-unit shared SVGs, labels >=21, verify 390 and 320 CSS display, 760px zoom",
+  "preservation": "All prior PNG/WEBP/SVG files retained; 031 existing tank figure and 037 four original crops reused",
+  "figures": [
+    {
+      "id": "FSM2-080",
+      "sourcePath": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/pump-circulation-relief-valve.md",
+      "slug": "pump-circulation-relief-valve",
+      "subject": 1,
+      "asset": "circulation-relief-section-v1.svg",
+      "caption": "순환배관 분기와 릴리프밸브",
+      "scope": "체크밸브와 펌프 사이 분기 및 과열방지. 릴리프밸브의 스프링과 밸브체는 개념 단면으로 표현. 닫힌 주배관 너머에 흐름 화살표 없음",
+      "source": "NFTC 102 2.2.1.8/2.3.8, 기존 033 문항",
+      "alt": "순환배관은 펌프와 체크밸브 사이에서 분기하고 릴리프밸브를 통해 배수. 아래는 물의 압력과 스프링으로 열리는 밸브의 개념 단면",
+      "width": 380,
+      "height": 710,
+      "questionIds": [
+        "moducbt-27782-q23",
+        "FSM2-MOCK-033-09"
+      ]
+    },
+    {
+      "id": "FSM2-081",
+      "sourcePath": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/pressure-chamber-start-switch.md",
+      "slug": "pressure-chamber-start-switch",
+      "subject": 1,
+      "asset": "pressure-chamber-parts-v1.svg",
+      "caption": "압력챔버의 계기와 밸브",
+      "scope": "압력계, 기동용 압력스위치, 안전밸브, 배수밸브를 서로 다른 부품으로 식별. 신호는 파랑 점선, 물은 녹색. 실제 제조사 포트 배치 미주장",
+      "source": "NFPC 정의 및 기동용수압개폐장치 형식승인 정의, 교육청 계통도",
+      "alt": "압력챔버의 압력계, 압력스위치, 안전밸브, 배수밸브를 번호로 구분한 예시. 압력스위치의 신호와 배관의 물 흐름은 구분",
+      "width": 380,
+      "height": 620,
+      "questionIds": [
+        "moducbt-27782-q23"
+      ]
+    },
+    {
+      "id": "FSM2-082",
+      "sourcePath": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/shared-tank-effective-volume.md",
+      "slug": "shared-tank-effective-volume",
+      "subject": 1,
+      "asset": "shared-tank-effective-section-v1.svg",
+      "caption": "겸용수조의 소화용 유효수량",
+      "scope": "일반급수 흡수구보다 아래 소화용 흡수구까지 사이 영역만 진한 연녹색. 높이 1.5m는 계산 예시, 법정 고정 높이가 아님. 화살표가 탱크 벽을 임의 관통하지 않음",
+      "source": "NFTC 102 2.1.4/2.1.5, 기존 031 그림",
+      "alt": "일반급수 흡수구와 소화용 흡수구 사이 높이 1.5m를 소화용 유효높이로 계산하는 겸용수조 예시. 두 흡수구 밖의 부피는 계산에서 제외",
+      "width": 380,
+      "height": 570,
+      "questionIds": [
+        "moducbt-27776-q18"
+      ]
+    },
+    {
+      "id": "FSM2-083",
+      "sourcePath": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/gas-actuation-discharge-feedback.md",
+      "slug": "gas-actuation-discharge-feedback",
+      "subject": 2,
+      "asset": "gas-actuation-feedback-v1.svg",
+      "caption": "기동 명령과 압력 검지 신호",
+      "scope": "솔레노이드/기동용기를 위에, 감시 대상 배관의 압력스위치와 표시를 아래에 분리. 전체 기동관 결선은 생략. 모든 PS가 소화약제 실유량을 증명한다고 주장하지 않음",
+      "source": "공식 자체점검표 방출표시/압력스위치 항목, 기존 041/042",
+      "alt": "위는 제어반 기동 명령이 솔레노이드와 기동용기로 전달되는 쪽, 아래는 감시 대상 배관의 압력스위치 입력으로 표시를 확인하는 쪽의 개념 비교",
+      "width": 380,
+      "height": 640,
+      "questionIds": [
+        "moducbt-27780-q35",
+        "moducbt-27774-q27"
+      ]
+    },
+    {
+      "id": "FSM2-047",
+      "sourcePath": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/p-receiver-indicators-switches.md",
+      "slug": "p-receiver-indicators-switches",
+      "subject": 2,
+      "asset": "receiver-normal-major-v2.svg",
+      "caption": "평상시 표시와 스위치주의",
+      "scope": "예비전원감시가 이상 표시인 예시의 주요 표시부. 정상/주의는 별도 카드로 분리",
+      "source": "기존 047 승인 문항",
+      "alt": "평상시 교류전원과 전압지시 정상 켜짐, 예비전원감시와 스위치주의 꺼짐. 별도 카드의 스위치주의 켜짐 또는 점멸은 스위치 위치 확인 대상",
+      "width": 380,
+      "height": 534,
+      "questionIds": []
+    },
+    {
+      "id": "FSM2-033",
+      "sourcePath": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/fire-pumps-piping-components.md",
+      "slug": "fire-pumps-piping-components",
+      "subject": 1,
+      "asset": "pump-system-overview-v2.svg",
+      "caption": "소화수 공급과 압력 검지",
+      "scope": "수원→펌프→체크밸브→개폐밸브→설비. 압력검지는 설비측 배관에 연결. 주/예비/충압의 상세 병렬 분기와 계기 생략",
+      "source": "기존 033 원문 및 NFTC 정의/교육청 계통도",
+      "alt": "수원에서 펌프, 체크밸브, 개폐밸브를 거쳐 설비로 물을 공급하고 설비측 배관의 압력 변동을 압력스위치에서 검지하는 부분 계통도",
+      "width": 380,
+      "height": 620,
+      "questionIds": []
+    },
+    {
+      "id": "FSM2-041",
+      "sourcePath": "src/content/chapters/fire-safety-manager-level2/fire-safety-theory/gas-suppression-components-discharge.md",
+      "slug": "gas-suppression-components-discharge",
+      "subject": 1,
+      "asset": "gas-discharge-methods-v2.svg",
+      "caption": "가스계 소화설비의 세 방출 방식",
+      "scope": "전역은 구획 공간 전체, 국소는 대상 기계, 호스릴은 이동 가능한 호스/노즐. 실제 분사량/농도/지연시간은 그림에 생성하지 않음",
+      "source": "기존 041 문항 및 NFTC 106",
+      "alt": "구획된 공간 전체의 전역방출, 기계 주변의 국소방출, 사람이 호스와 노즐을 조작하는 호스릴 방식을 비교",
+      "width": 380,
+      "height": 628,
+      "questionIds": []
+    },
+    {
+      "id": "FSM2-042",
+      "sourcePath": "src/content/chapters/fire-safety-manager-level2/fire-safety-practice/gas-system-pretest-safety.md",
+      "slug": "gas-system-pretest-safety",
+      "subject": 2,
+      "asset": "gas-pretest-safety-stages-v1.svg",
+      "caption": "가스계 점검의 준비와 복구",
+      "scope": "오방출 차단 확인→신호/경보 시험→복구. 실제 차단/분리 조작방법이나 모든 설비 공통 순서를 새로 만들지 않음",
+      "source": "소방청/소방안전원 안전자료와 기존 042 문항",
+      "alt": "실제 방출 차단 확인 후 신호와 경보를 시험하고, 정지 또는 분리한 장치를 기록과 대조해 복구하는 점검 구분",
+      "width": 380,
+      "height": 600,
+      "questionIds": []
+    }
+  ]
+}

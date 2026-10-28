@@ -57,6 +57,12 @@ jobs:
           QA_BASE_URL: https://getpasslab.co.kr
           QA_OUTPUT_DIR: qa-results/fire-production/phase2
         run: node scripts/qa-fire-practice-phase2.cjs
+      - name: Original 22-unit plan on the actual production site
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: https://getpasslab.co.kr
+          QA_OUTPUT_DIR: qa-results/fire-production/original-plan
+        run: node scripts/qa-fire-original-plan.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
