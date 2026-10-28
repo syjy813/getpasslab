@@ -100,6 +100,11 @@ jobs:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_OUTPUT_DIR: qa-results/fire-practice-phase2
         run: node scripts/qa-fire-practice-phase2.cjs
+      - name: Four followup lessons and linked practice
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_OUTPUT_DIR: qa-results/fire-followup-chapters
+        run: node scripts/qa-fire-followup-chapters.cjs
       - name: Fire chapter practice and full mock exam
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
@@ -139,4 +144,5 @@ jobs:
             qa-results/fire-priority-chapters/
             qa-results/fire-full-panels/
             qa-results/fire-practice-phase2/
+            qa-results/fire-followup-chapters/
           retention-days: 14

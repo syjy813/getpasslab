@@ -1,0 +1,292 @@
+[
+  {
+    "check": "check-accident-analysis-figures.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-all-chapter-hierarchy.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-chapter-formula-style.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-clam-shell-chapter.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-color-contrast.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-computer-literacy-001-081.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-computer-literacy-082-159.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-computer-literacy-c1.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-computer-literacy-publication.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-deferred-question-content.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-earth-retaining-structure.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-excavator-operation-safety.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-bulk-history-guard.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-five-full-panels.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-followup-chapters.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-full-panels.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-image-copy.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-launch-history-guard.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-persona-corrections.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-popup.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-practice-history-guard.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-practice-logic.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-practice-phase2.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-practice.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-preaction-copy.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-priority-chapters.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-publication.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-readability.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-safety-level2-bulk.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-safety-level2-launch.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-standardization.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fire-textbook-corrections.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-footer-left.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-formwork-lateral-pressure.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fta-original-options.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-fta-symbols-split.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-global-chapter-readability.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-gnb-chapter-toc.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-gnb-toc-height.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-hanging-scaffold-wire-rope.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-historical-practice-guard.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-industrial-20190804-review.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-industrial-question-source-repair.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-industrial-remaining-review.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-industrial-remaining-splits.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-industrial-safety-chapter-splits.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-industrial-safety-machine-tools-split.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-industrial-unassigned-links.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-instant-practice-coverage.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-instant-practice-datasets.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-instant-practice-pilot.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-mobile-chapter-top-ad.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-mobile-learning-ux.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-mobile-toc-width.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-mobile-top-ad.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-port-cargo-passages.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-public-content.mjs",
+    "exit": 0,
+    "failure": ""
+  },
+  {
+    "check": "check-seo.mjs",
+    "exit": 0,
+    "failure": ""
+  }
+]

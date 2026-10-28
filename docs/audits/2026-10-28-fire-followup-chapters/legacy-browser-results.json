@@ -1,0 +1,292 @@
+{
+  "base": "http://127.0.0.1:45883",
+  "cases": [
+    {
+      "chapterId": "FSM2-035",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 270,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+          "w": 270,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 도통시험 버튼 선택, ② 회로선택 1, ③ 도통시험 정상 켜짐과 단선 꺼짐. 화재 및 지구 표시등은 꺼져 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+          "w": 270,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 예비전원시험 선택, ② 전압지시 구역 확인, ③ 낮음 켜짐. 예비전원감시와 도통시험 정상 및 단선 표시는 모두 꺼져 있고 회로선택은 OFF인 학습 예시",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-050",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 340,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+          "w": 340,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 도통시험 버튼 선택, ② 회로선택 1, ③ 도통시험 정상 켜짐과 단선 꺼짐. 화재 및 지구 표시등은 꺼져 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+          "w": 340,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 예비전원시험 선택, ② 전압지시 구역 확인, ③ 낮음 켜짐. 예비전원감시와 도통시험 정상 및 단선 표시는 모두 꺼져 있고 회로선택은 OFF인 학습 예시",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-050",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+          "w": 718,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 도통시험 버튼 선택, ② 회로선택 1, ③ 도통시험 정상 켜짐과 단선 꺼짐. 화재 및 지구 표시등은 꺼져 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+          "w": 718,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 예비전원시험 선택, ② 전압지시 구역 확인, ③ 낮음 켜짐. 예비전원감시와 도통시험 정상 및 단선 표시는 모두 꺼져 있고 회로선택은 OFF인 학습 예시",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-050",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-048",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+          "w": 878,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 도통시험 버튼 선택, ② 회로선택 1, ③ 도통시험 정상 켜짐과 단선 꺼짐. 화재 및 지구 표시등은 꺼져 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-049",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+          "w": 878,
+          "nw": 1536,
+          "nh": 1024,
+          "alt": "P형 5회로 수신기 전체 판. ① 예비전원시험 선택, ② 전압지시 구역 확인, ③ 낮음 켜짐. 예비전원감시와 도통시험 정상 및 단선 표시는 모두 꺼져 있고 회로선택은 OFF인 학습 예시",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-050",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical iOS/Android and Safari not tested"
+  ],
+  "startedAt": "2026-10-28T11:12:34.359Z",
+  "result": "PASS",
+  "finishedAt": "2026-10-28T11:12:43.482Z"
+}

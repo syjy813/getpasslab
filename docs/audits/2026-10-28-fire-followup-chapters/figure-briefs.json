@@ -1,0 +1,88 @@
+{
+  "basis": "원래 22개 전체 목록 미복원. 현행 79개와 대조해 독립 챕터가 없는 4개 판독 주제로 재선정. 과거 미제작 17개를 확정했다고 주장하지 않음",
+  "standard": "learning-image-design-system-v1.md v1.3 §§1–9",
+  "level": "L1 개념/판독 비교, 정밀 장치 결선 재현 아님",
+  "mobile": "공통 380단위 SVG, 핵심 22/23단위, 390px 및 320px 실제 표시 점검, 확대 760px 제공",
+  "originals": "기존 SVG/WEBP 보존. 이번 SVG는 별도 이름으로 신규 작성",
+  "figures": [
+    {
+      "id": "FSM2-080",
+      "slug": "receiver-normal-watch-indicators",
+      "title": "수신기 평상시 표시와 스위치주의",
+      "order": 56.05,
+      "parent": "p-receiver-indicators-switches",
+      "parentId": "FSM2-047",
+      "asset": "receiver-normal-watch-v1.svg",
+      "height": 534,
+      "caption": "평상시 표시와 스위치주의",
+      "question": "전원이 켜진 것과 스위치가 정상 위치인 것은 같은 판단인가?",
+      "questionIds": [
+        "moducbt-27776-q38",
+        "moducbt-27777-q39"
+      ],
+      "verified": "기존 FSM2-047과 승인 문항의 예시 수신기 조건",
+      "scope": "주요 표시부만 비교. 예비전원감시는 이상 표시인 예시. 특정 제조사 전체 패널/색상 표준을 재현하지 않음",
+      "show": "평상시 교류전원/전압지시 정상 켜짐, 예비전원감시/스위치주의 꺼짐. 별도 사례에서 스위치주의 켜짐/점멸",
+      "alt": "주요 표시부 비교. 평상시는 교류전원과 전압지시 정상 켜짐, 예비전원감시와 스위치주의 꺼짐. 별도 예시의 스위치주의는 켜짐 또는 점멸로 정상 위치를 벗어난 스위치를 알림"
+    },
+    {
+      "id": "FSM2-081",
+      "slug": "main-zone-alarm-stop-targets",
+      "title": "주경종과 지구경종의 정지 대상",
+      "order": 56.3,
+      "parent": "p-receiver-indicators-switches",
+      "parentId": "FSM2-047",
+      "asset": "main-zone-alarm-targets-v1.svg",
+      "height": 492,
+      "caption": "주경종과 지구경종의 정지 대상",
+      "question": "주경종 정지스위치를 누르면 구역의 지구경종도 함께 멈추는가?",
+      "questionIds": [
+        "moducbt-27775-q28",
+        "moducbt-27777-q39"
+      ],
+      "verified": "동방전자 RP250 사용자설명서 운영 3.2.5 및 기존 FSM2-047 승인 문항",
+      "scope": "서로 다른 두 정지 대상을 비교. 화재가 아님을 현장에서 확인한 뒤의 일시 정지 예시. 화살표는 정지 대상, 전기 결선이 아님",
+      "show": "주경종 정지는 수신기 주변 주경종, 지구경종 정지는 구역 지구경종. 서로 독립된 두 비교 카드",
+      "alt": "위쪽 주경종 정지스위치의 대상은 수신기 주변 주경종. 아래쪽 지구경종 정지스위치의 대상은 구역에 설치된 지구경종. 파란 화살표는 각 스위치의 정지 대상을 나타냄"
+    },
+    {
+      "id": "FSM2-082",
+      "slug": "transmitter-reset-realarm",
+      "title": "발신기 복구와 재경보",
+      "order": 59.1,
+      "parent": "false-alarm-confirm-reset",
+      "parentId": "FSM2-050",
+      "asset": "transmitter-reset-realarm-v1.svg",
+      "height": 566,
+      "caption": "발신기 원위치 전후의 수신기 복구",
+      "question": "눌린 발신기를 그대로 두고 수신기만 복구하면 왜 다시 경보가 울리는가?",
+      "questionIds": [
+        "moducbt-27778-q34",
+        "moducbt-27779-q34"
+      ],
+      "verified": "한국소방안전원 공동주택 소방계획서 부록 p53의 비화재보 원인 제거→수신기 복구→음향장치 복구 순서와 공개 문항",
+      "scope": "비화재 확인 및 다른 이상 없음 조건. 상단은 원인 남음, 하단은 원인 제거. 마지막 음향장치 스위치 복귀는 인접 본문에서 설명",
+      "show": "발신기 눌림 유지→수신기만 복구→다시 화재신호. 발신기 원위치→수신기 복구→화재표시 복구",
+      "alt": "위쪽은 발신기가 눌린 채 수신기만 복구해 다시 화재신호가 들어오는 경우. 아래쪽은 발신기를 먼저 원위치로 되돌린 뒤 수신기를 복구해 화재표시를 복구한 경우"
+    },
+    {
+      "id": "FSM2-083",
+      "slug": "pump-circulation-performance-pipes",
+      "title": "순환배관과 성능시험배관의 역할 구분",
+      "order": 51.2,
+      "parent": "pump-performance-tests",
+      "parentId": "FSM2-035",
+      "asset": "pump-circulation-performance-v1.svg",
+      "height": 510,
+      "caption": "성능 확인용 배관과 과열 방지용 배관",
+      "question": "체절운전의 과열을 막는 배관과 펌프 유량을 시험하는 배관을 어떻게 구별하는가?",
+      "questionIds": [
+        "moducbt-27778-q25"
+      ],
+      "verified": "NFTC 102 2.2.1.7/2.2.1.8 국가법령정보센터 2026 법령집 검색 본문, 기존 FSM2-033/035",
+      "scope": "각 배관의 역할 비교용 부분 도식. 두 경로의 동시 운전/밸브 개폐 상태가 아님. 주배관/흡입/체크밸브/계기/시험측 개폐밸브/귀환 연결 생략. 설치 치수와 설정 압력 미표현",
+      "show": "성능시험 측 유량계→유량조절, 순환 측 릴리프밸브→배수. 물은 녹색. 파란색은 장치 구획, 유체가 아님",
+      "alt": "위쪽 성능시험배관은 유량계와 유량조절 장치로 시험 유량을 확인하는 부분 도식. 아래쪽 순환배관은 릴리프밸브를 통한 배수로 체절운전의 수온 상승을 방지하는 역할 비교"
+    }
+  ]
+}

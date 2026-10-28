@@ -1,5 +1,6 @@
 // Only exact reviewed changes/additions are hidden from historical release views.
 import fs, {beforeFirePreactionCopy} from './read-before-fire-preaction-copy.mjs';
+import {isFireFollowupAddition} from './read-before-fire-followup-chapters.mjs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -14,6 +15,7 @@ export function beforeFirePracticePhase2(file,bytes){
  const before=Buffer.from(row.before,'base64');assert.equal(hash(before),row.beforeSHA256,'exact phase2 predecessor');return before;
 }
 export function isFirePracticePhase2Addition(file){
+ if(isFireFollowupAddition(file))return true;
  const expected=phase2Review.additions[key(file)];if(!expected)return false;
  assert.equal(hash(fs.readFileSync(file)),expected,String(file)+': reviewed addition');return true;
 }

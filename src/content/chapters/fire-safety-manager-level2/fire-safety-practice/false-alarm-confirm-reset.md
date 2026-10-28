@@ -9,7 +9,7 @@ group: "소방시설 점검"
 tags: ["절차"]
 summary: "원인 판단·현장 확인·경종·발신기·수신기 복구를 구별함"
 questions: []
-related: []
+related: ["transmitter-reset-realarm"]
 order: 59
 priority: "출시 필수"
 status: "완료"

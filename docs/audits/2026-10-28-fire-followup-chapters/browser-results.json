@@ -1,0 +1,535 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "id": "FSM2-080",
+      "width": 320,
+      "typography": {
+        "caption": "16px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 270
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-047"
+    },
+    {
+      "id": "FSM2-081",
+      "width": 320,
+      "typography": {
+        "caption": "16px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 270
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-047"
+    },
+    {
+      "id": "FSM2-082",
+      "width": 320,
+      "typography": {
+        "caption": "16px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 270
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-050"
+    },
+    {
+      "id": "FSM2-083",
+      "width": 320,
+      "typography": {
+        "caption": "16px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 270
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-035"
+    },
+    {
+      "id": "FSM2-080",
+      "width": 390,
+      "typography": {
+        "caption": "16px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 340
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-047"
+    },
+    {
+      "id": "FSM2-081",
+      "width": 390,
+      "typography": {
+        "caption": "16px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 340
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-047"
+    },
+    {
+      "id": "FSM2-082",
+      "width": 390,
+      "typography": {
+        "caption": "16px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 340
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-050"
+    },
+    {
+      "id": "FSM2-083",
+      "width": 390,
+      "typography": {
+        "caption": "16px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 340
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-035"
+    },
+    {
+      "id": "FSM2-080",
+      "width": 768,
+      "typography": {
+        "caption": "17px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 478
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-047"
+    },
+    {
+      "id": "FSM2-081",
+      "width": 768,
+      "typography": {
+        "caption": "17px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 478
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-047"
+    },
+    {
+      "id": "FSM2-082",
+      "width": 768,
+      "typography": {
+        "caption": "17px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 478
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-050"
+    },
+    {
+      "id": "FSM2-083",
+      "width": 768,
+      "typography": {
+        "caption": "17px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 478
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-035"
+    },
+    {
+      "id": "FSM2-080",
+      "width": 1440,
+      "typography": {
+        "caption": "17px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 478
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-047"
+    },
+    {
+      "id": "FSM2-081",
+      "width": 1440,
+      "typography": {
+        "caption": "17px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 478
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-047"
+    },
+    {
+      "id": "FSM2-082",
+      "width": 1440,
+      "typography": {
+        "caption": "17px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 478
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-050"
+    },
+    {
+      "id": "FSM2-083",
+      "width": 1440,
+      "typography": {
+        "caption": "17px",
+        "note": "13px",
+        "weight": "400",
+        "imgWidth": 478
+      },
+      "zoom": "PASS",
+      "navigation": "PASS",
+      "practice": "FSM2-035"
+    }
+  ],
+  "svg": [
+    {
+      "id": "FSM2-080",
+      "labels": [
+        {
+          "text": "평상시 감시",
+          "x": 131.4375,
+          "y": 33,
+          "width": 117.125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "교류전원",
+          "x": 74,
+          "y": 85,
+          "width": 84.640625,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "켜짐",
+          "x": 293.515625,
+          "y": 86,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "전압지시 정상",
+          "x": 74,
+          "y": 147,
+          "width": 133.40625,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "켜짐",
+          "x": 293.515625,
+          "y": 148,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "예비전원감시",
+          "x": 74,
+          "y": 209,
+          "width": 126.96875,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "꺼짐",
+          "x": 293.515625,
+          "y": 210,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "스위치주의",
+          "x": 74,
+          "y": 271,
+          "width": 105.8125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "꺼짐",
+          "x": 293.515625,
+          "y": 272,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "스위치가 정상 위치를 벗어난 경우",
+          "x": 36,
+          "y": 359,
+          "width": 294,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "스위치주의",
+          "x": 74,
+          "y": 401,
+          "width": 105.8125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "켜짐 / 점멸",
+          "x": 234.53125,
+          "y": 437,
+          "width": 99.46875,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "시험·정지 스위치 위치 확인",
+          "x": 36,
+          "y": 469,
+          "width": 253.953125,
+          "height": 32,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "id": "FSM2-081",
+      "labels": [
+        {
+          "text": "주경종 정지",
+          "x": 131.4375,
+          "y": 41,
+          "width": 117.125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "수신기 주변",
+          "x": 147,
+          "y": 139,
+          "width": 107.375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "주경종",
+          "x": 147,
+          "y": 171,
+          "width": 69.015625,
+          "height": 36,
+          "size": 25
+        },
+        {
+          "text": "지구경종 정지",
+          "x": 120.3984375,
+          "y": 279,
+          "width": 139.203125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "각 경계구역",
+          "x": 147,
+          "y": 377,
+          "width": 107.375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "지구경종",
+          "x": 147,
+          "y": 409,
+          "width": 92.015625,
+          "height": 36,
+          "size": 25
+        }
+      ]
+    },
+    {
+      "id": "FSM2-082",
+      "labels": [
+        {
+          "text": "원인이 남아 있음",
+          "x": 112.9921875,
+          "y": 31,
+          "width": 154.015625,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "발신기 눌림 유지",
+          "x": 106,
+          "y": 74,
+          "width": 168,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "수신기만 복구",
+          "x": 120.3984375,
+          "y": 140,
+          "width": 139.203125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "다시 화재신호",
+          "x": 120.3984375,
+          "y": 206,
+          "width": 139.203125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "원인을 먼저 제거",
+          "x": 112.9921875,
+          "y": 303,
+          "width": 154.015625,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "발신기 원위치",
+          "x": 120.3984375,
+          "y": 346,
+          "width": 139.203125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "수신기 복구",
+          "x": 131.4375,
+          "y": 412,
+          "width": 117.125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "화재표시 복구",
+          "x": 120.3984375,
+          "y": 478,
+          "width": 139.203125,
+          "height": 35,
+          "size": 24
+        }
+      ]
+    },
+    {
+      "id": "FSM2-083",
+      "labels": [
+        {
+          "text": "성능시험배관",
+          "x": 36,
+          "y": 27,
+          "width": 138.015625,
+          "height": 36,
+          "size": 25
+        },
+        {
+          "text": "펌프 토출측 분기",
+          "x": 36,
+          "y": 63,
+          "width": 147,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "유량계",
+          "x": 138.6328125,
+          "y": 164,
+          "width": 60.734375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "유량조절",
+          "x": 229.515625,
+          "y": 164,
+          "width": 80.96875,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "유량과 압력을 시험",
+          "x": 36,
+          "y": 196,
+          "width": 182.171875,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "순환배관",
+          "x": 36,
+          "y": 275,
+          "width": 92.015625,
+          "height": 36,
+          "size": 25
+        },
+        {
+          "text": "펌프 토출측 분기",
+          "x": 36,
+          "y": 311,
+          "width": 147,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "릴리프밸브",
+          "x": 123.3984375,
+          "y": 404,
+          "width": 101.203125,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "배수",
+          "x": 294.7578125,
+          "y": 404,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "체절운전 시 수온 상승 방지",
+          "x": 36,
+          "y": 446,
+          "width": 258.53125,
+          "height": 34,
+          "size": 23
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical devices and Safari not tested"
+  ]
+}

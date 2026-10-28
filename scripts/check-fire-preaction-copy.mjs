@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+import fs from './read-before-fire-followup-chapters.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {preactionCopyReview as review,beforeFirePreactionCopy} from './read-before-fire-preaction-copy.mjs';

@@ -9,7 +9,7 @@ group: "소방시설 점검"
 tags: ["계산"]
 summary: "시험 유량·압력·밸브 조건과 릴리프밸브의 역할을 구별함"
 questions: []
-related: ["pump-test-piping-valves", "pump-manual-auto-reading"]
+related: ["pump-test-piping-valves", "pump-manual-auto-reading", "pump-circulation-performance-pipes"]
 order: 51
 priority: "출시 필수"
 status: "완료"
