@@ -1,5 +1,5 @@
 // Historical readers restore only the reviewed footer alignment CSS and stylesheet URLs.
-import fs from 'node:fs';
+import fs, {beforeFirePracticePhase2} from './read-before-fire-practice-phase2.mjs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -9,6 +9,7 @@ export const footerLeftReview=JSON.parse(gunzipSync(fs.readFileSync('docs/audits
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const keyFor=f=>path.normalize(path.isAbsolute(String(f))?path.relative(process.cwd(),String(f)):String(f));
 export function beforeFooterLeft(file,bytes){
+ bytes=beforeFirePracticePhase2(file,bytes);
  const row=footerLeftReview.changes[keyFor(file)];
  if(!row||hash(bytes)!==row.sha256)return bytes;
  let restored=bytes.toString();

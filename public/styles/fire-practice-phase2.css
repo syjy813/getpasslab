@@ -1,0 +1,7 @@
+/* Scope the phase-2 figures without changing earlier panel lessons. */
+article .fire-practice-lesson .fire-panel-overview figure:only-child{max-width:720px;margin-inline:auto}
+article .fire-practice-lesson .fire-panel-overview img{width:100%;max-width:none}
+article .fire-practice-lesson .fire-panel-steps{margin-top:24px}
+article .fire-practice-lesson .fire-example{margin:16px 0;padding:16px 20px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--gray-50)}
+article .fire-practice-lesson .fire-example>p{margin:0}
+article .fire-practice-dialog .fire-bulk-zoom-scroll img{width:1000px;min-width:1000px;max-width:none;height:auto}

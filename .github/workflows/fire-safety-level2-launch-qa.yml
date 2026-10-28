@@ -95,6 +95,11 @@ jobs:
           QA_SERVE_DIST: 1
           QA_OUTPUT_DIR: qa-results/fire-full-panels
         run: node scripts/qa-fire-full-panels.cjs
+      - name: Phase-two practice illustrations and linked questions
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_OUTPUT_DIR: qa-results/fire-practice-phase2
+        run: node scripts/qa-fire-practice-phase2.cjs
       - name: Fire chapter practice and full mock exam
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
@@ -133,4 +138,5 @@ jobs:
             qa-results/fire-publication/
             qa-results/fire-priority-chapters/
             qa-results/fire-full-panels/
+            qa-results/fire-practice-phase2/
           retention-days: 14

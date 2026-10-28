@@ -8,7 +8,7 @@ const output=process.env.QA_OUTPUT_DIR||'qa-results/fire-persona-corrections';
 fs.mkdirSync(output,{recursive:true});
 (async()=>{
   const browser=await chromium.launch({headless:true,...(process.env.QA_CHROMIUM_EXECUTABLE?{executablePath:process.env.QA_CHROMIUM_EXECUTABLE}:{}),args:['--no-sandbox','--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader']});
-  const result={pages:[],questionDisplays:[],errors:[],imageContentReview:'not repeated; unchanged assets',physicalDevices:'not tested'};
+  const result={pages:[],questionDisplays:[],errors:[],imageContentReview:'phase2 images validated separately by qa-fire-practice-phase2.cjs; other assets unchanged',physicalDevices:'not tested'};
   try{
     for(const width of [390,1440]){
       const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});
@@ -21,13 +21,22 @@ fs.mkdirSync(output,{recursive:true});
         assert.equal(response.status(),200,route);
         // FSM2-048's former standalone wiring section is now integrated with
         // the test conclusion; retain its three distinct wiring judgments.
-        const headingName=row.chapterId==='FSM2-048'?'시험 종료와 오답 구분':row.title;
+        const currentHeadings={'FSM2-048':'시험 종료와 오답 구분','FSM2-035':'복구와 기동 상태','FSM2-039':'시험장치의 배관과 배수'};
+        const headingName=currentHeadings[row.chapterId]||row.title;
         const heading=page.getByRole('heading',{name:headingName,exact:true});
         assert.equal(await heading.count(),1,row.chapterId+' addition present');
         await heading.scrollIntoViewIfNeeded();
         if(row.chapterId==='FSM2-048'){
           const section=await heading.locator('..').innerText();
           for(const term of ['1.5m','종단저항함','50Ω','전로저항','7개 이하','경계구역'])assert(section.includes(term),'FSM2-048 preserves wiring judgment '+term);
+        }
+        if(row.chapterId==='FSM2-035'){
+          const section=await heading.locator('..').innerText();
+          for(const term of ['동력제어반 전원','선택 위치','체절시험 합격'])assert(section.includes(term),'pump starting/failed-test judgment retained: '+term);
+        }
+        if(row.chapterId==='FSM2-039'){
+          const section=await heading.locator('..').innerText();
+          for(const term of ['2차측','25mm','오리피스','배수'])assert(section.includes(term),'wet test arrangement retained: '+term);
         }
         const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
         assert.equal(overflow,false,row.chapterId+' viewport overflow at '+width);

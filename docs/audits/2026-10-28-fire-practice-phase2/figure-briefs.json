@@ -1,0 +1,158 @@
+{
+  "standard": "learning-image-design-system-v1.md v1.3 §§1–9",
+  "figures": [
+    {
+      "id": "FSM2-039",
+      "slug": "wet-sprinkler-test-valve",
+      "asset": "wet-test-valve-assembly-v2.svg",
+      "caption": "습식 시험밸브함의 시험 상태",
+      "question": "시험할 때 물은 어디로 흐르고 어떤 밸브 상태를 확인하는가?",
+      "type": "L2 배관 흐름 및 시험장치 외형",
+      "old": [
+        "wet-test-valve-branch-v1.svg"
+      ],
+      "questions": [
+        "moducbt-27774-q31"
+      ],
+      "show": [
+        "2차측에서 갈라지는 시험배관",
+        "압력계용 콕밸브 열림",
+        "시험밸브 열림과 시험용 방수구",
+        "물받이와 배수",
+        "닫힌 헤드에서는 방수하지 않음"
+      ],
+      "omit": [
+        "제조사별 내부 트림 배관",
+        "기동 압력과 지연 시간"
+      ],
+      "verify": "기존 FSM2-039, 공개 문항, NFTC 103 2.5.12.1~3와 공식 기준집 검색 본문. 현행 동적 뷰어 전문은 추출 불가",
+      "notice": "※ 학습을 위해 재구성된 이미지",
+      "sourceWidth": 640,
+      "mobileGoal": "390px에서 주요 직접 라벨은 14px 이상을 목표로 하고 320px 보조 검수. 확대 시 벡터 선명도 유지",
+      "colors": {
+        "water": "#15785C",
+        "signal": "#526176",
+        "error": "#90234B"
+      },
+      "flowReview": "물은 실제 배관에서만 초록 실선/방향 표시. 압력계 접속은 압력 전달용이며 방수 흐름 화살표를 넣지 않음. 닫힌 헤드 뒤에는 흐름이나 물방울을 넣지 않음",
+      "reuseDecision": "기존 SVG는 그대로 보존. 직사각형 기호 중심 도식을 식별 가능한 기기 형상과 큰 라벨로 재구성",
+      "captionPolicy": "이미지 내부에 카드 제목과 안내를 반복하지 않음. 부품명과 상태만 직접 표기"
+    },
+    {
+      "id": "FSM2-035",
+      "slug": "pump-performance-tests",
+      "asset": "pump-performance-reading-v2.svg",
+      "caption": "체절과 최대유량 시험 결과",
+      "question": "같은 펌프에서 체절과 최대유량 결과의 적합 여부가 달라질 수 있는가?",
+      "type": "L1 수치 기반 벡터 그래프",
+      "old": [
+        "pump-performance-curve-v1.svg",
+        "pump-test-pipe-v1.svg"
+      ],
+      "questions": [
+        "moducbt-27777-q29",
+        "moducbt-27778-q25"
+      ],
+      "show": [
+        "정격 대비 유량과 압력 축",
+        "140% 상한과 65% 하한",
+        "예시 측정값 0.81MPa와 0.37MPa",
+        "정격 500L/min 및 0.60MPa",
+        "0.60MPa 정격점은 비교 기준"
+      ],
+      "omit": [
+        "제조사 실제 인증곡선",
+        "미측정 구간의 확정 성능"
+      ],
+      "verify": "기존 FSM2-035 및 공개 문항. NFPC 102 제5조제1항제7호 공식 검색 본문과 대조. 곡선은 예시 연결선",
+      "notice": "※ 학습을 위해 재구성된 이미지",
+      "sourceWidth": 640,
+      "mobileGoal": "390px에서 주요 직접 라벨은 14px 이상을 목표로 하고 320px 보조 검수. 확대 시 벡터 선명도 유지",
+      "colors": {
+        "water": "#15785C",
+        "signal": "#526176",
+        "error": "#90234B"
+      },
+      "flowReview": "물은 실제 배관에서만 초록 실선/방향 표시. 압력계 접속은 압력 전달용이며 방수 흐름 화살표를 넣지 않음. 닫힌 헤드 뒤에는 흐름이나 물방울을 넣지 않음",
+      "reuseDecision": "기존 SVG는 그대로 보존. 직사각형 기호 중심 도식을 식별 가능한 기기 형상과 큰 라벨로 재구성",
+      "captionPolicy": "이미지 내부에 카드 제목과 안내를 반복하지 않음. 부품명과 상태만 직접 표기"
+    },
+    {
+      "id": "FSM2-036",
+      "slug": "pitot-nozzle-pressure-test",
+      "asset": "pitot-measurement-assembly-v2.svg",
+      "caption": "관창과 피토게이지의 측정 위치",
+      "question": "노즐과 피토관 입구의 상대 위치 및 압력계 지시값을 어떻게 읽는가?",
+      "type": "L2 관창과 계측기 위치",
+      "old": [
+        "pitot-nozzle-position-v1.svg"
+      ],
+      "questions": [
+        "moducbt-27774-q33",
+        "moducbt-27774-q37"
+      ],
+      "show": [
+        "직사형 관창",
+        "노즐 구경 D와 거리 D/2",
+        "봉상주수 중심의 피토관 입구가 흐름을 마주 봄",
+        "0~1.0MPa 눈금과 0.20MPa 예시 지시"
+      ],
+      "omit": [
+        "손과 신체 자세",
+        "제조사별 계기 구조와 호스 결속 사양"
+      ],
+      "verify": "기존 FSM2-036, 공개 문항의 D/2 조건. 압력 판정은 NFPC 102 제5조제1항제3호와 대조. 측정 거리의 현행 고시 전문은 새로 확인하지 못함",
+      "notice": "※ 학습을 위해 재구성된 이미지",
+      "sourceWidth": 640,
+      "mobileGoal": "390px에서 주요 직접 라벨은 14px 이상을 목표로 하고 320px 보조 검수. 확대 시 벡터 선명도 유지",
+      "colors": {
+        "water": "#15785C",
+        "signal": "#526176",
+        "error": "#90234B"
+      },
+      "flowReview": "물은 실제 배관에서만 초록 실선/방향 표시. 압력계 접속은 압력 전달용이며 방수 흐름 화살표를 넣지 않음. 닫힌 헤드 뒤에는 흐름이나 물방울을 넣지 않음",
+      "reuseDecision": "기존 SVG는 그대로 보존. 직사각형 기호 중심 도식을 식별 가능한 기기 형상과 큰 라벨로 재구성",
+      "captionPolicy": "이미지 내부에 카드 제목과 안내를 반복하지 않음. 부품명과 상태만 직접 표기"
+    },
+    {
+      "id": "FSM2-040",
+      "slug": "preaction-cross-zone-test",
+      "asset": "preaction-water-supply-v2.svg",
+      "caption": "밸브 개방과 헤드 닫힘",
+      "question": "감지기 두 회로로 밸브가 열리면 폐쇄형 헤드도 바로 방수하는가?",
+      "type": "L2 물 공급 경로 및 상태",
+      "old": [
+        "cross-zone-and-condition-v1.svg"
+      ],
+      "questions": [
+        "moducbt-27775-q31",
+        "moducbt-27775-q38",
+        "moducbt-27776-q36"
+      ],
+      "show": [
+        "서로 다른 A와 B 입력",
+        "물과 구분한 기동 신호",
+        "준비작동밸브 개방",
+        "2차측 물 공급 경로",
+        "닫힌 헤드와 방수 없음"
+      ],
+      "omit": [
+        "제조사별 솔레노이드와 세팅수실 트림",
+        "펌프 자동기동 압력과 타이밍",
+        "시험 중 차단·배수 상태를 화재 때 흐름과 혼합하지 않음"
+      ],
+      "verify": "기존 FSM2-040과 공개 승인 문항, 관서 예방실무 준비작동식 점검 자료(과거 자료)와 대조. 제품별 복구 순서를 보편화하지 않음",
+      "notice": "※ 학습을 위해 재구성된 이미지",
+      "sourceWidth": 640,
+      "mobileGoal": "390px에서 주요 직접 라벨은 14px 이상을 목표로 하고 320px 보조 검수. 확대 시 벡터 선명도 유지",
+      "colors": {
+        "water": "#15785C",
+        "signal": "#526176",
+        "error": "#90234B"
+      },
+      "flowReview": "물은 실제 배관에서만 초록 실선/방향 표시. 압력계 접속은 압력 전달용이며 방수 흐름 화살표를 넣지 않음. 닫힌 헤드 뒤에는 흐름이나 물방울을 넣지 않음",
+      "reuseDecision": "기존 SVG는 그대로 보존. 직사각형 기호 중심 도식을 식별 가능한 기기 형상과 큰 라벨로 재구성",
+      "captionPolicy": "이미지 내부에 카드 제목과 안내를 반복하지 않음. 부품명과 상태만 직접 표기"
+    }
+  ]
+}

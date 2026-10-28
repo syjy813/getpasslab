@@ -1,0 +1,282 @@
+[
+  {
+    "script": "scripts/check-accident-analysis-figures.mjs",
+    "result": "PASS",
+    "seconds": 0.44
+  },
+  {
+    "script": "scripts/check-all-chapter-hierarchy.mjs",
+    "result": "PASS",
+    "seconds": 9.25
+  },
+  {
+    "script": "scripts/check-chapter-formula-style.mjs",
+    "result": "PASS",
+    "seconds": 6.87
+  },
+  {
+    "script": "scripts/check-clam-shell-chapter.mjs",
+    "result": "PASS",
+    "seconds": 7.48
+  },
+  {
+    "script": "scripts/check-color-contrast.mjs",
+    "result": "PASS",
+    "seconds": 0.11
+  },
+  {
+    "script": "scripts/check-computer-literacy-001-081.mjs",
+    "result": "PASS",
+    "seconds": 1.55
+  },
+  {
+    "script": "scripts/check-computer-literacy-082-159.mjs",
+    "result": "PASS",
+    "seconds": 2.16
+  },
+  {
+    "script": "scripts/check-computer-literacy-c1.mjs",
+    "result": "PASS",
+    "seconds": 0.14
+  },
+  {
+    "script": "scripts/check-computer-literacy-publication.mjs",
+    "result": "PASS",
+    "seconds": 0.1
+  },
+  {
+    "script": "scripts/check-deferred-question-content.mjs",
+    "result": "PASS",
+    "seconds": 0.59
+  },
+  {
+    "script": "scripts/check-earth-retaining-structure.mjs",
+    "result": "PASS",
+    "seconds": 1.43
+  },
+  {
+    "script": "scripts/check-excavator-operation-safety.mjs",
+    "result": "PASS",
+    "seconds": 8.93
+  },
+  {
+    "script": "scripts/check-fire-bulk-history-guard.mjs",
+    "result": "PASS",
+    "seconds": 4.76
+  },
+  {
+    "script": "scripts/check-fire-five-full-panels.mjs",
+    "result": "PASS",
+    "seconds": 1.05
+  },
+  {
+    "script": "scripts/check-fire-full-panels.mjs",
+    "result": "PASS",
+    "seconds": 1.02
+  },
+  {
+    "script": "scripts/check-fire-image-copy.mjs",
+    "result": "PASS",
+    "seconds": 0.82
+  },
+  {
+    "script": "scripts/check-fire-launch-history-guard.mjs",
+    "result": "PASS",
+    "seconds": 3.68
+  },
+  {
+    "script": "scripts/check-fire-persona-corrections.mjs",
+    "result": "PASS",
+    "seconds": 6.75
+  },
+  {
+    "script": "scripts/check-fire-popup.mjs",
+    "result": "PASS",
+    "seconds": 1.99
+  },
+  {
+    "script": "scripts/check-fire-practice-history-guard.mjs",
+    "result": "PASS",
+    "seconds": 3.7
+  },
+  {
+    "script": "scripts/check-fire-practice-logic.mjs",
+    "result": "PASS",
+    "seconds": 0.35
+  },
+  {
+    "script": "scripts/check-fire-practice-phase2.mjs",
+    "result": "PASS",
+    "seconds": 0.63
+  },
+  {
+    "script": "scripts/check-fire-practice.mjs",
+    "result": "PASS",
+    "seconds": 6.9
+  },
+  {
+    "script": "scripts/check-fire-priority-chapters.mjs",
+    "result": "PASS",
+    "seconds": 2.39
+  },
+  {
+    "script": "scripts/check-fire-publication.mjs",
+    "result": "PASS",
+    "seconds": 0.36
+  },
+  {
+    "script": "scripts/check-fire-readability.mjs",
+    "result": "PASS",
+    "seconds": 1.93
+  },
+  {
+    "script": "scripts/check-fire-safety-level2-bulk.mjs",
+    "result": "PASS",
+    "seconds": 8.3
+  },
+  {
+    "script": "scripts/check-fire-safety-level2-launch.mjs",
+    "result": "PASS",
+    "seconds": 4.74
+  },
+  {
+    "script": "scripts/check-fire-standardization.mjs",
+    "result": "PASS",
+    "seconds": 1.9
+  },
+  {
+    "script": "scripts/check-fire-textbook-corrections.mjs",
+    "result": "PASS",
+    "seconds": 4.74
+  },
+  {
+    "script": "scripts/check-footer-left.mjs",
+    "result": "PASS",
+    "seconds": 1.18
+  },
+  {
+    "script": "scripts/check-formwork-lateral-pressure.mjs",
+    "result": "PASS",
+    "seconds": 11.97
+  },
+  {
+    "script": "scripts/check-fta-original-options.mjs",
+    "result": "PASS",
+    "seconds": 11.35
+  },
+  {
+    "script": "scripts/check-fta-symbols-split.mjs",
+    "result": "PASS",
+    "seconds": 0.51
+  },
+  {
+    "script": "scripts/check-global-chapter-readability.mjs",
+    "result": "PASS",
+    "seconds": 12.77
+  },
+  {
+    "script": "scripts/check-gnb-chapter-toc.mjs",
+    "result": "PASS",
+    "seconds": 9.22
+  },
+  {
+    "script": "scripts/check-gnb-toc-height.mjs",
+    "result": "PASS",
+    "seconds": 3.96
+  },
+  {
+    "script": "scripts/check-hanging-scaffold-wire-rope.mjs",
+    "result": "PASS",
+    "seconds": 9.76
+  },
+  {
+    "script": "scripts/check-historical-practice-guard.mjs",
+    "result": "PASS",
+    "seconds": 5.35
+  },
+  {
+    "script": "scripts/check-industrial-20190804-review.mjs",
+    "result": "PASS",
+    "seconds": 8.36
+  },
+  {
+    "script": "scripts/check-industrial-question-source-repair.mjs",
+    "result": "PASS",
+    "seconds": 4.54
+  },
+  {
+    "script": "scripts/check-industrial-remaining-review.mjs",
+    "result": "PASS",
+    "seconds": 2.61
+  },
+  {
+    "script": "scripts/check-industrial-remaining-splits.mjs",
+    "result": "PASS",
+    "seconds": 2.43
+  },
+  {
+    "script": "scripts/check-industrial-safety-chapter-splits.mjs",
+    "result": "PASS",
+    "seconds": 1.49
+  },
+  {
+    "script": "scripts/check-industrial-safety-machine-tools-split.mjs",
+    "result": "PASS",
+    "seconds": 1.4
+  },
+  {
+    "script": "scripts/check-industrial-unassigned-links.mjs",
+    "result": "PASS",
+    "seconds": 7.31
+  },
+  {
+    "script": "scripts/check-instant-practice-coverage.mjs",
+    "result": "PASS",
+    "seconds": 0.58
+  },
+  {
+    "script": "scripts/check-instant-practice-datasets.mjs",
+    "result": "PASS",
+    "seconds": 0.18
+  },
+  {
+    "script": "scripts/check-instant-practice-pilot.mjs",
+    "result": "PASS",
+    "seconds": 0.1
+  },
+  {
+    "script": "scripts/check-mobile-chapter-top-ad.mjs",
+    "result": "PASS",
+    "seconds": 2.07
+  },
+  {
+    "script": "scripts/check-mobile-learning-ux.mjs",
+    "result": "PASS",
+    "seconds": 9.36
+  },
+  {
+    "script": "scripts/check-mobile-toc-width.mjs",
+    "result": "PASS",
+    "seconds": 1.02
+  },
+  {
+    "script": "scripts/check-mobile-top-ad.mjs",
+    "result": "PASS",
+    "seconds": 2.64
+  },
+  {
+    "script": "scripts/check-port-cargo-passages.mjs",
+    "result": "PASS",
+    "seconds": 7.84
+  },
+  {
+    "script": "scripts/check-public-content.mjs",
+    "result": "PASS",
+    "seconds": 1.38
+  },
+  {
+    "script": "scripts/check-seo.mjs",
+    "result": "PASS",
+    "seconds": 0.74
+  }
+]

@@ -1,4 +1,5 @@
-import fs from 'node:fs';
+// Current native files are checked by check-fire-practice-phase2.mjs.
+import fs from './read-before-fire-practice-phase2.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {footerLeftReview as review,beforeFooterLeft} from './read-before-footer-left.mjs';

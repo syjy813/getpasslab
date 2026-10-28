@@ -1,5 +1,5 @@
 // Historical readers restore only the reviewed mobile menu CSS and stylesheet URLs.
-import fs from 'node:fs';
+import fs from './read-before-fire-practice-phase2.mjs';
 import {beforeFooterLeft} from './read-before-footer-left.mjs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
