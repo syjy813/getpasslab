@@ -22,14 +22,22 @@ status: "완료"
 <div class="fire-panel-lesson fire-practice-lesson">
 
 ## 밸브 개방과 헤드 방수의 구별
-준비작동식은 감지기 신호로 밸브를 열어 2차측에 물을 공급하는 설비<br>그림은 **밸브 개방 후에도 폐쇄형 헤드는 닫혀 있는 예시**
+준비작동식은 감지기가 화재를 감지하면 밸브를 열어 헤드 쪽 배관에 물을 공급하는 설비<br>**밸브가 열리는 것과 헤드에서 물이 나오는 것은 별개**
+
+그림은 교차회로로 밸브를 자동 개방한 예시이며, 헤드는 아직 닫혀 있는 상태
 
 <div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>밸브 개방과 헤드 닫힘</strong></figcaption><img src="/images/fire-safety-manager-level2/preaction-water-supply-v2.svg" alt="서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음" width="640" height="625" loading="lazy" decoding="async"><p class="fire-panel-note">※ 학습을 위해 재구성된 이미지</p><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/preaction-water-supply-v2.svg" data-fire-alt="서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
-<div class="fire-panel-steps"><section class="fire-panel-step"><h3><span class="fire-panel-number">①</span>서로 다른 두 회로의 감지 확인</h3><p>다른 기동 원인이 없는 교차회로 예시<br>A회로 감지기 두 개를 A와 B 두 회로의 작동으로 대체하지 않음</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">②</span>밸브 개방과 2차측 공급 확인</h3><p>두 회로의 자동 기동 조건 또는 별도의 수동 기동으로 밸브를 개방<br>수신부의 밸브개방 표시와 계통의 상태로 개방 여부를 확인</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">③</span>헤드 개방을 별도로 판단</h3><p>그림은 밸브가 열렸지만 헤드는 닫힌 상태이므로 방수 없음<br>폐쇄형 헤드가 화재열로 열려야 그 헤드에서 방수</p></section></div>
+<div class="fire-panel-steps">
+<section class="fire-panel-step"><h3><span class="fire-panel-number">①</span>A와 B에서 각각 감지해야 밸브가 열림</h3><p>그림은 감지기를 연결한 전기 회로를 A와 B로 나눈 예시<br>A회로 감지기 하나와 B회로 감지기 하나가 작동하면 자동 개방 조건 충족<br>A회로에서만 감지기 두 개가 작동하면 B회로는 감지하지 않았으므로 조건 미충족</p></section>
+<section class="fire-panel-step"><h3><span class="fire-panel-number">②</span>밸브가 열리면 헤드 쪽 배관에 물이 공급됨</h3><p>밸브를 지난 뒤 헤드로 이어지는 배관을 <strong>2차측</strong>이라 함<br>밸브가 열리면 이 배관으로 물이 공급되지만, 닫힌 헤드에서는 아직 물이 나오지 않음</p></section>
+<section class="fire-panel-step"><h3><span class="fire-panel-number">③</span>헤드가 화재열로 열려야 물이 나옴</h3><p>헤드는 감지기 신호만으로 열리지 않음<br>화재열로 헤드의 감열부가 작동해야 해당 헤드에서 물이 나옴<br>그림은 밸브만 열리고 헤드는 닫혀 있으므로 방수 없음</p></section>
+</div>
 
-## 한 회로와 수동 기동의 구별
-한 회로만 작동한 단계에서는 화재 표시와 경보가 나타날 수 있지만 두 회로의 자동 기동 조건은 충족되지 않음<br>수동조작함(SVP) 등 승인된 수동 기동은 교차회로의 자동 조건과 별도 경로
+## 수동 기동은 별도 경로
+한 회로만 감지해도 화재 표시와 경보는 나타날 수 있지만, 그림의 자동 개방 조건인 A와 B의 감지는 충족되지 않음
+
+수동조작함(SVP) 등 설비에 정해진 수동 기동 방식으로도 밸브를 열 수 있음<br>수동 기동은 사람이 조작하는 별도 경로이므로 A와 B의 감지를 모두 기다리는 자동 작동과 구별
 
 제어반에서 입력, 기동 명령과 개방 확인을 읽는 방법은 [준비작동식 감시제어반 상태 판독](/fire-safety-manager-level2/written/fire-safety-practice/preaction-panel-state-reading/)에서 확인
 

@@ -1,0 +1,170 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "id": "FSM2-040",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "asset": "preaction-water-supply-v2.svg",
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "notes": 1
+      },
+      "zoom": "PASS",
+      "practice": "original pool retained"
+    },
+    {
+      "id": "FSM2-040",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "asset": "preaction-water-supply-v2.svg",
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "notes": 1
+      },
+      "zoom": "PASS",
+      "practice": "original pool retained"
+    },
+    {
+      "id": "FSM2-040",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "asset": "preaction-water-supply-v2.svg",
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "notes": 1
+      },
+      "zoom": "PASS",
+      "practice": "original pool retained"
+    }
+  ],
+  "svg": [
+    {
+      "id": "FSM2-040",
+      "labels": [
+        {
+          "text": "A",
+          "x": 82.78125,
+          "y": 27,
+          "width": 18,
+          "height": 37,
+          "size": 26
+        },
+        {
+          "text": "B",
+          "x": 245.234375,
+          "y": 27,
+          "width": 17.53125,
+          "height": 37,
+          "size": 26
+        },
+        {
+          "text": "1",
+          "x": 165.734375,
+          "y": 41,
+          "width": 16.53125,
+          "height": 40,
+          "size": 28
+        },
+        {
+          "text": "두 회로 감지",
+          "x": 101.7578125,
+          "y": 93,
+          "width": 144.484375,
+          "height": 40,
+          "size": 28
+        },
+        {
+          "text": "기동 신호",
+          "x": 92,
+          "y": 195,
+          "width": 102.96875,
+          "height": 37,
+          "size": 26
+        },
+        {
+          "text": "(점선)",
+          "x": 92,
+          "y": 232,
+          "width": 56.640625,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "밸브 열림",
+          "x": 318,
+          "y": 322,
+          "width": 110.890625,
+          "height": 40,
+          "size": 28
+        },
+        {
+          "text": "2",
+          "x": 277.734375,
+          "y": 321,
+          "width": 16.53125,
+          "height": 40,
+          "size": 28
+        },
+        {
+          "text": "준비작동밸브",
+          "x": 318,
+          "y": 360,
+          "width": 143.53125,
+          "height": 37,
+          "size": 26
+        },
+        {
+          "text": "3",
+          "x": 306.734375,
+          "y": 217,
+          "width": 16.53125,
+          "height": 40,
+          "size": 28
+        },
+        {
+          "text": "헤드 닫힘",
+          "x": 345,
+          "y": 218,
+          "width": 110.890625,
+          "height": 40,
+          "size": 28
+        },
+        {
+          "text": "방수 없음",
+          "x": 468.515625,
+          "y": 319,
+          "width": 102.96875,
+          "height": 37,
+          "size": 26
+        },
+        {
+          "text": "2차측 공급",
+          "x": 327.4375,
+          "y": 122,
+          "width": 127.125,
+          "height": 40,
+          "size": 28
+        },
+        {
+          "text": "급수",
+          "x": 194.234375,
+          "y": 563,
+          "width": 51.53125,
+          "height": 40,
+          "size": 28
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical devices and Safari not tested"
+  ]
+}

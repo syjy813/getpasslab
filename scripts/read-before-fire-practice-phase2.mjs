@@ -1,5 +1,5 @@
 // Only exact reviewed changes/additions are hidden from historical release views.
-import fs from 'node:fs';
+import fs, {beforeFirePreactionCopy} from './read-before-fire-preaction-copy.mjs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -9,6 +9,7 @@ export const phase2Review=JSON.parse(gunzipSync(fs.readFileSync('docs/audits/202
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const key=f=>path.normalize(path.isAbsolute(String(f))?path.relative(process.cwd(),String(f)):String(f));
 export function beforeFirePracticePhase2(file,bytes){
+ bytes=beforeFirePreactionCopy(file,bytes);
  const row=phase2Review.changes[key(file)];if(!row||hash(bytes)!==row.sha256)return bytes;
  const before=Buffer.from(row.before,'base64');assert.equal(hash(before),row.beforeSHA256,'exact phase2 predecessor');return before;
 }
