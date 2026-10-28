@@ -1,5 +1,6 @@
 // Invert only fingerprinted five-chapter changes for earlier release checks.
 import fs from 'node:fs';
+import {beforeFireImageCopy} from './read-before-fire-image-copy.mjs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -9,6 +10,7 @@ export const fivePanelReview=JSON.parse(gunzipSync(fs.readFileSync('docs/audits/
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const keyFor=f=>path.normalize(path.isAbsolute(String(f))?path.relative(process.cwd(),String(f)):String(f));
 export function beforeFireFivePanels(file,bytes){
+ bytes=beforeFireImageCopy(file,bytes);
  const row=fivePanelReview.changes[keyFor(file)];
  if(!row||hash(bytes)!==row.sha256)return bytes;
  const before=Buffer.from(row.before,'base64');

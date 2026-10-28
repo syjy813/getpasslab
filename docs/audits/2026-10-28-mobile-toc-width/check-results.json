@@ -1,0 +1,272 @@
+[
+  {
+    "script": "scripts/check-accident-analysis-figures.mjs",
+    "result": "PASS",
+    "seconds": 0.83
+  },
+  {
+    "script": "scripts/check-all-chapter-hierarchy.mjs",
+    "result": "PASS",
+    "seconds": 6.28
+  },
+  {
+    "script": "scripts/check-chapter-formula-style.mjs",
+    "result": "PASS",
+    "seconds": 7.83
+  },
+  {
+    "script": "scripts/check-clam-shell-chapter.mjs",
+    "result": "PASS",
+    "seconds": 9.38
+  },
+  {
+    "script": "scripts/check-color-contrast.mjs",
+    "result": "PASS",
+    "seconds": 0.09
+  },
+  {
+    "script": "scripts/check-computer-literacy-001-081.mjs",
+    "result": "PASS",
+    "seconds": 1.94
+  },
+  {
+    "script": "scripts/check-computer-literacy-082-159.mjs",
+    "result": "PASS",
+    "seconds": 3.46
+  },
+  {
+    "script": "scripts/check-computer-literacy-c1.mjs",
+    "result": "PASS",
+    "seconds": 0.25
+  },
+  {
+    "script": "scripts/check-computer-literacy-publication.mjs",
+    "result": "PASS",
+    "seconds": 0.17
+  },
+  {
+    "script": "scripts/check-deferred-question-content.mjs",
+    "result": "PASS",
+    "seconds": 0.53
+  },
+  {
+    "script": "scripts/check-earth-retaining-structure.mjs",
+    "result": "PASS",
+    "seconds": 1.51
+  },
+  {
+    "script": "scripts/check-excavator-operation-safety.mjs",
+    "result": "PASS",
+    "seconds": 9.29
+  },
+  {
+    "script": "scripts/check-fire-bulk-history-guard.mjs",
+    "result": "PASS",
+    "seconds": 4.02
+  },
+  {
+    "script": "scripts/check-fire-five-full-panels.mjs",
+    "result": "PASS",
+    "seconds": 0.97
+  },
+  {
+    "script": "scripts/check-fire-full-panels.mjs",
+    "result": "PASS",
+    "seconds": 0.9
+  },
+  {
+    "script": "scripts/check-fire-image-copy.mjs",
+    "result": "PASS",
+    "seconds": 0.76
+  },
+  {
+    "script": "scripts/check-fire-launch-history-guard.mjs",
+    "result": "PASS",
+    "seconds": 3.26
+  },
+  {
+    "script": "scripts/check-fire-persona-corrections.mjs",
+    "result": "PASS",
+    "seconds": 5.22
+  },
+  {
+    "script": "scripts/check-fire-popup.mjs",
+    "result": "PASS",
+    "seconds": 2.17
+  },
+  {
+    "script": "scripts/check-fire-practice-history-guard.mjs",
+    "result": "PASS",
+    "seconds": 14.11
+  },
+  {
+    "script": "scripts/check-fire-practice-logic.mjs",
+    "result": "PASS",
+    "seconds": 0.29
+  },
+  {
+    "script": "scripts/check-fire-practice.mjs",
+    "result": "PASS",
+    "seconds": 5.33
+  },
+  {
+    "script": "scripts/check-fire-priority-chapters.mjs",
+    "result": "PASS",
+    "seconds": 1.12
+  },
+  {
+    "script": "scripts/check-fire-publication.mjs",
+    "result": "PASS",
+    "seconds": 0.35
+  },
+  {
+    "script": "scripts/check-fire-readability.mjs",
+    "result": "PASS",
+    "seconds": 1.92
+  },
+  {
+    "script": "scripts/check-fire-safety-level2-bulk.mjs",
+    "result": "PASS",
+    "seconds": 5.31
+  },
+  {
+    "script": "scripts/check-fire-safety-level2-launch.mjs",
+    "result": "PASS",
+    "seconds": 5.5
+  },
+  {
+    "script": "scripts/check-fire-standardization.mjs",
+    "result": "PASS",
+    "seconds": 1.39
+  },
+  {
+    "script": "scripts/check-fire-textbook-corrections.mjs",
+    "result": "PASS",
+    "seconds": 5.44
+  },
+  {
+    "script": "scripts/check-formwork-lateral-pressure.mjs",
+    "result": "PASS",
+    "seconds": 10.15
+  },
+  {
+    "script": "scripts/check-fta-original-options.mjs",
+    "result": "PASS",
+    "seconds": 7.29
+  },
+  {
+    "script": "scripts/check-fta-symbols-split.mjs",
+    "result": "PASS",
+    "seconds": 1.44
+  },
+  {
+    "script": "scripts/check-global-chapter-readability.mjs",
+    "result": "PASS",
+    "seconds": 15.99
+  },
+  {
+    "script": "scripts/check-gnb-chapter-toc.mjs",
+    "result": "PASS",
+    "seconds": 9.61
+  },
+  {
+    "script": "scripts/check-gnb-toc-height.mjs",
+    "result": "PASS",
+    "seconds": 3.27
+  },
+  {
+    "script": "scripts/check-hanging-scaffold-wire-rope.mjs",
+    "result": "PASS",
+    "seconds": 9.79
+  },
+  {
+    "script": "scripts/check-historical-practice-guard.mjs",
+    "result": "PASS",
+    "seconds": 16.57
+  },
+  {
+    "script": "scripts/check-industrial-20190804-review.mjs",
+    "result": "PASS",
+    "seconds": 11.52
+  },
+  {
+    "script": "scripts/check-industrial-question-source-repair.mjs",
+    "result": "PASS",
+    "seconds": 7.45
+  },
+  {
+    "script": "scripts/check-industrial-remaining-review.mjs",
+    "result": "PASS",
+    "seconds": 6.41
+  },
+  {
+    "script": "scripts/check-industrial-remaining-splits.mjs",
+    "result": "PASS",
+    "seconds": 3.64
+  },
+  {
+    "script": "scripts/check-industrial-safety-chapter-splits.mjs",
+    "result": "PASS",
+    "seconds": 2.71
+  },
+  {
+    "script": "scripts/check-industrial-safety-machine-tools-split.mjs",
+    "result": "PASS",
+    "seconds": 2.34
+  },
+  {
+    "script": "scripts/check-industrial-unassigned-links.mjs",
+    "result": "PASS",
+    "seconds": 12.46
+  },
+  {
+    "script": "scripts/check-instant-practice-coverage.mjs",
+    "result": "PASS",
+    "seconds": 1.1
+  },
+  {
+    "script": "scripts/check-instant-practice-datasets.mjs",
+    "result": "PASS",
+    "seconds": 0.17
+  },
+  {
+    "script": "scripts/check-instant-practice-pilot.mjs",
+    "result": "PASS",
+    "seconds": 0.12
+  },
+  {
+    "script": "scripts/check-mobile-chapter-top-ad.mjs",
+    "result": "PASS",
+    "seconds": 2.54
+  },
+  {
+    "script": "scripts/check-mobile-learning-ux.mjs",
+    "result": "PASS",
+    "seconds": 10.71
+  },
+  {
+    "script": "scripts/check-mobile-toc-width.mjs",
+    "result": "PASS",
+    "seconds": 2.12
+  },
+  {
+    "script": "scripts/check-mobile-top-ad.mjs",
+    "result": "PASS",
+    "seconds": 4.15
+  },
+  {
+    "script": "scripts/check-port-cargo-passages.mjs",
+    "result": "PASS",
+    "seconds": 10.05
+  },
+  {
+    "script": "scripts/check-public-content.mjs",
+    "result": "PASS",
+    "seconds": 1.8
+  },
+  {
+    "script": "scripts/check-seo.mjs",
+    "result": "PASS",
+    "seconds": 0.46
+  }
+]

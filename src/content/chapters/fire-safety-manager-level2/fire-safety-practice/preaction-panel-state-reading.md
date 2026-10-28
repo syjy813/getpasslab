@@ -17,7 +17,7 @@ status: "완료"
 ---
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
-<link rel="stylesheet" href="/styles/fire-panel-lessons.css">
+<link rel="stylesheet" href="/styles/fire-panel-lessons.css?v=fire-image-copy-20261028">
 
 <div class="fire-panel-lesson">
 
@@ -29,7 +29,7 @@ status: "완료"
 ## A만, A+B, SVP의 차이
 아래는 교차회로가 적용되고 다른 기동 원인은 없는 설비의 입력 조건 비교<br>수동조작함(SVP)은 감지기 두 회로의 자동 조건과 별도의 수동 기동 경로
 
-<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>감지 입력과 기동 명령, 개방 확인을 따로 판독</strong><span>학습용 재구성 · 표시와 배치는 기기별로 다름</span></figcaption><img src="/images/fire-safety-manager-level2/preaction-full-panel-v2.webp" alt="준비작동식 학습용 감시제어반 전체 판. 감지기 A와 B는 켜지고 SVP 입력은 꺼져 있으며 밸브 기동 명령 있음과 개방 확인이 각각 표시된 상태" width="1536" height="1024" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/preaction-full-panel-v2.webp" data-fire-alt="준비작동식 학습용 감시제어반 전체 판. 감지기 A와 B는 켜지고 SVP 입력은 꺼져 있으며 밸브 기동 명령 있음과 개방 확인이 각각 표시된 상태" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">전체 판 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>감지기 입력과 밸브 개방 표시</strong></figcaption><div class="fire-panel-artwork" style="--panel-ratio:1536/790;--panel-offset:-14.93670886%"><img src="/images/fire-safety-manager-level2/preaction-full-panel-v2.webp" alt="준비작동식 학습용 감시제어반 전체 판. 감지기 A와 B는 켜지고 SVP 입력은 꺼져 있으며 밸브 기동 명령 있음과 개방 확인이 각각 표시된 상태" width="1536" height="1024" loading="lazy" decoding="async"></div><p class="fire-panel-note">※ 학습을 위해 재구성된 이미지</p><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/preaction-full-panel-v2.webp" data-fire-alt="준비작동식 학습용 감시제어반 전체 판. 감지기 A와 B는 켜지고 SVP 입력은 꺼져 있으며 밸브 기동 명령 있음과 개방 확인이 각각 표시된 상태" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">전체 판 확대 ↗</button></figure></div>
 
 <div class="fire-panel-steps"><section class="fire-panel-step"><h3><span class="fire-panel-number">①</span>A와 B 입력 확인</h3><p>서로 다른 A회로와 B회로 표시가 모두 켜진 상태<br>같은 A회로의 감지기 두 개를 A·B 두 회로로 읽지 않음</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">②</span>밸브 기동 명령 확인</h3><p>다른 기동 원인이 없는 예시에서 A·B 입력으로 자동 기동 조건 충족<br>입력 표시와 밸브를 여는 명령은 구분</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">③</span>밸브 개방 확인 신호 판독</h3><p>그림은 개방 확인 신호까지 들어온 예시<br>기동 명령만으로 실제 개방을 단정하지 않으며, 폐쇄형 헤드의 개방과 실제 방수도 별도 확인</p></section></div>
 
@@ -56,5 +56,5 @@ A회로만 감지해도 화재 표시와 음향 경보가 작동할 수 있음<b
 
 </div>
 
-<dialog id="fire-bulk-image-dialog" class="sample-image-layer fire-panel-dialog" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="1536" height="1024" alt=""></div></dialog>
+<dialog id="fire-bulk-image-dialog" class="sample-image-layer fire-panel-dialog" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><div class="fire-panel-artwork" style="--panel-ratio:1536/790;--panel-offset:-14.93670886%"><img width="1536" height="1024" alt=""></div></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>

@@ -1,0 +1,140 @@
+{
+  "standard": "learning-image-design-system-v1.md v1.3 §§1–9",
+  "notice": "※ 학습을 위해 재구성된 이미지",
+  "captions": "PC 17px / 모바일 16px",
+  "note": "13px, 400, gray-600",
+  "method": "원본 이미지 파일은 보존하고 HTML 표시 창에서 장식 영역만 제외. 본문과 확대 보기에 같은 범위 적용",
+  "figures": [
+    {
+      "slug": "receiver-circuit-continuity-test",
+      "caption": "회로도통시험 정상 표시",
+      "src": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+      "crop": {
+        "x": 0,
+        "top": 90,
+        "right": 1536,
+        "bottom": 908,
+        "sourceWidth": 1536,
+        "sourceHeight": 1024
+      },
+      "preserve": "표시등, 선택스위치 및 배관 경로의 원본 픽셀 유지",
+      "removed": "큰 장식 제목, 본문과 중복되는 순서 띠 및 중복 안내",
+      "learningQuestion": "도통시험에서 정상인 회로의 표시를 읽을 수 있는가"
+    },
+    {
+      "slug": "receiver-backup-power-test",
+      "caption": "예비전원시험 저전압 표시",
+      "src": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+      "crop": {
+        "x": 0,
+        "top": 90,
+        "right": 1536,
+        "bottom": 908,
+        "sourceWidth": 1536,
+        "sourceHeight": 1024
+      },
+      "preserve": "표시등, 선택스위치 및 배관 경로의 원본 픽셀 유지",
+      "removed": "큰 장식 제목, 본문과 중복되는 순서 띠 및 중복 안내",
+      "learningQuestion": "예비전원시험의 낮은 전압 표시를 읽을 수 있는가"
+    },
+    {
+      "slug": "pump-control-panels-states",
+      "caption": "펌프 제어반의 선택 위치와 운전 상태",
+      "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "crop": {
+        "x": 0,
+        "top": 86,
+        "right": 1536,
+        "bottom": 904,
+        "sourceWidth": 1536,
+        "sourceHeight": 1024
+      },
+      "preserve": "표시등, 선택스위치 및 배관 경로의 원본 픽셀 유지",
+      "removed": "큰 장식 제목, 본문과 중복되는 순서 띠 및 중복 안내",
+      "learningQuestion": "선택 위치와 실제 운전 표시를 구별할 수 있는가"
+    },
+    {
+      "slug": "pump-manual-auto-reading",
+      "caption": "주펌프와 충압펌프의 선택 상태",
+      "src": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "crop": {
+        "x": 0,
+        "top": 86,
+        "right": 1536,
+        "bottom": 904,
+        "sourceWidth": 1536,
+        "sourceHeight": 1024
+      },
+      "preserve": "표시등, 선택스위치 및 배관 경로의 원본 픽셀 유지",
+      "removed": "큰 장식 제목, 본문과 중복되는 순서 띠 및 중복 안내",
+      "learningQuestion": "주펌프와 충압펌프의 서로 다른 선택 상태를 읽을 수 있는가"
+    },
+    {
+      "slug": "receiver-operation-auto-reset",
+      "caption": "동작시험과 자동복구 선택",
+      "src": "/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp",
+      "crop": {
+        "x": 0,
+        "top": 90,
+        "right": 1536,
+        "bottom": 908,
+        "sourceWidth": 1536,
+        "sourceHeight": 1024
+      },
+      "preserve": "표시등, 선택스위치 및 배관 경로의 원본 픽셀 유지",
+      "removed": "큰 장식 제목, 본문과 중복되는 순서 띠 및 중복 안내",
+      "learningQuestion": "동작시험과 자동복구 선택을 구별할 수 있는가"
+    },
+    {
+      "slug": "detector-transmitter-signal-reading",
+      "caption": "발신기 입력과 3회로 표시",
+      "src": "/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp",
+      "crop": {
+        "x": 0,
+        "top": 90,
+        "right": 1536,
+        "bottom": 908,
+        "sourceWidth": 1536,
+        "sourceHeight": 1024
+      },
+      "preserve": "표시등, 선택스위치 및 배관 경로의 원본 픽셀 유지",
+      "removed": "큰 장식 제목, 본문과 중복되는 순서 띠 및 중복 안내",
+      "learningQuestion": "발신기 입력과 해당 경계구역 표시를 함께 읽을 수 있는가"
+    },
+    {
+      "slug": "pump-test-piping-valves",
+      "caption": "성능시험 배관과 밸브 개폐 상태",
+      "src": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp",
+      "crop": {
+        "x": 0,
+        "top": 112,
+        "right": 1536,
+        "bottom": 840,
+        "sourceWidth": 1536,
+        "sourceHeight": 1024
+      },
+      "preserve": "표시등, 선택스위치 및 배관 경로의 원본 픽셀 유지",
+      "removed": "큰 장식 제목, 본문과 중복되는 순서 띠 및 중복 안내",
+      "learningQuestion": "성능시험의 물 경로와 밸브 상태를 읽을 수 있는가"
+    },
+    {
+      "slug": "preaction-panel-state-reading",
+      "caption": "감지기 입력과 밸브 개방 표시",
+      "src": "/images/fire-safety-manager-level2/preaction-full-panel-v2.webp",
+      "crop": {
+        "x": 0,
+        "top": 118,
+        "right": 1536,
+        "bottom": 908,
+        "sourceWidth": 1536,
+        "sourceHeight": 1024
+      },
+      "preserve": "표시등, 선택스위치 및 배관 경로의 원본 픽셀 유지",
+      "removed": "큰 장식 제목, 본문과 중복되는 순서 띠 및 중복 안내",
+      "learningQuestion": "감지기 입력과 밸브 개방 상태를 구별할 수 있는가"
+    }
+  ],
+  "type": "원본 유지. 새 연결이나 상태를 생성하지 않는 HTML 표시 편집",
+  "flowAndLabels": "원본의 흐름선, 상태색, 장치 라벨 및 번호 표식 유지",
+  "mobileGoal": "390px와 320px에서 카드 제목과 안내를 구분. 작은 장치 라벨은 1280px 확대 및 가로/세로 이동으로 확인"
+}

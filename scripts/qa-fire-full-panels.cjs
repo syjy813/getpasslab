@@ -48,6 +48,17 @@ const report={result:'RUNNING',cases:[],errors:[],limitations:['Chromium emulati
     const src='/images/fire-safety-manager-level2/'+file;
     assert.equal(await overview.getAttribute('src'),src);
     assert.equal(await overview.evaluate(e=>e.naturalWidth),1536);
+    const type=await figure.evaluate(e=>{
+     const title=getComputedStyle(e.querySelector('figcaption strong'));
+     const notes=e.querySelectorAll('.fire-panel-note'),note=getComputedStyle(notes[0]);
+     return {title:title.fontSize,note:note.fontSize,weight:note.fontWeight,count:notes.length,text:notes[0].textContent};
+    });
+    assert.deepEqual(type,{title:width<768?'16px':'17px',note:'13px',weight:'400',count:1,text:'※ 학습을 위해 재구성된 이미지'},id+' caption hierarchy');
+    const crop=await figure.locator('.fire-panel-artwork').evaluate(e=>{
+     const frame=e.getBoundingClientRect(),img=e.querySelector('img').getBoundingClientRect();
+     return {frame:frame.height,source:img.height,top:frame.top-img.top,width:frame.width};
+    });
+    assert(crop.top>0&&crop.frame+crop.top<crop.source,'decorative title and footer are outside the display window');
     assert.equal(await page.locator('.fire-panel-step').count(),steps);
     const stepElements=page.locator('.fire-panel-step');const geometry=[];
     for(let i=0;i<steps;i++){
@@ -62,6 +73,10 @@ const report={result:'RUNNING',cases:[],errors:[],limitations:['Chromium emulati
     }
     await page.locator('.fire-panel-steps').screenshot({path:`${output}/${id}-text-steps-${width}.png`});
     await figure.screenshot({path:`${output}/${id}-overview-${width}.png`});
+    if(id==='FSM2-076'&&(width===390||width===1440)){
+     await figure.evaluate(e=>scrollTo(0,e.getBoundingClientRect().top+scrollY-90));
+     await page.screenshot({path:`${output}/${id}-hierarchy-${width}.png`});
+    }
     const button=figure.locator('.fire-bulk-zoom');await button.evaluate(e=>e.scrollIntoView({block:'center'}));
     const before=await page.evaluate(()=>({y:scrollY,style:document.body.getAttribute('style')||''}));
     await button.click();const dialog=page.locator('#fire-bulk-image-dialog');await dialog.locator('img').evaluate(e=>e.decode());
@@ -82,7 +97,7 @@ const report={result:'RUNNING',cases:[],errors:[],limitations:['Chromium emulati
     }
     await page.evaluate(()=>{scrollTo(0,0);return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));});
     if(width===390||width===1440)await page.screenshot({path:`${output}/${id}-page-${width}.png`,fullPage:true});
-    report.cases.push({id,width,steps,geometry,asset:src,overflow:false,zoomAndRestore:'PASS',practicePool:pool});
+    report.cases.push({id,width,steps,geometry,typography:type,crop,asset:src,overflow:false,zoomAndRestore:'PASS',practicePool:pool});
    }
    await context.close();
   }

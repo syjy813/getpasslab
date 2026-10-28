@@ -17,7 +17,7 @@ status: "완료"
 ---
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
-<link rel="stylesheet" href="/styles/fire-panel-lessons.css">
+<link rel="stylesheet" href="/styles/fire-panel-lessons.css?v=fire-image-copy-20261028">
 
 <div class="fire-panel-lesson">
 
@@ -29,7 +29,7 @@ status: "완료"
 ## 감지기와 발신기 신호의 비교
 아래는 동작시험이 해제되어 있고 다른 이상은 없으며, 발신기 표시 기능이 정상인 수신기의 예시
 
-<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>시험 여부와 입력 신호를 전체 판에서 구별</strong><span>학습용 재구성 · 표시와 배치는 기기별로 다름</span></figcaption><img src="/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp" alt="동작시험 등 시험 선택이 해제된 수신기 전체 판. 회로선택 OFF, 화재 및 3회로 지구 표시와 발신기 표시가 켜져 있음" width="1536" height="1024" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp" data-fire-alt="동작시험 등 시험 선택이 해제된 수신기 전체 판. 회로선택 OFF, 화재 및 3회로 지구 표시와 발신기 표시가 켜져 있음" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">전체 판 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>발신기 입력과 3회로 표시</strong></figcaption><div class="fire-panel-artwork" style="--panel-ratio:1536/818;--panel-offset:-11.00244499%"><img src="/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp" alt="동작시험 등 시험 선택이 해제된 수신기 전체 판. 회로선택 OFF, 화재 및 3회로 지구 표시와 발신기 표시가 켜져 있음" width="1536" height="1024" loading="lazy" decoding="async"></div><p class="fire-panel-note">※ 학습을 위해 재구성된 이미지</p><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp" data-fire-alt="동작시험 등 시험 선택이 해제된 수신기 전체 판. 회로선택 OFF, 화재 및 3회로 지구 표시와 발신기 표시가 켜져 있음" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">전체 판 확대 ↗</button></figure></div>
 
 <div class="fire-panel-steps"><section class="fire-panel-step"><h3><span class="fire-panel-number">①</span>동작시험 해제 확인</h3><p>조작부의 동작시험이 선택되지 않은 상태<br>수신기 자체 시험 신호인지 현장 입력인지 먼저 구분</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">②</span>화재와 3회로 표시 확인</h3><p>화재 표시와 3회로 지구 표시가 켜져 있음<br>3회로가 어느 층인지는 일람도 또는 문제의 대응 조건을 적용</p></section><section class="fire-panel-step"><h3><span class="fire-panel-number">③</span>발신기 표시 확인</h3><p>발신기 표시까지 켜져 있으므로 이 예시에서는 발신기 조작을 입력 단서로 판독<br>실제 화재가 없다는 뜻으로 해석하지 않음</p></section></div>
 
@@ -55,5 +55,5 @@ status: "완료"
 
 </div>
 
-<dialog id="fire-bulk-image-dialog" class="sample-image-layer fire-panel-dialog" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="1536" height="1024" alt=""></div></dialog>
+<dialog id="fire-bulk-image-dialog" class="sample-image-layer fire-panel-dialog" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><div class="fire-panel-artwork" style="--panel-ratio:1536/818;--panel-offset:-11.00244499%"><img width="1536" height="1024" alt=""></div></div></dialog>
 <script src="/scripts/fire-bulk-zoom.js" defer></script>

@@ -1,4 +1,5 @@
-import fs from 'node:fs';
+// Historical release view; check-fire-image-copy.mjs verifies current files.
+import fs from './read-before-fire-image-copy.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';

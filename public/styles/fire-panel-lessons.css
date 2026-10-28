@@ -4,6 +4,11 @@ article .fire-panel-section+.fire-panel-section{margin-top:32px;padding-top:32px
 article .fire-panel-section>h2{margin-top:0}
 article .fire-panel-lesson .fire-panel-overview figure:only-child{max-width:none}
 article .fire-panel-lesson .fire-panel-overview img{max-width:none;width:100%;height:auto}
+/* Titles and reconstruction notes belong to HTML, once per figure. */
+article .fire-panel-lesson .fire-panel-overview figcaption strong{font-size:17px;line-height:1.5;font-weight:700}
+article .fire-panel-artwork{position:relative;overflow:hidden;width:100%;aspect-ratio:var(--panel-ratio);background:var(--white)}
+article .fire-panel-lesson .fire-panel-artwork img{position:absolute;left:0;top:var(--panel-offset);display:block;width:100%;max-width:none;height:auto;margin:0}
+article .fire-panel-note{margin:0;padding:10px 16px 12px;color:var(--gray-600);font-size:13px;font-weight:400;line-height:1.6}
 article .fire-panel-steps{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:24px 0}
 article .fire-panel-steps.fire-panel-two{grid-template-columns:minmax(0,1fr)}
 article .fire-panel-step{min-width:0}
@@ -17,4 +22,7 @@ article .fire-panel-lesson table{font-size:14px}
 article .fire-panel-lesson tbody th,article .fire-panel-lesson td{vertical-align:top}
 article .fire-panel-lesson tbody th{min-width:85px}
 article .fire-panel-dialog .fire-bulk-zoom-scroll img{width:1280px;min-width:1280px;max-width:none;height:auto}
+article .fire-panel-dialog .fire-panel-artwork{width:1280px;min-width:1280px}
+article .fire-panel-dialog .fire-panel-artwork img{position:absolute;left:0;top:var(--panel-offset);margin:0}
 @media(max-width:767px){article .fire-panel-section+.fire-panel-section{margin-top:24px;padding-top:24px}}
+@media(max-width:767px){article .fire-panel-lesson .fire-panel-overview figcaption strong{font-size:16px}}
