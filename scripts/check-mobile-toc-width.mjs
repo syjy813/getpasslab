@@ -1,4 +1,5 @@
-import fs from 'node:fs';
+// Current files are checked by check-footer-left.mjs.
+import fs from './read-before-footer-left.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {mobileTOCWidthReview as review,beforeMobileTOCWidth} from './read-before-mobile-toc-width.mjs';

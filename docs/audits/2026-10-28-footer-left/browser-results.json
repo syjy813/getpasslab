@@ -1,0 +1,1202 @@
+[
+  {
+    "width": 320,
+    "route": "/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 479.203125,
+        "width": 272,
+        "height": 95.390625
+      },
+      {
+        "x": 24,
+        "y": 606.59375,
+        "width": 99,
+        "height": 192.765625
+      },
+      {
+        "x": 155,
+        "y": 606.59375,
+        "width": 98,
+        "height": 192.765625
+      }
+    ],
+    "columns": [
+      {
+        "heading": 24,
+        "links": [
+          {
+            "x": 24,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 24,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 24,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 24,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 155,
+        "links": [
+          {
+            "x": 155,
+            "href": "/"
+          },
+          {
+            "x": 155,
+            "href": "/about/"
+          },
+          {
+            "x": 155,
+            "href": "/terms/"
+          },
+          {
+            "x": 155,
+            "href": "/privacy/"
+          },
+          {
+            "x": 155,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "route": "/about/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 479.953125,
+        "width": 272,
+        "height": 95.390625
+      },
+      {
+        "x": 24,
+        "y": 607.34375,
+        "width": 99,
+        "height": 192.765625
+      },
+      {
+        "x": 155,
+        "y": 607.34375,
+        "width": 98,
+        "height": 192.765625
+      }
+    ],
+    "columns": [
+      {
+        "heading": 24,
+        "links": [
+          {
+            "x": 24,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 24,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 24,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 24,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 155,
+        "links": [
+          {
+            "x": 155,
+            "href": "/"
+          },
+          {
+            "x": 155,
+            "href": "/about/"
+          },
+          {
+            "x": 155,
+            "href": "/terms/"
+          },
+          {
+            "x": 155,
+            "href": "/privacy/"
+          },
+          {
+            "x": 155,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "route": "/computer-literacy/written/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 480.109375,
+        "width": 272,
+        "height": 95.390625
+      },
+      {
+        "x": 24,
+        "y": 607.5,
+        "width": 99,
+        "height": 192.765625
+      },
+      {
+        "x": 155,
+        "y": 607.5,
+        "width": 98,
+        "height": 192.765625
+      }
+    ],
+    "columns": [
+      {
+        "heading": 24,
+        "links": [
+          {
+            "x": 24,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 24,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 24,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 24,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 155,
+        "links": [
+          {
+            "x": 155,
+            "href": "/"
+          },
+          {
+            "x": 155,
+            "href": "/about/"
+          },
+          {
+            "x": 155,
+            "href": "/terms/"
+          },
+          {
+            "x": 155,
+            "href": "/privacy/"
+          },
+          {
+            "x": 155,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "route": "/industrial-safety/written/electrical/power-formula/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 407.375,
+        "width": 272,
+        "height": 95.390625
+      },
+      {
+        "x": 24,
+        "y": 534.765625,
+        "width": 99,
+        "height": 192.765625
+      },
+      {
+        "x": 155,
+        "y": 534.765625,
+        "width": 98,
+        "height": 192.765625
+      }
+    ],
+    "columns": [
+      {
+        "heading": 24,
+        "links": [
+          {
+            "x": 24,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 24,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 24,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 24,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 155,
+        "links": [
+          {
+            "x": 155,
+            "href": "/"
+          },
+          {
+            "x": 155,
+            "href": "/about/"
+          },
+          {
+            "x": 155,
+            "href": "/terms/"
+          },
+          {
+            "x": 155,
+            "href": "/privacy/"
+          },
+          {
+            "x": 155,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 479.21875,
+        "width": 280,
+        "height": 95.390625
+      },
+      {
+        "x": 24,
+        "y": 606.609375,
+        "width": 99,
+        "height": 192.765625
+      },
+      {
+        "x": 155,
+        "y": 606.609375,
+        "width": 98,
+        "height": 192.765625
+      }
+    ],
+    "columns": [
+      {
+        "heading": 24,
+        "links": [
+          {
+            "x": 24,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 24,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 24,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 24,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 155,
+        "links": [
+          {
+            "x": 155,
+            "href": "/"
+          },
+          {
+            "x": 155,
+            "href": "/about/"
+          },
+          {
+            "x": 155,
+            "href": "/terms/"
+          },
+          {
+            "x": 155,
+            "href": "/privacy/"
+          },
+          {
+            "x": 155,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "route": "/about/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 479.5625,
+        "width": 280,
+        "height": 95.390625
+      },
+      {
+        "x": 24,
+        "y": 606.953125,
+        "width": 99,
+        "height": 192.765625
+      },
+      {
+        "x": 155,
+        "y": 606.953125,
+        "width": 98,
+        "height": 192.765625
+      }
+    ],
+    "columns": [
+      {
+        "heading": 24,
+        "links": [
+          {
+            "x": 24,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 24,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 24,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 24,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 155,
+        "links": [
+          {
+            "x": 155,
+            "href": "/"
+          },
+          {
+            "x": 155,
+            "href": "/about/"
+          },
+          {
+            "x": 155,
+            "href": "/terms/"
+          },
+          {
+            "x": 155,
+            "href": "/privacy/"
+          },
+          {
+            "x": 155,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "route": "/computer-literacy/written/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 480.109375,
+        "width": 280,
+        "height": 95.390625
+      },
+      {
+        "x": 24,
+        "y": 607.5,
+        "width": 99,
+        "height": 192.765625
+      },
+      {
+        "x": 155,
+        "y": 607.5,
+        "width": 98,
+        "height": 192.765625
+      }
+    ],
+    "columns": [
+      {
+        "heading": 24,
+        "links": [
+          {
+            "x": 24,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 24,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 24,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 24,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 155,
+        "links": [
+          {
+            "x": 155,
+            "href": "/"
+          },
+          {
+            "x": 155,
+            "href": "/about/"
+          },
+          {
+            "x": 155,
+            "href": "/terms/"
+          },
+          {
+            "x": 155,
+            "href": "/privacy/"
+          },
+          {
+            "x": 155,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "route": "/industrial-safety/written/electrical/power-formula/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 407.3125,
+        "width": 280,
+        "height": 95.390625
+      },
+      {
+        "x": 24,
+        "y": 534.703125,
+        "width": 99,
+        "height": 192.765625
+      },
+      {
+        "x": 155,
+        "y": 534.703125,
+        "width": 98,
+        "height": 192.765625
+      }
+    ],
+    "columns": [
+      {
+        "heading": 24,
+        "links": [
+          {
+            "x": 24,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 24,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 24,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 24,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 155,
+        "links": [
+          {
+            "x": 155,
+            "href": "/"
+          },
+          {
+            "x": 155,
+            "href": "/about/"
+          },
+          {
+            "x": 155,
+            "href": "/terms/"
+          },
+          {
+            "x": 155,
+            "href": "/privacy/"
+          },
+          {
+            "x": 155,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 605.859375,
+        "width": 280,
+        "height": 194.359375
+      },
+      {
+        "x": 336,
+        "y": 605.859375,
+        "width": 108,
+        "height": 194.359375
+      },
+      {
+        "x": 476,
+        "y": 605.859375,
+        "width": 105,
+        "height": 194.359375
+      }
+    ],
+    "columns": [
+      {
+        "heading": 336,
+        "links": [
+          {
+            "x": 336,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 336,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 336,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 336,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 476,
+        "links": [
+          {
+            "x": 476,
+            "href": "/"
+          },
+          {
+            "x": 476,
+            "href": "/about/"
+          },
+          {
+            "x": 476,
+            "href": "/terms/"
+          },
+          {
+            "x": 476,
+            "href": "/privacy/"
+          },
+          {
+            "x": 476,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "route": "/about/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 605.140625,
+        "width": 280,
+        "height": 194.359375
+      },
+      {
+        "x": 336,
+        "y": 605.140625,
+        "width": 108,
+        "height": 194.359375
+      },
+      {
+        "x": 476,
+        "y": 605.140625,
+        "width": 105,
+        "height": 194.359375
+      }
+    ],
+    "columns": [
+      {
+        "heading": 336,
+        "links": [
+          {
+            "x": 336,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 336,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 336,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 336,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 476,
+        "links": [
+          {
+            "x": 476,
+            "href": "/"
+          },
+          {
+            "x": 476,
+            "href": "/about/"
+          },
+          {
+            "x": 476,
+            "href": "/terms/"
+          },
+          {
+            "x": 476,
+            "href": "/privacy/"
+          },
+          {
+            "x": 476,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "route": "/computer-literacy/written/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 605.71875,
+        "width": 280,
+        "height": 194.359375
+      },
+      {
+        "x": 336,
+        "y": 605.71875,
+        "width": 108,
+        "height": 194.359375
+      },
+      {
+        "x": 476,
+        "y": 605.71875,
+        "width": 105,
+        "height": 194.359375
+      }
+    ],
+    "columns": [
+      {
+        "heading": 336,
+        "links": [
+          {
+            "x": 336,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 336,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 336,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 336,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 476,
+        "links": [
+          {
+            "x": 476,
+            "href": "/"
+          },
+          {
+            "x": 476,
+            "href": "/about/"
+          },
+          {
+            "x": 476,
+            "href": "/terms/"
+          },
+          {
+            "x": 476,
+            "href": "/privacy/"
+          },
+          {
+            "x": 476,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "route": "/industrial-safety/written/electrical/power-formula/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 24,
+        "y": 533.5,
+        "width": 280,
+        "height": 194.359375
+      },
+      {
+        "x": 336,
+        "y": 533.5,
+        "width": 108,
+        "height": 194.359375
+      },
+      {
+        "x": 476,
+        "y": 533.5,
+        "width": 105,
+        "height": 194.359375
+      }
+    ],
+    "columns": [
+      {
+        "heading": 336,
+        "links": [
+          {
+            "x": 336,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 336,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 336,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 336,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 476,
+        "links": [
+          {
+            "x": 476,
+            "href": "/"
+          },
+          {
+            "x": 476,
+            "href": "/about/"
+          },
+          {
+            "x": 476,
+            "href": "/terms/"
+          },
+          {
+            "x": 476,
+            "href": "/privacy/"
+          },
+          {
+            "x": 476,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 144,
+        "y": 605.671875,
+        "width": 280,
+        "height": 194.359375
+      },
+      {
+        "x": 456,
+        "y": 605.671875,
+        "width": 108,
+        "height": 194.359375
+      },
+      {
+        "x": 596,
+        "y": 605.671875,
+        "width": 105,
+        "height": 194.359375
+      }
+    ],
+    "columns": [
+      {
+        "heading": 456,
+        "links": [
+          {
+            "x": 456,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 456,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 456,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 456,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 596,
+        "links": [
+          {
+            "x": 596,
+            "href": "/"
+          },
+          {
+            "x": 596,
+            "href": "/about/"
+          },
+          {
+            "x": 596,
+            "href": "/terms/"
+          },
+          {
+            "x": 596,
+            "href": "/privacy/"
+          },
+          {
+            "x": 596,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "route": "/about/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 144,
+        "y": 605.578125,
+        "width": 280,
+        "height": 194.359375
+      },
+      {
+        "x": 456,
+        "y": 605.578125,
+        "width": 108,
+        "height": 194.359375
+      },
+      {
+        "x": 596,
+        "y": 605.578125,
+        "width": 105,
+        "height": 194.359375
+      }
+    ],
+    "columns": [
+      {
+        "heading": 456,
+        "links": [
+          {
+            "x": 456,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 456,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 456,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 456,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 596,
+        "links": [
+          {
+            "x": 596,
+            "href": "/"
+          },
+          {
+            "x": 596,
+            "href": "/about/"
+          },
+          {
+            "x": 596,
+            "href": "/terms/"
+          },
+          {
+            "x": 596,
+            "href": "/privacy/"
+          },
+          {
+            "x": 596,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "route": "/computer-literacy/written/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 144,
+        "y": 605.71875,
+        "width": 280,
+        "height": 194.359375
+      },
+      {
+        "x": 456,
+        "y": 605.71875,
+        "width": 108,
+        "height": 194.359375
+      },
+      {
+        "x": 596,
+        "y": 605.71875,
+        "width": 105,
+        "height": 194.359375
+      }
+    ],
+    "columns": [
+      {
+        "heading": 456,
+        "links": [
+          {
+            "x": 456,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 456,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 456,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 456,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 596,
+        "links": [
+          {
+            "x": 596,
+            "href": "/"
+          },
+          {
+            "x": 596,
+            "href": "/about/"
+          },
+          {
+            "x": 596,
+            "href": "/terms/"
+          },
+          {
+            "x": 596,
+            "href": "/privacy/"
+          },
+          {
+            "x": 596,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "route": "/industrial-safety/written/electrical/power-formula/",
+    "justify": "flex-start",
+    "gap": 32,
+    "boxes": [
+      {
+        "x": 144,
+        "y": 605.5,
+        "width": 280,
+        "height": 194.359375
+      },
+      {
+        "x": 456,
+        "y": 605.5,
+        "width": 108,
+        "height": 194.359375
+      },
+      {
+        "x": 596,
+        "y": 605.5,
+        "width": 105,
+        "height": 194.359375
+      }
+    ],
+    "columns": [
+      {
+        "heading": 456,
+        "links": [
+          {
+            "x": 456,
+            "href": "/industrial-safety/written/"
+          },
+          {
+            "x": 456,
+            "href": "/energy-management/written/thermal-equipment/"
+          },
+          {
+            "x": 456,
+            "href": "/computer-literacy/written/"
+          },
+          {
+            "x": 456,
+            "href": "/fire-safety-manager-level2/written/"
+          }
+        ]
+      },
+      {
+        "heading": 596,
+        "links": [
+          {
+            "x": 596,
+            "href": "/"
+          },
+          {
+            "x": 596,
+            "href": "/about/"
+          },
+          {
+            "x": 596,
+            "href": "/terms/"
+          },
+          {
+            "x": 596,
+            "href": "/privacy/"
+          },
+          {
+            "x": 596,
+            "href": "mailto:hhae813@naver.com"
+          }
+        ]
+      }
+    ],
+    "overflow": false
+  }
+]

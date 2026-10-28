@@ -1,0 +1,34 @@
+[
+  {
+    "script": "check-fire-image-copy.mjs",
+    "result": "PASS"
+  },
+  {
+    "script": "check-fire-bulk-history-guard.mjs",
+    "result": "PASS"
+  },
+  {
+    "script": "check-fire-launch-history-guard.mjs",
+    "result": "PASS"
+  },
+  {
+    "script": "check-fire-practice-history-guard.mjs",
+    "result": "PASS"
+  },
+  {
+    "script": "check-historical-practice-guard.mjs",
+    "result": "PASS"
+  },
+  {
+    "script": "check-public-content.mjs",
+    "result": "PASS"
+  },
+  {
+    "script": "check-color-contrast.mjs",
+    "result": "PASS"
+  },
+  {
+    "script": "check-seo.mjs",
+    "result": "PASS"
+  }
+]
