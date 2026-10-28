@@ -445,3 +445,9 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .gnb-chapter-group-title{padding:var(--space-2) var(--space-3);font-size:var(--fs-label);font-weight:var(--fw-semibold);color:var(--gray-600)}
 .gnb-chapter-dropdown a{display:flex;align-items:center;min-height:var(--touch-target-size);overflow-wrap:anywhere}
 .gnb-chapter-dropdown a[aria-current="page"]{background:var(--primary-50);color:var(--primary-600);font-weight:var(--fw-semibold)}
+@media(max-width:767px){
+  .gnb-chapter-dropdown{width:max-content;min-width:0}
+  .gnb-chapter-group{min-width:0}
+  .gnb-chapter-dropdown a{display:block;line-height:26px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;overflow-wrap:normal}
+  .gnb-chapter-group-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}

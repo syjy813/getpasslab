@@ -45,6 +45,12 @@ jobs:
           QA_BASE_URL: https://getpasslab.co.kr
           QA_OUTPUT_DIR: qa-results/fire-production/priority-chapters
         run: node scripts/qa-fire-priority-chapters.cjs
+      - name: Chapter menu width on the actual production site
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: https://getpasslab.co.kr
+          QA_OUTPUT_DIR: qa-results/fire-production/mobile-toc-width
+        run: node scripts/qa-mobile-toc-width.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

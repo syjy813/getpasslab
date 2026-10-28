@@ -10,6 +10,8 @@ on:
       - 'scripts/*mobile-learning-ux*'
       - 'scripts/*gnb-chapter-toc*'
       - 'scripts/*gnb-toc-height*'
+      - 'scripts/*mobile-toc-width*'
+      - 'docs/audits/2026-10-28-mobile-toc-width/**'
       - 'docs/audits/2026-10-26-gnb-toc-height/**'
       - 'docs/audits/2026-10-26-gnb-chapter-toc/**'
       - 'scripts/read-before-global-chapter-readability.mjs'
@@ -30,6 +32,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - run: node scripts/check-mobile-toc-width.mjs
+      - run: node scripts/check-fire-image-copy.mjs
       - run: node scripts/check-gnb-toc-height.mjs
       - run: node scripts/check-gnb-chapter-toc.mjs
       - run: node scripts/check-mobile-learning-ux.mjs
@@ -51,9 +55,16 @@ jobs:
             sleep 1
           done
           node scripts/qa-mobile-learning-ux.cjs
+      - name: Content-sized mobile chapter menu and ellipsis
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_OUTPUT_DIR: qa-results/mobile-toc-width
+        run: node scripts/qa-mobile-toc-width.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: mobile-learning-ux-qa
-          path: qa-results/mobile-learning-ux/
+          path: |
+            qa-results/mobile-learning-ux/
+            qa-results/mobile-toc-width/
           retention-days: 14

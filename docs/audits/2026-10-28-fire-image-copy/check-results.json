@@ -1,0 +1,320 @@
+[
+  {
+    "script": "scripts/check-accident-analysis-figures.mjs",
+    "result": "PASS",
+    "seconds": 0.44,
+    "log": "/tmp/fire-image-copy-checks/check-accident-analysis-figures.log"
+  },
+  {
+    "script": "scripts/check-all-chapter-hierarchy.mjs",
+    "result": "PASS",
+    "seconds": 5.96,
+    "log": "/tmp/fire-image-copy-checks/check-all-chapter-hierarchy.log"
+  },
+  {
+    "script": "scripts/check-chapter-formula-style.mjs",
+    "result": "PASS",
+    "seconds": 9.03,
+    "log": "/tmp/fire-image-copy-checks/check-chapter-formula-style.log"
+  },
+  {
+    "script": "scripts/check-clam-shell-chapter.mjs",
+    "result": "PASS",
+    "seconds": 7.71,
+    "log": "/tmp/fire-image-copy-checks/check-clam-shell-chapter.log"
+  },
+  {
+    "script": "scripts/check-color-contrast.mjs",
+    "result": "PASS",
+    "seconds": 0.09,
+    "log": "/tmp/fire-image-copy-checks/check-color-contrast.log"
+  },
+  {
+    "script": "scripts/check-computer-literacy-001-081.mjs",
+    "result": "PASS",
+    "seconds": 1.72,
+    "log": "/tmp/fire-image-copy-checks/check-computer-literacy-001-081.log"
+  },
+  {
+    "script": "scripts/check-computer-literacy-082-159.mjs",
+    "result": "PASS",
+    "seconds": 2.02,
+    "log": "/tmp/fire-image-copy-checks/check-computer-literacy-082-159.log"
+  },
+  {
+    "script": "scripts/check-computer-literacy-c1.mjs",
+    "result": "PASS",
+    "seconds": 0.24,
+    "log": "/tmp/fire-image-copy-checks/check-computer-literacy-c1.log"
+  },
+  {
+    "script": "scripts/check-computer-literacy-publication.mjs",
+    "result": "PASS",
+    "seconds": 0.12,
+    "log": "/tmp/fire-image-copy-checks/check-computer-literacy-publication.log"
+  },
+  {
+    "script": "scripts/check-deferred-question-content.mjs",
+    "result": "PASS",
+    "seconds": 0.47,
+    "log": "/tmp/fire-image-copy-checks/check-deferred-question-content.log"
+  },
+  {
+    "script": "scripts/check-earth-retaining-structure.mjs",
+    "result": "PASS",
+    "seconds": 1.06,
+    "log": "/tmp/fire-image-copy-checks/check-earth-retaining-structure.log"
+  },
+  {
+    "script": "scripts/check-excavator-operation-safety.mjs",
+    "result": "PASS",
+    "seconds": 7.98,
+    "log": "/tmp/fire-image-copy-checks/check-excavator-operation-safety.log"
+  },
+  {
+    "script": "scripts/check-fire-bulk-history-guard.mjs",
+    "result": "PASS",
+    "seconds": 4.54,
+    "log": "/tmp/fire-image-copy-checks/check-fire-bulk-history-guard.log"
+  },
+  {
+    "script": "scripts/check-fire-five-full-panels.mjs",
+    "result": "PASS",
+    "seconds": 0.46,
+    "log": "/tmp/fire-image-copy-checks/check-fire-five-full-panels.log"
+  },
+  {
+    "script": "scripts/check-fire-full-panels.mjs",
+    "result": "PASS",
+    "seconds": 0.6,
+    "log": "/tmp/fire-image-copy-checks/check-fire-full-panels.log"
+  },
+  {
+    "script": "scripts/check-fire-image-copy.mjs",
+    "result": "PASS",
+    "seconds": 0.37,
+    "log": "/tmp/fire-image-copy-checks/check-fire-image-copy.log"
+  },
+  {
+    "script": "scripts/check-fire-launch-history-guard.mjs",
+    "result": "PASS",
+    "seconds": 3.4,
+    "log": "/tmp/fire-image-copy-checks/check-fire-launch-history-guard.log"
+  },
+  {
+    "script": "scripts/check-fire-persona-corrections.mjs",
+    "result": "PASS",
+    "seconds": 6.26,
+    "log": "/tmp/fire-image-copy-checks/check-fire-persona-corrections.log"
+  },
+  {
+    "script": "scripts/check-fire-popup.mjs",
+    "result": "PASS",
+    "seconds": 2.29,
+    "log": "/tmp/fire-image-copy-checks/check-fire-popup.log"
+  },
+  {
+    "script": "scripts/check-fire-practice-history-guard.mjs",
+    "result": "PASS",
+    "seconds": 4.42,
+    "log": "/tmp/fire-image-copy-checks/check-fire-practice-history-guard.log"
+  },
+  {
+    "script": "scripts/check-fire-practice-logic.mjs",
+    "result": "PASS",
+    "seconds": 0.42,
+    "log": "/tmp/fire-image-copy-checks/check-fire-practice-logic.log"
+  },
+  {
+    "script": "scripts/check-fire-practice.mjs",
+    "result": "PASS",
+    "seconds": 6.18,
+    "log": "/tmp/fire-image-copy-checks/check-fire-practice.log"
+  },
+  {
+    "script": "scripts/check-fire-priority-chapters.mjs",
+    "result": "PASS",
+    "seconds": 0.68,
+    "log": "/tmp/fire-image-copy-checks/check-fire-priority-chapters.log"
+  },
+  {
+    "script": "scripts/check-fire-publication.mjs",
+    "result": "PASS",
+    "seconds": 0.42,
+    "log": "/tmp/fire-image-copy-checks/check-fire-publication.log"
+  },
+  {
+    "script": "scripts/check-fire-readability.mjs",
+    "result": "PASS",
+    "seconds": 1.84,
+    "log": "/tmp/fire-image-copy-checks/check-fire-readability.log"
+  },
+  {
+    "script": "scripts/check-fire-safety-level2-bulk.mjs",
+    "result": "PASS",
+    "seconds": 7.29,
+    "log": "/tmp/fire-image-copy-checks/check-fire-safety-level2-bulk.log"
+  },
+  {
+    "script": "scripts/check-fire-safety-level2-launch.mjs",
+    "result": "PASS",
+    "seconds": 5.41,
+    "log": "/tmp/fire-image-copy-checks/check-fire-safety-level2-launch.log"
+  },
+  {
+    "script": "scripts/check-fire-standardization.mjs",
+    "result": "PASS",
+    "seconds": 1.2,
+    "log": "/tmp/fire-image-copy-checks/check-fire-standardization.log"
+  },
+  {
+    "script": "scripts/check-fire-textbook-corrections.mjs",
+    "result": "PASS",
+    "seconds": 5.66,
+    "log": "/tmp/fire-image-copy-checks/check-fire-textbook-corrections.log"
+  },
+  {
+    "script": "scripts/check-formwork-lateral-pressure.mjs",
+    "result": "PASS",
+    "seconds": 8.23,
+    "log": "/tmp/fire-image-copy-checks/check-formwork-lateral-pressure.log"
+  },
+  {
+    "script": "scripts/check-fta-original-options.mjs",
+    "result": "PASS",
+    "seconds": 12.24,
+    "log": "/tmp/fire-image-copy-checks/check-fta-original-options.log"
+  },
+  {
+    "script": "scripts/check-fta-symbols-split.mjs",
+    "result": "PASS",
+    "seconds": 0.88,
+    "log": "/tmp/fire-image-copy-checks/check-fta-symbols-split.log"
+  },
+  {
+    "script": "scripts/check-global-chapter-readability.mjs",
+    "result": "PASS",
+    "seconds": 27.18,
+    "log": "/tmp/fire-image-copy-checks/check-global-chapter-readability.log"
+  },
+  {
+    "script": "scripts/check-gnb-chapter-toc.mjs",
+    "result": "PASS",
+    "seconds": 21.53,
+    "log": "/tmp/fire-image-copy-checks/check-gnb-chapter-toc.log"
+  },
+  {
+    "script": "scripts/check-gnb-toc-height.mjs",
+    "result": "PASS",
+    "seconds": 7.23,
+    "log": "/tmp/fire-image-copy-checks/check-gnb-toc-height.log"
+  },
+  {
+    "script": "scripts/check-hanging-scaffold-wire-rope.mjs",
+    "result": "PASS",
+    "seconds": 12.34,
+    "log": "/tmp/fire-image-copy-checks/check-hanging-scaffold-wire-rope.log"
+  },
+  {
+    "script": "scripts/check-historical-practice-guard.mjs",
+    "result": "PASS",
+    "seconds": 4.95,
+    "log": "/tmp/fire-image-copy-checks/check-historical-practice-guard.log"
+  },
+  {
+    "script": "scripts/check-industrial-20190804-review.mjs",
+    "result": "PASS",
+    "seconds": 10.11,
+    "log": "/tmp/fire-image-copy-checks/check-industrial-20190804-review.log"
+  },
+  {
+    "script": "scripts/check-industrial-question-source-repair.mjs",
+    "result": "PASS",
+    "seconds": 5.84,
+    "log": "/tmp/fire-image-copy-checks/check-industrial-question-source-repair.log"
+  },
+  {
+    "script": "scripts/check-industrial-remaining-review.mjs",
+    "result": "PASS",
+    "seconds": 2.23,
+    "log": "/tmp/fire-image-copy-checks/check-industrial-remaining-review.log"
+  },
+  {
+    "script": "scripts/check-industrial-remaining-splits.mjs",
+    "result": "PASS",
+    "seconds": 1.62,
+    "log": "/tmp/fire-image-copy-checks/check-industrial-remaining-splits.log"
+  },
+  {
+    "script": "scripts/check-industrial-safety-chapter-splits.mjs",
+    "result": "PASS",
+    "seconds": 1.96,
+    "log": "/tmp/fire-image-copy-checks/check-industrial-safety-chapter-splits.log"
+  },
+  {
+    "script": "scripts/check-industrial-safety-machine-tools-split.mjs",
+    "result": "PASS",
+    "seconds": 1.4,
+    "log": "/tmp/fire-image-copy-checks/check-industrial-safety-machine-tools-split.log"
+  },
+  {
+    "script": "scripts/check-industrial-unassigned-links.mjs",
+    "result": "PASS",
+    "seconds": 7.59,
+    "log": "/tmp/fire-image-copy-checks/check-industrial-unassigned-links.log"
+  },
+  {
+    "script": "scripts/check-instant-practice-coverage.mjs",
+    "result": "PASS",
+    "seconds": 0.89,
+    "log": "/tmp/fire-image-copy-checks/check-instant-practice-coverage.log"
+  },
+  {
+    "script": "scripts/check-instant-practice-datasets.mjs",
+    "result": "PASS",
+    "seconds": 0.26,
+    "log": "/tmp/fire-image-copy-checks/check-instant-practice-datasets.log"
+  },
+  {
+    "script": "scripts/check-instant-practice-pilot.mjs",
+    "result": "PASS",
+    "seconds": 0.11,
+    "log": "/tmp/fire-image-copy-checks/check-instant-practice-pilot.log"
+  },
+  {
+    "script": "scripts/check-mobile-chapter-top-ad.mjs",
+    "result": "PASS",
+    "seconds": 1.37,
+    "log": "/tmp/fire-image-copy-checks/check-mobile-chapter-top-ad.log"
+  },
+  {
+    "script": "scripts/check-mobile-learning-ux.mjs",
+    "result": "PASS",
+    "seconds": 7.83,
+    "log": "/tmp/fire-image-copy-checks/check-mobile-learning-ux.log"
+  },
+  {
+    "script": "scripts/check-mobile-top-ad.mjs",
+    "result": "PASS",
+    "seconds": 1.77,
+    "log": "/tmp/fire-image-copy-checks/check-mobile-top-ad.log"
+  },
+  {
+    "script": "scripts/check-port-cargo-passages.mjs",
+    "result": "PASS",
+    "seconds": 7.65,
+    "log": "/tmp/fire-image-copy-checks/check-port-cargo-passages.log"
+  },
+  {
+    "script": "scripts/check-public-content.mjs",
+    "result": "PASS",
+    "seconds": 1.67,
+    "log": "/tmp/fire-image-copy-checks/check-public-content.log"
+  },
+  {
+    "script": "scripts/check-seo.mjs",
+    "result": "PASS",
+    "seconds": 0.73,
+    "log": "/tmp/fire-image-copy-checks/check-seo.log"
+  }
+]

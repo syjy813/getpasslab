@@ -1,0 +1,1421 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "id": "FSM2-048",
+      "width": 320,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 272,
+          "height": 81.96875,
+          "top": 408.703125,
+          "bottom": 490.671875,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 132.34375,
+          "top": 383.671875,
+          "bottom": 516.015625,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 132.34375,
+          "top": 384.015625,
+          "bottom": 516.359375,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 143.78125,
+        "source": 180,
+        "top": 15.8125,
+        "width": 270
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-048"
+    },
+    {
+      "id": "FSM2-049",
+      "width": 320,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 396.09375,
+          "bottom": 503.25,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 396.25,
+          "bottom": 503.40625,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 157.53125,
+          "top": 371.40625,
+          "bottom": 528.9375,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 143.78125,
+        "source": 180,
+        "top": 15.8125,
+        "width": 270
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-049"
+    },
+    {
+      "id": "FSM2-034",
+      "width": 320,
+      "steps": 2,
+      "geometry": [
+        {
+          "width": 272,
+          "height": 132.34375,
+          "top": 384.296875,
+          "bottom": 516.640625,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 132.34375,
+          "top": 383.640625,
+          "bottom": 515.984375,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 143.78125,
+        "source": 180,
+        "top": 15.109375,
+        "width": 270
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-077",
+      "width": 320,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 272,
+          "height": 132.34375,
+          "top": 383.484375,
+          "bottom": 515.828125,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 396.828125,
+          "bottom": 503.984375,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 395.984375,
+          "bottom": 503.140625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 143.78125,
+        "source": 180,
+        "top": 15.109375,
+        "width": 270
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-075",
+      "width": 320,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 272,
+          "height": 132.34375,
+          "top": 383.703125,
+          "bottom": 516.046875,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 81.96875,
+          "top": 409.046875,
+          "bottom": 491.015625,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 132.34375,
+          "top": 384.015625,
+          "bottom": 516.359375,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 143.78125,
+        "source": 180,
+        "top": 15.8125,
+        "width": 270
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-047"
+    },
+    {
+      "id": "FSM2-076",
+      "width": 320,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 396.5,
+          "bottom": 503.65625,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 396.65625,
+          "bottom": 503.8125,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 396.8125,
+          "bottom": 503.96875,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 143.78125,
+        "source": 180,
+        "top": 15.8125,
+        "width": 270
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-047"
+    },
+    {
+      "id": "FSM2-078",
+      "width": 320,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 396.5,
+          "bottom": 503.65625,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 396.65625,
+          "bottom": 503.8125,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 396.8125,
+          "bottom": 503.96875,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 127.96875,
+        "source": 180,
+        "top": 19.6875,
+        "width": 270
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-035"
+    },
+    {
+      "id": "FSM2-079",
+      "width": 320,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 272,
+          "height": 132.34375,
+          "top": 383.78125,
+          "bottom": 516.125,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 107.15625,
+          "top": 396.125,
+          "bottom": 503.28125,
+          "border": "0px"
+        },
+        {
+          "width": 272,
+          "height": 132.34375,
+          "top": 384.28125,
+          "bottom": 516.625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 138.859375,
+        "source": 180,
+        "top": 20.734375,
+        "width": 270
+      },
+      "asset": "/images/fire-safety-manager-level2/preaction-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-040"
+    },
+    {
+      "id": "FSM2-048",
+      "width": 390,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 342,
+          "height": 81.96875,
+          "top": 408.59375,
+          "bottom": 490.5625,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 132.34375,
+          "top": 383.5625,
+          "bottom": 515.90625,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 396.90625,
+          "bottom": 504.0625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 181.0625,
+        "source": 226.65625,
+        "top": 19.90625,
+        "width": 340
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-048"
+    },
+    {
+      "id": "FSM2-049",
+      "width": 390,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 395.984375,
+          "bottom": 503.140625,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 81.96875,
+          "top": 409.140625,
+          "bottom": 491.109375,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 132.34375,
+          "top": 384.109375,
+          "bottom": 516.453125,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 181.0625,
+        "source": 226.65625,
+        "top": 19.90625,
+        "width": 340
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-049"
+    },
+    {
+      "id": "FSM2-034",
+      "width": 390,
+      "steps": 2,
+      "geometry": [
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 396.59375,
+          "bottom": 503.75,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 396.75,
+          "bottom": 503.90625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 181.0625,
+        "source": 226.65625,
+        "top": 19.03125,
+        "width": 340
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-077",
+      "width": 390,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 396.59375,
+          "bottom": 503.75,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 396.75,
+          "bottom": 503.90625,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 396.90625,
+          "bottom": 504.0625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 181.0625,
+        "source": 226.65625,
+        "top": 19.03125,
+        "width": 340
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-075",
+      "width": 390,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 342,
+          "height": 81.96875,
+          "top": 408.59375,
+          "bottom": 490.5625,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 81.96875,
+          "top": 408.5625,
+          "bottom": 490.53125,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 81.96875,
+          "top": 408.53125,
+          "bottom": 490.5,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 181.0625,
+        "source": 226.65625,
+        "top": 19.90625,
+        "width": 340
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-047"
+    },
+    {
+      "id": "FSM2-076",
+      "width": 390,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 342,
+          "height": 81.96875,
+          "top": 408.984375,
+          "bottom": 490.953125,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 395.953125,
+          "bottom": 503.109375,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 396.109375,
+          "bottom": 503.265625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 181.0625,
+        "source": 226.65625,
+        "top": 19.90625,
+        "width": 340
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-047"
+    },
+    {
+      "id": "FSM2-078",
+      "width": 390,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 342,
+          "height": 81.96875,
+          "top": 408.890625,
+          "bottom": 490.859375,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 81.96875,
+          "top": 408.859375,
+          "bottom": 490.828125,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 81.96875,
+          "top": 408.828125,
+          "bottom": 490.796875,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 161.140625,
+        "source": 226.65625,
+        "top": 24.78125,
+        "width": 340
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-035"
+    },
+    {
+      "id": "FSM2-079",
+      "width": 390,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 342,
+          "height": 81.96875,
+          "top": 408.78125,
+          "bottom": 490.75,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 396.75,
+          "bottom": 503.90625,
+          "border": "0px"
+        },
+        {
+          "width": 342,
+          "height": 107.15625,
+          "top": 396.90625,
+          "bottom": 504.0625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "16px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 174.859375,
+        "source": 226.65625,
+        "top": 26.109375,
+        "width": 340
+      },
+      "asset": "/images/fire-safety-manager-level2/preaction-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-040"
+    },
+    {
+      "id": "FSM2-048",
+      "width": 768,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.609375,
+          "bottom": 490.578125,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.578125,
+          "bottom": 490.546875,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.546875,
+          "bottom": 490.515625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 382.359375,
+        "source": 478.65625,
+        "top": 42.0625,
+        "width": 718
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-048"
+    },
+    {
+      "id": "FSM2-049",
+      "width": 768,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.609375,
+          "bottom": 490.578125,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.578125,
+          "bottom": 490.546875,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.546875,
+          "bottom": 490.515625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 382.359375,
+        "source": 478.65625,
+        "top": 42.0625,
+        "width": 718
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-049"
+    },
+    {
+      "id": "FSM2-034",
+      "width": 768,
+      "steps": 2,
+      "geometry": [
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.796875,
+          "bottom": 490.765625,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.765625,
+          "bottom": 490.734375,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 382.359375,
+        "source": 478.65625,
+        "top": 40.1875,
+        "width": 718
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-077",
+      "width": 768,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.609375,
+          "bottom": 490.578125,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.578125,
+          "bottom": 490.546875,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.546875,
+          "bottom": 490.515625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 382.359375,
+        "source": 478.65625,
+        "top": 40.1875,
+        "width": 718
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-075",
+      "width": 768,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.796875,
+          "bottom": 490.765625,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 56.78125,
+          "top": 421.765625,
+          "bottom": 478.546875,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.546875,
+          "bottom": 490.515625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 382.359375,
+        "source": 478.65625,
+        "top": 42.0625,
+        "width": 718
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-047"
+    },
+    {
+      "id": "FSM2-076",
+      "width": 768,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.796875,
+          "bottom": 490.765625,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.765625,
+          "bottom": 490.734375,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 408.734375,
+          "bottom": 490.703125,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 382.359375,
+        "source": 478.65625,
+        "top": 42.0625,
+        "width": 718
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-047"
+    },
+    {
+      "id": "FSM2-078",
+      "width": 768,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 409.140625,
+          "bottom": 491.109375,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 409.109375,
+          "bottom": 491.078125,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 409.078125,
+          "bottom": 491.046875,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 340.296875,
+        "source": 478.65625,
+        "top": 52.34375,
+        "width": 718
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-035"
+    },
+    {
+      "id": "FSM2-079",
+      "width": 768,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 409.3125,
+          "bottom": 491.28125,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 409.28125,
+          "bottom": 491.25,
+          "border": "0px"
+        },
+        {
+          "width": 720,
+          "height": 81.96875,
+          "top": 409.25,
+          "bottom": 491.21875,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 369.28125,
+        "source": 478.65625,
+        "top": 55.15625,
+        "width": 718
+      },
+      "asset": "/images/fire-safety-manager-level2/preaction-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-040"
+    },
+    {
+      "id": "FSM2-048",
+      "width": 1440,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.828125,
+          "bottom": 490.796875,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.796875,
+          "bottom": 490.765625,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.765625,
+          "bottom": 490.734375,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 467.578125,
+        "source": 585.328125,
+        "top": 51.4375,
+        "width": 878
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-continuity-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-048"
+    },
+    {
+      "id": "FSM2-049",
+      "width": 1440,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.828125,
+          "bottom": 490.796875,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.796875,
+          "bottom": 490.765625,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.765625,
+          "bottom": 490.734375,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 467.578125,
+        "source": 585.328125,
+        "top": 51.4375,
+        "width": 878
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-backup-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-049"
+    },
+    {
+      "id": "FSM2-034",
+      "width": 1440,
+      "steps": 2,
+      "geometry": [
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 409.015625,
+          "bottom": 490.984375,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.984375,
+          "bottom": 490.953125,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 467.578125,
+        "source": 585.328125,
+        "top": 49.15625,
+        "width": 878
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-077",
+      "width": 1440,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.828125,
+          "bottom": 490.796875,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.796875,
+          "bottom": 490.765625,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.765625,
+          "bottom": 490.734375,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 467.578125,
+        "source": 585.328125,
+        "top": 49.15625,
+        "width": 878
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-control-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-034"
+    },
+    {
+      "id": "FSM2-075",
+      "width": 1440,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 409.421875,
+          "bottom": 491.390625,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 56.78125,
+          "top": 421.390625,
+          "bottom": 478.171875,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 409.171875,
+          "bottom": 491.140625,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 467.578125,
+        "source": 585.328125,
+        "top": 51.4375,
+        "width": 878
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-operation-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-047"
+    },
+    {
+      "id": "FSM2-076",
+      "width": 1440,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 409.015625,
+          "bottom": 490.984375,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.984375,
+          "bottom": 490.953125,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.953125,
+          "bottom": 490.921875,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 467.578125,
+        "source": 585.328125,
+        "top": 51.4375,
+        "width": 878
+      },
+      "asset": "/images/fire-safety-manager-level2/receiver-transmitter-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-047"
+    },
+    {
+      "id": "FSM2-078",
+      "width": 1440,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.96875,
+          "bottom": 490.9375,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.9375,
+          "bottom": 490.90625,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.90625,
+          "bottom": 490.875,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 416.125,
+        "source": 585.328125,
+        "top": 64.015625,
+        "width": 878
+      },
+      "asset": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-035"
+    },
+    {
+      "id": "FSM2-079",
+      "width": 1440,
+      "steps": 3,
+      "geometry": [
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.59375,
+          "bottom": 490.5625,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.5625,
+          "bottom": 490.53125,
+          "border": "0px"
+        },
+        {
+          "width": 880,
+          "height": 81.96875,
+          "top": 408.53125,
+          "bottom": 490.5,
+          "border": "0px"
+        }
+      ],
+      "typography": {
+        "title": "17px",
+        "note": "13px",
+        "weight": "400",
+        "count": 1,
+        "text": "※ 학습을 위해 재구성된 이미지"
+      },
+      "crop": {
+        "frame": 451.5625,
+        "source": 585.328125,
+        "top": 67.4375,
+        "width": 878
+      },
+      "asset": "/images/fire-safety-manager-level2/preaction-full-panel-v2.webp",
+      "overflow": false,
+      "zoomAndRestore": "PASS",
+      "practicePool": "FSM2-040"
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical devices and Safari not tested"
+  ]
+}
