@@ -1,5 +1,6 @@
 // Historical readers restore only the reviewed mobile menu CSS and stylesheet URLs.
 import fs from 'node:fs';
+import {beforeFooterLeft} from './read-before-footer-left.mjs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -9,6 +10,7 @@ export const mobileTOCWidthReview=JSON.parse(gunzipSync(fs.readFileSync('docs/au
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const keyFor=f=>path.normalize(path.isAbsolute(String(f))?path.relative(process.cwd(),String(f)):String(f));
 export function beforeMobileTOCWidth(file,bytes){
+ bytes=beforeFooterLeft(file,bytes);
  const row=mobileTOCWidthReview.changes[keyFor(file)];
  if(!row||hash(bytes)!==row.sha256)return bytes;
  let restored=bytes.toString();
