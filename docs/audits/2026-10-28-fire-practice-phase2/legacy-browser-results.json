@@ -1,0 +1,300 @@
+{
+  "base": "http://127.0.0.1:41085",
+  "cases": [
+    {
+      "chapterId": "FSM2-035",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 270,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-036",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pitot-measurement-assembly-v2.svg",
+          "w": 270,
+          "nw": 640,
+          "nh": 570,
+          "alt": "오른쪽으로 흐르는 직사형 관창의 봉상주수. 노즐선단에서 D/2 떨어진 중심에 피토관 입구가 물을 마주 보고 있으며 압력계는 0.20MPa를 표시",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-039",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/wet-test-valve-assembly-v2.svg",
+          "w": 270,
+          "nw": 640,
+          "nh": 620,
+          "alt": "유수검지장치 2차측에서 시험밸브함으로 연결된 배관. 압력계용 콕밸브와 시험밸브가 열려 있고 시험용 방수구에서 물받이와 배수관으로 물이 흐름. 폐쇄형 헤드는 닫혀 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/preaction-water-supply-v2.svg",
+          "w": 270,
+          "nw": 640,
+          "nh": 625,
+          "alt": "서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 340,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-036",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pitot-measurement-assembly-v2.svg",
+          "w": 340,
+          "nw": 640,
+          "nh": 570,
+          "alt": "오른쪽으로 흐르는 직사형 관창의 봉상주수. 노즐선단에서 D/2 떨어진 중심에 피토관 입구가 물을 마주 보고 있으며 압력계는 0.20MPa를 표시",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-039",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/wet-test-valve-assembly-v2.svg",
+          "w": 340,
+          "nw": 640,
+          "nh": 620,
+          "alt": "유수검지장치 2차측에서 시험밸브함으로 연결된 배관. 압력계용 콕밸브와 시험밸브가 열려 있고 시험용 방수구에서 물받이와 배수관으로 물이 흐름. 폐쇄형 헤드는 닫혀 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/preaction-water-supply-v2.svg",
+          "w": 340,
+          "nw": 640,
+          "nh": 625,
+          "alt": "서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-036",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pitot-measurement-assembly-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 570,
+          "alt": "오른쪽으로 흐르는 직사형 관창의 봉상주수. 노즐선단에서 D/2 떨어진 중심에 피토관 입구가 물을 마주 보고 있으며 압력계는 0.20MPa를 표시",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-039",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/wet-test-valve-assembly-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 620,
+          "alt": "유수검지장치 2차측에서 시험밸브함으로 연결된 배관. 압력계용 콕밸브와 시험밸브가 열려 있고 시험용 방수구에서 물받이와 배수관으로 물이 흐름. 폐쇄형 헤드는 닫혀 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/preaction-water-supply-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 625,
+          "alt": "서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-036",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pitot-measurement-assembly-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 570,
+          "alt": "오른쪽으로 흐르는 직사형 관창의 봉상주수. 노즐선단에서 D/2 떨어진 중심에 피토관 입구가 물을 마주 보고 있으며 압력계는 0.20MPa를 표시",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-039",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/wet-test-valve-assembly-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 620,
+          "alt": "유수검지장치 2차측에서 시험밸브함으로 연결된 배관. 압력계용 콕밸브와 시험밸브가 열려 있고 시험용 방수구에서 물받이와 배수관으로 물이 흐름. 폐쇄형 헤드는 닫혀 있음",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/preaction-water-supply-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 625,
+          "alt": "서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical iOS/Android and Safari not tested"
+  ],
+  "startedAt": "2026-10-28T01:42:04.438Z",
+  "result": "PASS",
+  "finishedAt": "2026-10-28T01:42:17.262Z"
+}

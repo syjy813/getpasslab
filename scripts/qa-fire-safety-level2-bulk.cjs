@@ -2,8 +2,10 @@ const assert=require('node:assert/strict');const fs=require('node:fs');const {ch
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4321';const dir=process.env.QA_OUTPUT_DIR||'qa-results/fire-safety-level2-bulk';
 const reviews=JSON.parse(fs.readFileSync('docs/audits/2026-10-14-fire-safety-level2-bulk/chapter-review.json','utf8'));
 for(const row of reviews){if(row.chapterId==='FSM2-034')row.visuals=[{file:'pump-control-full-panel-v2.webp',sourceWidth:1536}];if(row.chapterId==='FSM2-048')row.visuals=[{file:'receiver-continuity-full-panel-v2.webp',sourceWidth:1536}];if(row.chapterId==='FSM2-049')row.visuals=[{file:'receiver-backup-full-panel-v2.webp',sourceWidth:1536}];}
+// Current asset expectations; preserve the original release review unchanged.
+for(const r of JSON.parse(fs.readFileSync('docs/audits/2026-10-28-fire-practice-phase2/figure-briefs.json')).figures){const row=reviews.find(row=>row.chapterId===r.id);assert(row);row.visuals=[{file:r.asset,sourceWidth:640,zoomWidth:1000}];}
 const report={base,cases:[],errors:[],limitations:['Chromium emulation; physical iOS/Android and Safari not tested'],startedAt:new Date().toISOString()};fs.mkdirSync(dir,{recursive:true});
-(async()=>{const browser=await chromium.launch({headless:true,...(process.env.QA_CHROMIUM_EXECUTABLE?{executablePath:process.env.QA_CHROMIUM_EXECUTABLE}:{}),args:['--no-sandbox','--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader']});
+(async()=>{const browser=await chromium.launch({headless:true,...(process.env.QA_CHROMIUM_EXECUTABLE?{executablePath:process.env.QA_CHROMIUM_EXECUTABLE}:{}),args:JSON.parse(process.env.QA_CHROMIUM_ARGS||'["--no-sandbox","--disable-dev-shm-usage","--use-gl=angle","--use-angle=swiftshader"]')});
 try{
  for(const width of [320,390,768,1440]){
  const context=await browser.newContext({viewport:{width,height:900}});const page=await context.newPage();page.setDefaultTimeout(12000);
@@ -23,7 +25,7 @@ try{
  const fig=page.locator('article figure').nth(i);const img=fig.locator('img');await img.scrollIntoViewIfNeeded();await img.evaluate(e=>e.decode());
  const detail=await img.evaluate(e=>({src:new URL(e.currentSrc).pathname,w:e.getBoundingClientRect().width,nw:e.naturalWidth,nh:e.naturalHeight,alt:e.alt}));assert.equal(detail.src,'/images/fire-safety-manager-level2/'+row.visuals[i].file);assert.equal(detail.nw,row.visuals[i].sourceWidth||320);assert(detail.alt);if(!row.visuals[i].sourceWidth)assert(detail.w*20/320>=14,'smallest label size '+detail.w);else assert(await page.locator('.fire-panel-step').count()>=2,'whole panel has numbered explanations');
  const button=fig.locator('button');await button.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));const before=await page.evaluate(()=>({x:scrollX,y:scrollY,style:document.body.getAttribute('style')||''}));await button.click();
- await page.waitForFunction(()=>document.getElementById('fire-bulk-image-dialog').open);assert.equal(await page.locator('#fire-bulk-image-dialog img').evaluate(e=>e.getBoundingClientRect().width),row.visuals[i].sourceWidth?1280:640);
+ await page.waitForFunction(()=>document.getElementById('fire-bulk-image-dialog').open);assert.equal(await page.locator('#fire-bulk-image-dialog img').evaluate(e=>e.getBoundingClientRect().width),row.visuals[i].zoomWidth||(row.visuals[i].sourceWidth?1280:640));
  const close=(Number(row.chapterId.slice(-3))+i)%3===0?'button':(Number(row.chapterId.slice(-3))+i)%3===1?'escape':'backdrop';if(close==='button')await page.locator('[data-fire-close]').click();else if(close==='escape')await page.keyboard.press('Escape');else await page.mouse.click(1,1);
  await page.waitForFunction(b=>!document.getElementById('fire-bulk-image-dialog').open&&Math.abs(scrollY-b.y)<=1,before);assert.equal(await button.evaluate(e=>e===document.activeElement),true);assert.equal(await page.evaluate(()=>document.body.getAttribute('style')||''),before.style);images.push({...detail,close,restore:'PASS'});
  }

@@ -1,5 +1,5 @@
 // Restore only the exact reviewed presentation change for historical checks.
-import fs from 'node:fs';
+import fs from './read-before-fire-practice-phase2.mjs';
 import {beforeMobileTOCWidth} from './read-before-mobile-toc-width.mjs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';

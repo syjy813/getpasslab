@@ -1,5 +1,5 @@
 // Invert only fingerprinted five-chapter changes for earlier release checks.
-import fs from 'node:fs';
+import fs, {isFirePracticePhase2Addition} from './read-before-fire-practice-phase2.mjs';
 import {beforeFireImageCopy} from './read-before-fire-image-copy.mjs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
@@ -17,6 +17,7 @@ export function beforeFireFivePanels(file,bytes){
  assert.equal(hash(before),row.beforeSHA256,'exact five-panel predecessor');return before;
 }
 export function isFireFivePanelAddition(file){
+ if(isFirePracticePhase2Addition(file))return true;
  const expected=fivePanelReview.additions[keyFor(file)];if(!expected)return false;
  assert.equal(hash(fs.readFileSync(file)),expected,String(file)+': reviewed image addition');return true;
 }
