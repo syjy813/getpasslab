@@ -52,7 +52,8 @@ fs.mkdirSync(dir,{recursive:true});
    await page.evaluate(()=>scrollTo(0,0));if(width===390||width===1440)await page.screenshot({path:`${dir}/${row.chapterId}-page-${width}.png`,fullPage:true});
    report.cases.push({chapterId:row.chapterId,width,image,practice:'existing approved pool opens',zoomAndRestore:'PASS',navigation:'PASS',overflow:false});
   }
-  await page.goto(base+prefix);assert.equal(await page.locator('a.card').count(),30);
+  await page.goto(base+prefix);
+  assert.deepEqual(await page.locator('a.card').evaluateAll(es=>es.map(e=>e.getAttribute('href'))),slugs.map(slug=>prefix+slug+'/'),'practice index matches every current chapter in order');
   for(const row of cases)assert.equal(await page.locator(`a.card[href="${prefix+row.slug}/"]`).count(),1);
   await context.close();
  }
