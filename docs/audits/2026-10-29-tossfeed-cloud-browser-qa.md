@@ -1,5 +1,7 @@
 # 토스피드 vs GetPassLab — Cloud Browser 실측·조작 QA 후속 보고서
 
+> **최신 후속:** [연결된 사용자 PC Chrome QA](2026-10-29-tossfeed-connected-pc-qa.md)에서 지정 4크기의 실측·캡처를 수행했다. 아래 ‘지정 크기 미확인’은 Cloud 검증 당시 상태다. native popup 등 남은 제약은 최신 보고서를 참조한다.
+
 - 점검일: **2026-10-29 (KST)**
 - 결론: **부분 완료 / 지정 PC·모바일 크기 추가 검증 필요**
 - 이번에 완료한 범위: 실제 Cloud Browser의 데스크톱 화면 관찰·DOM 실측·탐색·기출·이미지·키보드 조작, 개선안 및 v1.3 보완
