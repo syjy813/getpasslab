@@ -65,7 +65,7 @@ async function verify(row,width,target){
    const hasImage=await item.locator('[data-practice-figure]').isVisible();
    for(let j=0;j<4;j++){
     const display=hasImage&&/^(수식|그림)[①②③④]$/.test(q.choices[j])?(q.choices[j].startsWith('수식')?'위 이미지에 제시된 수식':'위 이미지에 제시된 보기'):q.choices[j];
-    assert.equal(labels[j].trim(),symbols[j]+display,'canonical option '+q.id);
+    assert.equal(labels[j].trim(),symbols[j]+' '+display,'canonical option '+q.id);
    }
    const dims=await item.locator('.practice-choice').evaluateAll(es=>es.map(e=>({height:e.getBoundingClientRect().height,overflow:e.scrollWidth>e.clientWidth+1})));
    assert(dims.every(d=>!d.overflow),'choice wrapping');longChoiceHeight=Math.max(longChoiceHeight,...dims.map(d=>d.height));minChoiceHeight=Math.min(minChoiceHeight,...dims.map(d=>d.height));
@@ -76,7 +76,7 @@ async function verify(row,width,target){
    const caution=await item.locator('[data-practice-caution]').isVisible();if(caution)cautions++;
    const check=item.locator('[data-practice-check]');assert(await check.isDisabled());
    const selected=i%2===0?q.answer:q.answer%4+1;if(selected===q.answer)correct++;
-   await item.locator('input[type=radio]').nth(selected-1).check();await check.click();answered++;
+   await item.locator('.practice-choice').nth(selected-1).click();await check.click();answered++;
    assert.equal(await item.locator('.practice-choice.is-correct').count(),1);
    assert.equal(await item.locator('.practice-choice.is-incorrect').count(),selected===q.answer?0:1);
    if(i===1||max===1){feedbackStyles=await item.locator('.practice-choice').evaluateAll(es=>es.map(e=>({correct:e.classList.contains('is-correct'),incorrect:e.classList.contains('is-incorrect'),background:getComputedStyle(e).backgroundColor,border:getComputedStyle(e).borderColor,borderStyle:getComputedStyle(e).borderStyle})));}

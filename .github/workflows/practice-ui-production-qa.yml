@@ -1,0 +1,41 @@
+name: Practice UI production QA
+on:
+  workflow_run:
+    workflows: ['Deploy to GitHub Pages']
+    types: [completed]
+permissions:
+  contents: read
+jobs:
+  production:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Prepare browser
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Compare three certifications with the fire mock exam on production
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: https://getpasslab.co.kr
+          QA_OUTPUT_DIR: qa-results/practice-ui-production/reference
+        run: node scripts/qa-practice-ui-alignment.cjs
+      - name: Keyboard, grading, closing and scroll restoration on production
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: https://getpasslab.co.kr
+          QA_OUTPUT_DIR: qa-results/practice-ui-production/state
+        run: node scripts/qa-practice-dialog-state.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: practice-ui-production-qa
+          path: qa-results/practice-ui-production/
+          retention-days: 14

@@ -62,7 +62,7 @@ async function verify(sample, width) {
     assert(await check.isDisabled());
     const radios=item.locator('input[type="radio"]');
     assert.equal(await radios.count(), 4);
-    await radios.nth(i%2).check();
+    await item.locator('.practice-choice').nth(i%2).click();
     assert(await check.isEnabled());
     await check.click();
     assert(await item.locator('[data-practice-feedback]').isVisible());

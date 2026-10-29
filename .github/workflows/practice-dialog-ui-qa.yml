@@ -26,6 +26,7 @@ jobs:
       - name: Canonical, historical and existing-content regressions
         shell: bash
         run: |
+          node scripts/check-practice-ui-alignment.mjs
           for check in \
             industrial-safety-chapter-splits industrial-safety-machine-tools-split \
             industrial-remaining-splits industrial-remaining-review fta-original-options \
@@ -66,6 +67,7 @@ jobs:
           curl -fsS "$QA_BASE_URL/" > /dev/null
           mkdir -p "$QA_OUTPUT_DIR"
           node scripts/qa-practice-dialog-state.cjs | tee "$QA_OUTPUT_DIR/dialog-state.log"
+          QA_OUTPUT_DIR="$QA_OUTPUT_DIR/reference-alignment" node scripts/qa-practice-ui-alignment.cjs
           node scripts/qa-practice-browser.cjs | tee "$QA_OUTPUT_DIR/browser.log"
       - uses: actions/upload-artifact@v4
         if: always()

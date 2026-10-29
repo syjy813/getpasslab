@@ -1,5 +1,5 @@
 // The original proposal consists of 13 existing lessons and 9 new lessons, not 22 new chapters.
-import fs from 'node:fs';
+import fs from './read-before-practice-ui-alignment.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
