@@ -53,18 +53,16 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
       <div class="practice-dialog-inner">
         <div class="practice-modal-header">
           <h2 id="instant-practice-heading">기출 한 문제씩 풀기</h2>
-          <button type="button" class="practice-close" data-practice-close aria-label="문제 풀이 닫기">
-            닫기 <span aria-hidden="true">×</span>
+          <button type="button" class="btn btn-secondary practice-close" data-practice-close aria-label="문제 풀이 닫기">
+            창 닫기
           </button>
         </div>
-        <p class="practice-intro">답을 선택한 뒤 정답을 확인하세요. 검증된 해설이 없는 문항은 별도로 표시됩니다.</p>
         <div class="practice-status-row">
           <span>연결 기출 {practiceQuestions.length}문항</span>
           <strong class="practice-progress" data-practice-progress>1 / {practiceQuestions.length}</strong>
         </div>
         <p class="practice-loading" data-practice-loading hidden role="status"></p>
         <section class="practice-item" data-practice-item hidden aria-labelledby="instant-practice-question">
-          <p class="practice-meta" data-practice-source></p>
           <h3 id="instant-practice-question" tabindex="-1" data-practice-body></h3>
           <figure class="practice-figure" data-practice-figure hidden>
             <img data-practice-image alt="" loading="lazy" decoding="async" />
@@ -141,7 +139,6 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
     const progress = root.querySelector<HTMLElement>('[data-practice-progress]');
     const loading = root.querySelector<HTMLElement>('[data-practice-loading]');
     const item = root.querySelector<HTMLElement>('[data-practice-item]');
-    const source = root.querySelector<HTMLElement>('[data-practice-source]');
     const body = root.querySelector<HTMLElement>('[data-practice-body]');
     const figure = root.querySelector<HTMLElement>('[data-practice-figure]');
     const image = root.querySelector<HTMLImageElement>('[data-practice-image]');
@@ -232,7 +229,6 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
       if (complete) complete.hidden = true;
       item.hidden = false;
       if (progress) progress.textContent = (currentIndex + 1) + ' / ' + meta.length;
-      if (source) source.textContent = q.label.replace(/ 시행$/, ' 시험') + ' · ' + q.number + '번';
       body.textContent = (currentIndex + 1) + '. ' + q.body;
       const hasImage = Boolean(info.dataset.imageSrc);
       if (image && figure) {
@@ -261,13 +257,9 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
         radio.name = 'instant-practice-answer';
         radio.value = String(index + 1);
         radio.addEventListener('change', () => { if (!graded) check.disabled = false; });
-        const symbol = document.createElement('span');
-        symbol.className = 'choice-symbol';
-        symbol.setAttribute('aria-hidden', 'true');
-        symbol.textContent = symbols[index];
         const content = document.createElement('span');
-        content.textContent = displayChoice(choice, hasImage);
-        label.append(radio, symbol, content);
+        content.textContent = symbols[index] + ' ' + displayChoice(choice, hasImage);
+        label.append(radio, content);
         choices.append(label);
       });
       check.hidden = false;
@@ -357,27 +349,23 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
   .practice-modal-header{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3)}
   .practice-modal-header h2{display:block;flex:1;min-width:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:var(--gray-900);font-size:var(--fs-h3);font-weight:var(--fw-bold);line-height:1.4;letter-spacing:-.02em;word-break:keep-all}
   .practice-modal-header h2::before{display:none;content:none}
-  .practice-close{display:inline-flex;flex:none;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px 12px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white);color:var(--gray-800);font:inherit;font-size:var(--fs-caption);cursor:pointer}
-  .practice-close span{font-size:18px;line-height:1}
-  .practice-intro{margin:var(--space-3) 0 var(--space-4);font-size:var(--fs-caption);line-height:1.6;color:var(--gray-600)}
-  .practice-status-row{display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);padding:var(--space-3) 0;margin-bottom:var(--space-5,20px);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:var(--fs-caption);color:var(--gray-600)}
+  .practice-close{flex:none;min-height:44px;font-size:15px;line-height:1.5}
+  .practice-status-row{display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);padding:var(--space-3) 0;margin-top:var(--space-4);margin-bottom:var(--space-5,20px);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);font-size:var(--fs-caption);color:var(--gray-600)}
   .practice-progress{flex:none;white-space:nowrap;padding:4px 10px;border-radius:var(--radius-full);background:var(--primary-50);color:var(--primary-700);font-size:var(--fs-caption);font-weight:var(--fw-semibold)}
   .practice-item[hidden],.practice-feedback[hidden],.practice-complete[hidden],.practice-loading[hidden],.practice-figure[hidden],.practice-caution[hidden]{display:none!important}
   .practice-caution{margin:0 0 var(--space-4);padding:var(--space-3);border:1px solid var(--warning);border-radius:var(--radius-md);background:var(--warning-bg);font-size:var(--fs-caption);line-height:1.65}
   .practice-loading{margin:var(--space-4) 0;color:var(--gray-600);font-size:var(--fs-body)}
-  .practice-meta{color:var(--gray-600);font-size:var(--fs-caption);margin:0 0 var(--space-3)}
   .practice-item h3{margin:0 0 var(--space-4);font-size:var(--fs-h3);line-height:1.55;color:var(--gray-900);overflow-wrap:anywhere}
   .practice-item h3:focus-visible{outline:2px solid var(--primary-600);outline-offset:4px}
   .practice-figure{margin:0 0 var(--space-4)}
   .practice-figure img{display:block;max-width:100%;height:auto}
-  .practice-choices{padding:0;margin:0 0 var(--space-4);border:0;display:grid;gap:var(--space-2);min-width:0}
+  .practice-choices{padding:0;margin:0 0 var(--space-4);border:0;display:grid;gap:var(--space-3);min-width:0}
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
   /* The fieldset is Astro-scoped; its JS-created descendants are not. */
-  .practice-choices :global(.practice-choice){box-sizing:border-box;display:flex;gap:var(--space-3);align-items:flex-start;border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:var(--space-3);font-size:var(--fs-body);line-height:1.6;cursor:pointer;min-width:0;min-height:44px;overflow-wrap:anywhere}
+  .practice-choices :global(.practice-choice){box-sizing:border-box;position:relative;display:flex;gap:var(--space-3);align-items:flex-start;border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:var(--space-4);font-size:16px;line-height:1.8;white-space:pre-wrap;cursor:pointer;min-width:0;min-height:44px;overflow-wrap:anywhere}
   .practice-choices :global(.practice-choice:has(input:checked:not(:disabled))){border-color:var(--primary-600);background:var(--primary-50)}
-  .practice-choices :global(.practice-choice:has(input:focus-visible)){outline:2px solid var(--primary-600);outline-offset:2px}
-  .practice-choices :global(.practice-choice input){margin:5px 0 0;accent-color:var(--primary-600);flex:none}
-  .practice-choices :global(.choice-symbol){flex:none;font-weight:var(--fw-semibold)}
+  .practice-choices :global(.practice-choice:has(input:focus-visible)){outline:3px solid var(--primary-600);outline-offset:3px}
+  .practice-choices :global(.practice-choice input){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
   .practice-choices :global(.practice-choice.is-correct){border-color:var(--success);background:var(--success-bg)}
   .practice-choices :global(.practice-choice.is-incorrect){border-color:var(--error);background:var(--error-bg)}
   .practice-button:disabled{background:var(--gray-200);color:var(--gray-600);cursor:not-allowed}
@@ -398,11 +386,11 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
     .practice-dialog-inner{padding:var(--space-4);max-height:calc(100dvh - 24px)}
     .practice-modal-header{gap:var(--space-2)}
     .practice-modal-header h2{font-size:18px}
-    .practice-close{padding:8px 10px}
     .practice-button{width:100%}
     .practice-complete{padding:var(--space-6) var(--space-3)}
     .practice-complete-actions{flex-direction:column}
     .practice-exit-button{width:100%}
     :global(.practice-entry){align-items:stretch}
   }
+  @media(min-width:768px){.practice-choices :global(.practice-choice){font-size:17px}}
 </style>

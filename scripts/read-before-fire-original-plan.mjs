@@ -1,5 +1,5 @@
 // Latest release projection: only complete fingerprinted files can be restored or hidden.
-import fs from 'node:fs';
+import fs, {beforePracticeUIAlignment} from './read-before-practice-ui-alignment.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -8,6 +8,7 @@ export const originalPlanReview=JSON.parse(gunzipSync(fs.readFileSync('docs/audi
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const key=f=>path.normalize(path.isAbsolute(String(f))?path.relative(process.cwd(),String(f)):String(f));
 export function beforeFireOriginalPlan(file,bytes){
+ bytes=beforePracticeUIAlignment(file,bytes);
  const row=originalPlanReview.changes[key(file)];if(!row||hash(bytes)!==row.sha256)return bytes;
  let before=bytes;
  for(const patch of [...row.patches].reverse()){

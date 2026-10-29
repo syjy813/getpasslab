@@ -100,7 +100,7 @@ async function restored(page, before) {
           if (method === 'finish') {
             await item.locator('[data-practice-next]').click();
             for (let i = 1; i < ids.length; i++) {
-              await item.locator('input[type=radio]').nth(questionMap.get(ids[i]).answer - 1).check();
+              await item.locator('.practice-choice').nth(questionMap.get(ids[i]).answer - 1).click();
               await item.locator('[data-practice-check]').click(); await item.locator('[data-practice-next]').click();
             }
             assert.equal(await dialog.locator('[data-practice-score]').innerText(), '6문제 중 5문제 수록 답안과 일치');
