@@ -1,5 +1,6 @@
 import { beforeMobileLearningUX } from './read-before-mobile-learning-ux.mjs';
 import fs from 'node:fs';
+import {isCertificationAddition} from './read-before-certification-discovery.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -21,6 +22,7 @@ export function beforeGlobalChapterReadability(file,bytes){
   return restored;
 }
 export function isReadabilityAddition(file){
+  if(isCertificationAddition(file))return true;
   const key=path.normalize(String(file)),row=readabilityReview.files[key];
   if(!row?.added)return false;
   assert.equal(hash(fs.readFileSync(key)),row.sha256,key+': exact readability addition');
