@@ -1,0 +1,13 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { facilityArticlePath, facilityCategory } from '../config/facility';
+import { withBase } from '../config/url';
+interface Props { article: CollectionEntry<'facilityArticles'>; }
+const { article } = Astro.props;
+---
+<a class="card facility-card" href={withBase(facilityArticlePath(article))}>
+  <span class="card-label">{facilityCategory(article.data.category).name}</span>
+  <h3 class="card-title">{article.data.title}</h3>
+  <p class="card-description">{article.data.description}</p>
+  <div class="card-meta"><time datetime={article.data.publishedAt}>{article.data.publishedAt.replaceAll('-', '.')}</time><span aria-hidden="true"> · </span>읽어보기 →</div>
+</a>

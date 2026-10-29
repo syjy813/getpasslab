@@ -1,0 +1,11 @@
+---
+import { getCertification, getCertificationEntryPath } from '../config/certifications';
+import { withBase } from '../config/url';
+interface Props { ids?: string[]; }
+const { ids = ['energy-management', 'industrial-safety', 'fire-safety-manager-level2'] } = Astro.props;
+const certifications = ids.map(getCertification).filter(cert => cert !== undefined);
+---
+{certifications.length > 0 && <section class="facility-learning" aria-labelledby="facility-learning-title">
+  <div><span class="facility-eyebrow">자격증의 모든 것</span><h2 id="facility-learning-title" class="gpl-h2">이론부터 차근차근</h2><p>관련 자격증의 핵심 이론과 문제를 학습해 보세요.</p></div>
+  <ul>{certifications.map(cert => <li><a href={withBase(getCertificationEntryPath(cert.slug))}>{cert.name}<span aria-hidden="true"> →</span></a></li>)}</ul>
+</section>}

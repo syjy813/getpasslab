@@ -2,6 +2,7 @@
 import fs, {beforeFirePreactionCopy} from './read-before-fire-preaction-copy.mjs';
 import {isFireOriginalPlanAddition} from './read-before-fire-original-plan.mjs';
 import fsp from 'node:fs/promises';
+import {readdir as readdirBeforeServiceSplit} from './read-before-service-split.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -23,4 +24,4 @@ const filter=(dir,entries)=>entries.filter(e=>!isFirePracticePhase2Addition(path
 const encode=(data,options)=>{const enc=typeof options==='string'?options:options?.encoding;return enc?data.toString(enc):data;};
 export default {...fs,readFileSync(file,options){return encode(beforeFirePracticePhase2(file,fs.readFileSync(file)),options);},readdirSync(dir,options){return filter(dir,fs.readdirSync(dir,options));}};
 export async function readFile(file,options){return encode(beforeFirePracticePhase2(file,await fsp.readFile(file)),options);}
-export async function readdir(dir,options){return filter(dir,await fsp.readdir(dir,options));}
+export async function readdir(dir,options){return filter(dir,await readdirBeforeServiceSplit(dir,options));}

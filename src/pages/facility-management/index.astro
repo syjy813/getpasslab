@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import FacilityLayout from '../../layouts/FacilityLayout.astro';
+import FacilityCard from '../../components/FacilityCard.astro';
+import FacilityIcon from '../../components/FacilityIcon.astro';
+import FacilityLearningLinks from '../../components/FacilityLearningLinks.astro';
+import { FACILITY_CATEGORIES, facilityCategoryPath, sortFacilityArticles } from '../../config/facility';
+import { withBase } from '../../config/url';
+const articles = sortFacilityArticles(await getCollection('facilityArticles', article => article.data.status === 'published'));
+const featured = articles.filter(article => article.data.featured).slice(0, 3);
+const latest = articles.filter(article => !featured.some(item => item.id === article.id)).slice(0, 6);
+---
+<FacilityLayout title="시설의 모든 것 — 시설관리 입문·취업·실무 | GetPassLab" description="시설관리 입문부터 취업·이직, 자격증·법정선임, 시설관리 실무까지. 공식 자료와 확인 기준일을 함께 제공하는 GetPassLab의 시설관리 정보 서비스입니다.">
+  <section class="facility-intro">
+    <span class="facility-eyebrow">GetPassLab · 시설의 모든 것</span>
+    <h1 class="gpl-display">시설관리의 시작부터,<br />일하는 데 필요한 정보까지</h1>
+    <p>어떤 일을 하는지, 무엇을 준비해야 하는지.<br />시설관리 입문과 취업, 자격증, 실무 정보를 차근차근 살펴보세요.</p>
+    <div class="facility-actions"><a class="btn btn-primary" href="#facility-content">콘텐츠 살펴보기</a><a class="btn btn-secondary" href={withBase('/certifications/')}>자격증 학습하기 →</a></div>
+  </section>
+  <section class="facility-section" aria-labelledby="facility-category-title">
+    <div class="facility-section-head"><h2 id="facility-category-title" class="gpl-h2">어떤 정보가 필요하세요?</h2></div>
+    <div class="facility-category-grid">
+      {FACILITY_CATEGORIES.map(category => {
+        const count = articles.filter(article => article.data.category === category.slug).length;
+        return <a class="card facility-category" href={withBase(facilityCategoryPath(category.slug))}>
+          <span class="facility-icon"><FacilityIcon name={category.icon} /></span><h3 class="card-title">{category.name}</h3><p class="card-description">{category.description}</p><div class="card-meta">{count ? `콘텐츠 ${count}개` : '콘텐츠 준비 중'}</div>
+        </a>;
+      })}
+    </div>
+  </section>
+  <div id="facility-content">
+    {featured.length > 0 && <section class="facility-section" aria-labelledby="facility-featured-title"><div class="facility-section-head"><h2 id="facility-featured-title" class="gpl-h2">처음이라면 이 글부터</h2><span class="gpl-caption">추천 콘텐츠</span></div><div class="grid grid-2">{featured.map(article => <FacilityCard article={article} />)}</div></section>}
+    {latest.length > 0 && <section class="facility-section" aria-labelledby="facility-latest-title"><div class="facility-section-head"><h2 id="facility-latest-title" class="gpl-h2">최신 콘텐츠</h2></div><div class="grid grid-3">{latest.map(article => <FacilityCard article={article} />)}</div></section>}
+    {articles.length === 0 && <section class="facility-section"><div class="facility-empty"><h2 class="gpl-h3">첫 콘텐츠를 준비하고 있습니다</h2><p>그동안 관련 자격증의 이론 학습을 시작해 보세요.</p><a href={withBase('/certifications/')}>자격증 학습하러 가기 →</a></div></section>}
+  </div>
+  {FACILITY_CATEGORIES.map(category => {
+    const categoryArticles = articles.filter(article => article.data.category === category.slug);
+    return categoryArticles.length > 0 && <section class="facility-section" aria-labelledby={`category-${category.slug}`}><div class="facility-section-head"><h2 id={`category-${category.slug}`} class="gpl-h2">{category.name}</h2><a href={withBase(facilityCategoryPath(category.slug))}>전체 보기 →</a></div><div class="grid grid-3">{categoryArticles.slice(0, 3).map(article => <FacilityCard article={article} />)}</div></section>;
+  })}
+  <FacilityLearningLinks />
+</FacilityLayout>

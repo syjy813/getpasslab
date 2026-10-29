@@ -1,0 +1,58 @@
+name: Service split and GNB QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'astro.config.mjs'
+      - 'scripts/*service-split*'
+      - 'docs/audits/2026-10-29-service-split/**'
+      - '.github/workflows/service-split-qa.yml'
+permissions:
+  contents: read
+jobs:
+  service-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Verify live bytes, legacy content, SEO and colors
+        run: |
+          node scripts/check-service-split.mjs
+          npm run check:seo
+          npm run check:contrast
+          npm run check:public-content
+      - name: Prepare Chromium
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Services, keyboard, history, tables, chapter menus and practice dialogs
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: http://127.0.0.1:4321
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-service-preview.log 2>&1 &
+          qa_service_pid=$!
+          trap 'kill "$qa_service_pid" 2>/dev/null || true' EXIT
+          for qa_attempt in $(seq 1 30); do
+            if curl -fsS "$QA_BASE_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS "$QA_BASE_URL/" > /dev/null
+          node scripts/qa-service-split.cjs
+          node scripts/qa-practice-ui-alignment.cjs
+          QA_OUTPUT_DIR=qa-results/service-split/mobile-toc node scripts/qa-mobile-toc-width.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: service-split-qa
+          path: |
+            qa-results/service-split/
+            qa-results/practice-ui-alignment/
+          retention-days: 14

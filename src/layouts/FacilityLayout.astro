@@ -1,0 +1,14 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import '../styles/facility.css';
+interface Props {
+  title: string;
+  description: string;
+  robots?: string;
+  ogType?: 'website' | 'article';
+  structuredData?: Record<string, unknown>[];
+}
+---
+<BaseLayout {...Astro.props} bodyClass="facility-page">
+  <main id="main-content" class="container facility-main"><slot /></main>
+</BaseLayout>
