@@ -1,0 +1,45 @@
+name: Certification discovery QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/*certification*'
+      - '.github/workflows/certification-discovery-qa.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/check-certification-discovery.mjs
+      - run: npm run check:seo && npm run check:public-content && npm run check:contrast && npm run check:deferred-question-content
+      - name: Prepare browser tests
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Certification navigation and fixed-width advertisements
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_COMMIT: ${{ github.event.pull_request.head.sha }}
+        run: |
+          python3 -m http.server 4321 --bind 127.0.0.1 --directory dist > /tmp/getpasslab-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4321/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/qa-certification-discovery.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: certification-discovery-qa
+          path: qa-results/certification-discovery/
+          retention-days: 14

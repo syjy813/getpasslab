@@ -24,28 +24,25 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
 <BaseLayout
   title="GetPassLab — 자격증 핵심요약과 학습 그림"
   description={`국가기술자격 필기 기출 ${formatCount(totalQuestionCount)}문항의 출제 이력을 챕터별로 연결해 핵심 개념, 계산 공식, 법령 기준과 반복 출제 포인트를 정리한 학습 서비스입니다.`}
+  bodyClass="catalog-page certification-home"
 >
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-badge">국가기술자격 · 소방안전관리자</span>
-      <h1 class="gpl-display" style="max-width:760px;margin:0 auto">기출을 풀기 전에,<br/>무엇이 반복 출제되는지부터</h1>
-      <p class="gpl-body-lg" style="max-width:720px;margin:var(--space-4) auto 0;color:var(--gray-600)">
-        GetPassLab은 기출문제를 회차별로 나열하는 대신, 각 문항을 학습 주제에 연결해
-        어떤 개념이 언제 어떻게 출제됐는지 확인할 수 있게 정리합니다.
-      </p>
+      <span class="catalog-kicker">자격증의 모든 것</span>
+      <h1 class="gpl-display">자격증 공부,<br/>개념부터 기출까지</h1>
+      <p class="gpl-body-lg catalog-intro">핵심 개념을 익히고, 챕터에 연결된 기출로 확인하세요.</p>
     </div>
   </section>
 
-  <section class="section container">
-    <div style="margin-bottom:var(--space-6)">
-      <h2 class="gpl-h1">자격증 선택</h2>
-      <p class="gpl-body" style="color:var(--gray-600);margin:var(--space-2) 0 0">준비 중인 자격증을 선택해 핵심 이론과 학습 그림을 확인해 보세요. 기출이 연결된 챕터에서는 실제 문제도 풀 수 있습니다.</p>
+  <section class="section container" id="certifications" aria-labelledby="certifications-title">
+    <div class="section-heading">
+      <h2 class="gpl-h1" id="certifications-title">어떤 자격증을 준비하나요?</h2>
     </div>
-    <div class="grid grid-3">
+    <div class="grid certification-grid">
       {certifications.map((certification) => (
         <a class="card" href={withBase(getCertificationEntryPath(certification.slug))}>
           <span class="card-label">{certification.category}</span>
-          <div class="card-title card-title-primary">{certification.name}</div>
+          <h3 class="card-title card-title-primary">{certification.name}</h3>
           <div class="card-description">{certification.summary}</div>
           <div class="card-meta">
             챕터 {countByCertification(certification.slug)}개
@@ -53,6 +50,7 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
               ? ` · 기출 ${formatCount(questionCountByCertification[certification.slug])}문항`
               : ''}
           </div>
+          <span class="catalog-card-action">학습 시작 <span aria-hidden="true">→</span></span>
         </a>
       ))}
     </div>

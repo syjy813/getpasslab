@@ -1,5 +1,5 @@
 // Project only the exact reviewed shared-practice UI delta for historical audits.
-import fs from 'node:fs';
+import fs, {beforeCertificationDiscovery} from './read-before-certification-discovery.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -7,6 +7,7 @@ import {gunzipSync} from 'node:zlib';
 export const practiceUIReview=JSON.parse(gunzipSync(fs.readFileSync('docs/audits/2026-10-29-practice-ui-alignment/review.json.gz')));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 export function beforePracticeUIAlignment(file,bytes){
+ bytes=beforeCertificationDiscovery(file,bytes);
  const key=path.normalize(path.isAbsolute(String(file))?path.relative(process.cwd(),String(file)):String(file));
  const row=practiceUIReview.changes[key];if(!row||hash(bytes)!==row.sha256)return bytes;
  let before=bytes;

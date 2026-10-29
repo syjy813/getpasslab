@@ -1,3 +1,11 @@
+## 2026-10-29 자격증 GNB·홈·목록 1·2차 구현 검토본
+
+- 사용자 시설 영역 제외,320px 결함 보완과 기존 자격증 탐색/홈/목록 개선만 진행 지시. main6c70b14, `codex/certification-ui-phase1-20261029`
+- 고정 광고의 실제 viewport 수용 여부·resize 복원, 자격증/챕터 목차 공존 GNB, 짧은 홈·과목 우선 목록·그룹 바로가기·작은 화면 챕터 행 적용. 시설 메뉴/새 URL 없음
+- 콘텐츠·문항·이미지 원본·학습 본문·문제풀이/채점/모의고사 구조·기존 URL/SEO 보호. 검수는 `docs/audits/2026-10-29-certification-discovery/README.md` 참조
+- 로컬 Build554페이지/SEO556HTML·554URL,533article와 네이티브1446파일 보호 및 관련 정적 검사 통과. 로컬 브라우저 실행/Cloud localhost 제약을 기록하고 GitHub Actions에4폭·광고 SDK stub/탐색 회귀 준비
+- 실제 원격 Push/PR/CI 결과는 구현 PR의 head와 Checks를 확인. 문서 PR208은 별도 Draft로 유지. 이번 main 병합·Production 배포 없음
+
 ## 2026-10-28 소방 실무 2차 시각자료4개 제작 및 배포 승인
 
 - 사용자 기존4챕터 보완안과 실서버 배포 승인. 기준 main dac6daf(PR201 푸터 배포 완료), `codex/fire-practice-visuals-phase2-20261028`

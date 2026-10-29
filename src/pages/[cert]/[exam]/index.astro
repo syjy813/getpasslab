@@ -92,7 +92,7 @@ const subjectTooltip = subjects.length > 0
   ? `현재 출제기준 과목명: ${subjects.map(([id, subject]) => `${getSubjectLabel(Number(id), subject)} ${subject.name}`).join(' · ')}`
   : '현재 공개된 과목이 없습니다.';
 ---
-<BaseLayout title={`${certification.name} ${examDefinition.title} — GetPassLab`} description={examDefinition.description} mobileTopAd={examDefinition.slug === 'written'}>
+<BaseLayout title={`${certification.name} ${examDefinition.title} — GetPassLab`} description={examDefinition.description} bodyClass="catalog-page exam-index" mobileTopAd={examDefinition.slug === 'written'}>
   <section class="section container" style="padding-top:var(--space-8)">
     <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
       <a href={withBase('/')}>홈</a><span class="sep">/</span>
@@ -130,6 +130,19 @@ const subjectTooltip = subjects.length > 0
       </dl>
     </div>
 
+    <div class="section-heading compact">
+      <h2 class="gpl-h2">과목별 학습 범위</h2>
+      <p class="gpl-body">{isFireSafety ? '과목 이름은 공식 시험 범위를 요약한 학습 구분이며, 현재 공개된 챕터 수를 표시합니다.' : '각 과목에서 현재 공개된 챕터와 연결 기출 수를 함께 표시합니다.'}</p>
+    </div>
+    <div class="grid grid-3">
+      {subjectCards.map(({ subjectId, subject, chapterCount, questionCount }) => (
+        <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/`)}>
+          <span class="card-label">{getSubjectLabel(subjectId, subject)}</span>
+          <div class="card-title">{subject.name}</div>
+          <div class="card-meta">공개 챕터 {chapterCount}개{!isFireSafety && ` · 연결 기출 ${questionCount}문항`}</div>
+        </a>
+      ))}
+    </div>
     {featuredChapters.length > 0 && (
       <section class="subject-section">
         <div class="section-heading compact">
@@ -148,18 +161,5 @@ const subjectTooltip = subjects.length > 0
       </section>
     )}
 
-    <div class="section-heading compact">
-      <h2 class="gpl-h2">과목별 학습 범위</h2>
-      <p class="gpl-body">{isFireSafety ? '과목 이름은 공식 시험 범위를 요약한 학습 구분이며, 현재 공개된 챕터 수를 표시합니다.' : '각 과목에서 현재 공개된 챕터와 연결 기출 수를 함께 표시합니다.'}</p>
-    </div>
-    <div class="grid grid-3">
-      {subjectCards.map(({ subjectId, subject, chapterCount, questionCount }) => (
-        <a class="card" href={withBase(`/${certification.slug}/${examDefinition.slug}/${subject.slug}/`)}>
-          <span class="card-label">{getSubjectLabel(subjectId, subject)}</span>
-          <div class="card-title">{subject.name}</div>
-          <div class="card-meta">공개 챕터 {chapterCount}개{!isFireSafety && ` · 연결 기출 ${questionCount}문항`}</div>
-        </a>
-      ))}
-    </div>
   </section>
 </BaseLayout>

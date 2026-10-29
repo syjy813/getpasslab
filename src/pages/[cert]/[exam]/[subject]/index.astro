@@ -81,6 +81,7 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
 <BaseLayout
   title={`${subject.name} — ${certification.name} ${examDefinition.name} — GetPassLab`}
   description={`${certification.name} ${examDefinition.name} ${subject.name}의 공개 챕터와 핵심 개념, 계산·판별 기준, 시험 포인트를 정리합니다.`}
+  bodyClass="catalog-page subject-index"
   mobileTopAd={examDefinition.slug === 'written'}
 >
   <section class="section container" style="padding-top:var(--space-8)">
@@ -109,6 +110,13 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
       </dl>
     </div>
 
+    {groups.length > 0 && (
+      <nav class="catalog-group-nav" aria-label="학습 그룹 바로가기">
+        <a href="#all-chapters">전체 챕터</a>
+        {groups.map((group, index) => <a href={`#chapter-group-${index + 1}`}>{group}</a>)}
+      </nav>
+    )}
+
     {chapters.length === 0 && (
       <div class="card" style="cursor:default"><div class="card-title">콘텐츠 준비 중</div><div class="card-description">챕터가 순차적으로 공개됩니다.</div></div>
     )}
@@ -133,7 +141,7 @@ const sessionCount = new Set(linkedQuestions.map(question => question.date)).siz
 
     {groups.length > 0 && (
       <div class="section-heading compact">
-        <h2 class="gpl-h2">전체 챕터</h2>
+        <h2 class="gpl-h2" id="all-chapters">전체 챕터</h2>
         <p class="gpl-body">그룹별로 정리된 전체 공개 챕터를 확인하세요.</p>
       </div>
     )}

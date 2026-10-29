@@ -17,18 +17,22 @@ const desktopUnit = 'DAN-cUOTdTkWFtH2f3C1';
 <script is:inline>
   (() => {
     const initializeAdFit = (placement) => {
-      if (!(placement instanceof HTMLElement) || placement.dataset.adfitReady) return;
+      if (!(placement instanceof HTMLElement)) return;
 
       const mount = placement.querySelector('[data-adfit-mount]');
       if (!(mount instanceof HTMLElement)) return;
 
       const useDesktop = placement.getBoundingClientRect().width >= 728;
-      const width = useDesktop ? 728 : 320;
+      const width = Number(placement.dataset.adfitWidth) || (useDesktop ? 728 : 320);
+      const fitsViewport = document.documentElement.clientWidth >= width;
+      placement.toggleAttribute('data-adfit-unavailable', !fitsViewport);
+      if (!fitsViewport || placement.dataset.adfitReady) return;
       const height = useDesktop ? 90 : 100;
       const unit = useDesktop ? placement.dataset.desktopUnit : placement.dataset.mobileUnit;
       if (!unit) return;
 
       placement.dataset.adfitSize = useDesktop ? 'desktop' : 'mobile';
+      placement.dataset.adfitWidth = String(width);
 
       if (window.location.hostname !== 'getpasslab.co.kr') {
         placement.dataset.adfitReady = 'preview';
@@ -53,6 +57,9 @@ const desktopUnit = 'DAN-cUOTdTkWFtH2f3C1';
     };
 
     document.querySelectorAll('[data-adfit-responsive]').forEach(initializeAdFit);
+    new ResizeObserver(() => {
+      document.querySelectorAll('[data-adfit-responsive]').forEach(initializeAdFit);
+    }).observe(document.documentElement);
   })();
 </script>
 
@@ -85,5 +92,10 @@ const desktopUnit = 'DAN-cUOTdTkWFtH2f3C1';
   .adfit-placement[data-adfit-size='desktop'] .adfit-mount {
     width: 728px;
     height: 90px;
+  }
+
+  /* Preserve the reserved slot; never crop or scale a unit into a narrower viewport. */
+  .adfit-placement[data-adfit-unavailable] .adfit-mount {
+    display: none;
   }
 </style>
