@@ -546,9 +546,25 @@
       "format": "JPEG",
       "type": "interaction",
       "limitation": null
+    },
+    {
+      "file": "gp-computer-dialog-keyboard-390x844.jpg",
+      "screen": "gp-computer-dialog-keyboard",
+      "viewport": [
+        390,
+        844
+      ],
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "interaction",
+      "limitation": "Documents visible question modal keyboard focus; browser toolbar focus not captured"
     }
   ],
   "archive_url": "https://chatgpt.com/library?file_id=libfile_9ef7c097654481918136dcc158952699&account_id=personal",
   "baseline_count": 32,
-  "interaction_count": 6
+  "interaction_count": 7,
+  "total_count": 39
 }

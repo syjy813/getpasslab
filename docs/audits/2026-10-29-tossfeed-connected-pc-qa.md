@@ -1,10 +1,11 @@
 # 토스피드 vs GetPassLab — 연결된 PC Chrome 실측·조작 QA
 
 - 점검일: **2026-10-29**
-- 결론: **지정 뷰포트의 화면 비교 완료 / 결함 및 일부 조작 추가 검증 필요**
+- 결론: **조사·실측·QA 기록·개선안 문서 완료 / PC 별도 창 입력 등 환경 제약은 미확인 유지**
+- 최신 범위 대조: [남은 조작 후속 검증·완료 범위](2026-10-29-tossfeed-qa-scope-closure.md). 결함 수정이나 실제 UI 구현 완료를 뜻하지 않는다.
 - 환경: 사용자 PC에 연결된 **Chrome 확장 브라우저**. Cloud Browser 검증과 별도다. 1440×900, 390×844, 320×700, 768×1024를 viewport override로 적용하고 `innerWidth/innerHeight`로 확인했다. DPR 1.
 - 모바일 크기는 **PC 브라우저의 반응형 뷰포트 검사**다. 실물 모바일·터치·Safari 검증이 아니다. Chrome 정확한 버전·OS 버전은 수집하지 않았다.
-- 범위: 8화면 × 4크기 = **32개 화면 조건**, 기준 캡처 32개 + 조작 캡처 6개. 이 수치는 조작 전체를 32조건에서 반복했다는 뜻이 아니다.
+- 범위: 8화면 × 4크기 = **32개 화면 조건**, 기준 캡처 32개 + 조작 캡처 7개(후속 키보드 초점 캡처1개 포함). 이 수치는 조작 전체를 32조건에서 반복했다는 뜻이 아니다.
 - 이전 [Cloud QA](2026-10-29-tossfeed-cloud-browser-qa.md)의 1363×936 기록을 유지한다. 이 문서가 지정 크기 미실행 상태를 갱신한다.
 
 ## 1. 인수인계·Git 기준 및 변경 경계
@@ -43,11 +44,12 @@ AGENTS.md, main의 AI_HANDOVER.md, PR 상태·변경 파일, v1.3 운영 가이�
 
 ## 3. 캡처와 원자료
 
-- [38개 원본 캡처·실측 JSON ZIP](https://chatgpt.com/library?file_id=libfile_9ef7c097654481918136dcc158952699&account_id=personal)
+- [39개 원본 캡처·실측 JSON ZIP](https://chatgpt.com/library?file_id=libfile_9ef7c097654481918136dcc158952699&account_id=personal)
 - [PC 토스 카테고리 1440×900](https://chatgpt.com/library?file_id=libfile_d72ead67d1988191af2cca757425e51b&account_id=personal)
 - [모바일 크기 토스 카테고리 390×844](https://chatgpt.com/library?file_id=libfile_83756188f5d08191a0e89082a71f4a14&account_id=personal)
 - [PC GetPassLab 소방 1440×900](https://chatgpt.com/library?file_id=libfile_f940c8dace548191923d4009a55bb0ad&account_id=personal)
 - [모바일 크기 GetPassLab 소방 390×844](https://chatgpt.com/library?file_id=libfile_f0dec6ff503081918bd1ccca82476401&account_id=personal)
+- [추가 키보드·native popup 재시도 원자료](2026-10-29-tossfeed-remaining-interactions.json)
 - [렌더 실측·조작 원자료](2026-10-29-tossfeed-connected-pc-evidence.json)
 - [캡처 파일 목록·실제 이미지 크기·제약](2026-10-29-tossfeed-connected-pc-screenshots.json)
 
@@ -124,7 +126,7 @@ PASS는 아래 명시한 동작·조건에만 해당한다. 전 페이지/전 �
 | GP 홈390 | GNB Enter 열기·Escape 닫기, 산업안전 카드 클릭 | PASS | 실제 필기 목록 URL 진입 |
 | GP 산업안전·에너지·컴활390/320 | 챕터 메뉴 Enter/Escape; 기출 버튼 Enter/클릭→정답 공개→Escape | PASS | 열린 상태·정답 표시·닫힘·정확한 opener 초점 복귀 확인 |
 | GP 컴활390 | 정답 Enter, 닫기 Enter | PASS | 정답 표기·닫힘·기출 버튼 복귀 확인 |
-| GP 컴활390 | 마지막 닫기에서 Tab 순환 | **미확인** | DOM activeElement BODY. 브라우저 툴바로 이동했는지 확인 못함. 배경 페이지로 초점 탈출했다고 단정하지 않음 |
+| GP 컴활390 | 마지막 닫기에서 Tab·Shift+Tab 순환 | PASS | [후속 K01·K02](2026-10-29-tossfeed-qa-scope-closure.md)에서 순·역방향 반복 관찰. BODY를 경유해 레이어 내부로 돌아왔고 배경 컨트롤 접근 없음. 브라우저 UI 초점은 미확인 |
 | GP 컴활390 | 정답에서 Shift+Tab | PASS | 모달 안 닫기로 이동. 전체 포커스 트랩 통과와 구분 |
 | GP 소방1440 | 측면 목차 다른 챕터 선택→뒤로가기 | PASS | pump-performance-tests와 원래 챕터 확인 |
 | GP 소방320 | 하단 다음 챕터→뒤로가기 | PASS | pitot-nozzle-pressure-test와 원래 챕터 확인 |
@@ -175,6 +177,6 @@ F01의 광고는 **원인 후보와 관찰된 기하 관계**다. 광고 차단�
 3. **3차 시설 상세**: 조건부 결론·기준일·공식 근거·예외·표·이미지·관련 글/학습 연결. P1, 중. 법령/수치의 사실 검증은 별도.
 4. **4차 학습 읽기 제한 개선**: 글자·여백·박스·표·viewer 효용/안내. P2, 중. 문제풀이·채점·모의고사 구조 제외.
 
-아직 미확인인 항목은 실물 모바일/터치/Safari·Android/iOS, 모든 safe-area, native popup 시작·사이트 닫기 제어(PC 자동화 오류), 전 문항·전체 시험, 전체 포커스 순환/스크린리더, 광고 노출 안정성·수익,768 캡처 하단의 완전한 페인트다. 모든 기능을 모든 viewport에서 전수 조작한 것도 아니다.
+아직 미확인인 항목은 실물 모바일/터치/Safari·Android/iOS, 모든 safe-area, native popup 시작·사이트 닫기 제어(PC 자동화 오류), 전 문항·전체 시험, 브라우저 UI 초점/스크린리더(문서 내 순환은 후속 표본 확인), 광고 노출 안정성·수익,768 캡처 하단의 완전한 페인트다. 모든 기능을 모든 viewport에서 전수 조작한 것도 아니다.
 
 브라우저 viewport override는 종료 시 reset했고 이번에 만든 테스트 탭·팝업만 정리했다. 문서 상대 링크·JSON 구문을 확인한 뒤 기존 브랜치에 문서만 commit/push한다. Astro Test/Build는 제품 변경이 없어 미실행이며 CI·Merge·Deploy 성공을 주장하지 않는다.
