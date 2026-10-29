@@ -1,3 +1,11 @@
+# 2026-10-29 시설/자격증 서비스 분리 및 GNB 개편 (검토 브랜치)
+
+- 사용자 WEB Work 구현·Commit/Push/PR 승인. Production 배포·main 병합 금지. 기준 main `6c70b14d1b94f1bcb0ca8035e1d7cf1866ac7631`, 브랜치 `codex/service-split-gnb-20261029`.
+- `/facility-management/`, 4카테고리, 공식 채용정보 항목 기반 입문 글1개와 공통 상세 템플릿, `/certifications/` 추가. URL 기반 링크형 서비스 전환. 시설 전용 그린 토큰, 기존 자격증 블루/본문/주소/문제/정답 보존.
+- 기존 Astro content collection에 독립 facilityArticles 추가. draft 기본 비공개, 카테고리·글 분리, 공식 출처/자료확인일/작성·수정일/요약/관련글·학습 연결. 빈3카테고리 noindex, follow 및 렌더링된 robots 기준 sitemap 자동 제외. 가짜 글·회원 기능 없음.
+- `docs/audits/2026-10-29-service-split/` 기록 참조. 기존554HTML은 서비스 GNB CSS/전환링크/접근성명/서비스속성 삽입만 허용하며 역복원해 이전 바이트와 대조. 학습 article·SEO 메타·정본 데이터 불변. 새로운 네이티브 guard가 실제1741파일/추가23파일과 sitemap을 검증하고 과거 골든해시 보존.
+- WEB clean Build561페이지 성공. 실제 실행한 정적/브라우저/CI 결과는 감사 보고서와 PR 최종 HEAD 기준으로 확인. Chromium 320/390/768/1440px 서비스48조건, 기존 문항 팝업12조건 및 목차40조건 QA를 CI에 구성. 이 기록 작성 시 브라우저CI 진행 전이며 실물기기/Safari/Production 미검증.
+
 ## 2026-10-28 소방 실무 2차 시각자료4개 제작 및 배포 승인
 
 - 사용자 기존4챕터 보완안과 실서버 배포 승인. 기준 main dac6daf(PR201 푸터 배포 완료), `codex/fire-practice-visuals-phase2-20261028`

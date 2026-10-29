@@ -140,9 +140,10 @@ async function checkLayout(label) {
             await page.waitForURL(record.url);
             record.nextAndPreviousClicked = true;
           }
-          const list = page.locator('details.learning-chapters');
+          const list = page.locator('.gnb-menu');
+          assert.equal(await list.locator('.gnb-chapter-dropdown').count(), 1, 'current GNB chapter TOC exists');
           await list.locator('summary').click();
-          const toc = await list.locator('nav a').evaluateAll(els => els.map(e => e.getAttribute('href')));
+          const toc = await list.locator('.gnb-chapter-dropdown a').evaluateAll(els => els.map(e => e.getAttribute('href')));
           assert.deepEqual(toc, ordered.map(c => scope + c.slug + '/'));
           assert(!toc.some(h => /P2-02a/.test(h)));
           await list.locator('summary').click();

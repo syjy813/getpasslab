@@ -1,0 +1,10 @@
+---
+import { getCollection } from 'astro:content';
+import FacilityArticleLayout from '../../../layouts/FacilityArticleLayout.astro';
+export async function getStaticPaths() {
+  const articles = await getCollection('facilityArticles', article => article.data.status === 'published');
+  return articles.map(article => ({ params: { category: article.data.category, slug: article.id }, props: { article, related: articles.filter(item => item.id !== article.id && article.data.related.includes(item.id)) } }));
+}
+const { article, related } = Astro.props;
+---
+<FacilityArticleLayout article={article} related={related} />

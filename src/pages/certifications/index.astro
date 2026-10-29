@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getFeaturedCertifications, getCertificationEntryPath } from '../../config/certifications';
+import { withBase } from '../../config/url';
+const certifications = getFeaturedCertifications();
+const chapters = await getCollection('chapters', chapter => chapter.data.status === '완료');
+---
+<BaseLayout title="자격증의 모든 것 — 이론·기출·모의고사 | GetPassLab" description="산업안전기사, 에너지관리기능사, 컴퓨터활용능력 2급, 소방안전관리자 2급의 핵심 이론과 학습 그림을 살펴보고, 연결된 문제풀이로 학습한 내용을 확인하세요.">
+  <main>
+    <section class="hero"><div class="hero-inner"><span class="hero-badge">GetPassLab · 자격증의 모든 것</span><h1 class="gpl-display">준비하는 자격증,<br />핵심 이론부터 문제풀이까지</h1><p class="gpl-body-lg">학습할 자격증을 선택하세요. 기존 학습 페이지로 바로 연결됩니다.</p></div></section>
+    <section class="container section" style="padding-bottom:var(--space-16)" aria-labelledby="certifications-title"><div class="section-heading"><h2 id="certifications-title" class="gpl-h2">자격증 선택</h2><p>핵심 개념을 익히고, 기출이 연결된 챕터에서는 실제 문제도 풀어보세요.</p></div><div class="grid grid-2">{certifications.map(cert => <a class="card" href={withBase(getCertificationEntryPath(cert.slug))}><span class="card-label">{cert.category}</span><h3 class="card-title card-title-primary" style="margin:0">{cert.name}</h3><p class="card-description">{cert.description}</p><div class="card-meta">공개 챕터 {chapters.filter(chapter => chapter.data.cert_id === cert.slug).length}개 · 학습 시작 →</div></a>)}</div></section>
+  </main>
+</BaseLayout>

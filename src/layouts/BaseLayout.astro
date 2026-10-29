@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import AdFitFloating from '../components/AdFitFloating.astro';
 import { withBase } from '../config/url';
 import { SITE } from '../config/site';
+import { getServiceArea } from '../config/services';
 
 interface Props {
   title: string;
@@ -104,7 +105,7 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
     ))}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
   </head>
-  <body class={bodyClass}>
+  <body class={bodyClass} data-service={getServiceArea(Astro.url.pathname)}>
     {!focusMode && <GNB chapterNavigation={chapterNavigation} />}
     {!focusMode && mobileTopAd && (
       <aside class="mobile-top-ad" aria-label="광고" data-mobile-top-ad>

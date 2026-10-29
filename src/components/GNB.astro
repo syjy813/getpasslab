@@ -1,6 +1,9 @@
 ---
 import { getCertificationEntryPath, getFeaturedCertifications } from '../config/certifications';
 import { withBase } from '../config/url';
+import { getServiceArea } from '../config/services';
+import { FACILITY_CATEGORIES, facilityCategoryPath } from '../config/facility';
+import '../styles/serviceNavigation.css';
 export interface ChapterNavigationGroup {
   group: string;
   chapters: { title: string; href: string; current: boolean }[];
@@ -8,16 +11,25 @@ export interface ChapterNavigationGroup {
 interface Props { chapterNavigation?: ChapterNavigationGroup[]; }
 const { chapterNavigation } = Astro.props;
 const certifications = getFeaturedCertifications();
+const service = getServiceArea(Astro.url.pathname);
 ---
 <header class="gnb">
-  <nav class="gnb-inner">
+  <nav class="gnb-inner" aria-label="주 내비게이션">
     <a href={withBase('/')} class="gnb-logo">GetPassLab</a>
+    <div class="service-switch" role="group" aria-label="서비스 선택">
+      <a href={withBase('/facility-management/')} data-service-link="facility" aria-current={service === 'facility' ? 'true' : undefined}>시설의 모든 것</a>
+      <a href={withBase('/certifications/')} data-service-link="certifications" aria-current={service === 'certifications' ? 'true' : undefined}>자격증의 모든 것</a>
+    </div>
     <div class="gnb-spacer"></div>
     <details class="gnb-menu">
-      <summary>{chapterNavigation ? '챕터 목차' : '자격증 · 과목'}
+      <summary>{service === 'facility' ? '카테고리' : chapterNavigation ? '챕터 목차' : '자격증 · 과목'}
         <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
       </summary>
-      {chapterNavigation ? (
+      {service === 'facility' ? (
+        <div class="gnb-dropdown">
+          {FACILITY_CATEGORIES.map(category => <a href={withBase(facilityCategoryPath(category.slug))}>{category.name}</a>)}
+        </div>
+      ) : chapterNavigation ? (
         <nav class="gnb-dropdown gnb-chapter-dropdown" aria-label="챕터 목차">
           {chapterNavigation.map(({ group, chapters }) => (
             <div class="gnb-chapter-group">

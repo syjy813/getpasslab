@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+import fs from './read-before-service-split.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {practiceUIReview as review,beforePracticeUIAlignment} from './read-before-practice-ui-alignment.mjs';

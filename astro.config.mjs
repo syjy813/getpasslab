@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { readFileSync } from 'node:fs';
 import { unified } from '@astrojs/markdown-remark';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -20,6 +21,8 @@ export default defineConfig({
   integrations: [sitemap({
     filter: (page) =>
       !page.includes('/admin')
+      && (!new URL(page).pathname.startsWith('/facility-management/')
+        || !/name="robots"[^>]*content="noindex/.test(readFileSync(new URL(`./dist${new URL(page).pathname.replace(/\/?$/, '/')}index.html`, import.meta.url), 'utf8')))
       && !page.includes('/fire-safety-manager-level2/practice/')
       && !redirectSources.some(source => page.endsWith(source) || page.endsWith(`${source}/`)),
   })],
