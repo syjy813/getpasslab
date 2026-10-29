@@ -1,0 +1,548 @@
+{
+  "base": "http://127.0.0.1:41607",
+  "cases": [
+    {
+      "chapterId": "FSM2-031",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg",
+          "w": 270,
+          "nw": 320,
+          "nh": 310,
+          "alt": "일반급수 흡수구보다 아래이며 소화용 흡수구까지인 범위를 소화용 유효수량으로 판단하는 기존 개념도",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-032",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-033",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-system-overview-v2.svg",
+          "w": 270,
+          "nw": 380,
+          "nh": 620,
+          "alt": "수원에서 펌프, 체크밸브, 개폐밸브를 거쳐 설비로 물을 공급하고 설비측 배관의 압력 변동을 압력스위치에서 검지하는 부분 계통도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-041",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-discharge-methods-v2.svg",
+          "w": 270,
+          "nw": 380,
+          "nh": 628,
+          "alt": "구획된 공간 전체의 전역방출, 기계 주변의 국소방출, 사람이 호스와 노즐을 조작하는 호스릴 방식을 비교",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 270,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/preaction-water-supply-v2.svg",
+          "w": 270,
+          "nw": 640,
+          "nh": 625,
+          "alt": "서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-042",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-pretest-safety-stages-v1.svg",
+          "w": 270,
+          "nw": 380,
+          "nh": 600,
+          "alt": "실제 방출 차단 확인 후 신호와 경보를 시험하고, 정지 또는 분리한 장치를 기록과 대조해 복구하는 점검 구분",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-normal-major-v2.svg",
+          "w": 270,
+          "nw": 380,
+          "nh": 534,
+          "alt": "평상시 교류전원과 전압지시 정상 켜짐, 예비전원감시와 스위치주의 꺼짐. 별도 카드의 스위치주의 켜짐 또는 점멸은 스위치 위치 확인 대상",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-031",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg",
+          "w": 340,
+          "nw": 320,
+          "nh": 310,
+          "alt": "일반급수 흡수구보다 아래이며 소화용 흡수구까지인 범위를 소화용 유효수량으로 판단하는 기존 개념도",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-032",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-033",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-system-overview-v2.svg",
+          "w": 340,
+          "nw": 380,
+          "nh": 620,
+          "alt": "수원에서 펌프, 체크밸브, 개폐밸브를 거쳐 설비로 물을 공급하고 설비측 배관의 압력 변동을 압력스위치에서 검지하는 부분 계통도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-041",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-discharge-methods-v2.svg",
+          "w": 340,
+          "nw": 380,
+          "nh": 628,
+          "alt": "구획된 공간 전체의 전역방출, 기계 주변의 국소방출, 사람이 호스와 노즐을 조작하는 호스릴 방식을 비교",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 340,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/preaction-water-supply-v2.svg",
+          "w": 340,
+          "nw": 640,
+          "nh": 625,
+          "alt": "서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-042",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-pretest-safety-stages-v1.svg",
+          "w": 340,
+          "nw": 380,
+          "nh": 600,
+          "alt": "실제 방출 차단 확인 후 신호와 경보를 시험하고, 정지 또는 분리한 장치를 기록과 대조해 복구하는 점검 구분",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-normal-major-v2.svg",
+          "w": 340,
+          "nw": 380,
+          "nh": 534,
+          "alt": "평상시 교류전원과 전압지시 정상 켜짐, 예비전원감시와 스위치주의 꺼짐. 별도 카드의 스위치주의 켜짐 또는 점멸은 스위치 위치 확인 대상",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-031",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg",
+          "w": 478,
+          "nw": 320,
+          "nh": 310,
+          "alt": "일반급수 흡수구보다 아래이며 소화용 흡수구까지인 범위를 소화용 유효수량으로 판단하는 기존 개념도",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-032",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-033",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-system-overview-v2.svg",
+          "w": 478,
+          "nw": 380,
+          "nh": 620,
+          "alt": "수원에서 펌프, 체크밸브, 개폐밸브를 거쳐 설비로 물을 공급하고 설비측 배관의 압력 변동을 압력스위치에서 검지하는 부분 계통도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-041",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-discharge-methods-v2.svg",
+          "w": 478,
+          "nw": 380,
+          "nh": 628,
+          "alt": "구획된 공간 전체의 전역방출, 기계 주변의 국소방출, 사람이 호스와 노즐을 조작하는 호스릴 방식을 비교",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/preaction-water-supply-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 625,
+          "alt": "서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-042",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-pretest-safety-stages-v1.svg",
+          "w": 478,
+          "nw": 380,
+          "nh": 600,
+          "alt": "실제 방출 차단 확인 후 신호와 경보를 시험하고, 정지 또는 분리한 장치를 기록과 대조해 복구하는 점검 구분",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-normal-major-v2.svg",
+          "w": 478,
+          "nw": 380,
+          "nh": 534,
+          "alt": "평상시 교류전원과 전압지시 정상 켜짐, 예비전원감시와 스위치주의 꺼짐. 별도 카드의 스위치주의 켜짐 또는 점멸은 스위치 위치 확인 대상",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-031",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg",
+          "w": 478,
+          "nw": 320,
+          "nh": 310,
+          "alt": "일반급수 흡수구보다 아래이며 소화용 흡수구까지인 범위를 소화용 유효수량으로 판단하는 기존 개념도",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-032",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/",
+      "status": 200,
+      "overflow": false,
+      "images": []
+    },
+    {
+      "chapterId": "FSM2-033",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-system-overview-v2.svg",
+          "w": 478,
+          "nw": 380,
+          "nh": 620,
+          "alt": "수원에서 펌프, 체크밸브, 개폐밸브를 거쳐 설비로 물을 공급하고 설비측 배관의 압력 변동을 압력스위치에서 검지하는 부분 계통도",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-041",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-discharge-methods-v2.svg",
+          "w": 478,
+          "nw": 380,
+          "nh": 628,
+          "alt": "구획된 공간 전체의 전역방출, 기계 주변의 국소방출, 사람이 호스와 노즐을 조작하는 호스릴 방식을 비교",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-035",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/pump-performance-reading-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 580,
+          "alt": "정격 대비 유량과 압력을 표시한 예시 곡선. 체절 압력 135%는 140% 이하, 정격점 100%, 최대유량 150%에서 압력 61.7%는 65%에 미달",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-040",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/preaction-water-supply-v2.svg",
+          "w": 718,
+          "nw": 640,
+          "nh": 625,
+          "alt": "서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음",
+          "close": "escape",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-042",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/gas-pretest-safety-stages-v1.svg",
+          "w": 478,
+          "nw": 380,
+          "nh": 600,
+          "alt": "실제 방출 차단 확인 후 신호와 경보를 시험하고, 정지 또는 분리한 장치를 기록과 대조해 복구하는 점검 구분",
+          "close": "button",
+          "restore": "PASS"
+        }
+      ]
+    },
+    {
+      "chapterId": "FSM2-047",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "status": 200,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/images/fire-safety-manager-level2/receiver-normal-major-v2.svg",
+          "w": 478,
+          "nw": 380,
+          "nh": 534,
+          "alt": "평상시 교류전원과 전압지시 정상 켜짐, 예비전원감시와 스위치주의 꺼짐. 별도 카드의 스위치주의 켜짐 또는 점멸은 스위치 위치 확인 대상",
+          "close": "backdrop",
+          "restore": "PASS"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical iOS/Android and Safari not tested"
+  ],
+  "startedAt": "2026-10-28T14:24:13.800Z",
+  "result": "PASS",
+  "finishedAt": "2026-10-28T14:25:16.496Z"
+}

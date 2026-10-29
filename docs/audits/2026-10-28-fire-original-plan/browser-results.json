@@ -1,0 +1,1627 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "number": 1,
+      "id": "FSM2-047",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 2,
+      "id": "FSM2-075",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-operation-auto-reset/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 3,
+      "id": "FSM2-048",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-048",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 4,
+      "id": "FSM2-049",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-049",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 5,
+      "id": "FSM2-076",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/detector-transmitter-signal-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 6,
+      "id": "FSM2-033",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 7,
+      "id": "FSM2-034",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-034",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 8,
+      "id": "FSM2-077",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-manual-auto-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-034",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 9,
+      "id": "FSM2-035",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-035",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 10,
+      "id": "FSM2-078",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-035",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 11,
+      "id": "FSM2-080",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/pump-circulation-relief-valve/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 12,
+      "id": "FSM2-081",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/pressure-chamber-start-switch/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 13,
+      "id": "FSM2-031",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-031",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 14,
+      "id": "FSM2-082",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/shared-tank-effective-volume/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-031",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 15,
+      "id": "FSM2-036",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-036",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 16,
+      "id": "FSM2-037",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+      "figures": 4,
+      "zoomCount": 4,
+      "practicePool": "FSM2-037",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 17,
+      "id": "FSM2-039",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-039",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 18,
+      "id": "FSM2-040",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-040",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 19,
+      "id": "FSM2-079",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-panel-state-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-040",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 20,
+      "id": "FSM2-041",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-041",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 21,
+      "id": "FSM2-083",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-actuation-discharge-feedback/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-042",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 22,
+      "id": "FSM2-042",
+      "width": 320,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-042",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 1,
+      "id": "FSM2-047",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 2,
+      "id": "FSM2-075",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-operation-auto-reset/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 3,
+      "id": "FSM2-048",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-048",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 4,
+      "id": "FSM2-049",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-049",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 5,
+      "id": "FSM2-076",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/detector-transmitter-signal-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 6,
+      "id": "FSM2-033",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 7,
+      "id": "FSM2-034",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-034",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 8,
+      "id": "FSM2-077",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-manual-auto-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-034",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 9,
+      "id": "FSM2-035",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-035",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 10,
+      "id": "FSM2-078",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-035",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 11,
+      "id": "FSM2-080",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/pump-circulation-relief-valve/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 12,
+      "id": "FSM2-081",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/pressure-chamber-start-switch/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 13,
+      "id": "FSM2-031",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-031",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 14,
+      "id": "FSM2-082",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/shared-tank-effective-volume/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-031",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 15,
+      "id": "FSM2-036",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-036",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 16,
+      "id": "FSM2-037",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+      "figures": 4,
+      "zoomCount": 4,
+      "practicePool": "FSM2-037",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 17,
+      "id": "FSM2-039",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-039",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 18,
+      "id": "FSM2-040",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-040",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 19,
+      "id": "FSM2-079",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-panel-state-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-040",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 20,
+      "id": "FSM2-041",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-041",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 21,
+      "id": "FSM2-083",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-actuation-discharge-feedback/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-042",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 22,
+      "id": "FSM2-042",
+      "width": 390,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-042",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 1,
+      "id": "FSM2-047",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 2,
+      "id": "FSM2-075",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-operation-auto-reset/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 3,
+      "id": "FSM2-048",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-048",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 4,
+      "id": "FSM2-049",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-049",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 5,
+      "id": "FSM2-076",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/detector-transmitter-signal-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 6,
+      "id": "FSM2-033",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 7,
+      "id": "FSM2-034",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-034",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 8,
+      "id": "FSM2-077",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-manual-auto-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-034",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 9,
+      "id": "FSM2-035",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-035",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 10,
+      "id": "FSM2-078",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-035",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 11,
+      "id": "FSM2-080",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/pump-circulation-relief-valve/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 12,
+      "id": "FSM2-081",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/pressure-chamber-start-switch/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 13,
+      "id": "FSM2-031",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-031",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 14,
+      "id": "FSM2-082",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/shared-tank-effective-volume/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-031",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 15,
+      "id": "FSM2-036",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-036",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 16,
+      "id": "FSM2-037",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+      "figures": 4,
+      "zoomCount": 4,
+      "practicePool": "FSM2-037",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 17,
+      "id": "FSM2-039",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-039",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 18,
+      "id": "FSM2-040",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-040",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 19,
+      "id": "FSM2-079",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-panel-state-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-040",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 20,
+      "id": "FSM2-041",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-041",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 21,
+      "id": "FSM2-083",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-actuation-discharge-feedback/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-042",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 22,
+      "id": "FSM2-042",
+      "width": 768,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-042",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 1,
+      "id": "FSM2-047",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 2,
+      "id": "FSM2-075",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-operation-auto-reset/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 3,
+      "id": "FSM2-048",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-048",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 4,
+      "id": "FSM2-049",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-049",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 5,
+      "id": "FSM2-076",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/detector-transmitter-signal-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-047",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 6,
+      "id": "FSM2-033",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 7,
+      "id": "FSM2-034",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-034",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 8,
+      "id": "FSM2-077",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-manual-auto-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-034",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 9,
+      "id": "FSM2-035",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-035",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 10,
+      "id": "FSM2-078",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-035",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 11,
+      "id": "FSM2-080",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/pump-circulation-relief-valve/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 12,
+      "id": "FSM2-081",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/pressure-chamber-start-switch/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-033",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 13,
+      "id": "FSM2-031",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-031",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 14,
+      "id": "FSM2-082",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/shared-tank-effective-volume/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-031",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 15,
+      "id": "FSM2-036",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-036",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 16,
+      "id": "FSM2-037",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/",
+      "figures": 4,
+      "zoomCount": 4,
+      "practicePool": "FSM2-037",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 17,
+      "id": "FSM2-039",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-039",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 18,
+      "id": "FSM2-040",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-040",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 19,
+      "id": "FSM2-079",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/preaction-panel-state-reading/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-040",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 20,
+      "id": "FSM2-041",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-041",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 21,
+      "id": "FSM2-083",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-actuation-discharge-feedback/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-042",
+      "navigation": "PASS",
+      "overflow": false
+    },
+    {
+      "number": 22,
+      "id": "FSM2-042",
+      "width": 1440,
+      "route": "/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/",
+      "figures": 1,
+      "zoomCount": 1,
+      "practicePool": "FSM2-042",
+      "navigation": "PASS",
+      "overflow": false
+    }
+  ],
+  "svg": [
+    {
+      "id": "FSM2-080",
+      "labels": [
+        {
+          "text": "토출밸브 닫힘",
+          "x": 126,
+          "y": 59,
+          "width": 127.609375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "체크밸브",
+          "x": 126,
+          "y": 132,
+          "width": 80.96875,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "릴리프밸브",
+          "x": 184,
+          "y": 158,
+          "width": 101.203125,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "배수",
+          "x": 284,
+          "y": 295,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "펌프 운전",
+          "x": 35,
+          "y": 365,
+          "width": 87.125,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "설비측",
+          "x": 20,
+          "y": 2,
+          "width": 60.734375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "닫힘",
+          "x": 73.8359375,
+          "y": 437,
+          "width": 42.328125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "스프링 힘",
+          "x": 53.4140625,
+          "y": 663,
+          "width": 83.171875,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "열림",
+          "x": 258.8359375,
+          "y": 437,
+          "width": 42.328125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "물의 압력",
+          "x": 238.4140625,
+          "y": 663,
+          "width": 83.171875,
+          "height": 30,
+          "size": 21
+        }
+      ]
+    },
+    {
+      "id": "FSM2-081",
+      "labels": [
+        {
+          "text": "① 압력계",
+          "x": 22,
+          "y": 8,
+          "width": 87.703125,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "② 압력스위치",
+          "x": 204,
+          "y": 10,
+          "width": 122.359375,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "PS",
+          "x": 240.0703125,
+          "y": 95,
+          "width": 31.859375,
+          "height": 36,
+          "size": 25
+        },
+        {
+          "text": "기동 신호",
+          "x": 268.4140625,
+          "y": 166,
+          "width": 83.171875,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "공기",
+          "x": 153.8359375,
+          "y": 265,
+          "width": 42.328125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "물",
+          "x": 164.4140625,
+          "y": 366,
+          "width": 21.171875,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "③",
+          "x": 311.5,
+          "y": 198,
+          "width": 21,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "안전밸브",
+          "x": 283.359375,
+          "y": 223,
+          "width": 77.28125,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "④ 배수밸브",
+          "x": 212,
+          "y": 524,
+          "width": 103.03125,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "배관 압력과 연결",
+          "x": 20,
+          "y": 564,
+          "width": 154.015625,
+          "height": 32,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "id": "FSM2-082",
+      "labels": [
+        {
+          "text": "일반급수",
+          "x": 263.359375,
+          "y": 128,
+          "width": 77.28125,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "소화용",
+          "x": 271.6328125,
+          "y": 434,
+          "width": 60.734375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "소화용",
+          "x": 112.875,
+          "y": 242,
+          "width": 66.25,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "유효수량",
+          "x": 101.8359375,
+          "y": 278,
+          "width": 88.328125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "높이 1.5m",
+          "x": 96.609375,
+          "y": 318,
+          "width": 98.78125,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "흡수구 아래",
+          "x": 94.7578125,
+          "y": 434,
+          "width": 102.484375,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "두 흡수구 사이의 물",
+          "x": 95.6953125,
+          "y": 513,
+          "width": 188.609375,
+          "height": 34,
+          "size": 23
+        }
+      ]
+    },
+    {
+      "id": "FSM2-083",
+      "labels": [
+        {
+          "text": "제어반",
+          "x": 65.2578125,
+          "y": 93,
+          "width": 63.484375,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "명령",
+          "x": 171.6796875,
+          "y": 64,
+          "width": 38.640625,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "솔레노이드",
+          "x": 211.6953125,
+          "y": 34,
+          "width": 96.609375,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "기동용기",
+          "x": 217.6796875,
+          "y": 272,
+          "width": 84.640625,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "기동용",
+          "x": 36,
+          "y": 192,
+          "width": 60.734375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "가스",
+          "x": 36,
+          "y": 223,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "PS",
+          "x": 159.0703125,
+          "y": 423,
+          "width": 31.859375,
+          "height": 36,
+          "size": 25
+        },
+        {
+          "text": "압력스위치",
+          "x": 126.6953125,
+          "y": 362,
+          "width": 96.609375,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "제어반",
+          "x": 267.015625,
+          "y": 410,
+          "width": 57.96875,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "확인표시",
+          "x": 257.359375,
+          "y": 440,
+          "width": 77.28125,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "감시 대상 배관",
+          "x": 120.078125,
+          "y": 545,
+          "width": 139.84375,
+          "height": 34,
+          "size": 23
+        }
+      ]
+    },
+    {
+      "id": "FSM2-047",
+      "labels": [
+        {
+          "text": "평상시 감시",
+          "x": 131.4375,
+          "y": 33,
+          "width": 117.125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "교류전원",
+          "x": 74,
+          "y": 85,
+          "width": 84.640625,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "켜짐",
+          "x": 293.515625,
+          "y": 86,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "전압지시 정상",
+          "x": 74,
+          "y": 147,
+          "width": 133.40625,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "켜짐",
+          "x": 293.515625,
+          "y": 148,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "예비전원감시",
+          "x": 74,
+          "y": 209,
+          "width": 126.96875,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "꺼짐",
+          "x": 293.515625,
+          "y": 210,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "스위치주의",
+          "x": 74,
+          "y": 271,
+          "width": 105.8125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "꺼짐",
+          "x": 293.515625,
+          "y": 272,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "스위치가 정상 위치를 벗어난 경우",
+          "x": 36,
+          "y": 359,
+          "width": 294,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "스위치주의",
+          "x": 74,
+          "y": 401,
+          "width": 105.8125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "켜짐 / 점멸",
+          "x": 234.53125,
+          "y": 437,
+          "width": 99.46875,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "시험·정지 스위치 위치 확인",
+          "x": 36,
+          "y": 469,
+          "width": 253.953125,
+          "height": 32,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "id": "FSM2-033",
+      "labels": [
+        {
+          "text": "수원",
+          "x": 175,
+          "y": 62,
+          "width": 44.171875,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "펌프",
+          "x": 194,
+          "y": 198,
+          "width": 42.328125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "체크밸브",
+          "x": 140,
+          "y": 292,
+          "width": 80.96875,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "개폐밸브",
+          "x": 140,
+          "y": 382,
+          "width": 80.96875,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "압력 검지",
+          "x": 238.4140625,
+          "y": 447,
+          "width": 83.171875,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "기동 신호",
+          "x": 268.4140625,
+          "y": 566,
+          "width": 83.171875,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "설비로 공급",
+          "x": 20,
+          "y": 539,
+          "width": 107.375,
+          "height": 32,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "id": "FSM2-041",
+      "labels": [
+        {
+          "text": "전역방출",
+          "x": 34,
+          "y": 22,
+          "width": 88.328125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "국소방출",
+          "x": 34,
+          "y": 226,
+          "width": 88.328125,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "호스릴",
+          "x": 34,
+          "y": 430,
+          "width": 66.25,
+          "height": 35,
+          "size": 24
+        },
+        {
+          "text": "구획 공간",
+          "x": 224,
+          "y": 97,
+          "width": 83.171875,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "전체",
+          "x": 224,
+          "y": 126,
+          "width": 42.328125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "방호대상",
+          "x": 224,
+          "y": 295,
+          "width": 77.28125,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "주변",
+          "x": 224,
+          "y": 324,
+          "width": 42.328125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "호스와",
+          "x": 224,
+          "y": 490,
+          "width": 60.734375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "노즐",
+          "x": 224,
+          "y": 522,
+          "width": 40.484375,
+          "height": 32,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "id": "FSM2-042",
+      "labels": [
+        {
+          "text": "방출 차단 확인",
+          "x": 120.078125,
+          "y": 28,
+          "width": 139.84375,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "신호와 경보 시험",
+          "x": 109.4921875,
+          "y": 228,
+          "width": 161.015625,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "분리·정지 장치 복구",
+          "x": 92.109375,
+          "y": 428,
+          "width": 195.78125,
+          "height": 34,
+          "size": 23
+        },
+        {
+          "text": "전기 경로",
+          "x": 145,
+          "y": 76,
+          "width": 83.171875,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "수동·기계 경로",
+          "x": 145,
+          "y": 104,
+          "width": 134.046875,
+          "height": 30,
+          "size": 21
+        },
+        {
+          "text": "입력 확인",
+          "x": 195,
+          "y": 287,
+          "width": 87.125,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "경보 확인",
+          "x": 195,
+          "y": 320,
+          "width": 87.125,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "기록과 대조",
+          "x": 177,
+          "y": 483,
+          "width": 107.375,
+          "height": 32,
+          "size": 22
+        },
+        {
+          "text": "정상 상태 확인",
+          "x": 177,
+          "y": 522,
+          "width": 127.6875,
+          "height": 30,
+          "size": 21
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Chromium emulation; physical devices and Safari not tested"
+  ]
+}
