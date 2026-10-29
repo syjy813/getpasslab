@@ -1,0 +1,248 @@
+{
+  "date": "2026-10-29",
+  "environment": "Connected PC Chrome extension; same main 6c70b14; responsive viewport tests plus native-size popup retry",
+  "results": [
+    {
+      "id": "K01",
+      "viewport": [
+        390,
+        844
+      ],
+      "scenario": "computer question modal forward Tab x6",
+      "steps": [
+        {
+          "step": "open",
+          "aria": null,
+          "inside": true,
+          "open": true,
+          "tag": "DIV",
+          "text": "2015년 3월 시험 · 14번"
+        },
+        {
+          "step": "Tab 1",
+          "aria": null,
+          "inside": true,
+          "open": true,
+          "tag": "BUTTON",
+          "text": "정답 확인"
+        },
+        {
+          "step": "Tab 2",
+          "aria": null,
+          "inside": true,
+          "open": true,
+          "tag": "BUTTON",
+          "text": "닫기"
+        },
+        {
+          "step": "Tab 3",
+          "aria": null,
+          "inside": false,
+          "open": true,
+          "tag": "BODY",
+          "text": null
+        },
+        {
+          "step": "Tab 4",
+          "aria": null,
+          "inside": true,
+          "open": true,
+          "tag": "BUTTON",
+          "text": "정답 확인"
+        },
+        {
+          "step": "Tab 5",
+          "aria": null,
+          "inside": true,
+          "open": true,
+          "tag": "BUTTON",
+          "text": "닫기"
+        },
+        {
+          "step": "Tab 6",
+          "aria": null,
+          "inside": false,
+          "open": true,
+          "tag": "BODY",
+          "text": null
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "id": "K02",
+      "viewport": [
+        390,
+        844
+      ],
+      "scenario": "computer question modal reverse Tab x4",
+      "steps": [
+        {
+          "step": "Shift+Tab 1",
+          "aria": null,
+          "inside": true,
+          "open": true,
+          "tag": "BUTTON",
+          "text": "닫기"
+        },
+        {
+          "step": "Shift+Tab 2",
+          "aria": null,
+          "inside": true,
+          "open": true,
+          "tag": "BUTTON",
+          "text": "정답 확인"
+        },
+        {
+          "step": "Shift+Tab 3",
+          "aria": null,
+          "inside": false,
+          "open": true,
+          "tag": "BODY",
+          "text": null
+        },
+        {
+          "step": "Shift+Tab 4",
+          "aria": null,
+          "inside": true,
+          "open": true,
+          "tag": "BUTTON",
+          "text": "닫기"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "id": "K03",
+      "scenario": "computer question Escape focus return",
+      "aria": null,
+      "inside": false,
+      "open": false,
+      "tag": "BUTTON",
+      "text": "2015년 3월 시험 14번",
+      "result": "PASS"
+    },
+    {
+      "id": "N01",
+      "viewport": [
+        390,
+        844
+      ],
+      "scenario": "logo Tab to chapter summary; Enter opens; outside H1 click closes",
+      "result": "PASS",
+      "after": {
+        "open": false
+      }
+    },
+    {
+      "id": "N02-initial",
+      "scenario": "computer chapter menu click and back",
+      "clickedDestination": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/wearable-computers/",
+      "observedBack": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/storage-capacity-conversion/",
+      "result": "미확인"
+    },
+    {
+      "id": "N02-recheck",
+      "scenario": "computer chapter menu wearable click and browser back with settled page checks",
+      "viewport": [
+        390,
+        844
+      ],
+      "destination": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/wearable-computers/",
+      "returned": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-classification/",
+      "result": "PASS",
+      "note": "menu remained open after history return; initial unexpected destination not reproduced"
+    },
+    {
+      "id": "K04",
+      "viewport": [
+        320,
+        700
+      ],
+      "scenario": "energy image viewer forward Tab x5",
+      "steps": [
+        {
+          "step": "open",
+          "aria": null,
+          "inside": true,
+          "open": true,
+          "tag": "BUTTON",
+          "text": "닫기"
+        },
+        {
+          "step": "Tab 1",
+          "aria": "확대한 학습 그림",
+          "inside": true,
+          "open": true,
+          "tag": "DIV",
+          "text": ""
+        },
+        {
+          "step": "Tab 2",
+          "aria": null,
+          "inside": false,
+          "open": true,
+          "tag": "BODY",
+          "text": null
+        },
+        {
+          "step": "Tab 3",
+          "aria": null,
+          "inside": true,
+          "open": true,
+          "tag": "BUTTON",
+          "text": "닫기"
+        },
+        {
+          "step": "Tab 4",
+          "aria": "확대한 학습 그림",
+          "inside": true,
+          "open": true,
+          "tag": "DIV",
+          "text": ""
+        },
+        {
+          "step": "Tab 5",
+          "aria": null,
+          "inside": false,
+          "open": true,
+          "tag": "BODY",
+          "text": null
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "id": "K05",
+      "scenario": "image viewer Enter close",
+      "aria": "② 압입통풍 확대 보기",
+      "inside": false,
+      "open": false,
+      "tag": "BUTTON",
+      "text": "그림 확대",
+      "result": "PASS"
+    },
+    {
+      "id": "P01",
+      "scenario": "native fire practice popup retry without viewport override",
+      "openerViewport": [
+        1920,
+        919
+      ],
+      "popupViewport": [
+        1180,
+        843
+      ],
+      "url": "https://getpasslab.co.kr/fire-safety-manager-level2/practice/?chapter=FSM2-035&popup=1",
+      "result": "미확인",
+      "observations": [
+        "Popup opened and intro DOM readable",
+        "Start and window-close semantic clicks each timed out on Input.dispatchMouseEvent",
+        "Tab did not move DOM activeElement from BODY",
+        "Screenshot timed out on Page.captureScreenshot",
+        "Popup was removed through browser API; site close not verified"
+      ]
+    }
+  ],
+  "scopeNote": "PASS for recorded page controls and focus restoration; browser chrome traversal and screen reader behavior were not observed."
+}

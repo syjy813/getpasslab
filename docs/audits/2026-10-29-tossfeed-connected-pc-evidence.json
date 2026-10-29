@@ -1,0 +1,6624 @@
+{
+  "date": "2026-10-29",
+  "environment": "Connected user PC Chrome extension; desktop pointer; responsive viewport override; DPR 1",
+  "measurementType": "Rendered DOM getBoundingClientRect and getComputedStyle (CSS px)",
+  "rows": [
+    {
+      "screen": "toss-home",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-jvgtb2 e18wpp6m7",
+          "color": "rgba(253, 253, 255, 0.75)",
+          "display": "block",
+          "font": "17px",
+          "h": 25.5,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 332,
+          "weight": "600",
+          "x": 24,
+          "y": 74.05826568603516
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-scv7h8 e18wpp6m4",
+          "color": "rgb(242, 244, 246)",
+          "display": "block",
+          "font": "16px",
+          "h": 48,
+          "line": "24px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 332,
+          "weight": "500",
+          "x": 24,
+          "y": 184.63433837890625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-14on8x8",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "17px",
+          "h": 217.5,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 332,
+          "weight": "400",
+          "x": 24,
+          "y": 651.368896484375
+        }
+      ],
+      "cards": [],
+      "clientWidth": 380,
+      "dpr": 1,
+      "h1": [],
+      "h2": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-129097v e18wpp6m5",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "25px",
+          "h": 65,
+          "line": "32.5px",
+          "radius": "0px",
+          "tag": "H2",
+          "w": 332,
+          "weight": "700",
+          "x": 24,
+          "y": 109.63433837890625
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-58o19b",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 390,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgba(0, 0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 334,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 380,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 380,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed",
+      "viewport": [
+        390,
+        844
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "https://resources-fe.toss.im/image-optimize/width=3840,quality=75/https%3A%2F%2Fstatic.toss.im%2Fdisposables%2Fcontents%2FThumbnail-Tossfeed-Travel.png"
+        }
+      ]
+    },
+    {
+      "screen": "toss-category",
+      "body": [],
+      "cards": [],
+      "clientWidth": 380,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-p5b4ka e1oqg9pf1",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "28px",
+          "h": 39.1875,
+          "line": "39.2px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 332,
+          "weight": "600",
+          "x": 24,
+          "y": 110
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-58o19b",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 390,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-8ti0j4 edl7h780",
+          "color": "rgb(0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 29,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 332,
+          "weight": "400",
+          "x": 24,
+          "y": 1298.15625
+        }
+      ],
+      "images": [],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 380,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed/category/everyfinance",
+      "viewport": [
+        390,
+        844
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "toss-article",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-2wghat",
+          "color": "rgb(158, 158, 164)",
+          "display": "block",
+          "font": "17px",
+          "h": 20,
+          "line": "17px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 29.421875,
+          "weight": "400",
+          "x": 184.28125,
+          "y": 500
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-x274na",
+          "color": "rgb(158, 158, 164)",
+          "display": "block",
+          "font": "17px",
+          "h": 17,
+          "line": "17px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 25.015625,
+          "weight": "400",
+          "x": 186.484375,
+          "y": 534
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-14on8x8",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "17px",
+          "h": 81.5625,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 380,
+          "weight": "400",
+          "x": 0,
+          "y": 627
+        }
+      ],
+      "cards": [],
+      "clientWidth": 380,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-6ycby1 e113wcp04",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "32px",
+          "h": 129,
+          "line": "43px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 340,
+          "weight": "600",
+          "x": 20,
+          "y": 300
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-1ufe92g",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 390,
+          "weight": "400",
+          "x": 0,
+          "y": -60
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-gaqiig e113wcp06",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 551,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 380,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgba(0, 0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 260,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 390,
+          "weight": "400",
+          "x": -5,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 203.515625,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 379.984375,
+          "weight": "400",
+          "x": 0,
+          "y": 2807.75
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 203.515625,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 379.984375,
+          "weight": "400",
+          "x": 0,
+          "y": 3102.453125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 172.796875,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 379.96875,
+          "weight": "400",
+          "x": 0.015625,
+          "y": 3648.484375
+        }
+      ],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 380,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed/article/money-policies-64",
+      "viewport": [
+        390,
+        844
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 389,
+          "src": "https://resources-fe.toss.im/image-optimize/width=3840,quality=95/https%3A%2F%2Fstatic.toss.im%2Fdisposables%2Fcontents%2Fimg-money-policy-64.jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/8b4d3778-f07d-4fd4-b836-4e3d3e5e8601/infographic_(2).jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/c968c647-9e34-4faf-93d6-a740988aa008/infographic_(2)_(2).jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/f9bf7dd0-cd56-4908-abff-6a2352191c67/infographic-3.jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 300,
+          "src": "https://resources-fe.toss.im/image-optimize/width=256,quality=75/https%3A%2F%2Fstatic.toss.im%2Flogos%2Fsvg%2Flogo-toss-feed-mono-light.svg"
+        }
+      ],
+      "settledBody": [
+        {
+          "font": "17px",
+          "line": "27.2px",
+          "w": 380,
+          "x": 0
+        }
+      ]
+    },
+    {
+      "screen": "gp-home",
+      "body": [],
+      "cards": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 197.078125,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 597.9375
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 197.078125,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 811.015625
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 197.078125,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 1024.09375
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 197.078125,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 1237.171875
+        }
+      ],
+      "clientWidth": 375,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "28px",
+          "h": 72.78125,
+          "line": "36.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 327,
+          "weight": "700",
+          "x": 24,
+          "y": 168.1875
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 57,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 56,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 375,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://getpasslab.co.kr/",
+      "viewport": [
+        390,
+        844
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-industrial",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 76.5,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 421.5625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 76.5,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 514.0625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 51,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 606.5625
+        }
+      ],
+      "cards": [],
+      "clientWidth": 375,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "28px",
+          "h": 36.390625,
+          "line": "36.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 327,
+          "weight": "700",
+          "x": 24,
+          "y": 264.1875
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 327,
+          "weight": "600",
+          "x": 24,
+          "y": 358.171875
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 327,
+          "weight": "600",
+          "x": 24,
+          "y": 823.5625
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 57,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 56,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 82,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 57
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65.640625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 778.359375
+        }
+      ],
+      "scrollWidth": 375,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "14px",
+          "h": 576.34375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 928.546875
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "14px",
+          "h": 1030.90625,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 2665.96875
+        }
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/boiler-safety-devices/",
+      "viewport": [
+        390,
+        844
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-energy",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 76.5,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 398.359375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 102,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 900.421875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 102,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 2687.625
+        }
+      ],
+      "cards": [],
+      "clientWidth": 375,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "28px",
+          "h": 36.390625,
+          "line": "36.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 327,
+          "weight": "700",
+          "x": 24,
+          "y": 240.984375
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 327,
+          "weight": "600",
+          "x": 24,
+          "y": 334.96875
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 327,
+          "weight": "600",
+          "x": 24,
+          "y": 2624.234375
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 57,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 56,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 241.65625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 325,
+          "weight": "400",
+          "x": 25,
+          "y": 1093.21875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 241.65625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 325,
+          "weight": "400",
+          "x": 25,
+          "y": 1490.671875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 241.65625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 325,
+          "weight": "400",
+          "x": 25,
+          "y": 1888.125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 241.65625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 325,
+          "weight": "400",
+          "x": 25,
+          "y": 2285.578125
+        }
+      ],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 82,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 57
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65.640625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 778.359375
+        }
+      ],
+      "scrollWidth": 375,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 343.96875,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 490.859375
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 771.53125,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 3582.796875
+        }
+      ],
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/draft-flue-gas/",
+      "viewport": [
+        390,
+        844
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-natural-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-forced-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-induced-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-balanced-mobile-v2.svg"
+        }
+      ]
+    },
+    {
+      "screen": "gp-computer",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 51,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 735.734375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 51,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 802.734375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 51,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 1237.703125
+        }
+      ],
+      "cards": [],
+      "clientWidth": 375,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "28px",
+          "h": 36.390625,
+          "line": "36.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 327,
+          "weight": "700",
+          "x": 24,
+          "y": 292.984375
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 327,
+          "weight": "600",
+          "x": 24,
+          "y": 412.5625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 327,
+          "weight": "600",
+          "x": 24,
+          "y": 885.734375
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 57,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 56,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 82,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 57
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65.640625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 778.359375
+        }
+      ],
+      "scrollWidth": 375,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 243.78125,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 475.953125
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 272.578125,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 949.125
+        }
+      ],
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-classification/",
+      "viewport": [
+        390,
+        844
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-fire",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 72,
+          "line": "24px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 519.34375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 48,
+          "line": "24px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 606.34375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "fire-panel-note",
+          "color": "rgb(98, 109, 122)",
+          "display": "block",
+          "font": "13px",
+          "h": 42.796875,
+          "line": "20.8px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 325,
+          "weight": "400",
+          "x": 25,
+          "y": 874.375
+        }
+      ],
+      "cards": [],
+      "clientWidth": 375,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "28px",
+          "h": 72.78125,
+          "line": "36.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 327,
+          "weight": "700",
+          "x": 24,
+          "y": 292.984375
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 327,
+          "weight": "600",
+          "x": 24,
+          "y": 456.953125
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 327,
+          "weight": "600",
+          "x": 24,
+          "y": 1528.265625
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 57,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 56,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 216.65625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 325,
+          "weight": "400",
+          "x": 25,
+          "y": 696.65625
+        }
+      ],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 82,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 57
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65.640625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 375,
+          "weight": "400",
+          "x": 0,
+          "y": 778.359375
+        }
+      ],
+      "scrollWidth": 375,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 299.171875,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 327,
+          "weight": "400",
+          "x": 24,
+          "y": 1665.65625
+        }
+      ],
+      "url": "https://getpasslab.co.kr/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/",
+      "viewport": [
+        390,
+        844
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 1536,
+          "src": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp"
+        }
+      ]
+    },
+    {
+      "screen": "toss-home",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-jvgtb2 e18wpp6m7",
+          "color": "rgba(253, 253, 255, 0.75)",
+          "display": "block",
+          "font": "17px",
+          "h": 25.5,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 262,
+          "weight": "600",
+          "x": 24,
+          "y": 74
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-scv7h8 e18wpp6m4",
+          "color": "rgb(242, 244, 246)",
+          "display": "block",
+          "font": "16px",
+          "h": 48,
+          "line": "24px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 262,
+          "weight": "500",
+          "x": 24,
+          "y": 184.5
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-14on8x8",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "17px",
+          "h": 244.6875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 262,
+          "weight": "400",
+          "x": 24,
+          "y": 772.6875
+        }
+      ],
+      "cards": [],
+      "clientWidth": 310,
+      "dpr": 1,
+      "h1": [],
+      "h2": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-129097v e18wpp6m5",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "25px",
+          "h": 65,
+          "line": "32.5px",
+          "radius": "0px",
+          "tag": "H2",
+          "w": 262,
+          "weight": "700",
+          "x": 24,
+          "y": 109.5
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-58o19b",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 320,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgba(0, 0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 334,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 310,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 310,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed",
+      "viewport": [
+        320,
+        700
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 320,
+          "src": "https://resources-fe.toss.im/image-optimize/width=3840,quality=75/https%3A%2F%2Fstatic.toss.im%2Fdisposables%2Fcontents%2FThumbnail-Tossfeed-Travel.png"
+        }
+      ]
+    },
+    {
+      "screen": "toss-category",
+      "body": [],
+      "cards": [],
+      "clientWidth": 310,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-p5b4ka e1oqg9pf1",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "28px",
+          "h": 39.1875,
+          "line": "39.2px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 262,
+          "weight": "600",
+          "x": 24,
+          "y": 110
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-58o19b",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 320,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-8ti0j4 edl7h780",
+          "color": "rgb(0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 29,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 262,
+          "weight": "400",
+          "x": 24,
+          "y": 1431.71875
+        }
+      ],
+      "images": [],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 310,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed/category/everyfinance",
+      "viewport": [
+        320,
+        700
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "toss-article",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-2wghat",
+          "color": "rgb(158, 158, 164)",
+          "display": "block",
+          "font": "17px",
+          "h": 20,
+          "line": "17px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 29.421875,
+          "weight": "400",
+          "x": 149.28125,
+          "y": 500
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-x274na",
+          "color": "rgb(158, 158, 164)",
+          "display": "block",
+          "font": "17px",
+          "h": 17,
+          "line": "17px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 25.015625,
+          "weight": "400",
+          "x": 151.484375,
+          "y": 534
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-14on8x8",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "17px",
+          "h": 81.5625,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 310,
+          "weight": "400",
+          "x": 0,
+          "y": 627
+        }
+      ],
+      "cards": [],
+      "clientWidth": 310,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-6ycby1 e113wcp04",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "32px",
+          "h": 129,
+          "line": "43px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 270,
+          "weight": "600",
+          "x": 20,
+          "y": 300
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-1ufe92g",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 320,
+          "weight": "400",
+          "x": 0,
+          "y": -60
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-gaqiig e113wcp06",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 551,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 310,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgba(0, 0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 260,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 320,
+          "weight": "400",
+          "x": -5,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 160.59375,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 309.96875,
+          "weight": "400",
+          "x": 0.015625,
+          "y": 3106.8125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 160.59375,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 309.96875,
+          "weight": "400",
+          "x": 0.015625,
+          "y": 3358.59375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 136.359375,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 309.96875,
+          "weight": "400",
+          "x": 0.015625,
+          "y": 3888.890625
+        }
+      ],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 310,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed/article/money-policies-64",
+      "viewport": [
+        320,
+        700
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 320,
+          "src": "https://resources-fe.toss.im/image-optimize/width=3840,quality=95/https%3A%2F%2Fstatic.toss.im%2Fdisposables%2Fcontents%2Fimg-money-policy-64.jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/8b4d3778-f07d-4fd4-b836-4e3d3e5e8601/infographic_(2).jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/c968c647-9e34-4faf-93d6-a740988aa008/infographic_(2)_(2).jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/f9bf7dd0-cd56-4908-abff-6a2352191c67/infographic-3.jpg"
+        },
+        {
+          "complete": false,
+          "naturalWidth": 0,
+          "src": "https://resources-fe.toss.im/image-optimize/width=256,quality=75/https%3A%2F%2Fstatic.toss.im%2Flogos%2Fsvg%2Flogo-toss-feed-mono-light.svg"
+        }
+      ],
+      "settledBody": [
+        {
+          "font": "17px",
+          "line": "27.2px",
+          "w": 310,
+          "x": 0
+        }
+      ]
+    },
+    {
+      "screen": "gp-home",
+      "body": [],
+      "cards": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 197.078125,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 659.921875
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 197.078125,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 873
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 221.078125,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 1086.078125
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 197.078125,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 1323.15625
+        }
+      ],
+      "clientWidth": 305,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "28px",
+          "h": 109.171875,
+          "line": "36.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 257,
+          "weight": "700",
+          "x": 24,
+          "y": 168.1875
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 57,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 56,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 305,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://getpasslab.co.kr/",
+      "viewport": [
+        320,
+        700
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-industrial",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 76.5,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 475.953125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 76.5,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 568.453125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 76.5,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 660.953125
+        }
+      ],
+      "cards": [],
+      "clientWidth": 305,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "28px",
+          "h": 36.390625,
+          "line": "36.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 257,
+          "weight": "700",
+          "x": 24,
+          "y": 292.984375
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 257,
+          "weight": "600",
+          "x": 24,
+          "y": 412.5625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 257,
+          "weight": "600",
+          "x": 24,
+          "y": 928.953125
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 57,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 56,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 82,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 57
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65.640625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 619.359375
+        }
+      ],
+      "scrollWidth": 320,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "14px",
+          "h": 885.703125,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 1033.9375
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "14px",
+          "h": 1387.859375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 3233.71875
+        }
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/boiler-safety-devices/",
+      "viewport": [
+        320,
+        700
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-energy",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 127.5,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 452.75
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 102,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 1148.59375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 127.5,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 2748.40625
+        }
+      ],
+      "cards": [],
+      "clientWidth": 305,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "28px",
+          "h": 36.390625,
+          "line": "36.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 257,
+          "weight": "700",
+          "x": 24,
+          "y": 269.78125
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 257,
+          "weight": "600",
+          "x": 24,
+          "y": 389.359375
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 257,
+          "weight": "600",
+          "x": 24,
+          "y": 2685.015625
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 57,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 56,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 189.609375,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 255,
+          "weight": "400",
+          "x": 25,
+          "y": 1341.390625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 189.609375,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 255,
+          "weight": "400",
+          "x": 25,
+          "y": 1686.796875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 189.609375,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 255,
+          "weight": "400",
+          "x": 25,
+          "y": 2032.203125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 189.609375,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 255,
+          "weight": "400",
+          "x": 25,
+          "y": 2398.40625
+        }
+      ],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 82,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 57
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65.640625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 619.359375
+        }
+      ],
+      "scrollWidth": 320,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 486.75,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 596.25
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 961.90625,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 3745.578125
+        }
+      ],
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/draft-flue-gas/",
+      "viewport": [
+        320,
+        700
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-natural-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-forced-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-induced-mobile-v2.svg"
+        },
+        {
+          "complete": false,
+          "naturalWidth": 0,
+          "src": "/images/energy-management/draft-balanced-mobile-v2.svg"
+        }
+      ]
+    },
+    {
+      "screen": "gp-computer",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 51,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 783.328125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 51,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 850.328125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 51,
+          "line": "25.5px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 1356.6875
+        }
+      ],
+      "cards": [],
+      "clientWidth": 305,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "28px",
+          "h": 36.390625,
+          "line": "36.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 257,
+          "weight": "700",
+          "x": 24,
+          "y": 292.984375
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 257,
+          "weight": "600",
+          "x": 24,
+          "y": 412.5625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 47.390625,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 257,
+          "weight": "600",
+          "x": 24,
+          "y": 933.328125
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 57,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 56,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 82,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 57
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65.640625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 619.359375
+        }
+      ],
+      "scrollWidth": 320,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 291.375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 475.953125
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 343.96875,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 996.71875
+        }
+      ],
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-classification/",
+      "viewport": [
+        320,
+        700
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-fire",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 96,
+          "line": "24px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 542.734375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "15px",
+          "h": 48,
+          "line": "24px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 257,
+          "weight": "400",
+          "x": 24,
+          "y": 653.734375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "fire-panel-note",
+          "color": "rgb(98, 109, 122)",
+          "display": "block",
+          "font": "13px",
+          "h": 42.796875,
+          "line": "20.8px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 255,
+          "weight": "400",
+          "x": 25,
+          "y": 888.59375
+        }
+      ],
+      "cards": [],
+      "clientWidth": 305,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "28px",
+          "h": 72.78125,
+          "line": "36.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 257,
+          "weight": "700",
+          "x": 24,
+          "y": 292.984375
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 70.78125,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 257,
+          "weight": "600",
+          "x": 24,
+          "y": 456.953125
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "18px",
+          "h": 70.78125,
+          "line": "23.4px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 257,
+          "weight": "600",
+          "x": 24,
+          "y": 1640.859375
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 57,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 56,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 170,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 255,
+          "weight": "400",
+          "x": 25,
+          "y": 749.140625
+        }
+      ],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 82,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 57
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65.640625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 305,
+          "weight": "400",
+          "x": 0,
+          "y": 619.359375
+        }
+      ],
+      "scrollWidth": 320,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 370.5625,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 292.09375,
+          "weight": "400",
+          "x": 24,
+          "y": 1801.640625
+        }
+      ],
+      "url": "https://getpasslab.co.kr/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/",
+      "viewport": [
+        320,
+        700
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 1536,
+          "src": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp"
+        }
+      ]
+    },
+    {
+      "screen": "toss-home",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1jdpqz2 eo8rbh11",
+          "color": "rgb(242, 244, 246)",
+          "display": "block",
+          "font": "20px",
+          "h": 60,
+          "line": "30px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 500,
+          "weight": "500",
+          "x": 88,
+          "y": 282.6875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-14on8x8",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "17px",
+          "h": 108.75,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 580,
+          "weight": "400",
+          "x": 89,
+          "y": 701.5625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-14on8x8",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "17px",
+          "h": 81.5625,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 580,
+          "weight": "400",
+          "x": 89,
+          "y": 842.3125
+        }
+      ],
+      "cards": [],
+      "clientWidth": 758,
+      "dpr": 1,
+      "h1": [],
+      "h2": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-747h4j eo8rbh12",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "36px",
+          "h": 0,
+          "line": "48.6px",
+          "radius": "0px",
+          "tag": "H2",
+          "w": 0,
+          "weight": "700",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-747h4j eo8rbh12",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "36px",
+          "h": 97.1875,
+          "line": "48.6px",
+          "radius": "0px",
+          "tag": "H2",
+          "w": 500,
+          "weight": "700",
+          "x": 88,
+          "y": 169.5
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-zezy6m",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 768,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgba(0, 0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 420,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 678,
+          "weight": "400",
+          "x": 40,
+          "y": 80
+        }
+      ],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 758,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed",
+      "viewport": [
+        768,
+        1024
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 768,
+          "src": "https://resources-fe.toss.im/image-optimize/width=3840,quality=75/https%3A%2F%2Fstatic.toss.im%2Fdisposables%2Fcontents%2FThumbnail-Tossfeed-Travel.png"
+        }
+      ]
+    },
+    {
+      "screen": "toss-category",
+      "body": [],
+      "cards": [],
+      "clientWidth": 758,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-p5b4ka e1oqg9pf1",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "44px",
+          "h": 61.59375,
+          "line": "61.6px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 697.359375,
+          "weight": "600",
+          "x": 30.3125,
+          "y": 158
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-zezy6m",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 768,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-8ti0j4 edl7h780",
+          "color": "rgb(0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 0,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 758,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed/category/everyfinance",
+      "viewport": [
+        768,
+        1024
+      ],
+      "imageQuality": [],
+      "initialScrollWidth": 939
+    },
+    {
+      "screen": "toss-article",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-2wghat",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "17px",
+          "h": 24.796875,
+          "line": "23.8px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 29.421875,
+          "weight": "400",
+          "x": 405.671875,
+          "y": 779.203125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-x274na",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "17px",
+          "h": 17,
+          "line": "17px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 25.015625,
+          "weight": "400",
+          "x": 471.65625,
+          "y": 783.09375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1e3yv2i0 _1af0tyf3 css-1nbxptm",
+          "color": "rgb(49, 130, 246)",
+          "display": "block",
+          "font": "14px",
+          "h": 20,
+          "line": "20.006px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 104.0625,
+          "weight": "600",
+          "x": 806.4375,
+          "y": 1070
+        }
+      ],
+      "cards": [],
+      "clientWidth": 758,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-6ycby1 e113wcp04",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "56px",
+          "h": 156.78125,
+          "line": "78.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 758,
+          "weight": "600",
+          "x": 0,
+          "y": 602.421875
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-zezy6m",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 768,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-gaqiig e113wcp06",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 924,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 758,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgba(0, 0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 924,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 768,
+          "weight": "400",
+          "x": -5,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 429.09375,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 699.984375,
+          "weight": "400",
+          "x": 29,
+          "y": 2693.09375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 429.09375,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 699.984375,
+          "weight": "400",
+          "x": 29,
+          "y": 3213.375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 364.34375,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 699.984375,
+          "weight": "400",
+          "x": 29,
+          "y": 3908.515625
+        }
+      ],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 980,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed/article/money-policies-64",
+      "viewport": [
+        768,
+        1024
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 768,
+          "src": "https://resources-fe.toss.im/image-optimize/width=3840,quality=95/https%3A%2F%2Fstatic.toss.im%2Fdisposables%2Fcontents%2Fimg-money-policy-64.jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/8b4d3778-f07d-4fd4-b836-4e3d3e5e8601/infographic_(2).jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/c968c647-9e34-4faf-93d6-a740988aa008/infographic_(2)_(2).jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/f9bf7dd0-cd56-4908-abff-6a2352191c67/infographic-3.jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 300,
+          "src": "https://resources-fe.toss.im/image-optimize/width=256,quality=75/https%3A%2F%2Fstatic.toss.im%2Flogos%2Fsvg%2Flogo-toss-feed-mono-light.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 278,
+          "src": "https://resources-fe.toss.im/image-optimize/width=3840,quality=75/https%3A%2F%2Fstatic.toss-internal.com%2Fipd-tcs%2Ftoss_core%2Fstaging%2F032aa55a-fa3d-49ae-a3e8-8be1541245ab.png"
+        }
+      ],
+      "settledBody": [
+        {
+          "font": "17px",
+          "line": "27.2px",
+          "w": 700,
+          "x": 29
+        }
+      ]
+    },
+    {
+      "screen": "gp-home",
+      "body": [],
+      "cards": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 204.375,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 344.5,
+          "weight": "400",
+          "x": 24,
+          "y": 604.34375
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 204.375,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 344.5,
+          "weight": "400",
+          "x": 384.5,
+          "y": 604.34375
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 204.375,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 344.5,
+          "weight": "400",
+          "x": 24,
+          "y": 824.71875
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 204.375,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 344.5,
+          "weight": "400",
+          "x": 384.5,
+          "y": 824.71875
+        }
+      ],
+      "clientWidth": 753,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "40px",
+          "h": 104,
+          "line": "52px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 705,
+          "weight": "700",
+          "x": 24,
+          "y": 176.1875
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 64,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 753,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://getpasslab.co.kr/",
+      "viewport": [
+        768,
+        1024
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-industrial",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 54.375,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 349.765625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 54.375,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 420.140625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 27.1875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 490.515625
+        }
+      ],
+      "cards": [],
+      "clientWidth": 753,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "40px",
+          "h": 52,
+          "line": "52px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 705,
+          "weight": "700",
+          "x": 24,
+          "y": 172.578125
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 705,
+          "weight": "600",
+          "x": 24,
+          "y": 283.765625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 705,
+          "weight": "600",
+          "x": 24,
+          "y": 652.078125
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 64,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 66.890625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 957.109375
+        }
+      ],
+      "scrollWidth": 753,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 314.578125,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 762.875
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 792.9375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 1962.421875
+        }
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/boiler-safety-devices/",
+      "viewport": [
+        768,
+        1024
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-energy",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 54.375,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 345.765625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 81.5625,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 709.921875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 54.375,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 1732.796875
+        }
+      ],
+      "cards": [],
+      "clientWidth": 753,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "40px",
+          "h": 52,
+          "line": "52px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 705,
+          "weight": "700",
+          "x": 24,
+          "y": 168.578125
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 705,
+          "weight": "600",
+          "x": 24,
+          "y": 279.765625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 705,
+          "weight": "600",
+          "x": 24,
+          "y": 1666.796875
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 64,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 254.671875,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 342.5,
+          "weight": "400",
+          "x": 25,
+          "y": 885.46875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 254.671875,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 342.5,
+          "weight": "400",
+          "x": 385.5,
+          "y": 885.46875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 254.671875,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 342.5,
+          "weight": "400",
+          "x": 25,
+          "y": 1299.125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 254.671875,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 342.5,
+          "weight": "400",
+          "x": 385.5,
+          "y": 1299.125
+        }
+      ],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 66.890625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 957.109375
+        }
+      ],
+      "scrollWidth": 753,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 224.984375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 416.140625
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 557.359375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 2449.046875
+        }
+      ],
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/draft-flue-gas/",
+      "viewport": [
+        768,
+        1024
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-natural-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-forced-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-induced-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-balanced-mobile-v2.svg"
+        }
+      ]
+    },
+    {
+      "screen": "gp-computer",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 27.1875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 609.546875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 27.1875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 652.734375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 27.1875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 1034.90625
+        }
+      ],
+      "cards": [],
+      "clientWidth": 753,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "40px",
+          "h": 52,
+          "line": "52px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 705,
+          "weight": "700",
+          "x": 24,
+          "y": 172.578125
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 705,
+          "weight": "600",
+          "x": 24,
+          "y": 283.765625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 705,
+          "weight": "600",
+          "x": 24,
+          "y": 727.921875
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 64,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 66.890625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 957.109375
+        }
+      ],
+      "scrollWidth": 753,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 243.78125,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 349.765625
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 224.984375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 793.921875
+        }
+      ],
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-classification/",
+      "viewport": [
+        768,
+        1024
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-fire",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 51.1875,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 357.765625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 25.59375,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 424.953125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "fire-panel-note",
+          "color": "rgb(98, 109, 122)",
+          "display": "block",
+          "font": "13px",
+          "h": 42.796875,
+          "line": "20.8px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 703,
+          "weight": "400",
+          "x": 25,
+          "y": 851.234375
+        }
+      ],
+      "cards": [],
+      "clientWidth": 753,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "40px",
+          "h": 52,
+          "line": "52px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 705,
+          "weight": "700",
+          "x": 24,
+          "y": 172.578125
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 705,
+          "weight": "600",
+          "x": 24,
+          "y": 291.765625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 705,
+          "weight": "600",
+          "x": 24,
+          "y": 1415.3125
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 64,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 468.65625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 703,
+          "weight": "400",
+          "x": 25,
+          "y": 466.796875
+        }
+      ],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(255, 255, 255, 0.96)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 66.890625,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 753,
+          "weight": "400",
+          "x": 0,
+          "y": 957.109375
+        }
+      ],
+      "scrollWidth": 753,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 204.984375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 705,
+          "weight": "400",
+          "x": 24,
+          "y": 1534.90625
+        }
+      ],
+      "url": "https://getpasslab.co.kr/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/",
+      "viewport": [
+        768,
+        1024
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 1536,
+          "src": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp"
+        }
+      ]
+    },
+    {
+      "screen": "toss-home",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1jdpqz2 eo8rbh11",
+          "color": "rgb(242, 244, 246)",
+          "display": "block",
+          "font": "20px",
+          "h": 60,
+          "line": "30px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 500,
+          "weight": "500",
+          "x": 151.984375,
+          "y": 351.984375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-14on8x8",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "17px",
+          "h": 190.3125,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 353,
+          "weight": "400",
+          "x": 957,
+          "y": 471.125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-14on8x8",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "17px",
+          "h": 108.75,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 353,
+          "weight": "400",
+          "x": 957,
+          "y": 693.4375
+        }
+      ],
+      "cards": [],
+      "clientWidth": 1430,
+      "dpr": 1,
+      "h1": [],
+      "h2": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-747h4j eo8rbh12",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "40px",
+          "h": 108,
+          "line": "54px",
+          "radius": "0px",
+          "tag": "H2",
+          "w": 500,
+          "weight": "700",
+          "x": 151.984375,
+          "y": 227.984375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-747h4j eo8rbh12",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "40px",
+          "h": 0,
+          "line": "54px",
+          "radius": "0px",
+          "tag": "H2",
+          "w": 0,
+          "weight": "700",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-zezy6m",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 1440,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgba(0, 0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 507.28125,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 820.640625,
+          "weight": "400",
+          "x": 96.359375,
+          "y": 116.359375
+        }
+      ],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 1430,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed",
+      "viewport": [
+        1440,
+        900
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 1440,
+          "src": "https://resources-fe.toss.im/image-optimize/width=3840,quality=75/https%3A%2F%2Fstatic.toss.im%2Fdisposables%2Fcontents%2FThumbnail-Tossfeed-Travel.png"
+        }
+      ]
+    },
+    {
+      "screen": "toss-category",
+      "body": [],
+      "cards": [],
+      "clientWidth": 1430,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-p5b4ka e1oqg9pf1",
+          "color": "rgb(228, 228, 229)",
+          "display": "block",
+          "font": "44px",
+          "h": 61.59375,
+          "line": "61.6px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 1048.796875,
+          "weight": "600",
+          "x": 190.59375,
+          "y": 158
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-zezy6m",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 1440,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-8ti0j4 edl7h780",
+          "color": "rgb(0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 0,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 1430,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed/category/everyfinance",
+      "viewport": [
+        1440,
+        900
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "toss-article",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-2wghat",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "17px",
+          "h": 24.796875,
+          "line": "23.8px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 29.421875,
+          "weight": "400",
+          "x": 741.671875,
+          "y": 655.203125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-x274na",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "17px",
+          "h": 17,
+          "line": "17px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 25.015625,
+          "weight": "400",
+          "x": 807.65625,
+          "y": 659.09375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1e3yv2i0 _1af0tyf3 css-1nbxptm",
+          "color": "rgb(49, 130, 246)",
+          "display": "block",
+          "font": "14px",
+          "h": 20,
+          "line": "20.006px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 104.0625,
+          "weight": "600",
+          "x": 1196.1875,
+          "y": 946
+        }
+      ],
+      "cards": [],
+      "clientWidth": 1430,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-6ycby1 e113wcp04",
+          "color": "rgb(255, 255, 255)",
+          "display": "block",
+          "font": "56px",
+          "h": 78.390625,
+          "line": "78.4px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 1308.015625,
+          "weight": "600",
+          "x": 60.984375,
+          "y": 556.8125
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "_1mnaa8n0 css-zezy6m",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 60,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 1440,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-gaqiig e113wcp06",
+          "color": "rgb(0, 0, 0)",
+          "display": "flex",
+          "font": "16px",
+          "h": 800,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 1430,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgba(0, 0, 0, 0)",
+          "display": "block",
+          "font": "16px",
+          "h": 800,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 1440,
+          "weight": "400",
+          "x": -5,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 429.09375,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 699.984375,
+          "weight": "400",
+          "x": 365,
+          "y": 2569.09375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 429.09375,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 699.984375,
+          "weight": "400",
+          "x": 365,
+          "y": 3089.375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "css-1a3dl1i",
+          "color": "rgb(0, 0, 0)",
+          "display": "inline",
+          "font": "16px",
+          "h": 364.34375,
+          "line": "16px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 699.984375,
+          "weight": "400",
+          "x": 365,
+          "y": 3784.515625
+        }
+      ],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 1435,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://toss.im/tossfeed/article/money-policies-64",
+      "viewport": [
+        1440,
+        900
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 1440,
+          "src": "https://resources-fe.toss.im/image-optimize/width=3840,quality=95/https%3A%2F%2Fstatic.toss.im%2Fdisposables%2Fcontents%2Fimg-money-policy-64.jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/8b4d3778-f07d-4fd4-b836-4e3d3e5e8601/infographic_(2).jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/c968c647-9e34-4faf-93d6-a740988aa008/infographic_(2)_(2).jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 2000,
+          "src": "https://static.toss.im/ipd-tcs/toss_core/live/f9bf7dd0-cd56-4908-abff-6a2352191c67/infographic-3.jpg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 300,
+          "src": "https://resources-fe.toss.im/image-optimize/width=256,quality=75/https%3A%2F%2Fstatic.toss.im%2Flogos%2Fsvg%2Flogo-toss-feed-mono-light.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 225,
+          "src": "https://resources-fe.toss.im/image-optimize/width=3840,quality=75/https%3A%2F%2Fstatic.toss-internal.com%2Fipd-tcs%2Ftoss_core%2Fstaging%2F032aa55a-fa3d-49ae-a3e8-8be1541245ab.png"
+        }
+      ],
+      "settledBody": [
+        {
+          "font": "17px",
+          "line": "27.2px",
+          "w": 700,
+          "x": 365
+        }
+      ]
+    },
+    {
+      "screen": "gp-home",
+      "body": [],
+      "cards": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 204.375,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 373.328125,
+          "weight": "400",
+          "x": 136.5,
+          "y": 578.75
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 204.375,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 373.328125,
+          "weight": "400",
+          "x": 525.828125,
+          "y": 578.75
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 204.375,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 373.34375,
+          "weight": "400",
+          "x": 915.15625,
+          "y": 578.75
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "card",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 204.375,
+          "line": "25.6px",
+          "radius": "16px",
+          "tag": "A",
+          "w": 373.328125,
+          "weight": "400",
+          "x": 136.5,
+          "y": 799.125
+        }
+      ],
+      "clientWidth": 1425,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "40px",
+          "h": 104,
+          "line": "52px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 760,
+          "weight": "700",
+          "x": 332.5,
+          "y": 176.1875
+        }
+      ],
+      "h2": [],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 1425,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 64,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 1200,
+          "weight": "400",
+          "x": 112.5,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [],
+      "mobileNav": [],
+      "scrollWidth": 1425,
+      "scrollY": 0,
+      "tables": [],
+      "url": "https://getpasslab.co.kr/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-industrial",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 27.1875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 800,
+          "weight": "400",
+          "x": 408.5,
+          "y": 349.765625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 27.1875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 800,
+          "weight": "400",
+          "x": 408.5,
+          "y": 392.953125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 27.1875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 800,
+          "weight": "400",
+          "x": 408.5,
+          "y": 436.140625
+        }
+      ],
+      "cards": [],
+      "clientWidth": 1425,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "40px",
+          "h": 52,
+          "line": "52px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 880,
+          "weight": "700",
+          "x": 408.5,
+          "y": 172.578125
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 880,
+          "weight": "600",
+          "x": 408.5,
+          "y": 283.765625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 880,
+          "weight": "600",
+          "x": 408.5,
+          "y": 597.703125
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 1425,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 64,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 1200,
+          "weight": "400",
+          "x": 112.5,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "scrollWidth": 1425,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 314.578125,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 880,
+          "weight": "400",
+          "x": 408.5,
+          "y": 708.5
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 792.9375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 880,
+          "weight": "400",
+          "x": 408.5,
+          "y": 1853.671875
+        }
+      ],
+      "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/boiler-safety-devices/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-energy",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 54.375,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 800,
+          "weight": "400",
+          "x": 408.5,
+          "y": 345.765625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 81.5625,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 800,
+          "weight": "400",
+          "x": 408.5,
+          "y": 709.921875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 54.375,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 800,
+          "weight": "400",
+          "x": 408.5,
+          "y": 1862.921875
+        }
+      ],
+      "cards": [],
+      "clientWidth": 1425,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "40px",
+          "h": 52,
+          "line": "52px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 880,
+          "weight": "700",
+          "x": 408.5,
+          "y": 168.578125
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 880,
+          "weight": "600",
+          "x": 408.5,
+          "y": 279.765625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 880,
+          "weight": "600",
+          "x": 408.5,
+          "y": 1796.921875
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 1425,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 64,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 1200,
+          "weight": "400",
+          "x": 112.5,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 319.734375,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 430,
+          "weight": "400",
+          "x": 409.5,
+          "y": 885.46875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 319.734375,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 430,
+          "weight": "400",
+          "x": 857.5,
+          "y": 885.46875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 319.734375,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 430,
+          "weight": "400",
+          "x": 409.5,
+          "y": 1364.1875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 319.734375,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 430,
+          "weight": "400",
+          "x": 857.5,
+          "y": 1364.1875
+        }
+      ],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "scrollWidth": 1425,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 224.984375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 880,
+          "weight": "400",
+          "x": 408.5,
+          "y": 416.140625
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 557.359375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 880,
+          "weight": "400",
+          "x": 408.5,
+          "y": 2579.171875
+        }
+      ],
+      "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/draft-flue-gas/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-natural-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-forced-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-induced-mobile-v2.svg"
+        },
+        {
+          "complete": true,
+          "naturalWidth": 390,
+          "src": "/images/energy-management/draft-balanced-mobile-v2.svg"
+        }
+      ]
+    },
+    {
+      "screen": "gp-computer",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 27.1875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 800,
+          "weight": "400",
+          "x": 408.5,
+          "y": 609.546875
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 27.1875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 800,
+          "weight": "400",
+          "x": 408.5,
+          "y": 652.734375
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 27.1875,
+          "line": "27.2px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 800,
+          "weight": "400",
+          "x": 408.5,
+          "y": 1034.90625
+        }
+      ],
+      "cards": [],
+      "clientWidth": 1425,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "40px",
+          "h": 52,
+          "line": "52px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 880,
+          "weight": "700",
+          "x": 408.5,
+          "y": 172.578125
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 880,
+          "weight": "600",
+          "x": 408.5,
+          "y": 283.765625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 880,
+          "weight": "600",
+          "x": 408.5,
+          "y": 727.921875
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 1425,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 64,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 1200,
+          "weight": "400",
+          "x": 112.5,
+          "y": 0
+        }
+      ],
+      "images": [],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "scrollWidth": 1425,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 243.78125,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 880,
+          "weight": "400",
+          "x": 408.5,
+          "y": 349.765625
+        },
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 224.984375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 880,
+          "weight": "400",
+          "x": 408.5,
+          "y": 793.921875
+        }
+      ],
+      "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-classification/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "imageQuality": []
+    },
+    {
+      "screen": "gp-fire",
+      "body": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 51.1875,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 880,
+          "weight": "400",
+          "x": 408.5,
+          "y": 357.765625
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 25.59375,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 880,
+          "weight": "400",
+          "x": 408.5,
+          "y": 424.953125
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "fire-panel-note",
+          "color": "rgb(98, 109, 122)",
+          "display": "block",
+          "font": "13px",
+          "h": 42.796875,
+          "line": "20.8px",
+          "radius": "0px",
+          "tag": "P",
+          "w": 878,
+          "weight": "400",
+          "x": 409.5,
+          "y": 934.171875
+        }
+      ],
+      "cards": [],
+      "clientWidth": 1425,
+      "dpr": 1,
+      "h1": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gpl-display",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "40px",
+          "h": 52,
+          "line": "52px",
+          "radius": "0px",
+          "tag": "H1",
+          "w": 880,
+          "weight": "700",
+          "x": 408.5,
+          "y": 172.578125
+        }
+      ],
+      "h2": [
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 880,
+          "weight": "600",
+          "x": 408.5,
+          "y": 291.765625
+        },
+        {
+          "bg": "rgb(239, 246, 255)",
+          "cls": "",
+          "color": "rgb(25, 31, 40)",
+          "display": "block",
+          "font": "20px",
+          "h": 50,
+          "line": "26px",
+          "radius": "8px",
+          "tag": "H2",
+          "w": 880,
+          "weight": "600",
+          "x": 408.5,
+          "y": 1498.25
+        }
+      ],
+      "header": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "gnb",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 65,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "HEADER",
+          "w": 1425,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "gnb-inner",
+          "color": "rgb(51, 61, 75)",
+          "display": "flex",
+          "font": "16px",
+          "h": 64,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 1200,
+          "weight": "400",
+          "x": 112.5,
+          "y": 0
+        }
+      ],
+      "images": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "block",
+          "font": "16px",
+          "h": 585.328125,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "IMG",
+          "w": 878,
+          "weight": "400",
+          "x": 409.5,
+          "y": 454.03125
+        }
+      ],
+      "mobileAd": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "mobile-top-ad",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "ASIDE",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mobileNav": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "cls": "chapter-mobile-nav",
+          "color": "rgb(51, 61, 75)",
+          "display": "none",
+          "font": "16px",
+          "h": 0,
+          "line": "25.6px",
+          "radius": "0px",
+          "tag": "NAV",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "scrollWidth": 1425,
+      "scrollY": 0,
+      "tables": [
+        {
+          "bg": "rgb(255, 255, 255)",
+          "cls": "",
+          "color": "rgb(51, 61, 75)",
+          "display": "table",
+          "font": "14px",
+          "h": 204.984375,
+          "line": "23.8px",
+          "radius": "12px",
+          "tag": "TABLE",
+          "w": 880,
+          "weight": "400",
+          "x": 408.5,
+          "y": 1617.84375
+        }
+      ],
+      "url": "https://getpasslab.co.kr/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "imageQuality": [
+        {
+          "complete": true,
+          "naturalWidth": 1536,
+          "src": "/images/fire-safety-manager-level2/pump-test-system-full-v2.webp"
+        }
+      ]
+    }
+  ],
+  "categoryCards": [
+    {
+      "client": 380,
+      "items": [
+        {
+          "dateSize": "13px",
+          "h": 97.15625,
+          "href": "/tossfeed/article/findyoursafezone-2d",
+          "image": {
+            "h": 67.5,
+            "w": 100
+          },
+          "titleLine": "22.4px",
+          "titleSize": "16px",
+          "w": 332,
+          "x": 24
+        },
+        {
+          "dateSize": "13px",
+          "h": 97.15625,
+          "href": "/tossfeed/article/findyoursafezone-2a",
+          "image": {
+            "h": 67.5,
+            "w": 100
+          },
+          "titleLine": "22.4px",
+          "titleSize": "16px",
+          "w": 332,
+          "x": 24
+        },
+        {
+          "dateSize": "13px",
+          "h": 119.546875,
+          "href": "/tossfeed/article/toss-togethers-pos-mou",
+          "image": {
+            "h": 67.5,
+            "w": 100
+          },
+          "titleLine": "22.4px",
+          "titleSize": "16px",
+          "w": 332,
+          "x": 24
+        }
+      ],
+      "scroll": 380,
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "client": 310,
+      "items": [
+        {
+          "dateSize": "13px",
+          "h": 97.15625,
+          "href": "/tossfeed/article/findyoursafezone-2d",
+          "image": {
+            "h": 67.5,
+            "w": 100
+          },
+          "titleLine": "22.4px",
+          "titleSize": "16px",
+          "w": 262,
+          "x": 24
+        },
+        {
+          "dateSize": "13px",
+          "h": 119.546875,
+          "href": "/tossfeed/article/findyoursafezone-2a",
+          "image": {
+            "h": 67.5,
+            "w": 100
+          },
+          "titleLine": "22.4px",
+          "titleSize": "16px",
+          "w": 262,
+          "x": 24
+        },
+        {
+          "dateSize": "13px",
+          "h": 141.9375,
+          "href": "/tossfeed/article/toss-togethers-pos-mou",
+          "image": {
+            "h": 67.5,
+            "w": 100
+          },
+          "titleLine": "22.4px",
+          "titleSize": "16px",
+          "w": 262,
+          "x": 24
+        }
+      ],
+      "scroll": 310,
+      "viewport": [
+        320,
+        700
+      ]
+    },
+    {
+      "client": 758,
+      "items": [
+        {
+          "dateSize": "15px",
+          "h": 371.03125,
+          "href": "/tossfeed/article/year-end-tax-2026-checklist",
+          "image": {
+            "h": 221.84375,
+            "w": 328.671875
+          },
+          "titleLine": "33.6px",
+          "titleSize": "24px",
+          "w": 328.671875,
+          "x": 30.3125
+        },
+        {
+          "dateSize": "15px",
+          "h": 371.046875,
+          "href": "/tossfeed/article/moneyball-8",
+          "image": {
+            "h": 221.859375,
+            "w": 328.6875
+          },
+          "titleLine": "33.6px",
+          "titleSize": "24px",
+          "w": 328.6875,
+          "x": 398.984375
+        },
+        {
+          "dateSize": "15px",
+          "h": 337.4375,
+          "href": "/tossfeed/article/moneyball-10",
+          "image": {
+            "h": 221.84375,
+            "w": 328.671875
+          },
+          "titleLine": "33.6px",
+          "titleSize": "24px",
+          "w": 328.671875,
+          "x": 30.3125
+        }
+      ],
+      "scroll": 758,
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "client": 1430,
+      "items": [
+        {
+          "dateSize": "15px",
+          "h": 367.15625,
+          "href": "/tossfeed/article/year-end-tax-2026-checklist",
+          "image": {
+            "h": 217.96875,
+            "w": 322.921875
+          },
+          "titleLine": "33.6px",
+          "titleSize": "24px",
+          "w": 322.921875,
+          "x": 190.59375
+        },
+        {
+          "dateSize": "15px",
+          "h": 367.15625,
+          "href": "/tossfeed/article/moneyball-8",
+          "image": {
+            "h": 217.96875,
+            "w": 322.9375
+          },
+          "titleLine": "33.6px",
+          "titleSize": "24px",
+          "w": 322.9375,
+          "x": 553.515625
+        },
+        {
+          "dateSize": "15px",
+          "h": 333.5625,
+          "href": "/tossfeed/article/moneyball-10",
+          "image": {
+            "h": 217.96875,
+            "w": 322.921875
+          },
+          "titleLine": "33.6px",
+          "titleSize": "24px",
+          "w": 322.921875,
+          "x": 916.453125
+        }
+      ],
+      "scroll": 1430,
+      "viewport": [
+        1440,
+        900
+      ]
+    }
+  ],
+  "settledArticleChecks": [
+    {
+      "client": 1430,
+      "p": [
+        {
+          "font": "17px",
+          "line": "27.2px",
+          "w": 700,
+          "x": 365
+        }
+      ],
+      "screen": "toss-article",
+      "scroll": 1435,
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    {
+      "client": 380,
+      "p": [
+        {
+          "font": "17px",
+          "line": "27.2px",
+          "w": 380,
+          "x": 0
+        }
+      ],
+      "screen": "toss-article",
+      "scroll": 380,
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "client": 310,
+      "p": [
+        {
+          "font": "17px",
+          "line": "27.2px",
+          "w": 310,
+          "x": 0
+        }
+      ],
+      "screen": "toss-article",
+      "scroll": 310,
+      "viewport": [
+        320,
+        700
+      ]
+    },
+    {
+      "client": 758,
+      "p": [
+        {
+          "font": "17px",
+          "line": "27.2px",
+          "w": 700,
+          "x": 29
+        }
+      ],
+      "screen": "toss-article",
+      "scroll": 980,
+      "viewport": [
+        768,
+        1024
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "site": "toss",
+      "width": 390,
+      "scenario": "mobile menu click open/close and category navigation",
+      "result": "PASS",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "toss",
+      "width": 390,
+      "scenario": "mobile menu Escape closes",
+      "result": "FAIL",
+      "observation": "menu stayed open; toggle click closed it",
+      "originalResult": "FAIL"
+    },
+    {
+      "site": "gp-industrial",
+      "width": 390,
+      "scenario": "TOC Enter/Escape, question Enter, reveal answer, Escape focus return",
+      "menu": {
+        "bar": {
+          "bottom": 844,
+          "height": 65.640625,
+          "left": 0,
+          "right": 375,
+          "top": 778.359375,
+          "width": 375,
+          "x": 0,
+          "y": 778.359375
+        },
+        "menu": {
+          "bottom": 764,
+          "height": 708,
+          "left": 88.9375,
+          "right": 351,
+          "top": 56,
+          "width": 262.0625,
+          "x": 88.9375,
+          "y": 56
+        },
+        "open": true
+      },
+      "end": {
+        "focus": "2022년 4월 시험 45번",
+        "open": false
+      },
+      "result": "PASS",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "gp-energy",
+      "width": 390,
+      "scenario": "TOC Enter/Escape, question Enter, reveal answer, Escape focus return",
+      "menu": {
+        "bar": {
+          "bottom": 844,
+          "height": 65.640625,
+          "left": 0,
+          "right": 375,
+          "top": 778.359375,
+          "width": 375,
+          "x": 0,
+          "y": 778.359375
+        },
+        "menu": {
+          "bottom": 764,
+          "height": 708,
+          "left": 149.375,
+          "right": 351,
+          "top": 56,
+          "width": 201.625,
+          "x": 149.375,
+          "y": 56
+        },
+        "open": true
+      },
+      "end": {
+        "focus": "2010년 3월 시험 11번",
+        "open": false
+      },
+      "result": "PASS",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "gp-computer",
+      "width": 390,
+      "scenario": "TOC Enter/Escape, question Enter, reveal answer, Escape focus return",
+      "menu": {
+        "bar": {
+          "bottom": 844,
+          "height": 65.640625,
+          "left": 0,
+          "right": 375,
+          "top": 778.359375,
+          "width": 375,
+          "x": 0,
+          "y": 778.359375
+        },
+        "menu": {
+          "bottom": 764,
+          "height": 708,
+          "left": 52.96875,
+          "right": 351,
+          "top": 56,
+          "width": 298.03125,
+          "x": 52.96875,
+          "y": 56
+        },
+        "open": true
+      },
+      "end": {
+        "focus": "2015년 3월 시험 14번",
+        "open": false
+      },
+      "result": "PASS",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "gp-industrial",
+      "width": 320,
+      "scenario": "TOC Enter/Escape, question click/reveal/Escape/focus",
+      "menu": {
+        "bar": {
+          "bottom": 685,
+          "height": 65.640625,
+          "left": 0,
+          "right": 305,
+          "top": 619.359375,
+          "width": 305,
+          "x": 0,
+          "y": 619.359375
+        },
+        "open": true,
+        "rect": {
+          "bottom": 620,
+          "height": 564,
+          "left": 18.9375,
+          "right": 281,
+          "top": 56,
+          "width": 262.0625,
+          "x": 18.9375,
+          "y": 56
+        }
+      },
+      "opened": {
+        "open": true,
+        "rect": {
+          "bottom": 594.09375,
+          "height": 503.1875,
+          "left": 19,
+          "right": 286,
+          "top": 90.90625,
+          "width": 267,
+          "x": 19,
+          "y": 90.90625
+        }
+      },
+      "answer": {
+        "open": true,
+        "revealed": true
+      },
+      "end": {
+        "focus": "2022년 4월 시험 45번",
+        "open": false
+      },
+      "result": "PASS",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "gp-energy",
+      "width": 320,
+      "scenario": "TOC Enter/Escape, question click/reveal/Escape/focus",
+      "menu": {
+        "bar": {
+          "bottom": 685,
+          "height": 65.640625,
+          "left": 0,
+          "right": 305,
+          "top": 619.359375,
+          "width": 305,
+          "x": 0,
+          "y": 619.359375
+        },
+        "open": true,
+        "rect": {
+          "bottom": 620,
+          "height": 564,
+          "left": 79.375,
+          "right": 281,
+          "top": 56,
+          "width": 201.625,
+          "x": 79.375,
+          "y": 56
+        }
+      },
+      "opened": {
+        "open": true,
+        "rect": {
+          "bottom": 558.09375,
+          "height": 431.1875,
+          "left": 19,
+          "right": 286,
+          "top": 126.90625,
+          "width": 267,
+          "x": 19,
+          "y": 126.90625
+        }
+      },
+      "answer": {
+        "open": true,
+        "revealed": true
+      },
+      "end": {
+        "focus": "2010년 3월 시험 11번",
+        "open": false
+      },
+      "result": "PASS",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "gp-computer",
+      "width": 320,
+      "scenario": "TOC Enter/Escape, question click/reveal/Escape/focus",
+      "menu": {
+        "bar": {
+          "bottom": 685,
+          "height": 65.640625,
+          "left": 0,
+          "right": 305,
+          "top": 619.359375,
+          "width": 305,
+          "x": 0,
+          "y": 619.359375
+        },
+        "open": true,
+        "rect": {
+          "bottom": 620,
+          "height": 564,
+          "left": 9,
+          "right": 281,
+          "top": 56,
+          "width": 272,
+          "x": 9,
+          "y": 56
+        }
+      },
+      "opened": {
+        "open": true,
+        "rect": {
+          "bottom": 546.09375,
+          "height": 407.1875,
+          "left": 19,
+          "right": 286,
+          "top": 138.90625,
+          "width": 267,
+          "x": 19,
+          "y": 138.90625
+        }
+      },
+      "answer": {
+        "open": true,
+        "revealed": true
+      },
+      "end": {
+        "focus": "2015년 3월 시험 14번",
+        "open": false
+      },
+      "result": "PASS",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "gp-energy",
+      "width": 320,
+      "scenario": "image viewer",
+      "before": {
+        "w": 255
+      },
+      "result": "미확인",
+      "originalResult": "opened; numeric details in follow-up"
+    },
+    {
+      "site": "gp-fire",
+      "width": 320,
+      "scenario": "bottom next chapter and browser back",
+      "result": "PASS",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "gp-fire",
+      "width": 1440,
+      "scenario": "desktop side TOC link and browser back",
+      "result": "PASS",
+      "back": "https://getpasslab.co.kr/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "toss",
+      "width": 1440,
+      "scenario": "category card/article/back",
+      "before": [
+        {
+          "w": 322.921875,
+          "x": 190.59375
+        },
+        {
+          "w": 322.9375,
+          "x": 553.515625
+        },
+        {
+          "w": 322.921875,
+          "x": 916.453125
+        },
+        {
+          "w": 322.921875,
+          "x": 190.59375
+        },
+        {
+          "w": 322.9375,
+          "x": 553.515625
+        },
+        {
+          "w": 322.921875,
+          "x": 916.453125
+        }
+      ],
+      "articleURL": "https://toss.im/tossfeed/article/money-policies-64",
+      "back": "https://toss.im/tossfeed/category/everyfinance",
+      "after": [
+        {
+          "w": 322.921875,
+          "x": 190.59375
+        },
+        {
+          "w": 322.9375,
+          "x": 553.515625
+        },
+        {
+          "w": 322.921875,
+          "x": 916.453125
+        },
+        {
+          "w": 322.921875,
+          "x": 190.59375
+        },
+        {
+          "w": 322.9375,
+          "x": 553.515625
+        },
+        {
+          "w": 322.921875,
+          "x": 916.453125
+        }
+      ],
+      "result": "PASS",
+      "originalResult": "PASS navigation; compare widths separately"
+    },
+    {
+      "site": "toss",
+      "width": 1440,
+      "scenario": "search open/Escape close",
+      "result": "PASS",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "gp-energy",
+      "width": 1440,
+      "scenario": "image viewer enlargement utility",
+      "normalImage": 430,
+      "viewer": {
+        "imageWidth": 390,
+        "open": true,
+        "region": [
+          {
+            "ch": 314,
+            "cw": 958,
+            "sh": 314,
+            "sw": 958
+          }
+        ]
+      },
+      "result": "FAIL",
+      "originalResult": "FAIL"
+    },
+    {
+      "site": "gp-fire",
+      "width": 390,
+      "scenario": "native popup start and close controls",
+      "result": "미확인",
+      "reason": "Input.dispatchMouseEvent timed out in new popup; Enter produced no visible transition; not classified as site defect",
+      "originalResult": "UNCONFIRMED"
+    },
+    {
+      "site": "gp-fire",
+      "width": 390,
+      "scenario": "practice same URL in regular tab; select/next/previous",
+      "selected": {
+        "checked": 1,
+        "viewport": [
+          390,
+          844
+        ]
+      },
+      "result": "PASS",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "gp-fire",
+      "width": 390,
+      "scenario": "regular-tab practice submit/cancel retains answer/resubmit/results",
+      "result": "PASS",
+      "counts": {
+        "correct": 1,
+        "incorrect": 0,
+        "unanswered": 35
+      },
+      "note": "native popup controls remain unconfirmed",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "gp-home",
+      "width": 390,
+      "scenario": "GNB Enter/Escape and certification card click",
+      "result": "PASS",
+      "destination": "https://getpasslab.co.kr/industrial-safety/written/",
+      "originalResult": "PASS"
+    },
+    {
+      "site": "toss",
+      "width": 1440,
+      "scenario": "search Escape focus return",
+      "result": "FAIL",
+      "observed": "document.activeElement was BODY after panel closed",
+      "originalResult": "FAIL"
+    },
+    {
+      "site": "gp-energy",
+      "width": 320,
+      "scenario": "image viewer actual enlargement, keyboard horizontal scroll and Escape focus return",
+      "result": "PASS",
+      "normalWidth": 255,
+      "viewerWidth": 390,
+      "region": {
+        "clientWidth": 302,
+        "scrollWidth": 414,
+        "scrollLeftAfterArrowRight": 40
+      },
+      "closedFocus": "② 압입통풍 확대 보기"
+    },
+    {
+      "site": "gp-fire",
+      "width": 320,
+      "scenario": "image viewer both-axis keyboard scroll and Escape focus return",
+      "result": "PASS",
+      "region": {
+        "clientWidth": 267,
+        "scrollWidth": 1304,
+        "clientHeight": 557,
+        "scrollHeight": 631,
+        "scrollLeft": 40,
+        "scrollTop": 74
+      },
+      "note": "Observation recorded during earlier action sequence; not a full image-content accuracy audit"
+    },
+    {
+      "site": "gp-computer",
+      "width": 390,
+      "scenario": "dialog forward Tab cycle at last close control",
+      "result": "미확인",
+      "observation": "activeElement BODY after Tab; Shift+Tab from answer moved to close inside dialog; browser toolbar focus not inspected"
+    }
+  ],
+  "corrections": [
+    {
+      "screen": "toss-category",
+      "viewport": [
+        768,
+        1024
+      ],
+      "initialScrollWidth": 939,
+      "settledScrollWidth": 758,
+      "note": "Subsequent settled reload removed initial overflow; do not classify initial transition as persistent layout defect."
+    }
+  ]
+}
