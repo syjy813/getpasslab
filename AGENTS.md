@@ -6,6 +6,17 @@
 - 현재 브랜치/HEAD, 변경 파일, 관련 최신 문서를 확인하고 기존 정상 기능·공개 URL·문제 ID를 보호
 - 챕터 집필·수정 전 `CHAPTER_WRITING_GUIDE.md`를 읽기
 
+## 공통 운영 가이드 선택
+
+새 작업을 시작할 때 [운영 가이드 읽기 안내](docs/standards/README.md)를 참조하고, **작업에 해당하는 문서만** 확인할 것.
+
+- 디자인·공통 CSS: [디자인 가이드](docs/standards/site-design-guide.md)
+- 학습 챕터·시설관리 정보 집필/편집: [콘텐츠 작성 가이드](docs/standards/content-guide.md). 특히 독자 효용, 추임새·형식적 안내 삭제, 조건·근거 보존
+- 제목·본문 표현·버튼·배지·안내 문구: [카피라이팅 가이드](docs/standards/copywriting-guide.md)
+- 탐색·모달·문제풀이·모바일: [UX/UI 가이드](docs/standards/ux-ui-guide.md)
+
+위 문서의 **필수 규칙과 관련 검수 기준을 우선** 확인. 상세 예시·변경 이력은 필요할 때만 읽음. 자격증 챕터 집필 정본은 기존 `CHAPTER_WRITING_GUIDE.md`, 학습 이미지 기술 정본은 기존 `learning-image-design-system-v1.md`로 유지. 문서에 적혀 있다는 이유로 실제 코드 구현·Production 반영을 추정하지 않음.
+
 ## 학습 이미지 작업의 필수 절차 (신규·편집·교체·검수 모두 포함)
 **이미지 작업을 시작하기 전에 반드시 `docs/standards/learning-image-design-system-v1.md`를 실제로 열어 읽고, 해당 작업에 적용한 항목을 PR 또는 작업 보고서에 명시할 것.** 이 문서가 디자인 기준의 단일 정본(Single Source of Truth)임.
 
