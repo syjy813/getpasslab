@@ -20,13 +20,13 @@ const bounded=async(page,selector)=>{
  const nav=page.locator('.chapter-mobile-nav');
  if(await nav.isVisible()){const n=await nav.boundingBox();assert(b.y+b.height<=n.y-8,selector+' must clear bottom chapter navigation');}
 };
-let browser;
+let browser,activePage;
 (async()=>{
  browser=await chromium.launch({ignoreDefaultArgs:['--hide-scrollbars']});
  for(const size of sizes){
   const context=await browser.newContext({viewport:size});
   await context.route('**/*',r=>new URL(r.request().url()).origin===new URL(base).origin?r.continue():r.abort());
-  const page=await context.newPage();page.on('pageerror',e=>report.errors.push(String(e)));
+  const page=await context.newPage();activePage=page;page.on('pageerror',e=>report.errors.push(String(e)));
   for(const route of routes){
    assert.equal((await page.goto(base+route)).status(),200);await page.evaluate(()=>document.fonts.ready);
    const geometry=await page.evaluate(layout);assert(geometry.scroll<=geometry.client+1,route+' no document overflow');
@@ -44,7 +44,8 @@ let browser;
     assert.equal(await toc.locator('[aria-current="page"]').getAttribute('href'),route);
     assert.deepEqual(await toc.locator('a').evaluateAll(es=>es.map(e=>e.getAttribute('href'))),await page.locator('.chapter-side .side-nav a').evaluateAll(es=>es.map(e=>e.getAttribute('href'))));
     await cert.click();assert(!await toc.evaluate(e=>e.open),'only one menu open');
-    await page.locator('h1').click();assert.equal(await page.locator('[data-gnb-menu][open]').count(),0,'outside click closes');
+    // The open mobile menu covers the title. Click the visible outer gutter.
+    await page.mouse.click(4,size.height/2);assert.equal(await page.locator('[data-gnb-menu][open]').count(),0,'outside click closes');
     await toc.locator('summary').click();await page.locator('.gnb-chapter-dropdown').waitFor({state:'visible'});
     const other=toc.locator('a:not([aria-current])').first(),destination=await other.getAttribute('href');
     await other.click();await page.waitForURL(u=>u.pathname===destination);await page.goBack();assert.equal(new URL(page.url()).pathname,route);
@@ -80,7 +81,7 @@ let browser;
  const context=await browser.newContext({viewport:{width:390,height:844}});
  await context.addInitScript(()=>{document.addEventListener('DOMContentLoaded',()=>{const s=document.createElement('style');s.textContent='html{overflow-y:scroll;scrollbar-gutter:stable}::-webkit-scrollbar{width:15px;height:15px}';document.head.append(s);});});
  await context.route('**/*',async r=>{const u=new URL(r.request().url());if(u.hostname==='getpasslab.co.kr'){const response=await r.fetch({url:base+u.pathname+u.search});return r.fulfill({response});}if(u.hostname==='t1.kakaocdn.net')return r.fulfill({contentType:'application/javascript',body:sdk});return r.abort();});
- const page=await context.newPage();page.on('pageerror',e=>report.errors.push(String(e)));
+ const page=await context.newPage();activePage=page;page.on('pageerror',e=>report.errors.push(String(e)));
  for(const [c,s,ch]of samples){
   await page.setViewportSize({width:390,height:844});await page.goto(`https://getpasslab.co.kr/${c}/written/${s}/${ch}/`);await page.waitForFunction(()=>document.querySelector('[data-mobile-top-ad] ins[data-qa-filled]'));
   const adCount=await page.locator('.kakao_ad_area').count();
@@ -94,4 +95,4 @@ let browser;
  }
  await context.close();assert.equal(report.errors.length,0,JSON.stringify(report.errors));report.passed=true;
  await browser.close();fs.writeFileSync(out+'/results.json',JSON.stringify(report,null,2));console.log('[Certification discovery browser] PASS',report.cases.length,'cases');
-})().catch(async e=>{report.passed=false;report.errors.push(String(e));fs.writeFileSync(out+'/results.json',JSON.stringify(report,null,2));if(browser)await browser.close().catch(()=>{});console.error(e);process.exitCode=1;});
+})().catch(async e=>{report.passed=false;report.errors.push(String(e));if(activePage){report.failure={url:activePage.url(),viewport:activePage.viewportSize()};await activePage.screenshot({path:out+'/failure.png'}).catch(()=>{});}fs.writeFileSync(out+'/results.json',JSON.stringify(report,null,2));if(browser)await browser.close().catch(()=>{});console.error(e);process.exitCode=1;});
