@@ -4,7 +4,7 @@
 .catalog-page .hero-inner{padding-top:var(--space-12);padding-bottom:0;text-align:left}
 .catalog-page .hero-inner .gpl-display{max-width:760px;word-break:keep-all;overflow-wrap:break-word}
 .catalog-kicker{display:block;margin-bottom:var(--space-3);color:var(--gray-600);font-size:var(--fs-caption);font-weight:var(--fw-semibold)}
-.catalog-page .catalog-intro{max-width:620px;margin:var(--space-4) 0 0;color:var(--gray-600)}
+.catalog-page .catalog-intro{max-width:620px;margin:var(--space-4) 0 0;color:var(--gray-600);word-break:keep-all;overflow-wrap:break-word}
 .catalog-page .section{padding-top:var(--space-12)}
 .catalog-page .section:last-child{padding-bottom:var(--space-16)}
 .catalog-page .grid{grid-template-columns:minmax(0,1fr);gap:var(--space-4)}
