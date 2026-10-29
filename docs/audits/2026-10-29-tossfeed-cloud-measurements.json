@@ -1,0 +1,1823 @@
+[
+  {
+    "items": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(0, 0, 0)",
+        "h": 5678.578125,
+        "line": "16px",
+        "radius": "0px",
+        "size": "16px",
+        "tag": "ARTICLE",
+        "text": "청년미래적금 총정리: 가입 조건, 혜택, 신청 방법 한눈에 보기",
+        "w": 1353,
+        "weight": "400",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgba(0, 0, 0, 0)",
+        "h": 836,
+        "line": "16px",
+        "radius": "0px",
+        "size": "16px",
+        "tag": "IMG",
+        "text": "",
+        "w": 1363,
+        "weight": "400",
+        "x": -5,
+        "y": 0
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-6ycby1 e113wcp04",
+        "color": "rgb(255, 255, 255)",
+        "h": 78.390625,
+        "line": "78.4px",
+        "radius": "0px",
+        "size": "56px",
+        "tag": "H1",
+        "text": "청년미래적금 총정리: 가입 조건, 혜택, 신청 방법 한눈에 보기",
+        "w": 1308.015625,
+        "weight": "600",
+        "x": 22.484375,
+        "y": 592.8125
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-2wghat",
+        "color": "rgb(255, 255, 255)",
+        "h": 24.796875,
+        "line": "23.8px",
+        "radius": "0px",
+        "size": "17px",
+        "tag": "P",
+        "text": "토스",
+        "w": 29.421875,
+        "weight": "400",
+        "x": 703.171875,
+        "y": 691.203125
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-x274na",
+        "color": "rgb(255, 255, 255)",
+        "h": 17,
+        "line": "17px",
+        "radius": "0px",
+        "size": "17px",
+        "tag": "P",
+        "text": "3분",
+        "w": 25.015625,
+        "weight": "400",
+        "x": 769.15625,
+        "y": 695.09375
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "_1e3yv2i0 _1af0tyf3 css-1nbxptm",
+        "color": "rgb(49, 130, 246)",
+        "h": 20,
+        "line": "20.006px",
+        "radius": "0px",
+        "size": "14px",
+        "tag": "P",
+        "text": "청년미래적금이란?",
+        "w": 104.0625,
+        "weight": "600",
+        "x": 1151.53125,
+        "y": 982
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "_1e3yv2i0 _1af0tyf3 css-1nbxptm",
+        "color": "rgb(51, 61, 75)",
+        "h": 20,
+        "line": "20.006px",
+        "radius": "0px",
+        "size": "14px",
+        "tag": "P",
+        "text": "청년미래적금 가입 대상 및 조건",
+        "w": 168.96875,
+        "weight": "600",
+        "x": 1151.53125,
+        "y": 1024
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "_1e3yv2i0 _1af0tyf3 css-1nbxptm",
+        "color": "rgb(51, 61, 75)",
+        "h": 40,
+        "line": "20.006px",
+        "radius": "0px",
+        "size": "14px",
+        "tag": "P",
+        "text": "청년미래적금 만기수령액, \n최대 얼마까지 받을 수 있을까",
+        "w": 174,
+        "weight": "600",
+        "x": 1151.53125,
+        "y": 1060
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "_1e3yv2i0 _1af0tyf3 css-1nbxptm",
+        "color": "rgb(51, 61, 75)",
+        "h": 20,
+        "line": "20.006px",
+        "radius": "0px",
+        "size": "14px",
+        "tag": "P",
+        "text": "청년미래적금 가입 신청 방법",
+        "w": 153.984375,
+        "weight": "600",
+        "x": 1151.53125,
+        "y": 1116
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "_1e3yv2i0 _1af0tyf3 css-1nbxptm",
+        "color": "rgb(51, 61, 75)",
+        "h": 20,
+        "line": "20.006px",
+        "radius": "0px",
+        "size": "14px",
+        "tag": "P",
+        "text": "꼭 확인하세요",
+        "w": 75.5625,
+        "weight": "600",
+        "x": 1151.53125,
+        "y": 1158
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-14on8x8",
+        "color": "rgb(51, 61, 75)",
+        "h": 54.375,
+        "line": "27.2px",
+        "radius": "0px",
+        "size": "17px",
+        "tag": "P",
+        "text": "연 최대 19.4% 금리 효과를 기대할 수 있는 청년미래적금 가",
+        "w": 700,
+        "weight": "400",
+        "x": 326.5,
+        "y": 980
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-1feg9au",
+        "color": "rgb(25, 31, 40)",
+        "h": 38.390625,
+        "line": "38.4px",
+        "radius": "0px",
+        "size": "24px",
+        "tag": "H3",
+        "text": "청년미래적금이란?",
+        "w": 700,
+        "weight": "700",
+        "x": 326.5,
+        "y": 1066.375
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-14on8x8",
+        "color": "rgb(51, 61, 75)",
+        "h": 54.375,
+        "line": "27.2px",
+        "radius": "0px",
+        "size": "17px",
+        "tag": "P",
+        "text": "청년이 매달 최대 50만 원 까지 3년 동안 자유롭게 저축하면 ",
+        "w": 700,
+        "weight": "400",
+        "x": 326.5,
+        "y": 1132.765625
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-1feg9au",
+        "color": "rgb(25, 31, 40)",
+        "h": 38.390625,
+        "line": "38.4px",
+        "radius": "0px",
+        "size": "24px",
+        "tag": "H3",
+        "text": "청년미래적금 가입 대상 및 조건",
+        "w": 700,
+        "weight": "700",
+        "x": 326.5,
+        "y": 1219.140625
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-14on8x8",
+        "color": "rgb(51, 61, 75)",
+        "h": 27.1875,
+        "line": "27.2px",
+        "radius": "0px",
+        "size": "17px",
+        "tag": "P",
+        "text": "일반형",
+        "w": 700,
+        "weight": "400",
+        "x": 326.5,
+        "y": 1285.53125
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-14on8x8",
+        "color": "rgb(51, 61, 75)",
+        "h": 103.65625,
+        "line": "27.2px",
+        "radius": "0px",
+        "size": "17px",
+        "tag": "P",
+        "text": "19세부터 34세 이하 청년*이 가입할 수 있어요. 군 복무 기",
+        "w": 700,
+        "weight": "400",
+        "x": 326.5,
+        "y": 1344.71875
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-14on8x8",
+        "color": "rgb(51, 61, 75)",
+        "h": 27.1875,
+        "line": "27.2px",
+        "radius": "0px",
+        "size": "17px",
+        "tag": "P",
+        "text": "우대형",
+        "w": 700,
+        "weight": "400",
+        "x": 326.5,
+        "y": 1582.75
+      }
+    ],
+    "url": "https://toss.im/tossfeed/article/money-policies-64",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  {
+    "items": [
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "gnb",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "0px",
+        "radius": "0px",
+        "rect": {
+          "h": 65,
+          "w": 1348,
+          "x": 0,
+          "y": 0
+        },
+        "tag": "HEADER",
+        "text": "GetPassLab   자격증 · 과목     산업안전기사  1과목 · ",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "gnb-inner",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "12px",
+        "line": "25.6px",
+        "padding": "0px 24px",
+        "radius": "0px",
+        "rect": {
+          "h": 64,
+          "w": 1200,
+          "x": 74,
+          "y": 0
+        },
+        "tag": "NAV",
+        "text": "GetPassLab   자격증 · 과목     산업안전기사  1과목 · ",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "gpl-display",
+        "color": "rgb(25, 31, 40)",
+        "font": "40px",
+        "gap": "normal",
+        "line": "52px",
+        "padding": "0px",
+        "radius": "0px",
+        "rect": {
+          "h": 104,
+          "w": 760,
+          "x": 294,
+          "y": 176.1875
+        },
+        "tag": "H1",
+        "text": "기출을 풀기 전에,무엇이 반복 출제되는지부터",
+        "weight": "700"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "section container",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "64px 24px 0px",
+        "radius": "0px",
+        "rect": {
+          "h": 587.9375,
+          "w": 1200,
+          "x": 74,
+          "y": 415.5625
+        },
+        "tag": "SECTION",
+        "text": "자격증 선택 준비 중인 자격증을 선택해 핵심 이론과 학습 그림을 확인해 ",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "gpl-h1",
+        "color": "rgb(25, 31, 40)",
+        "font": "32px",
+        "gap": "normal",
+        "line": "41.6px",
+        "padding": "0px",
+        "radius": "0px",
+        "rect": {
+          "h": 41.59375,
+          "w": 1152,
+          "x": 98,
+          "y": 479.5625
+        },
+        "tag": "H2",
+        "text": "자격증 선택",
+        "weight": "700"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "card",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "24px",
+        "radius": "16px",
+        "rect": {
+          "h": 204.375,
+          "w": 373.328125,
+          "x": 98,
+          "y": 578.75
+        },
+        "tag": "A",
+        "text": "국가기술자격 · 기사 산업안전기사 산업 현장의 재해 예방과 안전 관리를 ",
+        "weight": "400"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "card",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "24px",
+        "radius": "16px",
+        "rect": {
+          "h": 204.375,
+          "w": 373.328125,
+          "x": 487.328125,
+          "y": 578.75
+        },
+        "tag": "A",
+        "text": "국가기술자격 · 기능사 에너지관리기능사 보일러와 열설비의 설치·운전·정비",
+        "weight": "400"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "card",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "24px",
+        "radius": "16px",
+        "rect": {
+          "h": 204.375,
+          "w": 373.34375,
+          "x": 876.65625,
+          "y": 578.75
+        },
+        "tag": "A",
+        "text": "국가기술자격 · 2급 컴퓨터활용능력 2급 컴퓨터일반·스프레드시트 일반의 ",
+        "weight": "400"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "card",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "24px",
+        "radius": "16px",
+        "rect": {
+          "h": 204.375,
+          "w": 373.328125,
+          "x": 98,
+          "y": 799.125
+        },
+        "tag": "A",
+        "text": "소방안전관리자 자격 · 2급 소방안전관리자 2급 소방설비의 구조와 작동 ",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "section container",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "64px 24px",
+        "radius": "0px",
+        "rect": {
+          "h": 345.171875,
+          "w": 1200,
+          "x": 74,
+          "y": 1003.5
+        },
+        "tag": "SECTION",
+        "text": "GetPassLab 학습 방식 기출에서 반복되는 핵심 개념을 먼저 익히고",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "gpl-h1",
+        "color": "rgb(25, 31, 40)",
+        "font": "32px",
+        "gap": "normal",
+        "line": "41.6px",
+        "padding": "0px",
+        "radius": "0px",
+        "rect": {
+          "h": 41.59375,
+          "w": 760,
+          "x": 98,
+          "y": 1067.5
+        },
+        "tag": "H2",
+        "text": "GetPassLab 학습 방식",
+        "weight": "700"
+      }
+    ],
+    "links": [
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "card",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "24px",
+        "radius": "16px",
+        "rect": {
+          "h": 204.375,
+          "w": 373.328125,
+          "x": 98,
+          "y": 578.75
+        },
+        "tag": "A",
+        "text": "국가기술자격 · 기사 산업안전기사 산업 현장의 재해 예방과 안전 관리를 ",
+        "weight": "400"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "card",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "24px",
+        "radius": "16px",
+        "rect": {
+          "h": 204.375,
+          "w": 373.328125,
+          "x": 487.328125,
+          "y": 578.75
+        },
+        "tag": "A",
+        "text": "국가기술자격 · 기능사 에너지관리기능사 보일러와 열설비의 설치·운전·정비",
+        "weight": "400"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "card",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "24px",
+        "radius": "16px",
+        "rect": {
+          "h": 204.375,
+          "w": 373.34375,
+          "x": 876.65625,
+          "y": 578.75
+        },
+        "tag": "A",
+        "text": "국가기술자격 · 2급 컴퓨터활용능력 2급 컴퓨터일반·스프레드시트 일반의 ",
+        "weight": "400"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "card",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "25.6px",
+        "padding": "24px",
+        "radius": "16px",
+        "rect": {
+          "h": 204.375,
+          "w": 373.328125,
+          "x": 98,
+          "y": 799.125
+        },
+        "tag": "A",
+        "text": "소방안전관리자 자격 · 2급 소방안전관리자 2급 소방설비의 구조와 작동 ",
+        "weight": "400"
+      }
+    ],
+    "url": "https://getpasslab.co.kr/",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  {
+    "dialogs": [
+      {
+        "id": "deferred-question-dialog",
+        "open": false
+      },
+      {
+        "id": "",
+        "open": false
+      },
+      {
+        "id": "instant-practice-dialog",
+        "open": false
+      }
+    ],
+    "items": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "mobile-top-ad",
+        "color": "rgb(51, 61, 75)",
+        "line": "25.6px",
+        "padding": "0px",
+        "rect": {
+          "h": 0,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "size": "16px",
+        "tag": "ASIDE",
+        "text": "광고  \n          (() => {\n      ",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "chapter-side",
+        "color": "rgb(51, 61, 75)",
+        "line": "25.6px",
+        "padding": "0px",
+        "rect": {
+          "h": 3704.6875,
+          "w": 240,
+          "x": 98,
+          "y": 97
+        },
+        "size": "16px",
+        "tag": "ASIDE",
+        "text": "3과목 · 챕터 목록   회전체 속도  평형 플랜지 지",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "gpl-display",
+        "color": "rgb(25, 31, 40)",
+        "line": "52px",
+        "padding": "0px",
+        "rect": {
+          "h": 52,
+          "w": 880,
+          "x": 370,
+          "y": 172.578125
+        },
+        "size": "40px",
+        "tag": "H1",
+        "text": "보일러 안전장치",
+        "weight": "700"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "line": "25.6px",
+        "padding": "0px",
+        "rect": {
+          "h": 3517.921875,
+          "w": 880,
+          "x": 370,
+          "y": 283.765625
+        },
+        "size": "16px",
+        "tag": "ARTICLE",
+        "text": "핵심 개념\n보일러 안전장치는 압력·수위·연소 상태를 감",
+        "weight": "400"
+      },
+      {
+        "bg": "rgb(239, 246, 255)",
+        "cls": "",
+        "color": "rgb(25, 31, 40)",
+        "line": "26px",
+        "padding": "12px 16px 12px 34px",
+        "rect": {
+          "h": 50,
+          "w": 880,
+          "x": 370,
+          "y": 283.765625
+        },
+        "size": "20px",
+        "tag": "H2",
+        "text": "핵심 개념",
+        "weight": "600"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "line": "27.2px",
+        "padding": "0px",
+        "rect": {
+          "h": 27.1875,
+          "w": 800,
+          "x": 370,
+          "y": 349.765625
+        },
+        "size": "16px",
+        "tag": "P",
+        "text": "보일러 안전장치는 압력·수위·연소 상태를 감시하고, 허",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "line": "27.2px",
+        "padding": "0px",
+        "rect": {
+          "h": 27.1875,
+          "w": 800,
+          "x": 370,
+          "y": 392.953125
+        },
+        "size": "16px",
+        "tag": "P",
+        "text": "하나의 장치가 모든 위험을 처리하는 것이 아니라 압력 ",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "line": "27.2px",
+        "padding": "0px",
+        "rect": {
+          "h": 27.1875,
+          "w": 800,
+          "x": 370,
+          "y": 436.140625
+        },
+        "size": "16px",
+        "tag": "P",
+        "text": "문제에서는 장치 이름만 외우게 하기보다 무엇을 감지하는",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "line": "27.2px",
+        "padding": "0px",
+        "rect": {
+          "h": 27.1875,
+          "w": 800,
+          "x": 370,
+          "y": 479.328125
+        },
+        "size": "16px",
+        "tag": "P",
+        "text": "예를 들어 압력계는 압력을 표시하지만 압력을 직접 방출",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "line": "27.2px",
+        "padding": "0px",
+        "rect": {
+          "h": 27.1875,
+          "w": 800,
+          "x": 370,
+          "y": 522.515625
+        },
+        "size": "16px",
+        "tag": "P",
+        "text": "이 기능 차이를 먼저 잡으면 생소한 선택지도 판별할 수",
+        "weight": "400"
+      },
+      {
+        "bg": "rgb(239, 246, 255)",
+        "cls": "",
+        "color": "rgb(25, 31, 40)",
+        "line": "26px",
+        "padding": "12px 16px 12px 34px",
+        "rect": {
+          "h": 50,
+          "w": 880,
+          "x": 370,
+          "y": 597.703125
+        },
+        "size": "20px",
+        "tag": "H2",
+        "text": "절차 및 판별 기준",
+        "weight": "600"
+      },
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "line": "23.8px",
+        "padding": "0px",
+        "rect": {
+          "h": 314.578125,
+          "w": 880,
+          "x": 370,
+          "y": 708.5
+        },
+        "size": "14px",
+        "tag": "TABLE",
+        "text": "감시 대상장치주된 기능압력압력계현재 압력을 표시해 운전",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "line": "27.2px",
+        "padding": "0px",
+        "rect": {
+          "h": 27.1875,
+          "w": 800,
+          "x": 370,
+          "y": 1039.078125
+        },
+        "size": "16px",
+        "tag": "P",
+        "text": "방폭문은 연소실에서 급격한 압력 상승이 생겼을 때 압력",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "line": "27.2px",
+        "padding": "0px",
+        "rect": {
+          "h": 27.1875,
+          "w": 800,
+          "x": 370,
+          "y": 1082.265625
+        },
+        "size": "16px",
+        "tag": "P",
+        "text": "언로드밸브, 아웃트리거, 과부하방지장치처럼 다른 기계의",
+        "weight": "400"
+      }
+    ],
+    "url": "https://getpasslab.co.kr/industrial-safety/written/mechanical/boiler-safety-devices/",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  {
+    "items": [
+      {
+        "bg": "rgb(255, 255, 255)",
+        "cls": "_1mnaa8n0 css-1twxq1v",
+        "color": "rgb(0, 0, 0)",
+        "font": "16px",
+        "line": "16px",
+        "margin": "0px",
+        "maxWidth": "none",
+        "rect": {
+          "h": 60,
+          "w": 1363,
+          "x": 0,
+          "y": 0
+        },
+        "tag": "NAV",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-14on8x8",
+        "color": "rgb(51, 61, 75)",
+        "font": "17px",
+        "line": "27.2px",
+        "margin": "24px 0px 8px",
+        "maxWidth": "none",
+        "rect": {
+          "h": 54.375,
+          "w": 700,
+          "x": 326.5,
+          "y": -3
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-1feg9au",
+        "color": "rgb(25, 31, 40)",
+        "font": "24px",
+        "line": "38.4px",
+        "margin": "24px 0px 4px",
+        "maxWidth": "none",
+        "rect": {
+          "h": 38.390625,
+          "w": 700,
+          "x": 326.5,
+          "y": 83.375
+        },
+        "tag": "H3",
+        "weight": "700"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-14on8x8",
+        "color": "rgb(51, 61, 75)",
+        "font": "17px",
+        "line": "27.2px",
+        "margin": "24px 0px 8px",
+        "maxWidth": "none",
+        "rect": {
+          "h": 54.375,
+          "w": 700,
+          "x": 326.5,
+          "y": 149.765625
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-1feg9au",
+        "color": "rgb(25, 31, 40)",
+        "font": "24px",
+        "line": "38.4px",
+        "margin": "24px 0px 4px",
+        "maxWidth": "none",
+        "rect": {
+          "h": 38.390625,
+          "w": 700,
+          "x": 326.5,
+          "y": 236.140625
+        },
+        "tag": "H3",
+        "weight": "700"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-14on8x8",
+        "color": "rgb(51, 61, 75)",
+        "font": "17px",
+        "line": "27.2px",
+        "margin": "24px 0px 8px",
+        "maxWidth": "none",
+        "rect": {
+          "h": 27.1875,
+          "w": 700,
+          "x": 326.5,
+          "y": 302.53125
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-14on8x8",
+        "color": "rgb(51, 61, 75)",
+        "font": "17px",
+        "line": "27.2px",
+        "margin": "24px 0px 8px",
+        "maxWidth": "none",
+        "rect": {
+          "h": 103.65625,
+          "w": 700,
+          "x": 326.5,
+          "y": 361.71875
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-14on8x8",
+        "color": "rgb(51, 61, 75)",
+        "font": "17px",
+        "line": "27.2px",
+        "margin": "24px 0px 8px",
+        "maxWidth": "none",
+        "rect": {
+          "h": 27.1875,
+          "w": 700,
+          "x": 326.5,
+          "y": 599.75
+        },
+        "tag": "P",
+        "weight": "400"
+      }
+    ],
+    "scrollY": 983,
+    "url": "https://toss.im/tossfeed/article/money-policies-64",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  {
+    "items": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "line": "25.6px",
+        "margin": "0px",
+        "rect": {
+          "h": 2908.890625,
+          "w": 880,
+          "x": 370,
+          "y": -1742.234375
+        },
+        "tag": "ARTICLE",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "line": "25.6px",
+        "margin": "16px 0px",
+        "rect": {
+          "h": 51.1875,
+          "w": 880,
+          "x": 370,
+          "y": -1676.234375
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "line": "25.6px",
+        "margin": "16px 0px",
+        "rect": {
+          "h": 25.59375,
+          "w": 880,
+          "x": 370,
+          "y": -1609.046875
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "line": "25.6px",
+        "margin": "0px",
+        "rect": {
+          "h": 50.5,
+          "w": 878,
+          "x": 371,
+          "y": -1566.453125
+        },
+        "tag": "FIGCAPTION",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "line": "25.6px",
+        "margin": "0px",
+        "rect": {
+          "h": 585.328125,
+          "w": 878,
+          "x": 371,
+          "y": -1579.96875
+        },
+        "tag": "IMG",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "fire-panel-note",
+        "color": "rgb(98, 109, 122)",
+        "font": "13px",
+        "line": "20.8px",
+        "margin": "0px",
+        "rect": {
+          "h": 42.796875,
+          "w": 878,
+          "x": 371,
+          "y": -1099.828125
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "14px",
+        "line": "25.2px",
+        "margin": "6px 0px 0px",
+        "rect": {
+          "h": 50.375,
+          "w": 880,
+          "x": 370,
+          "y": -956.4375
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "14px",
+        "line": "25.2px",
+        "margin": "6px 0px 0px",
+        "rect": {
+          "h": 50.375,
+          "w": 880,
+          "x": 370,
+          "y": -858.46875
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "14px",
+        "line": "25.2px",
+        "margin": "6px 0px 0px",
+        "rect": {
+          "h": 50.375,
+          "w": 880,
+          "x": 370,
+          "y": -760.5
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "line": "25.6px",
+        "margin": "16px 0px",
+        "rect": {
+          "h": 51.1875,
+          "w": 880,
+          "x": 370,
+          "y": -686.125
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "line": "25.6px",
+        "margin": "16px 0px",
+        "rect": {
+          "h": 51.1875,
+          "w": 880,
+          "x": 370,
+          "y": -618.9375
+        },
+        "tag": "P",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "",
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "line": "25.6px",
+        "margin": "16px 0px",
+        "rect": {
+          "h": 25.59375,
+          "w": 880,
+          "x": 370,
+          "y": -469.75
+        },
+        "tag": "P",
+        "weight": "400"
+      }
+    ],
+    "url": "https://getpasslab.co.kr/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  {
+    "items": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-p5b4ka e1oqg9pf1",
+        "color": "rgb(51, 61, 75)",
+        "font": "44px",
+        "gap": "normal",
+        "line": "61.6px",
+        "maxWidth": "calc(100% - 48px)",
+        "radius": "0px",
+        "rect": {
+          "h": 61.59375,
+          "w": 1048.796875,
+          "x": 152.09375,
+          "y": 158
+        },
+        "tag": "H1",
+        "text": "금융의 모든 것",
+        "weight": "600"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-12ym7ld",
+        "color": "rgb(0, 0, 238)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "radius": "0px",
+        "rect": {
+          "h": 334.0625,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 1137.640625
+        },
+        "tag": "A",
+        "text": "뉴스청년미래적금 총정리: 가입 조건,",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-w1atjl",
+        "color": "rgb(0, 0, 0)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "radius": "0px",
+        "rect": {
+          "h": 613.25,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 1137.640625
+        },
+        "tag": "DIV",
+        "text": "뉴스청년미래적금 총정리: 가입 조건,",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-q82moi",
+        "color": "rgb(0, 0, 238)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "radius": "0px",
+        "rect": {
+          "h": 84.09375,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 1137.640625
+        },
+        "tag": "DIV",
+        "text": "",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-1h53noy e16omeh81",
+        "color": "rgb(51, 61, 75)",
+        "font": "24px",
+        "gap": "normal",
+        "line": "33.6px",
+        "maxWidth": "100%",
+        "radius": "0px",
+        "rect": {
+          "h": 167.96875,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 1272.734375
+        },
+        "tag": "H4",
+        "text": "청년미래적금 총정리: 가입 조건, 혜",
+        "weight": "600"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-6hscel",
+        "color": "rgb(139, 149, 161)",
+        "font": "15px",
+        "gap": "normal",
+        "line": "21px",
+        "maxWidth": "none",
+        "radius": "0px",
+        "rect": {
+          "h": 21,
+          "w": 77.46875,
+          "x": 152.09375,
+          "y": 1450.703125
+        },
+        "tag": "TIME",
+        "text": "2026.06.25",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-4640zq exg06w83",
+        "color": "rgb(0, 0, 238)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "radius": "0px",
+        "rect": {
+          "h": 182.25,
+          "w": 1048.796875,
+          "x": 152.09375,
+          "y": 2055.6875
+        },
+        "tag": "A",
+        "text": "뉴스청년미래적금 총정리: 가입 조건,",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-1buexcl exg06w84",
+        "color": "rgb(0, 0, 0)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "radius": "0px",
+        "rect": {
+          "h": 182.25,
+          "w": 1048.796875,
+          "x": 152.09375,
+          "y": 2055.6875
+        },
+        "tag": "LI",
+        "text": "뉴스청년미래적금 총정리: 가입 조건,",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-q82moi",
+        "color": "rgb(0, 0, 238)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "radius": "0px",
+        "rect": {
+          "h": 182.25,
+          "w": 270,
+          "x": 930.890625,
+          "y": 2055.6875
+        },
+        "tag": "DIV",
+        "text": "",
+        "weight": "400"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-ln2ewx exg06w81",
+        "color": "rgb(51, 61, 75)",
+        "font": "24px",
+        "gap": "normal",
+        "line": "33.6px",
+        "maxWidth": "100%",
+        "radius": "0px",
+        "rect": {
+          "h": 33.59375,
+          "w": 560.578125,
+          "x": 152.09375,
+          "y": 2111.515625
+        },
+        "tag": "H4",
+        "text": "청년미래적금 총정리: 가입 조건, 혜",
+        "weight": "600"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "cls": "css-jkn3cf",
+        "color": "rgb(139, 149, 161)",
+        "font": "15px",
+        "gap": "normal",
+        "line": "21px",
+        "maxWidth": "none",
+        "radius": "0px",
+        "rect": {
+          "h": 21,
+          "w": 77.46875,
+          "x": 152.09375,
+          "y": 2192.109375
+        },
+        "tag": "TIME",
+        "text": "2026.06.25",
+        "weight": "400"
+      }
+    ],
+    "url": "https://toss.im/tossfeed/category/everyfinance/news?page=1",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  {
+    "items": [
+      {
+        "cls": "css-p5b4ka e1oqg9pf1",
+        "color": "rgb(51, 61, 75)",
+        "font": "44px",
+        "gap": "normal",
+        "line": "61.6px",
+        "maxWidth": "calc(100% - 48px)",
+        "overflow": "visible",
+        "radius": "0px",
+        "rect": {
+          "h": 61.59375,
+          "w": 1048.796875,
+          "x": 152.09375,
+          "y": 158
+        },
+        "tag": "H1",
+        "weight": "600"
+      },
+      {
+        "cls": "css-12ym7ld",
+        "color": "rgb(0, 0, 238)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "overflow": "visible",
+        "radius": "0px",
+        "rect": {
+          "h": 233.28125,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 484.390625
+        },
+        "tag": "A",
+        "weight": "400"
+      },
+      {
+        "cls": "css-w1atjl",
+        "color": "rgb(0, 0, 0)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "overflow": "visible",
+        "radius": "0px",
+        "rect": {
+          "h": 613.25,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 484.390625
+        },
+        "tag": "DIV",
+        "weight": "400"
+      },
+      {
+        "cls": "",
+        "color": "rgb(0, 0, 0)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "overflow": "visible",
+        "radius": "0px",
+        "rect": {
+          "h": 613.25,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 484.390625
+        },
+        "tag": "LI",
+        "weight": "400"
+      },
+      {
+        "cls": "",
+        "color": "rgba(0, 0, 0, 0)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "overflow": "clip",
+        "radius": "0px",
+        "rect": {
+          "h": 84.09375,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 484.390625
+        },
+        "tag": "IMG",
+        "weight": "400"
+      },
+      {
+        "cls": "css-q82moi",
+        "color": "rgb(0, 0, 238)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "overflow": "visible",
+        "radius": "0px",
+        "rect": {
+          "h": 84.09375,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 484.390625
+        },
+        "tag": "DIV",
+        "weight": "400"
+      },
+      {
+        "cls": "css-1w9r9z0 ewomlqi1",
+        "color": "rgb(0, 0, 238)",
+        "font": "16px",
+        "gap": "normal",
+        "line": "16px",
+        "maxWidth": "none",
+        "overflow": "hidden",
+        "radius": "16px",
+        "rect": {
+          "h": 84.09375,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 484.390625
+        },
+        "tag": "DIV",
+        "weight": "400"
+      },
+      {
+        "cls": "css-1h53noy e16omeh81",
+        "color": "rgb(51, 61, 75)",
+        "font": "24px",
+        "gap": "normal",
+        "line": "33.6px",
+        "maxWidth": "100%",
+        "overflow": "visible",
+        "radius": "0px",
+        "rect": {
+          "h": 67.1875,
+          "w": 124.59375,
+          "x": 152.09375,
+          "y": 619.484375
+        },
+        "tag": "H4",
+        "weight": "600"
+      },
+      {
+        "cls": "css-6hscel",
+        "color": "rgb(139, 149, 161)",
+        "font": "15px",
+        "gap": "normal",
+        "line": "21px",
+        "maxWidth": "none",
+        "overflow": "visible",
+        "radius": "0px",
+        "rect": {
+          "h": 21,
+          "w": 73.484375,
+          "x": 152.09375,
+          "y": 696.671875
+        },
+        "tag": "TIME",
+        "weight": "400"
+      }
+    ],
+    "url": "https://toss.im/tossfeed/category/everyfinance",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  {
+    "state": "category reload after uneven return layout",
+    "cards": [
+      {
+        "text": "1인당 35만 원 지원하는 평생교",
+        "w": 322.921875,
+        "x": 152.09375
+      },
+      {
+        "text": "연말정산 부양가족·월세·대출·의료",
+        "w": 322.9375,
+        "x": 515.015625
+      },
+      {
+        "text": "“불안할 때 나는 맑고 산뜻한 걸",
+        "w": 322.921875,
+        "x": 877.953125
+      },
+      {
+        "text": "버리기 힘든 냉장고·세탁기, 폐가",
+        "w": 322.921875,
+        "x": 152.09375
+      },
+      {
+        "text": "녹아가는 동계 올림픽",
+        "w": 196.734375,
+        "x": 515.015625
+      },
+      {
+        "text": "대학생·취업 준비생이 꼭 챙겨야 ",
+        "w": 322.921875,
+        "x": 877.953125
+      }
+    ],
+    "url": "https://toss.im/tossfeed/category/everyfinance",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  {
+    "canonical": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-classification/",
+    "items": [
+      {
+        "color": "rgb(25, 31, 40)",
+        "font": "40px",
+        "h": 52,
+        "line": "52px",
+        "tag": "H1",
+        "w": 880,
+        "weight": "700"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 2128.15625,
+        "line": "25.6px",
+        "tag": "ARTICLE",
+        "w": 880,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(25, 31, 40)",
+        "font": "20px",
+        "h": 50,
+        "line": "26px",
+        "tag": "H2",
+        "w": 880,
+        "weight": "600"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "14px",
+        "h": 243.78125,
+        "line": "23.8px",
+        "tag": "TABLE",
+        "w": 880,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 27.1875,
+        "line": "27.2px",
+        "tag": "P",
+        "w": 800,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 27.1875,
+        "line": "27.2px",
+        "tag": "P",
+        "w": 800,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(25, 31, 40)",
+        "font": "20px",
+        "h": 50,
+        "line": "26px",
+        "tag": "H2",
+        "w": 880,
+        "weight": "600"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "14px",
+        "h": 224.984375,
+        "line": "23.8px",
+        "tag": "TABLE",
+        "w": 880,
+        "weight": "400"
+      }
+    ],
+    "url": "https://getpasslab.co.kr/computer-literacy/written/computer-basics/computer-classification/",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  {
+    "canonical": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/draft-flue-gas/",
+    "items": [
+      {
+        "color": "rgb(25, 31, 40)",
+        "font": "40px",
+        "h": 52,
+        "line": "52px",
+        "tag": "H1",
+        "w": 880,
+        "weight": "700"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 4570.984375,
+        "line": "25.6px",
+        "tag": "ARTICLE",
+        "w": 880,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(25, 31, 40)",
+        "font": "20px",
+        "h": 50,
+        "line": "26px",
+        "tag": "H2",
+        "w": 880,
+        "weight": "600"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 54.375,
+        "line": "27.2px",
+        "tag": "P",
+        "w": 800,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "14px",
+        "h": 224.984375,
+        "line": "23.8px",
+        "tag": "TABLE",
+        "w": 880,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 81.5625,
+        "line": "27.2px",
+        "tag": "P",
+        "w": 800,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 76.984375,
+        "line": "25.6px",
+        "tag": "FIGCAPTION",
+        "w": 430,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 319.734375,
+        "line": "25.6px",
+        "tag": "IMG",
+        "w": 430,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 76.984375,
+        "line": "25.6px",
+        "tag": "FIGCAPTION",
+        "w": 430,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 319.734375,
+        "line": "25.6px",
+        "tag": "IMG",
+        "w": 430,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 76.984375,
+        "line": "25.6px",
+        "tag": "FIGCAPTION",
+        "w": 430,
+        "weight": "400"
+      },
+      {
+        "color": "rgb(51, 61, 75)",
+        "font": "16px",
+        "h": 319.734375,
+        "line": "25.6px",
+        "tag": "IMG",
+        "w": 430,
+        "weight": "400"
+      }
+    ],
+    "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/draft-flue-gas/",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  {
+    "image": [
+      {
+        "h": 290,
+        "naturalHeight": 290,
+        "naturalWidth": 390,
+        "w": 390
+      }
+    ],
+    "regions": [
+      {
+        "clientHeight": 314,
+        "clientWidth": 958,
+        "scrollHeight": 314,
+        "scrollWidth": 958
+      }
+    ],
+    "state": "image dialog open",
+    "url": "https://getpasslab.co.kr/energy-management/written/thermal-equipment/draft-flue-gas/",
+    "viewport": [
+      1363,
+      936
+    ]
+  }
+]

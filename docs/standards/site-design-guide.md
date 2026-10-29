@@ -1,5 +1,7 @@
 # GetPassLab 디자인 가이드
 
+> **후속 상태:** v1.3 작성 당시 미실행 기록은 역사적 상태다. [2026-10-29 Cloud 후속 QA](../audits/2026-10-29-tossfeed-cloud-browser-qa.md)에서 기본 1363×936의 실측·조작을 수행했다. 지정 PC·모바일 크기는 계속 미확인이다. 최신 결과는 후속 보고서와 본 문서 끝의 보완을 참조한다.
+
 - 버전: **v1.3 / 2026-10-29**
 - 적용: 사이트의 공통 시각 요소, 페이지 레이아웃, 카드·버튼·태그, 학습 이미지 배치
 - 확인 기준: 현행 `main`의 `src/styles/global.css`, `src/pages/index.astro`, `src/components/GNB.astro`, `src/components/Footer.astro`
@@ -216,3 +218,16 @@
 - 학습 이미지 정본: [learning-image-design-system-v1.md](learning-image-design-system-v1.md)
 - ‘시설의 모든 것 / 자격증의 모든 것’ 서비스 분리와 토스피드 참고 방향은 향후 디자인 과제. **현행 구현·배포 완료로 표기하지 않음**
 - 디자인 토큰의 최초 선정자·도입 이유·날짜는 확인되지 않아 추정하지 않음
+
+## 2026-10-29 Cloud Browser 후속 보완 — v1.3
+
+근거: [Cloud QA §4·§5](../audits/2026-10-29-tossfeed-cloud-browser-qa.md), [구현 제안](../audits/2026-10-29-tossfeed-ui-implementation-proposal.md). 코드 토큰 표는 유지한다.
+
+1. nav 64px와 border 포함 header 65px은 다른 측정 대상이다. 일반문단·절차·표·캡션의 실제 스타일을 따로 확인한다. 소방 절차 일부는 14px, 일반 본문은 16px로 관찰됐으므로 하나의 body 토큰으로 모든 본문 크기를 대표하지 않는다.
+2. 토스 정보형 일반문단 700px, GetPassLab article 880px·일반문단 800px을 확인했다. 시설정보 읽기 열을 따로 설계하고 학습 표·공식·도식을 기사 폭에 일괄 축소하지 않는다.
+3. 카드 최초 로드·필터·뒤로가기·재진입·재로드와 긴 제목·이미지 없음 상태를 함께 검사한다. 텍스트의 bounding width와 실제 카드 클릭 영역의 폭을 구분한다. 토스의 일시적 비균등 폭을 채택할 규칙으로 해석하지 않는다.
+4. viewer 열림/닫힘과 실제 확대 효용은 별도 검사다. 에너지 본문430px→viewer390px 사례와 소방의 큰 그림 viewer를 구분한다.
+5. 비슷한 회색·폰트색은 동일 UX라는 증거가 아니다. 기존 토큰·학습 의미색·원본·alt·비율을 보존한다.
+
+측정은 기본 Cloud 1363×936의 관찰이다. 지정 폭 QA 전 공통 토큰 수치를 확정하지 않는다. 상세 후보 수치는 구현 제안의 **GetPassLab 자체 설계 후보**로 유지한다.
+
