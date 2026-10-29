@@ -51,6 +51,7 @@ for(const r of briefs){
 // The tank's useful zone lies between the two intake levels, not the floor and water surface.
 const tank=fs.readFileSync('public/images/fire-safety-manager-level2/shared-tank-effective-section-v1.svg','utf8');assert(tank.includes('id="general-intake" d="M246 180H340"'));assert(tank.includes('id="fire-intake" d="M246 420H340"'));assert(180<420);assert.equal(4*1.5,6);
 const tankSource=chapters.find(c=>c.id==='FSM2-082').s;assert(tankSource.includes('4 × 1.5 = 6㎥')&&tankSource.includes('5.2㎥'));
+const chamberSource=chapters.find(c=>c.id==='FSM2-081').s;assert(chamberSource.includes('admRulSeq=2100000248748')&&chamberSource.includes('제2조, 제7조 및 제9조'),'pressure-chamber source links directly to definitions, components and volume');assert(!chamberSource.includes('menuNo=500265'),'generic certification landing page is not a component reference');
 const sitemap=fs.readFileSync('dist/sitemap-0.xml','utf8');const newSlugs=ledger.items.filter(r=>r.work==='new').map(r=>r.slug);for(const slug of newSlugs)assert(sitemap.includes('/'+slug+'/'));
 const restored=sitemap.replace(/<url>.*?<\/url>/g,m=>newSlugs.some(s=>m.includes('/'+s+'/'))?'':m);assert.equal(hash(Buffer.from(restored)),review.baseline['dist/sitemap-0.xml'],'exactly four new URLs');
 console.log('[Fire original plan] PASS',JSON.stringify({originalUnits:22,previouslyComplete:12,newChapters:4,revisedChapters:6,fireChapters:83,publishedQuestions:2328,currentFiles:inventory.length}));

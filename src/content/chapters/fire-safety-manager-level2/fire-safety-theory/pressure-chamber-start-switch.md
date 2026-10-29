@@ -38,7 +38,7 @@ status: "완료"
 
 그림은 부품을 식별하는 예시이며 배관과 부품의 실제 위치, 압력 설정값은 특정 제품을 재현한 것이 아님
 
-<p class="fire-source-note">확인 근거: <a href="https://hits.kfi.or.kr/portal/main/contents.do?menuNo=500265" target="_blank" rel="noopener">한국소방산업기술원 기동용수압개폐장치 안내</a> 구성 부품과 역할</p>
+<p class="fire-source-note">확인 근거: <a href="https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000248748" target="_blank" rel="noopener">기동용수압개폐장치의 형식승인 및 제품검사의 기술기준</a> 제2조, 제7조 및 제9조</p>
 
 </div>
 <dialog id="fire-bulk-image-dialog" class="sample-image-layer fire-original-dialog" aria-labelledby="fire-bulk-image-title"><div class="image-layer-head"><h2 id="fire-bulk-image-title">그림 확대</h2><button data-fire-close autofocus>닫기</button></div><div class="fire-bulk-zoom-scroll" tabindex="0" role="region" aria-label="확대 그림. 가로와 세로 이동 가능"><img width="380" height="600" alt=""></div></dialog>
