@@ -27,8 +27,8 @@ const report={result:'RUNNING',cases:[],interactions:[],errors:[],limitations:['
     const dropdown=page.locator('.gnb-dropdown'),rect=await dropdown.boundingBox();assert(rect.x>=0&&rect.x+rect.width<=width+1,'menu stays in viewport');
     if(route.includes('/written/')&&route.split('/').filter(Boolean).length>3){
      const current=page.locator('.gnb-chapter-dropdown a[aria-current="page"]');assert.equal(await current.getAttribute('href'),route);
-     const content=await page.locator('.gnb-chapter-dropdown a').evaluateAll(es=>es.map(e=>({title:e.textContent,href:e.getAttribute('href')})));
-     assert.deepEqual(content,await page.locator('.chapter-side .side-nav a').evaluateAll(es=>es.map(e=>({title:e.textContent,href:e.getAttribute('href')}))));
+     const content=await page.locator('.gnb-chapter-dropdown a').evaluateAll(es=>es.map(e=>({title:e.textContent.trim(),href:e.getAttribute('href')})));
+     assert.deepEqual(content,await page.locator('.chapter-side .side-nav a').evaluateAll(es=>es.map(e=>({title:e.textContent.trim(),href:e.getAttribute('href')}))));
      if(width<1024){const bottom=await page.locator('.chapter-mobile-nav').boundingBox();assert(rect.y+rect.height<=bottom.y-8+1,'TOC clears fixed bottom navigation');}
     }
     await page.keyboard.press('Escape');assert.equal(await page.locator('.gnb-menu').getAttribute('open'),null);assert(await menu.evaluate(e=>document.activeElement===e));
