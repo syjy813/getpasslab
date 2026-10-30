@@ -46,6 +46,7 @@ let browser;
             tables:[...a.querySelectorAll('table')].filter(visible).map(e=>({font:parseFloat(getComputedStyle(e).fontSize),cells:[...e.querySelectorAll('th,td')].map(c=>getComputedStyle(c).verticalAlign)})),
             related:[...a.querySelectorAll(':scope>.related-list')].map(e=>({margin:getComputedStyle(e).marginTop,style:getComputedStyle(e).listStyleType})),
             practice:[...a.querySelectorAll(':scope>[data-fire-practice-entry]')].map(e=>({border:getComputedStyle(e).borderTopWidth,gap:rect(e.querySelector('.fire-actions')).top-rect(e.querySelector('h2')).bottom})),
+            tableBulletStyles:[...a.querySelectorAll('td ul')].map(ul=>getComputedStyle(ul).listStyleType),
             cellLists:[...a.querySelectorAll('td>ul.chapter-cell-items')].map(ul=>({
               style:getComputedStyle(ul).listStyleType,
               items:[...ul.children].map(li=>({text:li.textContent.trim(),top:rect(li).top,bottom:rect(li).bottom,font:parseFloat(getComputedStyle(li).fontSize),marker:parseFloat(getComputedStyle(li,'::marker').fontSize)})),
@@ -69,10 +70,11 @@ let browser;
         for(const t of layout.tables){assert.equal(t.font,14,current+': table typography');assert(t.cells.every(v=>v==='top'),current+': cell alignment');}
         for(const r of layout.related){assert.equal(r.margin,'0px');assert.equal(r.style,'none');}
         for(const p of layout.practice){assert.equal(p.border,'1px');assert(Math.abs(p.gap-16)<=1);}
+        assert(layout.tableBulletStyles.every(style=>style==='none'),current+': no table bullet markers');
         for(const ul of layout.cellLists){
-          assert.equal(ul.style,'disc');assert(ul.items.length>=2,current+': multiple table items');
+          assert.equal(ul.style,'none');assert(ul.items.length>=2,current+': multiple table items');
           for(let i=0;i<ul.items.length;i++){
-            const item=ul.items[i];assert(item.text,current+': no empty list item');assert.equal(item.font,14);assert(item.marker<item.font,current+': small bullet');
+            const item=ul.items[i];assert(item.text,current+': no empty list item');assert.equal(item.font,14);
             if(i)assert(item.top>ul.items[i-1].bottom,current+': separate table item lines');
           }
         }

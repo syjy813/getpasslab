@@ -111,6 +111,7 @@ let browser,activePage;
   return {client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,learning:rect(document.querySelector('.home-learning-method')),footer:rect(document.querySelector('.footer')),slots:[...document.querySelectorAll('[data-home-ad],[data-footer-ad]')].map(e=>{const mount=e.querySelector('[data-home-ad-mount],[data-footer-ad-mount]');return {slot:e.hasAttribute('data-footer-ad')?'bottom':e.dataset.homeAd,hidden:e.hidden,rect:rect(e),mount:rect(mount),units:[...mount.querySelectorAll('ins')].map(i=>({unit:i.dataset.adUnit,width:i.dataset.adWidth,height:i.dataset.adHeight,filled:i.dataset.qaFilled})),scripts:mount.querySelectorAll('script').length};})};
  };
  const configs={middle:{unit:'DAN-WuLZW6NARBuA5jnA',width:'320',height:'100'},bottom:{unit:'DAN-A3dGUv2kIjnZSTmZ',width:'300',height:'250'}};
+ const desktopFooter={unit:'DAN-cUOTdTkWFtH2f3C1',width:'728',height:'90'};
  for(const width of [1920,1440,768,767,390,320,300]){
   let releaseSDK;const sdkGate=new Promise(resolve=>releaseSDK=resolve);
   const homeContext=await browser.newContext({viewport:{width,height:844}});
@@ -126,7 +127,7 @@ let browser,activePage;
   assert(after.scroll<=after.client+1,'home advertisements never overflow');
   assert.equal(after.learning.y,before.learning.y,'SDK load preserves learning position');assert.equal(after.footer.y,before.footer.y,'SDK load preserves footer position');
   for(const row of after.slots){
-   const config=configs[row.slot],shown=(row.slot==='bottom'||width<768)&&after.client>=Number(config.width);
+   const config=row.slot==='bottom'&&after.client>=1024?desktopFooter:configs[row.slot],shown=(row.slot==='bottom'||width<768)&&after.client>=Number(config.width);
    assert.equal(row.hidden,!shown);
    if(!shown){assert.equal(row.rect.height,0);assert.equal(row.units.length,0);assert.equal(row.scripts,0);continue;}
    assert.equal(row.units.length,1);const {filled,...actual}=row.units[0];assert.equal(filled,'true');assert.deepEqual(actual,config);assert.equal(row.scripts,1);
@@ -163,8 +164,8 @@ let browser,activePage;
     const ad=document.querySelector('[data-footer-ad]'),mount=ad.querySelector('[data-footer-ad-mount]'),i=mount.querySelector('ins'),r=mount.getBoundingClientRect(),box=ad.getBoundingClientRect();
     return {client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,slots:document.querySelectorAll('[data-footer-ad]').length,homeUnits:document.querySelectorAll('[data-home-ad]').length,unit:i.dataset.adUnit,width:i.dataset.adWidth,height:i.dataset.adHeight,mount:{x:r.x,y:r.y,width:r.width,height:r.height},footerGap:document.querySelector('.footer').getBoundingClientRect().top-box.bottom,beforeFooter:ad.nextElementSibling.classList.contains('footer'),afterArticle:!document.querySelector('article')||box.top>=document.querySelector('article').getBoundingClientRect().bottom,sdk:mount.querySelectorAll('script').length,visibleAds:[...document.querySelectorAll('ins.kakao_ad_area')].filter(e=>{const b=e.getBoundingClientRect();return b.width>0&&b.height>0;}).length};
    });
-   assert.equal(data.slots,1);assert.equal(data.homeUnits,0);assert.equal(data.unit,configs.bottom.unit);assert.equal(data.width,'300');assert.equal(data.height,'250');assert.equal(data.mount.width,300);assert.equal(data.mount.height,250);assert.equal(data.sdk,1);
-   assert(data.beforeFooter&&data.afterArticle&&data.footerGap>=24,'footer ad follows all content and clears footer');assert(data.scroll<=data.client+1);assert(data.mount.x>=0&&data.mount.x+300<=data.client);assert(Math.abs(data.mount.x+150-data.client/2)<1);assert(data.visibleAds<=4,'at most four displayed units including existing ads');
+   const expectedFooter=data.client>=1024?desktopFooter:configs.bottom;const adWidth=Number(expectedFooter.width);assert.equal(data.slots,1);assert.equal(data.homeUnits,0);assert.equal(data.unit,expectedFooter.unit);assert.equal(data.width,expectedFooter.width);assert.equal(data.height,expectedFooter.height);assert.equal(data.mount.width,adWidth);assert.equal(data.mount.height,Number(expectedFooter.height));assert.equal(data.sdk,1);
+   assert(data.beforeFooter&&data.afterArticle&&data.footerGap>=24,'footer ad follows all content and clears footer');assert(data.scroll<=data.client+1);assert(data.mount.x>=0&&data.mount.x+adWidth<=data.client);assert(Math.abs(data.mount.x+adWidth/2-data.client/2)<1);assert(data.visibleAds<=4,'at most four displayed units including existing ads');
    if(route.split('/').filter(Boolean).length===4){await commonPage.locator('[data-footer-ad]').scrollIntoViewIfNeeded();await commonPage.screenshot({path:`${out}/footer-ad-${route.split('/')[1]}-${width}.png`});}
    report.cases.push({route,width,scenario:'common footer on list/chapter, whole unit and advertisement count',data,result:'PASS'});
   }
