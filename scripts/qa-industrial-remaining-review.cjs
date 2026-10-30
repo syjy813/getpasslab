@@ -51,7 +51,7 @@ let browser;
           tableFontSizes: [...article.querySelectorAll('td,th')].map(e => parseFloat(getComputedStyle(e).fontSize)),
           mathErrors: article.querySelectorAll('.katex-error').length,
           formulaColors: [...article.querySelectorAll('.katex-display, p>.katex:only-child')].map(e => ({background:getComputedStyle(e).backgroundColor,border:getComputedStyle(e).borderTopColor,color:getComputedStyle(e).color})),
-          h2Colors: [...article.querySelectorAll('h2')].map(e => getComputedStyle(e).backgroundColor),
+          h2Colors: [...article.querySelectorAll('h2')].map(e => ({id:e.id, color:getComputedStyle(e).backgroundColor})),
           formulaTextWeights: [...article.querySelectorAll('.katex-display, p>.katex:only-child')].map(card => [...card.querySelectorAll('.katex-html span')].filter(e => [...e.childNodes].some(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim())).map(e => getComputedStyle(e).fontWeight)),
           tablesWithInternalScroll: [...article.querySelectorAll('table')].filter(e => e.scrollWidth > e.clientWidth + 2).length,
           formulasWithInternalScroll: [...article.querySelectorAll('.katex-display')].filter(e => e.scrollWidth > e.clientWidth + 2).length,
@@ -69,7 +69,7 @@ let browser;
         assert.equal(colors.background, 'rgb(242, 244, 246)', `${current}: formula color scope`);
         assert.equal(colors.border, 'rgb(229, 232, 235)'); assert.equal(colors.color, 'rgb(51, 61, 75)');
       }
-      assert(layout.h2Colors.every(color => color === 'rgb(239, 246, 255)'), `${current}: heading color changed`);
+      assert(layout.h2Colors.every(({id,color}) => color === (['핵심-개념','절차-및-판별-기준','자주-틀리는-포인트'].includes(id) ? 'rgba(0, 0, 0, 0)' : 'rgb(239, 246, 255)')), `${current}: heading color changed`);
       assert.equal(layout.rawLatex.length, 0, `${current}: unrendered math command ${JSON.stringify(layout.rawLatex)}`);
       assert.equal(await page.locator('h1').count(), 1);
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), row.url);
