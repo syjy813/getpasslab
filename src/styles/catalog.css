@@ -1,11 +1,11 @@
 /* Certification discovery only. Chapter reading and practice keep their own styles. */
-.catalog-page{background:var(--white)}
+.catalog-page{--catalog-section-gap:var(--space-16);background:var(--white)}
 .catalog-page .hero{background:transparent;border:0}
 .catalog-page .hero-inner{padding-top:var(--space-12);padding-bottom:0;text-align:left}
 .catalog-page .hero-inner .gpl-display{max-width:760px;word-break:keep-all;overflow-wrap:break-word}
 .catalog-kicker{display:block;margin-bottom:var(--space-3);color:var(--gray-600);font-size:var(--fs-caption);font-weight:var(--fw-semibold)}
 .catalog-page .catalog-intro{max-width:620px;margin:var(--space-4) 0 0;color:var(--gray-600);word-break:keep-all;overflow-wrap:break-word}
-.catalog-page .section{padding-top:var(--space-12)}
+.catalog-page .section{padding-top:var(--catalog-section-gap)}
 .catalog-page .section:last-child{padding-bottom:var(--space-16)}
 .catalog-page .grid{grid-template-columns:minmax(0,1fr);gap:var(--space-4)}
 .catalog-page .card{min-width:0;padding:var(--space-6);box-shadow:none}
@@ -23,6 +23,9 @@
 .catalog-group-nav a:hover{background:var(--gray-50);border-color:var(--gray-600)}
 .catalog-group-nav a:focus-visible{outline:3px solid var(--primary-500);outline-offset:2px}
 .catalog-page #all-chapters{scroll-margin-top:calc(var(--gnb-h) + var(--space-4))}
+.subject-index .subject-section,.subject-index .section-heading.compact{margin-top:var(--catalog-section-gap)}
+.subject-index .subject-section>.section-heading.compact{margin-top:0}
+.subject-index .chapter-group{margin-bottom:var(--catalog-section-gap)}
 @media(min-width:640px){
   .catalog-page .grid-2,.catalog-page .grid-3,.catalog-page .certification-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .catalog-page .certification-grid{gap:var(--space-6)}
@@ -31,8 +34,8 @@
   .catalog-page .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media(max-width:639px){
+  .catalog-page{--catalog-section-gap:var(--space-12)}
   .catalog-page .hero-inner{padding-top:var(--space-8)}
-  .catalog-page .section{padding-top:var(--space-8)}
   .catalog-page .card{padding:20px}
   .subject-index .chapter-group .grid{display:block}
   .subject-index .chapter-group .card{padding:20px 0;border:0;border-bottom:1px solid var(--gray-200);border-radius:0}
