@@ -9,7 +9,7 @@ const files=[...walk('src'),...walk('public'),...walk('dist').filter(f=>/\.(html
 assert.deepEqual(files,Object.keys(review.current).sort(),'native inventory');
 for(const file of files)assert.equal(hash(fs.readFileSync(file)),review.current[file],file+': reviewed current bytes');
 assert.deepEqual(review.productFiles,[
- 'src/components/AdFitResponsive.astro','src/components/GNB.astro','src/components/ReadableChapter.astro','src/layouts/BaseLayout.astro','src/layouts/ChapterLayout.astro',
+ 'src/components/AdFitResponsive.astro','src/components/GNB.astro','src/content/chapters/computer-literacy/written/computer-basics/computer-classification.md','src/layouts/BaseLayout.astro','src/layouts/ChapterLayout.astro',
  'src/pages/[cert]/[exam]/[subject]/index.astro','src/pages/[cert]/[exam]/index.astro','src/pages/[cert]/index.astro','src/pages/index.astro',
  'src/styles/catalog.css','src/styles/global.css',
 ]);
