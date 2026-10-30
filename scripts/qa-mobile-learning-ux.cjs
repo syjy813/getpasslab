@@ -86,11 +86,11 @@ let browser;
           for(const method of ['button','escape','backdrop']){
             await zoom.first().scrollIntoViewIfNeeded();
             const before=await page.evaluate(()=>({x:scrollX,y:scrollY,style:document.body.getAttribute('style')}));
-            const original=await zoom.first().evaluate(button=>{const e=button.closest('figure').querySelector('img');return {src:e.currentSrc,alt:e.alt,width:Number(e.getAttribute('width'))};});
+            const original=await zoom.first().evaluate(button=>{const e=button.closest('figure').querySelector('img');return {src:e.currentSrc,alt:e.alt,width:Number(e.getAttribute('width'))||e.naturalWidth||e.width,rendered:e.getBoundingClientRect().width};});
             await zoom.first().click();
             const dialog=page.locator('.learning-image-dialog');
             assert(await dialog.isVisible());
-            assert(await dialog.locator('img').evaluate((e,o)=>e.src===o.src&&e.alt===o.alt&&e.width===o.width,original),'exact original asset and full-size labels');
+            assert(await dialog.locator('img').evaluate((e,o)=>e.src===o.src&&e.alt===o.alt&&e.width>=o.width&&e.width>=o.rendered*1.25,original),'original asset and enlarged labels');
             assert(await page.evaluate(()=>document.body.style.position==='fixed'),'background scroll locked');
             assert(await dialog.locator('[data-learning-image-close]').evaluate(e=>e===document.activeElement),'close gets initial focus');
             await page.screenshot({path:`${out}/${width}-${route.split('/').at(-2)}-zoom.png`});
