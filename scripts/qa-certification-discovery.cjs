@@ -10,7 +10,7 @@ const samples=[
  ['computer-literacy','computer-basics','computer-classification'],
  ['fire-safety-manager-level2','fire-safety-practice','pump-test-piping-valves'],
 ];
-const routes=['/',...samples.flatMap(([c,s,ch])=>[`/${c}/`,`/${c}/written/`,`/${c}/written/${s}/`,`/${c}/written/${s}/${ch}/`])];
+const routes=['/',...samples.flatMap(([c,s,ch])=>[`/${c}/`,`/${c}/written/`,`/${c}/written/${s}/`,`/${c}/written/${s}/${ch}/`]),'/industrial-safety/written/safety-management/'];
 const sizes=[{width:1440,height:900},{width:390,height:844},{width:320,height:700},{width:768,height:1024}];
 const report={commit:process.env.QA_COMMIT||null,device:'Headless Chromium viewport tests; no physical mobile or user PC claim',cases:[],errors:[]};
 const layout=()=>({client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,viewport:[innerWidth,innerHeight]});
@@ -64,15 +64,22 @@ let browser,activePage;
    if(route==='/'){
     const first=await page.locator('.certification-grid .card').first().boundingBox();assert(first.y<size.height*.75,'home exposes certification choice early');
     await page.screenshot({path:`${out}/home-${size.width}.png`});
+    await page.locator('.footer').screenshot({path:`${out}/footer-${size.width}.png`});
    }
    if(route==='/computer-literacy/written/computer-basics/'){
     await page.locator('.catalog-group-nav a').nth(1).click();assert(new URL(page.url()).hash.startsWith('#chapter-group-'));
     const top=await page.locator(new URL(page.url()).hash).evaluate(e=>e.getBoundingClientRect().top),gnb=await page.locator('.gnb').boundingBox();assert(top>=gnb.height-1,'group jump clears GNB');
    }
-   if(route==='/energy-management/written/'||route==='/computer-literacy/written/computer-basics/'){
+   if(route==='/energy-management/written/'||route==='/computer-literacy/written/computer-basics/'||route==='/industrial-safety/written/safety-management/'){
     await page.goto(base+route);await page.screenshot({path:`${out}/${route.split('/')[1]}-list-${size.width}.png`});
    }
-   report.cases.push({route,...size,geometry,result:'PASS'});
+   const spacing=await page.evaluate(()=>{
+    if(!document.body.classList.contains('catalog-page'))return null;
+    const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height};};
+    const featured=document.querySelector('.subject-section'),groups=document.querySelector('.catalog-group-nav'),all=document.querySelector('#all-chapters')?.parentElement,footer=document.querySelector('.footer-inner');
+    return {sectionGap:getComputedStyle(document.body).getPropertyValue('--catalog-section-gap').trim(),featuredGap:featured&&groups?featured.getBoundingClientRect().top-groups.getBoundingClientRect().bottom:null,allChaptersGap:all&&featured?all.getBoundingClientRect().top-featured.getBoundingClientRect().bottom:null,footerColumnGap:getComputedStyle(footer).columnGap,footerColumns:[...footer.children].map(rect),gnbServiceLabels:document.querySelectorAll('.gnb-service-label').length};
+   });
+   report.cases.push({route,...size,geometry,spacing,result:'PASS'});
   }
   await context.close();
  }
