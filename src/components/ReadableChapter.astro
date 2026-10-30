@@ -1,6 +1,18 @@
 ---
 import { formatChapterHtml } from '../../scripts/chapter-readability.mjs';
 const { slug, certId } = Astro.props;
-const html = formatChapterHtml(await Astro.slots.render('default'), { slug, certId });
+let html = formatChapterHtml(await Astro.slots.render('default'), { slug, certId });
+// These two cells contain independent examples, matching the existing list for processing capacity.
+if (certId === 'computer-literacy' && slug === 'computer-classification') {
+  for (const items of [
+    ['디지털', '아날로그', '하이브리드'],
+    ['팜톱', '랩톱', '노트북', '데스크톱'],
+  ]) {
+    const original = `<td>${items.join('·')}</td>`;
+    const list = `<td><ul class="chapter-cell-items">${items.map(item => `<li>${item}</li>`).join('')}</ul></td>`;
+    if (!html.includes(original)) throw new Error(`Expected classification cell: ${items.join('·')}`);
+    html = html.replace(original, list);
+  }
+}
 ---
 <Fragment set:html={html} />
