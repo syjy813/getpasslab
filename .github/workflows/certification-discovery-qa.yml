@@ -40,6 +40,7 @@ jobs:
           node scripts/qa-certification-discovery.cjs
           node scripts/qa-learning-image-viewer.cjs
           node scripts/qa-chapter-reading-pilot.cjs
+          node scripts/qa-question-button-readability.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

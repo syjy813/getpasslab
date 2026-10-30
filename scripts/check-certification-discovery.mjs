@@ -9,7 +9,7 @@ const files=[...walk('src'),...walk('public'),...walk('dist').filter(f=>/\.(html
 assert.deepEqual(files,Object.keys(review.current).sort(),'native inventory');
 for(const file of files)assert.equal(hash(fs.readFileSync(file)),review.current[file],file+': reviewed current bytes');
 assert.deepEqual(review.productFiles,[
- 'src/components/AdFitResponsive.astro','src/components/GNB.astro','src/content/chapters/computer-literacy/written/computer-basics/computer-classification.md','src/layouts/BaseLayout.astro','src/layouts/ChapterLayout.astro',
+ 'src/components/AdFitResponsive.astro','src/components/GNB.astro','src/components/QuestionHistory.astro','src/content/chapters/computer-literacy/written/computer-basics/computer-classification.md','src/layouts/BaseLayout.astro','src/layouts/ChapterLayout.astro',
  'src/pages/[cert]/[exam]/[subject]/index.astro','src/pages/[cert]/[exam]/index.astro','src/pages/[cert]/index.astro','src/pages/index.astro',
  'src/styles/catalog.css','src/styles/global.css',
 ]);
@@ -22,6 +22,16 @@ const cleanLesson=(node,file)=>{
  const copy=structuredClone(node);
  const visit=n=>{if(!n.childNodes)return;n.childNodes=n.childNodes.filter(c=>!(c.tagName==='aside'&&(attr(c,'class')||'').split(' ').includes('adfit-placement'))&&!(c.tagName==='script'&&serialize(c).includes('const initializeAdFit =')));n.childNodes.forEach(visit);};visit(copy);
  let result=serialize(copy);
+ // Only normalize the reviewed question-button label and its explicit accessible name.
+ result=result.replace(/(<button class="round-badge"[^>]*>)([\s\S]*?)(<\/button>)/g,(_whole,start,inner,end)=>{
+  const aria=start.match(/ aria-label="([^"]*)"/);
+  const text=inner.replace(/<[^>]*>/g,'').trim().replace(/\s+/g,' ');
+  if(aria){
+   const expanded=text.replace(/^(\d{4}년 \d{1,2}월) · (\d+번)/,'$1 시험 $2');
+   assert.equal(aria[1],expanded,'accessible question label matches visible question');
+  }
+  return start.replace(/ aria-label="[^"]*"/,'')+inner.replace(/(\d{4}년 \d{1,2}월) · (\d+번)/,'$1 시험 $2').replace(/\s+/g,' ')+end;
+ });
  for(const items of file==='dist/computer-literacy/written/computer-basics/computer-classification/index.html' ? [['디지털','아날로그','하이브리드'],['팜톱','랩톱','노트북','데스크톱']] : []){
   const list=`<ul class="chapter-cell-items">${items.map(item=>`<li>${item}</li>`).join('')}</ul>`;
   result=result.replace(list,items.join('·'));

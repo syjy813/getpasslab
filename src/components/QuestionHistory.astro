@@ -40,6 +40,9 @@ const {
 const deferredDataset = deferredQuestionDataset ?? (deferQuestionContent ? 'energy-management' : undefined);
 const isDeferred = Boolean(deferredDataset);
 const examLabel = (label: string) => label.replace(/ 시행$/, ' 시험');
+const buttonLabel = (label: string, number: number) => label.endsWith(' 시행')
+  ? `${label.slice(0, -3)} · ${number}번`
+  : `${examLabel(label)} ${number}번`;
 const choiceSymbols = ['①', '②', '③', '④'];
 const imageChoicePattern = /^(수식|그림)[①②③④]$/;
 const displayChoice = (choice: string, hasImage: boolean) => {
@@ -82,10 +85,11 @@ const yearRange = sortedYears.length === 0
             data-question-image-src={isDeferred && q.image ? q.image.src.src : undefined}
             data-question-image-width={isDeferred && q.image ? String(q.image.src.width) : undefined}
             data-question-image-height={isDeferred && q.image ? String(q.image.src.height) : undefined}
+            aria-label={`${examLabel(q.label)} ${q.number}번${!isDeferred && q.caution ? ' · 풀이 참고' : ''}`}
             aria-haspopup="dialog"
             aria-controls={isDeferred ? 'deferred-question-dialog' : `q-${q.id}`}
           >
-            {examLabel(q.label)} {q.number}번
+            {buttonLabel(q.label, q.number)}
             {!isDeferred && q.caution && <span class="q-caution-badge"> · 풀이 참고</span>}
           </button>
         ))}
