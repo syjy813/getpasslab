@@ -8,31 +8,27 @@ export interface ChapterNavigationGroup {
 interface Props { chapterNavigation?: ChapterNavigationGroup[]; }
 const { chapterNavigation } = Astro.props;
 const certifications = getFeaturedCertifications();
+const currentPath = Astro.url.pathname;
 ---
-<header class="gnb">
-  <nav class="gnb-inner">
-    <a href={withBase('/')} class="gnb-logo">GetPassLab</a>
+<header class="gnb gnb-learning">
+  <nav class="gnb-inner" aria-label="자격증 학습 탐색">
+    <a href={withBase('/')} class="gnb-logo" aria-label="GetPassLab">
+      <span>GetPassLab</span>
+      <span class="gnb-service-label" aria-hidden="true">자격증의 모든 것</span>
+    </a>
     <div class="gnb-spacer"></div>
-    <details class="gnb-menu">
-      <summary>{chapterNavigation ? '챕터 목차' : '자격증 · 과목'}
+    <details class={chapterNavigation ? 'gnb-cert-menu' : 'gnb-menu'} data-gnb-menu>
+      <summary aria-label="자격증 선택">
+        <span class="gnb-label-full">자격증 선택</span><span class="gnb-label-short" aria-hidden="true">자격증</span>
         <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
       </summary>
-      {chapterNavigation ? (
-        <nav class="gnb-dropdown gnb-chapter-dropdown" aria-label="챕터 목차">
-          {chapterNavigation.map(({ group, chapters }) => (
-            <div class="gnb-chapter-group">
-              <div class="gnb-chapter-group-title">{group}</div>
-              {chapters.map(chapter => (
-                <a href={chapter.href} aria-current={chapter.current ? 'page' : undefined}>{chapter.title}</a>
-              ))}
-            </div>
-          ))}
-        </nav>
-      ) : (
-      <div class="gnb-dropdown">
+      <div class="gnb-dropdown gnb-cert-dropdown">
         {certifications.map((certification) => (
           <div class="gnb-certification">
-            <a class="gnb-certification-link" href={withBase(getCertificationEntryPath(certification.slug))}>{certification.name}</a>
+            <a class="gnb-certification-link" href={withBase(getCertificationEntryPath(certification.slug))}
+              aria-current={currentPath.startsWith(withBase(`/${certification.slug}/`)) ? 'location' : undefined}>
+              {certification.name}
+            </a>
             {Object.values(certification.exams).map((exam) => (
               Object.entries(exam.subjects).map(([id, subject]) => (
                 <a href={withBase(`/${certification.slug}/${exam.slug}/${subject.slug}/`)}>
@@ -43,17 +39,38 @@ const certifications = getFeaturedCertifications();
           </div>
         ))}
       </div>
-      )}
     </details>
+    {chapterNavigation && (
+    <details class="gnb-menu" data-gnb-menu>
+      <summary aria-label="챕터 목차">
+        <span class="gnb-label-full">챕터 목차</span><span class="gnb-label-short" aria-hidden="true">목차</span>
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </summary>
+        <nav class="gnb-dropdown gnb-chapter-dropdown" aria-label="챕터 목차">
+          {chapterNavigation.map(({ group, chapters }) => (
+            <div class="gnb-chapter-group">
+              <div class="gnb-chapter-group-title">{group}</div>
+              {chapters.map(chapter => (
+                <a href={chapter.href} aria-current={chapter.current ? 'page' : undefined}>{chapter.title}</a>
+              ))}
+            </div>
+          ))}
+        </nav>
+    </details>
+    )}
   </nav>
 </header>
 <script>
-  document.querySelectorAll('.gnb-menu').forEach(d => {
+  const menus = document.querySelectorAll('[data-gnb-menu]');
+  menus.forEach(d => {
     document.addEventListener('click', e => {
       if (d instanceof HTMLDetailsElement && d.open && !d.contains(e.target as Node)) d.open = false;
     });
     d.addEventListener('toggle', () => {
       if (!(d instanceof HTMLDetailsElement) || !d.open) return;
+      menus.forEach(other => {
+        if (other !== d && other instanceof HTMLDetailsElement) other.open = false;
+      });
       const menu = d.querySelector('.gnb-chapter-dropdown');
       const current = menu?.querySelector('[aria-current="page"]');
       if (menu instanceof HTMLElement && current instanceof HTMLElement) {
@@ -66,5 +83,30 @@ const certifications = getFeaturedCertifications();
         d.querySelector('summary')?.focus();
       }
     });
+    d.addEventListener('focusout', e => {
+      if (d instanceof HTMLDetailsElement && !d.contains((e as FocusEvent).relatedTarget as Node | null)) d.open = false;
+    });
   });
 </script>
+
+<style>
+  .gnb-inner{gap:8px}
+  .gnb-logo{flex:none;flex-direction:column;align-items:flex-start;justify-content:center;gap:0;line-height:22px}
+  .gnb-service-label{font-size:12px;font-weight:500;line-height:16px;color:var(--gray-600)}
+  .gnb-cert-menu{position:relative}
+  [data-gnb-menu]>summary{display:flex;align-items:center;gap:6px;min-height:44px;padding:0;list-style:none;cursor:pointer;font-size:var(--fs-caption);font-weight:500;color:var(--gray-800);border-radius:var(--radius-md)}
+  [data-gnb-menu]>summary::-webkit-details-marker{display:none}
+  [data-gnb-menu]>summary:hover,[data-gnb-menu][open]>summary{background:var(--gray-100)}
+  [data-gnb-menu]>summary:focus-visible,.gnb-logo:focus-visible{outline:3px solid var(--primary-500);outline-offset:3px}
+  .gnb-label-short{display:none}
+  .gnb-cert-dropdown{width:320px;max-width:calc(100vw - 48px);max-height:calc(100dvh - var(--gnb-h) - var(--chapter-mobile-nav-space, 0px) - 16px);overflow-y:auto;overscroll-behavior:contain}
+  .gnb-cert-dropdown a{min-height:44px;display:flex;align-items:center}
+  .gnb-cert-dropdown a:focus-visible{outline:2px solid var(--primary-500);outline-offset:-2px}
+  .gnb-certification-link[aria-current="location"]{background:var(--primary-50);color:var(--primary-600)}
+  @media(max-width:767px){
+    .gnb-label-full{display:none}
+    .gnb-label-short{display:inline}
+    .gnb-cert-dropdown{position:fixed;top:calc(var(--gnb-h) + 1px);right:24px;left:24px;width:auto;min-width:0;max-width:none}
+    .gnb-chapter-dropdown{position:fixed;top:calc(var(--gnb-h) + 1px);right:24px;max-width:calc(100% - 48px)}
+  }
+</style>

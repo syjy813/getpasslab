@@ -140,12 +140,13 @@ async function checkLayout(label) {
             await page.waitForURL(record.url);
             record.nextAndPreviousClicked = true;
           }
-          const list = page.locator('details.learning-chapters');
-          await list.locator('summary').click();
+          const summary = page.locator('.gnb-menu > summary[aria-label="챕터 목차"]');
+          const list = page.locator('.gnb-menu');
+          await summary.click();
           const toc = await list.locator('nav a').evaluateAll(els => els.map(e => e.getAttribute('href')));
           assert.deepEqual(toc, ordered.map(c => scope + c.slug + '/'));
           assert(!toc.some(h => /P2-02a/.test(h)));
-          await list.locator('summary').click();
+          await summary.click();
           record.completeMobileToc = toc.length;
         } else {
           const toc = await page.locator('.chapter-side .side-nav a').evaluateAll(els => els.map(e => e.getAttribute('href')));

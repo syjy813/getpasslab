@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/catalog.css';
 import GNB from '../components/GNB.astro';
 import type { ChapterNavigationGroup } from '../components/GNB.astro';
 import Footer from '../components/Footer.astro';
@@ -117,6 +118,9 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
             if (!(placement instanceof HTMLElement) || !(mount instanceof HTMLElement)) return;
             const mobile = window.matchMedia('(min-width:320px) and (max-width:767px)');
             const initialize = () => {
+              const fitsViewport = document.documentElement.clientWidth >= 320;
+              placement.toggleAttribute('data-adfit-unavailable', !fitsViewport);
+              if (!fitsViewport) return;
               if (!mobile.matches || placement.dataset.adfitReady || mount.getBoundingClientRect().width < 320) return;
               if (window.location.hostname !== 'getpasslab.co.kr') {
                 placement.dataset.adfitReady = 'preview';
@@ -138,6 +142,8 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
             };
             initialize();
             mobile.addEventListener('change', initialize);
+            // A loaded fixed-width unit must also fit after a resize or scrollbar change.
+            new ResizeObserver(initialize).observe(document.documentElement);
           })();
         </script>
       </aside>

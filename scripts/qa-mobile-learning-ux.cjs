@@ -33,7 +33,7 @@ let browser;
         });
         assert(Math.abs(alignment.left-24)<=1&&Math.abs(alignment.right-24)<=1,'symmetric GNB visible edges');
         const gnb=page.locator('.gnb-menu');
-        assert.equal((await gnb.locator('summary').innerText()).trim(),'챕터 목차');
+        assert.equal(await gnb.locator('summary').getAttribute('aria-label'),'챕터 목차');
         await gnb.locator('summary').click();
         const toc=gnb.locator('.gnb-chapter-dropdown');
         // Native details queues its toggle event; wait for the existing auto-scroll.
@@ -112,7 +112,7 @@ let browser;
     }
     for(const ordinary of ['/', '/computer-literacy/written/']){
       await page.goto(base+ordinary);
-      assert.equal((await page.locator('.gnb-menu>summary').innerText()).trim(),'자격증 · 과목');
+      assert.equal(await page.locator('.gnb-menu>summary').getAttribute('aria-label'),'자격증 선택');
       assert.equal(await page.locator('.gnb-chapter-dropdown').count(),0);
       const edges=await page.evaluate(()=>{const n=document.querySelector('.gnb-inner').getBoundingClientRect(),l=document.querySelector('.gnb-logo').getBoundingClientRect(),r=document.querySelector('.gnb-menu summary svg').getBoundingClientRect();return [l.left-n.left,n.right-r.right];});
       assert(edges.every(v=>Math.abs(v-24)<=1),'ordinary GNB symmetry');

@@ -34,7 +34,8 @@ const report={result:'RUNNING',cases:[],limitations:['Chromium responsive emulat
     if(width<768){
      assert(result.items.every(a=>a.whiteSpace==='nowrap'&&a.ellipsis==='ellipsis'&&a.overflow==='hidden'),'one-line ellipsis');
      const widest=Math.max(...result.items.map(a=>a.text));
-     assert(Math.abs(result.width-Math.min(widest+42,width-48))<2,'content-sized menu with viewport cap');
+     const client=await page.evaluate(()=>document.documentElement.clientWidth);
+     assert(Math.abs(result.width-Math.min(widest+42,client-48))<2,'content-sized menu with actual layout width cap');
     }else assert.equal(result.width,Math.min(360,width-48),'desktop/tablet width retained');
     if(width<1024){const bar=await page.locator('.chapter-mobile-nav').boundingBox();assert(result.bottom<=bar.y-8,'footer clearance');}
     const before=await menu.locator('a').evaluateAll(es=>es.map(e=>e.getAttribute('href')));
@@ -45,7 +46,10 @@ const report={result:'RUNNING',cases:[],limitations:['Chromium responsive emulat
     report.cases.push({route,viewport:width,...result});
    }
    await page.goto(base+'/computer-literacy/written/');await page.locator('.gnb-menu>summary').click();
-   assert.equal(await page.locator('.gnb-chapter-dropdown').count(),0);assert.equal(await page.locator('.gnb-dropdown').evaluate(e=>getComputedStyle(e).minWidth),'260px');
+   assert.equal(await page.locator('.gnb-chapter-dropdown').count(),0);
+   const generic=await page.locator('.gnb-dropdown').boundingBox(),client=await page.evaluate(()=>document.documentElement.clientWidth);
+   assert(generic.x>=23&&generic.x+generic.width<=client-23,'certification menu retains viewport insets');
+   assert(await page.locator('.gnb-dropdown a').evaluateAll(es=>es.every(e=>e.getBoundingClientRect().height>=44)),'certification menu retains touch targets');
    await page.close();
   }
   report.result='PASS';
