@@ -390,6 +390,9 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .chapter-page article>h2+h3{margin-top:0}
 .chapter-page article>:is(p,ul,ol,table,blockquote):not(.related-list){margin-block:var(--space-4)}
 .chapter-page article>:is(p,ul,ol):not(.related-list){line-height:1.7}
+/* Group consecutive prose without changing spacing around tables, formulas or images. */
+.chapter-page article>p:not(:has(>.katex:only-child,>img:only-child)):has(+p:not(:has(>.katex:only-child,>img:only-child))){margin-bottom:var(--space-2)}
+.chapter-page article>p:not(:has(>.katex:only-child,>img:only-child))+p:not(:has(>.katex:only-child,>img:only-child)){margin-top:var(--space-2)}
 .chapter-page article>:is(h2,h3)+:is(p,ul,ol,table,blockquote){margin-top:0}
 .chapter-page article>:is(ul,ol):not(.related-list){padding-left:1.25em}
 .chapter-page article>ul:not(.related-list)>li::marker{font-size:.65em;color:var(--gray-600)}
