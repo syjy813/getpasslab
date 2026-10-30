@@ -118,6 +118,7 @@ let browser,activePage;
   await homeContext.route('**/*',async r=>{const u=new URL(r.request().url());if(u.hostname==='getpasslab.co.kr'){const response=await r.fetch({url:base+u.pathname+u.search});return r.fulfill({response});}if(u.hostname==='t1.kakaocdn.net'){await sdkGate;return r.fulfill({contentType:'application/javascript',body:sdk});}return r.abort();});
   const homePage=await homeContext.newPage();activePage=homePage;homePage.on('pageerror',e=>report.errors.push(String(e)));
   await homePage.goto('https://getpasslab.co.kr/',{waitUntil:'domcontentloaded'});
+  await homePage.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});
   const before=await homePage.evaluate(homeSnapshot);releaseSDK();
   const expected=Number(width<768&&before.client>=320)+Number(before.client>=300);
   if(expected)await homePage.waitForFunction(n=>document.querySelectorAll('[data-home-ad]:not([hidden]) ins[data-qa-filled],[data-footer-ad]:not([hidden]) ins[data-qa-filled]').length===n,expected);
