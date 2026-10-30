@@ -58,8 +58,9 @@ let browser;
         if(width===390)await page.screenshot({path:`${out}/${width}-${route.split('/').at(-2)}-toc.png`});
         const destination=toc.locator('a:not([aria-current])').first();
         const destinationURL=await destination.getAttribute('href');
-        await destination.click();assert(new URL(page.url()).pathname===destinationURL,'TOC link navigation');
-        await page.goBack();assert.equal(new URL(page.url()).pathname,route);
+        await Promise.all([page.waitForURL(new URL(destinationURL,base).href,{waitUntil:'load'}),destination.click()]);
+        assert(new URL(page.url()).pathname===destinationURL,'TOC link navigation');
+        await page.goBack({waitUntil:'load'});assert.equal(new URL(page.url()).pathname,route);
         if(await page.locator('.gnb-menu').getAttribute('open')!==null)await page.locator('.gnb-menu>summary').click();
         const switcher=page.locator('.subject-switcher');
         if(await switcher.count()){
