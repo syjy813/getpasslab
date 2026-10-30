@@ -266,7 +266,7 @@ const structuredData = [
       <h2 id="learning-image-title">학습 그림 확대</h2>
       <button type="button" data-learning-image-close autofocus>닫기</button>
     </div>
-    <p class="learning-image-hint" id="learning-image-hint">그림을 좌우로 밀어 전체를 확인하세요</p>
+    <p class="learning-image-hint" id="learning-image-hint" hidden></p>
     <div class="learning-image-scroll" tabindex="0" role="region" aria-label="확대한 학습 그림" aria-describedby="learning-image-hint">
       <img alt="" />
     </div>
@@ -301,7 +301,18 @@ const structuredData = [
     const enlargedImage = imageDialog?.querySelector('img');
     const enlargedTitle = imageDialog?.querySelector('h2');
     const imageScroll = imageDialog?.querySelector('.learning-image-scroll');
-    if (imageDialog instanceof HTMLDialogElement && enlargedImage instanceof HTMLImageElement && enlargedTitle && imageScroll) {
+    const imageHint = imageDialog?.querySelector('.learning-image-hint');
+    if (imageDialog instanceof HTMLDialogElement && enlargedImage instanceof HTMLImageElement && enlargedTitle && imageScroll instanceof HTMLElement && imageHint instanceof HTMLElement) {
+      const updateImageHint = () => {
+        if (!imageDialog.open) return;
+        const horizontal = imageScroll.scrollWidth > imageScroll.clientWidth + 1;
+        const vertical = imageScroll.scrollHeight > imageScroll.clientHeight + 1;
+        imageHint.hidden = !horizontal && !vertical;
+        imageHint.textContent = horizontal && vertical ? '그림을 좌우와 위아래로 이동해 전체를 확인하세요' : horizontal ? '그림을 좌우로 이동해 전체를 확인하세요' : vertical ? '그림을 위아래로 이동해 전체를 확인하세요' : '';
+      };
+      const resizeObserver = new ResizeObserver(updateImageHint);
+      resizeObserver.observe(imageScroll);
+      enlargedImage.addEventListener('load', updateImageHint);
       let opener: HTMLButtonElement | undefined;
       let saved: { x: number; y: number; styles: [string, string, string][] } | undefined;
       const properties = ['position', 'top', 'left', 'right', 'overflow', 'padding-right'];
@@ -344,7 +355,8 @@ const structuredData = [
           if (imageDialog.open) return;
           enlargedImage.src = original.currentSrc || original.src;
           enlargedImage.alt = original.alt;
-          enlargedImage.width = Number(original.getAttribute('width')) || original.naturalWidth || original.width;
+          const sourceWidth = Number(original.getAttribute('width')) || original.naturalWidth || original.width;
+          enlargedImage.width = Math.ceil(Math.max(sourceWidth, original.getBoundingClientRect().width * 1.25));
           enlargedTitle.textContent = label;
           opener = button;
           saved = {
@@ -361,6 +373,7 @@ const structuredData = [
           document.body.style.setProperty('padding-right', `${padding + scrollbar}px`);
           imageDialog.showModal();
           imageScroll.scrollTo(0, 0);
+          requestAnimationFrame(updateImageHint);
         });
       });
     }
