@@ -282,10 +282,11 @@ article>p:has(>.katex:only-child){max-width:none}
 
 /* ═══ 기출 이력 (섹션 4) ═══ */
 .exam-history{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:var(--space-6);margin:var(--space-4) 0}
-.freq-label{font-size:var(--fs-caption);font-weight:var(--fw-bold);color:var(--primary-600);margin-bottom:var(--space-3)}
+.freq-label{font-size:var(--fs-caption);font-weight:var(--fw-semibold);color:var(--gray-600);margin-bottom:var(--space-3)}
 .evidence-intro{max-width:760px;margin:0 0 var(--space-3);font-size:var(--fs-body);color:var(--gray-800)}
 .round-badges{display:flex;flex-wrap:wrap;gap:var(--space-2)}
-.round-badge{font-family:var(--font-sans);font-size:var(--fs-caption);font-weight:var(--fw-medium);cursor:pointer;border:1px solid var(--primary-100);color:var(--primary-600);background:var(--primary-50);padding:6px 12px;border-radius:var(--radius-full);transition:background .15s}
+.round-badge{font-family:var(--font-sans);font-size:max(14px,var(--fs-caption));font-weight:var(--fw-medium);cursor:pointer;border:1px solid var(--primary-100);color:var(--primary-600);background:var(--primary-50);padding:6px 12px;border-radius:var(--radius-full);transition:background .15s}
+.chapter-page .practice-entry span{font-size:max(14px,var(--fs-caption))}
 .round-badge:hover{background:var(--primary-100)}
 .exam-comment{margin:0 0 var(--space-4);font-size:var(--fs-caption);color:var(--gray-600)}
 .exam-comment strong{color:var(--gray-900)}
