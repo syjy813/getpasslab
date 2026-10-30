@@ -53,9 +53,13 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
         </a>
       ))}
     </div>
+    <aside class="home-ad" data-home-ad="middle" data-unit="DAN-WuLZW6NARBuA5jnA" data-width="320" data-height="100" style="--home-ad-width:320px;--home-ad-height:100px" aria-label="광고" hidden>
+      <span class="home-ad-label">광고</span>
+      <div class="home-ad-mount" data-home-ad-mount></div>
+    </aside>
   </section>
 
-  <section class="section container" style="padding-bottom:var(--space-16)">
+  <section class="section container home-learning-method">
     <div class="section-heading">
       <h2 class="gpl-h1">GetPassLab 학습 방식</h2>
       <p class="gpl-body">기출에서 반복되는 핵심 개념을 먼저 익히고, 연결된 실제 기출로 확인합니다.</p>
@@ -83,7 +87,59 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
         </div>
       </li>
     </ol>
+    <aside class="home-ad" data-home-ad="bottom" data-unit="DAN-A3dGUv2kIjnZSTmZ" data-width="300" data-height="250" style="--home-ad-width:300px;--home-ad-height:250px" aria-label="광고" hidden>
+      <span class="home-ad-label">광고</span>
+      <div class="home-ad-mount" data-home-ad-mount></div>
+    </aside>
   </section>
 
+  <script is:inline>
+    (() => {
+      const mobile = window.matchMedia('(max-width:767px)');
+      const placements = [...document.querySelectorAll('[data-home-ad]')];
+      const update = () => placements.forEach(placement => {
+        const width = Number(placement.dataset.width);
+        const available = Math.min(document.documentElement.clientWidth, placement.parentElement.clientWidth);
+        const visible = mobile.matches && available >= width;
+        placement.hidden = !visible;
+        if (!visible || placement.dataset.homeAdReady) return;
+        const mount = placement.querySelector('[data-home-ad-mount]');
+        if (!mount) return;
+        if (window.location.hostname !== 'getpasslab.co.kr') {
+          placement.dataset.homeAdReady = 'preview';
+          return;
+        }
+        placement.dataset.homeAdReady = 'true';
+        const ad = document.createElement('ins');
+        ad.className = 'kakao_ad_area';
+        ad.style.display = 'none';
+        ad.dataset.adUnit = placement.dataset.unit;
+        ad.dataset.adWidth = placement.dataset.width;
+        ad.dataset.adHeight = placement.dataset.height;
+        mount.appendChild(ad);
+        const sdk = document.createElement('script');
+        sdk.type = 'text/javascript';
+        sdk.src = '//t1.kakaocdn.net/kas/static/ba.min.js';
+        sdk.async = true;
+        mount.appendChild(sdk);
+      });
+      update();
+      mobile.addEventListener('change', update);
+      new ResizeObserver(update).observe(document.documentElement);
+    })();
+  </script>
 </BaseLayout>
+
+<style>
+  .home-ad{box-sizing:border-box;display:flex;width:calc(100% + 48px);margin:var(--space-8) -24px 0;flex-direction:column;align-items:center}
+  .home-ad[hidden]{display:none}
+  .home-ad-label{margin-bottom:var(--space-2);font-size:var(--fs-label);line-height:1;color:var(--gray-600)}
+  .home-ad-mount{width:var(--home-ad-width);height:var(--home-ad-height);flex:none}
+  .home-learning-method{padding-bottom:var(--space-16)}
+  @media(max-width:767px){
+    .home-learning-method{padding-bottom:var(--space-8)}
+    :global(.certification-home .footer){margin-top:var(--space-8)}
+  }
+  @media(min-width:768px){.home-ad{display:none}}
+</style>
 

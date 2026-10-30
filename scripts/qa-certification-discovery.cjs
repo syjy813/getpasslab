@@ -62,6 +62,8 @@ let browser,activePage;
     }
    }
    if(route==='/'){
+    assert.equal(await page.locator('[data-home-ad]').count(),2);
+    assert.equal(await page.locator('[data-home-ad] ins,[data-home-ad] script').count(),0,'preview never requests production ads');
     const first=await page.locator('.certification-grid .card').first().boundingBox();assert(first.y<size.height*.75,'home exposes certification choice early');
     await page.screenshot({path:`${out}/home-${size.width}.png`});
     await page.locator('.footer').screenshot({path:`${out}/footer-${size.width}.png`});
@@ -100,6 +102,49 @@ let browser,activePage;
   assert.equal(await page.locator('.kakao_ad_area').count(),adCount,'same unit restored; no duplicate mount');
   report.cases.push({route:`/${c}/written/${s}/${ch}/`,scenario:'390 loaded SDK →320 occupied scrollbar→390 restoration',geometry:d,result:'PASS'});
  }
- await context.close();assert.equal(report.errors.length,0,JSON.stringify(report.errors));report.passed=true;
+ await context.close();
+ // Exercise the newly supplied units against a stub SDK; no live impressions.
+ const homeSnapshot=()=>{
+  const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom};};
+  return {client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,learning:rect(document.querySelector('.home-learning-method')),footer:rect(document.querySelector('.footer')),slots:[...document.querySelectorAll('[data-home-ad]')].map(e=>({slot:e.dataset.homeAd,hidden:e.hidden,rect:rect(e),mount:rect(e.querySelector('[data-home-ad-mount]')),units:[...e.querySelectorAll('ins')].map(i=>({unit:i.dataset.adUnit,width:i.dataset.adWidth,height:i.dataset.adHeight,filled:i.dataset.qaFilled})),scripts:e.querySelectorAll('script').length}))};
+ };
+ const configs={middle:{unit:'DAN-WuLZW6NARBuA5jnA',width:'320',height:'100'},bottom:{unit:'DAN-A3dGUv2kIjnZSTmZ',width:'300',height:'250'}};
+ for(const width of [1440,768,767,390,320,300]){
+  let releaseSDK;const sdkGate=new Promise(resolve=>releaseSDK=resolve);
+  const homeContext=await browser.newContext({viewport:{width,height:844}});
+  await homeContext.addInitScript(()=>{document.addEventListener('DOMContentLoaded',()=>{const s=document.createElement('style');s.textContent='html{overflow-y:scroll;scrollbar-gutter:stable}::-webkit-scrollbar{width:15px;height:15px}';document.head.append(s);});});
+  await homeContext.route('**/*',async r=>{const u=new URL(r.request().url());if(u.hostname==='getpasslab.co.kr'){const response=await r.fetch({url:base+u.pathname+u.search});return r.fulfill({response});}if(u.hostname==='t1.kakaocdn.net'){await sdkGate;return r.fulfill({contentType:'application/javascript',body:sdk});}return r.abort();});
+  const homePage=await homeContext.newPage();activePage=homePage;homePage.on('pageerror',e=>report.errors.push(String(e)));
+  await homePage.goto('https://getpasslab.co.kr/',{waitUntil:'domcontentloaded'});
+  const before=await homePage.evaluate(homeSnapshot);releaseSDK();
+  const expected=Object.values(configs).filter(c=>width<768&&before.client>=Number(c.width)).length;
+  if(expected)await homePage.waitForFunction(n=>document.querySelectorAll('[data-home-ad]:not([hidden]) ins[data-qa-filled]').length===n,expected);
+  const after=await homePage.evaluate(homeSnapshot);
+  assert(after.scroll<=after.client+1,'home advertisements never overflow');
+  assert.equal(after.learning.y,before.learning.y,'SDK load preserves learning position');assert.equal(after.footer.y,before.footer.y,'SDK load preserves footer position');
+  for(const row of after.slots){
+   const config=configs[row.slot],shown=width<768&&after.client>=Number(config.width);
+   assert.equal(row.hidden,!shown);
+   if(!shown){assert.equal(row.rect.height,0);assert.equal(row.units.length,0);assert.equal(row.scripts,0);continue;}
+   assert.equal(row.units.length,1);const {filled,...actual}=row.units[0];assert.equal(filled,'true');assert.deepEqual(actual,config);assert.equal(row.scripts,1);
+   assert.equal(row.mount.width,Number(config.width));assert.equal(row.mount.height,Number(config.height));
+   assert(row.mount.x>=0&&row.mount.x+row.mount.width<=after.client,'whole fixed unit fits');
+   assert(Math.abs(row.mount.x+row.mount.width/2-after.client/2)<1,'centered unit');
+   const boundary=await homePage.evaluate(slot=>{const ad=document.querySelector(`[data-home-ad="${slot}"]`).getBoundingClientRect();const previous=document.querySelector(slot==='middle'?'.certification-grid':'.learning-steps').getBoundingClientRect();const next=document.querySelector(slot==='middle'?'.home-learning-method .section-heading':'.footer').getBoundingClientRect();return {previousGap:ad.top-previous.bottom,nextGap:next.top-ad.bottom};},row.slot);
+   assert(boundary.previousGap>=24&&boundary.nextGap>=24,'advertisement separated from cards, text and footer');
+   if(width===390||width===320)await homePage.locator(`[data-home-ad="${row.slot}"]`).screenshot({path:`${out}/home-ad-${row.slot}-${width}.png`});
+  }
+  report.cases.push({route:'/',scenario:'home fixed units, delayed SDK and available width',width,before,after,result:'PASS'});
+  if(width===1440){
+   await homePage.setViewportSize({width:390,height:844});await homePage.waitForFunction(()=>document.querySelectorAll('[data-home-ad] ins[data-qa-filled]').length===2);
+   await homePage.setViewportSize({width:320,height:700});await homePage.waitForFunction(()=>document.querySelector('[data-home-ad="middle"]').hidden&&!document.querySelector('[data-home-ad="bottom"]').hidden);
+   const narrow=await homePage.evaluate(homeSnapshot);assert(narrow.scroll<=narrow.client+1);
+   await homePage.setViewportSize({width:390,height:844});await homePage.waitForFunction(()=>!document.querySelector('[data-home-ad="middle"]').hidden);
+   const restored=await homePage.evaluate(homeSnapshot);for(const row of restored.slots){assert.equal(row.units.length,1);assert.equal(row.scripts,1);}
+   report.cases.push({route:'/',scenario:'home desktop→390→320→390; units restored without duplicate mounts',narrow,restored,result:'PASS'});
+  }
+  await homeContext.close();
+ }
+ assert.equal(report.errors.length,0,JSON.stringify(report.errors));report.passed=true;
  await browser.close();fs.writeFileSync(out+'/results.json',JSON.stringify(report,null,2));console.log('[Certification discovery browser] PASS',report.cases.length,'cases');
 })().catch(async e=>{report.passed=false;report.errors.push(String(e));if(activePage){report.failure={url:activePage.url(),viewport:activePage.viewportSize()};await activePage.screenshot({path:out+'/failure.png'}).catch(()=>{});}fs.writeFileSync(out+'/results.json',JSON.stringify(report,null,2));if(browser)await browser.close().catch(()=>{});console.error(e);process.exitCode=1;});
