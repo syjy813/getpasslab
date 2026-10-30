@@ -24,4 +24,4 @@ const out = 'qa-results/certification-discovery'; fs.mkdirSync(out, {recursive:t
     await page.close();
   }
   await browser.close(); console.log('[Chapter paragraph spacing] PASS 4 viewport cases');
-})().catch(e=>{console.error(e);process.exitCode=1});
+})().catch(e=>{console.error(e);process.exit(1)});
