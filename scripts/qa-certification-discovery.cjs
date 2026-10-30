@@ -31,6 +31,8 @@ let browser,activePage;
    assert.equal((await page.goto(base+route)).status(),200);await page.evaluate(()=>document.fonts.ready);
    const geometry=await page.evaluate(layout);assert(geometry.scroll<=geometry.client+1,route+' no document overflow');
    assert.equal(await page.locator('h1').count(),1);
+   assert.equal(await page.locator('[data-footer-ad]').count(),1,'one common footer slot per content page');
+   assert.equal(await page.locator('[data-footer-ad-mount] ins,[data-footer-ad-mount] script').count(),0,'preview never requests footer ads');
    const menus=page.locator('[data-gnb-menu]');assert(await menus.count()>=1);
    assert(await menus.locator('summary').evaluateAll(es=>es.every(e=>e.getBoundingClientRect().height>=44)),'menu target height');
    const cert=page.locator('summary[aria-label="자격증 선택"]');
@@ -62,7 +64,7 @@ let browser,activePage;
     }
    }
    if(route==='/'){
-    assert.equal(await page.locator('[data-home-ad]').count(),2);
+    assert.equal(await page.locator('[data-home-ad]').count(),1);
     assert.equal(await page.locator('[data-home-ad] ins,[data-home-ad] script').count(),0,'preview never requests production ads');
     const first=await page.locator('.certification-grid .card').first().boundingBox();assert(first.y<size.height*.75,'home exposes certification choice early');
     await page.screenshot({path:`${out}/home-${size.width}.png`});
@@ -106,10 +108,10 @@ let browser,activePage;
  // Exercise the newly supplied units against a stub SDK; no live impressions.
  const homeSnapshot=()=>{
   const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom};};
-  return {client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,learning:rect(document.querySelector('.home-learning-method')),footer:rect(document.querySelector('.footer')),slots:[...document.querySelectorAll('[data-home-ad]')].map(e=>({slot:e.dataset.homeAd,hidden:e.hidden,rect:rect(e),mount:rect(e.querySelector('[data-home-ad-mount]')),units:[...e.querySelectorAll('ins')].map(i=>({unit:i.dataset.adUnit,width:i.dataset.adWidth,height:i.dataset.adHeight,filled:i.dataset.qaFilled})),scripts:e.querySelectorAll('script').length}))};
+  return {client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,learning:rect(document.querySelector('.home-learning-method')),footer:rect(document.querySelector('.footer')),slots:[...document.querySelectorAll('[data-home-ad],[data-footer-ad]')].map(e=>{const mount=e.querySelector('[data-home-ad-mount],[data-footer-ad-mount]');return {slot:e.hasAttribute('data-footer-ad')?'bottom':e.dataset.homeAd,hidden:e.hidden,rect:rect(e),mount:rect(mount),units:[...mount.querySelectorAll('ins')].map(i=>({unit:i.dataset.adUnit,width:i.dataset.adWidth,height:i.dataset.adHeight,filled:i.dataset.qaFilled})),scripts:mount.querySelectorAll('script').length};})};
  };
  const configs={middle:{unit:'DAN-WuLZW6NARBuA5jnA',width:'320',height:'100'},bottom:{unit:'DAN-A3dGUv2kIjnZSTmZ',width:'300',height:'250'}};
- for(const width of [1440,768,767,390,320,300]){
+ for(const width of [1920,1440,768,767,390,320,300]){
   let releaseSDK;const sdkGate=new Promise(resolve=>releaseSDK=resolve);
   const homeContext=await browser.newContext({viewport:{width,height:844}});
   await homeContext.addInitScript(()=>{document.addEventListener('DOMContentLoaded',()=>{const s=document.createElement('style');s.textContent='html{overflow-y:scroll;scrollbar-gutter:stable}::-webkit-scrollbar{width:15px;height:15px}';document.head.append(s);});});
@@ -117,27 +119,27 @@ let browser,activePage;
   const homePage=await homeContext.newPage();activePage=homePage;homePage.on('pageerror',e=>report.errors.push(String(e)));
   await homePage.goto('https://getpasslab.co.kr/',{waitUntil:'domcontentloaded'});
   const before=await homePage.evaluate(homeSnapshot);releaseSDK();
-  const expected=Object.values(configs).filter(c=>width<768&&before.client>=Number(c.width)).length;
-  if(expected)await homePage.waitForFunction(n=>document.querySelectorAll('[data-home-ad]:not([hidden]) ins[data-qa-filled]').length===n,expected);
+  const expected=Number(width<768&&before.client>=320)+Number(before.client>=300);
+  if(expected)await homePage.waitForFunction(n=>document.querySelectorAll('[data-home-ad]:not([hidden]) ins[data-qa-filled],[data-footer-ad]:not([hidden]) ins[data-qa-filled]').length===n,expected);
   const after=await homePage.evaluate(homeSnapshot);
   assert(after.scroll<=after.client+1,'home advertisements never overflow');
   assert.equal(after.learning.y,before.learning.y,'SDK load preserves learning position');assert.equal(after.footer.y,before.footer.y,'SDK load preserves footer position');
   for(const row of after.slots){
-   const config=configs[row.slot],shown=width<768&&after.client>=Number(config.width);
+   const config=configs[row.slot],shown=(row.slot==='bottom'||width<768)&&after.client>=Number(config.width);
    assert.equal(row.hidden,!shown);
    if(!shown){assert.equal(row.rect.height,0);assert.equal(row.units.length,0);assert.equal(row.scripts,0);continue;}
    assert.equal(row.units.length,1);const {filled,...actual}=row.units[0];assert.equal(filled,'true');assert.deepEqual(actual,config);assert.equal(row.scripts,1);
    assert.equal(row.mount.width,Number(config.width));assert.equal(row.mount.height,Number(config.height));
    assert(row.mount.x>=0&&row.mount.x+row.mount.width<=after.client,'whole fixed unit fits');
    assert(Math.abs(row.mount.x+row.mount.width/2-after.client/2)<1,'centered unit');
-   const boundary=await homePage.evaluate(slot=>{const ad=document.querySelector(`[data-home-ad="${slot}"]`).getBoundingClientRect();const previous=document.querySelector(slot==='middle'?'.certification-grid':'.learning-steps').getBoundingClientRect();const next=document.querySelector(slot==='middle'?'.home-learning-method .section-heading':'.footer').getBoundingClientRect();return {previousGap:ad.top-previous.bottom,nextGap:next.top-ad.bottom};},row.slot);
+   const boundary=await homePage.evaluate(slot=>{const element=document.querySelector(slot==='middle'?'[data-home-ad="middle"]':'[data-footer-ad]');const ad=element.getBoundingClientRect();const previous=document.querySelector(slot==='middle'?'.certification-grid':'.learning-steps').getBoundingClientRect();const next=document.querySelector(slot==='middle'?'.home-learning-method .section-heading':'.footer').getBoundingClientRect();return {previousGap:ad.top+parseFloat(getComputedStyle(element).paddingTop)-previous.bottom,nextGap:next.top-ad.bottom};},row.slot);
    assert(boundary.previousGap>=24&&boundary.nextGap>=24,'advertisement separated from cards, text and footer');
-   if(width===390||width===320)await homePage.locator(`[data-home-ad="${row.slot}"]`).screenshot({path:`${out}/home-ad-${row.slot}-${width}.png`});
+   if(width===390||width===320)await homePage.locator(row.slot==='middle'?'[data-home-ad="middle"]':'[data-footer-ad]').screenshot({path:`${out}/home-ad-${row.slot}-${width}.png`});
   }
   report.cases.push({route:'/',scenario:'home fixed units, delayed SDK and available width',width,before,after,result:'PASS'});
   if(width===1440){
-   await homePage.setViewportSize({width:390,height:844});await homePage.waitForFunction(()=>document.querySelectorAll('[data-home-ad] ins[data-qa-filled]').length===2);
-   await homePage.setViewportSize({width:320,height:700});await homePage.waitForFunction(()=>document.querySelector('[data-home-ad="middle"]').hidden&&!document.querySelector('[data-home-ad="bottom"]').hidden);
+   await homePage.setViewportSize({width:390,height:844});await homePage.waitForFunction(()=>document.querySelectorAll('[data-home-ad] ins[data-qa-filled],[data-footer-ad] ins[data-qa-filled]').length===2);
+   await homePage.setViewportSize({width:320,height:700});await homePage.waitForFunction(()=>document.querySelector('[data-home-ad="middle"]').hidden&&!document.querySelector('[data-footer-ad]').hidden);
    const narrow=await homePage.evaluate(homeSnapshot);assert(narrow.scroll<=narrow.client+1);
    await homePage.setViewportSize({width:390,height:844});await homePage.waitForFunction(()=>!document.querySelector('[data-home-ad="middle"]').hidden);
    const restored=await homePage.evaluate(homeSnapshot);for(const row of restored.slots){assert.equal(row.units.length,1);assert.equal(row.scripts,1);}
@@ -145,6 +147,32 @@ let browser,activePage;
   }
   await homeContext.close();
  }
+ const footerRoutes=samples.flatMap(([c,s,ch])=>[`/${c}/written/${s}/`,`/${c}/written/${s}/${ch}/`]);
+ const exclusions=['/about/','/terms/','/privacy/','/fire-safety-manager-level2/practice/'];
+ const commonContext=await browser.newContext({viewport:{width:390,height:844}});
+ await commonContext.addInitScript(()=>{document.addEventListener('DOMContentLoaded',()=>{const s=document.createElement('style');s.textContent='html{overflow-y:scroll;scrollbar-gutter:stable}::-webkit-scrollbar{width:15px;height:15px}';document.head.append(s);});});
+ await commonContext.route('**/*',async r=>{const u=new URL(r.request().url());if(u.hostname==='getpasslab.co.kr'){const response=await r.fetch({url:base+u.pathname+u.search});return r.fulfill({response});}if(u.hostname==='t1.kakaocdn.net')return r.fulfill({contentType:'application/javascript',body:sdk});return r.abort();});
+ const commonPage=await commonContext.newPage();activePage=commonPage;commonPage.on('pageerror',e=>report.errors.push(String(e)));
+ for(const width of [1920,390,320]){
+  await commonPage.setViewportSize({width,height:900});
+  for(const route of footerRoutes){
+   assert.equal((await commonPage.goto('https://getpasslab.co.kr'+route)).status(),200);
+   await commonPage.waitForFunction(()=>document.querySelector('[data-footer-ad] ins[data-qa-filled]'));
+   const data=await commonPage.evaluate(()=>{
+    const ad=document.querySelector('[data-footer-ad]'),mount=ad.querySelector('[data-footer-ad-mount]'),i=mount.querySelector('ins'),r=mount.getBoundingClientRect(),box=ad.getBoundingClientRect();
+    return {client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,slots:document.querySelectorAll('[data-footer-ad]').length,homeUnits:document.querySelectorAll('[data-home-ad]').length,unit:i.dataset.adUnit,width:i.dataset.adWidth,height:i.dataset.adHeight,mount:{x:r.x,y:r.y,width:r.width,height:r.height},footerGap:document.querySelector('.footer').getBoundingClientRect().top-box.bottom,beforeFooter:ad.nextElementSibling.classList.contains('footer'),afterArticle:!document.querySelector('article')||box.top>=document.querySelector('article').getBoundingClientRect().bottom,sdk:mount.querySelectorAll('script').length,visibleAds:[...document.querySelectorAll('ins.kakao_ad_area')].filter(e=>{const b=e.getBoundingClientRect();return b.width>0&&b.height>0;}).length};
+   });
+   assert.equal(data.slots,1);assert.equal(data.homeUnits,0);assert.equal(data.unit,configs.bottom.unit);assert.equal(data.width,'300');assert.equal(data.height,'250');assert.equal(data.mount.width,300);assert.equal(data.mount.height,250);assert.equal(data.sdk,1);
+   assert(data.beforeFooter&&data.afterArticle&&data.footerGap>=24,'footer ad follows all content and clears footer');assert(data.scroll<=data.client+1);assert(data.mount.x>=0&&data.mount.x+300<=data.client);assert(Math.abs(data.mount.x+150-data.client/2)<1);assert(data.visibleAds<=4,'at most four displayed units including existing ads');
+   if(route.split('/').filter(Boolean).length===4){await commonPage.locator('[data-footer-ad]').scrollIntoViewIfNeeded();await commonPage.screenshot({path:`${out}/footer-ad-${route.split('/')[1]}-${width}.png`});}
+   report.cases.push({route,width,scenario:'common footer on list/chapter, whole unit and advertisement count',data,result:'PASS'});
+  }
+ }
+ for(const width of [1440,390]){
+  await commonPage.setViewportSize({width,height:844});
+  for(const route of exclusions){await commonPage.goto('https://getpasslab.co.kr'+route);assert.equal(await commonPage.locator('[data-footer-ad]').count(),0,'excluded page has no common ad');report.cases.push({route,width,scenario:'common footer excluded from service/legal and practice pages',result:'PASS'});}
+ }
+ await commonContext.close();
  assert.equal(report.errors.length,0,JSON.stringify(report.errors));report.passed=true;
  await browser.close();fs.writeFileSync(out+'/results.json',JSON.stringify(report,null,2));console.log('[Certification discovery browser] PASS',report.cases.length,'cases');
 })().catch(async e=>{report.passed=false;report.errors.push(String(e));if(activePage){report.failure={url:activePage.url(),viewport:activePage.viewportSize()};await activePage.screenshot({path:out+'/failure.png'}).catch(()=>{});}fs.writeFileSync(out+'/results.json',JSON.stringify(report,null,2));if(browser)await browser.close().catch(()=>{});console.error(e);process.exitCode=1;});
