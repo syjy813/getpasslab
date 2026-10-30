@@ -218,10 +218,11 @@ article h2::before{content:'';width:10px;height:22px;border-radius:4px;backgroun
 /* Chapter section headings: a quiet background separates each learning topic. */
 .chapter-page article h2{position:relative;display:block;padding:var(--space-3) var(--space-4) var(--space-3) calc(var(--space-4) + 10px + var(--space-2));background:var(--primary-50);border-radius:var(--radius-md);line-height:var(--lh-heading);word-break:keep-all;overflow-wrap:anywhere}
 .chapter-page article h2::before{position:absolute;left:var(--space-4);top:calc(var(--space-3) + .1em)}
-/* Pilot: lighter topic headings; keep the established exam-point emphasis. */
-.reading-pilot article>h2:is(#핵심-개념,#절차-및-판별-기준,#자주-틀리는-포인트){background:transparent;padding-left:calc(10px + var(--space-2));padding-right:0}
-.reading-pilot article>h2:is(#핵심-개념,#절차-및-판별-기준,#자주-틀리는-포인트)::before{left:0}
+/* Keep recurring explanatory headings quiet while retaining exam and navigation emphasis. */
+.chapter-page article>h2:is(#핵심-개념,#절차-및-판별-기준,#자주-틀리는-포인트){background:transparent;padding-left:calc(10px + var(--space-2));padding-right:0}
+.chapter-page article>h2:is(#핵심-개념,#절차-및-판별-기준,#자주-틀리는-포인트)::before{left:0}
 @media(max-width:639px){
+  .chapter-page article :is(th,td){padding-left:8px;padding-right:8px}
   .reading-pilot article>h3#주요-장치와-기능+table{table-layout:fixed}
   .reading-pilot article>h3#주요-장치와-기능+table :is(th,td){padding:10px 7px;overflow-wrap:anywhere}
   .reading-pilot article>h3#주요-장치와-기능+table :is(th,td):nth-child(1){width:18%}
@@ -282,10 +283,11 @@ article>p:has(>.katex:only-child){max-width:none}
 
 /* ═══ 기출 이력 (섹션 4) ═══ */
 .exam-history{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:var(--space-6);margin:var(--space-4) 0}
-.freq-label{font-size:var(--fs-caption);font-weight:var(--fw-bold);color:var(--primary-600);margin-bottom:var(--space-3)}
+.freq-label{font-size:var(--fs-caption);font-weight:var(--fw-semibold);color:var(--gray-600);margin-bottom:var(--space-3)}
 .evidence-intro{max-width:760px;margin:0 0 var(--space-3);font-size:var(--fs-body);color:var(--gray-800)}
 .round-badges{display:flex;flex-wrap:wrap;gap:var(--space-2)}
-.round-badge{font-family:var(--font-sans);font-size:var(--fs-caption);font-weight:var(--fw-medium);cursor:pointer;border:1px solid var(--primary-100);color:var(--primary-600);background:var(--primary-50);padding:6px 12px;border-radius:var(--radius-full);transition:background .15s}
+.round-badge{font-family:var(--font-sans);font-size:max(14px,var(--fs-caption));font-weight:var(--fw-medium);cursor:pointer;border:1px solid var(--primary-100);color:var(--primary-600);background:var(--primary-50);padding:6px 12px;border-radius:var(--radius-full);transition:background .15s}
+.chapter-page .practice-entry span{font-size:max(14px,var(--fs-caption))}
 .round-badge:hover{background:var(--primary-100)}
 .exam-comment{margin:0 0 var(--space-4);font-size:var(--fs-caption);color:var(--gray-600)}
 .exam-comment strong{color:var(--gray-900)}
@@ -389,10 +391,12 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .chapter-page article>h2+h3{margin-top:0}
 .chapter-page article>:is(p,ul,ol,table,blockquote):not(.related-list){margin-block:var(--space-4)}
 .chapter-page article>:is(p,ul,ol):not(.related-list){line-height:1.7}
+/* Group consecutive prose without changing spacing around tables, formulas or images. */
+.chapter-page article>p:has(+p):not(:has(>.katex:only-child,>img:only-child,+p>.katex:only-child,+p>img:only-child)){margin-bottom:0}
+.chapter-page article>p:not(:has(>.katex:only-child,>img:only-child))+p:not(:has(>.katex:only-child,>img:only-child)){margin-top:var(--space-2)}
 .chapter-page article>:is(h2,h3)+:is(p,ul,ol,table,blockquote){margin-top:0}
 .chapter-page article>:is(ul,ol):not(.related-list){padding-left:1.25em}
-.chapter-page article>ul:not(.related-list)>li::marker,
-.chapter-page article td ul>li::marker{font-size:.65em;color:var(--gray-600)}
+.chapter-page article>ul:not(.related-list)>li::marker{font-size:.65em;color:var(--gray-600)}
 .chapter-page article>:is(ul,ol):not(.related-list)>li+li{margin-top:var(--space-2)}
 .chapter-page article table{font-size:var(--chapter-table-font-size);line-height:1.7}
 .chapter-page article :is(th,td){vertical-align:top}
@@ -400,7 +404,7 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .chapter-page article td :is(p,ul,ol){margin:0}
 .chapter-page article td :is(p,ul,ol)+:is(p,ul,ol),
 .chapter-page article td li+li{margin-top:var(--space-2)}
-.chapter-page article td ul.chapter-cell-items{padding-left:1.1em;list-style-type:disc}
+.chapter-page article td ul{padding-left:0;list-style-type:none}
 .chapter-page article>.sample-table-scroll{margin-block:var(--space-4)}
 .chapter-page article>.sample-table-scroll>table{margin:0}
 .chapter-page article>:is(h2,h3)+.sample-table-scroll{margin-top:0}

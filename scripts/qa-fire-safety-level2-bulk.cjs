@@ -95,8 +95,8 @@ try{
    await gradeRow.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));
    await gradeRow.screenshot({path:`${dir}/${row.chapterId}-grade-row-${i}-${width}.png`});
  }
- const marker=await table.locator('li').first().evaluate(e=>({text:parseFloat(getComputedStyle(e).fontSize),marker:parseFloat(getComputedStyle(e,'::marker').fontSize)}));
- assert(marker.marker<marker.text,'small condition bullet');
+ const lists=await table.locator('td ul').evaluateAll(es=>es.map(e=>({style:getComputedStyle(e).listStyleType,items:[...e.children].map(li=>({top:li.getBoundingClientRect().top,bottom:li.getBoundingClientRect().bottom}))})));
+ assert(lists.every(list=>list.style==='none' && list.items.every((item,i)=>i===0 || item.top>=list.items[i-1].bottom)),'condition lines retained without bullets');
  hierarchy=await page.locator('.fire-grade-lesson').evaluate(root=>{
    const sections=[...root.querySelectorAll(':scope>.fire-grade-section')];
    const rect=e=>e.getBoundingClientRect();
