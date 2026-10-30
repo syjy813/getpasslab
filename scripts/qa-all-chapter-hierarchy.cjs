@@ -39,7 +39,7 @@ let browser;
           return {width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,
             h1:document.querySelectorAll('h1').length,mathErrors:a.querySelectorAll('.katex-error').length,
             sections:headings.map((e,i)=>{const p=previousVisible(e),n=nextVisible(e),s=getComputedStyle(e,'::after');return {
-              title:e.textContent,font:parseFloat(getComputedStyle(e).fontSize),divider:s.height,dividerContent:s.content,
+              title:e.textContent,id:e.id,background:getComputedStyle(e).backgroundColor,font:parseFloat(getComputedStyle(e).fontSize),divider:s.height,dividerContent:s.content,
               dividerTop:parseFloat(s.top),previousGap:p?rect(e).top-rect(p).bottom:null,nextTag:n?.tagName,
               nextGap:n?rect(n).top-rect(e).bottom:null,needsDivider:i>0||Boolean(n?.matches('.exam-history,.related-list')),
             };}),
@@ -55,6 +55,8 @@ let browser;
         assert(layout.scroll<=layout.width+1,current+': page overflow');assert.equal(layout.h1,1);assert.equal(layout.mathErrors,0);
         for(const h of layout.sections){
           assert.equal(h.font,width<768?18:20,current+': section typography');
+          const quiet=['핵심-개념','절차-및-판별-기준','자주-틀리는-포인트'].includes(h.id);
+          assert.equal(h.background,quiet?'rgba(0, 0, 0, 0)':'rgb(239, 246, 255)',current+': section emphasis '+h.title);
           if(h.needsDivider){
             assert.equal(h.divider,'1px',current+': section divider '+h.title);
             assert.equal(h.dividerTop,width<768?-16:-24,current+': midpoint divider');
