@@ -157,6 +157,9 @@ a{color:inherit}
 .breadcrumb a:hover{color:var(--primary-600)}
 .breadcrumb .sep{color:var(--gray-200)}
 .breadcrumb .current{color:var(--gray-900);font-weight:var(--fw-medium)}
+@media(max-width:639px){
+  .chapter-page .breadcrumb>.breadcrumb-current-sep,.chapter-page .breadcrumb>.current{display:none}
+}
 .subject-switcher{position:relative;display:inline-block;color:var(--gray-600)}
 .subject-switcher>summary{display:flex;align-items:center;gap:4px;padding:2px 0;list-style:none;cursor:pointer;color:var(--gray-600)}
 .subject-switcher>summary::-webkit-details-marker{display:none}
@@ -215,6 +218,16 @@ article h2::before{content:'';width:10px;height:22px;border-radius:4px;backgroun
 /* Chapter section headings: a quiet background separates each learning topic. */
 .chapter-page article h2{position:relative;display:block;padding:var(--space-3) var(--space-4) var(--space-3) calc(var(--space-4) + 10px + var(--space-2));background:var(--primary-50);border-radius:var(--radius-md);line-height:var(--lh-heading);word-break:keep-all;overflow-wrap:anywhere}
 .chapter-page article h2::before{position:absolute;left:var(--space-4);top:calc(var(--space-3) + .1em)}
+/* Pilot: lighter topic headings; keep the established exam-point emphasis. */
+.reading-pilot article>h2:is(#핵심-개념,#절차-및-판별-기준,#자주-틀리는-포인트){background:transparent;padding-left:calc(10px + var(--space-2));padding-right:0}
+.reading-pilot article>h2:is(#핵심-개념,#절차-및-판별-기준,#자주-틀리는-포인트)::before{left:0}
+@media(max-width:639px){
+  .reading-pilot article>h3#주요-장치와-기능+table{table-layout:fixed}
+  .reading-pilot article>h3#주요-장치와-기능+table :is(th,td){padding:10px 7px;overflow-wrap:anywhere}
+  .reading-pilot article>h3#주요-장치와-기능+table :is(th,td):nth-child(1){width:18%}
+  .reading-pilot article>h3#주요-장치와-기능+table :is(th,td):nth-child(2){width:30%}
+  .reading-pilot article>h3#주요-장치와-기능+table :is(th,td):nth-child(3){width:52%}
+}
 article h3{font-size:var(--fs-h4);font-weight:var(--fw-semibold);color:var(--gray-900);margin:var(--space-6) 0 var(--space-2)}
 article p,article li{font-size:var(--fs-body);color:var(--gray-800);word-break:keep-all;overflow-wrap:break-word}
 article>p,article>ul,article>ol,article>blockquote{max-width:800px}

@@ -50,7 +50,7 @@ let browser;
           return {
             width: document.documentElement.clientWidth, scrollWidth: document.documentElement.scrollWidth,
             mathErrors: document.querySelectorAll('.katex-error').length,
-            headings: [...article.querySelectorAll('h2')].map(e => getComputedStyle(e).backgroundColor),
+            headings: [...article.querySelectorAll('h2')].map(e => ({ id:e.id, background:getComputedStyle(e).backgroundColor })),
             cards: cards.map(c => ({ background: getComputedStyle(c).backgroundColor, border: getComputedStyle(c).borderTopColor, color: getComputedStyle(c).color, width: c.clientWidth, scroll: c.scrollWidth,
               glyphs: [...c.querySelectorAll('.katex-html span')].filter(e => [...e.childNodes].some(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim())).map(e => ({weight:getComputedStyle(e).fontWeight, family:getComputedStyle(e).fontFamily})) })),
             otherMath: [...article.querySelectorAll('.katex')].filter(e => !cards.some(c => c.contains(e))).map(e => ({ background:getComputedStyle(e).backgroundColor, weight:getComputedStyle(e).fontWeight })),
@@ -58,7 +58,9 @@ let browser;
         });
         assert(layout.scrollWidth <= layout.width + 1, `${current}: page overflow`);
         assert.equal(layout.mathErrors, 0, `${current}: math error`);
-        assert(layout.headings.every(c => c === 'rgb(239, 246, 255)'), `${current}: headings changed`);
+        const pilot = route === '/industrial-safety/written/mechanical/boiler-safety-devices/';
+        const quietHeadings = new Set(['핵심-개념','절차-및-판별-기준','자주-틀리는-포인트']);
+        assert(layout.headings.every(h => h.background === (pilot && quietHeadings.has(h.id) ? 'rgba(0, 0, 0, 0)' : 'rgb(239, 246, 255)')), `${current}: headings changed`);
         for (const card of layout.cards) {
           assert.equal(card.background, 'rgb(242, 244, 246)');
           assert.equal(card.border, 'rgb(229, 232, 235)');
