@@ -31,7 +31,9 @@ const report={result:'RUNNING',cases:[],svg:[],errors:[],limitations:['Chromium 
     const typography=await figure.evaluate(e=>({title:getComputedStyle(e.querySelector('strong')).fontSize,note:getComputedStyle(e.querySelector('.fire-panel-note')).fontSize,weight:getComputedStyle(e.querySelector('.fire-panel-note')).fontWeight,notes:e.querySelectorAll('.fire-panel-note').length}));
     assert.deepEqual(typography,{title:width<768?'16px':'17px',note:'13px',weight:'400',notes:1});
     assert.equal((await figure.locator('.fire-panel-note').textContent()).trim(),'※ 학습을 위해 재구성된 이미지');
-    const button=figure.locator('button');await button.scrollIntoViewIfNeeded();
+    // Center the trigger before recording its position, so the subsequent click
+    // does not cause an additional automatic scroll under the fixed mobile bar.
+    const button=figure.locator('button');await button.evaluate(e=>e.scrollIntoView({block:'center'}));
     const before=await page.evaluate(()=>({y:scrollY,style:document.body.getAttribute('style')||''}));await button.click();
     const dialog=page.locator('#fire-bulk-image-dialog');assert(await dialog.evaluate(e=>e.open));await dialog.locator('img').evaluate(e=>e.decode());
     assert.equal(await dialog.locator('img').getAttribute('src'),'/images/fire-safety-manager-level2/'+r.asset);
