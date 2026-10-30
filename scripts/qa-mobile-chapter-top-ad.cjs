@@ -46,7 +46,7 @@ let browser;
    return r.abort();
   });
   const page=await context.newPage();page.on('pageerror',e=>report.errors.push(String(e)));
-  await page.goto('https://getpasslab.co.kr'+route,{waitUntil:'domcontentloaded'});const before=await page.evaluate(layout);release();
+  await page.goto('https://getpasslab.co.kr'+route,{waitUntil:'domcontentloaded'});await page.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});const before=await page.evaluate(layout);release();
   if(width===390){
    await page.waitForFunction(()=>document.querySelector('[data-mobile-top-ad-mount] ins[data-qa-filled="true"]'));
    const after=await page.evaluate(layout);assert.equal(after.breadcrumb,before.breadcrumb,'loading ad must not move content');assert.equal(after.ins,1);assert.equal(after.sdk,1);

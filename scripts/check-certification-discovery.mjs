@@ -23,6 +23,16 @@ const cleanLesson=node=>{
  const visit=n=>{if(!n.childNodes)return;n.childNodes=n.childNodes.filter(c=>!(c.tagName==='aside'&&(attr(c,'class')||'').split(' ').includes('adfit-placement'))&&!(c.tagName==='script'&&serialize(c).includes('const initializeAdFit =')));n.childNodes.forEach(visit);};visit(copy);return serialize(copy);
 };
 let lessons=0,htmlCount=0;
+let footerPages=0;
+for(const file of files.filter(f=>f.endsWith('.html'))){
+ const nodes=all(parse(fs.readFileSync(file,'utf8')));
+ const redirect=nodes.some(n=>n.tagName==='meta'&&(attr(n,'http-equiv')||'').toLowerCase()==='refresh');
+ const expected=(file==='dist/index.html'||/^dist\/(industrial-safety|energy-management|computer-literacy|fire-safety-manager-level2)\//.test(file))&&!file.includes('/practice/')&&!redirect;
+ const slots=nodes.filter(n=>attr(n,'data-footer-ad')!==undefined);
+ assert.equal(slots.length,expected?1:0,file+': common footer eligibility');
+ assert.equal(nodes.filter(n=>attr(n,'data-unit')==='DAN-A3dGUv2kIjnZSTmZ').length,expected?1:0,file+': exactly one footer unit; no home duplicate');
+ if(expected)footerPages++;
+}
 for(const [file,row]of Object.entries(review.changes)){
  const current=fs.readFileSync(file),before=beforeCertificationDiscovery(file,current);
  assert.equal(hash(before),row.beforeSHA256,file+': immutable predecessor');
@@ -37,4 +47,4 @@ for(const [file,row]of Object.entries(review.changes)){
 assert.deepEqual(walk('dist/_astro').filter(f=>/\.(js|css)$/.test(f)).sort(),Object.keys(review.bundles).sort(),'compiled bundle inventory');
 for(const [file,sha]of Object.entries(review.bundles))assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed bundle');
 assert(lessons>500);assert(htmlCount>500);
-console.log('[Certification discovery native] PASS',JSON.stringify({nativeFiles:files.length,lessons,htmlCount,sourceChanges:review.productFiles.length,questionsAndImages:'unchanged',routes:'unchanged'}));
+console.log('[Certification discovery native] PASS',JSON.stringify({nativeFiles:files.length,lessons,htmlCount,footerPages,sourceChanges:review.productFiles.length,questionsAndImages:'unchanged',routes:'unchanged'}));

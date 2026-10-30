@@ -41,8 +41,16 @@ const payloadPattern = /(<script[^>]*data-fire-payload[^>]*>)[\s\S]*?(<\/script>
       assert.equal(new URL(popup.url()).searchParams.get('popup'), '1');
       assert.equal(await popup.evaluate(() => window.opener), null);
       await popup.waitForFunction(() => document.querySelector('[data-start]')?.disabled === false);
-      await Promise.all([popup.waitForEvent('close'), popup.locator('[data-window-close]').click()]);
+      const closed = popup.waitForEvent('close');
+      const closeClick = popup.locator('[data-window-close]').click().catch(async error => {
+        // window.close() can destroy the target before Chromium acknowledges the click.
+        if (!String(error).includes('Target page, context or browser has been closed')) throw error;
+        await closed;
+        assert(popup.isClosed(), 'the expected popup must actually close');
+      });
+      await Promise.all([closed, closeClick]);
       assert(popup.isClosed());
+      assert(!page.isClosed(), 'the parent learning tab must remain open');
       // A blocked popup follows the usable link in the current tab.
       await page.evaluate(() => { window.open = () => null; });
       await page.locator('[data-fire-practice-entry] a').first().click();

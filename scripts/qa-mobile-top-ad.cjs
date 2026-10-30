@@ -54,21 +54,22 @@ let browser;
    });
    const page=await context.newPage();page.on('pageerror',e=>report.errors.push(String(e)));
    await page.goto('https://getpasslab.co.kr'+route,{waitUntil:'domcontentloaded'});
+   await page.evaluate(async()=>{await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});
    const before=await page.evaluate(dimensions);releaseSDK();
    if(width===390){
     await page.waitForFunction(()=>document.querySelector('ins[data-qa-filled="true"]'));
     const after=await page.evaluate(dimensions);assert.equal(before.breadcrumb,after.breadcrumb,'SDK load must not shift content');
     const config=await page.locator('[data-mobile-top-ad-mount] ins').evaluate(e=>({unit:e.dataset.adUnit,width:e.dataset.adWidth,height:e.dataset.adHeight}));
-    assert.deepEqual(config,{unit:'DAN-aX4OBdYehvddWlai',width:'320',height:'50'});assert.equal(sdkCalls,1);
+    assert.deepEqual(config,{unit:'DAN-aX4OBdYehvddWlai',width:'320',height:'50'});assert.equal(after.sdk,1,'one SDK mount for the top unit');
     await page.screenshot({path:`${out}/390-${route.split('/')[1]}-stub.png`});
    }else{
-    assert.equal(sdkCalls,0);assert.equal(before.ins,0);assert.equal(before.adHeight,0);
+    assert.equal(before.sdk,0,'desktop has no top-unit SDK; the common footer is independent');assert.equal(before.ins,0);assert.equal(before.adHeight,0);
     await page.setViewportSize({width:390,height:844});
     await page.waitForFunction(()=>document.querySelector('ins[data-qa-filled="true"]'));
-    assert.equal(sdkCalls,1);await page.setViewportSize({width:1440,height:844});assert(!(await page.evaluate(dimensions)).shown);
-    await page.setViewportSize({width:390,height:844});assert.equal((await page.evaluate(dimensions)).ins,1);assert.equal(sdkCalls,1,'resize must not duplicate SDK initialization');
+    assert.equal((await page.evaluate(dimensions)).sdk,1);await page.setViewportSize({width:1440,height:844});assert(!(await page.evaluate(dimensions)).shown);
+    await page.setViewportSize({width:390,height:844});assert.equal((await page.evaluate(dimensions)).ins,1);assert.equal((await page.evaluate(dimensions)).sdk,1,'resize must not duplicate top-unit SDK initialization');
    }
-   report.cases.push({width,route,case:'production hostname with SDK stub; sizing, CLS, desktop requests and resizing',passed:true});
+   report.cases.push({width,route,case:'production hostname with SDK stub; sizing, CLS, scoped top-unit SDK and resizing',totalSDKRequests:sdkCalls,passed:true});
    await context.close();
   }
  }

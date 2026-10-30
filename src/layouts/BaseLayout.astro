@@ -7,6 +7,7 @@ import Footer from '../components/Footer.astro';
 import AdFitFloating from '../components/AdFitFloating.astro';
 import { withBase } from '../config/url';
 import { SITE } from '../config/site';
+import { getFeaturedCertifications } from '../config/certifications';
 
 interface Props {
   title: string;
@@ -31,6 +32,12 @@ const {
   chapterNavigation,
   mobileTopAd = false,
 } = Astro.props;
+const pathname = Astro.url.pathname;
+const hasContentFooterAd = !focusMode && (
+  pathname === withBase('/') || getFeaturedCertifications().some(cert =>
+    pathname.startsWith(withBase(`/${cert.slug}/`)) && !pathname.includes('/practice/')
+  )
+);
 const siteOrigin = Astro.site ?? SITE.url;
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
 const ogImageUrl = new URL('/og-default.png', siteOrigin);
@@ -149,7 +156,51 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
       </aside>
     )}
     <slot />
+    {hasContentFooterAd && (
+      <aside class="footer-ad" data-footer-ad data-unit="DAN-A3dGUv2kIjnZSTmZ" aria-label="광고" hidden>
+        <span class="footer-ad-label">광고</span>
+        <div class="footer-ad-mount" data-footer-ad-mount></div>
+        <script is:inline>
+          (() => {
+            const placement = document.querySelector('[data-footer-ad]');
+            const mount = placement?.querySelector('[data-footer-ad-mount]');
+            if (!(placement instanceof HTMLElement) || !(mount instanceof HTMLElement)) return;
+            const initialize = () => {
+              const available = Math.min(document.documentElement.clientWidth, placement.parentElement.clientWidth);
+              placement.hidden = available < 300;
+              if (placement.hidden || placement.dataset.footerAdReady) return;
+              if (window.location.hostname !== 'getpasslab.co.kr') {
+                placement.dataset.footerAdReady = 'preview';
+                return;
+              }
+              placement.dataset.footerAdReady = 'true';
+              const ad = document.createElement('ins');
+              ad.className = 'kakao_ad_area';
+              ad.style.display = 'none';
+              ad.dataset.adUnit = placement.dataset.unit;
+              ad.dataset.adWidth = '300';
+              ad.dataset.adHeight = '250';
+              mount.appendChild(ad);
+              const sdk = document.createElement('script');
+              sdk.type = 'text/javascript';
+              sdk.src = '//t1.kakaocdn.net/kas/static/ba.min.js';
+              sdk.async = true;
+              mount.appendChild(sdk);
+            };
+            initialize();
+            new ResizeObserver(initialize).observe(document.documentElement);
+          })();
+        </script>
+      </aside>
+    )}
     {!focusMode && <Footer />}
     {!focusMode && <AdFitFloating />}
   </body>
 </html>
+
+<style>
+  .footer-ad{box-sizing:border-box;display:flex;width:100%;padding-top:var(--space-8);flex-direction:column;align-items:center}
+  .footer-ad[hidden]{display:none}
+  .footer-ad-label{margin-bottom:var(--space-2);font-size:var(--fs-label);line-height:1;color:var(--gray-600)}
+  .footer-ad-mount{width:300px;height:250px;flex:none}
+</style>

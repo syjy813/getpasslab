@@ -87,10 +87,6 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
         </div>
       </li>
     </ol>
-    <aside class="home-ad" data-home-ad="bottom" data-unit="DAN-A3dGUv2kIjnZSTmZ" data-width="300" data-height="250" style="--home-ad-width:300px;--home-ad-height:250px" aria-label="광고" hidden>
-      <span class="home-ad-label">광고</span>
-      <div class="home-ad-mount" data-home-ad-mount></div>
-    </aside>
   </section>
 
   <script is:inline>
@@ -135,9 +131,8 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
   .home-ad[hidden]{display:none}
   .home-ad-label{margin-bottom:var(--space-2);font-size:var(--fs-label);line-height:1;color:var(--gray-600)}
   .home-ad-mount{width:var(--home-ad-width);height:var(--home-ad-height);flex:none}
-  .home-learning-method{padding-bottom:var(--space-16)}
+  .home-learning-method{padding-bottom:0}
   @media(max-width:767px){
-    .home-learning-method{padding-bottom:var(--space-8)}
     :global(.certification-home .footer){margin-top:var(--space-8)}
   }
   @media(min-width:768px){.home-ad{display:none}}
