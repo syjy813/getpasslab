@@ -28,7 +28,7 @@ examComment: 수록 기출 4문항은 작은 일감의 고정·기동 전 척 �
 
 <div class="learning-visuals learning-visuals--single learning-visuals--drill">
 <figure>
-<figcaption><strong>드릴의 척·스핀들·일감</strong><span>학습용 재구성 · 고정식 예시, 방호장치 생략</span></figcaption>
+<figcaption><strong>드릴의 척·스핀들·일감</strong><span>고정식 예시, 방호장치 생략</span></figcaption>
 <img src="/images/industrial-safety/drill-motion-illustrated-v1.webp" alt="전체 고정식 드릴과 가공부 확대 그림. ① 스핀들에 연결된 ② 척이 ③ 드릴날을 잡고 함께 회전하며, ⑤ 바이스에 고정된 ④ 일감에 구멍을 뚫는다. 척 렌치는 꽂혀 있지 않으며 방호장치는 생략했다" width="1200" height="2000" loading="lazy" decoding="async" />
 </figure>
 </div>

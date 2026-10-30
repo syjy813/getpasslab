@@ -26,7 +26,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>농도가 낮아지거나 높아질 때 연소범위 진입 가능</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/flammability-range-v1.svg" alt="하한계 미만은 연료 부족, 범위 안은 연소 가능, 상한계 초과는 산소 부족" width="320" height="250" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/flammability-range-v1.svg" data-fire-alt="하한계 미만은 연료 부족, 범위 안은 연소 가능, 상한계 초과는 산소 부족" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>농도가 낮아지거나 높아질 때 연소범위 진입 가능</strong></figcaption><img src="/images/fire-safety-manager-level2/flammability-range-v1.svg" alt="하한계 미만은 연료 부족, 범위 안은 연소 가능, 상한계 초과는 산소 부족" width="320" height="250" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/flammability-range-v1.svg" data-fire-alt="하한계 미만은 연료 부족, 범위 안은 연소 가능, 상한계 초과는 산소 부족" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 수치의 단위와 위험도

@@ -22,7 +22,7 @@ status: "완료"
 
 <div class="learning-visuals">
 <figure>
-<figcaption><strong>셀 위치 · 학습용 재구성</strong><span>① 수식의 결과 E3 · ③ 수식에 참조되는 입력 B3</span></figcaption>
+<figcaption><strong>셀 위치</strong><span>① 수식의 결과 E3 · ③ 수식에 참조되는 입력 B3</span></figcaption>
 <img src="/images/computer-literacy/goal-seek-sheet.svg" width="480" height="336" alt="학습용 워크시트 — 2행 항목: A열 품목, B열 컴퓨터, C열 프린터, D열 캠코더, E열 평균 / 3행 판매량: B3 50, C3 70, D3 60 / ① 평균 E3은 수식 =AVERAGE(B3:D3)의 현재 결과 60 / ③ 바꿀 입력은 컴퓨터 판매량 B3" />
 </figure>
 <figure>

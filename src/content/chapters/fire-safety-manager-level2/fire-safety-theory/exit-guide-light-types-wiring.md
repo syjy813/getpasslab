@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>출구 위 피난구유도등과 낮은 복도통로유도등 구분</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/guide-light-locations-v1.svg" alt="피난구유도등은 문 위 1.5m 이상, 복도통로유도등은 바닥 1m 이하 위치를 보여주는 공간 개념도" width="320" height="300" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/guide-light-locations-v1.svg" data-fire-alt="피난구유도등은 문 위 1.5m 이상, 복도통로유도등은 바닥 1m 이하 위치를 보여주는 공간 개념도" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>출구 위 피난구유도등과 낮은 복도통로유도등 구분</strong></figcaption><img src="/images/fire-safety-manager-level2/guide-light-locations-v1.svg" alt="피난구유도등은 문 위 1.5m 이상, 복도통로유도등은 바닥 1m 이하 위치를 보여주는 공간 개념도" width="320" height="300" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/guide-light-locations-v1.svg" data-fire-alt="피난구유도등은 문 위 1.5m 이상, 복도통로유도등은 바닥 1m 이하 위치를 보여주는 공간 개념도" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 전원과 배선

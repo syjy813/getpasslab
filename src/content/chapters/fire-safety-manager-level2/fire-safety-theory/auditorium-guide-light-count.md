@@ -20,7 +20,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>두 객석 통로는 각각 계산하고 합산</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/auditorium-aisle-spacing-v1.svg" alt="객석 사이 독립 통로 A와 B의 길이를 각각 사용, 유도등 개수는 통로별로 올림 후 합산" width="320" height="300" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/auditorium-aisle-spacing-v1.svg" data-fire-alt="객석 사이 독립 통로 A와 B의 길이를 각각 사용, 유도등 개수는 통로별로 올림 후 합산" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>두 객석 통로는 각각 계산하고 합산</strong></figcaption><img src="/images/fire-safety-manager-level2/auditorium-aisle-spacing-v1.svg" alt="객석 사이 독립 통로 A와 B의 길이를 각각 사용, 유도등 개수는 통로별로 올림 후 합산" width="320" height="300" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/auditorium-aisle-spacing-v1.svg" data-fire-alt="객석 사이 독립 통로 A와 B의 길이를 각각 사용, 유도등 개수는 통로별로 올림 후 합산" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 계산 예

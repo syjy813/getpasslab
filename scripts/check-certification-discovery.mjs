@@ -3,11 +3,13 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse,serialize} from 'parse5';
 import {certificationUIReview as review,beforeCertificationDiscovery} from './read-before-certification-discovery.mjs';
+import {beforeImageCopy} from './read-before-image-copy.mjs';
+const prior=file=>beforeImageCopy(file,fs.readFileSync(file));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(d+'/'+e.name):[d+'/'+e.name]);
 const files=[...walk('src'),...walk('public'),...walk('dist').filter(f=>/\.(html|xml)$/.test(f))].sort();
 assert.deepEqual(files,Object.keys(review.current).sort(),'native inventory');
-for(const file of files)assert.equal(hash(fs.readFileSync(file)),review.current[file],file+': reviewed current bytes');
+for(const file of files)assert.equal(hash(prior(file)),review.current[file],file+': reviewed current bytes');
 assert.deepEqual(review.productFiles,[
  'src/components/AdFitResponsive.astro','src/components/GNB.astro','src/components/QuestionHistory.astro','src/content/chapters/computer-literacy/written/computer-basics/computer-classification.md','src/layouts/BaseLayout.astro','src/layouts/ChapterLayout.astro',
  'src/pages/[cert]/[exam]/[subject]/index.astro','src/pages/[cert]/[exam]/index.astro','src/pages/[cert]/index.astro','src/pages/index.astro',
@@ -41,7 +43,7 @@ const cleanLesson=(node,file)=>{
 let lessons=0,htmlCount=0;
 let footerPages=0;
 for(const file of files.filter(f=>f.endsWith('.html'))){
- const nodes=all(parse(fs.readFileSync(file,'utf8')));
+ const nodes=all(parse(prior(file).toString('utf8')));
  const redirect=nodes.some(n=>n.tagName==='meta'&&(attr(n,'http-equiv')||'').toLowerCase()==='refresh');
  const expected=(file==='dist/index.html'||/^dist\/(industrial-safety|energy-management|computer-literacy|fire-safety-manager-level2)\//.test(file))&&!file.includes('/practice/')&&!redirect;
  const slots=nodes.filter(n=>attr(n,'data-footer-ad')!==undefined);
@@ -50,7 +52,7 @@ for(const file of files.filter(f=>f.endsWith('.html'))){
  if(expected)footerPages++;
 }
 for(const [file,row]of Object.entries(review.changes)){
- const current=fs.readFileSync(file),before=beforeCertificationDiscovery(file,current);
+ const current=prior(file),before=beforeCertificationDiscovery(file,current);
  assert.equal(hash(before),row.beforeSHA256,file+': immutable predecessor');
  assert.notEqual(hash(beforeCertificationDiscovery(file,Buffer.concat([current,Buffer.from('unknown')]))),row.beforeSHA256,'unknown mutations remain detectable');
  if(!file.endsWith('.html'))continue;htmlCount++;

@@ -1,5 +1,6 @@
 // Historical views only. Unknown bytes are never projected away.
 import fs from 'node:fs';
+import {beforeImageCopy} from './read-before-image-copy.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -8,6 +9,7 @@ export const certificationUIReview=JSON.parse(gunzipSync(fs.readFileSync('docs/a
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const key=f=>path.normalize(path.isAbsolute(String(f))?path.relative(process.cwd(),String(f)):String(f));
 export function beforeCertificationDiscovery(file,bytes){
+ bytes=beforeImageCopy(file,bytes);
  const row=certificationUIReview.changes[key(file)];if(!row||hash(bytes)!==row.sha256)return bytes;
  let old=bytes;
  for(const p of [...row.patches].reverse()){

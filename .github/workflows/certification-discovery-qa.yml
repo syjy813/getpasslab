@@ -20,7 +20,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: node scripts/check-certification-discovery.mjs
+      - run: node scripts/check-image-copy-update.mjs && node scripts/check-certification-discovery.mjs
       - run: node scripts/check-historical-practice-guard.mjs && node scripts/check-fire-bulk-history-guard.mjs && node scripts/check-fire-launch-history-guard.mjs && node scripts/check-fire-practice-history-guard.mjs
       - run: npm run check:seo && npm run check:public-content && npm run check:contrast && npm run check:deferred-question-content
       - name: Prepare browser tests
@@ -42,6 +42,7 @@ jobs:
           node scripts/qa-chapter-reading-pilot.cjs
           node scripts/qa-chapter-paragraph-spacing.cjs
           node scripts/qa-question-button-readability.cjs
+          node scripts/qa-image-copy-update.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

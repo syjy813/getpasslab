@@ -340,7 +340,7 @@ const structuredData = [
         if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) imageDialog.close();
       });
       document.querySelectorAll('article .learning-visuals figure').forEach(figure => {
-        if (figure.querySelector('button, a, svg') || figure.closest('.learning-visuals--boiler-circulation')) return;
+        if (figure.querySelector('button, a, svg') || figure.closest('.learning-visuals--boiler-circulation, .learning-visuals--boiler-types')) return;
         const original = figure.querySelector('img');
         if (!(original instanceof HTMLImageElement)) return;
         const label = figure.querySelector('figcaption strong')?.textContent?.trim() || '학습 그림';

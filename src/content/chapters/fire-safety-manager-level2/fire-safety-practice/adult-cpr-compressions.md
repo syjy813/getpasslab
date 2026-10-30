@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>성인 가슴압박 위치는 흉골 아래쪽 절반</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/cpr-compression-point-v1.svg" alt="누운 성인의 앞가슴 개념도에 흉골 아래쪽 절반의 가슴압박 위치 표시, 실제 체형 비율과 술기 자세는 본문 적용" width="320" height="320" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/cpr-compression-point-v1.svg" data-fire-alt="누운 성인의 앞가슴 개념도에 흉골 아래쪽 절반의 가슴압박 위치 표시, 실제 체형 비율과 술기 자세는 본문 적용" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>성인 가슴압박 위치는 흉골 아래쪽 절반</strong></figcaption><img src="/images/fire-safety-manager-level2/cpr-compression-point-v1.svg" alt="누운 성인의 앞가슴 개념도에 흉골 아래쪽 절반의 가슴압박 위치 표시, 실제 체형 비율과 술기 자세는 본문 적용" width="320" height="320" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/cpr-compression-point-v1.svg" data-fire-alt="누운 성인의 앞가슴 개념도에 흉골 아래쪽 절반의 가슴압박 위치 표시, 실제 체형 비율과 술기 자세는 본문 적용" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 자세와 인공호흡

@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>점검 종료와 보고일을 각각 출발점으로 확인</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/inspection-report-timeline-v1.svg" alt="점검 종료 → 15일 이내 보고 → 보고 후 10·20일 조치 → 완료 후 10일 보고" width="320" height="327" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/inspection-report-timeline-v1.svg" data-fire-alt="점검 종료 → 15일 이내 보고 → 보고 후 10·20일 조치 → 완료 후 10일 보고" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>점검 종료와 보고일을 각각 출발점으로 확인</strong></figcaption><img src="/images/fire-safety-manager-level2/inspection-report-timeline-v1.svg" alt="점검 종료 → 15일 이내 보고 → 보고 후 10·20일 조치 → 완료 후 10일 보고" width="320" height="327" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/inspection-report-timeline-v1.svg" data-fire-alt="점검 종료 → 15일 이내 보고 → 보고 후 10·20일 조치 → 완료 후 10일 보고" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 중대위반사항과 연기

@@ -24,7 +24,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>선임·신고·교육의 서로 다른 기한</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/appointment-timeline-v1.svg" alt="사유 발생 → 30일 이내 선임 → 선임 후 14일 신고 → 선임 후 6개월 교육" width="320" height="327" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/appointment-timeline-v1.svg" data-fire-alt="사유 발생 → 30일 이내 선임 → 선임 후 14일 신고 → 선임 후 6개월 교육" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>선임·신고·교육의 서로 다른 기한</strong></figcaption><img src="/images/fire-safety-manager-level2/appointment-timeline-v1.svg" alt="사유 발생 → 30일 이내 선임 → 선임 후 14일 신고 → 선임 후 6개월 교육" width="320" height="327" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/appointment-timeline-v1.svg" data-fire-alt="사유 발생 → 30일 이내 선임 → 선임 후 14일 신고 → 선임 후 6개월 교육" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 교육 예외를 읽는 법

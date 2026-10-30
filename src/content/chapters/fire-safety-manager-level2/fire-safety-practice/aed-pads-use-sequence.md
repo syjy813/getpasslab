@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>오른쪽 위 가슴과 왼쪽 옆가슴에 패드 부착</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/aed-adult-pad-positions-v1.svg" alt="성인 정면도에서 환자 오른쪽 쇄골 아래는 그림 왼쪽, 환자 왼쪽 겨드랑이 아래 옆가슴은 그림 오른쪽" width="320" height="350" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/aed-adult-pad-positions-v1.svg" data-fire-alt="성인 정면도에서 환자 오른쪽 쇄골 아래는 그림 왼쪽, 환자 왼쪽 겨드랑이 아래 옆가슴은 그림 오른쪽" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>오른쪽 위 가슴과 왼쪽 옆가슴에 패드 부착</strong></figcaption><img src="/images/fire-safety-manager-level2/aed-adult-pad-positions-v1.svg" alt="성인 정면도에서 환자 오른쪽 쇄골 아래는 그림 왼쪽, 환자 왼쪽 겨드랑이 아래 옆가슴은 그림 오른쪽" width="320" height="350" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/aed-adult-pad-positions-v1.svg" data-fire-alt="성인 정면도에서 환자 오른쪽 쇄골 아래는 그림 왼쪽, 환자 왼쪽 겨드랑이 아래 옆가슴은 그림 오른쪽" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 접촉을 끊는 두 시점

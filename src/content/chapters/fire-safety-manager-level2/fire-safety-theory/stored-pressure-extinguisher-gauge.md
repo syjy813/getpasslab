@@ -24,7 +24,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>저압·정상·과압을 제품 눈금과 함께 판독</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/extinguisher-pressure-gauge-v1.svg" alt="저압과 정상 및 과압 세 구간 중 정상 범위를 가리키는 압력계 바늘" width="320" height="260" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/extinguisher-pressure-gauge-v1.svg" data-fire-alt="저압과 정상 및 과압 세 구간 중 정상 범위를 가리키는 압력계 바늘" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>저압·정상·과압을 제품 눈금과 함께 판독</strong></figcaption><img src="/images/fire-safety-manager-level2/extinguisher-pressure-gauge-v1.svg" alt="저압과 정상 및 과압 세 구간 중 정상 범위를 가리키는 압력계 바늘" width="320" height="260" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/extinguisher-pressure-gauge-v1.svg" data-fire-alt="저압과 정상 및 과압 세 구간 중 정상 범위를 가리키는 압력계 바늘" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 함께 확인할 항목

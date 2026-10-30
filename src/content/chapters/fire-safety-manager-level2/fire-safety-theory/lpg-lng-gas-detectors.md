@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>가스 비중에 따라 천장·바닥 가까이 설치</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/gas-detector-heights-v1.svg" alt="메탄 탐지부는 천장에서 30cm 이하, LPG 탐지부는 바닥에서 30cm 이하 · 주방자동소화장치 기준" width="320" height="270" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/gas-detector-heights-v1.svg" data-fire-alt="메탄 탐지부는 천장에서 30cm 이하, LPG 탐지부는 바닥에서 30cm 이하 · 주방자동소화장치 기준" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>가스 비중에 따라 천장·바닥 가까이 설치</strong></figcaption><img src="/images/fire-safety-manager-level2/gas-detector-heights-v1.svg" alt="메탄 탐지부는 천장에서 30cm 이하, LPG 탐지부는 바닥에서 30cm 이하 · 주방자동소화장치 기준" width="320" height="270" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/gas-detector-heights-v1.svg" data-fire-alt="메탄 탐지부는 천장에서 30cm 이하, LPG 탐지부는 바닥에서 30cm 이하 · 주방자동소화장치 기준" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 누설 시 행동

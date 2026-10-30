@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>감열체가 열리면 방수구를 통과한 물을 분산</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/closed-sprinkler-head-v1.svg" alt="폐쇄형 헤드의 감열체와 디플렉터 역할을 구분하는 단순 단면, 상세 제품 형상은 생략" width="320" height="270" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/closed-sprinkler-head-v1.svg" data-fire-alt="폐쇄형 헤드의 감열체와 디플렉터 역할을 구분하는 단순 단면, 상세 제품 형상은 생략" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>감열체가 열리면 방수구를 통과한 물을 분산</strong></figcaption><img src="/images/fire-safety-manager-level2/closed-sprinkler-head-v1.svg" alt="폐쇄형 헤드의 감열체와 디플렉터 역할을 구분하는 단순 단면, 상세 제품 형상은 생략" width="320" height="270" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/closed-sprinkler-head-v1.svg" data-fire-alt="폐쇄형 헤드의 감열체와 디플렉터 역할을 구분하는 단순 단면, 상세 제품 형상은 생략" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 수원·방수 기준

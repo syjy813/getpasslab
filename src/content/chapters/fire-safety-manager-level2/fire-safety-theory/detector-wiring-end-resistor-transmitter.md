@@ -22,7 +22,7 @@ P형 수신기의 감지기 회로는 **수신기 → 감지기 배선 → 회�
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>종단저항은 감지기 회로의 끝에 연결</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/end-of-line-resistor-circuit-v1.svg" alt="수신기에서 나간 두 선 사이에 감지기가 병렬로 연결되고 종단저항이 말단에 연결된 감시회로 개념도" width="320" height="320" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/end-of-line-resistor-circuit-v1.svg" data-fire-alt="수신기에서 나간 두 선 사이에 감지기가 병렬로 연결되고 종단저항이 말단에 연결된 감시회로 개념도" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>종단저항은 감지기 회로의 끝에 연결</strong></figcaption><img src="/images/fire-safety-manager-level2/end-of-line-resistor-circuit-v1.svg" alt="수신기에서 나간 두 선 사이에 감지기가 병렬로 연결되고 종단저항이 말단에 연결된 감시회로 개념도" width="320" height="320" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/end-of-line-resistor-circuit-v1.svg" data-fire-alt="수신기에서 나간 두 선 사이에 감지기가 병렬로 연결되고 종단저항이 말단에 연결된 감시회로 개념도" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 공통선과 회로
