@@ -37,8 +37,4 @@
   .catalog-page{--catalog-section-gap:var(--space-12)}
   .catalog-page .hero-inner{padding-top:var(--space-8)}
   .catalog-page .card{padding:20px}
-  .subject-index .chapter-group .grid{display:block}
-  .subject-index .chapter-group .card{padding:20px 0;border:0;border-bottom:1px solid var(--gray-200);border-radius:0}
-  .subject-index .chapter-group .card:last-child{border-bottom:0}
-  .subject-index .chapter-group .card:focus-visible{outline-offset:0}
 }
