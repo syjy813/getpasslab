@@ -100,3 +100,43 @@ jobs:
             for tag,i,j,k,l in edits[:25]:
               print('EDIT',tag,'old',i,j,'new',k,l, 'FROM',repr(a[i:j][:650]),'TO',repr(b[k:l][:650]))
           PY
+      - name: Prove all generated page changes are exactly CSS and inline script deltas
+        if: matrix.revision == 'head'
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          import {gzipSync} from 'node:zlib';
+          const prior='/tmp/gpl-table-base/dist',current='dist';
+          const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(x=>x.isDirectory()?walk(path.join(d,x.name)):[path.join(d,x.name)]);
+          const files=walk(current).filter(x=>x.endsWith('.html')).map(x=>path.relative(current,x));
+          const prev=walk(prior).filter(x=>x.endsWith('.html')).map(x=>path.relative(prior,x));
+          assert.deepEqual(files.sort(),prev.sort(),'identical page inventories');
+          const scripts=s=>[...s.matchAll(/<script\b[^>]*>[\s\S]*?<\/script>/g)].map(m=>m[0]);
+          const css=s=>s.match(/\/_astro\/_slug_\.[A-Za-z0-9_-]+\.css/)?.[0];
+          let changed=0,shared=null,uncertain=[];
+          for(const p of files){
+            const a=fs.readFileSync(path.join(prior,p),'utf8'),b=fs.readFileSync(path.join(current,p),'utf8');
+            if(a===b)continue;
+            const ac=css(a),bc=css(b),as=scripts(a),bs=scripts(b);
+            if(!ac||!bc||as.length!==bs.length){uncertain.push(p+': layout shape');continue;}
+            const diffs=as.map((x,i)=>x===bs[i]?null:[x,bs[i]]).filter(Boolean);
+            if(diffs.length!==1){uncertain.push(p+': script changes '+diffs.length);continue;}
+            const [beforeScript,afterScript]=diffs[0];
+            const delta={priorCss:ac,currentCss:bc,priorScript:beforeScript,currentScript:afterScript};
+            if(shared){if(Object.keys(delta).some(k=>delta[k]!==shared[k])){uncertain.push(p+': inconsistent shared asset delta');continue;}}
+            else shared=delta;
+            const restored=b.replace(bc,ac).replace(afterScript,beforeScript);
+            if(restored!==a){uncertain.push(p+': unexplained HTML delta');continue;}
+            changed++;
+          }
+          assert.equal(uncertain.length,0,'unexpected markup changes: '+uncertain.slice(0,10).join(', '));
+          assert(shared,'expect changed shared chapter assets');
+          console.log('PAGE_DELTA_INTEGRITY_PASS',JSON.stringify({pages:files.length,changed,unchanged:files.length-changed}));
+          console.log('SCRIPT_ASSET_REVIEW',JSON.stringify({
+            oldCSS:shared.priorCss,newCSS:shared.currentCss,
+            oldScriptGzip:gzipSync(shared.priorScript).toString('base64'),
+            newScriptGzip:gzipSync(shared.currentScript).toString('base64')
+          }));
+          NODE
