@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>12층 발화 예시는 12~16층 우선경보</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/priority-alarm-floor-range-v1.svg" alt="12층 화재에서는 발화층과 직상 4개 층인 13·14·15·16층에 경보" width="320" height="355" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/priority-alarm-floor-range-v1.svg" data-fire-alt="12층 화재에서는 발화층과 직상 4개 층인 13·14·15·16층에 경보" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>12층 발화 예시는 12~16층 우선경보</strong></figcaption><img src="/images/fire-safety-manager-level2/priority-alarm-floor-range-v1.svg" alt="12층 화재에서는 발화층과 직상 4개 층인 13·14·15·16층에 경보" width="320" height="355" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/priority-alarm-floor-range-v1.svg" data-fire-alt="12층 화재에서는 발화층과 직상 4개 층인 13·14·15·16층에 경보" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 우선경보의 범위

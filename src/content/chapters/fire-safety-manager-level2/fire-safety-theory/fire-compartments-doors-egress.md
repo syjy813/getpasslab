@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>닫힌 방화문이 두 구역 사이의 확산을 억제</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/fire-compartment-plan-v1.svg" alt="방화구획 벽과 문으로 나뉜 두 구역 · 통로의 문 닫힘 기능 유지" width="320" height="290" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/fire-compartment-plan-v1.svg" data-fire-alt="방화구획 벽과 문으로 나뉜 두 구역 · 통로의 문 닫힘 기능 유지" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>닫힌 방화문이 두 구역 사이의 확산을 억제</strong></figcaption><img src="/images/fire-safety-manager-level2/fire-compartment-plan-v1.svg" alt="방화구획 벽과 문으로 나뉜 두 구역 · 통로의 문 닫힘 기능 유지" width="320" height="290" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/fire-compartment-plan-v1.svg" data-fire-alt="방화구획 벽과 문으로 나뉜 두 구역 · 통로의 문 닫힘 기능 유지" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 방화문 관리

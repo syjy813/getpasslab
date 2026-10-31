@@ -30,7 +30,7 @@ examComment: 수록 기출 1문항은 베드·바이트·피트의 안전조치�
 
 <div class="learning-visuals learning-visuals--single learning-visuals--planer">
 <figure>
-<figcaption><strong>플레이너의 테이블·베드·바이트</strong><span>학습용 재구성 · 방호장치·구동부·피트 생략</span></figcaption>
+<figcaption><strong>플레이너의 테이블·베드·바이트</strong><span>방호장치·구동부·피트 생략</span></figcaption>
 <img src="/images/industrial-safety/planer-motion-illustrated-v1.webp" alt="전체 플레이너와 가공부 확대 그림. ③ 테이블과 고정된 ② 일감이 ④ 베드 위에서 왕복하며, 공구대에 짧게 설치된 ① 바이트가 일감의 평면을 깎는다. 방호장치·구동부·피트는 생략했다" width="1200" height="1900" loading="lazy" decoding="async" />
 </figure>
 </div>

@@ -29,7 +29,7 @@ status: "완료"
 130L/min × 20분 = 2,600L = **2.6㎥**<br>일반 기준에서 한 층에 4개가 설치되어도 N은 2이므로 기본 수원은 **5.2㎥ 이상**
 
 ## 겸용수조에서 확보되는 양
-<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>겸용수조의 소화용 확보 범위</strong></figcaption><img src="/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg" alt="일반급수 흡수구보다 아래이며 소화용 흡수구까지인 범위를 소화용 유효수량으로 판단하는 기존 개념도" width="320" height="310" loading="lazy" decoding="async"><p class="fire-panel-note">※ 학습을 위해 재구성된 이미지</p><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg" data-fire-alt="겸용수조의 두 흡수구 사이 소화용 유효수량" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>겸용수조의 소화용 확보 범위</strong></figcaption><img src="/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg" alt="일반급수 흡수구보다 아래이며 소화용 흡수구까지인 범위를 소화용 유효수량으로 판단하는 기존 개념도" width="320" height="310" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/hydrant-water-tank-v1.svg" data-fire-alt="겸용수조의 두 흡수구 사이 소화용 유효수량" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 외형 부피 대신 실제로 소화에 사용할 수 있는 유효수량을 계산<br>두 흡수구 사이의 범위와 계산 예시는 [수조의 유효수량 범위](/fire-safety-manager-level2/written/fire-safety-theory/shared-tank-effective-volume/)에서 확인
 
 ## 옥상수조와 특별기준

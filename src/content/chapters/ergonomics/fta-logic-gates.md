@@ -20,7 +20,7 @@ related: [fta-symbols, fta-event-symbols, exclusive-or-gate, cutset-pathset]
   <a class="chapter-figure-zoom-target" href="/images/chapters/fta-symbols/fta-logic-gates.svg" target="_blank" rel="noopener" aria-label="FTA AND·OR·억제 게이트 그림 크게 보기">
     <img src="/images/chapters/fta-symbols/fta-logic-gates.svg" alt="두 입력을 연결한 AND와 OR, 한 입력과 옆 조건 P를 가진 육각형 억제 게이트를 비교한 그림" width="360" height="400" loading="lazy" decoding="async" />
   </a>
-  <figcaption>학습용 재구성 · AND·OR의 입력 관계와 억제 게이트 옆 조건 P를 비교함 <a class="chapter-figure-zoom-link" href="/images/chapters/fta-symbols/fta-logic-gates.svg" target="_blank" rel="noopener">크게 보기</a></figcaption>
+  <figcaption>AND·OR의 입력 관계와 억제 게이트 옆 조건 P를 비교함 <a class="chapter-figure-zoom-link" href="/images/chapters/fta-symbols/fta-logic-gates.svg" target="_blank" rel="noopener">크게 보기</a></figcaption>
 </figure>
 
 | 게이트 | 출력이 생기는 조건 |

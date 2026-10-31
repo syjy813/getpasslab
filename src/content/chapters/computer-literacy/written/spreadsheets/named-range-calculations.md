@@ -20,7 +20,7 @@ status: "완료"
 
 <div class="learning-visuals">
 <figure>
-<figcaption><strong>SUMPRODUCT · 학습용 재구성</strong><span>이름을 범위로 바꾸고 같은 위치끼리 곱하기</span></figcaption>
+<figcaption><strong>SUMPRODUCT</strong><span>이름을 범위로 바꾸고 같은 위치끼리 곱하기</span></figcaption>
 <img src="/images/computer-literacy/named-range-products.svg" width="480" height="360" alt="첫범위 A1:A2의 값 2와 4, 둘째범위 B1:B2의 값 3과 5 — 첫 위치 2×3=6, 둘째 위치 4×5=20을 더해 SUMPRODUCT 결과 26" />
 </figure>
 </div>
@@ -45,7 +45,7 @@ SUMPRODUCT는 **각 범위의 합을 곱하는 (2+4)×(3+5)와 구별**
 
 <div class="learning-visuals">
 <figure>
-<figcaption><strong>INDEX · 학습용 재구성</strong><span>시트 번호가 아닌 지정 범위 안에서 행·열 세기</span></figcaption>
+<figcaption><strong>INDEX</strong><span>시트 번호가 아닌 지정 범위 안에서 행·열 세기</span></figcaption>
 <img src="/images/computer-literacy/named-range-index.svg" width="480" height="360" alt="성적 B2:D4의 값은 첫째 행 70·80·90, 둘째 행 60·85·95, 셋째 행 75·88·100 — INDEX(성적,2,1)은 범위 안의 두 번째 행과 첫 번째 열이 만나는 B3의 60" />
 </figure>
 </div>

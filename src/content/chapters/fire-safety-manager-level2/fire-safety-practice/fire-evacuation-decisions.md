@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>대피 경로가 막혔으면 무리한 진입 대신 구조 요청</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/apartment-evacuation-decision-v1.svg" alt="불·연기와 경로 확인 → 대피 가능 → 안전 대피 → 대피 불가 → 안전 공간 → 문 닫기·119 구조 요청" width="320" height="327" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/apartment-evacuation-decision-v1.svg" data-fire-alt="불·연기와 경로 확인 → 대피 가능 → 안전 대피 → 대피 불가 → 안전 공간 → 문 닫기·119 구조 요청" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>대피 경로가 막혔으면 무리한 진입 대신 구조 요청</strong></figcaption><img src="/images/fire-safety-manager-level2/apartment-evacuation-decision-v1.svg" alt="불·연기와 경로 확인 → 대피 가능 → 안전 대피 → 대피 불가 → 안전 공간 → 문 닫기·119 구조 요청" width="320" height="327" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/apartment-evacuation-decision-v1.svg" data-fire-alt="불·연기와 경로 확인 → 대피 가능 → 안전 대피 → 대피 불가 → 안전 공간 → 문 닫기·119 구조 요청" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 이동 중 행동

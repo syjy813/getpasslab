@@ -28,7 +28,7 @@ examComment: 수록 기출 6문항은 장갑 착용·절삭 중 측정·커터 �
 
 <div class="learning-visuals learning-visuals--single learning-visuals--milling">
 <figure>
-<figcaption><strong>밀링의 커터·컬럼·바이스</strong><span>학습용 재구성 · 수평형 예시, 방호장치 생략</span></figcaption>
+<figcaption><strong>밀링의 커터·컬럼·바이스</strong><span>수평형 예시, 방호장치 생략</span></figcaption>
 <img src="/images/industrial-safety/milling-motion-illustrated-v1.webp" alt="전체 수평형 밀링과 가공부 확대 그림. ① 컬럼 옆의 ② 커터가 회전하고, ④ 바이스에 고정된 ③ 일감은 테이블과 함께 이동한다. 화살표는 움직임 예시이며 방호장치는 생략했다" width="1200" height="2000" loading="lazy" decoding="async" />
 </figure>
 </div>

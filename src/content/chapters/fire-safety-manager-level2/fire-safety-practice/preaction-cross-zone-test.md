@@ -26,7 +26,7 @@ status: "완료"
 
 그림은 교차회로로 밸브를 자동 개방한 예시이며, 헤드는 아직 닫혀 있는 상태
 
-<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>밸브 개방과 헤드 닫힘</strong></figcaption><img src="/images/fire-safety-manager-level2/preaction-water-supply-v2.svg" alt="서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음" width="640" height="625" loading="lazy" decoding="async"><p class="fire-panel-note">※ 학습을 위해 재구성된 이미지</p><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/preaction-water-supply-v2.svg" data-fire-alt="서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals fire-panel-overview"><figure><figcaption><strong>밸브 개방과 헤드 닫힘</strong></figcaption><img src="/images/fire-safety-manager-level2/preaction-water-supply-v2.svg" alt="서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음" width="640" height="625" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/preaction-water-supply-v2.svg" data-fire-alt="서로 다른 A와 B 감지회로가 작동해 준비작동밸브가 열린 예시. 점선은 기동 신호이고 초록 배관은 급수에서 2차측으로의 물 공급 경로. 폐쇄형 헤드는 닫혀 방수하지 않음" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 <div class="fire-panel-steps">
 <section class="fire-panel-step"><h3><span class="fire-panel-number">①</span>A와 B에서 각각 감지해야 밸브가 열림</h3><p>그림은 감지기를 연결한 전기 회로를 A와 B로 나눈 예시<br>A회로 감지기 하나와 B회로 감지기 하나가 작동하면 자동 개방 조건 충족<br>A회로에서만 감지기 두 개가 작동하면 B회로는 감지하지 않았으므로 조건 미충족</p></section>

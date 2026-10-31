@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>특별피난계단은 부속실·노대를 거쳐 계단실로 진입</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/special-escape-stair-v1.svg" alt="실내 → 방화문 → 부속실·노대 → 방화문 → 계단실" width="320" height="405" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/special-escape-stair-v1.svg" data-fire-alt="실내 → 방화문 → 부속실·노대 → 방화문 → 계단실" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>특별피난계단은 부속실·노대를 거쳐 계단실로 진입</strong></figcaption><img src="/images/fire-safety-manager-level2/special-escape-stair-v1.svg" alt="실내 → 방화문 → 부속실·노대 → 방화문 → 계단실" width="320" height="405" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/special-escape-stair-v1.svg" data-fire-alt="실내 → 방화문 → 부속실·노대 → 방화문 → 계단실" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 설치 조건을 읽는 단서

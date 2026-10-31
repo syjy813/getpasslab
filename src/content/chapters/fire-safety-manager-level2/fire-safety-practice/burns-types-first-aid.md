@@ -22,7 +22,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>냉각을 시작하면서 장신구 제거 병행</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg" alt="안전 확보 후 시원한 물로 냉각하면서 장신구를 신속히 제거하고 냉각을 지속한 뒤 깨끗하게 덮고 진료" width="320" height="327" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg" data-fire-alt="안전 확보 후 시원한 물로 냉각하면서 장신구를 신속히 제거하고 냉각을 지속한 뒤 깨끗하게 덮고 진료" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>냉각을 시작하면서 장신구 제거 병행</strong></figcaption><img src="/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg" alt="안전 확보 후 시원한 물로 냉각하면서 장신구를 신속히 제거하고 냉각을 지속한 뒤 깨끗하게 덮고 진료" width="320" height="327" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/burn-cooling-sequence-v1.svg" data-fire-alt="안전 확보 후 시원한 물로 냉각하면서 장신구를 신속히 제거하고 냉각을 지속한 뒤 깨끗하게 덮고 진료" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 열화상 응급처치

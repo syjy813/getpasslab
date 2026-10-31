@@ -24,7 +24,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>직선이 아니라 장애물을 우회하는 보행거리</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/extinguisher-walk-distance-v1.svg" alt="벽을 돌아 이동하는 경로로 소형소화기까지 보행거리 20m 이내 판정" width="320" height="285" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/extinguisher-walk-distance-v1.svg" data-fire-alt="벽을 돌아 이동하는 경로로 소형소화기까지 보행거리 20m 이내 판정" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>직선이 아니라 장애물을 우회하는 보행거리</strong></figcaption><img src="/images/fire-safety-manager-level2/extinguisher-walk-distance-v1.svg" alt="벽을 돌아 이동하는 경로로 소형소화기까지 보행거리 20m 이내 판정" width="320" height="285" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/extinguisher-walk-distance-v1.svg" data-fire-alt="벽을 돌아 이동하는 경로로 소형소화기까지 보행거리 20m 이내 판정" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 배치 조건

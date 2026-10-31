@@ -20,7 +20,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>유효 개구부의 크기와 하단 높이</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/valid-window-opening-v1.svg" alt="지름 50cm 원이 통과하는 개구부, 바닥에서 하단까지 1.2m 이내" width="320" height="300" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/valid-window-opening-v1.svg" data-fire-alt="지름 50cm 원이 통과하는 개구부, 바닥에서 하단까지 1.2m 이내" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>유효 개구부의 크기와 하단 높이</strong></figcaption><img src="/images/fire-safety-manager-level2/valid-window-opening-v1.svg" alt="지름 50cm 원이 통과하는 개구부, 바닥에서 하단까지 1.2m 이내" width="320" height="300" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/valid-window-opening-v1.svg" data-fire-alt="지름 50cm 원이 통과하는 개구부, 바닥에서 하단까지 1.2m 이내" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 면적에 포함하는 개구부

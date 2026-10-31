@@ -50,10 +50,10 @@ const report={result:'RUNNING',cases:[],errors:[],limitations:['Chromium emulati
     assert.equal(await overview.evaluate(e=>e.naturalWidth),1536);
     const type=await figure.evaluate(e=>{
      const title=getComputedStyle(e.querySelector('figcaption strong'));
-     const notes=e.querySelectorAll('.fire-panel-note'),note=getComputedStyle(notes[0]);
-     return {title:title.fontSize,note:note.fontSize,weight:note.fontWeight,count:notes.length,text:notes[0].textContent};
+     const notes=e.querySelectorAll('.fire-panel-note');
+     return {title:title.fontSize,count:notes.length};
     });
-    assert.deepEqual(type,{title:width<768?'16px':'17px',note:'13px',weight:'400',count:1,text:'※ 학습을 위해 재구성된 이미지'},id+' caption hierarchy');
+    assert.deepEqual(type,{title:width<768?'16px':'17px',count:0},id+' caption hierarchy');
     const crop=await figure.locator('.fire-panel-artwork').evaluate(e=>{
      const frame=e.getBoundingClientRect(),img=e.querySelector('img').getBoundingClientRect();
      return {frame:frame.height,source:img.height,top:frame.top-img.top,width:frame.width};

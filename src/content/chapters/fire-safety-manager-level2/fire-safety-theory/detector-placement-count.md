@@ -24,7 +24,7 @@ status: "완료"
 
 <link rel="stylesheet" href="/styles/fire-bulk-visual.css">
 
-<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>담당 면적만 계산하지 않고 구획·이격도 확인</strong><span>학습용 재구성</span></figcaption><img src="/images/fire-safety-manager-level2/detector-grid-placement-v1.svg" alt="구획된 평면 안의 감지기 4개, 벽과 감지기의 이격 및 급기구 주변 제외를 확인하는 배치 개념도" width="320" height="280" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/detector-grid-placement-v1.svg" data-fire-alt="구획된 평면 안의 감지기 4개, 벽과 감지기의 이격 및 급기구 주변 제외를 확인하는 배치 개념도" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
+<div class="learning-visuals fire-bulk-visuals"><figure><figcaption><strong>담당 면적만 계산하지 않고 구획·이격도 확인</strong></figcaption><img src="/images/fire-safety-manager-level2/detector-grid-placement-v1.svg" alt="구획된 평면 안의 감지기 4개, 벽과 감지기의 이격 및 급기구 주변 제외를 확인하는 배치 개념도" width="320" height="280" loading="lazy" decoding="async"><button class="fire-bulk-zoom" data-fire-src="/images/fire-safety-manager-level2/detector-grid-placement-v1.svg" data-fire-alt="구획된 평면 안의 감지기 4개, 벽과 감지기의 이격 및 급기구 주변 제외를 확인하는 배치 개념도" aria-haspopup="dialog" aria-controls="fire-bulk-image-dialog">그림 확대 ↗</button></figure></div>
 
 
 ## 배치와 계산 예

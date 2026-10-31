@@ -23,8 +23,7 @@ const report={result:'RUNNING',cases:[],svg:[],errors:[],limitations:['Chromium 
     for(let i=0;i<r.figures.length;i++){
      const fig=figs.nth(i),img=fig.locator('img').first();await img.evaluate(e=>e.decode());assert.equal(await img.getAttribute('src'),r.figures[i].src);assert.equal(await img.evaluate(e=>e.naturalWidth),r.figures[i].width);assert(await img.getAttribute('alt'));
      if(r.work==='new'||r.work==='revise'){
-      const sizes=await fig.evaluate(e=>({title:getComputedStyle(e.querySelector('strong')).fontSize,note:getComputedStyle(e.querySelector('.fire-panel-note')).fontSize,weight:getComputedStyle(e.querySelector('.fire-panel-note')).fontWeight}));assert.deepEqual(sizes,{title:width<768?'16px':'17px',note:'13px',weight:'400'},r.id+' typography');
-      assert.equal((await fig.locator('.fire-panel-note').textContent()).trim(),'※ 학습을 위해 재구성된 이미지');
+      const sizes=await fig.evaluate(e=>({title:getComputedStyle(e.querySelector('strong')).fontSize,notes:e.querySelectorAll('.fire-panel-note').length}));assert.deepEqual(sizes,{title:width<768?'16px':'17px',notes:0},r.id+' typography');
       if(briefs.some(b=>'/images/fire-safety-manager-level2/'+b.asset===r.figures[i].src))assert(await img.evaluate(e=>e.getBoundingClientRect().width)*21/380>=14,r.id+' actual label size');
      }
      const button=fig.locator('button');await button.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await page.evaluate(()=>new Promise(r=>requestAnimationFrame(r)));const before=await page.evaluate(()=>({y:scrollY,style:document.body.getAttribute('style')||''}));await button.click();

@@ -20,7 +20,7 @@ related: [fta-symbols, fta-logic-gates, fta-procedure]
   <a class="chapter-figure-zoom-target" href="/images/chapters/fta-symbols/fta-event-symbols.svg" target="_blank" rel="noopener" aria-label="FTA 사상기호 그림 크게 보기">
     <img src="/images/chapters/fta-symbols/fta-event-symbols.svg" alt="사각형 결함사상, 원 기본사상, 집 모양 통상사상, 마름모 생략사상을 비교한 그림" width="360" height="340" loading="lazy" decoding="async" />
   </a>
-  <figcaption>학습용 재구성 · 사각형·원·집 모양·마름모를 사상의 의미와 연결함 <a class="chapter-figure-zoom-link" href="/images/chapters/fta-symbols/fta-event-symbols.svg" target="_blank" rel="noopener">크게 보기</a></figcaption>
+  <figcaption>사각형·원·집 모양·마름모를 사상의 의미와 연결함 <a class="chapter-figure-zoom-link" href="/images/chapters/fta-symbols/fta-event-symbols.svg" target="_blank" rel="noopener">크게 보기</a></figcaption>
 </figure>
 
 | 모양 | 사상 | 의미 |
