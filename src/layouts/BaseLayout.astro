@@ -127,7 +127,7 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
             const initialize = () => {
               const viewportWidth = document.documentElement.clientWidth;
               const available = Math.min(viewportWidth, placement.parentElement.clientWidth);
-              const active = viewportWidth >= 320 && viewportWidth <= 767 && available >= 300;
+              const active = window.innerWidth >= 320 && window.innerWidth <= 767 && available >= 300;
               placement.hidden = !active;
               if (!active) {
                 if (placement.dataset.adfitReady === 'true') {
@@ -262,6 +262,7 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
 
 <style>
   .footer-ad{box-sizing:border-box;display:flex;width:100%;padding-top:var(--space-8);flex-direction:column;align-items:center}
+  .mobile-top-ad[data-adfit-unavailable]{display:none}
   .footer-ad[hidden]{display:none}
   .footer-ad-label{margin-bottom:var(--space-2);font-size:var(--fs-label);line-height:1;color:var(--gray-600)}
   .footer-ad-mount{width:300px;height:250px;flex:none}
