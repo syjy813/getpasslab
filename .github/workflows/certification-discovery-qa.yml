@@ -14,20 +14,31 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+      - name: Select historical snapshot verification root
+        id: historical
+        run: node scripts/prepare-mobile-ad-legacy-qa.mjs
       - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
       - run: npm ci
+        working-directory: ${{ steps.historical.outputs.root }}
       - run: npm run build
+        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-image-copy-update.mjs && node scripts/check-certification-discovery.mjs
+        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-historical-practice-guard.mjs && node scripts/check-fire-bulk-history-guard.mjs && node scripts/check-fire-launch-history-guard.mjs && node scripts/check-fire-practice-history-guard.mjs
+        working-directory: ${{ steps.historical.outputs.root }}
       - run: npm run check:seo && npm run check:public-content && npm run check:contrast && npm run check:deferred-question-content
+        working-directory: ${{ steps.historical.outputs.root }}
       - name: Prepare browser tests
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
           /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: Certification navigation and fixed-width advertisements
+        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_COMMIT: ${{ github.event.pull_request.head.sha }}
@@ -47,5 +58,5 @@ jobs:
         if: always()
         with:
           name: certification-discovery-qa
-          path: qa-results/certification-discovery/
+          path: ${{ steps.historical.outputs.root }}/qa-results/certification-discovery/
           retention-days: 14
