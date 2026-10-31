@@ -10,7 +10,7 @@ const newTitle = 'GetPassLab 시설의 모든것';
 const revisions = {
   'src/pages/index.astro': {
     current: '37438da68407eb0f7bf08d7746f17c7158d8a501b1347fde9347030a2265be9b',
-    before: '88b15baafcfbd70a6dc758aa1ee9e11ba3ab1ea56e9c8c809333c2c2de34edab',
+    before: 'ca4ccc0cd7d50d57249c248ec771d98cc15cbf65f2823c328537c58476059d93',
   },
   'dist/index.html': {
     current: 'a333b84342f4655370fd24f0c35e03c5dfb63a67c8cd252c34cbad3cdb9afaac',
