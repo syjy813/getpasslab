@@ -1,0 +1,35 @@
+name: Facility launch draft QA
+on:
+  pull_request:
+    branches: [main]
+    paths: ['src/**', 'facility-assets/**', 'astro.config.mjs', 'scripts/qa-facility-launch.cjs', '.github/workflows/facility-launch-qa.yml']
+permissions:
+  contents: read
+jobs:
+  draft-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: FACILITY_DRAFT_PREVIEW=1 npm run build
+      - run: |
+          npm install --prefix /tmp/facility-tools --no-package-lock playwright@1.62.1
+          /tmp/facility-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Preview responsive checks
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/facility-tools/node_modules/playwright
+        run: |
+          python3 -m http.server 4321 --bind 127.0.0.1 --directory dist >/tmp/facility-server.log 2>&1 &
+          for n in $(seq 1 30); do curl -fsS http://127.0.0.1:4321/ >/dev/null && break; sleep 1; done
+          node scripts/qa-facility-launch.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: facility-draft-qa
+          path: qa-results/facility-launch/
+          retention-days: 14

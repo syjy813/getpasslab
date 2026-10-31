@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import FacilityLayout from '../../../layouts/FacilityLayout.astro';
+import FacilityCard from '../../../components/FacilityCard.astro';
+import FacilityBreadcrumb from '../../../components/FacilityBreadcrumb.astro';
+import FacilityLearningLinks from '../../../components/FacilityLearningLinks.astro';
+import { FACILITY_CATEGORIES, facilityCategoryPath, sortFacilityArticles } from '../../../config/facility';
+import { withBase } from '../../../config/url';
+import { SITE } from '../../../config/site';
+export async function getStaticPaths() {
+  const articles = await getCollection('facilityArticles', article => article.data.status === 'published' || (import.meta.env.FACILITY_DRAFT_PREVIEW === '1' && article.id !== 'reading-job-postings'));
+  return FACILITY_CATEGORIES.map(category => ({ params: { category: category.slug }, props: { category, articles: sortFacilityArticles(articles.filter(article => article.data.category === category.slug)) } }));
+}
+const { category, articles } = Astro.props;
+const breadcrumbs = [{ name: '시설의 모든 것', path: '/facility-management/' }, { name: category.name, path: facilityCategoryPath(category.slug) }];
+const structuredData = [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(withBase(item.path), SITE.url).href })) }];
+---
+<FacilityLayout title={`${category.name} — 시설의 모든 것 | GetPassLab`} description={`${category.description}. 시설의 모든 것에서 공개된 콘텐츠와 근거 자료를 확인하고, 관련 카테고리와 자격증 학습 페이지로 이어서 탐색하세요.`} robots={articles.length ? 'index, follow' : 'noindex, follow'} structuredData={structuredData}>
+  <FacilityBreadcrumb items={[{ name: category.name }]} />
+  <header class="facility-intro"><span class="facility-eyebrow">시설의 모든 것</span><h1 class="gpl-display">{category.name}</h1><p>{category.description}</p><span class="gpl-caption">공개 콘텐츠 {articles.length}개</span></header>
+  <section class="facility-section" aria-label={`${category.name} 콘텐츠`}>
+    {articles.length ? <div class="grid grid-3">{articles.map(article => <FacilityCard article={article} />)}</div> : <div class="facility-empty"><h2 class="gpl-h3">콘텐츠를 준비하고 있습니다</h2><p>공개된 입문 안내나 관련 자격증 학습을 먼저 살펴보세요.</p><a href={withBase('/facility-management/career/')}>시설관리 입문 살펴보기 →</a></div>}
+  </section>
+  <section class="facility-section" aria-labelledby="related-categories-title"><h2 id="related-categories-title" class="gpl-h2">다른 카테고리 살펴보기</h2><nav aria-label="시설관리 카테고리"><ul class="facility-category-nav">{FACILITY_CATEGORIES.map(item => <li><a href={withBase(facilityCategoryPath(item.slug))} aria-current={item.slug === category.slug ? 'page' : undefined}>{item.name}</a></li>)}</ul></nav></section>
+  <FacilityLearningLinks />
+</FacilityLayout>
