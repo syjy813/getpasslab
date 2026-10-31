@@ -17,7 +17,7 @@ const report={commit:process.env.QA_COMMIT||null,device:'Headless Chromium viewp
 const snapshot=()=>{
  const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,top:r.top,bottom:r.bottom};};
  const visible=e=>!!e&&!e.hidden&&getComputedStyle(e).display!=='none';
- const placement=e=>!e?null:{visible:visible(e),box:rect(e),mount:rect(e.querySelector('[data-mobile-entry-ad-mount], [data-mobile-top-ad-mount], [data-footer-ad-mount]')),
+ const placement=e=>!e?null:{visible:visible(e),hidden:e.hidden,display:getComputedStyle(e).display,parentWidth:e.parentElement.clientWidth,ready:e.dataset.adfitReady||null,box:rect(e),mount:rect(e.querySelector('[data-mobile-entry-ad-mount], [data-mobile-top-ad-mount], [data-footer-ad-mount]')),
   ins:[...e.querySelectorAll('ins.kakao_ad_area')].map(i=>({unit:i.dataset.adUnit,width:i.dataset.adWidth,height:i.dataset.adHeight})),
   sdk:e.querySelectorAll('script[src*="ba.min.js"]').length};
  const nav=document.querySelector('.chapter-mobile-nav');
@@ -49,7 +49,7 @@ let browser;
    assert.equal(!!d.entry,target,route+' entry eligibility');
    assert.equal(!!d.ribbon,target,route+' ribbon eligibility');
    if(target){
-    assert.equal(d.entry.visible,mobile,route+' top rectangle mobile only');
+    assert.equal(d.entry.visible,mobile,route+' top rectangle mobile only '+JSON.stringify({width:d.width,scroll:d.scroll,entry:d.entry,gnb:d.gnb}));
     assert.equal(d.ribbon.visible,mobile,route+' lower ribbon mobile only');
     assert.equal(d.old.visible,!mobile,route+' no duplicate footer rectangle');
     if(mobile){
