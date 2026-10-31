@@ -1,3 +1,4 @@
+import {beforeIndustrialMobileTable} from './read-before-industrial-mobile-table.mjs';
 import assert from 'node:assert/strict';
 import { readFile as readActualFile } from './read-before-clam-shell.mjs';
 import { createHash } from 'node:crypto';
@@ -12,6 +13,7 @@ const hash = value => createHash('sha256').update(value).digest('hex');
 export async function readFile(file, encoding) {
   const key = String(file), loader = review.generatedLoader;
   let bytes = await readActualFile(key === `dist${loader.originalPath}` ? `dist${loader.path}` : file);
+  bytes = beforeIndustrialMobileTable(key, bytes);
   const row = [...review.chapters, ...review.canonicalFiles, ...review.assetRegistries, ...review.displayFiles].find(row => row.path === key);
   if (row) {
     assert.equal(hash(bytes), row.sha256, `${key}: exact approved later source`);
