@@ -1,6 +1,7 @@
 ---
 import { getCertificationEntryPath, getFeaturedCertifications } from '../config/certifications';
 import { withBase } from '../config/url';
+import '../styles/serviceNavigation.css';
 export interface ChapterNavigationGroup {
   group: string;
   chapters: { title: string; href: string; current: boolean }[];
@@ -15,6 +16,10 @@ const currentPath = Astro.url.pathname;
     <a href={withBase('/')} class="gnb-logo" aria-label="GetPassLab">
       <span>GetPassLab</span>
     </a>
+    <div class="service-switch" role="group" aria-label="서비스 선택">
+      <a href={withBase('/facility-management/')} data-service-link="facility" aria-current={currentPath.startsWith(withBase('/facility-management/')) ? 'page' : undefined}>시설의 모든 것</a>
+      <a href={withBase('/certifications/')} data-service-link="certifications" aria-current={!currentPath.startsWith(withBase('/facility-management/')) ? 'page' : undefined}>자격증의 모든 것</a>
+    </div>
     <div class="gnb-spacer"></div>
     <details class={chapterNavigation ? 'gnb-cert-menu' : 'gnb-menu'} data-gnb-menu>
       <summary aria-label="자격증 선택">

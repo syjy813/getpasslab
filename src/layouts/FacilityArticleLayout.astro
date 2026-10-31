@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+import FacilityLayout from './FacilityLayout.astro';
+import FacilityBreadcrumb from '../components/FacilityBreadcrumb.astro';
+import FacilityCard from '../components/FacilityCard.astro';
+import FacilityLearningLinks from '../components/FacilityLearningLinks.astro';
+import { facilityCategory, facilityCategoryPath, facilityArticlePath } from '../config/facility';
+import { withBase } from '../config/url';
+import { SITE } from '../config/site';
+interface Props { article: CollectionEntry<'facilityArticles'>; related: CollectionEntry<'facilityArticles'>[]; }
+const { article, related } = Astro.props;
+const { Content } = await render(article);
+const data = article.data;
+const category = facilityCategory(data.category);
+const url = new URL(withBase(facilityArticlePath(article)), SITE.url).href;
+const breadcrumbs = [{ name: '시설의 모든 것', path: '/facility-management/' }, { name: category.name, path: facilityCategoryPath(category.slug) }, { name: data.title, path: facilityArticlePath(article) }];
+const structuredData = [
+  { '@context': 'https://schema.org', '@type': 'Article', headline: data.title, description: data.description, datePublished: data.publishedAt, dateModified: data.updatedAt, inLanguage: 'ko-KR', mainEntityOfPage: url, author: { '@type': 'Organization', name: SITE.name, url: SITE.url }, publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url }, citation: data.sources.map(source => source.url) },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(withBase(item.path), SITE.url).href })) },
+];
+---
+<FacilityLayout title={`${data.title} | GetPassLab`} description={data.description} ogType="article" robots={data.status === 'draft' ? 'noindex, nofollow' : undefined} structuredData={data.status === 'draft' ? [] : structuredData}>
+  <FacilityBreadcrumb items={[{ name: category.name, path: facilityCategoryPath(category.slug) }, { name: data.title }]} />
+  <div class="facility-article">
+    <article>
+      <header>{data.status === 'draft' && <p>검토용 초안 · 공개 전 사실 및 이미지 검증 필요</p>}<a class="card-label" href={withBase(facilityCategoryPath(category.slug))}>{category.name}</a><h1>{data.title}</h1>{data.status === 'published' && <div class="facility-article-meta"><span>작성 <time datetime={data.publishedAt}>{data.publishedAt}</time></span><span>수정 <time datetime={data.updatedAt}>{data.updatedAt}</time></span><span>자료 확인 <time datetime={data.reviewedAt}>{data.reviewedAt}</time></span></div>}</header>
+      <section class="facility-summary" aria-labelledby="article-summary-title"><h2 id="article-summary-title">핵심 요약</h2><ul>{data.summary.map(item => <li>{item}</li>)}</ul></section>
+      {data.legalReview && <aside class="facility-info"><strong>법령·선임 기준 확인일: {data.reviewedAt}</strong><p>적용 대상과 시행일에 따라 요건이 달라질 수 있습니다. 아래 공식 출처의 현행 기준을 확인하세요.</p></aside>}
+      <div class="facility-body"><Content /></div>
+      {data.sources.length > 0 && <section class="facility-sources" aria-labelledby="article-sources-title"><h2 id="article-sources-title">근거 자료 및 공식 출처</h2><p class="gpl-caption">자료 확인일: {data.reviewedAt}</p><ol>{data.sources.map(source => <li><a href={source.url}>{source.title}</a><p>{source.note}</p></li>)}</ol></section>}
+    </article>
+    {related.length > 0 && <section class="facility-section" aria-labelledby="related-articles-title"><div class="facility-section-head"><h2 id="related-articles-title" class="gpl-h2">관련 콘텐츠</h2></div><div class="grid grid-2">{related.map(item => <FacilityCard article={item} />)}</div></section>}
+    <FacilityLearningLinks ids={data.certifications} />
+  </div>
+</FacilityLayout>

@@ -1,0 +1,20 @@
+/* Shared navigation: links retain native browser and keyboard behavior. */
+.service-switch{display:flex;gap:4px;padding:4px;border:1px solid var(--gray-200);border-radius:var(--radius-lg);background:var(--gray-100);flex:none}
+.service-switch a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border-radius:var(--radius-md);font-size:14px;font-weight:var(--fw-medium);line-height:1.4;text-decoration:none;white-space:nowrap;color:var(--gray-600)}
+.service-switch a:hover{color:var(--gray-900);background:var(--white)}
+.service-switch a[aria-current]{background:var(--white);box-shadow:var(--shadow-sm);font-weight:var(--fw-bold);color:var(--primary-600)}
+.service-switch a[data-service-link="facility"][aria-current]{background:#18794E;color:#FFFFFF}
+.service-switch a:focus-visible{outline:3px solid var(--primary-500);outline-offset:1px}
+.gnb-inner>.gnb-logo{flex:none}
+@media(max-width:767px){
+  :root:root{--gnb-h:116px}
+  .gnb-inner{display:flex;flex-wrap:wrap;height:auto;gap:0 8px}
+  .gnb-inner>.gnb-logo{justify-self:start}
+  .gnb-inner>.gnb-spacer{display:block}
+  .gnb-inner>.gnb-menu{grid-column:2;grid-row:1}
+  .service-switch{order:10;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;margin-top:0}
+  .service-switch a{padding:8px 4px;font-size:14px}
+  .gnb-menu>.gnb-dropdown{top:calc(100% + 66px)}
+}
+/* The facility palette is inherited only within this URL-derived service area. */
+body.facility-page{--primary-50:#EAF5EE;--primary-100:#C9E4D3;--primary-500:#18794E;--primary-600:#18794E;--primary-700:#145C3E;--primary-800:#145C3E;background:var(--white)}
