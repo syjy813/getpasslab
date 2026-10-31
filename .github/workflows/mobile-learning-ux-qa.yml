@@ -26,43 +26,26 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
-        with:
-          fetch-depth: 2
-      - name: Select historical snapshot verification root
-        id: historical
-        run: node scripts/prepare-mobile-ad-legacy-qa.mjs
       - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
       - run: npm ci
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: npm run build
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-footer-left.mjs
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-mobile-toc-width.mjs
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-fire-image-copy.mjs
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-gnb-toc-height.mjs
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-gnb-chapter-toc.mjs
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-mobile-learning-ux.mjs
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-global-chapter-readability.mjs
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-all-chapter-hierarchy.mjs
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: npm run check:seo && npm run check:public-content && npm run check:contrast && npm run check:deferred-question-content
-        working-directory: ${{ steps.historical.outputs.root }}
       - name: Prepare temporary browser tooling
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
           /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: Responsive navigation, questions and image lifecycle
-        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_COMMIT: ${{ github.event.pull_request.head.sha }}
@@ -74,7 +57,6 @@ jobs:
           done
           node scripts/qa-mobile-learning-ux.cjs
       - name: Content-sized mobile chapter menu and ellipsis
-        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_OUTPUT_DIR: qa-results/mobile-toc-width
@@ -84,6 +66,6 @@ jobs:
         with:
           name: mobile-learning-ux-qa
           path: |
-            ${{ steps.historical.outputs.root }}/qa-results/mobile-learning-ux/
-            ${{ steps.historical.outputs.root }}/qa-results/mobile-toc-width/
+            qa-results/mobile-learning-ux/
+            qa-results/mobile-toc-width/
           retention-days: 14
