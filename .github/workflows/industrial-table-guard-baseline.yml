@@ -45,3 +45,39 @@ jobs:
               grep -m1 -E 'exact |native |reviewed |complete |original ' /tmp/guard-output.txt || true
             fi
           done
+      - name: Inspect exact built HTML and asset differences
+        if: matrix.revision == 'head'
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git fetch --depth=1 origin "$BASE_SHA"
+          git worktree add --detach /tmp/gpl-table-base "$BASE_SHA"
+          (cd /tmp/gpl-table-base && npm ci >/tmp/gpl-base-install.log && npm run build >/tmp/gpl-base-build.log)
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { createHash } from 'node:crypto';
+          import path from 'node:path';
+          const rootA='/tmp/gpl-table-base/dist',rootB='dist';
+          const pages=[
+            'industrial-safety/written/safety-management/accident-analysis-tools/index.html',
+            'computer-literacy/written/computer-basics/aero-peek/index.html',
+            'fire-safety-manager-level2/written/fire-safety-practice/detector-transmitter-signal-reading/index.html',
+            'index.html'
+          ];
+          const sha = s=>createHash('sha256').update(s).digest('hex').slice(0,12);
+          const tokens = s=>[...s.matchAll(/(?:src|href)="(\/_astro\/[^"]+)"/g)].map(m=>m[1]);
+          const normalize = s=>s.replaceAll(/\/_astro\/[\w.-]+/g,'/_astro/ASSET');
+          for(const file of pages){
+            const old=fs.readFileSync(path.join(rootA,file),'utf8'), now=fs.readFileSync(path.join(rootB,file),'utf8');
+            let prefix=0;while(prefix<Math.min(old.length,now.length)&&old[prefix]===now[prefix])prefix++;
+            let suffix=0;while(suffix<Math.min(old.length,now.length)-prefix&&old[old.length-1-suffix]===now[now.length-1-suffix])suffix++;
+            const article = html=>html.match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0]||'';
+            console.log('HTML_COMPARISON',JSON.stringify({
+              file, oldHash:sha(old),newHash:sha(now),oldLength:old.length,newLength:now.length,
+              firstDiff:prefix, oldSnippet:old.slice(prefix,prefix+210),newSnippet:now.slice(prefix,prefix+210),
+              suffix, articleEqual:sha(article(old))===sha(article(now)),normalizedEqual:normalize(old)===normalize(now),
+              oldAssets:tokens(old).slice(0,12),newAssets:tokens(now).slice(0,12)
+            }));
+          }
+          NODE
