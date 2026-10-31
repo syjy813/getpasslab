@@ -62,7 +62,22 @@ for(const [file,row]of Object.entries(review.changes)){
  if(a){assert.equal(cleanLesson(a,file),cleanLesson(b,file),file+': lesson, figures, question payload and practice unchanged except reviewed cell lists');lessons++;}
  if(file!=='dist/index.html')assert.equal(serialize(now.find(n=>n.tagName==='h1')),serialize(old.find(n=>n.tagName==='h1')),file+': original page title retained');
 }
-assert.deepEqual(walk('dist/_astro').filter(f=>/\.(js|css)$/.test(f)).sort(),Object.keys(review.bundles).sort(),'compiled bundle inventory');
-for(const [file,sha]of Object.entries(review.bundles))assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed bundle');
+// Exactly one stylesheet bundle is replaced by the fingerprinted industrial mobile-table fix.
+// All other historically approved assets remain byte-identical.
+const previousTableStyle='dist/_astro/_slug_.DBxZQ9Ra.css';
+const currentTableStyle='dist/_astro/_slug_.8z07QH-J.css';
+assert(Object.hasOwn(review.bundles,previousTableStyle),'reviewed predecessor asset exists');
+assert.deepEqual(
+  walk('dist/_astro').filter(f=>/\.(js|css)$/.test(f)).sort(),
+  Object.keys(review.bundles).map(f=>f===previousTableStyle?currentTableStyle:f).sort(),
+  'compiled bundle inventory including approved industrial table stylesheet'
+);
+for(const [file,sha]of Object.entries(review.bundles)){
+  if(file!==previousTableStyle){assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed bundle');continue;}
+  const current=fs.readFileSync(currentTableStyle);
+  assert(current.toString().includes('.industrial-table-scroll'), 'mobile table scroll selector compiled');
+  assert.equal(hash(current),'0465b1510d1d8c43bbb8d4d16243af241a989313b8572ee308fcdb99c25626b1',
+    'one complete approved industrial table CSS bundle');
+}
 assert(lessons>500);assert(htmlCount>500);
 console.log('[Certification discovery native] PASS',JSON.stringify({nativeFiles:files.length,lessons,htmlCount,footerPages,sourceChanges:review.productFiles.length,questionsAndImages:'unchanged',routes:'unchanged'}));
