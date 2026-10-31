@@ -33,9 +33,27 @@ let browser;
     assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), review.chapter.url);
     assert.deepEqual(await page.locator('main [data-open]').evaluateAll(els => els.map(e => e.dataset.open)), ['20190804_120']);
     assert.equal(await page.locator('article table tbody tr').count(), 3);
-    const layout = await page.evaluate(() => ({ viewport: document.documentElement.clientWidth, scroll: document.documentElement.scrollWidth, h2Background: getComputedStyle(document.querySelector('article h2')).backgroundColor, mathErrors: document.querySelectorAll('.katex-error').length }));
+    // The first "핵심 개념" heading intentionally uses a transparent background
+    // with a visible accent bar. Subsequent topic headings retain the section fill.
+    const layout = await page.evaluate(() => {
+      const primary = document.querySelector('article h2#핵심-개념');
+      const topic = document.querySelector('article h2#굴착-용도');
+      return {
+        viewport: document.documentElement.clientWidth,
+        scroll: document.documentElement.scrollWidth,
+        primaryExists: Boolean(primary),
+        topicExists: Boolean(topic),
+        primaryBackground: primary ? getComputedStyle(primary).backgroundColor : null,
+        accentBackground: primary ? getComputedStyle(primary, '::before').backgroundColor : null,
+        topicBackground: topic ? getComputedStyle(topic).backgroundColor : null,
+        mathErrors: document.querySelectorAll('.katex-error').length,
+      };
+    });
     assert(layout.scroll <= layout.viewport + 1); assert.equal(layout.mathErrors, 0);
-    assert.notEqual(layout.h2Background, 'rgba(0, 0, 0, 0)');
+    assert(layout.primaryExists && layout.topicExists, 'both preserved section headings are present');
+    assert.equal(layout.primaryBackground, 'rgba(0, 0, 0, 0)', 'first heading intentionally uses transparent background');
+    assert.notEqual(layout.accentBackground, 'rgba(0, 0, 0, 0)', 'first heading still has a visible accent bar');
+    assert.notEqual(layout.topicBackground, 'rgba(0, 0, 0, 0)', 'topic heading retains the section background');
     await page.screenshot({ path: path.join(out, `${width}-chapter.png`), fullPage: true });
     const dialog = page.locator('#deferred-question-dialog');
     await page.locator('[data-open="20190804_120"]').click(); await dialog.locator('[data-reveal]').waitFor({ state: 'visible' });
