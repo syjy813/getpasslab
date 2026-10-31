@@ -38,6 +38,7 @@ const hasContentFooterAd = !focusMode && (
     pathname.startsWith(withBase(`/${cert.slug}/`)) && !pathname.includes('/practice/')
   )
 );
+const swapMobileAds = mobileTopAd && hasContentFooterAd;
 const siteOrigin = Astro.site ?? SITE.url;
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
 const ogImageUrl = new URL('/og-default.png', siteOrigin);
@@ -114,6 +115,53 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
   </head>
   <body class={bodyClass}>
     {!focusMode && <GNB chapterNavigation={chapterNavigation} />}
+    {swapMobileAds && (
+      <aside class="footer-ad mobile-entry-ad" style="padding-top:var(--space-2)" data-mobile-entry-ad aria-label="광고" hidden>
+        <span class="footer-ad-label">광고</span>
+        <div class="footer-ad-mount" data-mobile-entry-ad-mount></div>
+        <script is:inline>
+          (() => {
+            const placement = document.querySelector('[data-mobile-entry-ad]');
+            const mount = placement?.querySelector('[data-mobile-entry-ad-mount]');
+            if (!(placement instanceof HTMLElement) || !(mount instanceof HTMLElement)) return;
+            const initialize = () => {
+              const viewportWidth = document.documentElement.clientWidth;
+              const available = Math.min(viewportWidth, placement.parentElement.clientWidth);
+              const active = window.innerWidth >= 320 && window.innerWidth <= 767 && available >= 300;
+              placement.hidden = !active;
+              if (!active) {
+                if (placement.dataset.adfitReady === 'true') {
+                  mount.replaceChildren();
+                  delete placement.dataset.adfitReady;
+                }
+                return;
+              }
+              if (placement.dataset.adfitReady) return;
+              if (window.location.hostname !== 'getpasslab.co.kr') {
+                placement.dataset.adfitReady = 'preview';
+                return;
+              }
+              placement.dataset.adfitReady = 'true';
+              const ad = document.createElement('ins');
+              ad.className = 'kakao_ad_area';
+              ad.style.display = 'none';
+              ad.dataset.adUnit = 'DAN-A3dGUv2kIjnZSTmZ';
+              ad.dataset.adWidth = '300';
+              ad.dataset.adHeight = '250';
+              mount.appendChild(ad);
+              const sdk = document.createElement('script');
+              sdk.type = 'text/javascript';
+              sdk.src = '//t1.kakaocdn.net/kas/static/ba.min.js';
+              sdk.async = true;
+              mount.appendChild(sdk);
+            };
+            initialize();
+            new ResizeObserver(initialize).observe(document.documentElement);
+          })();
+        </script>
+      </aside>
+    )}
+    <slot />
     {!focusMode && mobileTopAd && (
       <aside class="mobile-top-ad" aria-label="광고" data-mobile-top-ad>
         <span class="mobile-top-ad-label">광고</span>
@@ -155,9 +203,8 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
         </script>
       </aside>
     )}
-    <slot />
     {hasContentFooterAd && (
-      <aside class="footer-ad" data-footer-ad data-unit="DAN-A3dGUv2kIjnZSTmZ" data-desktop-unit="DAN-cUOTdTkWFtH2f3C1" aria-label="광고" hidden>
+      <aside class="footer-ad" data-footer-ad data-unit="DAN-A3dGUv2kIjnZSTmZ" data-desktop-unit="DAN-cUOTdTkWFtH2f3C1" data-mobile-swapped={swapMobileAds ? "true" : undefined} aria-label="광고" hidden>
         <span class="footer-ad-label">광고</span>
         <div class="footer-ad-mount" data-footer-ad-mount></div>
         <script is:inline>
@@ -171,8 +218,15 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
               const width = desktop ? 728 : 300;
               const height = desktop ? 90 : 250;
               const size = desktop ? 'desktop' : 'mobile';
-              placement.hidden = available < width;
-              if (placement.hidden) return;
+              const swappedMobile = placement.dataset.mobileSwapped === 'true' && window.innerWidth <= 767;
+              placement.hidden = swappedMobile || available < width;
+              if (placement.hidden) {
+                if (swappedMobile && mount.childElementCount) {
+                  mount.replaceChildren();
+                  delete placement.dataset.footerAdReady;
+                }
+                return;
+              }
               if (placement.dataset.footerAdSize === size && placement.dataset.footerAdReady) return;
               placement.dataset.footerAdSize = size;
               delete placement.dataset.footerAdReady;
@@ -208,6 +262,7 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
 
 <style>
   .footer-ad{box-sizing:border-box;display:flex;width:100%;padding-top:var(--space-8);flex-direction:column;align-items:center}
+  .mobile-top-ad[data-adfit-unavailable]{display:none}
   .footer-ad[hidden]{display:none}
   .footer-ad-label{margin-bottom:var(--space-2);font-size:var(--fs-label);line-height:1;color:var(--gray-600)}
   .footer-ad-mount{width:300px;height:250px;flex:none}

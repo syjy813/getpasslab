@@ -20,20 +20,31 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+      - name: Select historical snapshot verification root
+        id: historical
+        run: node scripts/prepare-mobile-ad-legacy-qa.mjs
       - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
       - run: npm ci
+        working-directory: ${{ steps.historical.outputs.root }}
       - run: npm run build
+        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-mobile-top-ad.mjs
+        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-mobile-chapter-top-ad.mjs
+        working-directory: ${{ steps.historical.outputs.root }}
       - run: node scripts/check-gnb-toc-height.mjs && node scripts/check-gnb-chapter-toc.mjs
+        working-directory: ${{ steps.historical.outputs.root }}
       - name: Prepare temporary browser tooling
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
           /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: All listing pages and advertisement initialization
+        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_COMMIT: ${{ github.event.pull_request.head.sha }}
@@ -50,6 +61,6 @@ jobs:
         with:
           name: mobile-top-ad-qa
           path: |
-            qa-results/mobile-top-ad/
-            qa-results/mobile-chapter-top-ad/
+            ${{ steps.historical.outputs.root }}/qa-results/mobile-top-ad/
+            ${{ steps.historical.outputs.root }}/qa-results/mobile-chapter-top-ad/
           retention-days: 14
