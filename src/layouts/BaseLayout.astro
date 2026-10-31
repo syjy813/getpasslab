@@ -218,7 +218,7 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
               const width = desktop ? 728 : 300;
               const height = desktop ? 90 : 250;
               const size = desktop ? 'desktop' : 'mobile';
-              const swappedMobile = placement.dataset.mobileSwapped === 'true' && document.documentElement.clientWidth <= 767;
+              const swappedMobile = placement.dataset.mobileSwapped === 'true' && window.innerWidth <= 767;
               placement.hidden = swappedMobile || available < width;
               if (placement.hidden) {
                 if (swappedMobile && mount.childElementCount) {
