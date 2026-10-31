@@ -94,7 +94,7 @@ jobs:
             a=(Path('/tmp/gpl-table-base/dist')/rel).read_text()
             b=(Path('dist')/rel).read_text()
             print('CHANGES_FOR', rel)
-            matches=SequenceMatcher(None,a,b,autojunk=False)
+            matches=SequenceMatcher(None,a,b,autojunk=True)
             edits=[(tag,i,j,k,l) for tag,i,j,k,l in matches.get_opcodes() if tag!='equal']
             print('EDIT_COUNT',len(edits))
             for tag,i,j,k,l in edits[:25]:
