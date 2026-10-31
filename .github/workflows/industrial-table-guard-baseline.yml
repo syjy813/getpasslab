@@ -81,3 +81,22 @@ jobs:
             }));
           }
           NODE
+      - name: Show precise output changes
+        if: matrix.revision == 'head'
+        run: |
+          python3 - <<'PY'
+          from difflib import SequenceMatcher
+          from pathlib import Path
+          for rel in [
+            'industrial-safety/written/safety-management/accident-analysis-tools/index.html',
+            'computer-literacy/written/computer-basics/aero-peek/index.html',
+          ]:
+            a=(Path('/tmp/gpl-table-base/dist')/rel).read_text()
+            b=(Path('dist')/rel).read_text()
+            print('CHANGES_FOR', rel)
+            matches=SequenceMatcher(None,a,b,autojunk=False)
+            edits=[(tag,i,j,k,l) for tag,i,j,k,l in matches.get_opcodes() if tag!='equal']
+            print('EDIT_COUNT',len(edits))
+            for tag,i,j,k,l in edits[:25]:
+              print('EDIT',tag,'old',i,j,'new',k,l, 'FROM',repr(a[i:j][:650]),'TO',repr(b[k:l][:650]))
+          PY
