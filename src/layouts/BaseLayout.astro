@@ -116,7 +116,7 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
   <body class={bodyClass}>
     {!focusMode && <GNB chapterNavigation={chapterNavigation} />}
     {swapMobileAds && (
-      <aside class="footer-ad mobile-entry-ad" data-mobile-entry-ad aria-label="광고" hidden>
+      <aside class="footer-ad mobile-entry-ad" style="padding-top:var(--space-2)" data-mobile-entry-ad aria-label="광고" hidden>
         <span class="footer-ad-label">광고</span>
         <div class="footer-ad-mount" data-mobile-entry-ad-mount></div>
         <script is:inline>
@@ -262,7 +262,6 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
 
 <style>
   .footer-ad{box-sizing:border-box;display:flex;width:100%;padding-top:var(--space-8);flex-direction:column;align-items:center}
-  .mobile-entry-ad{padding-top:var(--space-2)}
   .footer-ad[hidden]{display:none}
   .footer-ad-label{margin-bottom:var(--space-2);font-size:var(--fs-label);line-height:1;color:var(--gray-600)}
   .footer-ad-mount{width:300px;height:250px;flex:none}
