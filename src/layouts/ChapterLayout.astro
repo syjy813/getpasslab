@@ -272,6 +272,31 @@ const structuredData = [
     </div>
   </dialog>
   <script>
+    // Industrial chapter tables must keep their native table layout. On narrow screens,
+    // wrap only tables that truly exceed the article width, leaving short tables full-width.
+    const industrialArticle = document.querySelector('.industrial-safety-chapter article');
+    if (industrialArticle instanceof HTMLElement) {
+      const mobileTableViewport = window.matchMedia('(max-width: 767px)');
+      const wrapOverflowingTables = () => {
+        if (!mobileTableViewport.matches) return;
+        const articleWidth = industrialArticle.clientWidth;
+        industrialArticle.querySelectorAll(':scope > table').forEach((table) => {
+          if (!(table instanceof HTMLTableElement)) return;
+          if (table.getBoundingClientRect().width <= articleWidth + 1) return;
+          const region = document.createElement('div');
+          region.className = 'industrial-table-scroll';
+          region.tabIndex = 0;
+          region.setAttribute('role', 'region');
+          region.setAttribute('aria-label', '가로로 스크롤할 수 있는 표');
+          table.before(region);
+          region.append(table);
+        });
+      };
+      wrapOverflowingTables();
+      window.addEventListener('resize', wrapOverflowingTables, { passive: true });
+      document.fonts.ready.then(wrapOverflowingTables);
+    }
+
     const desktopSubjectHover = window.matchMedia('(hover: hover) and (pointer: fine)');
 
     document.querySelectorAll('.subject-switcher').forEach((switcher) => {
