@@ -76,7 +76,8 @@ for(const [file,sha]of Object.entries(review.bundles)){
   if(file!==previousTableStyle){assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed bundle');continue;}
   const current=fs.readFileSync(currentTableStyle);
   assert(current.toString().includes('.industrial-table-scroll'), 'mobile table scroll selector compiled');
-  console.log('[Industrial table CSS bundle SHA256]',hash(current));
+  assert.equal(hash(current),'0465b1510d1d8c43bbb8d4d16243af241a989313b8572ee308fcdb99c25626b1',
+    'one complete approved industrial table CSS bundle');
 }
 assert(lessons>500);assert(htmlCount>500);
 console.log('[Certification discovery native] PASS',JSON.stringify({nativeFiles:files.length,lessons,htmlCount,footerPages,sourceChanges:review.productFiles.length,questionsAndImages:'unchanged',routes:'unchanged'}));
