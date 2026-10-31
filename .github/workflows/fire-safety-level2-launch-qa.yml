@@ -28,21 +28,13 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
-        with:
-          fetch-depth: 2
-      - name: Select historical snapshot verification root
-        id: historical
-        run: node scripts/prepare-mobile-ad-legacy-qa.mjs
       - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
       - run: npm ci
-        working-directory: ${{ steps.historical.outputs.root }}
       - run: npm run build
-        working-directory: ${{ steps.historical.outputs.root }}
       - name: Current, historical, canonical and SEO checks
-        working-directory: ${{ steps.historical.outputs.root }}
         run: |
           for check in scripts/check-*.mjs; do node "$check"; done
       - name: Prepare browser tooling
@@ -55,7 +47,6 @@ jobs:
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
           /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
       - name: New certification navigation, image zoom and existing question popups
-        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_BASE_URL: http://127.0.0.1:4321
@@ -71,7 +62,6 @@ jobs:
           curl -fsS "$QA_BASE_URL/" > /dev/null
           node scripts/qa-fire-safety-level2-launch.cjs
       - name: Existing 73 chapters and 32 technical SVGs at four viewport widths
-        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_BASE_URL: http://127.0.0.1:4321
@@ -86,7 +76,6 @@ jobs:
           done
           node scripts/qa-fire-safety-level2-bulk.cjs
       - name: Priority five chapters, diagrams, navigation and linked practice
-        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_BASE_URL: http://127.0.0.1:4321
@@ -101,26 +90,22 @@ jobs:
           done
           node scripts/qa-fire-priority-chapters.cjs
       - name: Whole-panel lessons, enlarged details and practice links
-        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_SERVE_DIST: 1
           QA_OUTPUT_DIR: qa-results/fire-full-panels
         run: node scripts/qa-fire-full-panels.cjs
       - name: Phase-two practice illustrations and linked questions
-        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_OUTPUT_DIR: qa-results/fire-practice-phase2
         run: node scripts/qa-fire-practice-phase2.cjs
       - name: Original 22-unit plan coverage and four new chapters
-        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_OUTPUT_DIR: qa-results/fire-original-plan
         run: node scripts/qa-fire-original-plan.cjs
       - name: Fire chapter practice and full mock exam
-        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_BASE_URL: http://127.0.0.1:4321
@@ -135,7 +120,6 @@ jobs:
           done
           node scripts/qa-fire-practice.cjs
       - name: Actual published questions, chapter feedback and full exams
-        working-directory: ${{ steps.historical.outputs.root }}
         env:
           QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
           QA_BASE_URL: http://127.0.0.1:4321
@@ -154,11 +138,11 @@ jobs:
         with:
           name: fire-safety-level2-launch-qa
           path: |
-            ${{ steps.historical.outputs.root }}/qa-results/fire-safety-level2*/
-            ${{ steps.historical.outputs.root }}/qa-results/fire-practice/
-            ${{ steps.historical.outputs.root }}/qa-results/fire-publication/
-            ${{ steps.historical.outputs.root }}/qa-results/fire-priority-chapters/
-            ${{ steps.historical.outputs.root }}/qa-results/fire-full-panels/
-            ${{ steps.historical.outputs.root }}/qa-results/fire-practice-phase2/
-            ${{ steps.historical.outputs.root }}/qa-results/fire-original-plan/
+            qa-results/fire-safety-level2*/
+            qa-results/fire-practice/
+            qa-results/fire-publication/
+            qa-results/fire-priority-chapters/
+            qa-results/fire-full-panels/
+            qa-results/fire-practice-phase2/
+            qa-results/fire-original-plan/
           retention-days: 14
