@@ -49,16 +49,21 @@ let browser;
    assert.equal(!!d.entry,target,route+' entry eligibility');
    assert.equal(!!d.ribbon,target,route+' ribbon eligibility');
    if(target){
+    const ribbonFits=mobile&&d.width>=320;
     assert.equal(d.entry.visible,mobile,route+' top rectangle mobile only '+JSON.stringify({width:d.width,scroll:d.scroll,entry:d.entry,gnb:d.gnb}));
-    assert.equal(d.ribbon.visible,mobile,route+' lower ribbon mobile only');
+    assert.equal(d.ribbon.visible,ribbonFits,route+' ribbon only when 320px fits');
     assert.equal(d.old.visible,!mobile,route+' no duplicate footer rectangle');
     if(mobile){
      near(d.entry.box.top,d.gnb.bottom);
      near(d.entry.mount.width,300);near(d.entry.mount.height,250);
-     near(d.ribbon.mount.width,320);near(d.ribbon.mount.height,50);
-     assert(d.ribbon.box.top>=d.entry.box.bottom,route+' ribbon follows content');
-     assert(d.ribbon.box.bottom<d.footer.top,route+' ribbon before footer');
      assert(d.entry.box.x>=-1&&d.entry.box.x+d.entry.box.width<=d.width+1,route+' top ad fits viewport');
+     if(ribbonFits){
+      near(d.ribbon.mount.width,320);near(d.ribbon.mount.height,50);
+      assert(d.ribbon.box.top>=d.entry.box.bottom,route+' ribbon follows content');
+      assert(d.ribbon.box.bottom<d.footer.top,route+' ribbon before footer');
+     }else{
+      assert.equal(d.ribbon.box.height,0,route+' no empty ribbon gap on narrow screen');
+     }
     }else{
      assert.equal(d.entry.box.height,0,route+' no desktop top whitespace');
      assert.equal(d.ribbon.box.height,0,route+' no desktop ribbon whitespace');
