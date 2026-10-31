@@ -278,6 +278,12 @@ const structuredData = [
     if (industrialArticle instanceof HTMLElement) {
       const mobileTableViewport = window.matchMedia('(max-width: 767px)');
       const wrapOverflowingTables = () => {
+        // Re-measure from the native table on every resize. Desktop restores its
+        // original parent so mobile-only scroll wrappers never linger.
+        industrialArticle.querySelectorAll(':scope > .industrial-table-scroll > table').forEach((table) => {
+          const region = table.parentElement;
+          if (region?.classList.contains('industrial-table-scroll')) region.replaceWith(table);
+        });
         if (!mobileTableViewport.matches) return;
         const articleWidth = industrialArticle.clientWidth;
         industrialArticle.querySelectorAll(':scope > table').forEach((table) => {
