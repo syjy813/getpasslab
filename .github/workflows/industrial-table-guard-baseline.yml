@@ -1,0 +1,47 @@
+name: Industrial table legacy-guard baseline comparison
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/industrial-table-guard-baseline.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    strategy:
+      fail-fast: false
+      matrix:
+        revision: [base, head]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.revision == 'base' && github.event.pull_request.base.sha || github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Compare representative historical guards without masking failures
+        shell: bash
+        run: |
+          set +e
+          for check in \
+            scripts/check-image-copy-update.mjs \
+            scripts/check-footer-left.mjs \
+            scripts/check-mobile-top-ad.mjs \
+            scripts/check-gnb-chapter-toc.mjs \
+            scripts/check-chapter-formula-style.mjs; do
+            echo "=== ${{ matrix.revision }}: $check ==="
+            node "$check" > /tmp/guard-output.txt 2>&1
+            status=$?
+            if [ "$status" -eq 0 ]; then
+              echo "GUARD_RESULT ${{ matrix.revision }} PASS $check"
+            else
+              echo "GUARD_RESULT ${{ matrix.revision }} FAIL $check"
+              grep -m1 -E 'AssertionError|Error:|ERR_ASSERTION' /tmp/guard-output.txt || true
+              grep -m1 -E 'exact |native |reviewed |complete |original ' /tmp/guard-output.txt || true
+            fi
+          done
