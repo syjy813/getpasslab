@@ -112,7 +112,7 @@ let browser;
  d=await page.evaluate(snapshot);
  assert(!d.entry.visible&&!d.ribbon.visible&&d.old.visible,'desktop positions restored');
  await page.setViewportSize({width:390,height:844});
- await page.waitForFunction(()=>!document.querySelector('[data-mobile-entry-ad]').hidden&&document.querySelector('[data-footer-ad]').hidden&&document.querySelector('[data-mobile-entry-ad-mount] ins');
+ await page.waitForFunction(()=>!document.querySelector('[data-mobile-entry-ad]').hidden&&document.querySelector('[data-footer-ad]').hidden&&document.querySelector('[data-mobile-entry-ad-mount] ins'));
  d=await page.evaluate(snapshot);
  assert.equal(d.entry.ins.length,1);assert.equal(d.ribbon.ins.length,1);assert.equal(d.old.ins.length,0);
  report.cases.push({route:sample,width:'390 -> 1024 -> 390',result:'PASS',scenario:'SDK stub / resize'});
