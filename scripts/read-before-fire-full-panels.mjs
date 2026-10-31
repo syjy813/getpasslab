@@ -3,6 +3,8 @@
 import fs, {beforeFireFivePanels,isFireFivePanelAddition,readFile as readFiveFile,readdir as readFiveDirectory} from './read-before-fire-five-full-panels.mjs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
+import {isFacilityAddition} from './read-before-facility-launch.mjs';
+import {beforeHomepageTitle} from './read-before-homepage-title.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
@@ -21,6 +23,7 @@ export function beforePanelTextStyle(file,bytes){
 }
 const keyFor=file=>path.normalize(path.isAbsolute(String(file))?path.relative(process.cwd(),String(file)):String(file));
 export function beforeFireFullPanels(file,bytes){
+  bytes=beforeHomepageTitle(file,bytes);
   bytes=beforeFireFivePanels(file,bytes);
   bytes=beforePanelTextStyle(file,bytes);
   const key=keyFor(file),row=review.changes[key];
@@ -30,7 +33,7 @@ export function beforeFireFullPanels(file,bytes){
   return before;
 }
 export function isFireFullPanelAddition(file){
-  if(isFireFivePanelAddition(file))return true;
+  if(isFacilityAddition(file)||isFireFivePanelAddition(file))return true;
   const key=keyFor(file),expected=review.additions[key];
   if(!expected)return false;
   assert.equal(hash(beforePanelTextStyle(file,fs.readFileSync(file))),expected,key+': fingerprinted full-panel addition');

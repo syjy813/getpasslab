@@ -1,3 +1,4 @@
+import {isFacilityAddition,facilityReview} from './read-before-facility-launch.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -7,7 +8,7 @@ import {beforeImageCopy} from './read-before-image-copy.mjs';
 const prior=file=>beforeImageCopy(file,fs.readFileSync(file));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(d+'/'+e.name):[d+'/'+e.name]);
-const files=[...walk('src'),...walk('public'),...walk('dist').filter(f=>/\.(html|xml)$/.test(f))].sort();
+const files=[...walk('src'),...walk('public'),...walk('dist').filter(f=>/\.(html|xml)$/.test(f))].filter(f=>!isFacilityAddition(f)).sort();
 assert.deepEqual(files,Object.keys(review.current).sort(),'native inventory');
 for(const file of files)assert.equal(hash(prior(file)),review.current[file],file+': reviewed current bytes');
 assert.deepEqual(review.productFiles,[
@@ -62,7 +63,10 @@ for(const [file,row]of Object.entries(review.changes)){
  if(a){assert.equal(cleanLesson(a,file),cleanLesson(b,file),file+': lesson, figures, question payload and practice unchanged except reviewed cell lists');lessons++;}
  if(file!=='dist/index.html')assert.equal(serialize(now.find(n=>n.tagName==='h1')),serialize(old.find(n=>n.tagName==='h1')),file+': original page title retained');
 }
-assert.deepEqual(walk('dist/_astro').filter(f=>/\.(js|css)$/.test(f)).sort(),Object.keys(review.bundles).sort(),'compiled bundle inventory');
-for(const [file,sha]of Object.entries(review.bundles))assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed bundle');
+const bundles=walk('dist/_astro').filter(f=>/\.(js|css)$/.test(f)).sort();
+assert.deepEqual(bundles,Object.keys(facilityReview.bundles).sort(),'facility compiled bundle inventory');
+for(const [file,sha] of Object.entries(facilityReview.bundles))assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed facility bundle');
+assert.deepEqual(Object.keys(facilityReview.priorBundles).sort(),Object.keys(review.bundles).sort(),'preceding bundle inventory');
+for(const [file,sha] of Object.entries(review.bundles))assert.equal(hash(Buffer.from(facilityReview.priorBundles[file],'base64')),sha,file+': reviewed preceding bundle');
 assert(lessons>500);assert(htmlCount>500);
 console.log('[Certification discovery native] PASS',JSON.stringify({nativeFiles:files.length,lessons,htmlCount,footerPages,sourceChanges:review.productFiles.length,questionsAndImages:'unchanged',routes:'unchanged'}));
