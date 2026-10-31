@@ -10,7 +10,7 @@ const certificates = [
 ];
 const root = 'dist';
 const entry = 'data-mobile-entry-ad aria-label="광고"';
-const ribbon = 'data-mobile-top-ad>';
+const ribbon = 'data-mobile-top-ad data-astro-cid-';
 const footer = 'data-footer-ad data-unit="DAN-A3dGUv2kIjnZSTmZ"';
 const count = (text, needle) => text.split(needle).length - 1;
 
@@ -37,7 +37,7 @@ for (const file of files) {
   if (hasEntry) {
     assert(certificates.some(cert => route.startsWith('/' + cert + '/written/')), file + ' only supported certifications');
     assert([2,3,4].includes(route.split('/').filter(Boolean).length), file + ' only three target page types');
-    assert.equal(hasRibbon, true, file + ' ribbon retained; nearby=' + JSON.stringify((html.match(/.{0,120}mobile-top-ad.{0,120}/g) || []).slice(0,4)));
+    assert.equal(hasRibbon, true, file + ' ribbon retained');
     assert.equal(hasFooter, true, file + ' footer slot retained for PC');
     assert(html.includes('data-mobile-swapped="true"'), file + ' mobile duplicate suppression');
     const headerEnd = html.indexOf('</header>');
