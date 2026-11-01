@@ -16,7 +16,7 @@ const previousHeader = '<th>문제에서 보이는 키워드</th>';
 const currentHeader = '<th>주요 키워드</th>';
 const nextHeader = '<th>정답으로 연결</th>';
 const blobHash = bytes => createHash('sha1')
-  .update(Buffer.from('blob ' + bytes.length + '\\0'))
+  .update(Buffer.from('blob ' + bytes.length + String.fromCharCode(0)))
   .update(bytes).digest('hex');
 const key = file => path.normalize(path.isAbsolute(String(file))
   ? path.relative(process.cwd(), String(file)) : String(file)).split(path.sep).join('/');
