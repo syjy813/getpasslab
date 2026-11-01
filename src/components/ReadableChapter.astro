@@ -1,6 +1,9 @@
 ---
 import { formatChapterHtml } from '../../scripts/chapter-readability.mjs';
 const { slug, certId } = Astro.props;
-const html = formatChapterHtml(await Astro.slots.render('default'), { slug, certId });
+// Update only the first-column header in the exam-point table at build time.
+// Keep Markdown sources, other table headers, lesson text and question data intact.
+const html = formatChapterHtml(await Astro.slots.render('default'), { slug, certId })
+  .replaceAll('<th>문제에서 보이는 키워드</th>', '<th>주요 키워드</th>');
 ---
 <Fragment set:html={html} />

@@ -1,4 +1,5 @@
 import { beforeMobileLearningUX } from './read-before-mobile-learning-ux.mjs';
+import { beforeExamKeywordHeader } from './read-before-exam-keyword-header.mjs';
 import fs from 'node:fs';
 import {isCertificationAddition} from './read-before-certification-discovery.mjs';
 import path from 'node:path';
@@ -25,6 +26,6 @@ export function isReadabilityAddition(file){
   if(isCertificationAddition(file))return true;
   const key=path.normalize(String(file)),row=readabilityReview.files[key];
   if(!row?.added)return false;
-  assert.equal(hash(fs.readFileSync(key)),row.sha256,key+': exact readability addition');
+  assert.equal(hash(beforeExamKeywordHeader(key,fs.readFileSync(key))),row.sha256,key+': exact readability addition');
   return true;
 }

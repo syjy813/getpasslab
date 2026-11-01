@@ -1,0 +1,27 @@
+name: Exam point keyword header QA
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/components/ReadableChapter.astro'
+      - 'scripts/check-exam-keyword-header.mjs'
+      - '.github/workflows/exam-keyword-header-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/check-exam-keyword-header.mjs
