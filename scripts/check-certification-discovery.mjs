@@ -65,7 +65,7 @@ for(const [file,row]of Object.entries(review.changes)){
 // Only two known compiled CSS assets are replaced by this PR. Other bundles
 // must retain the complete archived digest; the new assets are content-addressed.
 const bundleRenames={
- 'dist/_astro/BaseLayout.Bj2BltZT.css':{path:'dist/_astro/BaseLayout.DPpxxNzx.css',sha:'3115cf93b050455520e28d9c79fdb5042c478c69691d46b19ad21c5882b79e5e'},
+ 'dist/_astro/BaseLayout.Bj2BltZT.css':{path:'dist/_astro/BaseLayout.CZK5_rkE.css',sha:'bbc2c1b646f1995e5ca3f71cfd0f654250cfe3b240b9b2b4c69a72f402b7066c'},
  'dist/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.B-5ce8YB.js':{path:'dist/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.pDAgU--1.js',sha:'23ac2aa42b7844502bcc5e7e1c0f29ce9d60dae6ad985c4faf7f2213e818fe09'},
  'dist/_astro/_slug_.DBxZQ9Ra.css':{path:'dist/_astro/_slug_.ji1xakQR.css',sha:'fcd472fdfaaca18b388f38acc2e517cd907c82c5fa75a093f6bb22c780ed8885'},
 };
