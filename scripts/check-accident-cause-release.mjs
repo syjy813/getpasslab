@@ -54,6 +54,7 @@ assert.deepEqual(changed,[
   'scripts/qa-accident-cause-chapter.cjs',
   'scripts/qa-all-chapter-hierarchy.cjs',
   'scripts/check-accident-cause-release.mjs',
+  'scripts/ci-archived-history.cjs',
   ...paths
 ].sort(), 'no additional files changed');
 const frontmatter = source => source.match(/^---\r?\n([\s\S]*?)\r?\n---/)[1];
