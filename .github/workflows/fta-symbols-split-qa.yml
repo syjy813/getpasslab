@@ -35,8 +35,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: node scripts/check-fta-symbols-split.mjs
-      - run: node scripts/check-fta-original-options.mjs
+      - name: Verify immutable FTA chapter and original-choice histories
+        run: |
+          node scripts/ci-archived-history.cjs "node scripts/check-fta-symbols-split.mjs && node scripts/check-fta-original-options.mjs"
+      - name: Validate current published content
+        run: npm run check:seo && npm run check:public-content && npm run check:deferred-question-content
       - name: Prepare temporary browser tooling
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
