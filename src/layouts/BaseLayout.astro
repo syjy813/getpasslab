@@ -19,6 +19,8 @@ interface Props {
   focusMode?: boolean;
   chapterNavigation?: ChapterNavigationGroup[];
   mobileTopAd?: boolean;
+  ogImagePath?: string;
+  ogImageAlt?: string;
 }
 
 const {
@@ -31,6 +33,8 @@ const {
   focusMode = false,
   chapterNavigation,
   mobileTopAd = false,
+  ogImagePath = '/og-default.png',
+  ogImageAlt = 'GetPassLab 자격증 핵심요약 학습 서비스',
 } = Astro.props;
 const pathname = Astro.url.pathname;
 const hasContentFooterAd = !focusMode && (
@@ -40,7 +44,7 @@ const hasContentFooterAd = !focusMode && (
 );
 const siteOrigin = Astro.site ?? SITE.url;
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
-const ogImageUrl = new URL('/og-default.png', siteOrigin);
+const ogImageUrl = new URL(ogImagePath, siteOrigin);
 const pageStructuredData = Array.isArray(structuredData) ? structuredData : [structuredData];
 const jsonLd = [
   {
@@ -102,7 +106,7 @@ const serializeJsonLd = (value: Record<string, unknown>) =>
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="GetPassLab 자격증 핵심요약 학습 서비스" />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />

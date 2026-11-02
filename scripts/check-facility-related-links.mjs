@@ -5,6 +5,8 @@ const routes=['career/what-is-facility-management','career/first-job','career/em
 if(process.env.FACILITY_DRAFT_PREVIEW !== '1') {
  for(const route of routes) assert(!fs.existsSync(`dist/facility-management/${route}/index.html`),route+': draft must not be in normal build');
  assert(!fs.existsSync('dist/images/facility-drafts'),'draft images must not be in normal build');
+ assert(fs.readFileSync('dist/facility-management/index.html','utf8').includes('https://getpasslab.co.kr/og-facility.png'),'facility home sharing image');
+ assert(fs.readFileSync('dist/computer-literacy/index.html','utf8').includes('https://getpasslab.co.kr/og-default.png'),'certificate sharing image preserved');
  console.log('[Facility related links] PASS: drafts excluded from normal build');
  process.exit(0);
 }
@@ -30,6 +32,7 @@ assert(draftCards>=5,'expected draft cards across facility pages');
 for(const route of routes){
  const html=fs.readFileSync(`dist/facility-management/${route}/index.html`,'utf8');
  assert(html.includes('noindex, nofollow'),route+': draft noindex');
+ assert(html.includes('https://getpasslab.co.kr/og-facility.png'),route+': facility sharing image');
  assert(html.includes('공개 전 자료 확인 중'),route+': draft source date is not final');
  assert(html.includes('근거 및 참고 자료'),route+': sources may include republished material');
  const walk=node=>{if(node.tagName==='a'){const href=node.attrs.find(a=>a.name==='href')?.value;if(href?.startsWith('/facility-management/')){assert(fs.existsSync(`dist${href.replace(/\/$/,'')}/index.html`),`${route}: missing ${href}`);checked++;}}for(const child of node.childNodes||[])walk(child)};

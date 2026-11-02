@@ -9,6 +9,6 @@ interface Props {
   structuredData?: Record<string, unknown>[];
 }
 ---
-<BaseLayout {...Astro.props} bodyClass="facility-page">
+<BaseLayout {...Astro.props} bodyClass="facility-page" ogImagePath="/og-facility.png" ogImageAlt="GetPassLab 시설의 모든 것: 취업, 법정선임, 시설관리 실무 정보" >
   <main id="main-content" class="container facility-main"><slot /></main>
 </BaseLayout>
