@@ -34,7 +34,7 @@
 .facility-summary ul{padding-left:20px;margin-bottom:0}
 .facility-article .facility-body{line-height:1.8}
 .facility-body a,.facility-sources a{color:var(--primary-700);text-underline-offset:3px;overflow-wrap:anywhere}
-.facility-body img{max-width:100%;height:auto;display:block;border-radius:var(--radius-lg)}
+.facility-body img{width:100%;max-width:100%;height:auto;aspect-ratio:auto 4/3;display:block;border-radius:var(--radius-lg)}
 .facility-body figure{margin:var(--space-6) 0}
 .facility-body figcaption{font-size:var(--fs-caption);color:var(--gray-600);margin-top:var(--space-2)}
 .facility-table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;border-radius:var(--radius-lg)}
