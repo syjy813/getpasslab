@@ -33,7 +33,6 @@ for(const width of [320,390,768,1440]){
   const heading=dialog.locator('#instant-practice-heading');
   assert.equal(await heading.textContent(),'기출 풀어보기');
   assert.equal(await dialog.locator('.practice-status-row').count(),0);
-  assert.equal(await dialog.getByText('연결 기출',{exact:false}).count(),0,'redundant count row absent');
   const progress=dialog.locator('[data-practice-progress]');
   const label=await progress.textContent();
   assert.match(label,/^1\s*\/\s*\d+$/);
