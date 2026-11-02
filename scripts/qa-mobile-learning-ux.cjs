@@ -27,6 +27,11 @@ let browser;
         assert(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1),'page overflow');
         assert.equal(await page.locator('h1').count(),1);
         assert.equal(await page.locator('.learning-chapters,.chapter-mobile-index').count(),0,'no body or bottom TOC');
+        if(width>=1024){
+          assert(!await page.locator('.gnb-menu').isVisible(),'desktop header TOC removed');
+          assert(await page.locator('.chapter-side').isVisible(),'sidebar provides desktop chapters');
+          assert(!await page.locator('.gnb-cert-menu').isVisible(),'desktop chapter header has no redundant certification picker');
+        }else{
         const alignment=await page.evaluate(()=>{
           const n=document.querySelector('.gnb-inner').getBoundingClientRect(),l=document.querySelector('.gnb-logo').getBoundingClientRect(),r=document.querySelector('.gnb-menu summary svg').getBoundingClientRect();
           return {left:l.left-n.left,right:n.right-r.right};
@@ -62,6 +67,7 @@ let browser;
         assert(new URL(page.url()).pathname===destinationURL,'TOC link navigation');
         await page.goBack({waitUntil:'load'});assert.equal(new URL(page.url()).pathname,route);
         if(await page.locator('.gnb-menu').getAttribute('open')!==null)await page.locator('.gnb-menu>summary').click();
+        }
         const switcher=page.locator('.subject-switcher');
         if(await switcher.count()){
           await switcher.locator('summary').click();

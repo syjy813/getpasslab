@@ -36,7 +36,7 @@ let browser,activePage;
    const menus=page.locator('[data-gnb-menu]');assert(await menus.count()>=1);
    assert(await menus.locator('summary:visible').evaluateAll(es=>es.every(e=>e.getBoundingClientRect().height>=44)),'visible menu target height');
    const chapterDetail=route.split('/').filter(Boolean).length===4;
-   const showCertificationMenu=!chapterDetail||size.width>=768;
+   const showCertificationMenu=!chapterDetail||(size.width>=768&&size.width<1024);
    const cert=page.locator('summary[aria-label="자격증 선택"]');
    assert.equal(await cert.isVisible(),showCertificationMenu,'certification menu visibility matches chapter mobile policy');
    if(showCertificationMenu){
@@ -45,7 +45,12 @@ let browser,activePage;
     await cert.press('Escape');assert(!await page.locator('.gnb-cert-dropdown').isVisible());assert(await cert.evaluate(e=>e===document.activeElement));
    }
    if(chapterDetail){
-    const toc=page.locator('.gnb-menu');await toc.locator('summary').press('Enter');
+    const toc=page.locator('.gnb-menu');
+    if(size.width>=1024){
+     assert(!await toc.isVisible(),'desktop header TOC is hidden');
+     assert(await page.locator('.chapter-side').isVisible(),'desktop sidebar replaces TOC');
+    }else{
+    await toc.locator('summary').press('Enter');
     await page.waitForFunction(()=>{const m=document.querySelector('.gnb-chapter-dropdown'),a=m?.querySelector('[aria-current="page"]');if(!m||!a)return false;const b=m.getBoundingClientRect(),r=a.getBoundingClientRect();return b.height>0&&r.bottom>b.top&&r.top<b.bottom;});
     await bounded(page,'.gnb-chapter-dropdown');
     assert.equal(await toc.locator('[aria-current="page"]').getAttribute('href'),route);
@@ -62,6 +67,7 @@ let browser,activePage;
     const other=toc.locator('a:not([aria-current])').first(),destination=await other.getAttribute('href');
     await other.click();await page.waitForURL(u=>u.pathname===destination);await page.goBack();assert.equal(new URL(page.url()).pathname,route);
     if(await toc.evaluate(e=>e.open))await toc.locator('summary').press('Escape');
+    }
     const question=page.locator('.round-badge').first();
     if(await question.count()){
      await question.press('Enter');const dialog=page.locator('dialog.q-layer[open]');await dialog.waitFor({state:'visible'});
