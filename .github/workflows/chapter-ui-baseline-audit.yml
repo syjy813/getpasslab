@@ -85,3 +85,7 @@ jobs:
           }
           console.log('EXACT_UI_PROJECTION_PASS',JSON.stringify({pages:current.length,changed,sourceFiles:2}));
           NODE
+
+      - name: Fingerprint the two exact updated CSS bundles
+        run: |
+          sha256sum dist/_astro/BaseLayout.C1KrpNFq.css dist/_astro/_slug_.ji1xakQR.css
