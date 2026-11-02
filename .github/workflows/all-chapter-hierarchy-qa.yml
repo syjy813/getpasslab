@@ -71,6 +71,12 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Validate exact approved release scope against immutable PR base
+        env:
+          REVIEW_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git fetch --no-tags --depth=1 origin "$REVIEW_BASE_SHA"
+          node scripts/check-accident-cause-release.mjs
       - run: npm run check:seo && npm run check:public-content
       - name: Prepare scoped browser QA
         run: |
