@@ -1,3 +1,4 @@
+import { beforeChapterPracticeGNB } from './read-before-chapter-practice-gnb.mjs';
 import { beforeExamKeywordHeader } from './read-before-exam-keyword-header.mjs';
 import assert from 'node:assert/strict';
 import { readFile as readActualFile } from './read-before-clam-shell.mjs';
@@ -13,6 +14,7 @@ const hash = value => createHash('sha256').update(value).digest('hex');
 export async function readFile(file, encoding) {
   const key = String(file), loader = review.generatedLoader;
   let bytes = await readActualFile(key === `dist${loader.originalPath}` ? `dist${loader.path}` : file);
+  bytes = beforeChapterPracticeGNB(key, bytes);
   bytes = beforeExamKeywordHeader(key, bytes);
   const row = [...review.chapters, ...review.canonicalFiles, ...review.assetRegistries, ...review.displayFiles].find(row => row.path === key);
   if (row) {

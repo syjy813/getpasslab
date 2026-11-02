@@ -107,6 +107,8 @@ const currentPath = Astro.url.pathname;
   .gnb-cert-dropdown a:focus-visible{outline:2px solid var(--primary-500);outline-offset:-2px}
   .gnb-certification-link[aria-current="location"]{background:var(--primary-50);color:var(--primary-600)}
   @media(max-width:767px){
+    /* Chapter detail already has chapter TOC, breadcrumb and home navigation. */
+    :global(body.chapter-page) .gnb-cert-menu{display:none}
     .gnb-label-full{display:none}
     .gnb-label-short{display:inline}
     .gnb-cert-dropdown{position:fixed;top:calc(var(--gnb-h) + 1px);right:24px;left:24px;width:auto;min-width:0;max-width:none}
