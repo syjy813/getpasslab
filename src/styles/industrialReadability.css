@@ -3,3 +3,13 @@
 .industrial-safety-chapter article p .katex:not(:only-child),
 .industrial-safety-chapter article li .katex{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;-webkit-overflow-scrolling:touch}
 @media(min-width:768px){.industrial-safety-chapter article table{display:table}}
+
+/* Keep the two compact accident-cause tables full-width at narrow viewport sizes. */
+.industrial-safety-chapter article table:has(.accident-cause-4m-label),
+.industrial-safety-chapter article table:has(.accident-cause-term-label){display:table;table-layout:fixed;width:100%}
+.industrial-safety-chapter article table:has(.accident-cause-4m-label) :is(th,td):first-child{width:37%}
+.industrial-safety-chapter article table:has(.accident-cause-term-label) :is(th,td):nth-child(1){width:30%}
+.industrial-safety-chapter article table:has(.accident-cause-term-label) :is(th,td):nth-child(2){width:21%}
+.industrial-safety-chapter article table:has(.accident-cause-term-label) :is(th,td):nth-child(3){width:49%;overflow-wrap:anywhere}
+.industrial-safety-chapter article table:has(.accident-cause-4m-label) th,
+.industrial-safety-chapter article table:has(.accident-cause-term-label) th{vertical-align:middle}

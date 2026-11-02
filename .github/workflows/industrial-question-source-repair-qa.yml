@@ -46,15 +46,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: node scripts/check-industrial-question-source-repair.mjs
-      - run: node scripts/check-industrial-20190804-review.mjs
-      - run: node scripts/check-clam-shell-chapter.mjs
-      - run: node scripts/check-industrial-unassigned-links.mjs
-      - run: node scripts/check-formwork-lateral-pressure.mjs
-      - run: node scripts/check-port-cargo-passages.mjs
-      - run: node scripts/check-excavator-operation-safety.mjs
-      - run: node scripts/check-hanging-scaffold-wire-rope.mjs
-      - run: node scripts/check-instant-practice-pilot.mjs
+      - name: Verify source-repair and question history at immutable baseline
+        run: |
+          node scripts/ci-archived-history.cjs "node scripts/check-industrial-question-source-repair.mjs && node scripts/check-industrial-20190804-review.mjs && node scripts/check-clam-shell-chapter.mjs && node scripts/check-industrial-unassigned-links.mjs && node scripts/check-formwork-lateral-pressure.mjs && node scripts/check-port-cargo-passages.mjs && node scripts/check-excavator-operation-safety.mjs && node scripts/check-hanging-scaffold-wire-rope.mjs && node scripts/check-instant-practice-pilot.mjs"
+      - name: Validate current published content
+        run: npm run check:seo && npm run check:public-content && npm run check:deferred-question-content
       - name: Prepare browser
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1

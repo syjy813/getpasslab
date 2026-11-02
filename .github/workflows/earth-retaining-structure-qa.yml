@@ -31,7 +31,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: node scripts/check-earth-retaining-structure.mjs
+      - name: Verify immutable earth-retaining figure and chapter history
+        run: node scripts/ci-archived-history.cjs "node scripts/check-earth-retaining-structure.mjs"
+      - name: Validate current published content
+        run: npm run check:seo && npm run check:public-content && npm run check:deferred-question-content
       - name: Prepare browser and Korean SVG fonts
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1

@@ -106,6 +106,8 @@ const currentPath = Astro.url.pathname;
   .gnb-cert-dropdown a{min-height:44px;display:flex;align-items:center}
   .gnb-cert-dropdown a:focus-visible{outline:2px solid var(--primary-500);outline-offset:-2px}
   .gnb-certification-link[aria-current="location"]{background:var(--primary-50);color:var(--primary-600)}
+  /* Desktop already has the persistent chapter sidebar; only mobile needs the header TOC. */
+  @media(min-width:1024px){.gnb-cert-menu,.gnb-cert-menu + .gnb-menu{display:none}}
   @media(max-width:767px){
     /* Chapter detail already has chapter TOC, breadcrumb and home navigation. */
     :global(body.chapter-page) .gnb-cert-menu{display:none}

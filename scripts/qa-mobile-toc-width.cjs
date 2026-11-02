@@ -21,6 +21,14 @@ const report={result:'RUNNING',cases:[],limitations:['Chromium responsive emulat
    await page.route('**/*',r=>new URL(r.request().url()).origin===base?r.continue():r.abort());
    for(const route of routes){
     assert.equal((await page.goto(base+route)).status(),200);await page.evaluate(()=>document.fonts.ready);
+    if(width>=1024){
+     assert(!await page.locator('.gnb-menu').isVisible(),'PC header TOC hidden when sidebar is present');
+     assert(!await page.locator('.gnb-cert-menu').isVisible(),'PC chapter certification menu hidden');
+     assert(await page.locator('.chapter-side').isVisible(),'PC sidebar remains available');
+     assert(await page.locator('.chapter-side .side-nav a').count()>0,'sidebar retains chapter links');
+     report.cases.push({route,viewport:width,desktopSidebar:'PASS'});
+     continue;
+    }
     await page.locator('.gnb-menu>summary').click();
     const menu=page.locator('.gnb-chapter-dropdown');
     const result=await menu.evaluate(e=>{

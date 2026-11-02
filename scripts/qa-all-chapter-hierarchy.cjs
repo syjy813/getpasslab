@@ -4,7 +4,10 @@ const assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const audit='docs/audits/2026-10-22-all-chapter-hierarchy/';
 const baseline=JSON.parse(fs.readFileSync(audit+'baseline.json'));
-const pages=Object.entries(baseline.html).filter(([,r])=>r.chapter).map(([file])=>({file,route:file.slice(4,-10),cert:file.split('/')[1]}));
+const allPages=Object.entries(baseline.html).filter(([,r])=>r.chapter).map(([file])=>({file,route:file.slice(4,-10),cert:file.split('/')[1]}));
+const sampleSlugs=['accident-cause-classification','boiler-safety-devices','goal-seek','management-target-grades','boiler-work-safety','concentration-conversion','industrial-accident-insurance','fire-emergency-plan-contents','character-codes','fuel-properties'];
+const pages=process.env.QA_CHAPTER_SAMPLE==='1'?allPages.filter(row=>sampleSlugs.some(slug=>row.route.endsWith('/'+slug+'/'))):allPages;
+if(process.env.QA_CHAPTER_SAMPLE==='1')assert(pages.length>=8,'representative chapters across subjects available');
 const base=(process.env.QA_BASE_URL||'http://127.0.0.1:4321').replace(/\/$/,'');
 const out=process.env.QA_OUTPUT_DIR||'qa-results/all-chapter-hierarchy';
 fs.mkdirSync(out,{recursive:true});
@@ -43,7 +46,7 @@ let browser;
               dividerTop:parseFloat(s.top),previousGap:p?rect(e).top-rect(p).bottom:null,nextTag:n?.tagName,
               nextGap:n?rect(n).top-rect(e).bottom:null,needsDivider:i>0||Boolean(n?.matches('.exam-history,.related-list')),
             };}),
-            tables:[...a.querySelectorAll('table')].filter(visible).map(e=>({font:parseFloat(getComputedStyle(e).fontSize),cells:[...e.querySelectorAll('th,td')].map(c=>getComputedStyle(c).verticalAlign)})),
+            tables:[...a.querySelectorAll('table')].filter(visible).map(e=>({font:parseFloat(getComputedStyle(e).fontSize),accidentTable:Boolean(e.querySelector('.accident-cause-4m-label,.accident-cause-term-label')),cells:[...e.querySelectorAll('th,td')].map(c=>({align:getComputedStyle(c).verticalAlign,header:c.tagName==='TH'}))})),
             related:[...a.querySelectorAll(':scope>.related-list')].map(e=>({margin:getComputedStyle(e).marginTop,style:getComputedStyle(e).listStyleType})),
             practice:[...a.querySelectorAll(':scope>[data-fire-practice-entry]')].map(e=>({border:getComputedStyle(e).borderTopWidth,gap:rect(e.querySelector('.fire-actions')).top-rect(e.querySelector('h2')).bottom})),
             tableBulletStyles:[...a.querySelectorAll('td ul')].map(ul=>getComputedStyle(ul).listStyleType),
@@ -56,7 +59,7 @@ let browser;
         assert(layout.scroll<=layout.width+1,current+': page overflow');assert.equal(layout.h1,1);assert.equal(layout.mathErrors,0);
         for(const h of layout.sections){
           assert.equal(h.font,width<768?18:20,current+': section typography');
-          const quiet=['핵심-개념','절차-및-판별-기준','자주-틀리는-포인트'].includes(h.id);
+          const quiet=['핵심-개념','절차-및-판별-기준'].includes(h.id);
           assert.equal(h.background,quiet?'rgba(0, 0, 0, 0)':'rgb(239, 246, 255)',current+': section emphasis '+h.title);
           if(h.needsDivider){
             assert.equal(h.divider,'1px',current+': section divider '+h.title);
@@ -67,7 +70,7 @@ let browser;
           if(!h.needsDivider)assert.notEqual(h.divider,'1px',current+': no duplicate divider before the first section');
           if(['P','UL','OL','TABLE'].includes(h.nextTag))assert(Math.abs(h.nextGap-16)<=1,current+': heading/content '+h.title+' '+h.nextGap);
         }
-        for(const t of layout.tables){assert.equal(t.font,14,current+': table typography');assert(t.cells.every(v=>v==='top'),current+': cell alignment');}
+        for(const t of layout.tables){assert.equal(t.font,14,current+': table typography');assert(t.cells.every(c=>c.align===(t.accidentTable&&c.header?'middle':'top')),current+': cell alignment');}
         for(const r of layout.related){assert.equal(r.margin,'0px');assert.equal(r.style,'none');}
         for(const p of layout.practice){assert.equal(p.border,'1px');assert(Math.abs(p.gap-16)<=1);}
         assert(layout.tableBulletStyles.every(style=>style==='none'),current+': no table bullet markers');

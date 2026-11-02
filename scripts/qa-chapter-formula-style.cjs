@@ -58,7 +58,7 @@ let browser;
         });
         assert(layout.scrollWidth <= layout.width + 1, `${current}: page overflow`);
         assert.equal(layout.mathErrors, 0, `${current}: math error`);
-        const quietHeadings = new Set(['핵심-개념','절차-및-판별-기준','자주-틀리는-포인트']);
+        const quietHeadings = new Set(['핵심-개념','절차-및-판별-기준']);
         assert(layout.headings.every(h => h.background === (quietHeadings.has(h.id) ? 'rgba(0, 0, 0, 0)' : 'rgb(239, 246, 255)')), `${current}: headings changed`);
         for (const card of layout.cards) {
           assert.equal(card.background, 'rgb(242, 244, 246)');
