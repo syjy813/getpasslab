@@ -1,0 +1,53 @@
+name: Chapter practice header and mobile GNB QA
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/components/InstantQuestionPractice.astro'
+      - 'src/components/GNB.astro'
+      - 'scripts/qa-chapter-practice-header-gnb.cjs'
+      - '.github/workflows/chapter-practice-header-gnb-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check:seo
+      - name: Install browser
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Check header and GNB at four widths
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: http://127.0.0.1:4321
+          QA_OUTPUT_DIR: qa-results/chapter-practice-header-gnb
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-new-modal-preview.log 2>&1 &
+          preview_pid=$!
+          trap 'kill "$preview_pid" 2>/dev/null || true' EXIT
+          for i in $(seq 1 40); do
+            if curl -fsS "$QA_BASE_URL/" >/dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS "$QA_BASE_URL/" >/dev/null
+          node scripts/qa-chapter-practice-header-gnb.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: chapter-practice-header-gnb-qa
+          path: qa-results/chapter-practice-header-gnb/
+          retention-days: 14
