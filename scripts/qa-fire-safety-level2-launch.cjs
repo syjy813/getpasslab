@@ -51,9 +51,17 @@ fs.mkdirSync(dir, {recursive:true});
         assert.equal(await button.evaluate(e=>e===document.activeElement),true);
         assert.equal(await page.evaluate(()=>document.body.getAttribute('style')||''),before.style||'');
       }
-      await page.locator('.gnb-menu summary').click();
-      assert.equal(await page.locator('.gnb-menu summary').getAttribute('aria-label'),'챕터 목차');
-      const chapterLink=page.locator('.gnb-chapter-dropdown a:not([aria-current])').first();
+      let chapterLink;
+      if(width>=1024){
+        assert(!await page.locator('.gnb-menu').isVisible(),'PC header chapter TOC hidden');
+        assert(!await page.locator('.gnb-cert-menu').isVisible(),'PC header certification picker hidden');
+        assert(await page.locator('.chapter-side').isVisible(),'PC navigation uses chapter sidebar');
+        chapterLink=page.locator('.chapter-side .side-nav a:not([aria-current])').first();
+      }else{
+        await page.locator('.gnb-menu summary').click();
+        assert.equal(await page.locator('.gnb-menu summary').getAttribute('aria-label'),'챕터 목차');
+        chapterLink=page.locator('.gnb-chapter-dropdown a:not([aria-current])').first();
+      }
       const chapterHref=await chapterLink.getAttribute('href');
       await chapterLink.click();
       await page.waitForURL(base+chapterHref);
