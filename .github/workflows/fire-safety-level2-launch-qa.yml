@@ -36,7 +36,9 @@ jobs:
       - run: npm run build
       - name: Current, historical, canonical and SEO checks
         run: |
-          for check in scripts/check-*.mjs; do node "$check"; done
+          node scripts/ci-archived-history.cjs 'for check in scripts/check-*.mjs; do node "$check"; done'
+          npm run check:seo
+          npm run check:public-content
       - name: Prepare browser tooling
         timeout-minutes: 5
         run: |

@@ -26,9 +26,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: node scripts/check-mobile-top-ad.mjs
-      - run: node scripts/check-mobile-chapter-top-ad.mjs
-      - run: node scripts/check-gnb-toc-height.mjs && node scripts/check-gnb-chapter-toc.mjs
+      - name: Verify original mobile advertisement and chapter TOC releases
+        run: |
+          node scripts/ci-archived-history.cjs "node scripts/check-mobile-top-ad.mjs && node scripts/check-mobile-chapter-top-ad.mjs && node scripts/check-gnb-toc-height.mjs && node scripts/check-gnb-chapter-toc.mjs"
       - name: Prepare temporary browser tooling
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1

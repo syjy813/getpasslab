@@ -41,7 +41,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: node scripts/check-chapter-formula-style.mjs
+      - name: Verify immutable formula style history
+        run: node scripts/ci-archived-history.cjs "node scripts/check-chapter-formula-style.mjs"
       - name: Prepare temporary browser tooling
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
