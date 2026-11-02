@@ -32,14 +32,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: node scripts/check-footer-left.mjs
-      - run: node scripts/check-mobile-toc-width.mjs
-      - run: node scripts/check-fire-image-copy.mjs
-      - run: node scripts/check-gnb-toc-height.mjs
-      - run: node scripts/check-gnb-chapter-toc.mjs
-      - run: node scripts/check-mobile-learning-ux.mjs
-      - run: node scripts/check-global-chapter-readability.mjs
-      - run: node scripts/check-all-chapter-hierarchy.mjs
+      - name: Verify original mobile learning and typography histories
+        run: |
+          node scripts/ci-archived-history.cjs "node scripts/check-footer-left.mjs && node scripts/check-mobile-toc-width.mjs && node scripts/check-fire-image-copy.mjs && node scripts/check-gnb-toc-height.mjs && node scripts/check-gnb-chapter-toc.mjs && node scripts/check-mobile-learning-ux.mjs && node scripts/check-global-chapter-readability.mjs && node scripts/check-all-chapter-hierarchy.mjs"
       - run: npm run check:seo && npm run check:public-content && npm run check:contrast && npm run check:deferred-question-content
       - name: Prepare temporary browser tooling
         run: |
