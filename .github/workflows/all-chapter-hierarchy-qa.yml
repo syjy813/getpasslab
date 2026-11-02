@@ -143,3 +143,23 @@ jobs:
           name: accident-cause-current-chapters
           path: qa-results/accident-cause-current-chapters/
           retention-days: 14
+
+  archived-baseline-proof:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Prove historical hierarchy audit on unchanged original release
+        run: |
+          node scripts/check-all-chapter-hierarchy.mjs
+          node scripts/check-global-chapter-readability.mjs
