@@ -1,6 +1,7 @@
 // Exact approved source and static-HTML projection for chapter modal/GNB UI.
 // Historical snapshots remain unchanged; new browser QA validates the visible UI.
 // Unknown changes are never projected: they remain visible to existing SHA guards.
+import {beforeCompletionDesktopToc} from './read-before-completion-desktop-toc.mjs';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import path from 'node:path';
@@ -16,6 +17,7 @@ const template=(tpl,count)=>tpl.replaceAll('{{N}}',String(count));
 const blob=bytes=>createHash('sha1').update(Buffer.from('blob '+bytes.length+String.fromCharCode(0))).update(bytes).digest('hex');
 const key=file=>path.normalize(path.isAbsolute(String(file))?path.relative(process.cwd(),String(file)):String(file)).split(path.sep).join('/');
 export function beforeChapterPracticeGNB(file,bytes){
+ bytes=beforeCompletionDesktopToc(file,bytes);
  bytes=Buffer.isBuffer(bytes)?bytes:Buffer.from(bytes);
  const name=key(file);
  if(Object.hasOwn(source,name)){
