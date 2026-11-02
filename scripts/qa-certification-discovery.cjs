@@ -34,19 +34,29 @@ let browser,activePage;
    assert.equal(await page.locator('[data-footer-ad]').count(),1,'one common footer slot per content page');
    assert.equal(await page.locator('[data-footer-ad-mount] ins,[data-footer-ad-mount] script').count(),0,'preview never requests footer ads');
    const menus=page.locator('[data-gnb-menu]');assert(await menus.count()>=1);
-   assert(await menus.locator('summary').evaluateAll(es=>es.every(e=>e.getBoundingClientRect().height>=44)),'menu target height');
+   assert(await menus.locator('summary:visible').evaluateAll(es=>es.every(e=>e.getBoundingClientRect().height>=44)),'visible menu target height');
+   const chapterDetail=route.split('/').filter(Boolean).length===4;
+   const showCertificationMenu=!chapterDetail||size.width>=768;
    const cert=page.locator('summary[aria-label="자격증 선택"]');
-   await cert.press('Enter');await page.locator('.gnb-cert-dropdown').waitFor({state:'visible'});await bounded(page,'.gnb-cert-dropdown');
-   assert.equal(await page.locator('.gnb-certification-link').count(),4);
-   await cert.press('Escape');assert(!await page.locator('.gnb-cert-dropdown').isVisible());assert(await cert.evaluate(e=>e===document.activeElement));
-   if(route.split('/').filter(Boolean).length===4){
+   assert.equal(await cert.isVisible(),showCertificationMenu,'certification menu visibility matches chapter mobile policy');
+   if(showCertificationMenu){
+    await cert.press('Enter');await page.locator('.gnb-cert-dropdown').waitFor({state:'visible'});await bounded(page,'.gnb-cert-dropdown');
+    assert.equal(await page.locator('.gnb-certification-link').count(),4);
+    await cert.press('Escape');assert(!await page.locator('.gnb-cert-dropdown').isVisible());assert(await cert.evaluate(e=>e===document.activeElement));
+   }
+   if(chapterDetail){
     const toc=page.locator('.gnb-menu');await toc.locator('summary').press('Enter');
     await page.waitForFunction(()=>{const m=document.querySelector('.gnb-chapter-dropdown'),a=m?.querySelector('[aria-current="page"]');if(!m||!a)return false;const b=m.getBoundingClientRect(),r=a.getBoundingClientRect();return b.height>0&&r.bottom>b.top&&r.top<b.bottom;});
     await bounded(page,'.gnb-chapter-dropdown');
     assert.equal(await toc.locator('[aria-current="page"]').getAttribute('href'),route);
     assert.deepEqual(await toc.locator('a').evaluateAll(es=>es.map(e=>e.getAttribute('href'))),await page.locator('.chapter-side .side-nav a').evaluateAll(es=>es.map(e=>e.getAttribute('href'))));
-    await cert.click();assert(!await toc.evaluate(e=>e.open),'only one menu open');
-    // The open mobile menu covers the title. Click the visible outer gutter.
+    if(showCertificationMenu){
+     await cert.click();assert(!await toc.evaluate(e=>e.open),'only one menu open');
+    }else{
+     await toc.locator('summary').click();assert(!await toc.evaluate(e=>e.open),'chapter-only menu toggles closed');
+     await toc.locator('summary').click();
+    }
+    // The open menu covers the title. Click the visible outer gutter.
     await page.mouse.click(4,size.height/2);assert.equal(await page.locator('[data-gnb-menu][open]').count(),0,'outside click closes');
     await toc.locator('summary').click();await page.locator('.gnb-chapter-dropdown').waitFor({state:'visible'});
     const other=toc.locator('a:not([aria-current])').first(),destination=await other.getAttribute('href');

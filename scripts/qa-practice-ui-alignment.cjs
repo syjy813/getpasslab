@@ -19,8 +19,10 @@ const styles=(locator,keys=properties)=>locator.evaluate((e,keys)=>Object.fromEn
    const page=await context.newPage();page.on('pageerror',e=>report.errors.push(String(e)));assert.equal((await page.goto(base+route)).status(),200);await page.evaluate(()=>document.fonts.ready);
    const open=page.locator('[data-practice-open]');await open.scrollIntoViewIfNeeded();await open.click();const dialog=page.locator('[data-practice-dialog]'),item=dialog.locator('[data-practice-item]');await item.waitFor();
    assert.equal(await dialog.locator('.practice-intro,[data-practice-source]').count(),0);
-   assert.deepEqual(await styles(dialog.locator('[data-practice-close]')),referenceClose,'close button matches fire mock exam '+width);
-   assert.equal((await dialog.locator('[data-practice-close]').textContent()).trim(),'창 닫기');
+   const closeButton=dialog.locator('[data-practice-close]');
+   assert.equal(await closeButton.getAttribute('aria-label'),'문제 풀이 닫기');
+   assert.equal(await closeButton.locator('svg[aria-hidden="true"]').count(),1,'X icon is accessible');
+   assert(await closeButton.evaluate(e=>e.getBoundingClientRect().width>=44&&e.getBoundingClientRect().height>=44),'close hit target at least 44px');
    const choice=item.locator('.practice-choice').first();assert.deepEqual(await styles(choice),referenceChoice,'choice card matches fire mock exam '+width);
    assert.equal(await choice.locator('input').evaluate(e=>getComputedStyle(e).clipPath),'inset(50%)');assert.equal(await choice.locator('input').getAttribute('type'),'radio');
    assert.equal(await item.locator('input:checked').count(),0);await choice.click();assert.deepEqual(await styles(choice,['backgroundColor','borderTopColor']),referenceSelected);
@@ -31,7 +33,7 @@ const styles=(locator,keys=properties)=>locator.evaluate((e,keys)=>Object.fromEn
    assert(await dialog.evaluate(e=>e.scrollWidth<=e.clientWidth+1));assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
    if(width===390||width===1440)await dialog.screenshot({path:out+'/'+route.split('/')[1]+'-'+width+'.png'});
    await dialog.locator('[data-practice-close]').click();await dialog.waitFor({state:'hidden'});assert(await open.evaluate(e=>e===document.activeElement));
-   report.cases.push({route,width,close:'matches reference',choices:'matches reference',keyboard:'PASS',gradeNextAndClose:'PASS',overflow:false});await page.close();
+   report.cases.push({route,width,close:'44px icon + aria label',choices:'matches reference',keyboard:'PASS',gradeNextAndClose:'PASS',overflow:false});await page.close();
   }await context.close();
  }assert.deepEqual(report.errors,[]);report.result='PASS';
 }catch(e){report.result='FAIL';report.errors.push(String(e));throw e;}finally{fs.writeFileSync(out+'/results.json',JSON.stringify(report,null,2));await browser.close();}console.log('[Practice UI reference comparison] PASS',report.cases.length,'certification/viewport cases');})().catch(e=>{console.error(e);process.exitCode=1});
