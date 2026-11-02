@@ -12,7 +12,10 @@ summary:
 - 첫 직장은 회사 이름보다 실제 담당 업무를 먼저 확인. 같은 ‘시설기사’라도 현장마다 하는 일이 크게 다름
 - 설비·선임 기회·경력증빙·업무 범위·교육체계가 중요한 비교 기준. 다섯 가지가 모두 완벽할 필요는 없지만, 무엇을 얻고 포기하는지는 알아야 함
 - 월급과 고용안정도 중요. 빠른 취업이 목표인지, 설비 기술을 배우려는지, 장기 경력을 쌓으려는지에 따라 좋은 현장은 달라짐
-sources: []
+sources:
+- title: 대한기계설비건설협회 기계설비유지관리자 경력신고 서류
+  url: https://career.kmcca.or.kr/yuji/bbs/selectBoardList.do?bbsId=10000000000000000225&bbsView=HTML
+  note: 경력확인서와 근무사실 증빙 서류 기준
 related:
 - what-is-facility-management
 - employment-types

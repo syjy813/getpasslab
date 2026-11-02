@@ -11,7 +11,16 @@ summary:
 - 주간·격일·교대라는 이름만으로 근무시간과 휴무가 정해지지는 않음. 실제 출퇴근 시각과 근무조 편성표를 확인해야 함
 - 24시간 현장에 있다고 24시간 전부 근로시간인 것은 아님. 하지만 휴게로 적혀 있어도 자유롭게 쉴 수 없다면 근로시간으로 판단될 수 있음
 - 월급은 기본급과 각종 수당을 나눠 비교. 야간·연장수당 포함 여부, 사업장별 법적 적용 조건까지 확인해야 함
-sources: []
+sources:
+- title: 근로기준법 제50조 근로시간
+  url: https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1034322355
+  note: 사용자의 지휘·감독 아래 대기시간
+- title: 근로기준법 제63조 적용의 제외
+  url: https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1029727975
+  note: 감시·단속적 근로의 승인과 적용 범위
+- title: 법제처 감시·단속적 근로자 야간근로수당 해석
+  url: https://www.law.go.kr/DRF/lawService.do?ID=315182&OC=unicpla&mobileYn=Y&target=expc&type=HTML
+  note: 야간근로수당 관련 해석
 related:
 - what-is-facility-management
 - first-job

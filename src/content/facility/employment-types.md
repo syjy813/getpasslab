@@ -11,7 +11,13 @@ summary:
 - 직영·자회사·용역을 구분할 때는 실제 고용주부터 확인. 같은 건물에서 일해도 근로계약을 맺는 회사가 다를 수 있음
 - 급여·정년·복리후생은 회사 간판으로 결정되지 않음. 근로계약서와 해당 회사의 인사규정, 개별 채용공고를 봐야 함
 - 경력의 가치는 고용형태만으로 단정할 수 없음. 맡았던 설비·업무와 이를 증빙할 수 있는지가 중요함
-sources: []
+sources:
+- title: 고용노동부 용역근로자 근로조건 보호지침 안내
+  url: https://moel.go.kr/policy/policydata/view.do?bbs_seq=20181000129
+  note: 적용 대상과 계약상 고용승계 조건 확인
+- title: 고용노동부 고용승계 상담 사례
+  url: https://1350.moel.go.kr/rtmview.do?id=1000261266
+  note: 포괄 승계와 신규 채용의 차이 검토
 related:
 - what-is-facility-management
 - first-job
