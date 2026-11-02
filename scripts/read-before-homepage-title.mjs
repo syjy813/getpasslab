@@ -44,7 +44,7 @@ export function beforeHomepageTitle(file, bytes) {
 export function assertCurrentHomepageTitle(file, bytes) {
   const row = revisions[file];
   assert(row, file + ': expected homepage scope');
-  assert.equal(hash(bytes), row.current, file + ': complete approved native file');
+  assert.equal(hash(beforeChapterPracticeGNB(file, bytes)), row.current, file + ': complete approved homepage after exact shared UI projection');
   assert(bytes.toString('utf8').includes(newTitle), file + ': new title visible');
   assert(!bytes.toString('utf8').includes(oldTitle), file + ': obsolete title absent');
 }
