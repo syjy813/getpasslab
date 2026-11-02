@@ -74,3 +74,10 @@
 
 - 검토용 빌드의 글 카드에는 초안 데이터의 임시 날짜 대신 ‘검토용 초안’을 표시한다. 발행된 글은 기존처럼 발행일을 표시한다.
 - 01~05 원고에 들어 있는 날짜는 실제 공개일이 아니다. 발행 시 실제 공개일과 최종 수정·자료 확인일을 각각 확인해 갱신해야 한다. 이 변경은 글의 공개 상태를 변경하지 않는다.
+
+## 2026-11-02 04번 근로시간·수당 추가 대조
+
+- [고용노동부 근로시간 판단 기준](https://www.moel.go.kr/policy/policybbs/workinghour/detailList.do?tpi_seq=20)은 휴식·수면 여부를 실제 업무와 사용자의 간섭, 휴게 장소 등 여러 사정으로 개별 판단한다고 안내한다. 04번의 설명에 해당 직접 출처를 추가했다.
+- [고용노동부의 5인 미만 안내](https://1350.moel.go.kr/rtmview.do?id=1000281283) 및 [근로기준법 제56조](https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1025590459)를 대조했다. 5인 미만 사업장에서 법정 가산임금 의무가 일반적으로 적용되지 않는다는 점과 실제 근로시간의 임금·계약상 수당을 구분하도록 원고에 보강했다.
+- [법제처 해석](https://www.law.go.kr/DRF/lawService.do?ID=315182&OC=unicpla&mobileYn=Y&target=expc&type=HTML)과 [고용노동부 설명](https://www.moel.go.kr/news/enews/explain/enewsView.do?news_seq=10646)은 감시·단속 승인만으로 야간 가산 규정까지 배제되지는 않는다는 취지를 확인해 준다. 적용 사업장 및 개별 사실관계는 별도 확인이 필요하다.
+- 이는 04번의 관련 문장에 대한 부분 검토이며 전체 원고·그림 검수나 공개 승인이 아니다.
