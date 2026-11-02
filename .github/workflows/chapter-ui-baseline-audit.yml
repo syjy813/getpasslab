@@ -1,0 +1,52 @@
+name: Temporary chapter UI baseline audit
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/chapter-ui-baseline-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci && npm run build
+      - name: Build baseline main and compare output
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git fetch origin "$BASE_SHA" --depth=1
+          git worktree add --detach /tmp/gpl-qa-baseline "$BASE_SHA"
+          (cd /tmp/gpl-qa-baseline && npm ci >/dev/null && npm run build >/dev/null)
+          python3 - <<'PY'
+          import pathlib,hashlib,difflib,re,collections
+          a=pathlib.Path('/tmp/gpl-qa-baseline/dist'); b=pathlib.Path('dist')
+          af=set(str(x.relative_to(a)) for x in a.rglob('*.html'))
+          bf=set(str(x.relative_to(b)) for x in b.rglob('*.html'))
+          assert af==bf,(len(af),len(bf))
+          data=[]
+          for p in sorted(af):
+            old=(a/p).read_text();new=(b/p).read_text()
+            if old!=new:data.append((p,old,new))
+          print('BASE_AUDIT_TOTALS',len(af),len(data))
+          for p,old,new in [data[0],next((x for x in data if 'practice-modal-header' in x[1]),data[0])]:
+            x=difflib.SequenceMatcher(None,old,new,autojunk=True)
+            edits=[(op,old[i:j][:850],new[k:l][:850]) for op,i,j,k,l in x.get_opcodes() if op!='equal']
+            print('BASE_AUDIT_SAMPLE',repr(p),'old',len(old),'new',len(new),'edits',len(edits))
+            for op,o,n in edits[:12]: print('BASE_AUDIT_EDIT',op,repr(o),'=>',repr(n))
+          assets_a=sorted(x.name for x in (a/'_astro').glob('*.css'))
+          assets_b=sorted(x.name for x in (b/'_astro').glob('*.css'))
+          print('BASE_AUDIT_CSS_ADDED',sorted(set(assets_b)-set(assets_a)))
+          print('BASE_AUDIT_CSS_REMOVED',sorted(set(assets_a)-set(assets_b)))
+          for p,old,new in data[:1]:
+            print('BASE_AUDIT_ASSETS',re.findall(r'/_astro/[^"]+\.css',old)[:20],re.findall(r'/_astro/[^"]+\.css',new)[:20])
+          PY
