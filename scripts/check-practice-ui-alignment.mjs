@@ -22,15 +22,14 @@ for(const [f,row]of Object.entries(review.changes)){
 }
 assert(dialogs>300,'shared overlay rollout');
 const reviewedBundleChanges={
- 'dist/_astro/BaseLayout.Bj2BltZT.css':'dist/_astro/BaseLayout.C1KrpNFq.css',
- 'dist/_astro/_slug_.DBxZQ9Ra.css':'dist/_astro/_slug_.ji1xakQR.css',
+ 'dist/_astro/BaseLayout.Bj2BltZT.css':{path:'dist/_astro/BaseLayout.C1KrpNFq.css',sha:'e9dba7d1a0192ab5bf724b0d77f067cb07a06dec27cd74ded21e88ed1253fe59'},
+ 'dist/_astro/_slug_.DBxZQ9Ra.css':{path:'dist/_astro/_slug_.ji1xakQR.css',sha:'fcd472fdfaaca18b388f38acc2e517cd907c82c5fa75a093f6bb22c780ed8885'},
 };
 assert.equal(Object.keys(review.bundles).length,2);
 for(const [file,sha]of Object.entries(review.bundles)){
  const replacement=reviewedBundleChanges[file];
  if(!replacement){assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed runtime bundle');continue;}
- const css=fs.readFileSync(replacement,'utf8');
- assert(css.includes(replacement.includes('BaseLayout')?'gnb-cert-menu':'practice-header-info'),replacement+': only the expected new UI styles compiled');
+ assert.equal(hash(fs.readFileSync(replacement.path)),replacement.sha,replacement.path+': exact new runtime CSS bundle');
 }
 const source=fs.readFileSync('src/components/InstantQuestionPractice.astro','utf8');
 assert(source.includes('clip-path:inset(50%)')&&source.includes('input:focus-visible')&&source.includes("radio.type = 'radio'"),'native keyboard-accessible single selection retained');
