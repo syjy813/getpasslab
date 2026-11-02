@@ -50,3 +50,14 @@ jobs:
           for p,old,new in data[:1]:
             print('BASE_AUDIT_ASSETS',re.findall(r'/_astro/[^"]+\.css',old)[:20],re.findall(r'/_astro/[^"]+\.css',new)[:20])
           PY
+      - name: Print modal HTML before and after
+        run: |
+          python3 - <<'PY'
+          import pathlib
+          p='computer-literacy/written/computer-basics/aero-peek/index.html'
+          for name,root in [('BEFORE','/tmp/gpl-qa-baseline/dist'),('AFTER','dist')]:
+            s=(pathlib.Path(root)/p).read_text()
+            at=s.index('<div class="practice-modal-header"')
+            end=s.index('<p class="practice-loading"',at)
+            print('MODAL_'+name,repr(s[at:end]))
+          PY
