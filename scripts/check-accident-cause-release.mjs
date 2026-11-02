@@ -60,6 +60,7 @@ assert.deepEqual(changed,[
   '.github/workflows/certification-discovery-qa.yml',
   'scripts/qa-accident-cause-chapter.cjs',
   'scripts/qa-mobile-chapter-top-ad.cjs',
+  'scripts/qa-chapter-formula-style.cjs',
   'scripts/qa-all-chapter-hierarchy.cjs',
   'scripts/check-accident-cause-release.mjs',
   'scripts/ci-archived-history.cjs',
@@ -87,4 +88,4 @@ assert(html.includes('Education (교육적 대책)'),'3E education retained');
 assert(html.includes('Enforcement (관리적 대책)'),'3E enforcement retained');
 assert(!html.includes('불가항력 (천재 등)'),'redundant example removed');
 
-console.log('[Accident cause release] PASS: three exact production deltas, 16-file total scope, immutable question metadata, native HTML, adversarial edit rejection');
+console.log('[Accident cause release] PASS: three exact production deltas, 17-file total scope, immutable question metadata, native HTML, adversarial edit rejection');
