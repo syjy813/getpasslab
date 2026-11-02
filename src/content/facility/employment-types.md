@@ -12,12 +12,18 @@ summary:
 - 급여·정년·복리후생은 회사 간판으로 결정되지 않음. 근로계약서와 해당 회사의 인사규정, 개별 채용공고를 봐야 함
 - 경력의 가치는 고용형태만으로 단정할 수 없음. 맡았던 설비·업무와 이를 증빙할 수 있는지가 중요함
 sources:
-- title: 고용노동부 용역근로자 근로조건 보호지침 안내
-  url: https://moel.go.kr/policy/policydata/view.do?bbs_seq=20181000129
-  note: 적용 대상과 계약상 고용승계 조건 확인
+- title: 고용노동부 공공부문 도급 노동자 보호지침 시행 안내
+  url: https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19901
+  note: 2026년 9월 시행 지침과 첨부 원문, 적용 대상 및 고용유지·승계 기준
+- title: 대법원 2016두57045 판결 주요 내용
+  url: https://scourt.go.kr/supreme/news/NewsViewAction2.work?gubun=4&searchOption=&searchWord=&seqnum=7676
+  note: 용역업체 변경 시 고용승계 기대권을 판단한 사례
 - title: 고용노동부 고용승계 상담 사례
   url: https://1350.moel.go.kr/rtmview.do?id=1000261266
   note: 포괄 승계와 신규 채용의 차이 검토
+- title: 대한기계설비건설협회 기계설비유지관리자 경력신고 서류
+  url: https://career.kmcca.or.kr/yuji/bbs/selectBoardList.do?bbsId=10000000000000000225&bbsView=HTML
+  note: 경력확인서와 근무사실 증빙 서류 기준
 related:
 - what-is-facility-management
 - first-job
@@ -90,6 +96,8 @@ certifications: []
 대법원은 구체적인 계약 내용과 과거 고용승계 관행 등 여러 사정에 따라, 새 용역업체로 고용이 이어질 것이라는 **고용승계 기대권**이 인정될 수 있다고 판단했다. 기대권이 인정되는 경우에도 실제 적용은 해당 사안의 사실관계에 따라 달라진다.
 
 또한 2026년 9월 시행된 **공공부문 도급 노동자 보호지침**은 적용 대상 공공부문에서 특별한 사정이 없으면 고용유지·승계를 입찰 조건으로 하도록 하는 등 보호 기준을 제시했다. **이 지침을 모든 민간 용역현장에 동일하게 적용해서는 안 된다.**
+
+공공부문 현장이라도 해당 지침과 입찰·도급계약이 내 업무에 어떻게 적용되는지 확인해야 한다. 업체가 바뀔 때 **고용이 이어지는지와 이전 근무기간을 새 회사의 계속근로기간으로 인정하는지는 별도로 확인할 질문**이다. 고용이 이어진다는 말만 듣고 이전 회사의 근무기간이 모든 조건에 그대로 반영된다고 생각하지 말자.
 
 ![관리업체 변경 시 확인할 계약 조건과 근로계약 관련 사항을 설명한 인포그래픽](/images/facility-drafts/03/03-contract-change-check.webp)
 

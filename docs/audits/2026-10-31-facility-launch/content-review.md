@@ -81,3 +81,10 @@
 - [고용노동부의 5인 미만 안내](https://1350.moel.go.kr/rtmview.do?id=1000281283) 및 [근로기준법 제56조](https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1025590459)를 대조했다. 5인 미만 사업장에서 법정 가산임금 의무가 일반적으로 적용되지 않는다는 점과 실제 근로시간의 임금·계약상 수당을 구분하도록 원고에 보강했다.
 - [법제처 해석](https://www.law.go.kr/DRF/lawService.do?ID=315182&OC=unicpla&mobileYn=Y&target=expc&type=HTML)과 [고용노동부 설명](https://www.moel.go.kr/news/enews/explain/enewsView.do?news_seq=10646)은 감시·단속 승인만으로 야간 가산 규정까지 배제되지는 않는다는 취지를 확인해 준다. 적용 사업장 및 개별 사실관계는 별도 확인이 필요하다.
 - 이는 04번의 관련 문장에 대한 부분 검토이며 전체 원고·그림 검수나 공개 승인이 아니다.
+
+## 2026-11-02 03번 고용승계 출처 보완
+
+- 기존 출처의 2018년 용역근로자 보호지침 안내는 본문에서 설명하는 2026년 새 지침의 직접 근거가 아니었다. 이를 [2026년 고용노동부 시행 안내와 첨부 지침](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19901)으로 교체했다. 발표문은 종전 용역·민간위탁 보호기준을 통합했고, 특별한 사정이 없으면 고용유지·승계를 입찰 조건으로 하고 계약에 반영하도록 안내한다.
+- [대법원 2016두57045 판결 안내](https://scourt.go.kr/supreme/news/NewsViewAction2.work?gubun=4&searchOption=&searchWord=&seqnum=7676)는 계약 내용·업무 특성·고용승계 관행 등을 종합해 고용승계 기대권을 인정한 개별 사례다. 자동 승계가 일반 원칙이라는 뜻으로 확대하지 않았다.
+- 고용이 이어지는지와 이전 근무기간을 새 고용주 아래 계속근로기간으로 인정받는지는 구분해 확인하도록 원고에 추가했다. 자회사·민간 현장 전체에 공공부문 지침이 자동 적용된다고 단정하지 않는다. 경력신고 설명에는 [협회 제출서류 안내](https://career.kmcca.or.kr/yuji/bbs/selectBoardList.do?bbsId=10000000000000000225&bbsView=HTML)를 연결했다.
+- 이미지와 원고 전체, 개별 사업장의 실제 계약 및 법적 판단은 미검증이며 해당 글은 초안으로 유지한다.
