@@ -24,7 +24,8 @@ for(const width of [320,390,768,1440]){
   const toc=page.locator('.gnb-menu');
   assert.equal(await toc.count(),1,'chapter TOC stays available');
   assert.equal(await cert.isVisible(),width>=768,'cert picker hidden only on small chapter detail');
-  assert(await toc.locator('summary').isVisible(),'chapter TOC summary visible');
+  assert.equal(await toc.locator('summary').isVisible(),width<1024,'TOC visible only when desktop sidebar is absent');
+  if(width>=1024) assert(await page.locator('.chapter-side').isVisible(),'desktop chapter sidebar replaces header TOC');
   assert.equal(await page.locator('.gnb-logo').getAttribute('href'),'/','home navigation stays available');
   const opener=page.locator('[data-practice-open]');
   assert(await opener.count(),'shared practice entry is present');
