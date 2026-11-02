@@ -4,12 +4,12 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 
 const sourceBlobs={
-  'src/components/GNB.astro':{before:'3b384b9a9f3e8b60f9088cd7ddb15e18019eb408',now:'28a9345ce1e965c49171d75cb84fe0712166b40d'},
+  'src/components/GNB.astro':{before:'3b384b9a9f3e8b60f9088cd7ddb15e18019eb408',now:'bc86e93d222a9d817b4f78b50d2412ac48102f1d'},
   'src/components/InstantQuestionPractice.astro':{before:'cbc8a863e3c132c6fc905b4f99418276ed33882e',now:'7ee33b06b99d229ecb3830b2701af8a5e1c95848'},
 };
 const changes={
  'src/components/GNB.astro':[
-  ['  /* Desktop already has the persistent chapter sidebar; only mobile needs the header TOC. */\n  @media(min-width:1024px){.gnb-cert-menu + .gnb-menu{display:none}}\n','']
+  ['  /* Desktop already has the persistent chapter sidebar; only mobile needs the header TOC. */\n  @media(min-width:1024px){.gnb-cert-menu,.gnb-cert-menu + .gnb-menu{display:none}}\n','']
  ],
  'src/components/InstantQuestionPractice.astro':[
   ["if (progress) { progress.hidden = false; progress.textContent = '1 / ' + meta.length; }","if (progress) progress.textContent = '1 / ' + meta.length;"],
