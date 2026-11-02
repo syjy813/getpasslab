@@ -65,7 +65,7 @@ for(const width of [320,390,768,1440]){
  }
  for(const other of ['/', '/computer-literacy/written/']){
   assert.equal((await page.goto(base+other)).status(),200);
-  assert(await page.locator('.gnb-cert-menu').isVisible(),'ordinary pages retain certification menu');
+  assert(await page.locator('[data-gnb-menu] > summary[aria-label="자격증 선택"]').isVisible(),'ordinary pages retain certification menu');
   assert.equal(await page.locator('.gnb-chapter-dropdown').count(),0,'no extra chapter picker on ordinary pages');
  }
  await context.close();
