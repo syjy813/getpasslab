@@ -61,3 +61,27 @@ jobs:
             end=s.index('<p class="practice-loading"',at)
             print('MODAL_'+name,repr(s[at:end]))
           PY
+
+      - name: Verify exact projection for all 556 pages and two sources
+        run: |
+          node --input-type=module <<'NODE'
+          import { beforeChapterPracticeGNB } from './scripts/read-before-chapter-practice-gnb.mjs';
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          const base='/tmp/gpl-qa-baseline';
+          const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
+          const current=walk('dist').filter(p=>p.endsWith('.html'));
+          let changed=0;
+          for(const file of current){
+            const previous=fs.readFileSync(path.join(base,file));
+            const now=fs.readFileSync(file);
+            const projected=beforeChapterPracticeGNB(file,now);
+            assert(projected.equals(previous),file+': no unreviewed HTML changes');
+            if(!now.equals(previous))changed++;
+          }
+          for(const file of ['src/components/GNB.astro','src/components/InstantQuestionPractice.astro']){
+            assert(beforeChapterPracticeGNB(file,fs.readFileSync(file)).equals(fs.readFileSync(path.join(base,file))),file);
+          }
+          console.log('EXACT_UI_PROJECTION_PASS',JSON.stringify({pages:current.length,changed,sourceFiles:2}));
+          NODE
