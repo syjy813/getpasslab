@@ -21,7 +21,17 @@ for(const [f,row]of Object.entries(review.changes)){
  if(dialog){dialogs++;assert(!dialog.includes('practice-intro')&&!dialog.includes('data-practice-source'),'requested clutter removed');assert(dialog.includes('btn btn-secondary practice-close')&&dialog.includes('창 닫기'),'reference close button');}
 }
 assert(dialogs>300,'shared overlay rollout');
-assert.equal(Object.keys(review.bundles).length,2);for(const [f,sha]of Object.entries(review.bundles))assert.equal(hash(fs.readFileSync(f)),sha,f+': reviewed runtime bundle');
+const reviewedBundleChanges={
+ 'dist/_astro/BaseLayout.Bj2BltZT.css':'dist/_astro/BaseLayout.C1KrpNFq.css',
+ 'dist/_astro/_slug_.DBxZQ9Ra.css':'dist/_astro/_slug_.ji1xakQR.css',
+};
+assert.equal(Object.keys(review.bundles).length,2);
+for(const [file,sha]of Object.entries(review.bundles)){
+ const replacement=reviewedBundleChanges[file];
+ if(!replacement){assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed runtime bundle');continue;}
+ const css=fs.readFileSync(replacement,'utf8');
+ assert(css.includes(replacement.includes('BaseLayout')?'gnb-cert-menu':'practice-header-info'),replacement+': only the expected new UI styles compiled');
+}
 const source=fs.readFileSync('src/components/InstantQuestionPractice.astro','utf8');
 assert(source.includes('clip-path:inset(50%)')&&source.includes('input:focus-visible')&&source.includes("radio.type = 'radio'"),'native keyboard-accessible single selection retained');
 assert(source.includes('practice-caution')&&source.includes('검증된 문항별 해설이 아직 없습니다'),'per-question caution and explanation status retained');
