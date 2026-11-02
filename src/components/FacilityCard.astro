@@ -9,5 +9,5 @@ const { article } = Astro.props;
   <span class="card-label">{facilityCategory(article.data.category).name}</span>
   <h3 class="card-title">{article.data.title}</h3>
   <p class="card-description">{article.data.description}</p>
-  <div class="card-meta"><time datetime={article.data.publishedAt}>{article.data.publishedAt.replaceAll('-', '.')}</time><span aria-hidden="true"> · </span>읽어보기 →</div>
+  <div class="card-meta">{article.data.status === 'draft' ? <span>검토용 초안</span> : <time datetime={article.data.publishedAt}>{article.data.publishedAt.replaceAll('-', '.')}</time>}<span aria-hidden="true"> · </span>읽어보기 →</div>
 </a>
