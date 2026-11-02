@@ -25,10 +25,15 @@ let browser;
    assert.equal(d.shown,width<768);assert(d.scroll<=d.client+1,'no page overflow');assert.equal(d.ins,0);assert.equal(d.sdk,0);
    if(width<768){assert.equal(d.height,82);assert.equal(d.mountWidth,320);assert.equal(d.mountHeight,50);assert(Math.abs(d.center-width/2)<=1);assert.equal(d.top,d.gnbBottom);assert(d.breadcrumb>d.bottom);}
    else assert.equal(d.height,0,'no PC whitespace');
-   await page.locator('.gnb-menu>summary').click();await page.waitForFunction(()=>document.querySelector('.gnb-menu').open);
-   const menu=await page.locator('.gnb-chapter-dropdown').boundingBox();
-   if(width<768){const footer=await page.locator('.chapter-mobile-nav').boundingBox();assert(menu.y+menu.height<=footer.y-8,'TOC still clears fixed footer');}
-   await page.locator('.gnb-menu>summary').press('Escape');assert(!await page.locator('.gnb-chapter-dropdown').isVisible());
+   if(width<1024){
+    await page.locator('.gnb-menu>summary').click();await page.waitForFunction(()=>document.querySelector('.gnb-menu').open);
+    const menu=await page.locator('.gnb-chapter-dropdown').boundingBox();
+    if(width<768){const footer=await page.locator('.chapter-mobile-nav').boundingBox();assert(menu.y+menu.height<=footer.y-8,'TOC still clears fixed footer');}
+    await page.locator('.gnb-menu>summary').press('Escape');assert(!await page.locator('.gnb-chapter-dropdown').isVisible());
+   }else{
+    assert(!await page.locator('.gnb-menu>summary').isVisible(),'desktop sidebar replaces header TOC');
+    assert(await page.locator('.chapter-side').isVisible(),'desktop chapter sidebar stays visible');
+   }
    if(width===390)await page.screenshot({path:`${out}/390-${route.split('/').at(-2)}-preview.png`});
    report.cases.push({route,width,case:'chapter ad placement, existing ad and GNB/footer',passed:true});
   }
