@@ -1,0 +1,44 @@
+name: Temporary completion & TOC output audit
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/temporary-completion-toc-output-audit.yml'
+permissions:
+  contents: read
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci && npm run build
+      - name: Compile exact baseline and diff 556 HTML files
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git fetch origin "$BASE_SHA" --depth=1
+          git worktree add --detach /tmp/gpl-base "$BASE_SHA"
+          (cd /tmp/gpl-base && npm ci >/dev/null && npm run build >/dev/null)
+          python3 - <<'PY'
+          import pathlib,re,difflib
+          a,b=pathlib.Path('/tmp/gpl-base/dist'),pathlib.Path('dist')
+          paths=sorted(str(p.relative_to(b)) for p in b.rglob('*.html'))
+          assert paths==sorted(str(p.relative_to(a)) for p in a.rglob('*.html'))
+          updated=[p for p in paths if (a/p).read_bytes()!=(b/p).read_bytes()]
+          print('AUDIT_COUNTS',len(paths),len(updated))
+          for p in [paths[0],next((x for x in updated if 'accident-analysis-tools' in x),updated[0])]:
+            old,new=(a/p).read_text(),(b/p).read_text()
+            edits=[(op,old[i:j],new[k:l]) for op,i,j,k,l in difflib.SequenceMatcher(None,old,new,autojunk=True).get_opcodes() if op!='equal']
+            print('AUDIT_SAMPLE',p,'changes',len(edits))
+            for op,x,y in edits[:16]:print('AUDIT_EDIT',op,repr(x[:1500]),repr(y[:1500]))
+          for ext in ['css','js']:
+            before=set(p.name for p in (a/'_astro').glob('*.'+ext))
+            after=set(p.name for p in (b/'_astro').glob('*.'+ext))
+            print('AUDIT_ASSETS',ext,'removed',sorted(before-after),'added',sorted(after-before))
+          PY
