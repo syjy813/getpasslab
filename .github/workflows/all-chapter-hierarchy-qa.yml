@@ -30,8 +30,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: node scripts/check-all-chapter-hierarchy.mjs
-      - run: node scripts/check-global-chapter-readability.mjs
+      - name: Verify immutable historical hierarchy and readability snapshots
+        run: node scripts/ci-archived-history.cjs "node scripts/check-all-chapter-hierarchy.mjs && node scripts/check-global-chapter-readability.mjs"
       - name: Prepare browser
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
