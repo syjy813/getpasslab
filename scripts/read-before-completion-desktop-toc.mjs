@@ -18,7 +18,7 @@ const changes={
  ]
 };
 const oldAssets={
- '/_astro/BaseLayout.DPpxxNzx.css':'/_astro/BaseLayout.C1KrpNFq.css',
+ '/_astro/BaseLayout.CZK5_rkE.css':'/_astro/BaseLayout.C1KrpNFq.css',
  '/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.pDAgU--1.js':'/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.B-5ce8YB.js'
 };
 const blob=b=>createHash('sha1').update(Buffer.from('blob '+b.length+String.fromCharCode(0))).update(b).digest('hex');
