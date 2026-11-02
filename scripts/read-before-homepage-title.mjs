@@ -1,5 +1,6 @@
 // Normalize only the approved 2026-10-31 homepage title edit for historical
 // SHA-256 regression snapshots. Native output retains the new title.
+import { beforeChapterPracticeGNB } from './read-before-chapter-practice-gnb.mjs';
 import { beforeExamKeywordHeader } from './read-before-exam-keyword-header.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -20,6 +21,7 @@ const revisions = {
 };
 
 export function beforeHomepageTitle(file, bytes) {
+  bytes = beforeChapterPracticeGNB(file, bytes);
   bytes = beforeExamKeywordHeader(file, bytes);
   const key = path.normalize(path.isAbsolute(String(file))
     ? path.relative(process.cwd(), String(file)) : String(file)).replaceAll('\\', '/');
