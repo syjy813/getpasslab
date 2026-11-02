@@ -1,0 +1,41 @@
+name: Temporary desktop header output audit
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/temporary-desktop-header-audit.yml'
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci && npm run build
+      - name: Print exact asset references and changed page shapes
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git fetch origin "$BASE_SHA" --depth=1
+          git worktree add --detach /tmp/gpl-header-base "$BASE_SHA"
+          (cd /tmp/gpl-header-base && npm ci >/dev/null && npm run build >/dev/null)
+          python3 - <<'PY'
+          import pathlib,difflib
+          a=pathlib.Path('/tmp/gpl-header-base/dist');b=pathlib.Path('dist')
+          pages=sorted(str(p.relative_to(b)) for p in b.rglob('*.html'))
+          changed=[p for p in pages if (a/p).read_bytes()!=(b/p).read_bytes()]
+          print('HEADER_AUDIT_PAGES',len(pages),'changed',len(changed))
+          for p in ['about/index.html','industrial-safety/written/safety-management/accident-analysis-tools/index.html']:
+            old,new=(a/p).read_text(),(b/p).read_text()
+            edits=[(old[i:j],new[k:l]) for op,i,j,k,l in difflib.SequenceMatcher(None,old,new,autojunk=True).get_opcodes() if op!='equal']
+            print('HEADER_AUDIT_EDIT',p,[(repr(x[:400]),repr(y[:400])) for x,y in edits])
+          print('HEADER_AUDIT_CSS_OLD',sorted(x.name for x in (a/'_astro').glob('BaseLayout*.css')))
+          print('HEADER_AUDIT_CSS_NEW',sorted(x.name for x in (b/'_astro').glob('BaseLayout*.css')))
+          PY
+          sha256sum dist/_astro/BaseLayout.*.css
