@@ -104,6 +104,8 @@ async function restored(page, before) {
               await item.locator('[data-practice-check]').click(); await item.locator('[data-practice-next]').click();
             }
             assert.equal(await dialog.locator('[data-practice-score]').innerText(), '6문제 중 5문제 수록 답안과 일치');
+            assert(await dialog.locator('[data-practice-progress]').isHidden(), 'no redundant 완료 badge in completion header');
+            assert(await dialog.locator('[data-practice-complete]').isVisible(), 'completion results and restart remain visible');
             await dialog.locator('[data-practice-finish]').click();
           } else if (method === 'Escape') await page.keyboard.press('Escape');
           else if (method === 'close-button') await dialog.locator('[data-practice-close]').click();
