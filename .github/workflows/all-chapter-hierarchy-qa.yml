@@ -58,3 +58,42 @@ jobs:
           name: all-chapter-hierarchy-qa
           path: qa-results/all-chapter-hierarchy/
           retention-days: 14
+
+  accident-cause-qa:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check:seo && npm run check:public-content
+      - name: Prepare scoped browser QA
+        run: |
+          npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
+          /tmp/getpasslab-browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Accident cause chapter at 320, 390, 400, 768 and 1440px
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/getpasslab-browser-tools/node_modules/playwright
+          QA_BASE_URL: http://127.0.0.1:4321
+          QA_OUTPUT_DIR: qa-results/accident-cause-chapter
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/getpasslab-accident-cause-preview.log 2>&1 &
+          preview_pid=$!
+          trap 'kill "$preview_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 40); do
+            if curl -fsS "$QA_BASE_URL/" >/dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS "$QA_BASE_URL/" >/dev/null
+          node scripts/qa-accident-cause-chapter.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: accident-cause-chapter-qa
+          path: qa-results/accident-cause-chapter/
+          retention-days: 14
