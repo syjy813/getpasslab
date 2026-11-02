@@ -12,7 +12,7 @@ const priorModal="<div class=\"practice-modal-header\" data-astro-cid-pfsuwkax> 
 const currentModal="<div class=\"practice-modal-header\" data-astro-cid-pfsuwkax> <div class=\"practice-header-info\" data-astro-cid-pfsuwkax> <h2 id=\"instant-practice-heading\" data-astro-cid-pfsuwkax>기출 풀어보기</h2> <strong class=\"practice-progress\" data-practice-progress aria-label=\"문항 진행 상황\" data-astro-cid-pfsuwkax>1 / {{N}}</strong> </div> <button type=\"button\" class=\"practice-close\" data-practice-close aria-label=\"문제 풀이 닫기\" title=\"닫기\" data-astro-cid-pfsuwkax> <svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" data-astro-cid-pfsuwkax><path d=\"M18 6 6 18M6 6l12 12\" data-astro-cid-pfsuwkax></path></svg> </button> </div> ";
 const oldCSS=['BaseLayout.Bj2BltZT.css','_slug_.DBxZQ9Ra.css'];
 const newCSS=['BaseLayout.C1KrpNFq.css','_slug_.ji1xakQR.css'];
-const template=n=>n.replaceAll('{{N}}',String(n));
+const template=(tpl,count)=>tpl.replaceAll('{{N}}',String(count));
 const blob=bytes=>createHash('sha1').update(Buffer.from('blob '+bytes.length+String.fromCharCode(0))).update(bytes).digest('hex');
 const key=file=>path.normalize(path.isAbsolute(String(file))?path.relative(process.cwd(),String(file)):String(file)).split(path.sep).join('/');
 export function beforeChapterPracticeGNB(file,bytes){
