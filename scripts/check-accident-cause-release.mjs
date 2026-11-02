@@ -51,6 +51,13 @@ for (const path of paths) {
 const changed=execFileSync('git',['diff','--name-only',base,'HEAD'],{encoding:'utf8'}).trim().split('\n').sort();
 assert.deepEqual(changed,[
   '.github/workflows/all-chapter-hierarchy-qa.yml',
+  '.github/workflows/industrial-remaining-splits-qa.yml',
+  '.github/workflows/chapter-formula-style-qa.yml',
+  '.github/workflows/mobile-learning-ux-qa.yml',
+  '.github/workflows/industrial-safety-chapter-splits-qa.yml',
+  '.github/workflows/mobile-top-ad-qa.yml',
+  '.github/workflows/fire-safety-level2-launch-qa.yml',
+  '.github/workflows/certification-discovery-qa.yml',
   'scripts/qa-accident-cause-chapter.cjs',
   'scripts/qa-all-chapter-hierarchy.cjs',
   'scripts/check-accident-cause-release.mjs',
@@ -79,4 +86,4 @@ assert(html.includes('Education (교육적 대책)'),'3E education retained');
 assert(html.includes('Enforcement (관리적 대책)'),'3E enforcement retained');
 assert(!html.includes('불가항력 (천재 등)'),'redundant example removed');
 
-console.log('[Accident cause release] PASS: three exact production deltas, six-file total scope, immutable question metadata, native HTML, adversarial edit rejection');
+console.log('[Accident cause release] PASS: three exact production deltas, 15-file total scope, immutable question metadata, native HTML, adversarial edit rejection');
