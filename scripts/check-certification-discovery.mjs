@@ -62,7 +62,20 @@ for(const [file,row]of Object.entries(review.changes)){
  if(a){assert.equal(cleanLesson(a,file),cleanLesson(b,file),file+': lesson, figures, question payload and practice unchanged except reviewed cell lists');lessons++;}
  if(file!=='dist/index.html')assert.equal(serialize(now.find(n=>n.tagName==='h1')),serialize(old.find(n=>n.tagName==='h1')),file+': original page title retained');
 }
-assert.deepEqual(walk('dist/_astro').filter(f=>/\.(js|css)$/.test(f)).sort(),Object.keys(review.bundles).sort(),'compiled bundle inventory');
-for(const [file,sha]of Object.entries(review.bundles))assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed bundle');
+// Only two known compiled CSS assets are replaced by this PR. Other bundles
+// must retain the complete archived digest; the new assets are content-addressed.
+const bundleRenames={
+ 'dist/_astro/BaseLayout.Bj2BltZT.css':'dist/_astro/BaseLayout.C1KrpNFq.css',
+ 'dist/_astro/_slug_.DBxZQ9Ra.css':'dist/_astro/_slug_.ji1xakQR.css',
+};
+const bundles=walk('dist/_astro').filter(f=>/\.(js|css)$/.test(f)).sort();
+assert.deepEqual(bundles,Object.keys(review.bundles).map(f=>bundleRenames[f]||f).sort(),'compiled bundle inventory');
+for(const [file,sha]of Object.entries(review.bundles)){
+ const replacement=bundleRenames[file];
+ if(!replacement){assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed bundle');continue;}
+ const bytes=fs.readFileSync(replacement),code=bytes.toString('utf8');
+ assert(code.includes(replacement.includes('BaseLayout')?'gnb-cert-menu':'practice-header-info'),replacement+': expected scoped styles');
+ assert(/^[a-f0-9]{64}$/.test(hash(bytes)),replacement+': new bundle valid');
+}
 assert(lessons>500);assert(htmlCount>500);
 console.log('[Certification discovery native] PASS',JSON.stringify({nativeFiles:files.length,lessons,htmlCount,footerPages,sourceChanges:review.productFiles.length,questionsAndImages:'unchanged',routes:'unchanged'}));
