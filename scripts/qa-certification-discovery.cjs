@@ -36,7 +36,7 @@ let browser,activePage;
    const menus=page.locator('[data-gnb-menu]');assert(await menus.count()>=1);
    assert(await menus.locator('summary:visible').evaluateAll(es=>es.every(e=>e.getBoundingClientRect().height>=44)),'visible menu target height');
    const chapterDetail=route.split('/').filter(Boolean).length===4;
-   const showCertificationMenu=!chapterDetail||size.width>=768;
+   const showCertificationMenu=!chapterDetail||(size.width>=768&&size.width<1024);
    const cert=page.locator('summary[aria-label="자격증 선택"]');
    assert.equal(await cert.isVisible(),showCertificationMenu,'certification menu visibility matches chapter mobile policy');
    if(showCertificationMenu){
