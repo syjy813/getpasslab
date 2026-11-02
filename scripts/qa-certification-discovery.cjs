@@ -50,6 +50,7 @@ let browser,activePage;
      assert(!await toc.isVisible(),'desktop header TOC is hidden');
      assert(await page.locator('.chapter-side').isVisible(),'desktop sidebar replaces TOC');
     }else{
+    await toc.locator('summary').press('Enter');
     await page.waitForFunction(()=>{const m=document.querySelector('.gnb-chapter-dropdown'),a=m?.querySelector('[aria-current="page"]');if(!m||!a)return false;const b=m.getBoundingClientRect(),r=a.getBoundingClientRect();return b.height>0&&r.bottom>b.top&&r.top<b.bottom;});
     await bounded(page,'.gnb-chapter-dropdown');
     assert.equal(await toc.locator('[aria-current="page"]').getAttribute('href'),route);
