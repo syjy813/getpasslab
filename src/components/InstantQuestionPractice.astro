@@ -211,7 +211,7 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
       if (complete) complete.hidden = true;
       if (feedback) feedback.hidden = true;
       if (loading) loading.hidden = true;
-      if (progress) progress.textContent = '1 / ' + meta.length;
+      if (progress) { progress.hidden = false; progress.textContent = '1 / ' + meta.length; }
       if (scrollArea) scrollArea.scrollTop = 0;
     };
     const render = () => {
@@ -227,7 +227,7 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
       if (loading) loading.hidden = true;
       if (complete) complete.hidden = true;
       item.hidden = false;
-      if (progress) progress.textContent = (currentIndex + 1) + ' / ' + meta.length;
+      if (progress) { progress.hidden = false; progress.textContent = (currentIndex + 1) + ' / ' + meta.length; }
       body.textContent = (currentIndex + 1) + '. ' + q.body;
       const hasImage = Boolean(info.dataset.imageSrc);
       if (image && figure) {
@@ -321,7 +321,7 @@ const explanations = chapterSlug === 'accident-prevention-principles' && certifi
         item.hidden = true;
         if (complete) complete.hidden = false;
         if (score) score.textContent = meta.length + '문제 중 ' + correctCount + '문제 수록 답안과 일치';
-        if (progress) progress.textContent = '완료';
+        if (progress) progress.hidden = true;
         if (scrollArea) scrollArea.scrollTop = 0;
         restart?.focus();
       }
