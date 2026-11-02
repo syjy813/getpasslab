@@ -65,17 +65,15 @@ for(const [file,row]of Object.entries(review.changes)){
 // Only two known compiled CSS assets are replaced by this PR. Other bundles
 // must retain the complete archived digest; the new assets are content-addressed.
 const bundleRenames={
- 'dist/_astro/BaseLayout.Bj2BltZT.css':'dist/_astro/BaseLayout.C1KrpNFq.css',
- 'dist/_astro/_slug_.DBxZQ9Ra.css':'dist/_astro/_slug_.ji1xakQR.css',
+ 'dist/_astro/BaseLayout.Bj2BltZT.css':{path:'dist/_astro/BaseLayout.C1KrpNFq.css',sha:'e9dba7d1a0192ab5bf724b0d77f067cb07a06dec27cd74ded21e88ed1253fe59'},
+ 'dist/_astro/_slug_.DBxZQ9Ra.css':{path:'dist/_astro/_slug_.ji1xakQR.css',sha:'fcd472fdfaaca18b388f38acc2e517cd907c82c5fa75a093f6bb22c780ed8885'},
 };
 const bundles=walk('dist/_astro').filter(f=>/\.(js|css)$/.test(f)).sort();
-assert.deepEqual(bundles,Object.keys(review.bundles).map(f=>bundleRenames[f]||f).sort(),'compiled bundle inventory');
+assert.deepEqual(bundles,Object.keys(review.bundles).map(f=>bundleRenames[f]?.path||f).sort(),'compiled bundle inventory');
 for(const [file,sha]of Object.entries(review.bundles)){
  const replacement=bundleRenames[file];
  if(!replacement){assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed bundle');continue;}
- const bytes=fs.readFileSync(replacement),code=bytes.toString('utf8');
- assert(code.includes(replacement.includes('BaseLayout')?'gnb-cert-menu':'practice-header-info'),replacement+': expected scoped styles');
- assert(/^[a-f0-9]{64}$/.test(hash(bytes)),replacement+': new bundle valid');
+ assert.equal(hash(fs.readFileSync(replacement.path)),replacement.sha,replacement.path+': full approved CSS bundle SHA256');
 }
 assert(lessons>500);assert(htmlCount>500);
 console.log('[Certification discovery native] PASS',JSON.stringify({nativeFiles:files.length,lessons,htmlCount,footerPages,sourceChanges:review.productFiles.length,questionsAndImages:'unchanged',routes:'unchanged'}));
