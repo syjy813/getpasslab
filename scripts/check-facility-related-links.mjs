@@ -30,6 +30,8 @@ assert(draftCards>=5,'expected draft cards across facility pages');
 for(const route of routes){
  const html=fs.readFileSync(`dist/facility-management/${route}/index.html`,'utf8');
  assert(html.includes('noindex, nofollow'),route+': draft noindex');
+ assert(html.includes('공개 전 자료 확인 중'),route+': draft source date is not final');
+ assert(html.includes('근거 및 참고 자료'),route+': sources may include republished material');
  const walk=node=>{if(node.tagName==='a'){const href=node.attrs.find(a=>a.name==='href')?.value;if(href?.startsWith('/facility-management/')){assert(fs.existsSync(`dist${href.replace(/\/$/,'')}/index.html`),`${route}: missing ${href}`);checked++;}}for(const child of node.childNodes||[])walk(child)};
  walk(parse(html));
 }
