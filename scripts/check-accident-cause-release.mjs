@@ -52,6 +52,7 @@ const changed=execFileSync('git',['diff','--name-only',base,'HEAD'],{encoding:'u
 assert.deepEqual(changed,[
   '.github/workflows/all-chapter-hierarchy-qa.yml',
   'scripts/qa-accident-cause-chapter.cjs',
+  'scripts/qa-all-chapter-hierarchy.cjs',
   'scripts/check-accident-cause-release.mjs',
   ...paths
 ].sort(), 'no additional files changed');
