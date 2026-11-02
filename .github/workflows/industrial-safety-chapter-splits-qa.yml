@@ -41,15 +41,11 @@ jobs:
       - run: npm run build
       - name: Check split invariants and site regressions
         run: |
-          node scripts/ci-archived-history.cjs "node scripts/check-historical-practice-guard.mjs && node scripts/check-industrial-safety-chapter-splits.mjs && node scripts/check-industrial-safety-machine-tools-split.mjs"
+          node scripts/ci-archived-history.cjs "node scripts/check-historical-practice-guard.mjs && node scripts/check-industrial-safety-chapter-splits.mjs && node scripts/check-industrial-safety-machine-tools-split.mjs && npm run check:computer-literacy && npm run check:computer-literacy-c1 && npm run check:computer-literacy-001-081 && npm run check:computer-literacy-082-159"
           npm run check:contrast
           npm run check:seo
           npm run check:public-content
           npm run check:deferred-question-content
-          npm run check:computer-literacy
-          npm run check:computer-literacy-c1
-          npm run check:computer-literacy-001-081
-          npm run check:computer-literacy-082-159
       - name: Prepare temporary browser tooling
         run: |
           npm install --prefix /tmp/getpasslab-browser-tools --no-package-lock playwright@1.62.1
