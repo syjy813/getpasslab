@@ -30,7 +30,7 @@ let browser;
         if(width>=1024){
           assert(!await page.locator('.gnb-menu').isVisible(),'desktop header TOC removed');
           assert(await page.locator('.chapter-side').isVisible(),'sidebar provides desktop chapters');
-          assert(await page.locator('.gnb-cert-menu').isVisible(),'certification menu remains on PC');
+          assert(!await page.locator('.gnb-cert-menu').isVisible(),'desktop chapter header has no redundant certification picker');
         }else{
         const alignment=await page.evaluate(()=>{
           const n=document.querySelector('.gnb-inner').getBoundingClientRect(),l=document.querySelector('.gnb-logo').getBoundingClientRect(),r=document.querySelector('.gnb-menu summary svg').getBoundingClientRect();
