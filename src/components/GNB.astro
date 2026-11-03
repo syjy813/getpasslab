@@ -25,8 +25,8 @@ const availableFacilityCategories = new Set(isFacility
       <span>GetPassLab</span>
     </a>
     <div class="service-switch" role="group" aria-label="서비스 선택">
-      <a href={withBase('/facility-management/')} data-service-link="facility" aria-current={isFacility ? 'page' : undefined}>커뮤니티</a>
-      <a href={withBase('/certifications/')} data-service-link="certifications" aria-current={!isFacility ? 'page' : undefined}>자격증</a>
+      <a href={withBase('/facility-management/')} data-service-link="facility" aria-current={isFacility ? 'page' : undefined}><span>커뮤니티</span></a>
+      <a href={withBase('/certifications/')} data-service-link="certifications" aria-current={!isFacility ? 'page' : undefined}><span>자격증</span></a>
     </div>
     <div class="gnb-spacer"></div>
     {isFacility ? (
