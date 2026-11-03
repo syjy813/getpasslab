@@ -165,3 +165,25 @@
   .facility-story-grid .facility-card-meta{margin-top:var(--space-2);padding-top:0}
   .facility-page .facility-body h2{font-size:var(--fs-h3)}
 }
+
+
+/* Category landing headers follow the certification exam index (e.g. "필기 6과목"):
+   breadcrumb → gpl-h1 → supporting copy → rule → existing article list. */
+.facility-page .facility-category-page .breadcrumb{margin-bottom:var(--space-6)}
+.facility-page .facility-category-page .facility-category-header{
+  padding:0 0 var(--space-6);
+  border-bottom:1px solid var(--gray-200)
+}
+.facility-page .facility-category-page .facility-category-header h1{
+  font-size:var(--fs-h1);
+  line-height:var(--lh-heading)
+}
+.facility-page .facility-category-page .facility-category-header p{
+  max-width:660px;
+  margin:var(--space-2) 0 var(--space-4);
+  font-size:var(--fs-body);
+  line-height:var(--lh-body);
+  color:var(--gray-600)
+}
+.facility-page .facility-category-page .facility-category-header .gpl-caption{display:block}
+.facility-page .facility-category-page .facility-category-list{padding-top:var(--space-8)}
