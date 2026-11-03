@@ -7,7 +7,7 @@ const mode = preview ? 'private-preview' : 'publication';
 const output = `qa-results/facility-launch/${mode}`;
 fs.mkdirSync(output, {recursive: true});
 const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':4};
-const pages = ['/facility-management/', ...['career','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/'];
+const pages = ['/', '/facility-management/', ...['career','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/'];
 (async () => {
   const browser = await chromium.launch();
   const results = [];
@@ -72,10 +72,15 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
       }
       await page.goto(base+'/facility-management/');
       await page.locator('.service-switch [data-service-link="certifications"]').click();
-      assert.equal(new URL(page.url()).pathname,'/certifications/');
+      assert.equal(new URL(page.url()).pathname,'/');
+      const certificationHomeHeading = await page.locator('h1').innerText();
       assert.equal(await page.locator('.service-switch [data-service-link="certifications"]').getAttribute('aria-current'),'page');
       await page.locator('.service-switch [data-service-link="facility"]').click();
       assert.equal(new URL(page.url()).pathname,'/facility-management/');
+      await page.locator('.gnb-logo').click();
+      assert.equal(new URL(page.url()).pathname,'/');
+      assert.equal(await page.locator('h1').innerText(),certificationHomeHeading,'logo and certification toggle open the same home');
+      await page.screenshot({path:`${output}/certification-home-${width}.png`,fullPage:true});
       const excluded = await page.request.get(base+'/facility-management/career/reading-job-postings/');
       assert.equal(excluded.status(),404,'unapproved draft is inaccessible');
       await context.close();

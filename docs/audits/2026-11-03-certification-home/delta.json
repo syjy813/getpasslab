@@ -1,0 +1,2849 @@
+{
+  "baselineCommit": "8882d40ff082b620fc678dc36cc91ceddd992fdd",
+  "change": "GNB certification toggle /certifications/ -> /; logo remains /",
+  "changedFiles": 565,
+  "sourceFiles": 1,
+  "htmlFiles": 564,
+  "changes": [
+    {
+      "path": "dist/about/index.html",
+      "beforeSHA256": "3ecc851ec1da3bb8b5861dcea7728e30023af62089fe8c5c3ab4a11376a9a1d0",
+      "sha256": "2691af3f00fa65b1c3706a37b9f18720cf034de3c8c62273a2977724bdd2ce6a"
+    },
+    {
+      "path": "dist/certifications/index.html",
+      "beforeSHA256": "379009588dd884f0f3d5588d5bf156e2e7e1d2b3d25a212bb4e8423533e48834",
+      "sha256": "434bbc290f77365b77ef33a4c40b230810dfc1e319710be77d53e95701d3fd40"
+    },
+    {
+      "path": "dist/computer-literacy/index.html",
+      "beforeSHA256": "c8785a79fce42d7a43e59593e0bdd34f7e51b066afa6c3657a3d15991e136435",
+      "sha256": "5fd97798e8fecfadd776165d2752444ac42359c97e31506f334b170a5d46f19d"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/aero-peek/index.html",
+      "beforeSHA256": "a1a96939087de55f115981ee1bd47a425de0dba6cd94d1057d1fe73e23ed3294",
+      "sha256": "ece64f77333e298a55a79c811a5ba781bdc6a08c3784b9043897bd3ff8fa0f25"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/ai-input-output/index.html",
+      "beforeSHA256": "dc1a8b90f08016c8b8d1cf43723ff1c2ce985c698a293d617599c81a7400d8c5",
+      "sha256": "871f3d21fb329859cbd6327fdc48a04be135545ec168cbec3f44b61d4417ff03"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/ai-machine-learning-deep-learning/index.html",
+      "beforeSHA256": "0f90e1b54abf08db902e6ffe0e5fb418d750a6d04012d64cd84d6aa47635aa92",
+      "sha256": "df3020c86f721a9a1e5f6191311e3f032fee1b72c630929295d72a7dec0d9354"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/ai-result-verification/index.html",
+      "beforeSHA256": "6bdcb928ba274c9971695cfae347ffcb67537db82ab1e62b8ecf53573a654586",
+      "sha256": "72dc03bb71b36d1ffaf8ec1584ba8061e30b7ca3b46f96b23aa94b6440d10741"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/ai-rights-fairness-responsibility/index.html",
+      "beforeSHA256": "ad2afd278d6a9b5baefd9b45ee3d8ab57ee86238f37fc4bd2571d7f1b33ee61f",
+      "sha256": "ccc4806f5e06af4466bfd464e2371af761ac4d745cd3db56f5c1cecd02ecfdf6"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/antialiasing-dithering/index.html",
+      "beforeSHA256": "f988adc0b53e581a81ccf91525ee6a52ecbc767e19639cd8b94b6d2f3a2aafad",
+      "sha256": "912c1fd0073d069764c1461182926ac9023ef810e31da5156f3413a5654eee32"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/archive-file-formats/index.html",
+      "beforeSHA256": "4d6f15b1ea73c4abe1e09e7e71120ff50f100ece55144a283e87d24bc2d8102b",
+      "sha256": "9d39baa4e86f1583829e94f2bbe5c6e78451af0dc796cf23190acc1f96cd32b2"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/backgrounds-and-themes/index.html",
+      "beforeSHA256": "8db849594c86118918f36746a8e840f00350e0f3e5d8a7b8e014cc056b57e857",
+      "sha256": "8381d8d84073623a8b0322cb1bb121b3c27d400c5e06c6a8daea7dff394f6f17"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/bitmap-vector-resolution/index.html",
+      "beforeSHA256": "295b398142fd744388366817b8350173bde25a01a5b9c0ee6adbb7d6e730fd8a",
+      "sha256": "e45dd6e84960497339f8103ecf14c949419792e666dec9732a5fbf143e1f5119"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/bits-bytes-data-units/index.html",
+      "beforeSHA256": "c3ac43c51a52a4073ffa0931cadd1d81d1caa6b1503ba85b2fccfd22af9b51f8",
+      "sha256": "f2cc8c01af22e69066f890d6e82aefa17c5128ac6da1858c8284e51a6109e0cd"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/bluetooth-pairing/index.html",
+      "beforeSHA256": "90813f62600b8fb24c1830fb16cfe2055cd0acabb70002d4b3d860a3d813efc4",
+      "sha256": "55b4e0a0119a194b31a67d87398f3e6ae5fa7a6bec8484e7ba3b147b8ca43d0b"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/boot-failure-causes/index.html",
+      "beforeSHA256": "968fae285f13f71305de7482003a36e0d85d4213fa832e74790f777a2bfaa14e",
+      "sha256": "66143ef2feb34116f95bdcce2d3c6b0730471881b58a27b929ddb2771ed345e3"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/browser-internet-options/index.html",
+      "beforeSHA256": "f9789c3fbd660159dadc7a07fc49b42f63ca2ea4f3d65cbf5c7161d136673106",
+      "sha256": "0277d655f3a0014a90bd74cad5ce1bf9218c9cb51d3eae6a223369dc132754d8"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/cache-buffer/index.html",
+      "beforeSHA256": "a06b121df932b3ffcdf3f2700646cc0ef780804e6c1565fc32a9689ef10e4e0f",
+      "sha256": "eba059dbe768876d78b933988d75054f5dccc8120eefc0fe5470c380f31800c4"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/camera-microphone-permissions/index.html",
+      "beforeSHA256": "c3dd999a5d36ee2df5c324bdde162005af7e017fae490150bcdedfe4d5d4083b",
+      "sha256": "c37dd8ff608e7b5d576aeb2f017239f3da3e1cb74e6b5c69a10c8341fc395cb0"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/character-codes/index.html",
+      "beforeSHA256": "eb51a4ea70e3476503d85dcb13631b35e835d806eb482d2b6464e949088eeea7",
+      "sha256": "93507ff556b61fc2cb73fc5225a9a57b6cd711bdc2576573403f28c4ceb0ae17"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/compiler-interpreter/index.html",
+      "beforeSHA256": "087f61ec572beddef28950e0047160107762bb306b5ae6b8b419b9823db9107a",
+      "sha256": "50714a0bcbe41331e5cf9dc973877d8f04337e060b555b78de52d263b50b3cc8"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/computer-classification/index.html",
+      "beforeSHA256": "b3c6b187f97631dab7bb7c387141ad17de85494cdebdb52c1a94895da9c94ec5",
+      "sha256": "16ccce13ffd2fb402dd6744ce01f84efbd5d3e53bc28d0f656f73cb3799061f3"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/computer-development/index.html",
+      "beforeSHA256": "bd421ca140bfe342c691fd8d17dd33c10c0b3c0d66ac2dbb205cff1b32f1ca4d",
+      "sha256": "9b7aaf0fd1b8bfe50c701edc3a9c4abb5b0e598a9c9541641017214a6478112c"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/computer-specifications/index.html",
+      "beforeSHA256": "ad9dfcbb70410fa3b0b6650d60642da72844c220f1dfcfba99f4946ac6fa1021",
+      "sha256": "647c22529d097d5c4b2c11cd05cb3b345484a2722934892e9e8f1f57bf13bcb3"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/cookies-cache-history/index.html",
+      "beforeSHA256": "f6e7036f69c2799ba1886be8789d1548d4dc451834d46f3bbc7c2a79f5ffdb47",
+      "sha256": "baf0ce52a8fdd1047e49cbcfb2ce7ef194865c71788b16e70fa6db93ab4caf31"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/copying-moving-files/index.html",
+      "beforeSHA256": "b4dadf2ac4135820c74e4bccac01ada133f1e670be86bbfb21b287873b4df9aa",
+      "sha256": "dd824b163deabb777006d33a4df8ac3438dc2cf7095dced18f6c36edb49e222e"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/copyright-protection/index.html",
+      "beforeSHA256": "65ac5a3c9f71a371850c62d75fbb0c655c3e70c721b15de9faa73bf9f4247eb8",
+      "sha256": "072aac8971117f5cdab6effafc68b1066553f05c12c39ee203a98169a4696347"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/cpu-operations-control/index.html",
+      "beforeSHA256": "233e815aefb79ad583b40f884e3565adc14b5c14c7744ad0452cb4f669f9ae3a",
+      "sha256": "dac7e4ea802423e7fdab2c38736b1f06f3354be4a22c25f4684d75de04bdf1d3"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/cpu-registers/index.html",
+      "beforeSHA256": "1d762a1849ece6e1a2e350d69e89c0cfc1a8c9f5b4b2700d92c8e7f7e763fdb1",
+      "sha256": "1f1cc0bd28996dcc7bf96ab2a371c6a3ee55283e3abcd6bbe6806d4e6cc060fa"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/data-information-informatization/index.html",
+      "beforeSHA256": "68cc442eaddc57fa1c25bd051e9f7c58fa7d3b8cb3fd286b52f4aca847371b6d",
+      "sha256": "33f9aac69f38eec8385fc59b914ccb27166af8e263212834728e85e974f3abd1"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/data-processing-methods/index.html",
+      "beforeSHA256": "f2c8f1a4379e0d8074abbd3187ac865ccd7d41f007fa56cf62e7b56def092d27",
+      "sha256": "2debef88d5ddfc89ba44f7c5c0f79c123aeb1036864973c231f1b84155d02797"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/ddos-service-disruption/index.html",
+      "beforeSHA256": "d1152aba87cd3878a893bb1e1003c4aee0bdd5864ca9a005683996491ccf5d77",
+      "sha256": "c7d2d6ceaa6f6362aeaf962981683c9b74bc0fe46023074a03412e0a9b9dda3a"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/default-apps/index.html",
+      "beforeSHA256": "3e7a61c6e0ce027bef5cdbbbcc3e1d03411c4b6f26af555e527825c76f535429",
+      "sha256": "708ce18b2628c5cf87c6ff78ccbafa2a938c8917489ed6fe56eb8435aee8f4d5"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/device-manager/index.html",
+      "beforeSHA256": "bdc8d5b41e63226a8d7e5e74c33895c26d3fbac1e5451318ab8b5e27d64a2fbd",
+      "sha256": "a6a80ba60d6e205e329aec8ec34c7e14b390ea00e598b940543b3be059d996c2"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/disk-cleanup/index.html",
+      "beforeSHA256": "4f23a4a95c8c07f3a9ad6cfd1633cd3b0993894ee1221975d8d56b2e247df003",
+      "sha256": "c496845a7553fb6d53e738863ce0b916aa453b98ffefa82529bfbaa1ad1bbfbf"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/disk-error-checking/index.html",
+      "beforeSHA256": "78d45eee29a16f22416ec9793b733e991f5d231321c978ed86c455f90c3f9e69",
+      "sha256": "50df73b9c8f8aa9d23f94446f29f2429597c98d02ee57ac7f0a4cb741f0279b3"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/disk-format-file-systems/index.html",
+      "beforeSHA256": "528b636d93bd93ae2fa937b28565b47593181907490c14e67e2e104edf053ee0",
+      "sha256": "2aa00e8806933962efbc8f508b5c784986bc81c278a53aa690437c0d99bbc0db"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/display-settings/index.html",
+      "beforeSHA256": "17f825672b2a5971448be37326558649fe98ec5c0441b0f2100df3a8b93b2236",
+      "sha256": "4bdc2534c4dfbe4b7aa4c320dbea509b4a61b564fc2340a2807b7d2d9778906d"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/dns-name-resolution/index.html",
+      "beforeSHA256": "ec6c0a98af1398ca804862f081f69cc1c068ec255ffc9a282cc07234ced5bfc4",
+      "sha256": "081419c9c6644f1990adc64d75828781a3ce5fc911457de611510207a66d81e4"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/domain-name-hierarchy/index.html",
+      "beforeSHA256": "b109c77a707cec0674ba3b89e33127bcb6375e43c875a291ef1e199ff0444823",
+      "sha256": "8bc32597356f39c8082cea9f038ef084d925eb5e9d0e2ffda287dceb0ef61b19"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/drive-optimization/index.html",
+      "beforeSHA256": "414f462a12ebe392d46a6f9f7b4f00777b9185f7e04ecb428d0b4e1465c8193b",
+      "sha256": "4435083d40aa17aea8ba3e3c501cd2a98c4d8d25d48eea2d3e5c17d81f55b862"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/email-address-reply-forward/index.html",
+      "beforeSHA256": "46e9b30c85ed49514083dd80ca90dfcb0d949753b5942d2285dfd4ed3fcde922",
+      "sha256": "c373a948a5592a00b7a0c4532875a5746be8b2a7a6b4779a4a5c17a01f89f00c"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/email-smtp-pop3-mime/index.html",
+      "beforeSHA256": "0c407962e91f47a107a35658eb3a1e9639bf40eeba5da843334e49bab058a129",
+      "sha256": "9b39c7a34db8594bace6a21ef6905fb9973ce4a0352165e54935cf076277a580"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/file-explorer-hierarchy/index.html",
+      "beforeSHA256": "7009e2f4f3df6597576cf10689d0ab6157f2376627c955bf47cab7c043d8041e",
+      "sha256": "4549b990a2a1cffa75bf90ce77d6d3303b31767c15b4fecc4f5c5592ba848201"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/file-extension-types/index.html",
+      "beforeSHA256": "b6af038873ce5e398aab9fdef764ced0fc277337f549cba1b94428b8e6e74498",
+      "sha256": "26e46e5a24d6fa52e3402620391bd49c78c8ec0664dfbefb2d0b30dcefd3bf4e"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/file-folder-properties/index.html",
+      "beforeSHA256": "9fb7386e98e2bc0dbf2040111889b317cc2d24c38aed1631a0316dbb1df62abd",
+      "sha256": "58f8205f35ea87dea9584458b139a3f33290609cdd70d478aac075ddf54973e5"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/file-search-and-run/index.html",
+      "beforeSHA256": "4edc53815bf90f6f38e73fb10739f3096b3d0a94cdcb97503157673d2262268e",
+      "sha256": "dcf95d611ec3fb954930ded3023128a635aba6e2c35ff62d55f598cc76848466"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/firmware-bios/index.html",
+      "beforeSHA256": "06fdeaf1c6076eac59128291b69fb7aebe6ff7ae73b7cb17d06148dc4d5ab44e",
+      "sha256": "03788bd235cb55bf39e9ec45237e201e9a7092cb2017facde2e5d2dd727e559a"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/ftp-file-transfer/index.html",
+      "beforeSHA256": "bd603bdfb672023dc08ee908c138819ca6292abc2195bc44a8da8192b4010dc5",
+      "sha256": "6fe022176c29229cfff4d7a65bfe6941b553717c861767eeaff6ebd8fd0ea339"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/game-bar-and-game-mode/index.html",
+      "beforeSHA256": "4511f1f14fae0f4c63e587a4aeea31829fe8a6e20ba207781605bbe7ae8aa7bd",
+      "sha256": "c42aba1bad50dd96c2a219f57337160789bf01871911696313197177abf70034"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/hdmi-interface/index.html",
+      "beforeSHA256": "8e44f595b8b1847af0c1da8b777c37627c25d2c85a87b586d0f5abceb0053f00",
+      "sha256": "1484dc6dd9d67ef1e7678b3f9aee0bd77bd8cc9496b926313a4aaa188c7450bb"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/hidden-files-extensions/index.html",
+      "beforeSHA256": "7944e097eb01b4afd7627559d19ed61481630e48b6b48c569380ac807a00b6cd",
+      "sha256": "03376b324dc53bc70b4cfa747a25db3a92ea8f4108d570c66d68a778e157726a"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/html-css-javascript/index.html",
+      "beforeSHA256": "e330903d8704df7eb5140b195ade4bcc270a884318a1ca930fae3c29c7c14136",
+      "sha256": "daeb3b769507ef89f69a11cb07b93e769b6d70e86d78a0762d5ef7f508b787c1"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/html5-dhtml-legacy-web/index.html",
+      "beforeSHA256": "e2409c694cf1c3619d86b83a71e56b207ad6b28996230af868b22863fab4c460",
+      "sha256": "3fbc73d1e95b82b64c9f0900a84c5c679c65e4ccce9875bedba85fee98523523"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/http-url-structure/index.html",
+      "beforeSHA256": "f4786426372b13cbaf48754a3427742c140cdd4ea071781fbcaf8792d3d2cf28",
+      "sha256": "0e91456f3f241ee401abc99e0aa108ba4aa1278434e78dcbd818d1a5cdfed89b"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/image-file-compression/index.html",
+      "beforeSHA256": "e474069bb39b53dd50eb910f44fd557369b4d855c870552fbb1043e528f889e7",
+      "sha256": "e1571bdd3db9cb5874a5a3ad7b981997d585587142989da72b0e90775eaf6345"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/index.html",
+      "beforeSHA256": "411241c25ca2621c98ea26b7b3045dfce9b62eef19e649190cfd624e590183ce",
+      "sha256": "e294cf6e90f8a33fb8870b38479c76283c03eb0c18ede47eb8ec5823b2b33e6a"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/information-society-challenges/index.html",
+      "beforeSHA256": "83ea4149fc407348881fe5853ca8d9027efe4cf1ad29aae4c3cdc31605423f74",
+      "sha256": "97c04f6964040861f7971f8a18f1ce20967a3fae00a254b9adf0bd02fb10744b"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/input-output-devices/index.html",
+      "beforeSHA256": "b8605f4c365c9e90cddfb6828b9c3e459495ef2cd2855f78a7502be72971e339",
+      "sha256": "dd07881a9df874bdb8f72ae1003c2c59fa17b132469ca1bfd5cde91289510f0b"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/internet-communication-services/index.html",
+      "beforeSHA256": "336d7949ff182790e159a7769e97f4ac0ded3da7b015a74e8577acc7e33beb42",
+      "sha256": "285d67bd86768c2ac8426d8027b7b7c2fb3efb86ebb66756a99c4e7a9056fd26"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/internet-interconnection/index.html",
+      "beforeSHA256": "5f4a7e559412087964ca0f8abfb7c5873309e9fd84453a072048505511f144bc",
+      "sha256": "9b29ca968db6dedb31fedd770d693b1a74cc72a993d3b0ba57ce793902e33e4e"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/intranet-extranet/index.html",
+      "beforeSHA256": "4495f98c7f14e9abff1c045c8244c07fc7e489cd54830f99f864a5f3f7feb9d7",
+      "sha256": "ea77f0031be2614c6dd66496a83713c1359247a5efcb4fc3538538d4afee9a0d"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/iot-information-flow/index.html",
+      "beforeSHA256": "6856a66942ec61bcb5a005e30efc9df229272d3cd61c62b8970cf6e41135dd83",
+      "sha256": "62b116748b934a84f87ad6eef10547296e663c8826e048fa1a3965e7360bacd5"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/iptv-smart-tv/index.html",
+      "beforeSHA256": "9eee9b68322aee30fdcaf2d2e4dd575267f761b76a5a715154fbeea130083099",
+      "sha256": "94603107e1c1ceb9882efec7eb10c3c896ff1b950f2ffca2a6f9ef88ff36ec2d"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/ipv4-ipv6-addresses/index.html",
+      "beforeSHA256": "b00be1393318c768b133a1417e6d4d48df4bc75d253986781a9860fcbccfd6e9",
+      "sha256": "341500f414e2e3481e22e19274a82a5d272dbefe799443d0311d562199477e0c"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/jump-lists/index.html",
+      "beforeSHA256": "15ed4688677160e0b630bdce643aff5335c36057eada6eb05bea2323929894a0",
+      "sha256": "b357360bf900f8cd7e1a61bb62553377ea047928e5ad3845cc81ccd24dfda688"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/keyboard-mouse-properties/index.html",
+      "beforeSHA256": "0010045def04be7b669560b5de9fedb6c897c25d2b0ac6b4f10acb5d440d0bbf",
+      "sha256": "d6bee7b57578b296b51e8610fd427f59cf962928d0e36d188bac13621ad15fa4"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/kiosk-information-terminals/index.html",
+      "beforeSHA256": "b1a0cf0f6839dd18e1c3ea38c20c89ab589d11e9a041514c228e05fa85d11931",
+      "sha256": "13fdcf71ed5abba56b353df830a8de6563d781898375bcf67d69e8d75e3b1861"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/language-and-region/index.html",
+      "beforeSHA256": "64bd7c7ff95961886434761e7812816505a98eaa0c91f608ad18a0cfd15d322c",
+      "sha256": "11665b93f0f6a56edd051cbdf8b30a05081ac0f4d74a176fe85e9ff5dca88127"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/learning-data-reliability/index.html",
+      "beforeSHA256": "fe4bcd1c57b48bf5446227e1f93a208bb0298313658cbc318083141f4df23cc1",
+      "sha256": "d93cef71f157f4bc31b8882eb3e72ca40ede3de7c33126275d7c8901e9ed8827"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/location-based-services/index.html",
+      "beforeSHA256": "4be9090bb1bd49588d808498161d79d81148208245fe914d4fd4858e7824d21f",
+      "sha256": "3dedf923a3fab4a29047cac545508656f2fde6b2e8859f8ab9fa0e45d1bf8342"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/machine-learning-training-inference/index.html",
+      "beforeSHA256": "fc1284d6441474b00275fab23e2fe482bd095cf18255d4cc97923824f5fcdfec",
+      "sha256": "2a82019f2c39faf0aec1d73201033fbccc5a767dd2e2b2a174040f4c1971b414"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/malware-infection-propagation/index.html",
+      "beforeSHA256": "ce8eba2f78d05058e06b81cb29416e2fa68c382ace34099b0bcb21ae10bccad4",
+      "sha256": "e0e69330163c3d0e40cab93f1f35db22e8851d739d48e394db6b7dcaf07c0399"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/malware-prevention/index.html",
+      "beforeSHA256": "d610d8cf8746572d3fc6abf33af4550636161fc1d513cc4917e52e21c9c2f596",
+      "sha256": "c3e8b066760b684fa573e61c2b6f0ccd5dfa67bfe5c7e4f5ab152a4401b749d7"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/manual-ip-dhcp/index.html",
+      "beforeSHA256": "f8e1ff7fdf80398fd0131210dd1df332636a62744e9fa52785a8616079134010",
+      "sha256": "f24726f4e1a0c66a30b3e01cb5bbe5d7689f84a104db24fefe798731134192f0"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/media-playback-editing/index.html",
+      "beforeSHA256": "6f51d4c295d763f20677d562bdb11e9c02e425b678664c179bedc4dc27d3c2c2",
+      "sha256": "f4aad00ced1d811cae0045516f62fa9bbade1273c017c00657b926efba256936"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/memory-speed-hierarchy/index.html",
+      "beforeSHA256": "794433f2b1ea45f92d379eb94aabc3ecbe1e0e1363dfedea4aae70030cdfacdd",
+      "sha256": "b46d339d46d2d520fe72c09ee27ed1f7352293ba46c3cc227cd4dfd275e2a99d"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/modeling-rendering/index.html",
+      "beforeSHA256": "d73b5c620c202116b20df801b5acf9b1c708e8b7bf90fb58896b2d2131369d41",
+      "sha256": "4a8842291d70bbf62b3359cd45823d71979d7161c968c900fed459373a170a9e"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/monitor-white-screen/index.html",
+      "beforeSHA256": "c63efc8a9591f5861ade6efdeb6db5a734c5713f0b137739550fc9ec607952aa",
+      "sha256": "c4acbb96ae40fd051236befd2af7a7dfeffbdb54b711e91eb31f167e8cb5fa87"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/morphing-animation/index.html",
+      "beforeSHA256": "36db701aff33254de336b704792430cd8e92130db4742a152add3c39be2f03f2",
+      "sha256": "3eab382b508f94d48c2eb5364a7b5ec708aa4ec9975962bfbbad5c8fe4c35335"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/multimedia-boards/index.html",
+      "beforeSHA256": "f566f1d690356b4b5e8317944ac915629abd4d0d8cdee37643824894ecb86184",
+      "sha256": "865685c5180fe02e3cba5101324fbf56bd58ef8e4f2250a13cb1a5d67116cf1e"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/multimedia-integration/index.html",
+      "beforeSHA256": "16517bd98207486dec5eba8d4adc7d4cafe3ef071fa01fbe0802be7b6f3876db",
+      "sha256": "2e864f5d853f69831bfb43251299ec6c734b2911e8414e914c2325d3f3bdbec7"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/network-device-roles/index.html",
+      "beforeSHA256": "146c4b0cd153dd8e01a07bfd6ac17339d52a7f51c14c141e9577f8e1df1519e5",
+      "sha256": "54b06a94e1ceeee39131ff0dc5c79a93d618a34083b939e2f6336739fc76d5cd"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/network-operating-structures/index.html",
+      "beforeSHA256": "681cffedf3f5aad60fab4383d08c1ba09a9e26747e93242bc597a3a49b437aa9",
+      "sha256": "2a178e461106afae7e34d57df6ad9c4f7cb1ee7196dc56c748ae1571d008a781"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/network-scope-types/index.html",
+      "beforeSHA256": "8d9a4fed4c7f825cfe3325ed3c97b9b0a3b65ff56b5899d72e1a8f54a0f5a83b",
+      "sha256": "e98234f1ae48bab4ae608bf39c3408950729c18f2f3169439fd7b9bea6457cab"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/network-topology-failures/index.html",
+      "beforeSHA256": "465fc56aece3a35e144365d2915a4c2852f0b54a1f390bcfd67e59813e368f55",
+      "sha256": "f70f49784eb7478422fc4566cef5094903c003c8e8c72538901947a2da474078"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/notepad-features/index.html",
+      "beforeSHA256": "5678e8b14444b7fb3c37af1cbdc407c8be2712abd1afa14123eaf3327046042b",
+      "sha256": "8019ac06af890c4f6a7cf95cc6c570c13a51e519a938724f31fe8c3eeedbf665"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/object-oriented-features/index.html",
+      "beforeSHA256": "10d85fc2b91657dc89279d4bdbeae3d894483e965b6094c2390f21e6eedd3e82",
+      "sha256": "9a533eca675a47325341afd672d02d31a9eafa1d5da2c0793130635499d021d1"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/operating-system-environments/index.html",
+      "beforeSHA256": "f870d73012b5e80aad8b632fe8b78fae8783f16d31adaab44e36a1406a98ee2d",
+      "sha256": "94c70bd76d934059321633f836bd4fb53b22526f5ae2d33babec4593b67768b5"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/operating-system-performance/index.html",
+      "beforeSHA256": "286821453a540d153c47f4c863a656c582b35100aa30b5fb266d776b427758b4",
+      "sha256": "53a814ffca60675f36c41b9b50d44930e6ee1489dd9ff512bb07642cb71e5583"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/operating-system-resources/index.html",
+      "beforeSHA256": "3cc6a1015c678cb7071820daeb0c4a19d82a570e1a101fb58fff6a8cc6411307",
+      "sha256": "b8146a6af48fdc620d6ae8bcc75044cb5ed6a0d037ad40477121cd4a1d9871d7"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/osi-reference-model/index.html",
+      "beforeSHA256": "5365b1bc1f8bf87f3304349a3ab56e675711fb50627958eb06816f7d69155c91",
+      "sha256": "69f3920438cbffed20fb20db7a03bd920a16a9492c1d63e2c43fdb03687c3361"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/parity-bit/index.html",
+      "beforeSHA256": "0c478928f4c97fc6bb1f51eb56f3e79b5bca9acae67837b08b3082f1aa2e4c7d",
+      "sha256": "4d943ad63878e18ed2b6b3ab5f12ed0fd16df1e3d627487927454e3d47804b79"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/patches-and-updates/index.html",
+      "beforeSHA256": "59d39979e9a9cbadda926af7af9860253923c0ce4671b6afbd8156606cee1d93",
+      "sha256": "f6d450cbe70cb635528fd6a878aa7c6ebb4bb7861671189f41d5c6d700796bad"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/pc-maintenance-backup/index.html",
+      "beforeSHA256": "36dd6d1daa5447966325dabf3b0db26b8104df1f854f7e4bb9f97692295f81ca",
+      "sha256": "fc3a2f2cb3d0a5c756f6e0917a866bef4621af8d32843a59b62cd0d36dec9658"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/pc-upgrade-compatibility/index.html",
+      "beforeSHA256": "e16be28507aef4fa544c326872a10823767a13ecb61181da20d8972ed26b787c",
+      "sha256": "6e76cf9f920c2e548e892c84f6d683620a21fb2b30ca054acc042dc7081a42a2"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/performance-metrics/index.html",
+      "beforeSHA256": "631bea3f03b5cce37aa979d3e61686396ca838ac6505aef6aab92da8f572dbec",
+      "sha256": "b74ca1bbe52acf1cbf46fb6cf5763a0f3ed1fed4627a3bd082a4ab77ebfc5964"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/personal-information-handling/index.html",
+      "beforeSHA256": "f4327d522614f301dd12eaa3416ac4d915e6650713451a6c72810f2094b8434c",
+      "sha256": "4351b5ecbba8162cc64036a2137b546906fc77a0038b274145441339d49befa7"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/phone-pc-link/index.html",
+      "beforeSHA256": "14a31f19c8c2d7062b03bd52f82f07d486ce2562616e407250463fe8fade21d7",
+      "sha256": "1a0b91072a85e8266d6507d89197e84c9c61fba9b625a207799d3710bfadd051"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/piggybacking-access/index.html",
+      "beforeSHA256": "2ea49849f10b4ed8752e835ba4b33d1fb934e15d0275fe25243754bd7ed8724d",
+      "sha256": "c08cdb9186dbe422afd5024ff2f9718b2c645c63f779fb321af18eed36130be9"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/ping-connectivity/index.html",
+      "beforeSHA256": "f1bd4ab775e3d1e764fac464c3d2b34cbc2be4ada26b32fb204800f920c0a8e7",
+      "sha256": "6bc9d5367823a4779c2afa7ff119fc197a3cba7f40040cf229c039334f075373"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/plug-and-play-hot-swap/index.html",
+      "beforeSHA256": "0d848f1c7b5c4523a704d411cc58d7510947eded5ff38a4717a99747ba6f60ca",
+      "sha256": "5ae94cbb36d1eb9705be3e2b10d9216b3bc7b5a2f1403787cf1fbc46c7a9b726"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/portal-mirror-sites/index.html",
+      "beforeSHA256": "7529c306a112a493ebdbe48c9cdc44f5477a04279b53223318c8e26391ec57b2",
+      "sha256": "d327e506df206dc878ebb2deb54fdba44ba3f050e5e652601cd646d580993311"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/print-spooling-queue/index.html",
+      "beforeSHA256": "fa33c69105bd31cf0e2289f170d7681473c598874b293ac54b2ef127fd04107b",
+      "sha256": "2c2c4ca9df2562627cc63a78336e7ebfd4b55512a40691cb089f393d54445408"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/printer-installation-default/index.html",
+      "beforeSHA256": "e16ceb70d43be14537f83e64446f5c1e9e71343e0ca9984f75ab23e0f2a4f4b6",
+      "sha256": "fe55e9c5719c137b84c8f1f77ceb9af6bed00e14ccd227554e6384ed26be9b8d"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/printer-principles/index.html",
+      "beforeSHA256": "3ca5aff7addac20b27bfbd7c37918470fdff93832e4c7324dd43aa9c1c9200af",
+      "sha256": "eae3b96e072d9f1c452fc29842b43f2b4d6018a4c276280195f0a6c7ddb9e56a"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/printer-troubleshooting/index.html",
+      "beforeSHA256": "4ac4bf3857730a6c89ced6b37a55a025fb33a5ff783bd073f6d3104eabcc35fe",
+      "sha256": "e86d14f222ccaf2a3f3fd7c385fbb661956edf619ea5009ef8df52e9936ef7eb"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/processing-time-units/index.html",
+      "beforeSHA256": "bdcdbb1b461cc60bcda3c1e81cbb6b3a9b375846a62e0ce7cf00fcaeb8fde5ea",
+      "sha256": "542c588d210bf596391c0fea3a7805ede27b5952aa02214da19cd82d3c400a3b"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/programs-and-windows-features/index.html",
+      "beforeSHA256": "738371b193520bfb92f657ba18f1ba05163ac4b2d5660963b85de764377c780d",
+      "sha256": "03ddb077ba4dca6e503d27c27b9a7d826239bd1ebaf88852e030c1c451ade472"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/ram-rom-flash/index.html",
+      "beforeSHA256": "a23ed933860275950ff1dda05ba1139ad0006d7eb693cbab91793ecf9e55f3a7",
+      "sha256": "905b20d4054d30922be6e954859d460d51fb947ac757df2169c445ee7e58b752"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/ram-shortage-response/index.html",
+      "beforeSHA256": "e7aebbe80fb62a55778459092382d130ad17cb66d51175c40f4f3140046ea29a",
+      "sha256": "9a7a6c1327491c2fca6fabcccbfc49f5ef9c403bff3825aa3330610132d93ece"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/recycle-bin-recovery/index.html",
+      "beforeSHA256": "280e5fd97c4ae244f67ded15079aade9589e18b0f7b711e476bd3064a6ed31cf",
+      "sha256": "0e0d0afad9063da0f0196f3a6d21e4a29117546b4492c7e2626df44b3719577e"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/remote-assistance-consent/index.html",
+      "beforeSHA256": "cc099aaef0e1ae5b4abb8fb6bdc00d9f45853e14b5b6c01435440a38c45ef777",
+      "sha256": "bcc6ce3c61a4f7a234ecb76c5b58a022d69cab878d87b136a346166c556b2e33"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/rfid-tag-identification/index.html",
+      "beforeSHA256": "b3da697124a5718b3498b0526dcaf01fdd73e9f74344fc4a69450749e7198662",
+      "sha256": "febe3f637a64d4bc1c9a490dc43f3a9249be56f5328564b1e5930364c2e59eeb"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/sampling-pcm-sequencing/index.html",
+      "beforeSHA256": "9433a25b9093275225828c8673655981cee9db24fab51bfc892cfaa7971356d0",
+      "sha256": "dd90c161f00f32c6b6559500e5594c76eabf5055c33cf6f450551d7267705cbe"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/sata-interface/index.html",
+      "beforeSHA256": "c1663425eb72e1a7cd5fe4c21a00177cfe061743fdfba6a474e34302df4c30be",
+      "sha256": "32933a80f97e9dd28c9d033ea804008886592529edbaacb127c9a7c99231d682"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/security-cia-threats/index.html",
+      "beforeSHA256": "e691582740a3f5cff080e3116170715bc22e2a70dd511afbc480f2d1e9caa211",
+      "sha256": "bcdd392d2814973f7a5687a74d86cf352f31e3a77897d29d8cb152c3b8fd66de"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/security-protection-roles/index.html",
+      "beforeSHA256": "85ca6c922e561cf538d7d1f862657017167084fc09c1fdd1e8bbdc694ca2c983",
+      "sha256": "4c78c75e22eb82456dbddfab07b5433c250dc53d8ed59907a3d7b24d11f64564"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/selecting-files-folders/index.html",
+      "beforeSHA256": "dd1e32218102fcfb159fa1a03f75d1f32bed69d2ac6128c4ac12843bdd255388",
+      "sha256": "98f3e1662189bef06e4d338b796d414b77f34b23f46a55f60eb4add820bfaaaa"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/sharing-facts-rights/index.html",
+      "beforeSHA256": "cd489055de433cdf34b688a4d8162533456b101f3301c73b4a676ae88df54e65",
+      "sha256": "b8d15532b1e12d6e373ca931558f7ff9bdfb7222ba5f7f9085300d3dfdd608ff"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/shortcuts-and-originals/index.html",
+      "beforeSHA256": "20a54c400fedcc904afb7262aac87a1c4643e4fb80781ca5506884965eb820b3",
+      "sha256": "08b7339e298286404f69000978328f8910076b806f22d6d24da1c30539cf7090"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/sign-in-and-account-types/index.html",
+      "beforeSHA256": "f9a95dfc70582301c2b129e1751f558dc1fbcf450f521ea0c6ad7a47bd159b60",
+      "sha256": "7672635401a5e9edd4145e5a21c8213e95d25b11962b44cff83836534764f708"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/simplex-half-full-duplex/index.html",
+      "beforeSHA256": "9bf3594ce2cc7925c2c601f67e9700c37251903acd67aed1c5b703a3f1bd3783",
+      "sha256": "5ab253e476259cb30b9134f7452c5170e4f8609eebcbbc4dc8e3c606603d4a23"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/sleep-hibernate-shutdown/index.html",
+      "beforeSHA256": "9b5b822077639d6e45aa037a55cb39624894d848de72554ccc4a9f6f15bc6ec2",
+      "sha256": "0ee57c915d9cfec8a22041b62b7b55f88205d2b2d3a71a8bc4c92dc8e2cbf9c3"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/sniffing-keyloggers/index.html",
+      "beforeSHA256": "14e1fe6b926c9a4740946d77d19c21d7edc5da5421f745d5b3e35dfd753ee332",
+      "sha256": "3555e0d1e07adb79c7da261d4f25c215c18817e58043655d9a29660d3fc2cddd"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/software-license-types/index.html",
+      "beforeSHA256": "65e19bcf18c5eb88b1f2e4b942bb0a0d031890529268b0d41b4174404a881092",
+      "sha256": "774f7f136ff9fde8a0a0c423e9daeccb87010d1d983becbd05a3a8c707748088"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/software-release-versions/index.html",
+      "beforeSHA256": "92ba673005f2c039b50280c93b811989a04884efc180f65e7c410771a4976a12",
+      "sha256": "40dfcfcb72fd83428e1719cb214a66b37d0836a9d479f2b6fb71f1b349bbec0e"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/software-types/index.html",
+      "beforeSHA256": "9983bde1c4b5e6d96f97e29a9dffbcec15015998102a1bbca6447245efd69fc8",
+      "sha256": "544cede128e031914d1248bde0748a585f21749824c648004d178d944d7605ba"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/sound-input-output/index.html",
+      "beforeSHA256": "d0d0e582c09dd16e8fa19c28fea752e6bf1694ef885c344ba24cde2fe19753e8",
+      "sha256": "935239ccc35186f64b5a10c6234f349d7a792118e98404f4bc76a4fcc35bbf24"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/spam-suspicious-email/index.html",
+      "beforeSHA256": "520435fa1aa727446a4bc4fa9238b8c67fec77aa5f0fab0bf15c4844955e978d",
+      "sha256": "56cee6b15c20953b8e6387c0dfa6ad7cc56a5468ed21a58a8ed49c667d79872b"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/spoofing-phishing/index.html",
+      "beforeSHA256": "bb7168a4d306826b249e22efa0c1049ce78a8f3ee977a9ee17ddf84709f3185e",
+      "sha256": "2ce780850371948e0cdccb14e10d44b3fe6c573c40155bf47a023da503b968bf"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/storage-capacity-conversion/index.html",
+      "beforeSHA256": "6f1e877b498691a60a6362b74c3c51c61fe641fe6b60dc5f06c4613c4fc7226a",
+      "sha256": "ab8bc375c8ebba76af630810b97fa161377917c85fecb70bd6800b19d10bc29d"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/storage-devices/index.html",
+      "beforeSHA256": "f8d2ee47c739037874543bd845251fcd5c96e1aeb581082be3ab44f7423078eb",
+      "sha256": "81c11ce8b38cc973984ee10a7d02cec9476021ba05d221bf140c529cb8c8d474"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/storage-sense/index.html",
+      "beforeSHA256": "852ac8ecea895215265094c1162604dcd6ab8c2dbceaad266803bd154e521eb2",
+      "sha256": "db379e661a01ff86f55b2aa50f3c32ea7d1f2f3b4b8f0685cb2c15d295043224"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/system-about-information/index.html",
+      "beforeSHA256": "5aebba047307e15ec99c90cf1cb0523564c96aac3c12672266e0c5ed2096cb3c",
+      "sha256": "39dc7f9baab53738e58b2bf70f916fff692d1636677000eeb1a3607e973374e8"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/system-information-categories/index.html",
+      "beforeSHA256": "9c0fbc93b8c05bf6bfb62a6880542a06b788b3ffafa2f5a48d894e64e8b3f418",
+      "sha256": "91ba63e99fdaeaee8c93d2944e363527cf22d7311cda12633de683068a9dc628"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/system-restore-file-backup/index.html",
+      "beforeSHA256": "8ee95847cf9259f2b6f806aa3f053dae09cd3b0bab8b0d34b36c9a66336aea4b",
+      "sha256": "6bfce23ad44852100acf1a1628836e96397bb665278fde11d98c42c881e946f2"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/task-manager/index.html",
+      "beforeSHA256": "33836bb4520747c91b11a9ef635c4b7aa066d4a7b08157e9837c33bf98156aa0",
+      "sha256": "34a0c907f689a75f7455d187d55cbd55578a6c3327941e5d8e7a89e105a592a0"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/taskbar-settings/index.html",
+      "beforeSHA256": "c7f3410f1afbacda309d7bd1d8c71a40dc81468e278d5277b4692e90345db7e1",
+      "sha256": "2a2b720b6ceae2d467e7163e3df301839ceb5acc027fba549334454500cc84ee"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/time-and-time-zones/index.html",
+      "beforeSHA256": "7a9d5de158a7d534c803d7f135629c594604e2cb5ad278d8aff767d58d321945",
+      "sha256": "654d9c6bce41bac87d48d26f18a30c960e5f923e5f3fa124a1fa291284d62397"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/update-restart-states/index.html",
+      "beforeSHA256": "bda792dffa633176ca42983d870c1c44f75e869b55d293451cb1a47ff40db7e1",
+      "sha256": "0720aa8040d36e1c07c1587312556a663632e30a4c7a7e3231ff2f30264c2ec6"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/usb-interface/index.html",
+      "beforeSHA256": "6e87ab56dc674fb9e769b7d87aec881e5d7b305e7658c2817074b6cf0ddf6d82",
+      "sha256": "9e2ca3e8cdf91d2e660bc526440f73951157074246c3a4ec8f4681b29884c43f"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/user-accounts-uac/index.html",
+      "beforeSHA256": "a3a736709e0589be4e25dd402217751506e8a3174ed8fb6e81cf3afbcd954664",
+      "sha256": "678b8523a6affb88262d0cb8eeea95d66a2791816fc4abfb2ea176650a91227d"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/video-standards-codecs/index.html",
+      "beforeSHA256": "3dc7976a21efc1deebb157bd740a9a511a2e94e8f5deae8ea1a0f70b282d3a8a",
+      "sha256": "01cc714006930d049ed17ef18c1e834d1fe06038b17eb768c1022d338416bf39"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/virtual-memory/index.html",
+      "beforeSHA256": "ec873f51f87e7bf2c5ee8c402865de404d9c33fd1687b3031d17c910d562bae8",
+      "sha256": "543344c1fed409846d48fbb7531b34a90cc954d67b0f1b0d20ab2a5179a7001d"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/virtual-reality/index.html",
+      "beforeSHA256": "deec6e2df674bb339a94f4ccd6deec6ebeae29a2b34ff37ff627eb8246c10722",
+      "sha256": "74db499842558803fff416279adda95f066d66151618ea82b84c85f84a9ae1d5"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/vod-mod-services/index.html",
+      "beforeSHA256": "3531c2b9c6635a24d7aa0346f02047032e8205c54f37162783b834ca8f340451",
+      "sha256": "e74cc32525a0a8e345eb69b6dd4aaf00aa51cc82995bf5ffe44f8eb92d689184"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/wav-midi-audio/index.html",
+      "beforeSHA256": "2ab741d21cf41c84463ae3f8dde13bae6fb1dc76a48674aef632cf43e43d8a27",
+      "sha256": "5311331c38d77ab924fcadd11687d25c5467b64636599827cc30bc9e97dbb6c7"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/wearable-computers/index.html",
+      "beforeSHA256": "780f67c28ad6874311720937de56a0253ead97c28f9f7bb4fb27da7566fe6c8c",
+      "sha256": "76344175fd07d1dc06d6a5236c85937f0f040b6ab23df3d1c464d85061d36529"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/wifi-bluetooth-ethernet/index.html",
+      "beforeSHA256": "9bacf62c1d37d74262664a04c4d3a02b0cd4ffa4c06a389069cfc45cac21fcd5",
+      "sha256": "0a87435b80c9631e85c95eceff3df5b342a49f63599bd9574aab53bb62f88a57"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/window-states/index.html",
+      "beforeSHA256": "53aaa8431d8207dd1f1a3ef75376e7ccd334e317fe1e34df9957eafaf2863338",
+      "sha256": "7a00fdf006b9b80b73d366aa41aae9b1bb0d2947b94ba9eab2c5534b732cb85a"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/windows-accessibility/index.html",
+      "beforeSHA256": "3f68f93c4a620f9587c32136837354505cb34e01f6fb43cc85a18ff3cc1d55fc",
+      "sha256": "4f7b1fa70a0625255053e9fb3b6585bf43b7b6d54d2f4c06b98045ce544d17ee"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/windows-accessories/index.html",
+      "beforeSHA256": "d0e2712da7a968d90b57afc730c2e06f4f6f9e7acf054b33fe66723fc5c90349",
+      "sha256": "5d85f0ec9c56ac927336f48e87864b6533d5913903e66c82c6482662069c4dcb"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/windows-apps-files-windows/index.html",
+      "beforeSHA256": "001f3a52dc707b4a9a0e7adf7954f8e650bd5e98d0e72b432950248062a5c844",
+      "sha256": "12649458ee5f88237dbf280a535b4c2077b7298935c288b54b4598de849b8484"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/windows-file-printer-sharing/index.html",
+      "beforeSHA256": "4b411016325aafea385d47e95e78184bcdec65b6327f9251496cd65a033b9922",
+      "sha256": "c4f41cedda21b2bb1625f57c445ca4012839abc6dabe4229178849d88e0b67a6"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/windows-libraries/index.html",
+      "beforeSHA256": "c71bdeed03f192caae302f9abc73ce09dfcb038b5237bd23898c167a015f0928",
+      "sha256": "486cb763ce7c28d24e094c475423506c563465edcc7647c41cb7ccefb50a853b"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/windows-registry/index.html",
+      "beforeSHA256": "3c21fbc7662209adc9c076ca6cfb4d1ffa2c85bfec55964a73da8ddee1f1f32f",
+      "sha256": "4ef6a218746e63b6cf032bc8ab41f5636a32a7804635290a05d58cfc15b0a54e"
+    },
+    {
+      "path": "dist/computer-literacy/written/computer-basics/windows-shortcuts/index.html",
+      "beforeSHA256": "b96ddd09df9c950e09bc0d088fa87298f26c5a44b54a7d486cb9f9a493df961f",
+      "sha256": "41ecfe84a0f332ad2b8df530530bda91007de3baa3cf7edadcf6c9c67929a878"
+    },
+    {
+      "path": "dist/computer-literacy/written/index.html",
+      "beforeSHA256": "6da0459f654a5d903f1c540a3b1648e4cf4c1b27d71e2363135657ce1fdc8a7f",
+      "sha256": "c244f91c27a8c8eed4bb71afb58c829f5ca28700556929d44b0ce072eac8b21e"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/cell-entry-edit-navigation/index.html",
+      "beforeSHA256": "0202b59e6d4e25bd43689a18df6c119cb8b20d170994c7db18c48726101b5a5e",
+      "sha256": "ae68b008248f59c23d53fe19f7b1cf2bac2e2e6847fc409bd6769c0e73760206"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/excel-interface-view/index.html",
+      "beforeSHA256": "a3339231ff2c0ed94c396b4051fb99031c0dfbd158b0e00c4345711e9873d109",
+      "sha256": "2de289dd38645d2550fe5c0fc8e0f23d7b3cfedec43bcdcec99ac033e9d46f64"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/excel-option-scope/index.html",
+      "beforeSHA256": "721b93d827a910b8fa0fcb4cc7f14773e128d0b4bf0dc0d225dbc4c925ad3e0a",
+      "sha256": "9d45f181d931cf7f03782d071b55cdb635247b4b8dbaa0ff12a9191cf77e571b"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/function-arguments-nesting/index.html",
+      "beforeSHA256": "2f335f76e2e68e1a73261756971043578c83548af22a64224a21e6176b47116f",
+      "sha256": "be17aa0641aaf0004153fb5b825b5eff312de52bb1465c84a05a690277dffe34"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/goal-seek/index.html",
+      "beforeSHA256": "7286e8e4975d1259e165e5b7850d5f099fa39f3e166c481cbdc1a3452c228e02",
+      "sha256": "f307b6e9c12e132feab9743cab39064c5656533a83e142eb849688c593ae43a2"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/index.html",
+      "beforeSHA256": "94672910c7da9640fab6ffb740226c70597d9d5252aba4f554ff1d6a9b6346c4",
+      "sha256": "d87f931f828ec4c59d0f3fd0d9fd5284e41ef1e5c4db2ec8be3a55eb02dc7eac"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/named-range-calculations/index.html",
+      "beforeSHA256": "54adc71c0bc496e87090e6b227834545e7fad15fe25ee69db44b33bfc0b0b549",
+      "sha256": "6f05adb0152da9029301e024d1791834e2221677326053da705be920a59b5935"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/operator-precedence/index.html",
+      "beforeSHA256": "6a38cc85fbe29dd15c2081d81eb8c17870fd2b09c4a758355b37d33f0009873e",
+      "sha256": "5a34925c6e2a988125ac3111a2e786cc242ca7390a8be66a9be51de3578a8228"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/workbook-worksheet-creation/index.html",
+      "beforeSHA256": "836e7578c78ffb179aabd94fa8a403bf2299c286344e8fa4c1de89eaa3c6ff9a",
+      "sha256": "96c89c5035078845f78108385c0a6d35926e33b96e39be3336edb42ebdc474f8"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/worksheet-rename-move-copy-delete/index.html",
+      "beforeSHA256": "fd7f55b3e1e81b0c42f3b1f53a49a50366b435b78ceacdd496ad1b14ae9a2a23",
+      "sha256": "303bd4c759d93d48eaa4200aec7887b3e9cfa1c71f29ef9a20ee51ace4d94242"
+    },
+    {
+      "path": "dist/computer-literacy/written/spreadsheets/worksheet-selection-groups/index.html",
+      "beforeSHA256": "74277addcd1937aecf0d40b664c848ff96e98fe12b808bdd32f9b4fa065b6c14",
+      "sha256": "ed53fa89150d27223e193137256fcdbcd43fc757ce97cb57901a894a12a1b490"
+    },
+    {
+      "path": "dist/energy-management/index.html",
+      "beforeSHA256": "f9d9e9f8e4f6896e3c5a019448ef4476b4edf2f0fa5cd4c9c03781dc9222d562",
+      "sha256": "122ef77c2b2fd6fce77c30c44589d1821b07923f93607bc2a129037e78b4f401"
+    },
+    {
+      "path": "dist/energy-management/written/index.html",
+      "beforeSHA256": "011c7717ebf6db45e7623b8229861a8b94788d7c20b45d61b161d282598b3994",
+      "sha256": "bb95e4774066e064fcf5e4f7e13a6176ba4abeac905e367fea22eff07b74129b"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-accessory-equipment/index.html",
+      "beforeSHA256": "b2b1dcf9a765b51afedaf406609458f2f828f2a3982eb237e2fc295d4a81a573",
+      "sha256": "4f6a91280473b5cc130fac68b5d0ab528c5484332684258fc300aaf24934d6a0"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-auxiliary-equipment/index.html",
+      "beforeSHA256": "8fb53e32656f42a43d8b29559eae9ea4585176b70b9569307bca7abace0987e0",
+      "sha256": "a4fd14bca163ee41a6457f05435bc2306e6796d18e0f783997d6090b6f954031"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-control-systems/index.html",
+      "beforeSHA256": "4a78121b710cc6510a948da04b282c69516f6c4e34cf9e75558513e238b364e6",
+      "sha256": "938f07d862eeb15c2e7b665b9b5a48167a30bbb9d4bd613df3c2ea2bfd137144"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-efficiency-heat-balance/index.html",
+      "beforeSHA256": "9db617d20cc09ef9b23f661cc86923a3c45c9d4281d5198d00b1886514559505",
+      "sha256": "8f86cc1d00a44167eeb8c8a657fa7845a0a49c69bba9f6e9926a81ff359e6b62"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-installation-combustion/index.html",
+      "beforeSHA256": "04f43967c45b2346dbf7ae53af76e73e759044b80132bbe1420a9bfa5d5e44b2",
+      "sha256": "ec503d9b6629e29f1a902f61685a857d87eb23c2be623707643135d3e03c4703"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-operation-basics/index.html",
+      "beforeSHA256": "edb2e660de32ad6997476d0311445aae87a995be9a3c5415f1c1a85a4482012f",
+      "sha256": "8e372119888b51e414c0d9f1fb677c0c2495bda00d3f9683b49e0a562c67b9e7"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-operation-maintenance/index.html",
+      "beforeSHA256": "ff8835ee74f19d0e1e3028e754abe9e6ff3b47b7e90e39d9f9f32d0d24253a14",
+      "sha256": "692a7dd400c01a2569e99754a9e28764c58859da80a59c884e41a0fa1e523071"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-piping-insulation/index.html",
+      "beforeSHA256": "d10c84fad3cc51104526f87d8864db21bb69c6d80fef4a27d48821a7adec9448",
+      "sha256": "5b0f8746bb75c8bf1913ddcc2a0c4155dd23471c18bd1c85920698e85e40640e"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-protection-devices/index.html",
+      "beforeSHA256": "5dcaf7e54469dab8d9dbb3d92b3d363e5a5d0cbe9a86e274e53fa157c6860ff2",
+      "sha256": "ccfd962039a0ef69ad3afdf627847f2e98be8c5c2184ee8dfed7d37a5e918e6a"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-types-construction/index.html",
+      "beforeSHA256": "e8888891f6fe6138d437c6ce36daef9a1ad8053d5e57c253c56869208b1ff0f5",
+      "sha256": "655679c717f2c4b715737a147cf5e89a88b65a3699239125c90b28ab18b8b445"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-water-treatment/index.html",
+      "beforeSHA256": "d0e7bb682c79ac7fbfa745e6931375b91c6b9fc02eb7a4dc30fea8b13883a524",
+      "sha256": "b7f5cc43ec35f97ccaa2d89a514ecdba5d06e3607af1f6a6949f72250156e345"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/boiler-work-safety/index.html",
+      "beforeSHA256": "2acc207bfd33d0bb4689b2fa2618d79fc733a7cbb67cfa773c0269ca8848e3d7",
+      "sha256": "e93c1d45bc1ebfe3970e155bf1fc547d4a89d2a784f786c82158c20342d8d53c"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/burners-furnaces-atomization/index.html",
+      "beforeSHA256": "33a4298e8f4ed6b6ecf533ed58e749700f43f7536327415efb32d1693923e020",
+      "sha256": "4741dfb3870e417d285ff0b3f09360a676933f65371a98969323bc9f9626066b"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/draft-flue-gas/index.html",
+      "beforeSHA256": "763dae0878a1f0aa2d2cfbf2ebdab32546b3513c86cf2526d51fc15a73e1cc6f",
+      "sha256": "59a785e12b99e48543d1b1f1978ebf0c2cbd31b95605d12daa89ef7ae634849d"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/energy-laws-and-inspection/index.html",
+      "beforeSHA256": "47b4b9c54eb3fdc29615473cebf09fbf149751c80a0b84a4552bb6cae68ea76c",
+      "sha256": "ce0a98252457bd58e2b173cb996b122aca5776a3c3d5e1df1fa0bc01442f348e"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/environmental-pollution-control/index.html",
+      "beforeSHA256": "7158779e1b7739e54fcf45c2e2a4600ba20903ab6a2a24895d5c9d0e74deaf07",
+      "sha256": "2f2690dc581f7c275524b281f1d7a1893130695ee8032f7bc041e6335a85c114"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/fuel-properties/index.html",
+      "beforeSHA256": "a0392d52eb7d6845b72ba9804436a2b04bd265e7e664f95f8a4cebf259730392",
+      "sha256": "d6531e455cfe76ceb7c7c6d4aa9471a8d7c9acc21f6033f3047104bc59cfb069"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/heating-load-radiators/index.html",
+      "beforeSHA256": "4b1a307f4c9605ac2f9fa91c352d3d81d852d7340809c7c3e4562c6bd4cd37c1",
+      "sha256": "558ae66a10e4f2ac97ac55944b67a3ae1c2245ea478cd374dea5622e229f0c41"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/heating-systems/index.html",
+      "beforeSHA256": "4bc6fa56c263c0b4f0a36f2a6f3fe603764c97671ddc5c2bfcdce69b66ee7834",
+      "sha256": "158c351b251637b8b47587b4488e9644994789996fb1f2f1834f048c47dbcca6"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/index.html",
+      "beforeSHA256": "c765b0655571601a3373f86e267fb442ba45fc02f76122b679d258f45d811381",
+      "sha256": "04b1f359590e896e8e981b0bc07a407a907e340fc78ed92ff653f05a52b93242"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/insulation-materials/index.html",
+      "beforeSHA256": "0520445f3b0ae6cf9f1c3ee63d047b9491b712152046d650e274b272d1950ec0",
+      "sha256": "9d8cba87cfb2661053831f33ed9a90cc5fffa6f13cc53fc799f31af332b747e4"
+    },
+    {
+      "path": "dist/energy-management/written/thermal-equipment/steam-traps-condensate/index.html",
+      "beforeSHA256": "8d11415153bd948564a65b8d17aa21e824eccccc9531c9c9babfcbd445975b40",
+      "sha256": "ab1a4c44683a7956ccc14269eb1046dae27305858d9c8d766de3ecdb01530501"
+    },
+    {
+      "path": "dist/facility-management/career/employment-types/index.html",
+      "beforeSHA256": "a0bc806fafdfcca19b954b32f3f6c7d5cd218816dd2daae9a0490ce635a50035",
+      "sha256": "cee190f421a75608891d84dd5e6235aa2fd1631db33bc2a7984268065b0cac15"
+    },
+    {
+      "path": "dist/facility-management/career/first-job/index.html",
+      "beforeSHA256": "55d4b2ef6b366e565444d5699a3574953393b471491734e0898063490a1013da",
+      "sha256": "5ea66654e4222c54bf74de4410af8ff7c5321427455cbcfb4cc14cd1a8314d79"
+    },
+    {
+      "path": "dist/facility-management/career/index.html",
+      "beforeSHA256": "167cbbebb1201586cfc771817fea6ea29df736fc1c44b41c5a7327fb1e63ec83",
+      "sha256": "544d75fe5636c75167c8d7e8d3628515b528eaf14399dc7047a897bc942dac22"
+    },
+    {
+      "path": "dist/facility-management/career/shifts-and-pay/index.html",
+      "beforeSHA256": "76f8ccbafb7fae74aa35ec24ad46182932945e456748a54428ad89540e0f5cc9",
+      "sha256": "b631ebb0de2fe071739b2767ea25dc33487a40732c4fc2b25d2ee9df03260bc2"
+    },
+    {
+      "path": "dist/facility-management/career/what-is-facility-management/index.html",
+      "beforeSHA256": "e83a22bbf097a9e04898fea5c85d4e30fae795088f22154c186f6e9ebe920f35",
+      "sha256": "051fcb9bd3c9c4c3a27c6ffcd4526668e8f43704e353dd14aa8587ee64352bdd"
+    },
+    {
+      "path": "dist/facility-management/index.html",
+      "beforeSHA256": "113a58758ec0c44c64950061c6e37e91fa30ebc858b5aa2080e1fb8efdd6c6fa",
+      "sha256": "2337587e81841fd5c7257d31a294c9ab557bff5431d3408ebd9d6cee3deff959"
+    },
+    {
+      "path": "dist/facility-management/jobs/index.html",
+      "beforeSHA256": "f395c29f8d76e0779cdc3182d8485b34e13640cc6de5160d03465ea2f7b54307",
+      "sha256": "877e5e1a10847556a83f068fdc8f6fe3d66424da7479ff56f2c9cb5481f2c229"
+    },
+    {
+      "path": "dist/facility-management/jobs/public-sector-comparison/index.html",
+      "beforeSHA256": "e460efb6bbf1c056a82eb4a4cef38ec1344ecd3303b628069aed098650e10786",
+      "sha256": "f34e998683a53f95fbbe6a4c63bd95fc69777cfdee9111ad4c74885b08a46a81"
+    },
+    {
+      "path": "dist/facility-management/practice/index.html",
+      "beforeSHA256": "38c0c1a9ba957ab932e832f35f63d245bb90ccd2c106e96c260676804be92e9f",
+      "sha256": "9768d7e43fdfe82613f1b3d4d215e0df2b05d5e8f6d66c2963b4e9fd395c41c2"
+    },
+    {
+      "path": "dist/facility-management/qualifications/index.html",
+      "beforeSHA256": "8b64795ea52148aeae8fdf20d8030dd356b156f37115d69a1fda69c4809dbc84",
+      "sha256": "9c4b5fda982aec8466d13b630fb5a84653e83164c1e99f8716ba4efd842c0d22"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/index.html",
+      "beforeSHA256": "5fe54722b2ef34ce97b2c67045ce642e2c616a8afd4ea10b01ef455d097dac25",
+      "sha256": "74d01b612a0abbee6b0edf7cd01e4c8d25ea05582009f02a1cff877745346ca1"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/adult-cpr-compressions/index.html",
+      "beforeSHA256": "d67d118c4b653feef7eec063d6c15367f23b0d76934ad9c53de2fb564225242e",
+      "sha256": "77fe21358dd7798960b69716ef1498a11ad4aecc9c88c466d4aa54c4327b7532"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/aed-pads-use-sequence/index.html",
+      "beforeSHA256": "513197ccdb5429c510abd9b2e25afeb0a767d06ed0f8e89b86c50816aefc6765",
+      "sha256": "1f5f24708de71220e76dc172d35a8b23deb5672b067bd7d70645389c2b3291d3"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/bleeding-shock-first-aid/index.html",
+      "beforeSHA256": "8504943fdcf87e0711e5c2fc02cfd5aeb9a99285e8ade816d8523e2182a83455",
+      "sha256": "da9d437a160de54b8c4a5da3064b0f6023b63c1413a3a425869b1e0144cdfea7"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/burns-types-first-aid/index.html",
+      "beforeSHA256": "743d3b8f13586f0b7d484144021ab7e284efe861cfabad541b9f53fe5fc88411",
+      "sha256": "7f597d002700774d6e842b3f11583e297f929e78bc34325490002818e5c29294"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/detector-transmitter-signal-reading/index.html",
+      "beforeSHA256": "618a4428aab9ae3a81be4890c88550f220d94e52c8c1a71970dbbf0f2fc8acff",
+      "sha256": "15c155b6d5423175361d099dd98de6b273d1fd39b6e4bc1b7a63fb8e5f408597"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/false-alarm-confirm-reset/index.html",
+      "beforeSHA256": "0920569ddfb699e1372e5ec45a190c7e08c30239b6428d1be5b40a57eba9945d",
+      "sha256": "5f19a4f3e16936498b8044e0bc6474d75221df1c8b9a0a7771ed54bd72868451"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-discovery-report-initial-action/index.html",
+      "beforeSHA256": "dee306a5ece8e418f6bb45ae890ec8397589898abe39f23878f733e048e0f12d",
+      "sha256": "1f38f6b3282dcef08d6d08c0414ad3d154c14959fe927199b7097c10b9a139ea"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-drill-plan-execute-evaluate/index.html",
+      "beforeSHA256": "703a7987297659a484323d53baf1c92c37d7ce25b809167cd7d4a1801868b242",
+      "sha256": "bb827171c81e6b84e310be672b5c8b99e88050a610b3f51f9fca91e1e4b02687"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-education-training-principles/index.html",
+      "beforeSHA256": "9f62174695e98b553e621d22a2aac93021edcfe9b28cece8ba9d66d72d425e0d",
+      "sha256": "d2b7a6189e69f247257eecafabb4fca4e3fcbdc470bca398021c1b28e8674930"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-emergency-plan-contents/index.html",
+      "beforeSHA256": "6d2570943b1bda13510d0a8e6b0d74ee59fb16f07166f81752717b145018932e",
+      "sha256": "e867718eef777631a76e0d0f5c4c162e22d56d64c2294ff0f425176b7601d07f"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-evacuation-decisions/index.html",
+      "beforeSHA256": "258d476b2956d3a772a583feab8944076cb813e0edcea16e62869f0e94c6b4c2",
+      "sha256": "a610cca0db167c014ee14c5158329cf17ceb7b574a9a90abdc2c2ff6247b8e18"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/fire-plan-development-process/index.html",
+      "beforeSHA256": "fb93dd38ac4b0771fd1dca41189ef73982c791bd88781da75cd1a62a4ef3ab01",
+      "sha256": "4cf2b90b03ca722f858974948d4974d59220d8e7a8126379292eb39d36336712"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/first-aid-assessment/index.html",
+      "beforeSHA256": "d4ee558e1406f3efb407633c2d766d493065064c13c22784079caac279c4de25",
+      "sha256": "044ebb2c9358c0060a0c918a5a5a6b2fc7feedbbce7289f415459812d8f8358a"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/gas-actuation-discharge-feedback/index.html",
+      "beforeSHA256": "d34f6f6a602340ef2d814ea9eb2ead8a3243d27adeab0e2f522aabb42f5fe8fb",
+      "sha256": "03145979938258215b2bcfda3579030b16c928a1a56dfb06bc4ee1e1129191b0"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/gas-system-pretest-safety/index.html",
+      "beforeSHA256": "2fa39a70f313948423537b7cd8dae989e4d07471386a804e68b0b119f4fea474",
+      "sha256": "e409a615631800f4a5987ffda498ef5895e2efc41f9d0c9807b123a6bd4317db"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/index.html",
+      "beforeSHA256": "5efa20f506a958c5c092ed0d70a651edca486541f8e9023b767f602bf2c09445",
+      "sha256": "ce02f0b98e49c32929a8941429f183ec571d9eb79dd670484acc5d3b0429835c"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/inspection-form-results-defects/index.html",
+      "beforeSHA256": "dc3d95269a4605dba99f5f7d88655035c43a98246faa7dd56a9914d66f4b46e6",
+      "sha256": "da4f01703b8cf894efd911a17e90360b89dc819e9351ffbba40b6f40b23b8d3f"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/management-duty-records/index.html",
+      "beforeSHA256": "0fa78dd7ce0287ff0d0fd02e8ea88eaeaf9dd534cbde955a8682357ab34e08c2",
+      "sha256": "a5a9255ad907d442440ec0e9c98d8f3b49a48ac16f36a084884a6e91e9637582"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/p-receiver-indicators-switches/index.html",
+      "beforeSHA256": "1f01cb7ecdf7857001a065f7e27eeb540d1bd65e2b71a33ff9b7bbbcfc38070a",
+      "sha256": "2c99950ef72a83c447c1ad4a8003f2af9d44b52e37c167abc0953dd35c0586ef"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/pitot-nozzle-pressure-test/index.html",
+      "beforeSHA256": "c403846f5575fcb180d2aa86d99452cbb7752e0271319c6d5f0d5e4db607fbc1",
+      "sha256": "dd151086433c2c10d706006e3b4e7cc16bf24352c62b97e6a32f180062011993"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/preaction-cross-zone-test/index.html",
+      "beforeSHA256": "abfa8f0bc4ebef3c2502413e291008cbb14a8a8624177d9eb9fab83be1abeb07",
+      "sha256": "fab39104820f41332a73587245e2636c4ff3184c4eed85fc4674e518a35f73fc"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/preaction-panel-state-reading/index.html",
+      "beforeSHA256": "eb83d6e9e2778e40a88c547828c1f697776886c14f2e3862326b548bb8b5ff23",
+      "sha256": "41fd539939ecf7704190fd0c5833d4d228117de790195834571bfb35b2c7ea4f"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/pump-control-panels-states/index.html",
+      "beforeSHA256": "9a7b473330bd3aec3ed7a548a54dab27bfb8ee590193eb070389ae0bc2c52954",
+      "sha256": "8f5ed22a29a0cd677bf69a1bc76300dbbc0125de4e3b2642d629b6a76cbeb963"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/pump-manual-auto-reading/index.html",
+      "beforeSHA256": "5fd0cf56037e20fefe21e0eff6ece2420a9c5db8ca376921ed6dcbbbc6e0e789",
+      "sha256": "423459b4e7793253d304bf39008bc31318704cc9cd97caf67e13edf8cf8c6bfe"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/pump-performance-tests/index.html",
+      "beforeSHA256": "136129854de1c0e23873287f633f51bd0d8e8055eb1b339e3e86fb7c43e30574",
+      "sha256": "6d0b037f87493823adbb595339a9246705fa89a56e5b6f65ba2d0467c2622005"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/pump-test-piping-valves/index.html",
+      "beforeSHA256": "4e867bb351595a51907c72e4544fbaeeca27ab7d4a997df1058071efd9f7f751",
+      "sha256": "0cb3ad10f851488781d19b51f740893a287b3fbc9a8b2258b11015210afc6252"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/receiver-backup-power-test/index.html",
+      "beforeSHA256": "e45ebbc5a4ae50397e905e5246459c4af18c85bef933248a3423588061c47747",
+      "sha256": "0eb6cf320c8072fa20099e997554e4fa039950316e31c95f6e892b45a310138a"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/receiver-circuit-continuity-test/index.html",
+      "beforeSHA256": "ad559a711226c1277140575c770a1bf8519618de0df9e4cb0b513789927f57fa",
+      "sha256": "a0bdbcd0256c07d9599d41dcccef2bb20923d1f7785af4095d43a80dd066142f"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/receiver-operation-auto-reset/index.html",
+      "beforeSHA256": "50f7b907228077501ae66863cf1ce0cd0df972e915440e306f4217dd0d24abc9",
+      "sha256": "2e25c3a999258bfbce018e7b7a73021e556e29619116b5bc757220b981155272"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/self-fire-brigade-initial-response/index.html",
+      "beforeSHA256": "e23c0cdc46a577bd765b2fea73a51c5a1130f4dd0b0aa45cc1ba525a92756ab6",
+      "sha256": "b7dac477fe81ae9a051fb752eb0397812c81b7cfc35ad6bc29e8d4608971c6ad"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/vulnerable-evacuees-assistance/index.html",
+      "beforeSHA256": "8c0177b4acdf6de5e3c56d52773426e4d4496ed7da5edf4ad6a8e45e59d7a9e5",
+      "sha256": "d7ac2ce53a8974beec9d60e8118fe0fd8b2c5e89fc34e37317b905ccd0253c3a"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-practice/wet-sprinkler-test-valve/index.html",
+      "beforeSHA256": "52f558dd47649567e7c5b7e478430bea34cda1c7715beda709a91598c39da6f1",
+      "sha256": "24ff62a3c30e9a55dac2793a67c6d4666bd9bf482fc2311c8b8567725b6613d2"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/alarm-zones-priority-alarm/index.html",
+      "beforeSHA256": "ff857e35f38408c0dde0630746f4bc9ce86995a847f718b9d8165f7f07143496",
+      "sha256": "08f41c7466d034e0a69f20c3cbbb31ae9fd149ca211ac3dfd66eb4e5d4e67956"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/appointment-report-training/index.html",
+      "beforeSHA256": "46feff8d24059d100cf783d0e802ac9d99e7f90436b203f1234d4052d1a8cf80",
+      "sha256": "8a7131c781024d4142976a40313d37257caa31fe25ff7cab21458bb8a9fca624"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/assistant-appointment-count/index.html",
+      "beforeSHA256": "565b8b31f9318a7588264f1c9dc52e74dda30b933140afc6fc96fa3bb6b585ac",
+      "sha256": "e01b466b808467fab6b42610124a1f71a4fe16390f07589c82c0dc74a8f185ea"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/auditorium-guide-light-count/index.html",
+      "beforeSHA256": "707efffee7063f508386f2ad4f4988c1176975411eb40c4dc8819491146bf369",
+      "sha256": "5ee4e5e0d7941bbb5cb292ff206998015cd9291f9cb58c408c24388007ca610d"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/basic-fire-law-terms-organization/index.html",
+      "beforeSHA256": "ad97c7e4eb5d103ad373f7b40a56046fcf92fe5550406f0663e701b93a21fbdc",
+      "sha256": "7bbfad5268fc5aa671a2170a8cc537659b00733270f3ad418c9739dfd453c6ff"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/boiler-heater-fire-prevention/index.html",
+      "beforeSHA256": "2800ceec9b07d4b5c041a2d8f551e5ee5c99d31aea01c2dc86dfa834c6ec3fde",
+      "sha256": "d0fb045d1ac524a5efd22e7bdffb25f38f5724824f99d5741459394b825f6165"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/building-area-height-floors/index.html",
+      "beforeSHA256": "a631998b60b0dcfcf1f25d876d568c6be7d9d5bbc2d79ff395259485243bfae7",
+      "sha256": "e2e5a3d8faf4afc7180cdab3adc7ac83b84854c7cb8df8c609550c083aadab1e"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/combustion-elements/index.html",
+      "beforeSHA256": "75a46669a922169a907017917cf3899524e51ce62aa4238e25540641abe2737d",
+      "sha256": "4b5977f52e4465fe37db8f4f04ab1535f7bf2de5373af5aa252de646ab2c2a36"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/conduction-convection-radiation/index.html",
+      "beforeSHA256": "32f6d76f09404a16511f2ede5c22c88cf1da71a44d19c8964aae937cad8360d0",
+      "sha256": "4b41f539ee2756e7ccad65abc134c2ebe9449fdb142a44bd38b5e6e84c006f8d"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/designated-quantity-multiples/index.html",
+      "beforeSHA256": "0ecd1a328feaf3eb50e84448fc091be7b4c650f03315a1fb9552362645d47ea2",
+      "sha256": "bbc27f5f78631063bfe0eaf866a65c6321a961c665553562fd93ef7aa64e7936"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/detector-placement-count/index.html",
+      "beforeSHA256": "d9b98f961636a84f74a5ee35e41f0bda727bbdaa426a690e138a824608a379f5",
+      "sha256": "e166e44d357027fb3c8377ae185b453d4f06d38f89133c11fa913de1314d019a"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/detector-types-principles/index.html",
+      "beforeSHA256": "90068b8a737de7a9742d944771bd3bbdbced5a65818e440532a1d6115fd519fc",
+      "sha256": "9c9581210f233c8051d6d87ea084a7c3467ba87383e75f0b4712e1c895856934"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/detector-wiring-end-resistor-transmitter/index.html",
+      "beforeSHA256": "52262051a4bad8ae52ec2c40d146fa69c678d05ec12aabbf0bdbec7086278555",
+      "sha256": "271ed34504aac8f77e4f5e64ac6037088d0fb521ae2546bc612b413662f69fd6"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/electrical-fire-static-prevention/index.html",
+      "beforeSHA256": "63545659ff0d49e66d0e4db8760be91544935de4630056a489cb3b3be8186850",
+      "sha256": "500b740d48cb6be22c67791699fee9227dfe5e3dcc5fe0479e981db3cccb8db1"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/escape-stairs-special-stairs/index.html",
+      "beforeSHA256": "c061a89fdbae58673fa58e459bdcfb878bca30a7cbaf3f287b7dcd93d7d46bee",
+      "sha256": "4f839f5caa0adc0f4e77caada2be43755d303279ea3cec9815e659ae4fc091ea"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/evacuation-device-types-conditions/index.html",
+      "beforeSHA256": "afc14a2125d09142c97db2613aa78f4c86b11cde5bf136792d07a4aedcc4e0d1",
+      "sha256": "5ad587375ba29bebb945b4715549e085802988203d436fd628a4c318078036c0"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/exit-guide-light-types-wiring/index.html",
+      "beforeSHA256": "01b487b28b4d7a6a6bdda44a717090bbe21cecd317207aba200206ad37d80626",
+      "sha256": "2f92da1d180a8e0800c9120ba52c1fd1ad62e5040c8d7a4e1c37671deeb9985f"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-layout-count/index.html",
+      "beforeSHA256": "811c60ef1f66140604b8532997880e2ad3461b5d6f66fd72362d39b854f9d568",
+      "sha256": "89917f9e6fdfe53c35cf078468cdc5f2e7537454a027284bf9ab25fd50969748"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-service-life/index.html",
+      "beforeSHA256": "bbb5bd863d90f69515db06c7442750e367ae05dfc2a612fcb6bfe0b48e56ea19",
+      "sha256": "0d51f187c7d5ec49f6e73ad88718a23aaabc1cc2137773c9d5c2c506d45a2ae0"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguisher-types-ratings/index.html",
+      "beforeSHA256": "a27919ae1b2b55c057582530c126a904c35781339c6f475299d3d4443406a31d",
+      "sha256": "cbfcd2c9a8f1465444c3ebe948b309894d98258b79c3921d7b5768b0c244654b"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/extinguishing-agents-properties/index.html",
+      "beforeSHA256": "3750cf30b408aabd8c224fa9bc5cb5378514902497d36c58fc1d2ae62d137423",
+      "sha256": "a2d11cb33f0e9288386fe76b91542090eecb90120cb103d97004baffb42d24d6"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/fire-classes-extinguishing-principles/index.html",
+      "beforeSHA256": "6cb590b4f58939377ab7ef956b469ca7cca206b095c250dfd159ddad21176e18",
+      "sha256": "2c28843f09cba7686839309088568608bf9c0463b7cfb871d3b40dda5024c34f"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/fire-compartments-doors-egress/index.html",
+      "beforeSHA256": "570e126bfa18acca9a6c63a7a51c293dc77ce59a4d2c95adb019dbb685445794",
+      "sha256": "c78dbb6eb5b4a781b440e41bbc243ac393dcc0cf90e0a170b82701f1b40d10bc"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/fire-facility-categories/index.html",
+      "beforeSHA256": "6d5b138fb18ea5f31a109d6cedd6d2d8de19244aefc26a253652fdb155ea8141",
+      "sha256": "d840ae41fe7f9072b29e6055b52464803055cc51d1a67851d5a44fa4b2d95649"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/fire-pumps-piping-components/index.html",
+      "beforeSHA256": "0c36792efc8c49eaf07d63122b3a3bb4e71fc230afc380c41ee30a6b15f2cb12",
+      "sha256": "c14a6bcfae66b8ed28fac29f78be8b1eb4fd5d1b38fcfe6f157694fa450f79d1"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/fire-safety-investigation-orders/index.html",
+      "beforeSHA256": "a10e515886ce55ec5e9be46bfe5d3614487b87764fa6d4d771d40aa22aafeb62",
+      "sha256": "bdde8a4850dfd6de08a4b3eb0bd10ecba4432a44fce0ec976bded1b256fe74a0"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/flame-retardant-target-test/index.html",
+      "beforeSHA256": "735f8f0290ef4bd1be2f00bee5f081150698795ff6579d46a1a2685dcb7f80cf",
+      "sha256": "869efe0343566dfc5ab807823f2307e43087c444afb3b85c38e788f062d6f1f8"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/flammable-range-explosion/index.html",
+      "beforeSHA256": "c0a961378f1a923eebf65b817ed40c846a53f4d3e7c54646b47d209513a613dc",
+      "sha256": "f537b25cdbc242be74637c250cf2d6a1a9595563c9a0a24c599610c8691ef729"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/flash-fire-autoignition-points/index.html",
+      "beforeSHA256": "ddee1f04a7dc8dac7dd047de08db30ccf90ee932b0885f8639a12fc1a0cdf14c",
+      "sha256": "d5088613cb02f12892f462782f2408a2083cdc1e0b3f8ccdaf5d9a43d287020b"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/gas-suppression-components-discharge/index.html",
+      "beforeSHA256": "ae909d1adeab98524616137eece3833adafc2495ae9a8dfbab04bc696f79b8b6",
+      "sha256": "3cf540198bd78b4c65a43ec4977839e83b18e6a4482ae0d0e060baaea26faa50"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/hazardous-material-manager-deputy/index.html",
+      "beforeSHA256": "9517bd295bd3bf265983be021b7e363a584b36ac3595b1dc5d25e9c9582e4368",
+      "sha256": "9b2d1334272d9ceea3ed1d94d8f3b070dc8f62b2a9b35988113517298e2c7538"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/hazardous-materials-classes/index.html",
+      "beforeSHA256": "3e5d67932619f8ffd0728bd5aec93fe303e7e57c6fde5aa20a4c78a50255359d",
+      "sha256": "6bc62973037e6e0599415010068dfbbf5eb3d5f217e0eb8fb78b61cafb11c987"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/hot-work-permit-fire-watch/index.html",
+      "beforeSHA256": "a7b4ae4a01375bc3bea909f919d53893df01786c251f5a88100dd4cc41374ab8",
+      "sha256": "fb58fe9fe17d9c6d1f81be519921688bce819163942d4993a889b6cbda0d5489"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/index.html",
+      "beforeSHA256": "5dd4861907111be788d4d0311c4302f7cd096dd824fb707fd35c8f61ff4156a8",
+      "sha256": "204d27658a2591602b61d670c384c3edaef9a801ea0e7d9f00a893cb35ff8219"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/indoor-hydrant-water-performance/index.html",
+      "beforeSHA256": "49f502b8bc02ac8849ac81a8888f56b723f95304c140e7c0320fdf24a61cd69e",
+      "sha256": "38105386e99b77d34e49d268ffd224e4c9b99c832e9de733da7347bfc788e99e"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/inspection-report-repair-records/index.html",
+      "beforeSHA256": "2ec6f31ad947146902588c289407eca29113232d712a3493b76691af66c0b3ff",
+      "sha256": "359b46035ba497309cf794e696eee9c47d4879336980c1fcfa02f25ef4b5789c"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/lpg-lng-gas-detectors/index.html",
+      "beforeSHA256": "3b9fc962f36fa761cc5bac2bc3419d509622f660b6d39bb8636674d2605887f3",
+      "sha256": "e9432270d0d8f7a20480daacce876213e6d0e977f402b59398788a535068d0ee"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/management-target-grades/index.html",
+      "beforeSHA256": "0867f05f18be6b5c9c6cf2d0ffd19c177e3517544560e7c54d04160726678bbf",
+      "sha256": "ef7315a45a5418b35c87acacbfe3dac1fdf419f73fd0dbc2f1fa4da69cd45b15"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/manager-duties-owner-responsibility/index.html",
+      "beforeSHA256": "706e3287eb725e5a80bf26b1487c780e102e967be41927ce55726dcb71c0ca6c",
+      "sha256": "51c7a5724b4aacde7866390ce28df8454c644880b1c5a19b5a32da23d2d22df4"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/manager-qualification-appointment/index.html",
+      "beforeSHA256": "e6d767e370b8ee96d46589db95fc0b4f43d62632c111b8baa698e8410920433b",
+      "sha256": "0d1fde49b0c7aa99093fbbb3e5e12cb1326e923e1010c0a0b8da94889608b614"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/outdoor-hydrant-water-performance/index.html",
+      "beforeSHA256": "7a613d9b136516c627cdd5039ef72c42b280eb5839919432de5885f47ab78c58",
+      "sha256": "7c678af1814c53b79859ef082716b0957a9ea423b181cba180752172ee7ad7b4"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/outsourced-management-supervision/index.html",
+      "beforeSHA256": "b77673afd9b185eeb74678132f2a301ec41359301f42019950d6251e5510446d",
+      "sha256": "17f87d37354e8537d04c779dfc266f66ab365f6c82a110abb9b2930df9e9e49e"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/penalties-administrative-fines/index.html",
+      "beforeSHA256": "a20f6f708a7e0d3efc143adca79ca987de0c773ca9f313e420b9dd4be9d0dabd",
+      "sha256": "6e55f78b6cec9ae523592e94b9d1b3bfca6202e790a309e4ee6748f6a7574eb0"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/pressure-chamber-start-switch/index.html",
+      "beforeSHA256": "6a59b28e9a5b11b6db9ee354b3af6ebe7669c7a3066433313e3bfe8da9894594",
+      "sha256": "dc4b01b94ee1abd22578218c893e3b6530d098000466b32fea0f33ffc934d478"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/pump-circulation-relief-valve/index.html",
+      "beforeSHA256": "61064d8ea2987190215cefa626dffb8ad4a9681e3645819a0b5f01b88a3b6113",
+      "sha256": "264f855753393660a6c8c57aee3881763ccdcbf43c59a28183a6f557647db544"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/self-inspection-types-schedule/index.html",
+      "beforeSHA256": "19f20570eab0564b654947aa2b3b607179a26007e6282d3c3ad26a4a03e53a3e",
+      "sha256": "d4b8096b4da2bf8654bf2a582f628872587a71ebc0f73a8d55eaf572eeb72684"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/shared-tank-effective-volume/index.html",
+      "beforeSHA256": "10951bad132069b96fe244fb710a03b5e1f225d4b509b094b0e14e74a3110651",
+      "sha256": "d39ef6659f00224c55d1bad6c1bcaa7d6e3bd379ce749141c085810e982e33b5"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/smoke-spread-combustion-products/index.html",
+      "beforeSHA256": "2b8c406f4f6f656e568e3c7d63a5bb041b64cbfc1c4c1f22035634743981e62e",
+      "sha256": "a8f2ece1c4e1e55ae4aff6bc74c73c3f7a867fa88afb05fa9970f404ebf18849"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-head-water-performance/index.html",
+      "beforeSHA256": "1e2193cd0e1a63138b5e078a598f260e2ca9d7d515c27b5023f1ff3e84409565",
+      "sha256": "2db87e1e7e1a7ea16adf180358948df90580adb46fb2a81a330dba72746d13cf"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/sprinkler-types-operation/index.html",
+      "beforeSHA256": "3bc256b1bf16d949015daa230d96aa9915430ecda802d406c2b1c3745856d38b",
+      "sha256": "5215e292d7dcc0e77f06f438005115bc72a36bd410197f186b2b08b85da64089"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/stored-pressure-extinguisher-gauge/index.html",
+      "beforeSHA256": "d536077fbe770dd57b53045d387e40ee685c507dfa133e5128291ddd0b3cbdd2",
+      "sha256": "3c5f515ad1ccc6188fca231d8400d888ede1565514f838c2d1200e15543456f7"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/vapor-density-leak-location/index.html",
+      "beforeSHA256": "9e5bfb6b2a55b5ce4c137b8b6dad15a2dba3a34aa8bed7496c5edad4bd5ed30f",
+      "sha256": "a16380b4e12aa26f88f2db5dfdd2724adcd726ee62014929c52dcd4cb260b599"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/fire-safety-theory/windowless-floor-openings/index.html",
+      "beforeSHA256": "2074eac5df67c2099345b8f8e18da1fff7c1d6726eea35e579dcd5cb73c6b180",
+      "sha256": "bf44b8eb68965a288a4af282d026753d2b3e03dff887c403923c91643dfef29d"
+    },
+    {
+      "path": "dist/fire-safety-manager-level2/written/index.html",
+      "beforeSHA256": "29cb5b0bac6961fd48de3b060d48539f7e60d5b8dade633f135969efafe8cdc5",
+      "sha256": "4cef2868e5f47e0706278f979bfcb27aeb7615a7415249615df27ba4a1a50379"
+    },
+    {
+      "path": "dist/index.html",
+      "beforeSHA256": "31da1340fad2e4200a2b76cdb2815502b281cf81d0f9c6a34b380dd04ae56f75",
+      "sha256": "5a7254a505e161e9e668cc952176e751475e5c67f5121f5f4d5350ef2c662f47"
+    },
+    {
+      "path": "dist/industrial-safety/index.html",
+      "beforeSHA256": "467185185389aef66869c37ce90679a2054214f13553bb1368c6fce655125766",
+      "sha256": "0324a1d9d8f4c39c045f71e0e83200eb15da491a08cf141ac89a0776ea9f795b"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/acetylene-dilution-gases/index.html",
+      "beforeSHA256": "6fb68440008f86bcb9bbfc66f8e274f2e1ad5d704169d47b03d403c0cd6f2dc1",
+      "sha256": "4f2fbcc8a284c6eee489884bb4d734b2e6cc3b6ce1ac5e9d3121b8399116d64e"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/acetylene-dissolved-storage/index.html",
+      "beforeSHA256": "bd9711688625a526e301c41daa22a9e9cd92ba2c55c7fa8c4167176cbb5075fc",
+      "sha256": "f3e6843a8a2f4d5743f4690ee6949a9b57d3a637e22d619a73fbb7951b1cda21"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/acetylene-properties/index.html",
+      "beforeSHA256": "7bfa1e4c65ee2f37470ae7fa68d9574fda0ea47e109cde86fa025848adf0e6c1",
+      "sha256": "93e3a0e1aeeabb39395d4e93a6965851e02d70c26457948fdf03cc881703d1ee"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/adiabatic-compression/index.html",
+      "beforeSHA256": "ce3a41c533276b7c4ea75c01dede310dda1b54689b86b5038f7ec6df959f09af",
+      "sha256": "eb028c33b03e7e9a79bc1cfa0bfee2d89fba3e63579a7b96cecb52d175e09a03"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/bleve/index.html",
+      "beforeSHA256": "1c5ee799ed4089874bed3a780685b5fc65a26f9703af64048b721f9c07cb1f59",
+      "sha256": "506efcbe872e389770a6423731aa50a29132b0888726ae79947c1578ea137aa8"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/burgess-wheeler/index.html",
+      "beforeSHA256": "dbe7df6d44586e4e46b6db64439917b7b72ec2d961daa9e0746d785ce4108d2b",
+      "sha256": "87f0c41541ec7b123b4fee9d3eea2e42ea8407c96af716d6a460d356924c74f6"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/calcium-carbide-reaction-storage/index.html",
+      "beforeSHA256": "41e3d727f9e1adf7e9a3948956a63a3d5e4a9cc23611d5c867a71c4e1e3a9a33",
+      "sha256": "343f4e9ab800387614c596b9ca44c81a65f3cf981869da8edb406da9a6bec0a8"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/cavitation/index.html",
+      "beforeSHA256": "0ce59afa596b2511170802a5464a46cf503cdb6bb0f53810fe48dd6e59512372",
+      "sha256": "df7e2af8d60f6e06c1cc0912f18d14b29f4db89cc3deac85b547610592f10922"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/chemical-classification/index.html",
+      "beforeSHA256": "a060615ba1112718dbd001d036f97018a2777c2dcfd30583fb041209accae3c4",
+      "sha256": "6358f2214d8e1e58a655ea748ce043bd35c272a0b0f83050e100ca6578eb5a4b"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/co2-extinguisher/index.html",
+      "beforeSHA256": "2d7e406497fc1d6c1425aa89c2747aa0db5beed3d988e6d392d6b2f05c1eb3be",
+      "sha256": "a45c8b76259ba2a735f2f4128e4ff73b7ff9a83a86b83b66fee83b7e27c2ad3f"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/combustion-forms/index.html",
+      "beforeSHA256": "7bd63ff1a6b0cd31f4a103ebb5356fc8bb168a66ce215061ee86613a2a8a6742",
+      "sha256": "9ad9ed04ef82958e5af952a2e5eb8d393df89279ff2c55811edb07ebc1f21e07"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/combustion-range-risk/index.html",
+      "beforeSHA256": "945aa3591161ac57c09289c80d21125885f09c23ad03ec98cdc17e0319d2d845",
+      "sha256": "0018dd789a1860eefd44a69550f6d978286e4a60596273cc8dc56facaa77ed20"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/complete-combustion-cst/index.html",
+      "beforeSHA256": "5c70fa65dfa8a54e6c1350373757ae723866eb286b6ad5b7b531e8b5b9e9f3a5",
+      "sha256": "0303a6c286f0150a7538c9656c05c80b27fd8947e5c4aa9409e61dfbe66c7a63"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/concentration-conversion/index.html",
+      "beforeSHA256": "1845ca530cc037ee66051582ae3143e03e65af780081cbd4502c2d245763e06c",
+      "sha256": "1a9aa672dc0ee671c12a8f4a99c9eed40e1622fee47b70a1f61f2e174ddd831b"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/drying-equipment/index.html",
+      "beforeSHA256": "b85f8b460b50de762701439a8efa22ba3c0f42cb99a5305fd80c01c458920d92",
+      "sha256": "2cd649fff2f573eb3c0a7be92462f417a6444005a5e02d7a986ca448381c9ce5"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/dust-explosion-factors/index.html",
+      "beforeSHA256": "8603fc26195f84801b844f69cd33edf9866a961faca0d481292e9876454580c7",
+      "sha256": "425054fd156c6299413a2a76110f688a5b3c116907b71f73d5a1fd274f489bc2"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/endothermic-substances/index.html",
+      "beforeSHA256": "6e64b4ee79ae800e3e9d765dbe80b0aff883a1926e7bfdf45af43e58a3e08237",
+      "sha256": "431f72d2474a0f99b9283add4c44a1910b56e1149b1d419e325a9d4f8bb42f37"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/explosion-types/index.html",
+      "beforeSHA256": "53d991f923b9c5326a510a1226845c7c08fc0711d3b0088cc30fb99d58a8de34",
+      "sha256": "f16541654e815ee3919d86039065ba60ba6e780f672fa24eee7776704ad94099"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/extinguisher-effects/index.html",
+      "beforeSHA256": "faf15ec84bcbe1f9e3f407e809a3a96152990dda86b219681a8ca6d13bed1d30",
+      "sha256": "5951c17bdebe9bdc4a0f3f4f69a13ad2f8f4346e8b1156576ad9cafba520b3c4"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/fire-classification/index.html",
+      "beforeSHA256": "0b01a502981dae24e7ffb3b62461b5a046c221323b519f7d534fb864ff937fcb",
+      "sha256": "1fccf54cb2bafb4ab81c5036ca898ab1e5f03312d5db84092a903a6b669d03a7"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/fire-suppression-principles/index.html",
+      "beforeSHA256": "cba4ab65547bc1363b852ab465c90e353dc645e6e7a0b3a776c97c1c20af165b",
+      "sha256": "cef183aec173f1ad0cdf70fdba3323331206d3533db2b322119482e0890b3f6c"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/flash-vs-ignition-point/index.html",
+      "beforeSHA256": "24f89c6be46203fc59b8283de0e5167b863472e65c0c5f7ecfcbfa9c429e2c5a",
+      "sha256": "095b5ad14ca590d1d1007b3450c0259a0f9671a2a6a8acbd57f676bbefceb51a"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/fourier-heat-law/index.html",
+      "beforeSHA256": "ae3d2aba6c261966f2eea0ce5e69a9308863b30359a0d97756c7b08d4b178318",
+      "sha256": "205eaf30788eb4ffd1ac8a694fcc2ad87ed0fee3a73efc1666bc58b844cc80ee"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/hazard-index/index.html",
+      "beforeSHA256": "c4f56666c7ecfd12139fface58b60d3aeb14ae8fba138a7749220c7514ee930b",
+      "sha256": "0297aa140350d2b79a764784820e3eb715b4164f8cdf2c850be84d50e76513a9"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/heat-exchanger-inspection/index.html",
+      "beforeSHA256": "fdb3e69e97ae1f32a5d24ee830f0a911ac206d5e0957eebf9ceb9f4b665d9df0",
+      "sha256": "0b7e718d8ffd18566e14823e05f61ff99f69263158b121254a25d9c141adfb43"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/ideal-gas-law/index.html",
+      "beforeSHA256": "fb3da1781edd24e8491039547188480477006deb8bc9920cb96096ff31f3e2a1",
+      "sha256": "822f8436b8ccd77da4d805723f5851f0646da570e1df6eb744a2d4cc7d4b8645"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/index.html",
+      "beforeSHA256": "50118b1e0bd4a3ee521c9d153e886134608abf364670c2bcdcbdc08469b1f8f6",
+      "sha256": "4048ba424d1176f23acd352a3c7e112e66b152e020a3deb6ee36186a2b3e7733"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/jones-formula/index.html",
+      "beforeSHA256": "681d8f9c4f0824a45af070fe664a2ffcdb57f2e712daac5846259b9373e080ee",
+      "sha256": "f69a101eb7e347383d5150ec489bee908a5efb2962ed440aa5e1642827b5e6c8"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/lechatelier-law/index.html",
+      "beforeSHA256": "a32bc1422a4d13279792408370721ec4d8e04c822fb52d5e6ce8ab86cad17f35",
+      "sha256": "11cd9cd49a48bc708ddbefc6722fec97eb5e049bdc2465cff1b4f6b2a003e028"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/mixed-gas-explosion-limits/index.html",
+      "beforeSHA256": "ad552386207a7f7f51f484709985764588fd690ca08b946b8dfd75e365c12bb0",
+      "sha256": "9b10b10e94ef3127e1f93aade2c897a8d4fabd86ef92d2075e817da7e61f4130"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/mixed-solution-concentration/index.html",
+      "beforeSHA256": "b5604642797e91fe6b0ca2b1386ff61797fbd3a6c3008945b598abbbb16ab606",
+      "sha256": "34d983edc390e6f4c6936d22eb49e76486a5957a3842ab400890dc37a40f2159"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/purge-inerting/index.html",
+      "beforeSHA256": "9d9eff1f953ebc55439333fe76915bca91ddbebdf7f339da63e72424f5ba51bb",
+      "sha256": "17b786819f23a957ed0f3da6c2fc7ceeb2529d1798e9700653697d6438264acb"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/reactive-dangerous-gases/index.html",
+      "beforeSHA256": "5ca934b5b807fc1f329e255d4eb90c7b1b4780cbd34fba3ab1571024248a1d43",
+      "sha256": "7e84d6ae788ecde0bb89ecd18afa0f4d399262fb6280f4372e7ba7ebf58f5bde"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/reactor-classification/index.html",
+      "beforeSHA256": "a119f9b3e7d16056e88aa179fecdad914eb220d5fbd700ef9f63978b27e238a3",
+      "sha256": "6a5a782d3240666b617454d3b27f0ba362b0fae5b4f06017bf93aed914f2968e"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/reactor-distillation-equipment/index.html",
+      "beforeSHA256": "b01ba872b980710324cd73b491b16a31a006e119aaa81de08656ec77d776451b",
+      "sha256": "77aba0af6f1c1aae857db2f56fd78e193c6d8f5fde4b092b81c7af960defbfb0"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/safe-explosion-combinations/index.html",
+      "beforeSHA256": "28cd1d0d1c44d0cbfaeebc8c697725e78aae1ab71aaf8116e9fbb55b2ce31d30",
+      "sha256": "77d4ccb880bcb78e449e805c91f67296abc11835cc209fe9ec88efe4a48da2eb"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/safety-valve-shutoff-exception/index.html",
+      "beforeSHA256": "7e5513640c3f25e1952eac6d6b47a121b37b8f87a0762d4ccec429c5817d7867",
+      "sha256": "c3001570f8770e4584c3fac68982183dc2c3a4e5e03924917cc23c2b8162f3d9"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/spontaneous-combustion/index.html",
+      "beforeSHA256": "e950b7227e0794305a989de1a7fcb0806ffc31707c8b65180b8b2ec3b142583f",
+      "sha256": "ab55838306ecf4dcff42ec36f27f55135f0cfe1bbcff749356038f1bf48fca82"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/surging-phenomenon/index.html",
+      "beforeSHA256": "8ead6458a53c74aa9456e68847ad8173c94e291c70adb0b926cee218883bf747",
+      "sha256": "65df39479a2bae112bc5263e8879ce95635e631f53bb0667984e6f8fa8a0487c"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/theoretical-air/index.html",
+      "beforeSHA256": "9ac363c853f02949b2ffde5ef7bfd1d436c63e13127e4051208acd18052bffff",
+      "sha256": "26c8a681bb5806b6abc85436c19b3b63cc293a1011f21336b8890d4408e20110"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/toxicity-indices/index.html",
+      "beforeSHA256": "9cf83ca652cd4e6b3c67ffa30fb415e8742e86986fda87c25252382dfe2916bc",
+      "sha256": "f7050fee4a7aa36fdc326c6fd30a6ea17e7da3f5c0059f562f8e362f624588af"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/vessel-charge-amount/index.html",
+      "beforeSHA256": "0f53286897838a90b514b65e7d1f5dd58ab9a9bcfbe5f011b53669b9a5fb5b92",
+      "sha256": "ad237ddb50a95e281f84026c486c642f664a821f6ecd869ec355c0c3763336c4"
+    },
+    {
+      "path": "dist/industrial-safety/written/chemical/water-prohibited-extinguishers/index.html",
+      "beforeSHA256": "3fe41cb2dc97dc252b7bbacf07b12ede4bd21f2ab4021450f5c7189d773274c8",
+      "sha256": "ebda455dc9748039d74b098fccbcb7e991015e9821e99f24b87b449543967e6a"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/blasting-safety/index.html",
+      "beforeSHA256": "d9759c26850193e4015ce05c4004b91549c35666db38871ac335708925419ec2",
+      "sha256": "d98cea7786f95ed6e104a67e367b16ccc3b044687cf4f1ea15d8fecc94876129"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/clam-shell/index.html",
+      "beforeSHA256": "509b06586b7924bac8f22eb97df04c87b2f18ec568807c024ef27bd10c5d462f",
+      "sha256": "51976d043f0cbc2f5813ea8cdcccf71a2fcc77602740487c274654cdb90d328f"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/construction-hazard-plan-documents/index.html",
+      "beforeSHA256": "34d9e37ea1ed4106705384035c0a60d0aae801bed9912706a823bc0868e8c583",
+      "sha256": "ea236dcb69a3e8b77ca07918199d0da9460e8e4c26d20a230fcafce4a8f47760"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/construction-illuminance/index.html",
+      "beforeSHA256": "44938f5666860c35711e2887925ecad6987bcfb8683858775cf1385145e6e375",
+      "sha256": "a42d739bf6a1279f44c9df64561b6adeac3fb74d220776b9e61d0a845579355c"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/demolition-safety-measures/index.html",
+      "beforeSHA256": "a1ee1c6feeaaba5ac6214d6e7b146d8b1a997001fb6dcfaaf0a1dd6aa680e7eb",
+      "sha256": "25143685807a74dce08d9d7c797f755bcac22202171552650321d248fcfac4b4"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/earth-retaining-components/index.html",
+      "beforeSHA256": "5869f4cf994050cfd1105d3c6362b221372fc111554db70f771ba03bfbaf4dfa",
+      "sha256": "fbd387d0cb5eeaf865d9bacea83f7b0add4a56610f8df958b6c322779d9b8a6d"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/euler-buckling-load/index.html",
+      "beforeSHA256": "098014f1da1c82abe224cb1643a1ca55179f605c08305d067edbb31cd71ad9dc",
+      "sha256": "c8147cd3c39fe983198a8cf8c99cbdaae300c962b965a1e8bf3439ecd284defe"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/excavation-slope-standard/index.html",
+      "beforeSHA256": "9591aa1418c59d8b8e11427095b0f807bffb2acfd65aebdb534aeba4c6699465",
+      "sha256": "0d9b95557ed58e0de1ec1b0939a3283e5aad9f8d764a3f2073d0167f7f4218ab"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/excavator-operation-safety/index.html",
+      "beforeSHA256": "1d7bd93437ef7d3f771a98fca30abb9ad33eabf5c35498e62dec37a8329e45e3",
+      "sha256": "b8d3f049d8379ea7345a3a949e7cfe1d0835c90727943280ff6466b80da1325d"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/fall-prevention-equipment/index.html",
+      "beforeSHA256": "e4fefe9f2169f9b845af9498c1a2e07b3192910cb94c6703c32facab88dc2ecf",
+      "sha256": "a41f24bb8761fa0c2cee8e5a1988e459dc902dc5cf24c2e6e31e4df8b0ca84c4"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/formwork-lateral-pressure/index.html",
+      "beforeSHA256": "e3bac7ee95342de445fabee1d6084c9622e6f965322cd21da284de2226f6f656",
+      "sha256": "2703fbfcb361f112b76ac8fc3009c96538c4dcbe9b53a906d95b26cd8f8df0ca"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/formwork-removal/index.html",
+      "beforeSHA256": "349089cc1b8b66a382abf0e9b343cdd3962a4cff811aa2a0c896bd328af7218e",
+      "sha256": "74933141705abacb065be19391efd965c32ffc8bfd940001131d7bcb5ff0bb5a"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/gangway-ladder-standard/index.html",
+      "beforeSHA256": "cddf89543eef31eaf3c8084cebf536ba1fc55cb3262c4b9b4428581970e53743",
+      "sha256": "f23e01b693ab387dc08eca8fe3f3fd4583299b84e5a695b2a34ab4915ed92035"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/hanging-scaffold-safety-factor/index.html",
+      "beforeSHA256": "ddaa303535f18cee52cc23af92fad930881a4d9da427f7150edbbf62af5d8347",
+      "sha256": "2a8a551a4373bb75add65ce24672b9b961db90fa94b60609eb64c139e3e3f12d"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/hanging-scaffold-wire-rope/index.html",
+      "beforeSHA256": "a149489f624072f4c0a2481f2650a61377e40aa3453923b6ca4c582aa7395e23",
+      "sha256": "b8c22c9e047f776935ecf3a7ab87c59f9e0ff5ebad8d86ab9fe213d9ad78afac"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/index.html",
+      "beforeSHA256": "d72bb13888f65f480d8f3e8bde6ec78b355a7d02ca44be36348b2e0bf0f26d27",
+      "sha256": "fa84d3b95cdb46a679f04997212ef02d1f370ec11180a5b1e252a1c0a618861f"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/ladder-cage-standard/index.html",
+      "beforeSHA256": "7376207df75936416a407dc1be8e0a4f92826cc9ab91fa8bea12a2055471139c",
+      "sha256": "2a341e73fec8c9cda850babd617eb920daa42a58dafb8523cedd973459f75c37"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/pile-driver-stability/index.html",
+      "beforeSHA256": "b4ae3741b3522bef1b204d41456da03c7d174c30120dbd9d6dd9099aae3c5ece",
+      "sha256": "c3ac939f67eca06ea2d362d2860494d02e368e7895862ed51a375f9684282f12"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/port-cargo-passages/index.html",
+      "beforeSHA256": "3a03e4f32fa06f42a950495e9a4ab661d97200d6ae1583daa97c9eadb554e546",
+      "sha256": "3ac7758fa7046d6a5b328a00ac11b8f0652831c1c2fec9381d8ee7c67888cb36"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/safety-handrail-structure/index.html",
+      "beforeSHA256": "31e8d870f820c6b0659b82beeb5ddbb3cd39d118df8fbabf2ef95d4a73a4102e",
+      "sha256": "0e5318dd34ed55ac5b2ddcc9cab7209f97bfb61431b7b9ab79dad3806bdbaa66"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/safety-management-cost/index.html",
+      "beforeSHA256": "d4910dc823d0af0c1db3002ea86e1e201c63fc7ae4e91cdd127db2358657b90f",
+      "sha256": "92a9df10b0815f788ca53714d3b5c872b1a396dfcb64d5954c9d52171dd7d363"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/safety-net-standards/index.html",
+      "beforeSHA256": "b308fd7ac37de7803485a7131be7af4f6734e7654827aabd5bd23263ec955349",
+      "sha256": "07366e575990b557d826331751eac2894ef8ecbb24bf58668a5651785b155617"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/shore-safety-standard/index.html",
+      "beforeSHA256": "2f3ab61eb35e5cd004f15cf03835a340508d20f70e9c13e2375bcae5fc590f88",
+      "sha256": "c807f5892d674b4d9ac1cf7d32bdb71c10202b059409198015a0bd7491e36ada"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/slope-collapse-prevention/index.html",
+      "beforeSHA256": "db8f3e9daba285b222f42e50f3b9b402f2ffd61ceb676acca1f1fd3969a8317b",
+      "sha256": "7a9d22267459f0f6f2bad7d19366ae9efdce1a5f2ff094b0f139be9dbd4e0ad2"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/slope-stabilization-methods/index.html",
+      "beforeSHA256": "b9bd7b0fee558bb839c9b6d735b1282909cca85bf527d8a366337b0dc3c2e812",
+      "sha256": "710884701a88d0ff4ff1ea8eb1f89683e328b169cda743019bc5791eb5466f0d"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/soil-collapse-prevention/index.html",
+      "beforeSHA256": "bce00ee9408ed1d7b2687b40965a13db1a947a6ce1e1f3167c46a7d81881148e",
+      "sha256": "f79357d8c3983c12eba2454eb19316086cebd15d82b565bf8e2f83ada4d13e69"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/soil-permeability-factors/index.html",
+      "beforeSHA256": "3fd859c7433d7f065fc8f9d796fc25807b2f39059bf52eb060da00d27bb27abf",
+      "sha256": "6cea8d94052a7e405da8575eab8c198d98b689157c760e6d40b5d1c37a43e307"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/soil-test-types/index.html",
+      "beforeSHA256": "e924a1de5be49fffe10385f730171be7b52f99b623d0291d13bf3ea72adb71e1",
+      "sha256": "4d2df10e8c05d8f0ea393276d1c2133172af75b160fcd772ffbdeca297831194"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/stairs-landings/index.html",
+      "beforeSHA256": "481ae3462c2e4f34e400f2df2dfb7f6bc98c7c5314c22a734f0501f43d78be80",
+      "sha256": "06c580b6b68074744f33ff60d4c377dc1864592c692a8992e8bcbd310ae41c8b"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/steel-frame-scaffold/index.html",
+      "beforeSHA256": "16d340446d9bba17b4e65e61b9e8d13b6c442324d60bb00be0cae17ad8da66d3",
+      "sha256": "d28ff3984ac4bbd9f7e341dfba665ef4e20e8ef8355e962e853aadfd952ffe97"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/steel-frame-work/index.html",
+      "beforeSHA256": "31bd27d7ba47f1141faee15ad8bc3ac5c498fdb8538a80db723ebef84c128f1f",
+      "sha256": "6071ddc59e95a11f9f5f872ba59071ea415fe751f91d979b9c954b662b1098da"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/steel-pipe-scaffold/index.html",
+      "beforeSHA256": "61156dc6bd697700fdd35ea7590e460dfd0b4db05463d985eacaaebb0d13708e",
+      "sha256": "839b7dfc48827f2253d9074aca7ac9ea1f1956fbc2d54f179c262012246a4451"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/temporary-passage-stairs/index.html",
+      "beforeSHA256": "370a89ceee780c24954e178bd60f2e46d675908566bc03abf8f597404989e871",
+      "sha256": "87e52caaab760b46f2310b403d1be96597e57e6e738247097caafe9cdfff0564"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/temporary-structure-defects/index.html",
+      "beforeSHA256": "306f9830b52663bba5c3d5cd40cd0cb543600899e3492ea744baff6deeef7d4c",
+      "sha256": "08a2a1adfd329ec41725d3ead0c66161b2160770a37b0185a969d3ef8bc2f2b1"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/tower-crane-rope-support/index.html",
+      "beforeSHA256": "8aa656f3c2585b061721d3c3cffc6eb654cc7fa6203181e84aa4a399327dafe7",
+      "sha256": "61f38b910fbffd2cb7b405c0eda2a08437fde625c699b609d10d8af2c36916ec"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/tower-crane-wind-limits/index.html",
+      "beforeSHA256": "ded15f2640bf97ca2dda43f87cfe1a6ba48ef40ac8163e579791283b25d9a443",
+      "sha256": "65bf0279b6bf5df996742813880a7b5f858f747297122a7b3b4c0ed4dd727e95"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/tunnel-blasting/index.html",
+      "beforeSHA256": "ee3d342db3fd78a2bd6bf3dec5828c6350cf20022344e9e070916b429c62aa06",
+      "sha256": "cafc4f8e700becbdeac1286deec41bdddbea6f8d0b63706be1927aa254dec7b9"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/tunnel-support-safety/index.html",
+      "beforeSHA256": "2ac94139f5b2e7d83c1695e4a58fad2d7064585b06bd8fdca5bb624ac7281a26",
+      "sha256": "e36168228208b6bfcbce4034c7fe40de4c1eebafffc31b7407ab6e3e5872d546"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/tunnel-survey-monitoring/index.html",
+      "beforeSHA256": "c31cda1edc67a57106d1490c7b22bd142e10cee12c44f30937fea9f0cefa069b",
+      "sha256": "48b9f6951d71b1d97e8b9c3c317bc057a81315ec6898db149e66ca1030201e42"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/vehicle-overturn-prevention/index.html",
+      "beforeSHA256": "605089cbe7e7d5befeeeae3bb5009298646328b3f35d6bc70d90f21a11a0c83f",
+      "sha256": "7cd54ebce43895e2e7ae8a4d367c803d6e38ea243cecd320928bd859af2e88b1"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/walkway-board-standard/index.html",
+      "beforeSHA256": "7384bef55ac0523165c5714f2b0437216e3fd376c55b9bbb55758b3971be778e",
+      "sha256": "740d0673fec6ef765b4f594cb45ee3382483a07a5e538a7d90d21d7ec58a2ec7"
+    },
+    {
+      "path": "dist/industrial-safety/written/construction/work-platform-standards/index.html",
+      "beforeSHA256": "abc7d5b7f59d4c86252f71fe1b375d1236ad7c7eaf7b76007a08f11906572e3d",
+      "sha256": "d30c57d597b238871dedd0ec319cbd30dd3d18f9ed1f5a623063232b6622add0"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/body-current-effect/index.html",
+      "beforeSHA256": "055077623506d4fb482e45f0c6a24e070d25950da4b186b7cd342521465e7b39",
+      "sha256": "d8fcbde400426aefb0788bed67bef238d8ab8b2066ff9d9b4f1a265559edacb1"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/body-current/index.html",
+      "beforeSHA256": "b5e40989bb3f14b033e3f325635cb30b2db7b3a6b9e65ae196fd7e26f370e086",
+      "sha256": "600841beca3976d5fc9c9fcc3b98ca2fb86405540dde60ff351e99c93e3c7354"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/body-resistance-factors/index.html",
+      "beforeSHA256": "7a04e49f4e42d41683ae6b5c3335fa7aad28f253f353d4484692c06102653daf",
+      "sha256": "0b6b24332e5a0ca738a89fe67a403106752c062d4ee9f8228de02ee5975719d7"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/breaker-types/index.html",
+      "beforeSHA256": "305a29ccbce85f6a8c2d1d9f9dd0532bd0acce78c409e3123a57f0fc12bbeabe",
+      "sha256": "c4d395b6952742b0967043b4b5095f32ec698634b01809a66815311eca6a19c2"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/charge-capacitance/index.html",
+      "beforeSHA256": "eca031fd1dbfc52d9f401c41bd8ba5dd55fb11f390a46383e09d4d16074af49f",
+      "sha256": "2d728c8c10f53d4a5b7d01ff1822497a3aadf23710b9fcd35f87f165386df30c"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/combined-resistance/index.html",
+      "beforeSHA256": "38cf791100ed6b8a51d7be4f9ec29c2bc9f517066574b0a5e7bb1e2e6544eb42",
+      "sha256": "ca34459ea8ef3aeb90ff959c3bee547c36bf4c0ebb1a2c542f16027c3e34cd6e"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/electrical-fire-causes/index.html",
+      "beforeSHA256": "bb355253ca5217b60b57b2f6b1e8ce647de74a6acb7076d3fb495190d9b8a225",
+      "sha256": "d0f96f0c5f1e529f2708f834c45ffb71436164ad36189c4c0588aa9810c39ec2"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/electrostatic-induction/index.html",
+      "beforeSHA256": "df9ae6e366f32a886855a403e1ce9d8f5ba71ac04d5236c85ff3e6cbf64e42ef",
+      "sha256": "07a4bf6ce88c532242af9ea360ce0c7baa36866e78b286348fa57b5428ca217c"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/explosion-grade-vessel/index.html",
+      "beforeSHA256": "8d3d6c3e7b9bdf630397929ea4d8a49aa49d15dbb7585aa1ffbac6dcbe0d9057",
+      "sha256": "f84f973867df8965cf9465b14229eae1eea7e80ee644308bc4139bec9a6575ca"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/explosion-proof-basics/index.html",
+      "beforeSHA256": "3b9ce5b7332a62a0f2cfd196fd452d0c49ac598f68e905bc876d28afff86e523",
+      "sha256": "d58c693a705645812d8c20c8e35e3c8657d0ddcbf1bb86f8dc1f4ebcacc978f4"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/explosion-proof-code/index.html",
+      "beforeSHA256": "df3cf6bd7895494c2a4401cd4f9e40121f7730d4de21d13fffebcf5ca92ff9f6",
+      "sha256": "40ae4501fb39b9fda7f713d2fbb486c9716c1967aea242c9b911ed74ac6d98a3"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/explosion-proof-fittings/index.html",
+      "beforeSHA256": "8e0b5b38927d300bcf153259b13054b37edc5338bad9dd622e6e3225d071dde5",
+      "sha256": "282d215fd63a1c428984350eab87b888dc14ae56cd032113f1a0c5d9bb1cd8ca"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/explosion-proof-types/index.html",
+      "beforeSHA256": "206bca2a90bf3ff918474f44323b3d9967268f3ce8df9d0f6b46b43c7c655cba",
+      "sha256": "f45ac811eb22d62b6a3d48d2d11c7afa1117b09bd936ce31a8c7dd0c338a87f4"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/explosion-temperature-class/index.html",
+      "beforeSHA256": "44a2c4823f6d617c7b869ef59e8b950faab57d07a08924bd83db2deb4e515f89",
+      "sha256": "ba383f41905b4818fbd6b508f09349f89456f09c219987cb307613bd1c5f69c0"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/explosion-zones/index.html",
+      "beforeSHA256": "46e50a402440ec92bfde08566fa57662c4fd8b88be1e65ef1c5951dc299610e6",
+      "sha256": "e12c47a68d43aa135513f99783a0df04eb93c563b278eab383f92a447fdd0190"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/gas-group-classification/index.html",
+      "beforeSHA256": "5149d083d4cfc3aa8b2e644e68d2f08d2ae07f32873d35e763f34f3dec7a52b1",
+      "sha256": "fa48fb3a8fb3c82b5c9a634aadcd8c170a22fa8c35eee2c35367906e34402512"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/gas-group-distance/index.html",
+      "beforeSHA256": "87cb9827ff2a00e772b5824f51ed3fb1fb02fcb440ba2817831479337ef08040",
+      "sha256": "6aab1a9181911c5d68a4296ff63fc649086df85835098463df434e0de685d365"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/grounding-exemption/index.html",
+      "beforeSHA256": "b0a8ac85c411e8c8682a3e99c9bf1a3d78b5109fd7bdc8c939770cd51351cd32",
+      "sha256": "76778992552f50c58d8fb93e30915f62e274eeda04d78ba96d29f5da08fb0627"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/grounding-targets/index.html",
+      "beforeSHA256": "f87154e45f02ae0d723986cec959f18c628de2f7ef174208f4461f31f5cff9d6",
+      "sha256": "90ccb7574c114e7c1c6f0eb681c7e9fcffa3a220c63193c41857ab941a07e826"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/grounding-types/index.html",
+      "beforeSHA256": "024f31e3313b83a1c67afddf1647a3d992198d5367b135ee3b8e72ead750c7ae",
+      "sha256": "8804f4f6b2ecfc7e9e968d2e728e4c204d9a893ab8f58ac9f35fc5df96b71863"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/index.html",
+      "beforeSHA256": "05c7e8a5ba1442c50454fed9a4b666d7aa0e40636a2e511d79eea9801b3ceb55",
+      "sha256": "dbada6bdb4d1d24b9eae2a39843c0316f2ee4326ca02bc3a51b12431f9783c12"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/insulation-temperature/index.html",
+      "beforeSHA256": "fc1ae94467818fac567bc78c165d0a881db7561b7ec1d8f71134fdcc7cfbfb11",
+      "sha256": "9c0524922624168045ae99b385f1fb44bb6d25e7a7a88c2c15e4d2fcbf7bbab6"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/leakage-breaker-exception/index.html",
+      "beforeSHA256": "533ec661a6b496f87c07822bf2f651b3ad1c7153d7cbfb99189938457a88348a",
+      "sha256": "07b15c61deca18fc7cd4c4f9b745da6e428483b14e0a47da9b807cbf4201428f"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/leakage-breaker-operation/index.html",
+      "beforeSHA256": "7ba08e31cfa8ad7dd2a64898784e7092cb066569d926ea59db5032ec3414291c",
+      "sha256": "4220c44c2b88a942e5581bbe0175c57ab3ae5023170a88ad4f2a48ff51ccbcd0"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/leakage-breaker-ratings/index.html",
+      "beforeSHA256": "4c5f7c1166d12d3341f99cbfe491a53668399ce76353a9e31f0a0412b79886b7",
+      "sha256": "ac336d540729403c5bbf9d633719d6a9771de34a1d0d65112777bc753735682c"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/leakage-breaker-types/index.html",
+      "beforeSHA256": "080f67ace65fd767a47bcee1641f4f5c974cf0918964c16beb27ffecd4bd475a",
+      "sha256": "7a3fcbd41049dab11ed6cb152d63dbc5618995eca559af77121c1ac3d914d5c5"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/leakage-vulnerable-points/index.html",
+      "beforeSHA256": "fbb976d75f9d1946ba91e421ada30c9336c08a52573a893257ad58ea06ff4605",
+      "sha256": "8141ea05c14e656ad4935c56f6be8cb29b210f3bf216215abfa7983645507d7d"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/lightning-arrester-conditions/index.html",
+      "beforeSHA256": "b03f20fd0579ce7c0c8451ee0d69f42d2fa4e960ef77f82fa3ce48241705c47d",
+      "sha256": "746b0a5f5d93e569472c6073f28e332b39fc2da11c2daab8c7656cf101b720cc"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/lightning-protection-standard/index.html",
+      "beforeSHA256": "e816ae3a8436a9bc04c7cb80a022339b2f0d83f8dfe62ef01c3ae9326a7c524c",
+      "sha256": "2cc53590b84a4d7f54e75cef85ed7baca4bd336e757acea78f7b058c5e5612e2"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/low-voltage-insulation/index.html",
+      "beforeSHA256": "13b6ba989e9a79766de16caab156370b621ad3a6330a8d248ff8176571a603e7",
+      "sha256": "7259e5b7943a6bf739712b8599b3e5f2c36cad04335094104a5e77af20c210fd"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/max-leakage-current/index.html",
+      "beforeSHA256": "cab1600703badf85b64796b8891fa88939a5fbd57921e4268e2ff440e40184fc",
+      "sha256": "4a89b53c48a2d49541593e2ba29076e7a0fd72b761284d5174e426f8bd606b10"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/ohms-law/index.html",
+      "beforeSHA256": "38d6b04ed41941d44855670e837d2c75be28837ff83ddc0300752eddd2a9b9a4",
+      "sha256": "d4fff8c5756cfd8d637deb4fe686d0ef007f18beff37a550e4fc90e30ae7ff8a"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/pipe-flow-limit/index.html",
+      "beforeSHA256": "3e8a669c34fccd0222a6473e69cb8df5f3916500e2be68d25e84e2ed3099dd97",
+      "sha256": "2337a6857d825949999fb4753e7503d861ba8395b9b450e9779f62e9a2319e46"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/power-current/index.html",
+      "beforeSHA256": "9bb1c0764888d0411f9b6b7216b028110a8383f18a1f559a941e6956784e68bf",
+      "sha256": "472edd03ea6aeb1b73c132068423be30ca99378d3d6c1504d4b4aecc8f59e0f7"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/power-formula/index.html",
+      "beforeSHA256": "54120f8eab7b721401cd347c6749abb01a2b1a6f0364745855f85ac3a11e3bdc",
+      "sha256": "f7590a3544d7876cb5b8e02cf9c31a4b97faf968f5e2bd1d04879ef8f9e06b35"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/power-off-procedure/index.html",
+      "beforeSHA256": "c93baac099224226e1e64f120ac48f57c131aa4949128d4912c4840e1a1c3e74",
+      "sha256": "8297a335f052685fd185cb2b9cd6133476eb98d642da5b459c07bd96db634bfd"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/shock-prevention/index.html",
+      "beforeSHA256": "c98c8751ddbc22f6241952e059a547e14ec05d2c793bf3fc8140c57bdf0a59c2",
+      "sha256": "0c1ae8af37f6c3be59b5c83e14259a64fc7f1dd610318a7052a3d7a57b763074"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/static-discharge-types/index.html",
+      "beforeSHA256": "898db2f2ea71bddeab05f571c9dce7b43d5c71f1e0d577d3b60b27ace07cbfd8",
+      "sha256": "00179e0100ade27b926edb4fbd8b13cc2c941d9cf4b3bd06d5e0b9a03f7c646e"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/static-energy/index.html",
+      "beforeSHA256": "bfaeb42e1407cc6cb84ef2bb336b476794eedd11106c821bd200e61fdb7a55ca",
+      "sha256": "18dbc4443ba85f2655d562a6480fcc81002a9bceb2f723ae620d27707b85238f"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/static-occurrence-factors/index.html",
+      "beforeSHA256": "0ee4140b6b87f76575e9bd653312f57c9b3e6d82ddd18d19361b375615dcf3b6",
+      "sha256": "8073661c1a43d4ae103fd94d6c27e4e81cb137df7a0e3bfa4098dcc155189520"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/static-prevention/index.html",
+      "beforeSHA256": "b84cbb04f7775d2a5a6b2ada13acf9319714973b1a5f1c77a6a445317a3c6841",
+      "sha256": "7c0db31072906abe3afcde90caf307fa6f56889fde42c071788c1b76a4049e94"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/step-touch-voltage/index.html",
+      "beforeSHA256": "9b59878b68cd1788e631af52f231495d7efa7737fa36ecce11a8cf7d39dd702b",
+      "sha256": "86d21f7368bd46e34e9027deda5ba9d391f7ab9d7785c5c5658e3c6884784930"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/ventricular-fibrillation-current/index.html",
+      "beforeSHA256": "a51c933f44d1e479508c3130ecc4a8148f015736e6211dd7b33833acb9524637",
+      "sha256": "68fbebc09408dbe1ff05194f3a31d6d8ab73ae52885df82297cb97bb2370e40a"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/vf-danger-energy/index.html",
+      "beforeSHA256": "839c120dface0836cf618a0e0ae30c8b5d3366ddf7c745012750bf69828da0c0",
+      "sha256": "eb3d934e74e4a90262a6af9a0b65ccf1c2b9de55ddf682f6bf5375ca2db0c35d"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/welder-duty-cycle/index.html",
+      "beforeSHA256": "069caac437eaa791dc6aa5b540104834c2243e3e4a04af262cd1d3b4eef9fdb3",
+      "sha256": "4bae788882056bced194730822fa9f8071b87d80138f6663a86184077f1e04a6"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/welder-efficiency/index.html",
+      "beforeSHA256": "95f28ced53e1b6769519b12a6ce87460517fbcdae3d3a5be25e5cdb65751e767",
+      "sha256": "c284e92fadd11badb78ed504acd2f3892b0a62a307ec49a8175d7fed32f9cb28"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/welder-shock-protector/index.html",
+      "beforeSHA256": "853d655f77421062cd453b12614530bd917eebcd3dd7b126c53b584ba25101aa",
+      "sha256": "195e2420b2fa5bfe68dc2c6c57c49db3990180a051e48e3841cab2f5668cee47"
+    },
+    {
+      "path": "dist/industrial-safety/written/electrical/wire-ignition-stages/index.html",
+      "beforeSHA256": "005b0b727f1f7e794826c8599d146aa92b0f4e7140615e4e91a1254817d66541",
+      "sha256": "85574291909c46524fadc89876523046fb3a6a8956caf7981da819356e2f2ca9"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/anthropometry-design/index.html",
+      "beforeSHA256": "8df8384e29d90b2d8cee38b57315f306cbc223a3fbd4a70068f422092c44f0cc",
+      "sha256": "ba6a2b3d99516bff3785b5eb9b0fc0301f8eb5b32f334a55c79363f0c6c7e5d0"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/articulation-index/index.html",
+      "beforeSHA256": "876ef679e4e757d323337f1dec47b400c0940c551e545ff0ee40c2e1fc363e4f",
+      "sha256": "ad998f719d189a9953dbe4399145bf815e2d54e343d9bb8367b242d4224d79bc"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/availability/index.html",
+      "beforeSHA256": "83379a1b9688c8a6fbbebb39cb62d70843da1b1051602ed799ab635cb105e74b",
+      "sha256": "c729debe84bd9ee5c8da91de7e6eae0f4ace03fd7b7b57dcb4622130d95761a7"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/compatibility/index.html",
+      "beforeSHA256": "e7f6c59a4b1ffd8790c2424c7b75d36080423d11181aad32e39dc795e57aee84",
+      "sha256": "e77aae2985ab3e6f5a5e771ee473136b87dd3689ed457aae57c77fb4aeb976b2"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/composite-noise/index.html",
+      "beforeSHA256": "1d1f2f24348fcb6eb64e75ea70fea11d47be99aa8de2d694c78a72f99afd2bb8",
+      "sha256": "fab8e52a8c52205c97c7b7486f00e5d8cf9247918b7d8977e8bcda797d8eb836"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/cr-ratio/index.html",
+      "beforeSHA256": "76d2e9abcefb0a548c56746af4d3a92d03fac8a49bfe756cb3cf126450d9bbe7",
+      "sha256": "33f658b5c8ff2f0320a202baca0000cc52f2d9d6bc758d7d3027d248ffe4326c"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/cutset-pathset/index.html",
+      "beforeSHA256": "996f8d0f95112b5fd8da85c8f592a571e0d512f585fe6297a8c763314571fe68",
+      "sha256": "5f0c3a6254713b65ab29a80462b3bfdd698f7d0fdc0596d3b376ff5278a4ff6a"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/ecrs-principle/index.html",
+      "beforeSHA256": "b2c0562f0cc34dc093041f400bfdd71565e80ee0aa5d9c638840d0cac8dee1bd",
+      "sha256": "462d9605498e62ea41c87e03c4af3163e1b152ad713370a6a8a01eca826f11fe"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/eta-event-tree/index.html",
+      "beforeSHA256": "1fbc70f3da5185430060e3c1220f6b97bb578267c659319ded0815cdb2375e99",
+      "sha256": "c916130af54efd8e3d9d2a0cfa8766a3d3cca6e0677648a5df424b88d5efe2ba"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/exclusive-or-gate/index.html",
+      "beforeSHA256": "ff73b3d8ce52d5ecf3e0452c24f325883756aa5041c3d3c15e83515fe67104ce",
+      "sha256": "1d6a1d7e986b776093c313bf9944b2daa0d906dc3c84d9d3891463e41f6ef1bc"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/fmea/index.html",
+      "beforeSHA256": "34990ded222e540708ba28465175211a0731e167a5cc72e0b6b1dc3b00b4ff43",
+      "sha256": "a69611f549d0f84f8cc3c96d14cf8ad763348ad76a8e961facf3bd314814c073"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/fta-event-symbols/index.html",
+      "beforeSHA256": "66bd39135a2c176e55e3e5249c2aff004c8a40f751d856fc2c4f314bfed56a9c",
+      "sha256": "e5624eb7302d4d2a77883bb3b6e3b85efdf20570eb473aaf722b1994cd13b00d"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/fta-logic-gates/index.html",
+      "beforeSHA256": "d8ce8aa81300dfcd6b54892223b2ecc3489eb52dafcfe9e5426c1e11c5162118",
+      "sha256": "46f6b8ee4f966bc504fcb1fb14ac48aad209334d32c3f471d139c8ff26a7e56c"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/fta-procedure/index.html",
+      "beforeSHA256": "dc6a886a8a2232e371b0b6448d58be48f2c60dd85b3bd33baf01ae9da8e67679",
+      "sha256": "9a113a1c827313bce38eb9d433cc655118f24a69f548b51aaece23f940832a72"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/fta-symbols/index.html",
+      "beforeSHA256": "35729b9dbe54f51506232fe35ec73853db4dc5d40bc7b32f57c4143e562d0ba6",
+      "sha256": "a7e57ec1f9a7594b7842b11c34d73520e976376cac51a455979cff2b92fd14de"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/hazard-prevention-plan-qualification/index.html",
+      "beforeSHA256": "3d065983aa669dd29746435c6d67275ecdbd2bf7423200666dfa734dd97b1ff5",
+      "sha256": "8296f104620912011dfb9f8371d7ffa445ce75fdfcccb56eadff510b72d251bc"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/hazop-guidewords/index.html",
+      "beforeSHA256": "8bcca086d8355c0af415d1e3cf9d91b575febfbc0ba23d65f93d450d0dcf7a8d",
+      "sha256": "72bb93e5951996b9d02075860171a0dc0e742804fc3018d035b5fd8b1206317b"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/human-error-factors/index.html",
+      "beforeSHA256": "3249d339ad06dd3796b436168bb60b0d07896e3e73dd8b9e952c9028ecc975b9",
+      "sha256": "00be0fe876cfbe813607ebdca2eff47827ed42508f584c65e79df834f33eeacf"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/illuminance-luminance-reflectance/index.html",
+      "beforeSHA256": "035885b2a69332aee9e176bd467cfad0008de9ffb01624492b74f775172e8762",
+      "sha256": "35b76b2a8aa486753822b7f4580e6901b91dfa34597adff0b0069c322593b8a8"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/index.html",
+      "beforeSHA256": "35f8fdcab380eb7585fcb903fa1264f403f9144b52dd6f6113e721103255cfc4",
+      "sha256": "e6ffe0ed1d17456647a6eff4aac65df0150bae3b9a324434e6ad545cc811b718"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/information-entropy/index.html",
+      "beforeSHA256": "85663aa535b2ca028b312da2a0cf430d3d46009717e37e984f2d2544fee5c68d",
+      "sha256": "e4408c07bcd2244a4a909f20a30e44c3bb4b0330eba86f2e9030fd6b359ba697"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/luminance/index.html",
+      "beforeSHA256": "ec956d7f0d125aaa2ec11e25f39c96930ae71d8e66f506d577b33776829553a0",
+      "sha256": "c7bad171e133f04e485510d1a18e8a4ecbfbdf9b26872f072a033502b04c7c7f"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/maintenance-types/index.html",
+      "beforeSHA256": "35f169f1749e20461a2c6e14a25a6d263a3fa5cde7a5a14cf14a13ffd69fae95",
+      "sha256": "8c1c428cddbe3ad33f60399195e9b6861bacafb4052d11f41de7ef95ca74aa68"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/man-machine-system-design/index.html",
+      "beforeSHA256": "c0ba3bcfad0715bb762e704d3bc0ee8f2d322aea972f9f86ee17180b8b3a4151",
+      "sha256": "936d5a765a8d438f794f5b9cf055080969fe6205d1d00e7c9604e392ff366f49"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/mil-std-882b-frequency/index.html",
+      "beforeSHA256": "46188e2a090469d0b1def9cc089b6e8295c5fffd4bbaae3cf49310e6df399507",
+      "sha256": "dbab99a4c4b8397519d402329685feda93d630fd67e7680ea15d833064300e69"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/msd-risk-factors/index.html",
+      "beforeSHA256": "405e039fa69e9cb018245d8b753f6694f30f298f1a0ca183357be4396f52303b",
+      "sha256": "f97a3be4b861a788d040e80a0210a953ec1b73b767161b3fccbb0a9dfe6d0885"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/msd-workload-assessment/index.html",
+      "beforeSHA256": "9d6291cac73257876592558dca3ee1c2767a70733906b4dbdc043dc1612f18af",
+      "sha256": "5d21f9954e51d7ca963f14719fd1d6f83ed51a3869166480fc230e9c717dce85"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/mttf/index.html",
+      "beforeSHA256": "045c3923a8395307da4ca56021af0093ccbcea31520146041d75c8cfcb16c25c",
+      "sha256": "8e0662f61698fe3e1bce64c1716a7e75567799be1017245f2558e6e767ef47a1"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/murrell-rest-formula/index.html",
+      "beforeSHA256": "9eb54ca6527aa8e273f8d47739b83c2d939cc429e0fd331c9c63b5f954815df2",
+      "sha256": "e1deff0999c62054f65e55b0552d45f0ed2f18eb701722a80b4c67259c8a4349"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/noise-loudness-scales/index.html",
+      "beforeSHA256": "a5f6d81728d036aca442770be624ded7607d5fc2ceb81539f139ffffed962d14",
+      "sha256": "364df09b88c4bfe9f387c617664ba7df23295a6196da22905e6cf67ebaa92900"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/oxygen-consumption/index.html",
+      "beforeSHA256": "17c3c000e2c92afe2f15deaaadeb8fe14778a335c15a2237fd456565a8d4a96e",
+      "sha256": "eeec1a8917231f3355b4a7c5c9b75477cbcb2425ae216048cd1f19603059f712"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/pha-preliminary-analysis/index.html",
+      "beforeSHA256": "ee249b131a9fc4a40b0baa145c798f98010a398664804aa104ab4dfbaeb29455",
+      "sha256": "8132d0c93eabb5aa66df8385e45923693f47dcf62e85e64ea5682ac7e1135a77"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/point-source-illuminance/index.html",
+      "beforeSHA256": "7aa118ad986e028049fa12966a66ba361eb0e1cba6e8e356c5f0352ce1b792e5",
+      "sha256": "194b7062e1d177f13d9b3fd1978cc64d00b95a4a4581bb8224b4b5fdd6b4825e"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/qualitative-assessment-items/index.html",
+      "beforeSHA256": "4369026af39f3430af27be61e33e429325601fb5f771eab047afaf8d318c9009",
+      "sha256": "a480e2e64b5cd364fab7e13b1326fb06d9fcf5da1a199b7537b4485d5e089207"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/quantitative-assessment-items/index.html",
+      "beforeSHA256": "e44e8f200d852b49e8e1c0fd19eb45215f6fb4fbc225c3088f651e1abc9be477",
+      "sha256": "83e27a705ca023fe1a404d0275ae4560136c9187beeeb888bc8685bcd60fb914"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/reliability-rt/index.html",
+      "beforeSHA256": "da5a4b5e8668fd135ef0751d3964594b421a3474347d5fb4bb71c4c71e6e5fd3",
+      "sha256": "9dc498ef745722ceec8241700924cf41e172b15410e4f2d2e08c9c89992cf103"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/risk-assessment-procedure/index.html",
+      "beforeSHA256": "78d8fde2c3dff475d65eeee9adf6f20e452ac33df73283b6b62f4e6930ef9d13",
+      "sha256": "bb277b74b27e7a466e59735ee8459730100efd3df5a047e0acba7d0bf89c647a"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/rmr-energy-metabolism/index.html",
+      "beforeSHA256": "0fbdbcbd06bab40bde4bea061d136137ed5d544f9d3f26a150cbae42e5fec7ad",
+      "sha256": "37eb805cd38541b07dbd2719536e2ad752fc3943cc5c5c56a6fc64c87b1abbef"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/safety-assessment-basic-principles/index.html",
+      "beforeSHA256": "cf7ff004621ff09f01bddd788f2f8aad2baee42b2500d61c71bd5edd9257a72e",
+      "sha256": "e9f78f57cb592929f76abc524e71c3e87df7d6293591567a93a4868bab889a1c"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/safety-improvement-plan-items/index.html",
+      "beforeSHA256": "49f25d609b48f4f835129b4d386e4815d549126b7b192576d09b22c6aeacd527",
+      "sha256": "0352ff621f52c450d61b41220b41b76216a7a11b224700e80c328272946a3140"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/series-parallel-reliability/index.html",
+      "beforeSHA256": "ed6d6573bb8e4418803e80064c5b3b36430369668213cb098d0ec5dabee5effc",
+      "sha256": "0eba576491423babcfb40636ac98ab20bcd93f681f7811359c4f764d49270a40"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/signal-detection-theory/index.html",
+      "beforeSHA256": "e67df6e6331fe6dce2256fa42e192ed800659531a8773c15e2764c9ca710d1b5",
+      "sha256": "6bc99c5d784c0ed4f4fda8839ba45314a2dce5eefa5be134581721d2e54e3d49"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/swain-human-error/index.html",
+      "beforeSHA256": "2581f9433beecb0b19be13a20db8bfb39aa600c2c9ea0f82e237c801660dc6ba",
+      "sha256": "1df75693ccdd58820a7e721c2dadf00f99139144f266ccf787ab04fdb5a747a0"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/system-analysis-techniques/index.html",
+      "beforeSHA256": "0f6e63054ca0a6e37c2efd262020cdd795eebf7f1e4500630205ab52b970ba21",
+      "sha256": "19c6f0333834add8c615637338a76361f5f58dd8a4a6301c146c0e57cd9f4212"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/system-lifecycle/index.html",
+      "beforeSHA256": "6a45afa8ba9f53d77462e02d82d1602a4253346c58a1979e29fbb19d6dcf270c",
+      "sha256": "aebbea31a72c531db14279cf63c4f6014970ca7c922b20a57258f123294c6fe9"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/thermal-conditions-wbgt/index.html",
+      "beforeSHA256": "7628bab666c079b283c2e2fe1b53eded0dde040e450f61ed225c2e9e05e4ecc8",
+      "sha256": "28c0ad430a23f60b2021e1f1de66ed5dfa17e65910c8b95efdd4376952431b5d"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/therp-human-error/index.html",
+      "beforeSHA256": "b4bc92c21e538a87776c9c4cf87e1f24bd7a47a54810301f52b60f3d97f71051",
+      "sha256": "693f0bc16bd698ce66d32638bb01779ad3a9a8185593b91aa1cceffeba0a3363"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/total-noise-dose/index.html",
+      "beforeSHA256": "8f699066de767b0dcb645c561d2f5d50c4cb7213fca98329324bb94c0f13954c",
+      "sha256": "ec5710b192ea82410440c2f2f122f38b2d392086d995fddfc02422fff32972ed"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/vdt-contrast/index.html",
+      "beforeSHA256": "1f5d476b57a8a031646d41b960b50b9354b48c49fd78d1ccc89f3816a10f44b8",
+      "sha256": "2cc719548a81896c4b36577a5278587ef7055e706904c1989aadc7901680c51a"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/vibration-raynaud/index.html",
+      "beforeSHA256": "06f06d040be10271f1c319a2ee2550784100d3a938ce950a11fb03e13e91cb33",
+      "sha256": "03288159e2b55a7b3bb8d4a6a96710d8d7da142864efb94d970dfdb8497f88b9"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/weber-fechner-law/index.html",
+      "beforeSHA256": "f36b33324c4b139b3b5614b039ac511261af50c318ac29af4cc277976f686dff",
+      "sha256": "fc13931b3460e9073528431cfb2d6f052d0dbc88ec07c3fd3068a8c1cad47523"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/workplace-layout-principles/index.html",
+      "beforeSHA256": "a502607d195d9983a135b194f08b0c701664ae93a4cd372667a3bcefa56f5a8f",
+      "sha256": "8db288c73c310525b8dfaeebbe22f3ccdae81c9043a27cb26b38e024bafe1332"
+    },
+    {
+      "path": "dist/industrial-safety/written/ergonomics/z-score/index.html",
+      "beforeSHA256": "3a223dbcda2d79d26556890ff69db6b570c47be7fa6f1071dd98bba007b38e7e",
+      "sha256": "4ef7b0a5713dac9b1c48643182b443e217a396abb1ae7ce95075e5822e744c57"
+    },
+    {
+      "path": "dist/industrial-safety/written/index.html",
+      "beforeSHA256": "0bfe4d0993929c0066066c67bbce8e4efa5d4dfabcb8791123d7c17b675b1e91",
+      "sha256": "ed65e569192fbbb99e581aa7861b1643b608163e1b62466f02401ac58e5579a0"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/balance-flange-diameter/index.html",
+      "beforeSHA256": "5eec5acb48cd54b0e8d65568259362503955aea6c19ae880e89d834a192fb391",
+      "sha256": "6480835e33d5dc6b7be9cd919d45e31eb1296d8df6fa4284263e2c2ab981a364"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/boiler-safety-devices/index.html",
+      "beforeSHA256": "ae59a2e94f4b78215ba1ff67b6c892b37e0ff91aed9f235995d7ecb7ae1df793",
+      "sha256": "675612eea7df97577075851d4bc97888f37139b2fdb4876fba0adec72693addd"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/circular-saw-devices/index.html",
+      "beforeSHA256": "6d4968e74aa9b47410e8f875d7aec03e05f616265b3e07bb2d03f38c974683d5",
+      "sha256": "1a39c9e024f277f697ad7b27461c748888666ed75d136f9bd7276ed479ba2d10"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/conveyor-safety/index.html",
+      "beforeSHA256": "d19e27ad15c829437e3b5c9096cd651bb54c8bec0c09fcdcac7d53d411bbdd0f",
+      "sha256": "d65b488fddc32233c5a651045f81b9308eaee672a41bb18c1b227f686c129126"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/crane-passenger-safety/index.html",
+      "beforeSHA256": "bfb896e947636c48ba6b115f2c99f01eb2aa592311f473115dfab5adc28f506b",
+      "sha256": "83bf71be7270bc73aab10c38da74ddbbfbd1ccfbee4c98ee9ec59afdcca51d6a"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/crane-rope-load/index.html",
+      "beforeSHA256": "7631ebd2f693365b96a583f0cdeaeb253fc164ed7263880a1fa8cc5c34891454",
+      "sha256": "6ee3ccac61cdf5900c8a17657a63dedf1b32b81da777ca93114e6822b97728d5"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/crane-safety-devices/index.html",
+      "beforeSHA256": "3dc9140248a32c12c099bf19e86e4a9a3266cae31faf574d71da1b1c360d9179",
+      "sha256": "9c32c2aa14b87eb6d54eb188a8c84adb0a0036064859fb5d8094905900aa4135"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/drill-safety/index.html",
+      "beforeSHA256": "04db57df843ea82a83a6efa827b96800631b2299f7fcbc55a7ca873c9f12ca03",
+      "sha256": "960e102c2adb74ef3a33a8f0bdcd6a9a3ce958ee42a1958eef529be267e57a2b"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/equipment-safety-three/index.html",
+      "beforeSHA256": "d7d1e003d10abafdaf2c3cc80f4d74bae03ea2a8dd8f3d3ccf9833c4eef99f90",
+      "sha256": "17b01f6681d408e20cb3ea719cc07d1e3a066697f0136376cf6ac226cd84d3f8"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/five-pinch-points/index.html",
+      "beforeSHA256": "489d555c4b66e4960506a618d8a0268f2caac636acc25e57560877e301559245",
+      "sha256": "fb0134293cd92fc103210a6b0cf637a51e44860e389968b4b6c35ce3d859a747"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/forklift-safety/index.html",
+      "beforeSHA256": "1b937d572460038db8bec554b6ab6eb818f7597b2601a6d75202d275769f7d68",
+      "sha256": "f7e9dcdea61b8189b691cec85ee30344563d1ecb5bccc0ef6155e95460083a0b"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/grinder-exposure-angle/index.html",
+      "beforeSHA256": "3b9a6e16f4a2df07dbf91c7074a1682f5adfce4697a96dda2bd24191914a5d60",
+      "sha256": "4c5c22a12caaca1e322432259ef4f8e42bae1f01e81798ba76c0211a3bf0b602"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/grinder-rotation-speed/index.html",
+      "beforeSHA256": "e97153269f8f8b4a7050999fc289b2178aa4cef38f962bb772ed21b8499e7d02",
+      "sha256": "c7e037f9657cc68a4348e23c2617bbd7a48c3f5c7a6819badf474e978b1c99b3"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/hand-pull-device-structure/index.html",
+      "beforeSHA256": "2089667ad13fe3c0f60ec2fd17ea973031e114740bb5e79c4cc11c58d0655024",
+      "sha256": "f563684fd6eea20ae2671ae7e088c50ca7c5f1246a8d4a857a0731f810ce3234"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/ilo-guard-opening/index.html",
+      "beforeSHA256": "82ca646da5f767a7b0c52bdead5d29f295ff9196dd08f8bfb51c49768184f495",
+      "sha256": "8ea7fd97862fb40becc573777df82cee393b6ea309618ce4099dc70eb5c9bd76"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/index.html",
+      "beforeSHA256": "c37d612ac150a32b5974587930197c67634d5f7575f80fdcdb58cacb00e555b3",
+      "sha256": "c2975838f469bfc1e2667e2d8e04eec06fdaaaacf6949955e43286b9c84e6a3d"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/industrial-robot-safety/index.html",
+      "beforeSHA256": "24b782a13f572c3a210e8796988aa853112e2a7cc1d90a958b781725ef08991f",
+      "sha256": "8ccd0fe6be0eaade853b6c577935059354fc698b07a66145403fa1caa45dd8f9"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/lathe-safety/index.html",
+      "beforeSHA256": "8b7f6cadbe6e97acfbbd2e2afb9da3599e711128afc7c868ccc84f7b4bebef75",
+      "sha256": "444b5ccb691c7bfa546fc806e462986822d2789b523c4b05706412082ae2812b"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/machine-tools-safety/index.html",
+      "beforeSHA256": "2452f82e45e651142ed4052abc90a2f2cf79d809cc8eda9362e2b370a07624ea",
+      "sha256": "88a25d4090777a734c1707a1f1fb57717a7e022255a567f8a48b16a27f5c4684"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/milling-safety/index.html",
+      "beforeSHA256": "7a000b83046dac8898178b79f932746164eec117d1da93a8c2bf2417e32c383f",
+      "sha256": "c088bae44642aa6edb63d36211d8dcb2d555bad984d17733a998dc0add9440ca"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/mold-safety/index.html",
+      "beforeSHA256": "066b2eb611abe3cf217e54ab1193417ab4f9461d2477ecea2981c57d7c4b5d0f",
+      "sha256": "6351a10da19ef384ed09ce0671c5797b01b28e61c909a7aa3fa15758c0d4cc73"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/ndt-types/index.html",
+      "beforeSHA256": "8c886b605b2d666e2ca3a7e5abfa53f63e73f67fcab301cce726ca0d28384343",
+      "sha256": "eef7ba876e2c2e760b0fb7aff0af316850f2709e8be350ef6d43a1adba233d57"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/overload-prevention-device/index.html",
+      "beforeSHA256": "aaed699387256c3c1926b7e166f2a91ebaf26b8d120235028abc5679a2d77fa9",
+      "sha256": "23a262099d771fe93d52e9695f2edcaca810a4da2f3be8b2bea280e604887f8b"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/penetrant-test-procedure/index.html",
+      "beforeSHA256": "44515898e168ddccc1d925195f5950a2327496f5dbf6ae36cda15d135bbad2e7",
+      "sha256": "11baffa690e1acc474810f056ad08168efed56b27627e26465f550e0bb57a384"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/planer-safety/index.html",
+      "beforeSHA256": "a65cbc24579d4ec3974870f7accdda29c08f56a4051b3921c6a0df583fd51971",
+      "sha256": "91dc8521d29f5acbb10beeb8f65bb266b7cf0ed5088f2b3ca3874f9c78f3db61"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/press-device-conditions/index.html",
+      "beforeSHA256": "da6f4768751a90a1de161f2b773abd02552933962b5980d8a1359e29b14be80a",
+      "sha256": "0e2c55e610bb974c1706dfa8777e2710c8aabcc2edc8e0d15f783859ddeccd06"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/press-pre-work-checklist/index.html",
+      "beforeSHA256": "bb29486909d579c2b13db7c318c7e1696e7b67f856c52c5ae4241dba88571415",
+      "sha256": "32d78eb19123d8d63f138aadf7570ead11ac4bace36dcd03370c6f378bcfc45d"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/press-safety-devices/index.html",
+      "beforeSHA256": "871062638f8537085e5b8b439cb0e595e6438526d5643061938335f61414e710",
+      "sha256": "c4c0ffbde7404978051f713800dd69c8c18c9fe9db2c9f8c89bff5e668c1b706"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/press-safety-distance/index.html",
+      "beforeSHA256": "3879c4d51774af9184885ec21e7993ea2719de56a6b31fd3f04dbdf87774fcb4",
+      "sha256": "3d60e03a4ecdeeea091de132b633090fd9be2bed04022e96c727b572d92eebb2"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/roller-stop-rope-standard/index.html",
+      "beforeSHA256": "93c5f3802b3ec1538e01034af62907603586a23e37c22f80ebe9c5c9542b0f6f",
+      "sha256": "9a0df6fc5e35c7fa4d2e1093ff600ff0016ca774695c0f9bccea18d4f1d37326"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/roller-stopping-distance/index.html",
+      "beforeSHA256": "96bfd8f4b54493476ca52b57e71dc625233f1236ca495d9efc5984dcf8cdc8c7",
+      "sha256": "5b1dccb4ac75ad3030b30095732edbf6589e821573067f38068e52f86d44f551"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/safety-certification-8/index.html",
+      "beforeSHA256": "ec9fa6716485125c7f1635b6f2f0d95e22ad4b2ca9becfc18524c84c2eecf1f4",
+      "sha256": "355bd7deecfb1bf2f42b24d95bd3125e582bd576be399f9d1521da40c67f7eab"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/safety-factor/index.html",
+      "beforeSHA256": "375ef4090665364a57486d9bbe8ba978e53cf0d79d0b5b3b3158603afab33bbb",
+      "sha256": "e2a10c31f4b6060d7edf80794ecbfdaccf68713b09004cbee845d24038f8bdf3"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/shaper-structure/index.html",
+      "beforeSHA256": "c2842ed4d19d603d6a90d00f78e7cdece64dc99e643065bd64e1db82eec759b2",
+      "sha256": "c0aead6123fca2dc2a2a55b9dd5d4306cbfdf82d879493b2a346d5444367f792"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/sling-wire-tension/index.html",
+      "beforeSHA256": "cd2ada6b487b4bcca726c61827ad1495f37fe32e3ebbc66c54d38a631d158620",
+      "sha256": "fe136468ffb92928fc950f246ba6f56e7f188f514b11e9c9c4de49407ef37291"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/test-types/index.html",
+      "beforeSHA256": "06609388ac4bcadad4e2580190d920154f5fe41f80b8e9a9c38502523ce99987",
+      "sha256": "bcdec6bac8d56e08e492f38acc0c3e949896b38c1074e89b7863cab2f4103045"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/vibration-diagnosis/index.html",
+      "beforeSHA256": "3a0d561a53e2b6f904ff836d56bd64e1d7cc94cfaad7a8aa0db56030afd3c466",
+      "sha256": "e6bd33f6528bfeb242a7822ad45d877aa533bb90b9df6db90d2a2202008ef83f"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/welding-defects/index.html",
+      "beforeSHA256": "ce206f9b48325d395a0cc99744c444a6939a0aee30d0e7521ed614da8f9dab88",
+      "sha256": "a3ba0e446be40b5b87f6e62db70a7606f0b40a912e518c994e761e16baf6de13"
+    },
+    {
+      "path": "dist/industrial-safety/written/mechanical/wire-rope-twist-types/index.html",
+      "beforeSHA256": "49b7382cde4fb6564afe3f822c3db16e1f84336090128e0863a4e7036f1b7601",
+      "sha256": "84c1fe9c4b399e62074b6bd9add9d12462c91b903e84cbdaec500d1728ac62ca"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/accident-analysis-tools/index.html",
+      "beforeSHA256": "f2a1dac41be42dcbb4909b64826e0ca50489d108a0c5e8962ab43f08b21aba86",
+      "sha256": "49d7528f1646978b83d4839b0f606e5e920b4ed6e3c2a1f009ed687a94852232"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/accident-cause-classification/index.html",
+      "beforeSHA256": "aecb93448046bf5199129d357a65ca86d7c43dfa7c2721d61a2a8d96a2f7b071",
+      "sha256": "809ee4546dd2e3e8881ce4804ecbd983c37e8dba456090a7e89e5d42ba0b492b"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/accident-occurrence-theories/index.html",
+      "beforeSHA256": "28addf11ef82bbc23e375224fe4e50bbc48f9d3d2d2e978b0b424e3fdbc3b90d",
+      "sha256": "dea35fd2510033e3bfc0bc3e8e81ef00c4e5940c55d89dc06dada4bb3f37eb72"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/accident-prevention-principles/index.html",
+      "beforeSHA256": "e0c561e99d25e42270b9d06c329167cd49dc448ac62808f3b309bffe2437fd0d",
+      "sha256": "1f408de4281aad723ab899627a696085bd6b579d776a987b0cd51b946c95b7ed"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/accident-ratio-law/index.html",
+      "beforeSHA256": "b6ce4592a95c67208130d86339cd0dc4c3652c82eb7686ac0be36f62829c5330",
+      "sha256": "028fd06a5d9f4b76a64a0106462c0e3d7deafbb5c01b5bff35bdb18f4ca24af5"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/annual-1000-rate/index.html",
+      "beforeSHA256": "c3e69b75ff963b0c1f652dd88f3e52682600a40a008a161c5583f9f5c74f188d",
+      "sha256": "28e1f6d1ce08f8ca07de67a09949a755116d5d7e0736256ac4c4d732228993eb"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/attention-consciousness/index.html",
+      "beforeSHA256": "6ea3317309e971701bd866841a86470d9f5e3ff48e45b8259eb1324988296f06",
+      "sha256": "e3f2bb35c0598f8d8d286c2f55746ff36ca5ee1a6870bcdf4041a97df8206e4c"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/bird-domino-theory/index.html",
+      "beforeSHA256": "dc3b2cf12ddbf602c9d8693bf070fe9f25770ca69bac9e79fd4f17e03ef0e0aa",
+      "sha256": "631ecb0e11440db59c2874b7df96c8c33a6457eaf2d7baf38db501bff5928842"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/carelessness-misjudgment/index.html",
+      "beforeSHA256": "0f67940e6793a960383f8c43c44cbbbd50fdb4995afb79e9c55fd1f10bc0660c",
+      "sha256": "a900b607789ee2020ad7ba11ef562b77870fa24df7733e1b872d2c95693ad161"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/davis-motivation/index.html",
+      "beforeSHA256": "23478de05e573827cfc8ebedb07e1b686918d871d03fbe811da6f5b357bde724",
+      "sha256": "ab4ed451ca8789bf4f91ab0e0a8e817b96c1e544acc58485896d6c68da6c7579"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/fatality-per-10k/index.html",
+      "beforeSHA256": "c66211a80072a9e1b4fe8b1c9590ae4a03059755a895b397ec1ea35b620c8daf",
+      "sha256": "64282028d4ecac4fe17ae52d85e217a8d20895f7459a306f2fc157b46e05ec73"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/frequency-rate/index.html",
+      "beforeSHA256": "2c6837ad8df16d113d8f59366653aae0300298bd28fa4673bb1c626fe772e162",
+      "sha256": "d7d9ed40d45de975045ac7ed0b49ec583e5ef94b6ace209ecc2b9d439744baa8"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/frequency-severity-indicator/index.html",
+      "beforeSHA256": "4c9aa95f56ce289ca63dc5d875678b4566b8754876b83351de29796e2c1183be",
+      "sha256": "aa2e4a3ab0a33919f951b56b3dc6aaae90ffc2aef5adb1a2327c18441db0a14d"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/group-discussion-methods/index.html",
+      "beforeSHA256": "b47e1b7ae8c6c22915f3b117e52ad07f5863726fb546a70d1719b2281fd9e8dc",
+      "sha256": "dae6e1ea44938729656a31295ad4f809a93ad3dd51b2d69ac564df8d98dbfb6f"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/hazard-prediction-training/index.html",
+      "beforeSHA256": "6d1f18ebbebc4505d838c0bcdf83e433aa4135949502d04f29ee92888371a8a3",
+      "sha256": "71fed49b090a6e4bf32555a7f0f94de28fd577e187342f875dff0574a1ea04b1"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/heinrich-domino-theory/index.html",
+      "beforeSHA256": "93f62c3a235a649dd1190812d83ed8829c79673839418bc778d635d33bce7d3c",
+      "sha256": "8b15fe420675351aacb95888889026c11ad6a4a22b9539a4469f08e3add960d3"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/herzberg-two-factor/index.html",
+      "beforeSHA256": "4ac1b735124e37c63a86f5de740cdf06934ce5bb1a8344097b329f7b7684dcbd",
+      "sha256": "edd7c7f7b6b0e7781da9a30808d4940e2e73820be5459dcc9f5e66fa7d527809"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/human-error-by-process/index.html",
+      "beforeSHA256": "b3e72f64d11c3a76f6745a29a108789c56979ee44b8db5368b0457d7939d22aa",
+      "sha256": "d236e7c9af4dadf48234df4175cee4ed9610970973cc9a0f605ff2152d7da70f"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/human-relations-mechanism/index.html",
+      "beforeSHA256": "da184b8d57770bfbbcf237b4a364ca01fe37a6f9d2b2a7878ace8cb2fa1a498e",
+      "sha256": "90fbc681cb101b81cab3dc9020bcc5c4359b9a0e85d0d80aba5669a740949d6d"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/index.html",
+      "beforeSHA256": "5fd370c173e01d3d3dbdf387e03cbf16c5e2a923b5617a40b734d97302023bb9",
+      "sha256": "05d5c798414a312a08559b2c7a01f7c98e26b5950b6a4f5ff9814f5f61eb8b2b"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/industrial-accident-insurance/index.html",
+      "beforeSHA256": "02fdf43c4c29fbf457d16ebd124bb223fc5bb14f8c6acec1fd11202bc795e75c",
+      "sha256": "aa07e47e28cac026e47232490cf2249e4d40e50a0ab916f7e6ea1207dd63f9f2"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/leadership-headship/index.html",
+      "beforeSHA256": "1dd972ba85284c96db65b1ed5f46abfb4fe08de0e97dd757a710198d3b873632",
+      "sha256": "3b7a9af0a52077925ef6afe306a68c992814521815717ee87a67f90bdd5e7d04"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/learning-theories/index.html",
+      "beforeSHA256": "3f67cc88d2aa7cb2949e84288aee86137f090a255ad86be10f5a55a8fdc3d4fb",
+      "sha256": "6695b924a45fb507e5b9f5db8529b8a997febfb401b2568e39ea8a0e1d4e4ed6"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/managerial-grid/index.html",
+      "beforeSHA256": "6a1f2b6d5903c8a2225c660a9b162f2753b137d0ebf9e949332c1ba39712f48e",
+      "sha256": "ad9d0567d35ed9b128cf8fde3a7a50d62d844bf2b57b077d66f5d2ef2b734e47"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/maslow-needs/index.html",
+      "beforeSHA256": "a85a535c8f3d3099eaa2c6b9681ed02b2ad8faa94a3b489f0d49c9cefbc34dc9",
+      "sha256": "ed43adb2a34efbfb11365f32c1da6d19d483098d3c636740d78603464404407c"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/mcgregor-xy/index.html",
+      "beforeSHA256": "6247f825a4fe11bb630603e7a570f5a2e12ac290bd302feeb0d7323e0b190c78",
+      "sha256": "065e96d78a5d0e3dc793003368f5dc2f1134bc5119cf596aa0de5c38b124b3f1"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/motivation-theories/index.html",
+      "beforeSHA256": "86c25dcb5d7250faafd4919f29af7899b818fe51c6035fd0c81e825eea6f5765",
+      "sha256": "fe1b4ccab47f3fa30ab1db283bbe14868e61358b52c395c7b8a1174281e57c41"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/ojt-offjt/index.html",
+      "beforeSHA256": "0b4d0ac2793798ed8185b0176d1c61f1c308a2c01d4cace48721721a36412b43",
+      "sha256": "c47cee760ffd23d0ed2f2953123199f94f5b9b501759cf7830d2639f69bddf80"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/product-liability-defects/index.html",
+      "beforeSHA256": "f5e754f7ebb9a4513242629fd29e8445b86f1bd1c97b53d86f4d787483ea57d5",
+      "sha256": "683435ff848d6ca7876e986775fa1d163b18ea2d9ee7e08d052baab2ac5cedae"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/protective-equipment-types/index.html",
+      "beforeSHA256": "fe1029a6af0b113fe8d9b812b51fb8b2c1c561546f7aa48dc1b4410945745a7c",
+      "sha256": "e08b5e68baa696a01c2106515dd73f111c335624558b57a09bccdc7215502991"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/risk-reduction-priority/index.html",
+      "beforeSHA256": "27478ed8f1e74969544fdd552e1a84fa043449d3f4359cedc3a4e9ca1d51aa74",
+      "sha256": "034bda7227619959db5cbf1717ec0b452e92dc96139f57a8da603a870abb4e95"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/safety-education-hours/index.html",
+      "beforeSHA256": "f66e6f114e3bd2bec3c1801eb13de1f5945c4e5eb738a570d67dc27c37f92a16",
+      "sha256": "aad3d152317209a66bb6303e4c36f7a4c0b90e34de587040081bd314a553b6d3"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/safety-education-plan/index.html",
+      "beforeSHA256": "044f330592df3178d53fc6bbfbb1f95a02e2165454b7b6c107c2cdf848ac76a8",
+      "sha256": "3ff2b872aba00dace1d89f3b5babe9569f67fc5b979dac334b8e2cae9ec7818e"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/safety-education-stages/index.html",
+      "beforeSHA256": "c68297b3059146a408c9bf56cb38f28aaec818039f19edecf4e4b2caf60213df",
+      "sha256": "0d9f9c5eed3edccdb4e2bb29b3592d2a49d4a99d2d91cd2ee3b33ee651148345"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/safety-inspection-types/index.html",
+      "beforeSHA256": "75900d75030192d2ac4f7f072076c1a3632676ad65819059bdf955acf1b66ef9",
+      "sha256": "a8f3a7ca4646c982794cf33402dde9babe7f08bcb763f1bacb026ce573e1ae5f"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/safety-management-organization/index.html",
+      "beforeSHA256": "56a52df2f9cfe6d6e5fbe6f623aee39eafec6a9ca5232f7f6dbbe30cb36f37a7",
+      "sha256": "7d78813def3642726d9ddbabf2d6c99fea29e7577d954a763680aeac4c59aa45"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/safety-manager-appointment/index.html",
+      "beforeSHA256": "b77a43907c85a60d8f80bbab715e43a753f1bf294f558b5599dc9afa3a53735c",
+      "sha256": "458edb0f4f8df17bbfb83dede34c2113372491fb327c464ea17341a1e77e03d1"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/safety-signs/index.html",
+      "beforeSHA256": "be956d902641536cad8d9b912eb6769075dbca160fb65cd3bf0823a79c978843",
+      "sha256": "577d63d57ca7b29fce3b2b4e079c56f0712028a429b6586ab71bdf2a280bbbb7"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/serious-accident-criteria/index.html",
+      "beforeSHA256": "590e2237bda09a1ceacdcf2eb5d71cdb1916b9ed4375701070081528a9af22d3",
+      "sha256": "ecaf04eda29c2c547832cf2e1cbf55003be9fe0049e4e106b081d16aabb55146"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/severity-rate/index.html",
+      "beforeSHA256": "8b93bd9a1f4dbcb04c50422986af993a3cf1f2956d0ea1d8a2eafc6f4d8e4824",
+      "sha256": "0e9becaf3c2d1e3ab61b10d34a02d0872a718a4d432c08b5821d488bfb6ae559"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/social-behavior-types/index.html",
+      "beforeSHA256": "76f4d195ba864158184afc5eeb41679bea7426ec38bfff1b6a673795ce2ebb21",
+      "sha256": "a3d739632781d85549c73b0c98d91888d9bf511938c0d75d329167b6bb46423f"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/twi-supervisor-training/index.html",
+      "beforeSHA256": "a0a422eef824012b310e36713482f7015eed26204d300930d723344446d3bf5e",
+      "sha256": "5651ae4f7e683c84f406964bdbefb9358ad60a81a923701d43a04a2fdce7a924"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/tyler-learning-principles/index.html",
+      "beforeSHA256": "57936709ee16d402d96013ac0c5a17babc25eb32677b76a2edd9243488a9bd70",
+      "sha256": "d6bac6a9d46d750d5f65e2ae920221a6936171ff64d312e7f0a078dd628d4fd7"
+    },
+    {
+      "path": "dist/industrial-safety/written/safety-management/zero-accident-movement/index.html",
+      "beforeSHA256": "e996009276245796e09c0cdfbc16f744aedfe9e7edc938648552147bf699cda9",
+      "sha256": "7ac01044ff1fde91432bfa1c566c1ff89edbe654260cfc8fad63f666b7adfc7d"
+    },
+    {
+      "path": "dist/privacy/index.html",
+      "beforeSHA256": "239ce8c539617555ae5ac4d2fa52bc5f61cfc75b404b5a0c0347916162122dbc",
+      "sha256": "00c01e231023b3cdb00ae8d96763b4d4015bdcd31cd078138d4a6534a2fc9650"
+    },
+    {
+      "path": "dist/terms/index.html",
+      "beforeSHA256": "bff8e0a21eb36c13b2b025cc66a042476cb92e443f810853e6f19b36c0637e9b",
+      "sha256": "b5253be755d5bd3e6cff5afe4211a447974638a96f0b982073e6ea69397fa047"
+    },
+    {
+      "path": "src/components/GNB.astro",
+      "beforeSHA256": "3f1346ae4de98a5fd578fbca942d4eb36ebecea892b7d867ed2e88ceea1439aa",
+      "sha256": "a3ff2161f69a6654f92905bf825a31fb193e69000fb200ca032bc8a0ff0352b8"
+    }
+  ],
+  "compiledBundlesUnchanged": {
+    "dist/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.eSkdUNKJ.js": "3cb5c08a165c917ce2fe04868aff94e3273f8634ca364b0216c9a1632bd1b063",
+    "dist/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.pDAgU--1.js": "23ac2aa42b7844502bcc5e7e1c0f29ce9d60dae6ad985c4faf7f2213e818fe09",
+    "dist/_astro/energy-management.CA2wbZts.js": "7b91a05db9bf058327c9ca653b4790f0b18b6f5c68342e0fe8e9af3ab181d75c",
+    "dist/_astro/BaseLayout.Cp8i3X8x.css": "f318672a87b58e40c40c81fd3e049e0b82649f92b3cad4410d2b768e4780335c",
+    "dist/_astro/_..Dw9nUkDW.css": "35d0c6a9ddd21b3c99d9c7f6ab6a323c76743fcfa5ddb773ad153bf544fdb18d",
+    "dist/_astro/_slug_.CiqVmwh5.css": "dd594e01a6785cf2bbc792ccba8ca3e843e022a28c90511e53d2bb94cc1fe298",
+    "dist/_astro/industrial-safety.D3rsEAtl.js": "8a34459bbbae5f350cb18800df5ce6a11f81164960f086573882221b07cc4158",
+    "dist/_astro/FacilityLearningLinks.CAeXmhAZ.css": "177e5d4bef9f0c8d836f67f1509ecd90d3b6acf4e3398ba270830da53ad7b80d",
+    "dist/_astro/index.DDqrQqw2.css": "745de9fb5c1ebd6e082405aa92e09ebec3f178f2b4ce698165fd047490905d7a",
+    "dist/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js": "710f7d4be3711e93b5132757d789b9598f13ed0f329302d4ba56447c2220056a",
+    "dist/_astro/global.CEAO8Mrk.css": "22c43451d455d4e33743ffe0820940b80c638cd0784634e45d1f1388ed7d7a6b"
+  },
+  "addedFiles": [],
+  "removedFiles": []
+}
