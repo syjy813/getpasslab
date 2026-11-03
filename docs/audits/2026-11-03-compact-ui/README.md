@@ -24,3 +24,11 @@
 - SEO 오류0/기존 소방 description161자 경고1. 나머지 정적 검사·검토 빌드·새 head CI/브라우저 증거는 PR Checks와 후속 결과 기록으로 구분한다.
 - 과거 immutable publication manifest와 archived history guard는 변경하지 않았다. 이번 승인된 global.css/시험·과목 템플릿은 개별 blob pin으로 현재 native guard에 추가했고 나머지 원본 보호는 유지한다.
 - Draft PR까지이며 Production 검증은 수행하지 않는다. 실물 기기/Safari/글꼴 확대/LCP·CLS 수치는 이번 완료 판정에 포함하지 않는다.
+
+## 전역 회귀 CI의 기존 기준 적용 오류 보완
+
+전체 챕터 워크플로가 이번 global.css 변경으로 실행되면서 두 과거 검사의 적용 오류를 확인했다. archived-baseline-proof는 PR base인 최신 main을 오래된 계층 snapshot과 대조해 FacilityCard의 이미 승인된 변경에서 실패했다. accident-cause-qa는 단 한 번의 원래 발행 delta 전용 검사를 후속 PR base에도 재적용해 이미 수정된 ‘불가항력’ 문구를 찾지 못했다. 새 제품 결함으로 분류하지 않는다.
+
+- archived-baseline-proof는 기존 ci-archived-history.cjs를 재사용해 이미 고정된 원래 release c7f856c의 native Build/역사 검사를 수행한다. snapshot·검사 script·정본 데이터를 수정하지 않는다.
+- accident-cause-qa는 현재 native guard로 모든 승인 소스/자산/URL을 검사하고, 해당 챕터/industrialReadability.css가 이번 PR base와 바이트 동일한지도 git diff로 확인한다. 기존 실제5폭 브라우저 검사는 그대로 수행한다. 일회성 check-accident-cause-release.mjs는 역사 기록으로 보존한다.
+- 실제 현재 전체 챕터4폭 검사와 대표 챕터/사고원인 브라우저 검사는 유지한다. QA를 삭제하거나 실패를 continue-on-error로 처리하지 않는다.
