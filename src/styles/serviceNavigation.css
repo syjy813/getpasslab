@@ -10,6 +10,9 @@
 .service-switch a[aria-current]::before{background:var(--white);box-shadow:var(--shadow-sm)}
 .service-switch a[data-service-link="facility"][aria-current]{color:#FFFFFF}
 .service-switch a[data-service-link="facility"][aria-current]::before{background:#18794E}
+/* The certification service is blue; community retains the green selected pill. */
+.service-switch a[data-service-link="certifications"][aria-current]{color:var(--white)}
+.service-switch a[data-service-link="certifications"][aria-current]::before{background:var(--primary-600)}
 .service-switch a:focus-visible{outline:3px solid var(--primary-500);outline-offset:1px}
 .gnb-inner>.gnb-logo{flex:none}
 @media(max-width:767px){

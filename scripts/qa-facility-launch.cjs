@@ -73,6 +73,35 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           assert.equal(await page.locator('.gnb-logo').getAttribute('href'),'/facility-management/','facility logo destination');
           assert.equal(await page.locator('summary[aria-label="시설 카테고리"]').count(),1,'facility-first navigation');
           assert.equal(await page.locator('summary[aria-label="자격증 선택"]').count(),0,'no certificate picker in facility area');
+          if (['career','jobs','practice','qualifications'].includes(slug)) {
+            assert.equal(await page.locator('.facility-category-page').count(),1,'category-specific layout');
+            assert.equal(await page.locator('.facility-category-header .facility-eyebrow').count(),0,'redundant eyebrow removed');
+            assert.equal(await page.locator('.facility-category-header h1.gpl-h1').count(),1,'compact subject-list heading');
+            assert.equal(await page.locator('.facility-category-header h1').innerText(),
+              await page.locator('.breadcrumb .current').innerText(), 'category H1 matches breadcrumb');
+            const categoryHeader = await page.evaluate(() => {
+              const header = document.querySelector('.facility-category-header');
+              const h1 = header.querySelector('h1');
+              const crumb = document.querySelector('.facility-category-page .breadcrumb');
+              const section = document.querySelector('.facility-category-list');
+              return {
+                titleFont: getComputedStyle(h1).fontSize,
+                topPadding: getComputedStyle(header).paddingTop,
+                breadcrumbGap: getComputedStyle(crumb).marginBottom,
+                bottomRule: getComputedStyle(header).borderBottomWidth,
+                listGap: getComputedStyle(section).paddingTop,
+              };
+            });
+            assert.equal(categoryHeader.titleFont, width >= 768 ? '32px' : '24px',
+              'category H1 uses certification subject-list size');
+            assert.equal(categoryHeader.topPadding,'0px','heading starts directly after breadcrumb');
+            assert.equal(categoryHeader.breadcrumbGap,'24px','subject-list breadcrumb spacing');
+            assert.equal(categoryHeader.bottomRule,'1px','header separator retained');
+            assert.equal(categoryHeader.listGap,'32px','article cards retain a clear 32px gap');
+            const counts = {career:4,jobs:1,practice:0,qualifications:0};
+            assert.equal(await page.locator('.facility-category-list .facility-card').count(),
+              counts[slug], 'existing article cards retained by category');
+          }
           if (path === '/facility-management/') {
             assert.equal(await page.locator('.facility-intro .facility-eyebrow').count(),0,'top eyebrow removed');
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
@@ -131,6 +160,9 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           return {
             shellRadius: getComputedStyle(switcher).borderRadius,
             activeRadius: before.borderRadius,
+            activeColor: getComputedStyle(active).color,
+            activeBackground: before.backgroundColor,
+            activeService: active.dataset.serviceLink,
             hitHeights: links.map(a => a.getBoundingClientRect().height),
             visualHeight: active.getBoundingClientRect().height - px(before.top) - px(before.bottom),
             width: switcher.getBoundingClientRect().width,
@@ -140,6 +172,12 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
         });
         assert.equal(pill.shellRadius, '999px', 'pill-shaped service switch outer border');
         assert.equal(pill.activeRadius, '999px', 'pill-shaped active background');
+        assert.equal(pill.activeColor,'rgb(255, 255, 255)','active toggle label uses white text');
+        if (pill.activeService === 'certifications') {
+          assert.equal(pill.activeBackground,'rgb(29, 78, 216)','certification uses blue active pill at every width');
+        } else {
+          assert.equal(pill.activeBackground,'rgb(24, 121, 78)','community retains forest green active pill');
+        }
         assert(pill.hitHeights.every(height => height >= 44), '44px service navigation touch targets');
         if (width < 768) {
           assert(Math.abs(pill.shellHeight - 36) <= 1, '36px visible mobile switch shell');
