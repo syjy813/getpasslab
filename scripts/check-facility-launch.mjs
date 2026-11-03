@@ -1,6 +1,6 @@
 // The original facility-publication fingerprint is kept immutable in
 // docs/audits/2026-10-31-facility-launch/review.json.gz.
-// The approved editorial UI and subsequent compact GNB revision pin nine exact source blobs.
+// The approved editorial UI and subsequent compact GNB revision pin ten exact source blobs.
 // Preserve exact old bytes for everything else, the complete output page/URL
 // inventory, and all original/rendered facility assets. Generated HTML changes
 // globally when the common header and footer change; verify its semantics via
@@ -24,8 +24,9 @@ const editorialBlobs = {
   'src/components/FacilityCard.astro': '7f4f6bbef4708bbcb89e961d92cb80b810b6c53e',
   'src/layouts/FacilityArticleLayout.astro': '0f9259e6f2473db213c8b416cf4aea5e58857782',
   'src/pages/facility-management/index.astro': 'b56e69b444af43a3e9373132f6c04fe9f88fce60',
-  'src/styles/facility.css': '33e048fa4d4d642c8b56b8e8bf442ed2e261e613',
-  'src/styles/serviceNavigation.css': '5de5e306c79e282bcd741e99aafabd6eacc500e3',
+  'src/styles/facility.css': 'e5ea527131cfacd09e5bf5ad79093127eb7d72ff',
+  'src/pages/facility-management/[category]/index.astro': 'c6e86be311d7f72fc212e32f0e3ce691b0d17239',
+  'src/styles/serviceNavigation.css': '76490d4107a2533c9c177cca96f1a9ea0a172722',
 };
 
 const files = [
@@ -54,7 +55,7 @@ for (const file of files) {
     }
   }
 }
-assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'nine reviewed UI changes only');
+assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'ten reviewed UI changes only');
 
 const assets = walk('facility-assets').sort();
 assert.deepEqual(assets, Object.keys(facilityReview.assets).sort(), 'original image inventory');
@@ -68,4 +69,4 @@ for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
 }
 assert.equal(served.length, 22, '22 approved images remain unchanged');
 console.log('[Facility UI source guard] PASS', files.length - generated, 'native files,', generated,
-  'rendered HTML/XML paths, nine pinned UI blobs, 22 unchanged images');
+  'rendered HTML/XML paths, ten pinned UI blobs, 22 unchanged images');
