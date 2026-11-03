@@ -17,13 +17,13 @@ const walk = dir => fs.existsSync(dir)
       entry.isDirectory() ? walk(dir + '/' + entry.name) : [dir + '/' + entry.name])
   : [];
 const editorialBlobs = {
-  'src/components/GNB.astro': '75637a96d277ec5fe39bcbbde289ea2ee3871420',
+  'src/components/GNB.astro': '94217aab4aa2b5a754a95e3674a3844a6e46a9c2',
   'src/components/Footer.astro': '1c21ee8122b0e7a2bbd5eac8c1c1f5d3538f5867',
   'src/components/FacilityCard.astro': '7f4f6bbef4708bbcb89e961d92cb80b810b6c53e',
   'src/layouts/FacilityArticleLayout.astro': '0f9259e6f2473db213c8b416cf4aea5e58857782',
   'src/pages/facility-management/index.astro': 'b56e69b444af43a3e9373132f6c04fe9f88fce60',
   'src/styles/facility.css': '33e048fa4d4d642c8b56b8e8bf442ed2e261e613',
-  'src/styles/serviceNavigation.css': '86e5dd0ca9dedd6963b47fd66d19f74afa9b1618',
+  'src/styles/serviceNavigation.css': 'd23b7abf51e2482b779d4026fd97e8776eec559a',
 };
 
 const files = [
