@@ -5,31 +5,31 @@ category: jobs
 status: draft
 publishedAt: '2026-10-30'
 updatedAt: '2026-11-03'
-reviewedAt: '2026-10-30'
+reviewedAt: '2026-11-03'
 featured: false
 summary:
 - 공공부문 건물에서 근무한다고 모두 공무원이나 해당 공공기관 직원이 되는 것은 아님. 실제 고용주와 고용형태부터 확인
 - 같은 시설관리라도 사업소·직위마다 자격증, 경력, 법정선임 요건이 다름. 기관 이름보다 모집 단위가 중요
 - 기관 평균보수는 시설기사 초봉이 아님. 개별 공고의 월 급여·수당·교대근무·계약기간·정년을 같은 기준으로 비교
 sources:
-- title: 한전에프엠에스 2026년 하반기 5직급 채용형 인턴 공고 전재본
-  url: https://job.career.co.kr/recruit/view/22203595
-  note: 사업소 채용 31명과 당시 근무형태·급여를 확인한 채용 포털 전재본
+- title: 한전에프엠에스 2026년 하반기 5직급 채용형 인턴 공고 PDF
+  url: https://www.syu.ac.kr/wp-admin/admin-ajax.php?action=file_download_id&o_name=2026%EB%85%84-%ED%95%98%EB%B0%98%EA%B8%B0-5%EC%A7%81%EA%B8%89-%EC%B1%84%EC%9A%A9%ED%98%95%EC%9D%B8%ED%84%B4-%EC%B1%84%EC%9A%A9-%EA%B3%B5%EA%B3%A0-%EB%B0%8F-%EB%B6%99%EC%9E%84%ED%8C%8C%EC%9D%BC.pdf&t_id=257480
+  note: 삼육대학교 취업지원팀 게시물에 첨부된 회사 명의 공고. PDF 1쪽 모집표·접수기간, 3쪽 근무조건·급여표 대조
 - title: 코레일테크 2026년 제1차 공무직 채용 접수 결과
   url: https://www.korailtech.com/recruitNotice/view.do?nttId=4278
   note: 2025년 11월 4일 발표한 시설 분야 모집 및 지원 집계
 - title: 캠코FMC 2026년 하반기 현장직 2차 채용 공고 안내
   url: https://www.kamcofmc.co.kr/bbs/board.php?bo_table=s4_3&wr_id=248
-  note: 공고 존재 및 채용대행 모집 페이지 연결 확인
+  note: 2026년 8월 5일 게시. 회사가 안내한 채용대행 페이지의 모집표와 함께 대조
 - title: 우체국시설관리단 2026년도 11차 현장직원 통합 채용 공고
   url: https://www.poma.or.kr/poma/employment.do?articleNo=980&mode=view
   note: 2026년 9월 공고의 모집 관서·분야 및 접수 기간
-- title: 중부대학교 취업정보에 게시된 한전에프엠에스 공고
-  url: https://joongbu.ac.kr/board.es?act=view&bid=0025&list_no=356575&mid=a10504050000&tag=
-  note: 회사 공고 재게시본의 모집인원·급여·인턴 운영 및 2027년 입사 예정일 대조
+- title: 캠코FMC 2026년 하반기 현장직 2차 모집표
+  url: https://m.incruit.com/jobdb_info/jobpostcontmobile.asp?job=2608040000998&mdetail=y&ver=inView
+  note: 회사 공식 안내에서 연결하는 채용대행사 공고. 시설 직위·사업장·직무 구분 확인
 - title: 국회예산정책처 2026 대한민국 공공기관
   url: https://www.nabo.go.kr/board/file/down.do?fid=33319306
-  note: 2026년 지정 기준 2025년 일반정규직 평균보수
+  note: 인쇄면 71~72쪽(PDF 81~82쪽). 2026년 지정 기준 2025년 일반정규직 평균보수. 무기계약직 제외
 related:
 - what-is-facility-management
 - first-job
@@ -83,7 +83,7 @@ certifications: []
 
 한전FMS의 **2026년 하반기 5직급 채용형 인턴 공고**는 시설관리 분야 **31명**을 사업소 단위로 모집했다.
 
-공고에 제시된 시설관리 급여는 **일근 8시간 기준 월 285만 원 수준**, **4조 2교대 기준 월 304만 원 수준**이다. 복지포인트와 명절상여금 등은 별도이며, 사업소 근무시간에 따라 금액이 달라질 수 있다고 안내한다.
+삼육대학교 취업지원팀에 첨부된 **회사 명의 공고 PDF**에서 시설관리 급여는 **일근 8시간 기준 월 285만 원 수준**, **4조 2교대 기준 월 304만 원 수준**이다. 복지포인트와 명절상여금 등은 별도이며, 사업소 근무시간에 따라 금액이 달라질 수 있다고 안내한다.
 
 차이가 보이는가? 같은 회사의 ‘시설관리’라도 **근무표와 급여 구성**을 먼저 비교해야 한다.
 
@@ -156,7 +156,7 @@ certifications: []
 
 ![기관 전체 평균보수와 개별 시설관리 채용공고 급여의 비교 기준이 다름을 설명하는 그림](/images/facility-drafts/05/04-pay-data-comparison.webp)
 
-*ALIO 전체 평균과 개별 채용공고 금액은 집계 대상·직군·근무형태가 달라 직접 비교할 수 없음*
+*국회예산정책처가 ALIO 자료로 집계한 일반정규직 평균보수와 개별 시설관리 공고 급여는 비교 대상이 다름*
 
 | 숫자 | 먼저 알아야 하는 것 |
 |---|---|

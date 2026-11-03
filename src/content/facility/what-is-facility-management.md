@@ -6,16 +6,19 @@ category: career
 status: draft
 publishedAt: '2026-10-30'
 updatedAt: '2026-11-03'
-reviewedAt: '2026-10-30'
+reviewedAt: '2026-11-03'
 featured: true
 summary:
 - 시설관리는 건물의 기계·전기·소방 등 주요 설비를 운전·점검하고, 문제가 생겼을 때 대응하는 일
 - 담당 직무는 기계·전기·소방·방재·영선 등으로 나뉘며, 같은 시설관리라도 현장에 따라 실제 업무가 달라짐
 - 취업 전 확인할 것은 회사 이름뿐 아니라 담당 설비, 근무형태, 필수자격과 법정선임 요건
 sources:
-- title: 대한기계설비건설협회 기계설비유지관리자 선임 및 자격 기준
-  url: https://career.kmcca.or.kr/yuji/bbs/selectBoardList.do?bbsId=10000000000000000228&bbsView=HTML
-  note: 시설·자격·경력에 따른 기계설비유지관리자 선임 요건의 사례
+- title: 우체국시설관리단 시설관리사업 안내
+  url: https://www.poma.or.kr/poma/fm.do
+  note: 기술 분야의 설비 운전·점검·유지보수와 기록 업무 사례
+- title: 기계설비법 시행령 제15조 기계설비유지관리자의 선임 등
+  url: https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1032876457
+  note: 2026년 6월 1일 시행. 자격·등급은 별표 5의2로 정하는 제도 사례이며 모든 시설의 선임 기준을 뜻하지 않음
 related:
 - employment-types
 - first-job
@@ -126,11 +129,7 @@ certifications: []
 
 전부 따야 하는 걸까?
 
-그렇지는 않다. **모든 시설관리 직원에게 공통으로 요구되는 단 하나의 필수 자격증은 없다.** 담당 직무와 사업장에 따라 요구 조건이 달라진다.
-
-![필수자격, 우대자격, 법정선임의 서로 다른 의미를 세 카드로 설명한 인포그래픽](/images/facility-drafts/01/04-qualifications-vs-appointment.webp)
-
-*세 항목은 취득·취업의 순서가 아니라 **서로 다른 요건의 구분**이다. 그림의 화살표는 실제 자격 취득 단계나 선임 순서를 뜻하지 않음*
+그렇지는 않다. **시설관리라는 직무명만으로 필요한 자격증이 정해지지는 않는다.** 담당 직무와 사업장에 따라 요구 조건이 달라진다.
 
 - **필수자격:** 해당 공고에 지원하려면 충족해야 하는 조건
 - **우대자격:** 채용 평가에서 유리할 수 있는 조건
