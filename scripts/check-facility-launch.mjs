@@ -1,6 +1,6 @@
 // The original facility-publication fingerprint is kept immutable in
 // docs/audits/2026-10-31-facility-launch/review.json.gz.
-// This subsequent approved editorial UI update has six explicit source blobs.
+// The approved editorial UI and subsequent compact GNB revision pin seven exact source blobs.
 // Preserve exact old bytes for everything else, the complete output page/URL
 // inventory, and all original/rendered facility assets. Generated HTML changes
 // globally when the common header and footer change; verify its semantics via
@@ -17,12 +17,13 @@ const walk = dir => fs.existsSync(dir)
       entry.isDirectory() ? walk(dir + '/' + entry.name) : [dir + '/' + entry.name])
   : [];
 const editorialBlobs = {
-  'src/components/GNB.astro': '5635c2f3f8c5844842afe3090509c82df408d869',
+  'src/components/GNB.astro': '75637a96d277ec5fe39bcbbde289ea2ee3871420',
   'src/components/Footer.astro': '1c21ee8122b0e7a2bbd5eac8c1c1f5d3538f5867',
   'src/components/FacilityCard.astro': '7f4f6bbef4708bbcb89e961d92cb80b810b6c53e',
   'src/layouts/FacilityArticleLayout.astro': '0f9259e6f2473db213c8b416cf4aea5e58857782',
-  'src/pages/facility-management/index.astro': 'a22997a9b06b11287f797ac2c1cd20b51a112e96',
+  'src/pages/facility-management/index.astro': 'b56e69b444af43a3e9373132f6c04fe9f88fce60',
   'src/styles/facility.css': '33e048fa4d4d642c8b56b8e8bf442ed2e261e613',
+  'src/styles/serviceNavigation.css': '86e5dd0ca9dedd6963b47fd66d19f74afa9b1618',
 };
 
 const files = [
@@ -51,7 +52,7 @@ for (const file of files) {
     }
   }
 }
-assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'six reviewed UI changes only');
+assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'seven reviewed UI changes only');
 
 const assets = walk('facility-assets').sort();
 assert.deepEqual(assets, Object.keys(facilityReview.assets).sort(), 'original image inventory');
@@ -65,4 +66,4 @@ for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
 }
 assert.equal(served.length, 22, '22 approved images remain unchanged');
 console.log('[Facility UI source guard] PASS', files.length - generated, 'native files,', generated,
-  'rendered HTML/XML paths, six pinned UI blobs, 22 unchanged images');
+  'rendered HTML/XML paths, seven pinned UI blobs, 22 unchanged images');

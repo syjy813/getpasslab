@@ -36,7 +36,8 @@ let browser;
           const n=document.querySelector('.gnb-inner').getBoundingClientRect(),l=document.querySelector('.gnb-logo').getBoundingClientRect(),r=document.querySelector('.gnb-menu summary svg').getBoundingClientRect();
           return {left:l.left-n.left,right:n.right-r.right};
         });
-        assert(Math.abs(alignment.left-24)<=1&&Math.abs(alignment.right-24)<=1,'symmetric GNB visible edges');
+        const inset=width<768?12:24;
+        assert(Math.abs(alignment.left-inset)<=1&&Math.abs(alignment.right-inset)<=1,'symmetric GNB visible edges');
         const gnb=page.locator('.gnb-menu');
         assert.equal(await gnb.locator('summary').getAttribute('aria-label'),'챕터 목차');
         await gnb.locator('summary').click();
@@ -122,7 +123,9 @@ let browser;
       assert.equal(await page.locator('.gnb-menu>summary').getAttribute('aria-label'),'자격증 선택');
       assert.equal(await page.locator('.gnb-chapter-dropdown').count(),0);
       const edges=await page.evaluate(()=>{const n=document.querySelector('.gnb-inner').getBoundingClientRect(),l=document.querySelector('.gnb-logo').getBoundingClientRect(),r=document.querySelector('.gnb-menu summary svg').getBoundingClientRect();return [l.left-n.left,n.right-r.right];});
-      assert(edges.every(v=>Math.abs(v-24)<=1),'ordinary GNB symmetry');
+      // The compact 320px GNB uses 12px inset to keep logo, switch and menu on one row.
+      const expectedInset=width<768?12:24;
+      assert(edges.every(v=>Math.abs(v-expectedInset)<=1),'ordinary GNB symmetry at '+width+'px');
       report.cases.push({width,route:ordinary,case:'ordinary page GNB',passed:true});
     }
     // Exercise long menus at short/normal heights and a simulated 34px bottom inset.

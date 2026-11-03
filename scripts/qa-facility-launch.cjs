@@ -28,6 +28,8 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           assert.equal(await page.locator('summary[aria-label="시설 카테고리"]').count(),1,'facility-first navigation');
           assert.equal(await page.locator('summary[aria-label="자격증 선택"]').count(),0,'no certificate picker in facility area');
           if (path === '/facility-management/') {
+            assert.equal(await page.locator('.facility-intro .facility-eyebrow').count(),0,'top eyebrow removed');
+            assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
             assert.equal(await page.locator('.facility-card').count(),5,'published articles appear once on home');
             assert.equal(await page.locator('.facility-category-link').count(),2,'only populated categories are linked');
             const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
@@ -70,6 +72,31 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
         assert(dimensions.scroll<=dimensions.client+1,`${width} ${path}: overflow ${JSON.stringify(dimensions)}`);
         assert.equal(await page.locator('h1').count(),1,path);
         assert.equal(await page.locator('.service-switch a').count(),2,path);
+        assert.deepEqual(
+          await page.locator('.service-switch a').allTextContents().then(labels => labels.map(label => label.trim())),
+          ['커뮤니티', '자격증'],
+          'short service names are shared by both areas'
+        );
+        if (width < 768) {
+          const layout = await page.evaluate(() => {
+            const nav = document.querySelector('.gnb-inner');
+            const logo = nav?.querySelector('.gnb-logo');
+            const switcher = nav?.querySelector('.service-switch');
+            const menu = [...(nav?.querySelectorAll('details[data-gnb-menu]') || [])]
+              .find(element => getComputedStyle(element).display !== 'none');
+            const rect = element => {
+              const r = element.getBoundingClientRect();
+              return { left:r.left, right:r.right, top:r.top, bottom:r.bottom, midY:(r.top+r.bottom)/2, width:r.width, height:r.height };
+            };
+            return { nav:rect(nav), logo:rect(logo), switcher:rect(switcher), menu:rect(menu), viewport:document.documentElement.clientWidth };
+          });
+          assert(layout.nav.height >= 54 && layout.nav.height <= 60, width+' '+path+': single-row header '+JSON.stringify(layout));
+          assert(layout.logo.right + 2 <= layout.switcher.left, width+' '+path+': logo/switch separation '+JSON.stringify(layout));
+          assert(layout.switcher.right + 2 <= layout.menu.left, width+' '+path+': switch/menu separation '+JSON.stringify(layout));
+          assert(layout.logo.left >= -1 && layout.menu.right <= layout.viewport + 1, width+' '+path+': all navigation within viewport');
+          assert(Math.abs(layout.logo.midY - layout.switcher.midY) <= 6, width+' '+path+': logo and switch aligned');
+          assert(Math.abs(layout.menu.midY - layout.switcher.midY) <= 6, width+' '+path+': menu aligned with switch');
+        }
         if (['facility-management','career','first-job'].includes(slug)) await page.screenshot({path:`${output}/${slug}-${width}.png`,fullPage:true});
         if (path.includes('/computer-classification/')) {
           const selector = page.locator('summary[aria-label="자격증 선택"]');
