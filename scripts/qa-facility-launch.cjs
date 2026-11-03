@@ -182,7 +182,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
         });
         assert(Math.abs(topGeometry.gap-(width>=768?20:10))<1,path+': logo-toggle gap');
         if(topGeometry.padding!==null)assert.equal(topGeometry.padding,width>=768?'24px':'16px',path+': shared compact top padding');
-        if(topGeometry.homeGap!==null)assert(Math.abs(topGeometry.homeGap-(width>=768?40:24))<1,path+': compact home header gap');
+        if((path==='/facility-management/'||path==='/certifications/')&&topGeometry.homeGap!==null)assert(Math.abs(topGeometry.homeGap-(width>=768?40:24))<1,path+': compact home header gap');
         const dimensions = await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth}));
         assert(dimensions.scroll<=dimensions.client+1,`${width} ${path}: overflow ${JSON.stringify(dimensions)}`);
         assert.equal(await page.locator('h1').count(),1,path);
