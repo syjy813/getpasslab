@@ -2,18 +2,26 @@
 import { withBase } from '../config/url';
 import { SITE } from '../config/site';
 import { getCertificationEntryPath, getFeaturedCertifications } from '../config/certifications';
+import { getServiceArea } from '../config/services';
+import { facilityCategoryPath } from '../config/facility';
 const certifications = getFeaturedCertifications();
+const isFacility = getServiceArea(Astro.url.pathname) === 'facility';
 ---
 <footer class="footer">
   <div class="footer-inner">
     <div>
       <div class="footer-brand">GetPassLab</div>
-      <p class="footer-desc">국가기술자격 합격을 위한 개념·공식·기출 학습 서비스. 핵심만 빠르게.</p>
+      <p class="footer-desc">{isFacility ? '시설관리 취업·법정선임·실무와 자격증 학습을 연결하는 정보 서비스.' : '국가기술자격 합격을 위한 개념·공식·기출 학습 서비스. 핵심만 빠르게.'}</p>
     </div>
     <div class="footer-col">
-      <h4>학습</h4>
+      <h4>{isFacility ? '시설 정보' : '학습'}</h4>
       <ul>
-        {certifications.map((certification) => (
+        {isFacility ? (
+          <>
+            <li><a href={withBase(facilityCategoryPath('career'))}>취업·커리어</a></li>
+            <li><a href={withBase(facilityCategoryPath('jobs'))}>채용공고 분석</a></li>
+          </>
+        ) : certifications.map((certification) => (
           <li><a href={withBase(getCertificationEntryPath(certification.slug))}>{certification.name}</a></li>
         ))}
       </ul>
@@ -21,18 +29,20 @@ const certifications = getFeaturedCertifications();
     <div class="footer-col">
       <h4>서비스</h4>
       <ul>
-        <li><a href={withBase('/')}>홈</a></li>
+        <li><a href={withBase(isFacility ? '/facility-management/' : '/certifications/')}>홈</a></li>
+        <li><a href={withBase('/facility-management/')}>시설의 모든 것</a></li>
+        <li><a href={withBase('/certifications/')}>자격증의 모든 것</a></li>
         <li><a href={withBase('/about/')}>GetPassLab 소개</a></li>
         <li><a href={withBase('/terms/')}>이용약관</a></li>
         <li><a href={withBase('/privacy/')}>개인정보처리방침</a></li>
-        <li><a href={`mailto:${SITE.contactEmail}`}>문의</a></li>
+        <li><a href={"mailto:" + SITE.contactEmail}>문의</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <div>
       <span>© 2026 GetPassLab.</span>
-      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+      <a href={"mailto:" + SITE.contactEmail}>{SITE.contactEmail}</a>
     </div>
   </div>
 </footer>
