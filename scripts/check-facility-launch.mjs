@@ -1,6 +1,6 @@
 // The original facility-publication fingerprint is kept immutable in
 // docs/audits/2026-10-31-facility-launch/review.json.gz.
-// The approved editorial UI and subsequent compact GNB revision pin ten exact source blobs.
+// The approved editorial UI and subsequent compact GNB revision pin thirteen exact source blobs.
 // Preserve exact old bytes for everything else, the complete output page/URL
 // inventory, and all original facility assets. Reviewed brand-free derivatives are pinned separately. Generated HTML changes
 // globally when the common header and footer change; verify its semantics via
@@ -17,16 +17,19 @@ const walk = dir => fs.existsSync(dir)
       entry.isDirectory() ? walk(dir + '/' + entry.name) : [dir + '/' + entry.name])
   : [];
 const editorialBlobs = {
+  'src/pages/[cert]/[exam]/[subject]/index.astro': '25ee38cc20c29e28d7542b70761c4d8b120e72f1',
+  'src/pages/[cert]/[exam]/index.astro': '3e648acef59825aa1430431775e1226989605ab3',
+  'src/styles/global.css': '297274d23a54af8863e44cb6f26c2e945617f6f8',
   'src/components/GNB.astro': '94217aab4aa2b5a754a95e3674a3844a6e46a9c2',
   'src/pages/certifications/index.astro': '125799ae05dc3918bd43b16babbdcfd9bf1fc043',
-  'src/styles/catalog.css': '6ad0d49ab835485aed8a0fec0230a189b849698a',
+  'src/styles/catalog.css': '8a90e16d57215350e844faf7accf12cd20b1cd68',
   'src/components/Footer.astro': '1c21ee8122b0e7a2bbd5eac8c1c1f5d3538f5867',
-  'src/components/FacilityCard.astro': '7f4f6bbef4708bbcb89e961d92cb80b810b6c53e',
+  'src/components/FacilityCard.astro': '0a7f2c764837931627707951983aaaa15cad9389',
   'src/layouts/FacilityArticleLayout.astro': '0f9259e6f2473db213c8b416cf4aea5e58857782',
-  'src/pages/facility-management/index.astro': 'b56e69b444af43a3e9373132f6c04fe9f88fce60',
-  'src/styles/facility.css': '2464b79078194765e66b1585bfa89abb1a6402e3',
+  'src/pages/facility-management/index.astro': 'f609c910d1b89037253da9923d38f714fa6d7ec7',
+  'src/styles/facility.css': '21931c04c65685e95e6a4c56cb2369e22776b034',
   'src/pages/facility-management/[category]/index.astro': 'c6e86be311d7f72fc212e32f0e3ce691b0d17239',
-  'src/styles/serviceNavigation.css': '76490d4107a2533c9c177cca96f1a9ea0a172722',
+  'src/styles/serviceNavigation.css': 'bcba28cbd7e11ba14e2c53f1eb7246ac89f0aca2',
 };
 
 const files = [
@@ -55,7 +58,7 @@ for (const file of files) {
     }
   }
 }
-assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'ten reviewed UI changes only');
+assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'thirteen reviewed UI changes only');
 
 const assets = walk('facility-assets').sort();
 assert.deepEqual(assets, Object.keys(facilityReview.assets).sort(), 'original image inventory');
@@ -85,4 +88,4 @@ for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
 assert.deepEqual([...servedEdits].sort(), [...edits.keys()].sort(), 'every derivative is actually served');
 assert.equal(served.length, 22, 'all 22 approved images');
 console.log('[Facility UI source guard] PASS', files.length - generated, 'native files,', generated,
-  'rendered HTML/XML paths, ten pinned UI blobs, 24 originals preserved, 11 edited + 11 original publication images');
+  'rendered HTML/XML paths, thirteen pinned UI blobs, 24 originals preserved, 11 edited + 11 original publication images');

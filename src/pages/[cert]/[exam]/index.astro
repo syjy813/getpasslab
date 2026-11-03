@@ -93,7 +93,7 @@ const subjectTooltip = subjects.length > 0
   : '현재 공개된 과목이 없습니다.';
 ---
 <BaseLayout title={`${certification.name} ${examDefinition.title} — GetPassLab`} description={examDefinition.description} bodyClass="catalog-page exam-index" mobileTopAd={examDefinition.slug === 'written'}>
-  <section class="section container" style="padding-top:var(--space-8)">
+  <section class="section container" style="padding-top:var(--page-top-space)">
     <nav class="breadcrumb" style="margin-bottom:var(--space-6)">
       <a href={withBase('/')}>홈</a><span class="sep">/</span>
       <span>{certification.name}</span><span class="sep">/</span>

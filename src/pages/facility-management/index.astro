@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import FacilityLayout from '../../layouts/FacilityLayout.astro';
 import FacilityCard from '../../components/FacilityCard.astro';
 import FacilityIcon from '../../components/FacilityIcon.astro';
-import FacilityLearningLinks from '../../components/FacilityLearningLinks.astro';
 import { FACILITY_CATEGORIES, facilityCategoryPath, sortFacilityArticles } from '../../config/facility';
 import { withBase } from '../../config/url';
 
@@ -34,7 +33,6 @@ const articleGroups = availableCategories.map(category => ({
   {lead && <section class="facility-section facility-featured" id="facility-content" aria-labelledby="facility-featured-title">
     <div class="facility-section-head">
       <h2 id="facility-featured-title" class="gpl-h2">처음이라면 이 글부터</h2>
-      <span class="gpl-caption">시설관리 입문</span>
     </div>
     <FacilityCard article={lead} lead />
   </section>}
@@ -64,5 +62,4 @@ const articleGroups = availableCategories.map(category => ({
   ))}
 
   {articles.length === 0 && <section class="facility-section"><div class="facility-empty"><h2 class="gpl-h3">첫 콘텐츠를 준비하고 있습니다</h2><p>그동안 관련 자격증의 이론 학습을 시작해 보세요.</p><a href={withBase('/certifications/')}>자격증 학습하러 가기 →</a></div></section>}
-  <FacilityLearningLinks />
 </FacilityLayout>

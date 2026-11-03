@@ -1,0 +1,34 @@
+# 공통 상단 간격과 시설 카드 정리
+
+기준 main `3f484f37e2a2b7af9c844b09ebb02dfd7bf66347`. 사용자 WEB 구현·검증·Commit/Push·Draft PR 승인. main 병합·Production 배포는 이번 범위에서 제외한다.
+
+## 변경과 적용 범위
+
+- 공통 GNB의 로고↔토글 간격: PC/태블릿 8→20px, 모바일 6→10px. 기존 토글 높이·44px 터치 영역·색·링크·포커스 동작 유지.
+- 공통 `--page-top-space`: 모바일16px/768px 이상24px. 시설 main, 자격증 홈, 자격증 소개/시험/과목 목록, 모든 학습 챕터 wrapper, 소개·약관·개인정보 페이지의 첫 콘텐츠 앞에 적용. GNB가 없는 집중 문제풀이 화면과 관리자 미리보기는 이 간격의 대상이 아니다. 본문 섹션 간격·광고 크기/배치·고정 메뉴의 높이는 변경하지 않는다.
+- 시설/자격증 홈은 intro 상단8/16px를 더해 GNB 아래→제목 상단을 모바일56→24px, PC80→40px로 축소한다.
+- 시설 홈의 `시설관리 입문` 보조 표기와 하단 `이론부터 차근차근` 자격증 안내 박스 제거. 상단 토글, 공통 푸터와 콘텐츠 상세의 관련 자격증 연결은 유지.
+- 모든 시설 카드에서 `글 읽기 →` 텍스트 제거. 기존 카드 전체 `<a>`·공개 주소·제목·설명·날짜 유지.
+- 시설 대표/목록 썸네일은 원본 비율+height:auto+contain. PC16:10·모바일1:1·대표 카드 강제 높이로 인한 크롭 제거. width/height 속성은 실제 원본 치수로 예약한다. 기존 얕은 테두리 유지.
+
+## 그림 브리프와 기준
+
+- 유형: 원본 유지형 / CSS 표시 변경. 질문: 제목·인물·하단 정보가 화면 크기와 무관하게 원본 전체로 보이는가?
+- 기존 원본·공개 파생 이미지 바이트, URL, alt/caption, 콘텐츠·문항·SEO 데이터를 수정하지 않는다. 이미지 제작/편집/추가 크롭 없음.
+- 적용: 학습 이미지 디자인 시스템v1.3 §§6–7·9(강제 비율 배제, 원본 보존, 실제320/390/PC 검사), 시설 콘텐츠 가이드v1.4 §5.13.2·4(4:3 우선, 테두리, 원본 종횡비 보존).
+- QA: 320/390/768/1440px에서 카드 natural/render 비율과 부모 경계, contain, 테두리 및 공통 상단 padding·홈 제목 위치·로고 간격·토글 충돌/overflow를 확인한다. 자격증 소개/시험/과목·소개 페이지를 기존 시설 QA에 추가했다.
+
+## 실제 검증 단계
+
+- WEB 일반 빌드565페이지 PASS. native909파일·569HTML/XML 경로·13개 승인 UI blob·원본24개·파생11개·served22개 해시 PASS. 시설 내부 링크127개 PASS.
+- SEO 오류0/기존 소방 description161자 경고1. 나머지 정적 검사·검토 빌드·새 head CI/브라우저 증거는 PR Checks와 후속 결과 기록으로 구분한다.
+- 과거 immutable publication manifest와 archived history guard는 변경하지 않았다. 이번 승인된 global.css/시험·과목 템플릿은 개별 blob pin으로 현재 native guard에 추가했고 나머지 원본 보호는 유지한다.
+- Draft PR까지이며 Production 검증은 수행하지 않는다. 실물 기기/Safari/글꼴 확대/LCP·CLS 수치는 이번 완료 판정에 포함하지 않는다.
+
+## 전역 회귀 CI의 기존 기준 적용 오류 보완
+
+전체 챕터 워크플로가 이번 global.css 변경으로 실행되면서 두 과거 검사의 적용 오류를 확인했다. archived-baseline-proof는 PR base인 최신 main을 오래된 계층 snapshot과 대조해 FacilityCard의 이미 승인된 변경에서 실패했다. accident-cause-qa는 단 한 번의 원래 발행 delta 전용 검사를 후속 PR base에도 재적용해 이미 수정된 ‘불가항력’ 문구를 찾지 못했다. 새 제품 결함으로 분류하지 않는다.
+
+- archived-baseline-proof는 기존 ci-archived-history.cjs를 재사용해 이미 고정된 원래 release c7f856c의 native Build/역사 검사를 수행한다. snapshot·검사 script·정본 데이터를 수정하지 않는다.
+- accident-cause-qa는 현재 native guard로 모든 승인 소스/자산/URL을 검사하고, 해당 챕터/industrialReadability.css가 이번 PR base와 바이트 동일한지도 git diff로 확인한다. 기존 실제5폭 브라우저 검사는 그대로 수행한다. 일회성 check-accident-cause-release.mjs는 역사 기록으로 보존한다.
+- 실제 현재 전체 챕터4폭 검사와 대표 챕터/사고원인 브라우저 검사는 유지한다. QA를 삭제하거나 실패를 continue-on-error로 처리하지 않는다.

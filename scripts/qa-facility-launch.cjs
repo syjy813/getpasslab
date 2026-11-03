@@ -7,7 +7,7 @@ const mode = preview ? 'private-preview' : 'publication';
 const output = `qa-results/facility-launch/${mode}`;
 fs.mkdirSync(output, {recursive: true});
 const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':4};
-const pages = ['/facility-management/', ...['career','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/'];
+const pages = ['/facility-management/', ...['career','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
 (async () => {
   const browser = await chromium.launch();
   const results = [];
@@ -36,8 +36,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             const title = intro?.querySelector('h1');
             const subtitle = intro?.querySelector('p');
             const h2 = sectionHead?.querySelector('h2.gpl-h2');
-            const caption = sectionHead?.querySelector('.gpl-caption');
-            if (!main || !intro || !section || !sectionHead || !title || !subtitle || !h2 || !caption) return null;
+            if (!main || !intro || !section || !sectionHead || !title || !subtitle || !h2) return null;
             const css = el => getComputedStyle(el);
             const x = el => Math.round(el.getBoundingClientRect().left * 100) / 100;
             return {
@@ -53,10 +52,11 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
               h2Font: css(h2).fontSize, h2Weight: css(h2).fontWeight,
               h2LineHeight: css(h2).lineHeight,
               sectionHeadMarginBottom: css(sectionHead).marginBottom,
-              captionFont: css(caption).fontSize,
             };
           }, isFacilityHome);
           assert(geometry, width+' '+path+': landing headings exist');
+          assert.equal(geometry.mainPaddingTop,width >= 768 ? '24px' : '16px','compact main top padding');
+          assert.equal(geometry.introPaddingTop,width >= 768 ? '16px' : '8px','compact intro top padding');
           if (isFacilityHome) {
             facilityHomeGeometry = geometry;
           } else {
@@ -104,6 +104,8 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           }
           if (path === '/facility-management/') {
             assert.equal(await page.locator('.facility-intro .facility-eyebrow').count(),0,'top eyebrow removed');
+            assert.equal(await page.locator('.facility-featured .facility-section-head .gpl-caption').count(),0,'redundant facility-intro caption removed');
+            assert.equal(await page.locator('.facility-learning').count(),0,'home cross-service promotion removed');
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
             assert.equal(await page.locator('.facility-card').count(),5,'published articles appear once on home');
             assert.equal(await page.locator('.facility-category-link').count(),2,'only populated categories are linked');
@@ -115,6 +117,24 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           }
           assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), preview ? 'noindex, nofollow' : empty ? 'noindex, follow' : 'index, follow');
           assert.equal(await page.locator('.service-switch [data-service-link="facility"]').getAttribute('aria-current'),'page');
+          assert.equal(await page.locator('.facility-card-action').count(),0,'redundant read-more text removed; entire card remains linked');
+          const covers = page.locator('.facility-card-cover img');
+          for (const cover of await covers.all()) {
+            await cover.scrollIntoViewIfNeeded();
+            await cover.evaluate(img=>img.decode());
+            const info=await cover.evaluate(img=>{
+              const r=img.getBoundingClientRect(),p=img.parentElement.getBoundingClientRect();
+              return {
+                natural:img.naturalWidth/img.naturalHeight,render:r.width/r.height,
+                fit:getComputedStyle(img).objectFit,
+                inside:r.left>=p.left-.5&&r.right<=p.right+.5&&r.top>=p.top-.5&&r.bottom<=p.bottom+.5
+              };
+            });
+            assert(Math.abs(info.natural-info.render)<.01,path+': full thumbnail ratio');
+            assert.equal(info.fit,'contain',path+': no object-fit crop');
+            assert(info.inside,path+': thumbnail inside border');
+          }
+          await page.evaluate(()=>window.scrollTo({top:0,left:0,behavior:'instant'}));
           const coverBorders = await page.locator('.facility-card-cover').evaluateAll(covers => covers.map(cover => ({width:getComputedStyle(cover).borderTopWidth,style:getComputedStyle(cover).borderTopStyle})));
           for (const border of coverBorders) {
             assert.equal(border.width,'1px',path+': thumbnail border');
@@ -151,6 +171,20 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             }
           }
         }
+        const topGeometry=await page.evaluate(()=>{
+          const gnb=document.querySelector('.gnb')?.getBoundingClientRect();
+          const shell=document.querySelector('.hero-inner,.chapter-wrap,.policy-page,.facility-main,.certifications-home-main,.exam-index>.section,.subject-index>.section');
+          const logo=document.querySelector('.gnb-logo').getBoundingClientRect();
+          const toggle=document.querySelector('.service-switch').getBoundingClientRect();
+          const h1=document.querySelector('.facility-intro h1,.certifications-home-intro h1');
+          return {
+            gap:toggle.left-logo.right,padding:shell?getComputedStyle(shell).paddingTop:null,
+            homeGap:h1&&gnb?h1.getBoundingClientRect().top-gnb.bottom:null
+          };
+        });
+        assert(Math.abs(topGeometry.gap-(width>=768?20:10))<1,width+' '+path+': logo-toggle gap '+JSON.stringify(topGeometry));
+        if(topGeometry.padding!==null)assert.equal(topGeometry.padding,width>=768?'24px':'16px',path+': shared compact top padding');
+        if((path==='/facility-management/'||path==='/certifications/')&&topGeometry.homeGap!==null)assert(Math.abs(topGeometry.homeGap-(width>=768?40:24))<1,path+': compact home header gap');
         const dimensions = await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth}));
         assert(dimensions.scroll<=dimensions.client+1,`${width} ${path}: overflow ${JSON.stringify(dimensions)}`);
         assert.equal(await page.locator('h1').count(),1,path);

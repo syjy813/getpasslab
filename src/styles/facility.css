@@ -1,4 +1,4 @@
-.facility-main{padding-block:var(--space-8) var(--space-16)}
+.facility-main{padding-block:var(--page-top-space) var(--space-16)}
 .facility-page :is(a,summary):focus-visible{outline:3px solid var(--primary-500);outline-offset:3px}
 .facility-page .breadcrumb{margin-bottom:var(--space-8)}
 .facility-intro{padding:var(--space-12) 0;border-bottom:1px solid var(--gray-200)}
@@ -64,7 +64,7 @@
 
 /* Facility editorial discovery: use the original article imagery and avoid
    repeating the same published article in multiple home sections. */
-.facility-page .facility-intro{padding:var(--space-12) 0 var(--space-8)}
+.facility-page .facility-intro{padding:var(--home-intro-top-space) 0 var(--space-8)}
 .facility-page .facility-intro p{max-width:640px;line-height:1.65}
 .facility-page .facility-featured{padding-top:var(--space-12)}
 .facility-page .facility-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -92,7 +92,7 @@
 }
 .facility-page .facility-card:hover .facility-card-title{color:var(--primary-700)}
 .facility-card-cover{box-sizing:border-box;display:block;width:100%;overflow:hidden;border:1px solid var(--gray-200);border-radius:var(--radius-lg);background:var(--gray-100)}
-.facility-card-cover img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.facility-card-cover img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
 .facility-card-content{display:flex;flex:1;flex-direction:column;align-items:start;min-width:0;padding:var(--space-3) 0}
 .facility-card-content .card-label{margin-bottom:var(--space-2)}
 .facility-card-title{display:block;font-size:var(--fs-h4);font-weight:var(--fw-bold);
@@ -101,14 +101,13 @@
   overflow:hidden;margin-top:var(--space-2);color:var(--gray-600);font-size:var(--fs-caption);line-height:1.6}
 .facility-card-meta{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-3);
   margin-top:auto;padding-top:var(--space-3);color:var(--gray-600);font-size:var(--fs-caption)}
-.facility-card-action{color:var(--primary-700);font-weight:var(--fw-semibold)}
 .facility-page .facility-card--lead{
   display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);
   background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl)
 }
 .facility-page .facility-card--lead:hover{border:1px solid var(--primary-100)}
-.facility-card--lead .facility-card-cover{height:100%;min-height:260px;border-radius:0}
-.facility-card--lead .facility-card-cover img{height:100%;min-height:260px;aspect-ratio:auto}
+.facility-card--lead .facility-card-cover{height:auto;min-height:0;align-self:center;border-radius:0}
+.facility-card--lead .facility-card-cover img{height:auto;min-height:0;aspect-ratio:auto}
 .facility-card--lead .facility-card-content{justify-content:center;padding:var(--space-8)}
 .facility-card--lead .facility-card-title{font-size:clamp(22px,2.5vw,30px);line-height:1.35}
 .facility-card--lead .facility-card-description{font-size:var(--fs-body);-webkit-line-clamp:3}
@@ -145,7 +144,7 @@
   .facility-story-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4)}
 }
 @media(max-width:639px){
-  .facility-page .facility-intro{padding:var(--space-6) 0}
+  .facility-page .facility-intro{padding:var(--home-intro-top-space) 0 var(--space-6)}
   .facility-page .facility-intro h1{font-size:30px}
   .facility-page .facility-category-grid{grid-template-columns:1fr}
   .facility-page .facility-category-link{gap:var(--space-3);padding:var(--space-4)}
@@ -157,8 +156,8 @@
   .facility-page .facility-story-grid .facility-card:not(.facility-card--text){
     display:grid;grid-template-columns:minmax(100px,36%) minmax(0,1fr);gap:var(--space-3)
   }
-  .facility-story-grid .facility-card-cover{height:100%;min-height:110px;border-radius:var(--radius-md)}
-  .facility-story-grid .facility-card-cover img{height:100%;min-height:110px;aspect-ratio:1/1}
+  .facility-story-grid .facility-card-cover{height:auto;min-height:0;align-self:start;border-radius:var(--radius-md)}
+  .facility-story-grid .facility-card-cover img{height:auto;min-height:0;aspect-ratio:auto}
   .facility-story-grid .facility-card-content{padding:0}
   .facility-story-grid .facility-card-title{font-size:var(--fs-body);line-height:1.4}
   .facility-story-grid .facility-card-description{-webkit-line-clamp:2}

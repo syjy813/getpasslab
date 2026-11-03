@@ -19,6 +19,7 @@
   --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px;
   --space-6:24px; --space-8:32px; --space-12:48px; --space-16:64px;
   --gnb-h:56px; --container-max:1200px;
+  --page-top-space:16px; --home-intro-top-space:8px;
   --radius-sm:6px; --radius-md:8px; --radius-lg:12px; --radius-xl:16px; --radius-full:999px;
   --shadow-sm:0 1px 2px rgba(25,31,40,.06);
   --shadow-md:0 4px 12px rgba(25,31,40,.08);
@@ -26,6 +27,7 @@
 @media (min-width:768px){:root{
   --fs-display:40px; --fs-h1:32px; --fs-h2:24px; --fs-h3:20px; --fs-h4:18px;
   --fs-body-lg:17px; --fs-body:16px; --fs-caption:14px; --gnb-h:64px;
+  --page-top-space:24px; --home-intro-top-space:16px;
 }}
 
 *{box-sizing:border-box}
@@ -143,7 +145,7 @@ a{color:inherit}
 
 /* ═══ Hero ═══ */
 .hero{background:var(--white);border-bottom:1px solid var(--gray-200)}
-.hero-inner{max-width:var(--container-max);margin:0 auto;padding:var(--space-16) var(--space-6);text-align:center}
+.hero-inner{max-width:var(--container-max);margin:0 auto;padding:var(--page-top-space) var(--space-6) var(--space-16);text-align:center}
 .hero-badge{display:inline-block;background:var(--primary-50);color:var(--primary-600);font-size:var(--fs-label);font-weight:var(--fw-semibold);padding:6px 12px;border-radius:var(--radius-full);margin-bottom:var(--space-4)}
 .btn{display:inline-block;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);padding:12px 24px;border-radius:var(--radius-lg);text-decoration:none;cursor:pointer;border:none}
 .btn-primary{background:var(--primary-600);color:var(--white)}
@@ -181,7 +183,7 @@ a{color:inherit}
 }
 
 /* ═══ Chapter page layout ═══ */
-.chapter-wrap{max-width:var(--container-max);margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;gap:var(--space-8)}
+.chapter-wrap{max-width:var(--container-max);margin:0 auto;padding:var(--page-top-space) var(--space-6) var(--space-8);display:grid;gap:var(--space-8)}
 .chapter-side{display:none}
 @media (min-width:1024px){
   .chapter-wrap{grid-template-columns:240px 1fr}
@@ -348,7 +350,7 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .footer-bottom a:hover{color:var(--primary-600)}
 
 /* ═══ Policy pages ═══ */
-.policy-page{max-width:840px;margin:0 auto;padding:var(--space-8) var(--space-6) 0}
+.policy-page{max-width:840px;margin:0 auto;padding:var(--page-top-space) var(--space-6) 0}
 .policy-header{margin-bottom:var(--space-6)}
 .policy-header .gpl-caption,.policy-header .gpl-body{margin:var(--space-3) 0 0}
 .policy-header .gpl-body{color:var(--gray-600)}
@@ -364,7 +366,7 @@ dialog.q-layer::backdrop{background:rgba(25,31,40,.5)}
 .policy-content .policy-contact p{margin:0}
 .policy-content .policy-contact p+p{margin-top:var(--space-2)}
 @media (min-width:768px){
-  .policy-page{padding-top:var(--space-12)}
+  .policy-page{padding-top:var(--page-top-space)}
   .policy-content{padding:var(--space-8)}
 }
 

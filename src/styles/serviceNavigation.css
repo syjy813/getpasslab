@@ -14,7 +14,7 @@
 .service-switch a[data-service-link="certifications"][aria-current]{color:var(--white)}
 .service-switch a[data-service-link="certifications"][aria-current]::before{background:var(--primary-600)}
 .service-switch a:focus-visible{outline:3px solid var(--primary-500);outline-offset:1px}
-.gnb-inner>.gnb-logo{flex:none}
+.gnb-inner>.gnb-logo{flex:none;margin-inline-end:12px}
 @media(max-width:767px){
   /* Keep the logo, compact service switch and page menu on one 56px row. */
   :root:root{--gnb-h:56px}
@@ -22,11 +22,11 @@
     display:grid;
     grid-template-columns:max-content minmax(0,1fr) max-content;
     align-items:center;
-    gap:6px;
+    gap:6px 10px;
     height:var(--gnb-h);
     padding-inline:12px;
   }
-  .gnb-inner>.gnb-logo{grid-column:1;grid-row:1;font-size:14px;white-space:nowrap}
+  .gnb-inner>.gnb-logo{grid-column:1;grid-row:1;margin-inline-end:0;font-size:14px;white-space:nowrap}
   .gnb-inner>.gnb-spacer{display:none}
   .gnb-inner>.service-switch{
     display:flex;

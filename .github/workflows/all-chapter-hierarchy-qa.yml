@@ -71,12 +71,13 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - name: Validate exact approved release scope against immutable PR base
+      - name: Protect current sources and the unchanged accident-cause chapter
         env:
           REVIEW_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           git fetch --no-tags --depth=1 origin "$REVIEW_BASE_SHA"
-          node scripts/check-accident-cause-release.mjs
+          node scripts/check-facility-launch.mjs
+          git diff --exit-code "$REVIEW_BASE_SHA" -- src/content/chapters/safety-management/accident-cause-classification.md src/styles/industrialReadability.css
       - run: npm run check:seo && npm run check:public-content
       - name: Prepare scoped browser QA
         run: |
@@ -150,9 +151,6 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
-        with:
-          ref: ${{ github.event.pull_request.base.sha }}
-          fetch-depth: 1
       - uses: actions/setup-node@v7
         with:
           node-version: 24
@@ -160,6 +158,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Prove historical hierarchy audit on unchanged original release
-        run: |
-          node scripts/check-all-chapter-hierarchy.mjs
-          node scripts/check-global-chapter-readability.mjs
+        run: node scripts/ci-archived-history.cjs "node scripts/check-all-chapter-hierarchy.mjs && node scripts/check-global-chapter-readability.mjs"
