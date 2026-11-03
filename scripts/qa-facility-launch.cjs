@@ -24,13 +24,31 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
         const expected = imageCounts[slug];
         if (path.startsWith('/facility-management/')) {
           const empty = ['practice','qualifications'].includes(slug);
+          assert.equal(await page.locator('.gnb-logo').getAttribute('href'),'/facility-management/','facility logo destination');
+          assert.equal(await page.locator('summary[aria-label="시설 카테고리"]').count(),1,'facility-first navigation');
+          assert.equal(await page.locator('summary[aria-label="자격증 선택"]').count(),0,'no certificate picker in facility area');
+          if (path === '/facility-management/') {
+            assert.equal(await page.locator('.facility-card').count(),5,'published articles appear once on home');
+            assert.equal(await page.locator('.facility-category-link').count(),2,'only populated categories are linked');
+            const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
+            assert.equal(new Set(routes).size,5,'no repeated home articles');
+            const leadCover = page.locator('.facility-card--lead img');
+            await leadCover.evaluate(img => img.decode());
+            assert(await leadCover.evaluate(img => img.naturalWidth > 0),'lead uses existing article image');
+          }
           assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), preview ? 'noindex, nofollow' : empty ? 'noindex, follow' : 'index, follow');
           assert.equal(await page.locator('.service-switch [data-service-link="facility"]').getAttribute('aria-current'),'page');
           if (expected !== undefined) {
             assert.equal(await page.locator('.facility-body img').count(),expected,`${path}: image count`);
-            assert.equal(await page.locator('.facility-article-meta time').count(),3);
+            assert.equal(await page.locator('.facility-article-meta time').count(),2,'publish and reviewed dates');
             for (const date of await page.locator('.facility-article-meta time').evaluateAll(elements=>elements.map(el=>el.dateTime))) assert.equal(date,'2026-11-03');
             assert(!(await page.locator('.facility-article > article').innerText()).includes('검토용 초안'));
+            const toc = page.locator('.facility-toc');
+            assert.equal(await toc.count(),1,'long article has table of contents');
+            await toc.locator('summary').click();
+            assert(await toc.locator('a').count()>=3,'TOC offers section anchors');
+            const anchor = await toc.locator('a').first().getAttribute('href');
+            assert(anchor?.startsWith('#') && await page.locator('[id="' + anchor.slice(1) + '"]').count()===1,'TOC targets an existing heading');
             assert.equal(await page.locator('.facility-sources a').count()>0,true);
             const images = page.locator('.facility-body img');
             for (let i=0;i<expected;i++) {
@@ -71,6 +89,11 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
         results.push({width,path,status:'PASS'});
       }
       await page.goto(base+'/facility-management/');
+      const facilityMenu = page.locator('summary[aria-label="시설 카테고리"]');
+      await facilityMenu.click();
+      assert(await page.locator('.gnb-facility-dropdown').isVisible(),'facility category menu opens');
+      await facilityMenu.press('Escape');
+      assert(!(await page.locator('.gnb-facility-dropdown').isVisible()),'facility category menu closes');
       await page.locator('.service-switch [data-service-link="certifications"]').click();
       assert.equal(new URL(page.url()).pathname,'/certifications/');
       assert.equal(await page.locator('.service-switch [data-service-link="certifications"]').getAttribute('aria-current'),'page');

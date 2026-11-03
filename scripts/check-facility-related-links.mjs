@@ -48,7 +48,7 @@ for(const path of ['/facility-management/','/facility-management/career/','/faci
  assert(!list.some(node=>node.nodeName==='#text'&&/(검토용 초안|공개 전 자료 확인 중)/.test(node.value)),path+': no editorial status shown');
  assert(text(list.find(node=>node.tagName==='article')).includes('근거 및 참고 자료'),path+': sources');
  const times=nodes(list.find(node=>node.tagName==='article')).filter(node=>node.tagName==='time');
- assert.equal(times.length,3,path+': published, updated, reviewed dates');
+ assert.equal(times.length,2,path+': published and reviewed dates (updated shown only when different)');
  for(const time of times)assert.equal(attrs(time,'datetime'),releaseDate,path+': actual release metadata');
  const articles=list.filter(node=>node.tagName==='script'&&attrs(node,'type')==='application/ld+json').flatMap(node=>{
   const json=JSON.parse(text(node));return Array.isArray(json)?json:[json];

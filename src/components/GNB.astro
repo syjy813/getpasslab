@@ -1,6 +1,8 @@
 ---
 import { getCertificationEntryPath, getFeaturedCertifications } from '../config/certifications';
 import { withBase } from '../config/url';
+import { getCollection } from 'astro:content';
+import { FACILITY_CATEGORIES, facilityCategoryPath } from '../config/facility';
 import '../styles/serviceNavigation.css';
 export interface ChapterNavigationGroup {
   group: string;
@@ -10,17 +12,39 @@ interface Props { chapterNavigation?: ChapterNavigationGroup[]; }
 const { chapterNavigation } = Astro.props;
 const certifications = getFeaturedCertifications();
 const currentPath = Astro.url.pathname;
+const isFacility = currentPath.startsWith(withBase('/facility-management/'));
+const availableFacilityCategories = new Set(isFacility
+  ? (await getCollection('facilityArticles', article =>
+      article.data.status === 'published' || (import.meta.env.FACILITY_DRAFT_PREVIEW === '1' && article.id !== 'reading-job-postings')
+    )).map(article => article.data.category)
+  : []);
 ---
 <header class="gnb gnb-learning">
-  <nav class="gnb-inner" aria-label="자격증 학습 탐색">
-    <a href={withBase('/')} class="gnb-logo" aria-label="GetPassLab">
+  <nav class="gnb-inner" aria-label={isFacility ? "시설관리 정보 탐색" : "자격증 학습 탐색"}>
+    <a href={withBase(isFacility ? '/facility-management/' : '/certifications/')} class="gnb-logo" aria-label={isFacility ? "GetPassLab 시설 홈" : "GetPassLab 자격증 홈"}>
       <span>GetPassLab</span>
     </a>
     <div class="service-switch" role="group" aria-label="서비스 선택">
-      <a href={withBase('/facility-management/')} data-service-link="facility" aria-current={currentPath.startsWith(withBase('/facility-management/')) ? 'page' : undefined}>시설의 모든 것</a>
-      <a href={withBase('/certifications/')} data-service-link="certifications" aria-current={!currentPath.startsWith(withBase('/facility-management/')) ? 'page' : undefined}>자격증의 모든 것</a>
+      <a href={withBase('/facility-management/')} data-service-link="facility" aria-current={isFacility ? 'page' : undefined}>시설의 모든 것</a>
+      <a href={withBase('/certifications/')} data-service-link="certifications" aria-current={!isFacility ? 'page' : undefined}>자격증의 모든 것</a>
     </div>
     <div class="gnb-spacer"></div>
+    {isFacility ? (
+      <details class="gnb-menu gnb-facility-menu" data-gnb-menu>
+        <summary aria-label="시설 카테고리">
+          <span class="gnb-label-full">카테고리</span><span class="gnb-label-short" aria-hidden="true">주제</span>
+          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <nav class="gnb-dropdown gnb-facility-dropdown" aria-label="시설관리 주제">
+          {FACILITY_CATEGORIES.filter(category => availableFacilityCategories.has(category.slug)).map(category => (
+            <a href={withBase(facilityCategoryPath(category.slug))}
+              aria-current={currentPath.startsWith(withBase(facilityCategoryPath(category.slug))) ? 'location' : undefined}>
+              {category.name}
+            </a>
+          ))}
+        </nav>
+      </details>
+    ) : (
     <details class={chapterNavigation ? 'gnb-cert-menu' : 'gnb-menu'} data-gnb-menu>
       <summary aria-label="자격증 선택">
         <span class="gnb-label-full">자격증 선택</span><span class="gnb-label-short" aria-hidden="true">자격증</span>
@@ -44,6 +68,7 @@ const currentPath = Astro.url.pathname;
         ))}
       </div>
     </details>
+    )}
     {chapterNavigation && (
     <details class="gnb-menu" data-gnb-menu>
       <summary aria-label="챕터 목차">
@@ -102,6 +127,8 @@ const currentPath = Astro.url.pathname;
   [data-gnb-menu]>summary:hover,[data-gnb-menu][open]>summary{background:var(--gray-100)}
   [data-gnb-menu]>summary:focus-visible,.gnb-logo:focus-visible{outline:3px solid var(--primary-500);outline-offset:3px}
   .gnb-label-short{display:none}
+  .gnb-facility-dropdown{width:260px;max-width:calc(100vw - 48px)}
+  .gnb-facility-dropdown a[aria-current="location"]{background:var(--primary-50);color:var(--primary-700);font-weight:var(--fw-semibold)}
   .gnb-cert-dropdown{width:320px;max-width:calc(100vw - 48px);max-height:calc(100dvh - var(--gnb-h) - var(--chapter-mobile-nav-space, 0px) - 16px);overflow-y:auto;overscroll-behavior:contain}
   .gnb-cert-dropdown a{min-height:44px;display:flex;align-items:center}
   .gnb-cert-dropdown a:focus-visible{outline:2px solid var(--primary-500);outline-offset:-2px}
@@ -113,7 +140,8 @@ const currentPath = Astro.url.pathname;
     :global(body.chapter-page) .gnb-cert-menu{display:none}
     .gnb-label-full{display:none}
     .gnb-label-short{display:inline}
-    .gnb-cert-dropdown{position:fixed;top:calc(var(--gnb-h) + 1px);right:24px;left:24px;width:auto;min-width:0;max-width:none}
+    .gnb-cert-dropdown,.gnb-facility-dropdown{position:fixed;top:calc(var(--gnb-h) + 1px);right:24px;left:24px;width:auto;min-width:0;max-width:none}
+    .gnb-facility-menu > .gnb-facility-dropdown{top:calc(var(--gnb-h) + 1px)}
     .gnb-chapter-dropdown{position:fixed;top:calc(var(--gnb-h) + 1px);right:24px;max-width:calc(100% - 48px)}
   }
 </style>

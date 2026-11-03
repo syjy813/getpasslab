@@ -26,7 +26,7 @@ for(const width of [320,390,768,1440]){
   assert.equal(await cert.isVisible(),width>=768&&width<1024,'cert picker is available only on tablet chapter detail');
   assert.equal(await toc.locator('summary').isVisible(),width<1024,'TOC visible only when desktop sidebar is absent');
   if(width>=1024) assert(await page.locator('.chapter-side').isVisible(),'desktop chapter sidebar replaces header TOC');
-  assert.equal(await page.locator('.gnb-logo').getAttribute('href'),'/','home navigation stays available');
+  assert.equal(await page.locator('.gnb-logo').getAttribute('href'),'/certifications/','certificate logo and service switch share one home');
   const opener=page.locator('[data-practice-open]');
   assert(await opener.count(),'shared practice entry is present');
   await opener.scrollIntoViewIfNeeded();await opener.click();
