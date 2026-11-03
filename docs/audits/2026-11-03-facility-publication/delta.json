@@ -1,0 +1,208 @@
+{
+  "baselineCommit": "c013e4f9c791f8e865c15db9ca1ae74e1b544f10",
+  "currentInventory": 1478,
+  "previousInventory": 1473,
+  "changed": [
+    {
+      "path": "dist/facility-management/career/index.html",
+      "beforeSHA256": "68aa6122aa278071c782fa7053018b9ed54350344d0d9c6b4c2e45f70ad06875",
+      "sha256": "167cbbebb1201586cfc771817fea6ea29df736fc1c44b41c5a7327fb1e63ec83"
+    },
+    {
+      "path": "dist/facility-management/index.html",
+      "beforeSHA256": "ee45a048d1720f388c9636a1999849b4a519b2215e1c4549ea339bfcffbae8c5",
+      "sha256": "113a58758ec0c44c64950061c6e37e91fa30ebc858b5aa2080e1fb8efdd6c6fa"
+    },
+    {
+      "path": "dist/facility-management/jobs/index.html",
+      "beforeSHA256": "a5a02116cdd0ed81960584b09838093e47dfd9dc61019e5d6b4b70c21dd3702f",
+      "sha256": "f395c29f8d76e0779cdc3182d8485b34e13640cc6de5160d03465ea2f7b54307"
+    },
+    {
+      "path": "dist/sitemap-0.xml",
+      "beforeSHA256": "b1cfbaf48e7e1789e70b70e3ba6afa9a19ecf6209bbe71c72288d2e197dcf3fd",
+      "sha256": "c06d74f3ee43a664a1184e31f3303eadf22324bf45af5a39c48bb486e7a7325a"
+    },
+    {
+      "path": "src/content/facility/employment-types.md",
+      "beforeSHA256": "03338fe6da4784a248ab98faad6f4a72d5c9e0738380bf6c88853658b1f0afd4",
+      "sha256": "80ff3cc724135fb419a713ea1d60ec011c0fec1c89489e7b3a051292e856d715"
+    },
+    {
+      "path": "src/content/facility/first-job.md",
+      "beforeSHA256": "fe4a55238105ff2a031a2e8cb627ab6e53336c714a29bcd572865c59d1ffccf3",
+      "sha256": "94c784404c02503ecc51783e4cad3f4c22eca3b52e9edd322247c68313628b4d"
+    },
+    {
+      "path": "src/content/facility/public-sector-comparison.md",
+      "beforeSHA256": "b0ee30223d3e34128a10bc53255cda93cc74e48f35649fb1819d7dfdb3ad42ae",
+      "sha256": "692d94c46da94f77b76bff5e68693af312ae52aac58ba40c201def70357104eb"
+    },
+    {
+      "path": "src/content/facility/shifts-and-pay.md",
+      "beforeSHA256": "9c54d61adcef5c0817114ac5e0d6d381e930efccef9ee47fbf1e5861f6c43500",
+      "sha256": "eb9050478dc870a0c2b6f5619280d03b0ee8f420e11d782c916391e18c72abb3"
+    },
+    {
+      "path": "src/content/facility/what-is-facility-management.md",
+      "beforeSHA256": "d0d7f2f51149c6661bf25c56744f2d4018c2245c96f1e10093a315bb47cff406",
+      "sha256": "e4d4825e02322478acfdb848839dfd9b60947c7f992a3aea2b81cd3cbf0e3935"
+    },
+    {
+      "path": "src/layouts/FacilityArticleLayout.astro",
+      "beforeSHA256": "c29b3271213e0db5e2a00ca166b4a3f455858dc061b2f7f369a530def51bd07c",
+      "sha256": "8ba28e63dc6b36dcaf344f83a0ffdcf233782ef7065291d420d51e99cbd95db4"
+    },
+    {
+      "path": "src/layouts/FacilityLayout.astro",
+      "beforeSHA256": "00c5abd5067e8dc62eafc71ddbd5f026d0abbb610fe648f3da0c68e06ce41c9e",
+      "sha256": "4af5998cc30ea93978cbcbd33f1782764a4541a4c9a3b3b434acf798698d15a7"
+    }
+  ],
+  "added": {
+    "dist/facility-management/career/employment-types/index.html": "a0bc806fafdfcca19b954b32f3f6c7d5cd218816dd2daae9a0490ce635a50035",
+    "dist/facility-management/career/first-job/index.html": "55d4b2ef6b366e565444d5699a3574953393b471491734e0898063490a1013da",
+    "dist/facility-management/career/shifts-and-pay/index.html": "76f8ccbafb7fae74aa35ec24ad46182932945e456748a54428ad89540e0f5cc9",
+    "dist/facility-management/career/what-is-facility-management/index.html": "e83a22bbf097a9e04898fea5c85d4e30fae795088f22154c186f6e9ebe920f35",
+    "dist/facility-management/jobs/public-sector-comparison/index.html": "e460efb6bbf1c056a82eb4a4cef38ec1344ecd3303b628069aed098650e10786"
+  },
+  "removed": [],
+  "unchangedCompiledBundles": {
+    "dist/_astro/FirePracticeRunner.astro_astro_type_script_index_0_lang.eSkdUNKJ.js": "3cb5c08a165c917ce2fe04868aff94e3273f8634ca364b0216c9a1632bd1b063",
+    "dist/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.pDAgU--1.js": "23ac2aa42b7844502bcc5e7e1c0f29ce9d60dae6ad985c4faf7f2213e818fe09",
+    "dist/_astro/energy-management.CA2wbZts.js": "7b91a05db9bf058327c9ca653b4790f0b18b6f5c68342e0fe8e9af3ab181d75c",
+    "dist/_astro/BaseLayout.Cp8i3X8x.css": "f318672a87b58e40c40c81fd3e049e0b82649f92b3cad4410d2b768e4780335c",
+    "dist/_astro/_..Dw9nUkDW.css": "35d0c6a9ddd21b3c99d9c7f6ab6a323c76743fcfa5ddb773ad153bf544fdb18d",
+    "dist/_astro/_slug_.CiqVmwh5.css": "dd594e01a6785cf2bbc792ccba8ca3e843e022a28c90511e53d2bb94cc1fe298",
+    "dist/_astro/industrial-safety.D3rsEAtl.js": "8a34459bbbae5f350cb18800df5ce6a11f81164960f086573882221b07cc4158",
+    "dist/_astro/FacilityLearningLinks.CAeXmhAZ.css": "177e5d4bef9f0c8d836f67f1509ecd90d3b6acf4e3398ba270830da53ad7b80d",
+    "dist/_astro/index.DDqrQqw2.css": "745de9fb5c1ebd6e082405aa92e09ebec3f178f2b4ce698165fd047490905d7a",
+    "dist/_astro/QuestionHistory.astro_astro_type_script_index_0_lang.B-zlVZfU.js": "710f7d4be3711e93b5132757d789b9598f13ed0f329302d4ba56447c2220056a",
+    "dist/_astro/global.CEAO8Mrk.css": "22c43451d455d4e33743ffe0820940b80c638cd0784634e45d1f1388ed7d7a6b"
+  },
+  "addedSitemapURLs": [
+    "https://getpasslab.co.kr/facility-management/career/",
+    "https://getpasslab.co.kr/facility-management/career/employment-types/",
+    "https://getpasslab.co.kr/facility-management/career/first-job/",
+    "https://getpasslab.co.kr/facility-management/career/shifts-and-pay/",
+    "https://getpasslab.co.kr/facility-management/career/what-is-facility-management/",
+    "https://getpasslab.co.kr/facility-management/jobs/",
+    "https://getpasslab.co.kr/facility-management/jobs/public-sector-comparison/"
+  ],
+  "publishedAssets": {
+    "dist/images/facility-drafts/01/01-facility-management-hero.webp": {
+      "source": "facility-assets/01/01-facility-management-hero.webp",
+      "sha256": "8e6aa8fedf74503cfd9a94b15d91cfe6f94b56833a9ea1bad4b2f1a0345062ee"
+    },
+    "dist/images/facility-drafts/01/02-facility-job-types.webp": {
+      "source": "facility-assets/01/02-facility-job-types.webp",
+      "sha256": "cc1d03e4d85987a9e90593bc22fe1843026c2f8188aec6aa82d28b191e7f233d"
+    },
+    "dist/images/facility-drafts/01/03-facility-workplaces.webp": {
+      "source": "facility-assets/01/03-facility-workplaces.webp",
+      "sha256": "2e8673fcf22ac400cea5ad3be67940c791b4e053c4f7066a622f1f0577ed984d"
+    },
+    "dist/images/facility-drafts/01/05-facility-job-checklist.webp": {
+      "source": "facility-assets/01/05-facility-job-checklist.webp",
+      "sha256": "02664a9e679909afca553f9d98a70b3d1563307cad719f828cdee8655ddfb626"
+    },
+    "dist/images/facility-drafts/02/01-first-job-hero.webp": {
+      "source": "facility-assets/02/01-first-job-hero.webp",
+      "sha256": "a80fef75c3fc7be916f7d5d4a83c0cb125c2f1a43ba0a7f5555b8d36a5236977"
+    },
+    "dist/images/facility-drafts/02/02-actual-work-scope.webp": {
+      "source": "facility-assets/02/02-actual-work-scope.webp",
+      "sha256": "dd0fd77d78713bc95fc4a3c3b98715cbbe4c4f7797a8899bf904cde384c53349"
+    },
+    "dist/images/facility-drafts/02/03-career-records.webp": {
+      "source": "facility-assets/02/03-career-records.webp",
+      "sha256": "25f56e308bce36f2fd0de1084bccd96725bd96f1361c976e666336caf9020c0b"
+    },
+    "dist/images/facility-drafts/02/04-interview-five-questions.webp": {
+      "source": "facility-assets/02/04-interview-five-questions.webp",
+      "sha256": "8907efc97afe5e236d0e91d1a44d3077a8f0aeeaaf9f79595711169d542dc3cd"
+    },
+    "dist/images/facility-drafts/03/01-employment-types-hero.webp": {
+      "source": "facility-assets/03/01-employment-types-hero.webp",
+      "sha256": "39f3450e2d707bc6e7357bb08018573fbbe378952cca7eaa9fcde122710e0d3b"
+    },
+    "dist/images/facility-drafts/03/02-three-employment-structures.webp": {
+      "source": "facility-assets/03/02-three-employment-structures.webp",
+      "sha256": "76ed02683bff8e4302f106384b3c41d97ee9b0f0eef11a2803441defbcc85154"
+    },
+    "dist/images/facility-drafts/03/03-contract-change-check.webp": {
+      "source": "facility-assets/03/03-contract-change-check.webp",
+      "sha256": "ac00035da3fc0dbda3067d45af71076937cf8cc4f4565081761e52fa5dfbf737"
+    },
+    "dist/images/facility-drafts/03/04-offer-comparison.webp": {
+      "source": "facility-assets/03/04-offer-comparison.webp",
+      "sha256": "31fc9820206d48bdd7d0907a3f61375c463415c797b487f5de784b9ebd22dd67"
+    },
+    "dist/images/facility-drafts/03/05-six-point-checklist.webp": {
+      "source": "facility-assets/03/05-six-point-checklist.webp",
+      "sha256": "0468ba49a70e30ce6bc46ec05195a5a42bd849079604410604e0ea75f865c519"
+    },
+    "dist/images/facility-drafts/04/01-shifts-pay-hero.webp": {
+      "source": "facility-assets/04/01-shifts-pay-hero.webp",
+      "sha256": "abacb024a1894c2c1a0099d043db3f275f59a720bc9b998a753ea3b4c2c48f92"
+    },
+    "dist/images/facility-drafts/04/02-shift-types.webp": {
+      "source": "facility-assets/04/02-shift-types.webp",
+      "sha256": "aa95158e8157854f16f54ae6b67c36ccc2a6fb166abb62f958bcfc067dde7d60"
+    },
+    "dist/images/facility-drafts/04/03-working-waiting-rest.webp": {
+      "source": "facility-assets/04/03-working-waiting-rest.webp",
+      "sha256": "6dcca62cf6120ae27e771d5e7555a13ac639a8ff6567a6788d93c9e50be24122"
+    },
+    "dist/images/facility-drafts/04/04-salary-comparison.webp": {
+      "source": "facility-assets/04/04-salary-comparison.webp",
+      "sha256": "5a9a698866634f36e19d361cf1b2fb16185b1d2962c4a791aeccfa69d8ed87c1"
+    },
+    "dist/images/facility-drafts/04/05-job-posting-checklist.webp": {
+      "source": "facility-assets/04/05-job-posting-checklist.webp",
+      "sha256": "77a22aec73d6e9924e22bfa55ffe262fe9dc5616a8ae20827f881f6653ce3966"
+    },
+    "dist/images/facility-drafts/05/01-public-sector-hero.webp": {
+      "source": "facility-assets/05/01-public-sector-hero.webp",
+      "sha256": "da5704d1655a2061027f9a41bb330346582c0ea4c5e33cd2649c4efd1235b6f9"
+    },
+    "dist/images/facility-drafts/05/02-employer-types.webp": {
+      "source": "facility-assets/05/02-employer-types.webp",
+      "sha256": "f97c1e35e40054a575a1a74592ea9915128daf4abe60ac6fecab27c0ffabc4db"
+    },
+    "dist/images/facility-drafts/05/04-pay-data-comparison.webp": {
+      "source": "facility-assets/05/04-pay-data-comparison.webp",
+      "sha256": "68ef9baedbb6842fab8399c0a3c0dad8b446eb01d70596ee5a021405d2b90d83"
+    },
+    "dist/images/facility-drafts/05/05-compare-jobs-checklist.webp": {
+      "source": "facility-assets/05/05-compare-jobs-checklist.webp",
+      "sha256": "9ee02d5e716052ff16717af9e577aa5ee5f70f1bf6ced13a81c817d3cae8b5b6"
+    }
+  },
+  "sourceAssetsPreserved": {
+    "facility-assets/04/01-shifts-pay-hero.webp": "abacb024a1894c2c1a0099d043db3f275f59a720bc9b998a753ea3b4c2c48f92",
+    "facility-assets/04/02-shift-types.webp": "aa95158e8157854f16f54ae6b67c36ccc2a6fb166abb62f958bcfc067dde7d60",
+    "facility-assets/04/04-salary-comparison.webp": "5a9a698866634f36e19d361cf1b2fb16185b1d2962c4a791aeccfa69d8ed87c1",
+    "facility-assets/04/05-job-posting-checklist.webp": "77a22aec73d6e9924e22bfa55ffe262fe9dc5616a8ae20827f881f6653ce3966",
+    "facility-assets/04/03-working-waiting-rest.webp": "6dcca62cf6120ae27e771d5e7555a13ac639a8ff6567a6788d93c9e50be24122",
+    "facility-assets/03/03-contract-change-check.webp": "ac00035da3fc0dbda3067d45af71076937cf8cc4f4565081761e52fa5dfbf737",
+    "facility-assets/03/02-three-employment-structures.webp": "76ed02683bff8e4302f106384b3c41d97ee9b0f0eef11a2803441defbcc85154",
+    "facility-assets/03/01-employment-types-hero.webp": "39f3450e2d707bc6e7357bb08018573fbbe378952cca7eaa9fcde122710e0d3b",
+    "facility-assets/03/04-offer-comparison.webp": "31fc9820206d48bdd7d0907a3f61375c463415c797b487f5de784b9ebd22dd67",
+    "facility-assets/03/05-six-point-checklist.webp": "0468ba49a70e30ce6bc46ec05195a5a42bd849079604410604e0ea75f865c519",
+    "facility-assets/02/01-first-job-hero.webp": "a80fef75c3fc7be916f7d5d4a83c0cb125c2f1a43ba0a7f5555b8d36a5236977",
+    "facility-assets/02/03-career-records.webp": "25f56e308bce36f2fd0de1084bccd96725bd96f1361c976e666336caf9020c0b",
+    "facility-assets/02/04-interview-five-questions.webp": "8907efc97afe5e236d0e91d1a44d3077a8f0aeeaaf9f79595711169d542dc3cd",
+    "facility-assets/02/02-actual-work-scope.webp": "dd0fd77d78713bc95fc4a3c3b98715cbbe4c4f7797a8899bf904cde384c53349",
+    "facility-assets/05/04-pay-data-comparison.webp": "68ef9baedbb6842fab8399c0a3c0dad8b446eb01d70596ee5a021405d2b90d83",
+    "facility-assets/05/02-employer-types.webp": "f97c1e35e40054a575a1a74592ea9915128daf4abe60ac6fecab27c0ffabc4db",
+    "facility-assets/05/03-recruitment-patterns.webp": "668c5682cdbcb6f2548305bda4337857e5d5c8f7f72c9ff3577348ad8666b0b5",
+    "facility-assets/05/05-compare-jobs-checklist.webp": "9ee02d5e716052ff16717af9e577aa5ee5f70f1bf6ced13a81c817d3cae8b5b6",
+    "facility-assets/05/01-public-sector-hero.webp": "da5704d1655a2061027f9a41bb330346582c0ea4c5e33cd2649c4efd1235b6f9",
+    "facility-assets/01/05-facility-job-checklist.webp": "02664a9e679909afca553f9d98a70b3d1563307cad719f828cdee8655ddfb626",
+    "facility-assets/01/01-facility-management-hero.webp": "8e6aa8fedf74503cfd9a94b15d91cfe6f94b56833a9ea1bad4b2f1a0345062ee",
+    "facility-assets/01/04-qualifications-vs-appointment.webp": "761451a0b80be7d3e474712df8309fdb348ab92de0ceeb3d3a03ea086cdf8057",
+    "facility-assets/01/03-facility-workplaces.webp": "2e8673fcf22ac400cea5ad3be67940c791b4e053c4f7066a622f1f0577ed984d",
+    "facility-assets/01/02-facility-job-types.webp": "cc1d03e4d85987a9e90593bc22fe1843026c2f8188aec6aa82d28b191e7f233d"
+  }
+}

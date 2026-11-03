@@ -21,11 +21,13 @@ const facilityAssets = {
       rmSync(join(fileURLToPath(dir), 'images', 'facility-drafts'), { recursive: true, force: true });
       for (const [number, slug] of Object.entries(facilityAssetArticles)) {
         const file = join(facilityDir, `${slug}.md`);
-        const front = readFileSync(file, 'utf8').split('---')[1] || '';
+        const markdown = readFileSync(file, 'utf8');
+        const front = markdown.split('---')[1] || '';
         if (process.env.FACILITY_DRAFT_PREVIEW !== '1' && !/^status:\s*['"]?published['"]?\s*$/m.test(front)) continue;
         const target = join(fileURLToPath(dir), 'images', 'facility-drafts', number);
         mkdirSync(target, { recursive: true });
-        cpSync(join('facility-assets', number), target, { recursive: true });
+        const references = [...markdown.matchAll(new RegExp(`/images/facility-drafts/${number}/([a-z0-9-]+\\.webp)`, 'g'))].map(match => match[1]);
+        for (const asset of new Set(references)) cpSync(join('facility-assets', number, asset), join(target, asset));
       }
     },
   },

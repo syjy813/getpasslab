@@ -3,8 +3,8 @@ title: 시설관리란? 건물이 멀쩡한 데는 다 이유가 있다
 description: 시설관리 직원은 어떤 일을 할까요? 기계·전기·소방·영선 직무부터 근무시설, 자격증과 법정선임, 취업 전 확인할 조건까지 쉽게
   정리했습니다.
 category: career
-status: draft
-publishedAt: '2026-10-30'
+status: published
+publishedAt: '2026-11-03'
 updatedAt: '2026-11-03'
 reviewedAt: '2026-11-03'
 featured: true

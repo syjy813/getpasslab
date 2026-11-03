@@ -1,3 +1,11 @@
+## 2026-11-03 시설 초기 5편 공개 설정·최종 QA 후보
+
+- 사용자 self-canonical 방침 이해 후 후속 WEB 작업 승인. PR222/codex/facility-launch-20261031의 c013e4f 이후,초기 1~5편만 published로 전환하고 발행 예정일을2026-11-03으로 설정. 실제 Production 발행·배포 승인은 아님. 일정 지연 시 배포 전 실제 날짜 재확인.
+- 일반 빌드에서 홈·진로4편·채용1편·관련 글·Article·사이트맵을 활성화. 미승인 reading-job-postings 초안과6~15편 제외. 검토 빌드는 시설 전체 noindex/nofollow·사이트맵/Article 제외. noindex는 접근 제어가 아니므로 검토 빌드 공개 금지.
+- 본문 참조22개 이미지만 빌드에 복사. 제외 이미지2개 포함 원본24개는 바이트 보존. CSS·공통 JS·기출·기존 자격증 HTML·공개 URL 변경 없음. 05 공고문 표시를 독자용 표현으로 정리하고 출처 링크·숫자 보존.
+- 공개/검토 두 모드 정적 검사와4폭×12페이지 브라우저 QA를 CI 행렬로 분리. 현재 manifest는 승인된11개 변경·상세HTML5개 추가·이미지22개만 검증 범위로 갱신,과거 격리 회귀 기준/원본 해시는 유지.
+- 근거는 docs/audits/2026-11-03-facility-publication/README.md와delta.json. 정상 빌드565페이지/567HTML·native1478파일·내부 링크77개 확인. 최종 브라우저·회귀 CI 결과는 새 head의 Checks에서 확인. Draft 유지,main 병합·배포·Production 확인은 미실행.
+
 ## 2026-11-03 시설 병행 발행·대표 URL 방침
 
 - 사용자 후속 WEB 승인,PR222의437a99c 이후 작업. 티스토리 첫 취업/공공기관 비교 실제 두 원문과 canonical을 대조하고 Google 공식 문서 확인.

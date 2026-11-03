@@ -2,8 +2,8 @@
 title: 시설관리 직영·자회사·용역 차이｜같은 건물, 다른 회사
 description: 시설관리 직영·자회사·용역의 고용주, 급여, 계약 변경, 경력증빙을 실제 채용공고에서 비교하는 방법
 category: career
-status: draft
-publishedAt: '2026-10-30'
+status: published
+publishedAt: '2026-11-03'
 updatedAt: '2026-11-03'
 reviewedAt: '2026-11-03'
 featured: true

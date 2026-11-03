@@ -8,7 +8,8 @@ interface Props {
   ogType?: 'website' | 'article';
   structuredData?: Record<string, unknown>[];
 }
+const isDraftPreview = import.meta.env.FACILITY_DRAFT_PREVIEW === '1';
 ---
-<BaseLayout {...Astro.props} bodyClass="facility-page" ogImagePath="/og-facility.png" ogImageAlt="GetPassLab 시설의 모든 것: 취업, 법정선임, 시설관리 실무 정보" >
+<BaseLayout {...Astro.props} robots={isDraftPreview ? 'noindex, nofollow' : Astro.props.robots} bodyClass="facility-page" ogImagePath="/og-facility.png" ogImageAlt="GetPassLab 시설의 모든 것: 취업, 법정선임, 시설관리 실무 정보" >
   <main id="main-content" class="container facility-main"><slot /></main>
 </BaseLayout>

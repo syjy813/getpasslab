@@ -18,13 +18,13 @@
 1. **독립적으로 편집한 GetPassLab 글은 자기 URL을 canonical로 사용**한다. 초기 1~5편의 주소는 기존 `/facility-management/{category}/{slug}/`를 유지한다. 02는 제목이 바뀌어도 `career/first-job/`를 유지한다.
 2. 티스토리에서 GetPassLab으로 이전하는 작업이 아니므로, 티스토리로 향하는 cross-domain canonical이나 티스토리를 없애는 리다이렉트를 추가하지 않는다. 티스토리 두 원문은 조회 시 각각 자체 URL을 canonical로 출력하고 있었다. 이번 작업은 그 설정이나 본문을 수정하지 않는다.
 3. GetPassLab의 현재 `BaseLayout.astro`는 canonical과 `og:url`을 같은 절대 URL로 출력한다. 발행된 Article의 `mainEntityOfPage`,사이트맵,내부 링크도 이 공개 URL에 맞춘다. 별도 canonical 필드나 우회용 URL을 추가할 필요가 없다.
-4. **초안은 계속 draft**다. 일반 빌드에서 상세·본문 이미지를 제외하고,검토용 빌드는 `noindex,nofollow`·시설 사이트맵 제외를 유지한다. 이는 검토본의 공개 방지이며 중복 문서의 대표 URL을 정하는 대체 수단이 아니다.
-5. 실제 발행 승인을 받은 글만 발행일 확정·published 전환 후 공개 상태의 canonical·robots·OG·Article·사이트맵·관련 글을 함께 확인한다. 이번 단계는 발행·배포 승인이 아니다.
+4. **승인되지 않은 글은 계속 draft**다. 일반 빌드에서 그 상세·본문 이미지를 제외한다. `FACILITY_DRAFT_PREVIEW=1` 검토용 빌드는 발행 상태와 무관하게 시설 페이지 전체의 `noindex,nofollow`·시설 사이트맵 제외·Article 제외를 유지한다. 검토용 빌드도 접근 권한을 제한하는 기능은 아니므로 공개 배포하지 않는다. 이는 중복 문서의 대표 URL을 정하는 대체 수단이 아니다.
+5. 사용자 후속 작업 승인에 따라 초기 1~5편은 작업 브랜치에서 `published`, 발행 예정일 `2026-11-03`으로 설정하고 공개 상태의 canonical·robots·OG·Article·사이트맵·관련 글을 함께 확인한다. 6~15편과 미승인 예시 초안은 공개 대상이 아니다. 이 설정과 QA는 실서버 공개 완료를 뜻하지 않는다. main 병합·Production 배포는 별도 사용자 승인 이후 수행하고, 일정이 미뤄지면 배포 전에 실제 발행일을 다시 맞춘다.
 
 Google은 매우 비슷한 주내용을 묶어 대표 페이지를 선택할 수 있고,지정한 canonical과 다른 URL을 고를 수도 있다. self-canonical 설정만으로 두 사이트의 색인이나 노출이 보장되지 않는다. [Google 대표 URL 설명](https://developers.google.com/search/docs/crawling-indexing/canonicalization),[대표 URL 지정 방법](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls)을 기준으로 판단한다.
 
 ## 향후 같은 원고를 옮기는 경우
 
 - 동일 본문을 이중 발행할 계획이라면 이번 '역할을 나눈 병행 운영' 결정을 그대로 적용하지 않는다. 원문 유지/이전과 대표 주소를 별도 판단한다.
-- 기존 공개 URL의 리다이렉트·삭제·검색 제외 또는 티스토리 편집이 필요하면 대상과 실제 변경안을 먼저 준비하고 사용자 승인을 받는다. 지금 승인된 범위는 GetPassLab 초안과 문서 정리다.
+- 기존 공개 URL의 리다이렉트·삭제·검색 제외 또는 티스토리 편집이 필요하면 대상과 실제 변경안을 먼저 준비하고 사용자 승인을 받는다. 현재 승인된 범위는 GetPassLab 초기 5편의 공개 설정·검증과 Draft PR 반영이다.
 - 공개 후 검색 결과를 검토할 때는 Search Console에서 실제 Google 선택 canonical과 색인 상태를 확인한다. 그 결과를 확인하기 전에는 '중복 해소','상위 노출','색인 완료'라고 보고하지 않는다. 확인을 위한 자동화나 외부 사이트 수정은 이번에 설정하지 않는다.

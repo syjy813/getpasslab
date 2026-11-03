@@ -1,41 +1,72 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {parse} from 'parse5';
+
+const origin='https://getpasslab.co.kr';
+const preview=process.env.FACILITY_DRAFT_PREVIEW === '1';
+const releaseDate='2026-11-03';
 const routes=['career/what-is-facility-management','career/first-job','career/employment-types','career/shifts-and-pay','jobs/public-sector-comparison'];
-if(process.env.FACILITY_DRAFT_PREVIEW !== '1') {
- for(const route of routes) assert(!fs.existsSync(`dist/facility-management/${route}/index.html`),route+': draft must not be in normal build');
- assert(!fs.existsSync('dist/images/facility-drafts'),'draft images must not be in normal build');
- assert(fs.readFileSync('dist/facility-management/index.html','utf8').includes('https://getpasslab.co.kr/og-facility.png'),'facility home sharing image');
- assert(fs.readFileSync('dist/computer-literacy/index.html','utf8').includes('https://getpasslab.co.kr/og-default.png'),'certificate sharing image preserved');
- console.log('[Facility related links] PASS: drafts excluded from normal build');
- process.exit(0);
-}
+const urls=routes.map(route=>`/facility-management/${route}/`);
+const attrs=(node,key)=>node.attrs?.find(attr=>attr.name===key)?.value;
+const nodes=root=>{const list=[];const visit=node=>{list.push(node);for(const child of node.childNodes||[])visit(child)};visit(root);return list;};
+const text=node=>node.nodeName==='#text'?node.value:(node.childNodes||[]).map(text).join('');
+const load=path=>nodes(parse(fs.readFileSync(`dist${path}index.html`,'utf8')));
+const meta=(list,key)=>list.find(node=>node.tagName==='meta'&&(attrs(node,'name')===key||attrs(node,'property')===key));
+const assertMetadata=(path,expectedRobots)=>{
+ const list=load(path);
+ const canonical=list.filter(node=>node.tagName==='link'&&attrs(node,'rel')==='canonical');
+ assert.equal(canonical.length,1,path+': exactly one canonical');
+ assert.equal(attrs(canonical[0],'href'),origin+path,path+': canonical');
+ assert.equal(attrs(meta(list,'og:url'),'content'),origin+path,path+': og:url');
+ assert.equal(attrs(meta(list,'robots'),'content'),preview?'noindex, nofollow':expectedRobots,path+': robots');
+ assert.equal(list.filter(node=>node.tagName==='h1').length,1,path+': one H1');
+ return list;
+};
+const published=fs.readdirSync('src/content/facility').filter(file=>file.endsWith('.md')&&/^status:\s*published\s*$/m.test(fs.readFileSync('src/content/facility/'+file,'utf8'))).map(file=>file.slice(0,-3)).sort();
+assert.deepEqual(published,routes.map(route=>route.split('/').at(-1)).sort(),'only approved five articles published');
+assert(!fs.existsSync('dist/facility-management/career/reading-job-postings/index.html'),'unapproved placeholder must not be built');
 let checked=0;
-let draftCards=0;
-for(const page of ['facility-management','facility-management/career','facility-management/jobs', ...routes.map(route=>`facility-management/${route}`)]){
- const doc=parse(fs.readFileSync(`dist/${page}/index.html`,'utf8'));
- const walk=node=>{
-  const href=node.attrs?.find(a=>a.name==='href')?.value;
-  if(node.tagName==='a' && node.attrs?.some(a=>a.name==='class' && a.value.split(/\s+/).includes('facility-card')) && routes.some(route=>href===`/facility-management/${route}/`)){
-   let text='', hasTime=false;
-   const inspect=child=>{if(child.nodeName==='#text') text+=child.value; if(child.tagName==='time') hasTime=true; for(const next of child.childNodes||[]) inspect(next);};
-   inspect(node);
-   assert(text.includes('검토용 초안'),page+': draft card must be identified');
-   assert(!hasTime,page+': draft must not show a publication date');
-   draftCards++;
+for(const path of ['/facility-management/','/facility-management/career/','/facility-management/jobs/',...urls]){
+ const list=assertMetadata(path,'index, follow');
+ assert.equal(attrs(meta(list,'og:image'),'content'),origin+'/og-facility.png',path+': facility sharing image');
+ const cards=list.filter(node=>node.tagName==='a'&&(attrs(node,'class')||'').split(/\s+/).includes('facility-card'));
+ for(const card of cards){
+  assert(urls.includes(attrs(card,'href')),path+': approved card');
+  assert(!text(card).includes('검토용 초안'),path+': publication card');
+  const times=nodes(card).filter(node=>node.tagName==='time');
+  assert.equal(times.length,1,path+': one card publication date');
+  assert.equal(attrs(times[0],'datetime'),releaseDate);
+ }
+ if(path==='/facility-management/') assert.deepEqual([...new Set(cards.map(card=>attrs(card,'href')))].sort(),[...urls].sort(),'home exposes all five');
+ for(const node of list){
+  const href=node.tagName==='a'?attrs(node,'href'):undefined;
+  if(href?.startsWith('/facility-management/')){
+   assert(fs.existsSync(`dist${href.replace(/\/$/,'')}/index.html`),path+': missing '+href);checked++;
   }
-  for(const child of node.childNodes||[]) walk(child);
- };
- walk(doc);
+ }
+ if(!urls.includes(path))continue;
+ assert(!list.some(node=>node.nodeName==='#text'&&/(검토용 초안|공개 전 자료 확인 중)/.test(node.value)),path+': no editorial status shown');
+ assert(text(list.find(node=>node.tagName==='article')).includes('근거 및 참고 자료'),path+': sources');
+ const times=nodes(list.find(node=>node.tagName==='article')).filter(node=>node.tagName==='time');
+ assert.equal(times.length,3,path+': published, updated, reviewed dates');
+ for(const time of times)assert.equal(attrs(time,'datetime'),releaseDate,path+': actual release metadata');
+ const articles=list.filter(node=>node.tagName==='script'&&attrs(node,'type')==='application/ld+json').flatMap(node=>{
+  const json=JSON.parse(text(node));return Array.isArray(json)?json:[json];
+ }).filter(item=>item['@type']==='Article');
+ assert.equal(articles.length,preview?0:1,path+': public Article only');
+ if(!preview){
+  assert.equal(articles[0].mainEntityOfPage,origin+path);assert.equal(articles[0].datePublished,releaseDate);assert.equal(articles[0].dateModified,releaseDate);
+  assert(articles[0].citation.length>0,path+': Article citations');
+ }
 }
-assert(draftCards>=5,'expected draft cards across facility pages');
-for(const route of routes){
- const html=fs.readFileSync(`dist/facility-management/${route}/index.html`,'utf8');
- assert(html.includes('noindex, nofollow'),route+': draft noindex');
- assert(html.includes('https://getpasslab.co.kr/og-facility.png'),route+': facility sharing image');
- assert(html.includes('공개 전 자료 확인 중'),route+': draft source date is not final');
- assert(html.includes('근거 및 참고 자료'),route+': sources may include republished material');
- const walk=node=>{if(node.tagName==='a'){const href=node.attrs.find(a=>a.name==='href')?.value;if(href?.startsWith('/facility-management/')){assert(fs.existsSync(`dist${href.replace(/\/$/,'')}/index.html`),`${route}: missing ${href}`);checked++;}}for(const child of node.childNodes||[])walk(child)};
- walk(parse(html));
+for(const category of ['practice','qualifications']){
+ const path=`/facility-management/${category}/`;
+ const list=assertMetadata(path,'noindex, follow');
+ assert(text(list.find(node=>node.tagName==='main')).includes('공개 콘텐츠 0개'),path+': empty category');
 }
-assert(checked>=20,'expected facility links');console.log('[Facility related links] PASS',checked);
+const sitemap=fs.readdirSync('dist').filter(file=>/^sitemap.*\.xml$/.test(file)).map(file=>fs.readFileSync('dist/'+file,'utf8')).join('');
+for(const path of ['/facility-management/','/facility-management/career/','/facility-management/jobs/',...urls])assert.equal(sitemap.includes(`<loc>${origin+path}</loc>`),!preview,path+': sitemap publication eligibility');
+for(const category of ['practice','qualifications'])assert(!sitemap.includes(`<loc>${origin}/facility-management/${category}/</loc>`),'empty category excluded from sitemap');
+assert(fs.readFileSync('dist/computer-literacy/index.html','utf8').includes(origin+'/og-default.png'),'certificate sharing image preserved');
+for(const excluded of ['01/04-qualifications-vs-appointment.webp','05/03-recruitment-patterns.webp'])assert(!fs.existsSync('dist/images/facility-drafts/'+excluded),'unreferenced figure must not be shipped');
+console.log('[Facility publication] PASS',JSON.stringify({mode:preview?'private-preview':'published-candidate',articles:5,internalLinks:checked,emptyCategories:2,canonicalAndDates:'PASS'}));

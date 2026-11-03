@@ -2,8 +2,8 @@
 title: 시설관리 첫 면접 질문 5가지｜업무·급여·교육 확인표
 description: 시설관리 첫 면접에서 실제 업무·급여와 근무표·신입 교육·선임 책임·경력증빙을 묻는 다섯 질문과 답변 기록 예시를 확인하세요. 공고에 빠진 조건을 찾고 입사 전 확인할 서류를 정리할 수 있습니다.
 category: career
-status: draft
-publishedAt: '2026-10-30'
+status: published
+publishedAt: '2026-11-03'
 updatedAt: '2026-11-03'
 reviewedAt: '2026-11-03'
 featured: true

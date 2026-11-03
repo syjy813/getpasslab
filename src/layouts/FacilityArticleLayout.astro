@@ -20,7 +20,7 @@ const structuredData = [
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(withBase(item.path), SITE.url).href })) },
 ];
 ---
-<FacilityLayout title={`${data.title} | GetPassLab`} description={data.description} ogType="article" robots={data.status === 'draft' ? 'noindex, nofollow' : undefined} structuredData={data.status === 'draft' ? [] : structuredData}>
+<FacilityLayout title={`${data.title} | GetPassLab`} description={data.description} ogType="article" robots={data.status === 'draft' ? 'noindex, nofollow' : undefined} structuredData={data.status === 'draft' || import.meta.env.FACILITY_DRAFT_PREVIEW === '1' ? [] : structuredData}>
   <FacilityBreadcrumb items={[{ name: category.name, path: facilityCategoryPath(category.slug) }, { name: data.title }]} />
   <div class="facility-article">
     <article>

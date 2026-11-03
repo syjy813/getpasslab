@@ -2,8 +2,8 @@
 title: 시설관리 주간·격일·교대근무 비교｜월급보다 근무표를 먼저 보자
 description: 시설관리 일근·격일·교대근무의 차이, 실제 휴게와 대기시간, 야간수당과 월급 구성까지 채용공고에서 확인하는 방법
 category: career
-status: draft
-publishedAt: '2026-10-30'
+status: published
+publishedAt: '2026-11-03'
 updatedAt: '2026-11-03'
 reviewedAt: '2026-11-03'
 featured: false
