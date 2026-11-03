@@ -1,6 +1,6 @@
 // The original facility-publication fingerprint is kept immutable in
 // docs/audits/2026-10-31-facility-launch/review.json.gz.
-// The approved editorial UI and subsequent compact GNB revision pin seven exact source blobs.
+// The approved editorial UI and subsequent compact GNB revision pin nine exact source blobs.
 // Preserve exact old bytes for everything else, the complete output page/URL
 // inventory, and all original/rendered facility assets. Generated HTML changes
 // globally when the common header and footer change; verify its semantics via
@@ -18,6 +18,8 @@ const walk = dir => fs.existsSync(dir)
   : [];
 const editorialBlobs = {
   'src/components/GNB.astro': '94217aab4aa2b5a754a95e3674a3844a6e46a9c2',
+  'src/pages/certifications/index.astro': '125799ae05dc3918bd43b16babbdcfd9bf1fc043',
+  'src/styles/catalog.css': '6ad0d49ab835485aed8a0fec0230a189b849698a',
   'src/components/Footer.astro': '1c21ee8122b0e7a2bbd5eac8c1c1f5d3538f5867',
   'src/components/FacilityCard.astro': '7f4f6bbef4708bbcb89e961d92cb80b810b6c53e',
   'src/layouts/FacilityArticleLayout.astro': '0f9259e6f2473db213c8b416cf4aea5e58857782',
@@ -52,7 +54,7 @@ for (const file of files) {
     }
   }
 }
-assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'seven reviewed UI changes only');
+assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'nine reviewed UI changes only');
 
 const assets = walk('facility-assets').sort();
 assert.deepEqual(assets, Object.keys(facilityReview.assets).sort(), 'original image inventory');
@@ -66,4 +68,4 @@ for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
 }
 assert.equal(served.length, 22, '22 approved images remain unchanged');
 console.log('[Facility UI source guard] PASS', files.length - generated, 'native files,', generated,
-  'rendered HTML/XML paths, seven pinned UI blobs, 22 unchanged images');
+  'rendered HTML/XML paths, nine pinned UI blobs, 22 unchanged images');

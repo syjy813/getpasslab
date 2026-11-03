@@ -16,12 +16,58 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
       const context = await browser.newContext({viewport:{width,height:900}});
       await context.route('**/*', route => new URL(route.request().url()).origin === new URL(base).origin ? route.continue() : route.abort());
       const page = await context.newPage();
+      let facilityHomeGeometry = null;
       for (const path of pages) {
         const response = await page.goto(base+path);
         assert.equal(response.status(),200,path);
         await page.evaluate(()=>document.fonts.ready);
         const slug = path.split('/').filter(Boolean).at(-1);
         const expected = imageCounts[slug];
+
+        // Both service homepages must share the same heading scale, left edge,
+        // intro spacing and section-heading hierarchy at every viewport.
+        if (path === '/facility-management/' || path === '/certifications/') {
+          const isFacilityHome = path === '/facility-management/';
+          const geometry = await page.evaluate(isFacility => {
+            const main = document.querySelector(isFacility ? '.facility-main' : '.certifications-home-main');
+            const intro = document.querySelector(isFacility ? '.facility-intro' : '.certifications-home-intro');
+            const section = document.querySelector(isFacility ? '.facility-featured' : '.certifications-home-section');
+            const sectionHead = section?.querySelector(isFacility ? '.facility-section-head' : '.certifications-home-section-head');
+            const title = intro?.querySelector('h1');
+            const subtitle = intro?.querySelector('p');
+            const h2 = sectionHead?.querySelector('h2.gpl-h2');
+            const caption = sectionHead?.querySelector('.gpl-caption');
+            if (!main || !intro || !section || !sectionHead || !title || !subtitle || !h2 || !caption) return null;
+            const css = el => getComputedStyle(el);
+            const x = el => Math.round(el.getBoundingClientRect().left * 100) / 100;
+            return {
+              mainLeft: x(main), titleLeft: x(title), h2Left: x(h2),
+              mainPaddingTop: css(main).paddingTop,
+              introPaddingTop: css(intro).paddingTop, introPaddingBottom: css(intro).paddingBottom,
+              introBorder: css(intro).borderBottomWidth,
+              titleFont: css(title).fontSize, titleWeight: css(title).fontWeight,
+              titleLineHeight: css(title).lineHeight,
+              titleAlignment: css(title).textAlign,
+              subtitleFont: css(subtitle).fontSize, subtitleLineHeight: css(subtitle).lineHeight,
+              sectionPaddingTop: css(section).paddingTop,
+              h2Font: css(h2).fontSize, h2Weight: css(h2).fontWeight,
+              h2LineHeight: css(h2).lineHeight,
+              sectionHeadMarginBottom: css(sectionHead).marginBottom,
+              captionFont: css(caption).fontSize,
+            };
+          }, isFacilityHome);
+          assert(geometry, width+' '+path+': landing headings exist');
+          if (isFacilityHome) {
+            facilityHomeGeometry = geometry;
+          } else {
+            assert.deepEqual(geometry, facilityHomeGeometry, width+': certification homepage matches facility heading hierarchy');
+            assert.equal(await page.locator('.certifications-home-intro h1').innerText(), '자격증의 모든 것');
+            assert.equal(await page.locator('.certifications-home-section-head h2').innerText(), '자격증 선택');
+            assert.equal(await page.locator('.certifications-home-intro .hero-badge').count(), 0, 'no redundant certification hero badge');
+            assert.equal(await page.locator('.certifications-home-section .card').count(), 4, 'four existing certifications retained');
+          }
+        }
+
         if (path.startsWith('/facility-management/')) {
           const empty = ['practice','qualifications'].includes(slug);
           assert.equal(await page.locator('.gnb-logo').getAttribute('href'),'/facility-management/','facility logo destination');
