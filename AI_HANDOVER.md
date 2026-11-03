@@ -1,3 +1,12 @@
+## 2026-11-03 시설 이미지 테두리·하단 브랜드 정리 검토본
+
+- 사용자 시설 공개22장+목록 썸네일의 연한 테두리와 하단 한글 브랜드 정리 WEB 작업 승인. 기준 main d58618c, codex/facility-image-border-branding-20261103. 이번 main 병합·Production 배포 미승인/미실행.
+- 시설 본문/커버에 회색1px solid·border-box 적용. 하단 '시설의 모든 것'이 있는11장을 built-in imagegen으로 편집하고 facility-asset-edits에 같은 치수의 WebP 파생 저장. 하단 표식이 없는11장은 기존 파일 사용. 원본24개 바이트 보존,같은 공개URL에서 파생/원본22개 선택 복사.
+- 정본 learning-image-design-system-v1.md §§5–7·9와 시설가이드v1.4 §5.13 적용. 기존 제목·비교 항목·순서·그림을 육안 대조. 브랜드 재발 방지를 시설가이드에 반영. 생성 결과는 픽셀 단위 동일성이 아니라 의미·글자·배치 보존 기준으로 검수했다.
+- 정상 Build565페이지/567HTML·SEO오류0/기존경고1·공개문구/명암·native909소스/공개파일+569HTML/XML경로·24원본·11파생해시 PASS. 시설 내부링크127개. baseline 재빌드 비교에서 시설10HTML만변경,나머지559HTML/XML 바이트 동일.
+- docs/audits/2026-11-03-facility-image-border/의 제작 전 브리프,image-edits.json(파일별원본/파생해시·프롬프트),output-delta.json 참조. 처음 파생변환 중 발견한0바이트파일1개는 생성마스터의SHA검증 후 동일 WebP로 복구하고 재빌드·해시검사를 통과시켰다.
+- 최종 PC/모바일 4폭·공개/검토모드 브라우저 결과는 새 head CI와 artifact로 구분. 22개 본문과 모든 목록 커버 테두리 폭·overflow·원래기능을 검사한다. 실서버는 아직 이전 이미지.
+
 ## 2026-11-03 시설 초기 5편 공개 설정·최종 QA 후보
 
 - 사용자 self-canonical 방침 이해 후 후속 WEB 작업 승인. PR222/codex/facility-launch-20261031의 c013e4f 이후,초기 1~5편만 published로 전환하고 발행 예정일을2026-11-03으로 설정. 실제 Production 발행·배포 승인은 아님. 일정 지연 시 배포 전 실제 날짜 재확인.

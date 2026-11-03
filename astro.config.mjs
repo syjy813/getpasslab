@@ -3,7 +3,7 @@ import { unified } from '@astrojs/markdown-remark';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import sitemap from '@astrojs/sitemap';
-import { readdirSync, readFileSync, cpSync, mkdirSync, rmSync } from 'node:fs';
+import { readdirSync, readFileSync, cpSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 
@@ -27,7 +27,11 @@ const facilityAssets = {
         const target = join(fileURLToPath(dir), 'images', 'facility-drafts', number);
         mkdirSync(target, { recursive: true });
         const references = [...markdown.matchAll(new RegExp(`/images/facility-drafts/${number}/([a-z0-9-]+\\.webp)`, 'g'))].map(match => match[1]);
-        for (const asset of new Set(references)) cpSync(join('facility-assets', number, asset), join(target, asset));
+        for (const asset of new Set(references)) {
+          const edited = join('facility-asset-edits', number, asset);
+          const source = existsSync(edited) ? edited : join('facility-assets', number, asset);
+          cpSync(source, join(target, asset));
+        }
       }
     },
   },

@@ -1,0 +1,47 @@
+{
+  "baselineCommit": "d58618c66f89a0968f60dda4167386ce274810b0",
+  "sameHTMLXMLInventory": 569,
+  "changedFacilityPages": {
+    "facility-management/index.html": {
+      "beforeSHA256": "4625f7ca23afa711fc7fadcba11c0fec0a7e31f93b00350adc57b1ce7786c35f",
+      "sha256": "0647299ab374cad59ae59d36a6ab43b2b5a2052080efb437e201891d2419042f"
+    },
+    "facility-management/qualifications/index.html": {
+      "beforeSHA256": "e92c34ffc9b94be06f1fd8bcee725cca9a083bc3987cf1db02e5f39e22fc59d5",
+      "sha256": "64baa6afd5a193517c3bb14e013d15492bc4d22f0def9baad76d2380a014de3d"
+    },
+    "facility-management/jobs/index.html": {
+      "beforeSHA256": "319a8ed0a9718b04531d7731c46ce676a0a5dc88ebb0733dd98408a9fb73d920",
+      "sha256": "de1ec9e17727e30509b1ca74ff0a9311e54ef0528f2ffa4e80770c19258e4183"
+    },
+    "facility-management/career/index.html": {
+      "beforeSHA256": "1303384d65be809a89a8cd675f54755260c8cff2e891b80b95cbbd26f272f061",
+      "sha256": "5c83d6d382b1815436fa3b3b08f71078b3174680f96abfef2230b29ed1857a9f"
+    },
+    "facility-management/practice/index.html": {
+      "beforeSHA256": "fcbd22b01592d885f63c14faeef20e7e915ab8e53a1c96e53df2c944fab19d5c",
+      "sha256": "4d24b2a08d628cb538d850f29272e004b2fc4784c0dce23699520370ae31631f"
+    },
+    "facility-management/jobs/public-sector-comparison/index.html": {
+      "beforeSHA256": "6eba959040ffc21ca09fae30b3c5a2e9d0f8a037dec590fdda27cf85f7bf2b09",
+      "sha256": "46d8b8576190397d69d6ceed452d1e4ac4e2fb8e305d76cf7d72349e8d5e35c2"
+    },
+    "facility-management/career/employment-types/index.html": {
+      "beforeSHA256": "7329096e5e80901a5df8d7294b17bba62126b83b22d8e38760b7db04672db319",
+      "sha256": "74b5352e34a350614247ac4a02a4a8bd0c14301ab2f4142825f59eb3b230caaa"
+    },
+    "facility-management/career/what-is-facility-management/index.html": {
+      "beforeSHA256": "be044ea5ab2d53c2613f5ab22ccc2de4c9a285f4cf9bca9a38854381829aeee6",
+      "sha256": "90ac0b54e96ae0f15601d114be1d1a6e8e9d518659c1c4a858e26365cec02565"
+    },
+    "facility-management/career/shifts-and-pay/index.html": {
+      "beforeSHA256": "ae710bd7f671b4554fcd7d3b5076b467b20b93b8f7bb053931675dc156546527",
+      "sha256": "5e75e07e0714cff74a0e234a5e88383dc6e6f1208c812993039c4d4de140ddcc"
+    },
+    "facility-management/career/first-job/index.html": {
+      "beforeSHA256": "b608537ca817690567a84cd621c2f10cc0ccbadc2ff58c9469c4bcbe3f3da4aa",
+      "sha256": "2b8e61e49206e4bd74ed1fccef794ebed3850569be783990a6f1e1298fc1309a"
+    }
+  },
+  "unchangedOtherHTMLXML": 559
+}
