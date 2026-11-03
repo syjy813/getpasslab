@@ -37,8 +37,8 @@ jobs:
           npm run check:computer-literacy
           npm run check:computer-literacy-c1
           npm run check:deferred-question-content
-          npm run check:computer-literacy-001-081
-          npm run check:computer-literacy-082-159
+      - name: Check immutable computer literacy release histories
+        run: node scripts/ci-archived-history.cjs "node scripts/check-computer-literacy-001-081.mjs && node scripts/check-computer-literacy-082-159.mjs"
       - name: Prepare browser in temporary tooling directory
         run: |
           mkdir -p /tmp/getpasslab-browser-tools

@@ -1,6 +1,7 @@
 // Project only this reviewed advertisement release for archived regression checks.
 // Unknown bytes pass through unchanged and remain visible to the native guards.
 import { beforeChapterPracticeGNB } from './read-before-chapter-practice-gnb.mjs';
+import { beforeFacilityLaunch } from './read-before-facility-launch.mjs';
 import {beforeMobileChapterTopAd} from './read-before-mobile-chapter-top-ad.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -10,6 +11,7 @@ import {gunzipSync} from 'node:zlib';
 export const mobileTopAdReview=JSON.parse(gunzipSync(fs.readFileSync('docs/audits/2026-10-27-mobile-top-ad/review.json.gz')));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 export function beforeMobileTopAd(file,bytes){
+  bytes=beforeFacilityLaunch(file,bytes);
   bytes=beforeChapterPracticeGNB(file,bytes);
   bytes=beforeMobileChapterTopAd(file,bytes);
   const key=path.normalize(String(file)),row=mobileTopAdReview.files[key];

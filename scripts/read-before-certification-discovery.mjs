@@ -1,5 +1,6 @@
 // Historical views only. Unknown bytes are never projected away.
 import fs from 'node:fs';
+import {isFacilityAddition} from './read-before-facility-launch.mjs';
 import {beforeImageCopy} from './read-before-image-copy.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -20,6 +21,7 @@ export function beforeCertificationDiscovery(file,bytes){
  assert.equal(hash(old),row.beforeSHA256,'complete main baseline restored');return old;
 }
 export const isCertificationAddition=file=>{
+ if(isFacilityAddition(file))return true;
  const expected=certificationUIReview.additions[key(file)];if(!expected)return false;
  assert.equal(hash(fs.readFileSync(file)),expected,'exact reviewed addition');return true;
 };

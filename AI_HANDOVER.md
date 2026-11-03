@@ -1,3 +1,26 @@
+## 2026-11-03 시설 초기 5편 공개 설정·최종 QA 후보
+
+- 사용자 self-canonical 방침 이해 후 후속 WEB 작업 승인. PR222/codex/facility-launch-20261031의 c013e4f 이후,초기 1~5편만 published로 전환하고 발행 예정일을2026-11-03으로 설정. 실제 Production 발행·배포 승인은 아님. 일정 지연 시 배포 전 실제 날짜 재확인.
+- 일반 빌드에서 홈·진로4편·채용1편·관련 글·Article·사이트맵을 활성화. 미승인 reading-job-postings 초안과6~15편 제외. 검토 빌드는 시설 전체 noindex/nofollow·사이트맵/Article 제외. noindex는 접근 제어가 아니므로 검토 빌드 공개 금지.
+- 본문 참조22개 이미지만 빌드에 복사. 제외 이미지2개 포함 원본24개는 바이트 보존. CSS·공통 JS·기출·기존 자격증 HTML·공개 URL 변경 없음. 05 공고문 표시를 독자용 표현으로 정리하고 출처 링크·숫자 보존.
+- 공개/검토 두 모드 정적 검사와4폭×12페이지 브라우저 QA를 CI 행렬로 분리. 현재 manifest는 승인된11개 변경·상세HTML5개 추가·이미지22개만 검증 범위로 갱신,과거 격리 회귀 기준/원본 해시는 유지.
+- 근거는 docs/audits/2026-11-03-facility-publication/README.md와delta.json. 정상 빌드565페이지/567HTML·native1478파일·내부 링크77개 확인. 최종 브라우저·회귀 CI 결과는 새 head의 Checks에서 확인. Draft 유지,main 병합·배포·Production 확인은 미실행.
+
+## 2026-11-03 시설 병행 발행·대표 URL 방침
+
+- 사용자 후속 WEB 승인,PR222의437a99c 이후 작업. 티스토리 첫 취업/공공기관 비교 실제 두 원문과 canonical을 대조하고 Google 공식 문서 확인.
+- 기존 블로그는 진로·기관 탐색,GetPassLab02는 첫 면접 질문·답변 기록,05는 실제 공고 해석·기록 실습으로 구체화. 02 제목 변경,first-job 주소 유지. 기존 출처·수치·이미지·초안 상태 보존.
+- self-canonical 병행 운영을 docs/standards/facility-search-publication-policy.md에 정하고 통합 가이드v1.4 §7에서 연결. BaseLayout의 기존 canonical/og:url 재사용,티스토리 편집·redirect·noindex 추가 없음.
+- docs/audits/2026-10-31-facility-launch/publication-seo-20261103.md 참조. 실제 색인·Google 선택 canonical은 미확인. 다음은 실제 발행일/공개 대상 확정 및 공개 상태 QA,별도 사용자 배포 승인.
+
+## 2026-11-03 시설 초기 1~5편 사실관계·이미지 정리
+
+- 사용자 WEB 후속 승인, Sol High 권장. PR222 / codex/facility-launch-20261031의 bbee729 이후 작업. main 병합·Production 배포 범위 아님.
+- 다섯 원고의 실제 주요 법령·서류·채용 수치를 대조하고 출처·설명을 보완. 한전FMS 회사 명의 PDF를 대학 재게시 첨부에서 확보(공식 시스템 직접 확보와 구분),1·3쪽 모집표·급여표 대조.
+- 2/3교대의 조 수·시간대 혼동 교정. 경력 지정 서식,승계 기대권·포괄승계 구분,감단 승인·야간 가산 표현 보완. reviewedAt 2026-11-03,초안 상태와 발행일·경로 유지.
+- 01-04 화살표 그림은 본문 제외·원본 보존,05-03 제외 유지. 본문22개(4/4/5/5/4),WebP24개 바이트 보존. 작은 보조 문구는 HTML에서 핵심을 함께 제공하는 조건으로 유지.
+- 근거·출처·이미지 판정은 docs/audits/2026-10-31-facility-launch/factcheck-and-images-20261103.md. 실제 최종 Build/CI는 PR Checks 참조. 다음은 티스토리 대표 URL 정책·발행 정보 확정·공개 상태 QA와 사용자 배포 승인.
+
 ## 2026-10-29 자격증 GNB·홈·목록 1·2차 구현 검토본
 
 - 사용자 시설 영역 제외,320px 결함 보완과 기존 자격증 탐색/홈/목록 개선만 진행 지시. main6c70b14, `codex/certification-ui-phase1-20261029`

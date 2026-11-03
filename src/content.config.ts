@@ -1,5 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { facilityCategorySlugs } from './config/facility';
+import { CERTIFICATIONS } from './config/certifications';
 import { questionFiles } from './loaders/questions';
 
 const chapterTypeTag = z.enum(['개념', '계산', '절차']);
@@ -51,4 +53,26 @@ const questions = defineCollection({
   }),
 });
 
-export const collections = { chapters, questions };
+const dateString = z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(value => {
+  const date = new Date(`${value}T00:00:00Z`);
+  return !Number.isNaN(date.valueOf()) && date.toISOString().slice(0, 10) === value;
+}, 'Use a valid YYYY-MM-DD date');
+const facilityArticles = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/facility' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    category: z.string().refine(value => facilityCategorySlugs.includes(value as typeof facilityCategorySlugs[number])),
+    status: z.enum(['draft', 'published']).default('draft'),
+    publishedAt: dateString,
+    updatedAt: dateString,
+    reviewedAt: dateString,
+    featured: z.boolean().default(false),
+    summary: z.array(z.string()).min(1),
+    sources: z.array(z.object({ title: z.string(), url: z.string().url(), note: z.string() })),
+    related: z.array(z.string()).default([]),
+    certifications: z.array(z.string().refine(value => value in CERTIFICATIONS)).default([]),
+    legalReview: z.boolean().default(false),
+  }).refine(data => data.status !== 'published' || data.sources.length > 0, 'Published articles require sources').refine(data => data.updatedAt >= data.publishedAt, 'updatedAt must not precede publishedAt'),
+});
+export const collections = { chapters, questions, facilityArticles };

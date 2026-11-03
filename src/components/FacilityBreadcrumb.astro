@@ -1,0 +1,9 @@
+---
+import { withBase } from '../config/url';
+interface Props { items?: { name: string; path?: string }[]; }
+const { items = [] } = Astro.props;
+---
+<nav class="breadcrumb" aria-label="현재 위치">
+  <a href={withBase('/facility-management/')}>시설의 모든 것</a>
+  {items.map(item => <><span class="sep" aria-hidden="true">/</span>{item.path ? <a href={withBase(item.path)}>{item.name}</a> : <span class="current" aria-current="page">{item.name}</span>}</>)}
+</nav>

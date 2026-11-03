@@ -1,3 +1,4 @@
+import {isFacilityAddition,facilityReview} from './read-before-facility-launch.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -7,7 +8,7 @@ import {beforeImageCopy} from './read-before-image-copy.mjs';
 const prior=file=>beforeImageCopy(file,fs.readFileSync(file));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(d+'/'+e.name):[d+'/'+e.name]);
-const files=[...walk('src'),...walk('public'),...walk('dist').filter(f=>/\.(html|xml)$/.test(f))].sort();
+const files=[...walk('src'),...walk('public'),...walk('dist').filter(f=>/\.(html|xml)$/.test(f))].filter(f=>!isFacilityAddition(f)).sort();
 assert.deepEqual(files,Object.keys(review.current).sort(),'native inventory');
 for(const file of files)assert.equal(hash(prior(file)),review.current[file],file+': reviewed current bytes');
 assert.deepEqual(review.productFiles,[
@@ -62,19 +63,15 @@ for(const [file,row]of Object.entries(review.changes)){
  if(a){assert.equal(cleanLesson(a,file),cleanLesson(b,file),file+': lesson, figures, question payload and practice unchanged except reviewed cell lists');lessons++;}
  if(file!=='dist/index.html')assert.equal(serialize(now.find(n=>n.tagName==='h1')),serialize(old.find(n=>n.tagName==='h1')),file+': original page title retained');
 }
-// Only two known compiled CSS assets are replaced by this PR. Other bundles
-// must retain the complete archived digest; the new assets are content-addressed.
+const bundles=walk('dist/_astro').filter(f=>/\.(js|css)$/.test(f)).sort();
+assert.deepEqual(bundles,Object.keys(facilityReview.bundles).sort(),'facility compiled bundle inventory');
+for(const [file,sha] of Object.entries(facilityReview.bundles))assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed facility bundle');
 const bundleRenames={
  'dist/_astro/BaseLayout.Bj2BltZT.css':{path:'dist/_astro/BaseLayout.CZK5_rkE.css',sha:'bbc2c1b646f1995e5ca3f71cfd0f654250cfe3b240b9b2b4c69a72f402b7066c'},
  'dist/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.B-5ce8YB.js':{path:'dist/_astro/InstantQuestionPractice.astro_astro_type_script_index_0_lang.pDAgU--1.js',sha:'23ac2aa42b7844502bcc5e7e1c0f29ce9d60dae6ad985c4faf7f2213e818fe09'},
  'dist/_astro/_slug_.DBxZQ9Ra.css':{path:'dist/_astro/_slug_.ji1xakQR.css',sha:'fcd472fdfaaca18b388f38acc2e517cd907c82c5fa75a093f6bb22c780ed8885'},
 };
-const bundles=walk('dist/_astro').filter(f=>/\.(js|css)$/.test(f)).sort();
-assert.deepEqual(bundles,Object.keys(review.bundles).map(f=>bundleRenames[f]?.path||f).sort(),'compiled bundle inventory');
-for(const [file,sha]of Object.entries(review.bundles)){
- const replacement=bundleRenames[file];
- if(!replacement){assert.equal(hash(fs.readFileSync(file)),sha,file+': reviewed bundle');continue;}
- assert.equal(hash(fs.readFileSync(replacement.path)),replacement.sha,replacement.path+': full approved CSS bundle SHA256');
-}
+assert.deepEqual(Object.keys(facilityReview.priorBundles).sort(),Object.keys(review.bundles).map(f=>bundleRenames[f]?.path||f).sort(),'preceding bundle inventory');
+for(const [file,sha] of Object.entries(review.bundles)){const r=bundleRenames[file];const actual=r?.path||file;assert.equal(hash(Buffer.from(facilityReview.priorBundles[actual],'base64')),r?.sha||sha,actual+': reviewed preceding bundle');}
 assert(lessons>500);assert(htmlCount>500);
 console.log('[Certification discovery native] PASS',JSON.stringify({nativeFiles:files.length,lessons,htmlCount,footerPages,sourceChanges:review.productFiles.length,questionsAndImages:'unchanged',routes:'unchanged'}));
