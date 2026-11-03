@@ -182,7 +182,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             homeGap:h1&&gnb?h1.getBoundingClientRect().top-gnb.bottom:null
           };
         });
-        assert(Math.abs(topGeometry.gap-(width>=768?20:10))<1,path+': logo-toggle gap');
+        assert(Math.abs(topGeometry.gap-(width>=768?20:10))<1,width+' '+path+': logo-toggle gap '+JSON.stringify(topGeometry));
         if(topGeometry.padding!==null)assert.equal(topGeometry.padding,width>=768?'24px':'16px',path+': shared compact top padding');
         if((path==='/facility-management/'||path==='/certifications/')&&topGeometry.homeGap!==null)assert(Math.abs(topGeometry.homeGap-(width>=768?40:24))<1,path+': compact home header gap');
         const dimensions = await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth}));

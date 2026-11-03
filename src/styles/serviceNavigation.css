@@ -14,7 +14,7 @@
 .service-switch a[data-service-link="certifications"][aria-current]{color:var(--white)}
 .service-switch a[data-service-link="certifications"][aria-current]::before{background:var(--primary-600)}
 .service-switch a:focus-visible{outline:3px solid var(--primary-500);outline-offset:1px}
-.gnb-inner>.gnb-logo{flex:none;margin-inline-end:8px}
+.gnb-inner>.gnb-logo{flex:none;margin-inline-end:12px}
 @media(max-width:767px){
   /* Keep the logo, compact service switch and page menu on one 56px row. */
   :root:root{--gnb-h:56px}
