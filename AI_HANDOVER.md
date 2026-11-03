@@ -1,3 +1,10 @@
+## 2026-11-03 시설 병행 발행·대표 URL 방침
+
+- 사용자 후속 WEB 승인,PR222의437a99c 이후 작업. 티스토리 첫 취업/공공기관 비교 실제 두 원문과 canonical을 대조하고 Google 공식 문서 확인.
+- 기존 블로그는 진로·기관 탐색,GetPassLab02는 첫 면접 질문·답변 기록,05는 실제 공고 해석·기록 실습으로 구체화. 02 제목 변경,first-job 주소 유지. 기존 출처·수치·이미지·초안 상태 보존.
+- self-canonical 병행 운영을 docs/standards/facility-search-publication-policy.md에 정하고 통합 가이드v1.4 §7에서 연결. BaseLayout의 기존 canonical/og:url 재사용,티스토리 편집·redirect·noindex 추가 없음.
+- docs/audits/2026-10-31-facility-launch/publication-seo-20261103.md 참조. 실제 색인·Google 선택 canonical은 미확인. 다음은 실제 발행일/공개 대상 확정 및 공개 상태 QA,별도 사용자 배포 승인.
+
 ## 2026-11-03 시설 초기 1~5편 사실관계·이미지 정리
 
 - 사용자 WEB 후속 승인, Sol High 권장. PR222 / codex/facility-launch-20261031의 bbee729 이후 작업. main 병합·Production 배포 범위 아님.
