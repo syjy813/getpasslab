@@ -99,6 +99,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           assert(Math.abs(pill.shellHeight - 36) <= 1, '36px visible mobile switch shell');
           assert(pill.visualHeight >= 29 && pill.visualHeight <= 31, '30px visible mobile active pill');
         } else {
+          assert(Math.abs(pill.shellHeight - 46) <= 1, 'unchanged 46px desktop/tablet switch shell');
           assert(pill.visualHeight >= 35 && pill.visualHeight <= 39, '36px visible desktop/tablet active pill');
         }
         assert(pill.width <= pill.viewport - 24, 'service switch stays within narrow screens');
