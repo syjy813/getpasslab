@@ -77,6 +77,25 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           ['커뮤니티', '자격증'],
           'short service names are shared by both areas'
         );
+        const pill = await page.locator('.service-switch').evaluate(switcher => {
+          const links = [...switcher.querySelectorAll('a')];
+          const active = links.find(a => a.getAttribute('aria-current') === 'page');
+          const before = getComputedStyle(active, '::before');
+          const px = value => Number.parseFloat(value) || 0;
+          return {
+            shellRadius: getComputedStyle(switcher).borderRadius,
+            activeRadius: before.borderRadius,
+            hitHeights: links.map(a => a.getBoundingClientRect().height),
+            visualHeight: active.getBoundingClientRect().height - px(before.top) - px(before.bottom),
+            width: switcher.getBoundingClientRect().width,
+            viewport: document.documentElement.clientWidth
+          };
+        });
+        assert.equal(pill.shellRadius, '999px', 'pill-shaped service switch outer border');
+        assert.equal(pill.activeRadius, '999px', 'pill-shaped active background');
+        assert(pill.hitHeights.every(height => height >= 44), '44px service navigation touch targets');
+        assert(pill.visualHeight >= 35 && pill.visualHeight <= 39, '36px visible active pill');
+        assert(pill.width <= pill.viewport - 24, 'service switch stays within narrow screens');
         if (width < 768) {
           const layout = await page.evaluate(() => {
             const nav = document.querySelector('.gnb-inner');

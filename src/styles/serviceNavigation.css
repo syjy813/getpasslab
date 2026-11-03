@@ -1,9 +1,15 @@
-/* Shared navigation: links retain native browser and keyboard behavior. */
-.service-switch{display:flex;gap:4px;padding:4px;border:1px solid var(--gray-200);border-radius:var(--radius-lg);background:var(--gray-100);flex:none}
-.service-switch a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border-radius:var(--radius-md);font-size:14px;font-weight:var(--fw-medium);line-height:1.4;text-decoration:none;white-space:nowrap;color:var(--gray-600)}
-.service-switch a:hover{color:var(--gray-900);background:var(--white)}
-.service-switch a[aria-current]{background:var(--white);box-shadow:var(--shadow-sm);font-weight:var(--fw-bold);color:var(--primary-600)}
-.service-switch a[data-service-link="facility"][aria-current]{background:#18794E;color:#FFFFFF}
+/* Shared navigation: links retain native browser and keyboard behavior.
+   The clickable link is 44px high; its visible pill is 36px high. */
+.service-switch{display:flex;align-items:center;gap:2px;padding:0 3px;border:1px solid var(--gray-200);border-radius:999px;background:var(--gray-100);flex:none}
+.service-switch a{display:flex;position:relative;isolation:isolate;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;font-size:14px;font-weight:var(--fw-medium);line-height:1.4;text-decoration:none;white-space:nowrap;color:var(--gray-600)}
+.service-switch a::before{content:"";position:absolute;inset:4px 0;z-index:0;border-radius:999px;pointer-events:none;transition:background-color .15s ease}
+.service-switch a span{position:relative;z-index:1}
+.service-switch a:not([aria-current]):hover{color:var(--gray-900)}
+.service-switch a:not([aria-current]):hover::before{background:var(--white)}
+.service-switch a[aria-current]{font-weight:var(--fw-bold);color:var(--primary-600)}
+.service-switch a[aria-current]::before{background:var(--white);box-shadow:var(--shadow-sm)}
+.service-switch a[data-service-link="facility"][aria-current]{color:#FFFFFF}
+.service-switch a[data-service-link="facility"][aria-current]::before{background:#18794E}
 .service-switch a:focus-visible{outline:3px solid var(--primary-500);outline-offset:1px}
 .gnb-inner>.gnb-logo{flex:none}
 @media(max-width:767px){
@@ -30,13 +36,13 @@
     min-width:0;
     margin:0;
     gap:2px;
-    padding:2px;
-    border-radius:var(--radius-md);
+    padding:0 2px;
+    border-radius:999px;
   }
   .gnb-inner>.service-switch a{
     min-height:44px;
-    padding:8px 8px;
-    border-radius:var(--radius-sm);
+    padding:0 12px;
+    border-radius:999px;
     font-size:13px;
     line-height:1.25;
   }
