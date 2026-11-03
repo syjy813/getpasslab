@@ -7,14 +7,49 @@
 .service-switch a:focus-visible{outline:3px solid var(--primary-500);outline-offset:1px}
 .gnb-inner>.gnb-logo{flex:none}
 @media(max-width:767px){
-  :root:root{--gnb-h:116px}
-  .gnb-inner{display:flex;flex-wrap:wrap;height:auto;gap:0 8px}
-  .gnb-inner>.gnb-logo{justify-self:start}
-  .gnb-inner>.gnb-spacer{display:block}
-  .gnb-inner>.gnb-menu{grid-column:2;grid-row:1}
-  .service-switch{order:10;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;margin-top:0}
-  .service-switch a{padding:8px 4px;font-size:14px}
-  .gnb-menu>.gnb-dropdown{top:calc(100% + 66px)}
+  /* Keep the logo, compact service switch and page menu on one 56px row. */
+  :root:root{--gnb-h:56px}
+  .gnb.gnb-learning .gnb-inner{
+    display:grid;
+    grid-template-columns:max-content minmax(0,1fr) max-content;
+    align-items:center;
+    gap:6px;
+    height:var(--gnb-h);
+    padding-inline:12px;
+  }
+  .gnb-inner>.gnb-logo{grid-column:1;grid-row:1;font-size:14px;white-space:nowrap}
+  .gnb-inner>.gnb-spacer{display:none}
+  .gnb-inner>.service-switch{
+    display:flex;
+    grid-column:2;
+    grid-row:1;
+    justify-self:start;
+    align-items:center;
+    width:max-content;
+    max-width:100%;
+    min-width:0;
+    margin:0;
+    gap:2px;
+    padding:2px;
+    border-radius:var(--radius-md);
+  }
+  .gnb-inner>.service-switch a{
+    min-height:44px;
+    padding:8px 8px;
+    border-radius:var(--radius-sm);
+    font-size:13px;
+    line-height:1.25;
+  }
+  .gnb-inner>.gnb-menu,.gnb-inner>.gnb-cert-menu{
+    grid-column:3;
+    grid-row:1;
+    justify-self:end;
+  }
+}
+@media(max-width:359px){
+  .gnb-inner>.gnb-logo{font-size:13px}
+  .gnb-inner>.service-switch a{font-size:12px;padding-inline:6px}
+  .gnb-inner>.gnb-menu>summary{gap:3px;font-size:12px}
 }
 /* The facility palette is inherited only within this URL-derived service area. */
 body.facility-page{--primary-50:#EAF5EE;--primary-100:#C9E4D3;--primary-500:#18794E;--primary-600:#18794E;--primary-700:#145C3E;--primary-800:#145C3E;background:var(--white)}
