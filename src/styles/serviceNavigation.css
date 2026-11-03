@@ -34,6 +34,8 @@
     width:max-content;
     max-width:100%;
     min-width:0;
+    height:36px;
+    box-sizing:border-box;
     margin:0;
     gap:2px;
     padding:0 2px;
@@ -46,6 +48,8 @@
     font-size:13px;
     line-height:1.25;
   }
+  /* The visible green/white pill is 30px, while links remain 44px tall. */
+  .gnb-inner>.service-switch a::before{inset-block:7px}
   .gnb-inner>.gnb-menu,.gnb-inner>.gnb-cert-menu{
     grid-column:3;
     grid-row:1;
