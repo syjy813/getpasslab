@@ -2,12 +2,25 @@
 import type { CollectionEntry } from 'astro:content';
 import { facilityArticlePath, facilityCategory } from '../config/facility';
 import { withBase } from '../config/url';
-interface Props { article: CollectionEntry<'facilityArticles'>; }
-const { article } = Astro.props;
+interface Props { article: CollectionEntry<'facilityArticles'>; lead?: boolean; }
+const { article, lead = false } = Astro.props;
+// Reuse images already referenced in the corresponding published article.
+// A future article without a cover remains a text card.
+const covers: Record<string, string> = {
+  'what-is-facility-management': '/images/facility-drafts/01/01-facility-management-hero.webp',
+  'first-job': '/images/facility-drafts/02/01-first-job-hero.webp',
+  'employment-types': '/images/facility-drafts/03/01-employment-types-hero.webp',
+  'shifts-and-pay': '/images/facility-drafts/04/01-shifts-pay-hero.webp',
+  'public-sector-comparison': '/images/facility-drafts/05/01-public-sector-hero.webp',
+};
+const cover = covers[article.id];
 ---
-<a class="card facility-card" href={withBase(facilityArticlePath(article))}>
-  <span class="card-label">{facilityCategory(article.data.category).name}</span>
-  <h3 class="card-title">{article.data.title}</h3>
-  <p class="card-description">{article.data.description}</p>
-  <div class="card-meta">{article.data.status === 'draft' ? <span>검토용 초안</span> : <time datetime={article.data.publishedAt}>{article.data.publishedAt.replaceAll('-', '.')}</time>}<span aria-hidden="true"> · </span>읽어보기 →</div>
+<a class:list={['card', 'facility-card', { 'facility-card--lead': lead, 'facility-card--text': !cover }]} href={withBase(facilityArticlePath(article))}>
+  {cover && <span class="facility-card-cover"><img src={withBase(cover)} alt="" width="800" height="520" loading={lead ? 'eager' : 'lazy'} decoding="async" /></span>}
+  <span class="facility-card-content">
+    <span class="card-label">{facilityCategory(article.data.category).name}</span>
+    <span class="facility-card-title">{article.data.title}</span>
+    <span class="facility-card-description">{article.data.description}</span>
+    <span class="facility-card-meta">{article.data.status === 'draft' ? <span>검토용 초안</span> : <time datetime={article.data.publishedAt}>{article.data.publishedAt.replaceAll('-', '.')}</time>}<span class="facility-card-action">글 읽기 <span aria-hidden="true">→</span></span></span>
+  </span>
 </a>
