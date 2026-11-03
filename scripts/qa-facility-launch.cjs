@@ -88,13 +88,20 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             hitHeights: links.map(a => a.getBoundingClientRect().height),
             visualHeight: active.getBoundingClientRect().height - px(before.top) - px(before.bottom),
             width: switcher.getBoundingClientRect().width,
+            shellHeight: switcher.getBoundingClientRect().height,
             viewport: document.documentElement.clientWidth
           };
         });
         assert.equal(pill.shellRadius, '999px', 'pill-shaped service switch outer border');
         assert.equal(pill.activeRadius, '999px', 'pill-shaped active background');
         assert(pill.hitHeights.every(height => height >= 44), '44px service navigation touch targets');
-        assert(pill.visualHeight >= 35 && pill.visualHeight <= 39, '36px visible active pill');
+        if (width < 768) {
+          assert(Math.abs(pill.shellHeight - 36) <= 1, '36px visible mobile switch shell');
+          assert(pill.visualHeight >= 29 && pill.visualHeight <= 31, '30px visible mobile active pill');
+        } else {
+          assert(Math.abs(pill.shellHeight - 46) <= 1, 'unchanged 46px desktop/tablet switch shell');
+          assert(pill.visualHeight >= 35 && pill.visualHeight <= 39, '36px visible desktop/tablet active pill');
+        }
         assert(pill.width <= pill.viewport - 24, 'service switch stays within narrow screens');
         if (width < 768) {
           const layout = await page.evaluate(() => {
