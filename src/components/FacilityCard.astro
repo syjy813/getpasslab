@@ -14,13 +14,14 @@ const covers: Record<string, string> = {
   'public-sector-comparison': '/images/facility-drafts/05/01-public-sector-hero.webp',
 };
 const cover = covers[article.id];
+const coverSize = article.id === 'first-job' ? [1447, 1087] : [1448, 1086];
 ---
 <a class:list={['card', 'facility-card', { 'facility-card--lead': lead, 'facility-card--text': !cover }]} href={withBase(facilityArticlePath(article))}>
-  {cover && <span class="facility-card-cover"><img src={withBase(cover)} alt="" width="800" height="520" loading={lead ? 'eager' : 'lazy'} decoding="async" /></span>}
+  {cover && <span class="facility-card-cover"><img src={withBase(cover)} alt="" width={coverSize[0]} height={coverSize[1]} loading={lead ? 'eager' : 'lazy'} decoding="async" /></span>}
   <span class="facility-card-content">
     <span class="card-label">{facilityCategory(article.data.category).name}</span>
     <span class="facility-card-title">{article.data.title}</span>
     <span class="facility-card-description">{article.data.description}</span>
-    <span class="facility-card-meta">{article.data.status === 'draft' ? <span>검토용 초안</span> : <time datetime={article.data.publishedAt}>{article.data.publishedAt.replaceAll('-', '.')}</time>}<span class="facility-card-action">글 읽기 <span aria-hidden="true">→</span></span></span>
+    <span class="facility-card-meta">{article.data.status === 'draft' ? <span>검토용 초안</span> : <time datetime={article.data.publishedAt}>{article.data.publishedAt.replaceAll('-', '.')}</time>}</span>
   </span>
 </a>
