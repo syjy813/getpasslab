@@ -120,6 +120,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           assert.equal(await page.locator('.facility-card-action').count(),0,'redundant read-more text removed; entire card remains linked');
           const covers = page.locator('.facility-card-cover img');
           for (const cover of await covers.all()) {
+            await cover.scrollIntoViewIfNeeded();
             await cover.evaluate(img=>img.decode());
             const info=await cover.evaluate(img=>{
               const r=img.getBoundingClientRect(),p=img.parentElement.getBoundingClientRect();
@@ -133,6 +134,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert.equal(info.fit,'contain',path+': no object-fit crop');
             assert(info.inside,path+': thumbnail inside border');
           }
+          await page.evaluate(()=>window.scrollTo({top:0,left:0,behavior:'instant'}));
           const coverBorders = await page.locator('.facility-card-cover').evaluateAll(covers => covers.map(cover => ({width:getComputedStyle(cover).borderTopWidth,style:getComputedStyle(cover).borderTopStyle})));
           for (const border of coverBorders) {
             assert.equal(border.width,'1px',path+': thumbnail border');
