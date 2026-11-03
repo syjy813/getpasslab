@@ -115,6 +115,11 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           }
           assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), preview ? 'noindex, nofollow' : empty ? 'noindex, follow' : 'index, follow');
           assert.equal(await page.locator('.service-switch [data-service-link="facility"]').getAttribute('aria-current'),'page');
+          const coverBorders = await page.locator('.facility-card-cover').evaluateAll(covers => covers.map(cover => ({width:getComputedStyle(cover).borderTopWidth,style:getComputedStyle(cover).borderTopStyle})));
+          for (const border of coverBorders) {
+            assert.equal(border.width,'1px',path+': thumbnail border');
+            assert.equal(border.style,'solid',path+': thumbnail solid border');
+          }
           if (expected !== undefined) {
             assert.equal(await page.locator('.facility-body img').count(),expected,`${path}: image count`);
             assert.equal(await page.locator('.facility-article-meta time').count(),2,'publish and reviewed dates');
@@ -132,9 +137,12 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
               const img = images.nth(i);
               await img.scrollIntoViewIfNeeded();
               await img.evaluate(el=>el.decode());
-              const info = await img.evaluate(el=>({src:el.getAttribute('src'),alt:el.getAttribute('alt'),complete:el.complete,naturalWidth:el.naturalWidth,renderWidth:el.getBoundingClientRect().width}));
+              const info = await img.evaluate(el=>({src:el.getAttribute('src'),alt:el.getAttribute('alt'),complete:el.complete,naturalWidth:el.naturalWidth,renderWidth:el.getBoundingClientRect().width,border:getComputedStyle(el).borderTopWidth,borderStyle:getComputedStyle(el).borderTopStyle,boxSizing:getComputedStyle(el).boxSizing}));
               assert(info.complete && info.naturalWidth>0 && info.alt?.trim(),`${path} image ${i}: load and alt`);
               assert(info.renderWidth>0 && info.renderWidth<=width,`${path} image ${i}: width`);
+              assert.equal(info.border,'1px',`${path} image ${i}: thin border`);
+              assert.equal(info.borderStyle,'solid',`${path} image ${i}: solid border`);
+              assert.equal(info.boxSizing,'border-box',`${path} image ${i}: border fits layout`);
               if (width===320 || width===390) {
                 const dir = `${output}/images-${width}`;
                 fs.mkdirSync(dir,{recursive:true});

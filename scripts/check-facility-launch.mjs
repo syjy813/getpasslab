@@ -2,7 +2,7 @@
 // docs/audits/2026-10-31-facility-launch/review.json.gz.
 // The approved editorial UI and subsequent compact GNB revision pin ten exact source blobs.
 // Preserve exact old bytes for everything else, the complete output page/URL
-// inventory, and all original/rendered facility assets. Generated HTML changes
+// inventory, and all original facility assets. Reviewed brand-free derivatives are pinned separately. Generated HTML changes
 // globally when the common header and footer change; verify its semantics via
 // SEO/public-content checks and 4-width browser QA, not obsolete HTML hashes.
 import fs from 'node:fs';
@@ -24,7 +24,7 @@ const editorialBlobs = {
   'src/components/FacilityCard.astro': '7f4f6bbef4708bbcb89e961d92cb80b810b6c53e',
   'src/layouts/FacilityArticleLayout.astro': '0f9259e6f2473db213c8b416cf4aea5e58857782',
   'src/pages/facility-management/index.astro': 'b56e69b444af43a3e9373132f6c04fe9f88fce60',
-  'src/styles/facility.css': 'e5ea527131cfacd09e5bf5ad79093127eb7d72ff',
+  'src/styles/facility.css': '2464b79078194765e66b1585bfa89abb1a6402e3',
   'src/pages/facility-management/[category]/index.astro': 'c6e86be311d7f72fc212e32f0e3ce691b0d17239',
   'src/styles/serviceNavigation.css': '76490d4107a2533c9c177cca96f1a9ea0a172722',
 };
@@ -61,12 +61,28 @@ const assets = walk('facility-assets').sort();
 assert.deepEqual(assets, Object.keys(facilityReview.assets).sort(), 'original image inventory');
 for (const file of assets) assert.equal(hash(fs.readFileSync(file)), facilityReview.assets[file], file + ': original image');
 
-const served = walk('dist/images/facility-drafts').sort();
-assert.deepEqual(served, Object.keys(facilityReview.publishedAssets).sort(), 'only previously approved publication images');
-for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
-  assert.equal(hash(fs.readFileSync(file)), row.sha256, file + ': served image bytes');
-  assert.equal(hash(fs.readFileSync(row.source)), row.sha256, file + ': source image bytes');
+const editReview = JSON.parse(fs.readFileSync('docs/audits/2026-11-03-facility-image-border/image-edits.json'));
+const edits = new Map();
+for (const row of editReview.edits) {
+  assert(!edits.has(row.source), 'no duplicate edited source');
+  assert.equal(row.file, row.source.replace('facility-assets/', 'facility-asset-edits/'), 'same image identity');
+  assert.equal(row.sourceSHA256, facilityReview.assets[row.source], 'approved original fingerprint');
+  assert.equal(hash(fs.readFileSync(row.source)), row.sourceSHA256, 'original preserved');
+  assert.equal(hash(fs.readFileSync(row.file)), row.sha256, 'reviewed brand-free derivative');
+  edits.set(row.source, row);
 }
-assert.equal(served.length, 22, '22 approved images remain unchanged');
+assert.equal(edits.size, 11, 'eleven bottom-brand edits');
+assert.deepEqual(walk('facility-asset-edits').sort(), editReview.edits.map(row => row.file).sort(), 'exact derivative inventory');
+const served = walk('dist/images/facility-drafts').sort();
+assert.deepEqual(served, Object.keys(facilityReview.publishedAssets).sort(), 'same 22 public image URLs');
+const servedEdits = new Set();
+for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
+  const edited = edits.get(row.source);
+  assert.equal(hash(fs.readFileSync(file)), edited ? edited.sha256 : row.sha256, file + ': intended served image');
+  assert.equal(hash(fs.readFileSync(row.source)), row.sha256, file + ': original source preserved');
+  if (edited) servedEdits.add(row.source);
+}
+assert.deepEqual([...servedEdits].sort(), [...edits.keys()].sort(), 'every derivative is actually served');
+assert.equal(served.length, 22, 'all 22 approved images');
 console.log('[Facility UI source guard] PASS', files.length - generated, 'native files,', generated,
-  'rendered HTML/XML paths, ten pinned UI blobs, 22 unchanged images');
+  'rendered HTML/XML paths, ten pinned UI blobs, 24 originals preserved, 11 edited + 11 original publication images');
