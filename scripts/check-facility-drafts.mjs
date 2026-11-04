@@ -53,6 +53,22 @@ if(!preview) {
   const baseline=JSON.parse(fs.readFileSync(audit+'public-baseline.json')).files;
   const files=walk('dist').filter(p=>!p.split('/').some(part=>part.startsWith('.'))).sort();
   assert.deepEqual(files,Object.keys(baseline).sort(),'complete public file inventory');
-  for(const file of files)assert.equal(sha(fs.readFileSync(file)),baseline[file],file+': public bytes unchanged');
-  console.log('Facility draft guard: 8 drafts and 40 assets excluded; '+files.length+' public files byte-identical');
+  // PR245 replaced these three outputs after the immutable PR242 baseline.
+  // Pin approved source masters and render in this environment: installed CJK
+  // fonts/Sharp can change bytes across machines without changing the source.
+  const generated = new Map([
+    ['01-public-sector-hero', '9bfa7b4ed1614597c8a3a4627929a64c6277e36f'],
+    ['02-employer-types', '5f5cf07544e75f5543ecbd591ec0e2c5ef9ec5c2'],
+    ['04-pay-data-comparison', 'b2981e016b006a6ee2ce0a6bca9e82ea35f7ca75'],
+  ]);
+  const expectedGenerated = new Map();
+  const {default: sharp} = await import('sharp');
+  for (const [name,blob] of generated) {
+    const source=fs.readFileSync('facility-asset-edits/05/'+name+'.svg');
+    assert.equal(createHash('sha1').update('blob '+source.length+'\0').update(source).digest('hex'),blob,'approved PR245 master: '+name);
+    const output=await sharp(source,{density:96}).resize(1440,1080,{fit:'fill'}).webp({quality:86,effort:6}).toBuffer();
+    expectedGenerated.set('dist/images/facility-drafts/05/'+name+'.webp',sha(output));
+  }
+  for(const file of files)assert.equal(sha(fs.readFileSync(file)),expectedGenerated.get(file)??baseline[file],file+': approved public bytes');
+  console.log('Facility draft guard: 8 drafts and 40 assets excluded; '+(files.length-generated.size)+' public files byte-identical to PR242; 3 approved PR245 master renders verified');
 } else console.log('Facility draft guard: 8 draft routes, 40 images, '+links+' internal links, robots/schema/sitemap PASS');

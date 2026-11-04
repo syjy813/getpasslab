@@ -27,6 +27,12 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - name: Install Korean fonts for SVG-to-WebP rendering
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends fonts-noto-cjk
+          fc-cache -f
+          fc-match -f '%{family}\n' 'Noto Sans CJK KR' | grep -q 'Noto Sans CJK'
       - run: npm run build
       - run: node scripts/check-facility-drafts.mjs
       - run: node scripts/check-facility-related-links.mjs

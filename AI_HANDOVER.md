@@ -1,3 +1,10 @@
+## 2026-11-05 시설 6~13편 PR243 최신 main 통합
+
+- 사용자 공유 대화·최종 ZIP·기존 PR243을 대조해 이어서 검증. 기존 PR head 25f0c1e 및 CI 5개 성공 확인. 최신 main d811ed66(PR244/245)을 PR 작업 브랜치에 병합하며 공개 1~5편과 05번 승인 SVG 3개·출력 경로를 보존. main 자체 병합·배포는 이번 승인 범위 밖.
+- 이전 PR242 공개 baseline 866개는 변경하지 않음. 이후 PR245에서 승인된 05번 출력 3개만 정확한 SVG blob을 고정하고 같은 환경의 Sharp 렌더 결과와 대조. 나머지 863개는 과거 바이트 보호 유지. 생성 이미지의 환경별 폰트 차이를 전체 baseline 갱신으로 숨기지 않음.
+- 독립 clean main/통합본 공개 빌드 866개 SHA256 전체 동일. 공개565페이지·초안8경로/40이미지 제외·기존5편 링크127/native guard PASS. 검토573페이지·초안8경로/40이미지·내부링크119/기존시설149·robots/schema/sitemap PASS. 양모드 SEO/공개문구 오류0, 기존 description 경고1.
+- 근거 docs/audits/2026-11-04-facility-drafts/latest-main-comparison.json 및 README 후속 기록. 로컬 CJK 글꼴·브라우저 없음: 한글 이미지 렌더·반응형은 폰트를 설치하는 CI에서 새 head로 재검증. 새 CI·Push·Production 상태는 실제 PR Checks와 구분. 새 법령·공고 조사/이미지 재제작/공개 상태 전환 없음.
+
 ## 2026-11-04 시설 신규6~13편 초안 GitHub 반영
 
 - 사용자 후속 범위: 검토본 반영·Draft PR·CI. 기준 main e8ef5483(PR242). 신규8편 status:draft, 이미지40장과 selective-assets/카드 커버 추가. 기존 공개5편·이미지/URL·자격증 기능 유지. main 병합·Production 배포 범위 아님.
