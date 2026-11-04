@@ -28,7 +28,7 @@ const facilityAssets = {
         mkdirSync(target, { recursive: true });
         const references = [...markdown.matchAll(new RegExp(`/images/facility-drafts/${number}/([a-z0-9-]+\\.webp)`, 'g'))].map(match => match[1]);
         for (const asset of new Set(references)) {
-          const approvedSvg = join('facility-asset-edits', number, asset.replace(/\\.webp$/, '.svg'));
+          const approvedSvg = join('facility-asset-edits', number, asset.replace(/\.webp$/, '.svg'));
           if (number === '05' && existsSync(approvedSvg)) {
             // Editable SVG master -> optimized WebP at the unchanged public URL.
             // Keep every original facility-assets WebP byte untouched.
