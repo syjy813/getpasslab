@@ -84,28 +84,26 @@
 .facility-upcoming{margin:var(--space-3) 0 0;color:var(--gray-600);font-size:var(--fs-caption)}
 .facility-story-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6)}
 .facility-page .facility-card{
-  display:flex;flex-direction:column;overflow:hidden;min-width:0;padding:0;
+  display:flex;flex-direction:column;overflow:visible;min-width:0;padding:0;
+  transition:transform 180ms ease;
   border:0;border-radius:0;background:transparent;box-shadow:none;text-decoration:none
 }
-.facility-page .facility-card:hover,.facility-page .facility-card:focus-visible{
-  border:0;box-shadow:none
-}
-.facility-page .facility-card:hover .facility-card-title{color:var(--primary-700)}
-.facility-card-cover{box-sizing:border-box;display:block;width:100%;overflow:hidden;border:1px solid var(--gray-200);border-radius:var(--radius-lg);background:var(--gray-100)}
+.facility-page .facility-card:is(:hover,:focus-visible){box-shadow:none}
+.facility-card-cover{box-sizing:border-box;display:block;width:100%;overflow:hidden;border:1px solid var(--gray-200);border-radius:var(--radius-lg);background:var(--gray-100);transition:border-color 180ms ease,box-shadow 180ms ease}
 .facility-card-cover img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
 .facility-card-content{display:flex;flex:1;flex-direction:column;align-items:start;min-width:0;padding:var(--space-3) 0}
 .facility-card-content .card-label{margin-bottom:var(--space-2)}
 .facility-card-title{display:block;font-size:var(--fs-h4);font-weight:var(--fw-bold);
-  line-height:1.45;color:var(--gray-900);word-break:keep-all;overflow-wrap:anywhere}
+  line-height:1.45;color:var(--gray-900);word-break:keep-all;overflow-wrap:anywhere;transition:color 180ms ease}
 .facility-card-description{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
   overflow:hidden;margin-top:var(--space-2);color:var(--gray-600);font-size:var(--fs-caption);line-height:1.6}
 .facility-card-meta{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-3);
   margin-top:auto;padding-top:var(--space-3);color:var(--gray-600);font-size:var(--fs-caption)}
 .facility-page .facility-card--lead{
   display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);
-  background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl)
+  overflow:hidden;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);
+  transition:transform 180ms ease,border-color 180ms ease,box-shadow 180ms ease
 }
-.facility-page .facility-card--lead:hover{border:1px solid var(--primary-100)}
 .facility-card--lead .facility-card-cover{height:auto;min-height:0;align-self:center;border-radius:0}
 .facility-card--lead .facility-card-cover img{height:auto;min-height:0;aspect-ratio:auto}
 .facility-card--lead .facility-card-content{justify-content:center;padding:var(--space-8)}
@@ -186,3 +184,29 @@
 }
 .facility-page .facility-category-page .facility-category-header .gpl-caption{display:block}
 .facility-page .facility-category-page .facility-category-list{padding-top:var(--space-8)}
+
+
+/* Card movement leaves image size and crop untouched. Pointer hover is limited
+   to devices with a mouse; keyboard focus receives the same emphasis. */
+.facility-page .facility-card:focus-visible{transform:translateY(-2px)}
+.facility-page .facility-card:focus-visible .facility-card-cover{
+  border-color:var(--primary-500);box-shadow:var(--shadow-md)
+}
+.facility-page .facility-card:focus-visible .facility-card-title{color:var(--primary-700)}
+.facility-page .facility-card--lead:focus-visible{
+  border-color:var(--primary-500);box-shadow:var(--shadow-md)
+}
+@media(hover:hover) and (pointer:fine){
+  .facility-page .facility-card:hover{transform:translateY(-2px)}
+  .facility-page .facility-card:hover .facility-card-cover{
+    border-color:var(--primary-500);box-shadow:var(--shadow-md)
+  }
+  .facility-page .facility-card:hover .facility-card-title{color:var(--primary-700)}
+  .facility-page .facility-card--lead:hover{
+    border-color:var(--primary-500);box-shadow:var(--shadow-md)
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .facility-page .facility-card,.facility-card-cover,.facility-card-title{transition:none}
+  .facility-page .facility-card:is(:hover,:focus-visible){transform:none}
+}
