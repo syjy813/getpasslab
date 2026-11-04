@@ -26,7 +26,9 @@
     height:var(--gnb-h);
     padding-inline:12px;
   }
-  .gnb-inner>.gnb-logo{grid-column:1;grid-row:1;margin-inline-end:0;font-size:14px;white-space:nowrap}
+  /* Group the mark with GetPassLab, while separating the complete brand from the service tabs. */
+  .gnb-inner>.gnb-logo{grid-column:1;grid-row:1;margin-inline-end:4px;font-size:14px;white-space:nowrap}
+  .gnb.gnb-learning .gnb-inner>.gnb-logo{column-gap:2px}
   .gnb-inner>.gnb-spacer{display:none}
   .gnb-inner>.service-switch{
     display:flex;
