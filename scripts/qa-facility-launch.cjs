@@ -176,14 +176,17 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           const gnb=document.querySelector('.gnb')?.getBoundingClientRect();
           const shell=document.querySelector('.hero-inner,.chapter-wrap,.policy-page,.facility-main,.certifications-home-main,.exam-index>.section,.subject-index>.section');
           const logo=document.querySelector('.gnb-logo').getBoundingClientRect();
+          const mark=document.querySelector('.gnb-brand-mark').getBoundingClientRect();
+          const wordmark=document.querySelector('.gnb-logo span').getBoundingClientRect();
           const toggle=document.querySelector('.service-switch').getBoundingClientRect();
           const h1=document.querySelector('.facility-intro h1,.certifications-home-intro h1');
           return {
-            gap:toggle.left-logo.right,padding:shell?getComputedStyle(shell).paddingTop:null,
+            gap:toggle.left-logo.right,markGap:wordmark.left-mark.right,padding:shell?getComputedStyle(shell).paddingTop:null,
             homeGap:h1&&gnb?h1.getBoundingClientRect().top-gnb.bottom:null
           };
         });
-        assert(Math.abs(topGeometry.gap-(width>=768?20:10))<1,width+' '+path+': logo-toggle gap '+JSON.stringify(topGeometry));
+        assert(Math.abs(topGeometry.gap-(width>=768?20:14))<1,width+' '+path+': logo-toggle gap '+JSON.stringify(topGeometry));
+        assert(Math.abs(topGeometry.markGap-(width>=768?6:2))<1,width+' '+path+': icon-wordmark gap '+JSON.stringify(topGeometry));
         if(topGeometry.padding!==null)assert.equal(topGeometry.padding,width>=768?'24px':'16px',path+': shared compact top padding');
         if((path==='/facility-management/'||path==='/certifications/')&&topGeometry.homeGap!==null)assert(Math.abs(topGeometry.homeGap-(width>=768?40:24))<1,path+': compact home header gap');
         const dimensions = await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth}));
