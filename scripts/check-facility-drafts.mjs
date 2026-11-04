@@ -27,6 +27,7 @@ for (const article of articles) {
   assert.equal(attr(list.find(n=>n.tagName==='meta'&&attr(n,'name')==='robots'),'content'),'noindex, nofollow');
   assert.equal(attr(list.find(n=>n.tagName==='link'&&attr(n,'rel')==='canonical'),'href'),'https://getpasslab.co.kr'+article.path);
   assert.equal(list.filter(n=>n.tagName==='img'&&attr(n,'src')?.includes('/images/facility-drafts/')).length >= 5,true);
+  assert(!list.some(n=>n.tagName==='img'&&attr(n,'alt')?.includes('\\~')),'no Markdown escape in HTML alt');
   assert(!list.some(n=>n.tagName==='del'),'no unintended Markdown strikethrough');
   assert(!list.some(n=>n.nodeName==='#text'&&n.value.includes('**')),'no raw Markdown emphasis');
   for (const node of list) {

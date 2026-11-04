@@ -73,7 +73,7 @@ legalReview: false
 
 같은 단어지만 담당하는 역할이 다르다. 채용표에서 두 개를 하나로 생각하면 자격 판단부터 꼬일 수 있다.
 
-<figure><img src="/images/facility-drafts/09/02-grade-and-experience.webp" alt="캠코FMC 2026년 8월 시설직 2\~5등급의 직위와 경력·자격요건 비교" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/09/02-grade-and-experience.webp" alt="캠코FMC 2026년 8월 시설직 2~5등급의 직위와 경력·자격요건 비교" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
 
 ### 2026년 8월 하반기 현장직 2차 기본요건
 
