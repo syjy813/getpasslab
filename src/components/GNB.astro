@@ -22,6 +22,7 @@ const availableFacilityCategories = new Set(isFacility
 <header class="gnb gnb-learning">
   <nav class="gnb-inner" aria-label={isFacility ? "시설관리 정보 탐색" : "자격증 학습 탐색"}>
     <a href={withBase(isFacility ? '/facility-management/' : '/certifications/')} class="gnb-logo" aria-label={isFacility ? "GetPassLab 시설 홈" : "GetPassLab 자격증 홈"}>
+      <img class="gnb-brand-mark" src={withBase('/favicon.svg')} alt="" width="30" height="30" />
       <span>GetPassLab</span>
     </a>
     <div class="service-switch" role="group" aria-label="서비스 선택">
@@ -120,7 +121,10 @@ const availableFacilityCategories = new Set(isFacility
 
 <style>
   .gnb-inner{gap:8px}
-  .gnb-logo{flex:none}
+  .gnb-logo{display:inline-flex;align-items:center;gap:6px;min-height:44px;flex:none;white-space:nowrap;color:#001C50}
+  .gnb-brand-mark{display:block;width:30px;height:30px;flex:none}
+  @media(max-width:767px){.gnb-logo{gap:4px}.gnb-brand-mark{width:22px;height:22px}}
+  @media(max-width:359px){.gnb-brand-mark{width:20px;height:20px}}
   .gnb-cert-menu{position:relative}
   [data-gnb-menu]>summary{display:flex;align-items:center;gap:6px;min-height:44px;padding:0;list-style:none;cursor:pointer;font-size:var(--fs-caption);font-weight:500;color:var(--gray-800);border-radius:var(--radius-md)}
   [data-gnb-menu]>summary::-webkit-details-marker{display:none}
