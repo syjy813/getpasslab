@@ -80,17 +80,50 @@ for (const row of editRows) {
   edits.set(row.source, row);
 }
 assert.equal(edits.size, 12, 'eleven bottom-brand edits and one hand correction');
-assert.deepEqual(walk('facility-asset-edits').sort(), editRows.map(row => row.file).sort(), 'exact derivative inventory');
+// Source SVGs are the approved editable masters for 05. Existing original WebPs remain immutable;
+// the Astro build renders WebP files at the SAME three public URLs.
+const facility05Masters = new Map([
+  ['facility-assets/05/01-public-sector-hero.webp', ['facility-asset-edits/05/01-public-sector-hero.svg', '00bfc256d9c5d6beda720d2d9380f5e56985f29e']],
+  ['facility-assets/05/02-employer-types.webp', ['facility-asset-edits/05/02-employer-types.svg', '873e85f6b9eb36a7ef83218e506f521a126f260c']],
+  ['facility-assets/05/04-pay-data-comparison.webp', ['facility-asset-edits/05/04-pay-data-comparison.svg', '872b8f6e6448cf0dd2c6741e30ee3ea4440d833d']],
+]);
+for (const [source, [masterPath, sha]] of facility05Masters) {
+  assert.equal(gitBlob(fs.readFileSync(masterPath)), sha, masterPath + ': approved vector master');
+  assert.equal(hash(fs.readFileSync(source)), facilityReview.assets[source], source + ': original unchanged');
+  const svg = fs.readFileSync(masterPath, 'utf8');
+  assert.match(svg, /viewBox="0 0 1440 1080"/, masterPath + ': 4:3 source geometry');
+  assert.equal((svg.match(/GetPassLab/g) || []).length, 1, masterPath + ': single brand');
+  assert.equal((svg.match(/font-size="64"/g) || []).length, 1, masterPath + ': 64px headline');
+  assert.equal((svg.match(/font-size="30"/g) || []).length, 1, masterPath + ': 30px subtitle');
+  assert(!svg.includes('시설의 모든 것 05'), masterPath + ': no decorative chapter badge');
+}
+assert.deepEqual(
+  walk('facility-asset-edits').sort(),
+  [...editRows.map(row => row.file), ...[...facility05Masters.values()].map(row => row[0])].sort(),
+  'exact derivative + editable SVG master inventory',
+);
+const { default: sharp } = await import('sharp');
+const generatedMasterWebps = new Map();
+for (const [source, [masterPath]] of facility05Masters) {
+  const webp = await sharp(fs.readFileSync(masterPath), { density: 96 })
+    .resize(1440, 1080, { fit: 'fill' }).webp({ quality: 86, effort: 6 }).toBuffer();
+  const meta = await sharp(webp).metadata();
+  assert.equal(meta.format, 'webp', source + ': optimized webp');
+  assert.equal(meta.width, 1440, source + ': width');
+  assert.equal(meta.height, 1080, source + ': height');
+  generatedMasterWebps.set(source, hash(webp));
+}
 const served = walk('dist/images/facility-drafts').sort();
 assert.deepEqual(served, Object.keys(facilityReview.publishedAssets).sort(), 'same 22 public image URLs');
 const servedEdits = new Set();
 for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
   const edited = edits.get(row.source);
-  assert.equal(hash(fs.readFileSync(file)), edited ? edited.sha256 : row.sha256, file + ': intended served image');
+  const generated = generatedMasterWebps.get(row.source);
+  assert.equal(hash(fs.readFileSync(file)), generated ?? (edited ? edited.sha256 : row.sha256), file + ': intended served image');
   assert.equal(hash(fs.readFileSync(row.source)), row.sha256, file + ': original source preserved');
-  if (edited) servedEdits.add(row.source);
+  if (edited || generated) servedEdits.add(row.source);
 }
-assert.deepEqual([...servedEdits].sort(), [...edits.keys()].sort(), 'every derivative is actually served');
-assert.equal(served.length, 22, 'all 22 approved images');
+assert.deepEqual([...servedEdits].sort(), [...edits.keys(), ...facility05Masters.keys()].sort(), 'every derivative is actually served');
+assert.equal(served.length, 22, 'all 22 approved public image URLs retained');
 console.log('[Facility UI source guard] PASS', files.length - generated, 'native files,', generated,
-  'rendered HTML/XML paths, fifteen pinned UI blobs, 24 originals preserved, 12 edited + 10 original publication images');
+  'rendered HTML/XML paths, fifteen pinned UI blobs, 24 originals preserved, 15 edited + 7 original publication images');
