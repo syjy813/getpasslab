@@ -1,3 +1,10 @@
+## 2026-11-04 시설 게시글 카드 hover·focus 효과 검토본
+
+- 사용자 시설 카드 2px 상승·썸네일 테두리/얕은 그림자·제목 그린 강조·180ms 전환 구현 승인. 기준 main52230e6(PR238 배포 완료), codex/facility-card-hover-20261104.
+- 홈·카테고리·관련 글의 공통 FacilityCard CSS에 적용. 마우스 hover는 hover:hover/pointer:fine 조건, 키보드 focus-visible은 같은 강조와 기존 outline 유지. reduced-motion에서는 이동·전환을 끄고 테두리/제목 강조 유지.
+- 일반 카드 overflow를 풀어 썸네일 그림자가 잘리지 않도록 하고 대표 카드의 외곽 라운드 클리핑은 유지. 이미지 크기·비율·내용·본문·공개 URL·광고·자격증 스타일 유지. native guard의 facility.css 승인 blob만 갱신하고 원본/과거 fingerprint 유지.
+- Build·기존 시설4폭128조건·CI 실제 결과는 새 head PR Checks에서 확인. 이번 main 병합·Production 배포는 미승인/미실행.
+
 ## 2026-11-03 공통 상단 간격·시설 카드 정리 검토본
 
 - 사용자 로고↔토글 간격 확대, 전역 상단 여백 축소, 시설 홈 보조 표기/자격증 안내 박스 및 카드 글 읽기 문구 제거, 썸네일 전체 표시 WEB 작업 승인. 기준 main3f484f3(이미지 수정 PR237 실제 배포 완료), codex/compact-page-spacing-thumbnails-20261103.
