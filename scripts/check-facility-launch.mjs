@@ -1,6 +1,6 @@
 // The original facility-publication fingerprint is kept immutable in
 // docs/audits/2026-10-31-facility-launch/review.json.gz.
-// The approved editorial UI and subsequent compact GNB revision pin thirteen exact source blobs.
+// The approved editorial UI and subsequent navy route rebrand pin fifteen exact source blobs.
 // Preserve exact old bytes for everything else, the complete output page/URL
 // inventory, and all original facility assets. Reviewed image derivatives are pinned separately. Generated HTML changes
 // globally when the common header and footer change; verify its semantics via
@@ -20,7 +20,9 @@ const editorialBlobs = {
   'src/pages/[cert]/[exam]/[subject]/index.astro': '25ee38cc20c29e28d7542b70761c4d8b120e72f1',
   'src/pages/[cert]/[exam]/index.astro': '3e648acef59825aa1430431775e1226989605ab3',
   'src/styles/global.css': '297274d23a54af8863e44cb6f26c2e945617f6f8',
-  'src/components/GNB.astro': 'da499adc039f6e0080047c9324cc0c77a4e80f17',
+  'src/components/GNB.astro': 'b349aba310092b9170fe6b13db4c55742431370d',
+  'src/layouts/BaseLayout.astro': '3446eb7568da5bf0d35364fdd6d7639776df7938',
+  'public/favicon.svg': '035e5d8687d0c001e2cf16f5f83b3fb7a592bc90',
   'src/pages/certifications/index.astro': '125799ae05dc3918bd43b16babbdcfd9bf1fc043',
   'src/styles/catalog.css': '8a90e16d57215350e844faf7accf12cd20b1cd68',
   'src/components/Footer.astro': '1c21ee8122b0e7a2bbd5eac8c1c1f5d3538f5867',
@@ -91,4 +93,4 @@ for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
 assert.deepEqual([...servedEdits].sort(), [...edits.keys()].sort(), 'every derivative is actually served');
 assert.equal(served.length, 22, 'all 22 approved images');
 console.log('[Facility UI source guard] PASS', files.length - generated, 'native files,', generated,
-  'rendered HTML/XML paths, thirteen pinned UI blobs, 24 originals preserved, 12 edited + 10 original publication images');
+  'rendered HTML/XML paths, fifteen pinned UI blobs, 24 originals preserved, 12 edited + 10 original publication images');
