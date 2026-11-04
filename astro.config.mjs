@@ -17,7 +17,7 @@ const facilityAssetArticles = {
 const facilityAssets = {
   name: 'facility-selective-assets',
   hooks: {
-    'astro:build:done': ({ dir }) => {
+    'astro:build:done': async ({ dir }) => {
       rmSync(join(fileURLToPath(dir), 'images', 'facility-drafts'), { recursive: true, force: true });
       for (const [number, slug] of Object.entries(facilityAssetArticles)) {
         const file = join(facilityDir, `${slug}.md`);
@@ -28,9 +28,20 @@ const facilityAssets = {
         mkdirSync(target, { recursive: true });
         const references = [...markdown.matchAll(new RegExp(`/images/facility-drafts/${number}/([a-z0-9-]+\\.webp)`, 'g'))].map(match => match[1]);
         for (const asset of new Set(references)) {
-          const edited = join('facility-asset-edits', number, asset);
-          const source = existsSync(edited) ? edited : join('facility-assets', number, asset);
-          cpSync(source, join(target, asset));
+          const approvedSvg = join('facility-asset-edits', number, asset.replace(/\.webp$/, '.svg'));
+          if (number === '05' && existsSync(approvedSvg)) {
+            // Editable SVG master -> optimized WebP at the unchanged public URL.
+            // Keep every original facility-assets WebP byte untouched.
+            const { default: sharp } = await import('sharp');
+            await sharp(readFileSync(approvedSvg), { density: 96 })
+              .resize(1440, 1080, { fit: 'fill' })
+              .webp({ quality: 86, effort: 6 })
+              .toFile(join(target, asset));
+          } else {
+            const edited = join('facility-asset-edits', number, asset);
+            const source = existsSync(edited) ? edited : join('facility-assets', number, asset);
+            cpSync(source, join(target, asset));
+          }
         }
       }
     },
