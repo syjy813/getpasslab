@@ -83,9 +83,9 @@ assert.equal(edits.size, 12, 'eleven bottom-brand edits and one hand correction'
 // Source SVGs are the approved editable masters for 05. Existing original WebPs remain immutable;
 // the Astro build renders WebP files at the SAME three public URLs.
 const facility05Masters = new Map([
-  ['facility-assets/05/01-public-sector-hero.webp', ['facility-asset-edits/05/01-public-sector-hero.svg', '00bfc256d9c5d6beda720d2d9380f5e56985f29e']],
-  ['facility-assets/05/02-employer-types.webp', ['facility-asset-edits/05/02-employer-types.svg', '873e85f6b9eb36a7ef83218e506f521a126f260c']],
-  ['facility-assets/05/04-pay-data-comparison.webp', ['facility-asset-edits/05/04-pay-data-comparison.svg', '872b8f6e6448cf0dd2c6741e30ee3ea4440d833d']],
+  ['facility-assets/05/01-public-sector-hero.webp', ['facility-asset-edits/05/01-public-sector-hero.svg', '9bfa7b4ed1614597c8a3a4627929a64c6277e36f']],
+  ['facility-assets/05/02-employer-types.webp', ['facility-asset-edits/05/02-employer-types.svg', '5f5cf07544e75f5543ecbd591ec0e2c5ef9ec5c2']],
+  ['facility-assets/05/04-pay-data-comparison.webp', ['facility-asset-edits/05/04-pay-data-comparison.svg', 'b2981e016b006a6ee2ce0a6bca9e82ea35f7ca75']],
 ]);
 for (const [source, [masterPath, sha]] of facility05Masters) {
   assert.equal(gitBlob(fs.readFileSync(masterPath)), sha, masterPath + ': approved vector master');
