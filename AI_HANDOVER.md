@@ -1,3 +1,11 @@
+## 2026-11-04 시설 신규6~13편 초안 GitHub 반영
+
+- 사용자 후속 범위: 검토본 반영·Draft PR·CI. 기준 main e8ef5483(PR242). 신규8편 status:draft, 이미지40장과 selective-assets/카드 커버 추가. 기존 공개5편·이미지/URL·자격증 기능 유지. main 병합·Production 배포 범위 아님.
+- 한전FMS/코레일테크 출처 표시6곳 PDF→문서, URL·쪽수 유지. 사실 재검증은 이전 패키지 기록을 인계하며 실제 발행 전 최신 근거와 날짜 재확인 필요.
+- 일반 clean565페이지/공개866파일 기준main과 바이트동일, 신규8경로·40이미지 제외. 검토 clean573페이지/8초안·40이미지·119시설링크, robots·schema·sitemap PASS. 양모드 SEO/공개문구 오류0, 기존description경고1.
+- docs/audits/2026-11-04-facility-drafts/에 해시·공개비교·근거·검수 기록. 과거 snapshot/역사검증 도구 보존. 정본 가이드v1.4 §5.11~14·학습이미지 §5~7·9 적용. 이번 이미지 재생성 없음.
+- 로컬 Chromium 다운로드 손상으로 브라우저 미실행. 공개/검토4폭 QA와 신규8편×4폭 검사를 CI에 연결. 실제 원격 Commit·PR·CI 완료는 해당 PR Checks로 확인. 실제휴대폰·Safari·실광고·Production QA 미실행.
+
 ## 2026-11-04 시설 GNB 명칭 통일·근무형태 대표 이미지 손 수정 검토본
 
 - 사용자 승인 범위: 시설 모바일 GNB `주제`를 PC와 같은 `카테고리`로 통일. 근무형태 대표 이미지 양쪽 종이를 잡은 손 제거. 기준 main ecace79a(PR239 배포 완료), codex/facility-gnb-image-hands-20261104.

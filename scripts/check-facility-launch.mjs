@@ -26,7 +26,7 @@ const editorialBlobs = {
   'src/pages/certifications/index.astro': '125799ae05dc3918bd43b16babbdcfd9bf1fc043',
   'src/styles/catalog.css': '8a90e16d57215350e844faf7accf12cd20b1cd68',
   'src/components/Footer.astro': '1c21ee8122b0e7a2bbd5eac8c1c1f5d3538f5867',
-  'src/components/FacilityCard.astro': '0a7f2c764837931627707951983aaaa15cad9389',
+  'src/components/FacilityCard.astro': 'bc60b65b1cd8c9f52ae6e9decfc66a17d8c33f70',
   'src/layouts/FacilityArticleLayout.astro': '0f9259e6f2473db213c8b416cf4aea5e58857782',
   'src/pages/facility-management/index.astro': 'f609c910d1b89037253da9923d38f714fa6d7ec7',
   'src/styles/facility.css': 'e9a0aff83b915f096a6cd5183a4d0d14f0b8d6ab',
@@ -34,11 +34,15 @@ const editorialBlobs = {
   'src/styles/serviceNavigation.css': 'de32048d9ea8af551344504ba3742fbda03d005f',
 };
 
+const draftManifest = JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/draft-manifest.json'));
+for (const [file, sha] of Object.entries({...draftManifest.source, ...draftManifest.assets})) {
+  assert.equal(hash(fs.readFileSync(file)), sha, file + ': pinned reviewed draft');
+}
 const files = [
   ...walk('src'),
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
-].sort();
+].filter(file => !Object.hasOwn(draftManifest.source, file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
@@ -62,7 +66,7 @@ for (const file of files) {
 }
 assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'fifteen reviewed UI changes only');
 
-const assets = walk('facility-assets').sort();
+const assets = walk('facility-assets').filter(file => !Object.hasOwn(draftManifest.assets, file)).sort();
 assert.deepEqual(assets, Object.keys(facilityReview.assets).sort(), 'original image inventory');
 for (const file of assets) assert.equal(hash(fs.readFileSync(file)), facilityReview.assets[file], file + ': original image');
 

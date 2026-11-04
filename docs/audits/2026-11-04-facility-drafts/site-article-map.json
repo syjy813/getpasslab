@@ -1,0 +1,34 @@
+{
+  "6": {
+    "slug": "hanfms",
+    "path": "/facility-management/jobs/hanfms/"
+  },
+  "7": {
+    "slug": "postal-facilities",
+    "path": "/facility-management/jobs/postal-facilities/"
+  },
+  "8": {
+    "slug": "korailtech",
+    "path": "/facility-management/jobs/korailtech/"
+  },
+  "9": {
+    "slug": "kamcofmc",
+    "path": "/facility-management/jobs/kamcofmc/"
+  },
+  "10": {
+    "slug": "statutory-appointments",
+    "path": "/facility-management/qualifications/statutory-appointments/"
+  },
+  "11": {
+    "slug": "mechanical-maintainer-levels",
+    "path": "/facility-management/qualifications/mechanical-maintainer-levels/"
+  },
+  "12": {
+    "slug": "mechanical-career-records",
+    "path": "/facility-management/qualifications/mechanical-career-records/"
+  },
+  "13": {
+    "slug": "boiler-inspection-manager",
+    "path": "/facility-management/qualifications/boiler-inspection-manager/"
+  }
+}

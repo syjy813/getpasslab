@@ -2,7 +2,7 @@ name: Facility publication QA
 on:
   pull_request:
     branches: [main]
-    paths: ['src/**', 'facility-assets/**', 'facility-asset-edits/**', 'docs/audits/2026-11-03-facility-image-border/image-edits.json', 'docs/audits/2026-11-04-facility-gnb-image/image-edits.json', 'astro.config.mjs', 'scripts/qa-facility-launch.cjs', 'scripts/check-facility-related-links.mjs', 'scripts/check-facility-launch.mjs', 'docs/audits/2026-10-31-facility-launch/review.json.gz', '.github/workflows/facility-launch-qa.yml']
+    paths: ['src/**', 'facility-assets/**', 'facility-asset-edits/**', 'docs/audits/2026-11-03-facility-image-border/image-edits.json', 'docs/audits/2026-11-04-facility-gnb-image/image-edits.json', 'astro.config.mjs', 'scripts/qa-facility-launch.cjs', 'scripts/qa-facility-drafts.cjs', 'scripts/check-facility-drafts.mjs', 'docs/audits/2026-11-04-facility-drafts/**', 'scripts/check-facility-related-links.mjs', 'scripts/check-facility-launch.mjs', 'docs/audits/2026-10-31-facility-launch/review.json.gz', '.github/workflows/facility-launch-qa.yml']
 permissions:
   contents: read
 jobs:
@@ -28,6 +28,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - run: node scripts/check-facility-drafts.mjs
       - run: node scripts/check-facility-related-links.mjs
       - run: npm run check:seo
       - run: npm run check:public-content
@@ -43,6 +44,7 @@ jobs:
           python3 -m http.server 4321 --bind 127.0.0.1 --directory dist >/tmp/facility-server.log 2>&1 &
           for n in $(seq 1 30); do curl -fsS http://127.0.0.1:4321/ >/dev/null && break; sleep 1; done
           node scripts/qa-facility-launch.cjs
+          node scripts/qa-facility-drafts.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

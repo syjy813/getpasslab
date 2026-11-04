@@ -1,0 +1,6 @@
+﻿article,file,selected,decision,detail,width,height,bytes,sha256,replaces,source_ids
+06,02-site-appointment-conditions-v2.webp,True,교체본 선정·화면QA 확인,공식 표와 다른 사업소 사례를 삭제하고 동용인·이천의 필수 선임요건으로 교체,1448,1086,49132,c017e50b673a96882d5692229d144c3aafe2d879c12d65dc32771435e8d7975d,02-site-appointment-conditions.webp,FMS_SITES
+06,03-required-versus-preferred-v2.webp,True,교체본 선정·화면QA 확인,한전인재개발원A의 필수·우대 원문 확인 사례로 교체,1448,1086,43474,5e73cedf8062a1997869d4af439dad705a4b3f020b650a2b0d5c548461c32bb5,03-required-versus-preferred.webp,FMS_SITES
+07,04-round-comparison-v2.webp,True,교체본 선정·화면QA 확인,원본 손3개 판정 정정: 원본에는 손2개. 모바일 가독성 개선을 위해 간결한 경력 비교로 교체,1448,1086,43764,d1fafd8d757ee33f9ce792bf8abf3e3d9eff9735170a8a28e7f2f2820b5ed4e8,04-round-comparison.webp,POMA11;POMA12
+08,04-retirement-and-probation-v2.webp,True,교체본 선정·화면QA 확인,출처 범위를2027년제1차에 한정해 정년·시용 비교로 교체,1448,1086,52060,e843bea25e82a4e2a58da1ed56516f41933cd6b562546954e349f5f0b8ec625a,04-retirement-and-probation.webp,KORAIL27;KORAIL_JOB
+13,01-boiler-manager-hero-v2.webp,True,교체본 선정·화면QA 확인,자격증 책을 잡는 여분의 손과 팔 제거. 턱손1+검사증손1=2개. 하단브랜드 제거,1448,1086,261128,718e16550e8c4655cbe1d8c3ff4d5b5a2cfe644b7dd12af37a5f54fa4f928e85,01-boiler-manager-hero.webp,THERMAL_TABLE
