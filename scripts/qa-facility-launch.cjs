@@ -72,6 +72,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           const empty = ['practice','qualifications'].includes(slug);
           assert.equal(await page.locator('.gnb-logo').getAttribute('href'),'/facility-management/','facility logo destination');
           assert.equal(await page.locator('summary[aria-label="시설 카테고리"]').count(),1,'facility-first navigation');
+          assert.equal((await page.locator('summary[aria-label="시설 카테고리"]').innerText()).trim(),'카테고리','same visible facility label at every viewport');
           assert.equal(await page.locator('summary[aria-label="자격증 선택"]').count(),0,'no certificate picker in facility area');
           if (['career','jobs','practice','qualifications'].includes(slug)) {
             assert.equal(await page.locator('.facility-category-page').count(),1,'category-specific layout');

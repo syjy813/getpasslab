@@ -1,0 +1,21 @@
+{
+  "baselineCommit": "ecace79a83f5af99deb8b727b9e4efbffa1ba46b",
+  "scope": "Remove the two paper-holding hands from article 04 hero; retain thinking hand and standalone papers",
+  "edits": [
+    {
+      "source": "facility-assets/04/01-shifts-pay-hero.webp",
+      "file": "facility-asset-edits/04/01-shifts-pay-hero.webp",
+      "generatedMaster": "exec-8e1847f2-e94f-477d-b4e6-a77447b557a8.png",
+      "generation": "built-in imagegen precise-object-edit",
+      "prompt": "Use case: precise-object-edit. Edit the supplied illustration itself, with minimal changes. It currently has THREE visible hands: one resting on the man's chin and two holding the papers. REMOVE ONLY the TWO hands gripping the papers at the bottom left and bottom right, including their extra forearm/sleeve stubs. Keep the man's central thinking hand on his chin and that arm exactly as they are. Both papers must remain as floating infographic panels, with full visible paper corners and clean uninterrupted paper edges, no hands or fingers on either paper. Naturally reconstruct only the small paper/jacket/background areas exposed by removal. Preserve the complete full-frame 4:3 composition, man/face/hair/jacket, day building on left, night equipment on right, sun and moon, palette and ALL Korean text, including 시설관리 근무형태, 월급보다 근무표를 먼저 보자, 월급 명세서, 근무표, and small upper-right 시설의 모든 것. Preserve the paper sizes, angles, positions, grid and sun/moon symbols. No cropping, no new limbs, no border, no new text, no redesign. Retain original resolution 1448x1086 if possible.",
+      "sourceSHA256": "abacb024a1894c2c1a0099d043db3f275f59a720bc9b998a753ea3b4c2c48f92",
+      "sha256": "b3b2c1f88a78e72ebf94e591219fe553ec28dc4e4c7af8e6998d807ae4fee2f5",
+      "generatedSHA256": "21ad6ab8907c5250951e1044bf04c023929bb76430f9c35671cc480322efa1d1",
+      "width": 1448,
+      "height": 1086,
+      "originalBytes": 204062,
+      "bytes": 245040,
+      "review": "Both paper-gripping hands removed; central thinking hand retained. Full frame, title, subtitle, paper labels, schedule icons, upper-right brand and day/night composition visually compared. Minor generation texture variations accepted; no claim of pixel identity."
+    }
+  ]
+}

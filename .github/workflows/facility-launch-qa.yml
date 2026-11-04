@@ -2,7 +2,7 @@ name: Facility publication QA
 on:
   pull_request:
     branches: [main]
-    paths: ['src/**', 'facility-assets/**', 'facility-asset-edits/**', 'docs/audits/2026-11-03-facility-image-border/image-edits.json', 'astro.config.mjs', 'scripts/qa-facility-launch.cjs', 'scripts/check-facility-related-links.mjs', 'scripts/check-facility-launch.mjs', 'docs/audits/2026-10-31-facility-launch/review.json.gz', '.github/workflows/facility-launch-qa.yml']
+    paths: ['src/**', 'facility-assets/**', 'facility-asset-edits/**', 'docs/audits/2026-11-03-facility-image-border/image-edits.json', 'docs/audits/2026-11-04-facility-gnb-image/image-edits.json', 'astro.config.mjs', 'scripts/qa-facility-launch.cjs', 'scripts/check-facility-related-links.mjs', 'scripts/check-facility-launch.mjs', 'docs/audits/2026-10-31-facility-launch/review.json.gz', '.github/workflows/facility-launch-qa.yml']
 permissions:
   contents: read
 jobs:

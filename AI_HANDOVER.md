@@ -1,3 +1,12 @@
+## 2026-11-04 시설 GNB 명칭 통일·근무형태 대표 이미지 손 수정 검토본
+
+- 사용자 승인 범위: 시설 모바일 GNB `주제`를 PC와 같은 `카테고리`로 통일. 근무형태 대표 이미지 양쪽 종이를 잡은 손 제거. 기준 main ecace79a(PR239 배포 완료), codex/facility-gnb-image-hands-20261104.
+- 시설 메뉴의 중복 full/short label을 단일 문구로 통일. 자격증·챕터 메뉴는 유지. 기존 4폭 브라우저 QA에 표시 문구 검증 추가.
+- built-in imagegen으로 양쪽 종이 손 2개 제거, 턱을 괸 손 유지. 1448×1086·제목/부제/종이 라벨/해·달/상단 브랜드 검수. 원본24장 유지, 04 hero WebP 파생본 245,040 bytes 추가. 목록/본문 동일 공개 URL 유지. 세부 질감의 생성 차이는 있으며 픽셀 동일성은 보장하지 않음.
+- 편집 브리프·prompt·원본/생성마스터/파생본 hash: docs/audits/2026-11-04-facility-gnb-image/. 과거 편집 manifest/fingerprint 유지, native guard에 새 파생본12번째 검증과 승인 GNB blob만 반영.
+- Local Build565페이지·native909/HTML/XML569·원본24/공개22·관련 링크127·SEO567HTML/563sitemap(오류0, 기존 description 길이 경고1)·공개본문567HTML(오류0)·diff/syntax PASS. 반응형/자격증/소방 CI 결과는 새 head PR Checks에서 확인.
+- 이번 main 병합·Production 배포 미승인/미실행. Draft PR로 전달.
+
 ## 2026-11-04 시설 게시글 카드 hover·focus 효과 검토본
 
 - 사용자 시설 카드 2px 상승·썸네일 테두리/얕은 그림자·제목 그린 강조·180ms 전환 구현 승인. 기준 main52230e6(PR238 배포 완료), codex/facility-card-hover-20261104.
