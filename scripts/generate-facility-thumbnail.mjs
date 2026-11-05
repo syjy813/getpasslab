@@ -41,10 +41,12 @@ export function heroGeometry(spec) {
   return {title,subtitle,subTop,ruleY,box,safe,variant,collageSlots};
 }
 
-export function renderFacilityThumbnail(spec,{graphicHref=null,graphicHrefs=null,preview=false}={}) {
+export function renderFacilityThumbnail(spec,{graphicHref=null,graphicHrefs=null,preview=false,artworkComposition=false}={}) {
   const layout=heroGeometry(spec);
   const c=TOKENS.colors;
   const collage=layout.variant==='collage';
+  if (artworkComposition && (preview || graphicHref || graphicHrefs || !('graphicCrop' in spec) || !spec.graphicCrop)) throw Error('Artwork composition requires a crop spec and an empty production shell');
+  if (artworkComposition && collage) throw Error('Artwork composition is not registered for collages');
   const validRasterHref = href => typeof href==='string' && /^data:image\/(png|jpeg|webp);base64,[a-zA-Z0-9+/]+={0,2}$/.test(href) && href.length<=14500000;
   if (collage) {
     if (graphicHref) throw Error('Collage requires 3 distinct raster graphicHrefs, not a single graphicHref');
@@ -55,7 +57,7 @@ export function renderFacilityThumbnail(spec,{graphicHref=null,graphicHrefs=null
     }
   } else {
     if (graphicHrefs) throw Error('Illustration template accepts exactly 1 raster graphic, not a collage');
-    if (!preview && !graphicHref) throw Error('Provide the main graphic to render a final thumbnail. Use preview:true only for wireframes.');
+    if (!preview && !graphicHref && !artworkComposition) throw Error('Provide the main graphic to render a final thumbnail. Use preview:true only for wireframes.');
     if (preview && graphicHref) throw Error('Preview mode and a final graphic are mutually exclusive');
     if (graphicHref && !validRasterHref(graphicHref)) throw Error('Only bounded embedded PNG/JPEG/WebP images are permitted');
   }
@@ -94,6 +96,8 @@ export function renderFacilityThumbnail(spec,{graphicHref=null,graphicHrefs=null
         }
         return '<image id="main-graphic-'+(i+1)+'" x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" href="'+graphicHrefs[i]+'" preserveAspectRatio="xMidYMid meet" clip-path="url(#'+clip+')" aria-hidden="true"/>';
       }).join('')+'</g>'
+    : artworkComposition
+    ? '<g id="main-graphic-composition-slot" data-artwork-layer="external-raster-by-sharp"/>'
     : preview
     ? '<g id="graphic-preview-placeholder">'
       + '<rect x="'+safe.x+'" y="'+safe.y+'" width="'+safe.width+'" height="'+safe.height+'" rx="18" fill="#F1F8F1" stroke="#9DC5A8" stroke-width="3" stroke-dasharray="12 10"/>'
