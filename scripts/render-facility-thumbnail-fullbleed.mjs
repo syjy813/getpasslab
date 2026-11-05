@@ -13,8 +13,11 @@ export const FULLBLEED_LAYOUT=Object.freeze({
 });
 
 export function fullBleedGeometry(spec){
-  if(!spec || !['string','object'].includes(typeof spec.title) || !['string','object'].includes(typeof spec.subtitle))
-    throw Error('Title and subtitle are required');
+  const validText=v=>typeof v==='string'&&v.trim().length>0 || Array.isArray(v)&&v.length>0&&v.every(x=>typeof x==='string'&&x.trim().length>0);
+  if(!spec || !validText(spec.title) || !validText(spec.subtitle))
+    throw Error('Title and subtitle are required as nonempty text or text lines');
+  if(spec.variant && spec.variant!=='fullbleed')
+    throw Error('Full-bleed cover requires variant=fullbleed; legacy card/slot layouts are separate templates');
   const title=wrap(spec.title,FULLBLEED_LAYOUT.titleCapacity,TOKENS.title.maxLines,'fullbleed title');
   const subtitle=wrap(spec.subtitle,FULLBLEED_LAYOUT.subtitleCapacity,TOKENS.subtitle.maxLines,'fullbleed subtitle');
   const subY=FULLBLEED_LAYOUT.titleY+title.length*FULLBLEED_LAYOUT.titleLineHeight+FULLBLEED_LAYOUT.subtitleGap;
