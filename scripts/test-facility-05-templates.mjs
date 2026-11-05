@@ -45,7 +45,7 @@ test('comparison 3-card and 2-card headers stay left aligned and retain original
   }
 });
 
-test('sharp decodes hero embedded artwork and all three masters to 1440x1080 WebP',async()=>{
+test('Sharp composes original hero artwork with SVG shell and renders all three masters to WebP',async()=>{
   const {default:sharp}=await import('sharp');
   for(const [path,svg] of masters){
     const webp=await renderFacility05MasterWebp(path);
@@ -55,8 +55,8 @@ test('sharp decodes hero embedded artwork and all three masters to 1440x1080 Web
     assert.equal(meta.height,1080,path);
     assert.ok(webp.length>5000,'empty graphic: '+path);
     if(path.endsWith('01-public-sector-hero.svg')){
-      // The source imagery is raster embedded inside the SVG. Verify that the
-      // renderer painted it, not merely the static frame/title shell.
+      // The original high-detail WebP is composited separately by Sharp.
+      // Verify the final asset adds genuine artwork to the clean SVG shell.
       const stats=await sharp(webp).extract({left:130,top:395,width:1180,height:560}).stats();
       const deviations=stats.channels.slice(0,3).map(channel=>Math.round(channel.stdev*10)/10);
       // Art contains a green-dominant mechanical facility; individual color
