@@ -7,6 +7,8 @@ on:
       - 'scripts/test-facility-infographic.mjs'
       - 'scripts/generate-facility-thumbnail.mjs'
       - 'scripts/test-facility-thumbnail.mjs'
+      - 'scripts/render-facility-thumbnail-fullbleed.mjs'
+      - 'scripts/test-facility-thumbnail-fullbleed.mjs'
       - 'docs/standards/facility-thumbnail-templates/**'
       - 'docs/standards/facility-infographic-templates/**'
       - 'docs/standards/facility-content-guide-v1.4.md'
@@ -20,7 +22,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: npm
+      - name: Install Sharp and locked dependencies
+        run: npm ci
       - name: Deterministic 1–4 card SVG validation
         run: node --test scripts/test-facility-infographic.mjs
       - name: Fixed hero thumbnail shell & isolated artwork QA
         run: node --test scripts/test-facility-thumbnail.mjs
+      - name: Full-bleed cover background overlay QA
+        run: node --test scripts/test-facility-thumbnail-fullbleed.mjs
