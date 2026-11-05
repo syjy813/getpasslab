@@ -1,3 +1,11 @@
+## 2026-11-05 시범 글 H2 위 패딩 24px·가이드 통합
+
+- 사용자 가이드 수정 및 현재 시범 게시글 반영 승인. 기준 main36892a5(PR248 실서버 반영 완료), codex/facility-heading-spacing-20261105.
+- 공공부문 비교 글 본문 H2 구분선 아래 padding-top만16→24px. 위 마진48px·선1px·아래 마진16px·그린700 유지. H3/요약/출처/관련 글과 다른 글의 화면 유지.
+- 정본 시설 가이드v1.4에 PR247의 소제목 색상·배경 기준을 통합하고24px 확정 간격표·체크리스트 추가. 전체 확장 기준과 현재 시범1편 범위를 구분. 이번 작업 반영 후 중복 문서PR247 대체 처리.
+- native guard는 레이아웃 blob1개만 갱신. 기존4폭 QA에 시범/비시범 H2 패딩 및 H2/H3 위·아래 마진 보호 검증 추가. Build/출력914파일 비교/CI/실서버 실제 결과는 최종PR 및 docs/audits/2026-11-05-facility-heading-spacing/ 참조.
+- 다른 글 전체 적용은 보류 상태 유지. 원고·이미지·공개URL·자격증 영역 변경 없음.
+
 ## 2026-11-05 공공부문 비교 글 소제목 색상 샘플
 
 - 사용자 지정 URL `/facility-management/jobs/public-sector-comparison/` 한 편 우선 화면 반영. 전체 글 적용은 추후 일괄 진행한다는 결정 유지. 기준 main5fe1956(PR243 배포 완료), codex/facility-heading-sample-20261105.

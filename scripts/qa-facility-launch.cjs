@@ -147,13 +147,17 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert.equal(await page.locator('.facility-body img').count(),expected,`${path}: image count`);
             const headingStyle = await page.locator('.facility-body :is(h2,h3)').evaluateAll(headings => headings.map(h => ({
               level:h.tagName,color:getComputedStyle(h).color,weight:getComputedStyle(h).fontWeight,
-              background:getComputedStyle(h).backgroundColor
+              background:getComputedStyle(h).backgroundColor,paddingTop:getComputedStyle(h).paddingTop,
+              marginTop:getComputedStyle(h).marginTop,marginBottom:getComputedStyle(h).marginBottom
             })));
             for (const heading of headingStyle) {
               const isSampleH2 = slug === 'public-sector-comparison' && heading.level === 'H2';
               assert.equal(heading.color,isSampleH2?'rgb(20, 92, 62)':'rgb(25, 31, 40)',path+': heading color scope');
               assert.equal(heading.weight,isSampleH2?'700':'600',path+': heading hierarchy');
               assert.equal(heading.background,'rgba(0, 0, 0, 0)',path+': headings keep the white article background');
+              assert.equal(heading.paddingTop,heading.level==='H2'?(isSampleH2?'24px':'16px'):'0px',path+': heading top padding scope');
+              assert.equal(heading.marginTop,heading.level==='H2'?'48px':'32px',path+': heading top margin retained');
+              assert.equal(heading.marginBottom,heading.level==='H2'?'16px':'12px',path+': heading bottom margin retained');
             }
             assert.equal(await page.locator('.facility-summary h2').evaluate(h=>getComputedStyle(h).color),'rgb(25, 31, 40)',path+': summary title stays neutral');
             assert.equal(await page.locator('.facility-article-meta time').count(),2,'publish and reviewed dates');
