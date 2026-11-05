@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import { readdirSync, readFileSync, cpSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
+import { publicSectorVisuals, assertPublicSectorVisuals } from './scripts/read-public-sector-visuals.mjs';
 
 const facilityDir = './src/content/facility';
 const publishedFacilityCategories = new Set(readdirSync(facilityDir).filter(file => file.endsWith('.md')).map(file => readFileSync(join(facilityDir, file), 'utf8').split('---')[1] || '').filter(front => /^status:\s*['\"]?published['\"]?\s*$/m.test(front)).map(front => front.match(/^category:\s*['\"]?([a-z-]+)['\"]?\s*$/m)?.[1]).filter(Boolean));
@@ -26,6 +27,7 @@ const facilityAssets = {
   name: 'facility-selective-assets',
   hooks: {
     'astro:build:done': async ({ dir }) => {
+      assertPublicSectorVisuals();
       rmSync(join(fileURLToPath(dir), 'images', 'facility-drafts'), { recursive: true, force: true });
       for (const [number, slug] of Object.entries(facilityAssetArticles)) {
         const file = join(facilityDir, `${slug}.md`);
@@ -36,6 +38,12 @@ const facilityAssets = {
         mkdirSync(target, { recursive: true });
         const references = [...markdown.matchAll(new RegExp(`/images/facility-drafts/${number}/([a-z0-9-]+\\.webp)`, 'g'))].map(match => match[1]);
         for (const asset of new Set(references)) {
+          const reviewed = publicSectorVisuals.images.find(row => row.publicPath === `/images/facility-drafts/${number}/${asset}`);
+          if (reviewed) {
+            // Serve the reviewed raster bytes, independent of build-host fonts.
+            cpSync(reviewed.file, join(target, asset));
+            continue;
+          }
           const approvedSvg = join('facility-asset-edits', number, asset.replace(/\.webp$/, '.svg'));
           if (number === '05' && existsSync(approvedSvg)) {
             // Editable SVG master -> optimized WebP at the unchanged public URL.

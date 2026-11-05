@@ -38,7 +38,7 @@ related:
 certifications: []
 ---
 
-![공공부문 시설관리 채용공고 여러 개를 비교하는 지원자와 공공시설 모습](/images/facility-drafts/05/01-public-sector-hero.webp)
+<img src="/images/facility-drafts/05/01-public-sector-hero.webp" alt="공공시설과 설비를 배경으로 채용공고 세 개와 비교 체크리스트·계약서를 검토하는 책상 장면" width="1440" height="1080" loading="eager" decoding="async" />
 
 *공공부문 취업을 알아볼 때는 이름보다 내가 실제로 지원할 공고부터 살펴보자*
 
@@ -58,7 +58,7 @@ certifications: []
 
 **“근로계약서에는 어느 회사 이름이 적히나요?”**
 
-![공공시설에서 일하는 직원의 세 가지 고용 구조](/images/facility-drafts/05/02-employer-types.webp)
+<img src="/images/facility-drafts/05/02-employer-types.webp" alt="공공시설에서 일하는 직원의 세 가지 고용 구조" width="1440" height="1080" loading="lazy" decoding="async" />
 
 *공공기관 직접채용·자회사 채용·전문업체 채용은 근무 장소가 비슷해도 근로계약 상대방이 다를 수 있음*
 
@@ -168,7 +168,7 @@ certifications: []
 
 반면 채용공고의 월 급여는 **그 회사·그 직위·그 근무형태**의 금액이다.
 
-![기관 전체 평균보수와 개별 시설관리 채용공고 급여의 비교 기준이 다름을 설명하는 그림](/images/facility-drafts/05/04-pay-data-comparison.webp)
+<img src="/images/facility-drafts/05/04-pay-data-comparison.webp" alt="기관 전체 평균보수와 개별 시설관리 채용공고 급여의 비교 기준이 다름을 설명하는 그림" width="1440" height="1080" loading="lazy" decoding="async" />
 
 *국회예산정책처가 ALIO 자료로 집계한 일반정규직 평균보수와 개별 시설관리 공고 급여는 비교 대상이 다름*
 
@@ -205,7 +205,9 @@ certifications: []
 5. **급여 구성:** 기본급과 수당, 상여·복지가 각각 어떻게 제시됐는가?
 6. **계약·정년:** 계약기간, 정규직 전환 조건, 정년 및 재고용 규정은 무엇인가?
 
-![공공부문 시설관리 채용공고에서 확인할 여섯 가지 기준 카드](/images/facility-drafts/05/05-compare-jobs-checklist.webp)
+<img src="/images/facility-drafts/05/05-compare-jobs-checklist.webp" alt="채용공고 지원 조건 세 가지: 실제 고용주, 사업소와 업무, 자격과 경력" width="1440" height="1080" loading="lazy" decoding="async" />
+
+<img src="/images/facility-drafts/05/06-compare-jobs-checklist.webp" alt="채용공고 근로 조건 세 가지: 근무표, 급여 구성, 계약과 정년" width="1440" height="1080" loading="lazy" decoding="async" />
 
 관심 있는 공고 세 개에서 **고용주·사업소·자격·근무표·급여·계약조건**을 같은 순서로 적어 보자. 공고에 없는 내용은 추측하지 말고 ‘미확인’으로 표시하면 추가로 물어볼 질문이 남는다.
 

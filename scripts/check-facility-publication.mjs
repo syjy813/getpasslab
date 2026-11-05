@@ -2,6 +2,9 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
+import {publicSectorVisuals,assertPublicSectorVisuals,visualOutput} from './read-public-sector-visuals.mjs';
+
+assertPublicSectorVisuals();
 
 const audit='docs/audits/2026-11-05-facility-publication/';
 const release=JSON.parse(fs.readFileSync(audit+'manifest.json'));
@@ -54,9 +57,11 @@ assert.equal(baseline[headingCSS.previousPath],headingCSS.previousSHA256,'origin
 assert(!fs.existsSync(headingCSS.previousPath),'obsolete facility CSS bundle removed');
 assert.equal(hash(fs.readFileSync(headingCSS.currentPath)),headingCSS.currentSHA256,'reviewed common heading CSS bundle');
 const files=walk('dist').filter(f=>!f.split('/').some(p=>p.startsWith('.'))).sort();
-assert.deepEqual(files,[...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages].map(f=>f===headingCSS.previousPath?headingCSS.currentPath:f).sort(),'same routes and images; exactly one facility CSS bundle replaced');
+const addedVisualImages=publicSectorVisuals.images.filter(r=>!r.existing).map(visualOutput);
+for(const row of publicSectorVisuals.images)assert.equal(hash(fs.readFileSync(visualOutput(row))),row.sha256,'approved public-sector output: '+row.publicPath);
+assert.deepEqual(files,[...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages].map(f=>f===headingCSS.previousPath?headingCSS.currentPath:f).sort(),'same routes and approved images; one checklist image added; exactly one facility CSS bundle replaced');
 let unchanged=0;
-const approvedRenders=new Set(['01-public-sector-hero','02-employer-types','04-pay-data-comparison'].map(n=>'dist/images/facility-drafts/05/'+n+'.webp'));
+const approvedRenders=new Set(publicSectorVisuals.images.filter(r=>r.existing).map(visualOutput));
 for(const [file,sha] of Object.entries(baseline)){
  if(file===headingCSS.previousPath)continue; // Replacement is hash-pinned above.
  // Facility lists/related links and XML reflect the reviewed release. Native

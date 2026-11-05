@@ -4,10 +4,12 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
+import {beforePublicSectorVisuals} from './read-public-sector-visuals.mjs';
 export const facilityReview=JSON.parse(gunzipSync(fs.readFileSync('docs/audits/2026-10-31-facility-launch/review.json.gz')));
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const key=f=>path.normalize(path.isAbsolute(String(f))?path.relative(process.cwd(),String(f)):String(f)).replaceAll('\\','/');
 export function beforeFacilityLaunch(file,bytes){
+ bytes=beforePublicSectorVisuals(file,bytes);
  const row=facilityReview.changes[key(file)];if(!row||hash(bytes)!==row.sha256)return bytes;
  let old=bytes;for(const p of [...row.patches].reverse()){
   const now=Buffer.from(facilityReview.chunks[p.current],'base64'),before=Buffer.from(facilityReview.chunks[p.before],'base64');
@@ -22,5 +24,5 @@ export function isFacilityAddition(file){
  const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
  const files=fs.statSync(k).isDirectory()?walk(k):[k];
  assert.deepEqual(files.sort(),rows.map(([p])=>p).sort(),k+': exact addition inventory');
- for(const [p,sha] of rows)assert.equal(hash(fs.readFileSync(p)),sha,p+': reviewed addition');return true;
+ for(const [p,sha] of rows)assert.equal(hash(beforePublicSectorVisuals(p,fs.readFileSync(p))),sha,p+': reviewed addition');return true;
 }

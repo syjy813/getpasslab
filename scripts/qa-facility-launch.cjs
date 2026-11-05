@@ -8,7 +8,7 @@ const expanded = preview || release;
 const mode = preview ? 'private-preview' : 'publication';
 const output = `qa-results/facility-launch/${mode}`;
 fs.mkdirSync(output, {recursive: true});
-const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':4};
+const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':5};
 const pages = ['/facility-management/', ...['career','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
 (async () => {
   const browser = await chromium.launch();
@@ -171,6 +171,15 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert(anchor?.startsWith('#') && await page.locator('[id="' + anchor.slice(1) + '"]').count()===1,'TOC targets an existing heading');
             assert.equal(await page.locator('.facility-sources a').count()>0,true);
             const images = page.locator('.facility-body img');
+            if(slug==='public-sector-comparison'){
+              const visualReview=JSON.parse(fs.readFileSync('docs/audits/2026-11-05-public-sector-visuals/manifest.json'));
+              assert.deepEqual(await images.evaluateAll(imgs=>imgs.map(img=>new URL(img.src).pathname)),visualReview.images.map(row=>row.publicPath),'reviewed hero and four card images in order');
+              assert(!(await images.first().getAttribute('alt')).includes('지원자'),'hero alt describes scene without a person');
+              for(const image of await images.all()){
+                await image.evaluate(el=>el.decode());
+                assert.deepEqual(await image.evaluate(el=>[el.naturalWidth,el.naturalHeight]),[1440,1080],'reviewed raster dimensions');
+              }
+            }
             for (let i=0;i<expected;i++) {
               const img = images.nth(i);
               await img.scrollIntoViewIfNeeded();
@@ -304,6 +313,6 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
       await context.close();
     }
     fs.writeFileSync(`${output}/results.json`,JSON.stringify({mode,cases:results.length,results},null,2)+'\n');
-    console.log(`Facility QA: ${mode}, ${results.length} page and viewport cases PASS; 22 images and service switching verified at four widths`);
+    console.log(`Facility QA: ${mode}, ${results.length} page and viewport cases PASS; 23 images and service switching verified at four widths`);
   } finally { await browser.close(); }
 })().catch(error=>{console.error(error);process.exitCode=1});
