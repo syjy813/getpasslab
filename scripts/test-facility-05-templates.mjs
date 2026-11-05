@@ -2,6 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {buildMasters} from './generate-facility-05-templates.mjs';
+import {renderFacility05MasterWebp} from './render-facility-05-webp.mjs';
 
 const root='facility-asset-edits/05/';
 const names=['01-public-sector-hero','02-employer-types','04-pay-data-comparison'];
@@ -17,15 +18,13 @@ test('exact three approved SVG masters are reproducible and originals remain sep
   }
 });
 
-test('one hero uses centered title and crop-clipped high-detail original, no second text header',()=>{
+test('one hero uses a centered clean SVG shell; artwork is composed as a separate raster layer',()=>{
   const svg=masters.get(root+'01-public-sector-hero.svg');
   assert.match(svg,/x="720" y="140"[^>]*text-anchor="middle"/);
   assert.match(svg,/x="720" y="230"[^>]*text-anchor="middle"/);
   assert.match(svg,/id="graphic-safe-area" data-variant="illustration"/);
-  assert.match(svg,/href="data:image\/webp;base64,/);
-  assert.match(svg,/id="main-graphic"/);
-  assert.match(svg,/preserveAspectRatio="none" clip-path="url\(#graphic-safe-clip\)"/);
-  assert.doesNotMatch(svg,/graphic-preview-placeholder/);
+  assert.match(svg,/id="main-graphic-composition-slot"/);
+  assert.doesNotMatch(svg,/href="data:image\/webp;base64,|id="main-graphic"|graphic-preview-placeholder/);
 });
 
 test('comparison 3-card and 2-card headers stay left aligned and retain original meaning',()=>{
@@ -49,7 +48,7 @@ test('comparison 3-card and 2-card headers stay left aligned and retain original
 test('sharp decodes hero embedded artwork and all three masters to 1440x1080 WebP',async()=>{
   const {default:sharp}=await import('sharp');
   for(const [path,svg] of masters){
-    const webp=await sharp(Buffer.from(svg),{density:96}).resize(1440,1080,{fit:'fill'}).webp({quality:86,effort:2}).toBuffer();
+    const webp=await renderFacility05MasterWebp(path);
     const meta=await sharp(webp).metadata();
     assert.equal(meta.format,'webp',path);
     assert.equal(meta.width,1440,path);
@@ -65,8 +64,14 @@ test('sharp decodes hero embedded artwork and all three masters to 1440x1080 Web
       // Require variability over all RGB channels rather than an arbitrary
       // minimum in each individual channel.
       console.log('[Facility 05 hero artwork RGB variation]',deviations);
-      assert.ok(deviations.some(value=>value>25),'hero image appears blank: '+deviations.join(','));
-      assert.ok(deviations.reduce((sum,value)=>sum+value,0)>55,'hero image lacks visual detail: '+deviations.join(','));
+      assert.ok(deviations.some(value=>value>45),'hero image appears blank: '+deviations.join(','));
+      assert.ok(deviations.reduce((sum,value)=>sum+value,0)>110,'hero image lacks visual detail: '+deviations.join(','));
+      const solid=await sharp(Buffer.from(svg),{density:96}).resize(1440,1080,{fit:'fill'}).png().toBuffer();
+      const composed=await sharp(webp).extract({left:360,top:500,width:680,height:370}).raw().toBuffer();
+      const blank=await sharp(solid).extract({left:360,top:500,width:680,height:370}).raw().toBuffer();
+      let diff=0;
+      for(let i=0;i<composed.length;i+=160)diff+=Math.abs(composed[i]-blank[i]);
+      assert.ok(diff>10000,'hero composition did not add the detailed artwork to the SVG shell');
     }
   }
 });
