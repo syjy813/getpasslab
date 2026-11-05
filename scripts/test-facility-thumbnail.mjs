@@ -130,3 +130,61 @@ test('malicious source strings cannot inject SVG tags',()=>{
   assert.match(out,/&amp; &lt;script&gt;/);
   assert.doesNotMatch(out,/<script>/);
 });
+
+test('collage template preview shares locked centered header and palette',()=>{
+  const spec=JSON.parse(readFileSync(dir+'example-collage.json','utf8'));
+  const geometry=heroGeometry(spec);
+  const out=renderFacilityThumbnail(spec,{preview:true});
+  assert.equal(out,readFileSync(dir+'hero-4x3-collage-preview.svg','utf8'),'collage template preview is stale');
+  assert.equal(geometry.variant,'collage');
+  assert.deepEqual(geometry.collageSlots,[
+    {x:98,y:366,width:760,height:616},
+    {x:876,y:366,width:466,height:299},
+    {x:876,y:683,width:466,height:299}
+  ]);
+  assert.match(out,/id="collage-graphic-layout" data-variant="collage"/);
+  assert.equal((out.match(/class="collage-preview-slot"/g)||[]).length,3);
+  assert.equal((out.match(/id="gpl-brand"/g)||[]).length,1);
+  assert.match(out,/x="720" y="140"[^>]*text-anchor="middle"/);
+  assert.match(out,/x="720" y="230"[^>]*text-anchor="middle"/);
+  assert.doesNotMatch(out,/id="main-graphic-\d"/);
+});
+
+test('collage uses three isolated raster slots with no overlap and preserves graphic aspect ratio',()=>{
+  const spec=JSON.parse(readFileSync(dir+'example-collage.json','utf8'));
+  const slots=heroGeometry(spec).collageSlots;
+  for(let i=0;i<3;i++){
+    const a=slots[i];
+    assert.ok(a.x>=98&&a.y>=366&&a.x+a.width<=1342&&a.y+a.height<=982);
+    for(let j=i+1;j<3;j++){
+      const b=slots[j];
+      assert.ok(!(Math.min(a.x+a.width,b.x+b.width)>Math.max(a.x,b.x)
+        && Math.min(a.y+a.height,b.y+b.height)>Math.max(a.y,b.y)),'collage areas must not overlap');
+    }
+  }
+  const png='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/UocAAAAASUVORK5CYII=';
+  assert.throws(()=>renderFacilityThumbnail(spec),/exactly 3/);
+  assert.throws(()=>renderFacilityThumbnail(spec,{graphicHref:png}),/3 distinct/);
+  assert.throws(()=>renderFacilityThumbnail(spec,{graphicHrefs:[png,png]}),/exactly 3/);
+  assert.throws(()=>renderFacilityThumbnail(spec,{graphicHrefs:[png,png,'https://example.com/abc.png']}),/3 bounded/);
+  assert.throws(()=>renderFacilityThumbnail({...spec,variant:'unknown'},{preview:true}),/Unsupported hero variant/);
+  const complete=renderFacilityThumbnail(spec,{graphicHrefs:[png,png,png]});
+  assert.equal((complete.match(/id="main-graphic-\d+"/g)||[]).length,3);
+  assert.equal((complete.match(/preserveAspectRatio="xMidYMid meet"/g)||[]).length,3);
+  assert.equal((complete.match(/clip-path="url\(#collage-graphic-clip-\d\)"/g)||[]).length,3);
+  assert.doesNotMatch(complete,/collage-preview-slot|메인 장면|보조 장면/);
+  assert.equal((complete.match(/id="gpl-brand"/g)||[]).length,1);
+  assert.match(complete,/data-variant="collage"/);
+});
+
+test('collage header stays centered on two lines and pushes three graphic slots downward',()=>{
+  const spec=JSON.parse(readFileSync(dir+'example-collage.json','utf8'));
+  const before=heroGeometry(spec);
+  const after=heroGeometry({...spec,title:['시설관리 근무현장의 다양한','업무와 설비를 살펴보자']});
+  assert.equal(after.collageSlots[0].y-before.collageSlots[0].y,74);
+  assert.equal(after.collageSlots[0].x,before.collageSlots[0].x);
+  assert.equal(after.safe.y+after.safe.height,982);
+  const svg=renderFacilityThumbnail({...spec,title:['시설관리 근무현장의 다양한','업무와 설비를 살펴보자']},{preview:true});
+  assert.match(svg,/text-anchor="middle"/);
+  assert.match(svg,/x="720" y="140"/);
+});
