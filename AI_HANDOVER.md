@@ -1,3 +1,10 @@
+## 2026-11-05 카드형 템플릿 장식·로고 정리
+
+- 사용자 템플릿수정→카드4장재생성→실서버게시 승인. 기준 main d50ea0a3(PR251 배포완료), 별도 codex/facility-card-template-refine-20261105.
+- 정본 scripts/generate-facility-infographic.mjs와1~4카드JSON/SVG/검증 등록. 우측하단 그린장식 삭제, 로고 x1150/y80→x1200/y44(크기유지). 가이드§5.13.6~7와README 갱신. 과거감사렌더러/미병합PR246은정본으로사용하지않음.
+- 대상글카드4장만v3WebP/별도SVG마스터로재생성. 이전SVG와변경2개만존재함을비교. 이전v2/64원본/역사마스터 보존, 대표이미지/본문/표/출처/날짜/공개URL/CSS 유지.
+- 새manifest로최신파생4개를고정하고과거manifest/자산을별도검증. 근거 docs/audits/2026-11-05-facility-card-template-refine/. 최종Build/4폭CI/Deploy/Production상태는해당PR실제기록확인.
+
 ## 2026-11-05 공공부문 대표 이미지·카드 교체 검토본
 
 - 사용자 대표이미지 승인·WEB 구현/검증/Draft PR 승인. main65890dba에서 codex/public-sector-visual-refresh-20261105. PR246은 충돌 Draft 상태 유지, 별도 병합 없음.
