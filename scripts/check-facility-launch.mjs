@@ -27,7 +27,7 @@ const editorialBlobs = {
   'src/styles/catalog.css': '8a90e16d57215350e844faf7accf12cd20b1cd68',
   'src/components/Footer.astro': '1c21ee8122b0e7a2bbd5eac8c1c1f5d3538f5867',
   'src/components/FacilityCard.astro': 'bc60b65b1cd8c9f52ae6e9decfc66a17d8c33f70',
-  'src/layouts/FacilityArticleLayout.astro': 'bfdfaae460bf9317eb1cd3aaefecae308557efbb',
+  'src/layouts/FacilityArticleLayout.astro': 'fc5bf317a974221acd759eaa67e5c348125ce7c2',
   'src/pages/facility-management/index.astro': 'f609c910d1b89037253da9923d38f714fa6d7ec7',
   'src/styles/facility.css': 'e9a0aff83b915f096a6cd5183a4d0d14f0b8d6ab',
   'src/pages/facility-management/[category]/index.astro': 'c6e86be311d7f72fc212e32f0e3ce691b0d17239',
