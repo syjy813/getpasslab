@@ -1,0 +1,33 @@
+{
+  "baseline": "main 0b938c9 same-environment clean build",
+  "beforeFiles": 914,
+  "afterFiles": 914,
+  "added": [
+    "_astro/FacilityCard.hoVVeo0t.css"
+  ],
+  "deleted": [
+    "_astro/FacilityCard.CilOa9gi.css"
+  ],
+  "changed": [
+    "facility-management/career/employment-types/index.html",
+    "facility-management/career/first-job/index.html",
+    "facility-management/career/index.html",
+    "facility-management/career/shifts-and-pay/index.html",
+    "facility-management/career/what-is-facility-management/index.html",
+    "facility-management/index.html",
+    "facility-management/jobs/hanfms/index.html",
+    "facility-management/jobs/index.html",
+    "facility-management/jobs/kamcofmc/index.html",
+    "facility-management/jobs/korailtech/index.html",
+    "facility-management/jobs/postal-facilities/index.html",
+    "facility-management/jobs/public-sector-comparison/index.html",
+    "facility-management/practice/index.html",
+    "facility-management/qualifications/boiler-inspection-manager/index.html",
+    "facility-management/qualifications/index.html",
+    "facility-management/qualifications/mechanical-career-records/index.html",
+    "facility-management/qualifications/mechanical-maintainer-levels/index.html",
+    "facility-management/qualifications/statutory-appointments/index.html"
+  ],
+  "unchangedFiles": 895,
+  "HTMLContentUnchangedExceptCSSReferencesAndSampleCleanup": true
+}
