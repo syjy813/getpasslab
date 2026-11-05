@@ -60,6 +60,20 @@ export function renderFacilityThumbnail(spec,{graphicHref=null,graphicHrefs=null
     if (graphicHref && !validRasterHref(graphicHref)) throw Error('Only bounded embedded PNG/JPEG/WebP images are permitted');
   }
   const {box,safe}=layout;
+  const crop=spec.graphicCrop||null;
+  if (crop && collage) throw Error('graphicCrop is only supported for the single-illustration template');
+  if (crop && (!Number.isInteger(crop.sourceWidth)||!Number.isInteger(crop.sourceHeight)
+    ||![crop.x,crop.y,crop.width,crop.height].every(Number.isFinite)
+    ||crop.sourceWidth<1||crop.sourceHeight<1||crop.x<0||crop.y<0||crop.width<=0||crop.height<=0
+    ||crop.x+crop.width>crop.sourceWidth||crop.y+crop.height>crop.sourceHeight))
+    throw Error('graphicCrop must be a valid rectangle contained in the source image');
+  const cropScale=crop?Math.min(safe.width/crop.width,safe.height/crop.height):null;
+  const cropImage=crop?{
+    x:Number((safe.x+(safe.width-crop.width*cropScale)/2-crop.x*cropScale).toFixed(4)),
+    y:Number((safe.y+(safe.height-crop.height*cropScale)/2-crop.y*cropScale).toFixed(4)),
+    width:Number((crop.sourceWidth*cropScale).toFixed(4)),
+    height:Number((crop.sourceHeight*cropScale).toFixed(4))
+  }:null;
   const accessibleTitle=Array.isArray(spec.title)?spec.title.join(' '):spec.title;
   const background=[
     rect(0,0,1440,1080,0,c.background),
@@ -87,7 +101,7 @@ export function renderFacilityThumbnail(spec,{graphicHref=null,graphicHrefs=null
       + '<text x="720" y="'+(safe.y+safe.height/2+38)+'" text-anchor="middle" font-size="38" font-weight="700" fill="'+c.ink+'">메인 그래픽 교체 영역</text>'
       + '<text x="720" y="'+(safe.y+safe.height/2+93)+'" text-anchor="middle" font-size="25" fill="'+c.muted+'">완성된 일러스트 · 사진 · 시각자료만 배치</text>'
       + '</g>'
-    : '<image id="main-graphic" x="'+safe.x+'" y="'+safe.y+'" width="'+safe.width+'" height="'+safe.height+'" href="'+graphicHref+'" preserveAspectRatio="xMidYMid meet" clip-path="url(#graphic-safe-clip)" aria-hidden="true"/>';
+    : '<image id="main-graphic" x="'+(cropImage?cropImage.x:safe.x)+'" y="'+(cropImage?cropImage.y:safe.y)+'" width="'+(cropImage?cropImage.width:safe.width)+'" height="'+(cropImage?cropImage.height:safe.height)+'" href="'+graphicHref+'" preserveAspectRatio="'+(cropImage?'none':'xMidYMid meet')+'" clip-path="url(#graphic-safe-clip)" aria-hidden="true"/>';
   return [
     '<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-label="'+escapeXml(accessibleTitle)+'">',
     '<title>'+escapeXml(accessibleTitle)+'</title>',
