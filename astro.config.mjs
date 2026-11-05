@@ -3,7 +3,7 @@ import { unified } from '@astrojs/markdown-remark';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import sitemap from '@astrojs/sitemap';
-import { readdirSync, readFileSync, cpSync, mkdirSync, rmSync, existsSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, cpSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 
@@ -40,11 +40,9 @@ const facilityAssets = {
           if (number === '05' && existsSync(approvedSvg)) {
             // Editable SVG master -> optimized WebP at the unchanged public URL.
             // Keep every original facility-assets WebP byte untouched.
-            const { default: sharp } = await import('sharp');
-            await sharp(readFileSync(approvedSvg), { density: 96 })
-              .resize(1440, 1080, { fit: 'fill' })
-              .webp({ quality: 86, effort: 6 })
-              .toFile(join(target, asset));
+            const { renderFacility05MasterWebp } = await import('./scripts/render-facility-05-webp.mjs');
+            const compiled = await renderFacility05MasterWebp(approvedSvg);
+            writeFileSync(join(target, asset), compiled);
           } else {
             const edited = join('facility-asset-edits', number, asset);
             const source = existsSync(edited) ? edited : join('facility-assets', number, asset);
