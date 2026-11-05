@@ -1,3 +1,27 @@
+## 2026-11-05 시설 6~13편 공개 후보 준비
+
+- 사용자 다음 작업 진행 승인으로 근거 재대조·공개 후보 설정·PR/검증 진행. 실제 main 병합·Production 배포 승인은 별도. 기준 PR243 6891341b, main d811ed66.
+- 출처29개 직접 재확보, 주요 법령/공고 첨부6개 이전 해시 동일. 공식 HWP11/12차 변경공고와 코레일 공개/보훈 PDF를 별도 대조. 8편별 재검증 범위와 한계는 docs/audits/2026-11-05-facility-publication/ 참조.
+- 13번 직무범위 조문을 제31조의27제3항으로 정정. 10번 누락된 A/B/C 가상 예문 표 복구. 이전 ledger 조문/비고번호 오기는 새 기록이 대체하며 원본 보존.
+- 신규8편을 작업 브랜치에서 published 후보로 전환, 예정 발행/수정/확인일2026-11-05. 기존5편 소스·40이미지·URL·자격증/GNB/CSS 보존. 기존 draft manifest와 과거 baseline은 보존하고 새 release manifest로 교정본 추적.
+- 일반 clean573페이지/575HTML·sitemap572, 신규8/40/119링크·기존시설149/SEO/공개문구/native PASS. 독립 main 대비 추가48·삭제0·변경11(시설HTML10+sitemap)·동일855. 검토 clean/CI4폭/원격 완료는 최종 PR Checks로 구분.
+- 배포가 미뤄지면 실제 발행일·접수 상태 재확인 필수. 이번 단계에서 main/Production 미반영. 아직 실제휴대폰/Safari/실광고/색인 검증 없음.
+
+## 2026-11-05 시설 6~13편 PR243 최신 main 통합
+
+- 사용자 공유 대화·최종 ZIP·기존 PR243을 대조해 이어서 검증. 기존 PR head 25f0c1e 및 CI 5개 성공 확인. 최신 main d811ed66(PR244/245)을 PR 작업 브랜치에 병합하며 공개 1~5편과 05번 승인 SVG 3개·출력 경로를 보존. main 자체 병합·배포는 이번 승인 범위 밖.
+- 이전 PR242 공개 baseline 866개는 변경하지 않음. 이후 PR245에서 승인된 05번 출력 3개만 정확한 SVG blob을 고정하고 같은 환경의 Sharp 렌더 결과와 대조. 나머지 863개는 과거 바이트 보호 유지. 생성 이미지의 환경별 폰트 차이를 전체 baseline 갱신으로 숨기지 않음.
+- 독립 clean main/통합본 공개 빌드 866개 SHA256 전체 동일. 공개565페이지·초안8경로/40이미지 제외·기존5편 링크127/native guard PASS. 검토573페이지·초안8경로/40이미지·내부링크119/기존시설149·robots/schema/sitemap PASS. 양모드 SEO/공개문구 오류0, 기존 description 경고1.
+- 근거 docs/audits/2026-11-04-facility-drafts/latest-main-comparison.json 및 README 후속 기록. 로컬 CJK 글꼴·브라우저 없음: 한글 이미지 렌더·반응형은 폰트를 설치하는 CI에서 새 head로 재검증. 새 CI·Push·Production 상태는 실제 PR Checks와 구분. 새 법령·공고 조사/이미지 재제작/공개 상태 전환 없음.
+
+## 2026-11-04 시설 신규6~13편 초안 GitHub 반영
+
+- 사용자 후속 범위: 검토본 반영·Draft PR·CI. 기준 main e8ef5483(PR242). 신규8편 status:draft, 이미지40장과 selective-assets/카드 커버 추가. 기존 공개5편·이미지/URL·자격증 기능 유지. main 병합·Production 배포 범위 아님.
+- 한전FMS/코레일테크 출처 표시6곳 PDF→문서, URL·쪽수 유지. 사실 재검증은 이전 패키지 기록을 인계하며 실제 발행 전 최신 근거와 날짜 재확인 필요.
+- 일반 clean565페이지/공개866파일 기준main과 바이트동일, 신규8경로·40이미지 제외. 검토 clean573페이지/8초안·40이미지·119시설링크, robots·schema·sitemap PASS. 양모드 SEO/공개문구 오류0, 기존description경고1.
+- docs/audits/2026-11-04-facility-drafts/에 해시·공개비교·근거·검수 기록. 과거 snapshot/역사검증 도구 보존. 정본 가이드v1.4 §5.11~14·학습이미지 §5~7·9 적용. 이번 이미지 재생성 없음.
+- 로컬 Chromium 다운로드 손상으로 브라우저 미실행. 공개/검토4폭 QA와 신규8편×4폭 검사를 CI에 연결. 실제 원격 Commit·PR·CI 완료는 해당 PR Checks로 확인. 실제휴대폰·Safari·실광고·Production QA 미실행.
+
 ## 2026-11-04 시설 GNB 명칭 통일·근무형태 대표 이미지 손 수정 검토본
 
 - 사용자 승인 범위: 시설 모바일 GNB `주제`를 PC와 같은 `카테고리`로 통일. 근무형태 대표 이미지 양쪽 종이를 잡은 손 제거. 기준 main ecace79a(PR239 배포 완료), codex/facility-gnb-image-hands-20261104.

@@ -3,6 +3,8 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/, '');
 const preview = process.env.QA_FACILITY_PREVIEW === '1';
+const release = fs.existsSync('docs/audits/2026-11-05-facility-publication/manifest.json');
+const expanded = preview || release;
 const mode = preview ? 'private-preview' : 'publication';
 const output = `qa-results/facility-launch/${mode}`;
 fs.mkdirSync(output, {recursive: true});
@@ -69,7 +71,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
         }
 
         if (path.startsWith('/facility-management/')) {
-          const empty = ['practice','qualifications'].includes(slug);
+          const empty = slug === 'practice' || (!expanded && slug === 'qualifications');
           assert.equal(await page.locator('.gnb-logo').getAttribute('href'),'/facility-management/','facility logo destination');
           assert.equal(await page.locator('summary[aria-label="시설 카테고리"]').count(),1,'facility-first navigation');
           assert.equal((await page.locator('summary[aria-label="시설 카테고리"]').innerText()).trim(),'카테고리','same visible facility label at every viewport');
@@ -99,7 +101,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert.equal(categoryHeader.breadcrumbGap,'24px','subject-list breadcrumb spacing');
             assert.equal(categoryHeader.bottomRule,'1px','header separator retained');
             assert.equal(categoryHeader.listGap,'32px','article cards retain a clear 32px gap');
-            const counts = {career:4,jobs:1,practice:0,qualifications:0};
+            const counts = {career:4,jobs:expanded?5:1,practice:0,qualifications:expanded?4:0};
             assert.equal(await page.locator('.facility-category-list .facility-card').count(),
               counts[slug], 'existing article cards retained by category');
           }
@@ -108,10 +110,10 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert.equal(await page.locator('.facility-featured .facility-section-head .gpl-caption').count(),0,'redundant facility-intro caption removed');
             assert.equal(await page.locator('.facility-learning').count(),0,'home cross-service promotion removed');
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
-            assert.equal(await page.locator('.facility-card').count(),5,'published articles appear once on home');
-            assert.equal(await page.locator('.facility-category-link').count(),2,'only populated categories are linked');
+            assert.equal(await page.locator('.facility-card').count(),expanded?13:5,'eligible articles appear once on home');
+            assert.equal(await page.locator('.facility-category-link').count(),expanded?3:2,'only populated categories are linked');
             const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
-            assert.equal(new Set(routes).size,5,'no repeated home articles');
+            assert.equal(new Set(routes).size,expanded?13:5,'no repeated home articles');
             const leadCover = page.locator('.facility-card--lead img');
             await leadCover.evaluate(img => img.decode());
             assert(await leadCover.evaluate(img => img.naturalWidth > 0),'lead uses existing article image');

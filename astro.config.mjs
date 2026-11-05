@@ -13,6 +13,14 @@ const publishedFacilityCategories = new Set(readdirSync(facilityDir).filter(file
 const facilityAssetArticles = {
   '01': 'what-is-facility-management', '02': 'first-job', '03': 'employment-types',
   '04': 'shifts-and-pay', '05': 'public-sector-comparison',
+  '06': 'hanfms',
+  '07': 'postal-facilities',
+  '08': 'korailtech',
+  '09': 'kamcofmc',
+  '10': 'statutory-appointments',
+  '11': 'mechanical-maintainer-levels',
+  '12': 'mechanical-career-records',
+  '13': 'boiler-inspection-manager',
 };
 const facilityAssets = {
   name: 'facility-selective-assets',

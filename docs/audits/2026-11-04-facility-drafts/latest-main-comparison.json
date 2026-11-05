@@ -1,0 +1,9 @@
+{
+  "base": "d811ed666b73ec9f9b2effe477ba7fcd4c4e3f2b",
+  "files": 866,
+  "changed": [],
+  "added": [],
+  "removed": [],
+  "method": "independent clean builds in the same local environment; full SHA256 comparison",
+  "limitation": "local image renderer has no Korean font; CJK rendering and browser checks run in CI"
+}
