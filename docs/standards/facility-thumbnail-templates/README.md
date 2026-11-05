@@ -1,71 +1,46 @@
-# GetPassLab 시설 썸네일·대표 이미지 4:3 템플릿
+# GetPassLab 시설 대표 이미지·썸네일 — 풀블리드 정본 (2026-11-05)
 
-정본 규칙: `docs/standards/facility-content-guide-v1.4.md` §5.13.8. **실제 배경·제목·부제·로고는 공통 SVG에서 생성하고, 주제별 메인 그래픽만 교체한다.**
+정본 가이드: `docs/standards/facility-content-guide-v1.4.md` **§5.13.8**.
 
-## 잠금 영역과 교체 영역
+## 신규 대표 이미지·썸네일은 반드시 이 방식 사용
 
-| 구분 | 1440×1080 기준 | 변경 정책 |
+**배경 이미지가 1440×1080 캔버스 전체를 채운다.** 하얀 헤더·아이보리 프레임·구분선·하단 그래픽 슬롯·반투명 텍스트 박스를 생성하지 않는다. 이미지와 분리된 **투명 SVG에 제목·부제·우측 상단 공식 GetPassLab 로고만** 렌더링해 최종 WebP 위에 합성한다.
+
+| 레이어 | 고정/가변 | 기본 좌표·규칙 |
 |---|---|---|
-| 캔버스/배경 | 1440×1080, 포레스트 그린·아이보리, 라운드 프레임 | 임의 변경 금지 |
-| 브랜드 | x=1150, y=80, 경로형 심벌+GetPassLab, 색상 #114935 | 단 한 번, 좌표·크기 고정 |
-| 메인 제목 | **x=720, text-anchor=middle**, top=140, 64px Bold, #114935 | 가운데 정렬, 텍스트만 변경. 2줄까지 허용 |
-| 부제 | **x=720, text-anchor=middle**, 제목 블록 하단 16px, 30px Regular, #52665B | 가운데 정렬, 텍스트만 변경. 2줄까지 허용 |
-| 구분선 | x=80..1360, 제목·부제 아래, 4px #76B978 | 자동 계산 |
-| 메인 그래픽 외곽 | x=80, y=348, w=1280, h=652 (1줄 제목·부제 기준) | 헤더 2줄이면 y 자동 이동; 하단 y=1000 고정 |
-| 실제 그림 안전영역 | x=98, y=366, w=1244, h=616 (1줄 기준) | **이 슬롯에만 그림 삽입**; 단일형은 1장, 콜라주형은 3장면. 안전영역 밖으로 넘침/로고 중복 금지 |
+| 배경 | 주제별 4:3 그림 **가변**, 반드시 텍스트·로고 없는 순수 일러스트 | 1440×1080 **전체**. 위·아래 끝까지 그림 존재, 합성시 자동 크롭 금지 |
+| 제목 | 텍스트 가변, 위치·색상 고정 | 중심 x=720, 상단 y=140, `#114935`, 임시 **64px Bold** |
+| 부제 | 텍스트 가변, 위치·색상 고정 | 중심 x=720, 첫 줄 기본 y=230, `#52665B`, 임시 **30px Regular** |
+| GetPassLab | **공식 SVG만** | x=1150/y=80, 카드 템플릿과 동일한 심벌·워드마크, 1회 |
 
-## 등록된 메인 그래픽 구성
+**폰트 크기 미확정:** 64/30px은 직전 가이드 수치를 그대로 임시 적용한 시안용 값이며, **합성 결과를 본 뒤 사용자와 결정**한다. 별도 승인 전 임의로 축소/증가하지 않는다.
 
-- **일반 일러스트형** (`variant: "illustration"`, 기본): 1244×616px 그래픽 슬롯에 한 장을 삽입한다. 별도 그림·캐릭터·설비에 텍스트/브랜드/외곽 프레임을 생성하지 않는다.
-- **콜라주형** (`variant: "collage"`): 3장면 고정 구획 — 좌측 큰 장면 `x98,y366,w760,h616`; 오른쪽 위 `x876,y366,w466,h299`; 오른쪽 아래 `x876,y683,w466,h299`. 슬롯 간격 18px, 모서리 18px, 각 이미지는 비율을 유지해 삽입한다.
-- 둘 모두 **공통 배경·로고·타이틀 셸을 공유**한다. 다른 이미지 갯수·구획·비율이 필요하면 임의 제작하지 말고 신규 템플릿을 승인·등록한다. 그래픽 자체의 질감·디테일·구도는 주제에 맞게 고품질로 제작한다.
+## 제작
 
-제목·부제의 모든 `tspan`도 x=720에 배치해 캔버스·그래픽 외곽·안전영역의 중심축과 맞춘다. **카드형 인포그래픽(1~4장)의 상단 제목·부제는 x=80, text-anchor=start의 좌측 정렬을 유지**한다. 공통 글꼴·색·로고 함수는 재사용하되 헤더 정렬 규칙은 용도별로 구분한다.
-
-줄바꿈은 기존 폭 제한(제목 20.4, 부제 40 가중 글자 단위)과 최대 2줄을 유지한다. 문자열은 단어/의미 단위로 자동 분리하고, 명시적 줄바꿈은 `title`·`subtitle`에 문자열 배열을 전달한다. 각 줄을 따로 가운데 정렬하며 제목 74px·부제 40px 줄 높이, 제목 아래 16px 간격을 유지한다. 범위를 넘으면 오류로 처리하고 폰트를 줄이지 않는다.
-
-## 제작·미리보기
-
-미리보기(메인 그래픽 자리 표시):
+`example-fullbleed.json`은 샘플 내용. `fullbleed-overlay-sample.svg`는 **배경이 없는 투명 글자·로고 오버레이(발행용 이미지 아님)**이다.
 
 ```sh
-node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-hero.json /tmp/facility-hero-preview.svg --preview
+# 투명 오버레이 SVG 생성 — 글자·로고 위치 확인용
+node scripts/render-facility-thumbnail-fullbleed.mjs docs/standards/facility-thumbnail-templates/example-fullbleed.json --overlay /tmp/fullbleed-overlay.svg
+
+# 4:3 전체 배경 + 투명 오버레이 = 최종 WebP
+node scripts/render-facility-thumbnail-fullbleed.mjs docs/standards/facility-thumbnail-templates/example-fullbleed.json --compose /path/to/artwork-only-4x3.png /tmp/fullbleed-result.webp
 ```
 
-`example-hero.json`/`hero-4x3-preview.svg`는 제목·부제 각각 1줄 예시다. `example-hero-two-lines.json`/`hero-4x3-two-lines-preview.svg`는 각각 2줄인 예시로, 중심축은 그대로 두고 그래픽 시작 y만 114px 아래로 이동한다.
+- **그림 제작 시** 원본 이미지 내부에 이미 그려진 제목·부제·로고·시리즈명·배지를 그대로 포함하지 않는다. 제목/로고가 있는 AI 완성 이미지를 배경으로 사용하면 **중복 표기 실패**다.
+- 4:3 완성 그림을 입력한다. 종횡비가 맞지 않으면 오류를 내고, 사용자 승인 없이 자동 크롭/왜곡하지 않는다.
+- 그림 상단은 **텍스트 가독성이 확보되는 구도와 명도**로 제작한다. 템플릿에서 임의 흰색 띠·반투명 박스·그라데이션으로 가리지 않는다.
+- 기존 고품질 배경 그래픽에 사람·건물·설비·문서 등 무엇을 그릴지는 콘텐츠 취지에 맞게 자유롭게 결정한다. 템플릿은 전체 배경 하나만 받는다.
+- **카드형 1~4종 비교 이미지**는 기존 `facility-infographic-templates/` 및 §5.13.7의 좌측 정렬·카드 레이아웃을 그대로 사용한다.
+- 기존 `hero-4x3-preview.svg`, `hero-4x3-collage-preview.svg`, `generate-facility-thumbnail.mjs` 등의 분할 그래픽/콜라주 템플릿은 **구버전 호환·회귀 테스트용**이다. 신규 4:3 대표 이미지는 `render-facility-thumbnail-fullbleed.mjs`만 사용한다. 특수한 형식이 필요하다면 사용자 승인 후 별도 공식 템플릿으로 등록한다.
+- **실서버 배포·기존 콘텐츠 3종 교체는 이번 정본 등록만으로 진행되지 않는다.** 합성 이미지/폰트 크기를 검수한 뒤 별도 승인한다.
+
+## QA
 
 ```sh
-node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-hero-two-lines.json /tmp/facility-hero-two-lines-preview.svg --preview
+node --test scripts/test-facility-thumbnail-fullbleed.mjs
+node --test scripts/test-facility-thumbnail.mjs
+node --test scripts/test-facility-infographic.mjs
 ```
 
-일반형 메인 그래픽 합성(PNG/JPG/WebP 중 하나):
-
-```sh
-node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-hero.json /tmp/facility-hero.svg --art /path/to/main-illustration.png
-```
-
-콜라주형 미리보기(3개 장면 교체 슬롯):
-
-```sh
-node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-collage.json /tmp/facility-collage-preview.svg --preview
-```
-
-콜라주형 메인 그래픽 합성(이미지 3개 필수, 순서: 왼쪽 메인 → 오른쪽 위 → 오른쪽 아래):
-
-```sh
-node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-collage.json /tmp/facility-collage.svg --collage /path/to/main.png /path/to/top-right.webp /path/to/bottom-right.jpg
-```
-
-- **그래픽만 AI 생성**: 별도로 제작한 주제 일러스트나 콜라주 각 장면에는 로고·제목·텍스트·구분선·배경 테두리를 그리지 않는다. 기하학적인 크롭이나 글자 삽입은 AI에게 맡기지 않는다.
-- 자동 합성은 이미지 비율을 지키는 `meet` 방식이다. 그래픽을 자르거나 찌그러뜨리지 않으며, 모서리는 SVG 클립으로 보호한다. 안전영역에 맞는 구도를 처음부터 제작한다.
-- **미리보기 템플릿은 공개 금지**: `--preview` 출력에는 메인 그래픽 자리 표시가 남는다. 최종 출력은 일반형 `--art` 1장 또는 콜라주형 `--collage` 3장이 필요하며, 누락·과다·잘못된 포맷을 거부한다.
-- 1:1 티스토리 썸네일·1.91:1 OG 이미지는 별도 규격이다. 필요할 때 별도 템플릿을 승인·등록한다. 이 4:3 템플릿을 무작정 크롭하지 않는다.
-- 이미 제작·승인된 대표 이미지와 기존 공개 URL은 이 템플릿 등록만으로 변경되지 않는다.
-
-## 템플릿 미등록 상황
-
-새로운 비율, 그래픽 영역 구조, 텍스트 배치가 필요한 경우 이미지를 임의 디자인하지 않는다. `시설 콘텐츠 통합 가이드` §5.13.7과 동일하게 **요구사항·재사용 불가 사유 설명 → 사용자 승인 → 새로운 템플릿/샘플/QA 제작 → GitHub 정본 등록 → 콘텐츠 적용** 순서로 진행한다.
-
-## 검증
-
-`node --test scripts/test-facility-thumbnail.mjs`과 기존 `scripts/test-facility-infographic.mjs`를 실행한다. 이후 SVG 렌더링, 로고 단일 표시, 표기 오류·비율·320/390px 모바일·1440px PC 목록/본문 크롭을 시각 QA한다. 테스트 통과만으로 실서버 반영이나 실제 시각 QA가 완료된 것은 아니다.
+세 테스트와 320/390/1440px 시각 QA를 구분해 보고한다. 공식 로고 x1150/y80, 제목·부제 x720, 상단 이미지 점유, 중복 글자·로고, 기존 공개 URL 보호를 확인한다.
