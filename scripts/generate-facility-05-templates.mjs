@@ -3,7 +3,7 @@
 // sources converted to WebP by the existing Astro selective-assets hook.
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
-import {renderFacilityThumbnail,rasterToDataUri} from './generate-facility-thumbnail.mjs';
+import {renderFacilityThumbnail} from './generate-facility-thumbnail.mjs';
 import {renderInfographic} from './generate-facility-infographic.mjs';
 
 const dir='docs/audits/2026-11-05-facility-05-visual-refresh/';
@@ -14,7 +14,7 @@ export function buildMasters(){
   for(const name of names){
     const spec=JSON.parse(fs.readFileSync(dir+name+'.json','utf8'));
     const svg=name==='01-public-sector-hero'
-      ?renderFacilityThumbnail(spec,{graphicHref:rasterToDataUri(fs.readFileSync('facility-assets/05/'+name+'.webp'))})
+      ?renderFacilityThumbnail(spec,{artworkComposition:true})
       :renderInfographic(spec);
     assert.match(svg,/<svg[^>]*viewBox="0 0 1440 1080"/);
     assert.equal((svg.match(/id="gpl-brand"/g)||[]).length,1);
