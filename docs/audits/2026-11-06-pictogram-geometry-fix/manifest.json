@@ -1,0 +1,33 @@
+{
+  "baseCommit": "e54dae0fe506946f2cc2b72a32396466ed3b872c",
+  "images": [
+    {
+      "publicPath": "/images/facility-drafts/05/05-compare-jobs-checklist.webp",
+      "file": "facility-asset-edits/05/05-compare-jobs-checklist-v5.webp",
+      "sha256": "c9f5f7960aebbc5736e4fa8ebbd74949ae47cdcffb477ae460e4d9cd32dd56e9",
+      "master": "docs/audits/2026-11-06-pictogram-geometry-fix/masters/05-compare-jobs-checklist.svg",
+      "masterSHA256": "ef86479144de2675d99354e7c1b67288b97080c8d9fb5dd677cc41a78f809876",
+      "kind": "official-card-template",
+      "existing": true
+    },
+    {
+      "publicPath": "/images/facility-drafts/05/06-compare-jobs-checklist.webp",
+      "file": "facility-asset-edits/05/06-compare-jobs-checklist-v5.webp",
+      "sha256": "af58b75a33272ce39919525b38b48a33a3820873746382958312c3daa0da6891",
+      "master": "docs/audits/2026-11-06-pictogram-geometry-fix/masters/06-compare-jobs-checklist.svg",
+      "masterSHA256": "96dec8a9c2ac4246e3ff4343b367a9747aad773a378ca3acc4249ff233ad7752",
+      "kind": "official-card-template",
+      "existing": false
+    }
+  ],
+  "template": {
+    "file": "scripts/generate-facility-infographic.mjs",
+    "gitBlob": "403eb21d675401074566345d63f89b9d86f6d726",
+    "dependencies": [
+      {
+        "file": "scripts/facility-pictograms.mjs",
+        "sha256": "7b84c1c2bffc4bd2794c1dd38f92da121164c94ad8efd1a7e1b6a4f126649483"
+      }
+    ]
+  }
+}

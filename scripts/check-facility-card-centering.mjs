@@ -3,11 +3,12 @@ import assert from 'node:assert/strict';
 import sharp from 'sharp';
 import {cardRects,TOKENS} from './generate-facility-infographic.mjs';
 import {PICTOGRAMS} from './facility-pictograms.mjs';
+import {publicSectorVisuals} from './read-public-sector-visuals.mjs';
 const audit='docs/audits/2026-11-05-facility-card-icons-center';
-const review=JSON.parse(fs.readFileSync(audit+'/manifest.json'));
+const review=publicSectorVisuals;
 const measurements=[];
 const used=[];
-for(const row of review.images){
+for(const row of review.images.filter(row=>row.kind==='official-card-template')){
   const stem=row.publicPath.split('/').at(-1).replace('.webp','');
   const spec=JSON.parse(fs.readFileSync(audit+'/specs/'+stem+'.json'));
   const svg=fs.readFileSync(row.master,'utf8');

@@ -1,5 +1,12 @@
 // Semantic, editable facility-employment pictograms. 104 × 104 local coordinates.
 // These illustrate the card topic; they are not official logos or legal symbols.
+function gearOutline(cx,cy){
+  return Array.from({length:32},(_,i)=>{
+    const angle=(i*11.25-90)*Math.PI/180;
+    const radius=[12.5,18,18,12.5][i%4];
+    return (i?'L':'M')+(cx+Math.cos(angle)*radius).toFixed(2)+' '+(cy+Math.sin(angle)*radius).toFixed(2);
+  }).join(' ')+'Z';
+}
 export const PICTOGRAMS = {
   'public-employer': {
     meaning: '공공기관 청사와 직접 고용',
@@ -27,7 +34,7 @@ export const PICTOGRAMS = {
   },
   worksite: {
     meaning: '근무 사업장 위치와 관리할 설비·업무',
-    svg: '<path fill="#E9F5E6" d="M17 18h45v75H17Z"/><path d="M28 34h7m13 0h3M28 48h7m13 0h3M28 62h7M32 93V76h15v17"/><path fill="#FFFFFF" d="M96 35c0 16-19 33-19 33S58 51 58 35a19 19 0 0 1 38 0Z"/><circle cx="77" cy="34" r="6"/><path fill="#E9F5E6" d="M70 70h13l2 7 7 2 5 11-6 6-11 1-5-6-7-2-2-11Z"/><circle cx="81" cy="84" r="5"/>'
+    svg: '<g data-part="building"><rect x="8" y="18" width="40" height="76" rx="3" fill="#E9F5E6"/><path d="M19 33h5m10 0h4M19 48h5m10 0h4M19 63h5M21 94V78h14v16"/></g><g data-part="pin"><path fill="#FFFFFF" d="M93 24c0 13-14 27-14 27S65 37 65 24a14 14 0 0 1 28 0Z"/><circle cx="79" cy="24" r="5"/></g><g data-part="gear" data-teeth="8"><path fill="#E9F5E6" d="'+gearOutline(79,80)+'"/><circle cx="79" cy="80" r="6" fill="#FFFFFF"/></g>'
   },
   qualification: {
     meaning: '자격증·경력 증빙과 요건 확인',
@@ -35,7 +42,7 @@ export const PICTOGRAMS = {
   },
   'shift-calendar': {
     meaning: '교대 일정과 주간·야간 근무표',
-    svg: '<rect x="10" y="18" width="77" height="75" rx="8" fill="#FFFFFF"/><path fill="#E9F5E6" d="M10 18h77v23H10Z"/><path d="M27 10v17M69 10v17M10 41h77M26 54h9m13 0h9M26 69h9m13 0h9M26 83h9"/><circle cx="78" cy="67" r="11" fill="#E9F5E6"/><path d="M78 49v-4M78 89v-4M60 67h-4M99 67h-4"/><path fill="#FFFFFF" d="M78 67c-8 2-9 14-2 20-15 3-23-15-11-24 2 5 7 6 13 4Z"/>'
+    svg: '<g data-part="calendar"><rect x="8" y="17" width="88" height="78" rx="7" fill="#FFFFFF"/><path fill="#E9F5E6" d="M8 25q0-8 8-8h72q8 0 8 8v16H8Z"/><path d="M29 9v16M75 9v16M8 41h88"/></g><g data-part="sun"><circle cx="32" cy="68" r="8" fill="#E9F5E6"/><path d="M14 68h4M46 68h4M32 50v4M32 82v4"/></g><g data-part="moon" transform="translate(56 47) scale(1.55)" stroke-width="3.2"><path fill="#E9F5E6" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></g>'
   },
   'pay-components': {
     meaning: '기본급·수당·상여로 구성된 급여명세',
