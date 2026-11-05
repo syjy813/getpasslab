@@ -36,7 +36,9 @@ test('text is centered, lines wrap without changing current provisional sizes',(
   assert.equal((svg.match(/id="gpl-brand"/g)||[]).length,1);
   assert.throws(()=>fullBleedGeometry({...example,title:['1','2','3']}),/exceeds/);
   assert.throws(()=>fullBleedGeometry({...example,title:'가'.repeat(200)}),/too long/);
-  assert.throws(()=>renderFullBleedOverlay({...example,title:'<img onerror=alert(1)>'}),/too long|unbreakable/);
+  const escaped=renderFullBleedOverlay({...example,title:'<img onerror=alert(1)>'});
+  assert.match(escaped,/&lt;img onerror=alert\(1\)&gt;/);
+  assert.doesNotMatch(escaped,/<img onerror/);
 });
 
 test('background fills the entire 4:3 frame without header box or default panel',async()=>{
