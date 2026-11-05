@@ -15,6 +15,8 @@ test('canonical dimensions and immutable typography tokens',()=>{
   assert.equal(TOKENS.typography.title,64);assert.equal(TOKENS.typography.subtitle,30);
   assert.deepEqual(TOKENS.logo,{x:1150,y:80,width:210,height:34,markHeight:28,markWidth:40,gap:8});
   assert.deepEqual(TOKENS.footer,{x:80,y:930,width:1280,height:85});
+  assert.equal(TOKENS.content.fourCardHeight,236);
+  assert.equal(TOKENS.content.fourCardMinHeight,230);
 });
 
 for(const {n,input,saved} of examples){
@@ -47,7 +49,13 @@ test('1-4 card layouts fit fixed content area without collision',()=>{
         &&Math.min(a.y+a.h,b.y+b.h)>Math.max(a.y,b.y);
       assert.equal(overlap,false,n+' cards '+i+','+j+' overlap');
     }
-    if(n===4)assert.equal(new Set(layout.map(p=>p.y)).size,2,'4 cards are 2x2');
+    if(n===4){
+      assert.equal(new Set(layout.map(p=>p.y)).size,2,'4 cards are 2x2');
+      assert.ok(layout.every(p=>p.h===236),'four-card rows use compact height');
+      assert.equal(layout.at(-1).y+layout.at(-1).h,840,'fixed header offset gives compact end');
+    }else{
+      assert.ok(layout.every(p=>p.y+p.h===894),n+' cards retain full height');
+    }
   }
 });
 
@@ -76,3 +84,25 @@ test('unsafe markup is escaped and oversize content fails early',()=>{
  assert.throws(()=>renderInfographic({...examples[0].input,cards:[]}),/1..4/);
  assert.throws(()=>renderInfographic({...examples[0].input,cards:Array(5).fill(examples[0].input.cards[0])}),/1..4/);
 });
+
+test('four-card template uses 32px shorter rows and 100px footer breathing room',()=>{
+  const layout=cardRects(4,338);
+  const fullHeight=(894-338-20)/2;
+  assert.equal(fullHeight,268,'previous four-card row height');
+  assert.ok(layout.every(p=>p.h===236),'each compact row must be exactly 236px');
+  assert.equal(fullHeight-layout[0].h,32,'each row shrinks by 32px');
+  assert.equal(layout[2].y-layout[0].y-layout[0].h,20,'20px row gap');
+  assert.equal(layout[3].y+layout[3].h,830,'bottom row ends at 830');
+  assert.equal(TOKENS.footer.y-(layout[3].y+layout[3].h),100);
+  const svg=renderInfographic(examples[3].input);
+  assert.match(svg, /<g class="card card-1"><rect x="80" y="338" width="630" height="236"/);
+  assert.match(svg,/width="582" height="44" rx="20" fill="#E9F5E6"/);
+});
+
+test('four-card layout rejects too little vertical room instead of overlapping text',()=>{
+  const input={...examples[3].input,
+    title:['시설관리 채용공고를 읽는','네 가지 중요한 비교 기준'],
+    subtitle:['실제 채용조건과 고용주를 확인하자','공고의 항목을 하나씩 비교하자']};
+  assert.throws(()=>renderInfographic(input),/Four-card header too tall/);
+});
+
