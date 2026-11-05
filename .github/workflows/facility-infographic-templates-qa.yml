@@ -1,0 +1,26 @@
+name: Facility infographic SVG templates QA
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/generate-facility-infographic.mjs'
+      - 'scripts/test-facility-infographic.mjs'
+      - 'scripts/generate-facility-thumbnail.mjs'
+      - 'scripts/test-facility-thumbnail.mjs'
+      - 'docs/standards/facility-thumbnail-templates/**'
+      - 'docs/standards/facility-infographic-templates/**'
+      - 'docs/standards/facility-content-guide-v1.4.md'
+  workflow_dispatch:
+
+jobs:
+  template:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Deterministic 1–4 card SVG validation
+        run: node --test scripts/test-facility-infographic.mjs
+      - name: Fixed hero thumbnail shell & isolated artwork QA
+        run: node --test scripts/test-facility-thumbnail.mjs

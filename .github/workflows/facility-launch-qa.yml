@@ -33,6 +33,8 @@ jobs:
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends fonts-noto-cjk
           fc-cache -f
           fc-match -f '%{family}\n' 'Noto Sans CJK KR' | grep -q 'Noto Sans CJK'
+      - name: Validate three facility-05 SVG templates and high-detail hero artwork render
+        run: node --test scripts/test-facility-05-templates.mjs
       - run: npm run build
       - run: node scripts/check-facility-drafts.mjs
       - run: node scripts/check-facility-related-links.mjs
@@ -51,6 +53,15 @@ jobs:
           for n in $(seq 1 30); do curl -fsS http://127.0.0.1:4321/ >/dev/null && break; sleep 1; done
           node scripts/qa-facility-launch.cjs
           node scripts/qa-facility-drafts.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: facility-05-rendered-images-${{ matrix.mode }}
+          path: |
+            dist/images/facility-drafts/05/01-public-sector-hero.webp
+            dist/images/facility-drafts/05/02-employer-types.webp
+            dist/images/facility-drafts/05/04-pay-data-comparison.webp
+          retention-days: 14
       - uses: actions/upload-artifact@v4
         if: always()
         with:
