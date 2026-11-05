@@ -8,11 +8,15 @@
 |---|---|---|
 | 캔버스/배경 | 1440×1080, 포레스트 그린·아이보리, 라운드 프레임 | 임의 변경 금지 |
 | 브랜드 | x=1150, y=80, 경로형 심벌+GetPassLab, 색상 #114935 | 단 한 번, 좌표·크기 고정 |
-| 메인 제목 | x=80, top=140, 64px Bold, #114935 | 텍스트만 변경. 2줄까지 허용 |
-| 부제 | 제목 블록 하단 16px, 30px Regular, #52665B | 텍스트만 변경. 2줄까지 허용 |
+| 메인 제목 | **x=720, text-anchor=middle**, top=140, 64px Bold, #114935 | 가운데 정렬, 텍스트만 변경. 2줄까지 허용 |
+| 부제 | **x=720, text-anchor=middle**, 제목 블록 하단 16px, 30px Regular, #52665B | 가운데 정렬, 텍스트만 변경. 2줄까지 허용 |
 | 구분선 | x=80..1360, 제목·부제 아래, 4px #76B978 | 자동 계산 |
 | 메인 그래픽 외곽 | x=80, y=348, w=1280, h=652 (1줄 제목·부제 기준) | 헤더 2줄이면 y 자동 이동; 하단 y=1000 고정 |
 | 실제 그림 안전영역 | x=98, y=366, w=1244, h=616 (1줄 기준) | **이 슬롯에만 그림 삽입**; 안전영역 밖으로 넘침/로고 중복 금지 |
+
+제목·부제의 모든 `tspan`도 x=720에 배치해 캔버스·그래픽 외곽·안전영역의 중심축과 맞춘다. **카드형 인포그래픽(1~4장)의 상단 제목·부제는 x=80, text-anchor=start의 좌측 정렬을 유지**한다. 공통 글꼴·색·로고 함수는 재사용하되 헤더 정렬 규칙은 용도별로 구분한다.
+
+줄바꿈은 기존 폭 제한(제목 20.4, 부제 40 가중 글자 단위)과 최대 2줄을 유지한다. 문자열은 단어/의미 단위로 자동 분리하고, 명시적 줄바꿈은 `title`·`subtitle`에 문자열 배열을 전달한다. 각 줄을 따로 가운데 정렬하며 제목 74px·부제 40px 줄 높이, 제목 아래 16px 간격을 유지한다. 범위를 넘으면 오류로 처리하고 폰트를 줄이지 않는다.
 
 ## 제작·미리보기
 
@@ -20,6 +24,12 @@
 
 ```sh
 node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-hero.json /tmp/facility-hero-preview.svg --preview
+```
+
+`example-hero.json`/`hero-4x3-preview.svg`는 제목·부제 각각 1줄 예시다. `example-hero-two-lines.json`/`hero-4x3-two-lines-preview.svg`는 각각 2줄인 예시로, 중심축은 그대로 두고 그래픽 시작 y만 114px 아래로 이동한다.
+
+```sh
+node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-hero-two-lines.json /tmp/facility-hero-two-lines-preview.svg --preview
 ```
 
 완성된 메인 그래픽 합성(PNG/JPG/WebP 중 하나):

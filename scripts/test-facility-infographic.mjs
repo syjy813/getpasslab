@@ -27,6 +27,14 @@ for(const {n,input,saved} of examples){
     assert.match(actual,/id="header-fixed"/);
     assert.match(actual,/x="80" y="140"[^>]*font-size="64" font-weight="700"/);
     assert.match(actual,/x="80" y="230"[^>]*font-size="30" font-weight="400"/);
+    const header=actual.match(/<g id="header-fixed">([\s\S]*?)<\/g>/)[1];
+    const texts=[...header.matchAll(/<text ([^>]+)>([\s\S]*?)<\/text>/g)];
+    assert.equal(texts.length,2);
+    for(const text of texts){
+      assert.match(text[1],/x="80"/);
+      assert.match(text[1],/text-anchor="start"/);
+      assert.ok([...text[2].matchAll(/<tspan x="(\d+)"/g)].every(span=>span[1]==='80'));
+    }
     assert.match(actual,/id="gpl-brand" transform="translate\(1150 80\)"/);
     assert.match(actual,/font-size="24" font-weight="600" fill="#114935">GetPassLab/);
     assert.equal((actual.match(/id="gpl-brand"/g)||[]).length,1);
@@ -73,6 +81,9 @@ test('long header wraps without shrinking font and shifts card region down',()=>
  const first=renderInfographic(examples[0].input);
  const second=renderInfographic({...examples[0].input,title:'시설관리 취업에서 실제 고용주와 급여 조건을 빠짐없이 확인하는 구체적인 방법'});
  assert.match(second,/font-size="64" font-weight="700"/);
+ const header=second.match(/<g id="header-fixed">([\s\S]*?)<\/g>/)[1];
+ assert.equal((header.match(/text-anchor="start"/g)||[]).length,2);
+ assert.ok([...header.matchAll(/<tspan x="(\d+)"/g)].every(span=>span[1]==='80'));
  const top=s=>Number(s.match(/data-count="1" data-top="([\d.]+)"/)[1]);
  assert.ok(top(second)>top(first));
 });

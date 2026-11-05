@@ -1,10 +1,11 @@
-// Facility hero/thumbnail master: all typography and branding are shared with the card renderer.
+// Facility hero/thumbnail master: shared typography/branding, independently centered header.
 // The sole variable visual layer is a separately authored PNG/JPEG/WebP inside the safe region.
 import { TOKENS, logoSvg, tspanBlock, wrap, rect, escapeXml } from './generate-facility-infographic.mjs';
 
 export const HERO_LAYOUT = Object.freeze({
   canvasWidth: 1440, canvasHeight: 1080,
   frame: {x:22,y:22,width:1396,height:1036,radius:30},
+  header: {centerX:720, anchor:'middle', titleCapacity:20.4, subtitleCapacity:40},
   art: {x:80, bottom:1000, padding:18, radius:28, gapBelowRule:48, minHeight:450},
   rule: {x1:80,x2:1360,width:4},
 });
@@ -14,8 +15,8 @@ export function heroGeometry(spec) {
   if (!spec || !validText(spec.title) || !validText(spec.subtitle)) {
     throw Error('A title and subtitle are required as text or explicit text lines');
   }
-  const title = wrap(spec.title,20.4,2,'hero title');
-  const subtitle = wrap(spec.subtitle,40,2,'hero subtitle');
+  const title = wrap(spec.title,HERO_LAYOUT.header.titleCapacity,TOKENS.title.maxLines,'hero title');
+  const subtitle = wrap(spec.subtitle,HERO_LAYOUT.header.subtitleCapacity,TOKENS.subtitle.maxLines,'hero subtitle');
   const subTop = TOKENS.title.top + title.length*TOKENS.title.lineHeight + TOKENS.subtitle.gap;
   const ruleY = subTop + subtitle.length*TOKENS.subtitle.lineHeight + TOKENS.content.ruleGap;
   const artTop = ruleY + HERO_LAYOUT.art.gapBelowRule;
@@ -60,8 +61,8 @@ export function renderFacilityThumbnail(spec,{graphicHref=null,preview=false}={}
     '<g font-family="Noto Sans CJK KR,NanumSquare,Noto Sans KR,Apple SD Gothic Neo,Malgun Gothic,sans-serif">',
     '<g id="brand-fixed">',logoSvg(),'</g>',
     '<g id="header-fixed">',
-    tspanBlock(layout.title,TOKENS.title.x,TOKENS.title.top,TOKENS.typography.title,TOKENS.title.lineHeight,c.ink,700),
-    tspanBlock(layout.subtitle,TOKENS.subtitle.x,layout.subTop,TOKENS.typography.subtitle,TOKENS.subtitle.lineHeight,c.muted,400),
+    tspanBlock(layout.title,HERO_LAYOUT.header.centerX,TOKENS.title.top,TOKENS.typography.title,TOKENS.title.lineHeight,c.ink,700,HERO_LAYOUT.header.anchor),
+    tspanBlock(layout.subtitle,HERO_LAYOUT.header.centerX,layout.subTop,TOKENS.typography.subtitle,TOKENS.subtitle.lineHeight,c.muted,400,HERO_LAYOUT.header.anchor),
     '<path d="M80 '+layout.ruleY+'H1360" stroke="'+c.rule+'" stroke-width="'+HERO_LAYOUT.rule.width+'" stroke-linecap="round"/>',
     '</g>',
     '<g id="graphic-safe-area" data-x="'+safe.x+'" data-y="'+safe.y+'" data-width="'+safe.width+'" data-height="'+safe.height+'">',
