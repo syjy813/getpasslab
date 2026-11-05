@@ -87,12 +87,14 @@ for (const row of editRows) {
   edits.set(row.source, row);
 }
 assert.equal(edits.size, 12, 'eleven bottom-brand edits and one hand correction');
+// Refreshed SVGs are deterministic templates from scripts/generate-facility-05-templates.mjs.
+// Source original WebPs remain immutable while the exact three served URLs receive new rendered images.
 // Source SVGs are the approved editable masters for 05. Existing original WebPs remain immutable;
 // the Astro build renders WebP files at the SAME three public URLs.
 const facility05Masters = new Map([
-  ['facility-assets/05/01-public-sector-hero.webp', ['facility-asset-edits/05/01-public-sector-hero.svg', '9bfa7b4ed1614597c8a3a4627929a64c6277e36f']],
-  ['facility-assets/05/02-employer-types.webp', ['facility-asset-edits/05/02-employer-types.svg', '5f5cf07544e75f5543ecbd591ec0e2c5ef9ec5c2']],
-  ['facility-assets/05/04-pay-data-comparison.webp', ['facility-asset-edits/05/04-pay-data-comparison.svg', 'b2981e016b006a6ee2ce0a6bca9e82ea35f7ca75']],
+  ['facility-assets/05/01-public-sector-hero.webp', ['facility-asset-edits/05/01-public-sector-hero.svg', '1e39c77ca1b729a6bbc2b12abf508fb44e5c5f49']],
+  ['facility-assets/05/02-employer-types.webp', ['facility-asset-edits/05/02-employer-types.svg', 'eabb3c6aa80fc3b990240dc358da17ea3e462901']],
+  ['facility-assets/05/04-pay-data-comparison.webp', ['facility-asset-edits/05/04-pay-data-comparison.svg', '1a51929ece2d35622dcc567b7ca8b38eabae1061']],
 ]);
 for (const [source, [masterPath, sha]] of facility05Masters) {
   assert.equal(gitBlob(fs.readFileSync(masterPath)), sha, masterPath + ': approved vector master');
