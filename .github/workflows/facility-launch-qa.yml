@@ -2,7 +2,7 @@ name: Facility publication QA
 on:
   pull_request:
     branches: [main]
-    paths: ['src/**', 'facility-assets/**', 'facility-asset-edits/**', 'docs/audits/2026-11-03-facility-image-border/image-edits.json', 'docs/audits/2026-11-04-facility-gnb-image/image-edits.json', 'astro.config.mjs', 'scripts/qa-facility-launch.cjs', 'scripts/qa-facility-drafts.cjs', 'scripts/check-facility-drafts.mjs', 'scripts/check-facility-publication.mjs', 'docs/audits/2026-11-05-facility-publication/**', 'docs/audits/2026-11-05-facility-heading-rollout/**', 'docs/audits/2026-11-04-facility-drafts/**', 'scripts/check-facility-related-links.mjs', 'scripts/check-facility-launch.mjs', 'docs/audits/2026-10-31-facility-launch/review.json.gz', '.github/workflows/facility-launch-qa.yml']
+    paths: ['src/**', 'facility-assets/**', 'facility-asset-edits/**', 'docs/audits/2026-11-03-facility-image-border/image-edits.json', 'docs/audits/2026-11-04-facility-gnb-image/image-edits.json', 'astro.config.mjs', 'scripts/check-public-sector-visuals.mjs', 'scripts/read-public-sector-visuals.mjs', 'docs/audits/2026-11-05-public-sector-visuals/**', 'scripts/qa-facility-launch.cjs', 'scripts/qa-facility-drafts.cjs', 'scripts/check-facility-drafts.mjs', 'scripts/check-facility-publication.mjs', 'docs/audits/2026-11-05-facility-publication/**', 'docs/audits/2026-11-05-facility-heading-rollout/**', 'docs/audits/2026-11-04-facility-drafts/**', 'scripts/check-facility-related-links.mjs', 'scripts/check-facility-launch.mjs', 'docs/audits/2026-10-31-facility-launch/review.json.gz', '.github/workflows/facility-launch-qa.yml']
 permissions:
   contents: read
 jobs:
@@ -34,6 +34,7 @@ jobs:
           fc-cache -f
           fc-match -f '%{family}\n' 'Noto Sans CJK KR' | grep -q 'Noto Sans CJK'
       - run: npm run build
+      - run: node scripts/check-public-sector-visuals.mjs
       - run: node scripts/check-facility-drafts.mjs
       - run: node scripts/check-facility-related-links.mjs
       - run: npm run check:seo

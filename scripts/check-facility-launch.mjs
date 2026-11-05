@@ -9,6 +9,9 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { facilityReview, beforeFacilityLaunch } from './read-before-facility-launch.mjs';
+import { publicSectorVisuals, beforePublicSectorVisuals, assertPublicSectorVisuals, visualOutput } from './read-public-sector-visuals.mjs';
+
+assertPublicSectorVisuals();
 
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const gitBlob = bytes => createHash('sha1').update('blob ' + bytes.length + '\0').update(bytes).digest('hex');
@@ -50,7 +53,7 @@ assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native
 const reviewedEditorialPaths = [];
 let generated = 0;
 for (const file of files) {
-  const bytes = fs.readFileSync(file);
+  const bytes = beforePublicSectorVisuals(file, fs.readFileSync(file));
   if (Object.hasOwn(editorialBlobs, file)) {
     assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
     assert.notEqual(hash(bytes), facilityReview.current[file], file + ': changed from publication snapshot');
@@ -106,7 +109,7 @@ for (const [source, [masterPath, sha]] of facility05Masters) {
 }
 assert.deepEqual(
   walk('facility-asset-edits').sort(),
-  [...editRows.map(row => row.file), ...[...facility05Masters.values()].map(row => row[0])].sort(),
+  [...editRows.map(row => row.file), ...[...facility05Masters.values()].map(row => row[0]), ...publicSectorVisuals.images.map(row=>row.file)].sort(),
   'exact derivative + editable SVG master inventory',
 );
 const { default: sharp } = await import('sharp');
@@ -121,6 +124,11 @@ for (const [source, [masterPath]] of facility05Masters) {
   generatedMasterWebps.set(source, hash(webp));
 }
 const newImagePaths = publication ? new Set(Object.keys(publication.assets).map(file=>file.replace('facility-assets/','dist/images/facility-drafts/'))) : new Set();
+for(const row of publicSectorVisuals.images){
+  assert.equal(hash(fs.readFileSync(visualOutput(row))),row.sha256,'reviewed visual is served: '+row.publicPath);
+  if(row.existing)generatedMasterWebps.set('facility-assets/05/'+row.publicPath.split('/').at(-1),row.sha256);
+  else newImagePaths.add(visualOutput(row));
+}
 const served = walk('dist/images/facility-drafts').filter(file=>!newImagePaths.has(file)).sort();
 assert.deepEqual(served, Object.keys(facilityReview.publishedAssets).sort(), 'same 22 public image URLs');
 const servedEdits = new Set();
@@ -131,7 +139,7 @@ for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
   assert.equal(hash(fs.readFileSync(row.source)), row.sha256, file + ': original source preserved');
   if (edited || generated) servedEdits.add(row.source);
 }
-assert.deepEqual([...servedEdits].sort(), [...edits.keys(), ...facility05Masters.keys()].sort(), 'every derivative is actually served');
+assert.deepEqual([...servedEdits].sort(), [...new Set([...edits.keys(), ...facility05Masters.keys(), ...publicSectorVisuals.images.filter(r=>r.existing).map(r=>'facility-assets/05/'+r.publicPath.split('/').at(-1))])].sort(), 'every derivative is actually served');
 assert.equal(served.length, 22, 'all 22 approved public image URLs retained');
 console.log('[Facility UI source guard] PASS', files.length - generated, 'native files,', generated,
-  'rendered HTML/XML paths, fifteen pinned UI blobs, 24 originals preserved, 15 edited + 7 original publication images');
+  'rendered HTML/XML paths, fifteen pinned UI blobs, 24 originals and 3 historical masters preserved; 5 current public-sector visuals verified');

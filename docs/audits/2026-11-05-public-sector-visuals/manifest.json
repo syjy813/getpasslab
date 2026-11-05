@@ -1,0 +1,61 @@
+{
+  "baseCommit": "65890dbad70938cb2c736c3cc705fa38cf2e8b8b",
+  "source": {
+    "file": "src/content/facility/public-sector-comparison.md",
+    "beforeFile": "docs/audits/2026-11-05-public-sector-visuals/article-before.md",
+    "beforeSHA256": "692d94c46da94f77b76bff5e68693af312ae52aac58ba40c201def70357104eb",
+    "afterSHA256": "7f0e08eafd2760a01f1c9bb135040b6b3816dc3617228fc6acbbd1dc3c86bd6e"
+  },
+  "images": [
+    {
+      "publicPath": "/images/facility-drafts/05/01-public-sector-hero.webp",
+      "file": "facility-asset-edits/05/01-public-sector-hero-v2.webp",
+      "sha256": "65f89861dd219a6c2c77346a44f486b094ea832ade4c98cd0176a751f4cbe7fd",
+      "master": "docs/audits/2026-11-05-public-sector-visuals/masters/01-public-sector-hero.png",
+      "masterSHA256": "9012c87d38f17b5deaf0b9cbe94387f278a805a7394d53d5c70e7e41d8f57334",
+      "kind": "approved-ai-hero",
+      "existing": true
+    },
+    {
+      "publicPath": "/images/facility-drafts/05/02-employer-types.webp",
+      "file": "facility-asset-edits/05/02-employer-types-v2.webp",
+      "sha256": "a9002060242127497b491a6c034a06036dafffb0bb6365e817bdbaec76fdd584",
+      "master": "docs/audits/2026-11-05-public-sector-visuals/masters/02-employer-types.svg",
+      "masterSHA256": "aa2e3c43f5febdff78eebf74575db9bc96068e81205e65ce6bde469c96b4e786",
+      "kind": "official-card-template",
+      "existing": true
+    },
+    {
+      "publicPath": "/images/facility-drafts/05/04-pay-data-comparison.webp",
+      "file": "facility-asset-edits/05/04-pay-data-comparison-v2.webp",
+      "sha256": "9b4a691647410b5c531489fe9dad67fd25d06db230605a634713478f6a49e2cc",
+      "master": "docs/audits/2026-11-05-public-sector-visuals/masters/04-pay-data-comparison.svg",
+      "masterSHA256": "d68c328d096e75f9adcbad4de8ab6cbff7a3a7dcbf629b1ad4c96f9b7cc55c2e",
+      "kind": "official-card-template",
+      "existing": true
+    },
+    {
+      "publicPath": "/images/facility-drafts/05/05-compare-jobs-checklist.webp",
+      "file": "facility-asset-edits/05/05-compare-jobs-checklist-v2.webp",
+      "sha256": "d3a35362787091b97a5888b66f1d2ecc5891c778706246bae6e0b5fd4f6b9991",
+      "master": "docs/audits/2026-11-05-public-sector-visuals/masters/05-compare-jobs-checklist.svg",
+      "masterSHA256": "17cf1f941cda74886ce2e25342b00c2119b75606a2bdfb1f8cb279367b149392",
+      "kind": "official-card-template",
+      "existing": true
+    },
+    {
+      "publicPath": "/images/facility-drafts/05/06-compare-jobs-checklist.webp",
+      "file": "facility-asset-edits/05/06-compare-jobs-checklist-v2.webp",
+      "sha256": "aa423a5c9430f6e7dc6fc52b771d5fbe9f50a1c39ab5ed231c506ef8b371bda3",
+      "master": "docs/audits/2026-11-05-public-sector-visuals/masters/06-compare-jobs-checklist.svg",
+      "masterSHA256": "ba7d840b30bdd85c59d57c9ef26ed39784be1dfa0a652ce3ed4f84da2a465231",
+      "kind": "official-card-template",
+      "existing": false
+    }
+  ],
+  "template": {
+    "file": "docs/audits/2026-11-05-public-sector-visuals/template/generate-facility-infographic.mjs",
+    "gitBlob": "acaa731fbdb19340be2b55a4da9b0c7462661bbf",
+    "originCommit": "698fc8b6a1c26ca57413f4f0778a9bf638ded0de"
+  }
+}

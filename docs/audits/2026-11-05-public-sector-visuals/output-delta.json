@@ -1,0 +1,16 @@
+{
+  "added": [
+    "dist/images/facility-drafts/05/06-compare-jobs-checklist.webp"
+  ],
+  "deleted": [],
+  "changed": [
+    "dist/facility-management/jobs/public-sector-comparison/index.html",
+    "dist/images/facility-drafts/05/01-public-sector-hero.webp",
+    "dist/images/facility-drafts/05/02-employer-types.webp",
+    "dist/images/facility-drafts/05/04-pay-data-comparison.webp",
+    "dist/images/facility-drafts/05/05-compare-jobs-checklist.webp"
+  ],
+  "unchanged": 909,
+  "beforeFiles": 914,
+  "afterFiles": 915
+}
