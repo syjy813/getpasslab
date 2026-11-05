@@ -56,6 +56,15 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
+          name: facility-05-rendered-images-${{ matrix.mode }}
+          path: |
+            dist/images/facility-drafts/05/01-public-sector-hero.webp
+            dist/images/facility-drafts/05/02-employer-types.webp
+            dist/images/facility-drafts/05/04-pay-data-comparison.webp
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
           name: facility-qa-${{ matrix.mode }}
           path: qa-results/facility-launch/
           retention-days: 14
