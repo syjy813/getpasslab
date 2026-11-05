@@ -2,10 +2,10 @@
 title: 캠코FMC 시설관리 채용｜직위보다 사업소, 월급보다 근무조건
 description: 2026년 캠코FMC 하반기 현장직 채용공고를 바탕으로 시설직 등급별 자격·경력, 사업소별 법정선임 조건, 실제 월급 및 교대근무를 비교합니다.
 category: jobs
-status: draft
-publishedAt: '2026-11-04'
-updatedAt: '2026-11-04'
-reviewedAt: '2026-11-04'
+status: published
+publishedAt: '2026-11-05'
+updatedAt: '2026-11-05'
+reviewedAt: '2026-11-05'
 featured: false
 summary:
 - 같은 캠코FMC 시설직이라도 사업소·등급에 따라 업무가 다르다. ‘기사’는 현장 직위명이지 반드시 국가기술자격 ‘기사’를 뜻하는 것은 아니다.
@@ -14,10 +14,10 @@ summary:
 sources:
 - title: 캠코FMC 지정 인크루트 상세 모집표
   url: https://m.incruit.com/jobdb_info/jobpostcontmobile.asp?job=2608040000998&mdetail=y&ver=inView
-  note: 2026년 8월 하반기 현장직 2차에 한정 · 2026-11-04 대조
+  note: 2026년 8월 하반기 현장직 2차에 한정 · 2026-11-05 재대조
 - title: 캠코FMC 2026년 하반기 현장직 2차 공식 공고
   url: https://www.kamcofmc.co.kr/bbs/board.php?bo_table=s4_3&wr_id=248
-  note: 2026-08-05 게시·08-19 접수 마감 · 2026-11-04 대조
+  note: 2026-08-05 게시·08-19 접수 마감 · 2026-11-05 재대조
 related:
 - first-job
 - shifts-and-pay

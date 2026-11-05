@@ -2,10 +2,10 @@
 title: 한전FMS 시설관리 채용｜사업소마다 선임조건이 다른 이유
 description: 2026년 상·하반기 한전FMS 시설관리 채용공고의 모집인원·급여·근무형태를 비교하고, 상반기 사업소별 필수 선임요건과 지원 전 확인할 사항을 정리합니다.
 category: jobs
-status: draft
-publishedAt: '2026-11-04'
-updatedAt: '2026-11-04'
-reviewedAt: '2026-11-04'
+status: published
+publishedAt: '2026-11-05'
+updatedAt: '2026-11-05'
+reviewedAt: '2026-11-05'
 featured: false
 summary:
 - 2026년 상반기 일반 시설관리 51명, 하반기 31명을 모집했다. 두 회차 모두 현재 접수는 종료됐다.
@@ -14,13 +14,13 @@ summary:
 sources:
 - title: 한전FMS 2026년 상반기 5직급 채용공고
   url: https://job.career.co.kr/recruit/view/21905687
-  note: 2026-05-14 공고·05-21 접수 마감 · 2026-11-04 대조
+  note: 2026-05-14 공고·05-21 접수 마감 · 2026-11-05 재대조
 - title: 한전FMS 2026년 하반기 공고 및 붙임 원문 사본(삼육대 게시)
   url: https://www.syu.ac.kr/wp-admin/admin-ajax.php?action=file_download_id&o_name=2026%EB%85%84-%ED%95%98%EB%B0%98%EA%B8%B0-5%EC%A7%81%EA%B8%89-%EC%B1%84%EC%9A%A9%ED%98%95%EC%9D%B8%ED%84%B4-%EC%B1%84%EC%9A%A9-%EA%B3%B5%EA%B3%A0-%EB%B0%8F-%EB%B6%99%EC%9E%84%ED%8C%8C%EC%9D%BC.pdf&t_id=257480
-  note: 2026-10-15 공고·10-22 접수 마감 · 2026-11-04 대조
+  note: 2026-10-15 공고·10-22 접수 마감 · 2026-11-05 재대조
 - title: 상반기 붙임3 모집단위 및 근무지별 자격기준
   url: https://job3.career.co.kr/ci/202600/tmpfile/kepcofms/0507/%EB%B6%99%EC%9E%843.%20%EB%AA%A8%EC%A7%91%EB%8B%A8%EC%9C%84%20%EB%B0%8F%20%EA%B7%BC%EB%AC%B4%EC%A7%80%EB%B3%84%20%EC%9E%90%EA%B2%A9%EA%B8%B0%EC%A4%80.pdf
-  note: 2026년 상반기 공고에 한정 · 2026-11-04 대조
+  note: 2026년 상반기 공고에 한정 · 2026-11-05 재대조
 related:
 - first-job
 - statutory-appointments

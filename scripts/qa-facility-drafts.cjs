@@ -3,6 +3,8 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const base=(process.env.QA_BASE_URL||'http://127.0.0.1:4321').replace(/\/$/,'');
 const preview=process.env.QA_FACILITY_PREVIEW==='1';
+const release=fs.existsSync('docs/audits/2026-11-05-facility-publication/manifest.json');
+const available=preview||release;
 const articles=Object.values(JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/site-article-map.json')));
 const output='qa-results/facility-launch/'+(preview?'private-preview':'publication')+'/drafts';
 fs.mkdirSync(output,{recursive:true});
@@ -18,11 +20,11 @@ fs.mkdirSync(output,{recursive:true});
    page.on('pageerror',error=>errors.push(error.message));
    for(const article of articles) {
     const response=await page.goto(base+article.path);
-    assert.equal(response.status(),preview?200:404,article.path);
-    if(!preview){results.push({width,path:article.path,status:404});continue;}
+    assert.equal(response.status(),available?200:404,article.path);
+    if(!available){results.push({width,path:article.path,status:404});continue;}
     await page.evaluate(()=>document.fonts.ready);
     assert.equal(await page.locator('h1').count(),1);
-    assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),'noindex, nofollow');
+    assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),preview?'noindex, nofollow':'index, follow');
     const images=page.locator('.facility-body img');
     assert.equal(await images.count(),5);
     for(const img of await images.all()) {
@@ -48,6 +50,6 @@ fs.mkdirSync(output,{recursive:true});
    await context.close();
   }
   fs.writeFileSync(output+'/results.json',JSON.stringify({preview,cases:results.length,results},null,2)+'\n');
-  console.log('Facility draft browser QA: '+results.length+' route/viewport cases PASS; '+(preview?'160 image loads':'drafts return 404'));
+  console.log('Facility draft browser QA: '+results.length+' route/viewport cases PASS; '+(available?'160 image loads':'drafts return 404'));
  } finally {await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

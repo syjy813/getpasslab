@@ -2,10 +2,10 @@
 title: 코레일테크 시설관리 채용｜같은 시설직인데 하는 일이 다르다고?
 description: 코레일테크 2026년 공무직 시설직의 모집인원·지원 경쟁률·직무 구분과 2027년 제1차 공고의 정년·시용조건을 공식자료로 비교합니다.
 category: jobs
-status: draft
-publishedAt: '2026-11-04'
-updatedAt: '2026-11-04'
-reviewedAt: '2026-11-04'
+status: published
+publishedAt: '2026-11-05'
+updatedAt: '2026-11-05'
+reviewedAt: '2026-11-05'
 featured: false
 summary:
 - ‘시설직’이라는 이름만 보고 건물 기계실 업무라고 판단하면 곤란하다. 철도 토목과 건물설비 등 세부 직무·담당 구역을 따로 확인해야 한다.
@@ -14,16 +14,16 @@ summary:
 sources:
 - title: 코레일테크 2026년 제1차 서류접수 결과
   url: https://www.korailtech.com/recruitNotice/view.do?nttId=4278
-  note: 2025-11-04 게시; 2026년 제1차 · 2026-11-04 대조
+  note: 2025-11-04 게시; 2026년 제1차 · 2026-11-05 재대조
 - title: 코레일테크 2026년 제3차 채용 보도자료
   url: https://www.korailtech.com/newsRelease/view.do?nttId=4392
-  note: 2026-06-25 공고 관련 · 2026-11-04 대조
+  note: 2026-06-25 공고 관련 · 2026-11-05 재대조
 - title: 코레일테크 2027년 제1차 채용 공고 ZIP(공개경쟁·보훈별 문서)
   url: https://www.alio.go.kr/download/download.json?fileNo=3080766
-  note: 2026-10-15 공고·10-29 10:00 마감; 2027년 채용 · 2026-11-04 대조
+  note: 2026-10-15 공고·10-29 10:00 마감; 2027년 채용 · 2026-11-05 재대조
 - title: JOB-ALIO 2027년 제1차 공무직 채용
   url: https://job.alio.go.kr/recruitview.do?idx=306032
-  note: 2026-10-15 등록·2027년 채용 · 2026-11-04 대조
+  note: 2026-10-15 등록·2027년 채용 · 2026-11-05 재대조
 related:
 - public-sector-comparison
 - first-job
@@ -136,7 +136,7 @@ legalReview: false
 
 채용공고 제목의 연도가 헷갈릴 수 있다. 코레일테크는 **2026년 10월 15일에 2027년 제1차 공무직사원 채용 공고**를 게시했다.
 
-접수기간은 **2026년 10월 15일 오전 10시부터 10월 29일 오전 10시까지**였다. 이 글을 작성하는 2026년 11월 4일에는 이미 접수가 끝났다. ([코레일테크 2027년 제1차 공고](https://www.korailtech.com/recruitNotice/view.do?nttId=4440))
+접수기간은 **2026년 10월 15일 오전 10시부터 10월 29일 오전 10시까지**였다. 이 글을 작성하는 2026년 11월 5일에는 이미 접수가 끝났다. ([코레일테크 2027년 제1차 공고](https://www.korailtech.com/recruitNotice/view.do?nttId=4440))
 
 공고 이름에 2027년이 들어갔다고 해서 2027년 내내 지원할 수 있는 것은 아니다. **공고명·게시일·접수 마감일을 따로 읽어야 한다.**
 

@@ -2,10 +2,10 @@
 title: 시설관리 법정선임 총정리｜자격증 하나로 모든 설비를 맡을 수 있을까?
 description: 보일러·냉동·가스·소방·기계설비와 전기·위험물의 법정선임을 구분하고, 채용공고에서 필수자격·선임요건·경력조건을 확인하는 방법
 category: qualifications
-status: draft
-publishedAt: '2026-11-04'
-updatedAt: '2026-11-04'
-reviewedAt: '2026-11-04'
+status: published
+publishedAt: '2026-11-05'
+updatedAt: '2026-11-05'
+reviewedAt: '2026-11-05'
 featured: false
 summary:
 - 법정선임은 자격증 이름만으로 결정되지 않는다. 관리할 설비·시설의 종류와 규모, 적용 법령, 자격·교육·경력 요건을 함께 확인해야 한다.
@@ -14,34 +14,34 @@ summary:
 sources:
 - title: 에너지이용 합리화법 시행규칙 제31조의26·27
   url: https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=116891
-  note: 직무범위 관련 조항 2026-05-28 신설 표시 · 2026-11-04 대조
+  note: 직무범위 관련 조항 2026-05-28 신설 표시 · 2026-11-05 재대조
 - title: 고압가스 안전관리법 제15조
   url: https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=283919&efYd=20260310
-  note: 시행 2026-03-10 · 2026-11-04 대조
+  note: 시행 2026-03-10 · 2026-11-05 재대조
 - title: 고압가스 안전관리법 시행령 제12조·별표3 연결
   url: https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1030237655
-  note: 시행 2026-06-09 · 2026-11-04 대조
+  note: 시행 2026-06-09 · 2026-11-05 재대조
 - title: 도시가스사업법 시행령 제15조·별표1 연결
   url: https://www.law.go.kr/LSW//lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0015&lsiSeq=284727&urlMode=lsScJoRltInfoR
-  note: 시행 2026-03-24 · 2026-11-04 대조
+  note: 시행 2026-03-24 · 2026-11-05 재대조
 - title: 액화석유가스의 안전관리 및 사업법 시행령 제15조
   url: https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1029643419
-  note: 시행 2025-10-01 · 2026-11-04 대조
+  note: 시행 2025-10-01 · 2026-11-05 재대조
 - title: 화재의 예방 및 안전관리에 관한 법률 시행령 제25조
   url: https://www.law.go.kr/LSW//lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0025&lsiSeq=287389&urlMode=lsScJoRltInfoR
-  note: 시행 2026-07-01 · 2026-11-04 대조
+  note: 시행 2026-07-01 · 2026-11-05 재대조
 - title: 기계설비법 시행령 제15조
   url: https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=285443&efYd=20260601
-  note: 시행 2026-06-01 · 2026-11-04 대조
+  note: 시행 2026-06-01 · 2026-11-05 재대조
 - title: 전기안전관리법 시행규칙 제25조·별표8 연결
   url: https://www.law.go.kr/LSW//lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0025&lsiSeq=289265&urlMode=lsScJoRltInfoR
-  note: 시행 2026-09-18 · 2026-11-04 대조
+  note: 시행 2026-09-18 · 2026-11-05 재대조
 - title: 위험물안전관리법 제15조
   url: https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=259933&efYd=20250807
-  note: 시행 2025-08-07 · 2026-11-04 대조
+  note: 시행 2025-08-07 · 2026-11-05 재대조
 - title: 기계설비법 법률 제21813호 개정문·부칙
   url: https://law.go.kr/LSW/lsRvsDocListP.do?chrClsCd=010202&lsId=013114&lsRvsGubun=all
-  note: 2026-06-16 공포·2026-12-17 시행 예정 · 2026-11-04 대조
+  note: 2026-06-16 공포·2026-12-17 시행 예정 · 2026-11-05 재대조
 related:
 - boiler-inspection-manager
 - mechanical-maintainer-levels
@@ -162,7 +162,7 @@ legalReview: true
 
 **관련 국가기술자격을 취득한 것, 협회에서 인정등급을 확인받은 것, 특정 건물에 실제 선임되는 것은 별개의 단계**다.
 
-한편 [2026년 6월 16일 공포된 기계설비법 법률 제21813호](https://law.go.kr/LSW/lsRvsDocListP.do?chrClsCd=010202&lsId=013114&lsRvsGubun=all)는 **2026년 12월 17일 시행 예정**이다. 이 글의 현행 기준일인 11월 4일에는 아직 시행 전이므로, 해당 개정 내용을 현행 선임요건에 섞어 적용해서는 안 된다.
+한편 [2026년 6월 16일 공포된 기계설비법 법률 제21813호](https://law.go.kr/LSW/lsRvsDocListP.do?chrClsCd=010202&lsId=013114&lsRvsGubun=all)는 **2026년 12월 17일 시행 예정**이다. 이 글의 현행 기준일인 11월 5일에는 아직 시행 전이므로, 해당 개정 내용을 현행 선임요건에 섞어 적용해서는 안 된다.
 
 ## 전기와 위험물도 빠뜨릴 수 없다
 
@@ -193,8 +193,13 @@ legalReview: true
 
 ## 채용공고의 ‘및’과 ‘또는’을 놓치지 말자
 
-다음은 이해를 돕기 위한 **가상의 공고 문구**다.
+다음은 이해를 돕기 위한 **가상의 공고 문구**다. 실제 채용공고를 인용한 사례는 아니다.
 
+| 현장 | 가상의 모집 문구 | 읽는 방법 |
+|---|---|---|
+| A현장 | 에너지관리기능사 **및** 가스기능사 보유 필수 | 두 자격을 모두 요구 |
+| B현장 | 에너지관리기능사 **또는** 가스기능사 보유 필수 | 둘 중 하나를 요구 |
+| C현장 | 에너지관리기능사 보유자 **우대** | 필수조건과 구분 |
 
 A현장은 두 조건을 모두 요구하는 표현이다. B현장은 둘 중 하나를 충족하는 경로를 제시한 표현이다. C현장은 해당 문구만 보면 필수조건이 아니라 우대사항이다.
 
@@ -226,4 +231,4 @@ A현장은 두 조건을 모두 요구하는 표현이다. B현장은 둘 중 �
 **“어느 설비를, 어떤 법령에 따라 맡게 되나요?”**
 
 
-*이 글은 2026년 11월 4일 확인한 법령의 대표 구조를 설명한다. 실제 선임 판단에는 해당 시설·설비에 적용되는 현행 법령과 별표, 예외 및 관할기관의 판단이 필요하다. 기계설비법의 2026년 12월 17일 시행 예정 개정은 현행 기준과 구분했다.*
+*이 글은 2026년 11월 5일 확인한 법령의 대표 구조를 설명한다. 실제 선임 판단에는 해당 시설·설비에 적용되는 현행 법령과 별표, 예외 및 관할기관의 판단이 필요하다. 기계설비법의 2026년 12월 17일 시행 예정 개정은 현행 기준과 구분했다.*

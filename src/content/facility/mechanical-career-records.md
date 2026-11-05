@@ -2,10 +2,10 @@
 title: 기계설비유지관리자 경력신고·수첩 발급｜퇴사 전에 꼭 챙길 서류
 description: 기계설비유지관리자 경력확인서 작성·직인 기준, 건강보험 증빙, 자격 취득 전후 인정률, 경력수첩 신청과 변경신고 절차를 정리했습니다.
 category: qualifications
-status: draft
-publishedAt: '2026-11-04'
-updatedAt: '2026-11-04'
-reviewedAt: '2026-11-04'
+status: published
+publishedAt: '2026-11-05'
+updatedAt: '2026-11-05'
+reviewedAt: '2026-11-05'
 featured: false
 summary:
 - 일반 경력증명서와 협회 지정 경력확인서는 다르다. 기계설비유지관리자 경력신고에는 정해진 서식과 해당 증빙이 필요하다.
@@ -14,13 +14,13 @@ summary:
 sources:
 - title: 대한기계설비건설협회 경력신고·서류·수수료 안내
   url: https://career.kmcca.or.kr/yuji/bbs/selectBoardList.do?bbsId=10000000000000000225&bbsView=HTML
-  note: 2026-11-04 조회 안내; 결제·신청 시 재확인 · 2026-11-04 대조
+  note: 2026-11-04 조회 안내; 결제·신청 시 재확인 · 2026-11-05 재대조
 - title: 대한기계설비건설협회 선임·자격·경력 인정 안내
   url: https://career.kmcca.or.kr/yuji/bbs/selectBoardList.do?bbsId=10000000000000000228
-  note: 2026-11-04 조회 안내; 신청 시 재확인 · 2026-11-04 대조
+  note: 2026-11-04 조회 안내; 신청 시 재확인 · 2026-11-05 재대조
 - title: 기계설비법 시행규칙 제8조의2·제8조의3
   url: https://www.law.go.kr/LSW/lsInfoR.do?lsiSeq=285589&efYd=20260601
-  note: 시행 2026-06-01 · 2026-11-04 대조
+  note: 시행 2026-06-01 · 2026-11-05 재대조
 related:
 - mechanical-maintainer-levels
 - first-job
@@ -139,7 +139,7 @@ legalReview: true
 
 ### 수첩 발급 비용은 얼마일까?
 
-2026년 11월 4일 협회 안내에는 **등급산정·수첩발급 7만 원**, **경력관리 연간 5만 원**, **수첩 재발급 1만 원**, **경력증명서 발급 3천 원**이 제시되어 있다.
+2026년 11월 5일 협회 안내에는 **등급산정·수첩발급 7만 원**, **경력관리 연간 5만 원**, **수첩 재발급 1만 원**, **경력증명서 발급 3천 원**이 제시되어 있다.
 
 처음 발급과 매년 관리, 재발급은 서로 다른 항목이다. 안내에 따르면 **등급 요건 미달로 발급받지 못하더라도 경력심사비는 반환되지 않을 수 있다.** 신청 전에 모의산정과 담당기관 안내를 확인하는 이유다.
 
@@ -188,4 +188,4 @@ legalReview: true
 - [대한기계설비건설협회 — 최초경력신고·서류·수수료 안내](https://career.kmcca.or.kr/yuji/bbs/selectBoardList.do?bbsId=10000000000000000225&bbsView=HTML)
 - [대한기계설비건설협회 — 자격기준·경력 인정기준](https://career.kmcca.or.kr/yuji/bbs/selectBoardList.do?bbsId=10000000000000000228)
 
-*공식 안내 확인일: 2026년 11월 4일. 개별 경력 인정·등급·발급 가능 여부는 제출자료와 심사에 따라 결정된다.*
+*공식 안내 확인일: 2026년 11월 5일. 개별 경력 인정·등급·발급 가능 여부는 제출자료와 심사에 따라 결정된다.*

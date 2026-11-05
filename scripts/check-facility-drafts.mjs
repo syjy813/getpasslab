@@ -3,6 +3,11 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
 
+if (fs.existsSync('docs/audits/2026-11-05-facility-publication/manifest.json')) {
+  await import('./check-facility-publication.mjs');
+  process.exit(0);
+}
+
 const audit = 'docs/audits/2026-11-04-facility-drafts/';
 const preview = process.env.FACILITY_DRAFT_PREVIEW === '1';
 const manifest = JSON.parse(fs.readFileSync(audit+'draft-manifest.json'));

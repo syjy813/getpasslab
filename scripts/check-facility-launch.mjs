@@ -35,14 +35,17 @@ const editorialBlobs = {
 };
 
 const draftManifest = JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/draft-manifest.json'));
-for (const [file, sha] of Object.entries({...draftManifest.source, ...draftManifest.assets})) {
+const publicationFile = 'docs/audits/2026-11-05-facility-publication/manifest.json';
+const publication = fs.existsSync(publicationFile) ? JSON.parse(fs.readFileSync(publicationFile)) : null;
+const newArticlePaths = publication ? Object.values(JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/site-article-map.json'))).map(row => 'dist'+row.path+'index.html') : [];
+for (const [file, sha] of Object.entries({...draftManifest.source, ...publication?.source, ...draftManifest.assets})) {
   assert.equal(hash(fs.readFileSync(file)), sha, file + ': pinned reviewed draft');
 }
 const files = [
   ...walk('src'),
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
-].filter(file => !Object.hasOwn(draftManifest.source, file)).sort();
+].filter(file => !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
@@ -117,7 +120,8 @@ for (const [source, [masterPath]] of facility05Masters) {
   assert.equal(meta.height, 1080, source + ': height');
   generatedMasterWebps.set(source, hash(webp));
 }
-const served = walk('dist/images/facility-drafts').sort();
+const newImagePaths = publication ? new Set(Object.keys(publication.assets).map(file=>file.replace('facility-assets/','dist/images/facility-drafts/'))) : new Set();
+const served = walk('dist/images/facility-drafts').filter(file=>!newImagePaths.has(file)).sort();
 assert.deepEqual(served, Object.keys(facilityReview.publishedAssets).sort(), 'same 22 public image URLs');
 const servedEdits = new Set();
 for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
