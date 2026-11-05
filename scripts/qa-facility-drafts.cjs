@@ -24,6 +24,18 @@ fs.mkdirSync(output,{recursive:true});
     if(!available){results.push({width,path:article.path,status:404});continue;}
     await page.evaluate(()=>document.fonts.ready);
     assert.equal(await page.locator('h1').count(),1);
+    const headings=await page.locator('.facility-body :is(h2,h3)').evaluateAll(elements=>elements.map(h=>{
+     const s=getComputedStyle(h);return {level:h.tagName,color:s.color,weight:s.fontWeight,padding:s.paddingTop,top:s.marginTop,bottom:s.marginBottom};
+    }));
+    assert(headings.some(h=>h.level==='H2'),article.path+': body headings exist');
+    for(const h of headings){
+     const isH2=h.level==='H2';
+     assert.equal(h.color,isH2?'rgb(20, 92, 62)':'rgb(25, 31, 40)',article.path+': heading color');
+     assert.equal(h.weight,isH2?'700':'600',article.path+': heading weight');
+     assert.equal(h.padding,isH2?'24px':'0px',article.path+': heading padding');
+     assert.equal(h.top,isH2?'48px':'32px',article.path+': heading top margin');
+     assert.equal(h.bottom,isH2?'16px':'12px',article.path+': heading bottom margin');
+    }
     assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),preview?'noindex, nofollow':'index, follow');
     const images=page.locator('.facility-body img');
     assert.equal(await images.count(),5);

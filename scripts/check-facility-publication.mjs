@@ -47,11 +47,18 @@ assert(fs.readFileSync('src/content/facility/statutory-appointments.md','utf8').
 const addedImages=Object.keys(release.assets).map(f=>f.replace('facility-assets/','dist/images/facility-drafts/'));
 for(const [source,sha] of Object.entries(release.assets))assert.equal(hash(fs.readFileSync(source.replace('facility-assets/','dist/images/facility-drafts/'))),sha);
 const baseline=JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/public-baseline.json')).files;
+// The all-article heading rollout replaces exactly one content-hashed facility
+// stylesheet. Preserve the historical baseline and pin both old and new bytes.
+const headingCSS=JSON.parse(fs.readFileSync('docs/audits/2026-11-05-facility-heading-rollout/css-bundle.json'));
+assert.equal(baseline[headingCSS.previousPath],headingCSS.previousSHA256,'original facility CSS fingerprint');
+assert(!fs.existsSync(headingCSS.previousPath),'obsolete facility CSS bundle removed');
+assert.equal(hash(fs.readFileSync(headingCSS.currentPath)),headingCSS.currentSHA256,'reviewed common heading CSS bundle');
 const files=walk('dist').filter(f=>!f.split('/').some(p=>p.startsWith('.'))).sort();
-assert.deepEqual(files,[...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages].sort(),'only eight routes and forty images added');
+assert.deepEqual(files,[...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages].map(f=>f===headingCSS.previousPath?headingCSS.currentPath:f).sort(),'same routes and images; exactly one facility CSS bundle replaced');
 let unchanged=0;
 const approvedRenders=new Set(['01-public-sector-hero','02-employer-types','04-pay-data-comparison'].map(n=>'dist/images/facility-drafts/05/'+n+'.webp'));
 for(const [file,sha] of Object.entries(baseline)){
+ if(file===headingCSS.previousPath)continue; // Replacement is hash-pinned above.
  // Facility lists/related links and XML reflect the reviewed release. Native
  // guard separately pins old source files and the three PR245 SVG renders.
  if(file.startsWith('dist/facility-management/')||file.endsWith('.xml')||approvedRenders.has(file))continue;

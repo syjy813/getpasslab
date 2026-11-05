@@ -128,7 +128,8 @@
   text-underline-offset:4px;word-break:keep-all}
 .facility-toc a:hover{color:var(--primary-700)}
 .facility-page .facility-body h2{display:block;margin:var(--space-12) 0 var(--space-4);
-  padding-top:var(--space-4);border-top:1px solid var(--gray-200);line-height:1.45;
+  padding-top:var(--space-6);border-top:1px solid var(--gray-200);line-height:1.45;
+  color:var(--primary-700);font-weight:var(--fw-bold);
   font-size:var(--fs-h2);word-break:keep-all;overflow-wrap:anywhere}
 .facility-page .facility-body h2::before{display:none}
 .facility-page .facility-body h3{margin:var(--space-8) 0 var(--space-3);line-height:1.5}

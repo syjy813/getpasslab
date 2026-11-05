@@ -151,11 +151,11 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
               marginTop:getComputedStyle(h).marginTop,marginBottom:getComputedStyle(h).marginBottom
             })));
             for (const heading of headingStyle) {
-              const isSampleH2 = slug === 'public-sector-comparison' && heading.level === 'H2';
-              assert.equal(heading.color,isSampleH2?'rgb(20, 92, 62)':'rgb(25, 31, 40)',path+': heading color scope');
-              assert.equal(heading.weight,isSampleH2?'700':'600',path+': heading hierarchy');
+              const isH2 = heading.level === 'H2';
+              assert.equal(heading.color,isH2?'rgb(20, 92, 62)':'rgb(25, 31, 40)',path+': shared heading color');
+              assert.equal(heading.weight,isH2?'700':'600',path+': heading hierarchy');
               assert.equal(heading.background,'rgba(0, 0, 0, 0)',path+': headings keep the white article background');
-              assert.equal(heading.paddingTop,heading.level==='H2'?(isSampleH2?'24px':'16px'):'0px',path+': heading top padding scope');
+              assert.equal(heading.paddingTop,isH2?'24px':'0px',path+': shared heading top padding');
               assert.equal(heading.marginTop,heading.level==='H2'?'48px':'32px',path+': heading top margin retained');
               assert.equal(heading.marginBottom,heading.level==='H2'?'16px':'12px',path+': heading bottom margin retained');
             }
