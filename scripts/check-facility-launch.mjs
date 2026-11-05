@@ -9,7 +9,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { facilityReview, beforeFacilityLaunch } from './read-before-facility-launch.mjs';
-import { publicSectorVisuals, beforePublicSectorVisuals, assertPublicSectorVisuals, visualOutput } from './read-public-sector-visuals.mjs';
+import { publicSectorVisuals, visualDerivativeFiles, beforePublicSectorVisuals, assertPublicSectorVisuals, visualOutput } from './read-public-sector-visuals.mjs';
 
 assertPublicSectorVisuals();
 
@@ -109,7 +109,7 @@ for (const [source, [masterPath, sha]] of facility05Masters) {
 }
 assert.deepEqual(
   walk('facility-asset-edits').sort(),
-  [...editRows.map(row => row.file), ...[...facility05Masters.values()].map(row => row[0]), ...publicSectorVisuals.images.map(row=>row.file)].sort(),
+  [...editRows.map(row => row.file), ...[...facility05Masters.values()].map(row => row[0]), ...visualDerivativeFiles].sort(),
   'exact derivative + editable SVG master inventory',
 );
 const { default: sharp } = await import('sharp');

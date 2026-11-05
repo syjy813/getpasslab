@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
 import {parse} from 'parse5';
-import {renderInfographic} from '../docs/audits/2026-11-05-public-sector-visuals/template/generate-facility-infographic.mjs';
+import {renderInfographic} from './generate-facility-infographic.mjs';
 import {publicSectorVisuals as review,assertPublicSectorVisuals,visualHash,visualOutput} from './read-public-sector-visuals.mjs';
 
 assertPublicSectorVisuals();
