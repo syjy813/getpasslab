@@ -92,7 +92,7 @@ assert.equal(edits.size, 12, 'eleven bottom-brand edits and one hand correction'
 // Source SVGs are the approved editable masters for 05. Existing original WebPs remain immutable;
 // the Astro build renders WebP files at the SAME three public URLs.
 const facility05Masters = new Map([
-  ['facility-assets/05/01-public-sector-hero.webp', ['facility-asset-edits/05/01-public-sector-hero.svg', '1e39c77ca1b729a6bbc2b12abf508fb44e5c5f49']],
+  ['facility-assets/05/01-public-sector-hero.webp', ['facility-asset-edits/05/01-public-sector-hero.svg', '5f6ec3cb8dffb220fd8adb3c897750db17a41153']],
   ['facility-assets/05/02-employer-types.webp', ['facility-asset-edits/05/02-employer-types.svg', 'eabb3c6aa80fc3b990240dc358da17ea3e462901']],
   ['facility-assets/05/04-pay-data-comparison.webp', ['facility-asset-edits/05/04-pay-data-comparison.svg', '1a51929ece2d35622dcc567b7ca8b38eabae1061']],
 ]);
@@ -111,11 +111,11 @@ assert.deepEqual(
   [...editRows.map(row => row.file), ...[...facility05Masters.values()].map(row => row[0])].sort(),
   'exact derivative + editable SVG master inventory',
 );
+const { renderFacility05MasterWebp } = await import('./render-facility-05-webp.mjs');
 const { default: sharp } = await import('sharp');
 const generatedMasterWebps = new Map();
 for (const [source, [masterPath]] of facility05Masters) {
-  const webp = await sharp(fs.readFileSync(masterPath), { density: 96 })
-    .resize(1440, 1080, { fit: 'fill' }).webp({ quality: 86, effort: 6 }).toBuffer();
+  const webp = await renderFacility05MasterWebp(masterPath);
   const meta = await sharp(webp).metadata();
   assert.equal(meta.format, 'webp', source + ': optimized webp');
   assert.equal(meta.width, 1440, source + ': width');
