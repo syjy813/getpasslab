@@ -1,0 +1,38 @@
+[
+  {
+    "size": 24,
+    "buildingGear": 2,
+    "pinGear": 2,
+    "sunMoon": 1
+  },
+  {
+    "size": 26,
+    "buildingGear": 2,
+    "pinGear": 2,
+    "sunMoon": 2
+  },
+  {
+    "size": 30,
+    "buildingGear": 2,
+    "pinGear": 2,
+    "sunMoon": 2
+  },
+  {
+    "size": 31,
+    "buildingGear": 3,
+    "pinGear": 2,
+    "sunMoon": 1
+  },
+  {
+    "size": 104,
+    "buildingGear": 8,
+    "pinGear": 6,
+    "sunMoon": 5
+  },
+  {
+    "size": 128,
+    "buildingGear": 10,
+    "pinGear": 8,
+    "sunMoon": 7
+  }
+]
