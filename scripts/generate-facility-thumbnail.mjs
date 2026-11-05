@@ -10,8 +10,9 @@ export const HERO_LAYOUT = Object.freeze({
 });
 
 export function heroGeometry(spec) {
-  if (!spec || typeof spec.title !== 'string' || typeof spec.subtitle !== 'string') {
-    throw Error('A title and subtitle are required');
+  const validText = v => typeof v === 'string' || (Array.isArray(v) && v.length>0 && v.every(line => typeof line === 'string'));
+  if (!spec || !validText(spec.title) || !validText(spec.subtitle)) {
+    throw Error('A title and subtitle are required as text or explicit text lines');
   }
   const title = wrap(spec.title,20.4,2,'hero title');
   const subtitle = wrap(spec.subtitle,40,2,'hero subtitle');
@@ -36,6 +37,7 @@ export function renderFacilityThumbnail(spec,{graphicHref=null,preview=false}={}
     throw Error('Only bounded embedded PNG/JPEG/WebP images are permitted');
   }
   const {box,safe}=layout;
+  const accessibleTitle=Array.isArray(spec.title)?spec.title.join(' '):spec.title;
   const background=[
     rect(0,0,1440,1080,0,c.background),
     '<path d="M0 365Q360 420 670 0H0Z" fill="#E9F5E6" opacity=".75"/>',
@@ -51,8 +53,8 @@ export function renderFacilityThumbnail(spec,{graphicHref=null,preview=false}={}
       + '</g>'
     : '<image id="main-graphic" x="'+safe.x+'" y="'+safe.y+'" width="'+safe.width+'" height="'+safe.height+'" href="'+graphicHref+'" preserveAspectRatio="xMidYMid meet" clip-path="url(#graphic-safe-clip)" aria-hidden="true"/>';
   return [
-    '<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-label="'+escapeXml(spec.title)+'">',
-    '<title>'+escapeXml(spec.title)+'</title>',
+    '<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-label="'+escapeXml(accessibleTitle)+'">',
+    '<title>'+escapeXml(accessibleTitle)+'</title>',
     '<defs><clipPath id="graphic-safe-clip"><rect x="'+safe.x+'" y="'+safe.y+'" width="'+safe.width+'" height="'+safe.height+'" rx="18"/></clipPath></defs>',
     background,
     '<g font-family="Noto Sans CJK KR,NanumSquare,Noto Sans KR,Apple SD Gothic Neo,Malgun Gothic,sans-serif">',
