@@ -12,7 +12,13 @@
 | 부제 | **x=720, text-anchor=middle**, 제목 블록 하단 16px, 30px Regular, #52665B | 가운데 정렬, 텍스트만 변경. 2줄까지 허용 |
 | 구분선 | x=80..1360, 제목·부제 아래, 4px #76B978 | 자동 계산 |
 | 메인 그래픽 외곽 | x=80, y=348, w=1280, h=652 (1줄 제목·부제 기준) | 헤더 2줄이면 y 자동 이동; 하단 y=1000 고정 |
-| 실제 그림 안전영역 | x=98, y=366, w=1244, h=616 (1줄 기준) | **이 슬롯에만 그림 삽입**; 안전영역 밖으로 넘침/로고 중복 금지 |
+| 실제 그림 안전영역 | x=98, y=366, w=1244, h=616 (1줄 기준) | **이 슬롯에만 그림 삽입**; 단일형은 1장, 콜라주형은 3장면. 안전영역 밖으로 넘침/로고 중복 금지 |
+
+## 등록된 메인 그래픽 구성
+
+- **일반 일러스트형** (`variant: "illustration"`, 기본): 1244×616px 그래픽 슬롯에 한 장을 삽입한다. 별도 그림·캐릭터·설비에 텍스트/브랜드/외곽 프레임을 생성하지 않는다.
+- **콜라주형** (`variant: "collage"`): 3장면 고정 구획 — 좌측 큰 장면 `x98,y366,w760,h616`; 오른쪽 위 `x876,y366,w466,h299`; 오른쪽 아래 `x876,y683,w466,h299`. 슬롯 간격 18px, 모서리 18px, 각 이미지는 비율을 유지해 삽입한다.
+- 둘 모두 **공통 배경·로고·타이틀 셸을 공유**한다. 다른 이미지 갯수·구획·비율이 필요하면 임의 제작하지 말고 신규 템플릿을 승인·등록한다. 그래픽 자체의 질감·디테일·구도는 주제에 맞게 고품질로 제작한다.
 
 제목·부제의 모든 `tspan`도 x=720에 배치해 캔버스·그래픽 외곽·안전영역의 중심축과 맞춘다. **카드형 인포그래픽(1~4장)의 상단 제목·부제는 x=80, text-anchor=start의 좌측 정렬을 유지**한다. 공통 글꼴·색·로고 함수는 재사용하되 헤더 정렬 규칙은 용도별로 구분한다.
 
@@ -32,15 +38,27 @@ node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-t
 node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-hero-two-lines.json /tmp/facility-hero-two-lines-preview.svg --preview
 ```
 
-완성된 메인 그래픽 합성(PNG/JPG/WebP 중 하나):
+일반형 메인 그래픽 합성(PNG/JPG/WebP 중 하나):
 
 ```sh
 node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-hero.json /tmp/facility-hero.svg --art /path/to/main-illustration.png
 ```
 
-- **그래픽만 AI 생성**: 별도로 제작한 주제 일러스트에는 로고·제목·텍스트·구분선·배경 테두리를 그리지 않는다. 기하학적인 크롭이나 글자 삽입은 AI에게 맡기지 않는다.
+콜라주형 미리보기(3개 장면 교체 슬롯):
+
+```sh
+node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-collage.json /tmp/facility-collage-preview.svg --preview
+```
+
+콜라주형 메인 그래픽 합성(이미지 3개 필수, 순서: 왼쪽 메인 → 오른쪽 위 → 오른쪽 아래):
+
+```sh
+node scripts/generate-facility-thumbnail.mjs docs/standards/facility-thumbnail-templates/example-collage.json /tmp/facility-collage.svg --collage /path/to/main.png /path/to/top-right.webp /path/to/bottom-right.jpg
+```
+
+- **그래픽만 AI 생성**: 별도로 제작한 주제 일러스트나 콜라주 각 장면에는 로고·제목·텍스트·구분선·배경 테두리를 그리지 않는다. 기하학적인 크롭이나 글자 삽입은 AI에게 맡기지 않는다.
 - 자동 합성은 이미지 비율을 지키는 `meet` 방식이다. 그래픽을 자르거나 찌그러뜨리지 않으며, 모서리는 SVG 클립으로 보호한다. 안전영역에 맞는 구도를 처음부터 제작한다.
-- **미리보기 템플릿은 공개 금지**: `--preview` 출력에는 메인 그래픽 자리 표시가 남는다. 실제 이미지 출력은 `--art` 입력을 요구한다.
+- **미리보기 템플릿은 공개 금지**: `--preview` 출력에는 메인 그래픽 자리 표시가 남는다. 최종 출력은 일반형 `--art` 1장 또는 콜라주형 `--collage` 3장이 필요하며, 누락·과다·잘못된 포맷을 거부한다.
 - 1:1 티스토리 썸네일·1.91:1 OG 이미지는 별도 규격이다. 필요할 때 별도 템플릿을 승인·등록한다. 이 4:3 템플릿을 무작정 크롭하지 않는다.
 - 이미 제작·승인된 대표 이미지와 기존 공개 URL은 이 템플릿 등록만으로 변경되지 않는다.
 
