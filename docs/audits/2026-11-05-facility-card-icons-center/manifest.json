@@ -1,0 +1,51 @@
+{
+  "baseCommit": "7be6bcc7345e79ae772c0d2712e8d5f6a6e0b269",
+  "images": [
+    {
+      "publicPath": "/images/facility-drafts/05/02-employer-types.webp",
+      "file": "facility-asset-edits/05/02-employer-types-v4.webp",
+      "sha256": "3e0b8e54447c253c19e8e12fdfe008bf359fa936c085f72552da3eb567879fb9",
+      "master": "docs/audits/2026-11-05-facility-card-icons-center/masters/02-employer-types.svg",
+      "masterSHA256": "4a9d8d4b09218cc36ba5bb4630782a825cef8a7e1d136529b97b5482b2d900b5",
+      "kind": "official-card-template",
+      "existing": true
+    },
+    {
+      "publicPath": "/images/facility-drafts/05/04-pay-data-comparison.webp",
+      "file": "facility-asset-edits/05/04-pay-data-comparison-v4.webp",
+      "sha256": "ce5291d9f08fcbba1ef4c3f81c332a643cb78b5d707b1ee1665fb4c3d33ac1e0",
+      "master": "docs/audits/2026-11-05-facility-card-icons-center/masters/04-pay-data-comparison.svg",
+      "masterSHA256": "56cd20f40997a3acc1dc5c9e31dfbd18bcd5a3b79cf3b20f38550fe3dd0f5c8a",
+      "kind": "official-card-template",
+      "existing": true
+    },
+    {
+      "publicPath": "/images/facility-drafts/05/05-compare-jobs-checklist.webp",
+      "file": "facility-asset-edits/05/05-compare-jobs-checklist-v4.webp",
+      "sha256": "ce0e58cff703dbd807f348d20d316fac3408e94168aadd612764df740ee7c228",
+      "master": "docs/audits/2026-11-05-facility-card-icons-center/masters/05-compare-jobs-checklist.svg",
+      "masterSHA256": "f958d2d7c87f7a23373ea628b8eea7ea1c4884d5dd245c5d87638ff2f838dafd",
+      "kind": "official-card-template",
+      "existing": true
+    },
+    {
+      "publicPath": "/images/facility-drafts/05/06-compare-jobs-checklist.webp",
+      "file": "facility-asset-edits/05/06-compare-jobs-checklist-v4.webp",
+      "sha256": "c4163e33eb5b6872899253720594464f4f840b9126d7a8a6a666cfb8deed8384",
+      "master": "docs/audits/2026-11-05-facility-card-icons-center/masters/06-compare-jobs-checklist.svg",
+      "masterSHA256": "8f918972270541e051fb621681a166e174b46d55969604276001b3312699c12e",
+      "kind": "official-card-template",
+      "existing": false
+    }
+  ],
+  "template": {
+    "file": "scripts/generate-facility-infographic.mjs",
+    "gitBlob": "403eb21d675401074566345d63f89b9d86f6d726",
+    "dependencies": [
+      {
+        "file": "scripts/facility-pictograms.mjs",
+        "sha256": "ee4460cbccbbb66beeac5ba906bbc96a138c95b10c83f61336c1b6206af1016a"
+      }
+    ]
+  }
+}

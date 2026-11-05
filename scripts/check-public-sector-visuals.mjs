@@ -6,7 +6,7 @@ import {renderInfographic} from './generate-facility-infographic.mjs';
 import {publicSectorVisuals as review,assertPublicSectorVisuals,visualHash,visualOutput} from './read-public-sector-visuals.mjs';
 
 assertPublicSectorVisuals();
-const audit='docs/audits/2026-11-05-public-sector-visuals';
+const audit='docs/audits/2026-11-05-facility-card-icons-center';
 const old=fs.readFileSync(review.source.beforeFile,'utf8'),current=fs.readFileSync(review.source.file,'utf8');
 const withoutImages=s=>s.replace(/!\[[^\]]*\]\([^)]+\)|<img[^>]+>/g,'').replace(/\n{3,}/g,'\n\n');
 assert.equal(withoutImages(current),withoutImages(old),'only image tags/alt changed; article facts, dates, links and text preserved');

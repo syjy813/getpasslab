@@ -4,9 +4,10 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 const historicalVisuals = JSON.parse(fs.readFileSync('docs/audits/2026-11-05-public-sector-visuals/manifest.json'));
-const refinement = JSON.parse(fs.readFileSync('docs/audits/2026-11-05-facility-card-template-refine/manifest.json'));
+const previousRefinement = JSON.parse(fs.readFileSync('docs/audits/2026-11-05-facility-card-template-refine/manifest.json'));
+const refinement = JSON.parse(fs.readFileSync('docs/audits/2026-11-05-facility-card-icons-center/manifest.json'));
 export const publicSectorVisuals = {...historicalVisuals, template:refinement.template, images:historicalVisuals.images.map(row=>refinement.images.find(next=>next.publicPath===row.publicPath)||row)};
-export const visualDerivativeFiles = [...new Set([...historicalVisuals.images,...refinement.images].map(row=>row.file))];
+export const visualDerivativeFiles = [...new Set([...historicalVisuals.images,...previousRefinement.images,...refinement.images].map(row=>row.file))];
 export const visualHash = b => createHash('sha256').update(b).digest('hex');
 export const visualOutput = row => 'dist' + row.publicPath;
 const key = file => path.relative(process.cwd(),path.resolve(String(file))).replaceAll('\\','/');
@@ -20,10 +21,12 @@ export function beforePublicSectorVisuals(file,bytes) {
 export function assertPublicSectorVisuals(){
   const {source,images,template}=publicSectorVisuals;
   assert.deepEqual(refinement.images.map(row=>row.publicPath),historicalVisuals.images.filter(row=>row.kind==='official-card-template').map(row=>row.publicPath),'only four approved card images refined');
-  for(const row of historicalVisuals.images){
+  for(const row of [...historicalVisuals.images,...previousRefinement.images]){
     assert.equal(visualHash(fs.readFileSync(row.file)),row.sha256,'previous derivative preserved: '+row.file);
     assert.equal(visualHash(fs.readFileSync(row.master)),row.masterSHA256,'previous master preserved: '+row.master);
   }
+  const previousRenderer=fs.readFileSync('docs/audits/2026-11-05-facility-card-icons-center/previous-renderer.mjs');
+  assert.equal(createHash('sha1').update('blob '+previousRenderer.length+'\0').update(previousRenderer).digest('hex'),previousRefinement.template.gitBlob,'previous canonical renderer preserved');
   const previous=fs.readFileSync(historicalVisuals.template.file);
   assert.equal(createHash('sha1').update('blob '+previous.length+'\0').update(previous).digest('hex'),historicalVisuals.template.gitBlob,'historical renderer preserved');
   assert.equal(visualHash(fs.readFileSync(source.file)),source.afterSHA256,'approved current article');
@@ -35,6 +38,7 @@ export function assertPublicSectorVisuals(){
     assert.equal(visualHash(fs.readFileSync(row.file)),row.sha256,row.file);
     assert.equal(visualHash(fs.readFileSync(row.master)),row.masterSHA256,row.master);
   }
+  for(const row of template.dependencies||[])assert.equal(visualHash(fs.readFileSync(row.file)),row.sha256,'current pictogram library');
   const bytes=fs.readFileSync(template.file);
   assert.equal(createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),template.gitBlob,'current canonical card renderer');
 }

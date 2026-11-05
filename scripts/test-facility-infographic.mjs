@@ -97,6 +97,7 @@ test('unsafe markup is escaped and oversize content fails early',()=>{
  assert.throws(()=>renderInfographic({...examples[0].input,title:'가'.repeat(150)}),/too long/);
  assert.throws(()=>renderInfographic({...examples[0].input,cards:[]}),/1..4/);
  assert.throws(()=>renderInfographic({...examples[0].input,cards:Array(5).fill(examples[0].input.cards[0])}),/1..4/);
+ assert.throws(()=>renderInfographic({...examples[0].input,cards:[{...examples[0].input.cards[0],icon:'unknown-topic'}]}),/Unknown pictogram/);
 });
 
 test('four-card template uses 32px shorter rows and 100px footer breathing room',()=>{
