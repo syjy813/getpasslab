@@ -17,3 +17,10 @@ node --test scripts/test-facility-infographic.mjs
 - 발행 전 320/390px·PC1440px에서 로고 잘림·카드 배치·세부문구 확인. 중요한 조건은 HTML 본문에도 제공한다.
 
 정본 규칙: `docs/standards/facility-content-guide-v1.4.md` §5.13.6~7.
+
+## 픽토그램·한 줄 정렬
+
+- 주제별 도형 정본은 `scripts/facility-pictograms.mjs`. 카드의 `icon`에 의미가 맞는 키를 지정한다. 청사/모자회사/업체계약/평균보수/채용공고/고용주확인/사업장/자격증/교대달력/급여명세/계약기간을 구별한다.
+- 2/3카드 픽토그램은140/128px로 확대한다. 제목·카드·로고 좌표는 유지한다.
+- 각 카드 하단 문구와 전체 이미지 하단 한 줄은 상자 중심좌표를 기준으로 배치한다. `dominant-baseline=central`과 글꼴의 광학보정을 함께 사용한다. 임의의 상단 y좌표로 맞추지 않는다.
+- `node scripts/check-facility-card-centering.mjs`는 최종 WebP에서15개 라벨의 실제 글자영역을 측정해 위아래 여백 차이가2px 이하인지 확인한다. 현재 승인본의 최대 차이는1px.

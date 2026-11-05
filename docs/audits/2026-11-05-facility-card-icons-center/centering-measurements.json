@@ -1,0 +1,92 @@
+[
+  {
+    "image": "02-employer-types",
+    "label": "기관 직접채용",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "02-employer-types",
+    "label": "자회사 채용",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "02-employer-types",
+    "label": "전문업체 채용",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "02-employer-types",
+    "label": "하단 한 줄",
+    "upper": 26,
+    "lower": 27
+  },
+  {
+    "image": "04-pay-data-comparison",
+    "label": "기관 평균보수",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "04-pay-data-comparison",
+    "label": "개별 채용공고",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "04-pay-data-comparison",
+    "label": "하단 한 줄",
+    "upper": 27,
+    "lower": 27
+  },
+  {
+    "image": "05-compare-jobs-checklist",
+    "label": "실제 고용주",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "05-compare-jobs-checklist",
+    "label": "사업소·업무",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "05-compare-jobs-checklist",
+    "label": "자격·경력",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "05-compare-jobs-checklist",
+    "label": "하단 한 줄",
+    "upper": 26,
+    "lower": 27
+  },
+  {
+    "image": "06-compare-jobs-checklist",
+    "label": "근무표",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "06-compare-jobs-checklist",
+    "label": "급여 구성",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "06-compare-jobs-checklist",
+    "label": "계약·정년",
+    "upper": 19,
+    "lower": 18
+  },
+  {
+    "image": "06-compare-jobs-checklist",
+    "label": "하단 한 줄",
+    "upper": 26,
+    "lower": 27
+  }
+]

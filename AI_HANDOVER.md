@@ -1,3 +1,10 @@
+## 2026-11-05 카드 픽토그램·한 줄 중앙정렬
+
+- 사용자 카드별 의미있는픽토그램/하단문구중앙정렬 수정및즉시배포 승인. 기준 main7be6bcc7(PR252 배포완료), codex/facility-card-icons-center-20261105.
+- 공통렌더러에 주제별SVG11종과 centeredLine 적용. 2/3카드아이콘140/128px, 하단문구의중앙baseline+NotoCJK광학보정. 카드11개행동문구+전체하단4개=15영역최종WebP잉크실측으로위아래차이최대1px확인.
+- 1~4카드샘플/가이드/검증갱신, 본문4장v4재생성. 원본/과거v2/v3/마스터/manifest보존, 이전렌더러별도보존. 새manifest에SVG의미키와도형모듈해시고정. 본문/숫자/표/출처/날짜/대표이미지/URL/CSS 유지.
+- 근거 docs/audits/2026-11-05-facility-card-icons-center/. 최종Test/Build/4폭CI/Deploy/Production은해당PR실제기록으로확인.
+
 ## 2026-11-05 카드형 템플릿 장식·로고 정리
 
 - 사용자 템플릿수정→카드4장재생성→실서버게시 승인. 기준 main d50ea0a3(PR251 배포완료), 별도 codex/facility-card-template-refine-20261105.
