@@ -1,0 +1,31 @@
+{
+  "title": "채용공고를 읽는 네 가지 기준",
+  "subtitle": "직위와 근무조건을 나눠서 비교해 보자",
+  "cards": [
+    {
+      "title": "고용주",
+      "summary": "근로계약을 체결할 회사",
+      "icon": "building",
+      "action": "계약 상대방 확인"
+    },
+    {
+      "title": "모집 직무",
+      "summary": "실제 일할 설비·직위",
+      "icon": "tools",
+      "action": "직무기술서 확인"
+    },
+    {
+      "title": "자격·경력",
+      "summary": "필수·우대 조건 구분",
+      "icon": "document",
+      "action": "그리고·또는 확인"
+    },
+    {
+      "title": "근무·급여",
+      "summary": "교대와 수당 포함 여부",
+      "icon": "people",
+      "action": "근무표와 급여 확인"
+    }
+  ],
+  "takeaway": "핵심 | 같은 채용 조건으로 나란히 비교한다"
+}
