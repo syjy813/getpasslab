@@ -145,6 +145,17 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           }
           if (expected !== undefined) {
             assert.equal(await page.locator('.facility-body img').count(),expected,`${path}: image count`);
+            const headingStyle = await page.locator('.facility-body :is(h2,h3)').evaluateAll(headings => headings.map(h => ({
+              level:h.tagName,color:getComputedStyle(h).color,weight:getComputedStyle(h).fontWeight,
+              background:getComputedStyle(h).backgroundColor
+            })));
+            for (const heading of headingStyle) {
+              const isSampleH2 = slug === 'public-sector-comparison' && heading.level === 'H2';
+              assert.equal(heading.color,isSampleH2?'rgb(20, 92, 62)':'rgb(25, 31, 40)',path+': heading color scope');
+              assert.equal(heading.weight,isSampleH2?'700':'600',path+': heading hierarchy');
+              assert.equal(heading.background,'rgba(0, 0, 0, 0)',path+': headings keep the white article background');
+            }
+            assert.equal(await page.locator('.facility-summary h2').evaluate(h=>getComputedStyle(h).color),'rgb(25, 31, 40)',path+': summary title stays neutral');
             assert.equal(await page.locator('.facility-article-meta time').count(),2,'publish and reviewed dates');
             for (const date of await page.locator('.facility-article-meta time').evaluateAll(elements=>elements.map(el=>el.dateTime))) assert.equal(date,'2026-11-03');
             assert(!(await page.locator('.facility-article > article').innerText()).includes('검토용 초안'));

@@ -1,0 +1,11 @@
+{
+  "baseline": "main 5fe1956 equivalent release build",
+  "beforeFiles": 914,
+  "afterFiles": 914,
+  "added": [],
+  "deleted": [],
+  "changed": [
+    "facility-management/jobs/public-sector-comparison/index.html"
+  ],
+  "unchangedFiles": 913
+}
