@@ -9,18 +9,15 @@ permissions:
   id-token: write
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
-      - name: Install Korean fonts for SVG-to-WebP rendering
-        run: |
-          sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends fonts-noto-cjk
-          fc-cache -f
-          fc-match -f '%{family}\n' 'Noto Sans CJK KR' | grep -q 'Noto Sans CJK'
+      # All published facility images are reviewed WebP files copied by the build.
+      # Font installation remains in image-generation QA, outside deployment.
       - uses: withastro/action@v6
         with:
           node-version: 24
