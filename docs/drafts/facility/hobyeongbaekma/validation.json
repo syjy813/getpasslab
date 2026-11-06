@@ -7,6 +7,10 @@
   "finalLabels": 20,
   "maxLabelDifference": 1,
   "privateAstroBuild": "PASS",
-  "browserQA": "pending remote CI",
-  "production": "not deployed"
+  "browserQA": "PASS: 320/390/768/1440px",
+  "production": "not deployed",
+  "reviewRun": 42225023443,
+  "seoRun": 42225023683,
+  "testedCommit": "a4487032e42fa92a6c2d5364105822b4b2540960",
+  "visualReview": "390/1440 screenshots inspected; 7 images and 2 tables, existing table scroll retained"
 }
