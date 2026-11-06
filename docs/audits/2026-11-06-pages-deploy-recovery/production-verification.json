@@ -1,0 +1,143 @@
+{
+  "deploymentRun": 42186776599,
+  "commit": "d57ccb42f201fa153bfa211d90298d8cbf999935",
+  "checkedAt": "2026-11-06T08:22:12Z",
+  "count": 85,
+  "matched": 85,
+  "articles": [
+    {
+      "path": "/facility-management/qualifications/boiler-inspection-manager/",
+      "status": 200,
+      "images": 8,
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/employment-types/",
+      "status": 200,
+      "images": 6,
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/first-job/",
+      "status": 200,
+      "images": 5,
+      "match": true
+    },
+    {
+      "path": "/facility-management/jobs/hanfms/",
+      "status": 200,
+      "images": 7,
+      "match": true
+    },
+    {
+      "path": "/facility-management/jobs/kamcofmc/",
+      "status": 200,
+      "images": 9,
+      "match": true
+    },
+    {
+      "path": "/facility-management/jobs/korailtech/",
+      "status": 200,
+      "images": 6,
+      "match": true
+    },
+    {
+      "path": "/facility-management/qualifications/mechanical-career-records/",
+      "status": 200,
+      "images": 8,
+      "match": true
+    },
+    {
+      "path": "/facility-management/qualifications/mechanical-maintainer-levels/",
+      "status": 200,
+      "images": 9,
+      "match": true
+    },
+    {
+      "path": "/facility-management/jobs/postal-facilities/",
+      "status": 200,
+      "images": 6,
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/shifts-and-pay/",
+      "status": 200,
+      "images": 6,
+      "match": true
+    },
+    {
+      "path": "/facility-management/qualifications/statutory-appointments/",
+      "status": 200,
+      "images": 8,
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/what-is-facility-management/",
+      "status": 200,
+      "images": 7,
+      "match": true
+    }
+  ],
+  "articleMatches": 12,
+  "fullImageVerificationSHA256": "fdf6979ec4fc8d3b7f98d705a52ae56726d4f01e2a177ad2569b166472556c6e",
+  "protectedImages": {
+    "count": 5,
+    "matched": 5,
+    "results": [
+      {
+        "path": "/images/facility-drafts/05/01-public-sector-hero.webp",
+        "status": 200,
+        "sha256": "65f89861dd219a6c2c77346a44f486b094ea832ade4c98cd0176a751f4cbe7fd",
+        "match": true
+      },
+      {
+        "path": "/images/facility-drafts/05/02-employer-types.webp",
+        "status": 200,
+        "sha256": "3e0b8e54447c253c19e8e12fdfe008bf359fa936c085f72552da3eb567879fb9",
+        "match": true
+      },
+      {
+        "path": "/images/facility-drafts/05/04-pay-data-comparison.webp",
+        "status": 200,
+        "sha256": "ce5291d9f08fcbba1ef4c3f81c332a643cb78b5d707b1ee1665fb4c3d33ac1e0",
+        "match": true
+      },
+      {
+        "path": "/images/facility-drafts/05/05-compare-jobs-checklist.webp",
+        "status": 200,
+        "sha256": "c9f5f7960aebbc5736e4fa8ebbd74949ae47cdcffb477ae460e4d9cd32dd56e9",
+        "match": true
+      },
+      {
+        "path": "/images/facility-drafts/05/06-compare-jobs-checklist.webp",
+        "status": 200,
+        "sha256": "af58b75a33272ce39919525b38b48a33a3820873746382958312c3daa0da6891",
+        "match": true
+      }
+    ]
+  },
+  "productionBrowser": {
+    "contentViewport": 1348,
+    "horizontalOverflow": false,
+    "reviewedCard": "01/02-facility-job-types-part-2.webp",
+    "naturalSize": [
+      1440,
+      1036
+    ],
+    "tocExpanded": true
+  },
+  "responsiveCI": {
+    "run": 42182930244,
+    "modes": [
+      "publication",
+      "private-preview"
+    ],
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "conclusion": "success"
+  }
+}
