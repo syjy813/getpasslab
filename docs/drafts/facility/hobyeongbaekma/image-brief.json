@@ -3,11 +3,19 @@
   "type": "editorial comparison, not technical or medical guidance",
   "facts": "Selected 10 anonymous self-reports, original/period/part/employer boundaries preserved. No statistical rankings.",
   "hero": {
-    "source": "User-provided hero in original ZIP",
-    "edit": "imagegen removed central people/text/signature; four interiors and related services collage",
-    "prompt": "Remove people and text; preserve detailed four-place editorial collage; fill blank header; hotel upper-left, hospital upper-right, department store lower-left, supermarket lower-right; forest green/ivory; no logos, rankings or arrows",
-    "master": "Generated PNG retained at generation source; SHA recorded in image-manifest.json",
-    "captionRole": "Illustrated juxtaposition; equipment drawn beside interiors does not show actual installation locations"
+    "source": "User requested simpler four-building cover on 2026-11-06",
+    "edit": "Hotel, hospital, department store and supermarket exteriors; title and subtitle; no mechanical collage",
+    "title": "시설관리 ‘호병백마’란?",
+    "subtitle": "호텔·병원·백화점·마트가 묶인 이유",
+    "labels": [
+      "호텔",
+      "병원",
+      "백화점",
+      "마트"
+    ],
+    "prompt": "Four recognizable building exteriors on an ivory background, forest green title and subtitle, no equipment/interior montage/people/logo",
+    "master": "exec-ecbd3335-7a5a-46b3-b845-1121e2828f83.png",
+    "captionRole": "Illustrated examples of four building types, not actual business premises"
   },
   "cards": {
     "renderer": "canonical compact renderer",

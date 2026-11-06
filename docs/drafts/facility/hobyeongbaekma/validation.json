@@ -12,5 +12,15 @@
   "reviewRun": 42225023443,
   "seoRun": 42225023683,
   "testedCommit": "a4487032e42fa92a6c2d5364105822b4b2540960",
-  "visualReview": "390/1440 screenshots inspected; 7 images and 2 tables, existing table scroll retained"
+  "visualReview": "390/1440 screenshots inspected; 7 images and 2 tables, existing table scroll retained",
+  "heroRevision": {
+    "design": "four-building-exteriors-title-subtitle",
+    "dimensions": [
+      1440,
+      1080
+    ],
+    "textVisualCheck": "PASS",
+    "priorBrowserRun": 42225023443,
+    "replacementBrowserQA": "pending PR CI"
+  }
 }

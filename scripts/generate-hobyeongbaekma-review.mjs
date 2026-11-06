@@ -71,6 +71,6 @@ const heroMaster = process.argv[2];
 if (!heroMaster) throw Error('Pass the reviewed generated PNG master');
 const hero = await sharp(heroMaster).resize(1440, 1080).webp({ quality: 90, effort: 6 }).toBuffer();
 fs.writeFileSync(`${root}/images/01-hobyeongbaekma-hero.webp`, hero);
-images.unshift({ id: '01-hobyeongbaekma-hero', file: 'images/01-hobyeongbaekma-hero.webp', width: 1440, height: 1080, sha256: sha(hero), sourcePNG: path.basename(heroMaster), sourceSHA256: sha(fs.readFileSync(heroMaster)), sourceRole: 'imagegen edited collage; not an equipment layout' });
+images.unshift({ id: '01-hobyeongbaekma-hero', file: 'images/01-hobyeongbaekma-hero.webp', width: 1440, height: 1080, sha256: sha(hero), sourcePNG: path.basename(heroMaster), sourceSHA256: sha(fs.readFileSync(heroMaster)), sourceRole: 'imagegen: four building exteriors with title and subtitle' });
 fs.writeFileSync(`${root}/image-manifest.json`, JSON.stringify({ images, cards: specs.length, renderer: 'scripts/generate-facility-compact-infographic.mjs', newIcon: { key: 'hotel', meaning: PICTOGRAMS.hotel.meaning, svg: PICTOGRAMS.hotel.svg } }, null, 2) + '\n');
 console.log(JSON.stringify({ images: images.length, cards: specs.length, labels: images.flatMap(r => r.centering || []).length, maxLabelDifference: Math.max(...images.flatMap(r => r.centering || [])) }));

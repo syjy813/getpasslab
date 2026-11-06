@@ -53,7 +53,7 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp" alt="호텔 로비·병원 복도·백화점·마트와 관련 설비를 나란히 구성한 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
+<figure><img src="/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp" alt="호텔·병원·백화점·마트 네 건물과 제목·부제로 구성한 호병백마 대표 이미지" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 ## 호병백마? 무슨 사자성어인 줄 알았다
 
