@@ -50,7 +50,7 @@ certifications: []
 legalReview: true
 ---
 
-<figure><img src="/images/facility-drafts/10/01-statutory-appointments-hero.webp" alt="건물의 여러 설비와 법정선임 요건을 살펴보는 시설관리 직원" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
+<figure><img src="/images/facility-drafts/10/01-statutory-appointments-hero.webp" alt="시설관리 법정선임 총정리 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 *건물 하나에도 여러 안전관리 제도가 적용될 수 있다. ‘시설관리자’라는 이름만으로 모든 선임을 설명할 수는 없다.*
 
@@ -86,7 +86,11 @@ legalReview: true
 | **전기** | 전기안전관리자 | 설비 종류·용량·기술자격·경력 |
 | **위험물** | 위험물안전관리자 | 제조소등 해당 여부·취급 자격 |
 
-<figure><img src="/images/facility-drafts/10/02-seven-appointment-types.webp" alt="시설관리에서 마주치는 서로 다른 법정선임 제도" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/10/02-seven-appointment-types.webp" alt="법정선임은 각각 다른 제도 1/3: 보일러 검사대상기기관리자, 냉동·고압가스 고압가스 관련 안전관리자, 도시가스·LPG 해당 가스시설 안전관리자" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/10/02-seven-appointment-types-part-2.webp" alt="법정선임은 각각 다른 제도 2/3: 소방 소방안전관리자, 기계설비 기계설비유지관리자, 전기 전기안전관리자" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/10/02-seven-appointment-types-part-3.webp" alt="법정선임은 각각 다른 제도 3/3: 위험물 위험물안전관리자" width="1440" height="1010" loading="lazy" decoding="async" /></figure>
 
 위 표는 시설관리 채용에서 자주 만나는 **대표 사례**다. 모든 건물에 일곱 분야가 한꺼번에 적용되는 것도 아니고, 모든 안전관리 제도를 망라한 목록도 아니다.
 
@@ -104,7 +108,7 @@ legalReview: true
 | **10t/h 초과\~30t/h 이하** | 에너지관리산업기사·기사·기능장 |
 | **30t/h 초과** | 에너지관리기사·기능장 |
 
-<figure><img src="/images/facility-drafts/10/03-boiler-qualification-ranges.webp" alt="검사대상 보일러의 대표 자격·용량 구간" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/10/03-boiler-qualification-ranges.webp" alt="보일러 기본 자격 구간: 10t/h 이하 에너지관리기능사 이상, 10 초과~30 이하 단위 t/h · 산업기사 이상, 30t/h 초과 에너지관리기사·기능장" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 **여기서 멈추면 아직 절반만 읽은 셈이다.**
 
@@ -136,7 +140,7 @@ legalReview: true
 | **고압가스 제조·저장·사용 관련 시설** | 고압가스 안전관리법령의 시설별 기준 |
 | **LPG 관련 시설** | 액화석유가스의 안전관리 및 사업법령의 시설별 기준 |
 
-<figure><img src="/images/facility-drafts/10/04-gas-laws-separation.webp" alt="가스시설의 종류에 따라 적용 기준이 달라지는 이유" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/10/04-gas-laws-separation.webp" alt="가스시설은 법률부터: 도시가스 도시가스사업법령, 고압가스·냉동 고압가스 안전관리법령, LPG 액화석유가스법령" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 여기서 **가스기능사 자격**과 **안전관리자 양성교육을 통한 자격 경로**를 같은 것으로 읽어서는 안 된다. 특정 관리자·시설에 인정되는 경로는 해당 시행령의 별표와 공고 문구로 확인해야 한다.
 
@@ -214,7 +218,9 @@ A현장은 두 조건을 모두 요구하는 표현이다. B현장은 둘 중 �
 5. **여러 조건:** 필수·우대·‘및’·‘또는’은 어떻게 적혀 있나?
 6. **선임·겸직:** 입사 후 실제 선임되는가? 겸직·위탁·신고 절차는?
 
-<figure><img src="/images/facility-drafts/10/05-application-checklist.webp" alt="법정선임 요구 공고를 읽는 여섯 단계" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/10/05-application-checklist.webp" alt="법정선임 공고 읽는 순서 1/2: 설비 확인 무엇을 관리하나, 적용 법령 정확한 관리자 명칭, 규모·대상 용량·능력·건축물 등급" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/10/05-application-checklist-part-2.webp" alt="법정선임 공고 읽는 순서 2/2: 내 자격 자격·교육·경력·수첩, 여러 조건 필수·우대·및·또는, 선임·겸직 배치·위탁·신고 절차" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 시설관리 경력을 쌓을 생각이라면 마지막으로 **담당 업무와 선임 경력을 어떤 서류로 증빙할 수 있는지도** 확인하자. 나중에 경력심사를 받을 때 해당 업무와 기간을 입증해야 할 수 있기 때문이다.
 

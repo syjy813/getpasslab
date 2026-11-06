@@ -1,0 +1,40 @@
+{
+  "number": "10",
+  "file": "02-seven-appointment-types-part-2.webp",
+  "original": "02-seven-appointment-types.webp",
+  "part": 2,
+  "total": 3,
+  "title": "법정선임은 각각 다른 제도 2/3",
+  "subtitle": "분야별 법령·대상·자격요건을 따로 확인",
+  "cards": [
+    {
+      "title": "소방",
+      "icon": "fire",
+      "summary": "소방안전관리자",
+      "details": [],
+      "action": "대상물 등급 확인"
+    },
+    {
+      "title": "기계설비",
+      "icon": "mechanical",
+      "summary": "기계설비유지관리자",
+      "details": [],
+      "action": "건물·등급 확인"
+    },
+    {
+      "title": "전기",
+      "icon": "electrical",
+      "summary": "전기안전관리자",
+      "details": [],
+      "action": "설비·용량 확인"
+    }
+  ],
+  "takeaway": "한 자격증으로 모든 분야의 선임요건을 충족하지 않음",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

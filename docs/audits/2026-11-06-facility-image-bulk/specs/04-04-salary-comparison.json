@@ -1,0 +1,37 @@
+{
+  "number": "04",
+  "file": "04-salary-comparison.webp",
+  "original": "04-salary-comparison.webp",
+  "part": 1,
+  "total": 1,
+  "title": "월급 차이, 구성부터",
+  "subtitle": "세전 가상 예시 | 실제 채용공고의 임금이 아님",
+  "cards": [
+    {
+      "title": "A사 · 주간",
+      "icon": "day",
+      "summary": "세전 월 300만 원",
+      "details": [
+        "기본급·수당 미확인",
+        "실제 근무·휴게 미확인"
+      ],
+      "action": "근무표·규정 확인"
+    },
+    {
+      "title": "B사 · 교대",
+      "icon": "shift-calendar",
+      "summary": "세전 월 350만 원",
+      "details": [
+        "기본급·수당 미확인",
+        "야간수당 포함범위 확인"
+      ],
+      "action": "조별 근무표 확인"
+    }
+  ],
+  "takeaway": "50만 원 차이만으로 우열을 판단할 수 없음",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "number": "09",
+  "file": "04-site-pay-and-shifts-part-2.webp",
+  "original": "04-site-pay-and-shifts.webp",
+  "part": 2,
+  "total": 2,
+  "title": "같은 회사, 다른 월 급여 2/2",
+  "subtitle": "캠코FMC | 2026년 8월 2차 · 세전 월 내외",
+  "cards": [
+    {
+      "title": "태안정책연수원",
+      "icon": "shift-calendar",
+      "summary": "3등급 주임 · 교대",
+      "details": [
+        "월 약 399만 원"
+      ],
+      "action": "당시 공고 사례"
+    },
+    {
+      "title": "캠코양재타워",
+      "icon": "shift-calendar",
+      "summary": "2등급 기사 · 교대",
+      "details": [
+        "월 약 374만 원"
+      ],
+      "action": "당시 공고 사례"
+    }
+  ],
+  "takeaway": "여러 수당·식비 포함 | 기본급·실수령액과 구분",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

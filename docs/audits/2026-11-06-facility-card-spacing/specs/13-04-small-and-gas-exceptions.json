@@ -1,0 +1,38 @@
+{
+  "number": "13",
+  "file": "04-small-and-gas-exceptions.webp",
+  "original": "04-small-and-gas-exceptions.webp",
+  "part": 1,
+  "total": 2,
+  "title": "기본 표 외의 추가조건 1/2",
+  "subtitle": "소형기기 인정교육 경로와 가스연료 조건을 구분",
+  "cards": [
+    {
+      "title": "소형 증기보일러",
+      "icon": "boiler",
+      "summary": "인정교육 경로 검토",
+      "details": [
+        "최고사용압력 1MPa 이하",
+        "및 전열면적 10㎡ 이하"
+      ],
+      "action": "두 조건 모두 충족"
+    },
+    {
+      "title": "온수·열매체",
+      "icon": "gauge",
+      "summary": "인정교육 경로 검토",
+      "details": [
+        "용량 581.5kW 이하",
+        "압력용기는 별도 범위"
+      ],
+      "action": "기기 조건 확인"
+    }
+  ],
+  "takeaway": "두 규정 혼동 금지 | 실제 기기·연료·해당 교육 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

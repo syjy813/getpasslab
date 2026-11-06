@@ -1,0 +1,32 @@
+{
+  "number": "11",
+  "file": "05-application-checklist-part-2.webp",
+  "original": "05-application-checklist.webp",
+  "part": 2,
+  "total": 2,
+  "title": "경력수첩 준비 다섯 단계 2/2",
+  "subtitle": "등급 인정과 건물에 실제 선임되는 절차는 다르다",
+  "cards": [
+    {
+      "title": "경력 신고",
+      "icon": "submission",
+      "summary": "협회 접수·보완 대응",
+      "details": [],
+      "action": "신청 안내 확인"
+    },
+    {
+      "title": "심사 결과",
+      "icon": "qualification",
+      "summary": "인정경력·등급·수첩",
+      "details": [],
+      "action": "선임신고·교육 별도"
+    }
+  ],
+  "takeaway": "자격증 보유나 근속기간만으로 등급이 확정되지 않음",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

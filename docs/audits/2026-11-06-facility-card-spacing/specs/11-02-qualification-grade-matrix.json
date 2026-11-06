@@ -1,0 +1,38 @@
+{
+  "number": "11",
+  "file": "02-qualification-grade-matrix.webp",
+  "original": "02-qualification-grade-matrix.webp",
+  "part": 1,
+  "total": 2,
+  "title": "책임등급의 대표 경력 1/2",
+  "subtitle": "관련 국가기술자격 경로 | 인정 실무경력 기준",
+  "cards": [
+    {
+      "title": "초급",
+      "icon": "qualification",
+      "summary": "관련 기사·기능장 경력요건 없음",
+      "details": [
+        "산업기사 3년 이상",
+        "기능사 6년 이상"
+      ],
+      "action": "자격·서류 심사 필요"
+    },
+    {
+      "title": "중급",
+      "icon": "qualification",
+      "summary": "관련 기사·기능장 4년 이상",
+      "details": [
+        "산업기사 7년 이상",
+        "기능사 일반 경로 없음"
+      ],
+      "action": "자동 승급 아님"
+    }
+  ],
+  "takeaway": "대표 경로 요약 | 등급조정·건설기술인·특례 별도",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

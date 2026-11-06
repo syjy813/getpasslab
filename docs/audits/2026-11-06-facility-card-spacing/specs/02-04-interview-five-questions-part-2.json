@@ -1,0 +1,36 @@
+{
+  "number": "02",
+  "file": "04-interview-five-questions-part-2.webp",
+  "original": "04-interview-five-questions.webp",
+  "part": 2,
+  "total": 2,
+  "title": "첫 면접의 다섯 질문 2/2",
+  "subtitle": "공고에 빠진 조건부터 구체적으로 질문",
+  "cards": [
+    {
+      "title": "선임 책임",
+      "icon": "law",
+      "summary": "어떤 법정선임이 필요한가",
+      "details": [
+        "현재 담당자·책임 범위"
+      ],
+      "action": "선임 조건 질문"
+    },
+    {
+      "title": "경력증빙",
+      "icon": "career",
+      "summary": "담당업무를 남길 수 있나",
+      "details": [
+        "지정 경력확인서 발급"
+      ],
+      "action": "공식 서류 확인"
+    }
+  ],
+  "takeaway": "면접 답변과 입사 전 확인한 자료를 나눠 기록",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

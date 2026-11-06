@@ -1,0 +1,40 @@
+{
+  "number": "07",
+  "file": "05-application-checklist-part-2.webp",
+  "original": "05-application-checklist.webp",
+  "part": 2,
+  "total": 2,
+  "title": "우체국시설관리단 확인 2/2",
+  "subtitle": "지원 전 여섯 가지를 해당 회차 공고와 대조",
+  "cards": [
+    {
+      "title": "관련경력",
+      "icon": "career",
+      "summary": "기간·업무를 증빙",
+      "details": [],
+      "action": "서류 일치 확인"
+    },
+    {
+      "title": "근무표",
+      "icon": "shift-calendar",
+      "summary": "일근·격일·4교대",
+      "details": [],
+      "action": "실제 대기·휴게 확인"
+    },
+    {
+      "title": "급여·정년",
+      "icon": "pay-components",
+      "summary": "식비 포함 세전 연봉",
+      "details": [],
+      "action": "재고용 보장 아님"
+    }
+  ],
+  "takeaway": "과거 공고 사례 | 최신 회차와 변경공고를 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "baseCommit": "ddcaecf638bf42c57651776336caea134daa4319",
+  "build": {
+    "pages": 573,
+    "HTML": 575,
+    "files": 942,
+    "status": "PASS"
+  },
+  "outputDelta": {
+    "added": 27,
+    "removed": 0,
+    "changedImages": 58,
+    "changedFacilityArticles": 12,
+    "unchanged": 845
+  },
+  "staticChecks": {
+    "templateTests": "PASS",
+    "canonicalPictogramGeometry": "PASS",
+    "referenceCentering": "PASS",
+    "bulkCentering": "PASS",
+    "bulkLabels": 255,
+    "cardTopics": 182,
+    "newPictograms": 28,
+    "pictogramSizes": [
+      24,
+      26,
+      30,
+      31,
+      104,
+      140
+    ],
+    "sourceAndAssets": "PASS",
+    "internalLinks": "PASS",
+    "SEOErrors": 0,
+    "existingSEOWarnings": 1,
+    "publicContentErrors": 0
+  },
+  "browser": {
+    "local": "unavailable: Chromium socket creation denied",
+    "CI": "pending; inspect PR checks"
+  },
+  "deployment": "not authorized for this refresh; not performed",
+  "personRequiredExceptions": []
+}

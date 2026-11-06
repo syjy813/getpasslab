@@ -1,0 +1,35 @@
+{
+  "number": "01",
+  "file": "05-facility-job-checklist.webp",
+  "original": "05-facility-job-checklist.webp",
+  "part": 1,
+  "total": 2,
+  "title": "취업 전 네 가지 확인 1/2",
+  "subtitle": "공고의 회사 이름 다음에 실제 조건을 보자",
+  "cards": [
+    {
+      "title": "건물",
+      "icon": "office",
+      "summary": "어떤 시설에서 일하나",
+      "details": [
+        "건물 종류·보유 설비"
+      ],
+      "action": "담당 시설 확인"
+    },
+    {
+      "title": "업무",
+      "icon": "mechanical",
+      "summary": "실제로 무엇을 맡나",
+      "details": [
+        "직접 점검·운전 여부"
+      ],
+      "action": "업무 범위 확인"
+    }
+  ],
+  "takeaway": "회사의 간판과 실제 업무·근로조건을 함께 확인",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

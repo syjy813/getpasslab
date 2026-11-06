@@ -32,7 +32,7 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-drafts/08/01-korailtech-hero.webp" alt="코레일테크 시설직 채용공고를 비교하는 구직자와 서로 다른 현장" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
+<figure><img src="/images/facility-drafts/08/01-korailtech-hero.webp" alt="코레일테크 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 ## 철도 회사의 ‘시설관리’, 내가 생각한 그 기계실일까?
 
@@ -48,7 +48,7 @@ legalReview: false
 
 ## ‘시설’ 안에는 어떤 일이 들어 있을까?
 
-<figure><img src="/images/facility-drafts/08/02-facility-versus-track.webp" alt="시설(토목)과 건물설비 관련 업무는 관리 대상이 다르다는 비교 그림" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/08/02-facility-versus-track.webp" alt="같은 시설직, 다른 업무: 시설 · 토목 선로·철도 토목 시설물, 시설 · 토목 외 건축·기계·통신 등" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 공고를 읽을 때는 큰 분야명보다 모집표의 세부 분류와 직무기술서를 함께 봐야 한다.
 
@@ -77,7 +77,7 @@ legalReview: false
 
 문제는 숫자를 어디까지 적용하느냐다. **9.1대 1은 시설 분야 전체 지원 규모를 보여주는 숫자**다. 특정 지역의 기계직이나 시설(토목) 한 직위의 경쟁률을 뜻하지 않는다. 서류 접수 이후 전형별 실질 경쟁률과도 구별해야 한다.
 
-<figure><img src="/images/facility-drafts/08/03-applicant-numbers.webp" alt="2026년 제1차 공무직의 시설 전체 모집·지원 숫자를 보여주는 인포그래픽" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/08/03-applicant-numbers.webp" alt="시설 전체 지원 규모: 모집인원 55명, 지원인원 502명, 단순 경쟁률 약 9.1대 1" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 공식 접수 결과는 [코레일테크 공지](https://www.korailtech.com/recruitNotice/view.do?nttId=4278)에서 확인할 수 있다.
 
@@ -122,7 +122,7 @@ legalReview: false
 | 차량정비·전기 | 만 63세 |
 | 경비·환경 | 만 65세 |
 
-<figure><img src="/images/facility-drafts/08/04-retirement-and-probation-v2.webp" alt="2027년 제1차 시설 토목 정년 만 63세, 토목 외 만 65세와 12주 시용 후 평가" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/08/04-retirement-and-probation-v2.webp" alt="정년과 시용을 구분: 시설 · 토목 정년 만 63세, 시설 · 토목 외 정년 만 65세, 12주 시용 근무실적 등 평가" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 이 기준은 **해당 회차 공고의 내용**이며, 다른 채용형태나 향후 공고의 모든 직군에 자동으로 적용되는 보장 조건은 아니다. 지원할 분야·직위를 확정한 뒤 실제 채용공고와 인사규정을 확인해야 한다.
 
@@ -171,7 +171,9 @@ legalReview: false
 5. **전형·시용:** 서류·체력검증/실기·면접과 12주 시용평가를 어떻게 적용하나?
 6. **급여·정년:** 해당 직무의 보수 수준과 정년 기준이 무엇인가?
 
-<figure><img src="/images/facility-drafts/08/05-application-checklist.webp" alt="코레일테크 공무직 지원 전에 살펴볼 여섯 가지" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/08/05-application-checklist.webp" alt="코레일테크 지원 전 1/2: 모집 회차 공고명·게시일·마감일, 세부 직무 토목·토목 외 업무, 사업소·근무지 담당 구역·이동 가능성" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/08/05-application-checklist-part-2.webp" alt="코레일테크 지원 전 2/2: 자격·경력 또는·및과 제출증빙, 전형·시용 검증 절차·12주 평가, 급여·정년 해당 직무 실제 조건" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 공무직이라는 이름 하나만으로 좋은 첫 직장인지 결정할 수는 없다.
 

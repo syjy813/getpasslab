@@ -1,0 +1,48 @@
+{
+  "number": "04",
+  "file": "02-shift-types.webp",
+  "original": "02-shift-types.webp",
+  "part": 1,
+  "total": 1,
+  "title": "이름보다 실제 근무표",
+  "subtitle": "몇 조인지와 몇 교대인지는 서로 다른 개념",
+  "cards": [
+    {
+      "title": "일근·주간",
+      "icon": "day",
+      "summary": "낮 시간 중심 근무",
+      "details": [
+        "주 5일·주말 당직 여부",
+        "비상출동 조건 확인"
+      ],
+      "action": "출퇴근 시각 확인"
+    },
+    {
+      "title": "격일",
+      "icon": "career",
+      "summary": "근무일·비번일 교번",
+      "details": [
+        "실제 휴게·수면시간",
+        "호출 대기 여부 확인"
+      ],
+      "action": "체류·근로 구분"
+    },
+    {
+      "title": "교대",
+      "icon": "shift-calendar",
+      "summary": "조별로 시간대를 분담",
+      "details": [
+        "주야 교번·휴무 주기",
+        "한 조 실제 근무시간"
+      ],
+      "action": "조별 편성표 확인"
+    }
+  ],
+  "takeaway": "근무형태의 이름만으로 시간과 휴무를 계산하지 않음",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

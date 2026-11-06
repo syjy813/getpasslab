@@ -1,0 +1,23 @@
+{
+  "number": "10",
+  "file": "02-seven-appointment-types-part-3.webp",
+  "original": "02-seven-appointment-types.webp",
+  "part": 3,
+  "total": 3,
+  "title": "법정선임은 각각 다른 제도 3/3",
+  "subtitle": "분야별 법령·대상·자격요건을 따로 확인",
+  "cards": [
+    {
+      "title": "위험물",
+      "icon": "hazardous",
+      "summary": "위험물안전관리자",
+      "details": [],
+      "action": "제조소 등 대상 확인"
+    }
+  ],
+  "takeaway": "한 자격증으로 모든 분야의 선임요건을 충족하지 않음",
+  "labelOffsets": [
+    3,
+    3
+  ]
+}

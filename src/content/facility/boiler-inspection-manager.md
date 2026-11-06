@@ -28,7 +28,7 @@ certifications: []
 legalReview: true
 ---
 
-<figure><img src="/images/facility-drafts/13/01-boiler-manager-hero-v2.webp" alt="보일러 검사증과 자격 조건을 살펴보는 시설관리 직원" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
+<figure><img src="/images/facility-drafts/13/01-boiler-manager-hero-v2.webp" alt="에너지관리기능사로 보일러 선임이 가능할까? — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 *기능사 자격이 있어도 실제로 관리할 보일러의 검사증과 연료 조건부터 확인해야 한다.*
 
@@ -54,7 +54,9 @@ legalReview: true
 
 가장 빠른 출발점은 담당 설비의 **검사증과 기기 명판·사양서**를 살펴보는 것이다. 설치된 기기가 어떤 종류로 등록되어 있는지, 용량이나 최고사용압력이 어떻게 표시되어 있는지 확인하면 다음 질문이 쉬워진다.
 
-<figure><img src="/images/facility-drafts/13/02-identify-boiler.webp" alt="보일러 관리자의 선임 판단을 위해 확인할 기기 종류·검사증·용량·연료" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/13/02-identify-boiler.webp" alt="자격표 전에 기기 확인 1/2: 검사대상 여부 검사증·관리대상 확인, 기기 종류 증기·온수·열매체 등" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/13/02-identify-boiler-part-2.webp" alt="자격표 전에 기기 확인 2/2: 용량·압력 t/h·kW·MPa 등, 사용 연료 가스 여부와 추가조건" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 *검사대상 여부와 실제 기기 사양을 먼저 확인한 뒤 자격표를 적용한다.*
 
@@ -70,7 +72,7 @@ legalReview: true
 | **10t/h 초과 \~ 30t/h 이하** | 에너지관리산업기사·기사·기능장 |
 | **30t/h 초과** | 에너지관리기사·기능장 |
 
-<figure><img src="/images/facility-drafts/13/03-capacity-grade-ranges.webp" alt="검사대상 보일러의 용량별 에너지관리 자격등급 기본 구간" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/13/03-capacity-grade-ranges.webp" alt="보일러 용량별 기본 자격: 10t/h 이하 에너지관리기능사 이상, 10 초과~30 이하 단위 t/h · 산업기사 이상, 30t/h 초과 에너지관리기사·기능장" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *기본 구간 요약이다. 같은 별표의 소형 기기·가스연료·1종 관류보일러 관련 비고도 반드시 함께 확인해야 한다.*
 
@@ -88,7 +90,9 @@ legalReview: true
 - **온수발생·열매체 가열 보일러:** 용량 **581.5kW 이하**인 것.
 - **압력용기:** 별표에서 별도 관리범위로 제시하는 기기.
 
-<figure><img src="/images/facility-drafts/13/04-small-and-gas-exceptions.webp" alt="소형 증기보일러, 온수·열매체 보일러와 압력용기의 별도 교육 경로" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/13/04-small-and-gas-exceptions.webp" alt="기본 표 외의 추가조건 1/2: 소형 증기보일러 인정교육 경로 검토, 온수·열매체 인정교육 경로 검토" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/13/04-small-and-gas-exceptions-part-2.webp" alt="기본 표 외의 추가조건 2/2: 가스연료 경로 1 기본 표 자격 + 관련 교육, 가스연료 경로 2 특정가스사용시설" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *교육 경로는 표시된 기기 조건을 충족하는 경우에만 검토한다. 가스연료 보일러라면 추가요건도 별도로 확인한다.*
 
@@ -134,7 +138,9 @@ legalReview: true
 
 이 신고 의무는 **기기를 설치한 측의 의무**다. 취업 준비자가 모든 신고를 혼자 처리해야 한다는 의미는 아니다.
 
-<figure><img src="/images/facility-drafts/13/05-appointment-checklist.webp" alt="검사대상기기관리자 선임 전 자격·사양·가스연료·구역·신고 여부 확인" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/13/05-appointment-checklist.webp" alt="보일러 선임 전 확인 1/2: 검사대상기기 법령상 검사·선임 대상, 종류·용량 증기·온수·열매체·사양, 가스연료 사용 연료와 자격 경로" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/13/05-appointment-checklist-part-2.webp" alt="보일러 선임 전 확인 2/2: 교육·추가자격 관련 교육과 별도 선임, 관리구역·대수 1구역·관류·합산 조건, 선임신고 설치자의 신고 준비" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 *선임 가능 여부를 확인할 때는 공고 문구만 보지 말고 실제 검사증과 적용 법령을 대조한다.*
 

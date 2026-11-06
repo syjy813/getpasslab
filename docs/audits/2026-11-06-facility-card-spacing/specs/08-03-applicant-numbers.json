@@ -1,0 +1,47 @@
+{
+  "number": "08",
+  "file": "03-applicant-numbers.webp",
+  "original": "03-applicant-numbers.webp",
+  "part": 1,
+  "total": 1,
+  "title": "시설 전체 지원 규모",
+  "subtitle": "코레일테크 2026년 제1차 공무직 서류접수",
+  "cards": [
+    {
+      "title": "모집인원",
+      "icon": "job-offer",
+      "summary": "55명",
+      "details": [
+        "시설 분야 전체 모집"
+      ],
+      "action": "특정 지역 숫자 아님"
+    },
+    {
+      "title": "지원인원",
+      "icon": "submission",
+      "summary": "502명",
+      "details": [
+        "시설 분야 전체 지원"
+      ],
+      "action": "접수 결과 기준"
+    },
+    {
+      "title": "단순 경쟁률",
+      "icon": "ratio",
+      "summary": "약 9.1대 1",
+      "details": [
+        "502 ÷ 55 ≈ 9.13",
+        "지역·직무별 경쟁률 아님"
+      ],
+      "action": "전체 규모 참고"
+    }
+  ],
+  "takeaway": "2026년 제3차 시설 모집 46명과는 다른 회차",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

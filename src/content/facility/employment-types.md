@@ -32,7 +32,7 @@ related:
 certifications: []
 ---
 
-![한 건물에서 일하지만 고용형태가 다른 시설관리 직원들을 나타낸 대표 이미지](/images/facility-drafts/03/01-employment-types-hero.webp)
+<figure><img src="/images/facility-drafts/03/01-employment-types-hero.webp" alt="시설관리 직영·자회사·용역 차이 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 ## 출근하는 건물은 같은데 회사가 다르다고?
 
@@ -56,7 +56,7 @@ certifications: []
 | **자회사** | 별도 법인인 자회사 | 자회사 자체의 임금·정년·복지 |
 | **용역** | 업무를 계약받은 시설관리 전문업체 | 현장 계약기간, 전환배치, 고용승계 조건 |
 
-![직영·자회사·용역 구조를 세 개의 독립적인 고용관계 카드로 비교한 그림](/images/facility-drafts/03/02-three-employment-structures.webp)
+<figure><img src="/images/facility-drafts/03/02-three-employment-structures.webp" alt="시설관리 고용주 비교: 직영 운영 주체가 직접 채용, 자회사 별도 법인이 채용, 용역 전문업체가 채용" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 쉽게 말해 **누구와 근로계약을 체결했는지** 확인하면 출발점이 잡힌다.
 
@@ -100,7 +100,7 @@ certifications: []
 
 용역업체가 바뀌어 새로 채용되는 경우와 영업양도 등으로 근로관계가 포괄적으로 넘어가는 경우는 다를 수 있다. ‘고용승계’라는 표현만으로 근속기간이 끊긴다거나 모든 조건이 그대로 유지된다고 단정하지 말자.
 
-![관리업체 변경 시 확인할 계약 조건과 근로계약 관련 사항을 설명한 인포그래픽](/images/facility-drafts/03/03-contract-change-check.webp)
+<figure><img src="/images/facility-drafts/03/03-contract-change-check.webp" alt="관리업체가 바뀐다면: 현장 계약 기간과 변경 조건, 고용승계 조항·관행·사실관계, 변경 후 조건 새 회사와의 근로조건" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 입사 전에는 다음 세 가지를 확인해 두자.
 
@@ -124,7 +124,7 @@ certifications: []
 | **근무지** | 해당 건물에서 계속 근무하나, 다른 현장으로 배치될 수 있나? |
 | **복리후생·정년** | 실제 고용회사에 어떤 규정이 적용되나? |
 
-![기본급과 수당, 고용기간과 근무지 조건을 나란히 검토하는 직원의 모습](/images/facility-drafts/03/04-offer-comparison.webp)
+<figure><img src="/images/facility-drafts/03/04-offer-comparison.webp" alt="같은 월급, 다른 조건: 기본급·수당 고정급과 변동 항목, 고용기간 기간제·무기계약 구분, 근무지·규정 현장 배치와 회사 규정" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 **‘어느 회사 소속인가’와 ‘실제로 얼마를, 어떤 조건으로 받는가’는 함께 봐야 하는 질문**이다.
 
@@ -153,7 +153,9 @@ certifications: []
 5. **급여:** 기본급과 각종 수당이 어떻게 구성되는가?
 6. **경력증빙:** 담당 설비·업무·기간을 어떤 서류로 남길 수 있는가?
 
-![시설관리 채용공고에 표시해야 할 여섯 가지 확인 항목](/images/facility-drafts/03/05-six-point-checklist.webp)
+<figure><img src="/images/facility-drafts/03/05-six-point-checklist.webp" alt="채용공고 여섯 가지 1/2: 고용주 근로계약을 맺는 법인, 고용기간 기간의 정함 여부, 현장 이동 다른 건물 전환배치" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/03/05-six-point-checklist-part-2.webp" alt="채용공고 여섯 가지 2/2: 실제 업무 운전·점검·감시·관리, 급여 기본급과 각종 수당, 경력증빙 설비·업무·기간의 증빙" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 지원하려는 공고에서 **실제 고용회사와 계약기간**을 먼저 찾아 적어 보자. 근무 장소만 나와 있다면 채용 담당자에게 근로계약을 맺는 회사를 물어보면 된다.
 

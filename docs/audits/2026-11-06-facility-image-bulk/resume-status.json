@@ -1,0 +1,21 @@
+{
+  "localCommit": "0dc4db757d6e50acadacfcc5dae3c7943c32541e",
+  "remoteBeforePush": "ddcaecf638bf42c57651776336caea134daa4319",
+  "rechecked": {
+    "images": 85,
+    "cardTopics": 182,
+    "centeredLabels": 255,
+    "newIcons": 28,
+    "iconSizes": 6,
+    "templateTests": 11,
+    "SEOErrors": 0,
+    "existingSEOWarnings": 1,
+    "publicContentErrors": 0,
+    "internalLinks": 149
+  },
+  "browser": "not executed: bundled browser absent, system Chromium exits during startup",
+  "gitHubUpload": "blocked by automatic approval review; do not retry without explicit authorization",
+  "PR": "not created",
+  "deployment": "not performed",
+  "next": "after user authorizes upload, push branch, create draft PR, inspect both-mode four-width QA before deployment decision"
+}

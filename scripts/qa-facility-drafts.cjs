@@ -3,6 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const base=(process.env.QA_BASE_URL||'http://127.0.0.1:4321').replace(/\/$/,'');
 const preview=process.env.QA_FACILITY_PREVIEW==='1';
+const bulkImages=JSON.parse(fs.readFileSync('docs/audits/2026-11-06-facility-image-bulk/manifest.json'));
 const release=fs.existsSync('docs/audits/2026-11-05-facility-publication/manifest.json');
 const available=preview||release;
 const articles=Object.values(JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/site-article-map.json')));
@@ -38,7 +39,8 @@ fs.mkdirSync(output,{recursive:true});
     }
     assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),preview?'noindex, nofollow':'index, follow');
     const images=page.locator('.facility-body img');
-    assert.equal(await images.count(),5);
+    const expectedImages=bulkImages.source['src/content/facility/'+article.slug+'.md']?.images??5;
+    assert.equal(await images.count(),expectedImages);
     for(const img of await images.all()) {
      await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode());
      const data=await img.evaluate(el=>{const r=el.getBoundingClientRect(),b=document.querySelector('.facility-body').getBoundingClientRect();return {loaded:el.complete&&el.naturalWidth>0,alt:el.alt,dimensions:!!el.width&&!!el.height,inside:r.left>=b.left-1&&r.right<=b.right+1,ratio:Math.abs(r.width/r.height-el.naturalWidth/el.naturalHeight)<.01,border:getComputedStyle(el).borderTopWidth};});
@@ -56,12 +58,12 @@ fs.mkdirSync(output,{recursive:true});
      await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
      await page.screenshot({path:output+'/'+article.slug+'-'+width+'.png',fullPage:true});
     }
-    results.push({width,path:article.path,status:200,images:5,...dimensions});
+    results.push({width,path:article.path,status:200,images:expectedImages,...dimensions});
    }
    assert.deepEqual(errors,[],'no page runtime errors');
    await context.close();
   }
   fs.writeFileSync(output+'/results.json',JSON.stringify({preview,cases:results.length,results},null,2)+'\n');
-  console.log('Facility draft browser QA: '+results.length+' route/viewport cases PASS; '+(available?'160 image loads':'drafts return 404'));
+  console.log('Facility draft browser QA: '+results.length+' route/viewport cases PASS; '+(available?'reviewed image loads':'drafts return 404'));
  } finally {await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

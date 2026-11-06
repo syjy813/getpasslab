@@ -1,0 +1,48 @@
+{
+  "number": "10",
+  "file": "03-boiler-qualification-ranges.webp",
+  "original": "03-boiler-qualification-ranges.webp",
+  "part": 1,
+  "total": 1,
+  "title": "보일러 기본 자격 구간",
+  "subtitle": "에너지이용 합리화법 시행규칙 별표 3의9 요약",
+  "cards": [
+    {
+      "title": "10t/h 이하",
+      "icon": "boiler",
+      "summary": "에너지관리기능사 이상",
+      "details": [
+        "기능사·산업기사",
+        "기사·기능장"
+      ],
+      "action": "기본 구간"
+    },
+    {
+      "title": "10 초과~30 이하",
+      "icon": "boiler",
+      "summary": "단위 t/h · 산업기사 이상",
+      "details": [
+        "에너지관리산업기사",
+        "기사·기능장"
+      ],
+      "action": "기본 구간"
+    },
+    {
+      "title": "30t/h 초과",
+      "icon": "boiler",
+      "summary": "에너지관리기사·기능장",
+      "details": [
+        "두 자격 중 해당 경로"
+      ],
+      "action": "기본 구간"
+    }
+  ],
+  "takeaway": "소형기기·가스연료·관류보일러 비고는 별도 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "number": "04",
+  "file": "03-working-waiting-rest.webp",
+  "original": "03-working-waiting-rest.webp",
+  "part": 1,
+  "total": 1,
+  "title": "휴게와 대기는 다르다",
+  "subtitle": "현장 체류시간과 근로시간을 구분",
+  "cards": [
+    {
+      "title": "업무 수행",
+      "icon": "mechanical",
+      "summary": "점검·운전·보고",
+      "details": [
+        "실제 업무 수행 시간"
+      ],
+      "action": "근로시간"
+    },
+    {
+      "title": "호출 대기",
+      "icon": "support",
+      "summary": "상시 감시·즉시 응답",
+      "details": [
+        "지휘·감독 여부가 핵심"
+      ],
+      "action": "근로시간 가능"
+    },
+    {
+      "title": "자유로운 휴게",
+      "icon": "night",
+      "summary": "업무 지시에서 벗어남",
+      "details": [
+        "시간을 자유롭게 이용"
+      ],
+      "action": "휴게시간 가능"
+    }
+  ],
+  "takeaway": "명칭보다 실제 업무·지휘감독·자유로운 이용을 판단",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

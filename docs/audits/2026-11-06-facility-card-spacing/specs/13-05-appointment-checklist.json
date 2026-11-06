@@ -1,0 +1,40 @@
+{
+  "number": "13",
+  "file": "05-appointment-checklist.webp",
+  "original": "05-appointment-checklist.webp",
+  "part": 1,
+  "total": 2,
+  "title": "보일러 선임 전 확인 1/2",
+  "subtitle": "채용공고 한 줄보다 실제 검사증·설비 조건을 먼저",
+  "cards": [
+    {
+      "title": "검사대상기기",
+      "icon": "boiler",
+      "summary": "법령상 검사·선임 대상",
+      "details": [],
+      "action": "검사증 확인"
+    },
+    {
+      "title": "종류·용량",
+      "icon": "gauge",
+      "summary": "증기·온수·열매체·사양",
+      "details": [],
+      "action": "명판·환산 확인"
+    },
+    {
+      "title": "가스연료",
+      "icon": "gas",
+      "summary": "사용 연료와 자격 경로",
+      "details": [],
+      "action": "추가조건 확인"
+    }
+  ],
+  "takeaway": "선임·해임·퇴직 시 설치자가 30일 이내 신고",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

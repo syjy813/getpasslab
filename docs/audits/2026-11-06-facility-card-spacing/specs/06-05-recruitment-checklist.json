@@ -1,0 +1,40 @@
+{
+  "number": "06",
+  "file": "05-recruitment-checklist.webp",
+  "original": "05-recruitment-checklist.webp",
+  "part": 1,
+  "total": 2,
+  "title": "한전FMS 지원 전 확인 1/2",
+  "subtitle": "사업소가 달라지면 지원 조건도 달라진다",
+  "cards": [
+    {
+      "title": "채용 회차",
+      "icon": "career",
+      "summary": "상반기·하반기 공고 구분",
+      "details": [],
+      "action": "접수 상태 확인"
+    },
+    {
+      "title": "모집 사업소",
+      "icon": "worksite",
+      "summary": "건물과 담당 설비",
+      "details": [],
+      "action": "사업소 자격표 확인"
+    },
+    {
+      "title": "필수·우대",
+      "icon": "qualification",
+      "summary": "여러 필수요건 모두 충족",
+      "details": [],
+      "action": "우대와 구분"
+    }
+  ],
+  "takeaway": "2026년 종료 공고 사례 | 새로운 회차의 원문 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

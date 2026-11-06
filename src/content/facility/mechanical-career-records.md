@@ -29,7 +29,7 @@ certifications: []
 legalReview: true
 ---
 
-<figure><img src="/images/facility-drafts/12/01-career-reporting-hero.webp" alt="기계설비유지관리자 경력신고, 퇴사 전에 챙길 서류" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
+<figure><img src="/images/facility-drafts/12/01-career-reporting-hero.webp" alt="기계설비유지관리자 경력신고·수첩 발급 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 *경력은 근무하면서 쌓이지만, 경력을 증명하는 서류는 따로 챙겨야 한다.*
 
@@ -61,7 +61,9 @@ legalReview: true
 | **회사별 증빙** | 회사의 업종과 업무 관련성 | 유지관리업체 사업자등록증 등 업무유형에 따른 자료 |
 | **자격·학력·사진** | 취득자격·관련 학력·본인 확인 | 해당자 제출 조건, 자격 취득일, 최근 6개월 사진 |
 
-<figure><img src="/images/facility-drafts/12/02-reporting-documents.webp" alt="기계설비유지관리자 최초 경력신고 서류 구분" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/12/02-reporting-documents.webp" alt="경력신고 서류의 역할 1/2: 경력신고서 신청인의 경력·자격 신고, 경력확인서 회사별 실제 담당업무" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/12/02-reporting-documents-part-2.webp" alt="경력신고 서류의 역할 2/2: 근무사실 증빙 소속회사와 재직기간, 회사별 증빙 업종과 업무 관련성" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *서류마다 증명하는 사실이 다르다. 신청인에 따라 필요한 항목과 제출 방식이 달라질 수 있다.*
 
@@ -89,7 +91,7 @@ legalReview: true
 | 위탁관리업체 | 발주자·건물 관리주체 | **발주자와 위탁업체의 계약관계 증빙이 있으면 조건부 인정 가능** |
 | 발주자와 위탁관리업체가 모두 기재 | 발주자 또는 위탁관리업체 | 협회 안내상 어느 한쪽 직인 인정 가능 |
 
-<figure><img src="/images/facility-drafts/12/03-employer-and-stamps.webp" alt="위탁관리 경력확인서 직인 주체 비교" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/12/03-employer-and-stamps.webp" alt="경력확인서 직인 주체: 발주자 소속 보험 사업자명: 발주자, 위탁업체 소속 보험 사업자명: 위탁업체, 위탁업체 소속 직인: 발주자" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *단순히 건물에서 일했다는 이유로 아무 직인을 받아도 되는 것은 아니다. 위 표는 협회 안내에 있는 대표 사례를 단순화한 것이다.*
 
@@ -110,7 +112,9 @@ legalReview: true
 | 자격 취득 전 | **70%** | 위 100% 적용 대상 업무의 취득 전 경력 |
 | 자격 취득 전 | **56%** | 위 80% 적용 대상 업무의 취득 전 경력(80% × 70%) |
 
-<figure><img src="/images/facility-drafts/12/04-recognized-experience.webp" alt="기계설비유지관리자 실무경력 환산율" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/12/04-recognized-experience.webp" alt="근속 5년과 인정경력 1/2: 자격 취득 후 유지관리·성능점검, 자격 취득 후 설계·시공·감리" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/12/04-recognized-experience-part-2.webp" alt="근속 5년과 인정경력 2/2: 자격 취득 전 유지관리·성능점검, 자격 취득 전 설계·시공·감리" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *대표적인 인정률 구분이며, 업무 수행 사실·소속기관·기술자격 등 법정 인정요건을 충족하는 경우에 한한다.*
 
@@ -131,7 +135,9 @@ legalReview: true
 5. **서류 심사·등급 확인:** 인정 경력과 등급 심사 결과 확인, 필요한 보완 대응
 6. **수첩 발급:** 해당 요건 충족 시 수첩 발급 신청 및 필요 절차 확인
 
-<figure><img src="/images/facility-drafts/12/05-reporting-process.webp" alt="기계설비유지관리자 경력신고부터 수첩 발급까지" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/12/05-reporting-process.webp" alt="경력신고부터 수첩 발급 1/2: 자격·경력 확인 종목·취득일·근무기간, 경력확인서 협회 지정 양식·날인, 근무·회사 증빙 보험·연금·회사 자료" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/12/05-reporting-process-part-2.webp" alt="경력신고부터 수첩 발급 2/2: 최초 경력신고 협회 인터넷 신고·접수, 심사·등급 확인 인정경력·보완 요청, 수첩 발급 해당 요건 충족 시 신청" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 *신청 경로와 제출서류는 최초신고·변경신고·재발급 여부에 따라 달라진다.*
 

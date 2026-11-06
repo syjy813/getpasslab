@@ -1,0 +1,48 @@
+{
+  "number": "02",
+  "file": "03-career-records.webp",
+  "original": "03-career-records.webp",
+  "part": 1,
+  "total": 1,
+  "title": "경력은 기록으로 남기자",
+  "subtitle": "담당업무와 해당 심사기관의 증빙 기준을 확인",
+  "cards": [
+    {
+      "title": "근무기간",
+      "icon": "career",
+      "summary": "언제·어디에서 일했나",
+      "details": [
+        "근무처별 입사·퇴사일",
+        "현장별 담당기간 기록"
+      ],
+      "action": "기간 대조"
+    },
+    {
+      "title": "담당업무",
+      "icon": "mechanical",
+      "summary": "어떤 설비를 맡았나",
+      "details": [
+        "실제 수행업무를 기재",
+        "하지 않은 업무 추가 금지"
+      ],
+      "action": "업무 확인"
+    },
+    {
+      "title": "증빙서류",
+      "icon": "folder",
+      "summary": "지정 서식과 근무사실",
+      "details": [
+        "협회 경력확인서 확인",
+        "일반 증명서와 구분"
+      ],
+      "action": "재직 중 준비"
+    }
+  ],
+  "takeaway": "서류 확보만으로 경력 인정이 보장되지는 않음",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

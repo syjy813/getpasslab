@@ -1,0 +1,40 @@
+{
+  "number": "09",
+  "file": "05-application-checklist.webp",
+  "original": "05-application-checklist.webp",
+  "part": 1,
+  "total": 2,
+  "title": "캠코FMC 지원 전 확인 1/2",
+  "subtitle": "회사 이름보다 지원할 모집표 한 칸을 정확히",
+  "cards": [
+    {
+      "title": "공고 회차",
+      "icon": "career",
+      "summary": "연도·차수와 접수 마감",
+      "details": [],
+      "action": "최신 원문 확인"
+    },
+    {
+      "title": "실제 사업소",
+      "icon": "worksite",
+      "summary": "시설과 담당 설비·업무",
+      "details": [],
+      "action": "배치 변경 확인"
+    },
+    {
+      "title": "직위·등급",
+      "icon": "job-offer",
+      "summary": "시설기사와 기사 자격 구분",
+      "details": [],
+      "action": "직위명 확인"
+    }
+  ],
+  "takeaway": "2026년 8월 종료 공고 | 향후 조건 보장 아님",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

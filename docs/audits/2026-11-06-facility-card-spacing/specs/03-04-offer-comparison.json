@@ -1,0 +1,48 @@
+{
+  "number": "03",
+  "file": "04-offer-comparison.webp",
+  "original": "04-offer-comparison.webp",
+  "part": 1,
+  "total": 1,
+  "title": "같은 월급, 다른 조건",
+  "subtitle": "총액만으로 좋은 일자리인지 판단할 수 없다",
+  "cards": [
+    {
+      "title": "기본급·수당",
+      "icon": "pay-components",
+      "summary": "고정급과 변동 항목",
+      "details": [
+        "야간·연장·선임수당",
+        "포함인지 별도인지"
+      ],
+      "action": "급여 구성 확인"
+    },
+    {
+      "title": "고용기간",
+      "icon": "contract-term",
+      "summary": "기간제·무기계약 구분",
+      "details": [
+        "근로계약의 종료 조건"
+      ],
+      "action": "계약기간 확인"
+    },
+    {
+      "title": "근무지·규정",
+      "icon": "route",
+      "summary": "현장 배치와 회사 규정",
+      "details": [
+        "다른 현장 이동 가능성",
+        "정년·복리후생 규정"
+      ],
+      "action": "실제 회사 기준"
+    }
+  ],
+  "takeaway": "소속회사와 실제로 받는 금액·조건을 함께 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

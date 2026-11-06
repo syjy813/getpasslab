@@ -1,0 +1,37 @@
+{
+  "number": "09",
+  "file": "03-site-appointment-requirements-part-2.webp",
+  "original": "03-site-appointment-requirements.webp",
+  "part": 2,
+  "total": 2,
+  "title": "사업소 추가 선임요건 2/2",
+  "subtitle": "캠코FMC | 2026년 8월 현장직 2차 사례",
+  "cards": [
+    {
+      "title": "글로벌지식협력단지",
+      "icon": "qualification",
+      "summary": "시설 4등급 대리",
+      "details": [
+        "기계설비유지관리자",
+        "초급 법정선임 가능"
+      ],
+      "action": "추가 필수조건"
+    },
+    {
+      "title": "태안정책연수원",
+      "icon": "qualification",
+      "summary": "시설 3등급 주임",
+      "details": [
+        "기계설비유지관리자",
+        "초급 법정선임 가능"
+      ],
+      "action": "추가 필수조건"
+    }
+  ],
+  "takeaway": "공고의 채용요건과 실제 법적 선임 가능 여부를 대조",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "number": "10",
+  "file": "04-gas-laws-separation.webp",
+  "original": "04-gas-laws-separation.webp",
+  "part": 1,
+  "total": 1,
+  "title": "가스시설은 법률부터",
+  "subtitle": "같은 가스 안전관리자 표현도 적용 법률이 다름",
+  "cards": [
+    {
+      "title": "도시가스",
+      "icon": "gas",
+      "summary": "도시가스사업법령",
+      "details": [
+        "특정가스사용시설 등",
+        "자격·시설·인원 확인"
+      ],
+      "action": "해당 시설 기준"
+    },
+    {
+      "title": "고압가스·냉동",
+      "icon": "cooling",
+      "summary": "고압가스 안전관리법령",
+      "details": [
+        "제조·저장·사용 등",
+        "자격·시설·인원 확인"
+      ],
+      "action": "해당 시설 기준"
+    },
+    {
+      "title": "LPG",
+      "icon": "gas",
+      "summary": "액화석유가스법령",
+      "details": [
+        "사용·저장·사업 등",
+        "자격·시설·인원 확인"
+      ],
+      "action": "해당 시설 기준"
+    }
+  ],
+  "takeaway": "가스기능사·양성교육 경로도 시설별 기준 확인",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

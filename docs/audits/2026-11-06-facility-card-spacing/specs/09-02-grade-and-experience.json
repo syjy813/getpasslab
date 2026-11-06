@@ -1,0 +1,37 @@
+{
+  "number": "09",
+  "file": "02-grade-and-experience.webp",
+  "original": "02-grade-and-experience.webp",
+  "part": 1,
+  "total": 2,
+  "title": "직위명과 자격증 구분 1/2",
+  "subtitle": "캠코FMC | 2026년 8월 현장직 2차 기본요건",
+  "cards": [
+    {
+      "title": "2등급 · 기사",
+      "icon": "career",
+      "summary": "관련 실무경력 1년 이상",
+      "details": [
+        "회사의 직위명",
+        "국가기술자격 기사와 구분"
+      ],
+      "action": "사업소 추가요건 확인"
+    },
+    {
+      "title": "3등급 · 주임",
+      "icon": "qualification",
+      "summary": "관련 실무경력 3년 이상",
+      "details": [
+        "및 관련 기능사 이상"
+      ],
+      "action": "경력·자격 모두"
+    }
+  ],
+  "takeaway": "해당 회차 기본요건 | 현장별 특수요건은 별도",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

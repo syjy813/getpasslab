@@ -26,7 +26,7 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-drafts/09/01-camcofmc-hero.webp" alt="캠코FMC 채용공고 두 장을 비교하는 구직자와 서로 다른 시설관리 현장" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
+<figure><img src="/images/facility-drafts/09/01-camcofmc-hero.webp" alt="캠코FMC 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 ## 과장보다 기사가 월급을 더 받는다고?
 
@@ -73,7 +73,9 @@ legalReview: false
 
 같은 단어지만 담당하는 역할이 다르다. 채용표에서 두 개를 하나로 생각하면 자격 판단부터 꼬일 수 있다.
 
-<figure><img src="/images/facility-drafts/09/02-grade-and-experience.webp" alt="캠코FMC 2026년 8월 시설직 2~5등급의 직위와 경력·자격요건 비교" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/09/02-grade-and-experience.webp" alt="직위명과 자격증 구분 1/2: 2등급 · 기사 관련 실무경력 1년 이상, 3등급 · 주임 관련 실무경력 3년 이상" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/09/02-grade-and-experience-part-2.webp" alt="직위명과 자격증 구분 2/2: 4등급 · 대리 관련 실무경력 5년 이상, 5등급 · 과장 관련 실무경력 7년 이상" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
 
 ### 2026년 8월 하반기 현장직 2차 기본요건
 
@@ -98,7 +100,9 @@ legalReview: false
 
 **한 가지 문을 더 통과해야 할 수 있다. 바로 해당 사업소가 요구하는 법정선임 조건이다.**
 
-<figure><img src="/images/facility-drafts/09/03-site-appointment-requirements.webp" alt="수원법원종합청사·캠코서울사옥·글로벌지식협력단지·태안정책연수원의 추가 선임요건 사례" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/09/03-site-appointment-requirements.webp" alt="사업소 추가 선임요건 1/2: 수원법원종합청사 시설 5등급 과장, 캠코서울사옥 시설 4등급 대리" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/09/03-site-appointment-requirements-part-2.webp" alt="사업소 추가 선임요건 2/2: 글로벌지식협력단지 시설 4등급 대리, 태안정책연수원 시설 3등급 주임" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 2026년 8월 2차 공고에 명시된 대표적인 필수 선임 가능 조건은 아래와 같다.
 
@@ -122,7 +126,9 @@ legalReview: false
 
 2026년 8월 2차 공고의 **시설직 사례만** 비교해 보자. 서로 다른 회차나 관리·보안·미화직 금액을 혼합하지 않았다.
 
-<figure><img src="/images/facility-drafts/09/04-site-pay-and-shifts.webp" alt="캠코FMC 2026년 8월 시설직 사업소별 월 급여와 주간·교대근무 비교" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/09/04-site-pay-and-shifts.webp" alt="같은 회사, 다른 월 급여 1/2: 수원법원종합청사 5등급 과장 · 주간, 캠코서울사옥 4등급 대리 · 주간" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/09/04-site-pay-and-shifts-part-2.webp" alt="같은 회사, 다른 월 급여 2/2: 태안정책연수원 3등급 주임 · 교대, 캠코양재타워 2등급 기사 · 교대" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
 
 | 사업소 | 시설직 직위 | 근무형태 | 당시 세전 월 급여 내외 |
 |---|---|---|---:|
@@ -171,7 +177,9 @@ legalReview: false
 
 ## 지원 전에 이것만 확인하자
 
-<figure><img src="/images/facility-drafts/09/05-application-checklist.webp" alt="캠코FMC 시설관리 지원 전에 확인할 여섯 가지 항목" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/09/05-application-checklist.webp" alt="캠코FMC 지원 전 확인 1/2: 공고 회차 연도·차수와 접수 마감, 실제 사업소 시설과 담당 설비·업무, 직위·등급 시설기사와 기사 자격 구분" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/09/05-application-checklist-part-2.webp" alt="캠코FMC 지원 전 확인 2/2: 자격·경력 및·또는와 기준일, 법정선임 사업소별 추가 선임요건, 급여·근무표 포함 수당·교대·휴게" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 1. **공고 회차** — 해당 연도·차수와 접수 마감일은 언제인지
 2. **사업소와 실제 업무** — 기계·전기·소방·영선·통신 중 무엇을 맡는지

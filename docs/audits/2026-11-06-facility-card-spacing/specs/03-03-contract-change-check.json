@@ -1,0 +1,49 @@
+{
+  "number": "03",
+  "file": "03-contract-change-check.webp",
+  "original": "03-contract-change-check.webp",
+  "part": 1,
+  "total": 1,
+  "title": "관리업체가 바뀐다면",
+  "subtitle": "업체 간 계약 변경과 개인 고용관계를 구분",
+  "cards": [
+    {
+      "title": "현장 계약",
+      "icon": "contract-term",
+      "summary": "기간과 변경 조건",
+      "details": [
+        "계약 종료 시점 확인",
+        "다른 현장 배치 가능성"
+      ],
+      "action": "계약 조항 확인"
+    },
+    {
+      "title": "고용승계",
+      "icon": "service-contractor",
+      "summary": "조항·관행·사실관계",
+      "details": [
+        "적용 지침과 범위 확인",
+        "자동 보장으로 단정 금지"
+      ],
+      "action": "해당 현장 확인"
+    },
+    {
+      "title": "변경 후 조건",
+      "icon": "pay-components",
+      "summary": "새 회사와의 근로조건",
+      "details": [
+        "임금·시간·근무지",
+        "이전 근무기간 인정 여부"
+      ],
+      "action": "서면 대조"
+    }
+  ],
+  "takeaway": "계속 근무 여부와 이전 근속기간 인정은 따로 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

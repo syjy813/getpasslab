@@ -1,0 +1,32 @@
+{
+  "icons": 39,
+  "icon_size_checks": 390,
+  "changed_icons": [
+    "mechanical",
+    "gas",
+    "submission",
+    "rail"
+  ],
+  "updated_images": 28,
+  "repaired_icon_instances": 30,
+  "unchanged_images": 57,
+  "all_images": 85,
+  "card_items": 182,
+  "centered_labels": 255,
+  "template_tests": 11,
+  "spacing_check": "PASS",
+  "preserved_public_sector_images": 5,
+  "build_pages": 573,
+  "seo_html": 575,
+  "seo_errors": 0,
+  "existing_seo_warnings": 1,
+  "mobile_raster_widths": [
+    320,
+    390
+  ],
+  "browser_qa": "not executed",
+  "remote_ci": "not executed",
+  "push": "not executed",
+  "deployment": "not executed",
+  "centered_label_gap_limit": 2
+}

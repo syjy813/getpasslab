@@ -1,0 +1,39 @@
+{
+  "number": "10",
+  "file": "02-seven-appointment-types.webp",
+  "original": "02-seven-appointment-types.webp",
+  "part": 1,
+  "total": 3,
+  "title": "법정선임은 각각 다른 제도 1/3",
+  "subtitle": "분야별 법령·대상·자격요건을 따로 확인",
+  "cards": [
+    {
+      "title": "보일러",
+      "icon": "boiler",
+      "summary": "검사대상기기관리자",
+      "details": [],
+      "action": "기기 종류·용량 확인"
+    },
+    {
+      "title": "냉동·고압가스",
+      "icon": "cooling",
+      "summary": "고압가스 관련 안전관리자",
+      "details": [],
+      "action": "시설·냉동능력 확인"
+    },
+    {
+      "title": "도시가스·LPG",
+      "icon": "gas",
+      "summary": "해당 가스시설 안전관리자",
+      "details": [],
+      "action": "적용 법률 구분"
+    }
+  ],
+  "takeaway": "한 자격증으로 모든 분야의 선임요건을 충족하지 않음",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

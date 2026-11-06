@@ -1,0 +1,1691 @@
+{
+  "baseCommit": "ddcaecf638bf42c57651776336caea134daa4319",
+  "scope": "13 published facility articles; public-sector comparison unchanged; draft excluded",
+  "source": {
+    "src/content/facility/boiler-inspection-manager.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/boiler-inspection-manager.md",
+      "beforeSHA256": "61a4f52f385d3e7b19ce052ff4e96c4f3a2a63ba3d3c1f8b3639e91ba9ef130c",
+      "sha256": "91f43474f6eeca07c5b60fd0011fbf00e824b036f219a5e8057107118b3f73be",
+      "images": 8
+    },
+    "src/content/facility/employment-types.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/employment-types.md",
+      "beforeSHA256": "80ff3cc724135fb419a713ea1d60ec011c0fec1c89489e7b3a051292e856d715",
+      "sha256": "c6baec753849a12d1a386fec7e493aa59a360adb2ea73d00833ef6bee5d71125",
+      "images": 6
+    },
+    "src/content/facility/first-job.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/first-job.md",
+      "beforeSHA256": "94c784404c02503ecc51783e4cad3f4c22eca3b52e9edd322247c68313628b4d",
+      "sha256": "8a7d5455d560d27548e2677aedc330eb6fa4f73dcac59ec25e4bd6bbc8a3d855",
+      "images": 5
+    },
+    "src/content/facility/hanfms.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/hanfms.md",
+      "beforeSHA256": "6811928d2da36a980b0adce0029617ce45fae8909ec12a5507b14adb70929398",
+      "sha256": "30ecf31d5cb5b9474b4b6b00890b82a9830ba9733b6f91b90131886e4d152e3a",
+      "images": 7
+    },
+    "src/content/facility/kamcofmc.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/kamcofmc.md",
+      "beforeSHA256": "b3e4892c21d2c828f1aad468b4f442d321ea03a9270a1212d0daf43cf693954c",
+      "sha256": "87d581b419bab7d28d907d231b0ee346837cd19587612ff8e9d27ab4b7a2b208",
+      "images": 9
+    },
+    "src/content/facility/korailtech.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/korailtech.md",
+      "beforeSHA256": "d3f70018a79a42e8ebaf3985e88e22f76d76032680035a59134dcba02dc74e6c",
+      "sha256": "4ab38cc95b05dc9bdb5d5a6e2ea6d1c7d15baa5945734f4c64da59bb5096fa6c",
+      "images": 6
+    },
+    "src/content/facility/mechanical-career-records.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/mechanical-career-records.md",
+      "beforeSHA256": "f3ffb755c8db2ad716fd0cda5af0298ef38284679c98e2600258035fef65e544",
+      "sha256": "9fd1b7d8cecea6f246330710d8e2fdbb1a83e042a9b64aeda90f85a1f30b8ed3",
+      "images": 8
+    },
+    "src/content/facility/mechanical-maintainer-levels.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/mechanical-maintainer-levels.md",
+      "beforeSHA256": "0121d1b78e87b6a6d6398b726b5a8694bc443d16cb0a3777e161c921e0c3303d",
+      "sha256": "b15606603c5e3e011406d9c2181a79ad4028106012b5ea551088535a6deb47f4",
+      "images": 9
+    },
+    "src/content/facility/postal-facilities.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/postal-facilities.md",
+      "beforeSHA256": "f68ccb0cf1ebdc3058b256e9fc763b9aa3bf4244793692c3f8c45ac1d8740196",
+      "sha256": "ee9db4eaaf2638e12f966952315a15ee7efd572c90a64045bfed24c913041450",
+      "images": 6
+    },
+    "src/content/facility/shifts-and-pay.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/shifts-and-pay.md",
+      "beforeSHA256": "eb9050478dc870a0c2b6f5619280d03b0ee8f420e11d782c916391e18c72abb3",
+      "sha256": "86e8c8a4235bf8905c121bf1cf9ba6de4729c325d76fa2e3478f9c5db1da601a",
+      "images": 6
+    },
+    "src/content/facility/statutory-appointments.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/statutory-appointments.md",
+      "beforeSHA256": "b3c8855381416089d8eeadfabe2449b22dcba125c8bde3476550899b4835e0c0",
+      "sha256": "02e10aaf83f61d5fc7b1130821a2b1778676b5e72aba769b9d71cb1c94417b99",
+      "images": 8
+    },
+    "src/content/facility/what-is-facility-management.md": {
+      "previous": "docs/audits/2026-11-06-facility-image-bulk/previous-articles/what-is-facility-management.md",
+      "beforeSHA256": "e4d4825e02322478acfdb848839dfd9b60947c7f992a3aea2b81cd3cbf0e3935",
+      "sha256": "89e2a3746ae8e8ba3c49f951b7427c850df10217f73aa11751ea116dc1f99739",
+      "images": 7
+    }
+  },
+  "dependencies": {
+    "scripts/generate-facility-infographic.mjs": "e5764355c86eceae03f0779a3009cf2ebd365bd33a6cf77f4a23a290d7e2c10a",
+    "scripts/facility-pictograms.mjs": "7b84c1c2bffc4bd2794c1dd38f92da121164c94ad8efd1a7e1b6a4f126649483",
+    "scripts/facility-pictograms-extended.mjs": "c9eea2b2bf2a51c11f070916dd8908e580d81e5665b87c68fd329538205ffe13",
+    "scripts/facility-bulk-specs.mjs": "f16c41a0679531416e1311daa76dff252bc18cc35c37e33188df9680da2a4a23",
+    "scripts/facility-bulk-labels.mjs": "54d5a71be7e0832f79bc9c955f1a94dd9119f1f4188f4e8f88c07c5e06c93fd8",
+    "scripts/generate-facility-bulk.mjs": "d4e19d65a9e3a50600956fd34121cf619bf73ed411ca98aa02976f6baf47cc95"
+  },
+  "images": [
+    {
+      "article": "boiler-inspection-manager",
+      "publicPath": "/images/facility-drafts/13/01-boiler-manager-hero-v2.webp",
+      "originalPath": "/images/facility-drafts/13/01-boiler-manager-hero-v2.webp",
+      "existing": true,
+      "file": "facility-image-refresh/13/01-boiler-manager-hero-v2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/13.png",
+      "kind": "editorial-hero",
+      "sha256": "2f25b095f7060e2f1216aa11917fc4cd470298f85f9333fed3f738bd7de7de0a",
+      "masterSHA256": "a9bfaf92139674c5e7027228a76f143d68737fdac37f0d9d75943e9efeec92bd",
+      "width": 1440,
+      "height": 1080,
+      "alt": "에너지관리기능사로 보일러 선임이 가능할까? — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "boiler-inspection-manager",
+      "publicPath": "/images/facility-drafts/13/02-identify-boiler.webp",
+      "originalPath": "/images/facility-drafts/13/02-identify-boiler.webp",
+      "existing": true,
+      "file": "facility-image-refresh/13/02-identify-boiler.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/13-02-identify-boiler.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/13-02-identify-boiler.json",
+      "kind": "official-card-template",
+      "sha256": "c1e84b4617999d57d7c25af242772d4470dcaee9341c467c90632cc37bb8a499",
+      "masterSHA256": "b07b5e1c1c5adbeec3288ac811bfb7ad053e8b626c633af956dcdc072c7e74da",
+      "width": 1440,
+      "height": 1080,
+      "alt": "자격표 전에 기기 확인 1/2: 검사대상 여부 검사증·관리대상 확인, 기기 종류 증기·온수·열매체 등",
+      "icons": [
+        "submission",
+        "boiler"
+      ]
+    },
+    {
+      "article": "boiler-inspection-manager",
+      "publicPath": "/images/facility-drafts/13/02-identify-boiler-part-2.webp",
+      "originalPath": "/images/facility-drafts/13/02-identify-boiler.webp",
+      "existing": false,
+      "file": "facility-image-refresh/13/02-identify-boiler-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/13-02-identify-boiler-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/13-02-identify-boiler-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "e16d0669256397c89bb2d611d0ce2764694a756b5aae9e5dbe5443444355b1d5",
+      "masterSHA256": "3e86bbdec23d20d111d479d799e3817b962d93d3fa10a040069186a76d0b6270",
+      "width": 1440,
+      "height": 1080,
+      "alt": "자격표 전에 기기 확인 2/2: 용량·압력 t/h·kW·MPa 등, 사용 연료 가스 여부와 추가조건",
+      "icons": [
+        "gauge",
+        "gas"
+      ]
+    },
+    {
+      "article": "boiler-inspection-manager",
+      "publicPath": "/images/facility-drafts/13/03-capacity-grade-ranges.webp",
+      "originalPath": "/images/facility-drafts/13/03-capacity-grade-ranges.webp",
+      "existing": true,
+      "file": "facility-image-refresh/13/03-capacity-grade-ranges.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/13-03-capacity-grade-ranges.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/13-03-capacity-grade-ranges.json",
+      "kind": "official-card-template",
+      "sha256": "ad87da808b104dc480fa5d8abeeff958bb2fb083ca28dfc8af470f7e2bdbc99b",
+      "masterSHA256": "cc8fbb4543a15ed0182d586492b670d6e580f225d8f1c8467b69705283562b1d",
+      "width": 1440,
+      "height": 1080,
+      "alt": "보일러 용량별 기본 자격: 10t/h 이하 에너지관리기능사 이상, 10 초과~30 이하 단위 t/h · 산업기사 이상, 30t/h 초과 에너지관리기사·기능장",
+      "icons": [
+        "boiler",
+        "boiler",
+        "boiler"
+      ]
+    },
+    {
+      "article": "boiler-inspection-manager",
+      "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions.webp",
+      "originalPath": "/images/facility-drafts/13/04-small-and-gas-exceptions.webp",
+      "existing": true,
+      "file": "facility-image-refresh/13/04-small-and-gas-exceptions.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/13-04-small-and-gas-exceptions.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/13-04-small-and-gas-exceptions.json",
+      "kind": "official-card-template",
+      "sha256": "68b193b7b2960395994133125e20cc9fd7de0325ae3cd8bd63ad2a79803711d9",
+      "masterSHA256": "98dc1b81a0f7cc65c7dc65690031f4087e3ec6970126252cb0c1e20aa984aa50",
+      "width": 1440,
+      "height": 1080,
+      "alt": "기본 표 외의 추가조건 1/2: 소형 증기보일러 인정교육 경로 검토, 온수·열매체 인정교육 경로 검토",
+      "icons": [
+        "boiler",
+        "gauge"
+      ]
+    },
+    {
+      "article": "boiler-inspection-manager",
+      "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions-part-2.webp",
+      "originalPath": "/images/facility-drafts/13/04-small-and-gas-exceptions.webp",
+      "existing": false,
+      "file": "facility-image-refresh/13/04-small-and-gas-exceptions-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/13-04-small-and-gas-exceptions-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/13-04-small-and-gas-exceptions-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "24f9913170c1e8c97b55c060ab07cfb1341edd314f746b311f6fdf8d5c4a2141",
+      "masterSHA256": "80ded5d7892e346bf7e9c663d447d21ade46713992ea8cf5b81e82e8a4ad5ebf",
+      "width": 1440,
+      "height": 1080,
+      "alt": "기본 표 외의 추가조건 2/2: 가스연료 경로 1 기본 표 자격 + 관련 교육, 가스연료 경로 2 특정가스사용시설",
+      "icons": [
+        "gas",
+        "gas"
+      ]
+    },
+    {
+      "article": "boiler-inspection-manager",
+      "publicPath": "/images/facility-drafts/13/05-appointment-checklist.webp",
+      "originalPath": "/images/facility-drafts/13/05-appointment-checklist.webp",
+      "existing": true,
+      "file": "facility-image-refresh/13/05-appointment-checklist.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/13-05-appointment-checklist.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/13-05-appointment-checklist.json",
+      "kind": "official-card-template",
+      "sha256": "183c34cd0e2d4deaf3236c425dbe999c6c595eecd710c2c1e6d60025e643ac78",
+      "masterSHA256": "a10ad339f80310643fbec9fd033054ad29ea319a869772c22dc82a941361f64e",
+      "width": 1440,
+      "height": 1080,
+      "alt": "보일러 선임 전 확인 1/2: 검사대상기기 법령상 검사·선임 대상, 종류·용량 증기·온수·열매체·사양, 가스연료 사용 연료와 자격 경로",
+      "icons": [
+        "boiler",
+        "gauge",
+        "gas"
+      ]
+    },
+    {
+      "article": "boiler-inspection-manager",
+      "publicPath": "/images/facility-drafts/13/05-appointment-checklist-part-2.webp",
+      "originalPath": "/images/facility-drafts/13/05-appointment-checklist.webp",
+      "existing": false,
+      "file": "facility-image-refresh/13/05-appointment-checklist-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/13-05-appointment-checklist-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/13-05-appointment-checklist-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "00209dadba741f95f56cbb4e03b637d03f7435da63915df5aa5ab098118a602d",
+      "masterSHA256": "15b68ae19ddefb762bace66c0dd13078150c11640523e62f5375c72543e0c516",
+      "width": 1440,
+      "height": 1080,
+      "alt": "보일러 선임 전 확인 2/2: 교육·추가자격 관련 교육과 별도 선임, 관리구역·대수 1구역·관류·합산 조건, 선임신고 설치자의 신고 준비",
+      "icons": [
+        "training",
+        "worksite",
+        "submission"
+      ]
+    },
+    {
+      "article": "employment-types",
+      "publicPath": "/images/facility-drafts/03/01-employment-types-hero.webp",
+      "originalPath": "/images/facility-drafts/03/01-employment-types-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/03/01-employment-types-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/03.png",
+      "kind": "editorial-hero",
+      "sha256": "cb9ef75718593da07be429eb4870da3b1108a96755509f50166494812209a7af",
+      "masterSHA256": "b9a37f7a2268cf9b3830d4e9de7414f841f4add27bc3227a7857a8166894a9dc",
+      "width": 1440,
+      "height": 1080,
+      "alt": "시설관리 직영·자회사·용역 차이 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "employment-types",
+      "publicPath": "/images/facility-drafts/03/02-three-employment-structures.webp",
+      "originalPath": "/images/facility-drafts/03/02-three-employment-structures.webp",
+      "existing": true,
+      "file": "facility-image-refresh/03/02-three-employment-structures.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/03-02-three-employment-structures.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/03-02-three-employment-structures.json",
+      "kind": "official-card-template",
+      "sha256": "ab9520abb09defb2496bb03ff0396c8102a51208dff898555491642ac2ca30a3",
+      "masterSHA256": "f62e512b51ea25770b7d66d568965f3e185ca73b532bc07671ea26a08d777202",
+      "width": 1440,
+      "height": 1080,
+      "alt": "시설관리 고용주 비교: 직영 운영 주체가 직접 채용, 자회사 별도 법인이 채용, 용역 전문업체가 채용",
+      "icons": [
+        "public-employer",
+        "subsidiary",
+        "service-contractor"
+      ]
+    },
+    {
+      "article": "employment-types",
+      "publicPath": "/images/facility-drafts/03/03-contract-change-check.webp",
+      "originalPath": "/images/facility-drafts/03/03-contract-change-check.webp",
+      "existing": true,
+      "file": "facility-image-refresh/03/03-contract-change-check.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/03-03-contract-change-check.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/03-03-contract-change-check.json",
+      "kind": "official-card-template",
+      "sha256": "f62f9f16683ca196544a3769c8352d6bae697ab4f7342a4bd642f62eb0630856",
+      "masterSHA256": "646d3be53dad5e172ca0c89e1b55a51c4b5fe798cd9b48430c5f4ce1eb4682e4",
+      "width": 1440,
+      "height": 1080,
+      "alt": "관리업체가 바뀐다면: 현장 계약 기간과 변경 조건, 고용승계 조항·관행·사실관계, 변경 후 조건 새 회사와의 근로조건",
+      "icons": [
+        "contract-term",
+        "service-contractor",
+        "pay-components"
+      ]
+    },
+    {
+      "article": "employment-types",
+      "publicPath": "/images/facility-drafts/03/04-offer-comparison.webp",
+      "originalPath": "/images/facility-drafts/03/04-offer-comparison.webp",
+      "existing": true,
+      "file": "facility-image-refresh/03/04-offer-comparison.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/03-04-offer-comparison.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/03-04-offer-comparison.json",
+      "kind": "official-card-template",
+      "sha256": "0e7da28fc80db2599fb2064d4561209fc55bb213ab9bd9490d3473f09ff4e3a0",
+      "masterSHA256": "63577965fa73f8b2b719239f7b294830b7e5354834bcdd4e0bfc7de087f71bb1",
+      "width": 1440,
+      "height": 1080,
+      "alt": "같은 월급, 다른 조건: 기본급·수당 고정급과 변동 항목, 고용기간 기간제·무기계약 구분, 근무지·규정 현장 배치와 회사 규정",
+      "icons": [
+        "pay-components",
+        "contract-term",
+        "route"
+      ]
+    },
+    {
+      "article": "employment-types",
+      "publicPath": "/images/facility-drafts/03/05-six-point-checklist.webp",
+      "originalPath": "/images/facility-drafts/03/05-six-point-checklist.webp",
+      "existing": true,
+      "file": "facility-image-refresh/03/05-six-point-checklist.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/03-05-six-point-checklist.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/03-05-six-point-checklist.json",
+      "kind": "official-card-template",
+      "sha256": "0df111da35ee6b8922fd9d99992e0accf15ff369fadbff772cf9c5dafe1ba8c0",
+      "masterSHA256": "6139b00f8b70902f6f59904291850bab1946de35c8cfbbe580522b22715990ca",
+      "width": 1440,
+      "height": 1080,
+      "alt": "채용공고 여섯 가지 1/2: 고용주 근로계약을 맺는 법인, 고용기간 기간의 정함 여부, 현장 이동 다른 건물 전환배치",
+      "icons": [
+        "legal-employer",
+        "contract-term",
+        "route"
+      ]
+    },
+    {
+      "article": "employment-types",
+      "publicPath": "/images/facility-drafts/03/05-six-point-checklist-part-2.webp",
+      "originalPath": "/images/facility-drafts/03/05-six-point-checklist.webp",
+      "existing": false,
+      "file": "facility-image-refresh/03/05-six-point-checklist-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/03-05-six-point-checklist-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/03-05-six-point-checklist-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "64e342f1aebfec844a090599d870fac57605d99af19df05816cfdb6965e583ee",
+      "masterSHA256": "4628fdce8462f7438d3f62cbb75825bed54f0ac851498c4ed296900c04604962",
+      "width": 1440,
+      "height": 1080,
+      "alt": "채용공고 여섯 가지 2/2: 실제 업무 운전·점검·감시·관리, 급여 기본급과 각종 수당, 경력증빙 설비·업무·기간의 증빙",
+      "icons": [
+        "mechanical",
+        "pay-components",
+        "career"
+      ]
+    },
+    {
+      "article": "first-job",
+      "publicPath": "/images/facility-drafts/02/01-first-job-hero.webp",
+      "originalPath": "/images/facility-drafts/02/01-first-job-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/02/01-first-job-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/02.png",
+      "kind": "editorial-hero",
+      "sha256": "5e7654a7071d0bb3afa1a593b963eb43ec727470c8067e9b07a7ecbc17ed44a6",
+      "masterSHA256": "a7396b7bf329482898cfe31b227659aa482b05105f9aecb599eddec7d177c58b",
+      "width": 1440,
+      "height": 1080,
+      "alt": "시설관리 첫 면접 질문 5가지 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "first-job",
+      "publicPath": "/images/facility-drafts/02/02-actual-work-scope.webp",
+      "originalPath": "/images/facility-drafts/02/02-actual-work-scope.webp",
+      "existing": true,
+      "file": "facility-image-refresh/02/02-actual-work-scope.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/02-02-actual-work-scope.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/02-02-actual-work-scope.json",
+      "kind": "official-card-template",
+      "sha256": "b69b3dba0bbe85a29d36933469e484ae2b469e036240a1b7092a086129ebe9bf",
+      "masterSHA256": "a9d47938c8921efaa1fa282b6a490e687183e3eb6fee7c4761b2c8d36564ee2c",
+      "width": 1440,
+      "height": 1080,
+      "alt": "같은 시설관리, 다른 업무: 직접 점검·운전 담당 설비 상태 확인, 감시·작업 관리 중앙감시·외주 작업 관리",
+      "icons": [
+        "mechanical",
+        "monitor"
+      ]
+    },
+    {
+      "article": "first-job",
+      "publicPath": "/images/facility-drafts/02/03-career-records.webp",
+      "originalPath": "/images/facility-drafts/02/03-career-records.webp",
+      "existing": true,
+      "file": "facility-image-refresh/02/03-career-records.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/02-03-career-records.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/02-03-career-records.json",
+      "kind": "official-card-template",
+      "sha256": "dce2c02996a86c7c7429abb34c761eed47106d02c0342e7f87f4708d02067b6b",
+      "masterSHA256": "4fe1e0ba2c5513526ba26048d9a9a02287ec253fc392d0d4ff6abb691d9931cf",
+      "width": 1440,
+      "height": 1080,
+      "alt": "경력은 기록으로 남기자: 근무기간 언제·어디에서 일했나, 담당업무 어떤 설비를 맡았나, 증빙서류 지정 서식과 근무사실",
+      "icons": [
+        "career",
+        "mechanical",
+        "folder"
+      ]
+    },
+    {
+      "article": "first-job",
+      "publicPath": "/images/facility-drafts/02/04-interview-five-questions.webp",
+      "originalPath": "/images/facility-drafts/02/04-interview-five-questions.webp",
+      "existing": true,
+      "file": "facility-image-refresh/02/04-interview-five-questions.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/02-04-interview-five-questions.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/02-04-interview-five-questions.json",
+      "kind": "official-card-template",
+      "sha256": "c0f2ae2ce03085db41e680639b6220cfe9afb1579503c0b4d2bb47ba207627ce",
+      "masterSHA256": "ff6502a5112694f5b2f3ecd7379a6bc4810ca3b1fdc32819278c1339f9d243c4",
+      "width": 1440,
+      "height": 1080,
+      "alt": "첫 면접의 다섯 질문 1/2: 실제 업무 직접 점검·운전하는 설비, 급여·근무표 기본급과 수당을 구분, 신입 교육 교육·야간 지원 체계",
+      "icons": [
+        "mechanical",
+        "pay-components",
+        "training"
+      ]
+    },
+    {
+      "article": "first-job",
+      "publicPath": "/images/facility-drafts/02/04-interview-five-questions-part-2.webp",
+      "originalPath": "/images/facility-drafts/02/04-interview-five-questions.webp",
+      "existing": false,
+      "file": "facility-image-refresh/02/04-interview-five-questions-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/02-04-interview-five-questions-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/02-04-interview-five-questions-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "313270620e649890148f8c5390f7e38461cd3c54158af4a20596fa2fb002b9ef",
+      "masterSHA256": "a2b2bd1725ae4772f0886620bb293f50febcadabd27e63faa49019d6eac076cc",
+      "width": 1440,
+      "height": 1080,
+      "alt": "첫 면접의 다섯 질문 2/2: 선임 책임 어떤 법정선임이 필요한가, 경력증빙 담당업무를 남길 수 있나",
+      "icons": [
+        "law",
+        "career"
+      ]
+    },
+    {
+      "article": "hanfms",
+      "publicPath": "/images/facility-drafts/06/01-hanfms-hero.webp",
+      "originalPath": "/images/facility-drafts/06/01-hanfms-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/06/01-hanfms-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/06.png",
+      "kind": "editorial-hero",
+      "sha256": "6683f14969509e3f2578100ebd44fabe51da7473cfe36372449b7c377222227e",
+      "masterSHA256": "19fd9bff93b5385340971ba1eb06aded210aa0af23ef84bde34e3851d451189b",
+      "width": 1440,
+      "height": 1080,
+      "alt": "한전FMS 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "hanfms",
+      "publicPath": "/images/facility-drafts/06/02-site-appointment-conditions-v2.webp",
+      "originalPath": "/images/facility-drafts/06/02-site-appointment-conditions-v2.webp",
+      "existing": true,
+      "file": "facility-image-refresh/06/02-site-appointment-conditions-v2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/06-02-site-appointment-conditions-v2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/06-02-site-appointment-conditions-v2.json",
+      "kind": "official-card-template",
+      "sha256": "1ff75755b083c52e434a5b39134f59be7d7c8159f27984a08e57ee7d030a888a",
+      "masterSHA256": "974fadd3043fceff702f0c840df1bcb0343fafd55e16e8a4ebc657d4d364b591",
+      "width": 1440,
+      "height": 1080,
+      "alt": "사업소별 필수 선임요건: 동용인지사 두 선임 가능 요건 모두, 이천지사 세 선임 가능 요건 모두",
+      "icons": [
+        "cooling",
+        "hazardous"
+      ]
+    },
+    {
+      "article": "hanfms",
+      "publicPath": "/images/facility-drafts/06/03-required-versus-preferred-v2.webp",
+      "originalPath": "/images/facility-drafts/06/03-required-versus-preferred-v2.webp",
+      "existing": true,
+      "file": "facility-image-refresh/06/03-required-versus-preferred-v2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/06-03-required-versus-preferred-v2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/06-03-required-versus-preferred-v2.json",
+      "kind": "official-card-template",
+      "sha256": "59fa1cf60c98ecee60650cf2df35802fb451c9e5d180c4e7b82b9aa013a297ae",
+      "masterSHA256": "f1cef223aa29784fdf28a41d8cf54ed07b7bd3624624111face8f5b0355b9bbd",
+      "width": 1440,
+      "height": 1080,
+      "alt": "필수와 우대는 다르다: 필수조건 4조 2교대 근무 가능, 우대사항 기계설비 관련 자격증",
+      "icons": [
+        "shift-calendar",
+        "qualification"
+      ]
+    },
+    {
+      "article": "hanfms",
+      "publicPath": "/images/facility-drafts/06/04-pay-and-shifts.webp",
+      "originalPath": "/images/facility-drafts/06/04-pay-and-shifts.webp",
+      "existing": true,
+      "file": "facility-image-refresh/06/04-pay-and-shifts.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/06-04-pay-and-shifts.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/06-04-pay-and-shifts.json",
+      "kind": "official-card-template",
+      "sha256": "c209f7e3d686639d2f5745e49fed4fc41db7e4acf1e68a2c027ceb1bf431509c",
+      "masterSHA256": "964413dda72a7889dbd1d8c01fdac21085efe93c7e790a0bd5f8a943190e9194",
+      "width": 1440,
+      "height": 1080,
+      "alt": "한전FMS 월 급여 사례 1/2: 시설관리 · 일근 월 약 285만 원, 시설관리 · 교대 월 약 304만 원",
+      "icons": [
+        "day",
+        "shift-calendar"
+      ]
+    },
+    {
+      "article": "hanfms",
+      "publicPath": "/images/facility-drafts/06/04-pay-and-shifts-part-2.webp",
+      "originalPath": "/images/facility-drafts/06/04-pay-and-shifts.webp",
+      "existing": false,
+      "file": "facility-image-refresh/06/04-pay-and-shifts-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/06-04-pay-and-shifts-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/06-04-pay-and-shifts-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "c227b45df4ede859cfa9ac7ac55113f5d280e14e280d399f474bcbffbf189b2f",
+      "masterSHA256": "1184828b5a86557511c4cdff7492b39e97d7325ca2a5429d05e9ef196a05abd1",
+      "width": 1440,
+      "height": 1080,
+      "alt": "한전FMS 월 급여 사례 2/2: 유지관리자 초급 월 약 347만 원, 유지관리자 고급 월 약 399만 원",
+      "icons": [
+        "qualification",
+        "qualification"
+      ]
+    },
+    {
+      "article": "hanfms",
+      "publicPath": "/images/facility-drafts/06/05-recruitment-checklist.webp",
+      "originalPath": "/images/facility-drafts/06/05-recruitment-checklist.webp",
+      "existing": true,
+      "file": "facility-image-refresh/06/05-recruitment-checklist.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/06-05-recruitment-checklist.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/06-05-recruitment-checklist.json",
+      "kind": "official-card-template",
+      "sha256": "26d4094ce0080338e283288e1f2d318ec449c4f9879db46aa875963e7972917e",
+      "masterSHA256": "d38c69d9244dc62816c7eb205975b466bc0601db9286e2da13c804d68acfef6c",
+      "width": 1440,
+      "height": 1080,
+      "alt": "한전FMS 지원 전 확인 1/2: 채용 회차 상반기·하반기 공고 구분, 모집 사업소 건물과 담당 설비, 필수·우대 여러 필수요건 모두 충족",
+      "icons": [
+        "career",
+        "worksite",
+        "qualification"
+      ]
+    },
+    {
+      "article": "hanfms",
+      "publicPath": "/images/facility-drafts/06/05-recruitment-checklist-part-2.webp",
+      "originalPath": "/images/facility-drafts/06/05-recruitment-checklist.webp",
+      "existing": false,
+      "file": "facility-image-refresh/06/05-recruitment-checklist-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/06-05-recruitment-checklist-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/06-05-recruitment-checklist-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "07d50fcb9c7ad03881ab1f57016243ed71f64fec085ed37459baa20a4e910c6c",
+      "masterSHA256": "03b17a9d42281c60611f0169f81d684c3248446b957f3c37c9c922058a1535a6",
+      "width": 1440,
+      "height": 1080,
+      "alt": "한전FMS 지원 전 확인 2/2: 법정선임 자격·경력·교육 기준, 근무·급여 일근·교대와 포함 수당, 인턴 전환 6개월 후 평가·적격자",
+      "icons": [
+        "law",
+        "pay-components",
+        "contract-term"
+      ]
+    },
+    {
+      "article": "kamcofmc",
+      "publicPath": "/images/facility-drafts/09/01-camcofmc-hero.webp",
+      "originalPath": "/images/facility-drafts/09/01-camcofmc-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/09/01-camcofmc-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/09.png",
+      "kind": "editorial-hero",
+      "sha256": "3250e6534948e6a6a66c5c17cc8cd4f56741ca6925b8f23d478de0ab54eea421",
+      "masterSHA256": "59bbf519daa2f4ae0adaeb7bee00d210112b087313cc6834c155ba71fbf75b78",
+      "width": 1440,
+      "height": 1080,
+      "alt": "캠코FMC 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "kamcofmc",
+      "publicPath": "/images/facility-drafts/09/02-grade-and-experience.webp",
+      "originalPath": "/images/facility-drafts/09/02-grade-and-experience.webp",
+      "existing": true,
+      "file": "facility-image-refresh/09/02-grade-and-experience.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/09-02-grade-and-experience.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/09-02-grade-and-experience.json",
+      "kind": "official-card-template",
+      "sha256": "fbe9165beb4164793df5a0fa7c05eddaae794f6a7231e222ae3dd5cfc8800eec",
+      "masterSHA256": "626e5b8a4b27cfe7d8dbd719f37e8eb6c0e2225fd8e993cbbcffb8fbbe7d2075",
+      "width": 1440,
+      "height": 1080,
+      "alt": "직위명과 자격증 구분 1/2: 2등급 · 기사 관련 실무경력 1년 이상, 3등급 · 주임 관련 실무경력 3년 이상",
+      "icons": [
+        "career",
+        "qualification"
+      ]
+    },
+    {
+      "article": "kamcofmc",
+      "publicPath": "/images/facility-drafts/09/02-grade-and-experience-part-2.webp",
+      "originalPath": "/images/facility-drafts/09/02-grade-and-experience.webp",
+      "existing": false,
+      "file": "facility-image-refresh/09/02-grade-and-experience-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/09-02-grade-and-experience-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/09-02-grade-and-experience-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "f58e6c7d71329d51673f30e46b37b865bf2d1373e01c5a5384a018d4cc42a39c",
+      "masterSHA256": "b4c66b05f812435371bba250512f9a1cff70fa0db2a819c06da148e140fff831",
+      "width": 1440,
+      "height": 1080,
+      "alt": "직위명과 자격증 구분 2/2: 4등급 · 대리 관련 실무경력 5년 이상, 5등급 · 과장 관련 실무경력 7년 이상",
+      "icons": [
+        "qualification",
+        "qualification"
+      ]
+    },
+    {
+      "article": "kamcofmc",
+      "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements.webp",
+      "originalPath": "/images/facility-drafts/09/03-site-appointment-requirements.webp",
+      "existing": true,
+      "file": "facility-image-refresh/09/03-site-appointment-requirements.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/09-03-site-appointment-requirements.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/09-03-site-appointment-requirements.json",
+      "kind": "official-card-template",
+      "sha256": "3fe977e1016bf14b6c86f2184406f3d1f0fda8c7580b4519a6e0440efaa4464b",
+      "masterSHA256": "579c2634c4f73cb2fd5eb5f03bced38f04ad9a512edd932498b7e3118e928855",
+      "width": 1440,
+      "height": 1080,
+      "alt": "사업소 추가 선임요건 1/2: 수원법원종합청사 시설 5등급 과장, 캠코서울사옥 시설 4등급 대리",
+      "icons": [
+        "fire",
+        "gas"
+      ]
+    },
+    {
+      "article": "kamcofmc",
+      "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements-part-2.webp",
+      "originalPath": "/images/facility-drafts/09/03-site-appointment-requirements.webp",
+      "existing": false,
+      "file": "facility-image-refresh/09/03-site-appointment-requirements-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/09-03-site-appointment-requirements-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/09-03-site-appointment-requirements-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "87131ca28e1dd6e9ce082bc35999a96165ee04d48cfd910eb67fde6b09be0b8c",
+      "masterSHA256": "a660ca72339fadc75fd0378a1a56d395c8b36a4e6baee6ac5f5d4e7c5dc1b86b",
+      "width": 1440,
+      "height": 1080,
+      "alt": "사업소 추가 선임요건 2/2: 글로벌지식협력단지 시설 4등급 대리, 태안정책연수원 시설 3등급 주임",
+      "icons": [
+        "qualification",
+        "qualification"
+      ]
+    },
+    {
+      "article": "kamcofmc",
+      "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts.webp",
+      "originalPath": "/images/facility-drafts/09/04-site-pay-and-shifts.webp",
+      "existing": true,
+      "file": "facility-image-refresh/09/04-site-pay-and-shifts.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/09-04-site-pay-and-shifts.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/09-04-site-pay-and-shifts.json",
+      "kind": "official-card-template",
+      "sha256": "ac33fe443db260fe764cffe1c3c204a3126eaa5ad50d1660b2c2cb036b2b8698",
+      "masterSHA256": "f8f05bba8224576f13a245c3b24b876d587e071fe954e238ed06d8353183eeab",
+      "width": 1440,
+      "height": 1080,
+      "alt": "같은 회사, 다른 월 급여 1/2: 수원법원종합청사 5등급 과장 · 주간, 캠코서울사옥 4등급 대리 · 주간",
+      "icons": [
+        "day",
+        "day"
+      ]
+    },
+    {
+      "article": "kamcofmc",
+      "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts-part-2.webp",
+      "originalPath": "/images/facility-drafts/09/04-site-pay-and-shifts.webp",
+      "existing": false,
+      "file": "facility-image-refresh/09/04-site-pay-and-shifts-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/09-04-site-pay-and-shifts-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/09-04-site-pay-and-shifts-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "77e2c5b1d0b45f87cf4dd98a08ff6c54691a2b73ce1a7da1c758ce9ad6409877",
+      "masterSHA256": "a321fdc07f75600b22e5e5ff467d5b770b1cbaf327e7bd7129f2736e889d8ed9",
+      "width": 1440,
+      "height": 1080,
+      "alt": "같은 회사, 다른 월 급여 2/2: 태안정책연수원 3등급 주임 · 교대, 캠코양재타워 2등급 기사 · 교대",
+      "icons": [
+        "shift-calendar",
+        "shift-calendar"
+      ]
+    },
+    {
+      "article": "kamcofmc",
+      "publicPath": "/images/facility-drafts/09/05-application-checklist.webp",
+      "originalPath": "/images/facility-drafts/09/05-application-checklist.webp",
+      "existing": true,
+      "file": "facility-image-refresh/09/05-application-checklist.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/09-05-application-checklist.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/09-05-application-checklist.json",
+      "kind": "official-card-template",
+      "sha256": "3cdcf849a7eb2abd262dbe1322414bbb985944c0e4aa0a1377c2e5b84e3ba416",
+      "masterSHA256": "07fcea7e721e97773fe6e0bfa67d70b7acd1e5feb6e3dea2826c6257cc00a3d9",
+      "width": 1440,
+      "height": 1080,
+      "alt": "캠코FMC 지원 전 확인 1/2: 공고 회차 연도·차수와 접수 마감, 실제 사업소 시설과 담당 설비·업무, 직위·등급 시설기사와 기사 자격 구분",
+      "icons": [
+        "career",
+        "worksite",
+        "job-offer"
+      ]
+    },
+    {
+      "article": "kamcofmc",
+      "publicPath": "/images/facility-drafts/09/05-application-checklist-part-2.webp",
+      "originalPath": "/images/facility-drafts/09/05-application-checklist.webp",
+      "existing": false,
+      "file": "facility-image-refresh/09/05-application-checklist-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/09-05-application-checklist-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/09-05-application-checklist-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "db742f0baeeeebf50e173ae301eccece69a893d676d759f8804619cff9f028a1",
+      "masterSHA256": "db91e3b8c61464c493abac551a96af9c7fd6f3eb4fdf27d4ab659a10445e8107",
+      "width": 1440,
+      "height": 1080,
+      "alt": "캠코FMC 지원 전 확인 2/2: 자격·경력 및·또는와 기준일, 법정선임 사업소별 추가 선임요건, 급여·근무표 포함 수당·교대·휴게",
+      "icons": [
+        "qualification",
+        "law",
+        "pay-components"
+      ]
+    },
+    {
+      "article": "korailtech",
+      "publicPath": "/images/facility-drafts/08/01-korailtech-hero.webp",
+      "originalPath": "/images/facility-drafts/08/01-korailtech-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/08/01-korailtech-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/08.png",
+      "kind": "editorial-hero",
+      "sha256": "8297cec6481e0ebb6b4bec7ebdfed94a94c1a18eacdddd30a4112cbeb19a5cfd",
+      "masterSHA256": "d7335356cded541c7aa9c48eb4357b17f7e7a680c73a933b6535ced87788f9ba",
+      "width": 1440,
+      "height": 1080,
+      "alt": "코레일테크 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "korailtech",
+      "publicPath": "/images/facility-drafts/08/02-facility-versus-track.webp",
+      "originalPath": "/images/facility-drafts/08/02-facility-versus-track.webp",
+      "existing": true,
+      "file": "facility-image-refresh/08/02-facility-versus-track.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/08-02-facility-versus-track.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/08-02-facility-versus-track.json",
+      "kind": "official-card-template",
+      "sha256": "9649c8535715d4b05a2538fd2dc8a15f7937709e75e04dd9769a89d88dcafb06",
+      "masterSHA256": "836c3c9288f29b160f557d70ef39615058d48985ca3f111f62db87dfc7298f14",
+      "width": 1440,
+      "height": 1080,
+      "alt": "같은 시설직, 다른 업무: 시설 · 토목 선로·철도 토목 시설물, 시설 · 토목 외 건축·기계·통신 등",
+      "icons": [
+        "rail",
+        "worksite"
+      ]
+    },
+    {
+      "article": "korailtech",
+      "publicPath": "/images/facility-drafts/08/03-applicant-numbers.webp",
+      "originalPath": "/images/facility-drafts/08/03-applicant-numbers.webp",
+      "existing": true,
+      "file": "facility-image-refresh/08/03-applicant-numbers.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/08-03-applicant-numbers.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/08-03-applicant-numbers.json",
+      "kind": "official-card-template",
+      "sha256": "cc62cad1e9f8ba6e5d8b194482d21e52041a77925732577b112df67d850936c7",
+      "masterSHA256": "d6d6708afccd73bef383e27b0eefbfc75b1f550abd9050998163352d81173064",
+      "width": 1440,
+      "height": 1080,
+      "alt": "시설 전체 지원 규모: 모집인원 55명, 지원인원 502명, 단순 경쟁률 약 9.1대 1",
+      "icons": [
+        "job-offer",
+        "submission",
+        "ratio"
+      ]
+    },
+    {
+      "article": "korailtech",
+      "publicPath": "/images/facility-drafts/08/04-retirement-and-probation-v2.webp",
+      "originalPath": "/images/facility-drafts/08/04-retirement-and-probation-v2.webp",
+      "existing": true,
+      "file": "facility-image-refresh/08/04-retirement-and-probation-v2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/08-04-retirement-and-probation-v2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/08-04-retirement-and-probation-v2.json",
+      "kind": "official-card-template",
+      "sha256": "ebb44c7b2fe2ca6b319999b5a3b8ae332110f031462fbc9040d984fd86c607ec",
+      "masterSHA256": "af9ea50b7b386480052590c3072b0dcb9612d6e7cc2216588ebd3a03006709e7",
+      "width": 1440,
+      "height": 1080,
+      "alt": "정년과 시용을 구분: 시설 · 토목 정년 만 63세, 시설 · 토목 외 정년 만 65세, 12주 시용 근무실적 등 평가",
+      "icons": [
+        "rail",
+        "worksite",
+        "contract-term"
+      ]
+    },
+    {
+      "article": "korailtech",
+      "publicPath": "/images/facility-drafts/08/05-application-checklist.webp",
+      "originalPath": "/images/facility-drafts/08/05-application-checklist.webp",
+      "existing": true,
+      "file": "facility-image-refresh/08/05-application-checklist.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/08-05-application-checklist.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/08-05-application-checklist.json",
+      "kind": "official-card-template",
+      "sha256": "70fc086b9be93dc1be0df43d92057468262959dc39939fa43a00b8b21891904d",
+      "masterSHA256": "7228aed05cc88564ee64072b1feb2e2aba73bfc8faadfd12595aed836a94bc43",
+      "width": 1440,
+      "height": 1080,
+      "alt": "코레일테크 지원 전 1/2: 모집 회차 공고명·게시일·마감일, 세부 직무 토목·토목 외 업무, 사업소·근무지 담당 구역·이동 가능성",
+      "icons": [
+        "career",
+        "rail",
+        "worksite"
+      ]
+    },
+    {
+      "article": "korailtech",
+      "publicPath": "/images/facility-drafts/08/05-application-checklist-part-2.webp",
+      "originalPath": "/images/facility-drafts/08/05-application-checklist.webp",
+      "existing": false,
+      "file": "facility-image-refresh/08/05-application-checklist-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/08-05-application-checklist-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/08-05-application-checklist-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "c94870d0268659cb62261c996ecaccd18e4c68e16fb1e85df898b16e9206b575",
+      "masterSHA256": "2afe7c37a7f3a8173cf1c3d90bbb0f1018c0a557f84ef9e661e54aa0653f803a",
+      "width": 1440,
+      "height": 1080,
+      "alt": "코레일테크 지원 전 2/2: 자격·경력 또는·및과 제출증빙, 전형·시용 검증 절차·12주 평가, 급여·정년 해당 직무 실제 조건",
+      "icons": [
+        "qualification",
+        "contract-term",
+        "pay-components"
+      ]
+    },
+    {
+      "article": "mechanical-career-records",
+      "publicPath": "/images/facility-drafts/12/01-career-reporting-hero.webp",
+      "originalPath": "/images/facility-drafts/12/01-career-reporting-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/12/01-career-reporting-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/12.png",
+      "kind": "editorial-hero",
+      "sha256": "40c45ac7d6a405aa8fa9c514b5364278b4adf611691a67a676868a69742cafb5",
+      "masterSHA256": "58ccecdcdb57638d5749bf17eb4287c54c3538a0f48817c56f23249a6c3894db",
+      "width": 1440,
+      "height": 1080,
+      "alt": "기계설비유지관리자 경력신고·수첩 발급 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "mechanical-career-records",
+      "publicPath": "/images/facility-drafts/12/02-reporting-documents.webp",
+      "originalPath": "/images/facility-drafts/12/02-reporting-documents.webp",
+      "existing": true,
+      "file": "facility-image-refresh/12/02-reporting-documents.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/12-02-reporting-documents.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/12-02-reporting-documents.json",
+      "kind": "official-card-template",
+      "sha256": "85a674b2eab121786041b708b2038f6f189746af2fdc9b741429f08a801dcb9d",
+      "masterSHA256": "a1100d48a02f98b8723fee68dd70ef9c8332a3bb83577bb00786051f8d2e3043",
+      "width": 1440,
+      "height": 1080,
+      "alt": "경력신고 서류의 역할 1/2: 경력신고서 신청인의 경력·자격 신고, 경력확인서 회사별 실제 담당업무",
+      "icons": [
+        "submission",
+        "stamp"
+      ]
+    },
+    {
+      "article": "mechanical-career-records",
+      "publicPath": "/images/facility-drafts/12/02-reporting-documents-part-2.webp",
+      "originalPath": "/images/facility-drafts/12/02-reporting-documents.webp",
+      "existing": false,
+      "file": "facility-image-refresh/12/02-reporting-documents-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/12-02-reporting-documents-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/12-02-reporting-documents-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "108b500cf6b04fb62ddf678c3697ce20398d777d4f3510158b45e5fb515a563a",
+      "masterSHA256": "ceb0464866d4982451a947660cfc630bea50387cc990dcdb97033932d38f8366",
+      "width": 1440,
+      "height": 1080,
+      "alt": "경력신고 서류의 역할 2/2: 근무사실 증빙 소속회사와 재직기간, 회사별 증빙 업종과 업무 관련성",
+      "icons": [
+        "career",
+        "office"
+      ]
+    },
+    {
+      "article": "mechanical-career-records",
+      "publicPath": "/images/facility-drafts/12/03-employer-and-stamps.webp",
+      "originalPath": "/images/facility-drafts/12/03-employer-and-stamps.webp",
+      "existing": true,
+      "file": "facility-image-refresh/12/03-employer-and-stamps.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/12-03-employer-and-stamps.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/12-03-employer-and-stamps.json",
+      "kind": "official-card-template",
+      "sha256": "fd7a13149c90f8acd36235dadd7774e4b8a8c98473e6a2a069eb1ef865fd6536",
+      "masterSHA256": "493b48a0379e98fb3d514ccdff04868ae710479daf12a462d7c5fd3e72fde8e7",
+      "width": 1440,
+      "height": 1080,
+      "alt": "경력확인서 직인 주체: 발주자 소속 보험 사업자명: 발주자, 위탁업체 소속 보험 사업자명: 위탁업체, 위탁업체 소속 직인: 발주자",
+      "icons": [
+        "office",
+        "service-contractor",
+        "stamp"
+      ]
+    },
+    {
+      "article": "mechanical-career-records",
+      "publicPath": "/images/facility-drafts/12/04-recognized-experience.webp",
+      "originalPath": "/images/facility-drafts/12/04-recognized-experience.webp",
+      "existing": true,
+      "file": "facility-image-refresh/12/04-recognized-experience.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/12-04-recognized-experience.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/12-04-recognized-experience.json",
+      "kind": "official-card-template",
+      "sha256": "8955f9d35c3f5d52d98247226935e8a15750e35e9355217c2ccffc98912dc474",
+      "masterSHA256": "1f6262affcb7b833f66c6113fa89559727f7d2805a7e152902f11ee0c741930b",
+      "width": 1440,
+      "height": 1080,
+      "alt": "근속 5년과 인정경력 1/2: 자격 취득 후 유지관리·성능점검, 자격 취득 후 설계·시공·감리",
+      "icons": [
+        "mechanical",
+        "repair"
+      ]
+    },
+    {
+      "article": "mechanical-career-records",
+      "publicPath": "/images/facility-drafts/12/04-recognized-experience-part-2.webp",
+      "originalPath": "/images/facility-drafts/12/04-recognized-experience.webp",
+      "existing": false,
+      "file": "facility-image-refresh/12/04-recognized-experience-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/12-04-recognized-experience-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/12-04-recognized-experience-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "44a49b59577dfa268924a2c338e1d307ab7bcfd0de7ce13083403ec3dbc0dd31",
+      "masterSHA256": "b06bee040b8d5444eb1d640136d161601f6ce648b75ab0068f15608210ebbc53",
+      "width": 1440,
+      "height": 1080,
+      "alt": "근속 5년과 인정경력 2/2: 자격 취득 전 유지관리·성능점검, 자격 취득 전 설계·시공·감리",
+      "icons": [
+        "mechanical",
+        "repair"
+      ]
+    },
+    {
+      "article": "mechanical-career-records",
+      "publicPath": "/images/facility-drafts/12/05-reporting-process.webp",
+      "originalPath": "/images/facility-drafts/12/05-reporting-process.webp",
+      "existing": true,
+      "file": "facility-image-refresh/12/05-reporting-process.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/12-05-reporting-process.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/12-05-reporting-process.json",
+      "kind": "official-card-template",
+      "sha256": "29403746a3a6c3fd4a8b0237579be3691891627c59a437877d1d6b2748e398f9",
+      "masterSHA256": "a2acc29cbc72cedddaf9d90f20e458169b6693d4a40cbc980b8a897629a84d3d",
+      "width": 1440,
+      "height": 1080,
+      "alt": "경력신고부터 수첩 발급 1/2: 자격·경력 확인 종목·취득일·근무기간, 경력확인서 협회 지정 양식·날인, 근무·회사 증빙 보험·연금·회사 자료",
+      "icons": [
+        "qualification",
+        "stamp",
+        "folder"
+      ]
+    },
+    {
+      "article": "mechanical-career-records",
+      "publicPath": "/images/facility-drafts/12/05-reporting-process-part-2.webp",
+      "originalPath": "/images/facility-drafts/12/05-reporting-process.webp",
+      "existing": false,
+      "file": "facility-image-refresh/12/05-reporting-process-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/12-05-reporting-process-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/12-05-reporting-process-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "9c38eec19ea73118abf56b0e22884df3444bac359767318385a0f6bb33f370f0",
+      "masterSHA256": "580aed85934d4ee041fb407179a1709642d3ee7d0a5fc84ced1415ccd6f14fd6",
+      "width": 1440,
+      "height": 1080,
+      "alt": "경력신고부터 수첩 발급 2/2: 최초 경력신고 협회 인터넷 신고·접수, 심사·등급 확인 인정경력·보완 요청, 수첩 발급 해당 요건 충족 시 신청",
+      "icons": [
+        "submission",
+        "qualification",
+        "folder"
+      ]
+    },
+    {
+      "article": "mechanical-maintainer-levels",
+      "publicPath": "/images/facility-drafts/11/01-maintainer-grades-hero.webp",
+      "originalPath": "/images/facility-drafts/11/01-maintainer-grades-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/11/01-maintainer-grades-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/11.png",
+      "kind": "editorial-hero",
+      "sha256": "3301597cc0def16caa8efc67a263f232621fec14188eca619dd8b1e255bd7867",
+      "masterSHA256": "1952ba71b084f549f7cde501011e96f7680ac4f190ae19b40e927316782c9d18",
+      "width": 1440,
+      "height": 1080,
+      "alt": "기계설비유지관리자 등급 총정리 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "mechanical-maintainer-levels",
+      "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix.webp",
+      "originalPath": "/images/facility-drafts/11/02-qualification-grade-matrix.webp",
+      "existing": true,
+      "file": "facility-image-refresh/11/02-qualification-grade-matrix.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/11-02-qualification-grade-matrix.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/11-02-qualification-grade-matrix.json",
+      "kind": "official-card-template",
+      "sha256": "bff445395dd0d9dea8c6d997fd5dda8e05e60fdc6105dcaad69880d078c49483",
+      "masterSHA256": "b46c682fc02a769fa2109d10dd4bd590fa88d13cc547f7648c8fa5c92696b57d",
+      "width": 1440,
+      "height": 1080,
+      "alt": "책임등급의 대표 경력 1/2: 초급 관련 기사·기능장 경력요건 없음, 중급 관련 기사·기능장 4년 이상",
+      "icons": [
+        "qualification",
+        "qualification"
+      ]
+    },
+    {
+      "article": "mechanical-maintainer-levels",
+      "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix-part-2.webp",
+      "originalPath": "/images/facility-drafts/11/02-qualification-grade-matrix.webp",
+      "existing": false,
+      "file": "facility-image-refresh/11/02-qualification-grade-matrix-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/11-02-qualification-grade-matrix-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/11-02-qualification-grade-matrix-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "39347fb5b58e7b1e8f5c525aafad2a7d0f41723e785b8d9ed73a883a1a8ebbc6",
+      "masterSHA256": "02876da3e47ca401f5145b24cb0f680cbba6401aea9987284f34d2dfee77b18f",
+      "width": 1440,
+      "height": 1080,
+      "alt": "책임등급의 대표 경력 2/2: 고급 관련 기사·기능장 7년 이상, 특급 관련 기사·기능장 10년 이상",
+      "icons": [
+        "qualification",
+        "qualification"
+      ]
+    },
+    {
+      "article": "mechanical-maintainer-levels",
+      "publicPath": "/images/facility-drafts/11/04-recognized-experience.webp",
+      "originalPath": "/images/facility-drafts/11/04-recognized-experience.webp",
+      "existing": true,
+      "file": "facility-image-refresh/11/04-recognized-experience.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/11-04-recognized-experience.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/11-04-recognized-experience.json",
+      "kind": "official-card-template",
+      "sha256": "aef3ccbb1780aebad47cecaceef02243ea6afda44c1adccb5e919d6edca2145c",
+      "masterSHA256": "f8075412cfbb0c9a47002b08a4939ba6de865cb5ea96ab36c08856ae9d4ff969",
+      "width": 1440,
+      "height": 1080,
+      "alt": "근무경력과 인정경력 1/2: 자격 취득 후 유지관리·성능점검, 자격 취득 후 설계·시공·감리",
+      "icons": [
+        "mechanical",
+        "repair"
+      ]
+    },
+    {
+      "article": "mechanical-maintainer-levels",
+      "publicPath": "/images/facility-drafts/11/04-recognized-experience-part-2.webp",
+      "originalPath": "/images/facility-drafts/11/04-recognized-experience.webp",
+      "existing": false,
+      "file": "facility-image-refresh/11/04-recognized-experience-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/11-04-recognized-experience-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/11-04-recognized-experience-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "5a56bf216183852dae82e73ac250626fd8cee8d748e2055ab3801bec09e7d286",
+      "masterSHA256": "3a2b611437c0152ec2109f675232b1650ca9e36e780f7c095d8f2c7072d55093",
+      "width": 1440,
+      "height": 1080,
+      "alt": "근무경력과 인정경력 2/2: 자격 취득 전 유지관리·성능점검, 자격 취득 전 설계·시공·감리",
+      "icons": [
+        "mechanical",
+        "repair"
+      ]
+    },
+    {
+      "article": "mechanical-maintainer-levels",
+      "publicPath": "/images/facility-drafts/11/03-building-grade-ranges.webp",
+      "originalPath": "/images/facility-drafts/11/03-building-grade-ranges.webp",
+      "existing": true,
+      "file": "facility-image-refresh/11/03-building-grade-ranges.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/11-03-building-grade-ranges.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/11-03-building-grade-ranges.json",
+      "kind": "official-card-template",
+      "sha256": "34482f65b4040e5045c454b75e1a1d174a4df976d01336cdb8bb1a48f19a7584",
+      "masterSHA256": "7ebc03c6e9a4463f767fa2af48072a18f79e06f811f4a4fba8b509b672e9a64c",
+      "width": 1440,
+      "height": 1080,
+      "alt": "건물 규모와 요구등급 1/2: 초급 이상 1만㎡ 이상~1만5천㎡ 미만, 중급 이상 1만5천㎡ 이상~3만㎡ 미만",
+      "icons": [
+        "office",
+        "office"
+      ]
+    },
+    {
+      "article": "mechanical-maintainer-levels",
+      "publicPath": "/images/facility-drafts/11/03-building-grade-ranges-part-2.webp",
+      "originalPath": "/images/facility-drafts/11/03-building-grade-ranges.webp",
+      "existing": false,
+      "file": "facility-image-refresh/11/03-building-grade-ranges-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/11-03-building-grade-ranges-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/11-03-building-grade-ranges-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "a0c2272a799c39644b0f06de750167759a0a720252a2c06620fb3f0b486eec7e",
+      "masterSHA256": "1fdde847ded5dcdb0c6fc059f3be342672b739309f74886fcdd1d4c3938b3cda",
+      "width": 1440,
+      "height": 1080,
+      "alt": "건물 규모와 요구등급 2/2: 고급 이상 3만㎡ 이상~6만㎡ 미만, 특급 이상 6만㎡ 이상",
+      "icons": [
+        "office",
+        "office"
+      ]
+    },
+    {
+      "article": "mechanical-maintainer-levels",
+      "publicPath": "/images/facility-drafts/11/05-application-checklist.webp",
+      "originalPath": "/images/facility-drafts/11/05-application-checklist.webp",
+      "existing": true,
+      "file": "facility-image-refresh/11/05-application-checklist.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/11-05-application-checklist.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/11-05-application-checklist.json",
+      "kind": "official-card-template",
+      "sha256": "a7018f29ec90defaad73873e487e8eb27a600450be7f055d4f509f1dfee44ae6",
+      "masterSHA256": "1fcc2c6c522741fc45a3e86edd489b06444a75d7af281732017dec0eb1bed25d",
+      "width": 1440,
+      "height": 1080,
+      "alt": "경력수첩 준비 다섯 단계 1/2: 인정 자격 종목명과 자격 취득일, 경력 구분 업무·기간·근무처 정리, 증빙 준비 지정 확인서·근무증명",
+      "icons": [
+        "qualification",
+        "career",
+        "folder"
+      ]
+    },
+    {
+      "article": "mechanical-maintainer-levels",
+      "publicPath": "/images/facility-drafts/11/05-application-checklist-part-2.webp",
+      "originalPath": "/images/facility-drafts/11/05-application-checklist.webp",
+      "existing": false,
+      "file": "facility-image-refresh/11/05-application-checklist-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/11-05-application-checklist-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/11-05-application-checklist-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "d8d8eb045cd03439704a305d5b5a726dfd2b68792ffe69a67cd350250adb69dc",
+      "masterSHA256": "7034bb0280e1277fa84f93b6768d58ac85f27d39f16c86ddc5a4aca0a14bbfaa",
+      "width": 1440,
+      "height": 1080,
+      "alt": "경력수첩 준비 다섯 단계 2/2: 경력 신고 협회 접수·보완 대응, 심사 결과 인정경력·등급·수첩",
+      "icons": [
+        "submission",
+        "qualification"
+      ]
+    },
+    {
+      "article": "postal-facilities",
+      "publicPath": "/images/facility-drafts/07/01-postal-facilities-hero.webp",
+      "originalPath": "/images/facility-drafts/07/01-postal-facilities-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/07/01-postal-facilities-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/07.png",
+      "kind": "editorial-hero",
+      "sha256": "940edc70c2bb090a3b33eb2fa470b89a743394e8853e56504d923c3948a97616",
+      "masterSHA256": "147d3d5b750984ac822855be740859871f038c8c5b64e8825ae976788f145966",
+      "width": 1440,
+      "height": 1080,
+      "alt": "우체국시설관리단 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "postal-facilities",
+      "publicPath": "/images/facility-drafts/07/02-workplace-types.webp",
+      "originalPath": "/images/facility-drafts/07/02-workplace-types.webp",
+      "existing": true,
+      "file": "facility-image-refresh/07/02-workplace-types.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/07-02-workplace-types.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/07-02-workplace-types.json",
+      "kind": "official-card-template",
+      "sha256": "aa85c5f714ff77dddc9910170bf04913c12e4f540858660cd0413428ca84dbf6",
+      "masterSHA256": "b040129db0ba195049528c50f4f35e2621b8ebe64ce5806ca8b60a20ba3a9f0c",
+      "width": 1440,
+      "height": 1080,
+      "alt": "관서마다 업무가 다르다: 우체국 기계·건물·영선 업무, 우편집중국 전기·건물·영선 업무, 우편물류센터 우편기계·자동화설비",
+      "icons": [
+        "office",
+        "electrical",
+        "warehouse"
+      ]
+    },
+    {
+      "article": "postal-facilities",
+      "publicPath": "/images/facility-drafts/07/03-required-conditions.webp",
+      "originalPath": "/images/facility-drafts/07/03-required-conditions.webp",
+      "existing": true,
+      "file": "facility-image-refresh/07/03-required-conditions.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/07-03-required-conditions.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/07-03-required-conditions.json",
+      "kind": "official-card-template",
+      "sha256": "19d22f000ad59e85c71bae0b7caa11dede708f22010226848e1857f6ad7d2e3a",
+      "masterSHA256": "d72a279fe38f20180755f9d50d78c1530c80076c517abd3ffa025098601812ff",
+      "width": 1440,
+      "height": 1080,
+      "alt": "필수조건을 모두 확인: 관련 자격 공고에 지정된 자격, 법정선임 해당 시설의 선임 가능, 관련 경력 요구 기간과 실제 업무",
+      "icons": [
+        "qualification",
+        "law",
+        "career"
+      ]
+    },
+    {
+      "article": "postal-facilities",
+      "publicPath": "/images/facility-drafts/07/04-round-comparison-v2.webp",
+      "originalPath": "/images/facility-drafts/07/04-round-comparison-v2.webp",
+      "existing": true,
+      "file": "facility-image-refresh/07/04-round-comparison-v2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/07-04-round-comparison-v2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/07-04-round-comparison-v2.json",
+      "kind": "official-card-template",
+      "sha256": "e915ef4b9a2b577bd92bd732d61fb7556cfcec8e8b6ce0a0aa24bf24e598079c",
+      "masterSHA256": "c236ffe8db844142c9507148886f54800b79f2b8ec7396ebcc22b74a49b37796",
+      "width": 1440,
+      "height": 1080,
+      "alt": "회차가 바뀌면 조건도: 11차 공고 관련 유지보수 경력, 12차 공고 관련 유지보수 경력",
+      "icons": [
+        "career",
+        "career"
+      ]
+    },
+    {
+      "article": "postal-facilities",
+      "publicPath": "/images/facility-drafts/07/05-application-checklist.webp",
+      "originalPath": "/images/facility-drafts/07/05-application-checklist.webp",
+      "existing": true,
+      "file": "facility-image-refresh/07/05-application-checklist.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/07-05-application-checklist.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/07-05-application-checklist.json",
+      "kind": "official-card-template",
+      "sha256": "c104b6e5f370c0491611f0e8ff80e549caabb88401ce7a23cc8aea1964357f3e",
+      "masterSHA256": "cc8d87d370e80116ec58dc7397bc80ccffaaab207c82ca48a248386a2154b850",
+      "width": 1440,
+      "height": 1080,
+      "alt": "우체국시설관리단 확인 1/2: 근무관서 우체국·집중국·물류센터, 필수자격 모든 조건·대체 경로, 법정선임 보유 자격과 선임 구분",
+      "icons": [
+        "worksite",
+        "qualification",
+        "law"
+      ]
+    },
+    {
+      "article": "postal-facilities",
+      "publicPath": "/images/facility-drafts/07/05-application-checklist-part-2.webp",
+      "originalPath": "/images/facility-drafts/07/05-application-checklist.webp",
+      "existing": false,
+      "file": "facility-image-refresh/07/05-application-checklist-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/07-05-application-checklist-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/07-05-application-checklist-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "4f416f458fbf364b840483c4b9f782f8ce950b5e4b5c0db307720f0233be7d5a",
+      "masterSHA256": "564ce0f96b3ce547f92ab487a55c4300252ac28427270d01dcb85902674fb39a",
+      "width": 1440,
+      "height": 1080,
+      "alt": "우체국시설관리단 확인 2/2: 관련경력 기간·업무를 증빙, 근무표 일근·격일·4교대, 급여·정년 식비 포함 세전 연봉",
+      "icons": [
+        "career",
+        "shift-calendar",
+        "pay-components"
+      ]
+    },
+    {
+      "article": "shifts-and-pay",
+      "publicPath": "/images/facility-drafts/04/01-shifts-pay-hero.webp",
+      "originalPath": "/images/facility-drafts/04/01-shifts-pay-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/04/01-shifts-pay-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/04.png",
+      "kind": "editorial-hero",
+      "sha256": "1dd2014e3cc6b5363963e78d6cd1557945bfbde335a23fc82bc83c511b204224",
+      "masterSHA256": "e089c8127aff10dd1825610c5b16dba3265cdc520e640d2b600bf341d2e25d2e",
+      "width": 1440,
+      "height": 1080,
+      "alt": "시설관리 주간·격일·교대근무 비교 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "shifts-and-pay",
+      "publicPath": "/images/facility-drafts/04/02-shift-types.webp",
+      "originalPath": "/images/facility-drafts/04/02-shift-types.webp",
+      "existing": true,
+      "file": "facility-image-refresh/04/02-shift-types.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/04-02-shift-types.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/04-02-shift-types.json",
+      "kind": "official-card-template",
+      "sha256": "574d7c60dc8515e2733928e8bdd1404cb6d84435a4384904abb79ff983de726b",
+      "masterSHA256": "0cfa2e6a33308f8570e62347a51eba856ed3b927437650fa98d33a312a2f484d",
+      "width": 1440,
+      "height": 1080,
+      "alt": "이름보다 실제 근무표: 일근·주간 낮 시간 중심 근무, 격일 근무일·비번일 교번, 교대 조별로 시간대를 분담",
+      "icons": [
+        "day",
+        "career",
+        "shift-calendar"
+      ]
+    },
+    {
+      "article": "shifts-and-pay",
+      "publicPath": "/images/facility-drafts/04/03-working-waiting-rest.webp",
+      "originalPath": "/images/facility-drafts/04/03-working-waiting-rest.webp",
+      "existing": true,
+      "file": "facility-image-refresh/04/03-working-waiting-rest.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/04-03-working-waiting-rest.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/04-03-working-waiting-rest.json",
+      "kind": "official-card-template",
+      "sha256": "504d671cb57788a5442d6eef75a07b85b004c3534c9372a692bfea16c13dc4a6",
+      "masterSHA256": "6fd55d682d7420516b28565d9cc71f4067748cfa27eb9201289badfbb9c7e495",
+      "width": 1440,
+      "height": 1080,
+      "alt": "휴게와 대기는 다르다: 업무 수행 점검·운전·보고, 호출 대기 상시 감시·즉시 응답, 자유로운 휴게 업무 지시에서 벗어남",
+      "icons": [
+        "mechanical",
+        "support",
+        "night"
+      ]
+    },
+    {
+      "article": "shifts-and-pay",
+      "publicPath": "/images/facility-drafts/04/04-salary-comparison.webp",
+      "originalPath": "/images/facility-drafts/04/04-salary-comparison.webp",
+      "existing": true,
+      "file": "facility-image-refresh/04/04-salary-comparison.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/04-04-salary-comparison.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/04-04-salary-comparison.json",
+      "kind": "official-card-template",
+      "sha256": "1b52efc55e0c133ea337924a2cc3fde93047e13c63c5ed6d93eaaa1bec1df72d",
+      "masterSHA256": "3bc822279d0cd0805443aeb8f233f8e831edb36e82a9c6e031c5182bd8dfd552",
+      "width": 1440,
+      "height": 1080,
+      "alt": "월급 차이, 구성부터: A사 · 주간 세전 월 300만 원, B사 · 교대 세전 월 350만 원",
+      "icons": [
+        "day",
+        "shift-calendar"
+      ]
+    },
+    {
+      "article": "shifts-and-pay",
+      "publicPath": "/images/facility-drafts/04/05-job-posting-checklist.webp",
+      "originalPath": "/images/facility-drafts/04/05-job-posting-checklist.webp",
+      "existing": true,
+      "file": "facility-image-refresh/04/05-job-posting-checklist.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/04-05-job-posting-checklist.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/04-05-job-posting-checklist.json",
+      "kind": "official-card-template",
+      "sha256": "6b574b56736180e927ee2fba80abba506b41208eb0f17fd50be03ec25b20d303",
+      "masterSHA256": "2ab7d8dba349021d0b3f1621d9d45c274f939bb4c840901c4a026df47e9c8894",
+      "width": 1440,
+      "height": 1080,
+      "alt": "근무표 확인 여섯 가지 1/2: 출퇴근 시각 한 번 출근해 머무는 시간, 조별 근무표 주간·야간·비번·휴무, 휴게·대기 쉬는 중 호출·감시 여부",
+      "icons": [
+        "clock",
+        "shift-calendar",
+        "support"
+      ]
+    },
+    {
+      "article": "shifts-and-pay",
+      "publicPath": "/images/facility-drafts/04/05-job-posting-checklist-part-2.webp",
+      "originalPath": "/images/facility-drafts/04/05-job-posting-checklist.webp",
+      "existing": false,
+      "file": "facility-image-refresh/04/05-job-posting-checklist-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/04-05-job-posting-checklist-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/04-05-job-posting-checklist-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "3f82c96ce15627e4027b68f674cd79c1b04e390b5cc69dcb41f1c75a6eb993ef",
+      "masterSHA256": "d01624fc50b741ed9c2e95cff0cc02314bc2ce1377685f6e06c2d8f7e85d71b1",
+      "width": 1440,
+      "height": 1080,
+      "alt": "근무표 확인 여섯 가지 2/2: 임금 구성 기본급·고정·변동수당, 감시·단속 승인 사업장·업무의 승인 여부, 야간 대응 단독 대응·지원·교육",
+      "icons": [
+        "pay-components",
+        "law",
+        "support"
+      ]
+    },
+    {
+      "article": "statutory-appointments",
+      "publicPath": "/images/facility-drafts/10/01-statutory-appointments-hero.webp",
+      "originalPath": "/images/facility-drafts/10/01-statutory-appointments-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/10/01-statutory-appointments-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/10.png",
+      "kind": "editorial-hero",
+      "sha256": "5f3119d4016b13dd692e5d67e729bf65f741b9a5174833e8cc02321c7f1f35d3",
+      "masterSHA256": "23993eff3aebe97f86ee4092baf1fa3498db4e1883a39251578cdf9a4a7e66d7",
+      "width": 1440,
+      "height": 1080,
+      "alt": "시설관리 법정선임 총정리 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "statutory-appointments",
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types.webp",
+      "originalPath": "/images/facility-drafts/10/02-seven-appointment-types.webp",
+      "existing": true,
+      "file": "facility-image-refresh/10/02-seven-appointment-types.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/10-02-seven-appointment-types.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/10-02-seven-appointment-types.json",
+      "kind": "official-card-template",
+      "sha256": "c2900e048eac26058fff444588679a18dad62695630cfb23c42a34d4a0cc540d",
+      "masterSHA256": "5f4ce4e04b71d6a5a609deb0a111134fa1daa810cd0192a5bde29ca51dd36428",
+      "width": 1440,
+      "height": 1080,
+      "alt": "법정선임은 각각 다른 제도 1/3: 보일러 검사대상기기관리자, 냉동·고압가스 고압가스 관련 안전관리자, 도시가스·LPG 해당 가스시설 안전관리자",
+      "icons": [
+        "boiler",
+        "cooling",
+        "gas"
+      ]
+    },
+    {
+      "article": "statutory-appointments",
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types-part-2.webp",
+      "originalPath": "/images/facility-drafts/10/02-seven-appointment-types.webp",
+      "existing": false,
+      "file": "facility-image-refresh/10/02-seven-appointment-types-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/10-02-seven-appointment-types-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/10-02-seven-appointment-types-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "c0660b77ddc9c20de05817d6b0ac52a12896403861d31ba4437ab4d9c7e8422b",
+      "masterSHA256": "66604bbcf0eff6a7a973baa019d72970baa121bc421155a2b6f9b805d6e4891e",
+      "width": 1440,
+      "height": 1080,
+      "alt": "법정선임은 각각 다른 제도 2/3: 소방 소방안전관리자, 기계설비 기계설비유지관리자, 전기 전기안전관리자",
+      "icons": [
+        "fire",
+        "mechanical",
+        "electrical"
+      ]
+    },
+    {
+      "article": "statutory-appointments",
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types-part-3.webp",
+      "originalPath": "/images/facility-drafts/10/02-seven-appointment-types.webp",
+      "existing": false,
+      "file": "facility-image-refresh/10/02-seven-appointment-types-part-3.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/10-02-seven-appointment-types-part-3.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/10-02-seven-appointment-types-part-3.json",
+      "kind": "official-card-template",
+      "sha256": "fe44360a4a9dff720094d8ec0d7fe42abdc59a8c6f2225c00f24fd9cd14b7e55",
+      "masterSHA256": "dd9eb14497718914fb44d6a00f46bff49ab85148e82a4f092255b5a8beec674b",
+      "width": 1440,
+      "height": 1080,
+      "alt": "법정선임은 각각 다른 제도 3/3: 위험물 위험물안전관리자",
+      "icons": [
+        "hazardous"
+      ]
+    },
+    {
+      "article": "statutory-appointments",
+      "publicPath": "/images/facility-drafts/10/03-boiler-qualification-ranges.webp",
+      "originalPath": "/images/facility-drafts/10/03-boiler-qualification-ranges.webp",
+      "existing": true,
+      "file": "facility-image-refresh/10/03-boiler-qualification-ranges.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/10-03-boiler-qualification-ranges.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/10-03-boiler-qualification-ranges.json",
+      "kind": "official-card-template",
+      "sha256": "4982b073729786e4f03784c4d6ad98d3014cbf094b60ccc6d7c35ad29c9debe5",
+      "masterSHA256": "fadd0090831a606966319a00f5c2f560e3b38de96b5ac446a4764573d948798d",
+      "width": 1440,
+      "height": 1080,
+      "alt": "보일러 기본 자격 구간: 10t/h 이하 에너지관리기능사 이상, 10 초과~30 이하 단위 t/h · 산업기사 이상, 30t/h 초과 에너지관리기사·기능장",
+      "icons": [
+        "boiler",
+        "boiler",
+        "boiler"
+      ]
+    },
+    {
+      "article": "statutory-appointments",
+      "publicPath": "/images/facility-drafts/10/04-gas-laws-separation.webp",
+      "originalPath": "/images/facility-drafts/10/04-gas-laws-separation.webp",
+      "existing": true,
+      "file": "facility-image-refresh/10/04-gas-laws-separation.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/10-04-gas-laws-separation.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/10-04-gas-laws-separation.json",
+      "kind": "official-card-template",
+      "sha256": "dd3d3b463c497eded2694297557d94ea94216ae2a4a4ed7f3e4ec4cf43f3ca29",
+      "masterSHA256": "722ed8084886abb7d16d9e223d4ffbbc86c409d39e466548872d869513e1b2fa",
+      "width": 1440,
+      "height": 1080,
+      "alt": "가스시설은 법률부터: 도시가스 도시가스사업법령, 고압가스·냉동 고압가스 안전관리법령, LPG 액화석유가스법령",
+      "icons": [
+        "gas",
+        "cooling",
+        "gas"
+      ]
+    },
+    {
+      "article": "statutory-appointments",
+      "publicPath": "/images/facility-drafts/10/05-application-checklist.webp",
+      "originalPath": "/images/facility-drafts/10/05-application-checklist.webp",
+      "existing": true,
+      "file": "facility-image-refresh/10/05-application-checklist.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/10-05-application-checklist.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/10-05-application-checklist.json",
+      "kind": "official-card-template",
+      "sha256": "2e7889e5894d76c1f5504220e98250ce480ca3ccd8779123d430a143909fa1c8",
+      "masterSHA256": "feaeac494102e87a39043fdfba74256a4337fceb128f6e52c0ee8333cae5a42c",
+      "width": 1440,
+      "height": 1080,
+      "alt": "법정선임 공고 읽는 순서 1/2: 설비 확인 무엇을 관리하나, 적용 법령 정확한 관리자 명칭, 규모·대상 용량·능력·건축물 등급",
+      "icons": [
+        "mechanical",
+        "law",
+        "gauge"
+      ]
+    },
+    {
+      "article": "statutory-appointments",
+      "publicPath": "/images/facility-drafts/10/05-application-checklist-part-2.webp",
+      "originalPath": "/images/facility-drafts/10/05-application-checklist.webp",
+      "existing": false,
+      "file": "facility-image-refresh/10/05-application-checklist-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/10-05-application-checklist-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/10-05-application-checklist-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "41988cc32cfe49cf472c4223f7e88b30b8abe49b408fdc81e5a4fb9b3e2ec45f",
+      "masterSHA256": "fbb419c377eb3aec95cd04f95795127a2f78a9586072cff8ebc5067d982f7e16",
+      "width": 1440,
+      "height": 1080,
+      "alt": "법정선임 공고 읽는 순서 2/2: 내 자격 자격·교육·경력·수첩, 여러 조건 필수·우대·및·또는, 선임·겸직 배치·위탁·신고 절차",
+      "icons": [
+        "qualification",
+        "job-offer",
+        "law"
+      ]
+    },
+    {
+      "article": "what-is-facility-management",
+      "publicPath": "/images/facility-drafts/01/01-facility-management-hero.webp",
+      "originalPath": "/images/facility-drafts/01/01-facility-management-hero.webp",
+      "existing": true,
+      "file": "facility-image-refresh/01/01-facility-management-hero.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/hero-masters/01.png",
+      "kind": "editorial-hero",
+      "sha256": "c5f0f3e9f96a83be0ed2f55690a96caece781db82b9df32a46b1e4310de954da",
+      "masterSHA256": "a2893735d9df951a8bd4dff132973549c43b33b40ae18e084f97798a0073ffdf",
+      "width": 1440,
+      "height": 1080,
+      "alt": "시설관리란? 건물이 멀쩡한 데는 다 이유가 있다 — 관련 설비와 확인 자료를 담은 일러스트",
+      "icons": []
+    },
+    {
+      "article": "what-is-facility-management",
+      "publicPath": "/images/facility-drafts/01/02-facility-job-types.webp",
+      "originalPath": "/images/facility-drafts/01/02-facility-job-types.webp",
+      "existing": true,
+      "file": "facility-image-refresh/01/02-facility-job-types.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/01-02-facility-job-types.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/01-02-facility-job-types.json",
+      "kind": "official-card-template",
+      "sha256": "4bfc17a7caa08f5606f6bacb3a0af99731ff3b10cc8f57148e8abf9cf7f0a563",
+      "masterSHA256": "bafe23d97721bc93dea393c005b5f2e9a7902ba3849362aecc6f424fc07c85ea",
+      "width": 1440,
+      "height": 1080,
+      "alt": "시설관리의 대표 직무 1/2: 기계 냉난방과 물길 관리, 전기 전력 공급 상태 관리",
+      "icons": [
+        "mechanical",
+        "electrical"
+      ]
+    },
+    {
+      "article": "what-is-facility-management",
+      "publicPath": "/images/facility-drafts/01/02-facility-job-types-part-2.webp",
+      "originalPath": "/images/facility-drafts/01/02-facility-job-types.webp",
+      "existing": false,
+      "file": "facility-image-refresh/01/02-facility-job-types-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/01-02-facility-job-types-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/01-02-facility-job-types-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "2a55f26197805e70b3bfb01a2b2e0bcae0542e47db7e1b2461bffa100c1e03cd",
+      "masterSHA256": "c23da26026081246000398d20596502ebfdca0dd4249921fb13383a598a47ca7",
+      "width": 1440,
+      "height": 1080,
+      "alt": "시설관리의 대표 직무 2/2: 소방·방재 비상상황에 대비, 영선 건물 시설물 보수",
+      "icons": [
+        "fire",
+        "repair"
+      ]
+    },
+    {
+      "article": "what-is-facility-management",
+      "publicPath": "/images/facility-drafts/01/03-facility-workplaces.webp",
+      "originalPath": "/images/facility-drafts/01/03-facility-workplaces.webp",
+      "existing": true,
+      "file": "facility-image-refresh/01/03-facility-workplaces.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/01-03-facility-workplaces.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/01-03-facility-workplaces.json",
+      "kind": "official-card-template",
+      "sha256": "3c2127bd36b36cc80374902ddf662146b1cdf333279eaab1326cf126d5baa1ed",
+      "masterSHA256": "aba31e56413c2a42a6a305012a47b93c950d45f29b5d958382de24760930a9f7",
+      "width": 1440,
+      "height": 1080,
+      "alt": "근무시설에 따른 차이 1/2: 오피스 냉난방·전력과 사무공간, 아파트 공용설비와 입주민, 병원 연속 운영과 비상 대응",
+      "icons": [
+        "office",
+        "apartment",
+        "hospital"
+      ]
+    },
+    {
+      "article": "what-is-facility-management",
+      "publicPath": "/images/facility-drafts/01/03-facility-workplaces-part-2.webp",
+      "originalPath": "/images/facility-drafts/01/03-facility-workplaces.webp",
+      "existing": false,
+      "file": "facility-image-refresh/01/03-facility-workplaces-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/01-03-facility-workplaces-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/01-03-facility-workplaces-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "e8d7180f37a8e5468c843e24e8961312f84a52603e79b14992fb1b5eefd23acd",
+      "masterSHA256": "5749366631e445219b175e94a126748b68f180084c230d31a30bdbe95c1e4052",
+      "width": 1440,
+      "height": 1080,
+      "alt": "근무시설에 따른 차이 2/2: 물류센터 보유 설비에 따라 다름, 쇼핑몰 이용객·협력업체와 운영",
+      "icons": [
+        "warehouse",
+        "shopping"
+      ]
+    },
+    {
+      "article": "what-is-facility-management",
+      "publicPath": "/images/facility-drafts/01/05-facility-job-checklist.webp",
+      "originalPath": "/images/facility-drafts/01/05-facility-job-checklist.webp",
+      "existing": true,
+      "file": "facility-image-refresh/01/05-facility-job-checklist.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/01-05-facility-job-checklist.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/01-05-facility-job-checklist.json",
+      "kind": "official-card-template",
+      "sha256": "2477a75a0351e033187c0d54dbadc5613788a7a5ed8db4b469b461804201afd0",
+      "masterSHA256": "307224789a4f9ff282654c44712d7b60d84deb47dcf92a151059f60852b12623",
+      "width": 1440,
+      "height": 1080,
+      "alt": "취업 전 네 가지 확인 1/2: 건물 어떤 시설에서 일하나, 업무 실제로 무엇을 맡나",
+      "icons": [
+        "office",
+        "mechanical"
+      ]
+    },
+    {
+      "article": "what-is-facility-management",
+      "publicPath": "/images/facility-drafts/01/05-facility-job-checklist-part-2.webp",
+      "originalPath": "/images/facility-drafts/01/05-facility-job-checklist.webp",
+      "existing": false,
+      "file": "facility-image-refresh/01/05-facility-job-checklist-part-2.webp",
+      "master": "docs/audits/2026-11-06-facility-image-bulk/masters/01-05-facility-job-checklist-part-2.svg",
+      "spec": "docs/audits/2026-11-06-facility-image-bulk/specs/01-05-facility-job-checklist-part-2.json",
+      "kind": "official-card-template",
+      "sha256": "5c2883603e036b43e235253b72891a7af8b5cc3a8e33a401f76453efabe85998",
+      "masterSHA256": "d0cecca50b135357452a7156348e1d68a1ee5098a030f58026fe5ce6b76ff5cf",
+      "width": 1440,
+      "height": 1080,
+      "alt": "취업 전 네 가지 확인 2/2: 근무형태 주간·격일·교대 여부, 자격·경력 필수·우대·선임 구분",
+      "icons": [
+        "shift-calendar",
+        "qualification"
+      ]
+    }
+  ]
+}

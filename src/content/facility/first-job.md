@@ -29,7 +29,7 @@ related:
 certifications: []
 ---
 
-![시설관리 첫 직장을 고민하는 구직자가 여러 건물과 기계설비 현장을 비교하는 일러스트](/images/facility-drafts/02/01-first-job-hero.webp)
+<figure><img src="/images/facility-drafts/02/01-first-job-hero.webp" alt="시설관리 첫 면접 질문 5가지 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 *시설관리 첫 취업을 앞두고 살펴볼 다섯 가지 기준을 소개하는 일러스트*
 
@@ -57,7 +57,7 @@ certifications: []
 
 다만 **직접 설비 운전·점검 경험을 쌓고 싶은 사람이라면 실제 담당 범위**를 확인해야 한다.
 
-![시설관리 현장의 직접 점검·운전 업무와 중앙감시·외주업체 작업 관리 업무를 비교한 이미지](/images/facility-drafts/02/02-actual-work-scope.webp)
+<figure><img src="/images/facility-drafts/02/02-actual-work-scope.webp" alt="같은 시설관리, 다른 업무: 직접 점검·운전 담당 설비 상태 확인, 감시·작업 관리 중앙감시·외주 작업 관리" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *같은 시설관리 업무도 직접 점검·운전과 감시·작업 관리의 비중은 현장에 따라 달라짐*
 
@@ -111,7 +111,7 @@ certifications: []
 
 근무처가 발주자인지 위탁관리업체인지에 따라 경력확인서에 필요한 직인이나 계약관계 증빙 조건도 달라질 수 있다.
 
-![근무기간·담당 설비·업무 내용·근무사실 증빙을 기록하고 모으는 경력관리 일러스트](/images/facility-drafts/02/03-career-records.webp)
+<figure><img src="/images/facility-drafts/02/03-career-records.webp" alt="경력은 기록으로 남기자: 근무기간 언제·어디에서 일했나, 담당업무 어떤 설비를 맡았나, 증빙서류 지정 서식과 근무사실" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *경력증빙은 근무기간뿐 아니라 담당 업무와 해당 심사기관이 요구하는 서류를 함께 준비해야 함*
 
@@ -135,7 +135,9 @@ certifications: []
 | **어떤 법정선임이 필요하며 누가 맡고 있나요?** | 자격요건과 책임 범위 |
 | **담당 업무가 적힌 경력확인서를 받을 수 있나요?** | 향후 경력증빙 |
 
-![시설관리 취업 면접에서 담당 설비·업무 방식·법정선임·경력증빙·교육체계를 확인하는 다섯 가지 질문 안내 이미지](/images/facility-drafts/02/04-interview-five-questions.webp)
+<figure><img src="/images/facility-drafts/02/04-interview-five-questions.webp" alt="첫 면접의 다섯 질문 1/2: 실제 업무 직접 점검·운전하는 설비, 급여·근무표 기본급과 수당을 구분, 신입 교육 교육·야간 지원 체계" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/02/04-interview-five-questions-part-2.webp" alt="첫 면접의 다섯 질문 2/2: 선임 책임 어떤 법정선임이 필요한가, 경력증빙 담당업무를 남길 수 있나" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
 
 *담당 설비와 업무, 선임, 경력증빙, 교육에 관해 물어볼 질문 예시. 급여와 근무표도 함께 확인하자.*
 

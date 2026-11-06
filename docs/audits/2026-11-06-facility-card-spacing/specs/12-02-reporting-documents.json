@@ -1,0 +1,37 @@
+{
+  "number": "12",
+  "file": "02-reporting-documents.webp",
+  "original": "02-reporting-documents.webp",
+  "part": 1,
+  "total": 2,
+  "title": "경력신고 서류의 역할 1/2",
+  "subtitle": "서류는 각각 다른 사실을 증명한다",
+  "cards": [
+    {
+      "title": "경력신고서",
+      "icon": "submission",
+      "summary": "신청인의 경력·자격 신고",
+      "details": [
+        "최신 지정 서식 확인"
+      ],
+      "action": "신청자가 작성"
+    },
+    {
+      "title": "경력확인서",
+      "icon": "stamp",
+      "summary": "회사별 실제 담당업무",
+      "details": [
+        "협회 지정 서식·직인",
+        "일반 경력증명서와 구분"
+      ],
+      "action": "회사 확인 필요"
+    }
+  ],
+  "takeaway": "자격·학력·사진도 신청인별 해당 제출 조건 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

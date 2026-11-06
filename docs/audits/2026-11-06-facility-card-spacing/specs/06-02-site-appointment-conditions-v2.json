@@ -1,0 +1,38 @@
+{
+  "number": "06",
+  "file": "02-site-appointment-conditions-v2.webp",
+  "original": "02-site-appointment-conditions-v2.webp",
+  "part": 1,
+  "total": 1,
+  "title": "사업소별 필수 선임요건",
+  "subtitle": "한전FMS | 2026년 상반기 당시 공고 사례",
+  "cards": [
+    {
+      "title": "동용인지사",
+      "icon": "cooling",
+      "summary": "두 선임 가능 요건 모두",
+      "details": [
+        "냉동제조시설",
+        "특정가스사용시설"
+      ],
+      "action": "두 항목 모두 필수"
+    },
+    {
+      "title": "이천지사",
+      "icon": "hazardous",
+      "summary": "세 선임 가능 요건 모두",
+      "details": [
+        "냉동제조시설",
+        "검사대상기기·위험물"
+      ],
+      "action": "세 항목 모두 필수"
+    }
+  ],
+  "takeaway": "자격증 개수가 아니라 각 관리업무의 법적 요건 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

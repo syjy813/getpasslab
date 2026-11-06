@@ -1,0 +1,49 @@
+{
+  "number": "03",
+  "file": "02-three-employment-structures.webp",
+  "original": "02-three-employment-structures.webp",
+  "part": 1,
+  "total": 1,
+  "title": "시설관리 고용주 비교",
+  "subtitle": "직영·자회사·용역은 우열이나 순서가 아니다",
+  "cards": [
+    {
+      "title": "직영",
+      "icon": "public-employer",
+      "summary": "운영 주체가 직접 채용",
+      "details": [
+        "계약기간·직군 확인",
+        "해당 인사규정 확인"
+      ],
+      "action": "운영 주체와 계약"
+    },
+    {
+      "title": "자회사",
+      "icon": "subsidiary",
+      "summary": "별도 법인이 채용",
+      "details": [
+        "자회사 자체 임금·정년",
+        "복리후생 규정 확인"
+      ],
+      "action": "자회사와 계약"
+    },
+    {
+      "title": "용역",
+      "icon": "service-contractor",
+      "summary": "전문업체가 채용",
+      "details": [
+        "현장 계약기간·전환배치",
+        "고용승계 조건 확인"
+      ],
+      "action": "전문업체와 계약"
+    }
+  ],
+  "takeaway": "근로계약 상대방 확인 | 자회사도 외주 구조일 수 있음",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

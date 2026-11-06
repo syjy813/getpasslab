@@ -1,0 +1,39 @@
+{
+  "number": "08",
+  "file": "05-application-checklist-part-2.webp",
+  "original": "05-application-checklist.webp",
+  "part": 2,
+  "total": 2,
+  "title": "코레일테크 지원 전 2/2",
+  "subtitle": "여섯 가지를 해당 회차 공식 별첨과 대조",
+  "cards": [
+    {
+      "title": "자격·경력",
+      "icon": "qualification",
+      "summary": "또는·및과 제출증빙",
+      "details": [],
+      "action": "필수조건 대조"
+    },
+    {
+      "title": "전형·시용",
+      "icon": "contract-term",
+      "summary": "검증 절차·12주 평가",
+      "details": [],
+      "action": "전형별 조건 확인"
+    },
+    {
+      "title": "급여·정년",
+      "icon": "pay-components",
+      "summary": "해당 직무 실제 조건",
+      "details": [],
+      "action": "기관 평균과 구분"
+    }
+  ],
+  "takeaway": "기관 이름보다 실제 담당 업무와 근로조건을 확인",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

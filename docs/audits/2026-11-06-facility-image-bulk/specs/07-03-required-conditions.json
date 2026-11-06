@@ -1,0 +1,48 @@
+{
+  "number": "07",
+  "file": "03-required-conditions.webp",
+  "original": "03-required-conditions.webp",
+  "part": 1,
+  "total": 1,
+  "title": "필수조건을 모두 확인",
+  "subtitle": "우체국시설관리단 | 관서별 응시요건을 대조",
+  "cards": [
+    {
+      "title": "관련 자격",
+      "icon": "qualification",
+      "summary": "공고에 지정된 자격",
+      "details": [
+        "필수와 우대 구분",
+        "또는·및 관계 확인"
+      ],
+      "action": "관련 분야 확인"
+    },
+    {
+      "title": "법정선임",
+      "icon": "law",
+      "summary": "해당 시설의 선임 가능",
+      "details": [
+        "자격증만으로 단정 금지",
+        "모든 필수항목 대조"
+      ],
+      "action": "설비·법령 확인"
+    },
+    {
+      "title": "관련 경력",
+      "icon": "career",
+      "summary": "요구 기간과 실제 업무",
+      "details": [
+        "관서·회차마다 다름",
+        "업무와 기간의 증빙"
+      ],
+      "action": "해당 회차 확인"
+    }
+  ],
+  "takeaway": "한 가지 자격 보유만으로 모든 필수조건 충족 아님",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "number": "13",
+  "file": "02-identify-boiler-part-2.webp",
+  "original": "02-identify-boiler.webp",
+  "part": 2,
+  "total": 2,
+  "title": "자격표 전에 기기 확인 2/2",
+  "subtitle": "검사증·명판·사양서에서 실제 설비의 조건을 찾자",
+  "cards": [
+    {
+      "title": "용량·압력",
+      "icon": "gauge",
+      "summary": "t/h·kW·MPa 등",
+      "details": [],
+      "action": "단위·환산 확인"
+    },
+    {
+      "title": "사용 연료",
+      "icon": "gas",
+      "summary": "가스 여부와 추가조건",
+      "details": [],
+      "action": "교육·가스자격 확인"
+    }
+  ],
+  "takeaway": "실제 검사대상 여부와 사양을 먼저 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

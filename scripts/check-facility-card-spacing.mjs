@@ -1,0 +1,63 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import sharp from 'sharp';
+import {createHash} from 'node:crypto';
+import {cardRects} from './generate-facility-infographic.mjs';
+import {infographicLayout,renderInfographic} from './generate-facility-compact-infographic.mjs';
+import {registerExtraPictograms} from './facility-pictograms-extended.mjs';
+import {applyBulkLabelOffsets} from './facility-bulk-labels.mjs';
+import {bulkVisuals,assertBulkVisuals} from './read-facility-bulk-visuals.mjs';
+registerExtraPictograms();assertBulkVisuals();sharp.cache(false);sharp.concurrency(1);
+const audit='docs/audits/2026-11-06-facility-card-spacing';
+const before=JSON.parse(fs.readFileSync(audit+'/before-manifest.json'));
+const sha=b=>createHash('sha256').update(b).digest('hex');
+const bodyText=svg=>[...svg.matchAll(/<text(?! class="centered-label")[^>]*>[\s\S]*?<\/text>/g)].map(m=>m[0]);
+const dark=(r,x,y)=>{const k=(y*r.info.width+x)*r.info.channels;return r.data[k]<120&&r.data[k+1]<150&&r.data[k+2]<120;};
+function lastBodyInk(r,card,actionTop){
+  for(let y=Math.ceil(actionTop)-1;y>=card.y+250;y--)
+    for(let x=Math.ceil(card.x+24);x<card.x+card.w-24;x++)if(dark(r,x,y))return y;
+  throw Error('Missing body ink');
+}
+const measurements=[];
+for(const row of bulkVisuals.images){
+  const old=before.images.find(r=>r.publicPath===row.publicPath);assert(old,'same public URL');
+  assert.equal(sha(fs.readFileSync(old.file)),old.sha256,'previous WebP preserved');
+  assert.equal(sha(fs.readFileSync(old.master)),old.masterSHA256,'previous master preserved');
+  assert.equal(row.alt,old.alt,'unchanged accessible description');
+  if(row.kind==='editorial-hero'){assert.equal(row.sha256,old.sha256,'hero bytes unchanged');continue;}
+  const spec=JSON.parse(fs.readFileSync(row.spec)),oldSpec=JSON.parse(fs.readFileSync(old.spec));
+  for(const key of ['title','subtitle','takeaway','cards'])assert.deepEqual(spec[key],oldSpec[key],'same copy and pictograms');
+  const svg=fs.readFileSync(row.master,'utf8'),oldSvg=fs.readFileSync(old.master,'utf8');
+  assert.deepEqual(bodyText(svg),bodyText(oldSvg),'body text geometry unchanged');
+  assert.equal(svg,applyBulkLabelOffsets(renderInfographic(spec),spec.labelOffsets));
+  const layout=infographicLayout(spec);assert.equal(row.height,layout.height);assert(layout.reduction>0);
+  const oldCards=cardRects(spec.cards.length,layout.top);
+  assert.equal(new Set(layout.cards.map(c=>c.y+c.h)).size,1,'aligned card bottoms');
+  const previous=await sharp(old.file).removeAlpha().raw().toBuffer({resolveWithObject:true});
+  const current=await sharp(row.file).removeAlpha().raw().toBuffer({resolveWithObject:true});
+  assert.equal(current.info.width,row.width);assert.equal(current.info.height,row.height);
+  const gaps=[];
+  for(let i=0;i<spec.cards.length;i++){
+    const offset=spec.cards.length===1?95:81,a=oldCards[i],b=layout.cards[i];
+    const oldTop=a.y+a.h-offset,newTop=b.y+b.h-offset;
+    const oldInk=lastBodyInk(previous,a,oldTop),newInk=lastBodyInk(current,b,newTop);
+    assert(Math.abs(oldInk-newInk)<=1,'final explanation line stays in place');
+    const oldGap=oldTop-oldInk-1,newGap=newTop-newInk-1;
+    assert(newGap>=24,'safe explanation to label gap');
+    assert(Math.abs(oldGap-newGap-layout.reduction)<=1,'remove only blank space');
+    gaps.push({label:spec.cards[i].title,before:oldGap,after:newGap});
+  }
+  const oldMin=Math.min(...gaps.map(g=>g.before)),newMin=Math.min(...gaps.map(g=>g.after));
+  assert(newMin/oldMin<=0.65,'row gap reduced to approximately half');
+  measurements.push({publicPath:row.publicPath,height:row.height,reduction:layout.reduction,gaps});
+}
+assert.equal(measurements.length,73);
+// The reusable 1-4 card examples retain the already compact 2x2 layout.
+const root='docs/standards/facility-infographic-templates/';
+for(const count of [1,2,3,4]){
+ const spec=JSON.parse(fs.readFileSync(root+'compact-example-'+count+'.json'));
+ assert.equal(fs.readFileSync(root+'compact-cards-'+count+'.svg','utf8'),renderInfographic(spec));
+ if(count===4)assert.equal(infographicLayout(spec).reduction,0,'already compact 2x2 retained');
+}
+fs.writeFileSync(bulkVisuals.measurementAudit?bulkVisuals.measurementAudit+'/spacing-measurements.json':audit+'/measurements.json',JSON.stringify(measurements,null,2)+'\n');
+console.log('[Card spacing] PASS '+JSON.stringify({images:measurements.length,cardItems:measurements.reduce((n,r)=>n+r.gaps.length,0),heights:[...new Set(measurements.map(r=>r.height))],sample:measurements.find(r=>r.publicPath.includes('job-types-part-2'))}));

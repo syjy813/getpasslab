@@ -1,0 +1,39 @@
+{
+  "number": "06",
+  "file": "05-recruitment-checklist-part-2.webp",
+  "original": "05-recruitment-checklist.webp",
+  "part": 2,
+  "total": 2,
+  "title": "한전FMS 지원 전 확인 2/2",
+  "subtitle": "사업소가 달라지면 지원 조건도 달라진다",
+  "cards": [
+    {
+      "title": "법정선임",
+      "icon": "law",
+      "summary": "자격·경력·교육 기준",
+      "details": [],
+      "action": "개별 법령 확인"
+    },
+    {
+      "title": "근무·급여",
+      "icon": "pay-components",
+      "summary": "일근·교대와 포함 수당",
+      "details": [],
+      "action": "지급 조건 확인"
+    },
+    {
+      "title": "인턴 전환",
+      "icon": "contract-term",
+      "summary": "6개월 후 평가·적격자",
+      "details": [],
+      "action": "자동 전환 아님"
+    }
+  ],
+  "takeaway": "2026년 종료 공고 사례 | 새로운 회차의 원문 확인",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

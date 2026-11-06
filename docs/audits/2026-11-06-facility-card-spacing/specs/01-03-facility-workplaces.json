@@ -1,0 +1,46 @@
+{
+  "number": "01",
+  "file": "03-facility-workplaces.webp",
+  "original": "03-facility-workplaces.webp",
+  "part": 1,
+  "total": 2,
+  "title": "근무시설에 따른 차이 1/2",
+  "subtitle": "건물 이름보다 실제 관리 설비를 확인",
+  "cards": [
+    {
+      "title": "오피스",
+      "icon": "office",
+      "summary": "냉난방·전력과 사무공간",
+      "details": [
+        "설비 운영·불편사항 대응"
+      ],
+      "action": "담당 범위 확인"
+    },
+    {
+      "title": "아파트",
+      "icon": "apartment",
+      "summary": "공용설비와 입주민",
+      "details": [
+        "급배수·민원 비중 확인"
+      ],
+      "action": "공용설비 확인"
+    },
+    {
+      "title": "병원",
+      "icon": "hospital",
+      "summary": "연속 운영과 비상 대응",
+      "details": [
+        "주요 설비의 중단 대비"
+      ],
+      "action": "대응 체계 확인"
+    }
+  ],
+  "takeaway": "근무시설별 예시 | 건물 종류로 급여·업무를 단정하지 않음",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

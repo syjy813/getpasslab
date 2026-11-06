@@ -1,0 +1,39 @@
+{
+  "number": "08",
+  "file": "05-application-checklist.webp",
+  "original": "05-application-checklist.webp",
+  "part": 1,
+  "total": 2,
+  "title": "코레일테크 지원 전 1/2",
+  "subtitle": "여섯 가지를 해당 회차 공식 별첨과 대조",
+  "cards": [
+    {
+      "title": "모집 회차",
+      "icon": "career",
+      "summary": "공고명·게시일·마감일",
+      "details": [],
+      "action": "접수 상태 확인"
+    },
+    {
+      "title": "세부 직무",
+      "icon": "rail",
+      "summary": "토목·토목 외 업무",
+      "details": [],
+      "action": "직무기술서 확인"
+    },
+    {
+      "title": "사업소·근무지",
+      "icon": "worksite",
+      "summary": "담당 구역·이동 가능성",
+      "details": [],
+      "action": "배치 범위 확인"
+    }
+  ],
+  "takeaway": "기관 이름보다 실제 담당 업무와 근로조건을 확인",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

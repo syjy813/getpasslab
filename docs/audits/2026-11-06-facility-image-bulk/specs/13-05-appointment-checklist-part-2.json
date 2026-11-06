@@ -1,0 +1,39 @@
+{
+  "number": "13",
+  "file": "05-appointment-checklist-part-2.webp",
+  "original": "05-appointment-checklist.webp",
+  "part": 2,
+  "total": 2,
+  "title": "보일러 선임 전 확인 2/2",
+  "subtitle": "채용공고 한 줄보다 실제 검사증·설비 조건을 먼저",
+  "cards": [
+    {
+      "title": "교육·추가자격",
+      "icon": "training",
+      "summary": "관련 교육과 별도 선임",
+      "details": [],
+      "action": "이수·자격 대조"
+    },
+    {
+      "title": "관리구역·대수",
+      "icon": "worksite",
+      "summary": "1구역·관류·합산 조건",
+      "details": [],
+      "action": "설치 구성 확인"
+    },
+    {
+      "title": "선임신고",
+      "icon": "submission",
+      "summary": "설치자의 신고 준비",
+      "details": [],
+      "action": "사유 발생 후 30일"
+    }
+  ],
+  "takeaway": "선임·해임·퇴직 시 설치자가 30일 이내 신고",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

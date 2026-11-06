@@ -1,0 +1,39 @@
+{
+  "number": "04",
+  "file": "05-job-posting-checklist.webp",
+  "original": "05-job-posting-checklist.webp",
+  "part": 1,
+  "total": 2,
+  "title": "근무표 확인 여섯 가지 1/2",
+  "subtitle": "급여·휴게·야간 대응까지 함께 질문",
+  "cards": [
+    {
+      "title": "출퇴근 시각",
+      "icon": "clock",
+      "summary": "한 번 출근해 머무는 시간",
+      "details": [],
+      "action": "체류시간 확인"
+    },
+    {
+      "title": "조별 근무표",
+      "icon": "shift-calendar",
+      "summary": "주간·야간·비번·휴무",
+      "details": [],
+      "action": "한 주기 확인"
+    },
+    {
+      "title": "휴게·대기",
+      "icon": "support",
+      "summary": "쉬는 중 호출·감시 여부",
+      "details": [],
+      "action": "실제 이용 확인"
+    }
+  ],
+  "takeaway": "금액뿐 아니라 실제 조건이 내 생활에 맞는지 확인",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

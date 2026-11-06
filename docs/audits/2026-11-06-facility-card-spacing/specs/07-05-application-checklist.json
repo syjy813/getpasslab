@@ -1,0 +1,40 @@
+{
+  "number": "07",
+  "file": "05-application-checklist.webp",
+  "original": "05-application-checklist.webp",
+  "part": 1,
+  "total": 2,
+  "title": "우체국시설관리단 확인 1/2",
+  "subtitle": "지원 전 여섯 가지를 해당 회차 공고와 대조",
+  "cards": [
+    {
+      "title": "근무관서",
+      "icon": "worksite",
+      "summary": "우체국·집중국·물류센터",
+      "details": [],
+      "action": "순회관리 여부 확인"
+    },
+    {
+      "title": "필수자격",
+      "icon": "qualification",
+      "summary": "모든 조건·대체 경로",
+      "details": [],
+      "action": "및·또는 확인"
+    },
+    {
+      "title": "법정선임",
+      "icon": "law",
+      "summary": "보유 자격과 선임 구분",
+      "details": [],
+      "action": "실제 요건 확인"
+    }
+  ],
+  "takeaway": "과거 공고 사례 | 최신 회차와 변경공고를 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

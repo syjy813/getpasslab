@@ -1,0 +1,380 @@
+[
+  {
+    "article": "boiler-inspection-manager",
+    "publicPath": "/images/facility-drafts/13/01-boiler-manager-hero-v2.webp",
+    "source": "facility-assets/13/01-boiler-manager-hero-v2.webp",
+    "role": "hero"
+  },
+  {
+    "article": "boiler-inspection-manager",
+    "publicPath": "/images/facility-drafts/13/02-identify-boiler.webp",
+    "source": "facility-assets/13/02-identify-boiler.webp",
+    "role": "body"
+  },
+  {
+    "article": "boiler-inspection-manager",
+    "publicPath": "/images/facility-drafts/13/03-capacity-grade-ranges.webp",
+    "source": "facility-assets/13/03-capacity-grade-ranges.webp",
+    "role": "body"
+  },
+  {
+    "article": "boiler-inspection-manager",
+    "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions.webp",
+    "source": "facility-assets/13/04-small-and-gas-exceptions.webp",
+    "role": "body"
+  },
+  {
+    "article": "boiler-inspection-manager",
+    "publicPath": "/images/facility-drafts/13/05-appointment-checklist.webp",
+    "source": "facility-assets/13/05-appointment-checklist.webp",
+    "role": "body"
+  },
+  {
+    "article": "employment-types",
+    "publicPath": "/images/facility-drafts/03/01-employment-types-hero.webp",
+    "source": "facility-asset-edits/03/01-employment-types-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "employment-types",
+    "publicPath": "/images/facility-drafts/03/02-three-employment-structures.webp",
+    "source": "facility-asset-edits/03/02-three-employment-structures.webp",
+    "role": "body"
+  },
+  {
+    "article": "employment-types",
+    "publicPath": "/images/facility-drafts/03/03-contract-change-check.webp",
+    "source": "facility-asset-edits/03/03-contract-change-check.webp",
+    "role": "body"
+  },
+  {
+    "article": "employment-types",
+    "publicPath": "/images/facility-drafts/03/04-offer-comparison.webp",
+    "source": "facility-asset-edits/03/04-offer-comparison.webp",
+    "role": "body"
+  },
+  {
+    "article": "employment-types",
+    "publicPath": "/images/facility-drafts/03/05-six-point-checklist.webp",
+    "source": "facility-asset-edits/03/05-six-point-checklist.webp",
+    "role": "body"
+  },
+  {
+    "article": "first-job",
+    "publicPath": "/images/facility-drafts/02/01-first-job-hero.webp",
+    "source": "facility-asset-edits/02/01-first-job-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "first-job",
+    "publicPath": "/images/facility-drafts/02/02-actual-work-scope.webp",
+    "source": "facility-assets/02/02-actual-work-scope.webp",
+    "role": "body"
+  },
+  {
+    "article": "first-job",
+    "publicPath": "/images/facility-drafts/02/03-career-records.webp",
+    "source": "facility-assets/02/03-career-records.webp",
+    "role": "body"
+  },
+  {
+    "article": "first-job",
+    "publicPath": "/images/facility-drafts/02/04-interview-five-questions.webp",
+    "source": "facility-asset-edits/02/04-interview-five-questions.webp",
+    "role": "body"
+  },
+  {
+    "article": "hanfms",
+    "publicPath": "/images/facility-drafts/06/01-hanfms-hero.webp",
+    "source": "facility-assets/06/01-hanfms-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "hanfms",
+    "publicPath": "/images/facility-drafts/06/02-site-appointment-conditions-v2.webp",
+    "source": "facility-assets/06/02-site-appointment-conditions-v2.webp",
+    "role": "body"
+  },
+  {
+    "article": "hanfms",
+    "publicPath": "/images/facility-drafts/06/03-required-versus-preferred-v2.webp",
+    "source": "facility-assets/06/03-required-versus-preferred-v2.webp",
+    "role": "body"
+  },
+  {
+    "article": "hanfms",
+    "publicPath": "/images/facility-drafts/06/04-pay-and-shifts.webp",
+    "source": "facility-assets/06/04-pay-and-shifts.webp",
+    "role": "body"
+  },
+  {
+    "article": "hanfms",
+    "publicPath": "/images/facility-drafts/06/05-recruitment-checklist.webp",
+    "source": "facility-assets/06/05-recruitment-checklist.webp",
+    "role": "body"
+  },
+  {
+    "article": "kamcofmc",
+    "publicPath": "/images/facility-drafts/09/01-camcofmc-hero.webp",
+    "source": "facility-assets/09/01-camcofmc-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "kamcofmc",
+    "publicPath": "/images/facility-drafts/09/02-grade-and-experience.webp",
+    "source": "facility-assets/09/02-grade-and-experience.webp",
+    "role": "body"
+  },
+  {
+    "article": "kamcofmc",
+    "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements.webp",
+    "source": "facility-assets/09/03-site-appointment-requirements.webp",
+    "role": "body"
+  },
+  {
+    "article": "kamcofmc",
+    "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts.webp",
+    "source": "facility-assets/09/04-site-pay-and-shifts.webp",
+    "role": "body"
+  },
+  {
+    "article": "kamcofmc",
+    "publicPath": "/images/facility-drafts/09/05-application-checklist.webp",
+    "source": "facility-assets/09/05-application-checklist.webp",
+    "role": "body"
+  },
+  {
+    "article": "korailtech",
+    "publicPath": "/images/facility-drafts/08/01-korailtech-hero.webp",
+    "source": "facility-assets/08/01-korailtech-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "korailtech",
+    "publicPath": "/images/facility-drafts/08/02-facility-versus-track.webp",
+    "source": "facility-assets/08/02-facility-versus-track.webp",
+    "role": "body"
+  },
+  {
+    "article": "korailtech",
+    "publicPath": "/images/facility-drafts/08/03-applicant-numbers.webp",
+    "source": "facility-assets/08/03-applicant-numbers.webp",
+    "role": "body"
+  },
+  {
+    "article": "korailtech",
+    "publicPath": "/images/facility-drafts/08/04-retirement-and-probation-v2.webp",
+    "source": "facility-assets/08/04-retirement-and-probation-v2.webp",
+    "role": "body"
+  },
+  {
+    "article": "korailtech",
+    "publicPath": "/images/facility-drafts/08/05-application-checklist.webp",
+    "source": "facility-assets/08/05-application-checklist.webp",
+    "role": "body"
+  },
+  {
+    "article": "mechanical-career-records",
+    "publicPath": "/images/facility-drafts/12/01-career-reporting-hero.webp",
+    "source": "facility-assets/12/01-career-reporting-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "mechanical-career-records",
+    "publicPath": "/images/facility-drafts/12/02-reporting-documents.webp",
+    "source": "facility-assets/12/02-reporting-documents.webp",
+    "role": "body"
+  },
+  {
+    "article": "mechanical-career-records",
+    "publicPath": "/images/facility-drafts/12/03-employer-and-stamps.webp",
+    "source": "facility-assets/12/03-employer-and-stamps.webp",
+    "role": "body"
+  },
+  {
+    "article": "mechanical-career-records",
+    "publicPath": "/images/facility-drafts/12/04-recognized-experience.webp",
+    "source": "facility-assets/12/04-recognized-experience.webp",
+    "role": "body"
+  },
+  {
+    "article": "mechanical-career-records",
+    "publicPath": "/images/facility-drafts/12/05-reporting-process.webp",
+    "source": "facility-assets/12/05-reporting-process.webp",
+    "role": "body"
+  },
+  {
+    "article": "mechanical-maintainer-levels",
+    "publicPath": "/images/facility-drafts/11/01-maintainer-grades-hero.webp",
+    "source": "facility-assets/11/01-maintainer-grades-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "mechanical-maintainer-levels",
+    "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix.webp",
+    "source": "facility-assets/11/02-qualification-grade-matrix.webp",
+    "role": "body"
+  },
+  {
+    "article": "mechanical-maintainer-levels",
+    "publicPath": "/images/facility-drafts/11/04-recognized-experience.webp",
+    "source": "facility-assets/11/04-recognized-experience.webp",
+    "role": "body"
+  },
+  {
+    "article": "mechanical-maintainer-levels",
+    "publicPath": "/images/facility-drafts/11/03-building-grade-ranges.webp",
+    "source": "facility-assets/11/03-building-grade-ranges.webp",
+    "role": "body"
+  },
+  {
+    "article": "mechanical-maintainer-levels",
+    "publicPath": "/images/facility-drafts/11/05-application-checklist.webp",
+    "source": "facility-assets/11/05-application-checklist.webp",
+    "role": "body"
+  },
+  {
+    "article": "postal-facilities",
+    "publicPath": "/images/facility-drafts/07/01-postal-facilities-hero.webp",
+    "source": "facility-assets/07/01-postal-facilities-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "postal-facilities",
+    "publicPath": "/images/facility-drafts/07/02-workplace-types.webp",
+    "source": "facility-assets/07/02-workplace-types.webp",
+    "role": "body"
+  },
+  {
+    "article": "postal-facilities",
+    "publicPath": "/images/facility-drafts/07/03-required-conditions.webp",
+    "source": "facility-assets/07/03-required-conditions.webp",
+    "role": "body"
+  },
+  {
+    "article": "postal-facilities",
+    "publicPath": "/images/facility-drafts/07/04-round-comparison-v2.webp",
+    "source": "facility-assets/07/04-round-comparison-v2.webp",
+    "role": "body"
+  },
+  {
+    "article": "postal-facilities",
+    "publicPath": "/images/facility-drafts/07/05-application-checklist.webp",
+    "source": "facility-assets/07/05-application-checklist.webp",
+    "role": "body"
+  },
+  {
+    "article": "public-sector-comparison",
+    "publicPath": "/images/facility-drafts/05/01-public-sector-hero.webp",
+    "source": "facility-asset-edits/05/01-public-sector-hero-v2.webp",
+    "role": "hero"
+  },
+  {
+    "article": "public-sector-comparison",
+    "publicPath": "/images/facility-drafts/05/02-employer-types.webp",
+    "source": "facility-asset-edits/05/02-employer-types-v4.webp",
+    "role": "body"
+  },
+  {
+    "article": "public-sector-comparison",
+    "publicPath": "/images/facility-drafts/05/04-pay-data-comparison.webp",
+    "source": "facility-asset-edits/05/04-pay-data-comparison-v2.webp",
+    "role": "body"
+  },
+  {
+    "article": "public-sector-comparison",
+    "publicPath": "/images/facility-drafts/05/05-compare-jobs-checklist.webp",
+    "source": "facility-asset-edits/05/05-compare-jobs-checklist-v3.webp",
+    "role": "body"
+  },
+  {
+    "article": "public-sector-comparison",
+    "publicPath": "/images/facility-drafts/05/06-compare-jobs-checklist.webp",
+    "source": "facility-asset-edits/05/06-compare-jobs-checklist-v3.webp",
+    "role": "body"
+  },
+  {
+    "article": "shifts-and-pay",
+    "publicPath": "/images/facility-drafts/04/01-shifts-pay-hero.webp",
+    "source": "facility-asset-edits/04/01-shifts-pay-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "shifts-and-pay",
+    "publicPath": "/images/facility-drafts/04/02-shift-types.webp",
+    "source": "facility-assets/04/02-shift-types.webp",
+    "role": "body"
+  },
+  {
+    "article": "shifts-and-pay",
+    "publicPath": "/images/facility-drafts/04/03-working-waiting-rest.webp",
+    "source": "facility-assets/04/03-working-waiting-rest.webp",
+    "role": "body"
+  },
+  {
+    "article": "shifts-and-pay",
+    "publicPath": "/images/facility-drafts/04/04-salary-comparison.webp",
+    "source": "facility-assets/04/04-salary-comparison.webp",
+    "role": "body"
+  },
+  {
+    "article": "shifts-and-pay",
+    "publicPath": "/images/facility-drafts/04/05-job-posting-checklist.webp",
+    "source": "facility-assets/04/05-job-posting-checklist.webp",
+    "role": "body"
+  },
+  {
+    "article": "statutory-appointments",
+    "publicPath": "/images/facility-drafts/10/01-statutory-appointments-hero.webp",
+    "source": "facility-assets/10/01-statutory-appointments-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "statutory-appointments",
+    "publicPath": "/images/facility-drafts/10/02-seven-appointment-types.webp",
+    "source": "facility-assets/10/02-seven-appointment-types.webp",
+    "role": "body"
+  },
+  {
+    "article": "statutory-appointments",
+    "publicPath": "/images/facility-drafts/10/03-boiler-qualification-ranges.webp",
+    "source": "facility-assets/10/03-boiler-qualification-ranges.webp",
+    "role": "body"
+  },
+  {
+    "article": "statutory-appointments",
+    "publicPath": "/images/facility-drafts/10/04-gas-laws-separation.webp",
+    "source": "facility-assets/10/04-gas-laws-separation.webp",
+    "role": "body"
+  },
+  {
+    "article": "statutory-appointments",
+    "publicPath": "/images/facility-drafts/10/05-application-checklist.webp",
+    "source": "facility-assets/10/05-application-checklist.webp",
+    "role": "body"
+  },
+  {
+    "article": "what-is-facility-management",
+    "publicPath": "/images/facility-drafts/01/01-facility-management-hero.webp",
+    "source": "facility-asset-edits/01/01-facility-management-hero.webp",
+    "role": "hero"
+  },
+  {
+    "article": "what-is-facility-management",
+    "publicPath": "/images/facility-drafts/01/02-facility-job-types.webp",
+    "source": "facility-asset-edits/01/02-facility-job-types.webp",
+    "role": "body"
+  },
+  {
+    "article": "what-is-facility-management",
+    "publicPath": "/images/facility-drafts/01/03-facility-workplaces.webp",
+    "source": "facility-asset-edits/01/03-facility-workplaces.webp",
+    "role": "body"
+  },
+  {
+    "article": "what-is-facility-management",
+    "publicPath": "/images/facility-drafts/01/05-facility-job-checklist.webp",
+    "source": "facility-asset-edits/01/05-facility-job-checklist.webp",
+    "role": "body"
+  }
+]

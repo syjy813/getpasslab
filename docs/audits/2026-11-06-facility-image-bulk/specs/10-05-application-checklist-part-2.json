@@ -1,0 +1,39 @@
+{
+  "number": "10",
+  "file": "05-application-checklist-part-2.webp",
+  "original": "05-application-checklist.webp",
+  "part": 2,
+  "total": 2,
+  "title": "법정선임 공고 읽는 순서 2/2",
+  "subtitle": "공고의 필수조건과 법적 선임 가능 여부를 각각 검토",
+  "cards": [
+    {
+      "title": "내 자격",
+      "icon": "qualification",
+      "summary": "자격·교육·경력·수첩",
+      "details": [],
+      "action": "개별 요건 대조"
+    },
+    {
+      "title": "여러 조건",
+      "icon": "job-offer",
+      "summary": "필수·우대·및·또는",
+      "details": [],
+      "action": "대체·동시 충족 구분"
+    },
+    {
+      "title": "선임·겸직",
+      "icon": "law",
+      "summary": "배치·위탁·신고 절차",
+      "details": [],
+      "action": "겸직 가능 여부 별도"
+    }
+  ],
+  "takeaway": "자격요건 충족과 실제 선임·겸직 허용은 다른 판단",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}
