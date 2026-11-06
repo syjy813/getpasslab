@@ -75,9 +75,9 @@ images.unshift({ id: '01-hobyeongbaekma-hero', file: 'images/01-hobyeongbaekma-h
 fs.writeFileSync(`${root}/image-manifest.json`, JSON.stringify({ images, cards: specs.length, renderer: 'scripts/generate-facility-compact-infographic.mjs', newIcon: { key: 'hotel', meaning: PICTOGRAMS.hotel.meaning, svg: PICTOGRAMS.hotel.svg } }, null, 2) + '\n');
 console.log(JSON.stringify({ images: images.length, cards: specs.length, labels: images.flatMap(r => r.centering || []).length, maxLabelDifference: Math.max(...images.flatMap(r => r.centering || [])) }));
 
-// Preserve the user-approved exact type layer when regenerating the review set.
-if (fs.existsSync(`${root}/specs/hero-centered-type.json`)) {
+// Keep the currently approved hero source when regenerating the review set.
+if (fs.existsSync(`${root}/specs/hero-approved-image.json`) || fs.existsSync(`${root}/specs/hero-centered-type.json`)) {
   const {spawnSync} = await import('node:child_process');
   const result = spawnSync(process.execPath, ['scripts/render-hobyeongbaekma-hero.mjs'], {stdio: 'inherit'});
-  if (result.status !== 0) throw Error('Centered hero regeneration failed');
+  if (result.status !== 0) throw Error('Approved hero regeneration failed');
 }

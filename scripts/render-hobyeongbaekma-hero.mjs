@@ -5,6 +5,26 @@ import assert from 'node:assert/strict';
 import sharp from 'sharp';
 
 const root = 'docs/drafts/facility/hobyeongbaekma';
+const approvedSpecPath = `${root}/specs/hero-approved-image.json`;
+if (fs.existsSync(approvedSpecPath)) {
+  const spec = JSON.parse(fs.readFileSync(approvedSpecPath));
+  const master = fs.readFileSync(`${root}/${spec.master}`);
+  const sha = b => createHash('sha256').update(b).digest('hex');
+  assert.equal(sha(master), spec.sourceSHA256, 'Approved artwork must not change');
+  const output = await sharp(master).resize(spec.width, spec.height).webp({ quality: 92, effort: 6 }).toBuffer();
+  fs.writeFileSync(`${root}/images/01-hobyeongbaekma-hero.webp`, output);
+  const manifest = JSON.parse(fs.readFileSync(`${root}/image-manifest.json`));
+  manifest.images[0] = {
+    id: '01-hobyeongbaekma-hero', file: 'images/01-hobyeongbaekma-hero.webp',
+    width: spec.width, height: spec.height, sha256: sha(output), master: spec.master,
+    sourcePNG: path.basename(spec.master), sourceSHA256: spec.sourceSHA256,
+    sourceRole: 'User-approved complete imagegen artwork including enlarged centered title/subtitle; no text overlay',
+    sourceLibraryFileId: spec.sourceLibraryFileId, approvedSpec: 'specs/hero-approved-image.json',
+  };
+  fs.writeFileSync(`${root}/image-manifest.json`, JSON.stringify(manifest, null, 2) + '\n');
+  console.log(JSON.stringify({ source: spec.master, width: spec.width, height: spec.height, bytes: output.length, typography: 'approved AI artwork, no overlay' }));
+  process.exit(0);
+}
 const background = `${root}/masters/hero-background-centered.webp`;
 const spec = {
   width: 1440, height: 1080,

@@ -5,7 +5,7 @@
   "episodes": [
     {
       "order": 0,
-      "title": "호병백마, 이게 뭔데?",
+      "title": "[호병백마 ep.0] 시설관리 호병백마, 이게 뭔데? 호텔·병원·백화점·마트가 묶인 이유",
       "status": "draft",
       "file": "episode00.md"
     },
@@ -53,5 +53,6 @@
       ]
     }
   ],
-  "publishApproval": false
+  "publishApproval": false,
+  "titlePrefixFormat": "[호병백마 ep.N]"
 }
