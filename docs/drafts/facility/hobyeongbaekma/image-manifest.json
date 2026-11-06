@@ -5,10 +5,13 @@
       "file": "images/01-hobyeongbaekma-hero.webp",
       "width": 1440,
       "height": 1080,
-      "sha256": "0fac459ae4c192b834f26097aa9453cb1f5813ae6f6fc4e04e45654ee0146fca",
-      "sourcePNG": "exec-ecbd3335-7a5a-46b3-b845-1121e2828f83.png",
-      "sourceSHA256": "3ba7afa12e4ba710b575580a48edcfbe2ed1b3cc51a7e1e161963b48606dcc68",
-      "sourceRole": "imagegen: four building exteriors with title and subtitle"
+      "sha256": "544172f39f30e5740e9ff28072865b52b8f57e4911036d76feea7e6d0fe84ca5",
+      "sourcePNG": "exec-58463503-6527-40e1-bda8-3e58e6a387aa.png",
+      "sourceSHA256": "c9f81c3c6c57816057805b2e063b1750b7c04f3a03d99004322d34179adb15b8",
+      "sourceRole": "imagegen four-building background + precisely centered native text layer",
+      "master": "masters/hero-centered-type.svg",
+      "background": "masters/hero-background-centered.webp",
+      "typeSpec": "specs/hero-centered-type.json"
     },
     {
       "id": "02-four-workplaces-1",

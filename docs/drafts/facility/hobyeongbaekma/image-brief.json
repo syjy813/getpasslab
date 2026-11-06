@@ -4,7 +4,7 @@
   "facts": "Selected 10 anonymous self-reports, original/period/part/employer boundaries preserved. No statistical rankings.",
   "hero": {
     "source": "User requested simpler four-building cover on 2026-11-06",
-    "edit": "Hotel, hospital, department store and supermarket exteriors; title and subtitle; no mechanical collage",
+    "edit": "Four building exteriors retained; header cleared by imagegen and title/subtitle typeset as exact centered vector text",
     "title": "시설관리 ‘호병백마’란?",
     "subtitle": "호텔·병원·백화점·마트가 묶인 이유",
     "labels": [
@@ -14,8 +14,29 @@
       "마트"
     ],
     "prompt": "Four recognizable building exteriors on an ivory background, forest green title and subtitle, no equipment/interior montage/people/logo",
-    "master": "exec-ecbd3335-7a5a-46b3-b845-1121e2828f83.png",
-    "captionRole": "Illustrated examples of four building types, not actual business premises"
+    "master": "masters/hero-centered-type.svg + masters/hero-background-centered.webp",
+    "captionRole": "Illustrated examples of four building types, not actual business premises",
+    "typography": {
+      "width": 1440,
+      "height": 1080,
+      "fontFamily": "Noto Sans CJK KR",
+      "alignment": "center",
+      "title": {
+        "text": "시설관리 ‘호병백마’란?",
+        "size": 64,
+        "weight": 700,
+        "x": 720,
+        "top": 140
+      },
+      "subtitle": {
+        "text": "호텔·병원·백화점·마트가 묶인 이유",
+        "size": 30,
+        "weight": 400,
+        "x": 720,
+        "top": 230
+      }
+    },
+    "verification": "hero-type-verification.json"
   },
   "cards": {
     "renderer": "canonical compact renderer",
