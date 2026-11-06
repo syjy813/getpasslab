@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-06",
+  "originalURLs": 46,
+  "currentSelectedRecheck": 10,
+  "originalPagesOpened": 9,
+  "searchExcerptOnly": 1,
+  "termSourceAdditional": {
+    "url": "https://gall.dcinside.com/board/view/?id=siseol&no=184217",
+    "date": "2023-11-21",
+    "role": "terminology only"
+  },
+  "unverified9": "source-package/UNVERIFIED_9.md",
+  "full46Recheck": false,
+  "sources": [
+    {
+      "id": "시설관리-11562",
+      "url": "https://gall.dcinside.com/board/view/?id=siseol&no=11562",
+      "currentMethod": "opened-original-page",
+      "date": "2021-05-19",
+      "scope": "코로나 시기의 사례이며 타 호텔 일반화 불가",
+      "currentClaim": "2021년 코로나19 인력 감축과 호텔 업무분장 붕괴; 당시 특정 사업장 사례"
+    },
+    {
+      "id": "시설관리-326100",
+      "url": "https://gall.dcinside.com/board/view/?id=siseol&no=326100",
+      "currentMethod": "opened-original-page",
+      "date": "2024-12-31",
+      "scope": "입사 수일만의 초기 소감; 장기 경험 아님",
+      "currentClaim": "2024년 12월 입사 며칠 차의 긍정 평가; 야간근무 경험은 아직 없음"
+    },
+    {
+      "id": "시설관리정보공유미니-1082",
+      "url": "https://gall.dcinside.com/mini/board/view/?id=sisul&no=1082&page=1",
+      "currentMethod": "search-body-excerpt",
+      "date": "2026-09-18",
+      "scope": "시설관리 갤러리 외 관련 미니갤러리",
+      "currentClaim": "전화응대 편중·업무분담만 채택. 수면·설비운전 주장 추가하지 않음"
+    },
+    {
+      "id": "시설관리-128547",
+      "url": "https://gall.dcinside.com/board/view/?id=siseol&no=128547",
+      "currentMethod": "opened-original-page",
+      "date": "2023-05-01",
+      "scope": "숙박업 중 리조트, 입사 초기 경험",
+      "currentClaim": "2023년 리조트 입사 한 달 차; 업무 수준을 견딜 만하다고 평가"
+    },
+    {
+      "id": "시설관리-1267",
+      "url": "https://gall.dcinside.com/board/view/?id=siseol&no=1267",
+      "currentMethod": "opened-original-page",
+      "date": "2020-05-17",
+      "scope": "당시 소속 병원 기준, 복지·법규 일반화 금지",
+      "currentClaim": "2020년 대학병원 정규직 기계팀 2년차; 복리후생·설비 경험 장점과 민원·전문성 한계 공존"
+    },
+    {
+      "id": "전기기사마이너-372636",
+      "url": "https://gall.dcinside.com/mgallery/board/view/?id=electro&no=372636",
+      "currentMethod": "opened-original-page",
+      "date": "2026-03-07",
+      "scope": "시설관리 갤러리 외 관련 갤러리",
+      "currentClaim": "2026년 병원 용역 전기직의 구체적 일과 및 민원 목록; 시설·파트별 범위 차이"
+    },
+    {
+      "id": "전기직취업마이너-300",
+      "url": "https://gall.dcinside.com/mgallery/board/view/?id=electricity2&no=300",
+      "currentMethod": "opened-original-page",
+      "date": "2024-10-18",
+      "scope": "시설관리 외 전기직 취업 갤러리",
+      "currentClaim": "2024년 백화점 전기팀 약 5년 경험; 행사 전기작업과 야간 근무 및 파트 구분"
+    },
+    {
+      "id": "시설관리-536408",
+      "url": "https://gall.dcinside.com/board/view/?id=siseol&no=536408",
+      "currentMethod": "opened-original-page",
+      "date": "2026-04-03",
+      "scope": "글쓴이 스스로 약 10년 전 경험임을 명시",
+      "currentClaim": "2026년에 작성된 약 10년 전 이마트 근무 경험; 야간작업에 따른 휴식·피로 문제"
+    },
+    {
+      "id": "시설관리-617789",
+      "url": "https://gall.dcinside.com/board/view/?id=siseol&no=617789",
+      "currentMethod": "opened-original-page",
+      "date": "2026-09-23",
+      "scope": "풍자성 가능성, 실제 업무 미확인",
+      "currentClaim": "제목은 강한 부정이나 본문은 일이 지나치게 편하다는 반어 표현; 단정적 긍정 증거는 아님"
+    },
+    {
+      "id": "siseol-632269",
+      "url": "https://gall.dcinside.com/board/view/?id=siseol&no=632269",
+      "currentMethod": "opened-original-page",
+      "date": "2026-10-20",
+      "scope": "3일차 극단적 초기 경험. 같은 시설·업무의 장기 일반화 금지",
+      "currentClaim": "2026년 백화점 입사 3일차; 휴게·대기 시간이 길었다는 단기 인상"
+    }
+  ]
+}

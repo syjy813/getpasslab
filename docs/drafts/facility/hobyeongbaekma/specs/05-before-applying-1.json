@@ -1,0 +1,35 @@
+{
+  "title": "지원 전 여섯 가지 확인 1/2",
+  "subtitle": "공고에서 빠진 항목부터 질문",
+  "cards": [
+    {
+      "title": "고용주",
+      "summary": "근로계약을 맺는 회사",
+      "icon": "legal-employer",
+      "details": [
+        "직영·자회사·용역 구분"
+      ],
+      "action": "계약 상대방 확인"
+    },
+    {
+      "title": "근무표",
+      "summary": "주간·야간·비번·휴무",
+      "icon": "shift-calendar",
+      "details": [
+        "한 주기의 실제 근무표"
+      ],
+      "action": "근무·휴무 주기 확인"
+    },
+    {
+      "title": "실제 담당",
+      "summary": "설비와 지원업무의 범위",
+      "icon": "mechanical",
+      "details": [
+        "고객서비스·행사 포함 여부"
+      ],
+      "action": "업무분장 확인"
+    }
+  ],
+  "takeaway": "기관 이름보다 실제 계약과 담당업무부터 확인",
+  "cardSpacing": "compact"
+}

@@ -1,0 +1,12 @@
+{
+  "publicFiles": 942,
+  "changedPublicFiles": 0,
+  "draftInPublic": false,
+  "cards": 6,
+  "images": 7,
+  "finalLabels": 20,
+  "maxLabelDifference": 1,
+  "privateAstroBuild": "PASS",
+  "browserQA": "pending remote CI",
+  "production": "not deployed"
+}
