@@ -1,3 +1,4 @@
+import {bulkVisuals,beforeBulkVisuals,assertBulkVisuals,bulkOutput} from './read-facility-bulk-visuals.mjs';
 // The original facility-publication fingerprint is kept immutable in
 // docs/audits/2026-10-31-facility-launch/review.json.gz.
 // The approved editorial UI and subsequent navy route rebrand pin fifteen exact source blobs.
@@ -12,6 +13,7 @@ import { facilityReview, beforeFacilityLaunch } from './read-before-facility-lau
 import { publicSectorVisuals, visualDerivativeFiles, beforePublicSectorVisuals, assertPublicSectorVisuals, visualOutput } from './read-public-sector-visuals.mjs';
 
 assertPublicSectorVisuals();
+assertBulkVisuals();
 
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const gitBlob = bytes => createHash('sha1').update('blob ' + bytes.length + '\0').update(bytes).digest('hex');
@@ -42,7 +44,7 @@ const publicationFile = 'docs/audits/2026-11-05-facility-publication/manifest.js
 const publication = fs.existsSync(publicationFile) ? JSON.parse(fs.readFileSync(publicationFile)) : null;
 const newArticlePaths = publication ? Object.values(JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/site-article-map.json'))).map(row => 'dist'+row.path+'index.html') : [];
 for (const [file, sha] of Object.entries({...draftManifest.source, ...publication?.source, ...draftManifest.assets})) {
-  assert.equal(hash(fs.readFileSync(file)), sha, file + ': pinned reviewed draft');
+  assert.equal(hash(beforeBulkVisuals(file,fs.readFileSync(file))), sha, file + ': pinned reviewed draft');
 }
 const files = [
   ...walk('src'),
@@ -53,7 +55,7 @@ assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native
 const reviewedEditorialPaths = [];
 let generated = 0;
 for (const file of files) {
-  const bytes = beforePublicSectorVisuals(file, fs.readFileSync(file));
+  const bytes = beforePublicSectorVisuals(file, beforeBulkVisuals(file, fs.readFileSync(file)));
   if (Object.hasOwn(editorialBlobs, file)) {
     assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
     assert.notEqual(hash(bytes), facilityReview.current[file], file + ': changed from publication snapshot');
@@ -129,6 +131,7 @@ for(const row of publicSectorVisuals.images){
   if(row.existing)generatedMasterWebps.set('facility-assets/05/'+row.publicPath.split('/').at(-1),row.sha256);
   else newImagePaths.add(visualOutput(row));
 }
+for(const row of bulkVisuals.images){if(!row.existing)newImagePaths.add(bulkOutput(row));else generatedMasterWebps.set('facility-assets/'+row.publicPath.split('/').slice(-2).join('/'),row.sha256);}
 const served = walk('dist/images/facility-drafts').filter(file=>!newImagePaths.has(file)).sort();
 assert.deepEqual(served, Object.keys(facilityReview.publishedAssets).sort(), 'same 22 public image URLs');
 const servedEdits = new Set();
@@ -139,7 +142,7 @@ for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
   assert.equal(hash(fs.readFileSync(row.source)), row.sha256, file + ': original source preserved');
   if (edited || generated) servedEdits.add(row.source);
 }
-assert.deepEqual([...servedEdits].sort(), [...new Set([...edits.keys(), ...facility05Masters.keys(), ...publicSectorVisuals.images.filter(r=>r.existing).map(r=>'facility-assets/05/'+r.publicPath.split('/').at(-1))])].sort(), 'every derivative is actually served');
+assert.deepEqual([...servedEdits].sort(), [...new Set([...edits.keys(), ...facility05Masters.keys(), ...publicSectorVisuals.images.filter(r=>r.existing).map(r=>'facility-assets/05/'+r.publicPath.split('/').at(-1)), ...bulkVisuals.images.filter(r=>r.existing&&Number(r.publicPath.split('/')[3])<6).map(r=>'facility-assets/'+r.publicPath.split('/').slice(-2).join('/'))])].sort(), 'every derivative is actually served');
 assert.equal(served.length, 22, 'all 22 approved public image URLs retained');
 console.log('[Facility UI source guard] PASS', files.length - generated, 'native files,', generated,
   'rendered HTML/XML paths, fifteen pinned UI blobs, 24 originals and 3 historical masters preserved; 5 current public-sector visuals verified');

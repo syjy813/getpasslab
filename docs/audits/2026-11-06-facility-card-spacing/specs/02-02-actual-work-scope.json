@@ -1,0 +1,38 @@
+{
+  "number": "02",
+  "file": "02-actual-work-scope.webp",
+  "original": "02-actual-work-scope.webp",
+  "part": 1,
+  "total": 1,
+  "title": "같은 시설관리, 다른 업무",
+  "subtitle": "설비가 있다는 사실과 내가 맡을 업무는 별개",
+  "cards": [
+    {
+      "title": "직접 점검·운전",
+      "icon": "mechanical",
+      "summary": "담당 설비 상태 확인",
+      "details": [
+        "정해진 절차·권한 준수",
+        "설비별 담당 범위 확인"
+      ],
+      "action": "직접 수행 범위 확인"
+    },
+    {
+      "title": "감시·작업 관리",
+      "icon": "monitor",
+      "summary": "중앙감시·외주 작업 관리",
+      "details": [
+        "이상 파악·작업 발주",
+        "결과 확인·안전 관리"
+      ],
+      "action": "업무 비중 확인"
+    }
+  ],
+  "takeaway": "현장마다 직접 작업과 감시·관리 업무의 비중이 다름",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

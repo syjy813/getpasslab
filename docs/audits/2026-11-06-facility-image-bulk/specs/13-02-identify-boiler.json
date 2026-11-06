@@ -1,0 +1,31 @@
+{
+  "number": "13",
+  "file": "02-identify-boiler.webp",
+  "original": "02-identify-boiler.webp",
+  "part": 1,
+  "total": 2,
+  "title": "자격표 전에 기기 확인 1/2",
+  "subtitle": "검사증·명판·사양서에서 실제 설비의 조건을 찾자",
+  "cards": [
+    {
+      "title": "검사대상 여부",
+      "icon": "submission",
+      "summary": "검사증·관리대상 확인",
+      "details": [],
+      "action": "적용 기기 확인"
+    },
+    {
+      "title": "기기 종류",
+      "icon": "boiler",
+      "summary": "증기·온수·열매체 등",
+      "details": [],
+      "action": "등록 종류 확인"
+    }
+  ],
+  "takeaway": "실제 검사대상 여부와 사양을 먼저 확인",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "number": "04",
+  "file": "05-job-posting-checklist-part-2.webp",
+  "original": "05-job-posting-checklist.webp",
+  "part": 2,
+  "total": 2,
+  "title": "근무표 확인 여섯 가지 2/2",
+  "subtitle": "급여·휴게·야간 대응까지 함께 질문",
+  "cards": [
+    {
+      "title": "임금 구성",
+      "icon": "pay-components",
+      "summary": "기본급·고정·변동수당",
+      "details": [],
+      "action": "포함범위 확인"
+    },
+    {
+      "title": "감시·단속 승인",
+      "icon": "law",
+      "summary": "사업장·업무의 승인 여부",
+      "details": [],
+      "action": "적용 조건 확인"
+    },
+    {
+      "title": "야간 대응",
+      "icon": "support",
+      "summary": "단독 대응·지원·교육",
+      "details": [],
+      "action": "연락체계 확인"
+    }
+  ],
+  "takeaway": "금액뿐 아니라 실제 조건이 내 생활에 맞는지 확인",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "number": "02",
+  "file": "04-interview-five-questions.webp",
+  "original": "04-interview-five-questions.webp",
+  "part": 1,
+  "total": 2,
+  "title": "첫 면접의 다섯 질문 1/2",
+  "subtitle": "공고에 빠진 조건부터 구체적으로 질문",
+  "cards": [
+    {
+      "title": "실제 업무",
+      "icon": "mechanical",
+      "summary": "직접 점검·운전하는 설비",
+      "details": [
+        "외주에 맡기는 업무는?"
+      ],
+      "action": "업무 범위 질문"
+    },
+    {
+      "title": "급여·근무표",
+      "icon": "pay-components",
+      "summary": "기본급과 수당을 구분",
+      "details": [
+        "한 주기 근무표 확인"
+      ],
+      "action": "자료 요청"
+    },
+    {
+      "title": "신입 교육",
+      "icon": "training",
+      "summary": "교육·야간 지원 체계",
+      "details": [
+        "누가 어떤 절차로 교육?"
+      ],
+      "action": "담당자 확인"
+    }
+  ],
+  "takeaway": "면접 답변과 입사 전 확인한 자료를 나눠 기록",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

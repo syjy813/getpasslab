@@ -26,7 +26,7 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-drafts/07/01-postal-facilities-hero.webp" alt="우체국시설관리단 시설관리 채용공고를 비교하는 구직자" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
+<figure><img src="/images/facility-drafts/07/01-postal-facilities-hero.webp" alt="우체국시설관리단 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 ## 우체국시설관리단에 입사하면 우체국에서만 일할까?
 
@@ -63,7 +63,7 @@ legalReview: false
 
 ## 관서가 달라지면 어떤 일을 하게 될까?
 
-<figure><img src="/images/facility-drafts/07/02-workplace-types.webp" alt="우체국·우편집중국·우편물류센터의 관리업무 차이" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/07/02-workplace-types.webp" alt="관서마다 업무가 다르다: 우체국 기계·건물·영선 업무, 우편집중국 전기·건물·영선 업무, 우편물류센터 우편기계·자동화설비" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
 
 | 근무시설 | 11차 공고에서 확인되는 업무의 예 |
 |---|---|
@@ -108,7 +108,7 @@ legalReview: false
 
 특히 우정인재개발원의 가스 관련 항목은 양성교육 이수와 가스기능사를 **대체 경로**로 제시했다. 반면 이를 제외한 다른 필수 항목까지 자동으로 면제되는 것은 아니다.
 
-<figure><img src="/images/facility-drafts/07/03-required-conditions.webp" alt="자격증·선임요건·관련 경력의 필수와 우대 구분" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/07/03-required-conditions.webp" alt="필수조건을 모두 확인: 관련 자격 공고에 지정된 자격, 법정선임 해당 시설의 선임 가능, 관련 경력 요구 기간과 실제 업무" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 ## 연봉이 가장 높았던 곳이 가장 좋은 첫 직장일까?
 
@@ -138,7 +138,7 @@ legalReview: false
 | **근무형태** | 2교대·격일 | 2교대·격일 |
 | **당시 세전 연봉** | 약 4,170만 원 | 약 4,170만 원 |
 
-<figure><img src="/images/facility-drafts/07/04-round-comparison-v2.webp" alt="동서울우편물류센터 우편기계 기사 관련 유지보수 경력: 11차 2년 이상, 12차 1년 이상" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/07/04-round-comparison-v2.webp" alt="회차가 바뀌면 조건도: 11차 공고 관련 유지보수 경력, 12차 공고 관련 유지보수 경력" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 자격증이 갑자기 바뀐 것도, 건물이 옮겨간 것도 아니다. **공고 회차가 바뀌면서 지원 가능한 경력의 문턱이 달라진 것이다.**
 
@@ -175,7 +175,9 @@ legalReview: false
 5. **근무표:** 일근·격일·4교대의 실제 대기·휴게는 어떻게 운영되나?
 6. **급여·정년:** 식비 포함 세전 연봉, 별도수당, 재고용 조건을 확인했는가?
 
-<figure><img src="/images/facility-drafts/07/05-application-checklist.webp" alt="우체국시설관리단 지원 전에 확인할 여섯 가지" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/07/05-application-checklist.webp" alt="우체국시설관리단 확인 1/2: 근무관서 우체국·집중국·물류센터, 필수자격 모든 조건·대체 경로, 법정선임 보유 자격과 선임 구분" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/07/05-application-checklist-part-2.webp" alt="우체국시설관리단 확인 2/2: 관련경력 기간·업무를 증빙, 근무표 일근·격일·4교대, 급여·정년 식비 포함 세전 연봉" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 지원 가능한 회사 이름을 하나 더 찾는 것보다 **내가 실제로 지원할 수 있는 관서 하나를 정확히 파악하는 일**이 더 유용할 때가 있다.
 

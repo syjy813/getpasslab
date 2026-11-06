@@ -1,0 +1,2418 @@
+{
+  "icons": 39,
+  "sizes": [
+    24,
+    26,
+    28,
+    31,
+    35,
+    38,
+    104,
+    118,
+    128,
+    140
+  ],
+  "changed": [
+    "gas",
+    "mechanical",
+    "rail",
+    "submission"
+  ],
+  "repairedCards": 28,
+  "repairedItems": 30,
+  "unchangedImages": 57,
+  "clearances": [
+    {
+      "size": 24,
+      "paperArrow": 5,
+      "arrowTray": 2
+    },
+    {
+      "size": 26,
+      "paperArrow": 6,
+      "arrowTray": 2
+    },
+    {
+      "size": 28,
+      "paperArrow": 6,
+      "arrowTray": 3
+    },
+    {
+      "size": 31,
+      "paperArrow": 2,
+      "arrowTray": 2
+    },
+    {
+      "size": 35,
+      "paperArrow": 3,
+      "arrowTray": 3
+    },
+    {
+      "size": 38,
+      "paperArrow": 3,
+      "arrowTray": 4
+    },
+    {
+      "size": 104,
+      "paperArrow": 8,
+      "arrowTray": 8
+    },
+    {
+      "size": 118,
+      "paperArrow": 8,
+      "arrowTray": 8
+    },
+    {
+      "size": 128,
+      "paperArrow": 9,
+      "arrowTray": 9
+    },
+    {
+      "size": 140,
+      "paperArrow": 10,
+      "arrowTray": 10
+    }
+  ],
+  "measurements": [
+    {
+      "name": "public-employer",
+      "size": 24,
+      "ink": 248,
+      "outside": 0
+    },
+    {
+      "name": "public-employer",
+      "size": 26,
+      "ink": 340,
+      "outside": 0
+    },
+    {
+      "name": "public-employer",
+      "size": 28,
+      "ink": 364,
+      "outside": 0
+    },
+    {
+      "name": "public-employer",
+      "size": 31,
+      "ink": 425,
+      "outside": 0
+    },
+    {
+      "name": "public-employer",
+      "size": 35,
+      "ink": 535,
+      "outside": 0
+    },
+    {
+      "name": "public-employer",
+      "size": 38,
+      "ink": 701,
+      "outside": 0
+    },
+    {
+      "name": "public-employer",
+      "size": 104,
+      "ink": 5016,
+      "outside": 0
+    },
+    {
+      "name": "public-employer",
+      "size": 118,
+      "ink": 6078,
+      "outside": 0
+    },
+    {
+      "name": "public-employer",
+      "size": 128,
+      "ink": 7406,
+      "outside": 0
+    },
+    {
+      "name": "public-employer",
+      "size": 140,
+      "ink": 8624,
+      "outside": 0
+    },
+    {
+      "name": "subsidiary",
+      "size": 24,
+      "ink": 277,
+      "outside": 0
+    },
+    {
+      "name": "subsidiary",
+      "size": 26,
+      "ink": 316,
+      "outside": 0
+    },
+    {
+      "name": "subsidiary",
+      "size": 28,
+      "ink": 373,
+      "outside": 0
+    },
+    {
+      "name": "subsidiary",
+      "size": 31,
+      "ink": 440,
+      "outside": 0
+    },
+    {
+      "name": "subsidiary",
+      "size": 35,
+      "ink": 574,
+      "outside": 0
+    },
+    {
+      "name": "subsidiary",
+      "size": 38,
+      "ink": 655,
+      "outside": 0
+    },
+    {
+      "name": "subsidiary",
+      "size": 104,
+      "ink": 5031,
+      "outside": 0
+    },
+    {
+      "name": "subsidiary",
+      "size": 118,
+      "ink": 6310,
+      "outside": 0
+    },
+    {
+      "name": "subsidiary",
+      "size": 128,
+      "ink": 7381,
+      "outside": 0
+    },
+    {
+      "name": "subsidiary",
+      "size": 140,
+      "ink": 8882,
+      "outside": 0
+    },
+    {
+      "name": "service-contractor",
+      "size": 24,
+      "ink": 363,
+      "outside": 0
+    },
+    {
+      "name": "service-contractor",
+      "size": 26,
+      "ink": 416,
+      "outside": 0
+    },
+    {
+      "name": "service-contractor",
+      "size": 28,
+      "ink": 489,
+      "outside": 0
+    },
+    {
+      "name": "service-contractor",
+      "size": 31,
+      "ink": 593,
+      "outside": 0
+    },
+    {
+      "name": "service-contractor",
+      "size": 35,
+      "ink": 746,
+      "outside": 0
+    },
+    {
+      "name": "service-contractor",
+      "size": 38,
+      "ink": 876,
+      "outside": 0
+    },
+    {
+      "name": "service-contractor",
+      "size": 104,
+      "ink": 6706,
+      "outside": 0
+    },
+    {
+      "name": "service-contractor",
+      "size": 118,
+      "ink": 8391,
+      "outside": 0
+    },
+    {
+      "name": "service-contractor",
+      "size": 128,
+      "ink": 9962,
+      "outside": 0
+    },
+    {
+      "name": "service-contractor",
+      "size": 140,
+      "ink": 11937,
+      "outside": 0
+    },
+    {
+      "name": "average-pay",
+      "size": 24,
+      "ink": 245,
+      "outside": 0
+    },
+    {
+      "name": "average-pay",
+      "size": 26,
+      "ink": 319,
+      "outside": 0
+    },
+    {
+      "name": "average-pay",
+      "size": 28,
+      "ink": 367,
+      "outside": 0
+    },
+    {
+      "name": "average-pay",
+      "size": 31,
+      "ink": 419,
+      "outside": 0
+    },
+    {
+      "name": "average-pay",
+      "size": 35,
+      "ink": 540,
+      "outside": 0
+    },
+    {
+      "name": "average-pay",
+      "size": 38,
+      "ink": 668,
+      "outside": 0
+    },
+    {
+      "name": "average-pay",
+      "size": 104,
+      "ink": 4895,
+      "outside": 0
+    },
+    {
+      "name": "average-pay",
+      "size": 118,
+      "ink": 6055,
+      "outside": 0
+    },
+    {
+      "name": "average-pay",
+      "size": 128,
+      "ink": 7078,
+      "outside": 0
+    },
+    {
+      "name": "average-pay",
+      "size": 140,
+      "ink": 8433,
+      "outside": 0
+    },
+    {
+      "name": "job-offer",
+      "size": 24,
+      "ink": 374,
+      "outside": 0
+    },
+    {
+      "name": "job-offer",
+      "size": 26,
+      "ink": 444,
+      "outside": 0
+    },
+    {
+      "name": "job-offer",
+      "size": 28,
+      "ink": 517,
+      "outside": 0
+    },
+    {
+      "name": "job-offer",
+      "size": 31,
+      "ink": 610,
+      "outside": 0
+    },
+    {
+      "name": "job-offer",
+      "size": 35,
+      "ink": 785,
+      "outside": 0
+    },
+    {
+      "name": "job-offer",
+      "size": 38,
+      "ink": 955,
+      "outside": 0
+    },
+    {
+      "name": "job-offer",
+      "size": 104,
+      "ink": 6964,
+      "outside": 0
+    },
+    {
+      "name": "job-offer",
+      "size": 118,
+      "ink": 8845,
+      "outside": 0
+    },
+    {
+      "name": "job-offer",
+      "size": 128,
+      "ink": 10409,
+      "outside": 0
+    },
+    {
+      "name": "job-offer",
+      "size": 140,
+      "ink": 12436,
+      "outside": 0
+    },
+    {
+      "name": "legal-employer",
+      "size": 24,
+      "ink": 360,
+      "outside": 0
+    },
+    {
+      "name": "legal-employer",
+      "size": 26,
+      "ink": 415,
+      "outside": 0
+    },
+    {
+      "name": "legal-employer",
+      "size": 28,
+      "ink": 479,
+      "outside": 0
+    },
+    {
+      "name": "legal-employer",
+      "size": 31,
+      "ink": 590,
+      "outside": 0
+    },
+    {
+      "name": "legal-employer",
+      "size": 35,
+      "ink": 735,
+      "outside": 0
+    },
+    {
+      "name": "legal-employer",
+      "size": 38,
+      "ink": 858,
+      "outside": 0
+    },
+    {
+      "name": "legal-employer",
+      "size": 104,
+      "ink": 6545,
+      "outside": 0
+    },
+    {
+      "name": "legal-employer",
+      "size": 118,
+      "ink": 8319,
+      "outside": 0
+    },
+    {
+      "name": "legal-employer",
+      "size": 128,
+      "ink": 9743,
+      "outside": 0
+    },
+    {
+      "name": "legal-employer",
+      "size": 140,
+      "ink": 11706,
+      "outside": 0
+    },
+    {
+      "name": "worksite",
+      "size": 24,
+      "ink": 323,
+      "outside": 0
+    },
+    {
+      "name": "worksite",
+      "size": 26,
+      "ink": 374,
+      "outside": 0
+    },
+    {
+      "name": "worksite",
+      "size": 28,
+      "ink": 444,
+      "outside": 0
+    },
+    {
+      "name": "worksite",
+      "size": 31,
+      "ink": 519,
+      "outside": 0
+    },
+    {
+      "name": "worksite",
+      "size": 35,
+      "ink": 672,
+      "outside": 0
+    },
+    {
+      "name": "worksite",
+      "size": 38,
+      "ink": 789,
+      "outside": 0
+    },
+    {
+      "name": "worksite",
+      "size": 104,
+      "ink": 5946,
+      "outside": 0
+    },
+    {
+      "name": "worksite",
+      "size": 118,
+      "ink": 7539,
+      "outside": 0
+    },
+    {
+      "name": "worksite",
+      "size": 128,
+      "ink": 8804,
+      "outside": 0
+    },
+    {
+      "name": "worksite",
+      "size": 140,
+      "ink": 10599,
+      "outside": 0
+    },
+    {
+      "name": "qualification",
+      "size": 24,
+      "ink": 330,
+      "outside": 0
+    },
+    {
+      "name": "qualification",
+      "size": 26,
+      "ink": 397,
+      "outside": 0
+    },
+    {
+      "name": "qualification",
+      "size": 28,
+      "ink": 447,
+      "outside": 0
+    },
+    {
+      "name": "qualification",
+      "size": 31,
+      "ink": 540,
+      "outside": 0
+    },
+    {
+      "name": "qualification",
+      "size": 35,
+      "ink": 700,
+      "outside": 0
+    },
+    {
+      "name": "qualification",
+      "size": 38,
+      "ink": 849,
+      "outside": 0
+    },
+    {
+      "name": "qualification",
+      "size": 104,
+      "ink": 6189,
+      "outside": 0
+    },
+    {
+      "name": "qualification",
+      "size": 118,
+      "ink": 7882,
+      "outside": 0
+    },
+    {
+      "name": "qualification",
+      "size": 128,
+      "ink": 9279,
+      "outside": 0
+    },
+    {
+      "name": "qualification",
+      "size": 140,
+      "ink": 11043,
+      "outside": 0
+    },
+    {
+      "name": "shift-calendar",
+      "size": 24,
+      "ink": 434,
+      "outside": 0
+    },
+    {
+      "name": "shift-calendar",
+      "size": 26,
+      "ink": 516,
+      "outside": 0
+    },
+    {
+      "name": "shift-calendar",
+      "size": 28,
+      "ink": 574,
+      "outside": 0
+    },
+    {
+      "name": "shift-calendar",
+      "size": 31,
+      "ink": 688,
+      "outside": 0
+    },
+    {
+      "name": "shift-calendar",
+      "size": 35,
+      "ink": 872,
+      "outside": 0
+    },
+    {
+      "name": "shift-calendar",
+      "size": 38,
+      "ink": 1052,
+      "outside": 0
+    },
+    {
+      "name": "shift-calendar",
+      "size": 104,
+      "ink": 7872,
+      "outside": 0
+    },
+    {
+      "name": "shift-calendar",
+      "size": 118,
+      "ink": 10049,
+      "outside": 0
+    },
+    {
+      "name": "shift-calendar",
+      "size": 128,
+      "ink": 11687,
+      "outside": 0
+    },
+    {
+      "name": "shift-calendar",
+      "size": 140,
+      "ink": 14082,
+      "outside": 0
+    },
+    {
+      "name": "pay-components",
+      "size": 24,
+      "ink": 358,
+      "outside": 0
+    },
+    {
+      "name": "pay-components",
+      "size": 26,
+      "ink": 393,
+      "outside": 0
+    },
+    {
+      "name": "pay-components",
+      "size": 28,
+      "ink": 450,
+      "outside": 0
+    },
+    {
+      "name": "pay-components",
+      "size": 31,
+      "ink": 561,
+      "outside": 0
+    },
+    {
+      "name": "pay-components",
+      "size": 35,
+      "ink": 733,
+      "outside": 0
+    },
+    {
+      "name": "pay-components",
+      "size": 38,
+      "ink": 846,
+      "outside": 0
+    },
+    {
+      "name": "pay-components",
+      "size": 104,
+      "ink": 6361,
+      "outside": 0
+    },
+    {
+      "name": "pay-components",
+      "size": 118,
+      "ink": 8092,
+      "outside": 0
+    },
+    {
+      "name": "pay-components",
+      "size": 128,
+      "ink": 9454,
+      "outside": 0
+    },
+    {
+      "name": "pay-components",
+      "size": 140,
+      "ink": 11315,
+      "outside": 0
+    },
+    {
+      "name": "contract-term",
+      "size": 24,
+      "ink": 359,
+      "outside": 0
+    },
+    {
+      "name": "contract-term",
+      "size": 26,
+      "ink": 411,
+      "outside": 0
+    },
+    {
+      "name": "contract-term",
+      "size": 28,
+      "ink": 469,
+      "outside": 0
+    },
+    {
+      "name": "contract-term",
+      "size": 31,
+      "ink": 573,
+      "outside": 0
+    },
+    {
+      "name": "contract-term",
+      "size": 35,
+      "ink": 753,
+      "outside": 0
+    },
+    {
+      "name": "contract-term",
+      "size": 38,
+      "ink": 876,
+      "outside": 0
+    },
+    {
+      "name": "contract-term",
+      "size": 104,
+      "ink": 6558,
+      "outside": 0
+    },
+    {
+      "name": "contract-term",
+      "size": 118,
+      "ink": 8347,
+      "outside": 0
+    },
+    {
+      "name": "contract-term",
+      "size": 128,
+      "ink": 9805,
+      "outside": 0
+    },
+    {
+      "name": "contract-term",
+      "size": 140,
+      "ink": 11682,
+      "outside": 0
+    },
+    {
+      "name": "mechanical",
+      "size": 24,
+      "ink": 218,
+      "outside": 0
+    },
+    {
+      "name": "mechanical",
+      "size": 26,
+      "ink": 271,
+      "outside": 0
+    },
+    {
+      "name": "mechanical",
+      "size": 28,
+      "ink": 291,
+      "outside": 0
+    },
+    {
+      "name": "mechanical",
+      "size": 31,
+      "ink": 378,
+      "outside": 0
+    },
+    {
+      "name": "mechanical",
+      "size": 35,
+      "ink": 479,
+      "outside": 0
+    },
+    {
+      "name": "mechanical",
+      "size": 38,
+      "ink": 546,
+      "outside": 0
+    },
+    {
+      "name": "mechanical",
+      "size": 104,
+      "ink": 4159,
+      "outside": 0
+    },
+    {
+      "name": "mechanical",
+      "size": 118,
+      "ink": 5171,
+      "outside": 0
+    },
+    {
+      "name": "mechanical",
+      "size": 128,
+      "ink": 6092,
+      "outside": 0
+    },
+    {
+      "name": "mechanical",
+      "size": 140,
+      "ink": 7248,
+      "outside": 0
+    },
+    {
+      "name": "electrical",
+      "size": 24,
+      "ink": 344,
+      "outside": 0
+    },
+    {
+      "name": "electrical",
+      "size": 26,
+      "ink": 380,
+      "outside": 0
+    },
+    {
+      "name": "electrical",
+      "size": 28,
+      "ink": 460,
+      "outside": 0
+    },
+    {
+      "name": "electrical",
+      "size": 31,
+      "ink": 513,
+      "outside": 0
+    },
+    {
+      "name": "electrical",
+      "size": 35,
+      "ink": 705,
+      "outside": 0
+    },
+    {
+      "name": "electrical",
+      "size": 38,
+      "ink": 812,
+      "outside": 0
+    },
+    {
+      "name": "electrical",
+      "size": 104,
+      "ink": 6128,
+      "outside": 0
+    },
+    {
+      "name": "electrical",
+      "size": 118,
+      "ink": 7776,
+      "outside": 0
+    },
+    {
+      "name": "electrical",
+      "size": 128,
+      "ink": 9056,
+      "outside": 0
+    },
+    {
+      "name": "electrical",
+      "size": 140,
+      "ink": 10980,
+      "outside": 0
+    },
+    {
+      "name": "fire",
+      "size": 24,
+      "ink": 216,
+      "outside": 0
+    },
+    {
+      "name": "fire",
+      "size": 26,
+      "ink": 228,
+      "outside": 0
+    },
+    {
+      "name": "fire",
+      "size": 28,
+      "ink": 265,
+      "outside": 0
+    },
+    {
+      "name": "fire",
+      "size": 31,
+      "ink": 337,
+      "outside": 0
+    },
+    {
+      "name": "fire",
+      "size": 35,
+      "ink": 432,
+      "outside": 0
+    },
+    {
+      "name": "fire",
+      "size": 38,
+      "ink": 505,
+      "outside": 0
+    },
+    {
+      "name": "fire",
+      "size": 104,
+      "ink": 3782,
+      "outside": 0
+    },
+    {
+      "name": "fire",
+      "size": 118,
+      "ink": 4752,
+      "outside": 0
+    },
+    {
+      "name": "fire",
+      "size": 128,
+      "ink": 5523,
+      "outside": 0
+    },
+    {
+      "name": "fire",
+      "size": 140,
+      "ink": 6630,
+      "outside": 0
+    },
+    {
+      "name": "repair",
+      "size": 24,
+      "ink": 192,
+      "outside": 0
+    },
+    {
+      "name": "repair",
+      "size": 26,
+      "ink": 214,
+      "outside": 0
+    },
+    {
+      "name": "repair",
+      "size": 28,
+      "ink": 245,
+      "outside": 0
+    },
+    {
+      "name": "repair",
+      "size": 31,
+      "ink": 305,
+      "outside": 0
+    },
+    {
+      "name": "repair",
+      "size": 35,
+      "ink": 396,
+      "outside": 0
+    },
+    {
+      "name": "repair",
+      "size": 38,
+      "ink": 469,
+      "outside": 0
+    },
+    {
+      "name": "repair",
+      "size": 104,
+      "ink": 3492,
+      "outside": 0
+    },
+    {
+      "name": "repair",
+      "size": 118,
+      "ink": 4302,
+      "outside": 0
+    },
+    {
+      "name": "repair",
+      "size": 128,
+      "ink": 5010,
+      "outside": 0
+    },
+    {
+      "name": "repair",
+      "size": 140,
+      "ink": 6027,
+      "outside": 0
+    },
+    {
+      "name": "office",
+      "size": 24,
+      "ink": 318,
+      "outside": 0
+    },
+    {
+      "name": "office",
+      "size": 26,
+      "ink": 369,
+      "outside": 0
+    },
+    {
+      "name": "office",
+      "size": 28,
+      "ink": 406,
+      "outside": 0
+    },
+    {
+      "name": "office",
+      "size": 31,
+      "ink": 500,
+      "outside": 0
+    },
+    {
+      "name": "office",
+      "size": 35,
+      "ink": 664,
+      "outside": 0
+    },
+    {
+      "name": "office",
+      "size": 38,
+      "ink": 765,
+      "outside": 0
+    },
+    {
+      "name": "office",
+      "size": 104,
+      "ink": 5752,
+      "outside": 0
+    },
+    {
+      "name": "office",
+      "size": 118,
+      "ink": 7336,
+      "outside": 0
+    },
+    {
+      "name": "office",
+      "size": 128,
+      "ink": 8474,
+      "outside": 0
+    },
+    {
+      "name": "office",
+      "size": 140,
+      "ink": 10191,
+      "outside": 0
+    },
+    {
+      "name": "apartment",
+      "size": 24,
+      "ink": 365,
+      "outside": 0
+    },
+    {
+      "name": "apartment",
+      "size": 26,
+      "ink": 406,
+      "outside": 0
+    },
+    {
+      "name": "apartment",
+      "size": 28,
+      "ink": 471,
+      "outside": 0
+    },
+    {
+      "name": "apartment",
+      "size": 31,
+      "ink": 582,
+      "outside": 0
+    },
+    {
+      "name": "apartment",
+      "size": 35,
+      "ink": 772,
+      "outside": 0
+    },
+    {
+      "name": "apartment",
+      "size": 38,
+      "ink": 879,
+      "outside": 0
+    },
+    {
+      "name": "apartment",
+      "size": 104,
+      "ink": 6782,
+      "outside": 0
+    },
+    {
+      "name": "apartment",
+      "size": 118,
+      "ink": 8583,
+      "outside": 0
+    },
+    {
+      "name": "apartment",
+      "size": 128,
+      "ink": 10077,
+      "outside": 0
+    },
+    {
+      "name": "apartment",
+      "size": 140,
+      "ink": 11877,
+      "outside": 0
+    },
+    {
+      "name": "hospital",
+      "size": 24,
+      "ink": 374,
+      "outside": 0
+    },
+    {
+      "name": "hospital",
+      "size": 26,
+      "ink": 434,
+      "outside": 0
+    },
+    {
+      "name": "hospital",
+      "size": 28,
+      "ink": 494,
+      "outside": 0
+    },
+    {
+      "name": "hospital",
+      "size": 31,
+      "ink": 587,
+      "outside": 0
+    },
+    {
+      "name": "hospital",
+      "size": 35,
+      "ink": 777,
+      "outside": 0
+    },
+    {
+      "name": "hospital",
+      "size": 38,
+      "ink": 926,
+      "outside": 0
+    },
+    {
+      "name": "hospital",
+      "size": 104,
+      "ink": 6740,
+      "outside": 0
+    },
+    {
+      "name": "hospital",
+      "size": 118,
+      "ink": 8487,
+      "outside": 0
+    },
+    {
+      "name": "hospital",
+      "size": 128,
+      "ink": 9930,
+      "outside": 0
+    },
+    {
+      "name": "hospital",
+      "size": 140,
+      "ink": 11932,
+      "outside": 0
+    },
+    {
+      "name": "warehouse",
+      "size": 24,
+      "ink": 375,
+      "outside": 0
+    },
+    {
+      "name": "warehouse",
+      "size": 26,
+      "ink": 448,
+      "outside": 0
+    },
+    {
+      "name": "warehouse",
+      "size": 28,
+      "ink": 528,
+      "outside": 0
+    },
+    {
+      "name": "warehouse",
+      "size": 31,
+      "ink": 619,
+      "outside": 0
+    },
+    {
+      "name": "warehouse",
+      "size": 35,
+      "ink": 803,
+      "outside": 0
+    },
+    {
+      "name": "warehouse",
+      "size": 38,
+      "ink": 932,
+      "outside": 0
+    },
+    {
+      "name": "warehouse",
+      "size": 104,
+      "ink": 7102,
+      "outside": 0
+    },
+    {
+      "name": "warehouse",
+      "size": 118,
+      "ink": 9095,
+      "outside": 0
+    },
+    {
+      "name": "warehouse",
+      "size": 128,
+      "ink": 10593,
+      "outside": 0
+    },
+    {
+      "name": "warehouse",
+      "size": 140,
+      "ink": 12750,
+      "outside": 0
+    },
+    {
+      "name": "shopping",
+      "size": 24,
+      "ink": 338,
+      "outside": 0
+    },
+    {
+      "name": "shopping",
+      "size": 26,
+      "ink": 406,
+      "outside": 0
+    },
+    {
+      "name": "shopping",
+      "size": 28,
+      "ink": 484,
+      "outside": 0
+    },
+    {
+      "name": "shopping",
+      "size": 31,
+      "ink": 591,
+      "outside": 0
+    },
+    {
+      "name": "shopping",
+      "size": 35,
+      "ink": 730,
+      "outside": 0
+    },
+    {
+      "name": "shopping",
+      "size": 38,
+      "ink": 886,
+      "outside": 0
+    },
+    {
+      "name": "shopping",
+      "size": 104,
+      "ink": 6568,
+      "outside": 0
+    },
+    {
+      "name": "shopping",
+      "size": 118,
+      "ink": 8300,
+      "outside": 0
+    },
+    {
+      "name": "shopping",
+      "size": 128,
+      "ink": 9860,
+      "outside": 0
+    },
+    {
+      "name": "shopping",
+      "size": 140,
+      "ink": 11784,
+      "outside": 0
+    },
+    {
+      "name": "clock",
+      "size": 24,
+      "ink": 308,
+      "outside": 0
+    },
+    {
+      "name": "clock",
+      "size": 26,
+      "ink": 360,
+      "outside": 0
+    },
+    {
+      "name": "clock",
+      "size": 28,
+      "ink": 416,
+      "outside": 0
+    },
+    {
+      "name": "clock",
+      "size": 31,
+      "ink": 505,
+      "outside": 0
+    },
+    {
+      "name": "clock",
+      "size": 35,
+      "ink": 657,
+      "outside": 0
+    },
+    {
+      "name": "clock",
+      "size": 38,
+      "ink": 762,
+      "outside": 0
+    },
+    {
+      "name": "clock",
+      "size": 104,
+      "ink": 5690,
+      "outside": 0
+    },
+    {
+      "name": "clock",
+      "size": 118,
+      "ink": 7328,
+      "outside": 0
+    },
+    {
+      "name": "clock",
+      "size": 128,
+      "ink": 8620,
+      "outside": 0
+    },
+    {
+      "name": "clock",
+      "size": 140,
+      "ink": 10283,
+      "outside": 0
+    },
+    {
+      "name": "day",
+      "size": 24,
+      "ink": 148,
+      "outside": 0
+    },
+    {
+      "name": "day",
+      "size": 26,
+      "ink": 164,
+      "outside": 0
+    },
+    {
+      "name": "day",
+      "size": 28,
+      "ink": 208,
+      "outside": 0
+    },
+    {
+      "name": "day",
+      "size": 31,
+      "ink": 245,
+      "outside": 0
+    },
+    {
+      "name": "day",
+      "size": 35,
+      "ink": 305,
+      "outside": 0
+    },
+    {
+      "name": "day",
+      "size": 38,
+      "ink": 364,
+      "outside": 0
+    },
+    {
+      "name": "day",
+      "size": 104,
+      "ink": 2684,
+      "outside": 0
+    },
+    {
+      "name": "day",
+      "size": 118,
+      "ink": 3429,
+      "outside": 0
+    },
+    {
+      "name": "day",
+      "size": 128,
+      "ink": 3944,
+      "outside": 0
+    },
+    {
+      "name": "day",
+      "size": 140,
+      "ink": 4704,
+      "outside": 0
+    },
+    {
+      "name": "night",
+      "size": 24,
+      "ink": 126,
+      "outside": 0
+    },
+    {
+      "name": "night",
+      "size": 26,
+      "ink": 147,
+      "outside": 0
+    },
+    {
+      "name": "night",
+      "size": 28,
+      "ink": 174,
+      "outside": 0
+    },
+    {
+      "name": "night",
+      "size": 31,
+      "ink": 203,
+      "outside": 0
+    },
+    {
+      "name": "night",
+      "size": 35,
+      "ink": 261,
+      "outside": 0
+    },
+    {
+      "name": "night",
+      "size": 38,
+      "ink": 307,
+      "outside": 0
+    },
+    {
+      "name": "night",
+      "size": 104,
+      "ink": 2303,
+      "outside": 0
+    },
+    {
+      "name": "night",
+      "size": 118,
+      "ink": 2914,
+      "outside": 0
+    },
+    {
+      "name": "night",
+      "size": 128,
+      "ink": 3417,
+      "outside": 0
+    },
+    {
+      "name": "night",
+      "size": 140,
+      "ink": 4092,
+      "outside": 0
+    },
+    {
+      "name": "monitor",
+      "size": 24,
+      "ink": 368,
+      "outside": 0
+    },
+    {
+      "name": "monitor",
+      "size": 26,
+      "ink": 432,
+      "outside": 0
+    },
+    {
+      "name": "monitor",
+      "size": 28,
+      "ink": 500,
+      "outside": 0
+    },
+    {
+      "name": "monitor",
+      "size": 31,
+      "ink": 582,
+      "outside": 0
+    },
+    {
+      "name": "monitor",
+      "size": 35,
+      "ink": 749,
+      "outside": 0
+    },
+    {
+      "name": "monitor",
+      "size": 38,
+      "ink": 868,
+      "outside": 0
+    },
+    {
+      "name": "monitor",
+      "size": 104,
+      "ink": 6678,
+      "outside": 0
+    },
+    {
+      "name": "monitor",
+      "size": 118,
+      "ink": 8364,
+      "outside": 0
+    },
+    {
+      "name": "monitor",
+      "size": 128,
+      "ink": 9806,
+      "outside": 0
+    },
+    {
+      "name": "monitor",
+      "size": 140,
+      "ink": 11848,
+      "outside": 0
+    },
+    {
+      "name": "training",
+      "size": 24,
+      "ink": 358,
+      "outside": 0
+    },
+    {
+      "name": "training",
+      "size": 26,
+      "ink": 392,
+      "outside": 0
+    },
+    {
+      "name": "training",
+      "size": 28,
+      "ink": 458,
+      "outside": 0
+    },
+    {
+      "name": "training",
+      "size": 31,
+      "ink": 569,
+      "outside": 0
+    },
+    {
+      "name": "training",
+      "size": 35,
+      "ink": 738,
+      "outside": 0
+    },
+    {
+      "name": "training",
+      "size": 38,
+      "ink": 880,
+      "outside": 0
+    },
+    {
+      "name": "training",
+      "size": 104,
+      "ink": 6476,
+      "outside": 0
+    },
+    {
+      "name": "training",
+      "size": 118,
+      "ink": 8302,
+      "outside": 0
+    },
+    {
+      "name": "training",
+      "size": 128,
+      "ink": 9701,
+      "outside": 0
+    },
+    {
+      "name": "training",
+      "size": 140,
+      "ink": 11532,
+      "outside": 0
+    },
+    {
+      "name": "career",
+      "size": 24,
+      "ink": 358,
+      "outside": 0
+    },
+    {
+      "name": "career",
+      "size": 26,
+      "ink": 432,
+      "outside": 0
+    },
+    {
+      "name": "career",
+      "size": 28,
+      "ink": 468,
+      "outside": 0
+    },
+    {
+      "name": "career",
+      "size": 31,
+      "ink": 596,
+      "outside": 0
+    },
+    {
+      "name": "career",
+      "size": 35,
+      "ink": 773,
+      "outside": 0
+    },
+    {
+      "name": "career",
+      "size": 38,
+      "ink": 874,
+      "outside": 0
+    },
+    {
+      "name": "career",
+      "size": 104,
+      "ink": 6692,
+      "outside": 0
+    },
+    {
+      "name": "career",
+      "size": 118,
+      "ink": 8462,
+      "outside": 0
+    },
+    {
+      "name": "career",
+      "size": 128,
+      "ink": 9902,
+      "outside": 0
+    },
+    {
+      "name": "career",
+      "size": 140,
+      "ink": 11962,
+      "outside": 0
+    },
+    {
+      "name": "folder",
+      "size": 24,
+      "ink": 382,
+      "outside": 0
+    },
+    {
+      "name": "folder",
+      "size": 26,
+      "ink": 462,
+      "outside": 0
+    },
+    {
+      "name": "folder",
+      "size": 28,
+      "ink": 540,
+      "outside": 0
+    },
+    {
+      "name": "folder",
+      "size": 31,
+      "ink": 603,
+      "outside": 0
+    },
+    {
+      "name": "folder",
+      "size": 35,
+      "ink": 797,
+      "outside": 0
+    },
+    {
+      "name": "folder",
+      "size": 38,
+      "ink": 944,
+      "outside": 0
+    },
+    {
+      "name": "folder",
+      "size": 104,
+      "ink": 7121,
+      "outside": 0
+    },
+    {
+      "name": "folder",
+      "size": 118,
+      "ink": 8986,
+      "outside": 0
+    },
+    {
+      "name": "folder",
+      "size": 128,
+      "ink": 10506,
+      "outside": 0
+    },
+    {
+      "name": "folder",
+      "size": 140,
+      "ink": 12679,
+      "outside": 0
+    },
+    {
+      "name": "stamp",
+      "size": 24,
+      "ink": 228,
+      "outside": 0
+    },
+    {
+      "name": "stamp",
+      "size": 26,
+      "ink": 268,
+      "outside": 0
+    },
+    {
+      "name": "stamp",
+      "size": 28,
+      "ink": 294,
+      "outside": 0
+    },
+    {
+      "name": "stamp",
+      "size": 31,
+      "ink": 368,
+      "outside": 0
+    },
+    {
+      "name": "stamp",
+      "size": 35,
+      "ink": 479,
+      "outside": 0
+    },
+    {
+      "name": "stamp",
+      "size": 38,
+      "ink": 543,
+      "outside": 0
+    },
+    {
+      "name": "stamp",
+      "size": 104,
+      "ink": 4166,
+      "outside": 0
+    },
+    {
+      "name": "stamp",
+      "size": 118,
+      "ink": 5169,
+      "outside": 0
+    },
+    {
+      "name": "stamp",
+      "size": 128,
+      "ink": 6058,
+      "outside": 0
+    },
+    {
+      "name": "stamp",
+      "size": 140,
+      "ink": 7264,
+      "outside": 0
+    },
+    {
+      "name": "rail",
+      "size": 24,
+      "ink": 124,
+      "outside": 0
+    },
+    {
+      "name": "rail",
+      "size": 26,
+      "ink": 146,
+      "outside": 0
+    },
+    {
+      "name": "rail",
+      "size": 28,
+      "ink": 150,
+      "outside": 0
+    },
+    {
+      "name": "rail",
+      "size": 31,
+      "ink": 195,
+      "outside": 0
+    },
+    {
+      "name": "rail",
+      "size": 35,
+      "ink": 248,
+      "outside": 0
+    },
+    {
+      "name": "rail",
+      "size": 38,
+      "ink": 285,
+      "outside": 0
+    },
+    {
+      "name": "rail",
+      "size": 104,
+      "ink": 2216,
+      "outside": 0
+    },
+    {
+      "name": "rail",
+      "size": 118,
+      "ink": 2644,
+      "outside": 0
+    },
+    {
+      "name": "rail",
+      "size": 128,
+      "ink": 3152,
+      "outside": 0
+    },
+    {
+      "name": "rail",
+      "size": 140,
+      "ink": 3678,
+      "outside": 0
+    },
+    {
+      "name": "ratio",
+      "size": 24,
+      "ink": 56,
+      "outside": 0
+    },
+    {
+      "name": "ratio",
+      "size": 26,
+      "ink": 52,
+      "outside": 0
+    },
+    {
+      "name": "ratio",
+      "size": 28,
+      "ink": 64,
+      "outside": 0
+    },
+    {
+      "name": "ratio",
+      "size": 31,
+      "ink": 47,
+      "outside": 0
+    },
+    {
+      "name": "ratio",
+      "size": 35,
+      "ink": 67,
+      "outside": 0
+    },
+    {
+      "name": "ratio",
+      "size": 38,
+      "ink": 100,
+      "outside": 0
+    },
+    {
+      "name": "ratio",
+      "size": 104,
+      "ink": 744,
+      "outside": 0
+    },
+    {
+      "name": "ratio",
+      "size": 118,
+      "ink": 904,
+      "outside": 0
+    },
+    {
+      "name": "ratio",
+      "size": 128,
+      "ink": 1013,
+      "outside": 0
+    },
+    {
+      "name": "ratio",
+      "size": 140,
+      "ink": 1327,
+      "outside": 0
+    },
+    {
+      "name": "boiler",
+      "size": 24,
+      "ink": 295,
+      "outside": 0
+    },
+    {
+      "name": "boiler",
+      "size": 26,
+      "ink": 351,
+      "outside": 0
+    },
+    {
+      "name": "boiler",
+      "size": 28,
+      "ink": 415,
+      "outside": 0
+    },
+    {
+      "name": "boiler",
+      "size": 31,
+      "ink": 488,
+      "outside": 0
+    },
+    {
+      "name": "boiler",
+      "size": 35,
+      "ink": 643,
+      "outside": 0
+    },
+    {
+      "name": "boiler",
+      "size": 38,
+      "ink": 755,
+      "outside": 0
+    },
+    {
+      "name": "boiler",
+      "size": 104,
+      "ink": 5632,
+      "outside": 0
+    },
+    {
+      "name": "boiler",
+      "size": 118,
+      "ink": 7139,
+      "outside": 0
+    },
+    {
+      "name": "boiler",
+      "size": 128,
+      "ink": 8414,
+      "outside": 0
+    },
+    {
+      "name": "boiler",
+      "size": 140,
+      "ink": 9999,
+      "outside": 0
+    },
+    {
+      "name": "gas",
+      "size": 24,
+      "ink": 184,
+      "outside": 0
+    },
+    {
+      "name": "gas",
+      "size": 26,
+      "ink": 216,
+      "outside": 0
+    },
+    {
+      "name": "gas",
+      "size": 28,
+      "ink": 244,
+      "outside": 0
+    },
+    {
+      "name": "gas",
+      "size": 31,
+      "ink": 271,
+      "outside": 0
+    },
+    {
+      "name": "gas",
+      "size": 35,
+      "ink": 352,
+      "outside": 0
+    },
+    {
+      "name": "gas",
+      "size": 38,
+      "ink": 420,
+      "outside": 0
+    },
+    {
+      "name": "gas",
+      "size": 104,
+      "ink": 3302,
+      "outside": 0
+    },
+    {
+      "name": "gas",
+      "size": 118,
+      "ink": 4054,
+      "outside": 0
+    },
+    {
+      "name": "gas",
+      "size": 128,
+      "ink": 4732,
+      "outside": 0
+    },
+    {
+      "name": "gas",
+      "size": 140,
+      "ink": 5639,
+      "outside": 0
+    },
+    {
+      "name": "cooling",
+      "size": 24,
+      "ink": 144,
+      "outside": 0
+    },
+    {
+      "name": "cooling",
+      "size": 26,
+      "ink": 156,
+      "outside": 0
+    },
+    {
+      "name": "cooling",
+      "size": 28,
+      "ink": 184,
+      "outside": 0
+    },
+    {
+      "name": "cooling",
+      "size": 31,
+      "ink": 227,
+      "outside": 0
+    },
+    {
+      "name": "cooling",
+      "size": 35,
+      "ink": 267,
+      "outside": 0
+    },
+    {
+      "name": "cooling",
+      "size": 38,
+      "ink": 336,
+      "outside": 0
+    },
+    {
+      "name": "cooling",
+      "size": 104,
+      "ink": 2388,
+      "outside": 0
+    },
+    {
+      "name": "cooling",
+      "size": 118,
+      "ink": 2986,
+      "outside": 0
+    },
+    {
+      "name": "cooling",
+      "size": 128,
+      "ink": 3460,
+      "outside": 0
+    },
+    {
+      "name": "cooling",
+      "size": 140,
+      "ink": 4118,
+      "outside": 0
+    },
+    {
+      "name": "law",
+      "size": 24,
+      "ink": 331,
+      "outside": 0
+    },
+    {
+      "name": "law",
+      "size": 26,
+      "ink": 384,
+      "outside": 0
+    },
+    {
+      "name": "law",
+      "size": 28,
+      "ink": 430,
+      "outside": 0
+    },
+    {
+      "name": "law",
+      "size": 31,
+      "ink": 536,
+      "outside": 0
+    },
+    {
+      "name": "law",
+      "size": 35,
+      "ink": 701,
+      "outside": 0
+    },
+    {
+      "name": "law",
+      "size": 38,
+      "ink": 816,
+      "outside": 0
+    },
+    {
+      "name": "law",
+      "size": 104,
+      "ink": 6112,
+      "outside": 0
+    },
+    {
+      "name": "law",
+      "size": 118,
+      "ink": 7755,
+      "outside": 0
+    },
+    {
+      "name": "law",
+      "size": 128,
+      "ink": 9130,
+      "outside": 0
+    },
+    {
+      "name": "law",
+      "size": 140,
+      "ink": 10915,
+      "outside": 0
+    },
+    {
+      "name": "gauge",
+      "size": 24,
+      "ink": 234,
+      "outside": 0
+    },
+    {
+      "name": "gauge",
+      "size": 26,
+      "ink": 275,
+      "outside": 0
+    },
+    {
+      "name": "gauge",
+      "size": 28,
+      "ink": 309,
+      "outside": 0
+    },
+    {
+      "name": "gauge",
+      "size": 31,
+      "ink": 381,
+      "outside": 0
+    },
+    {
+      "name": "gauge",
+      "size": 35,
+      "ink": 473,
+      "outside": 0
+    },
+    {
+      "name": "gauge",
+      "size": 38,
+      "ink": 574,
+      "outside": 0
+    },
+    {
+      "name": "gauge",
+      "size": 104,
+      "ink": 4288,
+      "outside": 0
+    },
+    {
+      "name": "gauge",
+      "size": 118,
+      "ink": 5464,
+      "outside": 0
+    },
+    {
+      "name": "gauge",
+      "size": 128,
+      "ink": 6405,
+      "outside": 0
+    },
+    {
+      "name": "gauge",
+      "size": 140,
+      "ink": 7668,
+      "outside": 0
+    },
+    {
+      "name": "submission",
+      "size": 24,
+      "ink": 263,
+      "outside": 0
+    },
+    {
+      "name": "submission",
+      "size": 26,
+      "ink": 316,
+      "outside": 0
+    },
+    {
+      "name": "submission",
+      "size": 28,
+      "ink": 368,
+      "outside": 0
+    },
+    {
+      "name": "submission",
+      "size": 31,
+      "ink": 463,
+      "outside": 0
+    },
+    {
+      "name": "submission",
+      "size": 35,
+      "ink": 610,
+      "outside": 0
+    },
+    {
+      "name": "submission",
+      "size": 38,
+      "ink": 646,
+      "outside": 0
+    },
+    {
+      "name": "submission",
+      "size": 104,
+      "ink": 5052,
+      "outside": 0
+    },
+    {
+      "name": "submission",
+      "size": 118,
+      "ink": 6426,
+      "outside": 0
+    },
+    {
+      "name": "submission",
+      "size": 128,
+      "ink": 7459,
+      "outside": 0
+    },
+    {
+      "name": "submission",
+      "size": 140,
+      "ink": 8925,
+      "outside": 0
+    },
+    {
+      "name": "hazardous",
+      "size": 24,
+      "ink": 276,
+      "outside": 0
+    },
+    {
+      "name": "hazardous",
+      "size": 26,
+      "ink": 344,
+      "outside": 0
+    },
+    {
+      "name": "hazardous",
+      "size": 28,
+      "ink": 378,
+      "outside": 0
+    },
+    {
+      "name": "hazardous",
+      "size": 31,
+      "ink": 481,
+      "outside": 0
+    },
+    {
+      "name": "hazardous",
+      "size": 35,
+      "ink": 604,
+      "outside": 0
+    },
+    {
+      "name": "hazardous",
+      "size": 38,
+      "ink": 696,
+      "outside": 0
+    },
+    {
+      "name": "hazardous",
+      "size": 104,
+      "ink": 5308,
+      "outside": 0
+    },
+    {
+      "name": "hazardous",
+      "size": 118,
+      "ink": 6720,
+      "outside": 0
+    },
+    {
+      "name": "hazardous",
+      "size": 128,
+      "ink": 7918,
+      "outside": 0
+    },
+    {
+      "name": "hazardous",
+      "size": 140,
+      "ink": 9384,
+      "outside": 0
+    },
+    {
+      "name": "route",
+      "size": 24,
+      "ink": 133,
+      "outside": 0
+    },
+    {
+      "name": "route",
+      "size": 26,
+      "ink": 129,
+      "outside": 0
+    },
+    {
+      "name": "route",
+      "size": 28,
+      "ink": 155,
+      "outside": 0
+    },
+    {
+      "name": "route",
+      "size": 31,
+      "ink": 194,
+      "outside": 0
+    },
+    {
+      "name": "route",
+      "size": 35,
+      "ink": 240,
+      "outside": 0
+    },
+    {
+      "name": "route",
+      "size": 38,
+      "ink": 291,
+      "outside": 0
+    },
+    {
+      "name": "route",
+      "size": 104,
+      "ink": 2156,
+      "outside": 0
+    },
+    {
+      "name": "route",
+      "size": 118,
+      "ink": 2684,
+      "outside": 0
+    },
+    {
+      "name": "route",
+      "size": 128,
+      "ink": 3119,
+      "outside": 0
+    },
+    {
+      "name": "route",
+      "size": 140,
+      "ink": 3772,
+      "outside": 0
+    },
+    {
+      "name": "support",
+      "size": 24,
+      "ink": 219,
+      "outside": 0
+    },
+    {
+      "name": "support",
+      "size": 26,
+      "ink": 263,
+      "outside": 0
+    },
+    {
+      "name": "support",
+      "size": 28,
+      "ink": 298,
+      "outside": 0
+    },
+    {
+      "name": "support",
+      "size": 31,
+      "ink": 363,
+      "outside": 0
+    },
+    {
+      "name": "support",
+      "size": 35,
+      "ink": 469,
+      "outside": 0
+    },
+    {
+      "name": "support",
+      "size": 38,
+      "ink": 552,
+      "outside": 0
+    },
+    {
+      "name": "support",
+      "size": 104,
+      "ink": 4068,
+      "outside": 0
+    },
+    {
+      "name": "support",
+      "size": 118,
+      "ink": 5174,
+      "outside": 0
+    },
+    {
+      "name": "support",
+      "size": 128,
+      "ink": 6113,
+      "outside": 0
+    },
+    {
+      "name": "support",
+      "size": 140,
+      "ink": 7317,
+      "outside": 0
+    }
+  ]
+}

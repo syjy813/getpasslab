@@ -29,7 +29,7 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-drafts/06/01-hanfms-hero.webp" alt="한전FMS 시설관리 채용과 사업소별 요건을 살펴보는 직원" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
+<figure><img src="/images/facility-drafts/06/01-hanfms-hero.webp" alt="한전FMS 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 ## 같은 회사 공고인데, 자격 조건은 왜 이렇게 다를까?
 
@@ -74,7 +74,7 @@ legalReview: false
 
 *근거: 상반기 붙임3 문서 11\~12쪽(문서 인쇄쪽수 22\~23쪽)의 사업소별 자격기준. 공통 응시자격은 별도 붙임2도 함께 확인한다.*
 
-<figure><img src="/images/facility-drafts/06/02-site-appointment-conditions-v2.webp" alt="동용인 냉동·특정가스 2종, 이천 냉동·검사대상기기·위험물 3종 선임 가능 요건" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/06/02-site-appointment-conditions-v2.webp" alt="사업소별 필수 선임요건: 동용인지사 두 선임 가능 요건 모두, 이천지사 세 선임 가능 요건 모두" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *상반기 공고에서 각 사업소가 요구한 관리자 선임요건을 모두 충족해야 한다.*
 
@@ -96,7 +96,7 @@ legalReview: false
 
 **우대 자격증을 갖춘 것과 필수 자격·선임요건을 충족한 것은 다르다.** 공고에서 먼저 확인할 단어는 ‘필수’와 ‘우대’다.
 
-<figure><img src="/images/facility-drafts/06/03-required-versus-preferred-v2.webp" alt="한전인재개발원 A의 필수는 4조 2교대 가능, 우대는 기계설비 관련 자격 보유" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/06/03-required-versus-preferred-v2.webp" alt="필수와 우대는 다르다: 필수조건 4조 2교대 근무 가능, 우대사항 기계설비 관련 자격증" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
 
 ## 에너지관리기능사 하나로 지원할 수 있을까?
 
@@ -119,7 +119,9 @@ legalReview: false
 | **기계설비유지관리자 초급(8시간 일근)** | 약 347만 원 | 상반기 별도 직위 |
 | **기계설비유지관리자 고급(8시간 일근)** | 약 399만 원 | 상반기 별도 직위 |
 
-<figure><img src="/images/facility-drafts/06/04-pay-and-shifts.webp" alt="2026년 상반기 한전FMS 공고의 대표 월 급여 수준" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/06/04-pay-and-shifts.webp" alt="한전FMS 월 급여 사례 1/2: 시설관리 · 일근 월 약 285만 원, 시설관리 · 교대 월 약 304만 원" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/06/04-pay-and-shifts-part-2.webp" alt="한전FMS 월 급여 사례 2/2: 유지관리자 초급 월 약 347만 원, 유지관리자 고급 월 약 399만 원" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 숫자만 보면 4조 2교대가 일근보다 월 19만 원 정도 높다.
 
@@ -148,7 +150,9 @@ legalReview: false
 5. **근무형태·급여:** 일근인지 교대인지, 지급액에 무엇이 포함되는가?
 6. **인턴 전환:** 평가를 통한 전환인지, 별도 조건이 있는가?
 
-<figure><img src="/images/facility-drafts/06/05-recruitment-checklist.webp" alt="한전FMS 채용공고 확인 체크리스트" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/06/05-recruitment-checklist.webp" alt="한전FMS 지원 전 확인 1/2: 채용 회차 상반기·하반기 공고 구분, 모집 사업소 건물과 담당 설비, 필수·우대 여러 필수요건 모두 충족" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/06/05-recruitment-checklist-part-2.webp" alt="한전FMS 지원 전 확인 2/2: 법정선임 자격·경력·교육 기준, 근무·급여 일근·교대와 포함 수당, 인턴 전환 6개월 후 평가·적격자" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 한전FMS라는 이름을 먼저 기억하는 것도 좋다. 다만 그다음에는 반드시 **사업소 이름과 모집번호, 자격표의 `(필수)` 표시**까지 내려가야 한다.
 

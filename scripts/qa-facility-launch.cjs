@@ -8,7 +8,9 @@ const expanded = preview || release;
 const mode = preview ? 'private-preview' : 'publication';
 const output = `qa-results/facility-launch/${mode}`;
 fs.mkdirSync(output, {recursive: true});
+const bulkImages=JSON.parse(fs.readFileSync('docs/audits/2026-11-06-facility-image-bulk/manifest.json'));
 const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':5};
+for(const [file,row] of Object.entries(bulkImages.source)) {const slug=file.split('/').at(-1).replace('.md','');if(slug in imageCounts)imageCounts[slug]=row.images;}
 const pages = ['/facility-management/', ...['career','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
 (async () => {
   const browser = await chromium.launch();

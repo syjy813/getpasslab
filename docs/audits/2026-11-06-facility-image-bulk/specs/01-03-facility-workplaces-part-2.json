@@ -1,0 +1,35 @@
+{
+  "number": "01",
+  "file": "03-facility-workplaces-part-2.webp",
+  "original": "03-facility-workplaces.webp",
+  "part": 2,
+  "total": 2,
+  "title": "근무시설에 따른 차이 2/2",
+  "subtitle": "건물 이름보다 실제 관리 설비를 확인",
+  "cards": [
+    {
+      "title": "물류센터",
+      "icon": "warehouse",
+      "summary": "보유 설비에 따라 다름",
+      "details": [
+        "냉장·냉동시설 여부"
+      ],
+      "action": "설비 목록 확인"
+    },
+    {
+      "title": "쇼핑몰",
+      "icon": "shopping",
+      "summary": "이용객·협력업체와 운영",
+      "details": [
+        "다수 설비·작업 관리"
+      ],
+      "action": "협업 범위 확인"
+    }
+  ],
+  "takeaway": "근무시설별 예시 | 건물 종류로 급여·업무를 단정하지 않음",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

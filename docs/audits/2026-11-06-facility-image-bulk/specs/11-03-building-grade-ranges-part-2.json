@@ -1,0 +1,37 @@
+{
+  "number": "11",
+  "file": "03-building-grade-ranges-part-2.webp",
+  "original": "03-building-grade-ranges.webp",
+  "part": 2,
+  "total": 2,
+  "title": "건물 규모와 요구등급 2/2",
+  "subtitle": "일반 건축물 연면적 대표 구간 | 공동주택 등은 별도",
+  "cards": [
+    {
+      "title": "고급 이상",
+      "icon": "office",
+      "summary": "3만㎡ 이상~6만㎡ 미만",
+      "details": [
+        "책임관리자 1명",
+        "보조관리자 1명 추가"
+      ],
+      "action": "대상·인원 확인"
+    },
+    {
+      "title": "특급 이상",
+      "icon": "office",
+      "summary": "6만㎡ 이상",
+      "details": [
+        "책임관리자 1명",
+        "보조관리자 1명 추가"
+      ],
+      "action": "특례·용도 확인"
+    }
+  ],
+  "takeaway": "면적표만으로 선임 확정 금지 | 적용요건·합산·특례 확인",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

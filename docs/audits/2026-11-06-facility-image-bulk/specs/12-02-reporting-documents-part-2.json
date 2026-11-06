@@ -1,0 +1,36 @@
+{
+  "number": "12",
+  "file": "02-reporting-documents-part-2.webp",
+  "original": "02-reporting-documents.webp",
+  "part": 2,
+  "total": 2,
+  "title": "경력신고 서류의 역할 2/2",
+  "subtitle": "서류는 각각 다른 사실을 증명한다",
+  "cards": [
+    {
+      "title": "근무사실 증빙",
+      "icon": "career",
+      "summary": "소속회사와 재직기간",
+      "details": [
+        "건강보험·국민연금 등",
+        "인정 항목 중 해당 자료"
+      ],
+      "action": "기간·사업자명 대조"
+    },
+    {
+      "title": "회사별 증빙",
+      "icon": "office",
+      "summary": "업종과 업무 관련성",
+      "details": [
+        "사업자등록 등 해당 자료"
+      ],
+      "action": "업무유형별 확인"
+    }
+  ],
+  "takeaway": "자격·학력·사진도 신청인별 해당 제출 조건 확인",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

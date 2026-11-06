@@ -1,0 +1,35 @@
+{
+  "number": "01",
+  "file": "05-facility-job-checklist-part-2.webp",
+  "original": "05-facility-job-checklist.webp",
+  "part": 2,
+  "total": 2,
+  "title": "취업 전 네 가지 확인 2/2",
+  "subtitle": "공고의 회사 이름 다음에 실제 조건을 보자",
+  "cards": [
+    {
+      "title": "근무형태",
+      "icon": "shift-calendar",
+      "summary": "주간·격일·교대 여부",
+      "details": [
+        "실제 휴게·수당 확인"
+      ],
+      "action": "근무표 확인"
+    },
+    {
+      "title": "자격·경력",
+      "icon": "qualification",
+      "summary": "필수·우대·선임 구분",
+      "details": [
+        "해당 조건 충족 여부"
+      ],
+      "action": "요건별로 확인"
+    }
+  ],
+  "takeaway": "회사의 간판과 실제 업무·근로조건을 함께 확인",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

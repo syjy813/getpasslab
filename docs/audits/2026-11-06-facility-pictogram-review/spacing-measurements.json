@@ -1,0 +1,1423 @@
+[
+  {
+    "publicPath": "/images/facility-drafts/13/02-identify-boiler.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "검사대상 여부",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "기기 종류",
+        "before": 189,
+        "after": 99
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/13/02-identify-boiler-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "용량·압력",
+        "before": 187,
+        "after": 97
+      },
+      {
+        "label": "사용 연료",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/13/03-capacity-grade-ranges.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "10t/h 이하",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "10 초과~30 이하",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "30t/h 초과",
+        "before": 135,
+        "after": 91
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "소형 증기보일러",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "온수·열매체",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions-part-2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "가스연료 경로 1",
+        "before": 135,
+        "after": 91
+      },
+      {
+        "label": "가스연료 경로 2",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/13/05-appointment-checklist.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "검사대상기기",
+        "before": 189,
+        "after": 99
+      },
+      {
+        "label": "종류·용량",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "가스연료",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/13/05-appointment-checklist-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "교육·추가자격",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "관리구역·대수",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "선임신고",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/03/02-three-employment-structures.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "직영",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "자회사",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "용역",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/03/03-contract-change-check.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "현장 계약",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "고용승계",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "변경 후 조건",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/03/04-offer-comparison.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "기본급·수당",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "고용기간",
+        "before": 135,
+        "after": 91
+      },
+      {
+        "label": "근무지·규정",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/03/05-six-point-checklist.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "고용주",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "고용기간",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "현장 이동",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/03/05-six-point-checklist-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "실제 업무",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "급여",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "경력증빙",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/02/02-actual-work-scope.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "직접 점검·운전",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "감시·작업 관리",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/02/03-career-records.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "근무기간",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "담당업무",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "증빙서류",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/02/04-interview-five-questions.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "실제 업무",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "급여·근무표",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "신입 교육",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/02/04-interview-five-questions-part-2.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "선임 책임",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "경력증빙",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/06/02-site-appointment-conditions-v2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "동용인지사",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "이천지사",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/06/03-required-versus-preferred-v2.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "필수조건",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "우대사항",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/06/04-pay-and-shifts.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "시설관리 · 일근",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "시설관리 · 교대",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/06/04-pay-and-shifts-part-2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "유지관리자 초급",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "유지관리자 고급",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/06/05-recruitment-checklist.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "채용 회차",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "모집 사업소",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "필수·우대",
+        "before": 190,
+        "after": 99
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/06/05-recruitment-checklist-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "법정선임",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "근무·급여",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "인턴 전환",
+        "before": 189,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/09/02-grade-and-experience.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "2등급 · 기사",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "3등급 · 주임",
+        "before": 135,
+        "after": 91
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/09/02-grade-and-experience-part-2.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "4등급 · 대리",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "5등급 · 과장",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "수원법원종합청사",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "캠코서울사옥",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements-part-2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "글로벌지식협력단지",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "태안정책연수원",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "수원법원종합청사",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "캠코서울사옥",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts-part-2.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "태안정책연수원",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "캠코양재타워",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/09/05-application-checklist.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "공고 회차",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "실제 사업소",
+        "before": 190,
+        "after": 99
+      },
+      {
+        "label": "직위·등급",
+        "before": 189,
+        "after": 99
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/09/05-application-checklist-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "자격·경력",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "법정선임",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "급여·근무표",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/08/02-facility-versus-track.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "시설 · 토목",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "시설 · 토목 외",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/08/03-applicant-numbers.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "모집인원",
+        "before": 135,
+        "after": 91
+      },
+      {
+        "label": "지원인원",
+        "before": 135,
+        "after": 91
+      },
+      {
+        "label": "단순 경쟁률",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/08/04-retirement-and-probation-v2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "시설 · 토목",
+        "before": 135,
+        "after": 91
+      },
+      {
+        "label": "시설 · 토목 외",
+        "before": 135,
+        "after": 91
+      },
+      {
+        "label": "12주 시용",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/08/05-application-checklist.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "모집 회차",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "세부 직무",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "사업소·근무지",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/08/05-application-checklist-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "자격·경력",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "전형·시용",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "급여·정년",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/12/02-reporting-documents.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "경력신고서",
+        "before": 135,
+        "after": 91
+      },
+      {
+        "label": "경력확인서",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/12/02-reporting-documents-part-2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "근무사실 증빙",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "회사별 증빙",
+        "before": 135,
+        "after": 91
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/12/03-employer-and-stamps.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "발주자 소속",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "위탁업체 소속",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "위탁업체 소속",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/12/04-recognized-experience.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "자격 취득 후",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "자격 취득 후",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/12/04-recognized-experience-part-2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "자격 취득 전",
+        "before": 135,
+        "after": 91
+      },
+      {
+        "label": "자격 취득 전",
+        "before": 98,
+        "after": 54
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/12/05-reporting-process.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "자격·경력 확인",
+        "before": 189,
+        "after": 99
+      },
+      {
+        "label": "경력확인서",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "근무·회사 증빙",
+        "before": 190,
+        "after": 99
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/12/05-reporting-process-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "최초 경력신고",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "심사·등급 확인",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "수첩 발급",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "초급",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "중급",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix-part-2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "고급",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "특급",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/11/04-recognized-experience.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "자격 취득 후",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "자격 취득 후",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/11/04-recognized-experience-part-2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "자격 취득 전",
+        "before": 135,
+        "after": 91
+      },
+      {
+        "label": "자격 취득 전",
+        "before": 98,
+        "after": 54
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/11/03-building-grade-ranges.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "초급 이상",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "중급 이상",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/11/03-building-grade-ranges-part-2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "고급 이상",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "특급 이상",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/11/05-application-checklist.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "인정 자격",
+        "before": 189,
+        "after": 99
+      },
+      {
+        "label": "경력 구분",
+        "before": 189,
+        "after": 100
+      },
+      {
+        "label": "증빙 준비",
+        "before": 189,
+        "after": 99
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/11/05-application-checklist-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "경력 신고",
+        "before": 189,
+        "after": 100
+      },
+      {
+        "label": "심사 결과",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/07/02-workplace-types.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "우체국",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "우편집중국",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "우편물류센터",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/07/03-required-conditions.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "관련 자격",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "법정선임",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "관련 경력",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/07/04-round-comparison-v2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "11차 공고",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "12차 공고",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/07/05-application-checklist.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "근무관서",
+        "before": 189,
+        "after": 99
+      },
+      {
+        "label": "필수자격",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "법정선임",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/07/05-application-checklist-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "관련경력",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "근무표",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "급여·정년",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/04/02-shift-types.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "일근·주간",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "격일",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "교대",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/04/03-working-waiting-rest.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "업무 수행",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "호출 대기",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "자유로운 휴게",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/04/04-salary-comparison.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "A사 · 주간",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "B사 · 교대",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/04/05-job-posting-checklist.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "출퇴근 시각",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "조별 근무표",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "휴게·대기",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/04/05-job-posting-checklist-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "임금 구성",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "감시·단속 승인",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "야간 대응",
+        "before": 189,
+        "after": 99
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/10/02-seven-appointment-types.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "보일러",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "냉동·고압가스",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "도시가스·LPG",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/10/02-seven-appointment-types-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "소방",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "기계설비",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "전기",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/10/02-seven-appointment-types-part-3.webp",
+    "height": 1010,
+    "reduction": 70,
+    "gaps": [
+      {
+        "label": "위험물",
+        "before": 152,
+        "after": 82
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/10/03-boiler-qualification-ranges.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "10t/h 이하",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "10 초과~30 이하",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "30t/h 초과",
+        "before": 135,
+        "after": 91
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/10/04-gas-laws-separation.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "도시가스",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "고압가스·냉동",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "LPG",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/10/05-application-checklist.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "설비 확인",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "적용 법령",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "규모·대상",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/10/05-application-checklist-part-2.webp",
+    "height": 990,
+    "reduction": 90,
+    "gaps": [
+      {
+        "label": "내 자격",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "여러 조건",
+        "before": 190,
+        "after": 100
+      },
+      {
+        "label": "선임·겸직",
+        "before": 190,
+        "after": 100
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/01/02-facility-job-types.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "기계",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "전기",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/01/02-facility-job-types-part-2.webp",
+    "height": 1036,
+    "reduction": 44,
+    "gaps": [
+      {
+        "label": "소방·방재",
+        "before": 96,
+        "after": 52
+      },
+      {
+        "label": "영선",
+        "before": 96,
+        "after": 52
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/01/03-facility-workplaces.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "오피스",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "아파트",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "병원",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/01/03-facility-workplaces-part-2.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "물류센터",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "쇼핑몰",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/01/05-facility-job-checklist.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "건물",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "업무",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  },
+  {
+    "publicPath": "/images/facility-drafts/01/05-facility-job-checklist-part-2.webp",
+    "height": 1017,
+    "reduction": 63,
+    "gaps": [
+      {
+        "label": "근무형태",
+        "before": 135,
+        "after": 72
+      },
+      {
+        "label": "자격·경력",
+        "before": 135,
+        "after": 72
+      }
+    ]
+  }
+]

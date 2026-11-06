@@ -38,7 +38,7 @@ related:
 certifications: []
 ---
 
-![주간근무와 야간근무 사이에서 근무표와 급여명세서를 함께 살펴보는 시설관리 직원](/images/facility-drafts/04/01-shifts-pay-hero.webp)
+<figure><img src="/images/facility-drafts/04/01-shifts-pay-hero.webp" alt="시설관리 주간·격일·교대근무 비교 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 *야간근무가 포함된 공고라면 월급과 근무표를 함께 확인*
 
@@ -68,7 +68,7 @@ A사는 주간근무에 월 300만 원, B사는 교대근무에 월 350만 원. 
 | **3교대** | 하루 근무를 세 시간대로 나눠 담당 | 교대 길이, 휴무일, 인수인계 시간 |
 | **4조 2교대** | 네 개 조로 두 교대 시간대를 운영 | 조별 순환표, 야간·비번 주기, 수당 구조 |
 
-![일근·격일·교대근무는 명칭보다 실제 근무표를 확인해야 한다는 비교 그림](/images/facility-drafts/04/02-shift-types.webp)
+<figure><img src="/images/facility-drafts/04/02-shift-types.webp" alt="이름보다 실제 근무표: 일근·주간 낮 시간 중심 근무, 격일 근무일·비번일 교번, 교대 조별로 시간대를 분담" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *근무형태 이름은 개념 구분용. 실제 근무표는 사업장마다 다름*
 
@@ -92,7 +92,7 @@ A사는 주간근무에 월 300만 원, B사는 교대근무에 월 350만 원. 
 
 누워서 자유롭게 쉴 수 있고 업무 지시에서도 벗어나 있다면 휴게시간으로 볼 여지가 있다. 반대로 언제 울릴지 모르는 경보를 계속 지켜보거나, 호출에 즉시 응해야 해서 자유로운 이용이 제한된다면 **사용자의 지휘·감독 아래 있는 대기시간으로 판단될 수 있다.**
 
-![실제 업무·호출 대기·자유로운 휴게의 차이를 설명한 그림](/images/facility-drafts/04/03-working-waiting-rest.webp)
+<figure><img src="/images/facility-drafts/04/03-working-waiting-rest.webp" alt="휴게와 대기는 다르다: 업무 수행 점검·운전·보고, 호출 대기 상시 감시·즉시 응답, 자유로운 휴게 업무 지시에서 벗어남" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
 
 *호출 대기가 실제 근로시간인지 여부는 업무 방식과 지휘·감독에 따라 판단*
 
@@ -124,7 +124,7 @@ A사는 주간근무에 월 300만 원, B사는 교대근무에 월 350만 원. 
 | 실제 근무·휴게시간 | 근무표 확인 | 근무표 확인 |
 | 휴일·비번 운영 | 규정 확인 | 조별 순환표 확인 |
 
-![월 지급액만 다르게 보이는 두 가상 공고를 기본급과 수당 구성으로 다시 비교하는 그림](/images/facility-drafts/04/04-salary-comparison.webp)
+<figure><img src="/images/facility-drafts/04/04-salary-comparison.webp" alt="월급 차이, 구성부터: A사 · 주간 세전 월 300만 원, B사 · 교대 세전 월 350만 원" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *세전 월 지급액은 가상 수치. 기본급과 수당이 확인되기 전에는 우열 판단 불가*
 
@@ -145,7 +145,9 @@ A사는 주간근무에 월 300만 원, B사는 교대근무에 월 350만 원. 
 5. **감시·단속 승인:** 관련 적용제외 승인이 있는 사업장·업무인가?
 6. **야간 대응체계:** 비상 상황에서 혼자 대응하나, 지원 인력과 교육 절차가 있나?
 
-![시설관리 근무형태 관련 채용공고에서 확인할 여섯 가지 항목](/images/facility-drafts/04/05-job-posting-checklist.webp)
+<figure><img src="/images/facility-drafts/04/05-job-posting-checklist.webp" alt="근무표 확인 여섯 가지 1/2: 출퇴근 시각 한 번 출근해 머무는 시간, 조별 근무표 주간·야간·비번·휴무, 휴게·대기 쉬는 중 호출·감시 여부" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/04/05-job-posting-checklist-part-2.webp" alt="근무표 확인 여섯 가지 2/2: 임금 구성 기본급·고정·변동수당, 감시·단속 승인 사업장·업무의 승인 여부, 야간 대응 단독 대응·지원·교육" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 *채용공고에서 빠진 근무조건은 지원·면접 단계에서 구체적으로 확인*
 

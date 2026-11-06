@@ -27,7 +27,7 @@ related:
 certifications: []
 ---
 
-![건물 내부의 기계실, 전기설비, 소방설비를 살펴보는 시설관리 직원과 운전·점검·유지보수·기록 업무를 그린 일러스트](/images/facility-drafts/01/01-facility-management-hero.webp)
+<figure><img src="/images/facility-drafts/01/01-facility-management-hero.webp" alt="시설관리란? 건물이 멀쩡한 데는 다 이유가 있다 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 ## 건물이 멀쩡하게 돌아가도록 하는 일
 
@@ -71,7 +71,9 @@ certifications: []
 
 **건물 안에는 서로 다른 역할을 하는 설비들이 모여 있기 때문이다.**
 
-![기계·전기·소방방재·영선 네 가지 시설관리 직무와 대표 설비를 나란히 비교한 카드형 이미지](/images/facility-drafts/01/02-facility-job-types.webp)
+<figure><img src="/images/facility-drafts/01/02-facility-job-types.webp" alt="시설관리의 대표 직무 1/2: 기계 냉난방과 물길 관리, 전기 전력 공급 상태 관리" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/01/02-facility-job-types-part-2.webp" alt="시설관리의 대표 직무 2/2: 소방·방재 비상상황에 대비, 영선 건물 시설물 보수" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *시설관리 대표 직무 네 가지. 실제 업무 분담은 시설 규모와 운영 방식에 따라 달라짐*
 
@@ -109,7 +111,9 @@ certifications: []
 
 같은 직함을 달고 있어도 하루 일과가 똑같지는 않다.
 
-![오피스·아파트·병원·물류센터·쇼핑몰 다섯 종류 건물을 나란히 보여주고 각 시설관리 업무의 특징을 요약한 이미지](/images/facility-drafts/01/03-facility-workplaces.webp)
+<figure><img src="/images/facility-drafts/01/03-facility-workplaces.webp" alt="근무시설에 따른 차이 1/2: 오피스 냉난방·전력과 사무공간, 아파트 공용설비와 입주민, 병원 연속 운영과 비상 대응" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/01/03-facility-workplaces-part-2.webp" alt="근무시설에 따른 차이 2/2: 물류센터 보유 설비에 따라 다름, 쇼핑몰 이용객·협력업체와 운영" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
 
 *근무시설별 주요 업무의 예시. 건물 종류만으로 급여·경력·담당 설비를 단정할 수는 없음*
 
@@ -152,7 +156,9 @@ certifications: []
 3. **근무형태:** 주간·격일·교대 중 무엇인가? 실제 휴게·수당 조건은?
 4. **자격·경력:** 필수와 우대는 무엇이고, 법정선임을 요구하는가?
 
-![취업공고에서 건물·업무·근무형태·자격경력 네 가지를 확인하라는 체크리스트 인포그래픽](/images/facility-drafts/01/05-facility-job-checklist.webp)
+<figure><img src="/images/facility-drafts/01/05-facility-job-checklist.webp" alt="취업 전 네 가지 확인 1/2: 건물 어떤 시설에서 일하나, 업무 실제로 무엇을 맡나" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/01/05-facility-job-checklist-part-2.webp" alt="취업 전 네 가지 확인 2/2: 근무형태 주간·격일·교대 여부, 자격·경력 필수·우대·선임 구분" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
 
 *채용공고를 읽을 때 활용하는 네 가지 체크포인트. 실제 공고의 필수 조건과 근로조건을 함께 확인*
 

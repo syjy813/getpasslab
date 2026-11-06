@@ -1,0 +1,49 @@
+{
+  "number": "12",
+  "file": "03-employer-and-stamps.webp",
+  "original": "03-employer-and-stamps.webp",
+  "part": 1,
+  "total": 1,
+  "title": "경력확인서 직인 주체",
+  "subtitle": "건강보험 증빙의 사업자명과 날인 주체를 대조",
+  "cards": [
+    {
+      "title": "발주자 소속",
+      "icon": "office",
+      "summary": "보험 사업자명: 발주자",
+      "details": [
+        "직인: 같은 발주자",
+        "원칙적으로 인정 가능"
+      ],
+      "action": "대표 사례"
+    },
+    {
+      "title": "위탁업체 소속",
+      "icon": "service-contractor",
+      "summary": "보험 사업자명: 위탁업체",
+      "details": [
+        "직인: 같은 위탁업체",
+        "관련 업종 등 조건 충족"
+      ],
+      "action": "대표 사례"
+    },
+    {
+      "title": "위탁업체 소속",
+      "icon": "stamp",
+      "summary": "직인: 발주자",
+      "details": [
+        "계약관계 증빙 필요",
+        "조건부 인정 가능"
+      ],
+      "action": "관련 증빙 확인"
+    }
+  ],
+  "takeaway": "발주자 사업자명에 위탁업체 직인만 받으면 인정 불가 가능",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

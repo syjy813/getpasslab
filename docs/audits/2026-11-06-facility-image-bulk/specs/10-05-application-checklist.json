@@ -1,0 +1,39 @@
+{
+  "number": "10",
+  "file": "05-application-checklist.webp",
+  "original": "05-application-checklist.webp",
+  "part": 1,
+  "total": 2,
+  "title": "법정선임 공고 읽는 순서 1/2",
+  "subtitle": "공고의 필수조건과 법적 선임 가능 여부를 각각 검토",
+  "cards": [
+    {
+      "title": "설비 확인",
+      "icon": "mechanical",
+      "summary": "무엇을 관리하나",
+      "details": [],
+      "action": "실제 설비 목록"
+    },
+    {
+      "title": "적용 법령",
+      "icon": "law",
+      "summary": "정확한 관리자 명칭",
+      "details": [],
+      "action": "해당 법률 확인"
+    },
+    {
+      "title": "규모·대상",
+      "icon": "gauge",
+      "summary": "용량·능력·건축물 등급",
+      "details": [],
+      "action": "적용 기준 확인"
+    }
+  ],
+  "takeaway": "자격요건 충족과 실제 선임·겸직 허용은 다른 판단",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

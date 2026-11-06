@@ -1,0 +1,38 @@
+{
+  "number": "01",
+  "file": "02-facility-job-types-part-2.webp",
+  "original": "02-facility-job-types.webp",
+  "part": 2,
+  "total": 2,
+  "title": "시설관리의 대표 직무 2/2",
+  "subtitle": "같은 시설관리라도 맡는 설비와 업무가 다르다",
+  "cards": [
+    {
+      "title": "소방·방재",
+      "icon": "fire",
+      "summary": "비상상황에 대비",
+      "details": [
+        "수신기·감지기·소화설비",
+        "피난시설 관리"
+      ],
+      "action": "현장 절차 확인"
+    },
+    {
+      "title": "영선",
+      "icon": "repair",
+      "summary": "건물 시설물 보수",
+      "details": [
+        "문·창호·누수 대응",
+        "마감·공용시설 보수"
+      ],
+      "action": "업무 분담 확인"
+    }
+  ],
+  "takeaway": "실제 업무는 시설 규모와 운영 방식에 따라 달라짐",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

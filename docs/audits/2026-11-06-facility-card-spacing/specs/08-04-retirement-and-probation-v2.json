@@ -1,0 +1,47 @@
+{
+  "number": "08",
+  "file": "04-retirement-and-probation-v2.webp",
+  "original": "04-retirement-and-probation-v2.webp",
+  "part": 1,
+  "total": 1,
+  "title": "정년과 시용을 구분",
+  "subtitle": "코레일테크 | 2027년 제1차 공무직 공고",
+  "cards": [
+    {
+      "title": "시설 · 토목",
+      "icon": "rail",
+      "summary": "정년 만 63세",
+      "details": [
+        "해당 회차 직무 기준"
+      ],
+      "action": "향후 보장 아님"
+    },
+    {
+      "title": "시설 · 토목 외",
+      "icon": "worksite",
+      "summary": "정년 만 65세",
+      "details": [
+        "해당 회차 직무 기준"
+      ],
+      "action": "정확한 모집분야 확인"
+    },
+    {
+      "title": "12주 시용",
+      "icon": "contract-term",
+      "summary": "근무실적 등 평가",
+      "details": [
+        "평가 후 공무직 임용",
+        "자동 확정으로 단정 금지"
+      ],
+      "action": "최종 임용 조건 확인"
+    }
+  ],
+  "takeaway": "공고의 직무·시용평가·인사규정을 함께 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

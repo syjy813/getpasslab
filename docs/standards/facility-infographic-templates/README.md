@@ -1,5 +1,18 @@
 # 시설 카드형 이미지 정본
 
+## 카드 하단 여백 축소 프로필 (2026-11-06)
+
+신규 카드 및 여백 수정을 승인받은 카드는 `cardSpacing: "compact"`와 다음 명령을 사용한다. 기본 렌더러를 재사용하면서 설명 마지막 줄과 하단 라벨 사이의 공백을 약 절반으로 줄인다. 카드·라벨·하단 메시지·프레임을 함께 줄이며 텍스트와 아이콘은 원래 크기를 유지한다. 같은 행의 라벨 높이는 동일하게 유지한다.
+
+```sh
+node scripts/generate-facility-compact-infographic.mjs docs/standards/facility-infographic-templates/compact-example-3.json /tmp/facility-compact.svg
+node scripts/check-facility-card-spacing.mjs
+```
+
+가로는 1440px, 높이는 공백 축소량에 따라 달라지므로 SVG·WebP·HTML 치수를 함께 갱신한다. 대표 이미지와 이전 승인본은 4:3을 유지하며 아래의 기존 샘플은 이전 제작 이력을 재현한다. 4카드 2×2 행은 이미 짧으므로 그대로 유지한다. 정본 가이드 §5.13.9 참조.
+
+## 기존 4:3 프로필
+
 카드 1~4개의 공통 제작 템플릿이다. `example-N.json`의 내용만 교체해 다음 명령으로 SVG를 생성한다.
 
 ```sh

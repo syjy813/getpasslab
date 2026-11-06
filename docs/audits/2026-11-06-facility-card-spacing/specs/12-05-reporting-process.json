@@ -1,0 +1,40 @@
+{
+  "number": "12",
+  "file": "05-reporting-process.webp",
+  "original": "05-reporting-process.webp",
+  "part": 1,
+  "total": 2,
+  "title": "경력신고부터 수첩 발급 1/2",
+  "subtitle": "제출 전 자격·업무·직인·증빙을 함께 확인",
+  "cards": [
+    {
+      "title": "자격·경력 확인",
+      "icon": "qualification",
+      "summary": "종목·취득일·근무기간",
+      "details": [],
+      "action": "실제 업무 구분"
+    },
+    {
+      "title": "경력확인서",
+      "icon": "stamp",
+      "summary": "협회 지정 양식·날인",
+      "details": [],
+      "action": "직인·간인 준비"
+    },
+    {
+      "title": "근무·회사 증빙",
+      "icon": "folder",
+      "summary": "보험·연금·회사 자료",
+      "details": [],
+      "action": "해당 요건 확인"
+    }
+  ],
+  "takeaway": "최초·변경·재발급 절차 구분 | 선임신고·교육 별도",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

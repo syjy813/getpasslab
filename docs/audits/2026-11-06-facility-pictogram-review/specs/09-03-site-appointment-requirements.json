@@ -1,0 +1,38 @@
+{
+  "number": "09",
+  "file": "03-site-appointment-requirements.webp",
+  "original": "03-site-appointment-requirements.webp",
+  "part": 1,
+  "total": 2,
+  "title": "사업소 추가 선임요건 1/2",
+  "subtitle": "캠코FMC | 2026년 8월 현장직 2차 사례",
+  "cards": [
+    {
+      "title": "수원법원종합청사",
+      "icon": "fire",
+      "summary": "시설 5등급 과장",
+      "details": [
+        "소방안전관리자 1급",
+        "법정선임 가능자"
+      ],
+      "action": "추가 필수조건"
+    },
+    {
+      "title": "캠코서울사옥",
+      "icon": "gas",
+      "summary": "시설 4등급 대리",
+      "details": [
+        "특정가스사용시설",
+        "안전관리자 선임 가능"
+      ],
+      "action": "추가 필수조건"
+    }
+  ],
+  "takeaway": "공고의 채용요건과 실제 법적 선임 가능 여부를 대조",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

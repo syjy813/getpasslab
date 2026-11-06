@@ -1,0 +1,2376 @@
+{
+  "centering": [
+    {
+      "publicPath": "/images/facility-drafts/13/02-identify-boiler.webp",
+      "label": "검사대상 여부",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/02-identify-boiler.webp",
+      "label": "기기 종류",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/02-identify-boiler.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/02-identify-boiler-part-2.webp",
+      "label": "용량·압력",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/02-identify-boiler-part-2.webp",
+      "label": "사용 연료",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/02-identify-boiler-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/03-capacity-grade-ranges.webp",
+      "label": "10t/h 이하",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/03-capacity-grade-ranges.webp",
+      "label": "10 초과~30 이하",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/03-capacity-grade-ranges.webp",
+      "label": "30t/h 초과",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/03-capacity-grade-ranges.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions.webp",
+      "label": "소형 증기보일러",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions.webp",
+      "label": "온수·열매체",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions.webp",
+      "label": "footer",
+      "upper": 26,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions-part-2.webp",
+      "label": "가스연료 경로 1",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions-part-2.webp",
+      "label": "가스연료 경로 2",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/04-small-and-gas-exceptions-part-2.webp",
+      "label": "footer",
+      "upper": 26,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/05-appointment-checklist.webp",
+      "label": "검사대상기기",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/05-appointment-checklist.webp",
+      "label": "종류·용량",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/05-appointment-checklist.webp",
+      "label": "가스연료",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/05-appointment-checklist.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/05-appointment-checklist-part-2.webp",
+      "label": "교육·추가자격",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/05-appointment-checklist-part-2.webp",
+      "label": "관리구역·대수",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/05-appointment-checklist-part-2.webp",
+      "label": "선임신고",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/13/05-appointment-checklist-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/02-three-employment-structures.webp",
+      "label": "직영",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/02-three-employment-structures.webp",
+      "label": "자회사",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/02-three-employment-structures.webp",
+      "label": "용역",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/02-three-employment-structures.webp",
+      "label": "footer",
+      "upper": 26,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/03-contract-change-check.webp",
+      "label": "현장 계약",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/03-contract-change-check.webp",
+      "label": "고용승계",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/03-contract-change-check.webp",
+      "label": "변경 후 조건",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/03-contract-change-check.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/04-offer-comparison.webp",
+      "label": "기본급·수당",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/04-offer-comparison.webp",
+      "label": "고용기간",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/04-offer-comparison.webp",
+      "label": "근무지·규정",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/04-offer-comparison.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/05-six-point-checklist.webp",
+      "label": "고용주",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/05-six-point-checklist.webp",
+      "label": "고용기간",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/05-six-point-checklist.webp",
+      "label": "현장 이동",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/05-six-point-checklist.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/05-six-point-checklist-part-2.webp",
+      "label": "실제 업무",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/05-six-point-checklist-part-2.webp",
+      "label": "급여",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/05-six-point-checklist-part-2.webp",
+      "label": "경력증빙",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/03/05-six-point-checklist-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/02-actual-work-scope.webp",
+      "label": "직접 점검·운전",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/02-actual-work-scope.webp",
+      "label": "감시·작업 관리",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/02-actual-work-scope.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/03-career-records.webp",
+      "label": "근무기간",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/03-career-records.webp",
+      "label": "담당업무",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/03-career-records.webp",
+      "label": "증빙서류",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/03-career-records.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/04-interview-five-questions.webp",
+      "label": "실제 업무",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/04-interview-five-questions.webp",
+      "label": "급여·근무표",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/04-interview-five-questions.webp",
+      "label": "신입 교육",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/04-interview-five-questions.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/04-interview-five-questions-part-2.webp",
+      "label": "선임 책임",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/04-interview-five-questions-part-2.webp",
+      "label": "경력증빙",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/02/04-interview-five-questions-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/02-site-appointment-conditions-v2.webp",
+      "label": "동용인지사",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/02-site-appointment-conditions-v2.webp",
+      "label": "이천지사",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/02-site-appointment-conditions-v2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/03-required-versus-preferred-v2.webp",
+      "label": "필수조건",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/03-required-versus-preferred-v2.webp",
+      "label": "우대사항",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/03-required-versus-preferred-v2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/04-pay-and-shifts.webp",
+      "label": "시설관리 · 일근",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/04-pay-and-shifts.webp",
+      "label": "시설관리 · 교대",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/04-pay-and-shifts.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/04-pay-and-shifts-part-2.webp",
+      "label": "유지관리자 초급",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/04-pay-and-shifts-part-2.webp",
+      "label": "유지관리자 고급",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/04-pay-and-shifts-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/05-recruitment-checklist.webp",
+      "label": "채용 회차",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/05-recruitment-checklist.webp",
+      "label": "모집 사업소",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/05-recruitment-checklist.webp",
+      "label": "필수·우대",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/05-recruitment-checklist.webp",
+      "label": "footer",
+      "upper": 26,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/05-recruitment-checklist-part-2.webp",
+      "label": "법정선임",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/05-recruitment-checklist-part-2.webp",
+      "label": "근무·급여",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/05-recruitment-checklist-part-2.webp",
+      "label": "인턴 전환",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/06/05-recruitment-checklist-part-2.webp",
+      "label": "footer",
+      "upper": 26,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/02-grade-and-experience.webp",
+      "label": "2등급 · 기사",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/02-grade-and-experience.webp",
+      "label": "3등급 · 주임",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/02-grade-and-experience.webp",
+      "label": "footer",
+      "upper": 26,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/02-grade-and-experience-part-2.webp",
+      "label": "4등급 · 대리",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/02-grade-and-experience-part-2.webp",
+      "label": "5등급 · 과장",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/02-grade-and-experience-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements.webp",
+      "label": "수원법원종합청사",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements.webp",
+      "label": "캠코서울사옥",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements-part-2.webp",
+      "label": "글로벌지식협력단지",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements-part-2.webp",
+      "label": "태안정책연수원",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/03-site-appointment-requirements-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts.webp",
+      "label": "수원법원종합청사",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts.webp",
+      "label": "캠코서울사옥",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts-part-2.webp",
+      "label": "태안정책연수원",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts-part-2.webp",
+      "label": "캠코양재타워",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/04-site-pay-and-shifts-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/05-application-checklist.webp",
+      "label": "공고 회차",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/05-application-checklist.webp",
+      "label": "실제 사업소",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/05-application-checklist.webp",
+      "label": "직위·등급",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/05-application-checklist.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/05-application-checklist-part-2.webp",
+      "label": "자격·경력",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/05-application-checklist-part-2.webp",
+      "label": "법정선임",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/05-application-checklist-part-2.webp",
+      "label": "급여·근무표",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/09/05-application-checklist-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/02-facility-versus-track.webp",
+      "label": "시설 · 토목",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/02-facility-versus-track.webp",
+      "label": "시설 · 토목 외",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/02-facility-versus-track.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/03-applicant-numbers.webp",
+      "label": "모집인원",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/03-applicant-numbers.webp",
+      "label": "지원인원",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/03-applicant-numbers.webp",
+      "label": "단순 경쟁률",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/03-applicant-numbers.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/04-retirement-and-probation-v2.webp",
+      "label": "시설 · 토목",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/04-retirement-and-probation-v2.webp",
+      "label": "시설 · 토목 외",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/04-retirement-and-probation-v2.webp",
+      "label": "12주 시용",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/04-retirement-and-probation-v2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/05-application-checklist.webp",
+      "label": "모집 회차",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/05-application-checklist.webp",
+      "label": "세부 직무",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/05-application-checklist.webp",
+      "label": "사업소·근무지",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/05-application-checklist.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/05-application-checklist-part-2.webp",
+      "label": "자격·경력",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/05-application-checklist-part-2.webp",
+      "label": "전형·시용",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/05-application-checklist-part-2.webp",
+      "label": "급여·정년",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/08/05-application-checklist-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/02-reporting-documents.webp",
+      "label": "경력신고서",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/02-reporting-documents.webp",
+      "label": "경력확인서",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/02-reporting-documents.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/02-reporting-documents-part-2.webp",
+      "label": "근무사실 증빙",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/02-reporting-documents-part-2.webp",
+      "label": "회사별 증빙",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/02-reporting-documents-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/03-employer-and-stamps.webp",
+      "label": "발주자 소속",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/03-employer-and-stamps.webp",
+      "label": "위탁업체 소속",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/03-employer-and-stamps.webp",
+      "label": "위탁업체 소속",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/03-employer-and-stamps.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/04-recognized-experience.webp",
+      "label": "자격 취득 후",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/04-recognized-experience.webp",
+      "label": "자격 취득 후",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/04-recognized-experience.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/04-recognized-experience-part-2.webp",
+      "label": "자격 취득 전",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/04-recognized-experience-part-2.webp",
+      "label": "자격 취득 전",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/04-recognized-experience-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/05-reporting-process.webp",
+      "label": "자격·경력 확인",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/05-reporting-process.webp",
+      "label": "경력확인서",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/05-reporting-process.webp",
+      "label": "근무·회사 증빙",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/05-reporting-process.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/05-reporting-process-part-2.webp",
+      "label": "최초 경력신고",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/05-reporting-process-part-2.webp",
+      "label": "심사·등급 확인",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/05-reporting-process-part-2.webp",
+      "label": "수첩 발급",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/12/05-reporting-process-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix.webp",
+      "label": "초급",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix.webp",
+      "label": "중급",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix-part-2.webp",
+      "label": "고급",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix-part-2.webp",
+      "label": "특급",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/02-qualification-grade-matrix-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/04-recognized-experience.webp",
+      "label": "자격 취득 후",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/04-recognized-experience.webp",
+      "label": "자격 취득 후",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/04-recognized-experience.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/04-recognized-experience-part-2.webp",
+      "label": "자격 취득 전",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/04-recognized-experience-part-2.webp",
+      "label": "자격 취득 전",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/04-recognized-experience-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/03-building-grade-ranges.webp",
+      "label": "초급 이상",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/03-building-grade-ranges.webp",
+      "label": "중급 이상",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/03-building-grade-ranges.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/03-building-grade-ranges-part-2.webp",
+      "label": "고급 이상",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/03-building-grade-ranges-part-2.webp",
+      "label": "특급 이상",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/03-building-grade-ranges-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/05-application-checklist.webp",
+      "label": "인정 자격",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/05-application-checklist.webp",
+      "label": "경력 구분",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/05-application-checklist.webp",
+      "label": "증빙 준비",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/05-application-checklist.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/05-application-checklist-part-2.webp",
+      "label": "경력 신고",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/05-application-checklist-part-2.webp",
+      "label": "심사 결과",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/11/05-application-checklist-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/02-workplace-types.webp",
+      "label": "우체국",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/02-workplace-types.webp",
+      "label": "우편집중국",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/02-workplace-types.webp",
+      "label": "우편물류센터",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/02-workplace-types.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/03-required-conditions.webp",
+      "label": "관련 자격",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/03-required-conditions.webp",
+      "label": "법정선임",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/03-required-conditions.webp",
+      "label": "관련 경력",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/03-required-conditions.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/04-round-comparison-v2.webp",
+      "label": "11차 공고",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/04-round-comparison-v2.webp",
+      "label": "12차 공고",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/04-round-comparison-v2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/05-application-checklist.webp",
+      "label": "근무관서",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/05-application-checklist.webp",
+      "label": "필수자격",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/05-application-checklist.webp",
+      "label": "법정선임",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/05-application-checklist.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/05-application-checklist-part-2.webp",
+      "label": "관련경력",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/05-application-checklist-part-2.webp",
+      "label": "근무표",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/05-application-checklist-part-2.webp",
+      "label": "급여·정년",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/07/05-application-checklist-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/02-shift-types.webp",
+      "label": "일근·주간",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/02-shift-types.webp",
+      "label": "격일",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/02-shift-types.webp",
+      "label": "교대",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/02-shift-types.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/03-working-waiting-rest.webp",
+      "label": "업무 수행",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/03-working-waiting-rest.webp",
+      "label": "호출 대기",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/03-working-waiting-rest.webp",
+      "label": "자유로운 휴게",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/03-working-waiting-rest.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/04-salary-comparison.webp",
+      "label": "A사 · 주간",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/04-salary-comparison.webp",
+      "label": "B사 · 교대",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/04-salary-comparison.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/05-job-posting-checklist.webp",
+      "label": "출퇴근 시각",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/05-job-posting-checklist.webp",
+      "label": "조별 근무표",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/05-job-posting-checklist.webp",
+      "label": "휴게·대기",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/05-job-posting-checklist.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/05-job-posting-checklist-part-2.webp",
+      "label": "임금 구성",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/05-job-posting-checklist-part-2.webp",
+      "label": "감시·단속 승인",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/05-job-posting-checklist-part-2.webp",
+      "label": "야간 대응",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/04/05-job-posting-checklist-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types.webp",
+      "label": "보일러",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types.webp",
+      "label": "냉동·고압가스",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types.webp",
+      "label": "도시가스·LPG",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types-part-2.webp",
+      "label": "소방",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types-part-2.webp",
+      "label": "기계설비",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types-part-2.webp",
+      "label": "전기",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types-part-3.webp",
+      "label": "위험물",
+      "upper": 19,
+      "lower": 19
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/02-seven-appointment-types-part-3.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/03-boiler-qualification-ranges.webp",
+      "label": "10t/h 이하",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/03-boiler-qualification-ranges.webp",
+      "label": "10 초과~30 이하",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/03-boiler-qualification-ranges.webp",
+      "label": "30t/h 초과",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/03-boiler-qualification-ranges.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/04-gas-laws-separation.webp",
+      "label": "도시가스",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/04-gas-laws-separation.webp",
+      "label": "고압가스·냉동",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/04-gas-laws-separation.webp",
+      "label": "LPG",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/04-gas-laws-separation.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/05-application-checklist.webp",
+      "label": "설비 확인",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/05-application-checklist.webp",
+      "label": "적용 법령",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/05-application-checklist.webp",
+      "label": "규모·대상",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/05-application-checklist.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/05-application-checklist-part-2.webp",
+      "label": "내 자격",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/05-application-checklist-part-2.webp",
+      "label": "여러 조건",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/05-application-checklist-part-2.webp",
+      "label": "선임·겸직",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/10/05-application-checklist-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/02-facility-job-types.webp",
+      "label": "기계",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/02-facility-job-types.webp",
+      "label": "전기",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/02-facility-job-types.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/02-facility-job-types-part-2.webp",
+      "label": "소방·방재",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/02-facility-job-types-part-2.webp",
+      "label": "영선",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/02-facility-job-types-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/03-facility-workplaces.webp",
+      "label": "오피스",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/03-facility-workplaces.webp",
+      "label": "아파트",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/03-facility-workplaces.webp",
+      "label": "병원",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/03-facility-workplaces.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/03-facility-workplaces-part-2.webp",
+      "label": "물류센터",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/03-facility-workplaces-part-2.webp",
+      "label": "쇼핑몰",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/03-facility-workplaces-part-2.webp",
+      "label": "footer",
+      "upper": 27,
+      "lower": 27
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/05-facility-job-checklist.webp",
+      "label": "건물",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/05-facility-job-checklist.webp",
+      "label": "업무",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/05-facility-job-checklist.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/05-facility-job-checklist-part-2.webp",
+      "label": "근무형태",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/05-facility-job-checklist-part-2.webp",
+      "label": "자격·경력",
+      "upper": 19,
+      "lower": 18
+    },
+    {
+      "publicPath": "/images/facility-drafts/01/05-facility-job-checklist-part-2.webp",
+      "label": "footer",
+      "upper": 30,
+      "lower": 29
+    }
+  ],
+  "icons": [
+    {
+      "name": "mechanical",
+      "size": 24,
+      "pixels": 230
+    },
+    {
+      "name": "mechanical",
+      "size": 26,
+      "pixels": 260
+    },
+    {
+      "name": "mechanical",
+      "size": 30,
+      "pixels": 365
+    },
+    {
+      "name": "mechanical",
+      "size": 31,
+      "pixels": 397
+    },
+    {
+      "name": "mechanical",
+      "size": 104,
+      "pixels": 4344
+    },
+    {
+      "name": "mechanical",
+      "size": 140,
+      "pixels": 7560
+    },
+    {
+      "name": "electrical",
+      "size": 24,
+      "pixels": 344
+    },
+    {
+      "name": "electrical",
+      "size": 26,
+      "pixels": 380
+    },
+    {
+      "name": "electrical",
+      "size": 30,
+      "pixels": 500
+    },
+    {
+      "name": "electrical",
+      "size": 31,
+      "pixels": 513
+    },
+    {
+      "name": "electrical",
+      "size": 104,
+      "pixels": 6128
+    },
+    {
+      "name": "electrical",
+      "size": 140,
+      "pixels": 10980
+    },
+    {
+      "name": "fire",
+      "size": 24,
+      "pixels": 216
+    },
+    {
+      "name": "fire",
+      "size": 26,
+      "pixels": 228
+    },
+    {
+      "name": "fire",
+      "size": 30,
+      "pixels": 319
+    },
+    {
+      "name": "fire",
+      "size": 31,
+      "pixels": 337
+    },
+    {
+      "name": "fire",
+      "size": 104,
+      "pixels": 3782
+    },
+    {
+      "name": "fire",
+      "size": 140,
+      "pixels": 6630
+    },
+    {
+      "name": "repair",
+      "size": 24,
+      "pixels": 192
+    },
+    {
+      "name": "repair",
+      "size": 26,
+      "pixels": 214
+    },
+    {
+      "name": "repair",
+      "size": 30,
+      "pixels": 301
+    },
+    {
+      "name": "repair",
+      "size": 31,
+      "pixels": 305
+    },
+    {
+      "name": "repair",
+      "size": 104,
+      "pixels": 3492
+    },
+    {
+      "name": "repair",
+      "size": 140,
+      "pixels": 6027
+    },
+    {
+      "name": "office",
+      "size": 24,
+      "pixels": 318
+    },
+    {
+      "name": "office",
+      "size": 26,
+      "pixels": 369
+    },
+    {
+      "name": "office",
+      "size": 30,
+      "pixels": 475
+    },
+    {
+      "name": "office",
+      "size": 31,
+      "pixels": 500
+    },
+    {
+      "name": "office",
+      "size": 104,
+      "pixels": 5752
+    },
+    {
+      "name": "office",
+      "size": 140,
+      "pixels": 10191
+    },
+    {
+      "name": "apartment",
+      "size": 24,
+      "pixels": 365
+    },
+    {
+      "name": "apartment",
+      "size": 26,
+      "pixels": 406
+    },
+    {
+      "name": "apartment",
+      "size": 30,
+      "pixels": 559
+    },
+    {
+      "name": "apartment",
+      "size": 31,
+      "pixels": 582
+    },
+    {
+      "name": "apartment",
+      "size": 104,
+      "pixels": 6782
+    },
+    {
+      "name": "apartment",
+      "size": 140,
+      "pixels": 11877
+    },
+    {
+      "name": "hospital",
+      "size": 24,
+      "pixels": 374
+    },
+    {
+      "name": "hospital",
+      "size": 26,
+      "pixels": 434
+    },
+    {
+      "name": "hospital",
+      "size": 30,
+      "pixels": 540
+    },
+    {
+      "name": "hospital",
+      "size": 31,
+      "pixels": 587
+    },
+    {
+      "name": "hospital",
+      "size": 104,
+      "pixels": 6740
+    },
+    {
+      "name": "hospital",
+      "size": 140,
+      "pixels": 11932
+    },
+    {
+      "name": "warehouse",
+      "size": 24,
+      "pixels": 375
+    },
+    {
+      "name": "warehouse",
+      "size": 26,
+      "pixels": 448
+    },
+    {
+      "name": "warehouse",
+      "size": 30,
+      "pixels": 605
+    },
+    {
+      "name": "warehouse",
+      "size": 31,
+      "pixels": 619
+    },
+    {
+      "name": "warehouse",
+      "size": 104,
+      "pixels": 7102
+    },
+    {
+      "name": "warehouse",
+      "size": 140,
+      "pixels": 12750
+    },
+    {
+      "name": "shopping",
+      "size": 24,
+      "pixels": 338
+    },
+    {
+      "name": "shopping",
+      "size": 26,
+      "pixels": 406
+    },
+    {
+      "name": "shopping",
+      "size": 30,
+      "pixels": 564
+    },
+    {
+      "name": "shopping",
+      "size": 31,
+      "pixels": 591
+    },
+    {
+      "name": "shopping",
+      "size": 104,
+      "pixels": 6568
+    },
+    {
+      "name": "shopping",
+      "size": 140,
+      "pixels": 11784
+    },
+    {
+      "name": "clock",
+      "size": 24,
+      "pixels": 308
+    },
+    {
+      "name": "clock",
+      "size": 26,
+      "pixels": 360
+    },
+    {
+      "name": "clock",
+      "size": 30,
+      "pixels": 468
+    },
+    {
+      "name": "clock",
+      "size": 31,
+      "pixels": 505
+    },
+    {
+      "name": "clock",
+      "size": 104,
+      "pixels": 5690
+    },
+    {
+      "name": "clock",
+      "size": 140,
+      "pixels": 10283
+    },
+    {
+      "name": "day",
+      "size": 24,
+      "pixels": 148
+    },
+    {
+      "name": "day",
+      "size": 26,
+      "pixels": 164
+    },
+    {
+      "name": "day",
+      "size": 30,
+      "pixels": 224
+    },
+    {
+      "name": "day",
+      "size": 31,
+      "pixels": 245
+    },
+    {
+      "name": "day",
+      "size": 104,
+      "pixels": 2684
+    },
+    {
+      "name": "day",
+      "size": 140,
+      "pixels": 4704
+    },
+    {
+      "name": "night",
+      "size": 24,
+      "pixels": 126
+    },
+    {
+      "name": "night",
+      "size": 26,
+      "pixels": 147
+    },
+    {
+      "name": "night",
+      "size": 30,
+      "pixels": 195
+    },
+    {
+      "name": "night",
+      "size": 31,
+      "pixels": 203
+    },
+    {
+      "name": "night",
+      "size": 104,
+      "pixels": 2303
+    },
+    {
+      "name": "night",
+      "size": 140,
+      "pixels": 4092
+    },
+    {
+      "name": "monitor",
+      "size": 24,
+      "pixels": 368
+    },
+    {
+      "name": "monitor",
+      "size": 26,
+      "pixels": 432
+    },
+    {
+      "name": "monitor",
+      "size": 30,
+      "pixels": 560
+    },
+    {
+      "name": "monitor",
+      "size": 31,
+      "pixels": 582
+    },
+    {
+      "name": "monitor",
+      "size": 104,
+      "pixels": 6678
+    },
+    {
+      "name": "monitor",
+      "size": 140,
+      "pixels": 11848
+    },
+    {
+      "name": "training",
+      "size": 24,
+      "pixels": 358
+    },
+    {
+      "name": "training",
+      "size": 26,
+      "pixels": 392
+    },
+    {
+      "name": "training",
+      "size": 30,
+      "pixels": 530
+    },
+    {
+      "name": "training",
+      "size": 31,
+      "pixels": 569
+    },
+    {
+      "name": "training",
+      "size": 104,
+      "pixels": 6476
+    },
+    {
+      "name": "training",
+      "size": 140,
+      "pixels": 11532
+    },
+    {
+      "name": "career",
+      "size": 24,
+      "pixels": 358
+    },
+    {
+      "name": "career",
+      "size": 26,
+      "pixels": 432
+    },
+    {
+      "name": "career",
+      "size": 30,
+      "pixels": 550
+    },
+    {
+      "name": "career",
+      "size": 31,
+      "pixels": 596
+    },
+    {
+      "name": "career",
+      "size": 104,
+      "pixels": 6692
+    },
+    {
+      "name": "career",
+      "size": 140,
+      "pixels": 11962
+    },
+    {
+      "name": "folder",
+      "size": 24,
+      "pixels": 382
+    },
+    {
+      "name": "folder",
+      "size": 26,
+      "pixels": 462
+    },
+    {
+      "name": "folder",
+      "size": 30,
+      "pixels": 595
+    },
+    {
+      "name": "folder",
+      "size": 31,
+      "pixels": 603
+    },
+    {
+      "name": "folder",
+      "size": 104,
+      "pixels": 7121
+    },
+    {
+      "name": "folder",
+      "size": 140,
+      "pixels": 12679
+    },
+    {
+      "name": "stamp",
+      "size": 24,
+      "pixels": 228
+    },
+    {
+      "name": "stamp",
+      "size": 26,
+      "pixels": 268
+    },
+    {
+      "name": "stamp",
+      "size": 30,
+      "pixels": 352
+    },
+    {
+      "name": "stamp",
+      "size": 31,
+      "pixels": 368
+    },
+    {
+      "name": "stamp",
+      "size": 104,
+      "pixels": 4166
+    },
+    {
+      "name": "stamp",
+      "size": 140,
+      "pixels": 7264
+    },
+    {
+      "name": "rail",
+      "size": 24,
+      "pixels": 176
+    },
+    {
+      "name": "rail",
+      "size": 26,
+      "pixels": 236
+    },
+    {
+      "name": "rail",
+      "size": 30,
+      "pixels": 291
+    },
+    {
+      "name": "rail",
+      "size": 31,
+      "pixels": 312
+    },
+    {
+      "name": "rail",
+      "size": 104,
+      "pixels": 3280
+    },
+    {
+      "name": "rail",
+      "size": 140,
+      "pixels": 5561
+    },
+    {
+      "name": "ratio",
+      "size": 24,
+      "pixels": 56
+    },
+    {
+      "name": "ratio",
+      "size": 26,
+      "pixels": 52
+    },
+    {
+      "name": "ratio",
+      "size": 30,
+      "pixels": 68
+    },
+    {
+      "name": "ratio",
+      "size": 31,
+      "pixels": 47
+    },
+    {
+      "name": "ratio",
+      "size": 104,
+      "pixels": 744
+    },
+    {
+      "name": "ratio",
+      "size": 140,
+      "pixels": 1327
+    },
+    {
+      "name": "boiler",
+      "size": 24,
+      "pixels": 295
+    },
+    {
+      "name": "boiler",
+      "size": 26,
+      "pixels": 351
+    },
+    {
+      "name": "boiler",
+      "size": 30,
+      "pixels": 470
+    },
+    {
+      "name": "boiler",
+      "size": 31,
+      "pixels": 488
+    },
+    {
+      "name": "boiler",
+      "size": 104,
+      "pixels": 5632
+    },
+    {
+      "name": "boiler",
+      "size": 140,
+      "pixels": 9999
+    },
+    {
+      "name": "gas",
+      "size": 24,
+      "pixels": 222
+    },
+    {
+      "name": "gas",
+      "size": 26,
+      "pixels": 254
+    },
+    {
+      "name": "gas",
+      "size": 30,
+      "pixels": 348
+    },
+    {
+      "name": "gas",
+      "size": 31,
+      "pixels": 361
+    },
+    {
+      "name": "gas",
+      "size": 104,
+      "pixels": 4170
+    },
+    {
+      "name": "gas",
+      "size": 140,
+      "pixels": 7306
+    },
+    {
+      "name": "cooling",
+      "size": 24,
+      "pixels": 144
+    },
+    {
+      "name": "cooling",
+      "size": 26,
+      "pixels": 156
+    },
+    {
+      "name": "cooling",
+      "size": 30,
+      "pixels": 220
+    },
+    {
+      "name": "cooling",
+      "size": 31,
+      "pixels": 227
+    },
+    {
+      "name": "cooling",
+      "size": 104,
+      "pixels": 2388
+    },
+    {
+      "name": "cooling",
+      "size": 140,
+      "pixels": 4118
+    },
+    {
+      "name": "law",
+      "size": 24,
+      "pixels": 331
+    },
+    {
+      "name": "law",
+      "size": 26,
+      "pixels": 384
+    },
+    {
+      "name": "law",
+      "size": 30,
+      "pixels": 491
+    },
+    {
+      "name": "law",
+      "size": 31,
+      "pixels": 536
+    },
+    {
+      "name": "law",
+      "size": 104,
+      "pixels": 6112
+    },
+    {
+      "name": "law",
+      "size": 140,
+      "pixels": 10915
+    },
+    {
+      "name": "gauge",
+      "size": 24,
+      "pixels": 234
+    },
+    {
+      "name": "gauge",
+      "size": 26,
+      "pixels": 275
+    },
+    {
+      "name": "gauge",
+      "size": 30,
+      "pixels": 352
+    },
+    {
+      "name": "gauge",
+      "size": 31,
+      "pixels": 381
+    },
+    {
+      "name": "gauge",
+      "size": 104,
+      "pixels": 4288
+    },
+    {
+      "name": "gauge",
+      "size": 140,
+      "pixels": 7668
+    },
+    {
+      "name": "submission",
+      "size": 24,
+      "pixels": 314
+    },
+    {
+      "name": "submission",
+      "size": 26,
+      "pixels": 384
+    },
+    {
+      "name": "submission",
+      "size": 30,
+      "pixels": 509
+    },
+    {
+      "name": "submission",
+      "size": 31,
+      "pixels": 536
+    },
+    {
+      "name": "submission",
+      "size": 104,
+      "pixels": 6101
+    },
+    {
+      "name": "submission",
+      "size": 140,
+      "pixels": 10884
+    },
+    {
+      "name": "hazardous",
+      "size": 24,
+      "pixels": 276
+    },
+    {
+      "name": "hazardous",
+      "size": 26,
+      "pixels": 344
+    },
+    {
+      "name": "hazardous",
+      "size": 30,
+      "pixels": 442
+    },
+    {
+      "name": "hazardous",
+      "size": 31,
+      "pixels": 481
+    },
+    {
+      "name": "hazardous",
+      "size": 104,
+      "pixels": 5308
+    },
+    {
+      "name": "hazardous",
+      "size": 140,
+      "pixels": 9384
+    },
+    {
+      "name": "route",
+      "size": 24,
+      "pixels": 133
+    },
+    {
+      "name": "route",
+      "size": 26,
+      "pixels": 129
+    },
+    {
+      "name": "route",
+      "size": 30,
+      "pixels": 184
+    },
+    {
+      "name": "route",
+      "size": 31,
+      "pixels": 194
+    },
+    {
+      "name": "route",
+      "size": 104,
+      "pixels": 2156
+    },
+    {
+      "name": "route",
+      "size": 140,
+      "pixels": 3772
+    },
+    {
+      "name": "support",
+      "size": 24,
+      "pixels": 219
+    },
+    {
+      "name": "support",
+      "size": 26,
+      "pixels": 263
+    },
+    {
+      "name": "support",
+      "size": 30,
+      "pixels": 346
+    },
+    {
+      "name": "support",
+      "size": 31,
+      "pixels": 363
+    },
+    {
+      "name": "support",
+      "size": 104,
+      "pixels": 4068
+    },
+    {
+      "name": "support",
+      "size": 140,
+      "pixels": 7317
+    }
+  ]
+}

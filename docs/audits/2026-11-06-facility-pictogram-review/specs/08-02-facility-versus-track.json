@@ -1,0 +1,38 @@
+{
+  "number": "08",
+  "file": "02-facility-versus-track.webp",
+  "original": "02-facility-versus-track.webp",
+  "part": 1,
+  "total": 1,
+  "title": "같은 시설직, 다른 업무",
+  "subtitle": "분야 이름과 세부 직무·담당 구역을 함께 확인",
+  "cards": [
+    {
+      "title": "시설 · 토목",
+      "icon": "rail",
+      "summary": "선로·철도 토목 시설물",
+      "details": [
+        "야외 점검 비중 확인",
+        "실제 담당 구역 확인"
+      ],
+      "action": "직무기술서 대조"
+    },
+    {
+      "title": "시설 · 토목 외",
+      "icon": "worksite",
+      "summary": "건축·기계·통신 등",
+      "details": [
+        "공고에 지정된 업무",
+        "기계설비만 전담 아님"
+      ],
+      "action": "담당 설비 확인"
+    }
+  ],
+  "takeaway": "실제 배정·업무범위는 해당 회차의 별첨이 우선",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    3
+  ]
+}

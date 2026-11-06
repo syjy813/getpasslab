@@ -1,0 +1,36 @@
+{
+  "number": "09",
+  "file": "02-grade-and-experience-part-2.webp",
+  "original": "02-grade-and-experience.webp",
+  "part": 2,
+  "total": 2,
+  "title": "직위명과 자격증 구분 2/2",
+  "subtitle": "캠코FMC | 2026년 8월 현장직 2차 기본요건",
+  "cards": [
+    {
+      "title": "4등급 · 대리",
+      "icon": "qualification",
+      "summary": "관련 실무경력 5년 이상",
+      "details": [
+        "및 관련 기능사 이상"
+      ],
+      "action": "경력·자격 모두"
+    },
+    {
+      "title": "5등급 · 과장",
+      "icon": "qualification",
+      "summary": "관련 실무경력 7년 이상",
+      "details": [
+        "및 관련 산업기사 이상"
+      ],
+      "action": "경력·자격 모두"
+    }
+  ],
+  "takeaway": "해당 회차 기본요건 | 현장별 특수요건은 별도",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

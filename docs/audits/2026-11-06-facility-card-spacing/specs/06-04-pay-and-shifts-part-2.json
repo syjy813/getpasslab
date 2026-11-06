@@ -1,0 +1,38 @@
+{
+  "number": "06",
+  "file": "04-pay-and-shifts-part-2.webp",
+  "original": "04-pay-and-shifts.webp",
+  "part": 2,
+  "total": 2,
+  "title": "한전FMS 월 급여 사례 2/2",
+  "subtitle": "2026년 공고 | 일반 시설관리와 별도 직위 구분",
+  "cards": [
+    {
+      "title": "유지관리자 초급",
+      "icon": "qualification",
+      "summary": "월 약 347만 원",
+      "details": [
+        "상반기 별도 직위",
+        "8시간 일근"
+      ],
+      "action": "일반 시설직과 구분"
+    },
+    {
+      "title": "유지관리자 고급",
+      "icon": "qualification",
+      "summary": "월 약 399만 원",
+      "details": [
+        "상반기 별도 직위",
+        "8시간 일근"
+      ],
+      "action": "일반 시설직과 구분"
+    }
+  ],
+  "takeaway": "당시 공고 수준 | 실수령액·확정 연봉과 구분",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

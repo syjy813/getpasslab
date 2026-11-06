@@ -1,0 +1,40 @@
+{
+  "number": "03",
+  "file": "05-six-point-checklist-part-2.webp",
+  "original": "05-six-point-checklist.webp",
+  "part": 2,
+  "total": 2,
+  "title": "채용공고 여섯 가지 2/2",
+  "subtitle": "읽는 순서를 정하고 빠진 조건을 표시",
+  "cards": [
+    {
+      "title": "실제 업무",
+      "icon": "mechanical",
+      "summary": "운전·점검·감시·관리",
+      "details": [],
+      "action": "담당 범위 확인"
+    },
+    {
+      "title": "급여",
+      "icon": "pay-components",
+      "summary": "기본급과 각종 수당",
+      "details": [],
+      "action": "지급 구성 확인"
+    },
+    {
+      "title": "경력증빙",
+      "icon": "career",
+      "summary": "설비·업무·기간의 증빙",
+      "details": [],
+      "action": "공식 서류 확인"
+    }
+  ],
+  "takeaway": "실제 고용회사와 계약기간부터 공고에 표시",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

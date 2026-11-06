@@ -1,0 +1,40 @@
+{
+  "number": "09",
+  "file": "05-application-checklist-part-2.webp",
+  "original": "05-application-checklist.webp",
+  "part": 2,
+  "total": 2,
+  "title": "캠코FMC 지원 전 확인 2/2",
+  "subtitle": "회사 이름보다 지원할 모집표 한 칸을 정확히",
+  "cards": [
+    {
+      "title": "자격·경력",
+      "icon": "qualification",
+      "summary": "및·또는와 기준일",
+      "details": [],
+      "action": "모든 필수조건 대조"
+    },
+    {
+      "title": "법정선임",
+      "icon": "law",
+      "summary": "사업소별 추가 선임요건",
+      "details": [],
+      "action": "법적 자격 확인"
+    },
+    {
+      "title": "급여·근무표",
+      "icon": "pay-components",
+      "summary": "포함 수당·교대·휴게",
+      "details": [],
+      "action": "지급 조건 확인"
+    }
+  ],
+  "takeaway": "2026년 8월 종료 공고 | 향후 조건 보장 아님",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

@@ -29,7 +29,7 @@ certifications: []
 legalReview: true
 ---
 
-<figure><img src="/images/facility-drafts/11/01-maintainer-grades-hero.webp" alt="기계설비유지관리자 초급부터 특급까지 등급을 검토하는 시설관리 직원" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
+<figure><img src="/images/facility-drafts/11/01-maintainer-grades-hero.webp" alt="기계설비유지관리자 등급 총정리 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 *기계설비유지관리자 등급은 자격증의 이름 하나가 아니라 인정경력과 선임 대상까지 연결해서 봐야 한다.*
 
@@ -64,7 +64,9 @@ legalReview: true
 | **고급** | 7년 이상 | 10년 이상 | 이 표의 일반 경로 없음 |
 | **특급** | 10년 이상 | 13년 이상 | 이 표의 일반 경로 없음 |
 
-<figure><img src="/images/facility-drafts/11/02-qualification-grade-matrix.webp" alt="초급부터 특급까지 대표 자격·경력요건을 비교한 표" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/11/02-qualification-grade-matrix.webp" alt="책임등급의 대표 경력 1/2: 초급 관련 기사·기능장 경력요건 없음, 중급 관련 기사·기능장 4년 이상" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/11/02-qualification-grade-matrix-part-2.webp" alt="책임등급의 대표 경력 2/2: 고급 관련 기사·기능장 7년 이상, 특급 관련 기사·기능장 10년 이상" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *2026년 11월 5일 기준 「기계설비법 시행령」 별표 5의2의 대표적인 국가기술자격 경로만 요약했다. 관련 기술사는 별도 특급 경로가 있으며 건설기술인, 종합평가·등급조정, 기타 특례는 이 표에 포함하지 않았다. ‘경력요건 없음’도 실제 자격·서류 심사를 생략한다는 뜻은 아니다.*
 
@@ -110,7 +112,9 @@ legalReview: true
 | 자격 취득 전 첫 번째 유형에 해당하는 업무 | **70%** |
 | 자격 취득 전 두 번째 유형에 해당하는 업무 | **56%(80% × 70%)** |
 
-<figure><img src="/images/facility-drafts/11/04-recognized-experience.webp" alt="자격 취득 전후와 업무 종류에 따른 실무경력 인정률 비교" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/11/04-recognized-experience.webp" alt="근무경력과 인정경력 1/2: 자격 취득 후 유지관리·성능점검, 자격 취득 후 설계·시공·감리" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/11/04-recognized-experience-part-2.webp" alt="근무경력과 인정경력 2/2: 자격 취득 전 유지관리·성능점검, 자격 취득 전 설계·시공·감리" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 예를 들어 자격 취득 이후 5년 동안 인정되는 설계업무를 수행했다면, 위 대표 기준에서 환산경력은 약 4년이다. **5년을 일했지만 등급 산정에 적용되는 기간은 다를 수 있다는 뜻**이다.
 
@@ -143,7 +147,9 @@ legalReview: true
 | **3만㎡ 이상 \~ 6만㎡ 미만** | 고급 이상 | 1명 추가 |
 | **6만㎡ 이상** | 특급 이상 | 1명 추가 |
 
-<figure><img src="/images/facility-drafts/11/03-building-grade-ranges.webp" alt="일반 건축물 연면적 구간에 따른 책임관리자 요구등급" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/11/03-building-grade-ranges.webp" alt="건물 규모와 요구등급 1/2: 초급 이상 1만㎡ 이상~1만5천㎡ 미만, 중급 이상 1만5천㎡ 이상~3만㎡ 미만" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/11/03-building-grade-ranges-part-2.webp" alt="건물 규모와 요구등급 2/2: 고급 이상 3만㎡ 이상~6만㎡ 미만, 특급 이상 6만㎡ 이상" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *「기계설비법 시행규칙」 별표 1 및 협회 선임기준의 **일반 건축물** 구간 예시다. 공동주택은 세대수와 난방 방식 등을, 일부 시설은 별도 고시·특례를 확인해야 한다. 선임 대상·인원 판단은 해당 법령의 적용요건에 따르며 단순 면적표로 확정할 수 없다.*
 
@@ -173,7 +179,9 @@ legalReview: true
 4. **경력 신고:** 대한기계설비건설협회에 접수하고 보완 요청 대응
 5. **심사 결과 확인:** 인정경력·등급·수첩, 이후 선임신고·교육 의무 확인
 
-<figure><img src="/images/facility-drafts/11/05-application-checklist.webp" alt="자격과 경력 증빙부터 선임조건까지 확인하는 다섯 가지 항목" width="1448" height="1086" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/11/05-application-checklist.webp" alt="경력수첩 준비 다섯 단계 1/2: 인정 자격 종목명과 자격 취득일, 경력 구분 업무·기간·근무처 정리, 증빙 준비 지정 확인서·근무증명" width="1440" height="990" loading="lazy" decoding="async" /></figure>
+
+<figure><img src="/images/facility-drafts/11/05-application-checklist-part-2.webp" alt="경력수첩 준비 다섯 단계 2/2: 경력 신고 협회 접수·보완 대응, 심사 결과 인정경력·등급·수첩" width="1440" height="990" loading="lazy" decoding="async" /></figure>
 
 **일반 재직증명서만 제출하면 경력 심사가 끝나는 것은 아니다.** 특히 위탁관리 현장에서는 고용회사와 경력확인서에 날인하는 회사, 근무사실 증빙 간 관계를 확인해야 한다.
 

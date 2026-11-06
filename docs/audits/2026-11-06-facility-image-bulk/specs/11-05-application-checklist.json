@@ -1,0 +1,39 @@
+{
+  "number": "11",
+  "file": "05-application-checklist.webp",
+  "original": "05-application-checklist.webp",
+  "part": 1,
+  "total": 2,
+  "title": "경력수첩 준비 다섯 단계 1/2",
+  "subtitle": "등급 인정과 건물에 실제 선임되는 절차는 다르다",
+  "cards": [
+    {
+      "title": "인정 자격",
+      "icon": "qualification",
+      "summary": "종목명과 자격 취득일",
+      "details": [],
+      "action": "관련 자격 확인"
+    },
+    {
+      "title": "경력 구분",
+      "icon": "career",
+      "summary": "업무·기간·근무처 정리",
+      "details": [],
+      "action": "실제 수행업무 확인"
+    },
+    {
+      "title": "증빙 준비",
+      "icon": "folder",
+      "summary": "지정 확인서·근무증명",
+      "details": [],
+      "action": "공식 서식 확인"
+    }
+  ],
+  "takeaway": "자격증 보유나 근속기간만으로 등급이 확정되지 않음",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    3
+  ]
+}

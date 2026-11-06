@@ -1,0 +1,37 @@
+{
+  "number": "13",
+  "file": "04-small-and-gas-exceptions-part-2.webp",
+  "original": "04-small-and-gas-exceptions.webp",
+  "part": 2,
+  "total": 2,
+  "title": "기본 표 외의 추가조건 2/2",
+  "subtitle": "소형기기 인정교육 경로와 가스연료 조건을 구분",
+  "cards": [
+    {
+      "title": "가스연료 경로 1",
+      "icon": "gas",
+      "summary": "기본 표 자격 + 관련 교육",
+      "details": [
+        "두 경로 중 해당 자격 검토"
+      ],
+      "action": "별표 비고 확인"
+    },
+    {
+      "title": "가스연료 경로 2",
+      "icon": "gas",
+      "summary": "특정가스사용시설",
+      "details": [
+        "안전관리책임자 자격",
+        "두 경로 중 해당 자격 검토"
+      ],
+      "action": "별표 비고 확인"
+    }
+  ],
+  "takeaway": "두 규정 혼동 금지 | 실제 기기·연료·해당 교육 확인",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

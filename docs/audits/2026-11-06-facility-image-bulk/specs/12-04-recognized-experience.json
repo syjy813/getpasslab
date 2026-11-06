@@ -1,0 +1,35 @@
+{
+  "number": "12",
+  "file": "04-recognized-experience.webp",
+  "original": "04-recognized-experience.webp",
+  "part": 1,
+  "total": 2,
+  "title": "근속 5년과 인정경력 1/2",
+  "subtitle": "인정되는 업무와 증빙 조건을 충족한 경우의 대표 비율",
+  "cards": [
+    {
+      "title": "자격 취득 후",
+      "icon": "mechanical",
+      "summary": "유지관리·성능점검",
+      "details": [
+        "대표 인정률 100%"
+      ],
+      "action": "인정 업무 해당 시"
+    },
+    {
+      "title": "자격 취득 후",
+      "icon": "repair",
+      "summary": "설계·시공·감리",
+      "details": [
+        "대표 인정률 80%"
+      ],
+      "action": "인정 업무 해당 시"
+    }
+  ],
+  "takeaway": "모든 업무에 자동 적용 아님 | 최종 인정은 협회 심사",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

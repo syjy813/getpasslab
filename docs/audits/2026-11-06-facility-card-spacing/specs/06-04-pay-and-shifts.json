@@ -1,0 +1,36 @@
+{
+  "number": "06",
+  "file": "04-pay-and-shifts.webp",
+  "original": "04-pay-and-shifts.webp",
+  "part": 1,
+  "total": 2,
+  "title": "한전FMS 월 급여 사례 1/2",
+  "subtitle": "2026년 공고 | 일반 시설관리와 별도 직위 구분",
+  "cards": [
+    {
+      "title": "시설관리 · 일근",
+      "icon": "day",
+      "summary": "월 약 285만 원",
+      "details": [
+        "상·하반기 · 8시간 일근"
+      ],
+      "action": "사업소 시간 확인"
+    },
+    {
+      "title": "시설관리 · 교대",
+      "icon": "shift-calendar",
+      "summary": "월 약 304만 원",
+      "details": [
+        "상·하반기 · 4조 2교대"
+      ],
+      "action": "실제 근무표 확인"
+    }
+  ],
+  "takeaway": "당시 공고 수준 | 실수령액·확정 연봉과 구분",
+  "cardSpacing": "compact",
+  "labelOffsets": [
+    0,
+    0,
+    0
+  ]
+}

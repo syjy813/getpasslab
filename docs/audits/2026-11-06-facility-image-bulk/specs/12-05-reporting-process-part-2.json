@@ -1,0 +1,39 @@
+{
+  "number": "12",
+  "file": "05-reporting-process-part-2.webp",
+  "original": "05-reporting-process.webp",
+  "part": 2,
+  "total": 2,
+  "title": "경력신고부터 수첩 발급 2/2",
+  "subtitle": "제출 전 자격·업무·직인·증빙을 함께 확인",
+  "cards": [
+    {
+      "title": "최초 경력신고",
+      "icon": "submission",
+      "summary": "협회 인터넷 신고·접수",
+      "details": [],
+      "action": "최신 절차 확인"
+    },
+    {
+      "title": "심사·등급 확인",
+      "icon": "qualification",
+      "summary": "인정경력·보완 요청",
+      "details": [],
+      "action": "심사 결과 확인"
+    },
+    {
+      "title": "수첩 발급",
+      "icon": "folder",
+      "summary": "해당 요건 충족 시 신청",
+      "details": [],
+      "action": "건물 선임은 별도"
+    }
+  ],
+  "takeaway": "최초·변경·재발급 절차 구분 | 선임신고·교육 별도",
+  "labelOffsets": [
+    0,
+    0,
+    0,
+    0
+  ]
+}
