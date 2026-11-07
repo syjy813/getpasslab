@@ -1,0 +1,22 @@
+{
+  "build": {
+    "status": "PASS",
+    "pages": 574,
+    "files": 950
+  },
+  "seo": {
+    "errors": 0,
+    "warnings": [
+      "Approved 62-character title",
+      "Existing 161-character pump description"
+    ]
+  },
+  "publicContent": "PASS: 576 HTML, 0 errors",
+  "publicationAssertions": "PASS: explanatory link absent, sources section absent, new 4개의 시설 heading, images/metadata/listing correct",
+  "regression": "PASS: 14 articles/151 links, previous8/40 assets, native909 files",
+  "sourceProtection": "Two native card SVGs change title text only; original master/draft/release manifest preserved",
+  "outputDelta": "4 changed files; 946 identical; no additions/deletions",
+  "remoteQA": "Pending latest PR HEAD",
+  "deployment": "Pending merge",
+  "production": "Pending deployment"
+}

@@ -1,12 +1,11 @@
 {
-  "master": "masters/hero-approved-cloudy-large-type.png",
-  "sourceLibraryFileId": "libfile_c9a0ee1fa904819184e744c411e60954",
-  "sourceSHA256": "39bd920efc984213045f5f64e94d50d6fe22cfa3a8587c788c54e30736733696",
+  "master": "masters/hero-subtitle-avoidance.png",
+  "sourceSHA256": "a5e1b195bdfb3b881756e6533f3ea27cf042695f9097d6c6819567f58ae8f674",
   "width": 1440,
   "height": 1080,
   "title": "시설관리 ‘호병백마’란?",
-  "subtitle": "호텔·병원·백화점·마트가 묶인 이유",
+  "subtitle": "호병백마는 왜 기피시설로 유명할까?",
   "typography": "AI-rendered enlarged condensed Gothic title and subtitle, centered; no separate text/template overlay",
   "mood": "Daytime sunshine veiled by clouds, shadowed four-building exteriors",
-  "approval": "User selected this enlarged C candidate on 2026-11-07; thumbnail wording unchanged; article prefix [호병백마 ep.0]"
+  "approval": "User requested this exact subtitle on 2026-11-07; original illustration/title preserved; built-in imagegen text-only edit"
 }

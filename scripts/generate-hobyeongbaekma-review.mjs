@@ -13,11 +13,11 @@ registerExtraPictograms();
 PICTOGRAMS.hotel = { meaning: '객실 침대와 호텔의 객실 설비', svg: '<g data-part="bed"><path d="M9 90V26M95 90V49M9 73h86M9 60h86V45H47v15"/><rect x="17" y="36" width="23" height="19" rx="6" fill="#E9F5E6"/><path d="M9 80h86"/></g>' };
 const card = (title, summary, icon, details, action) => ({ title, summary, icon, details, action });
 const specs = [
-  ['02-four-workplaces-1', '네 시설의 관리 대상 1/2', '같은 시설명이어도 실제 업무는 현장마다 다름', [
+  ['02-four-workplaces-1', '4개의 시설의 관리 대상 1/2', '같은 시설명이어도 실제 업무는 현장마다 다름', [
     card('호텔', '객실 냉난방·급탕', 'hotel', ['객실 불편 처리 범위', '야간 호출과 지원업무'], '객실 대응 범위 확인'),
     card('병원', '공조·전기·급배수', 'hospital', ['파트별 책임과 특수설비', '비상 대응·신입 교육'], '담당 파트와 교육 확인'),
   ], '관리 대상과 직접 정비하는 범위를 구분'],
-  ['02-four-workplaces-2', '네 시설의 관리 대상 2/2', '영업시간 밖의 작업과 담당 파트를 확인', [
+  ['02-four-workplaces-2', '4개의 시설의 관리 대상 2/2', '영업시간 밖의 작업과 담당 파트를 확인', [
     card('백화점', '전기·공조·방재', 'shopping', ['행사와 매장 변경 지원', '폐점 후 작업과 야간 인원'], '행사·야간 작업 확인'),
     card('마트', '냉장·냉동·배수', 'cooling', ['영선과 야간 보수', '외주 정비와 직접 업무'], '외주·직접 업무 구분'),
   ], '모든 시설팀이 같은 설비를 직접 정비하지는 않음'],

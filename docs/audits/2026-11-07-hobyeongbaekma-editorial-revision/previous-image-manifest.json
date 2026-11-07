@@ -1,0 +1,172 @@
+{
+  "images": [
+    {
+      "id": "01-hobyeongbaekma-hero",
+      "file": "images/01-hobyeongbaekma-hero.webp",
+      "width": 1440,
+      "height": 1080,
+      "sha256": "71f0cbba9c3a7b4da91d3fc7fd154a232f11d03ec9f01d3dabb647610b5946be",
+      "master": "masters/hero-approved-cloudy-large-type.png",
+      "sourcePNG": "hero-approved-cloudy-large-type.png",
+      "sourceSHA256": "39bd920efc984213045f5f64e94d50d6fe22cfa3a8587c788c54e30736733696",
+      "sourceRole": "User-approved complete imagegen artwork including enlarged centered title/subtitle; no text overlay",
+      "sourceLibraryFileId": "libfile_c9a0ee1fa904819184e744c411e60954",
+      "approvedSpec": "specs/hero-approved-image.json"
+    },
+    {
+      "id": "02-four-workplaces-1",
+      "file": "images/02-four-workplaces-1.webp",
+      "master": "masters/02-four-workplaces-1.svg",
+      "width": 1440,
+      "height": 1036,
+      "sha256": "c4f7ea3b9a507270d48098f0c17d21e2fd916bbfb911ab9af8d582c6f049818b",
+      "icons": [
+        {
+          "key": "hotel",
+          "meaning": "객실 침대와 호텔의 객실 설비"
+        },
+        {
+          "key": "hospital",
+          "meaning": "병원과 연속 운영 설비"
+        }
+      ],
+      "centering": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "02-four-workplaces-2",
+      "file": "images/02-four-workplaces-2.webp",
+      "master": "masters/02-four-workplaces-2.svg",
+      "width": 1440,
+      "height": 1036,
+      "sha256": "b1be3cd49179c6d0a177d892cf19b67977cad6754e0811ab8d9e2bf1c975e06d",
+      "icons": [
+        {
+          "key": "shopping",
+          "meaning": "쇼핑몰의 점포와 이용객 시설"
+        },
+        {
+          "key": "cooling",
+          "meaning": "냉동 및 저온설비"
+        }
+      ],
+      "centering": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "03-why-hard-1",
+      "file": "images/03-why-hard-1.webp",
+      "master": "masters/03-why-hard-1.svg",
+      "width": 1440,
+      "height": 1036,
+      "sha256": "332ca9b6a2371df92eaf93ac3d34c67f29704b421797ebbeb196d76eb90acbcb",
+      "icons": [
+        {
+          "key": "clock",
+          "meaning": "근무시간과 출퇴근 시각"
+        },
+        {
+          "key": "support",
+          "meaning": "비상 호출과 지원 연락체계"
+        }
+      ],
+      "centering": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "03-why-hard-2",
+      "file": "images/03-why-hard-2.webp",
+      "master": "masters/03-why-hard-2.svg",
+      "width": 1440,
+      "height": 1036,
+      "sha256": "22ee9f9bdac6a988292a3f5de3ab5c5d90dde04cc30725b8962f790cd8d81045",
+      "icons": [
+        {
+          "key": "repair",
+          "meaning": "문과 시설물의 보수"
+        },
+        {
+          "key": "training",
+          "meaning": "매뉴얼과 교육 절차"
+        }
+      ],
+      "centering": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "05-before-applying-1",
+      "file": "images/05-before-applying-1.webp",
+      "master": "masters/05-before-applying-1.svg",
+      "width": 1440,
+      "height": 1017,
+      "sha256": "440934bdcd6bc0d8e98a384f10469821104979d7c9e8981367a9cf27348089a4",
+      "icons": [
+        {
+          "key": "legal-employer",
+          "meaning": "근로계약 상대방으로 확인할 회사의 신원"
+        },
+        {
+          "key": "shift-calendar",
+          "meaning": "교대 일정과 주간·야간 근무표"
+        },
+        {
+          "key": "mechanical",
+          "meaning": "펌프와 배관을 통한 기계설비 관리"
+        }
+      ],
+      "centering": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "05-before-applying-2",
+      "file": "images/05-before-applying-2.webp",
+      "master": "masters/05-before-applying-2.svg",
+      "width": 1440,
+      "height": 1017,
+      "sha256": "7a383847ff1ad7f4878569c5692e1206c44548144d80524bcb8877cfdab92fa9",
+      "icons": [
+        {
+          "key": "support",
+          "meaning": "비상 호출과 지원 연락체계"
+        },
+        {
+          "key": "pay-components",
+          "meaning": "기본급·수당·상여로 구성된 급여명세"
+        },
+        {
+          "key": "career",
+          "meaning": "기간별 근무기록과 경력 증빙"
+        }
+      ],
+      "centering": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "cards": 6,
+  "renderer": "scripts/generate-facility-compact-infographic.mjs",
+  "newIcon": {
+    "key": "hotel",
+    "meaning": "객실 침대와 호텔의 객실 설비",
+    "svg": "<g data-part=\"bed\"><path d=\"M9 90V26M95 90V49M9 73h86M9 60h86V45H47v15\"/><rect x=\"17\" y=\"36\" width=\"23\" height=\"19\" rx=\"6\" fill=\"#E9F5E6\"/><path d=\"M9 80h86\"/></g>"
+  }
+}
