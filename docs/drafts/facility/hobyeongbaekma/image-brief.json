@@ -4,9 +4,9 @@
   "facts": "Selected 10 anonymous self-reports, original/period/part/employer boundaries preserved. No statistical rankings.",
   "hero": {
     "source": "User approved enlarged C candidate on 2026-11-07",
-    "edit": "Use the complete approved AI artwork; resize/encode only, no separate template or text overlay",
+    "edit": "Built-in imagegen subtitle-only edit: 호병백마는 왜 기피시설로 유명할까?",
     "title": "시설관리 ‘호병백마’란?",
-    "subtitle": "호텔·병원·백화점·마트가 묶인 이유",
+    "subtitle": "호병백마는 왜 기피시설로 유명할까?",
     "labels": [
       "호텔",
       "병원",
@@ -14,7 +14,7 @@
       "마트"
     ],
     "prompt": "Cloud-veiled daytime sunlight and shadowed four buildings; enlarged centered condensed Gothic title and subtitle; preserve wording; no people/logo",
-    "master": "masters/hero-approved-cloudy-large-type.png",
+    "master": "masters/hero-subtitle-avoidance.png",
     "captionRole": "Illustrated examples of four building types, not actual business premises",
     "typography": "AI-rendered enlarged condensed Gothic title and subtitle, centered; no separate text/template overlay",
     "spec": "specs/hero-approved-image.json",

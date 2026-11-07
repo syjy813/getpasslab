@@ -25,9 +25,13 @@ assert.equal(schemas.length, preview ? 0 : 1);
 if (!preview) {
   assert.equal(schemas[0].datePublished, release.publishedAt);
   assert.equal(schemas[0].mainEntityOfPage, origin + release.route);
-  assert.equal(schemas[0].citation.length, 11);
+  assert.equal(schemas[0].citation.length, 10);
 }
 const body = list.find(n => (attr(n, 'class') || '').split(/\s+/).includes('facility-body'));
+assert(!text(body).includes('네 시설'));
+assert(!list.some(n => n.tagName === 'a' && attr(n, 'href')?.includes('no=184217')));
+assert(!list.some(n => (attr(n, 'class') || '').split(/\s+/).includes('facility-sources')));
+assert(text(body).includes('4개의 시설은 무엇이 다를까?'));
 const images = nodes(body).filter(n => n.tagName === 'img');
 assert.equal(images.length, 7);
 for (const image of images) {

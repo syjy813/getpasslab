@@ -1,0 +1,18 @@
+{
+  "previousSource": "docs/audits/2026-11-07-hobyeongbaekma-editorial-revision/previous-article.md",
+  "additions": {
+    "src/content/facility/hobyeongbaekma.md": "b8903a3d94362924f0dc578a1eccdc0089b515ac50247d9c1970e8b914e0dcb7",
+    "public/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp": "88e8a14ed1edf0a9ee6b2ed873e5179942544115520e1f34e2475e3d2fdf3e12",
+    "public/images/facility-series/hobyeongbaekma-00/02-four-workplaces-1.webp": "51071d02dbd7983f656f1bc53f73d35c9d3fb2f9d4de9b5ce2993c3d8c804165",
+    "public/images/facility-series/hobyeongbaekma-00/02-four-workplaces-2.webp": "45a49eac9c2d490ecf60a05d557412175a5c9812c6963179010bc6c79db9a787"
+  },
+  "layoutBlob": "278630d045736343fdf3ce4c29fd3b4aea32b877",
+  "thumbnailSubtitle": "호병백마는 왜 기피시설로 유명할까?",
+  "changes": [
+    "remove no=184217 explanatory link and citation",
+    "replace 네 시설 with 4개의 시설 in article and two cards",
+    "hide sources section for episode zero only",
+    "edit thumbnail subtitle with built-in imagegen"
+  ],
+  "imagePrompt": "Edit only subtitle to 호병백마는 왜 기피시설로 유명할까?; preserve approved title, four buildings, mood and labels."
+}

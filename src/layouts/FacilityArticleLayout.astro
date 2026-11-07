@@ -13,6 +13,8 @@ const { article, related } = Astro.props;
 const { Content, headings } = await render(article);
 const sections = headings.filter(heading => heading.depth === 2 && heading.slug);
 const data = article.data;
+// Episode zero is a light editorial introduction; keep its research metadata internal.
+const showSourceList = article.id !== 'hobyeongbaekma';
 const category = facilityCategory(data.category);
 const url = new URL(withBase(facilityArticlePath(article)), SITE.url).href;
 const breadcrumbs = [{ name: '시설의 모든 것', path: '/facility-management/' }, { name: category.name, path: facilityCategoryPath(category.slug) }, { name: data.title, path: facilityArticlePath(article) }];
@@ -35,7 +37,7 @@ const structuredData = [
       </details>}
       {data.legalReview && <aside class="facility-info"><strong>{data.status === 'draft' ? '법령·선임 기준 확인 중' : `법령·선임 기준 확인일: ${data.reviewedAt}`}</strong><p>적용 대상과 시행일에 따라 요건이 달라질 수 있습니다. 아래 공식 출처의 현행 기준을 확인하세요.</p></aside>}
       <div class="facility-body"><Content /></div>
-      {data.sources.length > 0 && <section class="facility-sources" aria-labelledby="article-sources-title"><h2 id="article-sources-title">근거 및 참고 자료</h2><p class="gpl-caption">{data.status === 'draft' ? '공개 전 자료 확인 중' : `자료 확인일: ${data.reviewedAt}`}</p><ol>{data.sources.map(source => <li><a href={source.url}>{source.title}</a><p>{source.note}</p></li>)}</ol></section>}
+      {showSourceList && data.sources.length > 0 && <section class="facility-sources" aria-labelledby="article-sources-title"><h2 id="article-sources-title">근거 및 참고 자료</h2><p class="gpl-caption">{data.status === 'draft' ? '공개 전 자료 확인 중' : `자료 확인일: ${data.reviewedAt}`}</p><ol>{data.sources.map(source => <li><a href={source.url}>{source.title}</a><p>{source.note}</p></li>)}</ol></section>}
     </article>
     {related.length > 0 && <section class="facility-section" aria-labelledby="related-articles-title"><div class="facility-section-head"><h2 id="related-articles-title" class="gpl-h2">관련 콘텐츠</h2></div><div class="grid grid-2">{related.map(item => <FacilityCard article={item} />)}</div></section>}
     <FacilityLearningLinks ids={data.certifications} />

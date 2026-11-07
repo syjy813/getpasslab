@@ -12,9 +12,6 @@ summary:
   - '후기에는 민원·야간 대응·업무 분장에 대한 불만과 긍정적인 경험이 함께 등장. 사업장과 담당 파트, 근무기간을 구분해서 읽기'
   - '지원할 때는 건물 이름보다 고용주, 인력, 근무표, 실제 업무 범위, 교육과 휴게 여건을 확인'
 sources:
-  - title: '호백병마에 대해 알아보자 (2023년)'
-    url: 'https://gall.dcinside.com/board/view/?id=siseol&no=184217'
-    note: '비공식 용어 사용을 확인하는 자료. 글의 시설별 평판·고용형태 주장은 일반화하지 않음'
   - title: "호텔 시설관리 2개월차 후기"
     url: "https://gall.dcinside.com/board/view/?id=siseol&no=11562"
     note: "코로나 시기의 사례이며 타 호텔 일반화 불가 · 공개 원문 자기진술이며 근무 사실 독립인증 아님"
@@ -53,7 +50,7 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp" alt="호텔·병원·백화점·마트 네 건물과 제목·부제로 구성한 호병백마 대표 이미지" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
+<figure><img src="/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp" alt="호텔·병원·백화점·마트 4개의 시설과 제목·부제로 구성한 호병백마 대표 이미지" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 ## 호병백마? 무슨 사자성어인 줄 알았다
 
@@ -61,13 +58,13 @@ legalReview: false
 
 **호병백마.**
 
-알고 보면 거창한 뜻은 없다. **호텔·병원·백화점·마트**의 첫 글자를 딴 말이다. 실제 게시판에서는 순서를 달리한 ‘호백병마’도 쓰인다. [2023년 시설관리 갤러리의 설명 글](https://gall.dcinside.com/board/view/?id=siseol&no=184217)도 ‘호백병마’라는 이름으로 네 시설을 소개한다.
+알고 보면 거창한 뜻은 없다. **호텔·병원·백화점·마트**의 첫 글자를 딴 말이다. 실제 게시판에서는 순서를 달리한 ‘호백병마’도 쓰인다.
 
 다만 건물 유형을 묶은 것 이상의 의미가 따라붙는다. 대체로 ‘시설관리 업무가 만만치 않은 현장’이라는 평판이다. 그렇다고 법에서 정한 분류도, 근무자 전체를 조사해 만든 순위도 아니다. **커뮤니티에서 생겨난 평가**라고 이해하면 된다.
 
 그런데 이상하다. 손님에게 편안한 호텔과 백화점이 왜 직원에게는 피하라는 장소가 됐을까?
 
-## 네 시설은 무엇이 다를까?
+## 4개의 시설은 무엇이 다를까?
 
 <figure><img src="/images/facility-series/hobyeongbaekma-00/02-four-workplaces-1.webp" alt="호텔과 병원: 객실 냉난방·급탕과 공조·전기·급배수, 대응 범위와 교육 확인" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
@@ -116,7 +113,7 @@ legalReview: false
 
 ## 그런데 괜찮다는 후기도 있다
 
-여기까지만 읽으면 네 시설을 모두 피해야 할 것 같다. 하지만 공개된 경험담은 한 방향으로만 흐르지 않는다.
+여기까지만 읽으면 4개의 시설을 모두 피해야 할 것 같다. 하지만 공개된 경험담은 한 방향으로만 흐르지 않는다.
 
 [2023년 리조트 시설관리 한 달 후기](https://gall.dcinside.com/board/view/?id=siseol&no=128547)는 객실 요청을 처리하면서도 일이 감당하기 어려운 수준은 아니었다고 평가했다. [2024년 호텔 입사 초기 후기](https://gall.dcinside.com/board/view/?id=siseol&no=326100)에서는 민원은 많아도 업무가 체계적이고 본인의 적성에 맞는다는 반응이 나온다. 다만 두 글 모두 입사 초기 경험이라는 한계가 있다.
 
@@ -157,7 +154,7 @@ legalReview: false
 
 ## 이제 한 곳씩 살펴볼 차례
 
-호병백마라는 이름만으로 근무환경을 판단하기 어렵다는 점은 확인했다. 다음 편부터는 네 시설을 나눠 실제 업무와 후기, 지원 전 확인할 조건을 자세히 살펴본다.
+호병백마라는 이름만으로 근무환경을 판단하기 어렵다는 점은 확인했다. 다음 편부터는 4개의 시설을 나눠 실제 업무와 후기, 지원 전 확인할 조건을 자세히 살펴본다.
 
 - **1화 호텔:** 객실 민원·야간 당직·업무분장·퇴사와 장기근무 경험
 - **2화 병원:** 기계·전기·특수설비·비상 대응·교육체계
