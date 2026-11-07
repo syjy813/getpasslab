@@ -1,0 +1,58 @@
+{
+  "name": "호병백마",
+  "scope": "Existing facility career articles, not a new service/category/schema",
+  "path": "/facility-management/career/hobyeongbaekma/",
+  "episodes": [
+    {
+      "order": 0,
+      "title": "[호병백마 ep.0] 시설관리 호병백마, 이게 뭔데? 호텔·병원·백화점·마트가 묶인 이유",
+      "status": "draft",
+      "file": "episode00.md"
+    },
+    {
+      "order": 1,
+      "title": "호텔",
+      "status": "planned",
+      "focus": [
+        "객실 민원",
+        "야간 당직",
+        "업무분장",
+        "근무기간별 후기"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "병원",
+      "status": "planned",
+      "focus": [
+        "기계·전기 파트",
+        "특수설비",
+        "비상 대응",
+        "교육"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "백화점",
+      "status": "planned",
+      "focus": [
+        "행사",
+        "폐점 후 작업",
+        "전기·기계 차이"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "마트",
+      "status": "planned",
+      "focus": [
+        "냉장·냉동",
+        "영선",
+        "야간 보수",
+        "교대근무"
+      ]
+    }
+  ],
+  "publishApproval": false,
+  "titlePrefixFormat": "[호병백마 ep.N]"
+}

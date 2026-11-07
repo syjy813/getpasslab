@@ -1,0 +1,19 @@
+{
+  "added": [
+    "dist/facility-management/career/hobyeongbaekma/index.html",
+    "dist/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/02-four-workplaces-1.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/02-four-workplaces-2.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/03-why-hard-1.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/03-why-hard-2.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/05-before-applying-1.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/05-before-applying-2.webp"
+  ],
+  "removed": [],
+  "changed": [
+    "dist/facility-management/career/index.html",
+    "dist/facility-management/index.html",
+    "dist/sitemap-0.xml"
+  ],
+  "unchanged": 939
+}

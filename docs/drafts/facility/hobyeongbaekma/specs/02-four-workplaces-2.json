@@ -1,0 +1,28 @@
+{
+  "title": "네 시설의 관리 대상 2/2",
+  "subtitle": "영업시간 밖의 작업과 담당 파트를 확인",
+  "cards": [
+    {
+      "title": "백화점",
+      "summary": "전기·공조·방재",
+      "icon": "shopping",
+      "details": [
+        "행사와 매장 변경 지원",
+        "폐점 후 작업과 야간 인원"
+      ],
+      "action": "행사·야간 작업 확인"
+    },
+    {
+      "title": "마트",
+      "summary": "냉장·냉동·배수",
+      "icon": "cooling",
+      "details": [
+        "영선과 야간 보수",
+        "외주 정비와 직접 업무"
+      ],
+      "action": "외주·직접 업무 구분"
+    }
+  ],
+  "takeaway": "모든 시설팀이 같은 설비를 직접 정비하지는 않음",
+  "cardSpacing": "compact"
+}

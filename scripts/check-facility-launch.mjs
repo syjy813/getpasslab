@@ -1,3 +1,5 @@
+import { episode00Release, assertEpisode00Release } from './read-hobyeongbaekma-publication.mjs';
+assertEpisode00Release();
 import {bulkVisuals,beforeBulkVisuals,assertBulkVisuals,bulkOutput} from './read-facility-bulk-visuals.mjs';
 // The original facility-publication fingerprint is kept immutable in
 // docs/audits/2026-10-31-facility-launch/review.json.gz.
@@ -31,7 +33,7 @@ const editorialBlobs = {
   'src/pages/certifications/index.astro': '125799ae05dc3918bd43b16babbdcfd9bf1fc043',
   'src/styles/catalog.css': '8a90e16d57215350e844faf7accf12cd20b1cd68',
   'src/components/Footer.astro': '1c21ee8122b0e7a2bbd5eac8c1c1f5d3538f5867',
-  'src/components/FacilityCard.astro': 'bc60b65b1cd8c9f52ae6e9decfc66a17d8c33f70',
+  'src/components/FacilityCard.astro': episode00Release.cardBlob,
   'src/layouts/FacilityArticleLayout.astro': '0f9259e6f2473db213c8b416cf4aea5e58857782',
   'src/pages/facility-management/index.astro': 'f609c910d1b89037253da9923d38f714fa6d7ec7',
   'src/styles/facility.css': '48b48abb2751e463e3f70ccbfde589e3664b6e83',
@@ -50,7 +52,7 @@ const files = [
   ...walk('src'),
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
-].filter(file => !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
+].filter(file => !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;

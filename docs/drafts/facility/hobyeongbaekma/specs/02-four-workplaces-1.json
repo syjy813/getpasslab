@@ -1,0 +1,28 @@
+{
+  "title": "네 시설의 관리 대상 1/2",
+  "subtitle": "같은 시설명이어도 실제 업무는 현장마다 다름",
+  "cards": [
+    {
+      "title": "호텔",
+      "summary": "객실 냉난방·급탕",
+      "icon": "hotel",
+      "details": [
+        "객실 불편 처리 범위",
+        "야간 호출과 지원업무"
+      ],
+      "action": "객실 대응 범위 확인"
+    },
+    {
+      "title": "병원",
+      "summary": "공조·전기·급배수",
+      "icon": "hospital",
+      "details": [
+        "파트별 책임과 특수설비",
+        "비상 대응·신입 교육"
+      ],
+      "action": "담당 파트와 교육 확인"
+    }
+  ],
+  "takeaway": "관리 대상과 직접 정비하는 범위를 구분",
+  "cardSpacing": "compact"
+}

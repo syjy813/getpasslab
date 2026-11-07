@@ -1,0 +1,47 @@
+{
+  "publicFiles": 942,
+  "changedPublicFiles": 0,
+  "draftInPublic": false,
+  "cards": 6,
+  "images": 7,
+  "finalLabels": 20,
+  "maxLabelDifference": 1,
+  "privateAstroBuild": "PASS",
+  "browserQA": "PASS: 320/390/768/1440px",
+  "production": "not deployed",
+  "reviewRun": 42225023443,
+  "seoRun": 42225023683,
+  "testedCommit": "a4487032e42fa92a6c2d5364105822b4b2540960",
+  "visualReview": "390/1440 screenshots inspected; 7 images and 2 tables, existing table scroll retained",
+  "heroRevision": {
+    "design": "four-building-exteriors-title-subtitle",
+    "dimensions": [
+      1440,
+      1080
+    ],
+    "textVisualCheck": "PASS",
+    "priorBrowserRun": 42225023443,
+    "replacementBrowserQA": "pending PR CI for centered revision",
+    "typography": {
+      "width": 1440,
+      "height": 1080,
+      "fontFamily": "Noto Sans CJK KR",
+      "alignment": "center",
+      "title": {
+        "text": "시설관리 ‘호병백마’란?",
+        "size": 64,
+        "weight": 700,
+        "x": 720,
+        "top": 140
+      },
+      "subtitle": {
+        "text": "호텔·병원·백화점·마트가 묶인 이유",
+        "size": 30,
+        "weight": 400,
+        "x": 720,
+        "top": 230
+      }
+    },
+    "exactTypeCheck": "PASS; title horizontal gap difference 1px, subtitle 0px"
+  }
+}

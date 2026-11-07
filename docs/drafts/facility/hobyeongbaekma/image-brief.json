@@ -1,0 +1,43 @@
+{
+  "question": "호병백마라는 평판을 실제 지원 조건과 어떻게 구분할까?",
+  "type": "editorial comparison, not technical or medical guidance",
+  "facts": "Selected 10 anonymous self-reports, original/period/part/employer boundaries preserved. No statistical rankings.",
+  "hero": {
+    "source": "User approved enlarged C candidate on 2026-11-07",
+    "edit": "Use the complete approved AI artwork; resize/encode only, no separate template or text overlay",
+    "title": "시설관리 ‘호병백마’란?",
+    "subtitle": "호텔·병원·백화점·마트가 묶인 이유",
+    "labels": [
+      "호텔",
+      "병원",
+      "백화점",
+      "마트"
+    ],
+    "prompt": "Cloud-veiled daytime sunlight and shadowed four buildings; enlarged centered condensed Gothic title and subtitle; preserve wording; no people/logo",
+    "master": "masters/hero-approved-cloudy-large-type.png",
+    "captionRole": "Illustrated examples of four building types, not actual business premises",
+    "typography": "AI-rendered enlarged condensed Gothic title and subtitle, centered; no separate text/template overlay",
+    "spec": "specs/hero-approved-image.json",
+    "historicalOnly": [
+      "masters/hero-centered-type.svg",
+      "specs/hero-centered-type.json",
+      "hero-type-verification.json"
+    ]
+  },
+  "cards": {
+    "renderer": "canonical compact renderer",
+    "layout": "2 or 3 cards per image; 6 split figures",
+    "typography": "64px/30px; x80/y140; brand x1200/y44; preserved canonical tokens",
+    "icons": "Existing semantic set plus one guest-bed hotel icon; no people",
+    "labels": "20 final WebP labels measured; upper/lower ink difference <=1px"
+  },
+  "guides": [
+    "facility-content-guide-v1.4 §5.1–5.4,5.7–5.14",
+    "learning-image-design-system-v1 §1,5–7,9"
+  ],
+  "sourceZip": {
+    "libraryFileId": "libfile_d1b3895c8e108191addc586124eac39a",
+    "sha256": "256921cac5133656e82f406e16bd879908d3c9801433852e2f97aaa86e8b7ae3"
+  },
+  "publication": "not authorized for this new article; review branch only"
+}

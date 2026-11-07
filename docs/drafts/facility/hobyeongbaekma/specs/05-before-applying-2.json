@@ -1,0 +1,35 @@
+{
+  "title": "지원 전 여섯 가지 확인 2/2",
+  "subtitle": "인력·휴게·교육을 구체적으로 확인",
+  "cards": [
+    {
+      "title": "야간 지원",
+      "summary": "당직 인원과 연락체계",
+      "icon": "support",
+      "details": [
+        "혼자 해결하기 어려운 상황"
+      ],
+      "action": "지원 담당자 확인"
+    },
+    {
+      "title": "보수·휴게",
+      "summary": "기본급·수당·실제 휴게",
+      "icon": "pay-components",
+      "details": [
+        "금액의 포함 항목과 휴게 장소"
+      ],
+      "action": "급여·휴게 조건 확인"
+    },
+    {
+      "title": "경력·교육",
+      "summary": "신입 교육과 경력증빙",
+      "icon": "career",
+      "details": [
+        "교육 담당자와 업무 기록"
+      ],
+      "action": "교육·증빙 방법 확인"
+    }
+  ],
+  "takeaway": "구체적인 답변은 입사 전 확인 자료와 대조",
+  "cardSpacing": "compact"
+}

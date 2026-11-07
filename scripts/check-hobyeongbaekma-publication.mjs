@@ -1,0 +1,53 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { parse } from 'parse5';
+import { episode00Release as release, assertEpisode00Release } from './read-hobyeongbaekma-publication.mjs';
+
+assertEpisode00Release();
+const preview = process.env.FACILITY_DRAFT_PREVIEW === '1';
+const origin = 'https://getpasslab.co.kr';
+const nodes = n => [n, ...(n.childNodes || []).flatMap(nodes)];
+const attr = (n, key) => n?.attrs?.find(a => a.name === key)?.value;
+const text = n => n?.nodeName === '#text' ? n.value : (n?.childNodes || []).map(text).join('');
+const read = route => nodes(parse(fs.readFileSync('dist' + route + 'index.html', 'utf8')));
+const list = read(release.route);
+const meta = name => attr(list.find(n => n.tagName === 'meta' && attr(n, 'name') === name), 'content');
+assert.equal(meta('robots'), preview ? 'noindex, nofollow' : 'index, follow');
+assert.equal(attr(list.find(n => n.tagName === 'link' && attr(n, 'rel') === 'canonical'), 'href'), origin + release.route);
+assert.equal(list.filter(n => n.tagName === 'h1').length, 1);
+assert(text(list.find(n => n.tagName === 'h1')).startsWith('[호병백마 ep.0]'));
+assert(!/검토용 초안|공개 전 사실 및 이미지 검증 필요|EDITOR_NOTES|SOURCE_AUDIT/.test(text(list.find(n => n.tagName === 'main'))));
+const schemas = list.filter(n => n.tagName === 'script' && attr(n, 'type') === 'application/ld+json').flatMap(n => {
+  const value = JSON.parse(text(n)); return Array.isArray(value) ? value : [value];
+}).filter(n => n['@type'] === 'Article');
+assert.equal(schemas.length, preview ? 0 : 1);
+if (!preview) {
+  assert.equal(schemas[0].datePublished, release.publishedAt);
+  assert.equal(schemas[0].mainEntityOfPage, origin + release.route);
+  assert.equal(schemas[0].citation.length, 11);
+}
+const body = list.find(n => (attr(n, 'class') || '').split(/\s+/).includes('facility-body'));
+const images = nodes(body).filter(n => n.tagName === 'img');
+assert.equal(images.length, 7);
+for (const image of images) {
+  const path = attr(image, 'src');
+  assert(attr(image, 'alt') && attr(image, 'width') && attr(image, 'height'));
+  const expected = release.additions['public' + path]; assert(expected, path);
+  assert.equal(createHash('sha256').update(fs.readFileSync('dist' + path)).digest('hex'), expected);
+}
+for (const route of ['/facility-management/', '/facility-management/career/']) {
+  const cards = read(route).filter(n => n.tagName === 'a' && attr(n, 'href') === release.route);
+  assert.equal(cards.length, 1, 'exactly one episode card: ' + route);
+  const cover = nodes(cards[0]).find(n => n.tagName === 'img');
+  assert.equal(attr(cover, 'src'), attr(images[0], 'src'), 'approved hero on listing');
+  assert.equal(attr(cover, 'width'), '1440'); assert.equal(attr(cover, 'height'), '1080');
+}
+const sitemap = fs.readdirSync('dist').filter(f => /^sitemap.*\.xml$/.test(f)).map(f => fs.readFileSync('dist/' + f, 'utf8')).join('');
+assert.equal(sitemap.includes('<loc>' + origin + release.route + '</loc>'), !preview);
+assert(!fs.existsSync('dist/facility-management/career/hobyeongbaekma-hotel/index.html'), 'episode one remains unpublished');
+for (const n of list.filter(n => n.tagName === 'a')) {
+  const href = attr(n, 'href');
+  if (href?.startsWith('/facility-management/')) assert(fs.existsSync('dist' + href.replace(/\/$/, '') + '/index.html'), href);
+}
+console.log('Episode 00 publication: approved prose and 7 images, title, listing thumbnail, canonical, schema, sitemap and internal links PASS');

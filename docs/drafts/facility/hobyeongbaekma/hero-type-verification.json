@@ -1,0 +1,48 @@
+{
+  "spec": {
+    "width": 1440,
+    "height": 1080,
+    "fontFamily": "Noto Sans CJK KR",
+    "alignment": "center",
+    "title": {
+      "text": "시설관리 ‘호병백마’란?",
+      "size": 64,
+      "weight": 700,
+      "x": 720,
+      "top": 140
+    },
+    "subtitle": {
+      "text": "호텔·병원·백화점·마트가 묶인 이유",
+      "size": 30,
+      "weight": 400,
+      "x": 720,
+      "top": 230
+    }
+  },
+  "measurements": [
+    {
+      "role": "title",
+      "fontSize": 64,
+      "x": 720,
+      "anchorTop": 140,
+      "left": 413,
+      "right": 1025,
+      "inkTop": 142,
+      "inkBottom": 201,
+      "horizontalGapDifference": 1
+    },
+    {
+      "role": "subtitle",
+      "fontSize": 30,
+      "x": 720,
+      "anchorTop": 230,
+      "left": 496,
+      "right": 943,
+      "inkTop": 231,
+      "inkBottom": 258,
+      "horizontalGapDifference": 0
+    }
+  ],
+  "backgroundSHA256": "c6e1edf6cc17434fb74f101e75ed2767cc291db3cba5e3c4517ee6b5ace5bd06",
+  "outputSHA256": "544172f39f30e5740e9ff28072865b52b8f57e4911036d76feea7e6d0fe84ca5"
+}

@@ -1,0 +1,27 @@
+{
+  "route": "/facility-management/career/hobyeongbaekma/",
+  "publishedAt": "2026-11-07",
+  "reviewedAt": "2026-11-06",
+  "approvedDraftSHA256": "6bdf62890bab8287bb17adce82b768f596452bbbcc06dc8296f1727d07612fdf",
+  "additions": {
+    "src/content/facility/hobyeongbaekma.md": "35fd0f066243a307b30c3156ebe2105a38d1a015ad0cf8fac559dcca33350f28",
+    "public/images/facility-series/hobyeongbaekma-00/03-why-hard-1.webp": "332ca9b6a2371df92eaf93ac3d34c67f29704b421797ebbeb196d76eb90acbcb",
+    "public/images/facility-series/hobyeongbaekma-00/05-before-applying-2.webp": "7a383847ff1ad7f4878569c5692e1206c44548144d80524bcb8877cfdab92fa9",
+    "public/images/facility-series/hobyeongbaekma-00/02-four-workplaces-1.webp": "c4f7ea3b9a507270d48098f0c17d21e2fd916bbfb911ab9af8d582c6f049818b",
+    "public/images/facility-series/hobyeongbaekma-00/02-four-workplaces-2.webp": "b1be3cd49179c6d0a177d892cf19b67977cad6754e0811ab8d9e2bf1c975e06d",
+    "public/images/facility-series/hobyeongbaekma-00/03-why-hard-2.webp": "22ee9f9bdac6a988292a3f5de3ab5c5d90dde04cc30725b8962f790cd8d81045",
+    "public/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp": "71f0cbba9c3a7b4da91d3fc7fd154a232f11d03ec9f01d3dabb647610b5946be",
+    "public/images/facility-series/hobyeongbaekma-00/05-before-applying-1.webp": "440934bdcd6bc0d8e98a384f10469821104979d7c9e8981367a9cf27348089a4"
+  },
+  "outputAdditions": [
+    "dist/facility-management/career/hobyeongbaekma/index.html",
+    "dist/images/facility-series/hobyeongbaekma-00/03-why-hard-1.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/05-before-applying-2.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/02-four-workplaces-1.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/02-four-workplaces-2.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/03-why-hard-2.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp",
+    "dist/images/facility-series/hobyeongbaekma-00/05-before-applying-1.webp"
+  ],
+  "cardBlob": "9056ed63cbbf495e2cde9a8a9b3ff12c74b12c87"
+}
