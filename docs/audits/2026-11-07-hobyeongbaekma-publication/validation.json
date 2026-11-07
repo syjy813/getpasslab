@@ -1,0 +1,27 @@
+{
+  "build": {
+    "status": "PASS",
+    "pages": 574,
+    "files": 950
+  },
+  "seo": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": [
+      "Approved user title is 62 characters",
+      "Existing pump article description is 161 characters"
+    ]
+  },
+  "publicContent": "PASS: 576 HTML, 0 errors",
+  "episodePublication": "PASS: original body and seven images unchanged; date/metadata/listing/sitemap/links checked",
+  "nativeGuard": "PASS: 909 native files, historical inventory preserved",
+  "facilityPublication": "PASS: 8 existing released articles and 40 assets; 831 prior public files protected",
+  "relatedLinks": "PASS: 14 articles, 151 internal links",
+  "localBrowser": {
+    "status": "UNAVAILABLE",
+    "reason": "Chromium socket permission denied; use GitHub Actions responsive QA"
+  },
+  "remoteCI": "Pending actual PR HEAD checks",
+  "deploy": "Pending merge and Pages deployment",
+  "production": "Not checked yet"
+}

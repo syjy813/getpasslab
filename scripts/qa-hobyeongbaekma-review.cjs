@@ -2,13 +2,14 @@ const { chromium } = require(process.env.QA_PLAYWRIGHT_MODULE || 'playwright');
 const fs = require('node:fs');
 const assert = require('node:assert/strict');
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4321';
+const preview = process.env.QA_FACILITY_PREVIEW === '1';
 const route = '/facility-management/career/hobyeongbaekma/';
 const root = 'docs/drafts/facility/hobyeongbaekma';
 const images = JSON.parse(fs.readFileSync(root + '/image-manifest.json')).images;
 const output = 'tmp/hobyeongbaekma-review';
 fs.mkdirSync(output, { recursive: true });
 (async () => {
-  const browser = await chromium.launch();
+  const browser = await chromium.launch(process.env.QA_BROWSER_EXECUTABLE ? { executablePath: process.env.QA_BROWSER_EXECUTABLE } : {});
   const results = [];
   try {
     for (const width of [320, 390, 768, 1440]) {
@@ -24,11 +25,11 @@ fs.mkdirSync(output, { recursive: true });
       assert.equal(await page.locator('.facility-body h2').count(), 7);
       assert.equal(await page.locator('.facility-body h3').count(), 3);
       assert.equal(await page.locator('.facility-body table').count(), 2);
-      assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), 'noindex, nofollow');
+      assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), preview ? 'noindex, nofollow' : 'index, follow');
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://getpasslab.co.kr' + route);
-      assert.equal(await page.locator('.facility-article > article > header time').count(), 0, 'Draft does not display a publication date');
+      assert.equal(await page.locator('.facility-article > article > header time').count(), 2, 'Published and actual source-review dates are visible');
       assert.equal(await page.locator('.facility-body img').count(), images.length);
-      assert.equal(await page.locator('a[href*="hobyeongbaekma/"]').count(), 0, 'Future episodes have no broken links');
+      assert.equal(await page.locator('a[href*="hobyeongbaekma-hotel/"]').count(), 0, 'Future episodes have no broken links');
       for (const row of images) {
         const img = page.locator('img[src$="/' + row.id + '.webp"]');
         await img.scrollIntoViewIfNeeded();
@@ -43,7 +44,9 @@ fs.mkdirSync(output, { recursive: true });
       }
       assert(await page.locator('.facility-body').innerText().then(t => !/EDITOR_NOTES|SOURCE_AUDIT|editorial-review|proposedPath|46명/.test(t)));
       const schema = await page.locator('script[type="application/ld+json"]').allTextContents();
-      assert(schema.every(s => { const value = JSON.parse(s); return !(Array.isArray(value) ? value : [value]).some(x => x['@type'] === 'Article'); }));
+      const articleSchema = schema.flatMap(s => { const value = JSON.parse(s); return Array.isArray(value) ? value : [value]; }).filter(x => x['@type'] === 'Article');
+      assert.equal(articleSchema.length, preview ? 0 : 1);
+      if (!preview) { assert.equal(articleSchema[0].datePublished, '2026-11-07'); assert.equal(articleSchema[0].headline, await page.locator('h1').innerText()); }
       const geometry = await page.evaluate(() => ({ client: document.documentElement.clientWidth, scroll: document.documentElement.scrollWidth }));
       assert(geometry.scroll <= geometry.client + 1, 'No page overflow');
       await page.locator('.facility-toc summary').click();
@@ -56,7 +59,7 @@ fs.mkdirSync(output, { recursive: true });
       results.push({ width, images: images.length, h1: 1, h2: 7, h3: 3, tables: 2, ...geometry, toc: 'PASS', runtimeErrors: 0 });
       await page.close();
     }
-    fs.writeFileSync(output + '/results.json', JSON.stringify({ route, production: false, results }, null, 2));
-    console.log('Hobyeongbaekma review: 4 viewports, 7 images, draft metadata/tables/TOC PASS');
+    fs.writeFileSync(output + '/results.json', JSON.stringify({ route, production: new URL(base).origin === 'https://getpasslab.co.kr', preview, results }, null, 2));
+    console.log('Hobyeongbaekma review: 4 viewports, 7 images, publication metadata/tables/TOC PASS');
   } finally { await browser.close(); }
 })().catch(e => { console.error(e); process.exitCode = 1; });

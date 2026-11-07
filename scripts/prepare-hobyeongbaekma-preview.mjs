@@ -11,6 +11,12 @@ const source = fs.readFileSync(root + '/episode00.md');
 assert.match(source.toString(), /^status: draft$/m);
 for (const row of rows) assert.equal(sha(fs.readFileSync(root + '/' + row.file)), row.sha256);
 const mode = process.argv[2];
+if (fs.existsSync(article) && /^status: published$/m.test(fs.readFileSync(article, 'utf8'))) {
+  const { assertEpisode00Release } = await import('./read-hobyeongbaekma-publication.mjs');
+  assertEpisode00Release();
+  console.log('Episode 00 is published; preserve committed article and assets');
+  process.exit(0);
+}
 if (mode === 'stage') {
   assert(!fs.existsSync(article), 'Never overwrite an existing article');
   assert(!fs.existsSync(assets), 'Never overwrite existing assets');

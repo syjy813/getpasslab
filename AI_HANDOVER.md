@@ -1,3 +1,10 @@
+## 현재 우선 작업 — 호병백마 0화 공개 배포 (2026-11-07)
+
+- 사용자가 0화 실서버 배포를 명시 승인했다. PR #259의 확정 제목·승인 썸네일·본문·카드6장을 보존하고 0화만 공개한다. 1화 호텔 초안 브랜치는 별도 보존한다.
+- `src/content/facility/hobyeongbaekma.md`를 published로 등록하고 발행/수정일은 2026-11-07, 실제 자료 확인일은 2026-11-06을 유지한다. 공개 경로 `/facility-management/career/hobyeongbaekma/`, 공개 이미지7장과 목록 썸네일 연결을 추가한다.
+- 공개14편의 정확한 추가 파일·이미지 해시·카드 컴포넌트 blob은 `docs/audits/2026-11-07-hobyeongbaekma-publication/manifest.json`으로 검증한다. 기존 역사 baseline은 그대로 보존한다.
+- 로컬 Build574페이지/950파일·SEO오류0(승인제목62자/기존description 경고)·공개문구·0화발행·native·기존8편/40이미지·151내부링크 검사PASS. 기존942산출물중939개바이트동일, 변경3(시설홈/취업목록/sitemap), 추가8(0화HTML+7이미지), 삭제0. 로컬Chromium은socket권한제한. 원격4폭QA/Commit/Push/Merge/Deploy/Production 최종 상태는 PR 실제기록과 이번 validation.json을 확인한다. 이 항목 작성 시 배포 전이다.
+
 ## 현재 우선 작업 — 호병백마 시리즈0화 검토본 (2026-11-06)
 
 - 사용자 요청으로 기존 실무콘텐츠2편보다 호병백마시리즈를 먼저 진행한다. 첨부ZIP의0화교정본·46건조사표·미확인9건을 보존했다.

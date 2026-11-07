@@ -1,8 +1,8 @@
-name: Hobyeongbaekma editorial preview QA
+name: Hobyeongbaekma publication QA
 on:
   pull_request:
     branches: [main]
-    paths: ['docs/drafts/facility/hobyeongbaekma/**', 'scripts/*hobyeongbaekma*', '.github/workflows/hobyeongbaekma-review-qa.yml']
+    paths: ['docs/drafts/facility/hobyeongbaekma/**', 'scripts/*hobyeongbaekma*', 'src/content/facility/hobyeongbaekma.md', 'public/images/facility-series/hobyeongbaekma-00/**', 'docs/audits/2026-11-07-hobyeongbaekma-publication/**', '.github/workflows/hobyeongbaekma-review-qa.yml']
 permissions:
   contents: read
 jobs:
@@ -16,21 +16,14 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - name: Protect current public build
+      - name: Validate released page and existing public build
         run: |
           npm run build
           npm run check:seo
           npm run check:public-content
           node scripts/check-facility-bulk-visuals.mjs
           node scripts/check-facility-related-links.mjs
-          test ! -e dist/facility-management/career/hobyeongbaekma/index.html
-          test ! -e dist/images/facility-series/hobyeongbaekma-00
-      - name: Stage temporary editorial preview
-        run: node scripts/prepare-hobyeongbaekma-preview.mjs stage
-      - name: Build actual Astro draft page
-        env:
-          FACILITY_DRAFT_PREVIEW: '1'
-        run: npm run build
+          node scripts/check-hobyeongbaekma-publication.mjs
       - name: Install browser test tools
         run: |
           npm install --prefix /tmp/hobyeongbaekma-tools --no-package-lock playwright@1.62.1
@@ -42,11 +35,6 @@ jobs:
           python3 -m http.server 4321 --bind 127.0.0.1 --directory dist >/tmp/hobyeongbaekma-server.log 2>&1 &
           for n in $(seq 1 30); do curl -fsS http://127.0.0.1:4321/ >/dev/null && break; sleep 1; done
           node scripts/qa-hobyeongbaekma-review.cjs
-      - name: Remove only temporary preview files
-        if: always()
-        run: |
-          node scripts/prepare-hobyeongbaekma-preview.mjs clean
-          git diff --exit-code -- src public
       - uses: actions/upload-artifact@v4
         if: always()
         with:
