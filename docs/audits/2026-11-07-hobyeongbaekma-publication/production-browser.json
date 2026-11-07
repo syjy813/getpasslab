@@ -1,0 +1,31 @@
+{
+  "url": "https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/",
+  "status": "PASS",
+  "mobile": {
+    "requestedViewport": 390,
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "allSevenImagesLoaded": true,
+    "tocNavigation": "PASS",
+    "cardVisualReview": "PASS",
+    "h2TopPadding": "24px",
+    "h2Color": "rgb(20, 92, 62)"
+  },
+  "desktop": {
+    "requestedViewport": 1440,
+    "clientWidth": 1425,
+    "scrollWidth": 1425,
+    "h1": 1,
+    "images": 7,
+    "heroLoaded": true,
+    "visualReview": "PASS",
+    "runtimeErrors": []
+  },
+  "home": {
+    "cards": 14,
+    "episodeLinkCount": 1,
+    "approvedThumbnail": "PASS",
+    "navigationFromHome": "PASS"
+  },
+  "viewportOverrideRestored": true
+}

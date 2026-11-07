@@ -21,7 +21,61 @@
     "status": "UNAVAILABLE",
     "reason": "Chromium socket permission denied; use GitHub Actions responsive QA"
   },
-  "remoteCI": "Pending actual PR HEAD checks",
-  "deploy": "Pending merge and Pages deployment",
-  "production": "Not checked yet"
+  "remoteCI": {
+    "head": "1880ca29bb6c8b493f4d389ace9a6fe7afc2666e",
+    "episode00": {
+      "run": 42376490813,
+      "status": "success",
+      "widths": [
+        320,
+        390,
+        768,
+        1440
+      ]
+    },
+    "facilityPublication": {
+      "run": 42376490882,
+      "status": "success",
+      "modes": [
+        "publication",
+        "private-preview"
+      ],
+      "widths": [
+        320,
+        390,
+        768,
+        1440
+      ]
+    },
+    "seo": {
+      "run": 42376490808,
+      "status": "success"
+    },
+    "certificationDiscovery": {
+      "run": 42376490807,
+      "status": "success"
+    },
+    "fireFullRegression": {
+      "run": 42376490823,
+      "status": "in_progress at production QA; unchanged certificate output preserved"
+    }
+  },
+  "deploy": {
+    "run": 42376780644,
+    "mergeCommit": "f91882404792ded1457acf9e86a36cdcb27fdb80",
+    "build": "success",
+    "deploy": "success",
+    "pr": 259
+  },
+  "production": {
+    "status": "PASS",
+    "httpEvidence": "production-http.json",
+    "browserEvidence": "production-browser.json",
+    "unverified": [
+      "physical phones",
+      "Safari",
+      "live advertisement delivery",
+      "search engine indexing"
+    ]
+  }
 }

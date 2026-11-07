@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-11-07T13:25:29.385881+00:00",
+  "deployCommit": "f91882404792ded1457acf9e86a36cdcb27fdb80",
+  "url": "https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/",
+  "status": "PASS",
+  "metadata": "index/canonical/Article/publication date PASS",
+  "listing": "home and career link/approved hero PASS",
+  "sitemap": "PASS",
+  "responses": [
+    {
+      "path": "/facility-management/career/hobyeongbaekma/",
+      "http": 200,
+      "bytes": 35575
+    },
+    {
+      "path": "/facility-management/",
+      "http": 200,
+      "bytes": 27159
+    },
+    {
+      "path": "/facility-management/career/",
+      "http": 200,
+      "bytes": 18306
+    },
+    {
+      "path": "/sitemap-0.xml",
+      "http": 200,
+      "bytes": 63052
+    },
+    {
+      "path": "/images/facility-series/hobyeongbaekma-00/03-why-hard-1.webp",
+      "http": 200,
+      "bytes": 52702,
+      "sha256": "332ca9b6a2371df92eaf93ac3d34c67f29704b421797ebbeb196d76eb90acbcb",
+      "approvedHash": "PASS"
+    },
+    {
+      "path": "/images/facility-series/hobyeongbaekma-00/05-before-applying-2.webp",
+      "http": 200,
+      "bytes": 62078,
+      "sha256": "7a383847ff1ad7f4878569c5692e1206c44548144d80524bcb8877cfdab92fa9",
+      "approvedHash": "PASS"
+    },
+    {
+      "path": "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-1.webp",
+      "http": 200,
+      "bytes": 48390,
+      "sha256": "c4f7ea3b9a507270d48098f0c17d21e2fd916bbfb911ab9af8d582c6f049818b",
+      "approvedHash": "PASS"
+    },
+    {
+      "path": "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-2.webp",
+      "http": 200,
+      "bytes": 51278,
+      "sha256": "b1be3cd49179c6d0a177d892cf19b67977cad6754e0811ab8d9e2bf1c975e06d",
+      "approvedHash": "PASS"
+    },
+    {
+      "path": "/images/facility-series/hobyeongbaekma-00/03-why-hard-2.webp",
+      "http": 200,
+      "bytes": 53254,
+      "sha256": "22ee9f9bdac6a988292a3f5de3ab5c5d90dde04cc30725b8962f790cd8d81045",
+      "approvedHash": "PASS"
+    },
+    {
+      "path": "/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp",
+      "http": 200,
+      "bytes": 187200,
+      "sha256": "71f0cbba9c3a7b4da91d3fc7fd154a232f11d03ec9f01d3dabb647610b5946be",
+      "approvedHash": "PASS"
+    },
+    {
+      "path": "/images/facility-series/hobyeongbaekma-00/05-before-applying-1.webp",
+      "http": 200,
+      "bytes": 59626,
+      "sha256": "440934bdcd6bc0d8e98a384f10469821104979d7c9e8981367a9cf27348089a4",
+      "approvedHash": "PASS"
+    }
+  ]
+}

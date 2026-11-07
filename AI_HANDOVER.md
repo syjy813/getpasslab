@@ -1,9 +1,12 @@
-## 현재 우선 작업 — 호병백마 0화 공개 배포 (2026-11-07)
+## 현재 상태 — 호병백마 0화 실서버 발행 완료 (2026-11-07)
 
-- 사용자가 0화 실서버 배포를 명시 승인했다. PR #259의 확정 제목·승인 썸네일·본문·카드6장을 보존하고 0화만 공개한다. 1화 호텔 초안 브랜치는 별도 보존한다.
-- `src/content/facility/hobyeongbaekma.md`를 published로 등록하고 발행/수정일은 2026-11-07, 실제 자료 확인일은 2026-11-06을 유지한다. 공개 경로 `/facility-management/career/hobyeongbaekma/`, 공개 이미지7장과 목록 썸네일 연결을 추가한다.
-- 공개14편의 정확한 추가 파일·이미지 해시·카드 컴포넌트 blob은 `docs/audits/2026-11-07-hobyeongbaekma-publication/manifest.json`으로 검증한다. 기존 역사 baseline은 그대로 보존한다.
-- 로컬 Build574페이지/950파일·SEO오류0(승인제목62자/기존description 경고)·공개문구·0화발행·native·기존8편/40이미지·151내부링크 검사PASS. 기존942산출물중939개바이트동일, 변경3(시설홈/취업목록/sitemap), 추가8(0화HTML+7이미지), 삭제0. 로컬Chromium은socket권한제한. 원격4폭QA/Commit/Push/Merge/Deploy/Production 최종 상태는 PR 실제기록과 이번 validation.json을 확인한다. 이 항목 작성 시 배포 전이다.
+- 사용자 0화 우선 실서버 배포 승인에 따라 PR #259 병합. 공개 URL https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/ . 확정 `[호병백마 ep.0]` 제목·흐린낮/큰고딕 대표·카드6장·본문을 보존했다. 1화호텔초안은 `codex/hobyeongbaekma-hotel-draft-20261107` 브랜치에 보존하며 이번에 공개하지 않았다.
+- 공개정본 `src/content/facility/hobyeongbaekma.md`, published, 발행/수정2026-11-07·실제자료확인2026-11-06. 이미지7장과 시설홈/취업목록 썸네일 연결. 원고 차이는 status·발행/수정일뿐이며 approved draft/이미지해시 불변.
+- HEAD1880ca2의 원격0화4폭QA42376490813·시설공개/검토모드4폭QA42376490882·SEO42376490808·자격증탐색42376490807 모두success. 소방전체회귀42376490823은 실서버검수시점진행중으로 별도확인 필요; 자격증산출물은바이트그대로다.
+- 배포소스 `f91882404792ded1457acf9e86a36cdcb27fdb80`, Pages42376780644 build/deploy모두success. Production 2026-11-07 22:25 KST: 글/홈/취업목록/sitemap HTTP200, 이미지7장전부HTTP200·승인SHA일치. index/canonical/Article/실제발행일/목록링크정상.
+- Production브라우저390/1440px에서 가로넘침없음·대표/카드·목차이동·전체7이미지로딩·소제목24px/색·홈14카드/0화단일링크·진입확인. 임시화면크기원복. 실휴대폰/Safari/실광고/색인은미검증.
+- 로컬Build574페이지/950파일·SEO오류0(승인제목62자/기존description 경고)·공개문구·0화발행·native·기존8편/40이미지·151내부링크PASS. 기존942산출물중939바이트동일, 변경3(시설홈/취업목록/sitemap), 추가8(0화HTML+7이미지), 삭제0. 역사baseline보존, 명시추가manifest로검증.
+- 근거 `docs/audits/2026-11-07-hobyeongbaekma-publication/` . 아래0화미배포/미승인기록은제작당시이력이며현재상태는본항목이대체한다. 다음집필작업은1화호텔초안검토이며이미지는미완성상태다.
 
 ## 현재 우선 작업 — 호병백마 시리즈0화 검토본 (2026-11-06)
 
