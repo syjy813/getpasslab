@@ -24,6 +24,7 @@ const schemas = list.filter(n => n.tagName === 'script' && attr(n, 'type') === '
 assert.equal(schemas.length, preview ? 0 : 1);
 if (!preview) {
   assert.equal(schemas[0].datePublished, release.publishedAt);
+  assert.equal(schemas[0].dateModified, release.updatedAt);
   assert.equal(schemas[0].mainEntityOfPage, origin + release.route);
   assert.equal(schemas[0].citation.length, 10);
 }
@@ -33,13 +34,25 @@ assert(!list.some(n => n.tagName === 'a' && attr(n, 'href')?.includes('no=184217
 assert(!list.some(n => (attr(n, 'class') || '').split(/\s+/).includes('facility-sources')));
 assert(text(body).includes('4개의 시설은 무엇이 다를까?'));
 const images = nodes(body).filter(n => n.tagName === 'img');
-assert.equal(images.length, 7);
-for (const image of images) {
+assert.equal(images.length, 4, 'hero plus three complete comparison images');
+assert.equal(nodes(body).filter(n=>n.tagName==='picture').length,3);
+for (const [index,image] of images.entries()) {
   const path = attr(image, 'src');
+  const row=release.images[index];
+  assert.equal(path,row.src,'exact display-image order');
   assert(attr(image, 'alt') && attr(image, 'width') && attr(image, 'height'));
+  assert.equal(Number(attr(image,'width')),row.width);assert.equal(Number(attr(image,'height')),row.height);
   const expected = release.additions['public' + path]; assert(expected, path);
   assert.equal(createHash('sha256').update(fs.readFileSync('dist' + path)).digest('hex'), expected);
+  if(row.mobile){
+    const source=image.parentNode.childNodes.find(n=>n.tagName==='source');
+    assert.equal(attr(source,'srcset'),row.mobile.src);
+    assert.equal(attr(source,'media'),'(max-width:767px)');
+    assert.equal(Number(attr(source,'width')),row.mobile.width);assert.equal(Number(attr(source,'height')),row.mobile.height);
+    assert.equal(createHash('sha256').update(fs.readFileSync('dist'+row.mobile.src)).digest('hex'),row.mobile.sha256);
+  }
 }
+assert(!images.some(image=>/-(1|2)\.webp$/.test(attr(image,'src'))),'split images are no longer rendered');
 for (const route of ['/facility-management/', '/facility-management/career/']) {
   const cards = read(route).filter(n => n.tagName === 'a' && attr(n, 'href') === release.route);
   assert.equal(cards.length, 1, 'exactly one episode card: ' + route);
@@ -54,4 +67,4 @@ for (const n of list.filter(n => n.tagName === 'a')) {
   const href = attr(n, 'href');
   if (href?.startsWith('/facility-management/')) assert(fs.existsSync('dist' + href.replace(/\/$/, '') + '/index.html'), href);
 }
-console.log('Episode 00 publication: approved prose and 7 images, title, listing thumbnail, canonical, schema, sitemap and internal links PASS');
+console.log('Episode 00 publication: preserved prose and hero, three complete comparison pictures, six responsive assets, metadata/canonical/schema/sitemap/links PASS');

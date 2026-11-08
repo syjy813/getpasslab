@@ -1,0 +1,52 @@
+{
+  "title": "4개 시설의 관리 대상",
+  "subtitle": "같은 시설명이어도 실제 업무는 현장마다 다름",
+  "cards": [
+    {
+      "title": "호텔",
+      "summary": "객실 냉난방·급탕",
+      "icon": "hotel",
+      "details": [
+        "객실 불편 처리 범위",
+        "야간 호출과 지원업무"
+      ],
+      "action": "객실 대응 범위 확인"
+    },
+    {
+      "title": "병원",
+      "summary": "공조·전기·급배수",
+      "icon": "hospital",
+      "details": [
+        "파트별 책임과 특수설비",
+        "비상 대응·신입 교육"
+      ],
+      "action": "담당 파트와 교육 확인"
+    },
+    {
+      "title": "백화점",
+      "summary": "전기·공조·방재",
+      "icon": "shopping",
+      "details": [
+        "행사와 매장 변경 지원",
+        "폐점 후 작업과 야간 인원"
+      ],
+      "action": "행사·야간 작업 확인"
+    },
+    {
+      "title": "마트",
+      "summary": "냉장·냉동·배수",
+      "icon": "cooling",
+      "details": [
+        "영선과 야간 보수",
+        "외주 정비와 직접 업무"
+      ],
+      "action": "외주·직접 업무 구분"
+    }
+  ],
+  "takeaway": [
+    "관리 대상과 직접 정비하는 범위를 구분",
+    "모든 시설팀이 같은 설비를 직접 정비하지는 않음"
+  ],
+  "cardSpacing": "compact",
+  "cardLayout": "overview"
+}
