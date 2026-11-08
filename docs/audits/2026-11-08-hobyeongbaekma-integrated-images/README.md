@@ -33,6 +33,14 @@
 - 실제 페이지 브라우저 QA는 320/390/768/1440px에서 전체 항목 한 장 선택·자연 치수·종횡비·가로 넘침·목차·표·런타임 오류를 검사한다. 새 이미지 응답을 잠시 보류한 상태에서도 높이가 예약되고 decode 후 1px 이상 높이가 뛰지 않는지 확인한다. 실제 삽입폭에서 필수 세부 글씨 12px 이상도 확인한다.
 - 로컬 Chromium의 socket 제한은 이전과 같아 브라우저 검증은 PR의 CI에서 수행한다. Build·SEO·기존 시설 공개/비공개 회귀·0화 실제 화면 QA 결과는 해당 HEAD/실행 링크로 구분한다. 템플릿만의 과거 PASS를 실제 페이지 PASS로 확대하지 않는다.
 
+## 실제 페이지 체크포인트와 기존 산출물 보호
+
+적용 HEAD `d3bfd4058cf80ecab9eadf118d5113a5d546ac4c`의 [0화 실제 페이지 QA 42478116631](https://github.com/syjy813/getpasslab/actions/runs/42478116631), [Build·SEO 42478116582](https://github.com/syjy813/getpasslab/actions/runs/42478116582), [템플릿 QA 42478116646](https://github.com/syjy813/getpasslab/actions/runs/42478116646)는 성공했다. 0화의 실제 네 화면에서 pre-load 비율·decode 후 높이·4개 img/3개 picture·본문·목차·표를 확인했다.
+
+기존 시설 회귀는 과거 고정 CSS 파일명 `FacilityCard.hoVVeo0t.css` 참조로 실패했다. 과거 `css-bundle.json`이나 public baseline을 수정하지 않고, 새 content-hash CSS에서 이번 세 규칙을 정확히 한 번 제거한 바이트가 **이전 compiled CSS SHA-256과 완전히 일치**하는지 검증하도록 연결했다. 산출물 inventory에는 정확히 6개 새 WebP만 추가하고 기존 자산·경로는 유지한다. 최종 HEAD의 시설 회귀 실행 결과를 확인한다.
+
+이 후속 검사기 수정은 공개 원고/CSS/이미지/마스터를 바꾸지 않는다. 위 실제 페이지 성공은 동일 표시 대상에 재사용할 수 있으며 검사기 변경의 성공 여부는 최종 CI와 구분한다.
+
 ## 현재 상태와 다음 행동
 
 원고·자산 교체는 별도 PR 브랜치에 구현했다. main 병합·Production 배포는 수행하지 않았다. 실제 빌드·QA 실행은 PR #263을 확인한다. 실서버 배포 요청 후 병합/배포하고 실제 0화의 4개 표시 이미지와 각 화면의 파일 선택을 확인한다.

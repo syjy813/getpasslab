@@ -8,6 +8,7 @@ export const episode00Revision = JSON.parse(fs.readFileSync('docs/audits/2026-11
 export const episode00Integration=JSON.parse(fs.readFileSync(integratedImageRoot+'/manifest.json'));
 const originalImages=JSON.parse(fs.readFileSync('docs/drafts/facility/hobyeongbaekma/image-manifest.json')).images;
 export const episode00Release = { ...originalRelease, additions: { ...originalRelease.additions, ...episode00Revision.additions, ...episode00Integration.additions }, layoutBlob: episode00Revision.layoutBlob,
+  outputAdditions:[...originalRelease.outputAdditions,...Object.keys(episode00Integration.additions).filter(file=>file.startsWith('public/')).map(file=>'dist'+file.slice('public'.length))],
   updatedAt:episode00Integration.updatedAt,facilityStyleBlob:episode00Integration.facilityStyleBlob,
   images:[{...originalImages[0],src:'/images/facility-series/hobyeongbaekma-00/'+originalImages[0].id+'.webp'},...episode00Integration.groups.map(row=>({id:row.id,...row.desktop,mobile:row.mobile,alt:row.alt,count:row.count}))] };
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');

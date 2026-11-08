@@ -2,6 +2,11 @@
 // actual modification date, and replace only the three known figure pairs.
 export const integratedImageRoot='docs/audits/2026-11-08-hobyeongbaekma-integrated-images';
 export const integratedImageStyles='\n/* Complete comparison sheets reserve the selected artwork ratio before loading. */\n.facility-body .facility-overview-figure picture{display:block}\n.facility-body .facility-overview-figure img{aspect-ratio:var(--overview-ratio)}\n@media(max-width:767px){.facility-body .facility-overview-figure img{aspect-ratio:var(--overview-mobile-ratio)}}\n';
+export const integratedCompiledStyles='.facility-body .facility-overview-figure picture{display:block}.facility-body .facility-overview-figure img{aspect-ratio:var(--overview-ratio)}@media(max-width:767px){.facility-body .facility-overview-figure img{aspect-ratio:var(--overview-mobile-ratio)}}';
+export function beforeIntegratedStyles(css){
+  if(css.split(integratedCompiledStyles).length!==2)throw Error('Expected exactly one complete-sheet style block in the compiled facility CSS');
+  return css.replace(integratedCompiledStyles,'');
+}
 
 export function integratedPicture(row){
   const d=row.desktop,m=row.mobile;
