@@ -95,8 +95,8 @@ test('unsafe markup is escaped and oversize content fails early',()=>{
  const a=renderInfographic({...examples[0].input,title:'A & B'});
  assert.match(a,/A &amp; B/);assert.doesNotMatch(a,/<text[^>]*>A & B/);
  assert.throws(()=>renderInfographic({...examples[0].input,title:'가'.repeat(150)}),/too long/);
- assert.throws(()=>renderInfographic({...examples[0].input,cards:[]}),/1..4/);
- assert.throws(()=>renderInfographic({...examples[0].input,cards:Array(5).fill(examples[0].input.cards[0])}),/1..4/);
+ assert.throws(()=>renderInfographic({...examples[0].input,cards:[]}),/1..6/);
+ assert.throws(()=>renderInfographic({...examples[0].input,cards:Array(7).fill(examples[0].input.cards[0])}),/1..6/);
  assert.throws(()=>renderInfographic({...examples[0].input,cards:[{...examples[0].input.cards[0],icon:'unknown-topic'}]}),/Unknown pictogram/);
 });
 

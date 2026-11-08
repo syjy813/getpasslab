@@ -1,0 +1,47 @@
+{
+  "baseCommit": "9eca8430c03682a2b027e00a825fe5ed54b0c471",
+  "sources": {
+    "02-four-workplaces": {
+      "cardContentUnchanged": true,
+      "count": 4,
+      "sourceFiles": [
+        {
+          "path": "docs/drafts/facility/hobyeongbaekma/specs/02-four-workplaces-1.json",
+          "blob": "56458eea182cc1a531209601158040a1fcbd7d2d"
+        },
+        {
+          "path": "docs/drafts/facility/hobyeongbaekma/specs/02-four-workplaces-2.json",
+          "blob": "9dbb417c9eb43d322baa8edc9d452d2d4342fe1c"
+        }
+      ]
+    },
+    "05-before-applying": {
+      "cardContentUnchanged": true,
+      "count": 6,
+      "sourceFiles": [
+        {
+          "path": "docs/drafts/facility/hobyeongbaekma/specs/05-before-applying-1.json",
+          "blob": "fc3610d99537947d7b3aab7fb7ba9b0de8683696"
+        },
+        {
+          "path": "docs/drafts/facility/hobyeongbaekma/specs/05-before-applying-2.json",
+          "blob": "dca06d71ab368157aa900a5e0bc3bf47fcd3e0c6"
+        }
+      ]
+    },
+    "03-why-hard": {
+      "cardContentUnchanged": true,
+      "count": 4,
+      "sourceFiles": [
+        {
+          "path": "docs/drafts/facility/hobyeongbaekma/specs/03-why-hard-1.json",
+          "blob": "782749c6f51890080de14e9b01443900511ad31f"
+        },
+        {
+          "path": "docs/drafts/facility/hobyeongbaekma/specs/03-why-hard-2.json",
+          "blob": "4a75a6c9db829e6a03f1074e637d563885ffda93"
+        }
+      ]
+    }
+  }
+}

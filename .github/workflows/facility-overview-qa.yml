@@ -1,0 +1,40 @@
+name: Facility overview template QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/*facility*infographic*'
+      - 'scripts/facility-overview-layout.mjs'
+      - 'scripts/facility-pictograms*.mjs'
+      - 'scripts/*facility-overview*'
+      - 'docs/standards/facility-infographic-templates/**'
+      - '.github/workflows/facility-overview-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  templates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Check legacy reproduction and complete 4–6 card layouts
+        run: node --test scripts/test-facility-infographic.mjs scripts/test-facility-overview.mjs
+      - name: Install Korean fonts and browser tools
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends fonts-noto-cjk
+          fc-cache -f
+          npm install --prefix /tmp/facility-tools --no-package-lock playwright@1.62.1
+          /tmp/facility-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Check responsive sheets and rendered text bounds
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/facility-tools/node_modules/playwright
+          OVERVIEW_QA_REPORT: overview-browser-validation.json
+        run: node scripts/qa-facility-overview.cjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: facility-overview-browser-validation
+          path: overview-browser-validation.json

@@ -4,6 +4,7 @@ import {PICTOGRAMS} from './facility-pictograms.mjs';
 const soft='#E9F5E6';
 const box=(x,y,w,h,r=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${soft}"/>`;
 export const EXTRA_PICTOGRAMS={
+ hotel:{meaning:'객실 침대와 호텔의 객실 설비',svg:'<g data-part="bed"><path d="M9 90V26M95 90V49M9 73h86M9 60h86V45H47v15"/><rect x="17" y="36" width="23" height="19" rx="6" fill="#E9F5E6"/><path d="M9 80h86"/></g>'},
  mechanical:{meaning:'펌프와 배관을 통한 기계설비 관리',svg:'<g data-part="motor">'+box(56,40,36,33,5)+'<path d="M65 49v15M80 49v15"/></g><g data-part="pump"><circle cx="36" cy="55" r="20" fill="#E9F5E6"/><circle cx="36" cy="55" r="7" fill="#FFFFFF"/><path d="M16 55H6M6 47v16M36 35V18h34M70 10v16"/></g><path d="M36 75v13M76 74v14M16 88h76"/>'},
  electrical:{meaning:'수배전반과 전기설비',svg:box(22,8,60,88)+'<path d="M22 32h60M32 21h9m10 0h9M56 43L40 66h15l-5 19 19-28H54Z"/>'},
  fire:{meaning:'소화기와 소방설비',svg:box(31,35,43,60,12)+'<path d="M40 35V22h25v13M39 22l13-12h22M73 22q18 0 18 20v18M34 67h37M46 52h14M47 80h12"/>'},

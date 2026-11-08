@@ -1,8 +1,9 @@
 // Compact spacing profile over the canonical renderer. Existing approved
 // 4:3 assets keep their original renderer and byte-for-byte reproduction.
-import {renderInfographic as renderBase,cardRects,TOKENS,wrap,rect} from './generate-facility-infographic.mjs';
+import {renderInfographic as renderBase,cardRects,TOKENS,wrap,rect,infographicOverviewLayout} from './generate-facility-infographic.mjs';
 
 export function infographicLayout(spec){
+  if(spec.cardLayout==='overview'||spec.cards.length>4)return {...infographicOverviewLayout(spec),reduction:0,previousGap:null,gap:null};
   const title=wrap(spec.title,20.4,2,'title');
   const subtitle=wrap(spec.subtitle,40,2,'subtitle');
   const top=TOKENS.title.top+title.length*TOKENS.title.lineHeight+TOKENS.subtitle.gap
@@ -29,7 +30,7 @@ export function infographicLayout(spec){
 
 export function renderInfographic(spec){
   let svg=renderBase(spec);
-  if(spec.cardSpacing!=='compact')return svg;
+  if(spec.cardSpacing!=='compact'||spec.cardLayout==='overview'||spec.cards.length>4)return svg;
   const layout=infographicLayout(spec),count=spec.cards.length,c=TOKENS.colors;
   const replaceOnce=(before,after)=>{
     if(!svg.includes(before))throw Error('Canonical template changed; compact spacing needs review');

@@ -1,0 +1,13 @@
+{
+  "title": "호텔 면접에서 물어볼 5가지",
+  "subtitle": "맡을 업무와 지원·교육을 구체적으로 확인",
+  "cardLayout": "overview",
+  "cards": [
+    {"title":"최근 담당업무","summary":"이 자리가 실제로 맡은 일","icon":"job-offer","details":["객실 수리와 설비 점검","다른 부서 지원의 범위"],"action":"최근 업무 예시 질문"},
+    {"title":"요청·점검 배분","summary":"객실 호출과 점검이 겹칠 때","icon":"monitor","details":["접수와 우선순위 담당","점검을 이어갈 인력"],"action":"배분 방식 질문"},
+    {"title":"야간 지원","summary":"혼자 판단하기 어려운 상황","icon":"support","details":["보고 대상과 연락 방법","현장 지원을 받는 절차"],"action":"지원 담당자 질문"},
+    {"title":"신입 교육","summary":"처음 혼자 당직을 서기 전","icon":"training","details":["교육 담당자와 내용","단독근무 전환 기준"],"action":"교육 기준 질문"},
+    {"title":"직접 맡을 점검","summary":"기계실 점검과 업무 기록","icon":"mechanical","details":["직접 맡는 설비와 기록","희망 분야와의 연결"],"action":"실제 담당업무 질문"}
+  ],
+  "takeaway":"배울 업무와 감당할 일을 함께 비교"
+}

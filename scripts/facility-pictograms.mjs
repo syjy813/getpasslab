@@ -54,8 +54,8 @@ export const PICTOGRAMS = {
   }
 };
 
-export function semanticIconSvg(name,cx,cy,size){
-  const icon=PICTOGRAMS[name];
+export function semanticIconSvg(name,cx,cy,size,registry=PICTOGRAMS){
+  const icon=registry[name];
   if(!icon)return null;
   return '<g class="semantic-pictogram" data-icon="'+name+'" transform="translate('+(cx-size/2)+' '+(cy-size/2)+') scale('+(size/104)+')" fill="none" stroke="#12523C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">'+icon.svg+'</g>';
 }

@@ -1,0 +1,66 @@
+{
+  "title": "지원 전 6가지 확인",
+  "subtitle": "계약·업무·지원·교육을 한눈에 비교",
+  "cards": [
+    {
+      "title": "고용주",
+      "summary": "근로계약을 맺는 회사",
+      "icon": "legal-employer",
+      "details": [
+        "직영·자회사·용역 구분"
+      ],
+      "action": "계약 상대방 확인"
+    },
+    {
+      "title": "근무표",
+      "summary": "주간·야간·비번·휴무",
+      "icon": "shift-calendar",
+      "details": [
+        "한 주기의 실제 근무표"
+      ],
+      "action": "근무·휴무 주기 확인"
+    },
+    {
+      "title": "실제 담당",
+      "summary": "설비와 지원업무의 범위",
+      "icon": "mechanical",
+      "details": [
+        "고객서비스·행사 포함 여부"
+      ],
+      "action": "업무분장 확인"
+    },
+    {
+      "title": "야간 지원",
+      "summary": "당직 인원과 연락체계",
+      "icon": "support",
+      "details": [
+        "혼자 해결하기 어려운 상황"
+      ],
+      "action": "지원 담당자 확인"
+    },
+    {
+      "title": "보수·휴게",
+      "summary": "기본급·수당·실제 휴게",
+      "icon": "pay-components",
+      "details": [
+        "금액의 포함 항목과 휴게 장소"
+      ],
+      "action": "급여·휴게 조건 확인"
+    },
+    {
+      "title": "경력·교육",
+      "summary": "신입 교육과 경력증빙",
+      "icon": "career",
+      "details": [
+        "교육 담당자와 업무 기록"
+      ],
+      "action": "교육·증빙 방법 확인"
+    }
+  ],
+  "takeaway": [
+    "기관 이름보다 실제 계약과 담당업무부터 확인",
+    "구체적인 답변은 입사 전 확인 자료와 대조"
+  ],
+  "cardSpacing": "compact",
+  "cardLayout": "overview"
+}
