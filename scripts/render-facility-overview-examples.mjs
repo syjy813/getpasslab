@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import {renderInfographic} from './generate-facility-infographic.mjs';
+import {renderInfographic} from './generate-facility-overview.mjs';
 
 const root = 'docs/standards/facility-infographic-templates/';
 for (const name of ['overview-example-4','overview-example-5','overview-example-6','overview-workload-4']) {

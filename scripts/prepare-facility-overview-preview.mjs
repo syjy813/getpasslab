@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
-import {renderInfographic,infographicOverviewLayout} from './generate-facility-infographic.mjs';
+import {renderInfographic,infographicOverviewLayout} from './generate-facility-overview.mjs';
 const sharp=createRequire(import.meta.url)('sharp');
 const root='docs/standards/facility-infographic-templates/';
 const escape=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');

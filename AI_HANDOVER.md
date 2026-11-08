@@ -17,10 +17,10 @@
 
 | 단계 | 상태·근거 |
 |---|---|
-| 구현 | 기존 렌더러에 overview 프로필 추가. 4개 2×2, 5개 2+2+1, 6개 2×3; 모바일은 전체 항목 1열. 내용에 따라 높이 확장 |
+| 구현 | 기존 원본을 보존하는 별도 overview 진입점 추가. 4개 2×2, 5개 2+2+1, 6개 2×3; 모바일은 전체 항목 1열. 내용에 따라 높이 확장 |
 | 예제·검토본 | [4·5·6개 검토본](docs/standards/facility-infographic-templates/overview-preview.html), JSON/SVG·PNG·WebP 6종, 추가 업무 부담 4개 SVG 예제 |
 | 검증 | 기존 1~4개/compact 바이트 재현 및 내용 보존·겹침·장문 처리 등 22개 테스트 PASS. 분할본 3묶음의 카드 필드 보존 대조 PASS. 상세는 [audit](docs/audits/2026-11-08-facility-overview/README.md) |
-| Build / 브라우저 | 로컬 전체 사이트 Build 미실행. 로컬 Chromium은 socket 권한으로 실행 불가. 필수 Build/SEO 및 320/390/768/1440px 템플릿 브라우저 QA는 PR CI의 실제 결과를 확인 |
+| Build / 브라우저 | 로컬 전체 사이트 Build 미실행. 로컬 Chromium은 socket 권한으로 실행 불가. 첫 HEAD의 4폭 템플릿 브라우저 QA는 성공. 공용 해시 보호로 실패한 Build는 원본 복원·별도 진입점 분리 후 최종 HEAD CI를 다시 확인 |
 | Git | 별도 템플릿 브랜치/PR에 보존. 공개 원고·이미지·URL 및 패키지/의존성 변경 없음 |
 | Deploy / Production | 이번 배포 요청 없음. main 병합·배포 미수행. 0화 기존 공개본은 교체하지 않음 |
 

@@ -1,8 +1,9 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {renderInfographic,infographicOverviewLayout} from './generate-facility-infographic.mjs';
-import {renderInfographic as renderCompact,infographicLayout} from './generate-facility-compact-infographic.mjs';
+import {renderInfographic,infographicOverviewLayout} from './generate-facility-overview.mjs';
+import {renderInfographic as renderCompact} from './generate-facility-compact-infographic.mjs';
+import {renderInfographic as renderLegacy} from './generate-facility-infographic.mjs';
 
 const root='docs/standards/facility-infographic-templates/';
 const input=n=>JSON.parse(fs.readFileSync(root+'overview-example-'+n+'.json','utf8'));
@@ -39,18 +40,17 @@ for(const n of [4,5,6]) for(const viewport of ['desktop','mobile']) {
     }
     assert.equal(new Set(layout.cards.map(c=>c.x)).size,viewport==='mobile'?1:n===5?3:2);
     assert.equal((svg.match(/id="gpl-brand"/g)||[]).length,1);
-    assert.equal(renderCompact({...spec,cardSpacing:'compact'}),svg,'compact wrapper delegates without cropping');
-    assert.equal(infographicLayout(spec).height,layout.height);
+    assert.equal(renderInfographic({...spec,cardSpacing:'compact'}),svg,'compact input preserves complete overview geometry');
     assert.match(svg,new RegExp('width="'+layout.width+'" height="'+layout.height+'"'));
   });
 }
-test('5 and 6 cards select overview automatically; 4 cards require explicit opt-in',()=>{
+test('new entry point selects overview; approved legacy entry remains unchanged',()=>{
   const a=input(5); delete a.cardLayout;
   assert.match(renderInfographic(a),/data-layout="overview"/);
   const b=input(6); delete b.cardLayout;
   assert.match(renderInfographic(b),/data-layout="overview"/);
   const legacy=JSON.parse(fs.readFileSync(root+'example-4.json','utf8'));
-  assert.doesNotMatch(renderInfographic(legacy),/data-layout="overview"/);
+  assert.doesNotMatch(renderLegacy(legacy),/data-layout="overview"/);
 });
 test('fifth card keeps its size and is centred without creating a sixth empty card',()=>{
   const l=infographicOverviewLayout(input(5));
@@ -66,7 +66,7 @@ test('long headings increase canvas height instead of pushing cards into the foo
 test('invalid or excessive content fails rather than being silently discarded',()=>{
   const s=input(4);
   assert.throws(()=>renderInfographic({...s,cards:s.cards.slice(0,3)}),/4..6/);
-  assert.throws(()=>renderInfographic({...s,cards:Array(7).fill(s.cards[0])}),/1..6/);
+  assert.throws(()=>renderInfographic({...s,cards:Array(7).fill(s.cards[0])}),/4..6/);
   assert.throws(()=>renderInfographic({...s,cards:[{...s.cards[0],details:['a','b','c','d']},...s.cards.slice(1)]}),/silently dropped/);
   assert.throws(()=>renderInfographic({...s,cards:[{...s.cards[0],icon:'unknown-topic'},...s.cards.slice(1)]}),/Unknown pictogram/);
   assert.throws(()=>renderInfographic({...s,viewport:'watch'}),/viewport/);

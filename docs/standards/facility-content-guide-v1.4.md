@@ -700,7 +700,7 @@ status: "reviewed"
 
 #### 5.13.7 카드형 템플릿 정본 (2026-11-05 갱신)
 
-- 재사용 렌더러는 `scripts/generate-facility-infographic.mjs`, 등록된 1~6카드 JSON/SVG 예제는 `docs/standards/facility-infographic-templates/`. 새 카드와 승인된 카드 개정은 이 렌더러로 생성한다.
+- 기존 1~4개 재사용 렌더러는 `scripts/generate-facility-infographic.mjs`, 4~6개 상세 통합형은 `scripts/generate-facility-overview.mjs`다. 등록된 1~6카드 JSON/SVG 예제는 `docs/standards/facility-infographic-templates/`. 새 카드와 승인된 카드 개정은 이 렌더러로 생성한다.
 - **우측 하단 원형 그린 배경 장식은 사용하지 않는다.** 좌측 상단 배경·프레임·제목·카드·하단 핵심 메시지 구조는 유지한다.
 - 브랜드 크기를 유지하고 좌표를 x1150/y80 → **x1200/y44**로 이동한다. 제목·부제의 좌측80px 정렬 및64px/30px 크기는 유지한다.
 - 승인된 카드4장은 수정된 템플릿으로 재생성한다. 대표 일러스트·다른 게시글은 이 작업의 교체 대상이 아니다.
@@ -731,7 +731,7 @@ status: "reviewed"
 #### 5.13.10 4~6카드 통합형 (2026-11-08 사용자 요청)
 
 - 동일 비교 주제의 항목은 한 이미지에 함께 보여준다. 4개는 PC 2×2, 5개는 2+2+1(마지막 중앙), 6개는 2×3이다. 모바일에는 **같은 항목·순서·설명이 모두 들어간 1열 이미지 한 장**을 제공한다. 두 이미지로 내용을 나누는 것이 아니다.
-- 정본 진입점 `scripts/generate-facility-infographic.mjs`의 `cardLayout: "overview"`와 `scripts/facility-overview-layout.mjs`를 사용한다. 5~6개는 자동으로 통합형을 선택한다. 기존 1~4개 승인본의 생성 결과·4:3/compact 프로필은 그대로 보존한다.
+- 정본 확장 진입점 `scripts/generate-facility-overview.mjs`와 `scripts/facility-overview-layout.mjs`를 사용한다. 예제의 `cardLayout: "overview"`는 이 프로필을 표시한다. 기존 렌더러·픽토그램 원본의 해시를 바꾸지 않고 공개 헬퍼와 도형만 읽기 전용으로 재사용한다. 기존 1~4개 승인본의 생성 결과·4:3/compact 프로필은 그대로 보존한다.
 - 데스크톱은 1440px 폭·제목/부제 64/30px·기존 로고와 색을 유지한다. **4:3 고정 높이의 예외**로 카드 내용에 맞춰 전체 높이를 늘린다. 카드마다 제목·요약·상세·행동문구를 보존하며, 상세를 생략하거나 폰트를 줄여 맞추지 않는다.
 - 모바일은 720px 폭의 1열 파생으로 제목 44px·부제 32px·카드 제목 40px·본문/라벨 32px을 사용한다. 이는 작은 화면의 가독성을 위한 별도 제작 좌표이며, 기존 PC 제목 고정 토큰을 바꾸는 것이 아니다. 높이는 동일 내용에 맞춰 늘어난다.
 - 실제 HTML에는 `<picture>`로 화면에 맞는 완결된 이미지 하나를 선택한다. `<source>`/`<img>`에 각각 실제 치수를 넣고 `width:100%;height:auto`로 표시한다. 대표/목록 썸네일과 혼용하거나 4:3으로 crop하지 않는다.

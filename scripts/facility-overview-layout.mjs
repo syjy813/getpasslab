@@ -1,7 +1,5 @@
 // Content-preserving 4–6 card sheets. Helpers and pictograms come from the
 // canonical renderer; legacy 1–4 templates keep their exact SVG bytes.
-import {semanticIconSvg} from './facility-pictograms.mjs';
-import {EXTRA_PICTOGRAMS} from './facility-pictograms-extended.mjs';
 export function overviewLayout(spec, {TOKENS, wrap}) {
   const count = spec?.cards?.length;
   if (!Number.isInteger(count) || count < 4 || count > 6) throw Error('Overview cards length must be 4..6');
@@ -90,7 +88,7 @@ export function renderOverview(spec, helpers) {
     svg += '<circle cx="'+badgeX+'" cy="'+badgeY+'" r="21" fill="'+c.ink+'"/>';
     svg += '<text x="'+badgeX+'" y="'+(badgeY+7)+'" fill="#FFFFFF" font-size="22" text-anchor="middle">'+String(i+1).padStart(2,'0')+'</text>';
     const icon = card.icon || 'building', cx = g.x+(mobile?72:87), cy = g.y+104, size = mobile?82:104;
-    svg += semanticIconSvg(icon,cx,cy,size,EXTRA_PICTOGRAMS) || iconSvg(icon,cx,cy,size);
+    svg += iconSvg(icon,cx,cy,size);
     svg += tspanBlock(g.title,g.x+g.titleX,g.y+46,type.cardTitle,mobile?50:46,c.ink,700);
     svg += tspanBlock(g.summary,g.x+g.titleX,g.y+g.summaryTop,type.summary,lineHeight,c.muted,400);
     for (const detail of g.details) {
