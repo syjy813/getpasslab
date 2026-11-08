@@ -36,6 +36,11 @@ git show 68708f825ba58795a189b900d40fe0d913e5c83d:AI_HANDOVER.md
 | 12 | 보호 규칙 | 기능·공개 URL·동결 ID·관계·미커밋 / 미추적 파일·필수 검증·배포 경계·Force Push / History Rewrite 금지·외부 명령 경계 유지 |
 | 13 | diff 검토 | 문서 4개만 변경, 상대 링크·문구·과거 원문 보존·제품 / CI 동일성·공백 오류 확인 |
 
+## Git 반영과 검증 근거
+
+- 문서 변경 커밋 `e53069e3532980295b7edf13475d54998800161d`를 원격 작업 브랜치에 반영하고 [PR #261](https://github.com/syjy813/getpasslab/pull/261)을 생성했다. `main`은 기준 커밋 그대로다.
+- 필수 SEO CI [42436577083](https://github.com/syjy813/getpasslab/actions/runs/42436577083)의 전체 job 성공을 확인했다 (Build·SEO·공개콘텐츠·기출 전달 검사 포함). 이 Snapshot 보완 커밋의 최종 결과는 [PR Checks](https://github.com/syjy813/getpasslab/pull/261/checks)의 해당 HEAD로 확인한다.
+
 ## 검증 근거와 한계
 
 - [evidence.json](evidence.json): 조회 시점, 기준 커밋, PR #260 검증·Pages·후속 Production QA의 실제 실행 상태와 HEAD, 열린 PR 목록, 실서버 응답·검사·이미지 7장 해시를 저장했다. 전체 HTML·API 응답은 대화나 인계에 복제하지 않았다.

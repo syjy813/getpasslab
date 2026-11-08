@@ -5,7 +5,7 @@
 ## 기준 상태
 
 - 마지막 갱신: 2026-11-08 10:54 KST
-- 작업 Branch: `codex/operations-docs-v22-20261108`
+- 작업 Branch: `codex/operations-docs-v22-20261108` · [PR #261](https://github.com/syjy813/getpasslab/pull/261) (open, 미병합)
 - 기준 `main` / 마지막 확인된 Production 소스: [`68708f825ba58795a189b900d40fe0d913e5c83d`](https://github.com/syjy813/getpasslab/commit/68708f825ba58795a189b900d40fe0d913e5c83d) (PR #260)
 - 문서 변경의 실제 HEAD는 `git rev-parse HEAD`, 포함 커밋은 `git log -1 -- AGENTS.md AI_HANDOVER.md`로 확인한다. 위 기준 커밋을 현재 작업 HEAD로 혼동하지 않는다.
 - 시작 시 작업 트리는 clean이었다. 현재 세션은 새 체크아웃이며 다른 작업 공간의 미커밋 상태를 확인한 것으로 보지 않는다.
@@ -19,9 +19,9 @@
 | 단계 | 이번 운영 문서 작업 | 서비스 기준 상태 |
 |---|---|---|
 | 구현 | 문서 역할 분리·재사용·제한 조회·체크포인트 규칙 반영 | PR #260의 0화 문구·자료 섹션·썸네일 개정 병합 완료 |
-| Test / QA | 문서 링크·보호 규칙·완료 기준·diff 검토 | PR #260 HEAD `c5998e8`의 시설·0화·자격증 탐색·소방 QA 성공. 아래 Actions 증거 참조 |
-| Build | 제품 소스·의존성·설정 동일성에 근거해 기존 Build 증거 재사용. 문서 변경 PR의 필수 CI는 별도 확인 | `68708f8`의 Pages build 성공. SEO는 PR HEAD `c5998e8`의 실행 성공 |
-| Commit / Push | 작업 브랜치의 실제 Git / PR 기록으로 확인 | `68708f8`이 원격 `main`에 반영됨 |
+| Test / QA | 문서 링크·보호 규칙·완료 기준·diff 검토 완료. 제품·기존 audit 등 다른 파일의 Git 객체 동일성 확인 | PR #260 HEAD `c5998e8`의 시설·0화·자격증 탐색·소방 QA 성공. 아래 Actions 증거 참조 |
+| Build | 로컬 제품 재빌드는 기존 증거 재사용. 문서 HEAD `e53069e`의 필수 SEO CI 전체 성공 (Build·공개콘텐츠·기출 전달 검사 포함): [42436577083](https://github.com/syjy813/getpasslab/actions/runs/42436577083). 전체 job 및 후속 HEAD 판정은 [PR Checks](https://github.com/syjy813/getpasslab/pull/261/checks)를 정본으로 확인 | `68708f8`의 Pages build 성공. SEO는 PR HEAD `c5998e8`의 실행 성공 |
+| Commit / Push | 문서 변경 커밋 `e53069e3532980295b7edf13475d54998800161d` 원격 반영 및 PR #261 생성. 이 Snapshot 보완을 포함한 최종 HEAD는 PR / Git 기록으로 확인 | `68708f8`이 원격 `main`에 반영됨 |
 | Deploy | 이번 문서 작업은 미실행. 이번 요청에 Production 배포 승인 없음 | Pages [42382274155](https://github.com/syjy813/getpasslab/actions/runs/42382274155) build / deploy 성공 |
 | Production | 신규 배포 없음. 현재 서비스의 제한된 HTTP 검증만 수행 | 2026-11-08 10:54 KST: 0화·목록·사이트맵 HTTP 200, 메타데이터·개정 문구·이미지 7장 해시 일치. 소방 Production QA [42382350616](https://github.com/syjy813/getpasslab/actions/runs/42382350616) 성공 |
 
@@ -35,7 +35,7 @@ Production의 이번 확인은 HTTP·HTML·자산 해시 범위다. 새 수동 �
 
 ## 미완료 / 알려진 문제
 
-- 이번 문서 작업의 main 병합·Production 배포는 요청 범위에 없다. PR의 Commit / Push / 필수 CI 상태를 확인하고 인계한다.
+- 이번 문서 작업의 main 병합·Production 배포는 요청 범위에 없다. 필수 CI의 최종 판정은 PR #261의 대상 HEAD와 Checks를 확인한다. 이전 HEAD 성공을 최신 HEAD 전체 CI 성공으로 바꿔 쓰지 않는다.
 - 다음 콘텐츠 후보는 호병백마 1화 호텔이다. `main`에는 0화와 시리즈 계획만 확인됐으며 1~4화를 공개 완료로 보지 않는다. 이전 인계가 언급한 `codex/hobyeongbaekma-hotel-draft-20261107`은 현재 원격 브랜치 목록에서 확인되지 않았다. 재개 시 보존 위치부터 확인한다.
 - 열린 기존 PR 10건은 자동으로 병합·폐기하지 않았다. #255(자연스러운 집필 기준), #246(이전 이미지 템플릿) 등은 미병합 상태이며 현재 정본으로 간주하지 않는다. 나머지 목록은 [이번 상태 증거](docs/audits/2026-11-08-operations-docs-v22/evidence.json)의 `openPullRequests` 참조. 최신 정합성 검토는 별도 작업이다.
 - 기존 기록의 컴활 실제 Excel / 과거 Windows 환경 검증, 산업안전 Q-Net 공식 원문·정오표 대조, 기출·이미지 이용 권리 문제는 이번에 해결 여부를 재검증하지 않았다. 관련 작업 재개 시 해당 audit와 현재 소스를 대조한다. 과거 수치·보류 목록을 최신 전수 상태로 사용하지 않는다.
@@ -45,7 +45,7 @@ Production의 이번 확인은 HTTP·HTML·자산 해시 범위다. 새 수동 �
 
 ## 다음 행동
 
-1. 이번 작업 브랜치의 PR / 필수 CI 결과를 확인하고, 실패하면 관련 Step부터 보완한다. 문서 수정만으로 실서버 배포를 시작하지 않는다.
+1. 작업 재개 시 PR #261의 최신 HEAD / Checks를 먼저 확인한다. 실패·취소라면 관련 Step부터 보완하고, 이미 성공한 동일 대상 검증은 재사용한다. 문서 수정만으로 실서버 배포를 시작하지 않는다.
 2. 다음 사용자 요청이 콘텐츠라면 위 호텔 초안의 보존 위치와 최신 정본 가이드부터 확인한다. 이전 제작·QA 전부를 반복하지 않고 유효한 체크포인트부터 재개한다.
 3. 새 상태가 확정되면 이 Snapshot의 해당 항목을 교체한다. 상세 과정·과거 현재 상태를 아래에 누적하지 않는다.
 

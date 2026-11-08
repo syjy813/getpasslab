@@ -305,5 +305,12 @@
       "title": "content: 에너지관리기능사 2강 보강",
       "head": "content/energy-lecture2"
     }
-  ]
+  ],
+  "documentationCI": {
+    "id": 42436577083,
+    "head_sha": "e53069e3532980295b7edf13475d54998800161d",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42436577083"
+  }
 }
