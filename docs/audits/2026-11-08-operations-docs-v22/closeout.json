@@ -1,0 +1,229 @@
+{
+  "recordedAt": "2026-11-08T08:47:58.350184+00:00",
+  "merge": {
+    "pr": 261,
+    "url": "https://github.com/syjy813/getpasslab/pull/261",
+    "reviewedHead": "c6b53e3e06f8ff39f5d3803f09f46c237eac4729",
+    "mergeCommit": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+    "merged": true
+  },
+  "deployJobs": [
+    {
+      "name": "build",
+      "conclusion": "success"
+    },
+    {
+      "name": "deploy",
+      "conclusion": "success"
+    }
+  ],
+  "workflowEvidence": {
+    "checkedAt": "2026-11-08T08:46:57.937077+00:00",
+    "runs": [
+      {
+        "id": 42463910527,
+        "name": "Practice UI production QA",
+        "event": "workflow_run",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463910527"
+      },
+      {
+        "id": 42463910508,
+        "name": "Industrial remaining splits QA",
+        "event": "workflow_run",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463910508"
+      },
+      {
+        "id": 42463910467,
+        "name": "FTA symbols split QA",
+        "event": "workflow_run",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463910467"
+      },
+      {
+        "id": 42463910447,
+        "name": "Earth retaining structure QA",
+        "event": "workflow_run",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463910447"
+      },
+      {
+        "id": 42463910433,
+        "name": "Fire production publication QA",
+        "event": "workflow_run",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463910433"
+      },
+      {
+        "id": 42463910441,
+        "name": "Industrial remaining chapter review QA",
+        "event": "workflow_run",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463910441"
+      },
+      {
+        "id": 42463910458,
+        "name": "Industrial question source repair QA",
+        "event": "workflow_run",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463910458"
+      },
+      {
+        "id": 42463910450,
+        "name": "All chapter formula style QA",
+        "event": "workflow_run",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463910450"
+      },
+      {
+        "id": 42463910438,
+        "name": "Industrial safety chapter splits QA",
+        "event": "workflow_run",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463910438"
+      },
+      {
+        "id": 42463910465,
+        "name": "All chapter reading hierarchy QA",
+        "event": "workflow_run",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463910465"
+      },
+      {
+        "id": 42463837414,
+        "name": "Deploy to GitHub Pages",
+        "event": "push",
+        "head_sha": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42463837414"
+      }
+    ]
+  },
+  "production": {
+    "checkedAt": "2026-11-08T08:41:55.742790+00:00",
+    "deployCommit": "d289a9a48f35fe9bdadfa57702d974a6d2c30773",
+    "deployRun": 42463837414,
+    "scope": "post-deploy HTTP, HTML, listings, sitemap and image hashes; not a new manual browser or whole-site QA",
+    "checks": {
+      "revisedHeading": true,
+      "removedExplanatoryLink": true,
+      "removedSourcesSection": true,
+      "canonical": true,
+      "articleStructuredData": true,
+      "listingLinks": true,
+      "sitemap": true,
+      "sevenImages": true
+    },
+    "responses": [
+      {
+        "path": "/",
+        "http": 200,
+        "bytes": 23189
+      },
+      {
+        "path": "/facility-management/career/hobyeongbaekma/",
+        "http": 200,
+        "bytes": 32305
+      },
+      {
+        "path": "/facility-management/",
+        "http": 200,
+        "bytes": 27159
+      },
+      {
+        "path": "/facility-management/career/",
+        "http": 200,
+        "bytes": 18306
+      },
+      {
+        "path": "/sitemap-0.xml",
+        "http": 200,
+        "bytes": 63052
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/03-why-hard-1.webp",
+        "http": 200,
+        "bytes": 52702,
+        "sha256": "332ca9b6a2371df92eaf93ac3d34c67f29704b421797ebbeb196d76eb90acbcb",
+        "expectedSHA256": "332ca9b6a2371df92eaf93ac3d34c67f29704b421797ebbeb196d76eb90acbcb",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/05-before-applying-2.webp",
+        "http": 200,
+        "bytes": 62078,
+        "sha256": "7a383847ff1ad7f4878569c5692e1206c44548144d80524bcb8877cfdab92fa9",
+        "expectedSHA256": "7a383847ff1ad7f4878569c5692e1206c44548144d80524bcb8877cfdab92fa9",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-1.webp",
+        "http": 200,
+        "bytes": 48910,
+        "sha256": "51071d02dbd7983f656f1bc53f73d35c9d3fb2f9d4de9b5ce2993c3d8c804165",
+        "expectedSHA256": "51071d02dbd7983f656f1bc53f73d35c9d3fb2f9d4de9b5ce2993c3d8c804165",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-2.webp",
+        "http": 200,
+        "bytes": 52578,
+        "sha256": "45a49eac9c2d490ecf60a05d557412175a5c9812c6963179010bc6c79db9a787",
+        "expectedSHA256": "45a49eac9c2d490ecf60a05d557412175a5c9812c6963179010bc6c79db9a787",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/03-why-hard-2.webp",
+        "http": 200,
+        "bytes": 53254,
+        "sha256": "22ee9f9bdac6a988292a3f5de3ab5c5d90dde04cc30725b8962f790cd8d81045",
+        "expectedSHA256": "22ee9f9bdac6a988292a3f5de3ab5c5d90dde04cc30725b8962f790cd8d81045",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp",
+        "http": 200,
+        "bytes": 184644,
+        "sha256": "88e8a14ed1edf0a9ee6b2ed873e5179942544115520e1f34e2475e3d2fdf3e12",
+        "expectedSHA256": "88e8a14ed1edf0a9ee6b2ed873e5179942544115520e1f34e2475e3d2fdf3e12",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/05-before-applying-1.webp",
+        "http": 200,
+        "bytes": 59626,
+        "sha256": "440934bdcd6bc0d8e98a384f10469821104979d7c9e8981367a9cf27348089a4",
+        "expectedSHA256": "440934bdcd6bc0d8e98a384f10469821104979d7c9e8981367a9cf27348089a4",
+        "matches": true
+      }
+    ]
+  },
+  "legacy": {
+    "path": "docs/archives/AI_HANDOVER.legacy-2026-11-08.md",
+    "sha256": "9387596aa1892819bbac60ba94910d0dbfe0443224767bc2dc31e1ed5b746f0a",
+    "byteIdenticalToOriginal": true
+  },
+  "closureCommitPolicy": "Only AI_HANDOVER.md and this audit README/closeout JSON change after verified deployment. The status-only commit uses [skip ci] to avoid redeploying identical product source. All required PR CI, merge Pages build/deploy and ten triggered follow-up QA runs succeeded; product/runtime/configuration/workflow Git objects remain identical to merge commit."
+}

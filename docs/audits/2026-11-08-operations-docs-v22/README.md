@@ -53,7 +53,16 @@ git show 68708f825ba58795a189b900d40fe0d913e5c83d:AI_HANDOVER.md
 - `68708f8` Pages run 42382274155의 build / deploy job 모두 success. PR HEAD `c5998e8`의 SEO·시설·0화·자격증 탐색·소방 QA와 `68708f8`의 후속 Production QA도 실제 API에서 success 확인.
 - 이번 문서 작업은 제품 소스·자산·dependency·빌드 설정·workflow를 변경하지 않는다. Git diff / tree 동일성에 근거해 제품 Build·관련 QA 증거를 재사용하며 로컬 전체 Build·브라우저 QA를 중복 실행하지 않는다. 문서 내용의 정확성은 별도의 링크·정책·상태·diff 검토로 확인한다. PR 필수 CI는 기존 설정대로 수행하고 결과는 PR의 실제 HEAD에 연결한다.
 - 실서버 0화·시설 홈·취업 목록·사이트맵 HTTP 200, 개정 문구·설명 링크 / 자료 섹션 제거·canonical / Article·목록 / 사이트맵 연결·이미지 7장의 승인 해시 일치 확인. 새 수동 브라우저 세션·실휴대폰·Safari·실광고·색인·전체 사이트 검증을 수행한 것으로 해석하지 않는다.
-- 이번 변경은 작업 브랜치 / PR 범위다. `main` 병합·신규 Production 배포는 수행하지 않는다.
+- 사용자 후속 병합 요청에 따라 PR #261을 `d289a9a48f35fe9bdadfa57702d974a6d2c30773`로 main에 병합하고 배포·후속 QA·Production 확인을 완료했다. 최초 PR 작성 당시의 미병합 상태는 현재 상태가 아니다.
+
+## 병합 후 종료 확인
+
+- PR #261 최종 HEAD `c6b53e3e06f8ff39f5d3803f09f46c237eac4729`의 필수 SEO CI 42463564076 전체 성공 후 병합했다.
+- 병합·배포 소스 `d289a9a48f35fe9bdadfa57702d974a6d2c30773`, Pages 42463837414의 build / deploy 모두 성공. 자동으로 이어진 후속 QA 10개도 모두 success다.
+- 배포 후 홈·0화·시설 홈·취업 목록·사이트맵·이미지 7장 총 HTTP 12건 정상, 0화 개정 문구·metadata·목록·사이트맵과 승인 이미지 해시 일치 확인. 레거시 3,958줄 원본 바이트 일치 유지.
+- [closeout.json](closeout.json)에 대상 커밋·Actions 실행 ID·확인 시점·직접 Production 검증 범위를 보존한다. 제품·의존성·설정·workflow의 기존 Git 객체는 그대로다.
+- 병합 후 종료 기록은 `AI_HANDOVER.md`, 이 README, `closeout.json`만 갱신한다. 이미 성공한 제품 소스와 모든 필수 CI·배포·후속 QA 증거를 재사용하고 상태 기록 커밋에는 `[skip ci]`를 사용해 동일 제품의 중복 배포를 피한다. workflow 구조·트리거·필수 검사 자체는 변경하지 않는다.
+- 현재 운영 문서 작업의 잔여 사항은 없다. 아래 CI 후보는 별도 후속 범위다.
 
 ## 후속 CI 개선 후보 — 이번에는 변경하지 않음
 
