@@ -28,7 +28,7 @@
 - 생성: `node scripts/generate-hobyeongbaekma-integrated-images.mjs`
 - 독립 이미지 검토본: `node scripts/preview-hobyeongbaekma-integrated-images.mjs`, [episode00-integrated-images-review.html](episode00-integrated-images-review.html)
 - 직접 검사한 새 내용: 업무 부담 4조건의 PC PNG. 나머지 시설 4개/지원 6개는 직전 템플릿의 같은 카드·SVG·렌더링을 재사용하며 실제 페이지 선택/비율은 다시 검사한다.
-- 전용 로컬 테스트 5개 PASS: 세 쌍만 변경, 본문/표/링크/hero 보존, 원본 카드 필드·순서 보존, SVG/PNG/WebP 해시, CSS 범위와 비율, 잘못된 원본 입력 차단.
+- 전용 로컬 테스트 6개 PASS: 세 쌍만 변경, 본문/표/링크/hero 보존, 원본 카드 필드·순서 보존, SVG/PNG/WebP 해시, CSS 범위와 비율, 잘못된 원본 입력 차단.
 - `check-hobyeongbaekma-publication.mjs`는 대표+3장·picture 3개·데스크톱/모바일 파일 해시·수정일·기존 공개 메타데이터와 내부링크를 검사한다.
 - 실제 페이지 브라우저 QA는 320/390/768/1440px에서 전체 항목 한 장 선택·자연 치수·종횡비·가로 넘침·목차·표·런타임 오류를 검사한다. 새 이미지 응답을 잠시 보류한 상태에서도 높이가 예약되고 decode 후 1px 이상 높이가 뛰지 않는지 확인한다. 실제 삽입폭에서 필수 세부 글씨 12px 이상도 확인한다.
 - 로컬 Chromium의 socket 제한은 이전과 같아 브라우저 검증은 PR의 CI에서 수행한다. Build·SEO·기존 시설 공개/비공개 회귀·0화 실제 화면 QA 결과는 해당 HEAD/실행 링크로 구분한다. 템플릿만의 과거 PASS를 실제 페이지 PASS로 확대하지 않는다.

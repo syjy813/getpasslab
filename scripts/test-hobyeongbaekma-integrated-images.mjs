@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
-import {integrateEpisode00Images,integratedImageRoot as root,integratedImageStyles} from './hobyeongbaekma-integrated-images.mjs';
+import {integrateEpisode00Images,integratedImageRoot as root,integratedImageStyles,beforeIntegratedStyles} from './hobyeongbaekma-integrated-images.mjs';
 const manifest=JSON.parse(fs.readFileSync(root+'/manifest.json'));
 const previous=fs.readFileSync(manifest.previousSource,'utf8');
 const current=fs.readFileSync('src/content/facility/hobyeongbaekma.md','utf8');
@@ -48,4 +48,15 @@ test('unexpected, duplicate or already-integrated source fails closed',()=>{
   assert.throws(()=>integrateEpisode00Images(current,manifest),/source pair/);
   assert.throws(()=>integrateEpisode00Images(previous.replace(manifest.groups[0].previous[0],'missing.webp'),manifest),/source pair/);
   assert.throws(()=>integrateEpisode00Images(previous,{...manifest,groups:manifest.groups.slice(0,2)}),/three/);
+});
+test('compiled CSS guard accepts equivalent media formatting and rejects extra or changed rules',()=>{
+  const picture='.facility-body .facility-overview-figure picture{display:block}';
+  const desktop='.facility-body .facility-overview-figure img{aspect-ratio:var(--overview-ratio)}';
+  const mobile='.facility-body .facility-overview-figure img{aspect-ratio:var(--overview-mobile-ratio)}';
+  for(const condition of ['(max-width:767px)',' (width <= 767px)']){
+    const css='a{color:red}'+picture+desktop+'@media'+condition+'{'+mobile+'}'+'b{color:blue}';
+    assert.equal(beforeIntegratedStyles(css),'a{color:red}b{color:blue}');
+    assert.throws(()=>beforeIntegratedStyles(css+picture),/exactly one/);
+    assert.throws(()=>beforeIntegratedStyles(css.replace('767px','768px')),/exactly one/);
+  }
 });
