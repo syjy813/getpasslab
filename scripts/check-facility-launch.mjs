@@ -36,7 +36,7 @@ const editorialBlobs = {
   'src/components/FacilityCard.astro': episode00Release.cardBlob,
   'src/layouts/FacilityArticleLayout.astro': episode00Release.layoutBlob,
   'src/pages/facility-management/index.astro': 'f609c910d1b89037253da9923d38f714fa6d7ec7',
-  'src/styles/facility.css': '48b48abb2751e463e3f70ccbfde589e3664b6e83',
+  'src/styles/facility.css': episode00Release.facilityStyleBlob,
   'src/pages/facility-management/[category]/index.astro': 'c6e86be311d7f72fc212e32f0e3ce691b0d17239',
   'src/styles/serviceNavigation.css': 'de32048d9ea8af551344504ba3742fbda03d005f',
 };

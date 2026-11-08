@@ -4,7 +4,7 @@ description: '시설관리 커뮤니티에서 말하는 호병백마·호백병�
 category: career
 status: published
 publishedAt: '2026-11-07'
-updatedAt: '2026-11-07'
+updatedAt: '2026-11-08'
 reviewedAt: '2026-11-06'
 featured: false
 summary:
@@ -66,9 +66,7 @@ legalReview: false
 
 ## 4개의 시설은 무엇이 다를까?
 
-<figure><img src="/images/facility-series/hobyeongbaekma-00/02-four-workplaces-1.webp" alt="호텔과 병원: 객실 냉난방·급탕과 공조·전기·급배수, 대응 범위와 교육 확인" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
-
-<figure><img src="/images/facility-series/hobyeongbaekma-00/02-four-workplaces-2.webp" alt="백화점과 마트: 행사·폐점 후 작업과 냉장·냉동·배수, 직접 업무와 외주 정비 구분" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
+<figure class="facility-overview-figure" data-image-group="02-four-workplaces"><picture><source media="(max-width:767px)" srcset="/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-mobile.webp" width="720" height="2126" /><img src="/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-desktop.webp" alt="호텔·병원·백화점·마트 4개 시설의 관리 대상과 객실 대응·담당 파트·야간 작업·직접 정비 범위 비교" width="1440" height="1266" style="--overview-ratio:1440/1266;--overview-mobile-ratio:720/2126" loading="lazy" decoding="async" /></picture></figure>
 
 | 구분 | 눈여겨볼 관리 대상·업무 | 채용 전 확인할 부분 |
 |---|---|---|
@@ -83,9 +81,7 @@ legalReview: false
 
 ## 왜 기피 현장이라는 말이 붙었을까?
 
-<figure><img src="/images/facility-series/hobyeongbaekma-00/03-why-hard-1.webp" alt="업무 부담을 가르는 운영시간과 민원 요청: 근무표와 호출·처리 범위 확인" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
-
-<figure><img src="/images/facility-series/hobyeongbaekma-00/03-why-hard-2.webp" alt="업무 부담을 가르는 업무 분장과 인력 지원: 담당 설비와 교육·비상 지원 확인" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
+<figure class="facility-overview-figure" data-image-group="03-why-hard"><picture><source media="(max-width:767px)" srcset="/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-mobile.webp" width="720" height="2126" /><img src="/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-desktop.webp" alt="시설 업무 부담을 가르는 운영시간·민원과 요청·업무 분장·인력과 지원 4개 조건" width="1440" height="1266" style="--overview-ratio:1440/1266;--overview-mobile-ratio:720/2126" loading="lazy" decoding="async" /></picture></figure>
 
 ### 손님이 떠나도 시설팀의 일은 끝나지 않는다
 
@@ -135,9 +131,7 @@ legalReview: false
 
 ## 지원하기 전, 이것부터 묻자
 
-<figure><img src="/images/facility-series/hobyeongbaekma-00/05-before-applying-1.webp" alt="입사 전 고용주·근무표·실제 담당업무를 확인할 세 가지 질문" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
-
-<figure><img src="/images/facility-series/hobyeongbaekma-00/05-before-applying-2.webp" alt="입사 전 야간 지원·보수와 휴게·경력과 교육을 확인할 세 가지 질문" width="1440" height="1017" loading="lazy" decoding="async" /></figure>
+<figure class="facility-overview-figure" data-image-group="05-before-applying"><picture><source media="(max-width:767px)" srcset="/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-mobile.webp" width="720" height="2626" /><img src="/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-desktop.webp" alt="지원 전 확인할 고용주·근무표·실제 담당·야간 지원·보수와 휴게·경력과 교육 6개 항목" width="1440" height="1510" style="--overview-ratio:1440/1510;--overview-mobile-ratio:720/2626" loading="lazy" decoding="async" /></picture></figure>
 
 | 확인할 것 | 실제로 물어볼 질문 |
 |---|---|

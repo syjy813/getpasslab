@@ -1,4 +1,5 @@
 import { episode00Release, assertEpisode00Release } from './read-hobyeongbaekma-publication.mjs';
+import {beforeIntegratedStyles} from './hobyeongbaekma-integrated-images.mjs';
 assertEpisode00Release();
 import {bulkVisuals,beforeBulkVisuals,assertBulkVisuals,bulkOutput} from './read-facility-bulk-visuals.mjs';
 import fs from 'node:fs';
@@ -59,11 +60,17 @@ const baseline=JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-draft
 const headingCSS=JSON.parse(fs.readFileSync('docs/audits/2026-11-05-facility-heading-rollout/css-bundle.json'));
 assert.equal(baseline[headingCSS.previousPath],headingCSS.previousSHA256,'original facility CSS fingerprint');
 assert(!fs.existsSync(headingCSS.previousPath),'obsolete facility CSS bundle removed');
-assert.equal(hash(fs.readFileSync(headingCSS.currentPath)),headingCSS.currentSHA256,'reviewed common heading CSS bundle');
+// The integration adds only three scoped rules to the same stylesheet. Locate
+// its new content-hashed name, then recover and hash the exact previous bundle.
+const facilityCSS=walk('dist/_astro').filter(file=>file.endsWith('.css')&&fs.readFileSync(file,'utf8').includes('.facility-overview-figure'));
+assert.equal(facilityCSS.length,1,'one complete-sheet stylesheet');
+const currentFacilityCSS=facilityCSS[0],compiledCSS=fs.readFileSync(currentFacilityCSS,'utf8');
+assert(!fs.existsSync(headingCSS.currentPath),'previous content-hashed bundle replaced');
+assert.equal(hash(beforeIntegratedStyles(compiledCSS)),headingCSS.currentSHA256,'all pre-existing compiled CSS bytes are unchanged');
 const files=walk('dist').filter(f=>!f.split('/').some(p=>p.startsWith('.'))).sort();
 const addedVisualImages=publicSectorVisuals.images.filter(r=>!r.existing).map(visualOutput);
 for(const row of publicSectorVisuals.images)assert.equal(hash(fs.readFileSync(visualOutput(row))),row.sha256,'approved public-sector output: '+row.publicPath);
-assert.deepEqual(files,[...episode00Release.outputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===headingCSS.previousPath?headingCSS.currentPath:f).sort(),'same routes and approved images; one checklist image added; exactly one facility CSS bundle replaced');
+assert.deepEqual(files,[...episode00Release.outputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same routes and approved images plus six complete-sheet assets; exactly one facility CSS bundle replaced');
 let unchanged=0;
 const approvedRenders=new Set([...publicSectorVisuals.images.filter(r=>r.existing).map(visualOutput),...bulkVisuals.images.map(bulkOutput)]);
 for(const [file,sha] of Object.entries(baseline)){

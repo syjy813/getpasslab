@@ -1,3 +1,33 @@
+# 4·5·6개 통합형 (2026-11-08)
+
+현재 지원 범위는 **1~6개**다. 기존 1~4개 4:3/compact 예제는 그대로 재현하며, 설명이 있는 4~6개 비교는 `cardLayout: "overview"`를 사용한다. 4~6개는 별도 확장 진입점 `scripts/generate-facility-overview.mjs`를 사용한다. 기존 렌더러의 승인된 원본과 발행 검증 해시는 변경하지 않는다.
+
+| 항목 수 | PC 한 장 | 모바일 한 장 | 예제 |
+|---|---|---|---|
+| 4 | 2×2 | 1열 4행 | `overview-example-4.json` — 0화의 호텔·병원·백화점·마트 통합 |
+| 5 | 2+2+1, 마지막 카드 중앙 | 1열 5행 | `overview-example-5.json` — 호텔 면접 질문 |
+| 6 | 2×3 | 1열 6행 | `overview-example-6.json` — 0화의 지원 전 확인사항 통합 |
+
+읽기용 검토본은 [overview-preview.html](overview-preview.html). SVG 편집 마스터·PNG 원본·WebP 파생은 `overview-example-N-desktop/mobile.*`로 보존한다. `overview-workload-4.json`은 0화의 업무 부담 4조건을 추가 통합한 SVG 예제다. 후속 요청으로 0화 원고의 세 묶음도 통합 적용했으며 [0화 이미지 검토본](../../audits/2026-11-08-hobyeongbaekma-integrated-images/episode00-integrated-images-review.html)을 확인할 수 있다. 현재 PR 브랜치 적용이며 실서버 배포 전이다.
+
+```sh
+node scripts/render-facility-overview-examples.mjs
+node --test scripts/test-facility-infographic.mjs scripts/test-facility-overview.mjs
+# 기존 이미지 QA 환경(sharp)에서 PNG/WebP와 독립 검토본을 다시 만들 때만:
+node scripts/prepare-facility-overview-preview.mjs
+```
+
+- 렌더러: 새 `generate-facility-overview.mjs` → `facility-overview-layout.mjs`. 기존 정본의 공개 텍스트/프레임/브랜드 헬퍼·토큰과 등록된 픽토그램을 읽기 전용으로 재사용한다. 기존 compact 렌더러는 변경하지 않는다. 패키지·제품 의존성 추가 없음.
+- PC 마스터는 폭 1440, 제목/부제 64/30px과 기존 색·브랜드·픽토그램을 재사용한다. 높이는 실제 카드 내용에 따라 늘어나며 **4:3에 강제로 압축하지 않는다**.
+- 모바일은 같은 항목과 순서·설명을 모두 포함한 폭 720의 1열 파생이다. 제목 44, 부제/설명/라벨 32px, 카드 제목 40px. 별도 정보 이미지로 분할한 것이 아니며 한 화면에는 전체 항목이 담긴 이미지 하나만 노출한다.
+- 카드별 제목·요약·상세(최대 3개, 각 2줄)·하단 문구를 모두 보존한다. 긴 문구는 줄바꿈과 높이로 해결하며 한도를 넘으면 오류를 내고 문구를 조용히 생략하지 않는다. 5개형의 마지막 카드도 동일 폭을 유지한다.
+- 모바일/PC 선택은 실제 삽입 위치에서 `<picture>`로 제공한다. preview 예제는 767px 이하 모바일 파생을 선택한다. `<source>`와 `<img>`에 각 파일의 실제 width/height를 넣어 비율을 예약하며, 확대·crop·가로 스크롤을 넣지 않는다.
+- 320/390px(본문폭 280/350px), PC/태블릿 768/1440px(검토본 본문폭 720px)에서 확인한다. 핵심 세부 글씨는 이 조건에서 12px 이상이다. 더 좁은 삽입 위치에서는 다시 확인하며 PC 이미지를 모바일에 단순 축소해 쓰지 않는다.
+- 같은 비교 주제의 4~6개는 이 통합형을 우선한다. 다른 질문을 설명하는 이미지까지 억지로 합치지는 않는다. 실제 발행 전 본문 비교표/설명·alt와 정보가 일치하는지 별도로 확인한다.
+- 이번 브라우저 검사와 CI 근거는 PR 및 `docs/audits/2026-11-08-facility-overview/README.md`를 확인한다. 템플릿 검수와 실제 글 적용·Production 배포는 구분한다.
+
+---
+
 # 시설 카드형 이미지 정본
 
 ## 카드 하단 여백 축소 프로필 (2026-11-06)

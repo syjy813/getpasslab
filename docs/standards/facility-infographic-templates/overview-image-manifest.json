@@ -1,0 +1,59 @@
+{
+  "profile": "overview",
+  "images": [
+    {
+      "name": "overview-example-4-desktop",
+      "viewport": "desktop",
+      "count": 4,
+      "width": 1440,
+      "height": 1266,
+      "bytes": 79542,
+      "sha256": "82d64f807000337ece2f3bd0cfa7e84e49d8116334c8f49830928c354a46ebbf"
+    },
+    {
+      "name": "overview-example-4-mobile",
+      "viewport": "mobile",
+      "count": 4,
+      "width": 720,
+      "height": 2126,
+      "bytes": 82562,
+      "sha256": "c40683a85423bc602b6a92c9d4e8c25f60623bbf18eb1d823bc34d73d9643e9b"
+    },
+    {
+      "name": "overview-example-5-desktop",
+      "viewport": "desktop",
+      "count": 5,
+      "width": 1440,
+      "height": 1622,
+      "bytes": 97468,
+      "sha256": "49b198ab7ba6249378fd5ef2abc428f6e7a4fadfabb68117eda9e970caf966ab"
+    },
+    {
+      "name": "overview-example-5-mobile",
+      "viewport": "mobile",
+      "count": 5,
+      "width": 720,
+      "height": 2454,
+      "bytes": 98954,
+      "sha256": "7c11fdc0e6c00341b20a991e116aa6320ef6a910d094dfbb166b9ad42b61711a"
+    },
+    {
+      "name": "overview-example-6-desktop",
+      "viewport": "desktop",
+      "count": 6,
+      "width": 1440,
+      "height": 1510,
+      "bytes": 99074,
+      "sha256": "5b49baff972d8ce8c9d73f549a8a63290f3a50944b605bb169e531079fba9687"
+    },
+    {
+      "name": "overview-example-6-mobile",
+      "viewport": "mobile",
+      "count": 6,
+      "width": 720,
+      "height": 2626,
+      "bytes": 102612,
+      "sha256": "5ecbbfff29c1a7ea6ac03660561fdf29913554a4125d8d2b82fd8dbe62040ad8"
+    }
+  ]
+}

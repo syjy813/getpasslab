@@ -211,3 +211,8 @@
   .facility-page .facility-card,.facility-card-cover,.facility-card-title{transition:none}
   .facility-page .facility-card:is(:hover,:focus-visible){transform:none}
 }
+
+/* Complete comparison sheets reserve the selected artwork ratio before loading. */
+.facility-body .facility-overview-figure picture{display:block}
+.facility-body .facility-overview-figure img{aspect-ratio:var(--overview-ratio)}
+@media(max-width:767px){.facility-body .facility-overview-figure img{aspect-ratio:var(--overview-mobile-ratio)}}

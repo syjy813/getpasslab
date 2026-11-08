@@ -5,7 +5,9 @@ const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4321';
 const preview = process.env.QA_FACILITY_PREVIEW === '1';
 const route = '/facility-management/career/hobyeongbaekma/';
 const root = 'docs/drafts/facility/hobyeongbaekma';
-const images = JSON.parse(fs.readFileSync(root + '/image-manifest.json')).images;
+const originalImages=JSON.parse(fs.readFileSync(root+'/image-manifest.json')).images;
+const integrated=JSON.parse(fs.readFileSync('docs/audits/2026-11-08-hobyeongbaekma-integrated-images/manifest.json'));
+const images=[{...originalImages[0],src:'/images/facility-series/hobyeongbaekma-00/'+originalImages[0].id+'.webp'},...integrated.groups.map(row=>({id:row.id,...row.desktop,mobile:row.mobile}))];
 const output = 'tmp/hobyeongbaekma-review';
 fs.mkdirSync(output, { recursive: true });
 (async () => {
@@ -17,8 +19,15 @@ fs.mkdirSync(output, { recursive: true });
       await page.route('**/*', r => new URL(r.request().url()).origin === new URL(base).origin ? r.continue() : r.abort());
       const errors = [];
       page.on('pageerror', e => errors.push(e.message));
-      assert.equal((await page.goto(base + route)).status(), 200);
+      let releaseImages;
+      const imageGate=new Promise(resolve=>{releaseImages=resolve;});
+      await page.route('**/*-combined-*.webp',async r=>{await imageGate;await r.continue();});
+      assert.equal((await page.goto(base + route,{waitUntil:'domcontentloaded'})).status(), 200);
       await page.evaluate(() => document.fonts.ready);
+      const reserved=await page.locator('.facility-overview-figure img').evaluateAll(list=>list.map(el=>{const r=el.getBoundingClientRect();return {src:el.getAttribute('src'),width:r.width,height:r.height,ratio:r.width/r.height};}));
+      assert.equal(reserved.length,3);
+      for(const [i,entry] of reserved.entries()){const group=integrated.groups[i],selected=width<=767?group.mobile:group.desktop;assert(Math.abs(entry.ratio-selected.width/selected.height)<.01,'selected aspect ratio reserved before image data loads');}
+      releaseImages();
       assert.equal(await page.locator('h1').count(), 1);
       assert.equal(await page.locator('.facility-summary').count(), 1);
       assert.equal(await page.locator('.facility-body h1').count(), 0);
@@ -31,28 +40,41 @@ fs.mkdirSync(output, { recursive: true });
       assert.equal(await page.locator('.facility-body h2').nth(1).innerText(), '4개의 시설은 무엇이 다를까?');
       assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), preview ? 'noindex, nofollow' : 'index, follow');
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://getpasslab.co.kr' + route);
-      assert.equal(await page.locator('.facility-article > article > header time').count(), 2, 'Published and actual source-review dates are visible');
+      assert.equal(await page.locator('.facility-article > article > header time').count(), 3, 'Published, modification and actual source-review dates are visible');
       assert.equal(await page.locator('.facility-body img').count(), images.length);
       assert.equal(await page.locator('a[href*="hobyeongbaekma-hotel/"]').count(), 0, 'Future episodes have no broken links');
       for (const row of images) {
-        const img = page.locator('img[src$="/' + row.id + '.webp"]');
+        const img = page.locator('.facility-body img[src="'+row.src+'"]');
         await img.scrollIntoViewIfNeeded();
         await img.evaluate(el => el.decode());
         const info = await img.evaluate(el => {
           const r = el.getBoundingClientRect(), b = el.closest('.facility-body').getBoundingClientRect();
-          return { loaded: el.complete && el.naturalWidth > 0, alt: el.alt, width: el.naturalWidth, height: el.naturalHeight, ratio: r.width / r.height, inside: r.left >= b.left - 1 && r.right <= b.right + 1 };
+          return { currentSrc:el.currentSrc, loaded: el.complete && el.naturalWidth > 0, alt: el.alt, width: el.naturalWidth, height: el.naturalHeight, ratio: r.width / r.height, inside: r.left >= b.left - 1 && r.right <= b.right + 1 };
         });
         assert(info.loaded && info.alt && info.inside);
-        assert.equal(info.width, row.width); assert.equal(info.height, row.height);
-        assert(Math.abs(info.ratio - row.width / row.height) < .01);
+        const selected=row.mobile&&width<=767?row.mobile:row;
+        assert(info.currentSrc.endsWith(selected.src),'correct complete mobile/desktop sheet');
+        assert.equal(info.width,selected.width);assert.equal(info.height,selected.height);
+        assert(Math.abs(info.ratio-selected.width/selected.height)<.01);
+        if(row.mobile){
+          const figure=img.locator('..').locator('..');
+          assert.equal(await figure.locator('img').count(),1,'one image per comparison group');
+          const reserve=await img.evaluate(el=>{const r=el.getBoundingClientRect();return {ratio:r.width/r.height,css:getComputedStyle(el).aspectRatio};});
+          assert(Math.abs(reserve.ratio-selected.width/selected.height)<.01);
+          const before=reserved.find(r=>r.src===row.src),box=await img.boundingBox();
+          assert(Math.abs(before.height-box.height)<1,'no image-height jump after decode');
+          assert((width<=767?32:28)*box.width/selected.width>=12,'essential text remains at least 12px');
+        }
       }
       assert(await page.locator('.facility-body').innerText().then(t => !/EDITOR_NOTES|SOURCE_AUDIT|editorial-review|proposedPath|46명/.test(t)));
       const schema = await page.locator('script[type="application/ld+json"]').allTextContents();
       const articleSchema = schema.flatMap(s => { const value = JSON.parse(s); return Array.isArray(value) ? value : [value]; }).filter(x => x['@type'] === 'Article');
       assert.equal(articleSchema.length, preview ? 0 : 1);
-      if (!preview) { assert.equal(articleSchema[0].datePublished, '2026-11-07'); assert.equal(articleSchema[0].headline, await page.locator('h1').innerText()); }
+      if (!preview) { assert.equal(articleSchema[0].datePublished, '2026-11-07'); assert.equal(articleSchema[0].dateModified,integrated.updatedAt); assert.equal(articleSchema[0].headline, await page.locator('h1').innerText()); }
       const geometry = await page.evaluate(() => ({ client: document.documentElement.clientWidth, scroll: document.documentElement.scrollWidth }));
       assert(geometry.scroll <= geometry.client + 1, 'No page overflow');
+      assert.equal(await page.locator('.facility-body picture').count(),3);
+      assert.equal(await page.locator('.facility-body img[src$="-1.webp"],.facility-body img[src$="-2.webp"]').count(),0);
       await page.locator('.facility-toc summary').click();
       await page.locator('.facility-toc a').first().click();
       const target = await page.locator('.facility-toc a').first().getAttribute('href');
@@ -60,10 +82,10 @@ fs.mkdirSync(output, { recursive: true });
       await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
       await page.screenshot({ path: `${output}/episode00-${width}.png`, fullPage: true });
       assert.deepEqual(errors, []);
-      results.push({ width, images: images.length, h1: 1, h2: 7, h3: 3, tables: 2, ...geometry, toc: 'PASS', runtimeErrors: 0 });
+      results.push({ width, images: images.length, h1: 1, h2: 7, h3: 3, tables: 2, reservedImages:reserved.length, ...geometry, toc: 'PASS', runtimeErrors: 0 });
       await page.close();
     }
     fs.writeFileSync(output + '/results.json', JSON.stringify({ route, production: new URL(base).origin === 'https://getpasslab.co.kr', preview, results }, null, 2));
-    console.log('Hobyeongbaekma review: 4 viewports, 7 images, publication metadata/tables/TOC PASS');
+    console.log('Hobyeongbaekma review: 4 viewports, hero + 3 complete images, publication metadata/tables/TOC PASS');
   } finally { await browser.close(); }
 })().catch(e => { console.error(e); process.exitCode = 1; });

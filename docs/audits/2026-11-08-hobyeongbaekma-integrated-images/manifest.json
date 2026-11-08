@@ -1,0 +1,120 @@
+{
+  "baseCommit": "ca30d38975eec8ca0b8ec18e852f27386ef43050",
+  "previousSource": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/previous-article.md",
+  "previousSourceSHA256": "b8903a3d94362924f0dc578a1eccdc0089b515ac50247d9c1970e8b914e0dcb7",
+  "updatedAt": "2026-11-08",
+  "groups": [
+    {
+      "id": "02-four-workplaces",
+      "count": 4,
+      "alt": "호텔·병원·백화점·마트 4개 시설의 관리 대상과 객실 대응·담당 파트·야간 작업·직접 정비 범위 비교",
+      "spec": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/specs/02-four-workplaces.json",
+      "specSHA256": "d9d121c109a5cc509d558889f7722159003d60bd511a55a6bf8d89b7ed0274d9",
+      "previous": [
+        "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-1.webp",
+        "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-2.webp"
+      ],
+      "desktop": {
+        "src": "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-desktop.webp",
+        "file": "public/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-desktop.webp",
+        "width": 1440,
+        "height": 1266,
+        "sha256": "82d64f807000337ece2f3bd0cfa7e84e49d8116334c8f49830928c354a46ebbf",
+        "master": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/02-four-workplaces-combined-desktop.svg",
+        "masterSHA256": "777d0752c58481e56673a0b14f05f8a365279ae6733d5e8108bd6ffe04dd0874",
+        "pngMaster": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/02-four-workplaces-combined-desktop.png",
+        "pngSHA256": "2ed35681a2c39ee3a0becf4ae2ee32225ef82951735f9bfe55c4222f628bf2fe"
+      },
+      "mobile": {
+        "src": "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-mobile.webp",
+        "file": "public/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-mobile.webp",
+        "width": 720,
+        "height": 2126,
+        "sha256": "c40683a85423bc602b6a92c9d4e8c25f60623bbf18eb1d823bc34d73d9643e9b",
+        "master": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/02-four-workplaces-combined-mobile.svg",
+        "masterSHA256": "7211c8607a5d91e114d9599e729fe35ee198d4ca8872529d89584b25d257e090",
+        "pngMaster": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/02-four-workplaces-combined-mobile.png",
+        "pngSHA256": "58d3f555cfd5b8e71a872ae1050cb3b8073749540bf2de9d32ed6e7e8af9c0af"
+      }
+    },
+    {
+      "id": "03-why-hard",
+      "count": 4,
+      "alt": "시설 업무 부담을 가르는 운영시간·민원과 요청·업무 분장·인력과 지원 4개 조건",
+      "spec": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/specs/03-why-hard.json",
+      "specSHA256": "a1709b1b3bd0042112fbc913e505180595b8af1eb68433c59e9acecc88bb2adb",
+      "previous": [
+        "/images/facility-series/hobyeongbaekma-00/03-why-hard-1.webp",
+        "/images/facility-series/hobyeongbaekma-00/03-why-hard-2.webp"
+      ],
+      "desktop": {
+        "src": "/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-desktop.webp",
+        "file": "public/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-desktop.webp",
+        "width": 1440,
+        "height": 1266,
+        "sha256": "e2ebc31ab1258f9d1eb931cd8043db627676931122a08ddb15fecf0371e7ffd3",
+        "master": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/03-why-hard-combined-desktop.svg",
+        "masterSHA256": "ae6d728322e5ab331b6cfa6b0166f26dd971c4f30814c28ae92320bdeb22dfe9",
+        "pngMaster": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/03-why-hard-combined-desktop.png",
+        "pngSHA256": "3a638bd0c3f4a1f01ea455ca0a71d518466ee78cb4218054b1272f4098e93112"
+      },
+      "mobile": {
+        "src": "/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-mobile.webp",
+        "file": "public/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-mobile.webp",
+        "width": 720,
+        "height": 2126,
+        "sha256": "90a53656d5e9a85c3243e53455092abf379d9fdfbde6ebdd43cfa62aaa6862c8",
+        "master": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/03-why-hard-combined-mobile.svg",
+        "masterSHA256": "44487023fdb88c3bf8113f45f8977feb7be43252bca36f5bbe54c97302a2a589",
+        "pngMaster": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/03-why-hard-combined-mobile.png",
+        "pngSHA256": "78280e2511de601cee87c0b0001f9a9ca57263fd48e4eb637cb2444dd77d6222"
+      }
+    },
+    {
+      "id": "05-before-applying",
+      "count": 6,
+      "alt": "지원 전 확인할 고용주·근무표·실제 담당·야간 지원·보수와 휴게·경력과 교육 6개 항목",
+      "spec": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/specs/05-before-applying.json",
+      "specSHA256": "bc4e253641d31a5fd7158f72e5bb848cd5be34fcd10e003f58bdf11264bfa7fc",
+      "previous": [
+        "/images/facility-series/hobyeongbaekma-00/05-before-applying-1.webp",
+        "/images/facility-series/hobyeongbaekma-00/05-before-applying-2.webp"
+      ],
+      "desktop": {
+        "src": "/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-desktop.webp",
+        "file": "public/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-desktop.webp",
+        "width": 1440,
+        "height": 1510,
+        "sha256": "5b49baff972d8ce8c9d73f549a8a63290f3a50944b605bb169e531079fba9687",
+        "master": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/05-before-applying-combined-desktop.svg",
+        "masterSHA256": "ae5b5bdd0c69d5e12b1701219efc1f6a058a5a66bca14a987245a3d21b275554",
+        "pngMaster": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/05-before-applying-combined-desktop.png",
+        "pngSHA256": "75d3aed5690dcba2dfd575abc4021dd4cdaf5a7a4da1288e9d96d7360912bb82"
+      },
+      "mobile": {
+        "src": "/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-mobile.webp",
+        "file": "public/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-mobile.webp",
+        "width": 720,
+        "height": 2626,
+        "sha256": "5ecbbfff29c1a7ea6ac03660561fdf29913554a4125d8d2b82fd8dbe62040ad8",
+        "master": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/05-before-applying-combined-mobile.svg",
+        "masterSHA256": "92912e8c31359e6c4f37e132085591d9acc6e04729ec6596f6d70e48532607bb",
+        "pngMaster": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/masters/05-before-applying-combined-mobile.png",
+        "pngSHA256": "2f47a6635d75124222ff7dd723bc1265cec0d4ebc14ccb5ca5cc1b93d048c34c"
+      }
+    }
+  ],
+  "additions": {
+    "public/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-desktop.webp": "82d64f807000337ece2f3bd0cfa7e84e49d8116334c8f49830928c354a46ebbf",
+    "public/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-mobile.webp": "c40683a85423bc602b6a92c9d4e8c25f60623bbf18eb1d823bc34d73d9643e9b",
+    "public/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-desktop.webp": "e2ebc31ab1258f9d1eb931cd8043db627676931122a08ddb15fecf0371e7ffd3",
+    "public/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-mobile.webp": "90a53656d5e9a85c3243e53455092abf379d9fdfbde6ebdd43cfa62aaa6862c8",
+    "public/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-desktop.webp": "5b49baff972d8ce8c9d73f549a8a63290f3a50944b605bb169e531079fba9687",
+    "public/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-mobile.webp": "5ecbbfff29c1a7ea6ac03660561fdf29913554a4125d8d2b82fd8dbe62040ad8",
+    "src/content/facility/hobyeongbaekma.md": "b2826092dbefd8722d92ac5bdc6b07ae5a563e233bbedfda1eb7edaa1ad6cb34"
+  },
+  "previousStyle": "docs/audits/2026-11-08-hobyeongbaekma-integrated-images/previous-facility.css",
+  "previousStyleBlob": "48b48abb2751e463e3f70ccbfde589e3664b6e83",
+  "facilityStyleBlob": "412237815c5bd1dd5bd304eab776325e3f5db070",
+  "facilityStyleSHA256": "59cd3408671206b1a23eb649163fc7658c32f89681fc0ab69157007ea9d6921b"
+}
