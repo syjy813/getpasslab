@@ -1,0 +1,142 @@
+{
+  "verifiedOnKST": "2026-11-08",
+  "result": "deployed-and-production-verified",
+  "pullRequest": "https://github.com/syjy813/getpasslab/pull/263",
+  "testedHead": "f3a24198e41af8f4177db17a23fcf25af1a57522",
+  "productionSource": "dcfcf34adb4772996381ff5c98213851c88dcbf3",
+  "treeProof": {
+    "tested": {
+      "sha": "f3a24198e41af8f4177db17a23fcf25af1a57522",
+      "tree": "bf9d015f1363753024185ecd478257a4acc2c32e"
+    },
+    "merged": {
+      "sha": "dcfcf34adb4772996381ff5c98213851c88dcbf3",
+      "tree": "bf9d015f1363753024185ecd478257a4acc2c32e"
+    },
+    "identical": true
+  },
+  "deploy": {
+    "id": 42479587679,
+    "url": "https://github.com/syjy813/getpasslab/actions/runs/42479587679",
+    "build": "success",
+    "deploy": "success"
+  },
+  "pullRequestChecks": [
+    {
+      "id": 42478838191,
+      "name": "Fire safety level 2 launch QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42478837832,
+      "name": "Facility overview template QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42478837828,
+      "name": "SEO validation",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42478837907,
+      "name": "Hobyeongbaekma publication QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42478837827,
+      "name": "Certification discovery QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42478837841,
+      "name": "Facility publication QA",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "afterDeployChecks": [
+    {
+      "id": 42479674247,
+      "name": "All chapter formula style QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42479674343,
+      "name": "Practice UI production QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42479674431,
+      "name": "FTA symbols split QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42479674277,
+      "name": "Fire production publication QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42479674303,
+      "name": "Industrial question source repair QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42479674304,
+      "name": "Industrial remaining splits QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42479674318,
+      "name": "Earth retaining structure QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42479674301,
+      "name": "Industrial remaining chapter review QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42479674272,
+      "name": "Industrial safety chapter splits QA",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 42479674372,
+      "name": "All chapter reading hierarchy QA",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "production": {
+    "url": "https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/",
+    "bodyImagesBefore": 6,
+    "bodyImagesAfter": 3,
+    "totalImageElements": 4,
+    "pictureElements": 3,
+    "verifiedAssetHashes": 7,
+    "heroUnchanged": true,
+    "httpEvidence": "production-http.json",
+    "browserEvidence": "production-browser.json",
+    "desktopWidth": 1600,
+    "mobileWidth": 390,
+    "viewportReset": true
+  },
+  "limits": [
+    "The ten global after-deploy workflows are recorded at the observed snapshot status, separately from completed episode-zero verification.",
+    "No physical-device or Safari QA was performed."
+  ]
+}

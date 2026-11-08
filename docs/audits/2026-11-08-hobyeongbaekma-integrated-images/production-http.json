@@ -1,0 +1,79 @@
+{
+  "sourceCommit": "dcfcf34adb4772996381ff5c98213851c88dcbf3",
+  "url": "https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/",
+  "httpStatus": 200,
+  "imageElements": 4,
+  "pictureElements": 3,
+  "h1": 1,
+  "h2": 7,
+  "h3": 3,
+  "tables": 2,
+  "assets": [
+    {
+      "src": "/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp",
+      "status": 200,
+      "sha256": "88e8a14ed1edf0a9ee6b2ed873e5179942544115520e1f34e2475e3d2fdf3e12",
+      "bytes": 184644,
+      "contentType": "image/webp"
+    },
+    {
+      "src": "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-desktop.webp",
+      "status": 200,
+      "sha256": "82d64f807000337ece2f3bd0cfa7e84e49d8116334c8f49830928c354a46ebbf",
+      "bytes": 79542,
+      "contentType": "image/webp"
+    },
+    {
+      "src": "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-mobile.webp",
+      "status": 200,
+      "sha256": "c40683a85423bc602b6a92c9d4e8c25f60623bbf18eb1d823bc34d73d9643e9b",
+      "bytes": 82562,
+      "contentType": "image/webp"
+    },
+    {
+      "src": "/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-desktop.webp",
+      "status": 200,
+      "sha256": "e2ebc31ab1258f9d1eb931cd8043db627676931122a08ddb15fecf0371e7ffd3",
+      "bytes": 85988,
+      "contentType": "image/webp"
+    },
+    {
+      "src": "/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-mobile.webp",
+      "status": 200,
+      "sha256": "90a53656d5e9a85c3243e53455092abf379d9fdfbde6ebdd43cfa62aaa6862c8",
+      "bytes": 88624,
+      "contentType": "image/webp"
+    },
+    {
+      "src": "/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-desktop.webp",
+      "status": 200,
+      "sha256": "5b49baff972d8ce8c9d73f549a8a63290f3a50944b605bb169e531079fba9687",
+      "bytes": 99074,
+      "contentType": "image/webp"
+    },
+    {
+      "src": "/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-mobile.webp",
+      "status": 200,
+      "sha256": "5ecbbfff29c1a7ea6ac03660561fdf29913554a4125d8d2b82fd8dbe62040ad8",
+      "bytes": 102612,
+      "contentType": "image/webp"
+    }
+  ],
+  "canonical": "PASS",
+  "articleMetadata": "PASS",
+  "historicalHeroUnchanged": true,
+  "listingChecks": [
+    {
+      "route": "/facility-management/",
+      "status": 200,
+      "articleCards": 1,
+      "heroPreserved": true
+    },
+    {
+      "route": "/facility-management/career/",
+      "status": 200,
+      "articleCards": 1,
+      "heroPreserved": true
+    }
+  ]
+}

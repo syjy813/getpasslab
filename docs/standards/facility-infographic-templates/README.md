@@ -8,7 +8,7 @@
 | 5 | 2+2+1, 마지막 카드 중앙 | 1열 5행 | `overview-example-5.json` — 호텔 면접 질문 |
 | 6 | 2×3 | 1열 6행 | `overview-example-6.json` — 0화의 지원 전 확인사항 통합 |
 
-읽기용 검토본은 [overview-preview.html](overview-preview.html). SVG 편집 마스터·PNG 원본·WebP 파생은 `overview-example-N-desktop/mobile.*`로 보존한다. `overview-workload-4.json`은 0화의 업무 부담 4조건을 추가 통합한 SVG 예제다. 후속 요청으로 0화 원고의 세 묶음도 통합 적용했으며 [0화 이미지 검토본](../../audits/2026-11-08-hobyeongbaekma-integrated-images/episode00-integrated-images-review.html)을 확인할 수 있다. 현재 PR 브랜치 적용이며 실서버 배포 전이다.
+읽기용 검토본은 [overview-preview.html](overview-preview.html). SVG 편집 마스터·PNG 원본·WebP 파생은 `overview-example-N-desktop/mobile.*`로 보존한다. `overview-workload-4.json`은 0화의 업무 부담 4조건을 추가 통합한 SVG 예제다. 후속 요청으로 0화 원고의 세 묶음도 통합 적용했으며 [0화 이미지 검토본](../../audits/2026-11-08-hobyeongbaekma-integrated-images/episode00-integrated-images-review.html)을 확인할 수 있다. PR #263 병합·배포 후 0화 실서버 반영을 확인했다. [배포 완료 근거](../../audits/2026-11-08-hobyeongbaekma-integrated-images/closeout.json)를 참조한다.
 
 ```sh
 node scripts/render-facility-overview-examples.mjs

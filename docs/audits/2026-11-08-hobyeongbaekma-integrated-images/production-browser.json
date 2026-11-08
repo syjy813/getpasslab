@@ -1,0 +1,90 @@
+{
+  "desktop": {
+    "assets": [
+      {
+        "displayHeight": 600.5556030273438,
+        "displayWidth": 800.0000610351562,
+        "height": 1080,
+        "loaded": true,
+        "src": "https://getpasslab.co.kr/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp",
+        "width": 1440
+      },
+      {
+        "displayHeight": 703.3333740234375,
+        "displayWidth": 800.0000610351562,
+        "height": 1266,
+        "loaded": true,
+        "src": "https://getpasslab.co.kr/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-desktop.webp",
+        "width": 1440
+      },
+      {
+        "displayHeight": 703.3333740234375,
+        "displayWidth": 800.0000610351562,
+        "height": 1266,
+        "loaded": true,
+        "src": "https://getpasslab.co.kr/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-desktop.webp",
+        "width": 1440
+      },
+      {
+        "displayHeight": 838.888916015625,
+        "displayWidth": 800.0000610351562,
+        "height": 1510,
+        "loaded": true,
+        "src": "https://getpasslab.co.kr/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-desktop.webp",
+        "width": 1440
+      }
+    ],
+    "images": 4,
+    "overflow": false,
+    "pictures": 3,
+    "url": "https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/",
+    "viewport": {
+      "height": 1111,
+      "width": 1600
+    }
+  },
+  "mobile": {
+    "assets": [
+      {
+        "displayHeight": 244.56597900390625,
+        "displayWidth": 325.34722900390625,
+        "height": 1080,
+        "loaded": true,
+        "src": "https://getpasslab.co.kr/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp",
+        "width": 1440
+      },
+      {
+        "displayHeight": 960.6771240234375,
+        "displayWidth": 325.34722900390625,
+        "height": 2126,
+        "loaded": true,
+        "src": "https://getpasslab.co.kr/images/facility-series/hobyeongbaekma-00/02-four-workplaces-combined-mobile.webp",
+        "width": 720
+      },
+      {
+        "displayHeight": 960.6771240234375,
+        "displayWidth": 325.34722900390625,
+        "height": 2126,
+        "loaded": true,
+        "src": "https://getpasslab.co.kr/images/facility-series/hobyeongbaekma-00/03-why-hard-combined-mobile.webp",
+        "width": 720
+      },
+      {
+        "displayHeight": 1186.5972900390625,
+        "displayWidth": 325.34722900390625,
+        "height": 2626,
+        "loaded": true,
+        "src": "https://getpasslab.co.kr/images/facility-series/hobyeongbaekma-00/05-before-applying-combined-mobile.webp",
+        "width": 720
+      }
+    ],
+    "images": 4,
+    "overflow": false,
+    "pictures": 3,
+    "url": "https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/",
+    "viewport": {
+      "height": 900,
+      "width": 390
+    }
+  }
+}

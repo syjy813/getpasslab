@@ -43,4 +43,10 @@
 
 ## 현재 상태와 다음 행동
 
-원고·자산 교체는 별도 PR 브랜치에 구현했다. main 병합·Production 배포는 수행하지 않았다. 실제 빌드·QA 실행은 PR #263을 확인한다. 실서버 배포 요청 후 병합/배포하고 실제 0화의 4개 표시 이미지와 각 화면의 파일 선택을 확인한다.
+사용자 배포 승인(2026-11-08)에 따라 PR #263을 main `dcfcf34adb4772996381ff5c98213851c88dcbf3`에 병합했다. 검증된 최종 PR HEAD `f3a24198e41af8f4177db17a23fcf25af1a57522`와 merge의 Git tree가 같고, [Pages build/deploy 42479587679](https://github.com/syjy813/getpasslab/actions/runs/42479587679)가 모두 성공했다.
+
+실제 공개 URL에서 본문 6→3장·대표 포함 4개 img/3개 picture, 원본 대표와 새 데스크톱/모바일 7파일의 정확한 SHA-256을 확인했다. 실제 연결 브라우저에서는 PC 1600px·모바일 390px의 올바른 파일 선택·모든 이미지 로드·가로 넘침 없음을 확인하고 임시 viewport를 원복했다. 시설 홈과 취업 목록의 0화 카드 및 대표도 유지된다.
+
+완료 근거는 [closeout.json](closeout.json), [production-http.json](production-http.json), [production-browser.json](production-browser.json)이다. 승인 PR의 CI 6개는 모두 성공했다. 별도로 자동 실행된 전역 배포 후 QA 10건도 모두 성공했다. 확인 범위는 해당 자동 검사와 위 실제 브라우저/HTTP 검사에 한정한다.
+
+요청 범위의 0화 교체·배포 작업은 완료했다. 다음 콘텐츠는 별도 PR #262의 1화 호텔 원고와 이미지 작업이다.
