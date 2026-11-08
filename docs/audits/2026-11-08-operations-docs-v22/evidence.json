@@ -1,0 +1,309 @@
+{
+  "checkedAt": "2026-11-08T01:54:45.494537+00:00",
+  "baseline": "68708f825ba58795a189b900d40fe0d913e5c83d",
+  "previousHandover": {
+    "blob": "fd8511580a92cf39143f91d31df1f3c3c82febfd",
+    "sha256": "9387596aa1892819bbac60ba94910d0dbfe0443224767bc2dc31e1ed5b746f0a",
+    "lines": 3958
+  },
+  "runs": [
+    {
+      "id": 42382350674,
+      "name": "All chapter reading hierarchy QA",
+      "event": "workflow_run",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382350674"
+    },
+    {
+      "id": 42382350636,
+      "name": "Industrial safety chapter splits QA",
+      "event": "workflow_run",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382350636"
+    },
+    {
+      "id": 42382350621,
+      "name": "Industrial remaining chapter review QA",
+      "event": "workflow_run",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382350621"
+    },
+    {
+      "id": 42382350618,
+      "name": "Industrial question source repair QA",
+      "event": "workflow_run",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382350618"
+    },
+    {
+      "id": 42382350616,
+      "name": "Fire production publication QA",
+      "event": "workflow_run",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382350616"
+    },
+    {
+      "id": 42382350600,
+      "name": "FTA symbols split QA",
+      "event": "workflow_run",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382350600"
+    },
+    {
+      "id": 42382350581,
+      "name": "Earth retaining structure QA",
+      "event": "workflow_run",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382350581"
+    },
+    {
+      "id": 42382350569,
+      "name": "Industrial remaining splits QA",
+      "event": "workflow_run",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382350569"
+    },
+    {
+      "id": 42382350565,
+      "name": "All chapter formula style QA",
+      "event": "workflow_run",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382350565"
+    },
+    {
+      "id": 42382350553,
+      "name": "Practice UI production QA",
+      "event": "workflow_run",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382350553"
+    },
+    {
+      "id": 42382274155,
+      "name": "Deploy to GitHub Pages",
+      "event": "push",
+      "head_sha": "68708f825ba58795a189b900d40fe0d913e5c83d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42382274155"
+    },
+    {
+      "id": 42381904454,
+      "name": "SEO validation",
+      "event": "pull_request",
+      "head_sha": "c5998e863d8bba7fa1c96a97371579708bf0c9d5",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42381904454"
+    },
+    {
+      "id": 42381904112,
+      "name": "Hobyeongbaekma publication QA",
+      "event": "pull_request",
+      "head_sha": "c5998e863d8bba7fa1c96a97371579708bf0c9d5",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42381904112"
+    },
+    {
+      "id": 42381903841,
+      "name": "Facility publication QA",
+      "event": "pull_request",
+      "head_sha": "c5998e863d8bba7fa1c96a97371579708bf0c9d5",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42381903841"
+    },
+    {
+      "id": 42381903812,
+      "name": "Certification discovery QA",
+      "event": "pull_request",
+      "head_sha": "c5998e863d8bba7fa1c96a97371579708bf0c9d5",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42381903812"
+    },
+    {
+      "id": 42381903785,
+      "name": "Fire safety level 2 launch QA",
+      "event": "pull_request",
+      "head_sha": "c5998e863d8bba7fa1c96a97371579708bf0c9d5",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42381903785"
+    }
+  ],
+  "deployJobs": [
+    {
+      "name": "build",
+      "conclusion": "success"
+    },
+    {
+      "name": "deploy",
+      "conclusion": "success"
+    }
+  ],
+  "production": {
+    "scope": "HTTP, HTML metadata, listings, sitemap and seven asset hashes; no new browser session",
+    "url": "https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/",
+    "checks": {
+      "revisedHeading": true,
+      "removedExplanatoryLink": true,
+      "removedSourcesSection": true,
+      "canonical": true,
+      "articleStructuredData": true,
+      "listingLinks": true,
+      "sitemap": true,
+      "sevenImages": true
+    },
+    "responses": [
+      {
+        "path": "/facility-management/career/hobyeongbaekma/",
+        "http": 200,
+        "bytes": 32305
+      },
+      {
+        "path": "/facility-management/",
+        "http": 200,
+        "bytes": 27159
+      },
+      {
+        "path": "/facility-management/career/",
+        "http": 200,
+        "bytes": 18306
+      },
+      {
+        "path": "/sitemap-0.xml",
+        "http": 200,
+        "bytes": 63052
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/03-why-hard-1.webp",
+        "http": 200,
+        "bytes": 52702,
+        "sha256": "332ca9b6a2371df92eaf93ac3d34c67f29704b421797ebbeb196d76eb90acbcb",
+        "expectedSHA256": "332ca9b6a2371df92eaf93ac3d34c67f29704b421797ebbeb196d76eb90acbcb",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/05-before-applying-2.webp",
+        "http": 200,
+        "bytes": 62078,
+        "sha256": "7a383847ff1ad7f4878569c5692e1206c44548144d80524bcb8877cfdab92fa9",
+        "expectedSHA256": "7a383847ff1ad7f4878569c5692e1206c44548144d80524bcb8877cfdab92fa9",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-1.webp",
+        "http": 200,
+        "bytes": 48910,
+        "sha256": "51071d02dbd7983f656f1bc53f73d35c9d3fb2f9d4de9b5ce2993c3d8c804165",
+        "expectedSHA256": "51071d02dbd7983f656f1bc53f73d35c9d3fb2f9d4de9b5ce2993c3d8c804165",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/02-four-workplaces-2.webp",
+        "http": 200,
+        "bytes": 52578,
+        "sha256": "45a49eac9c2d490ecf60a05d557412175a5c9812c6963179010bc6c79db9a787",
+        "expectedSHA256": "45a49eac9c2d490ecf60a05d557412175a5c9812c6963179010bc6c79db9a787",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/03-why-hard-2.webp",
+        "http": 200,
+        "bytes": 53254,
+        "sha256": "22ee9f9bdac6a988292a3f5de3ab5c5d90dde04cc30725b8962f790cd8d81045",
+        "expectedSHA256": "22ee9f9bdac6a988292a3f5de3ab5c5d90dde04cc30725b8962f790cd8d81045",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp",
+        "http": 200,
+        "bytes": 184644,
+        "sha256": "88e8a14ed1edf0a9ee6b2ed873e5179942544115520e1f34e2475e3d2fdf3e12",
+        "expectedSHA256": "88e8a14ed1edf0a9ee6b2ed873e5179942544115520e1f34e2475e3d2fdf3e12",
+        "matches": true
+      },
+      {
+        "path": "/images/facility-series/hobyeongbaekma-00/05-before-applying-1.webp",
+        "http": 200,
+        "bytes": 59626,
+        "sha256": "440934bdcd6bc0d8e98a384f10469821104979d7c9e8981367a9cf27348089a4",
+        "expectedSHA256": "440934bdcd6bc0d8e98a384f10469821104979d7c9e8981367a9cf27348089a4",
+        "matches": true
+      }
+    ]
+  },
+  "openPullRequests": [
+    {
+      "number": 255,
+      "title": "docs: 시설 콘텐츠 가이드에 자연스러운 집필·AI 상투 표현 검수 기준 추가",
+      "head": "docs/facility-natural-editorial-writing-20261106"
+    },
+    {
+      "number": 246,
+      "title": "시설 이미지 템플릿 — 카드형 1~4장 + 대표 이미지 풀블리드(폰트 시안 검토 중)",
+      "head": "codex/facility-infographic-card-templates-20261105"
+    },
+    {
+      "number": 225,
+      "title": "fix: 산업안전기사 모바일 표 헤더·본문 폭 불일치 수정",
+      "head": "codex/industrial-mobile-table-width-20261031"
+    },
+    {
+      "number": 218,
+      "title": "시설 콘텐츠·디자인 통합 가이드 v1.4 정리",
+      "head": "codex/facility-guide-v14-20261031"
+    },
+    {
+      "number": 217,
+      "title": "학습 화면 제목·표 가독성 및 PC 하단 광고 개선",
+      "head": "codex/chapter-reading-completion-20261030"
+    },
+    {
+      "number": 216,
+      "title": "기출 이력 버튼과 안내의 모바일 가독성 개선",
+      "head": "codex/question-buttons-readability-20261030"
+    },
+    {
+      "number": 208,
+      "title": "docs: 운영 가이드 v1.3 보완 — PC·모바일 뷰포트 QA 및 UI 개편 기준",
+      "head": "codex/guide-refresh-20261029"
+    },
+    {
+      "number": 207,
+      "title": "시설·자격증 서비스 분리 및 GNB 서비스 전환",
+      "head": "codex/service-split-gnb-20261029"
+    },
+    {
+      "number": 114,
+      "title": "컴활 Production 모바일 브라우저 QA 실행",
+      "head": "codex/computer-literacy-production-qa-20261001"
+    },
+    {
+      "number": 80,
+      "title": "content: 에너지관리기능사 2강 보강",
+      "head": "content/energy-lecture2"
+    }
+  ]
+}
