@@ -6,19 +6,26 @@
     {
       "order": 0,
       "title": "[호병백마 ep.0] 시설관리 호병백마, 이게 뭔데? 호텔·병원·백화점·마트가 묶인 이유",
-      "status": "draft",
-      "file": "episode00.md"
+      "status": "published",
+      "file": "episode00.md",
+      "publicFile": "src/content/facility/hobyeongbaekma.md",
+      "publicPath": "/facility-management/career/hobyeongbaekma/",
+      "publishedAt": "2026-11-07"
     },
     {
       "order": 1,
-      "title": "호텔",
-      "status": "planned",
+      "title": "[호병백마 ep.1] 호텔 시설관리, 객실 호출부터 야간 당직까지",
+      "status": "draft",
       "focus": [
         "객실 민원",
         "야간 당직",
         "업무분장",
         "근무기간별 후기"
-      ]
+      ],
+      "file": "episode01.md",
+      "draftedAt": "2026-11-08",
+      "editorNotes": "episode01-editor-notes.md",
+      "reviewFile": "episode01-review.html"
     },
     {
       "order": 2,
@@ -54,5 +61,6 @@
     }
   ],
   "publishApproval": false,
-  "titlePrefixFormat": "[호병백마 ep.N]"
+  "titlePrefixFormat": "[호병백마 ep.N]",
+  "publishApprovalScope": "1~4화의 공개 승인 없음; 기존 0화 승인·공개 상태와 구분"
 }

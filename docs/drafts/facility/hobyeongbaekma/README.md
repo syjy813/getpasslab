@@ -1,3 +1,11 @@
+# 현재 집필 상태 — 2026-11-08
+
+0화는 `src/content/facility/hobyeongbaekma.md`에서 공개 중이다. 1화 호텔 편은 [원고](episode01.md)·[텍스트 검토본](episode01-review.html)·[집필 및 근거 기록](episode01-editor-notes.md)으로 보존했다. 객실 대응·시설 외 지원·야간 당직·신입 교육을 다루며 이미지 제작과 실제 사이트 preview QA는 남아 있다. 2~4화는 계획이다.
+
+`series-plan.json`은 위 상태와 일치시켰다. 원고는 `docs/drafts/`에만 있어 공개 컬렉션이나 사이트맵에 포함되지 않는다. 1화의 공개 URL·발행일은 생성하지 않았다. 아래 0화의 당시 제작·배포 기록은 역사 자료이며, 현행 공개 정본과 구별한다.
+
+---
+
 ## 0화 사용자 개정 — 2026-11-07
 
 공개 정본에서 디시 설명글(184217) 연결을 제거하고 본문·alt·카드2장 제목의 ‘네 시설’을 ‘4개의 시설’로 변경했다. 0화의 근거 및 참고 자료 섹션은 표시하지 않는다. 대표 부제는 ‘호병백마는 왜 기피시설로 유명할까?’이며, `masters/hero-subtitle-avoidance.png`와 활성spec이 정본이다. 아래 기존 제작기록은 당시 상태이며 이전 승인마스터·초안·발행manifest는 보존한다. 현재 개정의 정확한 변경·검증은 `docs/audits/2026-11-07-hobyeongbaekma-editorial-revision/`에 기록한다.

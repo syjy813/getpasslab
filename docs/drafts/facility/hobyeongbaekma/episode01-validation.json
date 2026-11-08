@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-08",
+  "baseCommit": "9eca8430c03682a2b027e00a825fe5ed54b0c471",
+  "scope": "editorial manuscript outside public content loader",
+  "frontmatter": "PASS",
+  "titleLength": 36,
+  "descriptionLength": 104,
+  "bodyCharacters": 5315,
+  "summaryCount": 3,
+  "sourcesCount": 4,
+  "renderedH1": 1,
+  "bodyH2": 8,
+  "tables": 2,
+  "previewLinks": 4,
+  "placeholderImageReferences": 0,
+  "fabricatedPublicationDates": 0,
+  "manuscriptSha256": "9060abbe6c6ab7a462cfc01fa0f52cbb8036252326fd0bdc4b46c3a03b7d1de1",
+  "previewSha256": "8bda981f9bee7ad9832b2b0a8080585e6b85677aa128ca7fd4e85bbae18bb19a",
+  "siteBuild": "not run locally; await PR required CI",
+  "browserQA": "not performed; text preview only",
+  "imageStatus": "brief only; not generated",
+  "deployment": "not requested/not run"
+}
