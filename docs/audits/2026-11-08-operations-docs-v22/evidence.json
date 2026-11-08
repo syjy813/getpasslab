@@ -312,5 +312,15 @@
     "status": "completed",
     "conclusion": "success",
     "html_url": "https://github.com/syjy813/getpasslab/actions/runs/42436577083"
+  },
+  "legacyArchive": {
+    "path": "docs/archives/AI_HANDOVER.legacy-2026-11-08.md",
+    "sourceCommit": "68708f825ba58795a189b900d40fe0d913e5c83d",
+    "sourcePath": "AI_HANDOVER.md",
+    "gitBlob": "fd8511580a92cf39143f91d31df1f3c3c82febfd",
+    "sha256": "9387596aa1892819bbac60ba94910d0dbfe0443224767bc2dc31e1ed5b746f0a",
+    "bytes": 285528,
+    "lines": 3958,
+    "byteIdenticalToSource": true
   }
 }

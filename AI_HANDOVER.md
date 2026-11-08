@@ -4,7 +4,7 @@
 
 ## 기준 상태
 
-- 마지막 갱신: 2026-11-08 10:54 KST
+- 마지막 갱신: 2026-11-08 17:34 KST
 - 작업 Branch: `codex/operations-docs-v22-20261108` · [PR #261](https://github.com/syjy813/getpasslab/pull/261) (open, 미병합)
 - 기준 `main` / 마지막 확인된 Production 소스: [`68708f825ba58795a189b900d40fe0d913e5c83d`](https://github.com/syjy813/getpasslab/commit/68708f825ba58795a189b900d40fe0d913e5c83d) (PR #260)
 - 문서 변경의 실제 HEAD는 `git rev-parse HEAD`, 포함 커밋은 `git log -1 -- AGENTS.md AI_HANDOVER.md`로 확인한다. 위 기준 커밋을 현재 작업 HEAD로 혼동하지 않는다.
@@ -12,7 +12,7 @@
 
 ## 현재 목표
 
-`AGENTS.md`를 공통 실행 규칙·가이드 라우터로, `AI_HANDOVER.md`를 현재 상태 Snapshot으로 정리해 프로젝트 총 지침 v2.2와 맞춘다. 제품 코드·CI 구조 변경은 이번 범위 밖이다.
+`AGENTS.md`를 공통 실행 규칙·가이드 라우터로, `AI_HANDOVER.md`를 현재 상태 Snapshot으로 정리해 프로젝트 총 지침 v2.2와 맞춘다. 제품 코드·CI 구조 변경은 이번 범위 밖이다. 사용자 후속 요청으로 정리 전 원문 전체를 별도 레거시 파일로도 보존한다.
 
 ## 현재 진행 상태
 
@@ -20,8 +20,8 @@
 |---|---|---|
 | 구현 | 문서 역할 분리·재사용·제한 조회·체크포인트 규칙 반영 | PR #260의 0화 문구·자료 섹션·썸네일 개정 병합 완료 |
 | Test / QA | 문서 링크·보호 규칙·완료 기준·diff 검토 완료. 제품·기존 audit 등 다른 파일의 Git 객체 동일성 확인 | PR #260 HEAD `c5998e8`의 시설·0화·자격증 탐색·소방 QA 성공. 아래 Actions 증거 참조 |
-| Build | 로컬 제품 재빌드는 기존 증거 재사용. 문서 HEAD `e53069e`의 필수 SEO CI 전체 성공 (Build·공개콘텐츠·기출 전달 검사 포함): [42436577083](https://github.com/syjy813/getpasslab/actions/runs/42436577083). 전체 job 및 후속 HEAD 판정은 [PR Checks](https://github.com/syjy813/getpasslab/pull/261/checks)를 정본으로 확인 | `68708f8`의 Pages build 성공. SEO는 PR HEAD `c5998e8`의 실행 성공 |
-| Commit / Push | 문서 변경 커밋 `e53069e3532980295b7edf13475d54998800161d` 원격 반영 및 PR #261 생성. 이 Snapshot 보완을 포함한 최종 HEAD는 PR / Git 기록으로 확인 | `68708f8`이 원격 `main`에 반영됨 |
+| Build | 로컬 제품 재빌드는 기존 증거 재사용. 문서 HEAD `1ffe19d`의 필수 SEO CI 전체 성공 (Build·공개콘텐츠·기출 전달 검사 포함): [42436769039](https://github.com/syjy813/getpasslab/actions/runs/42436769039). 전체 job 및 후속 HEAD 판정은 [PR Checks](https://github.com/syjy813/getpasslab/pull/261/checks)를 정본으로 확인 | `68708f8`의 Pages build 성공. SEO는 PR HEAD `c5998e8`의 실행 성공 |
+| Commit / Push | 문서 변경 커밋 `1ffe19d05e39285fec245c276748d72ba4e08f2b`까지 원격 반영 및 PR #261 생성. 이 Snapshot 보완을 포함한 최종 HEAD는 PR / Git 기록으로 확인 | `68708f8`이 원격 `main`에 반영됨 |
 | Deploy | 이번 문서 작업은 미실행. 이번 요청에 Production 배포 승인 없음 | Pages [42382274155](https://github.com/syjy813/getpasslab/actions/runs/42382274155) build / deploy 성공 |
 | Production | 신규 배포 없음. 현재 서비스의 제한된 HTTP 검증만 수행 | 2026-11-08 10:54 KST: 0화·목록·사이트맵 HTTP 200, 메타데이터·개정 문구·이미지 7장 해시 일치. 소방 Production QA [42382350616](https://github.com/syjy813/getpasslab/actions/runs/42382350616) 성공 |
 
@@ -52,6 +52,7 @@ Production의 이번 확인은 HTTP·HTML·자산 해시 범위다. 새 수동 �
 ## 근거와 과거 기록 보존
 
 - 이번 정리의 보존 확인·완료 기준·CI 후속 후보: [운영 문서 audit](docs/audits/2026-11-08-operations-docs-v22/README.md), [실행·HTTP·이미지 해시 증거](docs/audits/2026-11-08-operations-docs-v22/evidence.json).
-- 정리 전 인계 전체 3,958줄: [기준 커밋의 AI_HANDOVER.md](https://github.com/syjy813/getpasslab/blob/68708f825ba58795a189b900d40fe0d913e5c83d/AI_HANDOVER.md). Git blob `fd8511580a92cf39143f91d31df1f3c3c82febfd`, SHA-256 `9387596aa1892819bbac60ba94910d0dbfe0443224767bc2dc31e1ed5b746f0a`. 추가 사본은 만들지 않았다.
+- 정리 전 인계 전체 3,958줄은 [별도 레거시 파일](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)에 원문 그대로 보존했다. [보존·조회 기준](docs/archives/README.md)을 따르며 현재 작업 시작 시 전체를 자동으로 읽지 않는다. 과거 지시·상태를 현재 사실로 적용하지 않는다.
+- 원본 확인: [기준 커밋의 AI_HANDOVER.md](https://github.com/syjy813/getpasslab/blob/68708f825ba58795a189b900d40fe0d913e5c83d/AI_HANDOVER.md). Git blob `fd8511580a92cf39143f91d31df1f3c3c82febfd`, SHA-256 `9387596aa1892819bbac60ba94910d0dbfe0443224767bc2dc31e1ed5b746f0a`. 레거시 파일과 원본의 바이트·해시가 일치한다.
 - 과거 작업·QA 상세: [docs/audits](docs/audits/), [PR 목록](https://github.com/syjy813/getpasslab/pulls), [Actions](https://github.com/syjy813/getpasslab/actions). Artifact는 보존 기한을 확인하고, 없으면 Git에 남은 근거와 구분한다.
 - PR #260 검증 대상 `c5998e863d8bba7fa1c96a97371579708bf0c9d5`: [SEO 42381904454](https://github.com/syjy813/getpasslab/actions/runs/42381904454), [0화 4폭 QA 42381904112](https://github.com/syjy813/getpasslab/actions/runs/42381904112), [시설 QA 42381903841](https://github.com/syjy813/getpasslab/actions/runs/42381903841). 최신 main의 Deploy / Production QA는 위 상태표 참조.
