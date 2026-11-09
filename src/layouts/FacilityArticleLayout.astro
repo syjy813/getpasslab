@@ -14,12 +14,12 @@ const { Content, headings } = await render(article);
 const sections = headings.filter(heading => heading.depth === 2 && heading.slug);
 const data = article.data;
 // Episode zero is a light editorial introduction; keep its research metadata internal.
-const showSourceList = !['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id);
+const showSourceList = article.id !== 'hobyeongbaekma';
 const category = facilityCategory(data.category);
 const url = new URL(withBase(facilityArticlePath(article)), SITE.url).href;
 const breadcrumbs = [{ name: '시설의 모든 것', path: '/facility-management/' }, { name: category.name, path: facilityCategoryPath(category.slug) }, { name: data.title, path: facilityArticlePath(article) }];
 const structuredData = [
-  { '@context': 'https://schema.org', '@type': 'Article', headline: data.title, description: data.description, datePublished: data.publishedAt, dateModified: data.updatedAt, inLanguage: 'ko-KR', mainEntityOfPage: url, author: { '@type': 'Organization', name: SITE.name, url: SITE.url }, publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url }, citation: showSourceList ? data.sources.map(source => source.url) : [] },
+  { '@context': 'https://schema.org', '@type': 'Article', headline: data.title, description: data.description, datePublished: data.publishedAt, dateModified: data.updatedAt, inLanguage: 'ko-KR', mainEntityOfPage: url, author: { '@type': 'Organization', name: SITE.name, url: SITE.url }, publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url }, citation: data.sources.map(source => source.url) },
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(withBase(item.path), SITE.url).href })) },
 ];
 ---
