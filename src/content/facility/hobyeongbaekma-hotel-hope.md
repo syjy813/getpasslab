@@ -11,7 +11,10 @@ summary:
   - '호텔은 공조·급배수·전기·영선 등 다양한 분야의 설비와 업무를 접할 수 있는 시설이다.'
   - '입문자라면 여러 실무를 경험하며 자신의 적성과 관심 분야를 찾아가는 기회가 될 수 있다.'
   - '폭넓은 경험이 실제 기술과 향후 이직 경쟁력으로 이어지려면 교육체계·담당업무·기록이 중요하다.'
-sources: []
+sources:
+  - title: 'Marriott Careers · Courtyard by Marriott Seoul Times Square Engineering Supervisor'
+    url: 'https://careers.marriott.com/engineering-supervisor-%EC%A3%BC%EC%9E%84/job/P1-7561264-0'
+    note: '2026-11-08 확인한 개별 호텔 주임급 직무 설명. 전반적인 호텔 시설직이나 신입 교육의 표준 조건으로 일반화하지 않음.'
 related:
   - hobyeongbaekma
   - first-job
