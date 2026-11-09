@@ -11,7 +11,10 @@ summary:
   - '호텔 시설팀은 기계실 설비 점검뿐 아니라 객실 냉난방·조명·수전의 불편을 처리할 수 있다.'
   - '반복적인 타 부서 지원과 모호한 업무분장은 설비 경험을 쌓을 시간을 줄일 수 있다. 시설 수리와 인력 공백 지원은 구분해야 한다.'
   - '야간 인력·보고 체계·신입 교육·실제 담당 설비를 입사 전에 확인하는 것이 중요하다.'
-sources: []
+sources:
+  - title: 'Marriott Careers · Courtyard by Marriott Seoul Times Square Engineering Supervisor'
+    url: 'https://careers.marriott.com/engineering-supervisor-%EC%A3%BC%EC%9E%84/job/P1-7561264-0'
+    note: '2026-11-08 확인한 개별 호텔 주임급 직무 설명. 전반적인 호텔 시설직이나 신입 교육의 표준 조건으로 일반화하지 않음.'
 related:
   - hobyeongbaekma
   - first-job
