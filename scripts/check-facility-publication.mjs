@@ -69,8 +69,8 @@ assert(!fs.existsSync(headingCSS.currentPath),'previous content-hashed bundle re
 // Remove only the two user-approved employment-types borderless rules from
 // compiled CSS before comparing the full historical bundle fingerprint.
 const approvedHeroSelectors=[
-  /\\.facility-body\\s+img\\[src\\$=[\"']?\\/03\\/01-employment-types-hero\\.webp[\"']?\\]\\s*\\{\\s*border\\s*:\\s*0(?:px)?;?\\s*border-radius\\s*:\\s*0(?:px)?;?\\s*\\}/g,
-  /\\.facility-card-cover:has\\(\\s*>\\s*img\\[src\\$=[\"']?\\/03\\/01-employment-types-hero\\.webp[\"']?\\]\\s*\\)\\s*\\{\\s*border\\s*:\\s*0(?:px)?;?\\s*border-radius\\s*:\\s*0(?:px)?;?\\s*\\}/g
+  /\.facility-body\s+img\[src\$=[\"']?\/03\/01-employment-types-hero\.webp[\"']?\]\s*\{\s*border\s*:\s*0(?:px)?;?\s*border-radius\s*:\s*0(?:px)?;?\s*\}/g,
+  /\.facility-card-cover:has\(\s*>\s*img\[src\$=[\"']?\/03\/01-employment-types-hero\.webp[\"']?\]\s*\)\s*\{\s*border\s*:\s*0(?:px)?;?\s*border-radius\s*:\s*0(?:px)?;?\s*\}/g
 ];
 let originalCompiledCSS=compiledCSS;
 for(const pattern of approvedHeroSelectors){
