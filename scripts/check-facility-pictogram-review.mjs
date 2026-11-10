@@ -40,13 +40,23 @@ for(const size of sizes){
 }
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const before=JSON.parse(fs.readFileSync(audit+'/before-manifest.json'));let repairedCards=0,repairedItems=0;
+const approvedHeroReplacements=new Map([
+ ['/images/facility-drafts/03/01-employment-types-hero.webp',['1c5ba3afc4f0cfa900a0099e388d318031cb99dda16382d8956f705c7b1c2190','34f51903b1c14e3864a1b800f0246d168b7810eafa12dd5c5aabc6c930526f6f']],
+ ['/images/facility-drafts/01/01-facility-management-hero.webp',['649c9f00453893492def48198627f18302c6de5e3fa2dcc1a01edb58b6768e3a','8fd5433c0255084111b4f6dd19dcc35ed7880dda8b4ea392676d53594f29bda4']],
+ ['/images/facility-drafts/06/01-hanfms-hero.webp',['b3598ac070c2d8f8da9d5c9eb28507f0cf69f44b5a2cfb01981094c128816b58','87df5deb86022d41653b1d39cc6fa681399621b04891d6c1e486c168c6afb30b']],
+ ['/images/facility-drafts/08/01-korailtech-hero.webp',['df2a68b0be2ae3404b4333335202699931471020af0249f5bb33e20e9004b449','07968272b90dd85f04edfbc10726a27f4173740faba85982206aa9cc33fe4cb4']],
+ ['/images/facility-drafts/10/01-statutory-appointments-hero.webp',['3bc8a95bc41335ac8705d5b9f0fda87c0c820ba52654e653ed8bbc9a36f83730','46beceb63097c8fa76a87e439b2d2697db10907b3ffa679a64915c8d571ca094']],
+ ['/images/facility-drafts/11/01-maintainer-grades-hero.webp',['e2eefc106a820734a14514dd550b2ed2abbaa54974588bb9e9b472b675ad5431','a75335519dcf45571ee9a30b0c67e799a6a01e4d2d0468fb29ff847420f4185b']],
+ ['/images/facility-drafts/13/01-boiler-manager-hero-v2.webp',['8a7392998f99e31205c996ca591c88108e5729f875a395c3a4b57ef57a06a80b','e15dc2e306022d5699a36042ee2f1ed406f3e788c60c43c87e79e9df82071d40']]
+]);
 for(const row of bulkVisuals.images){
  const prev=before.images.find(r=>r.publicPath===row.publicPath);assert(prev,'stable image URL');
- if(row.publicPath==='/images/facility-drafts/03/01-employment-types-hero.webp'){
-  // Separately approved editorial hero update; all pictogram-card baselines remain protected.
+ const approvedHero=approvedHeroReplacements.get(row.publicPath);
+ if(approvedHero){
+  // Separately approved editorial hero updates; all pictogram-card baselines remain protected.
   assert.equal(row.kind,'editorial-hero');
-  assert.equal(row.sha256,'1c5ba3afc4f0cfa900a0099e388d318031cb99dda16382d8956f705c7b1c2190');
-  assert.equal(row.masterSHA256,'34f51903b1c14e3864a1b800f0246d168b7810eafa12dd5c5aabc6c930526f6f');
+  assert.equal(row.sha256,approvedHero[0]);
+  assert.equal(row.masterSHA256,approvedHero[1]);
   assert.equal(sha(fs.readFileSync(row.file)),row.sha256,'approved hero WebP bytes');
   assert.equal(sha(fs.readFileSync(row.master)),row.masterSHA256,'approved hero master bytes');
   for(const key of ['width','height','alt'])assert.equal(row[key],prev[key],'layout and copy retained');
