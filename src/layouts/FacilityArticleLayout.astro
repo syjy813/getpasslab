@@ -13,8 +13,8 @@ const { article, related } = Astro.props;
 const { Content, headings } = await render(article);
 const sections = headings.filter(heading => heading.depth === 2 && heading.slug);
 const data = article.data;
-// Episode zero is a light editorial introduction; keep its research metadata internal.
-const showSourceList = article.id !== 'hobyeongbaekma';
+// These approved series episodes keep research metadata out of the visible article.
+const showSourceList = !['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id);
 const category = facilityCategory(data.category);
 const url = new URL(withBase(facilityArticlePath(article)), SITE.url).href;
 const breadcrumbs = [{ name: '시설의 모든 것', path: '/facility-management/' }, { name: category.name, path: facilityCategoryPath(category.slug) }, { name: data.title, path: facilityArticlePath(article) }];

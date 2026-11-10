@@ -1,4 +1,7 @@
-import { episode00Release, assertEpisode00Release } from './read-hobyeongbaekma-publication.mjs';
+import {hotelRelease, assertHotelRelease} from './read-hotel-two-parter-release.mjs';
+assertHotelRelease();
+import { episode00Release, assertEpisode00Release, approvedBorderlessHeroStyle, episode00Integration } from './read-hobyeongbaekma-publication.mjs';
+import { integratedImageStyles } from './hobyeongbaekma-integrated-images.mjs';
 assertEpisode00Release();
 import {bulkVisuals,beforeBulkVisuals,assertBulkVisuals,bulkOutput} from './read-facility-bulk-visuals.mjs';
 // The original facility-publication fingerprint is kept immutable in
@@ -33,8 +36,8 @@ const editorialBlobs = {
   'src/pages/certifications/index.astro': '125799ae05dc3918bd43b16babbdcfd9bf1fc043',
   'src/styles/catalog.css': '8a90e16d57215350e844faf7accf12cd20b1cd68',
   'src/components/Footer.astro': '1c21ee8122b0e7a2bbd5eac8c1c1f5d3538f5867',
-  'src/components/FacilityCard.astro': episode00Release.cardBlob,
-  'src/layouts/FacilityArticleLayout.astro': episode00Release.layoutBlob,
+  'src/components/FacilityCard.astro': hotelRelease.nativeChanges['src/components/FacilityCard.astro'].blob,
+  'src/layouts/FacilityArticleLayout.astro': hotelRelease.nativeChanges['src/layouts/FacilityArticleLayout.astro'].blob,
   'src/pages/facility-management/index.astro': 'f609c910d1b89037253da9923d38f714fa6d7ec7',
   'src/styles/facility.css': episode00Release.facilityStyleBlob,
   'src/pages/facility-management/[category]/index.astro': 'c6e86be311d7f72fc212e32f0e3ce691b0d17239',
@@ -52,14 +55,20 @@ const files = [
   ...walk('src'),
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
-].filter(file => !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
+].filter(file => !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
 for (const file of files) {
   const bytes = beforePublicSectorVisuals(file, beforeBulkVisuals(file, fs.readFileSync(file)));
   if (Object.hasOwn(editorialBlobs, file)) {
-    assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
+    if (file === 'src/styles/facility.css') {
+      const originalFacilityCss=fs.readFileSync(episode00Integration.previousStyle,'utf8')+integratedImageStyles;
+      assert.equal(bytes.toString('utf8'),originalFacilityCss+approvedBorderlessHeroStyle,'only approved borderless hero CSS appended');
+      assert.equal(gitBlob(Buffer.from(originalFacilityCss)), editorialBlobs[file], file + ': original approved UI blob');
+    } else {
+      assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
+    }
     assert.notEqual(hash(bytes), facilityReview.current[file], file + ': changed from publication snapshot');
     reviewedEditorialPaths.push(file);
   } else if (file.startsWith('dist/')) {

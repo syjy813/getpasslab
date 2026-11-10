@@ -1,3 +1,5 @@
+import {hotelRelease, assertHotelRelease} from './read-hotel-two-parter-release.mjs';
+assertHotelRelease();
 import { episode00Release, assertEpisode00Release } from './read-hobyeongbaekma-publication.mjs';
 import {beforeIntegratedStyles} from './hobyeongbaekma-integrated-images.mjs';
 assertEpisode00Release();
@@ -66,11 +68,31 @@ const facilityCSS=walk('dist/_astro').filter(file=>file.endsWith('.css')&&fs.rea
 assert.equal(facilityCSS.length,1,'one complete-sheet stylesheet');
 const currentFacilityCSS=facilityCSS[0],compiledCSS=fs.readFileSync(currentFacilityCSS,'utf8');
 assert(!fs.existsSync(headingCSS.currentPath),'previous content-hashed bundle replaced');
-assert.equal(hash(beforeIntegratedStyles(compiledCSS)),headingCSS.currentSHA256,'all pre-existing compiled CSS bytes are unchanged');
+// Remove only the two user-approved employment-types borderless rules from
+// compiled CSS before comparing the full historical bundle fingerprint.
+const borderlessHeroPath='/03/01-employment-types-hero.webp';
+const approvedHeroRules=[...compiledCSS.matchAll(/([^{}]+)\{([^{}]*)\}/g)]
+  .filter(match=>match[0].includes(borderlessHeroPath));
+assert(approvedHeroRules.length>=1&&approvedHeroRules.length<=2,'only one or two approved compiled hero blocks');
+const seenSelectors=[];
+for(const match of approvedHeroRules){
+  const decls=match[2].split(';').map(s=>s.replace(/\s+/g,'')).filter(Boolean).sort();
+  assert.deepEqual(decls,['border:0','border-radius:0'].sort(),'exact approved borderless declarations');
+  seenSelectors.push(...match[1].split(',').map(s=>s.replace(/\s+/g,'').replace(/['"]/g,'')));
+}
+assert.deepEqual(seenSelectors.sort(),[
+  '.facility-bodyimg[src$='+borderlessHeroPath+']',
+  '.facility-card-cover:has(>img[src$='+borderlessHeroPath+'])'
+].sort(),'exactly two scoped hero image selectors');
+let originalCompiledCSS=compiledCSS;
+for(const match of approvedHeroRules.reverse()){
+  originalCompiledCSS=originalCompiledCSS.slice(0,match.index)+originalCompiledCSS.slice(match.index+match[0].length);
+}
+assert.equal(hash(beforeIntegratedStyles(originalCompiledCSS)),headingCSS.currentSHA256,'all pre-existing compiled CSS bytes are unchanged');
 const files=walk('dist').filter(f=>!f.split('/').some(p=>p.startsWith('.'))).sort();
 const addedVisualImages=publicSectorVisuals.images.filter(r=>!r.existing).map(visualOutput);
 for(const row of publicSectorVisuals.images)assert.equal(hash(fs.readFileSync(visualOutput(row))),row.sha256,'approved public-sector output: '+row.publicPath);
-assert.deepEqual(files,[...episode00Release.outputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same routes and approved images plus six complete-sheet assets; exactly one facility CSS bundle replaced');
+assert.deepEqual(files,[...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same routes and approved images plus six complete-sheet assets; exactly one facility CSS bundle replaced');
 let unchanged=0;
 const approvedRenders=new Set([...publicSectorVisuals.images.filter(r=>r.existing).map(visualOutput),...bulkVisuals.images.map(bulkOutput)]);
 for(const [file,sha] of Object.entries(baseline)){

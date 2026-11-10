@@ -43,6 +43,7 @@ jobs:
       - run: node scripts/check-facility-pictogram-review.mjs
       - run: node scripts/check-facility-drafts.mjs
       - run: node scripts/check-facility-related-links.mjs
+      - run: node scripts/check-hotel-two-parter-publication.mjs
       - run: npm run check:seo
       - run: npm run check:public-content
       - if: matrix.preview == '0'
@@ -58,9 +59,10 @@ jobs:
           for n in $(seq 1 30); do curl -fsS http://127.0.0.1:4321/ >/dev/null && break; sleep 1; done
           node scripts/qa-facility-launch.cjs
           node scripts/qa-facility-drafts.cjs
+          node scripts/qa-hotel-two-parter.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: facility-qa-${{ matrix.mode }}
-          path: qa-results/facility-launch/
+          path: qa-results/
           retention-days: 14

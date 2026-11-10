@@ -1,56 +1,51 @@
 # GetPassLab — 현재 상태 Snapshot
 
-작업 규칙·정본 라우터는 [AGENTS.md](AGENTS.md). 과거 상세 기록은 아래 보존 위치에서 필요한 항목만 확인한다.
+작업 규칙·정본 라우터는 [AGENTS.md](AGENTS.md). 과거 상세는 연결 문서에서 필요한 부분만 확인한다.
 
 ## 기준 상태
 
-- 마지막 갱신: 2026-11-08 KST · 호병백마 0화 통합 이미지 배포 완료
-- 현재 Branch: `main` · [PR #263](https://github.com/syjy813/getpasslab/pull/263) 병합 완료
-- 검증·배포 제품 소스: `dcfcf34adb4772996381ff5c98213851c88dcbf3`. 승인 PR HEAD `f3a24198e41af8f4177db17a23fcf25af1a57522`와 Git tree가 동일하다.
-- 이 Snapshot과 완료 증거를 기록하는 종료 커밋은 문서만 변경한다. 실제 원격 HEAD와 제품 배포 소스는 구분한다. 동일 제품의 중복 배포를 피하도록 종료 기록 커밋에 `[skip ci]`를 적용하며 다음 제품 변경의 필수 검사를 생략하지 않는다.
-- 로컬 작업 공간은 관련 파일만 가져온 부분 체크아웃이다. 원격 merge/배포 상태와 다른 공간의 미커밋 상태를 혼동하지 않는다.
+- 갱신: 2026-11-10 KST. 기준 main `98be89d2b093f2d39d383480cf92310a01986e80`.
+- 작업 브랜치: `codex/hobyeongbaekma-hotel-two-parter-20261109`, [PR #264](https://github.com/syjy813/getpasslab/pull/264).
+- 중단 전 원고 HEAD `4b9b3675968b93b4582fbcb5eadd02ec19e81991`와 최신 main을 결합해 호텔편 2부작의 기존 배포 승인 범위를 재개한다.
 
-## 현재 목표
+## 현재 목표와 진행
 
-호병백마 0화의 세 분할 이미지 묶음을 각 한 장으로 통합하고 사용자 배포 승인에 따라 실서버 교체·Production 확인을 완료했다. 본문 6→3장, 대표 포함 7→4개 img이며 해당 요청의 남은 구현·배포 작업은 없다.
+호병백마 ep.1-1 절망편·ep.1-2 희망편을 확정 썸네일과 함께 공개한다. 단일 호텔편 PR #262는 이번에 병합하지 않는다.
 
-## 현재 진행 상태
-
-| 단계 | 상태·근거 |
+| 단계 | 상태 |
 |---|---|
-| 구현 | 4개 시설·업무 부담 4조건·지원 전 6개 확인을 통합. PC 2열/모바일 전체 항목 1열, 로딩 전 비율 예약 |
-| 보존 | 본문·표·출처·대표·URL 및 이전 분할 자산 보존. [적용 audit](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/README.md)와 이전 원고/CSS·마스터·해시 참조 |
-| Test / QA | PR 최종 HEAD의 필수 SEO·템플릿·0화·시설 공개/비공개·자격증 탐색·소방 launch CI 6개 모두 성공. 로컬 통합 전용 6개 테스트 PASS. [최종 근거](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/closeout.json) |
-| Build / Deploy | merge 소스의 [Pages 42479587679](https://github.com/syjy813/getpasslab/actions/runs/42479587679) build/deploy 모두 성공 |
-| Git | PR #263을 main `dcfcf34a`로 병합. PR 검증 tree와 merge tree 동일성 확인. 종료 문서 커밋은 제품 코드·설정·자산을 변경하지 않음 |
-| Production | 공개 URL HTTP 200, img 4/picture 3, 대표+새 PC/모바일 7파일의 SHA 일치. 실제 브라우저 PC 1600/모바일 390px에서 전체 파일 선택·로드·가로 넘침 없음 확인, viewport 원복. 홈/취업 목록의 0화 카드·대표 유지 |
-| 추가 자동 QA | Pages 후속 전역 자동 QA 10건 모두 성공. 대상 실행은 closeout의 afterDeployChecks 참조 |
-
-## 최근 완료 핵심
-
-- [PR #263](https://github.com/syjy813/getpasslab/pull/263): 4·5·6개 통합 템플릿과 0화 본문 이미지 6→3장 통합, main 병합·Pages 배포·실서버 PC/모바일 및 7파일 해시 확인 완료.
-- [PR #261](https://github.com/syjy813/getpasslab/pull/261): 운영 문서 v2.2 정리·레거시 원문 보존을 main에 병합하고 Pages 및 후속 QA 확인 완료.
-- [PR #260](https://github.com/syjy813/getpasslab/pull/260): 0화 설명글 연결 제거, ‘4개의 시설’ 문구, 자료 섹션 비노출, 대표 부제 ‘호병백마는 왜 기피시설로 유명할까?’ 반영. 공개 정본 `src/content/facility/hobyeongbaekma.md`, URL `/facility-management/career/hobyeongbaekma/` 유지.
-- 시설 13편 이미지 교체와 Pages 복구는 이전 완료 작업이다. 상세는 [배포 복구 audit](docs/audits/2026-11-06-pages-deploy-recovery/README.md), 현재 개정은 [0화 개정 manifest](docs/audits/2026-11-07-hobyeongbaekma-editorial-revision/manifest.json)에서 추적한다.
-- 기존 원고·대표 마스터·발행 manifest·조사 자료는 보존돼 있다. [0화 제작 폴더](docs/drafts/facility/hobyeongbaekma/README.md)의 과거 초안·미배포 설명을 현재 승인·배포 상태로 해석하지 않는다.
-
-## 미완료 / 알려진 문제
-
-- 호병백마 1화 원고는 별도 PR #262에 보존돼 있으며 이 템플릿 브랜치에는 포함하지 않았다. 1화 이미지 제작/화면 QA, 2~4화 집필·공개는 미완료다.
-- 최초 상태 조회에서 열린 기존 PR 10건은 이번에 자동으로 병합·폐기하지 않았다. #255(자연스러운 집필 기준), #246(이전 이미지 템플릿) 등은 미병합 상태이며 현재 정본으로 간주하지 않는다. 나머지 목록은 [이번 상태 증거](docs/audits/2026-11-08-operations-docs-v22/evidence.json)의 `openPullRequests` 참조. 최신 정합성 검토는 별도 작업이다.
-- 기존 기록의 컴활 실제 Excel / 과거 Windows 환경 검증, 산업안전 Q-Net 공식 원문·정오표 대조, 기출·이미지 이용 권리 문제는 이번에 해결 여부를 재검증하지 않았다. 관련 작업 재개 시 해당 audit와 현재 소스를 대조한다. 과거 수치·보류 목록을 최신 전수 상태로 사용하지 않는다.
-- Search Console 색인·Google 선택 canonical, AdSense 계정 승인·실제 광고 노출·수익은 이번에 확인하지 않았다. 과거 ‘미승인’ 기록을 현재 계정 상태로 단정하지 않는다. 실제 휴대폰·Safari·학습자 효과도 이번 검증 범위 밖이다.
-- 과거 dependency 보안·번들 크기 경고는 현재 재검증하지 않았다. 자동 `npm audit fix` 없이 별도 dependency / 성능 검토 대상으로 유지한다.
-- CI 중복 Build·브라우저 설치·광범위한 path filter는 후속 후보이며 이번에 수정하지 않았다. [검토 근거](docs/audits/2026-11-08-operations-docs-v22/README.md) 참조.
+| 구현 | 두 공개 원고·자기 canonical 경로·대표 figure·상대편 링크·관련 카드·2026-11-10 날짜 적용 |
+| 이미지 | 승인 WebP 2개 저장소 등록 준비 완료. 1440×1080. 배포 패키지 해시와 일치 |
+| 출처 | 공식 Marriott 개별 주임급 설명 재확인, 내부 메타데이터 유지. 두 글의 본문 외부 링크·자료 섹션 없음. 타 일반 글 출처 표시는 유지 |
+| 보호 | 별도 manifest로 소스 2개·이미지 2개·출력 4개만 추가 허용. 공용 컴포넌트 전후 해시 보존. 과거 baseline·0화·기존 자산 유지 |
+| 로컬 검증 | Build·SEO·public-content·호텔 공개 검사·시설 공개/링크/소스 보호·0화·카드 여백·픽토그램 PASS. Private preview 검사 및 원격 CI는 최종 실행 결과로 갱신 |
+| 실제 화면 | 로컬 Chromium은 socket 제한으로 실행 불가. CI에서 320/390/768/1440px 2편 및 기존 화면 검사 필수 |
+| Git / Deploy | 구현 단계. 원격 최종 CI 성공 후 승인 범위 내 병합·Pages·Production 확인 예정. **현재 배포 완료로 보고하지 않음** |
 
 ## 다음 행동
 
-1. 이번 0화 이미지 통합·배포 요청은 종료했다. 새 요청이 없으면 재빌드·재배포하지 않는다.
-2. 다음 콘텐츠는 별도 PR #262의 호병백마 1화 호텔 원고다. 기존 원고·조사·체크포인트를 재사용해 이미지 제작과 실제 글 QA부터 이어간다.
-3. 추가 전역 자동 QA의 최신 결과가 필요하면 closeout에 연결된 실행만 확인하며 같은 제품의 성공한 검증을 반복하지 않는다.
+1. PR #264의 최신 Commit에서 필수 CI와 4폭 실제 페이지 QA 성공 확인.
+2. 승인 범위에 따라 병합·Pages build/deploy 성공 확인.
+3. 두 공개 URL·이미지 바이트 SHA·목록·PC/모바일 확인 후 종료 근거와 이 Snapshot 갱신.
+4. 다음 집필은 병원편이며 호텔 2부작 공개가 우선이다.
+
+## 최근 완료·보류
+
+- PR #263: 0화 본문 이미지 6→3장 통합과 4·5·6개 템플릿, Pages 및 Production 검증 완료.
+- PR #266: 직영·자회사·용역 무테두리 대표 이미지 배포 완료. 해당 이미지의 직접 공개 바이트 SHA·화면 검증 미확인 상태는 별도 유지.
+- PR #261: 운영 문서 경량화 및 레거시 원문 보존 완료.
+- PR #262·#255·#246 등 다른 열린 PR은 자동 병합·폐기하지 않는다.
+- Search Console 선택 canonical, 광고 승인·수익, 실제 휴대폰/Safari, 이전 자격증 원문·권리·Excel 검수와 dependency 경고는 이번 확인 범위 밖이다. 과거 기록은 해당 작업 재개 때 최신 소스로 확인한다.
+
+## 이번 근거
+
+- [공개 manifest·전후 소스](docs/audits/2026-11-10-hotel-two-parter/manifest.json), [작업·검증 범위](docs/audits/2026-11-10-hotel-two-parter/README.md).
+- 공개 정본: `src/content/facility/hobyeongbaekma-hotel-despair.md`, `hobyeongbaekma-hotel-hope.md`. docs/drafts의 2026-11-09 원고는 과거 편집본이다.
 
 ## 근거와 과거 기록 보존
 
+- 최종 외곽 여백·테두리 제거 배포: [PR #266](https://github.com/syjy813/getpasslab/pull/266), [시설 QA](https://github.com/syjy813/getpasslab/actions/runs/42736850031), [SEO](https://github.com/syjy813/getpasslab/actions/runs/42736850025), [Pages build/deploy success](https://github.com/syjy813/getpasslab/actions/runs/42739563616), deploy source `4d45d7a5be979ba04c170f2f2f2cad7e79f01106`.
+- 직전 상단 여백 수정 이력: [PR #265](https://github.com/syjy813/getpasslab/pull/265), Pages 42729771418. 이후 PR #266에서 최종 무테두리 버전으로 교체됨.
 - PR #263 완료: [closeout](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/closeout.json), [실서버 HTTP·자산·목록](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/production-http.json), [실제 PC·모바일 브라우저](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/production-browser.json).
 - 병합·배포·후속 QA 10개·Production 확인: [최종 종료 증거](docs/audits/2026-11-08-operations-docs-v22/closeout.json).
 - 이번 정리의 보존 확인·완료 기준·CI 후속 후보: [운영 문서 audit](docs/audits/2026-11-08-operations-docs-v22/README.md), [실행·HTTP·이미지 해시 증거](docs/audits/2026-11-08-operations-docs-v22/evidence.json).
