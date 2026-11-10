@@ -21,8 +21,8 @@ function lastBodyInk(r,card,actionTop){
 const measurements=[];
 const approvedHeroReplacements=new Map([
   ['/images/facility-drafts/03/01-employment-types-hero.webp',{
-    sha256:'1c5ba3afc4f0cfa900a0099e388d318031cb99dda16382d8956f705c7b1c2190',
-    masterSHA256:'34f51903b1c14e3864a1b800f0246d168b7810eafa12dd5c5aabc6c930526f6f'
+    sha256:'d826bd4a7ba73b5f2e55425d6ab30485af981b435a40863a0f7b49e9d17282b0',
+    masterSHA256:'45c18c7fec7573aa1c49d1ba7777556eb304af3a63474192c91b1807f861237d'
   }],
   ['/images/facility-drafts/01/01-facility-management-hero.webp',{
     sha256:'649c9f00453893492def48198627f18302c6de5e3fa2dcc1a01edb58b6768e3a',
