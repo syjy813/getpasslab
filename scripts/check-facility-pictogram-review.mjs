@@ -45,8 +45,8 @@ for(const row of bulkVisuals.images){
  if(row.publicPath==='/images/facility-drafts/03/01-employment-types-hero.webp'){
   // Separately approved editorial hero update; all pictogram-card baselines remain protected.
   assert.equal(row.kind,'editorial-hero');
-  assert.equal(row.sha256,'514a86e545e147cb90468715e1e111393c0741054410022fcf134473fa6fca21');
-  assert.equal(row.masterSHA256,'7b135df5ae2ab46d97c180c05183f6b2da5e28d195b926fed21e75477f9cbd4c');
+  assert.equal(row.sha256,'1c5ba3afc4f0cfa900a0099e388d318031cb99dda16382d8956f705c7b1c2190');
+  assert.equal(row.masterSHA256,'34f51903b1c14e3864a1b800f0246d168b7810eafa12dd5c5aabc6c930526f6f');
   assert.equal(sha(fs.readFileSync(row.file)),row.sha256,'approved hero WebP bytes');
   assert.equal(sha(fs.readFileSync(row.master)),row.masterSHA256,'approved hero master bytes');
   for(const key of ['width','height','alt'])assert.equal(row[key],prev[key],'layout and copy retained');
