@@ -30,7 +30,7 @@
 ## 파일 처리
 
 02·04·07·09·12는 기존 bulk hero 공개 WebP와 PNG 검수 마스터를 교체한다.
-05 공공부문 대표 이미지는 2026-11-05 역사 manifest와 기존 v2 파생본을 보존하기 위해 새 `facility-image-refresh/05/01-public-sector-hero-v3.webp` 및 별도 master를 override로 추가한다.
+05 공공부문 대표 이미지는 2026-11-05 역사 manifest와 기존 v2 파생본을 보존하기 위해 새 `facility-asset-edits/05/01-public-sector-hero-v3.webp` 및 별도 master를 override로 추가한다.
 
 PNG 검수 마스터는 공개 WebP와 동일한 1440×1080 화면을 확인하기 위한 무손실 indexed PNG로 저장한다.
 
