@@ -24,7 +24,7 @@ const output='qa-results/hotel-two-parter';fs.mkdirSync(output,{recursive:true})
     assert(state.dates.every(d=>d===row.publishedAt));
     await page.locator('.facility-toc summary').click();
     const target=await page.locator('.facility-toc a').first().getAttribute('href');
-    await page.locator('.facility-toc a').first().click();assert(new URL(page.url()).hash===target);
+    await page.locator('.facility-toc a').first().click();assert(decodeURIComponent(new URL(page.url()).hash)===decodeURIComponent(target));
     await page.goto(base+row.route);await page.locator('.facility-body img').evaluate(img=>img.decode());
     await page.screenshot({path:output+'/'+row.slug+'-'+width+'.png',fullPage:true});
     results.push({route:row.route,width,...state});
