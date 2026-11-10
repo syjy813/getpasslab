@@ -68,14 +68,23 @@ const currentFacilityCSS=facilityCSS[0],compiledCSS=fs.readFileSync(currentFacil
 assert(!fs.existsSync(headingCSS.currentPath),'previous content-hashed bundle replaced');
 // Remove only the two user-approved employment-types borderless rules from
 // compiled CSS before comparing the full historical bundle fingerprint.
-const approvedHeroSelectors=[
-  /\.facility-body\s+img\[src\$=[\"']?\/03\/01-employment-types-hero\.webp[\"']?\]\s*\{\s*border\s*:\s*0(?:px)?;?\s*border-radius\s*:\s*0(?:px)?;?\s*\}/g,
-  /\.facility-card-cover:has\(\s*>\s*img\[src\$=[\"']?\/03\/01-employment-types-hero\.webp[\"']?\]\s*\)\s*\{\s*border\s*:\s*0(?:px)?;?\s*border-radius\s*:\s*0(?:px)?;?\s*\}/g
-];
+const borderlessHeroPath='/03/01-employment-types-hero.webp';
+const approvedHeroRules=[...compiledCSS.matchAll(/([^{}]+)\{([^{}]*)\}/g)]
+  .filter(match=>match[0].includes(borderlessHeroPath));
+assert(approvedHeroRules.length>=1&&approvedHeroRules.length<=2,'only one or two approved compiled hero blocks');
+const seenSelectors=[];
+for(const match of approvedHeroRules){
+  const decls=match[2].split(';').map(s=>s.replace(/\s+/g,'')).filter(Boolean).sort();
+  assert.deepEqual(decls,['border:0','border-radius:0'].sort(),'exact approved borderless declarations');
+  seenSelectors.push(...match[1].split(',').map(s=>s.replace(/\s+/g,'').replace(/['"]/g,'')));
+}
+assert.deepEqual(seenSelectors.sort(),[
+  '.facility-bodyimg[src$='+borderlessHeroPath+']',
+  '.facility-card-cover:has(>img[src$='+borderlessHeroPath+'])'
+].sort(),'exactly two scoped hero image selectors');
 let originalCompiledCSS=compiledCSS;
-for(const pattern of approvedHeroSelectors){
-  assert.equal([...originalCompiledCSS.matchAll(pattern)].length,1,'exactly one approved borderless hero rule');
-  originalCompiledCSS=originalCompiledCSS.replace(pattern,'');
+for(const match of approvedHeroRules.reverse()){
+  originalCompiledCSS=originalCompiledCSS.slice(0,match.index)+originalCompiledCSS.slice(match.index+match[0].length);
 }
 assert.equal(hash(beforeIntegratedStyles(originalCompiledCSS)),headingCSS.currentSHA256,'all pre-existing compiled CSS bytes are unchanged');
 const files=walk('dist').filter(f=>!f.split('/').some(p=>p.startsWith('.'))).sort();
