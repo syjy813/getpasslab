@@ -1,0 +1,13 @@
+{
+  "images": [
+    {
+      "publicPath": "/images/facility-drafts/05/01-public-sector-hero.webp",
+      "file": "facility-asset-edits/05/01-public-sector-hero-v3.webp",
+      "sha256": "4103fe788435e6c0cf45b58a10edc7e8cbf04e0329744f0a180bb28f151118ab",
+      "master": "docs/audits/2026-11-10-facility-hero-title-normalization-phase2/masters/05.png",
+      "masterSHA256": "2735322ab9d90cc57d8409bf32dc2aedce39d7d13e14f932b6c1c414a712b798",
+      "kind": "approved-ai-hero",
+      "existing": true
+    }
+  ]
+}
