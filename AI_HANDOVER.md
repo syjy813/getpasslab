@@ -4,30 +4,30 @@
 
 ## 기준 상태
 
-- 마지막 갱신: 2026-11-10 KST · 직영/자회사/용역 대표 썸네일 교체 후 Pages 배포 복구 중
-- 제품 기준: `main` · [PR #265](https://github.com/syjy813/getpasslab/pull/265) squash 병합 커밋 `54553a760cf7e8b1e9ab5c0d8d8dad5f46040bb7`
-- 이번 변경 제품 범위: `facility-image-refresh/03/01-employment-types-hero.webp`, `docs/audits/2026-11-06-facility-image-bulk/hero-masters/03.png`, 관련 manifest 해시 및 승인 이미지 예외 검수 2개
-- 로컬 작업 공간의 Git 상태는 확인하지 못했으며 원격 PR/CI/Pages 상태를 근거로 한다. 후속 문서 커밋은 제품 이미지/코드 변경을 포함하지 않는다.
+- 마지막 갱신: 2026-11-10 KST · 직영/자회사/용역 대표 이미지 수정 및 Pages 재배포 성공
+- 제품 기준: `main` · [PR #265](https://github.com/syjy813/getpasslab/pull/265) squash 병합 제품 커밋 `54553a760cf7e8b1e9ab5c0d8d8dad5f46040bb7`
+- 재배포·상태 문서 기준: `6ae93ed1be68a855ee27687e945c84ef524dfede`; 이후 본 종료 문서 커밋은 제품 코드·이미지·설정을 바꾸지 않으며 `[skip ci]`를 적용한다.
+- 로컬 작업 공간 Git 상태는 조회하지 못했고 원격 PR/CI/Pages 증거를 기준으로 했다.
 
 ## 현재 목표
 
-사용자가 승인한 「시설관리 직영·자회사·용역 차이」 대표 썸네일의 상단 여백을 확대한 4:3 최종 이미지를 동일 공개 URL로 교체한다. 코드 및 이미지의 `main` 병합·CI PASS는 완료했으나, Pages 게시가 파일 동기화 중 시간 초과되어 Production 최종 반영은 미확인이다. 빌드 아티팩트를 유지한 채 새로운 Pages 배포 시도로 복구한다.
+사용자가 승인한 「시설관리 직영·자회사·용역 차이」 대표 썸네일의 제목·부제 상단 여백 확대한 4:3 이미지를 동일 URL로 교체했다. PR 병합·Test·Build·Pages Deploy는 완료했다. 실서버에서 변경 이미지의 HTTP/SHA 및 PC·모바일 시각 검증은 도구 접근 제한으로 미확인이므로 완료 QA로 확대하지 않는다.
 
 ## 현재 진행 상태
 
 | 단계 | 상태·근거 |
 |---|---|
-| 구현 | 완료. WebP·PNG 마스터 1440×1080 교체. 기존 대표 이미지 URL·본문·alt·다른 이미지 불변 |
-| 보존 | 개별 대표 이미지 SHA-256 2개를 기존 bulk manifest에 반영. 승인 대상 1개만 역사적 이미지 불변성 검사의 명시 예외로 처리하고 다른 자산 보호 유지 |
-| Test / QA | [PR #265](https://github.com/syjy813/getpasslab/pull/265) 최종 HEAD `3415d995959e1be58bc2ddf9537ac9728b5a29d9`: [시설 publication/public-private QA](https://github.com/syjy813/getpasslab/actions/runs/42727560555) PASS 및 [SEO](https://github.com/syjy813/getpasslab/actions/runs/42727560883) PASS |
-| Build | 제품 커밋 `54553a7`의 [Pages 42727982153](https://github.com/syjy813/getpasslab/actions/runs/42727982153) build PASS, 아티팩트 `github-pages` 생성 |
-| Commit / Push | PR #265 병합 완료. 후속 상태 문서 커밋은 새 Pages 배포를 다시 시작하는 목적 |
-| Deploy | **미완료**. 42727982153 첫 시도 `syncing_files` 10분 시간 초과로 취소됨. 실패 job만 재실행했으나 이전 취소 상태로 즉시 종료. 새 commit 기반 재배포 필요 |
-| Production | **미확인**. 현재 공개 이미지의 최종 SHA 및 PC/모바일 반영 미확인. 배포 성공 전 PASS로 표시하지 않음 |
+| 구현 | 완료. WebP·PNG 마스터 1440×1080 교체. 본문·대표 공개 URL·alt 및 다른 자산 불변 |
+| 보존 | 해당 대표 이미지 SHA-256 2개를 bulk manifest에 반영. 승인 대상 1개만 과거 불변성 검사의 명시 예외로 허용, 나머지 이미지 보호 |
+| Test / QA | [PR #265](https://github.com/syjy813/getpasslab/pull/265) 최종 HEAD `3415d995959e1be58bc2ddf9537ac9728b5a29d9`의 [시설 QA](https://github.com/syjy813/getpasslab/actions/runs/42727560555) PASS, [SEO](https://github.com/syjy813/getpasslab/actions/runs/42727560883) PASS |
+| Git | PR #265 squash 병합 제품 커밋 `54553a7`. 배포 복구를 위한 문서 커밋 `6ae93ed` 이후 별도 종료 문서 `[skip ci]` |
+| Build / Deploy | [Pages run 42729771418](https://github.com/syjy813/getpasslab/actions/runs/42729771418): commit `6ae93ed`, build/deploy 모두 **success**, https://getpasslab.co.kr/ 환경 URL 확인 |
+| 복구 이력 | 이전 [Pages 42727982153](https://github.com/syjy813/getpasslab/actions/runs/42727982153)은 `syncing_files` 10분 timeout, 같은 SHA의 deploy job 재실행은 canceled. 새 문서 commit 기반 신규 실행으로 성공 |
+| Production | Pages 배포 서비스 성공 보고 확인. 사이트 기존 탭의 URL·목록 구조 확인. **변경 후 공개 WebP HTTP/SHA 및 PC·모바일 브라우저 화면은 별도 검증 미실행** |
 
 ## 최근 완료 핵심
 
-- [PR #265](https://github.com/syjy813/getpasslab/pull/265): 직영·자회사·용역 대표 이미지 상단 여백 수정본, PNG 마스터, WebP, manifest·QA 보호 조건 수정. 원격 병합/CI PASS; Pages 배포 복구 중.
+- [PR #265](https://github.com/syjy813/getpasslab/pull/265): 직영·자회사·용역 대표 이미지 상단 여백 수정본, PNG 마스터, WebP, manifest·QA 보호 조건 수정. 원격 병합/CI PASS, Pages 재배포 성공(42729771418).
 - [PR #263](https://github.com/syjy813/getpasslab/pull/263): 4·5·6개 통합 템플릿과 0화 본문 이미지 6→3장 통합, main 병합·Pages 배포·실서버 PC/모바일 및 7파일 해시 확인 완료.
 - [PR #261](https://github.com/syjy813/getpasslab/pull/261): 운영 문서 v2.2 정리·레거시 원문 보존을 main에 병합하고 Pages 및 후속 QA 확인 완료.
 - [PR #260](https://github.com/syjy813/getpasslab/pull/260): 0화 설명글 연결 제거, ‘4개의 시설’ 문구, 자료 섹션 비노출, 대표 부제 ‘호병백마는 왜 기피시설로 유명할까?’ 반영. 공개 정본 `src/content/facility/hobyeongbaekma.md`, URL `/facility-management/career/hobyeongbaekma/` 유지.
@@ -36,7 +36,7 @@
 
 ## 미완료 / 알려진 문제
 
-- **현재 최우선 미완료:** 직영·자회사·용역 대표 이미지의 Pages 재배포 및 공개 WebP/화면 검증. 기존 제품 commit의 첫 Pages deploy가 `syncing_files` 시간 초과, 같은 SHA 재시도는 취소됨.
+- **추가 검증 필요:** 직영·자회사·용역 변경 대표 이미지의 공개 URL HTTP/SHA, PC 1440px·모바일 390px 화면 로드·글자 잘림·대표 카드 표시를 배포 후 실제 브라우저에서 직접 검증하지 못했다. Pages 배포 성공과 별도 상태다.
 - 호병백마 1화 원고는 별도 PR #262에 보존돼 있으며 이 템플릿 브랜치에는 포함하지 않았다. 1화 이미지 제작/화면 QA, 2~4화 집필·공개는 미완료다.
 - 최초 상태 조회에서 열린 기존 PR 10건은 이번에 자동으로 병합·폐기하지 않았다. #255(자연스러운 집필 기준), #246(이전 이미지 템플릿) 등은 미병합 상태이며 현재 정본으로 간주하지 않는다. 나머지 목록은 [이번 상태 증거](docs/audits/2026-11-08-operations-docs-v22/evidence.json)의 `openPullRequests` 참조. 최신 정합성 검토는 별도 작업이다.
 - 기존 기록의 컴활 실제 Excel / 과거 Windows 환경 검증, 산업안전 Q-Net 공식 원문·정오표 대조, 기출·이미지 이용 권리 문제는 이번에 해결 여부를 재검증하지 않았다. 관련 작업 재개 시 해당 audit와 현재 소스를 대조한다. 과거 수치·보류 목록을 최신 전수 상태로 사용하지 않는다.
@@ -46,13 +46,13 @@
 
 ## 다음 행동
 
-1. 현 상태 문서 커밋으로 새 Pages build/deploy가 시작되는지 확인하고 해당 실행의 `build`/`deploy` 결과를 제품 커밋과 연결한다.
-2. Pages 성공 시 공개 글과 대표 이미지의 HTTP·파일 SHA 및 PC/모바일 반영 상태를 확인한다.
-3. 확정된 결과로 이 Snapshot을 교체한다. 완료라면 후속 문서 전용 `[skip ci]` 커밋으로 불필요한 재배포를 피한다.
-4. 별도 콘텐츠 작업(호병백마 1화 이미지 및 2~4화 등)은 이 요청에 포함하지 않는다.
+1. Pages build/deploy까지는 완료했으며 동일 이미지의 중복 배포는 하지 않는다.
+2. 실서버에서 대상 URL `/facility-management/career/employment-types/`와 대표 WebP `/images/facility-drafts/03/01-employment-types-hero.webp`를 PC/모바일로 직접 확인할 때 이미지 SHA-256 `514a86e545e147cb90468715e1e111393c0741054410022fcf134473fa6fca21`를 대조하면 마지막 검증을 종료할 수 있다.
+3. 호병백마 1화 등 다른 콘텐츠 작업은 별도 승인 범위로 유지한다.
 
 ## 근거와 과거 기록 보존
 
+- 실제 재배포 완료: [Pages build/deploy success](https://github.com/syjy813/getpasslab/actions/runs/42729771418), commit `6ae93ed1be68a855ee27687e945c84ef524dfede`. 공개 이미지의 HTTP/파일 SHA는 직접 미검증.
 - 직영·자회사·용역 대표 이미지 교체: [PR #265](https://github.com/syjy813/getpasslab/pull/265), [PASS한 시설 QA](https://github.com/syjy813/getpasslab/actions/runs/42727560555), [PASS한 SEO](https://github.com/syjy813/getpasslab/actions/runs/42727560883), [첫 Pages 배포 실패 및 재시도](https://github.com/syjy813/getpasslab/actions/runs/42727982153).
 - PR #263 완료: [closeout](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/closeout.json), [실서버 HTTP·자산·목록](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/production-http.json), [실제 PC·모바일 브라우저](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/production-browser.json).
 - 병합·배포·후속 QA 10개·Production 확인: [최종 종료 증거](docs/audits/2026-11-08-operations-docs-v22/closeout.json).
