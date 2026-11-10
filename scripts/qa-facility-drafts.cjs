@@ -43,9 +43,9 @@ fs.mkdirSync(output,{recursive:true});
     assert.equal(await images.count(),expectedImages);
     for(const img of await images.all()) {
      await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode());
-     const data=await img.evaluate(el=>{const r=el.getBoundingClientRect(),b=document.querySelector('.facility-body').getBoundingClientRect();return {loaded:el.complete&&el.naturalWidth>0,alt:el.alt,dimensions:!!el.width&&!!el.height,inside:r.left>=b.left-1&&r.right<=b.right+1,ratio:Math.abs(r.width/r.height-el.naturalWidth/el.naturalHeight)<.01,border:getComputedStyle(el).borderTopWidth};});
+     const data=await img.evaluate(el=>{const r=el.getBoundingClientRect(),b=document.querySelector('.facility-body').getBoundingClientRect();return {src:el.getAttribute('src'),loaded:el.complete&&el.naturalWidth>0,alt:el.alt,dimensions:!!el.width&&!!el.height,inside:r.left>=b.left-1&&r.right<=b.right+1,ratio:Math.abs(r.width/r.height-el.naturalWidth/el.naturalHeight)<.01,border:getComputedStyle(el).borderTopWidth};});
      assert(data.loaded&&data.alt&&data.dimensions&&data.inside&&data.ratio,article.path+': image '+JSON.stringify(data));
-     assert.equal(data.border,'1px');
+     assert.equal(data.border,data.src==='/images/facility-drafts/03/01-employment-types-hero.webp'?'0px':'1px','only approved hero is borderless');
     }
     const dimensions=await page.evaluate(()=>({client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));
     assert(dimensions.scroll<=dimensions.client+1,article.path+': no page overflow');

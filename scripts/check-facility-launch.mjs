@@ -1,4 +1,5 @@
-import { episode00Release, assertEpisode00Release } from './read-hobyeongbaekma-publication.mjs';
+import { episode00Release, assertEpisode00Release, approvedBorderlessHeroStyle, episode00Integration } from './read-hobyeongbaekma-publication.mjs';
+import { integratedImageStyles } from './hobyeongbaekma-integrated-images.mjs';
 assertEpisode00Release();
 import {bulkVisuals,beforeBulkVisuals,assertBulkVisuals,bulkOutput} from './read-facility-bulk-visuals.mjs';
 // The original facility-publication fingerprint is kept immutable in
@@ -59,7 +60,13 @@ let generated = 0;
 for (const file of files) {
   const bytes = beforePublicSectorVisuals(file, beforeBulkVisuals(file, fs.readFileSync(file)));
   if (Object.hasOwn(editorialBlobs, file)) {
-    assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
+    if (file === 'src/styles/facility.css') {
+      const originalFacilityCss=fs.readFileSync(episode00Integration.previousStyle,'utf8')+integratedImageStyles;
+      assert.equal(bytes.toString('utf8'),originalFacilityCss+approvedBorderlessHeroStyle,'only approved borderless hero CSS appended');
+      assert.equal(gitBlob(Buffer.from(originalFacilityCss)), editorialBlobs[file], file + ': original approved UI blob');
+    } else {
+      assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
+    }
     assert.notEqual(hash(bytes), facilityReview.current[file], file + ': changed from publication snapshot');
     reviewedEditorialPaths.push(file);
   } else if (file.startsWith('dist/')) {

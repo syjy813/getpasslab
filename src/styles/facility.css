@@ -216,3 +216,13 @@
 .facility-body .facility-overview-figure picture{display:block}
 .facility-body .facility-overview-figure img{aspect-ratio:var(--overview-ratio)}
 @media(max-width:767px){.facility-body .facility-overview-figure img{aspect-ratio:var(--overview-mobile-ratio)}}
+
+/* Borderless employment-types cover only: preserve all other facility image frames. */
+.facility-body img[src$="/03/01-employment-types-hero.webp"]{
+  border:0;
+  border-radius:0;
+}
+.facility-card-cover:has(> img[src$="/03/01-employment-types-hero.webp"]){
+  border:0;
+  border-radius:0;
+}

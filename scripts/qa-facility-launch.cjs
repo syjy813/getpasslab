@@ -123,6 +123,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), preview ? 'noindex, nofollow' : empty ? 'noindex, follow' : 'index, follow');
           assert.equal(await page.locator('.service-switch [data-service-link="facility"]').getAttribute('aria-current'),'page');
           assert.equal(await page.locator('.facility-card-action').count(),0,'redundant read-more text removed; entire card remains linked');
+          const borderlessHeroPath='/images/facility-drafts/03/01-employment-types-hero.webp';
           const covers = page.locator('.facility-card-cover img');
           for (const cover of await covers.all()) {
             await cover.scrollIntoViewIfNeeded();
@@ -140,10 +141,11 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert(info.inside,path+': thumbnail inside border');
           }
           await page.evaluate(()=>window.scrollTo({top:0,left:0,behavior:'instant'}));
-          const coverBorders = await page.locator('.facility-card-cover').evaluateAll(covers => covers.map(cover => ({width:getComputedStyle(cover).borderTopWidth,style:getComputedStyle(cover).borderTopStyle})));
+          const coverBorders = await page.locator('.facility-card-cover').evaluateAll(covers => covers.map(cover => ({src:new URL(cover.querySelector('img').src).pathname,width:getComputedStyle(cover).borderTopWidth,style:getComputedStyle(cover).borderTopStyle})));
           for (const border of coverBorders) {
-            assert.equal(border.width,'1px',path+': thumbnail border');
-            assert.equal(border.style,'solid',path+': thumbnail solid border');
+            const isBorderlessHero=border.src===borderlessHeroPath;
+            assert.equal(border.width,isBorderlessHero?'0px':'1px',path+': thumbnail border');
+            assert.equal(border.style,isBorderlessHero?'none':'solid',path+': thumbnail solid border');
           }
           if (expected !== undefined) {
             assert.equal(await page.locator('.facility-body img').count(),expected,`${path}: image count`);
@@ -189,8 +191,9 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
               const info = await img.evaluate(el=>({src:el.getAttribute('src'),alt:el.getAttribute('alt'),complete:el.complete,naturalWidth:el.naturalWidth,renderWidth:el.getBoundingClientRect().width,border:getComputedStyle(el).borderTopWidth,borderStyle:getComputedStyle(el).borderTopStyle,boxSizing:getComputedStyle(el).boxSizing}));
               assert(info.complete && info.naturalWidth>0 && info.alt?.trim(),`${path} image ${i}: load and alt`);
               assert(info.renderWidth>0 && info.renderWidth<=width,`${path} image ${i}: width`);
-              assert.equal(info.border,'1px',`${path} image ${i}: thin border`);
-              assert.equal(info.borderStyle,'solid',`${path} image ${i}: solid border`);
+              const isBorderlessHero=info.src===borderlessHeroPath;
+              assert.equal(info.border,isBorderlessHero?'0px':'1px',`${path} image ${i}: approved border`);
+              assert.equal(info.borderStyle,isBorderlessHero?'none':'solid',`${path} image ${i}: border style`);
               assert.equal(info.boxSizing,'border-box',`${path} image ${i}: border fits layout`);
               if (width===320 || width===390) {
                 const dir = `${output}/images-${width}`;
