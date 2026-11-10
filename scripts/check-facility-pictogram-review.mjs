@@ -48,6 +48,12 @@ const approvedHeroReplacements=new Map([
  ['/images/facility-drafts/10/01-statutory-appointments-hero.webp',['3bc8a95bc41335ac8705d5b9f0fda87c0c820ba52654e653ed8bbc9a36f83730','46beceb63097c8fa76a87e439b2d2697db10907b3ffa679a64915c8d571ca094']],
  ['/images/facility-drafts/11/01-maintainer-grades-hero.webp',['e2eefc106a820734a14514dd550b2ed2abbaa54974588bb9e9b472b675ad5431','a75335519dcf45571ee9a30b0c67e799a6a01e4d2d0468fb29ff847420f4185b']],
  ['/images/facility-drafts/13/01-boiler-manager-hero-v2.webp',['8a7392998f99e31205c996ca591c88108e5729f875a395c3a4b57ef57a06a80b','e15dc2e306022d5699a36042ee2f1ed406f3e788c60c43c87e79e9df82071d40']]
+,
+ ['/images/facility-drafts/02/01-first-job-hero.webp',['e33a07b03555b2d6355e70491c3bcf19037d8d477989589ecf6286dface337c1','2a78ffb8aa55fa9a50453d3db7adaedbeb7d2b5c9415fa1aa622dce893e4face']],
+ ['/images/facility-drafts/04/01-shifts-pay-hero.webp',['ccc9fcb05904a5f0e9b82a84102f7d7160c73d66dfe2923a68982a3125351053','16a815bbca2292dca4e2edb6285309d57b8f1335d1dab0136773f1dd81d58139']],
+ ['/images/facility-drafts/07/01-postal-facilities-hero.webp',['dd2ce538f70fe8ab95ecb4bb57a29b7d0df9029ffe3117ab2032d5d7d3e7bb89','148d7e4126793b551eacbdc1caf0e88ea597fdcae686f1b992b251f09bbd20be']],
+ ['/images/facility-drafts/09/01-camcofmc-hero.webp',['3889bffcffad25f5ccc06cd8f2dea1300605b8c27b771f7d651018a0066044d0','6f18b1015f240c75063b5436dcff8846ab9006a966e947989294f050b064e603']],
+ ['/images/facility-drafts/12/01-career-reporting-hero.webp',['54b8a8146ab26384443a290ae0935592351bf17a9d838e2652ada2408d05db35','440710d4ce3d01c5ccfe00da4fdd845ba70685cb4f8009c6e671d452c73d9958']]
 ]);
 for(const row of bulkVisuals.images){
  const prev=before.images.find(r=>r.publicPath===row.publicPath);assert(prev,'stable image URL');
