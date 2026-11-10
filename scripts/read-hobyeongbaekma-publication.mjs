@@ -30,9 +30,11 @@ export function assertEpisode00Release() {
   assert.equal(fs.readFileSync('src/content/facility/hobyeongbaekma.md','utf8'),integrateEpisode00Images(previous,episode00Integration),'only three image pairs and modification date change');
   const blob=bytes=>createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
   assert.equal(blob(fs.readFileSync(episode00Integration.previousStyle)),episode00Integration.previousStyleBlob,'previous facility CSS preserved');
-  assert.equal(fs.readFileSync('src/styles/facility.css','utf8'),fs.readFileSync(episode00Integration.previousStyle,'utf8')+integratedImageStyles,'only scoped complete-sheet CSS rules added');
-  assert.equal(blob(fs.readFileSync('src/styles/facility.css')),episode00Integration.facilityStyleBlob,'scoped responsive image rules');
-  assert.equal(sha(fs.readFileSync('src/styles/facility.css')),episode00Integration.facilityStyleSHA256);
+  const approvedBorderlessHeroStyle="\n/* Borderless employment-types cover only: preserve all other facility image frames. */\n.facility-body img[src$=\"/03/01-employment-types-hero.webp\"]{\n  border:0;\n  border-radius:0;\n}\n.facility-card-cover:has(> img[src$=\"/03/01-employment-types-hero.webp\"]){\n  border:0;\n  border-radius:0;\n}\n";
+  const originalFacilityCss=fs.readFileSync(episode00Integration.previousStyle,'utf8')+integratedImageStyles;
+  assert.equal(fs.readFileSync('src/styles/facility.css','utf8'),originalFacilityCss+approvedBorderlessHeroStyle,'only scoped complete-sheet and approved borderless hero CSS rules');
+  assert.equal(blob(Buffer.from(originalFacilityCss)),episode00Integration.facilityStyleBlob,'original scoped responsive image rules preserved');
+  assert.equal(sha(Buffer.from(originalFacilityCss)),episode00Integration.facilityStyleSHA256);
   assert.deepEqual(episode00Integration.groups.map(row=>[row.id,row.count]),[['02-four-workplaces',4],['03-why-hard',4],['05-before-applying',6]]);
   for(const row of episode00Integration.groups){
     assert.equal(sha(fs.readFileSync(row.spec)),row.specSHA256,'preserved approved card data');
