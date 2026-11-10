@@ -66,7 +66,18 @@ const facilityCSS=walk('dist/_astro').filter(file=>file.endsWith('.css')&&fs.rea
 assert.equal(facilityCSS.length,1,'one complete-sheet stylesheet');
 const currentFacilityCSS=facilityCSS[0],compiledCSS=fs.readFileSync(currentFacilityCSS,'utf8');
 assert(!fs.existsSync(headingCSS.currentPath),'previous content-hashed bundle replaced');
-assert.equal(hash(beforeIntegratedStyles(compiledCSS)),headingCSS.currentSHA256,'all pre-existing compiled CSS bytes are unchanged');
+// Remove only the two user-approved employment-types borderless rules from
+// compiled CSS before comparing the full historical bundle fingerprint.
+const approvedHeroSelectors=[
+  /\\.facility-body\\s+img\\[src\\$=[\"']?\\/03\\/01-employment-types-hero\\.webp[\"']?\\]\\s*\\{\\s*border\\s*:\\s*0(?:px)?;?\\s*border-radius\\s*:\\s*0(?:px)?;?\\s*\\}/g,
+  /\\.facility-card-cover:has\\(\\s*>\\s*img\\[src\\$=[\"']?\\/03\\/01-employment-types-hero\\.webp[\"']?\\]\\s*\\)\\s*\\{\\s*border\\s*:\\s*0(?:px)?;?\\s*border-radius\\s*:\\s*0(?:px)?;?\\s*\\}/g
+];
+let originalCompiledCSS=compiledCSS;
+for(const pattern of approvedHeroSelectors){
+  assert.equal([...originalCompiledCSS.matchAll(pattern)].length,1,'exactly one approved borderless hero rule');
+  originalCompiledCSS=originalCompiledCSS.replace(pattern,'');
+}
+assert.equal(hash(beforeIntegratedStyles(originalCompiledCSS)),headingCSS.currentSHA256,'all pre-existing compiled CSS bytes are unchanged');
 const files=walk('dist').filter(f=>!f.split('/').some(p=>p.startsWith('.'))).sort();
 const addedVisualImages=publicSectorVisuals.images.filter(r=>!r.existing).map(visualOutput);
 for(const row of publicSectorVisuals.images)assert.equal(hash(fs.readFileSync(visualOutput(row))),row.sha256,'approved public-sector output: '+row.publicPath);
