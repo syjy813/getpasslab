@@ -4,29 +4,29 @@
 
 ## 기준 상태
 
-- 마지막 갱신: 2026-11-10 KST · 직영/자회사/용역 대표 이미지 외곽 여백·테두리 제거 및 Pages 재배포 성공
-- 제품 기준: `main` · [PR #266](https://github.com/syjy813/getpasslab/pull/266) 병합 제품 커밋 `373defe7c36739cb55d62f43d05e9f6822c24594`
-- 재배포 기준: `4d45d7a5be979ba04c170f2f2f2cad7e79f01106`; 이 커밋은 제품 tree를 바꾸지 않고 승인된 PR #266 배포를 재트리거했다. 이후 종료 문서 커밋은 `[skip ci]`를 적용한다.
+- 마지막 갱신: 2026-11-10 KST · 시설 대표 이미지 타이틀·부제 1차 통일 6장 병합·Pages 배포 성공
+- 제품 기준: `main` · [PR #267](https://github.com/syjy813/getpasslab/pull/267) squash 병합 제품 커밋 `1cf43d51eb687d968c764e7e2ca036d88dc2351b`
+- 배포 기준: `1cf43d51eb687d968c764e7e2ca036d88dc2351b`; Pages run 42747258907에서 build/deploy 모두 성공. 이후 종료 문서 커밋은 `[skip ci]`를 적용한다.
 - 로컬 작업 공간 Git 상태는 조회하지 못했고 원격 PR/CI/Pages 증거를 기준으로 했다.
 
 ## 현재 목표
 
-사용자가 승인한 「시설관리 직영·자회사·용역 차이」 대표 썸네일의 외곽 흰 여백과 라운드 테두리를 제거한 4:3 이미지를 동일 URL로 교체했다. PR 병합·자동 QA·Build·Pages Deploy까지 완료했다. 공개 페이지는 접근 가능하고 대표 이미지 참조도 확인했지만, 공개 WebP 바이트 SHA와 PC·모바일 화면 캡처 기반 시각 검증은 별도 미확인이다.
+게시 중 시설 대표 이미지 14장을 전수 비교한 뒤 편차가 큰 6장(01 시설관리란, 06 한전FMS, 08 코레일테크, 10 법정선임, 11 기계설비유지관리자 등급, 13 보일러 선임)의 타이틀·부제를 03 「같은 건물, 다른 회사」 정본 구조에 맞춰 1차 통일했다. 1440×1080(4:3), 중앙 정렬, 타이틀 y≈50~178px, 부제 y≈197~257px 기준을 §5.13.11에 추가했다. PR 병합·자동 QA·Pages Build/Deploy를 완료했고, 배포 Artifact의 공개 WebP 6개가 manifest 승인 SHA와 모두 일치함을 확인했다.
 
 ## 현재 진행 상태
 
 | 단계 | 상태·근거 |
 |---|---|
-| 구현 | 완료. 외곽 흰 여백·라운드 테두리 제거 WebP·PNG 마스터 1440×1080 교체. 본문·대표 공개 URL·alt 및 다른 자산 불변 |
-| 보존 | 승인 대표 WebP SHA-256 `1c5ba3afc4f0cfa900a0099e388d318031cb99dda16382d8956f705c7b1c2190`, PNG SHA-256 `34f51903b1c14e3864a1b800f0246d168b7810eafa12dd5c5aabc6c930526f6f`를 manifest·보호 조건에 반영. 다른 이미지 보호 |
-| Test / QA | [PR #266](https://github.com/syjy813/getpasslab/pull/266) HEAD `c1478d731e7ef6816baf4c56ff546e5e9d1d57b9`의 [시설 QA](https://github.com/syjy813/getpasslab/actions/runs/42736850031) PASS, [SEO](https://github.com/syjy813/getpasslab/actions/runs/42736850025) PASS. 관련 자격증 탐색·소방 launch·호병백마 QA도 PASS |
-| Git | PR #266 병합 제품 커밋 `373defe7`. Pages 지연 복구용 동일-tree 재배포 커밋 `4d45d7a`; 제품 파일 추가 변경 없음 |
-| Build / Deploy | [Pages run 42739563616](https://github.com/syjy813/getpasslab/actions/runs/42739563616): commit `4d45d7a`, build/deploy 모두 **success**. 직전 run 42738977719의 지연을 동일 tree 새 push가 concurrency로 대체 |
-| 복구 이력 | PR #266 병합 후 Pages deploy가 장시간 진행 상태에 머물러 제품 tree를 바꾸지 않는 재배포 커밋으로 새 실행을 시작. 새 run 42739563616에서 build/deploy 모두 성공 |
-| Production | Pages 배포 성공 확인. 연결 브라우저에서 공개 글 `/facility-management/career/employment-types/` 접근 및 `01-employment-types-hero.webp` 대표 이미지 참조 확인. **공개 WebP 바이트 SHA와 PC·모바일 화면 캡처 검증은 별도 미실행** |
-
+| 구현 | 완료. 01·06·08·10·11·13 대표 WebP와 PNG 마스터 교체. 캡슐형 부제·불필요한 3번째 설명문 정리. 공개 URL·본문·alt 유지 |
+| 규격 | 6장 모두 1440×1080(4:3). 대표 타이틀/부제 정본을 `docs/standards/facility-content-guide-v1.4.md` §5.13.11에 반영 |
+| Test / QA | [PR #267](https://github.com/syjy813/getpasslab/pull/267) HEAD `da76e0d655010f45128346efd6da0baa39116c50`의 [시설 QA](https://github.com/syjy813/getpasslab/actions/runs/42743817435) PASS, [SEO](https://github.com/syjy813/getpasslab/actions/runs/42743817780) PASS |
+| Git | PR #267 squash 병합 제품 커밋 `1cf43d51eb687d968c764e7e2ca036d88dc2351b` |
+| Build / Deploy | [Pages run 42747258907](https://github.com/syjy813/getpasslab/actions/runs/42747258907): commit `1cf43d51`, build/deploy 모두 **success** |
+| 배포 Artifact | run 42747258907의 `github-pages` Artifact를 직접 풀어 6개 WebP SHA-256을 manifest와 대조: **6/6 일치**, 실제 치수 **6/6 1440×1080** |
+| Production | GitHub Pages 배포 서비스 성공. 공개 CDN WebP 바이트 직접 다운로드와 PC 1440px·모바일 390px 화면 캡처 기반 육안 QA는 현재 도구 제한으로 별도 미실행 |
 ## 최근 완료 핵심
 
+- [PR #267](https://github.com/syjy813/getpasslab/pull/267): 시설 대표 이미지 14장 전수조사 후 01·06·08·10·11·13 6장의 타이틀·부제 1차 통일. 4:3 규격 유지, §5.13.11 정본 추가, QA PASS, Pages 42747258907 배포 성공. 배포 Artifact 6개 WebP SHA/치수 전부 일치 확인.
 - [PR #266](https://github.com/syjy813/getpasslab/pull/266): 직영·자회사·용역 대표 이미지 외곽 흰 여백·라운드 테두리 제거. 동일 공개 URL 유지, 관련 CSS는 해당 대표 이미지에만 예외 적용. 자동 QA PASS, Pages run 42739563616 build/deploy 성공.
 - [PR #265](https://github.com/syjy813/getpasslab/pull/265): 직영·자회사·용역 대표 이미지 상단 여백 수정본, PNG 마스터, WebP, manifest·QA 보호 조건 수정. 원격 병합/CI PASS, Pages 재배포 성공(42729771418).
 - [PR #263](https://github.com/syjy813/getpasslab/pull/263): 4·5·6개 통합 템플릿과 0화 본문 이미지 6→3장 통합, main 병합·Pages 배포·실서버 PC/모바일 및 7파일 해시 확인 완료.
@@ -37,22 +37,19 @@
 
 ## 미완료 / 알려진 문제
 
-- **추가 검증 필요:** 직영·자회사·용역 최종 대표 이미지의 공개 WebP 바이트 SHA, PC 1440px·모바일 390px 화면 캡처 기반 표시 상태는 직접 검증하지 못했다. 공개 글 접근과 이미지 참조, Pages 배포 성공은 확인했다.
-- 호병백마 1화 원고는 별도 PR #262에 보존돼 있으며 이 템플릿 브랜치에는 포함하지 않았다. 1화 이미지 제작/화면 QA, 2~4화 집필·공개는 미완료다.
-- 최초 상태 조회에서 열린 기존 PR 10건은 이번에 자동으로 병합·폐기하지 않았다. #255(자연스러운 집필 기준), #246(이전 이미지 템플릿) 등은 미병합 상태이며 현재 정본으로 간주하지 않는다. 나머지 목록은 [이번 상태 증거](docs/audits/2026-11-08-operations-docs-v22/evidence.json)의 `openPullRequests` 참조. 최신 정합성 검토는 별도 작업이다.
-- 기존 기록의 컴활 실제 Excel / 과거 Windows 환경 검증, 산업안전 Q-Net 공식 원문·정오표 대조, 기출·이미지 이용 권리 문제는 이번에 해결 여부를 재검증하지 않았다. 관련 작업 재개 시 해당 audit와 현재 소스를 대조한다. 과거 수치·보류 목록을 최신 전수 상태로 사용하지 않는다.
-- Search Console 색인·Google 선택 canonical, AdSense 계정 승인·실제 광고 노출·수익은 이번에 확인하지 않았다. 과거 ‘미승인’ 기록을 현재 계정 상태로 단정하지 않는다. 실제 휴대폰·Safari·학습자 효과도 이번 검증 범위 밖이다.
-- 과거 dependency 보안·번들 크기 경고는 현재 재검증하지 않았다. 자동 `npm audit fix` 없이 별도 dependency / 성능 검토 대상으로 유지한다.
-- CI 중복 Build·브라우저 설치·광범위한 path filter는 후속 후보이며 이번에 수정하지 않았다. [검토 근거](docs/audits/2026-11-08-operations-docs-v22/README.md) 참조.
-
+- 대표 이미지 14장 중 1차 우선 대상 6장은 통일 완료. **2차 미세 통일 후보는 02·04·05·07·09·12**이며, 14 호병백마 ep.0은 시리즈 전용 톤으로 별도 예외 유지 여부를 판단한다.
+- 1차 6장에 대해 Pages 배포 Artifact의 SHA·치수는 검증했지만, 실서버 CDN에서 직접 내려받은 파일 SHA 및 PC 1440px·모바일 390px 화면 캡처 기반 시각 검증은 현재 도구 제한으로 미확인이다.
+- 호병백마 1화 원고는 별도 PR #262에 보존돼 있으며 1화 이미지 제작/화면 QA, 2~4화 집필·공개는 미완료다.
+- 기존 기록의 컴활 실제 Excel / 과거 Windows 환경 검증, 산업안전 Q-Net 공식 원문·정오표 대조, Search Console·AdSense 계정 상태 등은 이번 작업 범위에서 재검증하지 않았다.
 ## 다음 행동
 
-1. 외곽 여백·테두리 제거 이미지의 Pages build/deploy까지 완료했으며 동일 이미지의 중복 배포는 하지 않는다.
-2. 필요 시 실서버 대표 WebP `/images/facility-drafts/03/01-employment-types-hero.webp` SHA-256 `1c5ba3afc4f0cfa900a0099e388d318031cb99dda16382d8956f705c7b1c2190`와 PC/모바일 화면을 직접 대조해 마지막 시각 QA를 닫는다.
-3. 호병백마 1화 등 다른 콘텐츠 작업은 별도 승인 범위로 유지한다.
-
+1. 1차 6장 병합·배포는 완료했으므로 동일 이미지의 중복 배포는 하지 않는다.
+2. 다음 대표 이미지 작업은 2차 후보 02·04·05·07·09·12의 타이틀 크기·부제 형태·상단 위치를 §5.13.11 기준으로 미세 통일한다.
+3. 14 호병백마 ep.0은 일반 대표 이미지와 동일화하지 않고 시리즈 고유 톤을 유지하되, 타이틀 블록 위치만 별도 검토한다.
+4. 브라우저/HTTP 도구가 허용되는 세션에서는 1차 6장의 공개 CDN SHA와 PC·모바일 육안 QA를 추가로 닫을 수 있다.
 ## 근거와 과거 기록 보존
 
+- 시설 대표 이미지 1차 통일: [PR #267](https://github.com/syjy813/getpasslab/pull/267), [시설 QA](https://github.com/syjy813/getpasslab/actions/runs/42743817435), [SEO](https://github.com/syjy813/getpasslab/actions/runs/42743817780), [Pages build/deploy success](https://github.com/syjy813/getpasslab/actions/runs/42747258907), 제품 commit `1cf43d51eb687d968c764e7e2ca036d88dc2351b`.
 - 최종 외곽 여백·테두리 제거 배포: [PR #266](https://github.com/syjy813/getpasslab/pull/266), [시설 QA](https://github.com/syjy813/getpasslab/actions/runs/42736850031), [SEO](https://github.com/syjy813/getpasslab/actions/runs/42736850025), [Pages build/deploy success](https://github.com/syjy813/getpasslab/actions/runs/42739563616), deploy source `4d45d7a5be979ba04c170f2f2f2cad7e79f01106`.
 - 직전 상단 여백 수정 이력: [PR #265](https://github.com/syjy813/getpasslab/pull/265), Pages 42729771418. 이후 PR #266에서 최종 무테두리 버전으로 교체됨.
 - PR #263 완료: [closeout](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/closeout.json), [실서버 HTTP·자산·목록](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/production-http.json), [실제 PC·모바일 브라우저](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/production-browser.json).
