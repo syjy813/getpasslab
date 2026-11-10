@@ -42,6 +42,17 @@ const sha=b=>createHash('sha256').update(b).digest('hex');
 const before=JSON.parse(fs.readFileSync(audit+'/before-manifest.json'));let repairedCards=0,repairedItems=0;
 for(const row of bulkVisuals.images){
  const prev=before.images.find(r=>r.publicPath===row.publicPath);assert(prev,'stable image URL');
+ if(row.publicPath==='/images/facility-drafts/03/01-employment-types-hero.webp'){
+  // Separately approved editorial hero update; all pictogram-card baselines remain protected.
+  assert.equal(row.kind,'editorial-hero');
+  assert.equal(row.sha256,'514a86e545e147cb90468715e1e111393c0741054410022fcf134473fa6fca21');
+  assert.equal(row.masterSHA256,'7b135df5ae2ab46d97c180c05183f6b2da5e28d195b926fed21e75477f9cbd4c');
+  assert.equal(sha(fs.readFileSync(row.file)),row.sha256,'approved hero WebP bytes');
+  assert.equal(sha(fs.readFileSync(row.master)),row.masterSHA256,'approved hero master bytes');
+  for(const key of ['width','height','alt'])assert.equal(row[key],prev[key],'layout and copy retained');
+  assert.deepEqual(row.icons,prev.icons,'unchanged hero icon semantics');
+  continue;
+ }
  assert.equal(sha(fs.readFileSync(prev.file)),prev.sha256,'previous WebP retained');
  assert.equal(sha(fs.readFileSync(prev.master)),prev.masterSHA256,'previous master retained');
  for(const key of ['width','height','alt'])assert.equal(row[key],prev[key],'layout and copy retained');
