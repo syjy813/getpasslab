@@ -41,7 +41,7 @@ for(const size of sizes){
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const before=JSON.parse(fs.readFileSync(audit+'/before-manifest.json'));let repairedCards=0,repairedItems=0;
 const approvedHeroReplacements=new Map([
- ['/images/facility-drafts/03/01-employment-types-hero.webp',['1c5ba3afc4f0cfa900a0099e388d318031cb99dda16382d8956f705c7b1c2190','34f51903b1c14e3864a1b800f0246d168b7810eafa12dd5c5aabc6c930526f6f']],
+ ['/images/facility-drafts/03/01-employment-types-hero.webp',['d826bd4a7ba73b5f2e55425d6ab30485af981b435a40863a0f7b49e9d17282b0','45c18c7fec7573aa1c49d1ba7777556eb304af3a63474192c91b1807f861237d']],
  ['/images/facility-drafts/01/01-facility-management-hero.webp',['649c9f00453893492def48198627f18302c6de5e3fa2dcc1a01edb58b6768e3a','8fd5433c0255084111b4f6dd19dcc35ed7880dda8b4ea392676d53594f29bda4']],
  ['/images/facility-drafts/06/01-hanfms-hero.webp',['b3598ac070c2d8f8da9d5c9eb28507f0cf69f44b5a2cfb01981094c128816b58','87df5deb86022d41653b1d39cc6fa681399621b04891d6c1e486c168c6afb30b']],
  ['/images/facility-drafts/08/01-korailtech-hero.webp',['df2a68b0be2ae3404b4333335202699931471020af0249f5bb33e20e9004b449','07968272b90dd85f04edfbc10726a27f4173740faba85982206aa9cc33fe4cb4']],
