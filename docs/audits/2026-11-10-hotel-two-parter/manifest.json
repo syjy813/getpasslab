@@ -1,0 +1,49 @@
+{
+  "baseMain": "98be89d2b093f2d39d383480cf92310a01986e80",
+  "articles": [
+    {
+      "slug": "hobyeongbaekma-hotel-despair",
+      "route": "/facility-management/career/hobyeongbaekma-hotel-despair/",
+      "source": "src/content/facility/hobyeongbaekma-hotel-despair.md",
+      "image": "public/images/facility-series/ep1-1-despair/01-hero.webp",
+      "hero": "/images/facility-series/ep1-1-despair/01-hero.webp",
+      "alt": "호텔 시설관리로 취업했는데 왜 객실 청소까지 하고 있을까? 호병백마 ep.1-1 절망편",
+      "publishedAt": "2026-11-10"
+    },
+    {
+      "slug": "hobyeongbaekma-hotel-hope",
+      "route": "/facility-management/career/hobyeongbaekma-hotel-hope/",
+      "source": "src/content/facility/hobyeongbaekma-hotel-hope.md",
+      "image": "public/images/facility-series/ep1-2-hope/01-hero.webp",
+      "hero": "/images/facility-series/ep1-2-hope/01-hero.webp",
+      "alt": "호텔 시설관리, 이런 장점도 있다? 다양한 설비 경험과 적성 발견을 다루는 호병백마 ep.1-2 희망편",
+      "publishedAt": "2026-11-10"
+    }
+  ],
+  "additions": {
+    "src/content/facility/hobyeongbaekma-hotel-despair.md": "017a60edf9817c503ada3dc87832442d3989ef49a1ccd5bfe00196b2f209bb4b",
+    "public/images/facility-series/ep1-1-despair/01-hero.webp": "a24b84158073819980e10e16a9ea2a752f049374803e1b80099d20b3983795a2",
+    "src/content/facility/hobyeongbaekma-hotel-hope.md": "7c0db163b426aab55f7b0c79658d1b7256b34e581e69ce71a0a129b8a0da90e9",
+    "public/images/facility-series/ep1-2-hope/01-hero.webp": "8d967c8ded87d05b689481d822752d9a490162efe30d655fd874b7e2ad356a09"
+  },
+  "outputAdditions": [
+    "dist/facility-management/career/hobyeongbaekma-hotel-despair/index.html",
+    "dist/images/facility-series/ep1-1-despair/01-hero.webp",
+    "dist/facility-management/career/hobyeongbaekma-hotel-hope/index.html",
+    "dist/images/facility-series/ep1-2-hope/01-hero.webp"
+  ],
+  "nativeChanges": {
+    "src/components/FacilityCard.astro": {
+      "previous": "docs/audits/2026-11-10-hotel-two-parter/previous-FacilityCard.astro",
+      "previousSHA256": "d2939fb9fe9b9ba0ac948816022f3f3108d3bcf132256dedb2084c40ea953c68",
+      "sha256": "357d5b9b45f695636f3e60d5ddfb184afa791baae0cb5614eebea6dc7c833367",
+      "blob": "653ce5c78f2f195b5f040d7264d81b01e939bbb6"
+    },
+    "src/layouts/FacilityArticleLayout.astro": {
+      "previous": "docs/audits/2026-11-10-hotel-two-parter/previous-FacilityArticleLayout.astro",
+      "previousSHA256": "37b8a19971cdca09ac02ad7687bdfb333660fb3a4d353dcee1be7cfe78fc2f6e",
+      "sha256": "1051412c6167a7cfb233a739f1c1308803eab1b7438e5d903086c770fae1f89e",
+      "blob": "6ac7adcda5cdef3e4f071c723f49e85c3db73511"
+    }
+  }
+}

@@ -103,7 +103,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert.equal(categoryHeader.breadcrumbGap,'24px','subject-list breadcrumb spacing');
             assert.equal(categoryHeader.bottomRule,'1px','header separator retained');
             assert.equal(categoryHeader.listGap,'32px','article cards retain a clear 32px gap');
-            const counts = {career:5,jobs:expanded?5:1,practice:0,qualifications:expanded?4:0};
+            const counts = {career:7,jobs:expanded?5:1,practice:0,qualifications:expanded?4:0};
             assert.equal(await page.locator('.facility-category-list .facility-card').count(),
               counts[slug], 'existing article cards retained by category');
           }
@@ -112,10 +112,10 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert.equal(await page.locator('.facility-featured .facility-section-head .gpl-caption').count(),0,'redundant facility-intro caption removed');
             assert.equal(await page.locator('.facility-learning').count(),0,'home cross-service promotion removed');
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
-            assert.equal(await page.locator('.facility-card').count(),expanded?14:6,'eligible articles appear once on home');
+            assert.equal(await page.locator('.facility-card').count(),expanded?16:8,'eligible articles appear once on home');
             assert.equal(await page.locator('.facility-category-link').count(),expanded?3:2,'only populated categories are linked');
             const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
-            assert.equal(new Set(routes).size,expanded?14:6,'no repeated home articles');
+            assert.equal(new Set(routes).size,expanded?16:8,'no repeated home articles');
             const leadCover = page.locator('.facility-card--lead img');
             await leadCover.evaluate(img => img.decode());
             assert(await leadCover.evaluate(img => img.naturalWidth > 0),'lead uses existing article image');

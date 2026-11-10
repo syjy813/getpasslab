@@ -7,6 +7,8 @@ const { article, lead = false } = Astro.props;
 // Reuse images already referenced in the corresponding published article.
 // A future article without a cover remains a text card.
 const covers: Record<string, string> = {
+  'hobyeongbaekma-hotel-despair': '/images/facility-series/ep1-1-despair/01-hero.webp',
+  'hobyeongbaekma-hotel-hope': '/images/facility-series/ep1-2-hope/01-hero.webp',
   'hobyeongbaekma': '/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp',
   'what-is-facility-management': '/images/facility-drafts/01/01-facility-management-hero.webp',
   'first-job': '/images/facility-drafts/02/01-first-job-hero.webp',
@@ -23,7 +25,7 @@ const covers: Record<string, string> = {
   'boiler-inspection-manager': '/images/facility-drafts/13/01-boiler-manager-hero-v2.webp',
 };
 const cover = covers[article.id];
-const coverSize = article.id === 'hobyeongbaekma' ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];
+const coverSize = ['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id) ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];
 ---
 <a class:list={['card', 'facility-card', { 'facility-card--lead': lead, 'facility-card--text': !cover }]} href={withBase(facilityArticlePath(article))}>
   {cover && <span class="facility-card-cover"><img src={withBase(cover)} alt="" width={coverSize[0]} height={coverSize[1]} loading={lead ? 'eager' : 'lazy'} decoding="async" /></span>}
