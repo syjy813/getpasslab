@@ -4,7 +4,7 @@
 
 ## 기준 상태
 
-- 마지막 갱신: **2026-11-10 KST** · 호병백마 호텔 절망편/희망편 코드 병합 완료, **GitHub Pages 배포 2회 실패 / Production 반영 미확인**
+- 마지막 갱신: **2026-11-10 KST** · 호병백마 호텔 절망편/희망편 코드 병합 완료, **GitHub Pages 배포 3회 실패 / Production 반영 미확인**
 - Branch: `main`
 - 최신 제품 변경: [PR #264](https://github.com/syjy813/getpasslab/pull/264) squash 병합, 제품 커밋 `ca7fd0f68533340de0d0aedd6c8489c5eeed51bb`
 - 가장 최근 **성공이 증명된** Pages 배포: [run 42806450308](https://github.com/syjy813/getpasslab/actions/runs/42806450308), 제품 커밋 `8c61529b9a2b3e08363667c11cbb3bfdbc9e1d91` (PR #269). 이후 변경된 호텔편은 **배포 성공이 증명되지 않음**.
@@ -21,7 +21,7 @@
 | 검증 | PR #264 최종 HEAD `f138f99d116702bb05982197bc58cd390a1af32f`: [호병백마 QA](https://github.com/syjy813/getpasslab/actions/runs/42809365414), [시설 공개/비공개·반응형 QA](https://github.com/syjy813/getpasslab/actions/runs/42809365512), [SEO](https://github.com/syjy813/getpasslab/actions/runs/42809365401), [자격증 탐색](https://github.com/syjy813/getpasslab/actions/runs/42809365411), [소방 회귀](https://github.com/syjy813/getpasslab/actions/runs/42809365404) **모두 PASS** |
 | Git | 완료 · PR #264 squash 병합 성공, 제품 커밋 `ca7fd0f6`; 최신 일반 시설 이미지 변경 보존. 예전 단일 호텔편 [PR #262](https://github.com/syjy813/getpasslab/pull/262)는 Draft로 보존하고 병합하지 않음 |
 | Pages Build | 성공 · [run 42810573395](https://github.com/syjy813/getpasslab/actions/runs/42810573395), 제품 커밋 `ca7fd0f6`, `github-pages` Artifact 생성 |
-| Pages Deploy | **실패 · 동일 run 1·2차 시도 모두 600초 타임아웃**. 1차는 `syncing_files` 지속 후 취소. 2차는 `finished_file_sync` 이후 최종 성공 응답 없이 타임아웃·취소. 추가 3차 시도는 실행하지 않음 |
+| Pages Deploy | **실패 · 동일 run 1·2·3차 모두 600초 타임아웃**. 1차는 `syncing_files` 지속 후 취소, 2차는 `finished_file_sync` 이후 성공 응답 없이 취소, **3차(2026-11-10 21:20–21:30 KST)는 배포 상태 응답이 빈 값으로 유지되다가 타임아웃·취소**. 빌드 성공·배포 Artifact 재사용. 새 소스 변경 없음 |
 | Production | **미확인** · 신규 두 URL의 실서버 응답/이미지·PC/모바일 육안 QA 미완료. 배포 성공/실서버 공개라고 표현 금지 |
 
 ## 대상 URL
@@ -40,20 +40,20 @@
 
 ## 미완료 / 알려진 문제
 
-1. **최우선: Pages 배포 문제**. 현재 제품 빌드/CI는 성공했지만 GitHub Pages 게시 서비스 응답이 2회 타임아웃. Pages 런 로그 및 최근 유사 사례를 고려해 무분별한 재시도·소스 변경을 피하고 서비스 상태/배포 대기 상태를 확인한 후 동일 제품 커밋으로 재배포할 것.
+1. **최우선: Pages 배포 문제**. 현재 제품 빌드/CI는 성공했지만 GitHub Pages 게시 서비스 응답이 3회 타임아웃. Pages 런 로그 및 최근 유사 사례를 고려해 무분별한 재시도·소스 변경을 피하고 서비스 상태/배포 대기 상태를 확인한 후 동일 제품 커밋으로 재배포할 것.
 2. 신규 2개 공개 URL의 HTTP·본문·메타·이미지 로딩, 관련 카드, ep.0 회귀 및 PC/모바일 실서버 QA 미완료.
 3. 호병백마 병원·백화점·마트 등 후속 편 집필·발행 미완료. 기존 호텔 단일편 PR #262를 현재 발행 정본으로 혼동하지 말 것.
 4. 일반 시설 대표 이미지 일부의 CDN 직접 SHA·실기기/Safari 캡처 기반 육안 QA, 기존 다른 자격증 검증 과제는 현재 범위 밖이며 이전 기록 참조.
 
 ## 다음 행동
 
-1. [Pages run 42810573395](https://github.com/syjy813/getpasslab/actions/runs/42810573395) 실패 로그와 GitHub Pages 상태 확인. 동기화 문제 회복 시 **동일 제품 `ca7fd0f6`** 재배포; 이미 통과한 PR CI·산출물은 동일성 검토 후 재사용. 반복 실패 중 무리한 리트라이/미요청 소스 변경 금지.
+1. [Pages run 42810573395](https://github.com/syjy813/getpasslab/actions/runs/42810573395) 실패 로그와 GitHub Pages 상태 확인. 동기화 서비스 상태 및 필요 시 GitHub 지원 경로 확인. 문제가 해소되면 **동일 제품 `ca7fd0f6`** 또는 동일 산출물로 재배포; 통과된 PR CI는 동일성 검토 후 재사용. 동일 실패 반복 중 추가 재시도·임의 제품 소스 변경 금지.
 2. Pages `build/deploy success` 확인 후 신규 두 URL의 실서버 HTML·이미지/대표 카드·내부 연결·canonical·Article·사이트맵 및 ep.0 회귀를 확인, 가능한 PC/모바일 QA 수행.
 3. 성공한 배포 커밋·실서버 검증 증거로 이 Snapshot을 교체 갱신.
 
 ## 근거
 
 - 호텔편 [PR #264](https://github.com/syjy813/getpasslab/pull/264), [개별 audit](docs/audits/2026-11-10-hotel-two-parter/README.md), [manifest](docs/audits/2026-11-10-hotel-two-parter/manifest.json).
-- [Pages Build 성공 / Deploy 2회 실패 run 42810573395](https://github.com/syjy813/getpasslab/actions/runs/42810573395), 제품 `ca7fd0f6`. 실패 Job 로그: 1차 `syncing_files`→600초 timeout; 2차 `finished_file_sync`→600초 timeout.
+- [Pages Build 성공 / Deploy 3회 실패 run 42810573395](https://github.com/syjy813/getpasslab/actions/runs/42810573395), 제품 `ca7fd0f6`. 실패 Job 로그: 1차 `syncing_files`→600초 timeout; 2차 `finished_file_sync`→600초 timeout; **3차 job 129825320421** `Current status:` 빈 응답 반복→600초 timeout 및 cancel. Run attempt=3, conclusion=failure.
 - 이전 성공 배포 [42806450308](https://github.com/syjy813/getpasslab/actions/runs/42806450308), 이전 이미지 통합 [closeout](docs/audits/2026-11-08-hobyeongbaekma-integrated-images/closeout.json).
 - 2026-11-08 이전 전체 인계 기록 [레거시 파일](docs/archives/AI_HANDOVER.legacy-2026-11-08.md). 상세 이력·승인·기준은 Git PR, audit, 원본 파일을 정본으로 활용한다.
