@@ -19,8 +19,22 @@ function lastBodyInk(r,card,actionTop){
   throw Error('Missing body ink');
 }
 const measurements=[];
+const approvedHeroReplacement={
+  publicPath:'/images/facility-drafts/03/01-employment-types-hero.webp',
+  sha256:'514a86e545e147cb90468715e1e111393c0741054410022fcf134473fa6fca21',
+  masterSHA256:'7b135df5ae2ab46d97c180c05183f6b2da5e28d195b926fed21e75477f9cbd4c'
+};
 for(const row of bulkVisuals.images){
   const old=before.images.find(r=>r.publicPath===row.publicPath);assert(old,'same public URL');
+  if(row.publicPath===approvedHeroReplacement.publicPath){
+    assert.equal(row.kind,'editorial-hero','approved replacement is hero only');
+    assert.equal(row.sha256,approvedHeroReplacement.sha256,'approved replacement WebP');
+    assert.equal(row.masterSHA256,approvedHeroReplacement.masterSHA256,'approved replacement master');
+    assert.equal(sha(fs.readFileSync(row.file)),row.sha256,'approved WebP bytes');
+    assert.equal(sha(fs.readFileSync(row.master)),row.masterSHA256,'approved PNG master bytes');
+    assert.equal(row.alt,old.alt,'unchanged accessible description');
+    continue;
+  }
   assert.equal(sha(fs.readFileSync(old.file)),old.sha256,'previous WebP preserved');
   assert.equal(sha(fs.readFileSync(old.master)),old.masterSHA256,'previous master preserved');
   assert.equal(row.alt,old.alt,'unchanged accessible description');
