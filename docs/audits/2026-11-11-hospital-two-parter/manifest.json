@@ -1,0 +1,33 @@
+{
+  "baseMain": "d8655698c2d41ae97cd7bb4163a35ded675f2f59",
+  "publishedAt": "2026-11-11",
+  "articles": [
+    {
+      "slug": "hobyeongbaekma-hospital-despair",
+      "route": "/facility-management/career/hobyeongbaekma-hospital-despair/",
+      "source": "src/content/facility/hobyeongbaekma-hospital-despair.md",
+      "image": "public/images/facility-series/ep2-1-hospital-despair/01-hero.webp",
+      "hero": "/images/facility-series/ep2-1-hospital-despair/01-hero.webp",
+      "sha256": "5b444673f943866c90d30fd118d383303260611200db451854a0a4bba51c3489"
+    },
+    {
+      "slug": "hobyeongbaekma-hospital-hope",
+      "route": "/facility-management/career/hobyeongbaekma-hospital-hope/",
+      "source": "src/content/facility/hobyeongbaekma-hospital-hope.md",
+      "image": "public/images/facility-series/ep2-2-hospital-hope/01-hero.webp",
+      "hero": "/images/facility-series/ep2-2-hospital-hope/01-hero.webp",
+      "sha256": "38617aa764c3e5c77e0bcabf8110053c915f0689d1a6850c3334b814afb3d3b4"
+    }
+  ],
+  "validation": {
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "publicationScript": "scripts/check-hospital-two-parter-publication.mjs",
+    "responsiveScript": "scripts/qa-hospital-two-parter.cjs"
+  },
+  "status": "publication candidate; merge/deploy after CI PASS"
+}
