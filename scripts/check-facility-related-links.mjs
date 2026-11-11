@@ -2,10 +2,13 @@ import {hotelRelease} from './read-hotel-two-parter-release.mjs';
 const hotelUrls=hotelRelease.articles.map(row=>row.route);
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+const hospitalRelease=JSON.parse(fs.readFileSync('docs/audits/2026-11-11-hospital-two-parter/manifest.json'));
+const hospitalUrls=hospitalRelease.articles.map(row=>row.route);
+const hospitalSlugs=hospitalRelease.articles.map(row=>row.slug);
 import {parse} from 'parse5';
 
 const episode00='/facility-management/career/hobyeongbaekma/';
-const eligible=urls=>[...urls,episode00,...hotelUrls];
+const eligible=urls=>[...urls,episode00,...hotelUrls,...hospitalUrls];
 const origin='https://getpasslab.co.kr';
 const preview=process.env.FACILITY_DRAFT_PREVIEW === '1';
 const releaseDate='2026-11-03';
@@ -32,7 +35,7 @@ const assertMetadata=(path,expectedRobots)=>{
  return list;
 };
 const published=fs.readdirSync('src/content/facility').filter(file=>file.endsWith('.md')&&/^status:\s*published\s*$/m.test(fs.readFileSync('src/content/facility/'+file,'utf8'))).map(file=>file.slice(0,-3)).sort();
-assert.deepEqual(published,[...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug)].sort(),'only reviewed articles in publication candidate');
+assert.deepEqual(published,[...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs].sort(),'only reviewed articles in publication candidate');
 assert(!fs.existsSync('dist/facility-management/career/reading-job-postings/index.html'),'unapproved placeholder must not be built');
 let checked=0;
 for(const path of ['/facility-management/','/facility-management/career/','/facility-management/jobs/',...urls]){
@@ -46,7 +49,7 @@ for(const path of ['/facility-management/','/facility-management/career/','/faci
   if (urls.includes(attrs(card,'href'))) {
    assert.equal(times.length,1,path+': one card publication date');
    assert.equal(attrs(times[0],'datetime'),releaseDate);
-  } else if(hotelUrls.includes(attrs(card,'href'))){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-10')} else if(attrs(card,'href')===episode00){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-07')} else if(publication){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),publication.plannedPublicationDate)} else assert.equal(times.length,0,'draft has no publication date');
+  } else if(hotelUrls.includes(attrs(card,'href'))){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-10')} else if(hospitalUrls.includes(attrs(card,'href'))){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-11')} else if(attrs(card,'href')===episode00){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-07')} else if(publication){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),publication.plannedPublicationDate)} else assert.equal(times.length,0,'draft has no publication date');
  }
  if(path==='/facility-management/') assert.deepEqual([...new Set(cards.map(card=>attrs(card,'href')))].sort(),eligible(expanded ? [...urls,...draftUrls] : urls).sort(),'home exposes eligible articles');
  for(const node of list){
@@ -80,4 +83,4 @@ for(const path of ['/facility-management/','/facility-management/career/','/faci
 for(const category of (publication&&!preview?['practice']:['practice','qualifications']))assert(!sitemap.includes(`<loc>${origin}/facility-management/${category}/</loc>`),'empty category excluded from sitemap');
 assert(fs.readFileSync('dist/computer-literacy/index.html','utf8').includes(origin+'/og-default.png'),'certificate sharing image preserved');
 for(const excluded of ['01/04-qualifications-vs-appointment.webp','05/03-recruitment-patterns.webp'])assert(!fs.existsSync('dist/images/facility-drafts/'+excluded),'unreferenced figure must not be shipped');
-console.log('[Facility publication] PASS',JSON.stringify({mode:preview?'private-preview':'published-candidate',articles:(publication?14:6)+hotelUrls.length,internalLinks:checked,emptyCategories:publication?1:2,canonicalAndDates:'PASS'}));
+console.log('[Facility publication] PASS',JSON.stringify({mode:preview?'private-preview':'published-candidate',articles:(publication?14:6)+hotelUrls.length+hospitalUrls.length,internalLinks:checked,emptyCategories:publication?1:2,canonicalAndDates:'PASS'}));
