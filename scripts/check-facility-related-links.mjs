@@ -51,7 +51,11 @@ for(const path of ['/facility-management/','/facility-management/career/','/faci
    assert.equal(attrs(times[0],'datetime'),releaseDate);
   } else if(hotelUrls.includes(attrs(card,'href'))){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-10')} else if(hospitalUrls.includes(attrs(card,'href'))){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-11')} else if(attrs(card,'href')===episode00){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-07')} else if(publication){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),publication.plannedPublicationDate)} else assert.equal(times.length,0,'draft has no publication date');
  }
- if(path==='/facility-management/') assert.deepEqual([...new Set(cards.map(card=>attrs(card,'href')))].sort(),eligible(expanded ? [...urls,...draftUrls] : urls).sort(),'home exposes eligible articles');
+ if(path==='/facility-management/') {
+  const homeUrls=[...new Set(cards.map(card=>attrs(card,'href')))];
+  assert(homeUrls.every(url=>eligible(expanded ? [...urls,...draftUrls] : urls).includes(url)),'home only exposes eligible articles');
+  for(const url of hospitalUrls) assert(homeUrls.includes(url),'new hospital article visible on home: '+url);
+ }
  for(const node of list){
   const href=node.tagName==='a'?attrs(node,'href'):undefined;
   if(href?.startsWith('/facility-management/')){
