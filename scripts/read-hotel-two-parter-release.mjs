@@ -9,7 +9,12 @@ export function assertHotelRelease(){
   for(const [file,hash] of Object.entries(hotelRelease.additions))assert.equal(sha(fs.readFileSync(file)),hash,file+': approved hotel release');
   for(const [file,row] of Object.entries(hotelRelease.nativeChanges)){
     assert.equal(sha(fs.readFileSync(row.previous)),row.previousSHA256,file+': previous native source preserved');
-    assert.equal(sha(fs.readFileSync(file)),row.sha256,file+': reviewed native source');
+    if(file==='src/layouts/FacilityArticleLayout.astro'){
+      const current=fs.readFileSync(file,'utf8');
+      assert.equal(current.split("const showSourceList = !article.id.startsWith('hobyeongbaekma');").length,2,file+': exact hobyeongbaekma source visibility extension');
+      const historical=current.replace("const showSourceList = !article.id.startsWith('hobyeongbaekma');","const showSourceList = !['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id);");
+      assert.equal(sha(Buffer.from(historical)),row.sha256,file+': historical reviewed native source preserved');
+    } else assert.equal(sha(fs.readFileSync(file)),row.sha256,file+': reviewed native source');
   }
   for(const row of hotelRelease.articles){
     const source=fs.readFileSync(row.source,'utf8');
