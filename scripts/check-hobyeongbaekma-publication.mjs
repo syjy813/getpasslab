@@ -33,6 +33,13 @@ assert(!text(body).includes('네 시설'));
 assert(!list.some(n => n.tagName === 'a' && attr(n, 'href')?.includes('no=184217')));
 assert(!list.some(n => (attr(n, 'class') || '').split(/\s+/).includes('facility-sources')));
 assert(text(body).includes('4개의 시설은 무엇이 다를까?'));
+assert(!text(body).includes('이 글은 공개 커뮤니티에 게시된 경험담과 의견을 검토해 작성했습니다.'),'removed disclaimer must not be shown');
+const nextRoute='/facility-management/career/hobyeongbaekma-hotel-despair/';
+assert(nodes(body).some(n=>n.tagName==='a'&&attr(n,'href')===nextRoute),'ep.0 last section links to episode 1-1');
+assert(text(body).includes('다음 편 보기'),'next episode section present');
+assert(fs.existsSync('dist'+nextRoute+'index.html'),'published hotel ep.1-1 is generated');
+const related=list.filter(n=>n.tagName==='a'&&(attr(n,'class')||'').split(/\s+/).includes('facility-card'));
+assert(related.length>0&&attr(related[0],'href')===nextRoute,'first related content card links to hotel ep.1-1');
 const images = nodes(body).filter(n => n.tagName === 'img');
 assert.equal(images.length, 4, 'hero plus three complete comparison images');
 assert.equal(nodes(body).filter(n=>n.tagName==='picture').length,3);
@@ -62,9 +69,10 @@ for (const route of ['/facility-management/', '/facility-management/career/']) {
 }
 const sitemap = fs.readdirSync('dist').filter(f => /^sitemap.*\.xml$/.test(f)).map(f => fs.readFileSync('dist/' + f, 'utf8')).join('');
 assert.equal(sitemap.includes('<loc>' + origin + release.route + '</loc>'), !preview);
-assert(!fs.existsSync('dist/facility-management/career/hobyeongbaekma-hotel/index.html'), 'episode one remains unpublished');
+// Hotel ep.1-1 and ep.1-2 are now published independently; the old single-part draft remains unpublished.
+assert(!fs.existsSync('dist/facility-management/career/hobyeongbaekma-hotel/index.html'), 'obsolete one-part hotel draft remains unpublished');
 for (const n of list.filter(n => n.tagName === 'a')) {
   const href = attr(n, 'href');
   if (href?.startsWith('/facility-management/')) assert(fs.existsSync('dist' + href.replace(/\/$/, '') + '/index.html'), href);
 }
-console.log('Episode 00 publication: preserved prose and hero, three complete comparison pictures, six responsive assets, metadata/canonical/schema/sitemap/links PASS');
+console.log('Episode 00 publication: approved editorial continuation, original images and responsive assets, metadata/canonical/schema/sitemap/related links PASS');
