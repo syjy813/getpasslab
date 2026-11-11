@@ -8,7 +8,7 @@
       "source": "src/content/facility/hobyeongbaekma-hospital-despair.md",
       "image": "public/images/facility-series/ep2-1-hospital-despair/01-hero.webp",
       "hero": "/images/facility-series/ep2-1-hospital-despair/01-hero.webp",
-      "sha256": "a9ef4149d4153ba7be7d92739c0fdcea23ee2b86981d9ba52293bd046c1b3a4d"
+      "sha256": "83a1ea84729f1da333f2fdbe8859ef22deff6a13ad4bb4f603e310bdf948a516"
     },
     {
       "slug": "hobyeongbaekma-hospital-hope",
@@ -16,7 +16,7 @@
       "source": "src/content/facility/hobyeongbaekma-hospital-hope.md",
       "image": "public/images/facility-series/ep2-2-hospital-hope/01-hero.webp",
       "hero": "/images/facility-series/ep2-2-hospital-hope/01-hero.webp",
-      "sha256": "2e90a140f6695b03d725feced9eaeedf00351d613e8f38fec961da236ba17ea9"
+      "sha256": "3e42d821e7ba280681e6fa5014a40eecf957a8517330d16e428d434e3d4d6f43"
     }
   ],
   "validation": {
