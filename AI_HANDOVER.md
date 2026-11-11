@@ -20,7 +20,7 @@
 | PR / QA | **5개 모두 PASS** · [SEO 42932480829](https://github.com/syjy813/getpasslab/actions/runs/42932480829), [호병백마 전용 42932480785](https://github.com/syjy813/getpasslab/actions/runs/42932480785), [시설 공개/비공개 42932480824](https://github.com/syjy813/getpasslab/actions/runs/42932480824), [자격증 탐색 42932480832](https://github.com/syjy813/getpasslab/actions/runs/42932480832), [소방 42932480828](https://github.com/syjy813/getpasslab/actions/runs/42932480828). 검증 HEAD `1fbd498c254add46a0678d6e2081d9bca990b251` |
 | Git | **완료** · [PR #270](https://github.com/syjy813/getpasslab/pull/270) squash 병합 `83cd2b0e`, 변경 파일 5개(원고 1개, 검사기 4개) |
 | Pages | **Build/Deploy 성공** · [run 42933900188](https://github.com/syjy813/getpasslab/actions/runs/42933900188) 커밋 `83cd2b0e`, build/deploy jobs success |
-| 배포 Artifact 실물 | **PASS** · ZIP 내 `artifact.tar`에서 ep.0 HTML 직접 파싱: 옛 안내문 문자열 0회, 다음 편 제목 및 ep.1-1 상대링크, 첫 관련 콘텐츠 카드 절망편, 수정일 2026-11-11, ep.0 이미지 4개 유지, ep.0 자기 canonical, 기존 ep.1-1·1-2 HTML·시설 홈/취업 목록 존재, 두 sitemap에 ep.0 및 ep.1-1 주소 포함 |
+| 배포 후 전역 회귀 QA | **10개 모두 PASS** · 제품 `83cd2b0e` 대상 GitHub Actions `workflow_run` 검사. [산업안전 챕터 회귀 42934037798](https://github.com/syjy813/getpasslab/actions/runs/42934037798)는 1차 실서버 단일 페이지 HTTP 503으로 실패했으나 **Attempt 2 성공**. 해당 일시적 503을 ep.0 소스 결함으로 판정하지 않음. 나머지 9개 자동 검사도 PASS |\n| 배포 Artifact 실물 | **PASS** · ZIP 내 `artifact.tar`에서 ep.0 HTML 직접 파싱: 옛 안내문 문자열 0회, 다음 편 제목 및 ep.1-1 상대링크, 첫 관련 콘텐츠 카드 절망편, 수정일 2026-11-11, ep.0 이미지 4개 유지, ep.0 자기 canonical, 기존 ep.1-1·1-2 HTML·시설 홈/취업 목록 존재, 두 sitemap에 ep.0 및 ep.1-1 주소 포함 |
 | Production 직접 QA | **추가 확인 필요** · GitHub Pages의 배포 success는 확인했지만 외부 HTTP 도구 및 실행 컨테이너에서 `getpasslab.co.kr` 직접 조회 실패(DNS/접근 제한). 연결 브라우저에서 읽은 ep.0 탭은 **배포 전(수정 2026-11-08) 상태로 열려 있는 미갱신 탭**이므로 최신 Production 검증 증거로 쓰지 않음. 새 URL의 HTTP 200·CDN SHA 및 PC/모바일 실제 화면을 PASS로 주장하지 않음 |
 
 ## 공개 URL
@@ -39,8 +39,7 @@
 ## 미완료·다음 행동
 
 1. **최우선: ep.0와 ep.1-1의 최신 Production 직접 QA.** 실서버 접근 가능한 브라우저에서 ep.0 강력 새로고침 후 안내문 부재, `다음 편 보기` 링크 클릭 후 ep.1-1 정상 200·대표 이미지 표시, 첫 관련 카드 이동, PC/모바일 가로넘침·이미지 로딩·화면 깨짐, 다른 ep.0/ep.1-2 링크 영향 확인. 실제 CDN WebP SHA가 필요하면 직접 내려받아 승인 hash 대조.
-2. 병합·배포 후 자동 트리거된 전역 회귀 QA는 [Actions](https://github.com/syjy813/getpasslab/actions)에서 해당 제품 `83cd2b0e` 기준 결과 확인. 이 검사를 이번 호병백마 실서버 육안 QA와 혼동하지 않음.
-3. 직접 QA 결과·오류가 나오면 기준 커밋과 함께 갱신. 이후 호병백마 병원·백화점·마트 편 등 후속 시리즈 기획/집필 검토.
+2. 직접 QA 결과·오류가 나오면 제품 `83cd2b0e` 및 배포 run `42933900188`과 연결해 Snapshot 갱신. 이후 호병백마 병원·백화점·마트 후속 시리즈를 검토한다.
 
 ## 근거
 
