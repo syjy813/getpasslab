@@ -2,17 +2,18 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
-import {approvedBorderlessHeroStyle} from './read-hobyeongbaekma-publication.mjs';
+import {approvedBorderlessHeroStyle,applyEpisode00NextLink} from './read-hobyeongbaekma-publication.mjs';
 import {integrateEpisode00Images,integratedImageRoot as root,integratedImageStyles,beforeIntegratedStyles} from './hobyeongbaekma-integrated-images.mjs';
 const manifest=JSON.parse(fs.readFileSync(root+'/manifest.json'));
 const previous=fs.readFileSync(manifest.previousSource,'utf8');
 const current=fs.readFileSync('src/content/facility/hobyeongbaekma.md','utf8');
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 
-test('only three image pairs and actual modification date change',()=>{
-  assert.equal(current,integrateEpisode00Images(previous,manifest));
+test('only three image pairs and separately approved ep.0 continuation change',()=>{
+  const imageIntegrated=integrateEpisode00Images(previous,manifest);
+  assert.equal(current,applyEpisode00NextLink(imageIntegrated),'only approved editorial continuation');
   const prose=s=>s.replace(/<figure[\s\S]*?<\/figure>/g,'').replace("updatedAt: '2026-11-08'","updatedAt: '2026-11-07'").split('\n').filter(l=>l.trim()).join('\n');
-  assert.equal(prose(current),prose(previous),'all prose, source links, tables and metadata preserved');
+  assert.equal(prose(imageIntegrated),prose(previous),'original image integration preserves all previous prose and metadata');
   assert.equal((current.match(/<figure/g)||[]).length,4);
   assert.equal((current.match(/<picture>/g)||[]).length,3);
   const hero=s=>s.match(/<figure><img[^>]+01-hobyeongbaekma-hero[\s\S]*?<\/figure>/)[0];
