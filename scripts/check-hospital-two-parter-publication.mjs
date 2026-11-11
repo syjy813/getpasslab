@@ -12,8 +12,8 @@ const hasClass=(n,name)=>(attr(n,'class')||'').split(/\s+/).includes(name);
 const load=route=>nodes(parse(fs.readFileSync('dist'+route+'index.html','utf8')));
 const sitemap=fs.readdirSync('dist').filter(f=>/^sitemap.*\.xml$/.test(f)).map(f=>fs.readFileSync('dist/'+f,'utf8')).join('');
 const articles=[
- {slug:'hobyeongbaekma-hospital-despair',route:'/facility-management/career/hobyeongbaekma-hospital-despair/',hero:'/images/facility-series/ep2-1-hospital-despair/01-hero.webp',alt:'병원 시설관리로 취업했는데 민원 처리와 설비 점검이 겹쳐 지친 시설관리자를 표현한 호병백마 ep.2-1 절망편',sha256:'83a1ea84729f1da333f2fdbe8859ef22deff6a13ad4bb4f603e310bdf948a516',publishedAt:'2026-11-11',citations:3},
- {slug:'hobyeongbaekma-hospital-hope',route:'/facility-management/career/hobyeongbaekma-hospital-hope/',hero:'/images/facility-series/ep2-2-hospital-hope/01-hero.webp',alt:'병원 시설관리의 안정적인 근무환경과 전문 설비 경험, 장기 경력 성장 가능성을 표현한 호병백마 ep.2-2 희망편',sha256:'3e42d821e7ba280681e6fa5014a40eecf957a8517330d16e428d434e3d4d6f43',publishedAt:'2026-11-11',citations:2}
+ {slug:'hobyeongbaekma-hospital-despair',route:'/facility-management/career/hobyeongbaekma-hospital-despair/',hero:'/images/facility-series/ep2-1-hospital-despair/01-hero.webp',alt:'병원 시설관리로 취업했는데 민원 처리와 설비 점검이 겹쳐 지친 시설관리자를 표현한 호병백마 ep.2-1 절망편',sha256:'83a1ea84729f1da333f2fdbe8859ef22deff6a13ad4bb4f603e310bdf948a516',publishedAt:'2026-11-11',citations:2},
+ {slug:'hobyeongbaekma-hospital-hope',route:'/facility-management/career/hobyeongbaekma-hospital-hope/',hero:'/images/facility-series/ep2-2-hospital-hope/01-hero.webp',alt:'병원 시설관리의 안정적인 근무환경과 전문 설비 경험, 장기 경력 성장 가능성을 표현한 호병백마 ep.2-2 희망편',sha256:'3e42d821e7ba280681e6fa5014a40eecf957a8517330d16e428d434e3d4d6f43',publishedAt:'2026-11-11',citations:3}
 ];
 const actualImageHashes=Object.fromEntries(articles.map(row=>[row.slug,createHash('sha256').update(fs.readFileSync('dist'+row.hero)).digest('hex')]));
 console.log('[Hospital hero SHA256]',JSON.stringify(actualImageHashes));
