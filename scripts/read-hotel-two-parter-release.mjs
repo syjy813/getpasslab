@@ -9,7 +9,18 @@ export function assertHotelRelease(){
   for(const [file,hash] of Object.entries(hotelRelease.additions))assert.equal(sha(fs.readFileSync(file)),hash,file+': approved hotel release');
   for(const [file,row] of Object.entries(hotelRelease.nativeChanges)){
     assert.equal(sha(fs.readFileSync(row.previous)),row.previousSHA256,file+': previous native source preserved');
-    assert.equal(sha(fs.readFileSync(file)),row.sha256,file+': reviewed native source');
+    if(file==='src/layouts/FacilityArticleLayout.astro'){
+      const current=fs.readFileSync(file,'utf8');
+      assert.equal(current.split("const showSourceList = !article.id.startsWith('hobyeongbaekma');").length,2,file+': exact hobyeongbaekma source visibility extension');
+      const historical=current.replace("const showSourceList = !article.id.startsWith('hobyeongbaekma');","const showSourceList = !['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id);");
+      assert.equal(sha(Buffer.from(historical)),row.sha256,file+': historical reviewed native source preserved');
+    } else if(file==='src/components/FacilityCard.astro'){
+      const current=fs.readFileSync(file,'utf8');
+      assert.equal(current.split("  'hobyeongbaekma-hospital-despair': '/images/facility-series/ep2-1-hospital-despair/01-hero.webp',\n  'hobyeongbaekma-hospital-hope': '/images/facility-series/ep2-2-hospital-hope/01-hero.webp',\n").length,2,file+': exact hospital cover additions');
+      assert.equal(current.split("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];").length,2,file+': series cover size rule');
+      const historical=current.replace("  'hobyeongbaekma-hospital-despair': '/images/facility-series/ep2-1-hospital-despair/01-hero.webp',\n  'hobyeongbaekma-hospital-hope': '/images/facility-series/ep2-2-hospital-hope/01-hero.webp',\n",'').replace("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];","const coverSize = ['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id) ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];");
+      assert.equal(sha(Buffer.from(historical)),row.sha256,file+': historical reviewed card source preserved');
+    } else assert.equal(sha(fs.readFileSync(file)),row.sha256,file+': reviewed native source');
   }
   for(const row of hotelRelease.articles){
     const source=fs.readFileSync(row.source,'utf8');

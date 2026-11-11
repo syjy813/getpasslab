@@ -48,6 +48,9 @@ const draftManifest = JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facilit
 const publicationFile = 'docs/audits/2026-11-05-facility-publication/manifest.json';
 const publication = fs.existsSync(publicationFile) ? JSON.parse(fs.readFileSync(publicationFile)) : null;
 const newArticlePaths = publication ? Object.values(JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/site-article-map.json'))).map(row => 'dist'+row.path+'index.html') : [];
+const hospitalRelease = JSON.parse(fs.readFileSync('docs/audits/2026-11-11-hospital-two-parter/manifest.json'));
+const hospitalSourceAdditions = new Set(hospitalRelease.articles.flatMap(row => [row.source, row.image]));
+const hospitalOutputAdditions = new Set(hospitalRelease.articles.map(row => 'dist'+row.route+'index.html'));
 for (const [file, sha] of Object.entries({...draftManifest.source, ...publication?.source, ...draftManifest.assets})) {
   assert.equal(hash(beforeBulkVisuals(file,fs.readFileSync(file))), sha, file + ': pinned reviewed draft');
 }
@@ -55,7 +58,7 @@ const files = [
   ...walk('src'),
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
-].filter(file => !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
+].filter(file => !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
@@ -66,6 +69,17 @@ for (const file of files) {
       const originalFacilityCss=fs.readFileSync(episode00Integration.previousStyle,'utf8')+integratedImageStyles;
       assert.equal(bytes.toString('utf8'),originalFacilityCss+approvedBorderlessHeroStyle,'only approved borderless hero CSS appended');
       assert.equal(gitBlob(Buffer.from(originalFacilityCss)), editorialBlobs[file], file + ': original approved UI blob');
+    } else if (file === 'src/layouts/FacilityArticleLayout.astro') {
+      const current=bytes.toString('utf8');
+      assert.equal(current.split("const showSourceList = !article.id.startsWith('hobyeongbaekma');").length,2,file + ': exact hobyeongbaekma source visibility extension');
+      const historical=Buffer.from(current.replace("const showSourceList = !article.id.startsWith('hobyeongbaekma');","const showSourceList = !['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id);"));
+      assert.equal(gitBlob(historical), editorialBlobs[file], file + ': approved UI baseline with series source visibility extension');
+    } else if (file === 'src/components/FacilityCard.astro') {
+      const current=bytes.toString('utf8');
+      assert.equal(current.split("  'hobyeongbaekma-hospital-despair': '/images/facility-series/ep2-1-hospital-despair/01-hero.webp',\n  'hobyeongbaekma-hospital-hope': '/images/facility-series/ep2-2-hospital-hope/01-hero.webp',\n").length,2,file + ': exact hospital cover additions');
+      assert.equal(current.split("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];").length,2,file + ': series cover size rule');
+      const historical=Buffer.from(current.replace("  'hobyeongbaekma-hospital-despair': '/images/facility-series/ep2-1-hospital-despair/01-hero.webp',\n  'hobyeongbaekma-hospital-hope': '/images/facility-series/ep2-2-hospital-hope/01-hero.webp',\n",'').replace("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];","const coverSize = ['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id) ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];"));
+      assert.equal(gitBlob(historical), editorialBlobs[file], file + ': approved card baseline with hospital cover extension');
     } else {
       assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
     }
