@@ -74,6 +74,12 @@ for (const file of files) {
       assert.equal(current.split("const showSourceList = !article.id.startsWith('hobyeongbaekma');").length,2,file + ': exact hobyeongbaekma source visibility extension');
       const historical=Buffer.from(current.replace("const showSourceList = !article.id.startsWith('hobyeongbaekma');","const showSourceList = !['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id);"));
       assert.equal(gitBlob(historical), editorialBlobs[file], file + ': approved UI baseline with series source visibility extension');
+    } else if (file === 'src/components/FacilityCard.astro') {
+      const current=bytes.toString('utf8');
+      assert.equal(current.split("  'hobyeongbaekma-hospital-despair': '/images/facility-series/ep2-1-hospital-despair/01-hero.webp',\n  'hobyeongbaekma-hospital-hope': '/images/facility-series/ep2-2-hospital-hope/01-hero.webp',\n").length,2,file + ': exact hospital cover additions');
+      assert.equal(current.split("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];").length,2,file + ': series cover size rule');
+      const historical=Buffer.from(current.replace("  'hobyeongbaekma-hospital-despair': '/images/facility-series/ep2-1-hospital-despair/01-hero.webp',\n  'hobyeongbaekma-hospital-hope': '/images/facility-series/ep2-2-hospital-hope/01-hero.webp',\n",'').replace("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];","const coverSize = ['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id) ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];"));
+      assert.equal(gitBlob(historical), editorialBlobs[file], file + ': approved card baseline with hospital cover extension');
     } else {
       assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
     }
