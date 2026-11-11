@@ -48,6 +48,9 @@ const draftManifest = JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facilit
 const publicationFile = 'docs/audits/2026-11-05-facility-publication/manifest.json';
 const publication = fs.existsSync(publicationFile) ? JSON.parse(fs.readFileSync(publicationFile)) : null;
 const newArticlePaths = publication ? Object.values(JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/site-article-map.json'))).map(row => 'dist'+row.path+'index.html') : [];
+const hospitalRelease = JSON.parse(fs.readFileSync('docs/audits/2026-11-11-hospital-two-parter/manifest.json'));
+const hospitalSourceAdditions = new Set(hospitalRelease.articles.flatMap(row => [row.source, row.image]));
+const hospitalOutputAdditions = new Set(hospitalRelease.articles.map(row => 'dist'+row.route+'index.html'));
 for (const [file, sha] of Object.entries({...draftManifest.source, ...publication?.source, ...draftManifest.assets})) {
   assert.equal(hash(beforeBulkVisuals(file,fs.readFileSync(file))), sha, file + ': pinned reviewed draft');
 }
@@ -55,7 +58,7 @@ const files = [
   ...walk('src'),
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
-].filter(file => !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
+].filter(file => !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
