@@ -2,7 +2,7 @@ name: Hobyeongbaekma publication QA
 on:
   pull_request:
     branches: [main]
-    paths: ['docs/drafts/facility/hobyeongbaekma/**', 'scripts/*hobyeongbaekma*', 'src/content/facility/hobyeongbaekma.md', 'public/images/facility-series/hobyeongbaekma-00/**', 'docs/audits/2026-11-07-hobyeongbaekma-publication/**', 'docs/audits/2026-11-08-hobyeongbaekma-integrated-images/**', '.github/workflows/hobyeongbaekma-review-qa.yml']
+    paths: ['docs/drafts/facility/hobyeongbaekma/**', 'scripts/*hobyeongbaekma*', 'scripts/*hospital-two-parter*', 'src/content/facility/hobyeongbaekma.md', 'src/content/facility/hobyeongbaekma-hospital-*.md', 'public/images/facility-series/hobyeongbaekma-00/**', 'public/images/facility-series/ep2-1-hospital-despair/**', 'public/images/facility-series/ep2-2-hospital-hope/**', 'docs/audits/2026-11-07-hobyeongbaekma-publication/**', 'docs/audits/2026-11-08-hobyeongbaekma-integrated-images/**', '.github/workflows/hobyeongbaekma-review-qa.yml']
 permissions:
   contents: read
 jobs:
@@ -25,6 +25,7 @@ jobs:
           node scripts/check-facility-bulk-visuals.mjs
           node scripts/check-facility-related-links.mjs
           node scripts/check-hobyeongbaekma-publication.mjs
+          node scripts/check-hospital-two-parter-publication.mjs
       - name: Install browser test tools
         run: |
           npm install --prefix /tmp/hobyeongbaekma-tools --no-package-lock playwright@1.62.1
@@ -36,6 +37,7 @@ jobs:
           python3 -m http.server 4321 --bind 127.0.0.1 --directory dist >/tmp/hobyeongbaekma-server.log 2>&1 &
           for n in $(seq 1 30); do curl -fsS http://127.0.0.1:4321/ >/dev/null && break; sleep 1; done
           node scripts/qa-hobyeongbaekma-review.cjs
+          node scripts/qa-hospital-two-parter.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
