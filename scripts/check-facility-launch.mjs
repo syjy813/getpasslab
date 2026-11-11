@@ -69,6 +69,11 @@ for (const file of files) {
       const originalFacilityCss=fs.readFileSync(episode00Integration.previousStyle,'utf8')+integratedImageStyles;
       assert.equal(bytes.toString('utf8'),originalFacilityCss+approvedBorderlessHeroStyle,'only approved borderless hero CSS appended');
       assert.equal(gitBlob(Buffer.from(originalFacilityCss)), editorialBlobs[file], file + ': original approved UI blob');
+    } else if (file === 'src/layouts/FacilityArticleLayout.astro') {
+      const current=bytes.toString('utf8');
+      assert.equal(current.split("const showSourceList = !article.id.startsWith('hobyeongbaekma');").length,2,file + ': exact hobyeongbaekma source visibility extension');
+      const historical=Buffer.from(current.replace("const showSourceList = !article.id.startsWith('hobyeongbaekma');","const showSourceList = !['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id);"));
+      assert.equal(gitBlob(historical), editorialBlobs[file], file + ': approved UI baseline with series source visibility extension');
     } else {
       assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
     }
