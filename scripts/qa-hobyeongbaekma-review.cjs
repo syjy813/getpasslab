@@ -31,12 +31,16 @@ fs.mkdirSync(output, { recursive: true });
       assert.equal(await page.locator('h1').count(), 1);
       assert.equal(await page.locator('.facility-summary').count(), 1);
       assert.equal(await page.locator('.facility-body h1').count(), 0);
-      assert.equal(await page.locator('.facility-body h2').count(), 7);
+      assert.equal(await page.locator('.facility-body h2').count(), 8);
       assert.equal(await page.locator('.facility-body h3').count(), 3);
       assert.equal(await page.locator('.facility-body table').count(), 2);
       assert.equal(await page.locator('.facility-sources').count(), 0);
       assert.equal(await page.locator('a[href*="no=184217"]').count(), 0);
       assert(!(await page.locator('.facility-body').innerText()).includes('네 시설'));
+      const ep1Route='/facility-management/career/hobyeongbaekma-hotel-despair/';
+      assert(!(await page.locator('.facility-body').innerText()).includes('이 글은 공개 커뮤니티에 게시된 경험담과 의견을 검토해 작성했습니다.'));
+      assert.equal(await page.locator('.facility-body a[href="'+ep1Route+'"]:visible').count(),1,'ep.1-1 link visible at article end');
+      assert.equal(await page.locator('.facility-section a.facility-card').first().getAttribute('href'),ep1Route,'first related card is hotel despair');
       assert.equal(await page.locator('.facility-body h2').nth(1).innerText(), '4개의 시설은 무엇이 다를까?');
       assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), preview ? 'noindex, nofollow' : 'index, follow');
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://getpasslab.co.kr' + route);
@@ -70,7 +74,7 @@ fs.mkdirSync(output, { recursive: true });
       const schema = await page.locator('script[type="application/ld+json"]').allTextContents();
       const articleSchema = schema.flatMap(s => { const value = JSON.parse(s); return Array.isArray(value) ? value : [value]; }).filter(x => x['@type'] === 'Article');
       assert.equal(articleSchema.length, preview ? 0 : 1);
-      if (!preview) { assert.equal(articleSchema[0].datePublished, '2026-11-07'); assert.equal(articleSchema[0].dateModified,integrated.updatedAt); assert.equal(articleSchema[0].headline, await page.locator('h1').innerText()); }
+      if (!preview) { assert.equal(articleSchema[0].datePublished, '2026-11-07'); assert.equal(articleSchema[0].dateModified,'2026-11-11'); assert.equal(articleSchema[0].headline, await page.locator('h1').innerText()); }
       const geometry = await page.evaluate(() => ({ client: document.documentElement.clientWidth, scroll: document.documentElement.scrollWidth }));
       assert(geometry.scroll <= geometry.client + 1, 'No page overflow');
       assert.equal(await page.locator('.facility-body picture').count(),3);
@@ -82,7 +86,7 @@ fs.mkdirSync(output, { recursive: true });
       await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
       await page.screenshot({ path: `${output}/episode00-${width}.png`, fullPage: true });
       assert.deepEqual(errors, []);
-      results.push({ width, images: images.length, h1: 1, h2: 7, h3: 3, tables: 2, reservedImages:reserved.length, ...geometry, toc: 'PASS', runtimeErrors: 0 });
+      results.push({ width, images: images.length, h1: 1, h2: 8, h3: 3, tables: 2, reservedImages:reserved.length, ...geometry, toc: 'PASS', runtimeErrors: 0 });
       await page.close();
     }
     fs.writeFileSync(output + '/results.json', JSON.stringify({ route, production: new URL(base).origin === 'https://getpasslab.co.kr', preview, results }, null, 2));

@@ -4,7 +4,7 @@ description: '시설관리 커뮤니티에서 말하는 호병백마·호백병�
 category: career
 status: published
 publishedAt: '2026-11-07'
-updatedAt: '2026-11-08'
+updatedAt: '2026-11-11'
 reviewedAt: '2026-11-06'
 featured: false
 summary:
@@ -43,6 +43,7 @@ sources:
     url: "https://gall.dcinside.com/board/view/?id=siseol&no=632269"
     note: "3일차 극단적 초기 경험. 같은 시설·업무의 장기 일반화 금지 · 공개 원문 자기진술이며 근무 사실 독립인증 아님"
 related:
+  - hobyeongbaekma-hotel-despair
   - what-is-facility-management
   - first-job
   - shifts-and-pay
@@ -155,4 +156,10 @@ legalReview: false
 - **3화 백화점:** 행사·폐점 후 작업·전기와 기계 파트 차이
 - **4화 마트:** 냉장·냉동·영선·야간 보수작업·교대근무
 
-*이 글은 공개 커뮤니티에 게시된 경험담과 의견을 검토해 작성했습니다. 확인 가능한 원문 내용을 바탕으로 소개했지만 게시자의 근무 사실은 독립적으로 인증되지 않았으며, 커뮤니티 후기는 전체 시설관리 종사자의 대표 표본이 아닙니다. 조사·교정 기준일: 2026년 11월 6일.*
+## 다음 편 보기
+
+이제 첫 번째 시설인 **호텔**을 살펴볼 차례다. 객실 민원과 야간 당직, 업무분장 문제부터 확인해 보자.
+
+**[호병백마 ep.1-1 절망편] 호텔 시설관리로 취업했는데, 왜 객실 청소까지?**
+
+[호텔 시설관리 절망편 보러가기](/facility-management/career/hobyeongbaekma-hotel-despair/)
