@@ -1,0 +1,33 @@
+{
+  "baseMain": "e54befdd0f203b0fc23a2b8dd584e03b6fcca3b8",
+  "publishedAt": "2026-11-12",
+  "articles": [
+    {
+      "slug": "hobyeongbaekma-mart-despair",
+      "route": "/facility-management/career/hobyeongbaekma-mart-despair/",
+      "source": "src/content/facility/hobyeongbaekma-mart-despair.md",
+      "image": "public/images/facility-series/ep4-1-mart-despair/01-hero.webp",
+      "hero": "/images/facility-series/ep4-1-mart-despair/01-hero.webp",
+      "sha256": "b092c1078f554251cfb29448bdc23db96abd4debf905865e16fd40a4531c778b"
+    },
+    {
+      "slug": "hobyeongbaekma-mart-hope",
+      "route": "/facility-management/career/hobyeongbaekma-mart-hope/",
+      "source": "src/content/facility/hobyeongbaekma-mart-hope.md",
+      "image": "public/images/facility-series/ep4-2-mart-hope/01-hero.webp",
+      "hero": "/images/facility-series/ep4-2-mart-hope/01-hero.webp",
+      "sha256": "0378c000a85565d64b3283660319860930adec3c642a13f7afb6db7a6447ceb1"
+    }
+  ],
+  "validation": {
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "publicationScript": "scripts/check-mart-two-parter-publication.mjs",
+    "responsiveScript": "scripts/qa-mart-two-parter.cjs"
+  },
+  "status": "publication candidate; user authorized merge/deploy after CI PASS"
+}

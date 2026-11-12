@@ -28,9 +28,12 @@ for(const row of hotelRelease.articles){
  assert.equal(sitemap.includes('<loc>https://getpasslab.co.kr'+row.route+'</loc>'),!preview);
  const other=hotelRelease.articles.find(r=>r.slug!==row.slug);
  assert(nodes(body).some(n=>n.tagName==='a'&&attr(n,'href')===other.route),'counterpart linked in body');
- for(const route of ['/facility-management/','/facility-management/career/']){
-  const card=load(route).find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);assert(card,route+': new article card');
+ {
+  const route='/facility-management/career/';
+  const card=load(route).find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);assert(card,route+': hotel article card');
   const cover=nodes(card).find(n=>n.tagName==='img');assert.equal(attr(cover,'src'),row.hero);assert.equal(attr(cover,'width'),'1440');assert.equal(attr(cover,'height'),'1080');
+  const homeCard=load('/facility-management/').find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);
+  assert.equal(homeCard,undefined,'hotel article displaced from six-card home slice by six newer hospital/department-store/mart articles');
  }
 }
 console.log('Hotel two-parter: approved images, sources visibility, links, dates, canonical, Article and sitemap PASS ('+(preview?'private preview':'publication')+')');
