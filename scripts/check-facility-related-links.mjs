@@ -38,7 +38,7 @@ const assertMetadata=(path,expectedRobots)=>{
  return list;
 };
 const published=fs.readdirSync('src/content/facility').filter(file=>file.endsWith('.md')&&/^status:\s*published\s*$/m.test(fs.readFileSync('src/content/facility/'+file,'utf8'))).map(file=>file.slice(0,-3)).sort();
-assert.deepEqual(published,[...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs].sort(),'only reviewed articles in publication candidate');
+assert.deepEqual(published,[...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs,...departmentStoreSlugs].sort(),'only reviewed articles in publication candidate');
 assert(!fs.existsSync('dist/facility-management/career/reading-job-postings/index.html'),'unapproved placeholder must not be built');
 let checked=0;
 for(const path of ['/facility-management/','/facility-management/career/','/facility-management/jobs/',...urls]){
