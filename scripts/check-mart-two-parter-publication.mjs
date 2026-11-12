@@ -13,7 +13,7 @@ const load=route=>nodes(parse(fs.readFileSync('dist'+route+'index.html','utf8'))
 const sitemap=fs.readdirSync('dist').filter(f=>/^sitemap.*\.xml$/.test(f)).map(f=>fs.readFileSync('dist/'+f,'utf8')).join('');
 const articles=[
  {slug:'hobyeongbaekma-mart-despair',route:'/facility-management/career/hobyeongbaekma-mart-despair/',hero:'/images/facility-series/ep4-1-mart-despair/01-hero.webp',alt:'마트 영업 종료 후에도 냉장·냉동 설비와 야간 작업에 지친 시설관리자를 표현한 호병백마 ep.4-1 절망편',sha256:'b092c1078f554251cfb29448bdc23db96abd4debf905865e16fd40a4531c778b',publishedAt:'2026-11-12',citations:3,required:['온도 이상은 ‘내일 아침에 보자’고 하기 어려울 수 있다','면접에서 꼭 확인할 여섯 가지']},
- {slug:'hobyeongbaekma-mart-hope',route:'/facility-management/career/hobyeongbaekma-mart-hope/',hero:'/images/facility-series/ep4-2-mart-hope/01-hero.webp',alt:'마트 시설관리의 냉장·냉동 설비 경험과 원격감시·장애 대응·영선 경험을 표현한 호병백마 ep.4-2 희망편',sha256:'0378c000a85565d64b3283660319860930adec3c642a13f7afb6db7a6447ceb1',publishedAt:'2026-11-12',citations:3,required:['냉동·냉장 설비의 가치는 ‘직접 수리’보다 운영 흐름을 배우는 데 있다','공조냉동 공부와 실제 설비 연결']}
+ {slug:'hobyeongbaekma-mart-hope',route:'/facility-management/career/hobyeongbaekma-mart-hope/',hero:'/images/facility-series/ep4-2-mart-hope/01-hero.webp',alt:'마트 시설관리의 냉장·냉동 설비 경험과 원격감시·장애 대응·영선 경험을 표현한 호병백마 ep.4-2 희망편',sha256:'0378c000a85565d64b3283660319860930adec3c642a13f7afb6db7a6447ceb1',publishedAt:'2026-11-12',citations:3,required:['냉동·냉장 설비의 가치는 ‘직접 수리’보다 운영 흐름을 배우는 데 있다','공조냉동 공부와 연결하기 좋다']}
 ];
 const actualImageHashes=Object.fromEntries(articles.map(row=>[row.slug,createHash('sha256').update(fs.readFileSync('dist'+row.hero)).digest('hex')]));
 console.log('[Mart hero SHA256]',JSON.stringify(actualImageHashes));
