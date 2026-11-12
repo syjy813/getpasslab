@@ -17,11 +17,13 @@ export function assertHotelRelease(){
     } else if(file==='src/components/FacilityCard.astro'){
       const current=fs.readFileSync(file,'utf8');
       const departmentStoreCovers="  'hobyeongbaekma-department-store-despair': '/images/facility-series/ep3-1-department-store-despair/01-hero.webp',\n  'hobyeongbaekma-department-store-hope': '/images/facility-series/ep3-2-department-store-hope/01-hero.webp',\n";
+const martCovers="  'hobyeongbaekma-mart-despair': '/images/facility-series/ep4-1-mart-despair/01-hero.webp',\n  'hobyeongbaekma-mart-hope': '/images/facility-series/ep4-2-mart-hope/01-hero.webp',\n";
       const hospitalCovers="  'hobyeongbaekma-hospital-despair': '/images/facility-series/ep2-1-hospital-despair/01-hero.webp',\n  'hobyeongbaekma-hospital-hope': '/images/facility-series/ep2-2-hospital-hope/01-hero.webp',\n";
       assert.equal(current.split(departmentStoreCovers).length,2,file+': exact department-store cover additions');
+      assert.equal(current.split(martCovers).length,2,file+': exact mart cover additions');
       assert.equal(current.split(hospitalCovers).length,2,file+': exact hospital cover additions');
       assert.equal(current.split("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];").length,2,file+': series cover size rule');
-      const historical=current.replace(departmentStoreCovers,'').replace(hospitalCovers,'').replace("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];","const coverSize = ['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id) ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];");
+      const historical=current.replace(departmentStoreCovers,'').replace(martCovers,'').replace(hospitalCovers,'').replace("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];","const coverSize = ['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id) ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];");
       assert.equal(sha(Buffer.from(historical)),row.sha256,file+': historical reviewed card source preserved');
     } else assert.equal(sha(fs.readFileSync(file)),row.sha256,file+': reviewed native source');
   }
