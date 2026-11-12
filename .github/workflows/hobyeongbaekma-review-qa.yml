@@ -2,7 +2,7 @@ name: Hobyeongbaekma publication QA
 on:
   pull_request:
     branches: [main]
-    paths: ['docs/drafts/facility/hobyeongbaekma/**', 'scripts/*hobyeongbaekma*', 'scripts/*hospital-two-parter*', 'src/content/facility/hobyeongbaekma.md', 'src/content/facility/hobyeongbaekma-hospital-*.md', 'public/images/facility-series/hobyeongbaekma-00/**', 'public/images/facility-series/ep2-1-hospital-despair/**', 'public/images/facility-series/ep2-2-hospital-hope/**', 'docs/audits/2026-11-07-hobyeongbaekma-publication/**', 'docs/audits/2026-11-08-hobyeongbaekma-integrated-images/**', '.github/workflows/hobyeongbaekma-review-qa.yml']
+    paths: ['docs/drafts/facility/hobyeongbaekma/**', 'scripts/*hobyeongbaekma*', 'scripts/*hospital-two-parter*', 'scripts/*department-store-two-parter*', 'src/content/facility/hobyeongbaekma.md', 'src/content/facility/hobyeongbaekma-hospital-*.md', 'src/content/facility/hobyeongbaekma-department-store-*.md', 'public/images/facility-series/hobyeongbaekma-00/**', 'public/images/facility-series/ep2-1-hospital-despair/**', 'public/images/facility-series/ep2-2-hospital-hope/**', 'public/images/facility-series/ep3-1-department-store-despair/**', 'public/images/facility-series/ep3-2-department-store-hope/**', 'docs/audits/2026-11-12-department-store-two-parter/**', 'docs/audits/2026-11-07-hobyeongbaekma-publication/**', 'docs/audits/2026-11-08-hobyeongbaekma-integrated-images/**', '.github/workflows/hobyeongbaekma-review-qa.yml']
 permissions:
   contents: read
 jobs:
@@ -26,6 +26,7 @@ jobs:
           node scripts/check-facility-related-links.mjs
           node scripts/check-hobyeongbaekma-publication.mjs
           node scripts/check-hospital-two-parter-publication.mjs
+          node scripts/check-department-store-two-parter-publication.mjs
       - name: Install browser test tools
         run: |
           npm install --prefix /tmp/hobyeongbaekma-tools --no-package-lock playwright@1.62.1
@@ -38,6 +39,7 @@ jobs:
           for n in $(seq 1 30); do curl -fsS http://127.0.0.1:4321/ >/dev/null && break; sleep 1; done
           node scripts/qa-hobyeongbaekma-review.cjs
           node scripts/qa-hospital-two-parter.cjs
+          node scripts/qa-department-store-two-parter.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

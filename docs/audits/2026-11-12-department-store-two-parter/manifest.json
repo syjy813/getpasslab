@@ -1,0 +1,33 @@
+{
+  "baseMain": "bf70e0661deb66cb21c274d61cd67ced6e9d6466",
+  "publishedAt": "2026-11-12",
+  "articles": [
+    {
+      "slug": "hobyeongbaekma-department-store-despair",
+      "route": "/facility-management/career/hobyeongbaekma-department-store-despair/",
+      "source": "src/content/facility/hobyeongbaekma-department-store-despair.md",
+      "image": "public/images/facility-series/ep3-1-department-store-despair/01-hero.webp",
+      "hero": "/images/facility-series/ep3-1-department-store-despair/01-hero.webp",
+      "sha256": "f2adf5a160cd34f29d57e1e80dff6aaf43744f2cf24a651afd57b0f6d214f62c"
+    },
+    {
+      "slug": "hobyeongbaekma-department-store-hope",
+      "route": "/facility-management/career/hobyeongbaekma-department-store-hope/",
+      "source": "src/content/facility/hobyeongbaekma-department-store-hope.md",
+      "image": "public/images/facility-series/ep3-2-department-store-hope/01-hero.webp",
+      "hero": "/images/facility-series/ep3-2-department-store-hope/01-hero.webp",
+      "sha256": "610889534186260339f2df39b186690fb9b2d50174c4455cf87fb56fad2bed32"
+    }
+  ],
+  "validation": {
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "publicationScript": "scripts/check-department-store-two-parter-publication.mjs",
+    "responsiveScript": "scripts/qa-department-store-two-parter.cjs"
+  },
+  "status": "publication candidate; user authorized merge/deploy after CI PASS"
+}
