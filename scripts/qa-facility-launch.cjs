@@ -112,7 +112,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert.equal(await page.locator('.facility-featured .facility-section-head .gpl-caption').count(),0,'redundant facility-intro caption removed');
             assert.equal(await page.locator('.facility-learning').count(),0,'home cross-service promotion removed');
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
-            assert.equal(await page.locator('.facility-card').count(),expanded?18:8,'eligible articles appear once on home');
+            assert.equal(await page.locator('.facility-card').count(),expanded?16:8,'eligible articles appear once on home');
             assert.equal(await page.locator('.facility-category-link').count(),expanded?3:2,'only populated categories are linked');
             const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
             assert.equal(new Set(routes).size,expanded?16:8,'no repeated home articles');
