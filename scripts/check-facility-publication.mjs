@@ -11,6 +11,8 @@ const departmentStoreRelease=JSON.parse(fs.readFileSync('docs/audits/2026-11-12-
 const departmentStoreOutputAdditions=departmentStoreRelease.articles.flatMap(row=>['dist'+row.route+'index.html',row.image.replace(/^public/,'dist')]);
 const martRelease=JSON.parse(fs.readFileSync('docs/audits/2026-11-12-mart-two-parter/manifest.json'));
 const martOutputAdditions=martRelease.articles.flatMap(row=>['dist'+row.route+'index.html',row.image.replace(/^public/,'dist')]);
+const hospitalExtraRelease=JSON.parse(fs.readFileSync('docs/audits/2026-11-13-hospital-ep2-3/manifest.json'));
+const hospitalExtraOutputAdditions=hospitalExtraRelease.articles.flatMap(row=>['dist'+row.route+'index.html',row.image.replace(/^public/,'dist')]);
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
@@ -98,7 +100,7 @@ assert.equal(hash(beforeIntegratedStyles(originalCompiledCSS)),headingCSS.curren
 const files=walk('dist').filter(f=>!f.split('/').some(p=>p.startsWith('.'))).sort();
 const addedVisualImages=publicSectorVisuals.images.filter(r=>!r.existing).map(visualOutput);
 for(const row of publicSectorVisuals.images)assert.equal(hash(fs.readFileSync(visualOutput(row))),row.sha256,'approved public-sector output: '+row.publicPath);
-assert.deepEqual(files,[...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...hospitalOutputAdditions,...departmentStoreOutputAdditions,...martOutputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same routes plus approved hotel, episode-0, hospital, department-store and mart outputs; exactly one facility CSS bundle replaced');
+assert.deepEqual(files,[...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...hospitalOutputAdditions,...departmentStoreOutputAdditions,...martOutputAdditions,...hospitalExtraOutputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same routes plus approved hotel, episode-0, hospital, department-store, mart and hospital ep.2-3 outputs; exactly one facility CSS bundle replaced');
 let unchanged=0;
 const approvedRenders=new Set([...publicSectorVisuals.images.filter(r=>r.existing).map(visualOutput),...bulkVisuals.images.map(bulkOutput)]);
 for(const [file,sha] of Object.entries(baseline)){
