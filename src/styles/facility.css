@@ -226,31 +226,3 @@
   border:0;
   border-radius:0;
 }
-
-
-/* Facility article condition cards: compact support/interview checks. */
-.facility-check-grid{
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);
-  margin:var(--space-6) 0 var(--space-8)
-}
-.facility-check-card{
-  min-width:0;padding:var(--space-5);border:1px solid var(--gray-200);
-  border-radius:var(--radius-lg);background:var(--gray-50)
-}
-.facility-check-card .facility-check-number{
-  display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:28px;
-  padding:0 9px;border-radius:var(--radius-full);background:var(--primary-50);
-  color:var(--primary-700);font-size:var(--fs-label);font-weight:var(--fw-bold)
-}
-.facility-page .facility-body .facility-check-card h3{
-  margin:var(--space-3) 0 var(--space-2);font-size:var(--fs-h4);color:var(--gray-900)
-}
-.facility-check-card p{margin:0;color:var(--gray-700);font-weight:var(--fw-semibold);line-height:1.55}
-.facility-check-card strong{
-  display:block;margin-top:var(--space-3);color:var(--gray-600);
-  font-size:var(--fs-caption);font-weight:var(--fw-regular);line-height:1.65
-}
-@media(max-width:639px){
-  .facility-check-grid{grid-template-columns:1fr;gap:var(--space-3)}
-  .facility-check-card{padding:var(--space-4)}
-}
