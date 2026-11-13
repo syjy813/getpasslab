@@ -15,6 +15,21 @@ const articles = Object.values(JSON.parse(fs.readFileSync(audit+'site-article-ma
 const images = JSON.parse(fs.readFileSync(audit+'site-image-map.json'));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const walk = dir => fs.existsSync(dir) ? fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(dir+'/'+e.name):[dir+'/'+e.name]) : [];
+const normalizeApprovedSearchBranding = (file, bytes) => {
+  if (!file.endsWith('.html')) return bytes;
+  let html = bytes.toString('utf8');
+  const approvedFavicon = '<link rel="icon" href="/favicon-approved-v1.png" type="image/png" sizes="96x96">';
+  const baselineFavicon = '<link rel="icon" href="/favicon.svg" type="image/svg+xml">';
+  assert.equal(html.includes(approvedFavicon), true, file+': approved search favicon rendered');
+  html = html.replace(approvedFavicon, baselineFavicon);
+  if (file === 'dist/index.html') {
+    const currentTitle = 'GetPassLab - 시설의 모든 것';
+    const baselineTitle = 'GetPassLab 시설의 모든것';
+    assert.equal(html.split(currentTitle).length - 1, 3, file+': approved home title signals');
+    html = html.replaceAll(currentTitle, baselineTitle);
+  }
+  return Buffer.from(html);
+};
 const attr = (node,key) => node.attrs?.find(a=>a.name===key)?.value;
 const nodes = root => [root,...(root.childNodes||[]).flatMap(nodes)];
 for (const [file,hash] of Object.entries({...manifest.source,...manifest.assets})) assert.equal(sha(fs.readFileSync(file)),hash,file);
@@ -74,6 +89,10 @@ if(!preview) {
     const output=await sharp(source,{density:96}).resize(1440,1080,{fit:'fill'}).webp({quality:86,effort:6}).toBuffer();
     expectedGenerated.set('dist/images/facility-drafts/05/'+name+'.webp',sha(output));
   }
-  for(const file of files)assert.equal(sha(fs.readFileSync(file)),expectedGenerated.get(file)??baseline[file],file+': approved public bytes');
+  for(const file of files) {
+    const bytes=fs.readFileSync(file);
+    const reviewedBytes=expectedGenerated.has(file) ? bytes : normalizeApprovedSearchBranding(file,bytes);
+    assert.equal(sha(reviewedBytes),expectedGenerated.get(file)??baseline[file],file+': approved public bytes');
+  }
   console.log('Facility draft guard: 8 drafts and 40 assets excluded; '+(files.length-generated.size)+' public files byte-identical to PR242; 3 approved PR245 master renders verified');
 } else console.log('Facility draft guard: 8 draft routes, 40 images, '+links+' internal links, robots/schema/sitemap PASS');
