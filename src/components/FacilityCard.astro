@@ -7,6 +7,7 @@ const { article, lead = false } = Astro.props;
 // Reuse images already referenced in the corresponding published article.
 // A future article without a cover remains a text card.
 const covers: Record<string, string> = {
+  'hobyeongbaekma-hospital-large-university': '/images/facility-series/ep2-3-hospital-large/01-hero.webp',
   'hobyeongbaekma-mart-despair': '/images/facility-series/ep4-1-mart-despair/01-hero.webp',
   'hobyeongbaekma-mart-hope': '/images/facility-series/ep4-2-mart-hope/01-hero.webp',
   'hobyeongbaekma-department-store-despair': '/images/facility-series/ep3-1-department-store-despair/01-hero.webp',
