@@ -4,12 +4,20 @@
 
 ## 기준 상태
 
-- 최종 갱신: **2026-11-12 KST** · 호병백마 **마트 ep.4-1 절망편 / ep.4-2 희망편과 시리즈 통일 썸네일 2장 Production 배포 성공**.
-- 제품 기준: `main`, [PR #274](https://github.com/syjy813/getpasslab/pull/274) squash 병합 제품 커밋 **`0f6cb3503f991cb22bedbd1ca3a1e4a3d1997fa6`**.
-- 배포 기준: [GitHub Pages run 43152644190](https://github.com/syjy813/getpasslab/actions/runs/43152644190), Build/Deploy 모두 `completed/success`. Deploy job `130965469040`에서 `Reported success!`, 환경 URL `https://getpasslab.co.kr/` 확인.
+- 최종 갱신: **2026-11-13 KST** · Google 검색용 파비콘과 홈 타이틀 변경 Production 배포 성공.
+- 제품 기준: `main`, [PR #276](https://github.com/syjy813/getpasslab/pull/276) squash 병합 제품 커밋 **`662ca57371d08d6b417e8feec6a339fba6930348`**.
+- 배포 기준: [GitHub Pages run 43337329786](https://github.com/syjy813/getpasslab/actions/runs/43337329786), 제품 `662ca573` 대상 Build/Deploy `completed/success`. 공개 HTML 실시간 조회는 별도 재확인 필요.
 - 운영 문서 갱신은 `[skip ci]` 커밋으로 별도 반영해 제품 재배포를 발생시키지 않는다.
 
-## 이번 작업 결과
+## 이번 작업 결과 — Google 검색 브랜딩
+
+- 홈 `<title>`: `GetPassLab - 시설의 모든 것` (`src/pages/index.astro`), `og:title`/`twitter:title`도 공통 레이아웃에서 같은 값 사용.
+- 파비콘: 기존 Owner 승인 `favicon-approved-v1.png`(96×96 PNG) 참조 (`src/layouts/BaseLayout.astro`).
+- 시설 관련 QA의 고정 승인 blob/HTML 보호 규칙을 해당 변경만 허용하도록 보정. 기존 공개 URL 및 콘텐츠 데이터는 변경 없음.
+- PR #276 최종 HEAD `205ffb95e5eb4f41949a757db3ac48ab01ac9e2b` 사전 CI 7/7 PASS. `main` squash 병합 제품 `662ca573`, Pages Build/Deploy PASS.
+- 미확인: 실서버 HTML 직접 조회 및 Google 검색결과 재크롤링/반영. 배포 성공은 검색결과 즉시 변경을 보장하지 않음.
+
+## 직전 콘텐츠 배포 결과 — 마트 ep.4
 
 사용자 요청: 호병백마 마지막 시설 유형인 마트 절망편·희망편을 제작하고, 기존 병원·백화점과 통일된 시리즈 썸네일을 적용해 실서버 배포.
 
@@ -47,11 +55,14 @@
 
 ## 다음 행동
 
-1. 배포 후 전역 회귀 QA 10개 종료 상태를 제품 `0f6cb350`과 연결해 확인한다.
-2. 사용자 브라우저에서 마트 두 글을 강력 새로고침하고 최종 썸네일·본문·표·상호 링크를 모바일/PC에서 육안 확인한다.
-3. 호병백마 ep.0~4 전체 시리즈의 연결 구조·목록 순서를 필요 시 최종 점검한다.
+1. 실서버 `https://getpasslab.co.kr/`의 `<title>`, `og:title`, `twitter:title`과 `/favicon-approved-v1.png` 응답을 직접 확인한다.
+2. Google 재크롤링 후 검색결과 제목·파비콘 갱신 여부를 별도로 모니터링한다.
+3. 호병백마 마트 두 글의 최종 모바일/PC 육안 QA가 필요하면 추가 확인한다.
 
 ## 근거
+
+- [PR #276](https://github.com/syjy813/getpasslab/pull/276)
+- [Pages run 43337329786](https://github.com/syjy813/getpasslab/actions/runs/43337329786), 제품 `662ca57371d08d6b417e8feec6a339fba6930348`
 
 - [PR #274](https://github.com/syjy813/getpasslab/pull/274)
 - [Pages run 43152644190](https://github.com/syjy813/getpasslab/actions/runs/43152644190), Artifact ID `13914323321`
