@@ -1,59 +1,32 @@
 # GetPassLab — 현재 상태 Snapshot
 
-실행 지침은 [AGENTS.md](AGENTS.md). 과거 작업·상세 검증은 Git PR·Actions·[audits](docs/audits/)를 정본으로 참조하며, 오래된 전체 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)에 보존한다.
+실행 지침은 [AGENTS.md](AGENTS.md). 상세 검증은 Git PR·Actions·[audits](docs/audits/)를 정본으로 참조한다. 오래된 전체 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)에 보존한다.
 
-## 기준 상태
+## 현재 작업 — 사수골대 사전 자료 수집
 
-- 최종 갱신: **2026-11-13 KST** · 호병백마 병원 ep.2-3 대학·대형병원 시설직 콘텐츠 Production 배포 성공.
-- 제품 기준: `main`, [PR #275](https://github.com/syjy813/getpasslab/pull/275) squash 병합 제품 커밋 **`a25acff4dc772b9dd12f5910584fe527bf40edd4`**.
-- 배포 기준: [GitHub Pages run 43337873601](https://github.com/syjy813/getpasslab/actions/runs/43337873601), Build/Deploy 모두 `completed/success`. Deploy 로그에서 제품 `a25acff4`의 Pages deployment 생성 후 `Reported success!`, 환경 URL `https://getpasslab.co.kr/` 확인.
-- 배포 Artifact: **ID `13997268692`**, digest `sha256:59781a1b4fd174210c762a06139852ef3b4d269e05fab23182a48ee59c162773`.
-- 운영 문서 갱신은 `[skip ci]` 커밋으로 별도 반영해 제품 재배포를 발생시키지 않는다.
-
-## 이번 작업 결과 — 호병백마 병원 ep.2-3
-
-사용자 요청: 대학·대형병원 시설직의 장점과 지원·면접 단계 확인 조건을 정리한 병원 ep.2-3을 최종 썸네일과 함께 실서버 배포.
-
-| 단계 | 상태 |
-|---|---|
-| 공개 원고 | **완료** · `src/content/facility/hobyeongbaekma-hospital-large-university.md` · 제목 `[호병백마 ep.2-3] 병원도 다 같은 병원이 아니다｜대학·대형병원 시설직은 왜 따로 봐야 할까?` |
-| 핵심 흐름 | **완료** · 대학·대형병원의 복지·고용·조직·설비 경험 장점 → 같은 병원 안의 직군/고용구조 차이 → 지원·면접 단계부터 조건 확인 |
-| 조건 카드 | **완료** · 기존 검증된 시설 카드 UI 재사용. 고용주 / 직군 / 고용형태 / 보수·연금 / 복리후생 / 실제 업무·장기근속 **6개 카드** |
-| 근거 | **완료** · 서울대학교병원 2026 하반기 채용의 기술직 기계 J1·시설지원직 기계 SA1 구분, 강원대학교병원 업무협력직 사례, 서울아산병원 복리후생 안내. 대학·대형병원 전체로 일반화하지 않음 |
-| 썸네일 | **완료** · 사람 제거, `변외편` 문구 제거, `대학·대형병원은 어떨까?` 확정. 1440×1080 WebP, SHA-256 `184def5eb152d17238e77914709adcb8948c73449b9060b4d359bd5fb4e300e1` |
-| 사전 QA | **PASS** · 최신 HEAD `c98eea5d`: SEO / 호병백마 / 시설 publication·private-preview / 자격증 탐색 PASS. 병원 responsive QA는 **3페이지 × 320·390·768·1440px PASS** |
-| 소방 회귀 | **PASS 증거 재사용** · 같은 작업 HEAD `11067f39`, run `43335286662` success. 이후 변경은 시설 ep.2-3 본문·시설 전용 카드 매핑·시설 QA/가드뿐이며 소방 콘텐츠·공용 레이아웃·의존성 변경 없음 |
-| Git | **완료** · PR #275 squash 병합 → 제품 `a25acff4` |
-| Pages | **완료** · run `43337873601`, Build/Deploy success |
-| 배포 Artifact QA | **PASS** · 새 HTML 존재, canonical 정확, sitemap 포함, 6개 조건 카드, 병원 ep.2-1/2-2 링크, hero 경로 확인. 배포 WebP 1440×1080 및 승인 SHA-256 정확히 일치 |
-| Production 직접 HTTP | **환경 한계** · 현재 실행환경의 외부 DNS에서 `getpasslab.co.kr` 직접 조회가 실패해 실도메인 HTTP 육안 확인은 수행하지 못함. 대신 GitHub Pages deployment success + 실제 배포 Artifact를 제품 커밋과 연결해 검증함 |
-
-## 공개 URL
-
-- 병원 ep.2-3: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-large-university/
-- 병원 ep.2-1 절망편: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-despair/
-- 병원 ep.2-2 희망편: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-hope/
-- 시리즈 ep.0: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/
-
-## 보호된 최근 상태
-
-- Google 검색 브랜딩 작업: PR #276, 제품 `662ca57371d08d6b417e8feec6a339fba6930348`, Pages run `43337329786` success. 이번 ep.2-3 병합은 당시 최신 `main` 위에 정상 병합됨.
-- 마트 ep.4: PR #274, 제품 `0f6cb350`.
-- 백화점 ep.3: PR #273.
-- 병원 ep.2-1/2-2: PR #271/#272.
-- 호텔 ep.1: PR #264.
-- ep.0: PR #270.
-- 이번 작업에서 기존 공개 URL·기존 호병백마 본문·이미지는 변경하지 않음. 홈 최신 6개 슬라이스에는 새 ep.2-3가 들어오며 기존 병원 카드 중 1개만 남는 동작을 회귀 QA에서 명시적으로 검증함.
+- 갱신: **2026-11-13**. 조사 기준 `main@281264eefaa894de4f71392107765cef27e5044f`.
+- 브랜치: `codex/sasugoldae-source-research-20261113`. 정확한 문서 커밋·Push 여부는 이 브랜치의 Git/원격 HEAD로 확인한다.
+- 상태: **부분 완료**. 핵심 유효 후보 **60건**(범수방 공개 설명1·디시9·블로그2·기숙사 행정 인터뷰1·채용31·공식16), 보조5·원장 제외3. 독립 경험60건이라는 의미가 아니다.
+- 생성: `docs/drafts/facility/sasugoldae/`의 `source-index.md` + ep.0/사우나/수영장/골프장/대학교 source review **6개**. 소스별 요약·URL·게시/확인일·업무·고용·근무·급여 등과 신뢰 범위·미검증 사항을 기록했다.
+- 핵심 판단: 시설 이름보다 고용주·직군·담당범위·설비·인원·교대·외주 조건을 비교한다. 골프 코스/건물·대학병원/대학·공무원/공무직·운영사/용역사 정규직을 구분했다.
+- 미완료: 범수방 카페 본문 접근, 디시 댓글 전체 확인, Google 직접 결과 확인, 시설별 후기 목표, 사우나/수영장 긍정 직접후기, 대학 자회사·직군별 실제 경험, 법령 별표 판본·연금 적용·일부 공고 첨부 상세.
+- 검증: 6파일·15절 구조, 핵심60/집계, 소스ID·내부 링크·필수 기록항목 및 변경 경계 점검. 웹 전체 링크의 상시 접근·개인 경험의 독립 인증은 보장하지 않는다.
+- Build/화면 QA: 문서만 변경해 수행하지 않음. 공개 콘텐츠·코드·URL·이미지 변경 없음. **Production 배포 없음.** 문서 브랜치를 main에 병합하지 않았다.
 
 ## 다음 행동
 
-1. 사용자 브라우저에서 ep.2-3를 강력 새로고침해 실제 도메인의 최종 썸네일·6개 카드 표시를 한 번 육안 확인하면 Production 확인이 완결됨.
-2. Google 검색 브랜딩 변경은 별도 재크롤링 반영 여부를 계속 구분해 판단한다.
+1. [전체 출처·완료 판정](docs/drafts/facility/sasugoldae/source-index.md)의 접근 제한·미달 목록부터 재개한다. 기존60건을 처음부터 다시 수집하지 않는다.
+2. 단독 사우나·공공/민간 수영장의 긍정/부정 직접후기, 범수방 원문을 우선 보완한다. 접근 불가·질문·미러로 개수를 채우지 않는다.
+3. 대학 본부/대학회계/연구소/용역/자회사별 경험과 현행 연금·임용 조건을 추가 대조한다. 대학 고용구조 별도편 분리를 권고하되 공개 집필은 이번 범위 밖이다.
+4. 모델 변경은 현재 필수로 판단하지 않았다. 향후 상충 근거·연금·직군 최종 검수 시 추론 강도 상향을 고려할 수 있으나 접근 제한 해결과는 별개다.
 
-## 근거
+## 보호된 Production 기준
 
-- [PR #275](https://github.com/syjy813/getpasslab/pull/275)
-- [Pages run 43337873601](https://github.com/syjy813/getpasslab/actions/runs/43337873601), Artifact ID `13997268692`
-- 제품 커밋 `a25acff4dc772b9dd12f5910584fe527bf40edd4`
-- 내부 근거 검토: `docs/drafts/facility/hobyeongbaekma/episode02-3-hospital-employment-structure-source-review.md`
-- Release manifest: `docs/audits/2026-11-13-hospital-ep2-3/manifest.json`
+- 최근 제품: 호병백마 병원 ep.2-3, [PR #275](https://github.com/syjy813/getpasslab/pull/275), 제품 커밋 **`a25acff4dc772b9dd12f5910584fe527bf40edd4`**.
+- [Pages run 43337873601](https://github.com/syjy813/getpasslab/actions/runs/43337873601): Build/Deploy success. Artifact `13997268692`, digest `sha256:59781a1b4fd174210c762a06139852ef3b4d269e05fab23182a48ee59c162773`.
+- 기존 배포 Artifact 검증은 해당 제품에 대한 증거다. 6개 조건 카드·canonical·sitemap·썸네일 1440×1080과 SHA-256 일치. 사수골대 문서 검증이나 신규 배포 증거로 전용하지 않는다.
+- 직전 환경에서 `getpasslab.co.kr` 직접 DNS/HTTP 확인은 실패했다. 배포 성공·Artifact QA와 실도메인 직접 육안 QA를 구분한다. 사용자 브라우저의 최종 화면 확인은 남아 있다.
+- 병원 ep.2-3: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-large-university/
+- 상세: [병원 ep.2-3 manifest](docs/audits/2026-11-13-hospital-ep2-3/manifest.json), 기존 배포 검증은 PR #275와 해당 run 참조.
+- Google 검색 브랜딩은 PR #276·`662ca57371d08d6b417e8feec6a339fba6930348`·run `43337329786` success로 이전 병원 배포에 포함. 재크롤링 반영은 별도 확인 사항이다.
+- 이전 시리즈: 마트 PR #274, 백화점 #273, 병원 #271/#272, 호텔 #264, ep.0 #270. 이번 조사에서 수정하지 않았다.
