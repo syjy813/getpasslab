@@ -16,7 +16,7 @@ sources:
     url: 'https://www.snuh.org/about/news/recruit/recruView.do?recruit_id=26110'
     note: '일반 기술직 기계 J1과 시설지원직 기계 SA1을 별도 직군으로 모집한 사례. 같은 병원 시설 관련 채용도 직군·지원자격이 나뉠 수 있음을 확인하는 근거로 사용.'
   - title: '강원대학교병원 · 2025-26 업무협력직 채용 공고'
-    url: 'https://www.knuh.or.kr/hospitalinfo/hospitalinfo_03_05_view.asp?bid=1&idx=33280&page=1'
+    url: 'https://www.knuh.or.kr/upfiles/2024-35%20%EC%97%85%EB%AC%B4%ED%98%91%EB%A0%A5%EC%A7%81%28%EC%B2%AD%EC%86%8C%29%20%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0.pdf'
     note: '시설관리 등을 담당하는 업무협력직 정규직 전환 직종 사례. 일반직과 직무·보수 차이가 있음을 공고에서 안내한 사례로 사용.'
   - title: '서울아산병원 채용안내 · 복리후생'
     url: 'https://recruit.amc.seoul.kr/recruit/info/welfare.do'
@@ -160,45 +160,56 @@ legalReview: false
 
 **공고를 읽는 순간부터 확인하고, 공고만으로 알 수 없는 부분은 면접에서 질문해야 한다.**
 
-<div class="facility-check-grid" role="list" aria-label="대학·대형병원 시설직 지원·면접 체크 항목">
-  <section class="facility-check-card" role="listitem">
-    <span class="facility-check-number">01</span>
-    <h3>고용주</h3>
-    <p>병원 직접고용 / 자회사 / 위탁업체</p>
-    <strong>같은 병원에서 일해도 소속이 다르면 급여·복지·장기근속 구조가 달라질 수 있음</strong>
-  </section>
-  <section class="facility-check-card" role="listitem">
-    <span class="facility-check-number">02</span>
-    <h3>직군</h3>
-    <p>기술직 / 기능직 / 시설지원직 / 별도직군</p>
-    <strong>같은 정규직이어도 직군에 따라 보수체계와 조직 내 위치가 달라질 수 있음</strong>
-  </section>
-  <section class="facility-check-card" role="listitem">
-    <span class="facility-check-number">03</span>
-    <h3>고용형태</h3>
-    <p>정규직 / 기간제 / 계약직</p>
-    <strong>정규직 여부를 확인하되 ‘어느 직군의 정규직인가’까지 함께 확인</strong>
-  </section>
-  <section class="facility-check-card" role="listitem">
-    <span class="facility-check-number">04</span>
-    <h3>보수·연금</h3>
-    <p>기본급 / 수당 / 경력인정 / 적용 연금</p>
-    <strong>초임뿐 아니라 장기적인 임금 상승 구조와 실제 적용 제도를 확인</strong>
-  </section>
-  <section class="facility-check-card" role="listitem">
-    <span class="facility-check-number">05</span>
-    <h3>복리후생</h3>
-    <p>병원 복지 + 내 직군 적용 여부</p>
-    <strong>병원 전체 복지 안내를 내 조건으로 바로 가져오지 말고 적용 범위를 확인</strong>
-  </section>
-  <section class="facility-check-card" role="listitem">
-    <span class="facility-check-number">06</span>
-    <h3>실제 업무·장기근속</h3>
-    <p>담당 설비 / 외주 범위 / 교대·당직 / 정년·승진</p>
-    <strong>오래 다닐 수 있는 조건과 원하는 기술경력이 함께 쌓이는 자리인지 확인</strong>
-  </section>
+<div class="facility-story-grid" role="list" aria-label="대학·대형병원 시설직 지원·면접 체크 항목">
+  <div class="facility-card facility-card--text" role="listitem">
+    <div class="facility-card-content">
+      <span class="card-label">01</span>
+      <h3 class="facility-card-title">고용주</h3>
+      <p><strong>병원 직접고용 / 자회사 / 위탁업체</strong></p>
+      <p>같은 병원에서 일해도 소속이 다르면 급여·복지·장기근속 구조가 달라질 수 있음</p>
+    </div>
+  </div>
+  <div class="facility-card facility-card--text" role="listitem">
+    <div class="facility-card-content">
+      <span class="card-label">02</span>
+      <h3 class="facility-card-title">직군</h3>
+      <p><strong>기술직 / 기능직 / 시설지원직 / 별도직군</strong></p>
+      <p>같은 정규직이어도 직군에 따라 보수체계와 조직 내 위치가 달라질 수 있음</p>
+    </div>
+  </div>
+  <div class="facility-card facility-card--text" role="listitem">
+    <div class="facility-card-content">
+      <span class="card-label">03</span>
+      <h3 class="facility-card-title">고용형태</h3>
+      <p><strong>정규직 / 기간제 / 계약직</strong></p>
+      <p>정규직 여부를 확인하되 ‘어느 직군의 정규직인가’까지 함께 확인</p>
+    </div>
+  </div>
+  <div class="facility-card facility-card--text" role="listitem">
+    <div class="facility-card-content">
+      <span class="card-label">04</span>
+      <h3 class="facility-card-title">보수·연금</h3>
+      <p><strong>기본급 / 수당 / 경력인정 / 적용 연금</strong></p>
+      <p>초임뿐 아니라 장기적인 임금 상승 구조와 실제 적용 제도를 확인</p>
+    </div>
+  </div>
+  <div class="facility-card facility-card--text" role="listitem">
+    <div class="facility-card-content">
+      <span class="card-label">05</span>
+      <h3 class="facility-card-title">복리후생</h3>
+      <p><strong>병원 복지 + 내 직군 적용 여부</strong></p>
+      <p>병원 전체 복지 안내를 내 조건으로 바로 가져오지 말고 실제 적용 범위를 확인</p>
+    </div>
+  </div>
+  <div class="facility-card facility-card--text" role="listitem">
+    <div class="facility-card-content">
+      <span class="card-label">06</span>
+      <h3 class="facility-card-title">실제 업무·장기근속</h3>
+      <p><strong>담당 설비 / 외주 범위 / 교대·당직 / 정년·승진</strong></p>
+      <p>오래 다닐 수 있는 조건과 원하는 기술경력이 함께 쌓이는 자리인지 확인</p>
+    </div>
+  </div>
 </div>
-
 ## 면접에서는 이렇게 물어보자
 
 공고에서 확인하지 못한 내용은 면접에서 구체적으로 물어보면 된다.
