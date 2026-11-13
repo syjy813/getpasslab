@@ -6,7 +6,7 @@ assertEpisode00Release();
 import {bulkVisuals,beforeBulkVisuals,assertBulkVisuals,bulkOutput} from './read-facility-bulk-visuals.mjs';
 // The original facility-publication fingerprint is kept immutable in
 // docs/audits/2026-10-31-facility-launch/review.json.gz.
-// The approved editorial UI and subsequent navy route rebrand pin fifteen exact source blobs.
+// The approved editorial UI and current search branding pin sixteen exact source blobs.
 // Preserve exact old bytes for everything else, the complete output page/URL
 // inventory, and all original facility assets. Reviewed image derivatives are pinned separately. Generated HTML changes
 // globally when the common header and footer change; verify its semantics via
@@ -31,7 +31,8 @@ const editorialBlobs = {
   'src/pages/[cert]/[exam]/index.astro': '3e648acef59825aa1430431775e1226989605ab3',
   'src/styles/global.css': '297274d23a54af8863e44cb6f26c2e945617f6f8',
   'src/components/GNB.astro': 'b349aba310092b9170fe6b13db4c55742431370d',
-  'src/layouts/BaseLayout.astro': '3446eb7568da5bf0d35364fdd6d7639776df7938',
+  'src/layouts/BaseLayout.astro': '02a88c45b7e82afc1b8f38a43b74d840f877b9a4',
+  'src/pages/index.astro': '3359904eb7683b843b6c026a68c30ca3fcb73541',
   'public/favicon.svg': '035e5d8687d0c001e2cf16f5f83b3fb7a592bc90',
   'src/pages/certifications/index.astro': '125799ae05dc3918bd43b16babbdcfd9bf1fc043',
   'src/styles/catalog.css': '8a90e16d57215350e844faf7accf12cd20b1cd68',
@@ -93,7 +94,11 @@ const martCovers="  'hobyeongbaekma-mart-despair': '/images/facility-series/ep4-
     } else {
       assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
     }
-    assert.notEqual(hash(bytes), facilityReview.current[file], file + ': changed from publication snapshot');
+    // Restoring the Owner-approved PNG favicon intentionally returns BaseLayout to the original publication bytes.
+    // Its exact current blob is pinned above, so only the other reviewed editorial files must differ from that snapshot.
+    if (file !== 'src/layouts/BaseLayout.astro') {
+      assert.notEqual(hash(bytes), facilityReview.current[file], file + ': changed from publication snapshot');
+    }
     reviewedEditorialPaths.push(file);
   } else if (file.startsWith('dist/')) {
     // Exact rendered HTML bytes change on every page due to shared GNB/footer.

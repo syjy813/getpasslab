@@ -29,6 +29,20 @@ const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirector
 const nodes=n=>[n,...(n.childNodes||[]).flatMap(nodes)];
 const attr=(n,k)=>n?.attrs?.find(a=>a.name===k)?.value;
 const text=n=>n?.nodeName==='#text'?n.value:(n?.childNodes||[]).map(text).join('');
+const beforeSearchBranding=(file,bytes)=>{
+ if(!file.endsWith('.html'))return bytes;
+ let html=bytes.toString('utf8');
+ const approvedFavicon='<link rel="icon" href="/favicon-approved-v1.png" type="image/png" sizes="96x96">';
+ const baselineFavicon='<link rel="icon" href="/favicon.svg" type="image/svg+xml">';
+ if(html.includes(approvedFavicon))html=html.replace(approvedFavicon,baselineFavicon);
+ if(file==='dist/index.html'){
+  const currentTitle='GetPassLab - 시설의 모든 것';
+  const baselineTitle='GetPassLab 시설의 모든것';
+  assert.equal(html.split(currentTitle).length-1,3,file+': approved home title signals');
+  html=html.replaceAll(currentTitle,baselineTitle);
+ }
+ return Buffer.from(html);
+};
 assert.equal(Object.keys(release.source).length,8);
 assert.deepEqual(Object.keys(release.source).sort(),Object.keys(original.source).sort(),'same eight reviewed article identities');
 assert.deepEqual(release.assets,original.assets,'all forty reviewed image bytes remain unchanged');
@@ -106,6 +120,7 @@ for(const [file,sha] of Object.entries(baseline)){
  // Facility lists/related links and XML reflect the reviewed release. Native
  // guard separately pins old source files and the three PR245 SVG renders.
  if(file.startsWith('dist/facility-management/')||file.endsWith('.xml')||approvedRenders.has(file))continue;
- assert.equal(hash(beforeBulkVisuals(file,fs.readFileSync(file))),sha,file+': existing public bytes protected');unchanged++;
+ const protectedBytes=beforeSearchBranding(file,beforeBulkVisuals(file,fs.readFileSync(file)));
+ assert.equal(hash(protectedBytes),sha,file+': existing public bytes protected');unchanged++;
 }
 console.log('[Facility release] PASS',JSON.stringify({articles:8,images:40,links,mode:preview?'private-preview':'publication-candidate',publicFiles:files.length,unchangedPublicFiles:unchanged,date:release.plannedPublicationDate}));
