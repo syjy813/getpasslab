@@ -103,9 +103,10 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert.equal(categoryHeader.breadcrumbGap,'24px','subject-list breadcrumb spacing');
             assert.equal(categoryHeader.bottomRule,'1px','header separator retained');
             assert.equal(categoryHeader.listGap,'32px','article cards retain a clear 32px gap');
-            const counts = {career:13,jobs:expanded?5:1,practice:0,qualifications:expanded?4:0};
+            const counts = {career:14,jobs:expanded?5:1,practice:0,qualifications:expanded?4:0};
             assert.equal(await page.locator('.facility-category-list .facility-card').count(),
               counts[slug], 'existing article cards retained by category');
+            if (slug === 'career') assert.equal(await page.locator('.facility-category-list .facility-card[href="/facility-management/career/hobyeongbaekma-hospital-large-university/"]').count(),1,'hospital ep.2-3 category card');
           }
           if (path === '/facility-management/') {
             assert.equal(await page.locator('.facility-intro .facility-eyebrow').count(),0,'top eyebrow removed');

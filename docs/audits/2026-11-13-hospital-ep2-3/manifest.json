@@ -1,0 +1,25 @@
+{
+  "baseMain": "00988913e862c2356b79b4809ed022ae2485f30d",
+  "publishedAt": "2026-11-13",
+  "articles": [
+    {
+      "slug": "hobyeongbaekma-hospital-large-university",
+      "route": "/facility-management/career/hobyeongbaekma-hospital-large-university/",
+      "source": "src/content/facility/hobyeongbaekma-hospital-large-university.md",
+      "image": "public/images/facility-series/ep2-3-hospital-large/01-hero.webp",
+      "hero": "/images/facility-series/ep2-3-hospital-large/01-hero.webp",
+      "sha256": "184def5eb152d17238e77914709adcb8948c73449b9060b4d359bd5fb4e300e1"
+    }
+  ],
+  "validation": {
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "publicationScript": "scripts/check-hospital-two-parter-publication.mjs",
+    "responsiveScript": "scripts/qa-hospital-two-parter.cjs"
+  },
+  "status": "publication candidate; user authorized merge/deploy after CI PASS"
+}

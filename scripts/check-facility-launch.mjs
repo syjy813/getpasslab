@@ -58,6 +58,9 @@ const departmentStoreOutputAdditions = new Set(departmentStoreRelease.articles.m
 const martRelease = JSON.parse(fs.readFileSync('docs/audits/2026-11-12-mart-two-parter/manifest.json'));
 const martSourceAdditions = new Set(martRelease.articles.flatMap(row => [row.source, row.image]));
 const martOutputAdditions = new Set(martRelease.articles.map(row => 'dist'+row.route+'index.html'));
+const hospitalExtraRelease = JSON.parse(fs.readFileSync('docs/audits/2026-11-13-hospital-ep2-3/manifest.json'));
+const hospitalExtraSourceAdditions = new Set(hospitalExtraRelease.articles.flatMap(row => [row.source, row.image]));
+const hospitalExtraOutputAdditions = new Set(hospitalExtraRelease.articles.map(row => 'dist'+row.route+'index.html'));
 for (const [file, sha] of Object.entries({...draftManifest.source, ...publication?.source, ...draftManifest.assets})) {
   assert.equal(hash(beforeBulkVisuals(file,fs.readFileSync(file))), sha, file + ': pinned reviewed draft');
 }
@@ -65,7 +68,7 @@ const files = [
   ...walk('src'),
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
-].filter(file => !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
+].filter(file => !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
@@ -86,10 +89,12 @@ for (const file of files) {
       const departmentStoreCovers="  'hobyeongbaekma-department-store-despair': '/images/facility-series/ep3-1-department-store-despair/01-hero.webp',\n  'hobyeongbaekma-department-store-hope': '/images/facility-series/ep3-2-department-store-hope/01-hero.webp',\n";
 const martCovers="  'hobyeongbaekma-mart-despair': '/images/facility-series/ep4-1-mart-despair/01-hero.webp',\n  'hobyeongbaekma-mart-hope': '/images/facility-series/ep4-2-mart-hope/01-hero.webp',\n";
       const hospitalCovers="  'hobyeongbaekma-hospital-despair': '/images/facility-series/ep2-1-hospital-despair/01-hero.webp',\n  'hobyeongbaekma-hospital-hope': '/images/facility-series/ep2-2-hospital-hope/01-hero.webp',\n";
+      const hospitalExtraCover="  'hobyeongbaekma-hospital-large-university': '/images/facility-series/ep2-3-hospital-large/01-hero.webp',\n";
       assert.equal(current.split(departmentStoreCovers).length,2,file + ': exact department-store cover additions');
       assert.equal(current.split(hospitalCovers).length,2,file + ': exact hospital cover additions');
+      assert.equal(current.split(hospitalExtraCover).length,2,file + ': exact hospital ep.2-3 cover addition');
       assert.equal(current.split("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];").length,2,file + ': series cover size rule');
-      const historical=Buffer.from(current.replace(departmentStoreCovers,'').replace(martCovers,'').replace(hospitalCovers,'').replace("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];","const coverSize = ['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id) ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];"));
+      const historical=Buffer.from(current.replace(departmentStoreCovers,'').replace(martCovers,'').replace(hospitalCovers,'').replace(hospitalExtraCover,'').replace("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];","const coverSize = ['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id) ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];"));
       assert.equal(gitBlob(historical), editorialBlobs[file], file + ': approved card baseline with hospital and department-store cover extensions');
     } else {
       assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');

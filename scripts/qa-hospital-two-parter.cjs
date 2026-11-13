@@ -3,7 +3,8 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4321';
 const rows=[
  {slug:'hobyeongbaekma-hospital-despair',route:'/facility-management/career/hobyeongbaekma-hospital-despair/',other:'/facility-management/career/hobyeongbaekma-hospital-hope/'},
- {slug:'hobyeongbaekma-hospital-hope',route:'/facility-management/career/hobyeongbaekma-hospital-hope/',other:'/facility-management/career/hobyeongbaekma-hospital-despair/'}
+ {slug:'hobyeongbaekma-hospital-hope',route:'/facility-management/career/hobyeongbaekma-hospital-hope/',other:'/facility-management/career/hobyeongbaekma-hospital-despair/'},
+ {slug:'hobyeongbaekma-hospital-large-university',route:'/facility-management/career/hobyeongbaekma-hospital-large-university/',other:'/facility-management/career/hobyeongbaekma-hospital-hope/',checks:6}
 ];
 const output='qa-results/hospital-two-parter';fs.mkdirSync(output,{recursive:true});
 (async()=>{const browser=await chromium.launch();const results=[];try{
@@ -18,11 +19,11 @@ const output='qa-results/hospital-two-parter';fs.mkdirSync(output,{recursive:tru
    assert.equal(state.h1,1);assert.equal(state.sources,0);assert(state.scrollWidth<=state.width+1,'no page overflow');
    assert.equal(state.image.width,1440);assert.equal(state.image.height,1080);assert(Math.abs(state.image.renderedWidth/state.image.renderedHeight-4/3)<.01,'uncropped 4:3');
    assert(state.heads.length>=6&&state.heads.every(h=>h.color==='rgb(20, 92, 62)'&&Number(h.weight)>=700),'heading hierarchy');
-   assert.equal(await page.locator('.facility-body a[href="'+row.other+'"]').count(),1,'counterpart link');
+   assert.equal(await page.locator('.facility-body a[href="'+row.other+'"]').count(),1,'counterpart link');if(row.checks)assert.equal(await page.locator('.facility-body .facility-story-grid .facility-card--text').count(),row.checks,'support/interview cards');
    await page.locator('.facility-toc summary').click();const target=await page.locator('.facility-toc a').first().getAttribute('href');await page.locator('.facility-toc a').first().click();assert(decodeURIComponent(new URL(page.url()).hash)===decodeURIComponent(target));
    await page.goto(base+row.route);await page.locator('.facility-body img').evaluate(img=>img.decode());await page.screenshot({path:output+'/'+row.slug+'-'+width+'.png',fullPage:true});
    results.push({route:row.route,width,...state});
   } await context.close();
  }
- fs.writeFileSync(output+'/results.json',JSON.stringify({base,results},null,2));console.log('Hospital responsive QA PASS: 2 pages × 4 widths');
+ fs.writeFileSync(output+'/results.json',JSON.stringify({base,results},null,2));console.log('Hospital responsive QA PASS: 3 pages × 4 widths');
 }finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});
