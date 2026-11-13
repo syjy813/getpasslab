@@ -4,67 +4,56 @@
 
 ## 기준 상태
 
-- 최종 갱신: **2026-11-13 KST** · Google 검색용 파비콘과 홈 타이틀 변경 Production 배포 성공.
-- 제품 기준: `main`, [PR #276](https://github.com/syjy813/getpasslab/pull/276) squash 병합 제품 커밋 **`662ca57371d08d6b417e8feec6a339fba6930348`**.
-- 배포 기준: [GitHub Pages run 43337329786](https://github.com/syjy813/getpasslab/actions/runs/43337329786), 제품 `662ca573` 대상 Build/Deploy `completed/success`. 공개 HTML 실시간 조회는 별도 재확인 필요.
+- 최종 갱신: **2026-11-13 KST** · 호병백마 병원 ep.2-3 대학·대형병원 시설직 콘텐츠 Production 배포 성공.
+- 제품 기준: `main`, [PR #275](https://github.com/syjy813/getpasslab/pull/275) squash 병합 제품 커밋 **`a25acff4dc772b9dd12f5910584fe527bf40edd4`**.
+- 배포 기준: [GitHub Pages run 43337873601](https://github.com/syjy813/getpasslab/actions/runs/43337873601), Build/Deploy 모두 `completed/success`. Deploy 로그에서 제품 `a25acff4`의 Pages deployment 생성 후 `Reported success!`, 환경 URL `https://getpasslab.co.kr/` 확인.
+- 배포 Artifact: **ID `13997268692`**, digest `sha256:59781a1b4fd174210c762a06139852ef3b4d269e05fab23182a48ee59c162773`.
 - 운영 문서 갱신은 `[skip ci]` 커밋으로 별도 반영해 제품 재배포를 발생시키지 않는다.
 
-## 이번 작업 결과 — Google 검색 브랜딩
+## 이번 작업 결과 — 호병백마 병원 ep.2-3
 
-- 홈 `<title>`: `GetPassLab - 시설의 모든 것` (`src/pages/index.astro`), `og:title`/`twitter:title`도 공통 레이아웃에서 같은 값 사용.
-- 파비콘: 기존 Owner 승인 `favicon-approved-v1.png`(96×96 PNG) 참조 (`src/layouts/BaseLayout.astro`).
-- 시설 관련 QA의 고정 승인 blob/HTML 보호 규칙을 해당 변경만 허용하도록 보정. 기존 공개 URL 및 콘텐츠 데이터는 변경 없음.
-- PR #276 최종 HEAD `205ffb95e5eb4f41949a757db3ac48ab01ac9e2b` 사전 CI 7/7 PASS. `main` squash 병합 제품 `662ca573`, Pages Build/Deploy PASS.
-- 미확인: 실서버 HTML 직접 조회 및 Google 검색결과 재크롤링/반영. 배포 성공은 검색결과 즉시 변경을 보장하지 않음.
-
-## 직전 콘텐츠 배포 결과 — 마트 ep.4
-
-사용자 요청: 호병백마 마지막 시설 유형인 마트 절망편·희망편을 제작하고, 기존 병원·백화점과 통일된 시리즈 썸네일을 적용해 실서버 배포.
+사용자 요청: 대학·대형병원 시설직의 장점과 지원·면접 단계 확인 조건을 정리한 병원 ep.2-3을 최종 썸네일과 함께 실서버 배포.
 
 | 단계 | 상태 |
 |---|---|
-| 원고 | **완료** · `src/content/facility/hobyeongbaekma-mart-despair.md`, `hobyeongbaekma-mart-hope.md`, 두 글 모두 `status: published`, 날짜 `2026-11-12` |
-| 절망편 핵심 | **완료** · 폐점 후 공사·당직, 실질 휴게, 냉장·냉동 이상 대응, 전기·냉동·영선·제설 등 넓은 업무범위, 용역/경력증빙, 반대 사례 반영 |
-| 희망편 핵심 | **완료** · 냉동·냉장·제상·원격감시, 경보→현장확인→보고→업체협업→복구확인→기록, 공조냉동 이론과 실제 설비 연결, 검침·외주 협업·경력증빙 반영 |
-| 근거 | **완료** · 기존 마트 후기 재검토 + 현행 「유통산업발전법」 + 「식품위생법」 제7조 + 「식품의 기준 및 규격」. 시설직 개인의 식품안전 책임으로 확대하지 않음 |
-| 썸네일 | **완료** · 기존 호병백마 절망/희망 디자인 계열과 통일한 1440×1080 WebP. 절망편 SHA-256 `b092c1078f554251cfb29448bdc23db96abd4debf905865e16fd40a4531c778b`, 희망편 `0378c000a85565d64b3283660319860930adec3c642a13f7afb6db7a6447ceb1` |
-| PR / 사전 QA | **완료** · PR #274 최종 HEAD `d8f9227d`; SEO / 호병백마 / 시설 공개·반응형 / 자격증 탐색 / 소방 회귀 **5개 모두 PASS** |
-| Git | **완료** · PR #274 squash 병합 → 제품 `0f6cb350` |
-| Pages | **완료** · run 43152644190 Build/Deploy success |
-| 배포 Artifact | **PASS** · Artifact ID `13914323321`. 마트 두 HTML, 상호 링크·canonical·sitemap 확인. 배포 WebP SHA가 승인 파일과 정확히 일치 |
-| 배포 후 전역 회귀 QA | **진행 중** · 제품 `0f6cb350` 대상으로 workflow_run 10개 시작. Snapshot 작성 시 Practice UI 1개 PASS, 나머지 9개 진행 중, 실패 없음 |
-| Production 직접 화면 QA | **별도 육안 확인 권장** · Pages 환경 배포 성공과 게시 Artifact는 확정. 실제 사용자 브라우저에서 캐시 갱신 후 모바일/PC 크롭·본문 표시를 최종 육안 확인하면 됨 |
+| 공개 원고 | **완료** · `src/content/facility/hobyeongbaekma-hospital-large-university.md` · 제목 `[호병백마 ep.2-3] 병원도 다 같은 병원이 아니다｜대학·대형병원 시설직은 왜 따로 봐야 할까?` |
+| 핵심 흐름 | **완료** · 대학·대형병원의 복지·고용·조직·설비 경험 장점 → 같은 병원 안의 직군/고용구조 차이 → 지원·면접 단계부터 조건 확인 |
+| 조건 카드 | **완료** · 기존 검증된 시설 카드 UI 재사용. 고용주 / 직군 / 고용형태 / 보수·연금 / 복리후생 / 실제 업무·장기근속 **6개 카드** |
+| 근거 | **완료** · 서울대학교병원 2026 하반기 채용의 기술직 기계 J1·시설지원직 기계 SA1 구분, 강원대학교병원 업무협력직 사례, 서울아산병원 복리후생 안내. 대학·대형병원 전체로 일반화하지 않음 |
+| 썸네일 | **완료** · 사람 제거, `변외편` 문구 제거, `대학·대형병원은 어떨까?` 확정. 1440×1080 WebP, SHA-256 `184def5eb152d17238e77914709adcb8948c73449b9060b4d359bd5fb4e300e1` |
+| 사전 QA | **PASS** · 최신 HEAD `c98eea5d`: SEO / 호병백마 / 시설 publication·private-preview / 자격증 탐색 PASS. 병원 responsive QA는 **3페이지 × 320·390·768·1440px PASS** |
+| 소방 회귀 | **PASS 증거 재사용** · 같은 작업 HEAD `11067f39`, run `43335286662` success. 이후 변경은 시설 ep.2-3 본문·시설 전용 카드 매핑·시설 QA/가드뿐이며 소방 콘텐츠·공용 레이아웃·의존성 변경 없음 |
+| Git | **완료** · PR #275 squash 병합 → 제품 `a25acff4` |
+| Pages | **완료** · run `43337873601`, Build/Deploy success |
+| 배포 Artifact QA | **PASS** · 새 HTML 존재, canonical 정확, sitemap 포함, 6개 조건 카드, 병원 ep.2-1/2-2 링크, hero 경로 확인. 배포 WebP 1440×1080 및 승인 SHA-256 정확히 일치 |
+| Production 직접 HTTP | **환경 한계** · 현재 실행환경의 외부 DNS에서 `getpasslab.co.kr` 직접 조회가 실패해 실도메인 HTTP 육안 확인은 수행하지 못함. 대신 GitHub Pages deployment success + 실제 배포 Artifact를 제품 커밋과 연결해 검증함 |
 
 ## 공개 URL
 
-- 마트 ep.4-1 절망편: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-mart-despair/
-- 마트 ep.4-2 희망편: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-mart-hope/
-- 백화점 ep.3-1 절망편: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-department-store-despair/
-- 백화점 ep.3-2 희망편: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-department-store-hope/
+- 병원 ep.2-3: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-large-university/
 - 병원 ep.2-1 절망편: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-despair/
 - 병원 ep.2-2 희망편: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-hope/
 - 시리즈 ep.0: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/
 
-## 보호된 기존 상태
+## 보호된 최근 상태
 
-- 백화점 2부작: PR #273, 제품 `07394310`.
-- 병원 법적 시설기준 보강: PR #272; 최초 발행·썸네일: PR #271.
-- 호텔 2부작: PR #264.
+- Google 검색 브랜딩 작업: PR #276, 제품 `662ca57371d08d6b417e8feec6a339fba6930348`, Pages run `43337329786` success. 이번 ep.2-3 병합은 당시 최신 `main` 위에 정상 병합됨.
+- 마트 ep.4: PR #274, 제품 `0f6cb350`.
+- 백화점 ep.3: PR #273.
+- 병원 ep.2-1/2-2: PR #271/#272.
+- 호텔 ep.1: PR #264.
 - ep.0: PR #270.
-- 이번 마트 배포에서 기존 호텔·병원·백화점 본문·이미지·공개 URL은 의도적으로 변경하지 않음. 최신 6개 홈 카드 슬라이스 특성상 호텔 카드는 시설 홈에서 밀리고 커리어 카테고리에는 유지됨.
+- 이번 작업에서 기존 공개 URL·기존 호병백마 본문·이미지는 변경하지 않음. 홈 최신 6개 슬라이스에는 새 ep.2-3가 들어오며 기존 병원 카드 중 1개만 남는 동작을 회귀 QA에서 명시적으로 검증함.
 
 ## 다음 행동
 
-1. 실서버 `https://getpasslab.co.kr/`의 `<title>`, `og:title`, `twitter:title`과 `/favicon-approved-v1.png` 응답을 직접 확인한다.
-2. Google 재크롤링 후 검색결과 제목·파비콘 갱신 여부를 별도로 모니터링한다.
-3. 호병백마 마트 두 글의 최종 모바일/PC 육안 QA가 필요하면 추가 확인한다.
+1. 사용자 브라우저에서 ep.2-3를 강력 새로고침해 실제 도메인의 최종 썸네일·6개 카드 표시를 한 번 육안 확인하면 Production 확인이 완결됨.
+2. Google 검색 브랜딩 변경은 별도 재크롤링 반영 여부를 계속 구분해 판단한다.
 
 ## 근거
 
-- [PR #276](https://github.com/syjy813/getpasslab/pull/276)
-- [Pages run 43337329786](https://github.com/syjy813/getpasslab/actions/runs/43337329786), 제품 `662ca57371d08d6b417e8feec6a339fba6930348`
-
-- [PR #274](https://github.com/syjy813/getpasslab/pull/274)
-- [Pages run 43152644190](https://github.com/syjy813/getpasslab/actions/runs/43152644190), Artifact ID `13914323321`
-- 제품 커밋 `0f6cb3503f991cb22bedbd1ca3a1e4a3d1997fa6`
-- 내부 근거 검토: `docs/drafts/facility/hobyeongbaekma/episode04-mart-source-review.md`
+- [PR #275](https://github.com/syjy813/getpasslab/pull/275)
+- [Pages run 43337873601](https://github.com/syjy813/getpasslab/actions/runs/43337873601), Artifact ID `13997268692`
+- 제품 커밋 `a25acff4dc772b9dd12f5910584fe527bf40edd4`
+- 내부 근거 검토: `docs/drafts/facility/hobyeongbaekma/episode02-3-hospital-employment-structure-source-review.md`
+- Release manifest: `docs/audits/2026-11-13-hospital-ep2-3/manifest.json`
