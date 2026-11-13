@@ -31,7 +31,7 @@ const editorialBlobs = {
   'src/pages/[cert]/[exam]/index.astro': '3e648acef59825aa1430431775e1226989605ab3',
   'src/styles/global.css': '297274d23a54af8863e44cb6f26c2e945617f6f8',
   'src/components/GNB.astro': 'b349aba310092b9170fe6b13db4c55742431370d',
-  'src/layouts/BaseLayout.astro': '3446eb7568da5bf0d35364fdd6d7639776df7938',
+  'src/layouts/BaseLayout.astro': '02a88c45b7e82afc1b8f38a43b74d840f877b9a4',
   'public/favicon.svg': '035e5d8687d0c001e2cf16f5f83b3fb7a592bc90',
   'src/pages/certifications/index.astro': '125799ae05dc3918bd43b16babbdcfd9bf1fc043',
   'src/styles/catalog.css': '8a90e16d57215350e844faf7accf12cd20b1cd68',
