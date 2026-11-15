@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "source": "GA4 Data API",
+  "propertyId": "547805075",
+  "scope": "published-facility-articles",
+  "metric": "screenPageViews",
+  "hosts": [
+    "getpasslab.co.kr",
+    "www.getpasslab.co.kr"
+  ],
+  "period": {
+    "startDate": "2026-07-30",
+    "endDate": "2026-11-14",
+    "requestedEndDate": "yesterday",
+    "timeZone": "Asia/Seoul"
+  },
+  "fetchedAt": "2026-11-15T10:49:45.868Z",
+  "articleCount": 24,
+  "recordedArticleCount": 9,
+  "totalArticleViews": 48,
+  "articles": {
+    "/facility-management/career/employment-types/": {
+      "views": 7,
+      "recorded": true
+    },
+    "/facility-management/career/first-job/": {
+      "views": 4,
+      "recorded": true
+    },
+    "/facility-management/career/hobyeongbaekma-department-store-despair/": {
+      "views": 2,
+      "recorded": true
+    },
+    "/facility-management/career/hobyeongbaekma-department-store-hope/": {
+      "views": 1,
+      "recorded": true
+    },
+    "/facility-management/career/hobyeongbaekma-hospital-despair/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/career/hobyeongbaekma-hospital-hope/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/career/hobyeongbaekma-hospital-large-university/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/career/hobyeongbaekma-hotel-despair/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/career/hobyeongbaekma-hotel-hope/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/career/hobyeongbaekma-mart-despair/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/career/hobyeongbaekma-mart-hope/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/career/hobyeongbaekma/": {
+      "views": 4,
+      "recorded": true
+    },
+    "/facility-management/career/sasugoldae/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/career/shifts-and-pay/": {
+      "views": 5,
+      "recorded": true
+    },
+    "/facility-management/career/what-is-facility-management/": {
+      "views": 10,
+      "recorded": true
+    },
+    "/facility-management/jobs/hanfms/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/jobs/kamcofmc/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/jobs/korailtech/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/jobs/postal-facilities/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/jobs/public-sector-comparison/": {
+      "views": 11,
+      "recorded": true
+    },
+    "/facility-management/qualifications/boiler-inspection-manager/": {
+      "views": 4,
+      "recorded": true
+    },
+    "/facility-management/qualifications/mechanical-career-records/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/qualifications/mechanical-maintainer-levels/": {
+      "views": 0,
+      "recorded": false
+    },
+    "/facility-management/qualifications/statutory-appointments/": {
+      "views": 0,
+      "recorded": false
+    }
+  }
+}
