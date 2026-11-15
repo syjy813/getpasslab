@@ -1,4 +1,5 @@
 import {beforeSasugoldae, sasugoldaeSourceAdditions, sasugoldaeOutputAdditions} from './read-sasugoldae-release.mjs';
+import {assertGA4Snapshot, beforeGA4Sorting, ga4DataPath} from './read-ga4-sorting-release.mjs';
 import {hotelRelease, assertHotelRelease} from './read-hotel-two-parter-release.mjs';
 assertHotelRelease();
 import { episode00Release, assertEpisode00Release, approvedBorderlessHeroStyle, episode00Integration } from './read-hobyeongbaekma-publication.mjs';
@@ -20,6 +21,7 @@ import { publicSectorVisuals, visualDerivativeFiles, beforePublicSectorVisuals, 
 
 assertPublicSectorVisuals();
 assertBulkVisuals();
+assertGA4Snapshot();
 
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const gitBlob = bytes => createHash('sha1').update('blob ' + bytes.length + '\0').update(bytes).digest('hex');
@@ -69,12 +71,12 @@ const files = [
   ...walk('src'),
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
-].filter(file => !sasugoldaeSourceAdditions.includes(file) && !sasugoldaeOutputAdditions.includes(file) && !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
+].filter(file => file !== ga4DataPath && !sasugoldaeSourceAdditions.includes(file) && !sasugoldaeOutputAdditions.includes(file) && !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
 for (const file of files) {
-  const bytes = beforeSasugoldae(file, beforePublicSectorVisuals(file, beforeBulkVisuals(file, fs.readFileSync(file))));
+  const bytes = beforeSasugoldae(file, beforePublicSectorVisuals(file, beforeBulkVisuals(file, beforeGA4Sorting(file, fs.readFileSync(file)))));
   if (Object.hasOwn(editorialBlobs, file)) {
     if (file === 'src/styles/facility.css') {
       const originalFacilityCss=fs.readFileSync(episode00Integration.previousStyle,'utf8')+integratedImageStyles;
