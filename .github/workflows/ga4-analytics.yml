@@ -11,6 +11,10 @@ on:
       - 'scripts/test-ga4-page-views.mjs'
       - 'scripts/commit-ga4-page-views.mjs'
       - 'scripts/lib/facility-page-views.mjs'
+      - 'scripts/read-ga4-sorting-release.mjs'
+      - 'scripts/qa-ga4-sorting.cjs'
+      - 'scripts/check-facility-launch.mjs'
+      - 'src/pages/facility-management/[category]/index.astro'
   workflow_dispatch:
   # Runs only on the default branch after a separately approved merge.
   schedule:
@@ -76,3 +80,45 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/commit-ga4-page-views.mjs
+  verify-sorting-ui:
+    needs: validate
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Build and verify protected facility source and publication
+        run: |
+          npm run build > /tmp/ga4-sort-build.log 2>&1
+          tail -n 8 /tmp/ga4-sort-build.log
+          node scripts/check-facility-launch.mjs
+          node scripts/check-facility-publication.mjs
+          npm run check:seo
+          npm run check:public-content
+      - name: Install Chromium for sorting behavior checks
+        run: |
+          npm install --prefix /tmp/ga4-sort-tools --no-package-lock --no-audit playwright@1.62.1
+          /tmp/ga4-sort-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Check sorting at mobile and desktop widths
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/ga4-sort-tools/node_modules/playwright
+        run: |
+          python3 -m http.server 4321 --bind 127.0.0.1 --directory dist >/tmp/ga4-sort-server.log 2>&1 &
+          for n in $(seq 1 30); do curl -fsS http://127.0.0.1:4321/ >/dev/null && break; sleep 1; done
+          node scripts/qa-ga4-sorting.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ga4-facility-sorting-review
+          path: qa-results/ga4-sorting/
+          if-no-files-found: ignore
+          retention-days: 14

@@ -1,4 +1,5 @@
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
 const { chromium } = require(process.env.QA_PLAYWRIGHT_MODULE || 'playwright');
 
 const base = 'http://127.0.0.1:4321';
@@ -43,6 +44,10 @@ const categories = ['career', 'jobs', 'qualifications', 'practice'];
         await select.selectOption('views');
         assert.deepEqual(await cards.evaluateAll(items => items.map(card => card.getAttribute('href'))), expected,
           `${category}/${width}: view-count sorting`);
+        if (category === 'career' && [390, 1440].includes(width)) {
+          fs.mkdirSync('qa-results/ga4-sorting', { recursive: true });
+          await page.screenshot({ path: `qa-results/ga4-sorting/career-${width}-views.png`, fullPage: true });
+        }
         await select.selectOption('latest');
         assert.deepEqual(await cards.evaluateAll(items => items.map(card => card.getAttribute('href'))), initial.map(item => item.href),
           `${category}/${width}: restore latest sorting`);
