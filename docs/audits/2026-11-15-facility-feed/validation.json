@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "baseCommit": "ea67d199ab0839a2fb569a66aff2df172da4194e",
+  "implementationCommit": "d88581670376321c2d4bc6f4269ac1cc4924fdde",
+  "qaCommit": "1e68b02affc6aa4b5ddae222b673f40ce29cfc0e",
+  "sameProductEvidence": [
+    "scripts/qa-facility-launch.cjs"
+  ],
+  "build": {
+    "status": "PASS",
+    "node": "24.22.1",
+    "pages": 584,
+    "dependencyChange": false
+  },
+  "localChecks": {
+    "seo": "PASS; 0 errors, 5 existing warnings",
+    "publicContent": "PASS; 0 errors",
+    "facilityPublication": "PASS",
+    "relatedLinks": "PASS; 163 internal links, canonical and dates preserved",
+    "integratedImages": "PASS",
+    "feedCssVariables": "PASS; every referenced token is present in actual global.css"
+  },
+  "htmlComparison": "content-validation.json; 586 HTML files identical except one CSS filename; 28 list pages, 134 cards",
+  "browser": {
+    "run": 43725736766,
+    "status": "PASS",
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "modes": [
+      "publication",
+      "private-preview"
+    ],
+    "reviewedCapture": {
+      "commit": "d88581670376321c2d4bc6f4269ac1cc4924fdde",
+      "artifactId": 14166147675,
+      "path": "facility-launch/publication/career-390.png",
+      "result": "Visual review PASS; original-ratio thumbnails left, complete titles right, consistent padding/separators; only QA script differs from final QA commit"
+    },
+    "casesPerMode": 64,
+    "articleCasesPerMode": 32,
+    "artifactId": 14166995205,
+    "artifactDigest": "sha256:08d4bb19c408055e7a8dc0687d9bf359ab1e4bdac4b31597145fb23564bce887",
+    "visualReview": [
+      "390px career list PASS",
+      "1440px career list PASS; existing PC grid/summary retained"
+    ]
+  },
+  "otherRuns": {
+    "seo": 43725736773,
+    "certificationDiscovery": 43725736822,
+    "fireSafety": 43725736888
+  },
+  "fixes": [
+    {
+      "run": 43724972169,
+      "problem": "390px gap referenced undefined --space-5",
+      "resolution": "Explicit approved 20px gap; build and HTML/source guards repeated"
+    },
+    {
+      "run": 43725431353,
+      "problem": "Chromium normalized desktop display:-webkit-box to flow-root",
+      "resolution": "Verify non-hidden summary with positive rendered width and height; no product change"
+    }
+  ],
+  "deploy": {
+    "status": "PASS",
+    "run": 43726251784,
+    "productCommit": "398923fdc04920181a96dc67f9e7a0f7185b9566",
+    "artifactId": 14165824327,
+    "digest": "sha256:a62b0f0c7afd128b3503eb97ddce748bc8a8b8b56d7288aa544ffd51782e84e0"
+  },
+  "production": {
+    "status": "PASS",
+    "evidence": "production-validation.json",
+    "routes": 7,
+    "cards": 48,
+    "cssByteMatches": 3,
+    "imageByteMatches": 2,
+    "limit": "Four-width browser QA was performed pre-deploy in CI; live Production was verified by HTTP/HTML/CSS/image comparison, not a live-browser screenshot."
+  },
+  "mergedProductCommit": "398923fdc04920181a96dc67f9e7a0f7185b9566",
+  "productTree": "e86c4818260d160b8c6637ce421c60383ffd0ccf",
+  "mergeEvidence": "QA commit 1e68b02a and merged product 398923fd have identical Git trees; no additional build/QA needed for merge",
+  "reusedFireRegression": {
+    "status": "PASS",
+    "run": 43724972188,
+    "commit": "ebf69e536130402ba74e6ec8f05debbcba765e19",
+    "evidence": "Since that successful run, only scripts/qa-facility-launch.cjs and the scoped mobile feed CSS changed under src/scripts/config. Fire source, workflow, dependency/config inputs and rendered fire HTML remain unchanged. The spacing correction was independently covered by the final four-width facility CI.",
+    "latestDuplicateRun": 43725736888,
+    "latestDuplicateStatus": "in_progress at deployment; prior same-target success reused under AGENTS.md"
+  }
+}
