@@ -1,0 +1,29 @@
+{
+  "baseMain": "281264eefaa894de4f71392107765cef27e5044f",
+  "sourceCheckpoint": "66cbf49ba4620bc36a2ef9f524e9ee3f59cb3529",
+  "finalCopyCheckpoint": "1626dd524043ff6812631f12a2cefd96beb474dc",
+  "publishedAt": "2026-11-15",
+  "reviewedAt": "2026-11-13",
+  "route": "/facility-management/career/sasugoldae/",
+  "source": "src/content/facility/sasugoldae.md",
+  "copy": "docs/drafts/facility/sasugoldae/ep00-sasugoldae-final.md",
+  "hero": {
+    "master": "docs/drafts/facility/sasugoldae/masters/01-sasugoldae-hero.png",
+    "publicFile": "public/images/facility-series/sasugoldae-00/01-sasugoldae-hero.webp",
+    "width": 1448,
+    "height": 1086,
+    "masterSha256": "07ecc2bb1ff33bffebd53dca6fe418330cda3d20c38f7d05e060010f188e6a33",
+    "webpSha256": "232863f74ce249e260cf7018c75c2a514463a8d81c04d1bd3f354648c1231998",
+    "webpBytes": 215220
+  },
+  "validation": {
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ]
+  },
+  "status": "publication candidate; user explicitly authorized production deployment",
+  "sourceSha256": "e3d3b6c89986fada1dc2b176c761d467268be35f2087a3373cca3ff5dfa2eb17"
+}
