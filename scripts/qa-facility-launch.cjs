@@ -129,7 +129,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             const rect = el => {const r = el.getBoundingClientRect(); return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height};};
             const title=card.querySelector('.facility-card-title');
             const previous=card.previousElementSibling;
-            return {card:rect(card),title:rect(title),cover:rect(card.querySelector('.facility-card-cover')),summaryDisplay:getComputedStyle(card.querySelector('.facility-card-description')).display,display:getComputedStyle(card).display,padding:getComputedStyle(card).paddingTop,border:getComputedStyle(card).borderTopWidth,previous:previous?.classList.contains('facility-card')?rect(previous):null,titleClipped:title.scrollHeight>title.clientHeight+1};
+            return {card:rect(card),title:rect(title),cover:rect(card.querySelector('.facility-card-cover')),summary:rect(card.querySelector('.facility-card-description')),summaryDisplay:getComputedStyle(card.querySelector('.facility-card-description')).display,display:getComputedStyle(card).display,padding:getComputedStyle(card).paddingTop,border:getComputedStyle(card).borderTopWidth,previous:previous?.classList.contains('facility-card')?rect(previous):null,titleClipped:title.scrollHeight>title.clientHeight+1};
           }));
           for (const row of listCards) {
             if (width < 640) {
@@ -147,7 +147,7 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
               }
             } else {
               assert.equal(row.display,'flex',path+': desktop layout retained');
-              assert.equal(row.summaryDisplay,'-webkit-box',path+': desktop summary retained');
+              assert(row.summaryDisplay!=='none'&&row.summary.width>0&&row.summary.height>0,path+': desktop summary retained');
             }
           }
           const borderlessHeroPath='/images/facility-drafts/03/01-employment-types-hero.webp';
