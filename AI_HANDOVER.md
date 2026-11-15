@@ -1,59 +1,40 @@
 # GetPassLab — 현재 상태 Snapshot
 
-실행 지침은 [AGENTS.md](AGENTS.md). 과거 작업·상세 검증은 Git PR·Actions·[audits](docs/audits/)를 정본으로 참조하며, 오래된 전체 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)에 보존한다.
+실행 지침은 [AGENTS.md](AGENTS.md). 이 Snapshot 이전의 상세 제품/배포 기록은 [이전 인계 보존본](docs/audits/2026-11-15-ga4-auth/previous-handover.md)에 보존한다.
 
-## 기준 상태
+## 기준과 목표
 
-- 최종 갱신: **2026-11-13 KST** · 호병백마 병원 ep.2-3 대학·대형병원 시설직 콘텐츠 Production 배포 성공.
-- 제품 기준: `main`, [PR #275](https://github.com/syjy813/getpasslab/pull/275) squash 병합 제품 커밋 **`a25acff4dc772b9dd12f5910584fe527bf40edd4`**.
-- 배포 기준: [GitHub Pages run 43337873601](https://github.com/syjy813/getpasslab/actions/runs/43337873601), Build/Deploy 모두 `completed/success`. Deploy 로그에서 제품 `a25acff4`의 Pages deployment 생성 후 `Reported success!`, 환경 URL `https://getpasslab.co.kr/` 확인.
-- 배포 Artifact: **ID `13997268692`**, digest `sha256:59781a1b4fd174210c762a06139852ef3b4d269e05fab23182a48ee59c162773`.
-- 운영 문서 갱신은 `[skip ci]` 커밋으로 별도 반영해 제품 재배포를 발생시키지 않는다.
+- 갱신: **2026-11-15 KST** · GA4 GitHub 인증 연결 준비.
+- 작업 기준 원격 `main`: `281264eefaa894de4f71392107765cef27e5044f`.
+- 작업 브랜치: `chore/ga4-auth-connection`. 기존 제품/공개 URL·콘텐츠·배포 설정은 변경하지 않음.
+- 목표: GA4 누적 게시글 조회수의 GitHub 적재·정렬에 앞서, GitHub Actions 인증과 읽기 전용 API 호출 검증.
+- 이번 범위: 인증/호출 테스트 준비. 실제 조회수 적재·목록 정렬·정기 실행·Production 배포는 아직 수행하지 않음.
 
-## 이번 작업 결과 — 호병백마 병원 ep.2-3
-
-사용자 요청: 대학·대형병원 시설직의 장점과 지원·면접 단계 확인 조건을 정리한 병원 ep.2-3을 최종 썸네일과 함께 실서버 배포.
+## 현재 상태
 
 | 단계 | 상태 |
 |---|---|
-| 공개 원고 | **완료** · `src/content/facility/hobyeongbaekma-hospital-large-university.md` · 제목 `[호병백마 ep.2-3] 병원도 다 같은 병원이 아니다｜대학·대형병원 시설직은 왜 따로 봐야 할까?` |
-| 핵심 흐름 | **완료** · 대학·대형병원의 복지·고용·조직·설비 경험 장점 → 같은 병원 안의 직군/고용구조 차이 → 지원·면접 단계부터 조건 확인 |
-| 조건 카드 | **완료** · 기존 검증된 시설 카드 UI 재사용. 고용주 / 직군 / 고용형태 / 보수·연금 / 복리후생 / 실제 업무·장기근속 **6개 카드** |
-| 근거 | **완료** · 서울대학교병원 2026 하반기 채용의 기술직 기계 J1·시설지원직 기계 SA1 구분, 강원대학교병원 업무협력직 사례, 서울아산병원 복리후생 안내. 대학·대형병원 전체로 일반화하지 않음 |
-| 썸네일 | **완료** · 사람 제거, `변외편` 문구 제거, `대학·대형병원은 어떨까?` 확정. 1440×1080 WebP, SHA-256 `184def5eb152d17238e77914709adcb8948c73449b9060b4d359bd5fb4e300e1` |
-| 사전 QA | **PASS** · 최신 HEAD `c98eea5d`: SEO / 호병백마 / 시설 publication·private-preview / 자격증 탐색 PASS. 병원 responsive QA는 **3페이지 × 320·390·768·1440px PASS** |
-| 소방 회귀 | **PASS 증거 재사용** · 같은 작업 HEAD `11067f39`, run `43335286662` success. 이후 변경은 시설 ep.2-3 본문·시설 전용 카드 매핑·시설 QA/가드뿐이며 소방 콘텐츠·공용 레이아웃·의존성 변경 없음 |
-| Git | **완료** · PR #275 squash 병합 → 제품 `a25acff4` |
-| Pages | **완료** · run `43337873601`, Build/Deploy success |
-| 배포 Artifact QA | **PASS** · 새 HTML 존재, canonical 정확, sitemap 포함, 6개 조건 카드, 병원 ep.2-1/2-2 링크, hero 경로 확인. 배포 WebP 1440×1080 및 승인 SHA-256 정확히 일치 |
-| Production 직접 HTTP | **환경 한계** · 현재 실행환경의 외부 DNS에서 `getpasslab.co.kr` 직접 조회가 실패해 실도메인 HTTP 육안 확인은 수행하지 못함. 대신 GitHub Pages deployment success + 실제 배포 Artifact를 제품 커밋과 연결해 검증함 |
-
-## 공개 URL
-
-- 병원 ep.2-3: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-large-university/
-- 병원 ep.2-1 절망편: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-despair/
-- 병원 ep.2-2 희망편: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-hope/
-- 시리즈 ep.0: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/
-
-## 보호된 최근 상태
-
-- Google 검색 브랜딩 작업: PR #276, 제품 `662ca57371d08d6b417e8feec6a339fba6930348`, Pages run `43337329786` success. 이번 ep.2-3 병합은 당시 최신 `main` 위에 정상 병합됨.
-- 마트 ep.4: PR #274, 제품 `0f6cb350`.
-- 백화점 ep.3: PR #273.
-- 병원 ep.2-1/2-2: PR #271/#272.
-- 호텔 ep.1: PR #264.
-- ep.0: PR #270.
-- 이번 작업에서 기존 공개 URL·기존 호병백마 본문·이미지는 변경하지 않음. 홈 최신 6개 슬라이스에는 새 ep.2-3가 들어오며 기존 병원 카드 중 1개만 남는 동작을 회귀 QA에서 명시적으로 검증함.
+| GA4 데이터 확인 | 완료 · 속성 `547805075`, 가장 이른 기록 2026-07-30. 2026-11-14까지 전체 속성 5,886회·428개 페이지 경로를 UI에서 확인. 홈/목록 포함이며 게시글 전용 합계가 아님 |
+| Cloud 프로젝트 | 완료 · `level-array-514808-v0`, 번호 `528916134663`. 결제 계정 미연결 확인 |
+| Analytics Data API | 활성화 완료 |
+| 조회 전용 서비스 계정 | 생성 완료 · `getpasslab-ga4-reader@level-array-514808-v0.iam.gserviceaccount.com`. 키 생성 없음 |
+| GA4 권한 | 사용자 확인 후 적용 완료 · Viewer, 비용·수익 측정항목 접근 제한 |
+| GitHub 인증 코드 | 구현 완료 · WIF 단기 토큰, analytics.readonly, 실제 호출은 `GA4_WIF_ENABLED=true`일 때만 실행 |
+| Google WIF/IAM 연결 | **대기** · 전용 저장소·소유자 숫자 ID, 지정 브랜치·워크플로 조건을 준비. 외부 실행기에 인증 접근을 부여하는 최종 적용 전 사용자 확인 필요 |
+| 로컬 검사 | PASS · 스크립트 문법, 7개 fixture 검사, YAML/권한 경계 검증. 실제 API 결과와 구분 |
+| 실제 API 호출 | 미실행 · WIF/IAM 연결과 GitHub 변수 활성화 후 실행 필요 |
+| Push / CI | 작업 브랜치 반영/검증 상태는 PR·Actions 및 [체크포인트](docs/audits/2026-11-15-ga4-auth/README.md)로 확인 |
+| Merge / Deploy / Production | 미수행 · 기존 사이트 제품 소스 변경 없음. 기존 Production 최신 배포는 이번 작업에서 재검증하지 않음 |
 
 ## 다음 행동
 
-1. 사용자 브라우저에서 ep.2-3를 강력 새로고침해 실제 도메인의 최종 썸네일·6개 카드 표시를 한 번 육안 확인하면 Production 확인이 완결됨.
-2. Google 검색 브랜딩 변경은 별도 재크롤링 반영 여부를 계속 구분해 판단한다.
+1. 결제 계정 없이 필수 인증 API 활성화를 확인한다. 결제 연결이 요구되면 중단·보고한다.
+2. 준비된 WIF와 서비스 계정 impersonation 적용을 사용자에게 구체적으로 확인받는다. 전체 Cloud/관리자 권한이나 서비스 계정 키는 부여하지 않는다.
+3. 승인 후 적용·정책 확인 → `GA4_WIF_ENABLED=true` → 작업 브랜치 인증 테스트 실행 및 실제 run 증거 기록.
+4. 인증이 성공하면 URL별 누적 조회수 전체 수집·매칭·적재를 다음 단계로 구현한다. 현재 테스트는 페이지 경로 1개만 요청하는 인증 확인용이다.
 
 ## 근거
 
-- [PR #275](https://github.com/syjy813/getpasslab/pull/275)
-- [Pages run 43337873601](https://github.com/syjy813/getpasslab/actions/runs/43337873601), Artifact ID `13997268692`
-- 제품 커밋 `a25acff4dc772b9dd12f5910584fe527bf40edd4`
-- 내부 근거 검토: `docs/drafts/facility/hobyeongbaekma/episode02-3-hospital-employment-structure-source-review.md`
-- Release manifest: `docs/audits/2026-11-13-hospital-ep2-3/manifest.json`
+- [이번 인증 구성·검증 체크포인트](docs/audits/2026-11-15-ga4-auth/README.md)
+- [이전 제품/배포 인계 보존본](docs/audits/2026-11-15-ga4-auth/previous-handover.md)
+- GA4 권한은 속성 액세스 관리 목록에서 서비스 계정 Viewer 및 비용·수익 제한을 직접 확인.

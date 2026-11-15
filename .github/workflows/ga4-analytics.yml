@@ -1,0 +1,58 @@
+name: GA4 authentication check
+
+on:
+  push:
+    branches: [chore/ga4-auth-connection]
+    paths:
+      - '.github/workflows/ga4-analytics.yml'
+      - 'scripts/check-ga4-auth.mjs'
+      - 'scripts/test-ga4-auth.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ga4-auth-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - run: node --check scripts/check-ga4-auth.mjs
+      - run: node scripts/test-ga4-auth.mjs
+  authenticate-and-query:
+    needs: validate
+    # Enable only after the user approves the external identity trust and IAM grant.
+    if: vars.GA4_WIF_ENABLED == 'true' && github.repository_id == '1292439277' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/chore/ga4-auth-connection')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Authenticate with short-lived read-only credentials
+        id: auth
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3
+        with:
+          project_id: level-array-514808-v0
+          workload_identity_provider: projects/528916134663/locations/global/workloadIdentityPools/getpasslab-github/providers/github-actions
+          service_account: getpasslab-ga4-reader@level-array-514808-v0.iam.gserviceaccount.com
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/analytics.readonly
+          access_token_lifetime: 300s
+          create_credentials_file: false
+          export_environment_variables: false
+      - name: Verify authentication and cumulative page-view query
+        env:
+          GA4_PROPERTY_ID: '547805075'
+          GA4_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+        run: node scripts/check-ga4-auth.mjs
