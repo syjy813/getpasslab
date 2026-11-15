@@ -1,0 +1,86 @@
+{
+  "verifiedHead": "871c51d8ba3f1f8d651c4bb3a3244bf9c632e059",
+  "baseCommit": "5bca56b9370683b13b58503cb1f20fcb1bb350a8",
+  "pr": "https://github.com/syjy813/getpasslab/pull/279",
+  "local": {
+    "buildPages": 584,
+    "seoErrors": 0,
+    "existingSeoWarnings": 5,
+    "publicContentErrors": 0,
+    "cardComparison": {
+      "pages": 28,
+      "cards": 134,
+      "unchanged": [
+        "full titles",
+        "destinations",
+        "image sources"
+      ]
+    }
+  },
+  "workflows": [
+    {
+      "id": 43722550533,
+      "name": "Fire safety level 2 launch QA",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550533"
+    },
+    {
+      "id": 43722550461,
+      "name": "SEO validation",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550461"
+    },
+    {
+      "id": 43722550497,
+      "name": "Sasugoldae publication QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550497"
+    },
+    {
+      "id": 43722550463,
+      "name": "Hobyeongbaekma publication QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550463"
+    },
+    {
+      "id": 43722550428,
+      "name": "Certification discovery QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550428"
+    },
+    {
+      "id": 43722550514,
+      "name": "Facility publication QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550514"
+    }
+  ],
+  "responsive": {
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "facilityPublication": "PASS",
+    "facilityPrivatePreview": "PASS",
+    "casesPerMode": 64
+  },
+  "visualReview": {
+    "status": "PASS",
+    "artifact": 14164313923,
+    "head": "fc8177191cddaf9290e2c001e7a1244cbf536ede",
+    "images": [
+      "career-390.png",
+      "facility-management-1440.png"
+    ],
+    "reuseReason": "871c51d8 only changes the historical image test; application sources, dependencies and configuration are identical."
+  },
+  "deploy": "not requested; not performed"
+}

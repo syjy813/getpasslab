@@ -14,7 +14,8 @@
 - 기존 source/asset 보호, 시설 발행, 호병백마·호텔·병원·백화점·마트 발행 검사 PASS.
 - 관련 링크 163개 및 상세 날짜/canonical PASS. 목록 날짜 검사만 새 요구사항으로 변경했다.
 - `qa-facility-launch.cjs`에 4폭 모바일/PC 배치·뱃지/날짜 제거 검사 추가. 기존 이미지 비율·가로 넘침·탐색 검사를 함께 유지한다.
-- 로컬 Chromium은 실행 환경의 소켓 제한으로 시작할 수 없어 GitHub CI에서 화면 검사를 수행한다. 최종 CI 결과는 PR 및 `AI_HANDOVER.md` 참조.
+- 로컬 Chromium 소켓 제한은 GitHub CI로 대체했다. 시설 공개/비공개 각 64케이스·4폭 화면 검사 PASS. SEO·사수골대·호병백마·자격증 탐색 CI도 PASS. 별도 소방 전체 회귀는 기록 시 진행 중.
+- 28페이지·134카드에서 전체 제목/이미지/목적지 일치. 390px 목록·1440px 홈 캡처 시각 검토 완료. 캡처는 `fc817719`의 Artifact `14164313923`, 최종 검증 HEAD `871c51d8`과 제품 소스/설정 동일. 차이는 과거 이미지 CSS 검사 1파일뿐이다. [검증 기록](validation.json) 참조.
 
 `delta.json`은 정확한 before/after 소스와 빌드 CSS를 고정한다. 기존 불변 검사에서는 이 변경만 되돌린 뒤 원래 fingerprint를 검증한다. CSS 이전 번들은 같은 HEAD·lockfile·Node 환경의 별도 기준 checkout을 빌드해 확보했다. 과거 해시나 원본 이미지를 교체하지 않는다.
 
