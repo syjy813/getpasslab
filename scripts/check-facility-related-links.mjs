@@ -55,11 +55,8 @@ for(const path of ['/facility-management/','/facility-management/career/','/faci
  for(const card of cards){
   assert(eligible(expanded ? [...urls,...draftUrls] : urls).includes(attrs(card,'href')),path+': approved card');
   assert(preview || !text(card).includes('검토용 초안'),path+': publication card');
-  const times=nodes(card).filter(node=>node.tagName==='time');
-  if (urls.includes(attrs(card,'href'))) {
-   assert.equal(times.length,1,path+': one card publication date');
-   assert.equal(attrs(times[0],'datetime'),releaseDate);
-  } else if(attrs(card,'href')===sasugoldaeRelease.route){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),sasugoldaeRelease.publishedAt)} else if(hotelUrls.includes(attrs(card,'href'))){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-10')} else if(hospitalExtraUrls.includes(attrs(card,'href'))){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-13')} else if(hospitalUrls.includes(attrs(card,'href'))){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-11')} else if(departmentStoreUrls.includes(attrs(card,'href'))||martUrls.includes(attrs(card,'href'))){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-12')} else if(attrs(card,'href')===episode00){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),'2026-11-07')} else if(publication){assert.equal(times.length,1);assert.equal(attrs(times[0],'datetime'),publication.plannedPublicationDate)} else assert.equal(times.length,0,'draft has no publication date');
+  assert.equal(nodes(card).filter(node=>node.tagName==='time').length,0,path+': no list publication date');
+  assert(!nodes(card).some(node=>(attrs(node,'class')||'').split(/\s+/).includes('card-label')),path+': no list category badge');
  }
  if(path==='/facility-management/') {
   const homeUrls=[...new Set(cards.map(card=>attrs(card,'href')))];

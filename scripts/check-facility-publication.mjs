@@ -3,6 +3,7 @@ import {hotelRelease, assertHotelRelease} from './read-hotel-two-parter-release.
 assertHotelRelease();
 import { episode00Release, assertEpisode00Release } from './read-hobyeongbaekma-publication.mjs';
 import {beforeIntegratedStyles} from './hobyeongbaekma-integrated-images.mjs';
+import {beforeFacilityListCompiled} from './read-facility-list-layout.mjs';
 assertEpisode00Release();
 import {bulkVisuals,beforeBulkVisuals,assertBulkVisuals,bulkOutput} from './read-facility-bulk-visuals.mjs';
 import fs from 'node:fs';
@@ -89,7 +90,7 @@ assert(!fs.existsSync(headingCSS.previousPath),'obsolete facility CSS bundle rem
 // its new content-hashed name, then recover and hash the exact previous bundle.
 const facilityCSS=walk('dist/_astro').filter(file=>file.endsWith('.css')&&fs.readFileSync(file,'utf8').includes('.facility-overview-figure'));
 assert.equal(facilityCSS.length,1,'one complete-sheet stylesheet');
-const currentFacilityCSS=facilityCSS[0],compiledCSS=fs.readFileSync(currentFacilityCSS,'utf8');
+const currentFacilityCSS=facilityCSS[0],compiledCSS=beforeFacilityListCompiled(fs.readFileSync(currentFacilityCSS,'utf8'));
 assert(!fs.existsSync(headingCSS.currentPath),'previous content-hashed bundle replaced');
 // Remove only the two user-approved employment-types borderless rules from
 // compiled CSS before comparing the full historical bundle fingerprint.

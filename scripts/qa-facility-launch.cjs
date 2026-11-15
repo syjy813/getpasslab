@@ -124,6 +124,20 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
           assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), preview ? 'noindex, nofollow' : empty ? 'noindex, follow' : 'index, follow');
           assert.equal(await page.locator('.service-switch [data-service-link="facility"]').getAttribute('aria-current'),'page');
           assert.equal(await page.locator('.facility-card-action').count(),0,'redundant read-more text removed; entire card remains linked');
+          assert.equal(await page.locator('.facility-card .card-label, .facility-card time').count(),0,'list badges and publication dates removed');
+          const listCards = await page.locator('.facility-card:not(.facility-card--lead):not(.facility-card--text)').evaluateAll(cards => cards.map(card => {
+            const rect = el => {const r = el.getBoundingClientRect(); return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height};};
+            return {card:rect(card),title:rect(card.querySelector('.facility-card-title')),cover:rect(card.querySelector('.facility-card-cover')),summary:rect(card.querySelector('.facility-card-description')),display:getComputedStyle(card).display};
+          }));
+          for (const row of listCards) {
+            if (width < 640) {
+              assert.equal(row.display,'grid',path+': mobile list layout');
+              assert(Math.abs(row.title.width-row.card.width)<1,path+': title uses full card width');
+              assert(row.title.bottom <= row.cover.top,path+': title precedes cover');
+              assert(row.cover.right < row.summary.left,path+': summary beside cover');
+              assert(Math.abs((row.cover.top+row.cover.bottom-row.summary.top-row.summary.bottom)/2)<1,path+': cover and summary vertically centered');
+            } else assert.equal(row.display,'flex',path+': desktop layout retained');
+          }
           const borderlessHeroPath='/images/facility-drafts/03/01-employment-types-hero.webp';
           const covers = page.locator('.facility-card-cover img');
           for (const cover of await covers.all()) {
