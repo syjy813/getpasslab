@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "method": "Production HTTP/HTML/CSS/image comparison against four-width CI-tested build; no live-browser claim",
+  "routes": [
+    {
+      "route": "/facility-management/",
+      "status": 200,
+      "cards": 16,
+      "canonical": "https://getpasslab.co.kr/facility-management/",
+      "structuredData": "matched",
+      "cardContent": "matched",
+      "styles": [
+        "/_astro/global.DqF5I1IJ.css",
+        "/_astro/FacilityCard.2OtCWNRI.css",
+        "/_astro/BaseLayout.BMRIa7qL.css"
+      ],
+      "headers": {
+        "ETag": "\"6af9bf8d-68c3\"",
+        "Last-Modified": "Sun, 15 Nov 2026 14:19:57 GMT",
+        "Cache-Control": "max-age=600"
+      }
+    },
+    {
+      "route": "/facility-management/career/",
+      "status": 200,
+      "cards": 15,
+      "canonical": "https://getpasslab.co.kr/facility-management/career/",
+      "structuredData": "matched",
+      "cardContent": "matched",
+      "styles": [
+        "/_astro/global.DqF5I1IJ.css",
+        "/_astro/FacilityCard.2OtCWNRI.css",
+        "/_astro/BaseLayout.BMRIa7qL.css"
+      ],
+      "headers": {
+        "ETag": "\"6af9bf8d-611e\"",
+        "Last-Modified": "Sun, 15 Nov 2026 14:19:57 GMT",
+        "Cache-Control": "max-age=600"
+      }
+    },
+    {
+      "route": "/facility-management/jobs/",
+      "status": 200,
+      "cards": 5,
+      "canonical": "https://getpasslab.co.kr/facility-management/jobs/",
+      "structuredData": "matched",
+      "cardContent": "matched",
+      "styles": [
+        "/_astro/global.DqF5I1IJ.css",
+        "/_astro/FacilityCard.2OtCWNRI.css",
+        "/_astro/BaseLayout.BMRIa7qL.css"
+      ],
+      "headers": {
+        "ETag": "\"6af9bf8d-4480\"",
+        "Last-Modified": "Sun, 15 Nov 2026 14:19:57 GMT",
+        "Cache-Control": "max-age=600"
+      }
+    },
+    {
+      "route": "/facility-management/qualifications/",
+      "status": 200,
+      "cards": 4,
+      "canonical": "https://getpasslab.co.kr/facility-management/qualifications/",
+      "structuredData": "matched",
+      "cardContent": "matched",
+      "styles": [
+        "/_astro/global.DqF5I1IJ.css",
+        "/_astro/FacilityCard.2OtCWNRI.css",
+        "/_astro/BaseLayout.BMRIa7qL.css"
+      ],
+      "headers": {
+        "ETag": "\"6af9bf8d-42b0\"",
+        "Last-Modified": "Sun, 15 Nov 2026 14:19:57 GMT",
+        "Cache-Control": "max-age=600"
+      }
+    },
+    {
+      "route": "/facility-management/career/sasugoldae/",
+      "status": 200,
+      "cards": 4,
+      "canonical": "https://getpasslab.co.kr/facility-management/career/sasugoldae/",
+      "structuredData": "matched",
+      "cardContent": "matched",
+      "styles": [
+        "/_astro/global.DqF5I1IJ.css",
+        "/_astro/FacilityCard.2OtCWNRI.css",
+        "/_astro/BaseLayout.BMRIa7qL.css"
+      ],
+      "headers": {
+        "ETag": "\"6af9bf8d-719f\"",
+        "Last-Modified": "Sun, 15 Nov 2026 14:19:57 GMT",
+        "Cache-Control": "max-age=600"
+      }
+    },
+    {
+      "route": "/facility-management/career/first-job/",
+      "status": 200,
+      "cards": 4,
+      "canonical": "https://getpasslab.co.kr/facility-management/career/first-job/",
+      "structuredData": "matched",
+      "cardContent": "matched",
+      "styles": [
+        "/_astro/global.DqF5I1IJ.css",
+        "/_astro/FacilityCard.2OtCWNRI.css",
+        "/_astro/BaseLayout.BMRIa7qL.css"
+      ],
+      "headers": {
+        "ETag": "\"6af9bf8d-7dd4\"",
+        "Last-Modified": "Sun, 15 Nov 2026 14:19:57 GMT",
+        "Cache-Control": "max-age=600"
+      }
+    },
+    {
+      "route": "/certifications/",
+      "status": 200,
+      "cards": 0,
+      "canonical": "https://getpasslab.co.kr/certifications/",
+      "structuredData": "matched",
+      "cardContent": "matched",
+      "styles": [
+        "/_astro/global.DqF5I1IJ.css",
+        "/_astro/BaseLayout.BMRIa7qL.css"
+      ],
+      "headers": {
+        "ETag": "\"6af9bf8d-402e\"",
+        "Last-Modified": "Sun, 15 Nov 2026 14:19:57 GMT",
+        "Cache-Control": "max-age=600"
+      }
+    }
+  ],
+  "styles": [
+    {
+      "path": "/_astro/BaseLayout.BMRIa7qL.css",
+      "status": 200,
+      "sha256": "07c52ec9b7bf10b3056d51de052568858b6c86a4d9ce062e77db80150a6a03fc"
+    },
+    {
+      "path": "/_astro/FacilityCard.2OtCWNRI.css",
+      "status": 200,
+      "sha256": "3a12b38cbb0fb4603a7457d26ad6f2d085ae37a4ac2437d6305644745916c1e6"
+    },
+    {
+      "path": "/_astro/global.DqF5I1IJ.css",
+      "status": 200,
+      "sha256": "e6ef92d19c8bd0a0d49981868828babc1567d8e4c563baabb20a1dc08d262063"
+    }
+  ],
+  "images": [
+    {
+      "path": "/images/facility-series/sasugoldae-00/01-sasugoldae-hero.webp",
+      "status": 200,
+      "sha256": "232863f74ce249e260cf7018c75c2a514463a8d81c04d1bd3f354648c1231998"
+    },
+    {
+      "path": "/images/facility-series/ep2-3-hospital-large/01-hero.webp",
+      "status": 200,
+      "sha256": "184def5eb152d17238e77914709adcb8948c73449b9060b4d359bd5fb4e300e1"
+    }
+  ],
+  "deployment": {
+    "productCommit": "ea67d199ab0839a2fb569a66aff2df172da4194e",
+    "pr": 279,
+    "run": 43723678125,
+    "url": "https://github.com/syjy813/getpasslab/actions/runs/43723678125",
+    "conclusion": "success",
+    "artifact": [
+      {
+        "id": 14165636198,
+        "name": "github-pages",
+        "digest": "sha256:bf472710d51b9e8b9bd00a5c90b71bb0c786b9193ac62f9bfabc21b53d457ddd"
+      }
+    ],
+    "sourceEvidence": "PR branch ad1bf3c8 and merged product ea67d199 have identical Git trees. Source/configuration matched CI target 871c51d8; remaining differences are documentation only."
+  }
+}
