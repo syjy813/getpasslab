@@ -28,8 +28,8 @@ jobs:
       - run: node scripts/test-ga4-auth.mjs
   authenticate-and-query:
     needs: validate
-    # Enable only after the user approves the external identity trust and IAM grant.
-    if: vars.GA4_WIF_ENABLED == 'true' && github.repository_id == '1292439277' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/chore/ga4-auth-connection')
+    # External identity trust and IAM grant approved by the user.
+    if: github.repository_id == '1292439277' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/chore/ga4-auth-connection')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
