@@ -1,38 +1,40 @@
 # GetPassLab — 현재 상태 Snapshot
 
-실행 지침은 [AGENTS.md](AGENTS.md). 상세 검증은 Git PR·Actions·[audits](docs/audits/)를 정본으로 참조한다. 오래된 전체 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)에 보존한다.
+실행 지침은 [AGENTS.md](AGENTS.md). 상세 이력·검증은 PR·Actions·[audits](docs/audits/), 과거 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)를 참조한다.
 
-## 현재 작업 — 사수골대 ep.0 발행·배포
+## 기준 상태
 
-- 갱신: **2026-11-15**. 조사 기준 `main@281264eefaa894de4f71392107765cef27e5044f`.
-- 브랜치: `codex/sasugoldae-source-research-20261113`. 정확한 문서 커밋·Push 여부는 이 브랜치의 Git/원격 HEAD로 확인한다.
-- 상태: **ep.0 발행 구현 완료·배포 전 CI 검증 중, 자료 수집은 부분 완료**. 사용자가 2026-11-15 실서버 배포를 명시 승인했다. 핵심 유효 후보 **71건**(범수방 공개 설명1·디시12·네이버카페8·블로그2·기숙사 행정 인터뷰1·채용31·공식16), 보조7·원장 제외3. 네이버8은 경험 스레드7·작업기록1이며 독립 근무후기71건이라는 뜻이 아니다.
-- 생성: `docs/drafts/facility/sasugoldae/`의 `source-index.md` + ep.0/사우나/수영장/골프장/대학교 source review **6개**. 소스별 요약·URL·게시/확인일·업무·고용·근무·급여 등과 신뢰 범위·미검증 사항을 기록했다.
-- 원고: [ep.0 최종 원고](docs/drafts/facility/sasugoldae/ep00-sasugoldae-final.md), [편집·근거 메모](docs/drafts/facility/sasugoldae/ep00-sasugoldae-editor-notes.md). ‘사수골대란 뭘까?’를 제목으로 용어·4개 시설의 특징·상반된 수영장 경험·지원 전 질문·사우나편 예고를 작성했다. 주장별 출처와 한계는 별도 메모에 연결했다. 근거 기준은 조사 커밋 `66cbf49ba4620bc36a2ef9f524e9ee3f59cb3529`다.
-- PC Chrome 보완: Google 직접 검색 성공, P04·S05·S06의 본문/댓글을 확인해 핵심3건 추가. 범수방14279 본문·관련 댓글도 확인했으나 대학 안전관리 직무여서 U10 보조로 분리. 카페 내부 검색창 입력·텍스트 추출은 불안정해 대량검색 완료로 세지 않음.
-- 네이버 카페 보완: 카페 자체 검색6개어로 시설관리몰6·전아모1·관리센터 작업기록1을 핵심 추가. 수영장 장기근속 긍정/공공기관3년 부정·대학 임용/당직·골프 전기/환경 분장/예산·사우나 청소 지휘권 차이를 정리. 견적 상담N08은 보조. 범수방26279는 알림 후 본문 미표시로 정확한 제한 사유 미확인.
-- 저장된 기존 체크포인트: [Draft PR #277](https://github.com/syjy813/getpasslab/pull/277), 직전 PC Chrome 조사 커밋 `ac1f075385522be27b0f4f1ccc74aff3a63561da`; 후속 커밋은 브랜치 HEAD 참조.
-- 핵심 판단: 시설 이름보다 고용주·직군·담당범위·설비·인원·교대·외주 조건을 비교한다. 골프 코스/건물·대학병원/대학·공무원/공무직·운영사/용역사 정규직을 구분했다.
-- 미완료: 범수방 시설별 원문 추가 확보, 기존 디시9건의 댓글 검토, 대학·골프장 Google 조사 확대, 시설별 후기 목표, 사우나 장기 긍정·수영장 긍정 현장의 실제 고용구조, 대학 자회사·직군별 실제 경험, 법령 별표 판본·연금 적용·일부 공고 첨부 상세.
-- 검증: 기존 조사6파일·15절 구조와 핵심71/집계 검증은 조사 체크포인트에서 재사용했다. 최종 원고는 제목1개·요약3개·시설명·원문 링크2개와 근거 메모·인계의 내부 링크/앵커31개·변경 경계를 점검했다. 실제 Commit/CI 결과는 PR #277과 브랜치 HEAD의 Actions를 참조한다. 웹 전체 링크의 상시 접근·개인 경험의 독립 인증은 보장하지 않는다.
-- 발행 구현: `src/content/facility/sasugoldae.md`, `/facility-management/career/sasugoldae/`. 제작한 썸네일 PNG 원본과 1448×1086 WebP(215,220 bytes)를 보존하고 본문·목록에 연결했다. ep.0의 별도 조사 목록은 화면에서 숨기되 출처 메타·Article citation은 유지했다. 기존 글·URL은 변경하지 않았다.
-- 발행 검증: 로컬 Build 584페이지 성공, SEO 오류0·기존 경고5, 공개 콘텐츠 오류0. canonical·robots·사이트맵·Article 날짜/출처·목록·배포 이미지 해시 확인. 로컬 Chromium은 환경 소켓 제한으로 시작하지 못해 `.github/workflows/sasugoldae-qa.yml`에서 320/390/768/1440px를 검증한다. CI 성공 전 main 병합하지 않는다.
-- 배포 상태: PR #277의 현재 HEAD·Checks·merge SHA와 Pages 실행을 정본으로 확인한다. 이 문서 커밋 시점에는 **배포 전**이다. 재개 검증: `1076a5b7`의 사수골대 화면 CI [43692848160](https://github.com/syjy813/getpasslab/actions/runs/43692848160) 성공, Artifact `14153230758`의 390/1440px 캡처 육안 확인 및 `responsive-qa.json` 보존. 공통 CI 2건은 신규 글·카드·출처 정책을 기존 고정 해시/목록 검사가 허용하지 않아 실패했다. 원본 보호 해시는 유지하고 정확한 승인 델타와 신규 산출물만 허용하도록 보완, 로컬 Build 584페이지와 source/publication/관련 링크/병원 회귀 PASS. 보완 HEAD의 CI는 다시 확인해야 한다. [발행 manifest](docs/audits/2026-11-15-sasugoldae-ep00/manifest.json), [로컬 빌드 점검](docs/audits/2026-11-15-sasugoldae-ep00/build-validation.json)을 참조한다.
+- 갱신: **2026-11-15 KST**. 사수골대 ep.0 공개·실서버 배포·Production HTTP 검증 **완료**.
+- 제품: `main@40a4b722ff60cbce62b4179dd9ee2483dcff3ed8`, [PR #277](https://github.com/syjy813/getpasslab/pull/277) squash 병합.
+- 검증 HEAD: `0f13ef81e8eec48225253c89a43f59c9e33bd5b0`. 제품과 검증 HEAD의 Git tree는 `2bdc945de595d8b7a349a2cc262c2d1aeda70c98`로 동일하다.
+- [Pages run 43697216589](https://github.com/syjy813/getpasslab/actions/runs/43697216589): Build/Deploy **success**. Deploy 로그의 `Reported success!`와 환경 URL 확인.
+- 배포 Artifact: `14155381079`, digest `sha256:c23278a66800640cf762018d17aac660d985a52a09802bbb009bb043090af600`.
+- 이 상태 문서·검증 기록은 제품 이후 `[skip ci]` 문서 커밋으로 갱신한다. 문서 갱신을 별도 제품 배포로 취급하지 않는다.
 
-## 다음 행동
+## 사수골대 ep.0 결과
 
-1. PR #277의 SEO/화면 CI 성공 확인 → 승인된 범위로 main 병합 → Pages Build/Deploy 성공 → 신규 글·목록·썸네일 Production 확인. 재개 시 이미 성공한 동일 소스 검증은 재사용한다.
-2. 추가 조사 시 [전체 출처·완료 판정](docs/drafts/facility/sasugoldae/source-index.md)의 접근 제한·미달 목록부터 재개한다. 기존71건을 처음부터 다시 수집하지 않는다. 단독 사우나·공공/민간 수영장의 긍정/부정 직접후기와 범수방 원문을 우선 보완하며 접근 불가·질문·미러로 개수를 채우지 않는다.
-3. 대학 본부/대학회계/연구소/용역/자회사별 경험과 현행 연금·임용 조건을 추가 대조한다. 대학 고용구조 별도편 분리를 권고하되 해당 원고 집필은 별도 후속 작업이다.
-4. 모델 변경은 현재 필수로 판단하지 않았다. 향후 상충 근거·연금·직군 최종 검수 시 추론 강도 상향을 고려할 수 있으나 접근 제한 해결과는 별개다.
+| 단계 | 상태·근거 |
+|---|---|
+| 원고 | **완료** · `src/content/facility/sasugoldae.md`, 제목 `[사수골대 ep.0] 사수골대란 뭘까?` |
+| 발행 메타 | **완료** · 발행 2026-11-15, 자료 확인 2026-11-13, Article citation 11개 유지. ep.0의 별도 조사 목록만 화면에서 숨김 |
+| 썸네일 | **완료** · PNG 원본 보존, WebP 1448×1086·215,220 bytes, 본문·홈·카테고리 연결 |
+| Build·SEO | **PASS** · 584페이지, SEO 오류0·기존 경고5, 공개 콘텐츠 오류0 |
+| 화면 QA | **PASS** · 글/홈/카테고리 × 320·390·768·1440px, 목차 이동·가로 넘침·원본 비율·기존 출처 표시 회귀. [run 43696294230](https://github.com/syjy813/getpasslab/actions/runs/43696294230), Artifact `14154274038` |
+| 시각 검토 | **완료** · 이전 동일 제품 소스 `1076a5b7`의 Artifact `14153230758`에서 390/1440px 상단·320px 하단·홈 캡처 확인. 이후 제품 소스·설정 변경 없음; 새 HEAD의 화면 CI도 재통과 |
+| 공통 CI | **전부 PASS** · SEO, 사수골대, 호병백마, 자격증 탐색, 시설 발행/비공개 미리보기, 소방 전체 회귀. 6개 workflow·7개 job |
+| 검사 보완 | **완료** · 신규 글·썸네일 산출물, 카드/출처 정책의 정확한 델타, 취업 카테고리 15개·홈 최신6개 변화 반영. 기존 원본 보호 해시 유지 |
+| Production | **PASS** · 새 글·홈·카테고리·이미지·사이트맵·기존2글 HTTP 200. canonical/robots/citation/목록/사이트맵·썸네일 해시 일치 |
+| 검증 범위 | 화면은 배포 전 Chromium, 실도메인은 배포 후 HTTP/HTML/이미지 대조. 실도메인의 브라우저 캡처를 수행한 것으로 확대하지 않음 |
 
-## 보호된 Production 기준
+공개 URL: https://getpasslab.co.kr/facility-management/career/sasugoldae/
 
-- 최근 제품: 호병백마 병원 ep.2-3, [PR #275](https://github.com/syjy813/getpasslab/pull/275), 제품 커밋 **`a25acff4dc772b9dd12f5910584fe527bf40edd4`**.
-- [Pages run 43337873601](https://github.com/syjy813/getpasslab/actions/runs/43337873601): Build/Deploy success. Artifact `13997268692`, digest `sha256:59781a1b4fd174210c762a06139852ef3b4d269e05fab23182a48ee59c162773`.
-- 기존 배포 Artifact 검증은 해당 제품에 대한 증거다. 6개 조건 카드·canonical·sitemap·썸네일 1440×1080과 SHA-256 일치. 사수골대 문서 검증이나 신규 배포 증거로 전용하지 않는다.
-- 직전 환경에서 `getpasslab.co.kr` 직접 DNS/HTTP 확인은 실패했다. 배포 성공·Artifact QA와 실도메인 직접 육안 QA를 구분한다. 사용자 브라우저의 최종 화면 확인은 남아 있다.
-- 병원 ep.2-3: https://getpasslab.co.kr/facility-management/career/hobyeongbaekma-hospital-large-university/
-- 상세: [병원 ep.2-3 manifest](docs/audits/2026-11-13-hospital-ep2-3/manifest.json), 기존 배포 검증은 PR #275와 해당 run 참조.
-- Google 검색 브랜딩은 PR #276·`662ca57371d08d6b417e8feec6a339fba6930348`·run `43337329786` success로 이전 병원 배포에 포함. 재크롤링 반영은 별도 확인 사항이다.
-- 이전 시리즈: 마트 PR #274, 백화점 #273, 병원 #271/#272, 호텔 #264, ep.0 #270. 이번 조사에서 수정하지 않았다.
+검증 기록: [manifest](docs/audits/2026-11-15-sasugoldae-ep00/manifest.json), [release-validation](docs/audits/2026-11-15-sasugoldae-ep00/release-validation.json), [Production 검증](docs/audits/2026-11-15-sasugoldae-ep00/production-validation.json), [화면 수치](docs/audits/2026-11-15-sasugoldae-ep00/responsive-qa.json).
+
+## 남은 사항·다음 행동
+
+- **이번 ep.0 배포 범위의 미완료 없음.** 기존 SEO 경고5는 유지되며 오류와 구분한다.
+- **시리즈 사전 자료 수집은 부분 완료**다. 핵심 후보71건은 독립 근무후기71건을 뜻하지 않는다. 집계·접근 제한·시설별 미달은 [source-index](docs/drafts/facility/sasugoldae/source-index.md)가 정본이다.
+- 후속 조사 시 범수방 시설별 원문, 디시 댓글, 사우나/수영장 긍정·부정 직접후기, 대학 고용주·직군·연금과 공고 상세 공백부터 재개한다. 기존71건을 처음부터 재수집하지 않는다.
+- 사우나 절망편·희망편 등 후속편 집필·새 배포는 후속 사용자 요청에 따라 진행한다.
+- 기존 공개 URL·기존 호병백마 원고/이미지·자격증/문제 데이터는 보호했다. 최신6개 홈 슬라이스에서 기존 병원 일부 카드가 빠져도 카테고리와 상세 URL은 유지된다.
+- 이전 병원 ep.2-3 배포 근거는 [기존 manifest](docs/audits/2026-11-13-hospital-ep2-3/manifest.json), PR #275·run 43337873601에 보존한다.

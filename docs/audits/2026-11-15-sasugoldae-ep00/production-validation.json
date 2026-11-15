@@ -1,0 +1,32 @@
+{
+  "productCommit": "40a4b722ff60cbce62b4179dd9ee2483dcff3ed8",
+  "verifiedAt": "2026-11-15T18:02:51+09:00",
+  "origin": "https://getpasslab.co.kr",
+  "http": {
+    "/facility-management/career/sasugoldae/": 200,
+    "/facility-management/": 200,
+    "/facility-management/career/": 200,
+    "/images/facility-series/sasugoldae-00/01-sasugoldae-hero.webp": 200,
+    "/sitemap-0.xml": 200,
+    "/facility-management/career/first-job/": 200,
+    "/facility-management/career/hobyeongbaekma/": 200
+  },
+  "article": {
+    "h1": 1,
+    "canonical": "pass",
+    "robots": "index, follow",
+    "citations": 11,
+    "visibleSourceList": false,
+    "cafeLinks": 2
+  },
+  "lists": "home and career contain one card and approved thumbnail",
+  "sitemap": "pass",
+  "hero": {
+    "sha256": "232863f74ce249e260cf7018c75c2a514463a8d81c04d1bd3f354648c1231998",
+    "bytes": 215220,
+    "width": 1448,
+    "height": 1086
+  },
+  "regressions": "first-job sources visible; hobyeongbaekma sources hidden",
+  "visualQA": "pre-deploy Chromium 320/390/768/1440; live HTTP verification, no live screenshot"
+}

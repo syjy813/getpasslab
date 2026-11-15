@@ -5,5 +5,7 @@
   "seoWarnings": 5,
   "publicContentErrors": 0,
   "publicationChecks": "pass",
-  "responsiveQA": "CI pending; local Chromium launch blocked by environment socket restriction"
+  "responsiveQA": "PASS: article/home/category at 320/390/768/1440px; run 43696294230",
+  "validatedPrHead": "0f13ef81e8eec48225253c89a43f59c9e33bd5b0",
+  "allCI": "6 workflows / 7 jobs success"
 }

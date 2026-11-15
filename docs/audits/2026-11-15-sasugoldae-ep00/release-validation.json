@@ -1,0 +1,53 @@
+{
+  "productCommit": "40a4b722ff60cbce62b4179dd9ee2483dcff3ed8",
+  "validatedPrHead": "0f13ef81e8eec48225253c89a43f59c9e33bd5b0",
+  "identicalProductTree": "2bdc945de595d8b7a349a2cc262c2d1aeda70c98",
+  "checks": [
+    {
+      "name": "SEO validation",
+      "runId": 43696294151,
+      "conclusion": "success"
+    },
+    {
+      "name": "Sasugoldae publication QA",
+      "runId": 43696294230,
+      "conclusion": "success"
+    },
+    {
+      "name": "Hobyeongbaekma publication QA",
+      "runId": 43696294186,
+      "conclusion": "success"
+    },
+    {
+      "name": "Certification discovery QA",
+      "runId": 43696294182,
+      "conclusion": "success"
+    },
+    {
+      "name": "Facility publication QA",
+      "runId": 43696294228,
+      "conclusion": "success"
+    },
+    {
+      "name": "Fire safety level 2 launch QA",
+      "runId": 43696294160,
+      "conclusion": "success"
+    }
+  ],
+  "facilityJobs": 2,
+  "visualEvidence": {
+    "currentRun": 43696294230,
+    "currentArtifact": 14154274038,
+    "reviewedArtifact": 14153230758,
+    "reviewedSourceCommit": "1076a5b7cda46117ec59a331bc6b002e1c272af4",
+    "reuseReason": "No changes to src/public/dependencies/config/workflow between reviewed source and validated PR HEAD; current responsive CI also passed"
+  },
+  "deployment": {
+    "runId": 43697216589,
+    "build": "success",
+    "deploy": "success",
+    "artifactId": 14155381079,
+    "digest": "sha256:c23278a66800640cf762018d17aac660d985a52a09802bbb009bb043090af600"
+  },
+  "production": "production-validation.json"
+}

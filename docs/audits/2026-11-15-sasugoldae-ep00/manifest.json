@@ -24,6 +24,14 @@
       1440
     ]
   },
-  "status": "publication candidate; user explicitly authorized production deployment",
-  "sourceSha256": "e3d3b6c89986fada1dc2b176c761d467268be35f2087a3373cca3ff5dfa2eb17"
+  "status": "deployed; production HTTP verification pass",
+  "sourceSha256": "e3d3b6c89986fada1dc2b176c761d467268be35f2087a3373cca3ff5dfa2eb17",
+  "deployment": {
+    "productCommit": "40a4b722ff60cbce62b4179dd9ee2483dcff3ed8",
+    "validatedPrHead": "0f13ef81e8eec48225253c89a43f59c9e33bd5b0",
+    "runId": 43697216589,
+    "conclusion": "success",
+    "artifactId": 14155381079,
+    "artifactDigest": "sha256:c23278a66800640cf762018d17aac660d985a52a09802bbb009bb043090af600"
+  }
 }
