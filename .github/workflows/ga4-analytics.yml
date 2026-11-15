@@ -1,4 +1,4 @@
-name: GA4 authentication check
+name: GA4 facility article page views
 
 on:
   push:
@@ -7,7 +7,14 @@ on:
       - '.github/workflows/ga4-analytics.yml'
       - 'scripts/check-ga4-auth.mjs'
       - 'scripts/test-ga4-auth.mjs'
+      - 'scripts/sync-ga4-page-views.mjs'
+      - 'scripts/test-ga4-page-views.mjs'
+      - 'scripts/commit-ga4-page-views.mjs'
+      - 'scripts/lib/facility-page-views.mjs'
   workflow_dispatch:
+  # Runs only on the default branch after a separately approved merge.
+  schedule:
+    - cron: '13 2 * * *'
 
 permissions:
   contents: read
@@ -26,6 +33,10 @@ jobs:
           persist-credentials: false
       - run: node --check scripts/check-ga4-auth.mjs
       - run: node scripts/test-ga4-auth.mjs
+      - run: node --check scripts/sync-ga4-page-views.mjs
+      - run: node --check scripts/commit-ga4-page-views.mjs
+      - run: node --check scripts/lib/facility-page-views.mjs
+      - run: node scripts/test-ga4-page-views.mjs
   authenticate-and-query:
     needs: validate
     # External identity trust and IAM grant approved by the user.
@@ -33,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
-      contents: read
+      contents: write # only this job can update the facility view-count JSON
       id-token: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -56,3 +67,12 @@ jobs:
           GA4_PROPERTY_ID: '547805075'
           GA4_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
         run: node scripts/check-ga4-auth.mjs
+      - name: Build published facility article view-count snapshot
+        env:
+          GA4_PROPERTY_ID: '547805075'
+          GA4_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+        run: node scripts/sync-ga4-page-views.mjs
+      - name: Commit the single approved snapshot file
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/commit-ga4-page-views.mjs
