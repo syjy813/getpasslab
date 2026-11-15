@@ -24,5 +24,6 @@
       1440
     ]
   },
-  "status": "publication candidate; user explicitly authorized production deployment"
+  "status": "publication candidate; user explicitly authorized production deployment",
+  "sourceSha256": "e3d3b6c89986fada1dc2b176c761d467268be35f2087a3373cca3ff5dfa2eb17"
 }

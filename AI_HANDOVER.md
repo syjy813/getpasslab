@@ -17,7 +17,7 @@
 - 검증: 기존 조사6파일·15절 구조와 핵심71/집계 검증은 조사 체크포인트에서 재사용했다. 최종 원고는 제목1개·요약3개·시설명·원문 링크2개와 근거 메모·인계의 내부 링크/앵커31개·변경 경계를 점검했다. 실제 Commit/CI 결과는 PR #277과 브랜치 HEAD의 Actions를 참조한다. 웹 전체 링크의 상시 접근·개인 경험의 독립 인증은 보장하지 않는다.
 - 발행 구현: `src/content/facility/sasugoldae.md`, `/facility-management/career/sasugoldae/`. 제작한 썸네일 PNG 원본과 1448×1086 WebP(215,220 bytes)를 보존하고 본문·목록에 연결했다. ep.0의 별도 조사 목록은 화면에서 숨기되 출처 메타·Article citation은 유지했다. 기존 글·URL은 변경하지 않았다.
 - 발행 검증: 로컬 Build 584페이지 성공, SEO 오류0·기존 경고5, 공개 콘텐츠 오류0. canonical·robots·사이트맵·Article 날짜/출처·목록·배포 이미지 해시 확인. 로컬 Chromium은 환경 소켓 제한으로 시작하지 못해 `.github/workflows/sasugoldae-qa.yml`에서 320/390/768/1440px를 검증한다. CI 성공 전 main 병합하지 않는다.
-- 배포 상태: PR #277의 현재 HEAD·Checks·merge SHA와 Pages 실행을 정본으로 확인한다. 이 문서 커밋 시점에는 **배포 전**이다. [발행 manifest](docs/audits/2026-11-15-sasugoldae-ep00/manifest.json), [로컬 빌드 점검](docs/audits/2026-11-15-sasugoldae-ep00/build-validation.json)을 참조한다.
+- 배포 상태: PR #277의 현재 HEAD·Checks·merge SHA와 Pages 실행을 정본으로 확인한다. 이 문서 커밋 시점에는 **배포 전**이다. 재개 검증: `1076a5b7`의 사수골대 화면 CI [43692848160](https://github.com/syjy813/getpasslab/actions/runs/43692848160) 성공, Artifact `14153230758`의 390/1440px 캡처 육안 확인 및 `responsive-qa.json` 보존. 공통 CI 2건은 신규 글·카드·출처 정책을 기존 고정 해시/목록 검사가 허용하지 않아 실패했다. 원본 보호 해시는 유지하고 정확한 승인 델타와 신규 산출물만 허용하도록 보완, 로컬 Build 584페이지와 source/publication/관련 링크/병원 회귀 PASS. 보완 HEAD의 CI는 다시 확인해야 한다. [발행 manifest](docs/audits/2026-11-15-sasugoldae-ep00/manifest.json), [로컬 빌드 점검](docs/audits/2026-11-15-sasugoldae-ep00/build-validation.json)을 참조한다.
 
 ## 다음 행동
 
