@@ -10,6 +10,7 @@ on:
       - 'scripts/sync-ga4-page-views.mjs'
       - 'scripts/test-ga4-page-views.mjs'
       - 'scripts/commit-ga4-page-views.mjs'
+      - 'scripts/dispatch-ga4-pages.mjs'
       - 'scripts/lib/facility-page-views.mjs'
       - 'scripts/read-ga4-sorting-release.mjs'
       - 'scripts/qa-ga4-sorting.cjs'
@@ -39,6 +40,7 @@ jobs:
       - run: node scripts/test-ga4-auth.mjs
       - run: node --check scripts/sync-ga4-page-views.mjs
       - run: node --check scripts/commit-ga4-page-views.mjs
+      - run: node --check scripts/dispatch-ga4-pages.mjs
       - run: node --check scripts/lib/facility-page-views.mjs
       - run: node scripts/test-ga4-page-views.mjs
   authenticate-and-query:
@@ -50,6 +52,8 @@ jobs:
     permissions:
       contents: write # only this job can update the facility view-count JSON
       id-token: write
+    outputs:
+      snapshot_changed: ${{ steps.commit_snapshot.outputs.changed }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -77,9 +81,29 @@ jobs:
           GA4_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
         run: node scripts/sync-ga4-page-views.mjs
       - name: Commit the single approved snapshot file
+        id: commit_snapshot
+        # A branch push validates collection but does not move the PR head with [skip ci].
+        # Manual dispatch can refresh this branch; production schedule refreshes main.
+        if: github.event_name != 'push'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/commit-ga4-page-views.mjs
+  deploy-refreshed-data:
+    needs: authenticate-and-query
+    if: github.ref == 'refs/heads/main' && needs.authenticate-and-query.outputs.snapshot_changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Request existing Pages workflow after verified data update
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/dispatch-ga4-pages.mjs
   verify-sorting-ui:
     needs: validate
     if: github.event_name != 'schedule'
