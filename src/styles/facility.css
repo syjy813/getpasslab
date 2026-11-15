@@ -92,7 +92,6 @@
 .facility-card-cover{box-sizing:border-box;display:block;width:100%;overflow:hidden;border:1px solid var(--gray-200);border-radius:var(--radius-lg);background:var(--gray-100);transition:border-color 180ms ease,box-shadow 180ms ease}
 .facility-card-cover img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
 .facility-card-content{display:flex;flex:1;flex-direction:column;align-items:start;min-width:0;padding:var(--space-3) 0}
-.facility-card-content .card-label{margin-bottom:var(--space-2)}
 .facility-card-title{display:block;font-size:var(--fs-h4);font-weight:var(--fw-bold);
   line-height:1.45;color:var(--gray-900);word-break:keep-all;overflow-wrap:anywhere;transition:color 180ms ease}
 .facility-card-description{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
@@ -152,16 +151,35 @@
   .facility-card--lead .facility-card-content{padding:var(--space-4)}
   .facility-card--lead .facility-card-title{font-size:23px}
   .facility-story-grid{grid-template-columns:1fr}
-  .facility-page .facility-story-grid .facility-card:not(.facility-card--text){
-    display:grid;grid-template-columns:minmax(100px,36%) minmax(0,1fr);gap:var(--space-3)
-  }
-  .facility-story-grid .facility-card-cover{height:auto;min-height:0;align-self:start;border-radius:var(--radius-md)}
-  .facility-story-grid .facility-card-cover img{height:auto;min-height:0;aspect-ratio:auto}
-  .facility-story-grid .facility-card-content{padding:0}
-  .facility-story-grid .facility-card-title{font-size:var(--fs-body);line-height:1.4}
-  .facility-story-grid .facility-card-description{-webkit-line-clamp:2}
-  .facility-story-grid .facility-card-meta{margin-top:var(--space-2);padding-top:0}
   .facility-page .facility-body h2{font-size:var(--fs-h3)}
+}
+
+/* Mobile lists: full-width title, then the original-ratio cover and summary.
+   The same card serves home, category and related-article lists. */
+.facility-page .facility-card:not(.facility-card--lead):not(.facility-card--text){
+  display:grid;grid-template-columns:minmax(96px,34%) minmax(0,1fr);
+  align-items:center;gap:var(--space-3)
+}
+.facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-content{display:contents}
+.facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-title{
+  grid-column:1 / -1;grid-row:1;font-size:var(--fs-body);line-height:1.45
+}
+.facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-cover{
+  grid-column:1;grid-row:2;align-self:center;border-radius:var(--radius-md)
+}
+.facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-description{
+  grid-column:2;grid-row:2;margin-top:0;-webkit-line-clamp:3
+}
+.facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-meta{
+  grid-column:1 / -1;margin-top:0;padding-top:0
+}
+@media(min-width:640px){
+  .facility-page .facility-card:not(.facility-card--lead):not(.facility-card--text){display:flex;align-items:stretch}
+  .facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-content{display:flex}
+  .facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-title{font-size:var(--fs-h4)}
+  .facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-cover{align-self:auto;border-radius:var(--radius-lg)}
+  .facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-description{margin-top:var(--space-2);-webkit-line-clamp:2}
+  .facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-meta{margin-top:auto;padding-top:var(--space-3)}
 }
 
 

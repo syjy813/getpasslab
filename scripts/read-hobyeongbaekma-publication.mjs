@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import {integratedImageRoot,integrateEpisode00Images,integratedImageStyles} from './hobyeongbaekma-integrated-images.mjs';
+import {beforeFacilityListLayout} from './read-facility-list-layout.mjs';
 
 const originalRelease = JSON.parse(fs.readFileSync('docs/audits/2026-11-07-hobyeongbaekma-publication/manifest.json'));
 export const episode00Revision = JSON.parse(fs.readFileSync('docs/audits/2026-11-07-hobyeongbaekma-editorial-revision/manifest.json'));
@@ -61,7 +62,7 @@ export function assertEpisode00Release() {
   assert.equal(blob(fs.readFileSync(episode00Integration.previousStyle)),episode00Integration.previousStyleBlob,'previous facility CSS preserved');
 
   const originalFacilityCss=fs.readFileSync(episode00Integration.previousStyle,'utf8')+integratedImageStyles;
-  assert.equal(fs.readFileSync('src/styles/facility.css','utf8'),originalFacilityCss+approvedBorderlessHeroStyle,'only scoped complete-sheet and approved borderless hero CSS rules');
+  assert.equal(beforeFacilityListLayout('src/styles/facility.css',fs.readFileSync('src/styles/facility.css')).toString('utf8'),originalFacilityCss+approvedBorderlessHeroStyle,'previous scoped image CSS preserved beneath reviewed list layout');
   assert.equal(blob(Buffer.from(originalFacilityCss)),episode00Integration.facilityStyleBlob,'original scoped responsive image rules preserved');
   assert.equal(sha(Buffer.from(originalFacilityCss)),episode00Integration.facilityStyleSHA256);
   assert.deepEqual(episode00Integration.groups.map(row=>[row.id,row.count]),[['02-four-workplaces',4],['03-why-hard',4],['05-before-applying',6]]);

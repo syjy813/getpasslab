@@ -2,6 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeFacilityListLayout} from './read-facility-list-layout.mjs';
 import {approvedBorderlessHeroStyle,applyEpisode00NextLink} from './read-hobyeongbaekma-publication.mjs';
 import {integrateEpisode00Images,integratedImageRoot as root,integratedImageStyles,beforeIntegratedStyles} from './hobyeongbaekma-integrated-images.mjs';
 const manifest=JSON.parse(fs.readFileSync(root+'/manifest.json'));
@@ -40,7 +41,7 @@ test('exact approved responsive assets and masters are available',()=>{
   }
 });
 test('CSS is limited to complete-sheet layout and correct pre-load aspect ratios',()=>{
-  assert.equal(fs.readFileSync('src/styles/facility.css','utf8'),fs.readFileSync(manifest.previousStyle,'utf8')+integratedImageStyles+approvedBorderlessHeroStyle);
+  assert.equal(beforeFacilityListLayout('src/styles/facility.css',fs.readFileSync('src/styles/facility.css')).toString('utf8'),fs.readFileSync(manifest.previousStyle,'utf8')+integratedImageStyles+approvedBorderlessHeroStyle);
   for(const row of manifest.groups){
     assert(current.includes('--overview-ratio:'+row.desktop.width+'/'+row.desktop.height));
     assert(current.includes('--overview-mobile-ratio:'+row.mobile.width+'/'+row.mobile.height));
