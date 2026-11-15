@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "baseCommit": "ea67d199ab0839a2fb569a66aff2df172da4194e",
+  "htmlPages": 586,
+  "listPages": 28,
+  "cards": 134,
+  "comparison": "Every HTML byte unchanged after replacing the single content-hashed facility stylesheet filename. Titles, links, descriptions, canonical, structured data and detail dates preserved. Mobile descriptions are hidden by CSS.",
+  "rows": [
+    {
+      "path": "facility-management/career/employment-types/index.html",
+      "cards": 4
+    },
+    {
+      "path": "facility-management/career/first-job/index.html",
+      "cards": 4
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma/index.html",
+      "cards": 4
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-department-store-despair/index.html",
+      "cards": 5
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-department-store-hope/index.html",
+      "cards": 5
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-hospital-despair/index.html",
+      "cards": 5
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-hospital-hope/index.html",
+      "cards": 5
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-hospital-large-university/index.html",
+      "cards": 5
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-hotel-despair/index.html",
+      "cards": 4
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-hotel-hope/index.html",
+      "cards": 4
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-mart-despair/index.html",
+      "cards": 5
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-mart-hope/index.html",
+      "cards": 5
+    },
+    {
+      "path": "facility-management/career/index.html",
+      "cards": 15
+    },
+    {
+      "path": "facility-management/career/sasugoldae/index.html",
+      "cards": 4
+    },
+    {
+      "path": "facility-management/career/shifts-and-pay/index.html",
+      "cards": 4
+    },
+    {
+      "path": "facility-management/career/what-is-facility-management/index.html",
+      "cards": 4
+    },
+    {
+      "path": "facility-management/index.html",
+      "cards": 16
+    },
+    {
+      "path": "facility-management/jobs/hanfms/index.html",
+      "cards": 3
+    },
+    {
+      "path": "facility-management/jobs/index.html",
+      "cards": 5
+    },
+    {
+      "path": "facility-management/jobs/kamcofmc/index.html",
+      "cards": 3
+    },
+    {
+      "path": "facility-management/jobs/korailtech/index.html",
+      "cards": 3
+    },
+    {
+      "path": "facility-management/jobs/postal-facilities/index.html",
+      "cards": 3
+    },
+    {
+      "path": "facility-management/jobs/public-sector-comparison/index.html",
+      "cards": 4
+    },
+    {
+      "path": "facility-management/qualifications/boiler-inspection-manager/index.html",
+      "cards": 2
+    },
+    {
+      "path": "facility-management/qualifications/index.html",
+      "cards": 4
+    },
+    {
+      "path": "facility-management/qualifications/mechanical-career-records/index.html",
+      "cards": 3
+    },
+    {
+      "path": "facility-management/qualifications/mechanical-maintainer-levels/index.html",
+      "cards": 3
+    },
+    {
+      "path": "facility-management/qualifications/statutory-appointments/index.html",
+      "cards": 3
+    }
+  ]
+}

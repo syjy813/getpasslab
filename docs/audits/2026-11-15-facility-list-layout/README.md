@@ -19,4 +19,4 @@
 
 `delta.json`은 정확한 before/after 소스와 빌드 CSS를 고정한다. 기존 불변 검사에서는 이 변경만 되돌린 뒤 원래 fingerprint를 검증한다. CSS 이전 번들은 같은 HEAD·lockfile·Node 환경의 별도 기준 checkout을 빌드해 확보했다. 과거 해시나 원본 이미지를 교체하지 않는다.
 
-이번 요청에는 Production 배포를 포함하지 않는다.
+사용자의 후속 실서버 반영 요청에 따라 PR #279를 squash 병합했다. 제품 `ea67d199ab0839a2fb569a66aff2df172da4194e`, Pages run `43723678125` build/deploy 성공. 7개 실서버 경로·48개 카드의 내용/링크/메타, CSS 3개와 썸네일 2개의 바이트 일치를 확인했다. [Production 근거](production-validation.json) 참조. 화면은 배포 전 4폭 Chromium, 실서버는 HTTP/HTML/CSS/이미지 대조로 구분한다.

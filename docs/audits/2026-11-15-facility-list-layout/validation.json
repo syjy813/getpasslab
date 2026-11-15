@@ -19,27 +19,6 @@
   },
   "workflows": [
     {
-      "id": 43722550533,
-      "name": "Fire safety level 2 launch QA",
-      "status": "in_progress",
-      "conclusion": null,
-      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550533"
-    },
-    {
-      "id": 43722550461,
-      "name": "SEO validation",
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550461"
-    },
-    {
-      "id": 43722550497,
-      "name": "Sasugoldae publication QA",
-      "status": "completed",
-      "conclusion": "success",
-      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550497"
-    },
-    {
       "id": 43722550463,
       "name": "Hobyeongbaekma publication QA",
       "status": "completed",
@@ -59,6 +38,27 @@
       "status": "completed",
       "conclusion": "success",
       "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550514"
+    },
+    {
+      "id": 43722550461,
+      "name": "SEO validation",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550461"
+    },
+    {
+      "id": 43722550497,
+      "name": "Sasugoldae publication QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550497"
+    },
+    {
+      "id": 43722550533,
+      "name": "Fire safety level 2 launch QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/43722550533"
     }
   ],
   "responsive": {
@@ -82,5 +82,19 @@
     ],
     "reuseReason": "871c51d8 only changes the historical image test; application sources, dependencies and configuration are identical."
   },
-  "deploy": "not requested; not performed"
+  "deploy": {
+    "productCommit": "ea67d199ab0839a2fb569a66aff2df172da4194e",
+    "pr": 279,
+    "run": 43723678125,
+    "url": "https://github.com/syjy813/getpasslab/actions/runs/43723678125",
+    "conclusion": "success",
+    "artifact": [
+      {
+        "id": 14165636198,
+        "name": "github-pages",
+        "digest": "sha256:bf472710d51b9e8b9bd00a5c90b71bb0c786b9193ac62f9bfabc21b53d457ddd"
+      }
+    ],
+    "sourceEvidence": "PR branch ad1bf3c8 and merged product ea67d199 have identical Git trees. Source/configuration matched CI target 871c51d8; remaining differences are documentation only."
+  }
 }
