@@ -36,7 +36,7 @@ const text=n=>n?.nodeName==='#text'?n.value:(n?.childNodes||[]).map(text).join('
 const beforeSearchBranding=(file,bytes)=>{
  if(!file.endsWith('.html'))return bytes;
  let html=bytes.toString('utf8');
- const approvedFavicon='<link rel="icon" href="/favicon-approved-v1.png" type="image/png" sizes="96x96">';
+ const approvedFavicon='<link rel="icon" href="/favicon-approved-v1.png?v=20261115" type="image/png" sizes="96x96">';
  const baselineFavicon='<link rel="icon" href="/favicon.svg" type="image/svg+xml">';
  if(html.includes(approvedFavicon))html=html.replace(approvedFavicon,baselineFavicon);
  if(file==='dist/index.html'){
@@ -121,6 +121,10 @@ let unchanged=0;
 const approvedRenders=new Set([...publicSectorVisuals.images.filter(r=>r.existing).map(visualOutput),...bulkVisuals.images.map(bulkOutput)]);
 for(const [file,sha] of Object.entries(baseline)){
  if(file===headingCSS.previousPath)continue; // Replacement is hash-pinned above.
+ if(file==='dist/favicon-approved-v1.png'){
+  assert.equal(hash(fs.readFileSync(file)),'b78bfddaa9386745375ae07c5f1f18df6c9312643bd85caad72857c361c3a2c0','approved navy-brand PNG');
+  continue;
+ }
  // Facility lists/related links and XML reflect the reviewed release. Native
  // guard separately pins old source files and the three PR245 SVG renders.
  if(file.startsWith('dist/facility-management/')||file.endsWith('.xml')||approvedRenders.has(file))continue;

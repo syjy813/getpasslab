@@ -7,7 +7,7 @@ assertEpisode00Release();
 import {bulkVisuals,beforeBulkVisuals,assertBulkVisuals,bulkOutput} from './read-facility-bulk-visuals.mjs';
 // The original facility-publication fingerprint is kept immutable in
 // docs/audits/2026-10-31-facility-launch/review.json.gz.
-// The approved editorial UI and current search branding pin sixteen exact source blobs.
+// The approved editorial UI and current unified navy branding pin exact source blobs.
 // Preserve exact old bytes for everything else, the complete output page/URL
 // inventory, and all original facility assets. Reviewed image derivatives are pinned separately. Generated HTML changes
 // globally when the common header and footer change; verify its semantics via
@@ -32,9 +32,10 @@ const editorialBlobs = {
   'src/pages/[cert]/[exam]/index.astro': '3e648acef59825aa1430431775e1226989605ab3',
   'src/styles/global.css': '297274d23a54af8863e44cb6f26c2e945617f6f8',
   'src/components/GNB.astro': 'b349aba310092b9170fe6b13db4c55742431370d',
-  'src/layouts/BaseLayout.astro': '02a88c45b7e82afc1b8f38a43b74d840f877b9a4',
+  'src/layouts/BaseLayout.astro': '339bb8e75ad977a91d4cfafcc2181146060caa42',
   'src/pages/index.astro': '3359904eb7683b843b6c026a68c30ca3fcb73541',
   'public/favicon.svg': '035e5d8687d0c001e2cf16f5f83b3fb7a592bc90',
+  'public/favicon-approved-v1.png': 'd5c235158422531435a64d924804fe92b6c01724',
   'src/pages/certifications/index.astro': '125799ae05dc3918bd43b16babbdcfd9bf1fc043',
   'src/styles/catalog.css': '8a90e16d57215350e844faf7accf12cd20b1cd68',
   'src/components/Footer.astro': '1c21ee8122b0e7a2bbd5eac8c1c1f5d3538f5867',
@@ -100,11 +101,7 @@ const martCovers="  'hobyeongbaekma-mart-despair': '/images/facility-series/ep4-
     } else {
       assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
     }
-    // Restoring the Owner-approved PNG favicon intentionally returns BaseLayout to the original publication bytes.
-    // Its exact current blob is pinned above, so only the other reviewed editorial files must differ from that snapshot.
-    if (file !== 'src/layouts/BaseLayout.astro') {
-      assert.notEqual(hash(bytes), facilityReview.current[file], file + ': changed from publication snapshot');
-    }
+    assert.notEqual(hash(bytes), facilityReview.current[file], file + ': changed from publication snapshot');
     reviewedEditorialPaths.push(file);
   } else if (file.startsWith('dist/')) {
     // Exact rendered HTML bytes change on every page due to shared GNB/footer.
@@ -118,7 +115,7 @@ const martCovers="  'hobyeongbaekma-mart-despair': '/images/facility-series/ep4-
     }
   }
 }
-assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'fifteen reviewed UI changes only');
+assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'reviewed UI and favicon changes only');
 
 const assets = walk('facility-assets').filter(file => !Object.hasOwn(draftManifest.assets, file)).sort();
 assert.deepEqual(assets, Object.keys(facilityReview.assets).sort(), 'original image inventory');
@@ -191,4 +188,4 @@ for (const [file, row] of Object.entries(facilityReview.publishedAssets)) {
 assert.deepEqual([...servedEdits].sort(), [...new Set([...edits.keys(), ...facility05Masters.keys(), ...publicSectorVisuals.images.filter(r=>r.existing).map(r=>'facility-assets/05/'+r.publicPath.split('/').at(-1)), ...bulkVisuals.images.filter(r=>r.existing&&Number(r.publicPath.split('/')[3])<6).map(r=>'facility-assets/'+r.publicPath.split('/').slice(-2).join('/'))])].sort(), 'every derivative is actually served');
 assert.equal(served.length, 22, 'all 22 approved public image URLs retained');
 console.log('[Facility UI source guard] PASS', files.length - generated, 'native files,', generated,
-  'rendered HTML/XML paths, fifteen pinned UI blobs, 24 originals and 3 historical masters preserved; 5 current public-sector visuals verified');
+  'rendered HTML/XML paths,', Object.keys(editorialBlobs).length, 'pinned UI/brand blobs, 24 originals and 3 historical masters preserved; 5 current public-sector visuals verified');
