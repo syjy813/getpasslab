@@ -174,7 +174,7 @@
   grid-column:2;margin-top:0;padding-top:0
 }
 @media(min-width:360px){
-  .facility-page .facility-card:not(.facility-card--lead):not(.facility-card--text){grid-template-columns:96px minmax(0,1fr);gap:var(--space-5)}
+  .facility-page .facility-card:not(.facility-card--lead):not(.facility-card--text){grid-template-columns:96px minmax(0,1fr);gap:20px}
 }
 @media(max-width:639px){
   .facility-page :is(.facility-story-grid,.grid):has(> .facility-card){row-gap:0}
