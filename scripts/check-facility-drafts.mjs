@@ -18,7 +18,7 @@ const walk = dir => fs.existsSync(dir) ? fs.readdirSync(dir,{withFileTypes:true}
 const normalizeApprovedSearchBranding = (file, bytes) => {
   if (!file.endsWith('.html')) return bytes;
   let html = bytes.toString('utf8');
-  const approvedFavicon = '<link rel="icon" href="/favicon-approved-v1.png" type="image/png" sizes="96x96">';
+  const approvedFavicon = '<link rel="icon" href="/favicon-approved-v1.png?v=20261115" type="image/png" sizes="96x96">';
   const baselineFavicon = '<link rel="icon" href="/favicon.svg" type="image/svg+xml">';
   assert.equal(html.includes(approvedFavicon), true, file+': approved search favicon rendered');
   html = html.replace(approvedFavicon, baselineFavicon);
@@ -91,6 +91,10 @@ if(!preview) {
   }
   for(const file of files) {
     const bytes=fs.readFileSync(file);
+    if(file==='dist/favicon-approved-v1.png') {
+      assert.equal(sha(bytes),'b78bfddaa9386745375ae07c5f1f18df6c9312643bd85caad72857c361c3a2c0',file+': approved navy brand favicon');
+      continue;
+    }
     const reviewedBytes=expectedGenerated.has(file) ? bytes : normalizeApprovedSearchBranding(file,bytes);
     assert.equal(sha(reviewedBytes),expectedGenerated.get(file)??baseline[file],file+': approved public bytes');
   }
