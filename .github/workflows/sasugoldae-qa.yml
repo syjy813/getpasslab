@@ -1,0 +1,44 @@
+name: Sasugoldae publication QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/content/facility/sasugoldae.md'
+      - 'public/images/facility-series/sasugoldae-00/**'
+      - 'src/components/FacilityCard.astro'
+      - 'src/layouts/FacilityArticleLayout.astro'
+      - 'scripts/qa-sasugoldae.cjs'
+      - '.github/workflows/sasugoldae-qa.yml'
+permissions:
+  contents: read
+jobs:
+  responsive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Install browser tools
+        run: |
+          npm install --prefix /tmp/sasugoldae-tools --no-package-lock playwright@1.62.1
+          /tmp/sasugoldae-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Inspect article and lists at four widths
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/sasugoldae-tools/node_modules/playwright
+        run: |
+          python3 -m http.server 4321 --bind 127.0.0.1 --directory dist >/tmp/sasugoldae-server.log 2>&1 &
+          for n in $(seq 1 30); do curl -fsS http://127.0.0.1:4321/ >/dev/null && break; sleep 1; done
+          node scripts/qa-sasugoldae.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sasugoldae-publication-review
+          path: |
+            qa-results/sasugoldae/
+            docs/audits/2026-11-15-sasugoldae-ep00/responsive-qa.json
+          retention-days: 14

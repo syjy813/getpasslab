@@ -3,6 +3,7 @@
 ## Scope and baseline
 
 - Baseline: `main` at `281264eefaa894de4f71392107765cef27e5044f`.
+- Synchronized parallel `main@40a4b722ff60cbce62b4179dd9ee2483dcff3ed8` without overwriting the sasugoldae checkpoint or site changes. Original latest handover is retained both inline as the parallel task and in `previous-handover.md`.
 - Work branch: `chore/ga4-auth-connection`.
 - Scope: authenticate GitHub Actions to the existing GA4 reader and run a read-only cumulative page-view smoke test. No page counters, ingestion, ranking UI, schedule, merge, or Production deployment in this change.
 - Remote files were inspected through GitHub. The scratch directory was not a pre-existing local checkout; no existing local work was replaced.
@@ -14,6 +15,8 @@
 - Google Analytics Data API enabled.
 - Service account: `getpasslab-ga4-reader@level-array-514808-v0.iam.gserviceaccount.com`; no service-account keys created.
 - GA4 property `547805075`: Viewer role applied after user confirmation, with cost and revenue metric access disabled. Verified in the property access list.
+
+- IAM, Resource Manager, Service Account Credentials, and STS APIs were enabled successfully without linking billing.
 
 ## Prepared federation (not saved or granted yet)
 
@@ -33,12 +36,13 @@
 - Local `node --check`: PASS.
 - Local `node scripts/test-ga4-auth.mjs`: 7/7 PASS (valid response, 403, 429, invalid schema, thresholding, sampling, invalid property ID), including public-log credential/raw-path redaction checks.
 - Workflow YAML structure and permission-boundary inspection: PASS.
+- GitHub code commit `56b78731c600ee352194f321f087a027391e1f4f`, [run 43697285839](https://github.com/syjy813/getpasslab/actions/runs/43697285839): validate **success**, authenticate-and-query **skipped** as expected. Documentation/main-sync changes leave all three auth code/workflow files byte-identical, so this evidence is reused.
 - Live service-account query: **not run**; external identity trust and GitHub variable remain disabled.
 - Site Build/UI/Production QA: not applicable to these isolated auth files; no site source or deployment workflow changed.
 
 ## Resume after approval
 
-1. Confirm IAM, Resource Manager, Service Account Credentials, and Security Token Service APIs are enabled, without linking billing. If billing is required, stop and report it.
+1. The four prerequisite authentication APIs are enabled. Reuse this console evidence unless configuration changes; do not link billing.
 2. Save the prepared pool/provider, verify exact mappings and numeric-ID/branch/workflow restrictions, then grant the service-account impersonation role to the principal above.
 3. Set repository Actions variable `GA4_WIF_ENABLED=true` (non-secret), then rerun the workflow on this branch.
 4. Inspect authentication and live report results; handle permission propagation before changing policy. Update this checkpoint with actual run/commit evidence. Do not claim the API test passed based on mock fixtures.
