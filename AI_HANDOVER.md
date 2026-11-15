@@ -2,19 +2,18 @@
 
 실행 지침은 [AGENTS.md](AGENTS.md). 상세 검증은 Git PR·Actions·[audits](docs/audits/)를 정본으로 참조한다. 오래된 전체 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)에 보존한다.
 
-## 현재 작업 — GA4 GitHub 인증 연결
+## 현재 작업 — GA4 GitHub 인증 연결 완료
 
-- 갱신: **2026-11-15 KST**. 작업 브랜치 `chore/ga4-auth-connection`, [Draft PR #278](https://github.com/syjy813/getpasslab/pull/278). 최초 기준 `281264ee`, 병행 변경을 보존하며 `main@40a4b722` 동기화.
-- 목표: 조회수 적재·정렬 전 GitHub Actions에서 GA4 읽기 전용 인증과 실제 보고서 호출 검증. 사이트·공개 URL·콘텐츠·배포 설정 변경 없음.
-- 완료: GA4 속성 `547805075`의 가장 이른 기록 2026-07-30, 2026-11-14까지 전체 속성 5,886회·428개 경로 UI 확인(홈/목록 포함). Cloud `level-array-514808-v0`(번호 `528916134663`) 생성, **결제 계정 미연결** 확인. Analytics Data/IAM/Resource Manager/IAM Credentials/STS API 활성화 완료.
-- 권한: `getpasslab-ga4-reader@level-array-514808-v0.iam.gserviceaccount.com` 생성, 사용자 확인 후 GA4 Viewer 및 비용·수익 측정항목 접근 제한 적용·확인. 서비스 계정 키 없음.
-- 구현: `.github/workflows/ga4-analytics.yml`, `scripts/check-ga4-auth.mjs`, `scripts/test-ga4-auth.mjs`. 300초 WIF 토큰과 analytics.readonly 사용. 실제 호출은 저장소 변수 `GA4_WIF_ENABLED=true` 전까지 비활성. 이 PR에는 정기 실행·적재·정렬 UI 없음.
-- 검증: 로컬 문법/YAML 권한 경계 및 fixture 7/7 PASS. 코드 커밋 `56b78731`, [run 43697285839](https://github.com/syjy813/getpasslab/actions/runs/43697285839)의 **validate success**, **authenticate-and-query skipped**. 이후 문서/main 동기화 시 동일한 인증 코드·설정의 이 검증을 재사용한다. 실제 GA4 API 호출 PASS와 구분.
-- 미완료: WIF 공급업체·서비스 계정 impersonation **최종 적용 전 사용자 확인 대기**, GitHub 변수 활성화와 실제 API 호출 미실행. Google 콘솔에 저장소/소유자 숫자 ID·지정 브랜치/워크플로 제한 조건을 준비했으며 아직 저장하지 않음.
-- 다음 행동: 승인 후 WIF 저장·조건 확인 → reader 서비스 계정에 한정한 `roles/iam.workloadIdentityUser` 부여 → GitHub 변수 활성화 → 작업 브랜치에서 인증 테스트 실행·증거 기록. 결제 계정은 연결하지 않는다.
-- 상태: Commit/Push/검증 완료, 인증 연결은 적용 대기. main 병합·배포·Production QA 미수행. 사이트 소스 미변경이므로 사이트 Build/UI QA는 실행하지 않았다.
-- 상세 재개 정보와 IAM principal: [인증 체크포인트](docs/audits/2026-11-15-ga4-auth/README.md). 교체 전 전체 인계는 [보존본](docs/audits/2026-11-15-ga4-auth/previous-handover.md)에 보존.
-- 아래 사수골대 병행 작업의 상태·승인은 최신 main 인계 그대로 보존하며 이번 인증 작업에서 재검증하지 않았다.
+- 갱신: **2026-11-15 18:10 KST**. 작업 브랜치 `chore/ga4-auth-connection`, [PR #278](https://github.com/syjy813/getpasslab/pull/278). 최초 기준 `281264ee`, 병행 변경을 보존하며 `main@40a4b722` 동기화.
+- 완료: Cloud 프로젝트/API/조회 전용 계정, GA4 Viewer(비용·수익 제한), 사용자 승인 후 WIF 공급업체 및 reader 계정 한정 impersonation 연결까지 적용. **결제 계정 미연결**, 서비스 계정 키 생성 없음.
+- GitHub 인증: 저장소/소유자 숫자 ID·지정 브랜치/워크플로 제한, 300초 토큰, `analytics.readonly`. 준비용 `GA4_WIF_ENABLED` 변수 의존성은 승인 후 제거했고 별도 GitHub 설정 변경 없음.
+- 실제 검증: 코드 `49741b6b32703a7843d673d74359bd6ca261a9f2`, [run 43697865632](https://github.com/syjy813/getpasslab/actions/runs/43697865632) **completed/success**. validate(7개 fixture), 토큰 발급, 실제 `runReport` 모두 success.
+- 실제 결과: 운영 도메인 `getpasslab.co.kr`/`www.getpasslab.co.kr`, **2026-07-30~2026-11-14**, **419개 경로·누적 5,441회**. 홈/목록 포함이며 게시글 전용 합계가 아님. 요청의 일일 quota 1토큰 소모, 잔여199,999. 이전 UI 전체 속성 428경로·5,886회와는 호스트 필터 범위가 다름.
+- 변경: 인증 워크플로·스크립트·검사·인계 문서. 사이트 소스·공개 URL·콘텐츠·배포 설정 변경 없음. 최신 후속 문서 갱신은 검증된 인증 코드/설정이 같아 위 실제 run 증거를 재사용한다.
+- 상태: 구현/로컬 검사/Commit/Push/GitHub 실제 호출 검증 **완료**. main 병합·Pages 배포·Production QA는 미수행. 사이트 Build/UI QA는 사이트 소스 미변경으로 미실행.
+- 미완료·다음: **게시글 URL별 전체 누적 적재**가 다음 단계. 현재는 limit 1 인증 확인용 보고서로 전체 URL 데이터를 내려받지 않았다. 전체 페이지네이션·기존 canonical URL 매칭·누적 교체·실패 시 이전 데이터 보존을 구현한 뒤 정렬·일일 갱신을 진행한다.
+- 재개 시 인증/권한을 다시 만들지 않는다. [완료 구성과 증거](docs/audits/2026-11-15-ga4-auth/README.md), [이전 인계 보존본](docs/audits/2026-11-15-ga4-auth/previous-handover.md)을 참조한다.
+- 아래 사수골대 병행 작업의 상태·승인은 동기화한 main 인계 그대로 보존했으며 이번 인증 작업에서 재검증하지 않았다.
 
 ## 병행 작업 — 사수골대 ep.0 발행·배포
 

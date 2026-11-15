@@ -1,53 +1,57 @@
-# GA4 GitHub authentication checkpoint
+# GA4 GitHub authentication — completed
 
-## Scope and baseline
+## Scope and verified source
 
-- Baseline: `main` at `281264eefaa894de4f71392107765cef27e5044f`.
-- Synchronized parallel `main@40a4b722ff60cbce62b4179dd9ee2483dcff3ed8` without overwriting the sasugoldae checkpoint or site changes. Original latest handover is retained both inline as the parallel task and in `previous-handover.md`.
-- Work branch: `chore/ga4-auth-connection`.
-- Scope: authenticate GitHub Actions to the existing GA4 reader and run a read-only cumulative page-view smoke test. No page counters, ingestion, ranking UI, schedule, merge, or Production deployment in this change.
-- Remote files were inspected through GitHub. The scratch directory was not a pre-existing local checkout; no existing local work was replaced.
+- Updated: **2026-11-15 18:10 KST**.
+- Work branch: `chore/ga4-auth-connection`; [PR #278](https://github.com/syjy813/getpasslab/pull/278).
+- Verified code commit: `49741b6b32703a7843d673d74359bd6ca261a9f2`.
+- Baseline initially `main@281264ee`; merged `main@40a4b722` while preserving the parallel sasugoldae files and handover.
+- No page-view ingestion, ranking UI, schedule, merge, or Production deployment in this change. Remote files were inspected through GitHub; no pre-existing local checkout was replaced.
 
-## Confirmed Google configuration
+## Google configuration — applied and verified
 
 - Project: `GetPassLab Analytics`, ID `level-array-514808-v0`, number `528916134663`.
-- Billing account is **not linked**, confirmed in the console before this checkpoint. No payment method or free-trial signup was submitted.
-- Google Analytics Data API enabled.
-- Service account: `getpasslab-ga4-reader@level-array-514808-v0.iam.gserviceaccount.com`; no service-account keys created.
-- GA4 property `547805075`: Viewer role applied after user confirmation, with cost and revenue metric access disabled. Verified in the property access list.
-
-- IAM, Resource Manager, Service Account Credentials, and STS APIs were enabled successfully without linking billing.
-
-## Prepared federation (not saved or granted yet)
-
-- Pool ID `getpasslab-github`; OIDC provider ID `github-actions`.
-- Issuer `https://token.actions.githubusercontent.com`; default provider audience.
+- Billing account **not linked**. No card, billing association, or free-trial signup was submitted.
+- Analytics Data, IAM, Resource Manager, IAM Credentials, and STS APIs enabled without linking billing.
+- Reader: `getpasslab-ga4-reader@level-array-514808-v0.iam.gserviceaccount.com`; no service-account keys created.
+- GA4 property `547805075`: Viewer, cost and revenue metrics access disabled; applied after user confirmation and verified in the access list.
+- Workload identity pool `getpasslab-github`, provider `github-actions`, issuer `https://token.actions.githubusercontent.com`, default provider audience.
 - Mappings: `google.subject=assertion.sub`, `attribute.repository_id=assertion.repository_id`, `attribute.repository_owner_id=assertion.repository_owner_id`.
-- Condition requires repository ID `1292439277`, owner ID `73263769`, refs `main` or `chore/ga4-auth-connection`, events push/workflow_dispatch/schedule, and the exact `.github/workflows/ga4-analytics.yml` workflow reference on those refs.
-- Intended IAM grant: `roles/iam.workloadIdentityUser` **on the reader service account only**, to `principalSet://iam.googleapis.com/projects/528916134663/locations/global/workloadIdentityPools/getpasslab-github/attribute.repository_id/1292439277`.
-- No project-level Cloud roles, service-account keys, or domain-wide delegation required.
-- Saving federation and granting impersonation are pending action-time user confirmation for new external authentication access.
+- Condition requires repository ID `1292439277`, owner ID `73263769`, refs `main` or `chore/ga4-auth-connection`, events push/workflow_dispatch/schedule, and the exact `.github/workflows/ga4-analytics.yml` reference on those refs. The schedule event is permitted for a future workflow, but this workflow has no schedule.
+- Service-account-only impersonation grant: `roles/iam.workloadIdentityUser`, principal `principalSet://iam.googleapis.com/projects/528916134663/locations/global/workloadIdentityPools/getpasslab-github/attribute.repository_id/1292439277`.
+- Console confirmed linked reader and `attribute.repository_id="1292439277"`, with policy update success.
+- No project-level Cloud role, domain-wide delegation, or persistent private key was granted.
 
-## Implementation and validation
+## GitHub configuration
 
-- `.github/workflows/ga4-analytics.yml`: validation on the work branch, optional manual execution once on the default branch; no schedule. Authentication is gated by the repository variable `GA4_WIF_ENABLED == true`, which has not been created/enabled.
-- Auth requests a 300-second access token with `analytics.readonly`; no credentials file exported, persisted checkout credentials disabled. Actions pinned to reviewed release commits.
-- `scripts/check-ga4-auth.mjs`: one bounded `runReport`, 2026-07-30 through yesterday in the property time zone, production host filter, pagePath/screenPageViews. Only aggregate counts and quota balance are printed, never tokens, raw reports, or individual page paths.
-- Local `node --check`: PASS.
-- Local `node scripts/test-ga4-auth.mjs`: 7/7 PASS (valid response, 403, 429, invalid schema, thresholding, sampling, invalid property ID), including public-log credential/raw-path redaction checks.
-- Workflow YAML structure and permission-boundary inspection: PASS.
-- GitHub code commit `56b78731c600ee352194f321f087a027391e1f4f`, [run 43697285839](https://github.com/syjy813/getpasslab/actions/runs/43697285839): validate **success**, authenticate-and-query **skipped** as expected. Documentation/main-sync changes leave all three auth code/workflow files byte-identical, so this evidence is reused.
-- Live service-account query: **not run**; external identity trust and GitHub variable remain disabled.
-- Site Build/UI/Production QA: not applicable to these isolated auth files; no site source or deployment workflow changed.
+- `.github/workflows/ga4-analytics.yml`: work-branch path-filtered push and manual dispatch; no schedule, write permission, deploy job, or artifact upload. Manual dispatch from GitHub's normal UI becomes available once the workflow is on the default branch.
+- Explicit permission: contents read, id-token write only for the auth job.
+- Approved activation is committed in the workflow; **GA4_WIF_ENABLED repository variable is not used or required**. The earlier preparation gate was removed after user approval. The GitHub settings page required sign-in, so no GitHub account setting was changed; the already connected GitHub API performed the code update.
+- Official auth/checkout Actions pinned to release commits.
+- Access token lifetime 300 seconds, scope `analytics.readonly`; credentials file and environment export disabled. No persistent checkout credential.
+- `scripts/check-ga4-auth.mjs`: one `runReport`, `pagePath`/`screenPageViews`, production host filter, metric TOTAL, page limit 1. No individual page path, token, raw report, or headers in public logs.
+- This limit-1 query verifies auth, report shape, rowCount and grand total; it does **not** download all URL rows for ingestion.
 
-## Resume after approval
+## Evidence
 
-1. The four prerequisite authentication APIs are enabled. Reuse this console evidence unless configuration changes; do not link billing.
-2. Save the prepared pool/provider, verify exact mappings and numeric-ID/branch/workflow restrictions, then grant the service-account impersonation role to the principal above.
-3. Set repository Actions variable `GA4_WIF_ENABLED=true` (non-secret), then rerun the workflow on this branch.
-4. Inspect authentication and live report results; handle permission propagation before changing policy. Update this checkpoint with actual run/commit evidence. Do not claim the API test passed based on mock fixtures.
-5. Keep this PR unmerged until a separate Production approval or a change that cannot trigger Pages deployment is established.
+- Local syntax/YAML permission-boundary inspection and 7 fixture checks PASS.
+- Earlier validation run `43697285839` at `56b78731`: validation success, auth intentionally skipped before approval.
+- **Live run [43697865632](https://github.com/syjy813/getpasslab/actions/runs/43697865632), code commit `49741b6b`: completed/success.**
+- Job `132762293308` validate: success, including 7 fixture cases.
+- Job `132762356025` authenticate-and-query: success. Both token issuance and live report request succeeded.
+- Executed at 2026-11-15 09:09:56 UTC / 18:09:56 KST.
+- GA4 property: `547805075`; period **2026-07-30 through 2026-11-14** (query end yesterday, property reporting time zone).
+- Hosts: `getpasslab.co.kr`, `www.getpasslab.co.kr`.
+- **419 reported page paths; 5,441 total page views.** Includes home/list pages, not article-only totals.
+- Daily quota remaining **199,999 / 200,000** after this request (1 quota token consumed; a quota unit, not a monetary charge).
+- Earlier UI check was property-wide without the production-host restriction: 428 paths / 5,886 views. Different report scope; do not replace it with an article-only claim or infer the excluded host identities without another report.
+- Latest follow-up checkpoint commit changes documentation only. Auth script/test/workflow remain byte-identical to the verified code commit, so the live evidence is reused rather than making another API request.
+- No site Build/UI/Production QA: no site source or deployment workflow changed. No main merge or Pages deployment performed.
 
-## Next product step
+## Next stage and resume
 
-After successful live authentication, implement full page-view ingestion with complete pagination, canonical URL matching, cumulative replacement, source dates/time zone, and failed-refresh preservation. GA4 totals include homes/list pages; they are not article-only totals. Ranking and daily refresh remain separate stages.
+1. Authentication stage is complete. Do not recreate credentials or reapply IAM.
+2. Implement full ingestion separately: paginate all relevant production URL rows, match existing canonical published article URLs, preserve fixed identifiers, store period/time zone/fetchedAt, replace cumulative totals rather than incrementing them, retain prior data on a failed refresh.
+3. Add latest/view-count sorting and daily refresh only as the corresponding implementation stages proceed.
+4. Any main merge still needs Production authorization because this repository's main push deploys Pages.
+5. Preserve parallel work: prior handover is copied in `previous-handover.md`; current `AI_HANDOVER.md` retains the sasugoldae section.
