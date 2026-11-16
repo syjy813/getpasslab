@@ -36,6 +36,7 @@
 | 시설 콘텐츠·에디토리얼 이미지 작성·편집·검수 | [시설 콘텐츠 통합 가이드 v1.4](docs/standards/facility-content-guide-v1.4.md). 교육·설비 도식이 겹치면 학습 이미지 정본의 기술 정확성 규칙도 확인 |
 | 시설 카드·대표 이미지 템플릿 | 시설 통합 가이드 및 [정본 템플릿 README](docs/standards/facility-infographic-templates/README.md) |
 | 시설 검색·병행 발행·대표 URL | 시설 통합 가이드 및 [검색·병행 발행 방침](docs/standards/facility-search-publication-policy.md). 과거 적용 범위·승인 상태는 현재 코드·PR로 구분 |
+| 커뮤니티 기획·운영·기능 도입·유지·변경 판단 | [커뮤니티 운영 가이드 v1](docs/standards/community-operation-guide-v1.md). 현재 운영 단계에 해당하는 절을 확인하고, 시설 콘텐츠 작업은 기존 시설 통합 가이드도 함께 적용 |
 | UI·반응형·접근성·광고 표시 | [UI_UX_GUIDE.md](UI_UX_GUIDE.md) 및 해당 영역의 작업 가이드 |
 | 기존 문제·결정 배경·장기 후보 확인 | [KNOWN_ISSUES.md](KNOWN_ISSUES.md), [DECISION_LOG.md](DECISION_LOG.md), [BACKLOG.md](BACKLOG.md) 등 필요한 항목만 확인. 오래된 상태는 현재 사실로 간주하지 않음 |
 
