@@ -5,7 +5,7 @@
 ## 기준 상태
 
 - 갱신: **2026-11-16 KST**. 확인한 원격 기준 `main@cfeeeb8a87ce494630e7e69fd9a50190318ceb8b` (PR #281 포함).
-- 현재 작업: `feat/facility-ia-five-categories-20261116`에서 시설관리 **5개 1차 카테고리 개편** 구현 및 로컬 검증 완료. **main 병합·Production 배포 미실행**. PR/CI 확인 후 명시 배포 요청이 필요하다.
+- 현재 작업: 시설관리 **5개 1차 카테고리 개편** [PR #282](https://github.com/syjy813/getpasslab/pull/282) 구현 및 로컬 검증 완료. 최초 PR CI의 기존 카테고리 위치 가정으로 인한 회귀검사 실패 3종을 보완했다. **사용자 Production 배포 승인 확보**, 수정 CI 검증 후 병합·배포 진행 예정. 현재 기준 main 병합·Production 배포 미실행.
 - 최근 검증된 실서버 변경은 모바일 피드 [PR #280](https://github.com/syjy813/getpasslab/pull/280), [Pages run 43726251784](https://github.com/syjy813/getpasslab/actions/runs/43726251784). 이후 PR #281의 파비콘 변경은 `main`에 있으나 이 Snapshot에서는 별도 Production QA를 주장하지 않는다.
 
 ## 현행 목표·변경 범위
@@ -20,7 +20,7 @@
 - 공개/비공개 미리보기 `astro build` PASS. 새 IA 검사 각각 **4개 운영 카테고리, 24개 글 단일 매핑, 기존 URL/canonical 및 /jobs/ 보존 PASS**.
 - 양 모드 시설 발행 검증·관련 링크 검증 PASS. 공개 `check-facility-launch` 소스/이미지 보호 PASS. `check:public-content` 오류 0, `check:seo` 오류 0/기존 경고 5.
 - 원고 해시를 보존하기 위해 `category`를 URL 경로로 유지하고, 표시 분류는 중앙 매핑/선택적 `navigationCategory` 필드로 분리했다. 기존 회귀검사는 이 허용된 IA 변경만 예외로 처리하고 새 IA 검사를 CI에 추가했다.
-- **미완료:** PR 생성/원격 CI, 새 화면의 320·390·768·1440px 브라우저 QA, main 병합/배포/Production 확인. 사용자 배포 승인 전에는 진행하지 않는다.
+- **미완료:** 수정 PR의 원격 CI, 새 화면의 320·390·768·1440px 브라우저 QA, main 병합/배포/Production 확인. 배포 승인 확보, CI 회귀 검사 통과 전 병합하지 않는다.
 
 ## 기존 후속 사항
 
