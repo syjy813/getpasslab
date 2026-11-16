@@ -4,11 +4,19 @@
 
 ## 기준 상태
 
-- 갱신: **2026-11-16 KST**. 시설관리 IA 기능 배포 기준 `main@9a791640720c75410b4d30fa4ee09256542bfcd3` ([PR #282](https://github.com/syjy813/getpasslab/pull/282) 병합).
-- 현재 작업: 시설관리 **5개 1차 카테고리 개편 완료, Production 배포·확인 완료**. 최초 PR CI에서 기존 카테고리 위치를 가정한 회귀검사 3종을 보완했고, 수정 CI를 확인한 뒤 병합했다.
+- 갱신: **2026-11-16 KST**. 통합 기준 `main@2f3882b4bbbef7fb3e977d7e18d0c44beb8ae0ce` ([PR #284](https://github.com/syjy813/getpasslab/pull/284) 포함). 시설관리 IA 기능 배포 Commit은 `9a791640720c75410b4d30fa4ee09256542bfcd3` ([PR #282](https://github.com/syjy813/getpasslab/pull/282) 병합).
+- 최근 제품: 시설관리 **5개 1차 카테고리 개편 완료, Production 배포·확인 완료**. 최초 PR CI에서 기존 카테고리 위치를 가정한 회귀검사 3종을 보완했고, 수정 CI를 확인한 뒤 병합했다.
 - 배포 근거: [Pages run 43780562659](https://github.com/syjy813/getpasslab/actions/runs/43780562659) **Success** (build+deploy). 실서버 목록 4곳·기존 `/jobs/` 목록·호병백마 기존 게시글 URL 및 새 카테고리 링크 확인 PASS.
 
-## 현행 목표·변경 범위
+## 현재 작업 — 커뮤니티 운영 가이드 PR 검토 준비
+
+- [PR #283](https://github.com/syjy813/getpasslab/pull/283), 브랜치 `docs/community-operation-guide-v1-20261116`. 이전 문서 HEAD `030b1496` 이후 최신 main을 통합하며 양쪽 이력을 보존한다. main 병합·배포 승인은 이번 문서 작업에 없음.
+- [운영 가이드 v1](docs/standards/community-operation-guide-v1.md): 6개 이론·11개 출처, 연구/추론/실측 분리, A/B/C 원칙·기능 판단·지표·미실행 실험 후보. §1.1·§6.2·§9를 배포된 5개 IA와 미병합 GA4 #278 상태에 맞춰 보완했다.
+- `AGENTS.md` 정본 라우터 1행, 시설 콘텐츠 가이드 §12 상호 링크 및 현행 분류 수 정합성 보완. 기존 집필·이미지·SEO·승인 규칙 유지.
+- 검증 대상은 이 Snapshot을 포함한 PR 최신 HEAD. 문서 diff·내부 링크·인용 대응과 최신 main 대비 실행 소스/설정/의존성 무변경을 확인한다. 최종 CI는 PR HEAD와 실행 SHA를 대조한다. 이전 `971f2e11`의 CI는 구제품 대상이므로 최신 통합 HEAD의 제품 검증을 대신하지 않는다.
+- 다음: 최신 PR CI·검토 상태 확인 후 사용자에게 보고. **별도 승인 전 main 병합·Production 배포 금지**. 총 지침 복사용 최소 문구는 운영 가이드 §9.1. 기능·운영 정책·추가 추적은 적용하지 않았다.
+
+## 현행 IA·변경 범위
 
 - 새 IA: **시설관리 입문·용어 (1) / 취업·커리어 (8) / 시설 이야기 (11) / 법정선임·자격 활용 (4) / 시설관리 실무 (0, 준비 중)**.
 - 취업·커리어는 취업 가이드 4 / 기업·채용 분석 4, 시설 이야기는 호병백마 10 / 사수골대 1로 2차 탐색을 제공한다.
