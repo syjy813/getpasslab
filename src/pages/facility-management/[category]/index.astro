@@ -4,14 +4,18 @@ import FacilityLayout from '../../../layouts/FacilityLayout.astro';
 import FacilityCard from '../../../components/FacilityCard.astro';
 import FacilityBreadcrumb from '../../../components/FacilityBreadcrumb.astro';
 import FacilityLearningLinks from '../../../components/FacilityLearningLinks.astro';
-import { FACILITY_CATEGORIES, facilityCategoryPath, sortFacilityArticles } from '../../../config/facility';
+import { FACILITY_CATEGORIES, facilityArticlePath, facilityCategoryPath, sortFacilityArticles } from '../../../config/facility';
 import { withBase } from '../../../config/url';
 import { SITE } from '../../../config/site';
+import pageViews from '../../../data/facility-page-views.json';
 export async function getStaticPaths() {
   const articles = await getCollection('facilityArticles', article => article.data.status === 'published' || (import.meta.env.FACILITY_DRAFT_PREVIEW === '1' && article.id !== 'reading-job-postings'));
   return FACILITY_CATEGORIES.map(category => ({ params: { category: category.slug }, props: { category, articles: sortFacilityArticles(articles.filter(article => article.data.category === category.slug)) } }));
 }
 const { category, articles } = Astro.props;
+const viewStats = pageViews.articles as Record<string, { views: number; recorded: boolean }>;
+const categoryViewStats = Object.fromEntries(articles.map(article => [facilityArticlePath(article), viewStats[facilityArticlePath(article)] ?? { views: 0, recorded: false }]));
+const viewDate = pageViews.period.endDate?.replaceAll('-', '.') ?? '집계 확인 중';
 const breadcrumbs = [{ name: '시설의 모든 것', path: '/facility-management/' }, { name: category.name, path: facilityCategoryPath(category.slug) }];
 const structuredData = [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(withBase(item.path), SITE.url).href })) }];
 ---
@@ -24,9 +28,65 @@ const structuredData = [{ '@context': 'https://schema.org', '@type': 'Breadcrumb
       <span class="gpl-caption">공개 콘텐츠 {articles.length}개</span>
     </header>
     <section class="facility-section facility-category-list" aria-label={`${category.name} 콘텐츠`}>
-    {articles.length ? <div class="grid grid-3">{articles.map(article => <FacilityCard article={article} />)}</div> : <div class="facility-empty"><h2 class="gpl-h3">콘텐츠를 준비하고 있습니다</h2><p>공개된 입문 안내나 관련 자격증 학습을 먼저 살펴보세요.</p><a href={withBase('/facility-management/career/')}>시설관리 입문 살펴보기 →</a></div>}
+    {articles.length ? <>
+      <div class="facility-sort-toolbar">
+        <label for="facility-sort-order">정렬</label>
+        <select id="facility-sort-order" aria-controls="facility-article-grid" data-facility-sort>
+          <option value="latest" selected>최신순</option>
+          <option value="views">조회수순</option>
+        </select>
+      </div>
+      <p class="facility-sort-note">누적 조회수: 2026.07.30 ~ {viewDate} · GA4 수집 기준</p>
+      <div id="facility-article-grid" class="grid grid-3" data-facility-article-grid data-facility-views={JSON.stringify(categoryViewStats)}>{articles.map(article => <FacilityCard article={article} />)}</div>
+    </> : <div class="facility-empty"><h2 class="gpl-h3">콘텐츠를 준비하고 있습니다</h2><p>공개된 입문 안내나 관련 자격증 학습을 먼저 살펴보세요.</p><a href={withBase('/facility-management/career/')}>시설관리 입문 살펴보기 →</a></div>}
   </section>
   <section class="facility-section" aria-labelledby="related-categories-title"><h2 id="related-categories-title" class="gpl-h2">다른 카테고리 살펴보기</h2><nav aria-label="시설관리 카테고리"><ul class="facility-category-nav">{FACILITY_CATEGORIES.map(item => <li><a href={withBase(facilityCategoryPath(item.slug))} aria-current={item.slug === category.slug ? 'page' : undefined}>{item.name}</a></li>)}</ul></nav></section>
   <FacilityLearningLinks />
   </div>
 </FacilityLayout>
+
+<style is:inline>
+  .facility-sort-toolbar{display:flex;align-items:center;justify-content:flex-end;gap:var(--space-3);margin-bottom:var(--space-2)}
+  .facility-sort-toolbar label{font-size:var(--fs-caption);font-weight:var(--fw-semibold);color:var(--gray-800)}
+  .facility-sort-toolbar select{padding:8px 28px 8px 12px;border:1px solid var(--gray-200);border-radius:var(--radius-md);background:var(--white);color:var(--gray-900);font:inherit;font-size:var(--fs-caption);cursor:pointer}
+  .facility-sort-toolbar select:focus-visible{outline:2px solid var(--primary-600);outline-offset:2px}
+  .facility-sort-note{text-align:right;margin:0 0 var(--space-5);font-size:var(--fs-caption);color:var(--gray-600)}
+</style>
+
+<script is:inline>
+  const select = document.querySelector('[data-facility-sort]');
+  const grid = document.querySelector('[data-facility-article-grid]');
+  if (select && grid) {
+    const cards = [...grid.querySelectorAll(':scope > .facility-card')];
+    const viewStats = JSON.parse(grid.dataset.facilityViews ?? '{}');
+    const numberFormat = new Intl.NumberFormat('ko-KR');
+    for (const [index, card] of cards.entries()) {
+      const path = new URL(card.href).pathname;
+      const viewStat = viewStats[path] ?? { views: 0, recorded: false };
+      card.dataset.publishedAt = card.querySelector('time')?.getAttribute('datetime') ?? '';
+      card.dataset.sortIndex = String(index);
+      card.dataset.viewCount = String(viewStat.views);
+      card.dataset.viewRecorded = String(viewStat.recorded);
+      const meta = card.querySelector('.facility-card-meta');
+      if (meta) {
+        const label = document.createElement('span');
+        label.textContent = viewStat.recorded ? `조회 ${numberFormat.format(viewStat.views)}` : '조회 기록 없음';
+        meta.append(label);
+      }
+    }
+    const newestFirst = (a, b) =>
+      (b.dataset.publishedAt ?? '').localeCompare(a.dataset.publishedAt ?? '')
+      || Number(a.dataset.sortIndex) - Number(b.dataset.sortIndex);
+    select.addEventListener('change', () => {
+      const sorted = [...cards].sort((a, b) => {
+        if (select.value === 'views') {
+          const recorded = Number(b.dataset.viewRecorded === 'true') - Number(a.dataset.viewRecorded === 'true');
+          const views = Number(b.dataset.viewCount) - Number(a.dataset.viewCount);
+          if (recorded || views) return recorded || views;
+        }
+        return newestFirst(a, b);
+      });
+      grid.append(...sorted);
+    });
+  }
+</script>

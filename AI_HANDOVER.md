@@ -2,6 +2,17 @@
 
 실행 지침은 [AGENTS.md](AGENTS.md). 과거 작업은 Git·PR·[audits](docs/audits/), 이전 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)를 참조한다.
 
+## 현재 작업 — GA4 시설관리 게시글 조회수 적재·정렬
+
+- 갱신: **2026-11-15 KST**. 작업 브랜치 `chore/ga4-auth-connection`, [PR #278](https://github.com/syjy813/getpasslab/pull/278). 인증 완료 체크포인트부터 누적 조회수 적재와 카테고리 목록 정렬까지 이어서 구현했다.
+- 인증: Google Cloud **결제 계정 미연결**, 키 없는 WIF 인증, 300초 `analytics.readonly` 토큰, GA4 Viewer 권한 제한 유지. [run 43697865632](https://github.com/syjy813/getpasslab/actions/runs/43697865632) 인증 성공을 재사용.
+- 적재: [run 43705923328](https://github.com/syjy813/getpasslab/actions/runs/43705923328) **completed/success**. 공개 글 **24개 중 9개 기록 확인, 누적 48회**, 나머지 15개는 조회 기록 없음. 기간 **2026-07-30~2026-11-14**, 속성 시간대 `Asia/Seoul`. 전체 사이트 5,441회와 구분.
+- 데이터: `src/data/facility-page-views.json`. 전체 페이지네이션, 발행글 canonical 경로 매칭, 누적값 교체, 불완전한 API 응답 차단, 실패 시 이전 JSON 유지. GitHub API는 해당 JSON 1개만 커밋. [데이터 커밋 8ab1e2b](https://github.com/syjy813/getpasslab/commit/8ab1e2b586303adb19959c51722a7a529d6b3de4).
+- 화면: 카테고리 목록에 `최신순`/`조회수순`, 조회 기록 및 기준일 표시 적용. 기존 공개 URL·공통 카드 소스·이미지·본문 보호. 구현 [커밋 e7aded6](https://github.com/syjy813/getpasslab/commit/e7aded63a2528954b07785b7d6a4cb5e7f72978c).
+- 검증: 로컬 584페이지 Build PASS, 시설관리 기존 소스/게시 가드 PASS, SEO 오류0·기존 경고5, 공개 콘텐츠 오류0. GitHub Actions [run 43707356332](https://github.com/syjy813/getpasslab/actions/runs/43707356332) **정렬 UI 4폭(320/390/768/1440px)×4카테고리 Chromium PASS**, GA4 인증·API·적재 PASS. [시설 발행 QA](https://github.com/syjy813/getpasslab/actions/runs/43707361018), [자격증 탐색 QA](https://github.com/syjy813/getpasslab/actions/runs/43707361014), [모바일 광고 QA](https://github.com/syjy813/getpasslab/actions/runs/43707360986) 전부 PASS. main 변경과 병합해 PR 충돌 해결.
+- 자동화: main 병합 후 매일 02:13 UTC(11:13 KST) 갱신 예정. 스냅샷이 변경된 경우 기존 `deploy.yml`에 `workflow_dispatch`하여 GitHub Token 커밋으로는 실행되지 않는 Pages `push` 배포를 보완. PR `push` 시 적재 검증만 하고 자동 데이터 커밋으로 PR HEAD를 이동시키지 않음. **main 병합·Pages 배포·Production QA 미수행**, 별도 사용자 배포 승인 필요.
+- 다음: 자동 배포 연결 변경에 대한 최종 CI 확인 후 사용자 배포 승인 시 main 병합/Pages/Production 확인. 인증/IAM 재설정 불필요. [기존 인증 상세 Audit](docs/audits/2026-11-15-ga4-auth/README.md).
+
 ## 기준 상태
 
 - 갱신: **2026-11-15 KST**. 승인한 모바일 피드 수정·실서버 배포·Production 확인 **완료**.
