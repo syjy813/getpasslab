@@ -171,7 +171,7 @@ const structuredData = [
     <main style="min-width:0">
       <nav class="breadcrumb">
         <a href={withBase('/')}>홈</a><span class="sep">/</span>
-        <a href={withBase(`/${certification.slug}/`)}>{certification.name}</a><span class="sep">/</span>
+        <span>{certification.name}</span><span class="sep">/</span>
         <a href={examEntryUrl}>{examDefinition.name}</a>
         {!isSingleSubjectExam && (
           <>
