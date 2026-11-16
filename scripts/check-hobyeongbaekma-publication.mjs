@@ -61,9 +61,9 @@ for (const [index,image] of images.entries()) {
 }
 assert(!images.some(image=>/-(1|2)\.webp$/.test(attr(image,'src'))),'split images are no longer rendered');
 {
-  const careerRoute='/facility-management/career/';
-  const cards=read(careerRoute).filter(n=>n.tagName==='a'&&attr(n,'href')===release.route);
-  assert.equal(cards.length,1,'exactly one episode card: '+careerRoute);
+  const storiesRoute='/facility-management/stories/';
+  const cards=read(storiesRoute).filter(n=>n.tagName==='a'&&attr(n,'href')===release.route);
+  assert.equal(cards.length,1,'exactly one episode card: '+storiesRoute);
   const cover=nodes(cards[0]).find(n=>n.tagName==='img');
   assert.equal(attr(cover,'src'),attr(images[0],'src'),'approved hero on category listing');
   assert.equal(attr(cover,'width'),'1440');assert.equal(attr(cover,'height'),'1080');

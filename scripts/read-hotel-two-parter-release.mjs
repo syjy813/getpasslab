@@ -12,7 +12,16 @@ export function assertHotelRelease(){
   for(const [file,row] of Object.entries(hotelRelease.nativeChanges)){
     assert.equal(sha(fs.readFileSync(row.previous)),row.previousSHA256,file+': previous native source preserved');
     if(file==='src/layouts/FacilityArticleLayout.astro'){
-      const current=beforeSasugoldae(file,fs.readFileSync(file)).toString('utf8');
+      // Undo only the later five-category navigation delta before comparing the
+      // reviewed historical source hash. Article bodies and public URLs stay pinned.
+      let current=beforeSasugoldae(file,fs.readFileSync(file)).toString('utf8');
+      for(const [later,previous] of [
+        ["import { facilityNavigationCategory, facilityCategoryPath, facilityArticlePath } from '../config/facility';", "import { facilityCategory, facilityCategoryPath, facilityArticlePath } from '../config/facility';"],
+        ["const category = facilityNavigationCategory(article);", "const category = facilityCategory(data.category);"],
+      ]){
+        assert.equal(current.split(later).length,2,file+': exact navigation-only change');
+        current=current.replace(later,previous);
+      }
       assert.equal(current.split("const showSourceList = !article.id.startsWith('hobyeongbaekma');").length,2,file+': exact hobyeongbaekma source visibility extension');
       const historical=current.replace("const showSourceList = !article.id.startsWith('hobyeongbaekma');","const showSourceList = !['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id);");
       assert.equal(sha(Buffer.from(historical)),row.sha256,file+': historical reviewed native source preserved');

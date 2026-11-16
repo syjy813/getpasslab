@@ -43,6 +43,7 @@ jobs:
       - run: node scripts/check-facility-pictogram-review.mjs
       - run: node scripts/check-facility-drafts.mjs
       - run: node scripts/check-facility-related-links.mjs
+      - run: npm run check:facility-ia
       - run: node scripts/check-hotel-two-parter-publication.mjs
       - run: node scripts/check-hospital-two-parter-publication.mjs
       - run: node scripts/check-department-store-two-parter-publication.mjs

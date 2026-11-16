@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import FacilityLayout from '../../layouts/FacilityLayout.astro';
 import FacilityCard from '../../components/FacilityCard.astro';
 import FacilityIcon from '../../components/FacilityIcon.astro';
-import { FACILITY_CATEGORIES, facilityCategoryPath, sortFacilityArticles } from '../../config/facility';
+import { FACILITY_CATEGORIES, facilityCategoryPath, facilityNavigationCategorySlug, sortFacilityArticles } from '../../config/facility';
 import { withBase } from '../../config/url';
 
 const articles = sortFacilityArticles(await getCollection('facilityArticles', article =>
@@ -14,7 +14,7 @@ const lead = articles.find(article => article.id === 'what-is-facility-managemen
   ?? articles[0];
 const categories = FACILITY_CATEGORIES.map(category => ({
   ...category,
-  articles: articles.filter(article => article.data.category === category.slug),
+  articles: articles.filter(article => facilityNavigationCategorySlug(article) === category.slug),
 }));
 const availableCategories = categories.filter(category => category.articles.length > 0);
 const upcomingCategories = categories.filter(category => category.articles.length === 0);
@@ -54,7 +54,7 @@ const articleGroups = availableCategories.map(category => ({
   {articleGroups.map(category => (
     <section class="facility-section" aria-labelledby={'facility-group-' + category.slug}>
       <div class="facility-section-head">
-        <h2 id={'facility-group-' + category.slug} class="gpl-h2">{category.slug === 'career' ? '시설관리 취업 가이드' : category.name}</h2>
+        <h2 id={'facility-group-' + category.slug} class="gpl-h2">{category.name}</h2>
         <a href={withBase(facilityCategoryPath(category.slug))}>전체 보기 <span aria-hidden="true">→</span></a>
       </div>
       <div class="facility-story-grid">{category.articles.slice(0, 6).map(article => <FacilityCard article={article} />)}</div>

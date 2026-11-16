@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { facilityCategorySlugs } from './config/facility';
+import { facilityCategorySlugs, facilityRouteCategorySlugs } from './config/facility';
 import { CERTIFICATIONS } from './config/certifications';
 import { questionFiles } from './loaders/questions';
 
@@ -62,7 +62,9 @@ const facilityArticles = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    category: z.string().refine(value => facilityCategorySlugs.includes(value as typeof facilityCategorySlugs[number])),
+    // URL route segment is immutable for already published articles.
+    category: z.string().refine(value => facilityRouteCategorySlugs.includes(value)),
+    navigationCategory: z.string().refine(value => facilityCategorySlugs.includes(value as typeof facilityCategorySlugs[number])).optional(),
     status: z.enum(['draft', 'published']).default('draft'),
     publishedAt: dateString,
     updatedAt: dateString,

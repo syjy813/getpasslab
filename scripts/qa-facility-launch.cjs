@@ -3,15 +3,13 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/, '');
 const preview = process.env.QA_FACILITY_PREVIEW === '1';
-const release = fs.existsSync('docs/audits/2026-11-05-facility-publication/manifest.json');
-const expanded = preview || release;
 const mode = preview ? 'private-preview' : 'publication';
 const output = `qa-results/facility-launch/${mode}`;
 fs.mkdirSync(output, {recursive: true});
 const bulkImages=JSON.parse(fs.readFileSync('docs/audits/2026-11-06-facility-image-bulk/manifest.json'));
 const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':5};
 for(const [file,row] of Object.entries(bulkImages.source)) {const slug=file.split('/').at(-1).replace('.md','');if(slug in imageCounts)imageCounts[slug]=row.images;}
-const pages = ['/facility-management/', ...['career','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
+const pages = ['/facility-management/', ...['intro','career','stories','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
 (async () => {
   const browser = await chromium.launch();
   const results = [];
@@ -73,12 +71,12 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
         }
 
         if (path.startsWith('/facility-management/')) {
-          const empty = slug === 'practice' || (!expanded && slug === 'qualifications');
+          const empty = slug === 'practice';
           assert.equal(await page.locator('.gnb-logo').getAttribute('href'),'/facility-management/','facility logo destination');
           assert.equal(await page.locator('summary[aria-label="시설 카테고리"]').count(),1,'facility-first navigation');
           assert.equal((await page.locator('summary[aria-label="시설 카테고리"]').innerText()).trim(),'카테고리','same visible facility label at every viewport');
           assert.equal(await page.locator('summary[aria-label="자격증 선택"]').count(),0,'no certificate picker in facility area');
-          if (['career','jobs','practice','qualifications'].includes(slug)) {
+          if (['intro','career','stories','jobs','practice','qualifications'].includes(slug)) {
             assert.equal(await page.locator('.facility-category-page').count(),1,'category-specific layout');
             assert.equal(await page.locator('.facility-category-header .facility-eyebrow').count(),0,'redundant eyebrow removed');
             assert.equal(await page.locator('.facility-category-header h1.gpl-h1').count(),1,'compact subject-list heading');
@@ -103,20 +101,20 @@ const pages = ['/facility-management/', ...['career','jobs','practice','qualific
             assert.equal(categoryHeader.breadcrumbGap,'24px','subject-list breadcrumb spacing');
             assert.equal(categoryHeader.bottomRule,'1px','header separator retained');
             assert.equal(categoryHeader.listGap,'32px','article cards retain a clear 32px gap');
-            const counts = {career:15,jobs:expanded?5:1,practice:0,qualifications:expanded?4:0};
+            const counts = {intro:1,career:8,stories:11,jobs:5,practice:0,qualifications:4};
             assert.equal(await page.locator('.facility-category-list .facility-card').count(),
               counts[slug], 'existing article cards retained by category');
-            if (slug === 'career') assert.equal(await page.locator('.facility-category-list .facility-card[href="/facility-management/career/hobyeongbaekma-hospital-large-university/"]').count(),1,'hospital ep.2-3 category card');
+            if (slug === 'stories') assert.equal(await page.locator('.facility-category-list .facility-card[href="/facility-management/career/hobyeongbaekma-hospital-large-university/"]').count(),1,'hospital ep.2-3 category card');
           }
           if (path === '/facility-management/') {
             assert.equal(await page.locator('.facility-intro .facility-eyebrow').count(),0,'top eyebrow removed');
             assert.equal(await page.locator('.facility-featured .facility-section-head .gpl-caption').count(),0,'redundant facility-intro caption removed');
             assert.equal(await page.locator('.facility-learning').count(),0,'home cross-service promotion removed');
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
-            assert.equal(await page.locator('.facility-card').count(),expanded?16:8,'eligible articles appear once on home');
-            assert.equal(await page.locator('.facility-category-link').count(),expanded?3:2,'only populated categories are linked');
+            assert.equal(await page.locator('.facility-card').count(),17,'one lead and at most six cards from each populated category');
+            assert.equal(await page.locator('.facility-category-link').count(),4,'only four populated categories are linked');
             const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
-            assert.equal(new Set(routes).size,expanded?16:8,'no repeated home articles');
+            assert.equal(new Set(routes).size,17,'no repeated home articles');
             const leadCover = page.locator('.facility-card--lead img');
             await leadCover.evaluate(img => img.decode());
             assert(await leadCover.evaluate(img => img.naturalWidth > 0),'lead uses existing article image');

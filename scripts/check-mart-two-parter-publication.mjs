@@ -35,7 +35,7 @@ for(const row of articles){
  assert.equal(sitemap.includes('<loc>'+origin+row.route+'</loc>'),!preview);
  const other=articles.find(r=>r.slug!==row.slug);
  assert(nodes(body).some(n=>n.tagName==='a'&&attr(n,'href')===other.route),'counterpart linked in body');
- for(const route of ['/facility-management/','/facility-management/career/']){
+ for(const route of ['/facility-management/','/facility-management/stories/']){
   const card=load(route).find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);assert(card,route+': mart article card');
   const cover=nodes(card).find(n=>n.tagName==='img');assert.equal(attr(cover,'src'),row.hero);assert.equal(attr(cover,'width'),'1440');assert.equal(attr(cover,'height'),'1080');
  }

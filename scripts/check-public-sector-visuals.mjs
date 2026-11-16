@@ -35,7 +35,7 @@ const article=nodes(parse(fs.readFileSync('dist/facility-management/jobs/public-
 const body=article.find(n=>(attr(n,'class')||'').split(/\s+/).includes('facility-body'));
 assert.deepEqual(nodes(body).filter(n=>n.tagName==='img').map(n=>attr(n,'src')),review.images.map(r=>r.publicPath),'rendered article images in approved order');
 for(const row of review.images)assert(article.some(n=>n.tagName==='img'&&attr(n,'src')===row.publicPath&&attr(n,'width')&&attr(n,'height')),'reserved layout size: '+row.publicPath);
-for(const page of ['dist/facility-management/index.html','dist/facility-management/jobs/index.html']){
+for(const page of ['dist/facility-management/career/index.html','dist/facility-management/jobs/index.html']){
  const all=nodes(parse(fs.readFileSync(page,'utf8')));
  const link=all.find(n=>n.tagName==='a'&&attr(n,'href')==='/facility-management/jobs/public-sector-comparison/'&&(attr(n,'class')||'').includes('facility-card'));
  assert(link,page+': article card exists');

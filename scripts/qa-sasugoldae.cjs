@@ -15,7 +15,7 @@ for(const width of [320,390,768,1440]){
  assert.equal(await page.locator('.facility-body a[href^="https://cafe.naver.com/"]').count(),2);
  await page.screenshot({path:`${out}/article-${width}.png`,fullPage:true});
  await page.locator('.facility-toc summary').click();const target=await page.locator('.facility-toc a').first().getAttribute('href');await page.locator('.facility-toc a').first().click();assert.equal(decodeURIComponent(new URL(page.url()).hash),decodeURIComponent(target));
- for(const list of ['/facility-management/','/facility-management/career/']){
+ for(const list of ['/facility-management/','/facility-management/stories/']){
   assert.equal((await page.goto(base+list)).status(),200);
   const card=page.locator(`a.facility-card[href="${route}"]`).first();assert.equal(await card.count(),1);
   const img=card.locator('img');await img.scrollIntoViewIfNeeded();await img.evaluate(im=>im.decode());assert((await img.getAttribute('src')).includes('sasugoldae-00'));
