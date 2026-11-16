@@ -8,6 +8,11 @@ const output = `qa-results/facility-launch/${mode}`;
 fs.mkdirSync(output, {recursive: true});
 const bulkImages=JSON.parse(fs.readFileSync('docs/audits/2026-11-06-facility-image-bulk/manifest.json'));
 const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':5};
+const listingThumbnails = [
+  ['hobyeongbaekma','hobyeongbaekma-ep0'],
+  ['hobyeongbaekma-hotel-despair','hobyeongbaekma-hotel-despair'],
+  ['hobyeongbaekma-hotel-hope','hobyeongbaekma-hotel-hope'],
+];
 for(const [file,row] of Object.entries(bulkImages.source)) {const slug=file.split('/').at(-1).replace('.md','');if(slug in imageCounts)imageCounts[slug]=row.images;}
 const pages = ['/facility-management/', ...['intro','career','stories','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
 (async () => {
@@ -25,6 +30,23 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
         await page.evaluate(()=>document.fonts.ready);
         const slug = path.split('/').filter(Boolean).at(-1);
         const expected = imageCounts[slug];
+        if (path === '/facility-management/stories/') {
+          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails/"]').count(),3,'only three approved listing thumbnails');
+          for (const [id,name] of listingThumbnails) {
+            const card=page.locator(`a.facility-card[href="/facility-management/career/${id}/"]`);
+            assert.equal(await card.count(),1,id+': existing article link retained');
+            const image=card.locator('img');
+            assert.equal(await image.getAttribute('src'),`/images/facility-series/list-thumbnails/${name}.webp`);
+            await image.evaluate(el=>el.decode());
+            const state=await image.evaluate(el=>{
+              const rect=el.getBoundingClientRect();
+              return {natural:[el.naturalWidth,el.naturalHeight],displayRatio:rect.width/rect.height,fit:getComputedStyle(el).objectFit};
+            });
+            assert.deepEqual(state.natural,[1448,1086],id+': optimized WebP loads');
+            assert(Math.abs(state.displayRatio-4/3)<.01,id+': no crop or vertical stretching');
+            assert.equal(state.fit,'contain',id+': full image shown');
+          }
+        }
 
         // Both service homepages must share the same heading scale, left edge,
         // intro spacing and section-heading hierarchy at every viewport.

@@ -1,0 +1,83 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {parse} from 'parse5';
+
+const sha = bytes => createHash('sha256').update(bytes).digest('hex');
+const component = 'src/components/FacilityCard.astro';
+const componentBefore = 'c2597defc70e6b5a3eca2e5222264089c15df347ba9be97e354c8b6d445146bf';
+const componentAfter = 'd3ae744482c33f7293110b81f86562c6552a99b5df765138aaf92e939285103a';
+
+// User-approved 2026-11-16 listing-only images. These are intentionally absent
+// from the older immutable source/publication inventories.
+export const thumbnailRows = [
+  {id:'hobyeongbaekma',name:'hobyeongbaekma-ep0',png:'63e5a116a02f52ff3989cb8f7bec065e4c96f4d08c6f9388c1e3c33e4c7d9def',webp:'d880566ea4820c762eb753e4e1606f44525506d6e108eff75666a44c6392e770'},
+  {id:'hobyeongbaekma-hotel-despair',name:'hobyeongbaekma-hotel-despair',png:'e2050def62c0d75c84b2b9a4a5180a11a58fa76882fb248277d0fc3c74410600',webp:'f5e78e3c7ca3e55354a66fe92988245db8a126a64a465945659b10035d0132f0'},
+  {id:'hobyeongbaekma-hotel-hope',name:'hobyeongbaekma-hotel-hope',png:'158f37a2d7e106d24867a704f0f8179b67d76527f2683cb6dee922a8ff3b37ea',webp:'c0c6a8ac16d5480ead0003864ba0b179c12cd38097407b6e872b0a10d21488d5'},
+].map(row=>({
+  ...row,
+  master:`facility-assets/hobyeongbaekma-list-thumbnails/${row.name}.png`,
+  publicFile:`public/images/facility-series/list-thumbnails/${row.name}.webp`,
+  outputFile:`dist/images/facility-series/list-thumbnails/${row.name}.webp`,
+  route:`/facility-management/career/${row.id}/`,
+}));
+export const thumbnailMasterFiles = thumbnailRows.map(row=>row.master);
+export const thumbnailPublicFiles = thumbnailRows.map(row=>row.publicFile);
+export const thumbnailOutputFiles = thumbnailRows.map(row=>row.outputFile);
+
+// Reconstruct the exact pre-thumbnail component before older immutable guards.
+// No older fingerprint or unrelated rule is relaxed.
+export function beforeHobyeongbaekmaListThumbnails(file, bytes) {
+  if (file !== component) return bytes;
+  assert.equal(sha(bytes),componentAfter,file+': approved thumbnail component');
+  let text=bytes.toString('utf8');
+  const changes=[
+    [
+      '// Published articles reuse their hero image by default; approved listing-only\n// thumbnails override it without changing the article body or social metadata.\n',
+      '// Reuse images already referenced in the corresponding published article.\n',
+    ],
+    [
+      "const listingThumbnails: Record<string, string> = {\n  'hobyeongbaekma': '/images/facility-series/list-thumbnails/hobyeongbaekma-ep0.webp',\n  'hobyeongbaekma-hotel-despair': '/images/facility-series/list-thumbnails/hobyeongbaekma-hotel-despair.webp',\n  'hobyeongbaekma-hotel-hope': '/images/facility-series/list-thumbnails/hobyeongbaekma-hotel-hope.webp',\n};\nconst listingThumbnail = listingThumbnails[article.id];\nconst cover = listingThumbnail ?? covers[article.id];\nconst coverSize = listingThumbnail ? [1448, 1086] : article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];",
+      "const cover = covers[article.id];\nconst coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];",
+    ],
+  ];
+  for (const [current,previous] of changes) {
+    assert.equal(text.split(current).length,2,file+': exact approved thumbnail edit');
+    text=text.replace(current,previous);
+  }
+  assert.equal(sha(text),componentBefore,file+': original card source restored');
+  return Buffer.from(text);
+}
+
+const allNodes = node => [node,...(node.childNodes||[]).flatMap(allNodes)];
+const attr = (node,name) => node?.attrs?.find(row=>row.name===name)?.value;
+const hasClass = (node,name) => (attr(node,'class')||'').split(/\s+/).includes(name);
+
+export async function assertHobyeongbaekmaListThumbnails() {
+  beforeHobyeongbaekmaListThumbnails(component,fs.readFileSync(component));
+  const {default:sharp}=await import('sharp');
+  for (const row of thumbnailRows) {
+    for (const [file,expected,format] of [[row.master,row.png,'png'],[row.publicFile,row.webp,'webp'],[row.outputFile,row.webp,'webp']]) {
+      const bytes=fs.readFileSync(file);
+      assert.equal(sha(bytes),expected,file+': approved image bytes');
+      const meta=await sharp(bytes).metadata();
+      assert.deepEqual([meta.format,meta.width,meta.height],[format,1448,1086],file+': 4:3 image');
+      if (format==='webp') assert(bytes.length<200_000,file+': optimized listing thumbnail');
+    }
+  }
+  const list=allNodes(parse(fs.readFileSync('dist/facility-management/stories/index.html','utf8')));
+  const cards=list.filter(node=>node.tagName==='a'&&hasClass(node,'facility-card'));
+  assert.equal(cards.filter(node=>allNodes(node).some(child=>attr(child,'src')?.includes('/list-thumbnails/'))).length,3,'exactly three listing overrides');
+  for (const row of thumbnailRows) {
+    const card=cards.find(node=>attr(node,'href')===row.route);
+    assert(card,row.route+': listing card');
+    const img=allNodes(card).find(node=>node.tagName==='img');
+    assert.equal(attr(img,'src'),row.publicFile.replace(/^public/,''),row.route+': approved listing-only image');
+    assert.deepEqual([attr(img,'width'),attr(img,'height')],['1448','1086'],row.route+': reserved aspect ratio');
+    const article=allNodes(parse(fs.readFileSync('dist'+row.route+'index.html','utf8')));
+    const body=article.find(node=>hasClass(node,'facility-body'));
+    assert(body,row.route+': article body');
+    assert(!allNodes(body).some(node=>attr(node,'src')?.includes('/list-thumbnails/')),row.route+': original article hero preserved');
+    assert(!article.some(node=>node.tagName==='meta'&&attr(node,'property')==='og:image'&&attr(node,'content')?.includes('/list-thumbnails/')),row.route+': social image preserved');
+  }
+}
