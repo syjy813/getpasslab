@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {parse} from 'parse5';
 import {createHash} from 'node:crypto';
 import {hotelRelease,assertHotelRelease} from './read-hotel-two-parter-release.mjs';
+import {thumbnailRows} from './read-hobyeongbaekma-list-thumbnails.mjs';
 assertHotelRelease();
 const preview=process.env.FACILITY_DRAFT_PREVIEW==='1';
 const nodes=n=>[n,...(n.childNodes||[]).flatMap(nodes)];
@@ -31,7 +32,11 @@ for(const row of hotelRelease.articles){
  {
   const route='/facility-management/stories/';
   const card=load(route).find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);assert(card,route+': hotel article card');
-  const cover=nodes(card).find(n=>n.tagName==='img');assert.equal(attr(cover,'src'),row.hero);assert.equal(attr(cover,'width'),'1440');assert.equal(attr(cover,'height'),'1080');
+  const cover=nodes(card).find(n=>n.tagName==='img');
+  const thumbnail=thumbnailRows.find(item=>item.id===row.slug);
+  assert(thumbnail,row.slug+': approved listing-only thumbnail');
+  assert.equal(attr(cover,'src'),thumbnail.publicFile.replace(/^public/,''));
+  assert.equal(attr(cover,'width'),'1448');assert.equal(attr(cover,'height'),'1086');
   const homeCard=load('/facility-management/').find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);
   assert.equal(homeCard,undefined,'hotel article displaced from six-card home slice by six newer hospital/department-store/mart articles');
  }

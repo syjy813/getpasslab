@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {beforeFacilityFeed, beforeFacilityFeedCompiled} from './read-facility-feed.mjs';
+import {beforeHobyeongbaekmaListThumbnails} from './read-hobyeongbaekma-list-thumbnails.mjs';
 
 const delta = JSON.parse(fs.readFileSync('docs/audits/2026-11-15-facility-list-layout/delta.json'));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -9,6 +10,7 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 // Keep historical source/asset guards intact. Restore only the reviewed list
 // presentation delta, checking both endpoints before comparing older releases.
 export function beforeFacilityListLayout(file, bytes) {
+  bytes = beforeHobyeongbaekmaListThumbnails(file, bytes);
   bytes = beforeFacilityFeed(file, bytes);
   const row = delta.source[file];
   if (!row) return bytes;
