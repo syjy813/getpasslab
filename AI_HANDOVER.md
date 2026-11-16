@@ -4,9 +4,9 @@
 
 ## 기준 상태
 
-- 갱신: **2026-11-16 KST**. 확인한 원격 기준 `main@cfeeeb8a87ce494630e7e69fd9a50190318ceb8b` (PR #281 포함).
-- 현재 작업: 시설관리 **5개 1차 카테고리 개편** [PR #282](https://github.com/syjy813/getpasslab/pull/282) 구현 및 로컬 검증 완료. 최초 PR CI의 기존 카테고리 위치 가정으로 인한 회귀검사 실패 3종을 보완했다. **사용자 Production 배포 승인 확보**, 수정 CI 검증 후 병합·배포 진행 예정. 현재 기준 main 병합·Production 배포 미실행.
-- 최근 검증된 실서버 변경은 모바일 피드 [PR #280](https://github.com/syjy813/getpasslab/pull/280), [Pages run 43726251784](https://github.com/syjy813/getpasslab/actions/runs/43726251784). 이후 PR #281의 파비콘 변경은 `main`에 있으나 이 Snapshot에서는 별도 Production QA를 주장하지 않는다.
+- 갱신: **2026-11-16 KST**. 시설관리 IA 기능 배포 기준 `main@9a791640720c75410b4d30fa4ee09256542bfcd3` ([PR #282](https://github.com/syjy813/getpasslab/pull/282) 병합).
+- 현재 작업: 시설관리 **5개 1차 카테고리 개편 완료, Production 배포·확인 완료**. 최초 PR CI에서 기존 카테고리 위치를 가정한 회귀검사 3종을 보완했고, 수정 CI를 확인한 뒤 병합했다.
+- 배포 근거: [Pages run 43780562659](https://github.com/syjy813/getpasslab/actions/runs/43780562659) **Success** (build+deploy). 실서버 목록 4곳·기존 `/jobs/` 목록·호병백마 기존 게시글 URL 및 새 카테고리 링크 확인 PASS.
 
 ## 현행 목표·변경 범위
 
@@ -20,7 +20,8 @@
 - 공개/비공개 미리보기 `astro build` PASS. 새 IA 검사 각각 **4개 운영 카테고리, 24개 글 단일 매핑, 기존 URL/canonical 및 /jobs/ 보존 PASS**.
 - 양 모드 시설 발행 검증·관련 링크 검증 PASS. 공개 `check-facility-launch` 소스/이미지 보호 PASS. `check:public-content` 오류 0, `check:seo` 오류 0/기존 경고 5.
 - 원고 해시를 보존하기 위해 `category`를 URL 경로로 유지하고, 표시 분류는 중앙 매핑/선택적 `navigationCategory` 필드로 분리했다. 기존 회귀검사는 이 허용된 IA 변경만 예외로 처리하고 새 IA 검사를 CI에 추가했다.
-- **미완료:** 수정 PR의 원격 CI, 새 화면의 320·390·768·1440px 브라우저 QA, main 병합/배포/Production 확인. 배포 승인 확보, CI 회귀 검사 통과 전 병합하지 않는다.
+- 원격 CI: 시설 발행 QA의 공개/비공개 미리보기, 호병백마·사수골대 브라우저 QA, SEO 검사 **PASS**. 브라우저 검사에는 320·390·768·1440px 검증이 포함된다.
+- **남은 사항:** `시설관리 실무` 카테고리는 공개 글 0편으로 메뉴에서 숨김. 향후 용어·실무 콘텐츠를 작성하면 콘텐츠 분류를 검수한다. 현재 IA 개편의 미완료 배포 단계는 없다.
 
 ## 기존 후속 사항
 

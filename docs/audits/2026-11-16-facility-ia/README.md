@@ -42,4 +42,10 @@
 - PR #282 최초 CI에서 호병백마 목록 검증, 사수골대 반응형 QA, 공공부문 카드 검증이 과거 카테고리/홈 배치를 기대해 실패했다. `check-hobyeongbaekma-publication.mjs`, `qa-sasugoldae.cjs`, `check-public-sector-visuals.mjs`, `qa-facility-launch.cjs`의 검사 대상만 새 IA에 맞게 수정했다. 게시글 URL과 원고·이미지는 수정하지 않았다.
 - 수정 후 공개 빌드 및 시설 시각 자료·시리즈·링크·IA·SEO·공개 콘텐츠의 로컬 정적 검사가 PASS. CI 브라우저 QA 재검증은 남아 있다.
 
-검증과 배포 결과는 PR 및 GitHub Actions 증거를 기준으로 확정한다. 이 문서 자체는 Production 배포 완료 증거가 아니다.
+## Production 배포 및 확인 (2026-11-16 KST)
+
+- [PR #282](https://github.com/syjy813/getpasslab/pull/282) 병합 완료, 기능 배포 Commit `9a791640720c75410b4d30fa4ee09256542bfcd3`.
+- [GitHub Pages run 43780562659](https://github.com/syjy813/getpasslab/actions/runs/43780562659) build·deploy 모두 **Success**.
+- 수정 PR CI: 시설 발행 QA 공개/비공개 프리뷰, 호병백마, 사수골대, SEO, 모바일 상단 광고, 자격증 탐색, 챕터 헤더·GNB 검사 **PASS**. 핵심 반응형 QA는 320·390·768·1440px에서 수행됨.
+- 브라우저 실서버 확인: `/facility-management/intro/` 1편, `/career/` 8편, `/stories/` 11편, `/qualifications/` 4편. 기존 `/jobs/` 목록 5편 정상. `/career/hobyeongbaekma/` 기존 URL·canonical 유지, 표시 카테고리 `시설 이야기`와 이동 링크 `/facility-management/stories/` 확인.
+- 24개 글의 기존 URL·원문·이미지를 수정하지 않았다. 후속 `시설관리 실무` 및 용어 콘텐츠 추가는 별도 작업이다.
