@@ -47,6 +47,27 @@ const beforeSearchBranding=(file,bytes)=>{
  }
  return Buffer.from(html);
 };
+// Historical publication hashes predate the approved certification breadcrumbs.
+// Recover the exact previous breadcrumb markup only on those index URLs; all
+// other rendered bytes remain protected by the original publication baseline.
+const beforeSeoBreadcrumbs=(file,bytes)=>{
+ const match=file.match(/^dist\/(computer-literacy|fire-safety-manager-level2|industrial-safety|energy-management)\/written\/(?:index\.html|[^/]+\/index\.html)$/);
+ if(!match)return bytes;
+ const certification=match[1];
+ let html=bytes.toString('utf8');
+ const current=html.match(/<nav class="breadcrumb"[^>]*>[\s\S]*?<\/nav>/)?.[0];
+ assert(current,`${file}: certification breadcrumb`);
+ const modern=`<a href="/${certification}/">`;
+ assert.equal(current.split(modern).length,2,`${file}: approved certification overview link`);
+ let original=current.replace(new RegExp(`<a href="/${certification}/">([^<]+)<\\/a>`),(_,label)=>`<span>${label}</span>`);
+ if(file==='dist/energy-management/written/thermal-equipment/index.html'){
+  const singleSubject=/\s+<a href="\/energy-management\/written\/">필기<\/a><span class="sep">\/<\/span> <span class="current">[^<]+<\/span>\s+(?=<\/nav>)/;
+  assert(singleSubject.test(original),`${file}: approved single-subject exam link`);
+  original=original.replace(singleSubject,' <span class="current">필기</span> ');
+ }
+ html=html.replace(current,original);
+ return Buffer.from(html);
+};
 assert.equal(Object.keys(release.source).length,8);
 assert.deepEqual(Object.keys(release.source).sort(),Object.keys(original.source).sort(),'same eight reviewed article identities');
 assert.deepEqual(release.assets,original.assets,'all forty reviewed image bytes remain unchanged');
@@ -130,7 +151,7 @@ for(const [file,sha] of Object.entries(baseline)){
  // Facility lists/related links and XML reflect the reviewed release. Native
  // guard separately pins old source files and the three PR245 SVG renders.
  if(file.startsWith('dist/facility-management/')||file.endsWith('.xml')||approvedRenders.has(file))continue;
- const protectedBytes=beforeSearchBranding(file,beforeBulkVisuals(file,fs.readFileSync(file)));
+ const protectedBytes=beforeSeoBreadcrumbs(file,beforeSearchBranding(file,beforeBulkVisuals(file,fs.readFileSync(file))));
  assert.equal(hash(protectedBytes),sha,file+': existing public bytes protected');unchanged++;
 }
 console.log('[Facility release] PASS',JSON.stringify({articles:8,images:40,links,mode:preview?'private-preview':'publication-candidate',publicFiles:files.length,unchangedPublicFiles:unchanged,date:release.plannedPublicationDate}));

@@ -46,6 +46,31 @@ const editorialBlobs = {
   'src/pages/facility-management/[category]/index.astro': 'c6e86be311d7f72fc212e32f0e3ce691b0d17239',
   'src/styles/serviceNavigation.css': 'de32048d9ea8af551344504ba3742fbda03d005f',
 };
+// SEO link recovery is limited to the two certification index breadcrumbs.
+// Reverse only the approved text/link substitutions before checking the
+// original UI fingerprints; unrelated edits must still fail the guard.
+const oldCertificationCrumb = '      <span>{certification.name}</span><span class="sep">/</span>';
+const linkedCertificationCrumb = '      <a href={withBase(`/${certification.slug}/`)}>{certification.name}</a><span class="sep">/</span>';
+const oldSingleSubjectCrumb = [
+  '      {isSingleSubjectExam ? (',
+  '        <span class="current">{examDefinition.name}</span>',
+  '      ) : (',
+].join('\n');
+const linkedSingleSubjectCrumb = [
+  '      {isSingleSubjectExam ? (',
+  '        <>',
+  '          <a href={withBase(`/${certification.slug}/${examDefinition.slug}/`)}>{examDefinition.name}</a><span class="sep">/</span>',
+  '          <span class="current">{subject.name}</span>',
+  '        </>',
+  '      ) : (',
+].join('\n');
+const approvedSeoBreadcrumbs = new Map([
+  ['src/pages/[cert]/[exam]/index.astro', [[linkedCertificationCrumb, oldCertificationCrumb]]],
+  ['src/pages/[cert]/[exam]/[subject]/index.astro', [
+    [linkedCertificationCrumb, oldCertificationCrumb],
+    [linkedSingleSubjectCrumb, oldSingleSubjectCrumb],
+  ]],
+]);
 
 const draftManifest = JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/draft-manifest.json'));
 const publicationFile = 'docs/audits/2026-11-05-facility-publication/manifest.json';
@@ -116,6 +141,13 @@ const martCovers="  'hobyeongbaekma-mart-despair': '/images/facility-series/ep4-
       assert.equal(current.split("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];").length,2,file + ': series cover size rule');
       const historical=Buffer.from(current.replace(departmentStoreCovers,'').replace(martCovers,'').replace(hospitalCovers,'').replace(hospitalExtraCover,'').replace("const coverSize = article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];","const coverSize = ['hobyeongbaekma', 'hobyeongbaekma-hotel-despair', 'hobyeongbaekma-hotel-hope'].includes(article.id) ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];"));
       assert.equal(gitBlob(historical), editorialBlobs[file], file + ': approved card baseline with hospital and department-store cover extensions');
+    } else if (approvedSeoBreadcrumbs.has(file)) {
+      let historical = bytes.toString('utf8');
+      for (const [current, original] of approvedSeoBreadcrumbs.get(file)) {
+        assert.equal(historical.split(current).length, 2, `${file}: exact approved SEO breadcrumb change`);
+        historical = historical.replace(current, original);
+      }
+      assert.equal(gitBlob(Buffer.from(historical)), editorialBlobs[file], `${file}: original UI preserved beyond approved links`);
     } else {
       assert.equal(gitBlob(bytes), editorialBlobs[file], file + ': approved UI blob');
     }
