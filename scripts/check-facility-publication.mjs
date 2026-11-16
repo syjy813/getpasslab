@@ -116,7 +116,9 @@ assert.equal(hash(beforeIntegratedStyles(originalCompiledCSS)),headingCSS.curren
 const files=walk('dist').filter(f=>!f.split('/').some(p=>p.startsWith('.'))).sort();
 const addedVisualImages=publicSectorVisuals.images.filter(r=>!r.existing).map(visualOutput);
 for(const row of publicSectorVisuals.images)assert.equal(hash(fs.readFileSync(visualOutput(row))),row.sha256,'approved public-sector output: '+row.publicPath);
-assert.deepEqual(files,[...sasugoldaeOutputAdditions,...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...hospitalOutputAdditions,...departmentStoreOutputAdditions,...martOutputAdditions,...hospitalExtraOutputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same routes plus approved hotel, episode-0, hospital, department-store, mart and hospital ep.2-3 outputs; exactly one facility CSS bundle replaced');
+// Five-category IA adds two listing URLs; every old article and /jobs/ URL stays.
+const facilityIANewListings = ['dist/facility-management/intro/index.html', 'dist/facility-management/stories/index.html'];
+assert.deepEqual(files,[...facilityIANewListings,...sasugoldaeOutputAdditions,...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...hospitalOutputAdditions,...departmentStoreOutputAdditions,...martOutputAdditions,...hospitalExtraOutputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same approved routes and images plus two five-category IA listings');
 let unchanged=0;
 const approvedRenders=new Set([...publicSectorVisuals.images.filter(r=>r.existing).map(visualOutput),...bulkVisuals.images.map(bulkOutput)]);
 for(const [file,sha] of Object.entries(baseline)){

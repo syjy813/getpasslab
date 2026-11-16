@@ -2,7 +2,7 @@
 import { getCertificationEntryPath, getFeaturedCertifications } from '../config/certifications';
 import { withBase } from '../config/url';
 import { getCollection } from 'astro:content';
-import { FACILITY_CATEGORIES, facilityCategoryPath } from '../config/facility';
+import { FACILITY_CATEGORIES, facilityCategoryPath, facilityArticlePath, facilityNavigationCategorySlug } from '../config/facility';
 import '../styles/serviceNavigation.css';
 export interface ChapterNavigationGroup {
   group: string;
@@ -13,11 +13,14 @@ const { chapterNavigation } = Astro.props;
 const certifications = getFeaturedCertifications();
 const currentPath = Astro.url.pathname;
 const isFacility = currentPath.startsWith(withBase('/facility-management/'));
-const availableFacilityCategories = new Set(isFacility
-  ? (await getCollection('facilityArticles', article =>
-      article.data.status === 'published' || (import.meta.env.FACILITY_DRAFT_PREVIEW === '1' && article.id !== 'reading-job-postings')
-    )).map(article => article.data.category)
-  : []);
+const facilityArticles = isFacility ? await getCollection('facilityArticles', article =>
+  article.data.status === 'published' || (import.meta.env.FACILITY_DRAFT_PREVIEW === '1' && article.id !== 'reading-job-postings')
+) : [];
+const availableFacilityCategories = new Set(facilityArticles.map(facilityNavigationCategorySlug));
+const currentArticle = facilityArticles.find(article => currentPath === withBase(facilityArticlePath(article)));
+const currentFacilityCategory = (currentArticle ? facilityNavigationCategorySlug(currentArticle) : undefined)
+  ?? (currentPath.startsWith(withBase('/facility-management/jobs/')) ? 'career'
+    : FACILITY_CATEGORIES.find(category => currentPath.startsWith(withBase(facilityCategoryPath(category.slug))))?.slug);
 ---
 <header class="gnb gnb-learning">
   <nav class="gnb-inner" aria-label={isFacility ? "시설관리 정보 탐색" : "자격증 학습 탐색"}>
@@ -39,7 +42,7 @@ const availableFacilityCategories = new Set(isFacility
         <nav class="gnb-dropdown gnb-facility-dropdown" aria-label="시설관리 주제">
           {FACILITY_CATEGORIES.filter(category => availableFacilityCategories.has(category.slug)).map(category => (
             <a href={withBase(facilityCategoryPath(category.slug))}
-              aria-current={currentPath.startsWith(withBase(facilityCategoryPath(category.slug))) ? 'location' : undefined}>
+              aria-current={currentFacilityCategory === category.slug ? 'location' : undefined}>
               {category.name}
             </a>
           ))}

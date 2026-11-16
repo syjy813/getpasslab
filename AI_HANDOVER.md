@@ -4,42 +4,36 @@
 
 ## 기준 상태
 
-- 갱신: **2026-11-16 KST**. 현재 목표는 커뮤니티 운영 이론 조사·가이드 구축·지침 연결. 문서 제안이며 기능·IA·Production 변경 없음.
-- 기준 `main@cfeeeb8a87ce494630e7e69fd9a50190318ceb8b` ([PR #281](https://github.com/syjy813/getpasslab/pull/281) 포함). 이전 Snapshot의 #280 제품·QA 결과와 구분한다.
-- 작업 브랜치: `docs/community-operation-guide-v1-20261116`, [검토 PR #283](https://github.com/syjy813/getpasslab/pull/283). 문서 기준 Commit `971f2e1130e851ecc461ca5058e14db0bb1bac0f` Commit·Push 완료. 후속 Snapshot 갱신은 제품·설정을 바꾸지 않는다.
+- 갱신: **2026-11-16 KST**. 통합 기준 `main@2f3882b4bbbef7fb3e977d7e18d0c44beb8ae0ce` ([PR #284](https://github.com/syjy813/getpasslab/pull/284) 포함). 시설관리 IA 기능 배포 Commit은 `9a791640720c75410b4d30fa4ee09256542bfcd3` ([PR #282](https://github.com/syjy813/getpasslab/pull/282) 병합).
+- 최근 제품: 시설관리 **5개 1차 카테고리 개편 완료, Production 배포·확인 완료**. 최초 PR CI에서 기존 카테고리 위치를 가정한 회귀검사 3종을 보완했고, 수정 CI를 확인한 뒤 병합했다.
+- 배포 근거: [Pages run 43780562659](https://github.com/syjy813/getpasslab/actions/runs/43780562659) **Success** (build+deploy). 실서버 목록 4곳·기존 `/jobs/` 목록·호병백마 기존 게시글 URL 및 새 카테고리 링크 확인 PASS.
 
-## 현재 작업 — 커뮤니티 운영 가이드
+## 현재 작업 — 커뮤니티 운영 가이드 PR 검토 준비
 
-- [운영 가이드 v1](docs/standards/community-operation-guide-v1.md) 작성: 기존 구조·관련 정본 조사, 6개 이론·11개 출처, 연구/추론/현지 데이터 분리, A/B/C 원칙·의사결정·지표·실험 후보.
-- `AGENTS.md` 라우터 1행 및 시설 가이드 §12 상호 연결. 기존 집필·이미지·SEO·URL·승인 규칙 유지.
-- main의 운영자 발행형 구조: 공개 24편/초안 1편, 카테고리 4개. 5개 IA [PR #282](https://github.com/syjy813/getpasslab/pull/282)와 GA4 조회수·정렬 [PR #278](https://github.com/syjy813/getpasslab/pull/278)는 조사 시 미병합. 이번 문서에서 구현·배포 완료로 취급하지 않는다.
-- 문서 검증: 출처·수치·비지지 결과·한계 대조, 내부 Markdown 링크 32개·참고문헌 대응·문서 4개 변경 범위 확인. 제품 소스·의존성·CI 변경 없음. 로컬 Build·브라우저 QA는 문서 변경 범위상 미실행.
-- [SEO CI 43780549695](https://github.com/syjy813/getpasslab/actions/runs/43780549695), 대상 `971f2e11`: Build·SEO·공개 콘텐츠·컴활·C1·문제 전달·즉시풀이 검증 success. 이 결과는 해당 Commit의 증거이며 후속 HEAD의 CI는 PR Checks에서 별도 확인한다. Production 배포·QA 미실행.
-- 다음 행동: PR에서 문서 검토. 사용자 별도 승인 전 **main 병합·Production 배포 금지**. 총 지침 추가 문구는 운영 가이드 §9.1에 제공하며 프로젝트 설정을 직접 수정한 것으로 보고하지 않는다.
-- 재개 시 이 브랜치의 최신 HEAD·diff·PR CI부터 확인한다. 현행/미병합 상태가 달라지면 운영 가이드 §1.1과 관련 부분만 갱신한다.
+- [PR #283](https://github.com/syjy813/getpasslab/pull/283), 브랜치 `docs/community-operation-guide-v1-20261116`. 이전 문서 HEAD `030b1496` 이후 최신 main을 통합하며 양쪽 이력을 보존한다. main 병합·배포 승인은 이번 문서 작업에 없음.
+- [운영 가이드 v1](docs/standards/community-operation-guide-v1.md): 6개 이론·11개 출처, 연구/추론/실측 분리, A/B/C 원칙·기능 판단·지표·미실행 실험 후보. §1.1·§6.2·§9를 배포된 5개 IA와 미병합 GA4 #278 상태에 맞춰 보완했다.
+- `AGENTS.md` 정본 라우터 1행, 시설 콘텐츠 가이드 §12 상호 링크 및 현행 분류 수 정합성 보완. 기존 집필·이미지·SEO·승인 규칙 유지.
+- 검증 대상은 이 Snapshot을 포함한 PR 최신 HEAD. 문서 diff·내부 링크·인용 대응과 최신 main 대비 실행 소스/설정/의존성 무변경을 확인한다. 최종 CI는 PR HEAD와 실행 SHA를 대조한다. 이전 `971f2e11`의 CI는 구제품 대상이므로 최신 통합 HEAD의 제품 검증을 대신하지 않는다.
+- 다음: 최신 PR CI·검토 상태 확인 후 사용자에게 보고. **별도 승인 전 main 병합·Production 배포 금지**. 총 지침 복사용 최소 문구는 운영 가이드 §9.1. 기능·운영 정책·추가 추적은 적용하지 않았다.
 
-## 직전 제품 상태 — 모바일 피드
+## 현행 IA·변경 범위
 
-- 홈·카테고리·관련 글의 모바일 일반 목록: **왼쪽 원본 비율 썸네일·오른쪽 전체 제목**, 요약 숨김. 뱃지·작성 날짜 제거 유지.
-- 360px 미만 썸네일 88px/간격 16px, 그 이상 96px/20px. 제목 16px/600/1.5. 상하 28px·최소 높이 128px·항목 구분선·목록 행 간격 0.
-- PC·홈 대표 카드, 상세 원고/날짜/분류·URL·원본 이미지·SEO 메타는 보존. [시설 가이드](docs/standards/facility-content-guide-v1.4.md) §4.4 정합성 갱신.
-- 최초 390px 검사에서 미정의 간격 변수를 발견해 20px로 수정. PC 요약 검사는 Chromium의 display 정규화 차이를 반영해 실제 표시 크기를 확인한다.
+- 새 IA: **시설관리 입문·용어 (1) / 취업·커리어 (8) / 시설 이야기 (11) / 법정선임·자격 활용 (4) / 시설관리 실무 (0, 준비 중)**.
+- 취업·커리어는 취업 가이드 4 / 기업·채용 분석 4, 시설 이야기는 호병백마 10 / 사수골대 1로 2차 탐색을 제공한다.
+- 새 목록 `/facility-management/intro/`, `/facility-management/stories/` 추가. 기존 `/jobs/` 목록과 **공개 24개 글의 URL·원고·이미지·canonical** 보존. 상세 브레드크럼·상단 메뉴·푸터·홈 카테고리와 통합 가이드 §4를 일치시켰다.
+- 작업·검증 범위: [IA audit](docs/audits/2026-11-16-facility-ia/README.md). 이전 모바일 피드의 레이아웃과 이미지·기술 설명은 그대로 유지한다.
 
-## 직전 모바일 피드 검증·배포 — 과거 증거
+## 검증 및 남은 단계
 
-- 아래는 이번 문서 변경의 신규 검증이 아니다. 제품 `398923fd` ([PR #280](https://github.com/syjy813/getpasslab/pull/280))와 검증 HEAD `1e68b02a`의 제품 tree 동일성은 당시 기록이다. 이후 main 전체에 동일하다고 확대하지 않는다.
-- [Pages run 43726251784](https://github.com/syjy813/getpasslab/actions/runs/43726251784) 당시 Build/Deploy success, artifact `14165824327`, digest `sha256:a62b0f0c7afd128b3503eb97ddce748bc8a8b8b56d7288aa544ffd51782e84e0`.
-
-- Build 584페이지 PASS. SEO 오류 0/기존 경고 5, 공개 콘텐츠 오류 0, 시설 발행/내부 링크 163개/통합 이미지 보호 PASS.
-- 생성 HTML 586개는 시설 CSS 파일명만 정규화하면 기준 `ea67d199` 빌드와 동일. 목록 28페이지·134카드 내용/링크/이미지 보존.
-- [시설 CI 43725736766](https://github.com/syjy813/getpasslab/actions/runs/43725736766): 공개/비공개 각 64케이스·본문 각 32케이스 PASS, 320·390·768·1440px. 390px 목록과 1440px PC 캡처 시각 검토 완료. Artifact `14166995205`.
-- SEO `43725736773`·자격증 탐색 `43725736822` PASS. 소방은 성공한 이번 작업 run `43724972188` (`ebf69e53`) 결과 재사용: 이후에는 시설 QA 스크립트와 시설 모바일 CSS 간격만 달라졌고 소방 소스/설정/의존성/생성 HTML은 같다. 중복 최신 소방 run `43725736888`은 배포 시 진행 중으로 별도 구분한다.
-- Production 7경로·48카드 내용/링크/메타, CSS 3개·썸네일 2개 바이트 일치. 실서버 확인은 HTTP/HTML/CSS/이미지 대조이며 Production 브라우저 캡처를 수행한 것으로 확대하지 않는다.
-- [작업·검증 정본](docs/audits/2026-11-15-facility-feed/README.md), [최종 검증](docs/audits/2026-11-15-facility-feed/validation.json), [Production](docs/audits/2026-11-15-facility-feed/production-validation.json). 이전 목록 배포 근거는 [이전 기록](docs/audits/2026-11-15-facility-list-layout/README.md)에 보존.
-- 직전 모바일 피드 요청은 완료 기록을 유지한다. 이번 문서 변경의 Build·CI·Production 확인 결과로 재사용하지 않는다.
+- 공개/비공개 미리보기 `astro build` PASS. 새 IA 검사 각각 **4개 운영 카테고리, 24개 글 단일 매핑, 기존 URL/canonical 및 /jobs/ 보존 PASS**.
+- 양 모드 시설 발행 검증·관련 링크 검증 PASS. 공개 `check-facility-launch` 소스/이미지 보호 PASS. `check:public-content` 오류 0, `check:seo` 오류 0/기존 경고 5.
+- 원고 해시를 보존하기 위해 `category`를 URL 경로로 유지하고, 표시 분류는 중앙 매핑/선택적 `navigationCategory` 필드로 분리했다. 기존 회귀검사는 이 허용된 IA 변경만 예외로 처리하고 새 IA 검사를 CI에 추가했다.
+- 원격 CI: 시설 발행 QA의 공개/비공개 미리보기, 호병백마·사수골대 브라우저 QA, SEO 검사 **PASS**. 브라우저 검사에는 320·390·768·1440px 검증이 포함된다.
+- **남은 사항:** `시설관리 실무` 카테고리는 공개 글 0편으로 메뉴에서 숨김. 향후 용어·실무 콘텐츠를 작성하면 콘텐츠 분류를 검수한다. 현재 IA 개편의 미완료 배포 단계는 없다.
 
 ## 기존 후속 사항
 
+- 이전 모바일 피드의 상세 검증/Production 기록은 [2026-11-15 audit](docs/audits/2026-11-15-facility-feed/README.md) 및 병합 기준 `398923fd`에서 확인한다.
 - 사수골대 ep.0 원고·배포는 이전 완료 상태를 유지한다. [이전 완료 기록](docs/audits/2026-11-15-sasugoldae-ep00/manifest.json), [PR #277](https://github.com/syjy813/getpasslab/pull/277), [Pages run 43697216589](https://github.com/syjy813/getpasslab/actions/runs/43697216589). 이전 상세 Snapshot은 기준 커밋 `5bca56b9`에 보존.
 - 사수골대 사전 자료 수집은 **부분 완료**. 핵심 후보 71건은 독립 근무후기 71건이 아니다. 집계·접근 제한·시설별 미달은 [source-index](docs/drafts/facility/sasugoldae/source-index.md)가 정본.
 - 사우나 후속편 집필·배포는 이번 목록 UI 작업 범위에 포함하지 않는다.

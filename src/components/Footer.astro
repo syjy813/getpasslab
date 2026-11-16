@@ -3,9 +3,13 @@ import { withBase } from '../config/url';
 import { SITE } from '../config/site';
 import { getCertificationEntryPath, getFeaturedCertifications } from '../config/certifications';
 import { getServiceArea } from '../config/services';
-import { facilityCategoryPath } from '../config/facility';
+import { FACILITY_CATEGORIES, facilityCategoryPath, facilityNavigationCategorySlug } from '../config/facility';
+import { getCollection } from 'astro:content';
 const certifications = getFeaturedCertifications();
 const isFacility = getServiceArea(Astro.url.pathname) === 'facility';
+const availableFacilitySlugs = new Set(isFacility ? (await getCollection('facilityArticles', article =>
+  article.data.status === 'published' || (import.meta.env.FACILITY_DRAFT_PREVIEW === '1' && article.id !== 'reading-job-postings')
+)).map(facilityNavigationCategorySlug) : []);
 ---
 <footer class="footer">
   <div class="footer-inner">
@@ -17,10 +21,9 @@ const isFacility = getServiceArea(Astro.url.pathname) === 'facility';
       <h4>{isFacility ? '시설 정보' : '학습'}</h4>
       <ul>
         {isFacility ? (
-          <>
-            <li><a href={withBase(facilityCategoryPath('career'))}>취업·커리어</a></li>
-            <li><a href={withBase(facilityCategoryPath('jobs'))}>채용공고 분석</a></li>
-          </>
+          FACILITY_CATEGORIES.filter(category => availableFacilitySlugs.has(category.slug)).map(category => (
+            <li><a href={withBase(facilityCategoryPath(category.slug))}>{category.name}</a></li>
+          ))
         ) : certifications.map((certification) => (
           <li><a href={withBase(getCertificationEntryPath(certification.slug))}>{certification.name}</a></li>
         ))}

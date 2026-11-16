@@ -63,6 +63,24 @@ const martOutputAdditions = new Set(martRelease.articles.map(row => 'dist'+row.r
 const hospitalExtraRelease = JSON.parse(fs.readFileSync('docs/audits/2026-11-13-hospital-ep2-3/manifest.json'));
 const hospitalExtraSourceAdditions = new Set(hospitalExtraRelease.articles.flatMap(row => [row.source, row.image]));
 const hospitalExtraOutputAdditions = new Set(hospitalExtraRelease.articles.map(row => 'dist'+row.route+'index.html'));
+// These shared navigation files changed under the five-category IA. Their new
+// rendered behavior and preservation of all 24 article URLs are checked by
+// scripts/check-facility-ia.mjs. Retain original byte guards for all other files.
+const facilityIAFiles = new Set([
+  'src/components/FacilityIcon.astro',
+  'src/components/Footer.astro',
+  'src/components/GNB.astro',
+  'src/config/facility.ts',
+  'src/content.config.ts',
+  'src/layouts/FacilityArticleLayout.astro',
+  'src/pages/facility-management/[category]/index.astro',
+  'src/pages/facility-management/index.astro',
+  'src/styles/facility.css',
+]);
+const facilityIANewRoutes = new Set([
+  'dist/facility-management/intro/index.html',
+  'dist/facility-management/stories/index.html',
+]);
 for (const [file, sha] of Object.entries({...draftManifest.source, ...publication?.source, ...draftManifest.assets})) {
   assert.equal(hash(beforeBulkVisuals(file,fs.readFileSync(file))), sha, file + ': pinned reviewed draft');
 }
@@ -70,8 +88,8 @@ const files = [
   ...walk('src'),
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
-].filter(file => !sasugoldaeSourceAdditions.includes(file) && !sasugoldaeOutputAdditions.includes(file) && !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
-assert.deepEqual(files, Object.keys(facilityReview.current).sort(), 'same native source and public URL inventory');
+].filter(file => !facilityIAFiles.has(file) && !facilityIANewRoutes.has(file) && !sasugoldaeSourceAdditions.includes(file) && !sasugoldaeOutputAdditions.includes(file) && !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
+assert.deepEqual(files, Object.keys(facilityReview.current).filter(file => !facilityIAFiles.has(file)).sort(), 'same non-IA source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
 for (const file of files) {
@@ -115,7 +133,7 @@ const martCovers="  'hobyeongbaekma-mart-despair': '/images/facility-series/ep4-
     }
   }
 }
-assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).sort(), 'reviewed UI and favicon changes only');
+assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).filter(file => !facilityIAFiles.has(file)).sort(), 'other reviewed UI and favicon changes preserved');
 
 const assets = walk('facility-assets').filter(file => !Object.hasOwn(draftManifest.assets, file)).sort();
 assert.deepEqual(assets, Object.keys(facilityReview.assets).sort(), 'original image inventory');
