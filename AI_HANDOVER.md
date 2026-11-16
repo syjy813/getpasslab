@@ -4,17 +4,18 @@
 
 ## 기준 상태
 
-- 갱신: **2026-11-16 KST**. 통합 기준 `main@2f3882b4bbbef7fb3e977d7e18d0c44beb8ae0ce` ([PR #284](https://github.com/syjy813/getpasslab/pull/284) 포함). 시설관리 IA 기능 배포 Commit은 `9a791640720c75410b4d30fa4ee09256542bfcd3` ([PR #282](https://github.com/syjy813/getpasslab/pull/282) 병합).
+- 갱신: **2026-11-16 KST**. 커뮤니티 운영 가이드 반영 기준 `main@4c83ee50a08311c12e8be365b9e7584e8519d2a6` ([PR #283](https://github.com/syjy813/getpasslab/pull/283) 병합). 후속 완료 기록은 문서만 변경한다. 시설관리 IA 기능 배포 Commit은 `9a791640720c75410b4d30fa4ee09256542bfcd3` ([PR #282](https://github.com/syjy813/getpasslab/pull/282) 병합).
 - 최근 제품: 시설관리 **5개 1차 카테고리 개편 완료, Production 배포·확인 완료**. 최초 PR CI에서 기존 카테고리 위치를 가정한 회귀검사 3종을 보완했고, 수정 CI를 확인한 뒤 병합했다.
 - 배포 근거: [Pages run 43780562659](https://github.com/syjy813/getpasslab/actions/runs/43780562659) **Success** (build+deploy). 실서버 목록 4곳·기존 `/jobs/` 목록·호병백마 기존 게시글 URL 및 새 카테고리 링크 확인 PASS.
 
-## 현재 작업 — 커뮤니티 운영 가이드 PR 검토 준비
+## 현재 작업 — 커뮤니티 운영 가이드 완료
 
-- [PR #283](https://github.com/syjy813/getpasslab/pull/283), 브랜치 `docs/community-operation-guide-v1-20261116`. 이전 문서 HEAD `030b1496` 이후 최신 main을 통합하며 양쪽 이력을 보존한다. main 병합·배포 승인은 이번 문서 작업에 없음.
-- [운영 가이드 v1](docs/standards/community-operation-guide-v1.md): 6개 이론·11개 출처, 연구/추론/실측 분리, A/B/C 원칙·기능 판단·지표·미실행 실험 후보. §1.1·§6.2·§9를 배포된 5개 IA와 미병합 GA4 #278 상태에 맞춰 보완했다.
-- `AGENTS.md` 정본 라우터 1행, 시설 콘텐츠 가이드 §12 상호 링크 및 현행 분류 수 정합성 보완. 기존 집필·이미지·SEO·승인 규칙 유지.
-- 검증 대상은 이 Snapshot을 포함한 PR 최신 HEAD. 문서 diff·내부 링크·인용 대응과 최신 main 대비 실행 소스/설정/의존성 무변경을 확인한다. 최종 CI는 PR HEAD와 실행 SHA를 대조한다. 이전 `971f2e11`의 CI는 구제품 대상이므로 최신 통합 HEAD의 제품 검증을 대신하지 않는다.
-- 다음: 최신 PR CI·검토 상태 확인 후 사용자에게 보고. **별도 승인 전 main 병합·Production 배포 금지**. 총 지침 복사용 최소 문구는 운영 가이드 §9.1. 기능·운영 정책·추가 추적은 적용하지 않았다.
+- 사용자 `main 병합 및 실서버 배포` 승인에 따라 [PR #283](https://github.com/syjy813/getpasslab/pull/283) 병합 완료. 검증 HEAD `a523763ff207cdd4ffbf20cc9820c1d70eed57c6`와 병합 Commit `4c83ee50`의 Git tree가 동일(`548e5ce5eb27e6d2451b660e0bb8d5e441130848`).
+- [운영 가이드 v1](docs/standards/community-operation-guide-v1.md): 6개 이론·11개 출처, 연구/추론/실측 분리, A/B/C 원칙·기능 판단·지표·미실행 실험 후보. `AGENTS.md` 라우터 및 시설 가이드 §12와 연결. 현행 5개 IA와 미병합 조회수 PR #278 구분.
+- [SEO CI 43782037314](https://github.com/syjy813/getpasslab/actions/runs/43782037314), 대상 `a523763f`: Build·SEO·공개 콘텐츠·컴활·C1·문제 전달·즉시풀이 success. GitHub 병합 상태 clean 확인 후 병합.
+- [Pages run 43782452839](https://github.com/syjy813/getpasslab/actions/runs/43782452839), 대상 `4c83ee50`: Build/Deploy success. 변경은 문서이며 제품 소스·원고·이미지·IA·URL·의존성·CI 구조는 기존 main 대비 동일.
+- Production 8경로 HTTP 200·canonical PASS. 주요 목록 1/8/11/4편, 기존 jobs 5편, 기존 호병백마 URL·자격증 진입 확인. 사전 비교한 6경로 HTML SHA-256 동일. [검증 기록](docs/audits/2026-11-16-community-operation-guide/deployment.json). 확인 범위는 HTTP/HTML이며 브라우저 육안 QA를 수행한 것으로 확대하지 않는다.
+- **이번 승인 범위 미완료 없음.** 총 지침 복사용 문구는 운영 가이드 §9.1(프로젝트 설정 직접 수정은 미실행). 회원 기능·운영 정책의 실제 적용·실험은 별도 작업이다.
 
 ## 현행 IA·변경 범위
 
