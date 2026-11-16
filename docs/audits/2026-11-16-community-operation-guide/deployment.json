@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-11-16T00:49:08.671895+00:00",
+  "commit": "4c83ee50a08311c12e8be365b9e7584e8519d2a6",
+  "deploy_run": 43782452839,
+  "checks": [
+    {
+      "path": "/facility-management/",
+      "status": 200,
+      "canonical": "https://getpasslab.co.kr/facility-management/",
+      "h1": "시설관리의 모든 것",
+      "cards": 17,
+      "sha256": "fb10192f1de449e9d21fadcd3e6a3943a79769dfc27d0805f22518f7fed38b16",
+      "canonical_ok": true,
+      "unchanged_html": true
+    },
+    {
+      "path": "/facility-management/intro/",
+      "status": 200,
+      "canonical": "https://getpasslab.co.kr/facility-management/intro/",
+      "h1": "시설관리 입문·용어",
+      "cards": 1,
+      "sha256": "aff62b258be8de09363a3cdabe7e27fbe5fb8fdd50b1bdc04b275d5fb09ec43b",
+      "canonical_ok": true,
+      "expected_cards": 1,
+      "cards_ok": true,
+      "unchanged_html": true
+    },
+    {
+      "path": "/facility-management/career/",
+      "status": 200,
+      "canonical": "https://getpasslab.co.kr/facility-management/career/",
+      "h1": "취업·커리어",
+      "cards": 8,
+      "sha256": "5b456e37a061a7574cd249d2699c901f84459b72e0ccb371ce817e1b29a2a307",
+      "canonical_ok": true,
+      "expected_cards": 8,
+      "cards_ok": true,
+      "unchanged_html": true
+    },
+    {
+      "path": "/facility-management/stories/",
+      "status": 200,
+      "canonical": "https://getpasslab.co.kr/facility-management/stories/",
+      "h1": "시설 이야기",
+      "cards": 11,
+      "sha256": "0adb612040f2dba5accbaaf509c9f79a872d18972d0b9a01c1947550114e2c18",
+      "canonical_ok": true,
+      "expected_cards": 11,
+      "cards_ok": true,
+      "unchanged_html": true
+    },
+    {
+      "path": "/facility-management/qualifications/",
+      "status": 200,
+      "canonical": "https://getpasslab.co.kr/facility-management/qualifications/",
+      "h1": "법정선임·자격 활용",
+      "cards": 4,
+      "sha256": "d08fbb0dd46e1f5946722db6b6aba7895cb2347e88c26d540db82b3b4f97797e",
+      "canonical_ok": true,
+      "expected_cards": 4,
+      "cards_ok": true,
+      "unchanged_html": true
+    },
+    {
+      "path": "/facility-management/jobs/",
+      "status": 200,
+      "canonical": "https://getpasslab.co.kr/facility-management/jobs/",
+      "h1": "채용공고 분석",
+      "cards": 5,
+      "sha256": "1a1a7f3f5a968181dbae34b5976804a29929368472ad2d86f81f339642f648ca",
+      "canonical_ok": true,
+      "expected_cards": 5,
+      "cards_ok": true
+    },
+    {
+      "path": "/facility-management/career/hobyeongbaekma/",
+      "status": 200,
+      "canonical": "https://getpasslab.co.kr/facility-management/career/hobyeongbaekma/",
+      "h1": "[호병백마 ep.0] 시설관리 호병백마, 이게 뭔데? 호텔·병원·백화점·마트가 묶인 이유",
+      "cards": 4,
+      "sha256": "f1ee78ad0b89dd913559809ebdb39cdbda1ebf3a5be58a98b15d7c5d79060e8a",
+      "canonical_ok": true,
+      "unchanged_html": true
+    },
+    {
+      "path": "/certifications/",
+      "status": 200,
+      "canonical": "https://getpasslab.co.kr/certifications/",
+      "h1": "자격증의 모든 것",
+      "cards": 0,
+      "sha256": "64d5461b01edf0d37221abd6a7aec7dc6147afdc462e9ff1d2db87efb366b111",
+      "canonical_ok": true
+    }
+  ],
+  "scope": "HTTP/HTML/canonical/card count; no browser visual QA",
+  "pass": true
+}
