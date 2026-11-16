@@ -6,14 +6,15 @@
 
 - 갱신: **2026-11-16 KST**. 현재 목표는 커뮤니티 운영 이론 조사·가이드 구축·지침 연결. 문서 제안이며 기능·IA·Production 변경 없음.
 - 기준 `main@cfeeeb8a87ce494630e7e69fd9a50190318ceb8b` ([PR #281](https://github.com/syjy813/getpasslab/pull/281) 포함). 이전 Snapshot의 #280 제품·QA 결과와 구분한다.
-- 작업 브랜치: `docs/community-operation-guide-v1-20261116`. 이 Snapshot을 포함한 문서 Commit이 대상이며 정확한 HEAD·Push·PR·CI 상태는 실제 Git·PR 증거로 확인한다.
+- 작업 브랜치: `docs/community-operation-guide-v1-20261116`, [검토 PR #283](https://github.com/syjy813/getpasslab/pull/283). 문서 기준 Commit `971f2e1130e851ecc461ca5058e14db0bb1bac0f` Commit·Push 완료. 후속 Snapshot 갱신은 제품·설정을 바꾸지 않는다.
 
 ## 현재 작업 — 커뮤니티 운영 가이드
 
 - [운영 가이드 v1](docs/standards/community-operation-guide-v1.md) 작성: 기존 구조·관련 정본 조사, 6개 이론·11개 출처, 연구/추론/현지 데이터 분리, A/B/C 원칙·의사결정·지표·실험 후보.
 - `AGENTS.md` 라우터 1행 및 시설 가이드 §12 상호 연결. 기존 집필·이미지·SEO·URL·승인 규칙 유지.
 - main의 운영자 발행형 구조: 공개 24편/초안 1편, 카테고리 4개. 5개 IA [PR #282](https://github.com/syjy813/getpasslab/pull/282)와 GA4 조회수·정렬 [PR #278](https://github.com/syjy813/getpasslab/pull/278)는 조사 시 미병합. 이번 문서에서 구현·배포 완료로 취급하지 않는다.
-- 문서 검증: 출처·수치·비지지 결과·한계 대조, Markdown 링크·참고문헌 대응·변경 범위 확인. 제품 소스·의존성·CI 변경 없음. 로컬 Build·브라우저 QA는 문서 변경 범위상 미실행. PR의 기존 SEO CI가 실행되면 그 결과를 별도로 확인한다.
+- 문서 검증: 출처·수치·비지지 결과·한계 대조, 내부 Markdown 링크 32개·참고문헌 대응·문서 4개 변경 범위 확인. 제품 소스·의존성·CI 변경 없음. 로컬 Build·브라우저 QA는 문서 변경 범위상 미실행.
+- [SEO CI 43780549695](https://github.com/syjy813/getpasslab/actions/runs/43780549695), 대상 `971f2e11`: Build·SEO·공개 콘텐츠·컴활·C1·문제 전달·즉시풀이 검증 success. 이 결과는 해당 Commit의 증거이며 후속 HEAD의 CI는 PR Checks에서 별도 확인한다. Production 배포·QA 미실행.
 - 다음 행동: PR에서 문서 검토. 사용자 별도 승인 전 **main 병합·Production 배포 금지**. 총 지침 추가 문구는 운영 가이드 §9.1에 제공하며 프로젝트 설정을 직접 수정한 것으로 보고하지 않는다.
 - 재개 시 이 브랜치의 최신 HEAD·diff·PR CI부터 확인한다. 현행/미병합 상태가 달라지면 운영 가이드 §1.1과 관련 부분만 갱신한다.
 
