@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-17 KST",
+  "pull_request": 288,
+  "tested_head": "7d1e3ad39a02a4f3fa3f9e30b51f494a24377191",
+  "merge_commit": "6164767e9f5aec4a6567e1e12f93a8192dc243ed",
+  "identical_tested_and_merged_tree": "9230de767d46aeb8d9eb1a03ec4f5ea72180f5c5",
+  "deploy": {
+    "run_id": 43989905658,
+    "url": "https://github.com/syjy813/getpasslab/actions/runs/43989905658",
+    "build": "success",
+    "deploy": "success"
+  },
+  "ci": [
+    {
+      "name": "Certification discovery QA",
+      "id": 43988540476,
+      "conclusion": "success",
+      "head_sha": "7d1e3ad39a02a4f3fa3f9e30b51f494a24377191"
+    },
+    {
+      "name": "Facility publication QA",
+      "id": 43988540489,
+      "conclusion": "success",
+      "head_sha": "7d1e3ad39a02a4f3fa3f9e30b51f494a24377191"
+    },
+    {
+      "name": "SEO validation",
+      "id": 43988540470,
+      "conclusion": "success",
+      "head_sha": "7d1e3ad39a02a4f3fa3f9e30b51f494a24377191"
+    },
+    {
+      "name": "Sasugoldae publication QA",
+      "id": 43988540487,
+      "conclusion": "success",
+      "head_sha": "7d1e3ad39a02a4f3fa3f9e30b51f494a24377191"
+    },
+    {
+      "name": "Hobyeongbaekma publication QA",
+      "id": 43988540507,
+      "conclusion": "success",
+      "head_sha": "7d1e3ad39a02a4f3fa3f9e30b51f494a24377191"
+    },
+    {
+      "name": "Fire safety level 2 launch QA",
+      "id": 43988540481,
+      "conclusion": "success",
+      "head_sha": "7d1e3ad39a02a4f3fa3f9e30b51f494a24377191"
+    }
+  ],
+  "responsive_ci": {
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "hospital_cards": 3,
+    "publication_cases": 72,
+    "private_preview_cases": 72
+  },
+  "production": {
+    "method": "Connected browser; DOM comparison against predeployment production pages and visual inspection",
+    "actual_desktop_viewport_width": 1905,
+    "cardComparison": {
+      "countBefore": 11,
+      "countAfter": 11,
+      "changed": [
+        {
+          "href": "/facility-management/career/hobyeongbaekma-hospital-large-university/",
+          "src": "/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-large-university.webp"
+        },
+        {
+          "href": "/facility-management/career/hobyeongbaekma-hospital-despair/",
+          "src": "/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-despair.webp"
+        },
+        {
+          "href": "/facility-management/career/hobyeongbaekma-hospital-hope/",
+          "src": "/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-hope.webp"
+        }
+      ],
+      "titlesPreserved": true,
+      "otherCardsPreserved": true
+    },
+    "detailComparison": [
+      {
+        "route": "/facility-management/career/hobyeongbaekma-hospital-despair/",
+        "bodyPreserved": true,
+        "ogPreserved": true,
+        "canonicalPreserved": true,
+        "hero": "/images/facility-series/ep2-1-hospital-despair/01-hero.webp"
+      },
+      {
+        "route": "/facility-management/career/hobyeongbaekma-hospital-hope/",
+        "bodyPreserved": true,
+        "ogPreserved": true,
+        "canonicalPreserved": true,
+        "hero": "/images/facility-series/ep2-2-hospital-hope/01-hero.webp"
+      },
+      {
+        "route": "/facility-management/career/hobyeongbaekma-hospital-large-university/",
+        "bodyPreserved": true,
+        "ogPreserved": true,
+        "canonicalPreserved": true,
+        "hero": "/images/facility-series/ep2-3-hospital-large/01-hero.webp"
+      }
+    ],
+    "homeUniversityCardLoaded": true,
+    "allHospitalListingImagesLoadedAt": [
+      1448,
+      1086
+    ],
+    "responsiveProductionNote": "Browser viewport override did not change measured width; mobile checks are the four-width CI results, not a claim of mobile Production browser QA"
+  },
+  "source_protection": {
+    "src/content/facility/hobyeongbaekma-hospital-despair.md": "eb8bc7647305527897d3375c678fbf4fe7565a57",
+    "src/content/facility/hobyeongbaekma-hospital-hope.md": "928d8c12d5405072a4bf772d5270679ad8f69e3e",
+    "src/content/facility/hobyeongbaekma-hospital-large-university.md": "f30811d0097495afabc835c398704d42c81776d7",
+    "src/layouts/FacilityArticleLayout.astro": "514bb907f42667a64871b04783fce6059101340f",
+    "src/layouts/FacilityLayout.astro": "e42fafcbf46f542e679edc5ca713402d375063a2"
+  },
+  "remaining_in_scope": []
+}

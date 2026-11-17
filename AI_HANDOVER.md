@@ -4,11 +4,20 @@
 
 ## 기준 상태
 
-- 갱신: **2026-11-16 KST**. 커뮤니티 운영 가이드 반영 기준 `main@4c83ee50a08311c12e8be365b9e7584e8519d2a6` ([PR #283](https://github.com/syjy813/getpasslab/pull/283) 병합). 후속 완료 기록은 문서만 변경한다. 시설관리 IA 기능 배포 Commit은 `9a791640720c75410b4d30fa4ee09256542bfcd3` ([PR #282](https://github.com/syjy813/getpasslab/pull/282) 병합).
-- 최근 제품: 시설관리 **5개 1차 카테고리 개편 완료, Production 배포·확인 완료**. 최초 PR CI에서 기존 카테고리 위치를 가정한 회귀검사 3종을 보완했고, 수정 CI를 확인한 뒤 병합했다.
-- 배포 근거: [Pages run 43780562659](https://github.com/syjy813/getpasslab/actions/runs/43780562659) **Success** (build+deploy). 실서버 목록 4곳·기존 `/jobs/` 목록·호병백마 기존 게시글 URL 및 새 카테고리 링크 확인 PASS.
+- 갱신: **2026-11-17 KST**. 제품 기준 `main@6164767e9f5aec4a6567e1e12f93a8192dc243ed` ([PR #288](https://github.com/syjy813/getpasslab/pull/288) squash 병합). 후속 완료 기록은 문서만 변경한다.
+- 최근 제품: **병원편 목록 전용 썸네일 3종 교체·Production 확인 완료**. 절망편 체크리스트, 희망편 A안 정밀 진단, 대학병원 정문 확정본을 적용했다. 기존 5개 IA·본문·대표·OG·URL은 유지한다.
+- 배포 근거: [Pages run 43989905658](https://github.com/syjy813/getpasslab/actions/runs/43989905658) **build/deploy success**. [검증 기록](docs/audits/2026-11-17-hospital-list-thumbnails/deployment.json).
 
-## 현재 작업 — 커뮤니티 운영 가이드 완료
+## 현재 작업 — 병원편 목록 썸네일 배포 완료
+
+- 사용자 업로드 `893e9772`의 PNG 3종을 같은 바이트의 영문 파일명으로 정리하고, 1448×1086 WebP 129,322 / 116,506 / 294,802바이트로 제공한다. 품질 82·effort 6, 리사이즈·크롭 없음. [원본·해시 기록](docs/audits/2026-11-17-hospital-list-thumbnails/manifest.json).
+- 제품 코드는 `FacilityCard.astro`의 목록 전용 매핑 3행만 추가했다. 본문 Markdown 3편·기존 대표 WebP·레이아웃·OG·canonical·의존성은 변경하지 않았다. 기존 승인 3종을 포함한 총 6종의 파일 해시·기존 소스 불변 검사를 유지한다.
+- 최종 검증 HEAD `7d1e3ad39a02a4f3fa3f9e30b51f494a24377191`와 병합 결과의 Git tree `9230de767d46aeb8d9eb1a03ec4f5ea72180f5c5`가 동일하다. 6개 CI 모두 success: 시설 [43988540489](https://github.com/syjy813/getpasslab/actions/runs/43988540489), 호병백마 [43988540507](https://github.com/syjy813/getpasslab/actions/runs/43988540507), SEO [43988540470](https://github.com/syjy813/getpasslab/actions/runs/43988540470), 사수골대 [43988540487](https://github.com/syjy813/getpasslab/actions/runs/43988540487), 자격증 탐색 [43988540476](https://github.com/syjy813/getpasslab/actions/runs/43988540476), 소방 [43988540481](https://github.com/syjy813/getpasslab/actions/runs/43988540481).
+- 공개·비공개 모드 각각 72개 화면 조합 PASS. 병원 목록·홈·클릭 이동·본문/OG 보존을 320·390·768·1440px CI에서 확인했다. 기존 공통 브라우저 검사의 썸네일 3종 고정값만 정본의 6종 목록으로 연결했다. SEO 오류 0 / 기존 경고 5.
+- Production: 목록 11개 중 병원 3개 이미지 경로만 변경, 제목·나머지 8개 카드 이미지 동일. 병원 상세 3편의 **본문 HTML 전체·OG·canonical이 배포 전과 동일**하다. 새 이미지 3종 실제 로드(1448×1086), 홈 대학병원 카드 로드·연결·데스크톱 화면 확인. Production 브라우저 실측 폭은 1905px이며 모바일 확인은 위 CI 결과로 구분한다.
+- **이번 승인 범위 미완료 없음.** 다른 시설 썸네일 확대·본문/OG 교체는 이번 작업에 포함하지 않는다. 이전 작업 근거는 아래 기존 완료 기록 및 각 PR에 보존한다.
+
+## 최근 완료 — 커뮤니티 운영 가이드
 
 - 사용자 `main 병합 및 실서버 배포` 승인에 따라 [PR #283](https://github.com/syjy813/getpasslab/pull/283) 병합 완료. 검증 HEAD `a523763ff207cdd4ffbf20cc9820c1d70eed57c6`와 병합 Commit `4c83ee50`의 Git tree가 동일(`548e5ce5eb27e6d2451b660e0bb8d5e441130848`).
 - [운영 가이드 v1](docs/standards/community-operation-guide-v1.md): 6개 이론·11개 출처, 연구/추론/실측 분리, A/B/C 원칙·기능 판단·지표·미실행 실험 후보. `AGENTS.md` 라우터 및 시설 가이드 §12와 연결. 현행 5개 IA와 미병합 조회수 PR #278 구분.
