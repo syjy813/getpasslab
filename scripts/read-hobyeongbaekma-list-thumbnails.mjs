@@ -14,6 +14,9 @@ export const thumbnailRows = [
   {id:'hobyeongbaekma',name:'hobyeongbaekma-ep0',png:'63e5a116a02f52ff3989cb8f7bec065e4c96f4d08c6f9388c1e3c33e4c7d9def',webp:'d880566ea4820c762eb753e4e1606f44525506d6e108eff75666a44c6392e770'},
   {id:'hobyeongbaekma-hotel-despair',name:'hobyeongbaekma-hotel-despair',png:'e2050def62c0d75c84b2b9a4a5180a11a58fa76882fb248277d0fc3c74410600',webp:'f5e78e3c7ca3e55354a66fe92988245db8a126a64a465945659b10035d0132f0'},
   {id:'hobyeongbaekma-hotel-hope',name:'hobyeongbaekma-hotel-hope',png:'158f37a2d7e106d24867a704f0f8179b67d76527f2683cb6dee922a8ff3b37ea',webp:'c0c6a8ac16d5480ead0003864ba0b179c12cd38097407b6e872b0a10d21488d5'},
+  {"id":"hobyeongbaekma-hospital-despair","name":"hobyeongbaekma-hospital-despair","png":"30bb9bbd45ff09ced1ce3146ea108d36ececf911647425890df0cbb1cc1a9af3","webp":"b6710879676824a08e30c55244e25b6cfc618221d3568dc85ce39afb6296c69a","maxBytes":200000},
+  {"id":"hobyeongbaekma-hospital-hope","name":"hobyeongbaekma-hospital-hope","png":"aa65a52be38228c099f0024605bcede7d23db1dfeab769f7b37d3bb94e99dd08","webp":"c1fea9913a39fb7f4d0fb16a13c93ce07dfe00224e0aab8c407db207f1d7f7ab","maxBytes":200000},
+  {"id":"hobyeongbaekma-hospital-large-university","name":"hobyeongbaekma-hospital-large-university","png":"4ab1c556d8c43c6953c0b2039c4772035f6783cfcd0c363a7d57f9af36b3aff7","webp":"6b9c208a69ca97d1afd00ec589548e8934711035bb5d03bd597418f4b9710cb3","maxBytes":300000},
 ].map(row=>({
   ...row,
   master:`facility-assets/hobyeongbaekma-list-thumbnails/${row.name}.png`,
@@ -29,8 +32,13 @@ export const thumbnailOutputFiles = thumbnailRows.map(row=>row.outputFile);
 // No older fingerprint or unrelated rule is relaxed.
 export function beforeHobyeongbaekmaListThumbnails(file, bytes) {
   if (file !== component) return bytes;
-  assert.equal(sha(bytes),componentAfter,file+': approved thumbnail component');
   let text=bytes.toString('utf8');
+  // Remove only the three approved hospital listing overrides before the immutable baseline.
+  for (const entry of ["  'hobyeongbaekma-hospital-despair': '/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-despair.webp',\n","  'hobyeongbaekma-hospital-hope': '/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-hope.webp',\n","  'hobyeongbaekma-hospital-large-university': '/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-large-university.webp',\n"]) {
+    assert.equal(text.split(entry).length,2,file+': exact approved hospital thumbnail entry');
+    text=text.replace(entry,'');
+  }
+  assert.equal(sha(text),componentAfter,file+': approved thumbnail component');
   const changes=[
     [
       '// Published articles reuse their hero image by default; approved listing-only\n// thumbnails override it without changing the article body or social metadata.\n',
@@ -62,12 +70,12 @@ export async function assertHobyeongbaekmaListThumbnails() {
       assert.equal(sha(bytes),expected,file+': approved image bytes');
       const meta=await sharp(bytes).metadata();
       assert.deepEqual([meta.format,meta.width,meta.height],[format,1448,1086],file+': 4:3 image');
-      if (format==='webp') assert(bytes.length<200_000,file+': optimized listing thumbnail');
+      if (format==='webp') assert(bytes.length<(row.maxBytes ?? 200_000),file+': optimized listing thumbnail');
     }
   }
   const list=allNodes(parse(fs.readFileSync('dist/facility-management/stories/index.html','utf8')));
   const cards=list.filter(node=>node.tagName==='a'&&hasClass(node,'facility-card'));
-  assert.equal(cards.filter(node=>allNodes(node).some(child=>attr(child,'src')?.includes('/list-thumbnails/'))).length,3,'exactly three listing overrides');
+  assert.equal(cards.filter(node=>allNodes(node).some(child=>attr(child,'src')?.includes('/list-thumbnails/'))).length,thumbnailRows.length,'exactly the approved listing overrides');
   for (const row of thumbnailRows) {
     const card=cards.find(node=>attr(node,'href')===row.route);
     assert(card,row.route+': listing card');

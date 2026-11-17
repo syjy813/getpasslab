@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-17",
+  "baseline": "52dc6e4ddc4da20a74730ca1a03a7fa2cb8d9249",
+  "uploaded_commit": "893e97726c4cdc62c2ee8de052e54b80413b42dd",
+  "scope": "Hospital series listing cards only; original Markdown, hero assets, layouts, OG, URLs and dependencies preserved",
+  "guide": "facility-content-guide-v1.4.md §5.13.12; user-approved hospital exceptions: checklist text and university-hospital signage",
+  "conversion_run": "https://github.com/syjy813/getpasslab/actions/runs/43987818114",
+  "encoding": {
+    "format": "webp",
+    "quality": 82,
+    "effort": 6,
+    "resize": false
+  },
+  "images": [
+    {
+      "id": "hobyeongbaekma-hospital-despair",
+      "file": "병원 시설 업무 체크리스트.png",
+      "size": 1954853,
+      "blob": "d95b84ad720a2110f971a5d7c7f24a52da83a701",
+      "png": "30bb9bbd45ff09ced1ce3146ea108d36ececf911647425890df0cbb1cc1a9af3",
+      "webp": "b6710879676824a08e30c55244e25b6cfc618221d3568dc85ce39afb6296c69a",
+      "webpBlob": "397ea91794242337d549b18650d93cbc057b8a5a",
+      "webpBytes": 129322,
+      "width": 1448,
+      "height": 1086,
+      "quality": 82
+    },
+    {
+      "id": "hobyeongbaekma-hospital-hope",
+      "file": "병원 HVAC 정밀 진단 디오라마.png",
+      "size": 1959370,
+      "blob": "4bcabe6a1e812287a031e209553320bb66ca57e0",
+      "png": "aa65a52be38228c099f0024605bcede7d23db1dfeab769f7b37d3bb94e99dd08",
+      "webp": "c1fea9913a39fb7f4d0fb16a13c93ce07dfe00224e0aab8c407db207f1d7f7ab",
+      "webpBlob": "74f23a3309a3667b5e52c5ae2abfa5f5adcd555d",
+      "webpBytes": 116506,
+      "width": 1448,
+      "height": 1086,
+      "quality": 82
+    },
+    {
+      "id": "hobyeongbaekma-hospital-large-university",
+      "file": "가까이 담은 대학병원 정문.png",
+      "size": 2534283,
+      "blob": "4ac66fb5e3e3f216abe1e364256a806c155e6323",
+      "png": "4ab1c556d8c43c6953c0b2039c4772035f6783cfcd0c363a7d57f9af36b3aff7",
+      "webp": "6b9c208a69ca97d1afd00ec589548e8934711035bb5d03bd597418f4b9710cb3",
+      "webpBlob": "ff23aad61f31f0d1bc1dd29ca6f58e1a17ab76ec",
+      "webpBytes": 294802,
+      "width": 1448,
+      "height": 1086,
+      "quality": 82
+    }
+  ],
+  "protectedFiles": {
+    "src/content/facility/hobyeongbaekma-hospital-despair.md": "eb8bc7647305527897d3375c678fbf4fe7565a57",
+    "src/content/facility/hobyeongbaekma-hospital-hope.md": "928d8c12d5405072a4bf772d5270679ad8f69e3e",
+    "src/content/facility/hobyeongbaekma-hospital-large-university.md": "f30811d0097495afabc835c398704d42c81776d7",
+    "src/layouts/FacilityArticleLayout.astro": "514bb907f42667a64871b04783fce6059101340f",
+    "src/layouts/FacilityLayout.astro": "e42fafcbf46f542e679edc5ca713402d375063a2"
+  }
+}

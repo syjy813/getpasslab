@@ -8,14 +8,10 @@ const output = `qa-results/facility-launch/${mode}`;
 fs.mkdirSync(output, {recursive: true});
 const bulkImages=JSON.parse(fs.readFileSync('docs/audits/2026-11-06-facility-image-bulk/manifest.json'));
 const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':5};
-const listingThumbnails = [
-  ['hobyeongbaekma','hobyeongbaekma-ep0'],
-  ['hobyeongbaekma-hotel-despair','hobyeongbaekma-hotel-despair'],
-  ['hobyeongbaekma-hotel-hope','hobyeongbaekma-hotel-hope'],
-];
 for(const [file,row] of Object.entries(bulkImages.source)) {const slug=file.split('/').at(-1).replace('.md','');if(slug in imageCounts)imageCounts[slug]=row.images;}
 const pages = ['/facility-management/', ...['intro','career','stories','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
 (async () => {
+  const listingThumbnails = (await import('./read-hobyeongbaekma-list-thumbnails.mjs')).thumbnailRows.map(({id,name})=>[id,name]);
   const browser = await chromium.launch();
   const results = [];
   try {
@@ -31,7 +27,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
         const slug = path.split('/').filter(Boolean).at(-1);
         const expected = imageCounts[slug];
         if (path === '/facility-management/stories/') {
-          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails/"]').count(),3,'only three approved listing thumbnails');
+          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails/"]').count(),listingThumbnails.length,'only the approved listing thumbnails');
           for (const [id,name] of listingThumbnails) {
             const card=page.locator(`a.facility-card[href="/facility-management/career/${id}/"]`);
             assert.equal(await card.count(),1,id+': existing article link retained');
