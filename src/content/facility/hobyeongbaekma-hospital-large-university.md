@@ -31,11 +31,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure>
-  <img src="/images/facility-series/ep2-3-hospital-large/01-hero.webp" alt="대학·대형병원 시설관리에서 직접고용, 직군, 복리후생, 장기근속 조건을 확인하는 호병백마 ep.2-3 썸네일" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" />
-  <figcaption>대학·대형병원이라는 이름보다 실제로 어떤 조건의 시설직인지 확인하는 것이 중요함</figcaption>
-</figure>
-
 ## 대학·대형병원은 일반 병원과 조금 다르다
 
 호병백마에서 병원은 흔히 기피시설로 묶인다.

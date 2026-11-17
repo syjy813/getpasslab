@@ -24,8 +24,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/ep1-1-despair/01-hero.webp" alt="호텔 시설관리로 취업했는데 왜 객실 청소까지 하고 있을까? 호병백마 ep.1-1 절망편" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" /></figure>
-
 
 ## 시설관리로 입사했는데, 오늘도 기계실에 못 갔다
 

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {beforeBodyHeroRemoval} from './read-hobyeongbaekma-body-heroes.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import {integratedImageRoot,integrateEpisode00Images,integratedImageStyles} from './hobyeongbaekma-integrated-images.mjs';
@@ -56,7 +57,7 @@ export function assertEpisode00Release() {
   assert.equal(sha(previous),episode00Revision.additions['src/content/facility/hobyeongbaekma.md'],'exact prior released source');
   assert.equal(sha(previous),episode00Integration.previousSourceSHA256);
   const imageIntegrated = integrateEpisode00Images(previous,episode00Integration);
-  assert.equal(fs.readFileSync('src/content/facility/hobyeongbaekma.md','utf8'),applyEpisode00NextLink(imageIntegrated),'approved editorial continuation, no unrelated source modifications');
+  assert.equal(beforeBodyHeroRemoval('src/content/facility/hobyeongbaekma.md',fs.readFileSync('src/content/facility/hobyeongbaekma.md')).toString('utf8'),applyEpisode00NextLink(imageIntegrated),'approved editorial continuation, no unrelated source modifications');
   assert.equal(sha(Buffer.from(imageIntegrated)), episode00Integration.additions['src/content/facility/hobyeongbaekma.md'], 'immutable 2026-11-08 source baseline preserved');
   const blob=bytes=>createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
   assert.equal(blob(fs.readFileSync(episode00Integration.previousStyle)),episode00Integration.previousStyleBlob,'previous facility CSS preserved');

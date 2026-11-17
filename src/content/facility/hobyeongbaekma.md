@@ -51,8 +51,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp" alt="호텔·병원·백화점·마트 4개의 시설과 제목·부제로 구성한 호병백마 대표 이미지" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 ## 호병백마? 무슨 사자성어인 줄 알았다
 
 시설관리 채용공고를 보다 커뮤니티까지 들어가면 처음 보는 말이 적지 않다. 당비휴, 영선, 선임, 무수기. 그러다 유난히 눈길을 끄는 네 글자가 나온다.

@@ -1,13 +1,15 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {beforeBodyHeroRemoval} from './read-hobyeongbaekma-body-heroes.mjs';
 import {createHash} from 'node:crypto';
 import {beforeFacilityListLayout} from './read-facility-list-layout.mjs';
 import {approvedBorderlessHeroStyle,applyEpisode00NextLink} from './read-hobyeongbaekma-publication.mjs';
 import {integrateEpisode00Images,integratedImageRoot as root,integratedImageStyles,beforeIntegratedStyles} from './hobyeongbaekma-integrated-images.mjs';
 const manifest=JSON.parse(fs.readFileSync(root+'/manifest.json'));
 const previous=fs.readFileSync(manifest.previousSource,'utf8');
-const current=fs.readFileSync('src/content/facility/hobyeongbaekma.md','utf8');
+// Historical integration assertions reconstruct the separately approved hero deletion.
+const current=beforeBodyHeroRemoval('src/content/facility/hobyeongbaekma.md',fs.readFileSync('src/content/facility/hobyeongbaekma.md')).toString('utf8');
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 
 test('only three image pairs and separately approved ep.0 continuation change',()=>{

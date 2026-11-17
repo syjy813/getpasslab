@@ -31,8 +31,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/ep2-2-hospital-hope/01-hero.webp" alt="병원 시설관리의 안정적인 근무환경과 전문 설비 경험, 장기 경력 성장 가능성을 표현한 호병백마 ep.2-2 희망편" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" /></figure>
-
 ## 기피시설이라고만 보기엔, 배울 설비가 꽤 많다
 
 병원 시설관리에는 민원과 교대근무를 힘들어하는 후기가 있다. 하지만 반대쪽 이야기도 있다. 한 건물에서 다양한 설비를 접할 수 있다는 점이다.

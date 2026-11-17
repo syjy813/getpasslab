@@ -8,7 +8,15 @@
 - 최근 제품: **병원편 목록 전용 썸네일 3종 교체·Production 확인 완료**. 절망편 체크리스트, 희망편 A안 정밀 진단, 대학병원 정문 확정본을 적용했다. 기존 5개 IA·본문·대표·OG·URL은 유지한다.
 - 배포 근거: [Pages run 43989905658](https://github.com/syjy813/getpasslab/actions/runs/43989905658) **build/deploy success**. [검증 기록](docs/audits/2026-11-17-hospital-list-thumbnails/deployment.json).
 
-## 현재 작업 — 백화점 목록 썸네일 2종 적용
+## 현재 작업 — 호병백 본문 상단 대표 이미지 제거
+
+- 사용자 승인: 이번 교체한 호병백 썸네일 대상 글의 본문 상단 대표 이미지를 제거하고 최소 QA 후 Production 배포.
+- 기준 `main@794d4c616159970a3a21bf96ef86908aef58ec53`, 브랜치 `fix/hobyeongbaekma-remove-leading-images-20261117`.
+- ep.0·호텔 2편·병원 3편·백화점 2편 총 8편의 첫 `<figure>`만 제거. 본문 문구·frontmatter·설명 이미지·목록 썸네일·OG·URL·레이아웃·의존성은 그대로다. 마트는 대상 밖.
+- 기존 검사는 대표 이미지 존재 기대값만 변경하고, 과거 불변 소스 검사는 [삭제 전후 해시·정확한 삭제 범위](docs/audits/2026-11-17-hobyeongbaekma-body-heroes/manifest.json)로 원본을 복원해 유지한다.
+- 구현·586페이지 Build·통합 이미지 6검사·대상 발행/링크/메타 검사 PASS. SEO 오류 0(기존 경고 5)·공개 콘텐츠 오류 0. 마트 대표 이미지 유지 PASS. 광범위 로컬 브라우저 QA는 생략한다. 다음 단계는 PR 병합·Pages 배포와 대상 Production HTML 확인이다.
+
+## 이전 작업 기록 — 백화점 목록 썸네일 2종 적용
 
 - 사용자 `ㄱㄱㄱㄱㄱ`에 따라 확정된 절망/희망 2종의 목록 카드 적용과 실서버 배포까지 승인된 상태다.
 - 기준 `main@b71e0a209eaa56eb59029baa0c3f907a993c8be0`, 브랜치 `feat/department-store-list-thumbnails-20261117`.
