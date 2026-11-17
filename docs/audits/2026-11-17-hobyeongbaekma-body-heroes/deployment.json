@@ -1,0 +1,104 @@
+{
+  "commit": "4bd413481e5821dd89aa351aa30526d0bb3def73",
+  "deploymentRun": "https://github.com/syjy813/getpasslab/actions/runs/44095107320",
+  "pr": "https://github.com/syjy813/getpasslab/pull/291",
+  "checkedAt": "2026-11-17T13:42:25.527Z",
+  "verification": "HTTP and parsed HTML; broad local browser QA omitted as requested",
+  "checks": {
+    "buildPages": 586,
+    "existingIntegratedImageTests": 6,
+    "publicationChecks": "8 target articles and 2 mart articles PASS",
+    "publicContentErrors": 0,
+    "seoErrors": 0,
+    "existingSeoWarnings": 5,
+    "sourceGuard": "PASS"
+  },
+  "results": [
+    {
+      "route": "/facility-management/career/hobyeongbaekma/",
+      "status": 200,
+      "bodyMatchesBuild": true,
+      "bodyImages": 3,
+      "heroRemoved": true,
+      "metadataPreserved": true
+    },
+    {
+      "route": "/facility-management/career/hobyeongbaekma-hotel-despair/",
+      "status": 200,
+      "bodyMatchesBuild": true,
+      "bodyImages": 0,
+      "heroRemoved": true,
+      "metadataPreserved": true
+    },
+    {
+      "route": "/facility-management/career/hobyeongbaekma-hotel-hope/",
+      "status": 200,
+      "bodyMatchesBuild": true,
+      "bodyImages": 0,
+      "heroRemoved": true,
+      "metadataPreserved": true
+    },
+    {
+      "route": "/facility-management/career/hobyeongbaekma-hospital-despair/",
+      "status": 200,
+      "bodyMatchesBuild": true,
+      "bodyImages": 0,
+      "heroRemoved": true,
+      "metadataPreserved": true
+    },
+    {
+      "route": "/facility-management/career/hobyeongbaekma-hospital-hope/",
+      "status": 200,
+      "bodyMatchesBuild": true,
+      "bodyImages": 0,
+      "heroRemoved": true,
+      "metadataPreserved": true
+    },
+    {
+      "route": "/facility-management/career/hobyeongbaekma-hospital-large-university/",
+      "status": 200,
+      "bodyMatchesBuild": true,
+      "bodyImages": 0,
+      "heroRemoved": true,
+      "metadataPreserved": true
+    },
+    {
+      "route": "/facility-management/career/hobyeongbaekma-department-store-despair/",
+      "status": 200,
+      "bodyMatchesBuild": true,
+      "bodyImages": 0,
+      "heroRemoved": true,
+      "metadataPreserved": true
+    },
+    {
+      "route": "/facility-management/career/hobyeongbaekma-department-store-hope/",
+      "status": 200,
+      "bodyMatchesBuild": true,
+      "bodyImages": 0,
+      "heroRemoved": true,
+      "metadataPreserved": true
+    },
+    {
+      "route": "/facility-management/stories/",
+      "status": 200,
+      "listingCards": 11,
+      "thumbnailsPreserved": true
+    },
+    {
+      "route": "/facility-management/career/hobyeongbaekma-mart-despair/",
+      "status": 200,
+      "bodyMatchesBuild": true,
+      "bodyImages": 1,
+      "heroRemoved": false,
+      "metadataPreserved": true
+    },
+    {
+      "route": "/facility-management/career/hobyeongbaekma-mart-hope/",
+      "status": 200,
+      "bodyMatchesBuild": true,
+      "bodyImages": 1,
+      "heroRemoved": false,
+      "metadataPreserved": true
+    }
+  ]
+}

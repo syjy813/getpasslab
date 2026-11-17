@@ -4,26 +4,21 @@
 
 ## 기준 상태
 
-- 갱신: **2026-11-17 KST**. 제품 기준 `main@6164767e9f5aec4a6567e1e12f93a8192dc243ed` ([PR #288](https://github.com/syjy813/getpasslab/pull/288) squash 병합). 후속 완료 기록은 문서만 변경한다.
-- 최근 제품: **병원편 목록 전용 썸네일 3종 교체·Production 확인 완료**. 절망편 체크리스트, 희망편 A안 정밀 진단, 대학병원 정문 확정본을 적용했다. 기존 5개 IA·본문·대표·OG·URL은 유지한다.
-- 배포 근거: [Pages run 43989905658](https://github.com/syjy813/getpasslab/actions/runs/43989905658) **build/deploy success**. [검증 기록](docs/audits/2026-11-17-hospital-list-thumbnails/deployment.json).
+- 갱신: **2026-11-17 KST**. 제품 기준 `main@4bd413481e5821dd89aa351aa30526d0bb3def73` ([PR #291](https://github.com/syjy813/getpasslab/pull/291) squash 병합). 후속 완료 기록은 문서만 변경한다.
+- 최근 제품: **호병백 본문 상단 대표 이미지 8종 제거·Production 확인 완료**. ep.0·호텔 2편·병원 3편·백화점 2편 대상이며 본문 설명 이미지·목록 썸네일·OG·URL·마트편은 유지한다.
+- 배포 근거: [Pages run 44095107320](https://github.com/syjy813/getpasslab/actions/runs/44095107320) **build/deploy success**. [실서버 HTML 검증](docs/audits/2026-11-17-hobyeongbaekma-body-heroes/deployment.json).
 
-## 현재 작업 — 호병백 본문 상단 대표 이미지 제거
+## 최근 완료 — 호병백 본문 상단 대표 이미지 제거
 
 - 사용자 승인: 이번 교체한 호병백 썸네일 대상 글의 본문 상단 대표 이미지를 제거하고 최소 QA 후 Production 배포.
 - 기준 `main@794d4c616159970a3a21bf96ef86908aef58ec53`, 브랜치 `fix/hobyeongbaekma-remove-leading-images-20261117`.
 - ep.0·호텔 2편·병원 3편·백화점 2편 총 8편의 첫 `<figure>`만 제거. 본문 문구·frontmatter·설명 이미지·목록 썸네일·OG·URL·레이아웃·의존성은 그대로다. 마트는 대상 밖.
 - 기존 검사는 대표 이미지 존재 기대값만 변경하고, 과거 불변 소스 검사는 [삭제 전후 해시·정확한 삭제 범위](docs/audits/2026-11-17-hobyeongbaekma-body-heroes/manifest.json)로 원본을 복원해 유지한다.
-- 구현·586페이지 Build·통합 이미지 6검사·대상 발행/링크/메타 검사 PASS. SEO 오류 0(기존 경고 5)·공개 콘텐츠 오류 0. 마트 대표 이미지 유지 PASS. 광범위 로컬 브라우저 QA는 생략한다. 다음 단계는 PR 병합·Pages 배포와 대상 Production HTML 확인이다.
+- 구현·586페이지 Build·통합 이미지 6검사·대상 발행/링크/메타 검사 PASS. SEO 오류 0(기존 경고 5)·공개 콘텐츠 오류 0. 마트 대표 이미지 유지 PASS. 광범위 로컬 브라우저 QA는 생략한다. PR #291 병합과 Pages build/deploy success. 병합 tree `a5e592333a13f3388bce3913fff4d8bb587078e9`가 로컬 검증 tree와 동일하다. Production 11경로 HTTP/HTML 대조 PASS: 8편 상단 이미지 제거·ep.0 설명 이미지 3개 유지·목록 11개 썸네일 유지·마트 2편 대표 이미지 유지·OG/canonical 유지. 육안 브라우저 QA 완료로 확대하지 않는다. 이번 범위 미완료 없음.
 
-## 이전 작업 기록 — 백화점 목록 썸네일 2종 적용
+## 백화점 목록 썸네일 이전 작업
 
-- 사용자 `ㄱㄱㄱㄱㄱ`에 따라 확정된 절망/희망 2종의 목록 카드 적용과 실서버 배포까지 승인된 상태다.
-- 기준 `main@b71e0a209eaa56eb59029baa0c3f907a993c8be0`, 브랜치 `feat/department-store-list-thumbnails-20261117`.
-- 원본 PNG 바이트·1448×1086 비율을 유지하고 WebP 2종으로 최적화했다. 제품 변경은 `FacilityCard.astro` 목록 전용 매핑 2행이다.
-- 상세 원고·본문 대표 이미지·OG·URL·공통 레이아웃·의존성은 유지한다. 기존 불변 검사에는 승인된 2행·이미지만 연결하고, 홈/목록·4폭·본문/OG 회귀 검사를 수행한다.
-- 원본/파생 해시·범위는 [manifest](docs/audits/2026-11-17-department-store-list-thumbnails/manifest.json). 제품 Commit `16770074dc9831292cdb2523be4e94ce8596ad83` 완료, Push/PR/Deploy는 대기.
-- 로컬 `astro build` 586페이지 PASS, 백화점 발행·목록 이미지 총 8종 해시/연결·`check:public-content` PASS, `check:seo` 오류 0/기존 경고 5. 코드·의존성 불변이면 이 검증 결과를 재사용한다. 배포는 `AGENTS.md`의 **배포 재개 최소 조회 순서**를 적용한다.
+- 백화점 목록 썸네일 2종은 현재 main과 Production에서 적용된 상태다. 이번 변경에서도 해당 목록 이미지는 유지했다. 이전 상세 작업 상태와 검증 기록은 [기존 audit](docs/audits/2026-11-17-department-store-list-thumbnails/)와 Git history를 참조한다.
 
 ## 최근 완료 — 조회수 분석실 일일 수집 활성화
 
