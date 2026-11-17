@@ -4,10 +4,8 @@ const assert = require('node:assert/strict');
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4321';
 const preview = process.env.QA_FACILITY_PREVIEW === '1';
 const route = '/facility-management/career/hobyeongbaekma/';
-const root = 'docs/drafts/facility/hobyeongbaekma';
-const originalImages=JSON.parse(fs.readFileSync(root+'/image-manifest.json')).images;
 const integrated=JSON.parse(fs.readFileSync('docs/audits/2026-11-08-hobyeongbaekma-integrated-images/manifest.json'));
-const images=[{...originalImages[0],src:'/images/facility-series/hobyeongbaekma-00/'+originalImages[0].id+'.webp'},...integrated.groups.map(row=>({id:row.id,...row.desktop,mobile:row.mobile}))];
+const images=integrated.groups.map(row=>({id:row.id,...row.desktop,mobile:row.mobile}));
 const output = 'tmp/hobyeongbaekma-review';
 fs.mkdirSync(output, { recursive: true });
 (async () => {
@@ -90,6 +88,6 @@ fs.mkdirSync(output, { recursive: true });
       await page.close();
     }
     fs.writeFileSync(output + '/results.json', JSON.stringify({ route, production: new URL(base).origin === 'https://getpasslab.co.kr', preview, results }, null, 2));
-    console.log('Hobyeongbaekma review: 4 viewports, hero + 3 complete images, publication metadata/tables/TOC PASS');
+    console.log('Hobyeongbaekma review: 4 viewports, 3 complete images; leading hero removed, publication metadata/tables/TOC PASS');
   } finally { await browser.close(); }
 })().catch(e => { console.error(e); process.exitCode = 1; });

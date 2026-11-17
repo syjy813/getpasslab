@@ -24,8 +24,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/ep1-2-hope/01-hero.webp" alt="호텔 시설관리, 이런 장점도 있다? 다양한 설비 경험과 적성 발견을 다루는 호병백마 ep.1-2 희망편" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" /></figure>
-
 
 ## 기피시설이라더니, 첫 직장으로는 괜찮을 수도 있다고?
 

@@ -27,8 +27,7 @@ for(const row of articles){
  assert(!list.some(n=>hasClass(n,'facility-sources')),'no reader-visible sources section');
  assert(!nodes(body).some(n=>n.tagName==='a'&&/^https?:/.test(attr(n,'href')||'')),'no external body links');
  assert(!/검토용 초안|SOURCE_AUDIT|EDITOR_NOTES/.test(text(list.find(n=>n.tagName==='article'))));
- const images=nodes(body).filter(n=>n.tagName==='img');assert.equal(images.length,1);
- for(const [key,value] of Object.entries({src:row.hero,alt:row.alt,width:'1440',height:'1080',loading:'eager',fetchpriority:'high'})) assert.equal(attr(images[0],key),value);
+ const images=nodes(body).filter(n=>n.tagName==='img');assert.equal(images.length,0,'approved body hero removed');
  assert.equal(actualImageHashes[row.slug],row.sha256);
  const schemas=list.filter(n=>n.tagName==='script'&&attr(n,'type')==='application/ld+json').flatMap(n=>{const v=JSON.parse(text(n));return Array.isArray(v)?v:[v]}).filter(n=>n['@type']==='Article');
  assert.equal(schemas.length,preview?0:1);

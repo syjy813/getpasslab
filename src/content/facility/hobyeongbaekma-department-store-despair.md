@@ -30,8 +30,6 @@ related:
 certifications: []
 legalReview: false
 ---
-<figure><img src="/images/facility-series/ep3-1-department-store-despair/01-hero.webp" alt="백화점 폐점 후 매장 리뉴얼 공사와 야간 시설 업무에 지친 시설관리자를 표현한 호병백마 ep.3-1 절망편" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" /></figure>
-
 ## 백화점은 문을 닫아도 시설팀 일정이 끝나지 않는다
 
 밤 10시가 넘었다. 영업은 끝났는데 행사장에서는 전기선을 철수해야 하고, 다음 날 들어올 팝업매장 쪽에서는 조명 위치를 다시 봐달라는 요청이 들어온다.

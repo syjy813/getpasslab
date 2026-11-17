@@ -1,5 +1,6 @@
 import {beforeSasugoldae, assertSasugoldaeRelease} from './read-sasugoldae-release.mjs';
 import fs from 'node:fs';
+import {beforeBodyHeroRemoval} from './read-hobyeongbaekma-body-heroes.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 export const hotelRelease=JSON.parse(fs.readFileSync('docs/audits/2026-11-10-hotel-two-parter/manifest.json'));
@@ -8,7 +9,7 @@ export function assertHotelRelease(){
   assertSasugoldaeRelease();
   assert.deepEqual(hotelRelease.articles.map(row=>row.slug),['hobyeongbaekma-hotel-despair','hobyeongbaekma-hotel-hope']);
   assert.equal(hotelRelease.outputAdditions.length,4);
-  for(const [file,hash] of Object.entries(hotelRelease.additions))assert.equal(sha(fs.readFileSync(file)),hash,file+': approved hotel release');
+  for(const [file,hash] of Object.entries(hotelRelease.additions))assert.equal(sha(beforeBodyHeroRemoval(file,fs.readFileSync(file))),hash,file+': approved hotel release');
   for(const [file,row] of Object.entries(hotelRelease.nativeChanges)){
     assert.equal(sha(fs.readFileSync(row.previous)),row.previousSHA256,file+': previous native source preserved');
     if(file==='src/layouts/FacilityArticleLayout.astro'){

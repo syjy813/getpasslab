@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import {bodyHeroRemoval,beforeBodyHeroRemoval} from './read-hobyeongbaekma-body-heroes.mjs';
+for(const row of bodyHeroRemoval.articles) beforeBodyHeroRemoval(row.file,fs.readFileSync(row.file));
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { parse } from 'parse5';
@@ -42,11 +44,11 @@ assert(fs.existsSync('dist'+nextRoute+'index.html'),'published hotel ep.1-1 is g
 const related=list.filter(n=>n.tagName==='a'&&(attr(n,'class')||'').split(/\s+/).includes('facility-card'));
 assert(related.length>0&&attr(related[0],'href')===nextRoute,'first related content card links to hotel ep.1-1');
 const images = nodes(body).filter(n => n.tagName === 'img');
-assert.equal(images.length, 4, 'hero plus three complete comparison images');
+assert.equal(images.length, 3, 'three complete comparison images; leading hero removed');
 assert.equal(nodes(body).filter(n=>n.tagName==='picture').length,3);
 for (const [index,image] of images.entries()) {
   const path = attr(image, 'src');
-  const row=release.images[index];
+  const row=release.images[index + 1];
   assert.equal(path,row.src,'exact display-image order');
   assert(attr(image, 'alt') && attr(image, 'width') && attr(image, 'height'));
   assert.equal(Number(attr(image,'width')),row.width);assert.equal(Number(attr(image,'height')),row.height);
@@ -67,7 +69,7 @@ assert(!images.some(image=>/-(1|2)\.webp$/.test(attr(image,'src'))),'split image
   assert.equal(cards.length,1,'exactly one episode card: '+storiesRoute);
   const cover=nodes(cards[0]).find(n=>n.tagName==='img');
   const thumbnail=thumbnailRows.find(row=>row.id==='hobyeongbaekma');
-  assert.equal(attr(cover,'src'),thumbnail.publicFile.replace(/^public/,''),'approved listing-only image; article hero unchanged');
+  assert.equal(attr(cover,'src'),thumbnail.publicFile.replace(/^public/,''),'approved listing-only image remains');
   assert.equal(attr(cover,'width'),'1448');assert.equal(attr(cover,'height'),'1086');
   const homeCards=read('/facility-management/').filter(n=>n.tagName==='a'&&attr(n,'href')===release.route);
   assert.equal(homeCards.length,0,'episode 0 is displaced from six-card career home slice by six newer series articles');

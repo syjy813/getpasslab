@@ -28,8 +28,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/ep2-1-hospital-despair/01-hero.webp" alt="병원 시설관리로 취업했는데 민원 처리와 설비 점검이 겹쳐 지친 시설관리자를 표현한 호병백마 ep.2-1 절망편" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" /></figure>
-
 ## 전화 한 통에 점검표가 멈춘다면
 
 오전에는 기계실을 점검하기로 했다. 그런데 병동에서 화장실 배수가 막혔다고 연락이 온다. 현장을 확인하고 돌아오니 이번에는 냉방이 약하단다. 점검표를 다시 펼치려는 순간, 또 전화가 울린다.

@@ -30,8 +30,6 @@ related:
 certifications: []
 legalReview: false
 ---
-<figure><img src="/images/facility-series/ep3-2-department-store-hope/01-hero.webp" alt="백화점 시설관리의 대형 상업시설 경험과 리뉴얼 변경관리, 협업 경력 가치를 표현한 호병백마 ep.3-2 희망편" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" /></figure>
-
 ## 백화점은 ‘같은 건물’인데 매일 조금씩 달라진다
 
 어제까지 비어 있던 공간에 팝업매장이 들어온다. 조명 방향이 바뀌고 전기 사용 위치도 달라진다. 다음 주에는 또 다른 행사가 예정돼 있다.

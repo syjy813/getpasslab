@@ -1,0 +1,86 @@
+{
+  "base": "794d4c616159970a3a21bf96ef86908aef58ec53",
+  "scope": "Remove only leading hero figures for the eight approved listing-thumbnail articles; prose, frontmatter, inline images, listing thumbnails and OG remain unchanged.",
+  "articles": [
+    {
+      "id": "hobyeongbaekma",
+      "file": "src/content/facility/hobyeongbaekma.md",
+      "route": "/facility-management/career/hobyeongbaekma/",
+      "beforeSHA256": "9c70551234d30438425d6e17ad4cf2893dcc17be9b171746b69e8af133266bb9",
+      "afterSHA256": "cdab85db787a88618b46c5feb76b6974fdf55f49b2fa2ba28b75fbcf0ca868f1",
+      "offset": 2340,
+      "removed": "<figure><img src=\"/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp\" alt=\"호텔·병원·백화점·마트 4개의 시설과 제목·부제로 구성한 호병백마 대표 이미지\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+      "hero": "/images/facility-series/hobyeongbaekma-00/01-hobyeongbaekma-hero.webp"
+    },
+    {
+      "id": "hobyeongbaekma-hotel-despair",
+      "file": "src/content/facility/hobyeongbaekma-hotel-despair.md",
+      "route": "/facility-management/career/hobyeongbaekma-hotel-despair/",
+      "beforeSHA256": "017a60edf9817c503ada3dc87832442d3989ef49a1ccd5bfe00196b2f209bb4b",
+      "afterSHA256": "15c0f7edfa3657808f44f4f626aaf55cf6b0ac86f9d6d8ab4028d913267c8125",
+      "offset": 901,
+      "removed": "<figure><img src=\"/images/facility-series/ep1-1-despair/01-hero.webp\" alt=\"호텔 시설관리로 취업했는데 왜 객실 청소까지 하고 있을까? 호병백마 ep.1-1 절망편\" width=\"1440\" height=\"1080\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" /></figure>\n\n",
+      "hero": "/images/facility-series/ep1-1-despair/01-hero.webp"
+    },
+    {
+      "id": "hobyeongbaekma-hotel-hope",
+      "file": "src/content/facility/hobyeongbaekma-hotel-hope.md",
+      "route": "/facility-management/career/hobyeongbaekma-hotel-hope/",
+      "beforeSHA256": "7c0db163b426aab55f7b0c79658d1b7256b34e581e69ce71a0a129b8a0da90e9",
+      "afterSHA256": "5a063c100dee47a88c4802739fbb81181ed009e66f51a41f3bf6fe72bbe06911",
+      "offset": 890,
+      "removed": "<figure><img src=\"/images/facility-series/ep1-2-hope/01-hero.webp\" alt=\"호텔 시설관리, 이런 장점도 있다? 다양한 설비 경험과 적성 발견을 다루는 호병백마 ep.1-2 희망편\" width=\"1440\" height=\"1080\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" /></figure>\n\n",
+      "hero": "/images/facility-series/ep1-2-hope/01-hero.webp"
+    },
+    {
+      "id": "hobyeongbaekma-hospital-despair",
+      "file": "src/content/facility/hobyeongbaekma-hospital-despair.md",
+      "route": "/facility-management/career/hobyeongbaekma-hospital-despair/",
+      "beforeSHA256": "686fd1aa3cf5b27b0955742f91d7bb0d90b4fa0993b69faa4620caa564969811",
+      "afterSHA256": "68f11f775d031069fc190efa74fe4f9b8986a161f6d428ab88c58e7f400124e0",
+      "offset": 1280,
+      "removed": "<figure><img src=\"/images/facility-series/ep2-1-hospital-despair/01-hero.webp\" alt=\"병원 시설관리로 취업했는데 민원 처리와 설비 점검이 겹쳐 지친 시설관리자를 표현한 호병백마 ep.2-1 절망편\" width=\"1440\" height=\"1080\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" /></figure>\n\n",
+      "hero": "/images/facility-series/ep2-1-hospital-despair/01-hero.webp"
+    },
+    {
+      "id": "hobyeongbaekma-hospital-hope",
+      "file": "src/content/facility/hobyeongbaekma-hospital-hope.md",
+      "route": "/facility-management/career/hobyeongbaekma-hospital-hope/",
+      "beforeSHA256": "b8b2fd51ba07cfd74512ca1c939ad4fdfffafbc36696b7bfdc11c9ef2878f87f",
+      "afterSHA256": "3a399c93cafc669b9c01cb828622a454bde2bae9d5a2efea4cb151dc115a1267",
+      "offset": 1472,
+      "removed": "<figure><img src=\"/images/facility-series/ep2-2-hospital-hope/01-hero.webp\" alt=\"병원 시설관리의 안정적인 근무환경과 전문 설비 경험, 장기 경력 성장 가능성을 표현한 호병백마 ep.2-2 희망편\" width=\"1440\" height=\"1080\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" /></figure>\n\n",
+      "hero": "/images/facility-series/ep2-2-hospital-hope/01-hero.webp"
+    },
+    {
+      "id": "hobyeongbaekma-hospital-large-university",
+      "file": "src/content/facility/hobyeongbaekma-hospital-large-university.md",
+      "route": "/facility-management/career/hobyeongbaekma-hospital-large-university/",
+      "beforeSHA256": "c11fa413b9fc4ae27c8ac59274884fd370ba2d06f2ab18c4f7f55ba1c8436d2f",
+      "afterSHA256": "a61aa647aaf04266ba63f87bb0e182a621f68c0ae01d84e2f975db205e62bc33",
+      "offset": 1443,
+      "removed": "<figure>\n  <img src=\"/images/facility-series/ep2-3-hospital-large/01-hero.webp\" alt=\"대학·대형병원 시설관리에서 직접고용, 직군, 복리후생, 장기근속 조건을 확인하는 호병백마 ep.2-3 썸네일\" width=\"1440\" height=\"1080\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" />\n  <figcaption>대학·대형병원이라는 이름보다 실제로 어떤 조건의 시설직인지 확인하는 것이 중요함</figcaption>\n</figure>\n\n",
+      "hero": "/images/facility-series/ep2-3-hospital-large/01-hero.webp"
+    },
+    {
+      "id": "hobyeongbaekma-department-store-despair",
+      "file": "src/content/facility/hobyeongbaekma-department-store-despair.md",
+      "route": "/facility-management/career/hobyeongbaekma-department-store-despair/",
+      "beforeSHA256": "ab6ebebc0cdb80b80110e7da5367301c5ce5320cf39becbc35e03a67c3369a7e",
+      "afterSHA256": "76b8d1f4278c19baad456a845cc8b1a51d120097310e78629d1402ea2a887141",
+      "offset": 1521,
+      "removed": "<figure><img src=\"/images/facility-series/ep3-1-department-store-despair/01-hero.webp\" alt=\"백화점 폐점 후 매장 리뉴얼 공사와 야간 시설 업무에 지친 시설관리자를 표현한 호병백마 ep.3-1 절망편\" width=\"1440\" height=\"1080\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" /></figure>\n\n",
+      "hero": "/images/facility-series/ep3-1-department-store-despair/01-hero.webp"
+    },
+    {
+      "id": "hobyeongbaekma-department-store-hope",
+      "file": "src/content/facility/hobyeongbaekma-department-store-hope.md",
+      "route": "/facility-management/career/hobyeongbaekma-department-store-hope/",
+      "beforeSHA256": "6faf0130a9f65c3e505a211d3eb032c0cb519d9e08dbf38f65171fabc3282083",
+      "afterSHA256": "3548be6d905d424b5753b931708b80d65d849c2e6a0f7ca29177e882329691a5",
+      "offset": 1501,
+      "removed": "<figure><img src=\"/images/facility-series/ep3-2-department-store-hope/01-hero.webp\" alt=\"백화점 시설관리의 대형 상업시설 경험과 리뉴얼 변경관리, 협업 경력 가치를 표현한 호병백마 ep.3-2 희망편\" width=\"1440\" height=\"1080\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" /></figure>\n\n",
+      "hero": "/images/facility-series/ep3-2-department-store-hope/01-hero.webp"
+    }
+  ]
+}
