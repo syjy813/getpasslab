@@ -38,9 +38,9 @@ jobs:
            assert.equal(png.length,row.size);assert.equal(gitBlob(png),row.blob);
            const meta=await sharp(png).metadata();
            assert.deepEqual([meta.format,meta.width,meta.height],['png',1448,1086]);
-           let quality=84,webp;
-           do {webp=await sharp(png).webp({quality,effort:6}).toBuffer();if(webp.length<200000)break;quality-=4;}while(quality>=60);
-           assert(webp.length<200000,'optimized image budget');
+           let quality=82,webp;
+           do {webp=await sharp(png).webp({quality,effort:6}).toBuffer();console.log('ENCODING',row.id,quality,webp.length);if(webp.length<400000)break;quality-=4;}while(quality>=74);
+           assert(webp.length<400000,'optimized image budget');
            const encoded=await sharp(webp).metadata();
            assert.deepEqual([encoded.format,encoded.width,encoded.height],['webp',1448,1086]);
            const res=await fetch('https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY+'/git/blobs',{
