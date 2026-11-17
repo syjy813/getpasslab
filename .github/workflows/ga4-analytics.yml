@@ -1,0 +1,87 @@
+name: GA4 facility article page views
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ga4-analytics.yml'
+      - 'scripts/*ga4*.mjs'
+      - 'scripts/lib/facility-page-views.mjs'
+  pull_request:
+    paths:
+      - '.github/workflows/ga4-analytics.yml'
+      - 'scripts/*ga4*.mjs'
+      - 'scripts/lib/facility-page-views.mjs'
+      - 'src/config/facility.ts'
+      - 'src/content/facility/**'
+  workflow_dispatch:
+  # 01:00 UTC = every day at 10:00 Asia/Seoul. GitHub may start later under load.
+  schedule:
+    - cron: '0 1 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ga4-collection-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - run: node --check scripts/check-ga4-auth.mjs
+      - run: node --check scripts/sync-ga4-page-views.mjs
+      - run: node --check scripts/commit-ga4-page-views.mjs
+      - run: node scripts/test-ga4-auth.mjs
+      - run: node scripts/test-ga4-page-views.mjs
+      - run: node scripts/test-ga4-collection.mjs
+  authenticate-and-query:
+    needs: validate
+    if: github.repository_id == '1292439277' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Authenticate with short-lived read-only credentials
+        id: auth
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3
+        with:
+          project_id: level-array-514808-v0
+          workload_identity_provider: projects/528916134663/locations/global/workloadIdentityPools/getpasslab-github/providers/github-actions
+          service_account: getpasslab-ga4-reader@level-array-514808-v0.iam.gserviceaccount.com
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/analytics.readonly
+          access_token_lifetime: 300s
+          create_credentials_file: false
+          export_environment_variables: false
+      - name: Collect full cumulative report with bounded retries
+        env:
+          GA4_PROPERTY_ID: '547805075'
+          GA4_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+        shell: bash
+        run: |
+          for attempt in 1 2 3; do
+            if node scripts/sync-ga4-page-views.mjs; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then sleep 10; fi
+          done
+          exit 1
+      - name: Commit verified snapshot for the private analytics dashboard
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/commit-ga4-page-views.mjs
