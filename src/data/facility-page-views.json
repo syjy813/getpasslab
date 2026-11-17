@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "source": "GA4 Data API",
+  "propertyId": "547805075",
+  "scope": "published-facility-articles",
+  "metric": "screenPageViews",
+  "hosts": [
+    "getpasslab.co.kr",
+    "www.getpasslab.co.kr"
+  ],
+  "period": {
+    "startDate": "2026-07-30",
+    "endDate": "2026-11-16",
+    "requestedEndDate": "yesterday",
+    "timeZone": "Asia/Seoul"
+  },
+  "fetchedAt": "2026-11-17T12:35:25.124Z",
+  "articleCount": 24,
+  "recordedArticleCount": 10,
+  "totalArticleViews": 51,
+  "articles": {
+    "/facility-management/qualifications/boiler-inspection-manager/": {
+      "views": 4,
+      "recorded": true,
+      "title": "에너지관리기능사로 보일러 선임이 가능할까?｜검사대상기기관리자 기준",
+      "publishedAt": "2026-11-05",
+      "category": "qualifications"
+    },
+    "/facility-management/career/employment-types/": {
+      "views": 7,
+      "recorded": true,
+      "title": "시설관리 직영·자회사·용역 차이｜같은 건물, 다른 회사",
+      "publishedAt": "2026-11-03",
+      "category": "career"
+    },
+    "/facility-management/career/first-job/": {
+      "views": 4,
+      "recorded": true,
+      "title": "시설관리 첫 면접 질문 5가지｜업무·급여·교육 확인표",
+      "publishedAt": "2026-11-03",
+      "category": "career"
+    },
+    "/facility-management/jobs/hanfms/": {
+      "views": 0,
+      "recorded": false,
+      "title": "한전FMS 시설관리 채용｜사업소마다 선임조건이 다른 이유",
+      "publishedAt": "2026-11-05",
+      "category": "career"
+    },
+    "/facility-management/career/hobyeongbaekma-department-store-despair/": {
+      "views": 2,
+      "recorded": true,
+      "title": "[호병백마 ep.3-1 절망편] 백화점 시설관리, 문 닫은 뒤 일이 몰리는 이유",
+      "publishedAt": "2026-11-12",
+      "category": "stories"
+    },
+    "/facility-management/career/hobyeongbaekma-department-store-hope/": {
+      "views": 1,
+      "recorded": true,
+      "title": "[호병백마 ep.3-2 희망편] 백화점 시설관리, 행사·설비 경험이 경력이 되려면?",
+      "publishedAt": "2026-11-12",
+      "category": "stories"
+    },
+    "/facility-management/career/hobyeongbaekma-hospital-despair/": {
+      "views": 0,
+      "recorded": false,
+      "title": "[호병백마 ep.2-1 절망편] 병원 시설관리, 기계실보다 민원 처리에 더 바쁘다면?",
+      "publishedAt": "2026-11-11",
+      "category": "stories"
+    },
+    "/facility-management/career/hobyeongbaekma-hospital-hope/": {
+      "views": 0,
+      "recorded": false,
+      "title": "[호병백마 ep.2-2 희망편] 병원 시설관리, 다양한 설비가 진짜 경력이 되려면?",
+      "publishedAt": "2026-11-11",
+      "category": "stories"
+    },
+    "/facility-management/career/hobyeongbaekma-hospital-large-university/": {
+      "views": 0,
+      "recorded": false,
+      "title": "[호병백마 ep.2-3] 병원도 다 같은 병원이 아니다｜대학·대형병원 시설직은 왜 따로 봐야 할까?",
+      "publishedAt": "2026-11-13",
+      "category": "stories"
+    },
+    "/facility-management/career/hobyeongbaekma-hotel-despair/": {
+      "views": 0,
+      "recorded": false,
+      "title": "[호병백마 ep.1-1 절망편] 호텔 시설관리로 취업했는데, 왜 객실 청소까지?",
+      "publishedAt": "2026-11-10",
+      "category": "stories"
+    },
+    "/facility-management/career/hobyeongbaekma-hotel-hope/": {
+      "views": 0,
+      "recorded": false,
+      "title": "[호병백마 ep.1-2 희망편] 호텔 시설관리, 처음 시작하기에 의외로 괜찮은 이유",
+      "publishedAt": "2026-11-10",
+      "category": "stories"
+    },
+    "/facility-management/career/hobyeongbaekma-mart-despair/": {
+      "views": 0,
+      "recorded": false,
+      "title": "[호병백마 ep.4-1 절망편] 마트 시설관리, 문을 닫아도 냉장·냉동은 멈추지 않는다",
+      "publishedAt": "2026-11-12",
+      "category": "stories"
+    },
+    "/facility-management/career/hobyeongbaekma-mart-hope/": {
+      "views": 0,
+      "recorded": false,
+      "title": "[호병백마 ep.4-2 희망편] 마트 시설관리, 냉장·냉동 설비 경험이 경력이 되려면?",
+      "publishedAt": "2026-11-12",
+      "category": "stories"
+    },
+    "/facility-management/career/hobyeongbaekma/": {
+      "views": 4,
+      "recorded": true,
+      "title": "[호병백마 ep.0] 시설관리 호병백마, 이게 뭔데? 호텔·병원·백화점·마트가 묶인 이유",
+      "publishedAt": "2026-11-07",
+      "category": "stories"
+    },
+    "/facility-management/jobs/kamcofmc/": {
+      "views": 0,
+      "recorded": false,
+      "title": "캠코FMC 시설관리 채용｜직위보다 사업소, 월급보다 근무조건",
+      "publishedAt": "2026-11-05",
+      "category": "career"
+    },
+    "/facility-management/jobs/korailtech/": {
+      "views": 0,
+      "recorded": false,
+      "title": "코레일테크 시설관리 채용｜같은 시설직인데 하는 일이 다르다고?",
+      "publishedAt": "2026-11-05",
+      "category": "career"
+    },
+    "/facility-management/qualifications/mechanical-career-records/": {
+      "views": 0,
+      "recorded": false,
+      "title": "기계설비유지관리자 경력신고·수첩 발급｜퇴사 전에 꼭 챙길 서류",
+      "publishedAt": "2026-11-05",
+      "category": "qualifications"
+    },
+    "/facility-management/qualifications/mechanical-maintainer-levels/": {
+      "views": 0,
+      "recorded": false,
+      "title": "기계설비유지관리자 등급 총정리｜초급·중급·고급·특급, 몇 년이 필요할까?",
+      "publishedAt": "2026-11-05",
+      "category": "qualifications"
+    },
+    "/facility-management/jobs/postal-facilities/": {
+      "views": 0,
+      "recorded": false,
+      "title": "우체국시설관리단 시설관리 채용｜같은 기관인데 관서마다 조건이 다른 이유",
+      "publishedAt": "2026-11-05",
+      "category": "career"
+    },
+    "/facility-management/jobs/public-sector-comparison/": {
+      "views": 11,
+      "recorded": true,
+      "title": "공공부문 시설관리 채용공고 읽는 법｜실제 사례로 보는 6가지 기준",
+      "publishedAt": "2026-11-03",
+      "category": "career"
+    },
+    "/facility-management/career/sasugoldae/": {
+      "views": 3,
+      "recorded": true,
+      "title": "[사수골대 ep.0] 사수골대란 뭘까?",
+      "publishedAt": "2026-11-15",
+      "category": "stories"
+    },
+    "/facility-management/career/shifts-and-pay/": {
+      "views": 5,
+      "recorded": true,
+      "title": "시설관리 주간·격일·교대근무 비교｜월급보다 근무표를 먼저 보자",
+      "publishedAt": "2026-11-03",
+      "category": "career"
+    },
+    "/facility-management/qualifications/statutory-appointments/": {
+      "views": 0,
+      "recorded": false,
+      "title": "시설관리 법정선임 총정리｜자격증 하나로 모든 설비를 맡을 수 있을까?",
+      "publishedAt": "2026-11-05",
+      "category": "qualifications"
+    },
+    "/facility-management/career/what-is-facility-management/": {
+      "views": 10,
+      "recorded": true,
+      "title": "시설관리란? 건물이 멀쩡한 데는 다 이유가 있다",
+      "publishedAt": "2026-11-03",
+      "category": "intro"
+    }
+  },
+  "collectionSchedule": {
+    "timeZone": "Asia/Seoul",
+    "hour": 10,
+    "minute": 0
+  },
+  "sourceCommit": "7f87af5e9ea186df9d331c0450ba9da76b6e1318"
+}
