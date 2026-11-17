@@ -17,6 +17,15 @@
 - 원본/파생 해시·범위는 [manifest](docs/audits/2026-11-17-department-store-list-thumbnails/manifest.json). 제품 Commit `16770074dc9831292cdb2523be4e94ce8596ad83` 완료, Push/PR/Deploy는 대기.
 - 로컬 `astro build` 586페이지 PASS, 백화점 발행·목록 이미지 총 8종 해시/연결·`check:public-content` PASS, `check:seo` 오류 0/기존 경고 5. 코드·의존성 불변이면 이 검증 결과를 재사용한다. 배포는 `AGENTS.md`의 **배포 재개 최소 조회 순서**를 적용한다.
 
+## 최근 완료 — 조회수 분석실 일일 수집 활성화
+
+- 사용자 요청에 따라 매일 **오전 10:00 KST**(`0 1 * * *` UTC)에 전날까지의 GA4 누적 조회수를 수집한다. [PR #290](https://github.com/syjy813/getpasslab/pull/290) 병합 `7f87af5e9ea186df9d331c0450ba9da76b6e1318`. 기존 #278의 운영 사이트 정렬 UI는 병합하지 않았다.
+- 실제 첫 수집 [run 44084504550](https://github.com/syjy813/getpasslab/actions/runs/44084504550) **validate/authenticate-and-query 모두 success**. GitHub 단일 JSON 저장 성공: 수집 `2026-11-17T12:35:25.124Z`, 집계 `2026-07-30~2026-11-16`, 공개글 24개·기록 10개·누적 51회. 제목·발행일·현행 표시 분류도 같은 JSON에 포함한다.
+- 인증은 기존 WIF/300초 analytics.readonly를 재사용한다. 최대 3회 재시도, 불완전 응답·실패 시 기존 파일 유지, main의 승인된 JSON만 갱신. 일일 데이터 갱신은 Pages 배포를 호출하지 않는다. 최초 코드 병합의 [Pages run 44084504647](https://github.com/syjy813/getpasslab/actions/runs/44084504647) success; 공개 화면 소스는 변경하지 않았다.
+- 소유자 전용 [분석실](https://getpasslab-view-insights-2026.resolutebough2.chatgpt.site) **수정·배포 success**, Site 소스 `ad23ae4e3ba03ed4ed1a89e700a601ec05ebbc21`, 배포 `appgdep_6afc4af4c008819196909d56c9946395`. main 데이터만 읽으며 접속·수동 갱신·화면 복귀·표시 중 5분마다 재확인. 집계 종료일·수집/확인 시각·다음 수집 예정·갱신 지연을 구분한다.
+- 검증: GA4 fixture·신규 메타/초안 제외·원자적 실패 보존·전날 경계·main 쓰기 제한 PASS, PR GA4/SEO CI success. 분석실 Node 회귀 PASS. 브라우저 preview에서 실제 원격 JSON 반영(51회, 11-16 종료), 새로고침, 시설 이야기 11개 필터·최신순 정렬 확인. 배포는 Sites native 성공 결과로 확인; 모바일 시각 QA는 미수행.
+- 다음 예약 목표 **2026-11-18 10:00 KST**. 해당 예약 실행 자체는 아직 도래하지 않았다. GitHub 시작 지연·GA4 전날 수치 보정 가능. [운영 경로·검증](docs/audits/2026-11-17-ga4-daily-dashboard/README.md).
+
 ## 최근 완료 — 병원편 목록 썸네일 배포 완료
 
 - 사용자 업로드 `893e9772`의 PNG 3종을 같은 바이트의 영문 파일명으로 정리하고, 1448×1086 WebP 129,322 / 116,506 / 294,802바이트로 제공한다. 품질 82·effort 6, 리사이즈·크롭 없음. [원본·해시 기록](docs/audits/2026-11-17-hospital-list-thumbnails/manifest.json).
