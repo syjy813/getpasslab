@@ -8,7 +8,7 @@ const component = 'src/components/FacilityCard.astro';
 const componentBefore = 'c2597defc70e6b5a3eca2e5222264089c15df347ba9be97e354c8b6d445146bf';
 const componentAfter = 'd3ae744482c33f7293110b81f86562c6552a99b5df765138aaf92e939285103a';
 
-// User-approved 2026-11-16 listing-only images. These are intentionally absent
+// User-approved 2026-11-16/17 listing-only images. These are intentionally absent
 // from the older immutable source/publication inventories.
 export const thumbnailRows = [
   {id:'hobyeongbaekma',name:'hobyeongbaekma-ep0',png:'63e5a116a02f52ff3989cb8f7bec065e4c96f4d08c6f9388c1e3c33e4c7d9def',webp:'d880566ea4820c762eb753e4e1606f44525506d6e108eff75666a44c6392e770'},
@@ -17,6 +17,8 @@ export const thumbnailRows = [
   {"id":"hobyeongbaekma-hospital-despair","name":"hobyeongbaekma-hospital-despair","png":"30bb9bbd45ff09ced1ce3146ea108d36ececf911647425890df0cbb1cc1a9af3","webp":"b6710879676824a08e30c55244e25b6cfc618221d3568dc85ce39afb6296c69a","maxBytes":200000},
   {"id":"hobyeongbaekma-hospital-hope","name":"hobyeongbaekma-hospital-hope","png":"aa65a52be38228c099f0024605bcede7d23db1dfeab769f7b37d3bb94e99dd08","webp":"c1fea9913a39fb7f4d0fb16a13c93ce07dfe00224e0aab8c407db207f1d7f7ab","maxBytes":200000},
   {"id":"hobyeongbaekma-hospital-large-university","name":"hobyeongbaekma-hospital-large-university","png":"4ab1c556d8c43c6953c0b2039c4772035f6783cfcd0c363a7d57f9af36b3aff7","webp":"6b9c208a69ca97d1afd00ec589548e8934711035bb5d03bd597418f4b9710cb3","maxBytes":300000},
+  {"id":"hobyeongbaekma-department-store-despair","name":"hobyeongbaekma-department-store-despair","png":"bfe7cc5c3aa3cfdf5a07e31b2bccd8ba581bfd535adec46976ada8a65a7b0e9e","webp":"9dac894afb02197def5cc078aaa63d8aa06b12add56a2118aac9708e7d7a181f","maxBytes":200000},
+  {"id":"hobyeongbaekma-department-store-hope","name":"hobyeongbaekma-department-store-hope","png":"079701e4c68fd78326a71a28ad85069ee5b05130a4013700043e8c8af5039454","webp":"6c1ba432f74c893111179ce77f2ffbba0003dbaee37837290d2e0aa17ad88e73","maxBytes":200000},
 ].map(row=>({
   ...row,
   master:`facility-assets/hobyeongbaekma-list-thumbnails/${row.name}.png`,
@@ -33,9 +35,10 @@ export const thumbnailOutputFiles = thumbnailRows.map(row=>row.outputFile);
 export function beforeHobyeongbaekmaListThumbnails(file, bytes) {
   if (file !== component) return bytes;
   let text=bytes.toString('utf8');
-  // Remove only the three approved hospital listing overrides before the immutable baseline.
-  for (const entry of ["  'hobyeongbaekma-hospital-despair': '/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-despair.webp',\n","  'hobyeongbaekma-hospital-hope': '/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-hope.webp',\n","  'hobyeongbaekma-hospital-large-university': '/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-large-university.webp',\n"]) {
-    assert.equal(text.split(entry).length,2,file+': exact approved hospital thumbnail entry');
+  // Restore only approved hospital/department-store overrides before the immutable baseline.
+  for (const row of thumbnailRows.slice(3)) {
+    const entry = `  '${row.id}': '${row.publicFile.replace(/^public/,'')}',\n`;
+    assert.equal(text.split(entry).length,2,file+': exact approved thumbnail entry');
     text=text.replace(entry,'');
   }
   assert.equal(sha(text),componentAfter,file+': approved thumbnail component');

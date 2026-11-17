@@ -8,7 +8,16 @@
 - 최근 제품: **병원편 목록 전용 썸네일 3종 교체·Production 확인 완료**. 절망편 체크리스트, 희망편 A안 정밀 진단, 대학병원 정문 확정본을 적용했다. 기존 5개 IA·본문·대표·OG·URL은 유지한다.
 - 배포 근거: [Pages run 43989905658](https://github.com/syjy813/getpasslab/actions/runs/43989905658) **build/deploy success**. [검증 기록](docs/audits/2026-11-17-hospital-list-thumbnails/deployment.json).
 
-## 현재 작업 — 병원편 목록 썸네일 배포 완료
+## 현재 작업 — 백화점 목록 썸네일 2종 적용
+
+- 사용자 `ㄱㄱㄱㄱㄱ`에 따라 확정된 절망/희망 2종의 목록 카드 적용과 실서버 배포까지 승인된 상태다.
+- 기준 `main@b71e0a209eaa56eb59029baa0c3f907a993c8be0`, 브랜치 `feat/department-store-list-thumbnails-20261117`.
+- 원본 PNG 바이트·1448×1086 비율을 유지하고 WebP 2종으로 최적화했다. 제품 변경은 `FacilityCard.astro` 목록 전용 매핑 2행이다.
+- 상세 원고·본문 대표 이미지·OG·URL·공통 레이아웃·의존성은 유지한다. 기존 불변 검사에는 승인된 2행·이미지만 연결하고, 홈/목록·4폭·본문/OG 회귀 검사를 수행한다.
+- 원본/파생 해시·범위는 [manifest](docs/audits/2026-11-17-department-store-list-thumbnails/manifest.json). 제품 Commit `16770074dc9831292cdb2523be4e94ce8596ad83` 완료, Push/PR/Deploy는 대기.
+- 로컬 `astro build` 586페이지 PASS, 백화점 발행·목록 이미지 총 8종 해시/연결·`check:public-content` PASS, `check:seo` 오류 0/기존 경고 5. 코드·의존성 불변이면 이 검증 결과를 재사용한다. 배포는 `AGENTS.md`의 **배포 재개 최소 조회 순서**를 적용한다.
+
+## 최근 완료 — 병원편 목록 썸네일 배포 완료
 
 - 사용자 업로드 `893e9772`의 PNG 3종을 같은 바이트의 영문 파일명으로 정리하고, 1448×1086 WebP 129,322 / 116,506 / 294,802바이트로 제공한다. 품질 82·effort 6, 리사이즈·크롭 없음. [원본·해시 기록](docs/audits/2026-11-17-hospital-list-thumbnails/manifest.json).
 - 제품 코드는 `FacilityCard.astro`의 목록 전용 매핑 3행만 추가했다. 본문 Markdown 3편·기존 대표 WebP·레이아웃·OG·canonical·의존성은 변경하지 않았다. 기존 승인 3종을 포함한 총 6종의 파일 해시·기존 소스 불변 검사를 유지한다.

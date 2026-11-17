@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {parse} from 'parse5';
 import {createHash} from 'node:crypto';
+import {thumbnailRows} from './read-hobyeongbaekma-list-thumbnails.mjs';
 
 const preview=process.env.FACILITY_DRAFT_PREVIEW==='1';
 const origin='https://getpasslab.co.kr';
@@ -37,7 +38,8 @@ for(const row of articles){
  assert(nodes(body).some(n=>n.tagName==='a'&&attr(n,'href')===other.route),'counterpart linked in body');
  for(const route of ['/facility-management/','/facility-management/stories/']){
   const card=load(route).find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);assert(card,route+': department-store article card');
-  const cover=nodes(card).find(n=>n.tagName==='img');assert.equal(attr(cover,'src'),row.hero);assert.equal(attr(cover,'width'),'1440');assert.equal(attr(cover,'height'),'1080');
+  const cover=nodes(card).find(n=>n.tagName==='img'),thumbnail=thumbnailRows.find(item=>item.id===row.slug);
+  assert(thumbnail,'approved listing image');assert.equal(attr(cover,'src'),thumbnail.publicFile.replace(/^public/,''));assert.equal(attr(cover,'width'),'1448');assert.equal(attr(cover,'height'),'1086');
  }
  for(const n of list.filter(n=>n.tagName==='a')){const href=attr(n,'href');if(href?.startsWith('/facility-management/'))assert(fs.existsSync('dist'+href.replace(/\/$/,'')+'/index.html'),href);}
 }
