@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-17 KST",
+  "baseline": "b71e0a209eaa56eb59029baa0c3f907a993c8be0",
+  "scope": "Two approved department-store listing thumbnails; article content, body images, OG and URLs preserved",
+  "guide": "facility-content-guide-v1.4.md §5.13.2/4/12; user-approved character illustrations",
+  "encoding": {
+    "format": "webp",
+    "quality": "82 despair / 80 hope",
+    "effort": 6,
+    "resize": false,
+    "crop": false
+  },
+  "images": [
+    {
+      "id": "hobyeongbaekma-department-store-despair",
+      "file": "문 닫은 백화점의 야간 시설 점검.png",
+      "libraryId": "libfile_c66259b7029c8191b56440810a8d8f56",
+      "master": "facility-assets/hobyeongbaekma-list-thumbnails/hobyeongbaekma-department-store-despair.png",
+      "publicFile": "public/images/facility-series/list-thumbnails/hobyeongbaekma-department-store-despair.webp",
+      "png": "bfe7cc5c3aa3cfdf5a07e31b2bccd8ba581bfd535adec46976ada8a65a7b0e9e",
+      "webp": "9dac894afb02197def5cc078aaa63d8aa06b12add56a2118aac9708e7d7a181f",
+      "webpBytes": 184870,
+      "width": 1448,
+      "height": 1086,
+      "quality": 82
+    },
+    {
+      "id": "hobyeongbaekma-department-store-hope",
+      "file": "팝업 매장 설비를 점검하는 두 기술자.png",
+      "libraryId": "libfile_0dc639e330ec81918287173d86805a8b",
+      "master": "facility-assets/hobyeongbaekma-list-thumbnails/hobyeongbaekma-department-store-hope.png",
+      "publicFile": "public/images/facility-series/list-thumbnails/hobyeongbaekma-department-store-hope.webp",
+      "png": "079701e4c68fd78326a71a28ad85069ee5b05130a4013700043e8c8af5039454",
+      "webp": "6c1ba432f74c893111179ce77f2ffbba0003dbaee37837290d2e0aa17ad88e73",
+      "webpBytes": 191962,
+      "width": 1448,
+      "height": 1086,
+      "quality": 80
+    }
+  ],
+  "protectedFiles": {
+    "src/content/facility/hobyeongbaekma-department-store-despair.md": "ab6ebebc0cdb80b80110e7da5367301c5ce5320cf39becbc35e03a67c3369a7e",
+    "src/content/facility/hobyeongbaekma-department-store-hope.md": "6faf0130a9f65c3e505a211d3eb032c0cb519d9e08dbf38f65171fabc3282083",
+    "src/layouts/FacilityArticleLayout.astro": "f00fd3d191a39bd8abec6ca847f74e8dec93d57ba2e8e88152dd9475389ff2fa",
+    "src/layouts/FacilityLayout.astro": "4af5998cc30ea93978cbcbd33f1782764a4541a4c9a3b3b434acf798698d15a7",
+    "src/styles/global.css": "01fa1f7679c298215b95be8b977fed53768d977dc4952e589c321ff484ba64b5",
+    "package.json": "bd95f8c6e18cd0afe2580dfb096ac5217508ca5d24c13ce2f919d45b8d3820e0",
+    "package-lock.json": "8acd246ed320a0b2c80ced11397865cbaabf7b347da92fb446d5045710736ffb"
+  }
+}
