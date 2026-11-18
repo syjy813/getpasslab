@@ -2,6 +2,13 @@
 
 실행 지침은 [AGENTS.md](AGENTS.md). 과거 작업은 Git·PR·[audits](docs/audits/), 이전 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)를 참조한다.
 
+## 현재 보관 작업 — 사수골대·마트 썸네일 (2026-11-18)
+
+- 브랜치 `design/sasugoldae-soft-thumbnails-20261118`, 기준 `main@bfe206af1b806a81e2b29d97f667ef44f8cdd2e8`. 최종 지시는 **Git/PR까지만 업로드, 신규 사수골대 시리즈와 함께 출시**다. main 병합·Production 배포는 수행하지 않는다.
+- 사수골대 확정 9종 WebP는 `docs/drafts/facility/sasugoldae/thumbnails/`. 현실성·절망 표정·희망편의 부드러운 검은 타원 눈/곡선 눈썹을 반영했다. 마트 희망편도 같은 눈매로 수정했다.
+- 작업 브랜치에서 ep.0 목록 매핑 1행과 마트 희망편 WebP 교체만 공개 적용 준비. 본문·OG·원고·URL·CSS 유지. 후속 8편은 미발행이며 원고 보관 PR #295를 병합하지 않는다.
+- Build 586페이지, 기존 시설 발행/불변 보호·관련 링크·IA·SEO·공개 콘텐츠 검사 PASS(SEO 기존 경고 5, 오류 0). [이미지 지문·범위·검증](docs/audits/2026-11-18-series-thumbnails/README.md). 출시 시 원고와 이미지 변경을 함께 검토하고 병합·배포한다.
+
 ## 기준 상태
 
 - 갱신: **2026-11-17 KST**. 제품 기준 `main@4bd413481e5821dd89aa351aa30526d0bb3def73` ([PR #291](https://github.com/syjy813/getpasslab/pull/291) squash 병합). 후속 완료 기록은 문서만 변경한다.

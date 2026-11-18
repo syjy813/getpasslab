@@ -18,7 +18,7 @@ for(const width of [320,390,768,1440]){
  for(const list of ['/facility-management/','/facility-management/stories/']){
   assert.equal((await page.goto(base+list)).status(),200);
   const card=page.locator(`a.facility-card[href="${route}"]`).first();assert.equal(await card.count(),1);
-  const img=card.locator('img');await img.scrollIntoViewIfNeeded();await img.evaluate(im=>im.decode());assert((await img.getAttribute('src')).includes('sasugoldae-00'));
+  const img=card.locator('img');await img.scrollIntoViewIfNeeded();await img.evaluate(im=>im.decode());assert.equal(await img.getAttribute('src'),'/images/facility-series/list-thumbnails/sasugoldae-ep0.webp');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   if(list==='/facility-management/'&&width===390)await page.screenshot({path:`${out}/home-${width}.png`,fullPage:true});
  }
