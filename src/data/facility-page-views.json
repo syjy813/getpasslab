@@ -10,11 +10,11 @@
   ],
   "period": {
     "startDate": "2026-07-30",
-    "endDate": "2026-11-16",
+    "endDate": "2026-11-17",
     "requestedEndDate": "yesterday",
     "timeZone": "Asia/Seoul"
   },
-  "fetchedAt": "2026-11-17T12:35:25.124Z",
+  "fetchedAt": "2026-11-18T00:45:27.685Z",
   "articleCount": 24,
   "recordedArticleCount": 10,
   "totalArticleViews": 51,
@@ -190,8 +190,8 @@
   },
   "collectionSchedule": {
     "timeZone": "Asia/Seoul",
-    "hour": 10,
+    "hour": 9,
     "minute": 0
   },
-  "sourceCommit": "7f87af5e9ea186df9d331c0450ba9da76b6e1318"
+  "sourceCommit": "ebbcd31134100e42bb3ae024d2e914f5954e42d2"
 }
