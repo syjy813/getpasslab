@@ -8,6 +8,13 @@
 - 최근 제품: **호병백 본문 상단 대표 이미지 8종 제거·Production 확인 완료**. ep.0·호텔 2편·병원 3편·백화점 2편 대상이며 본문 설명 이미지·목록 썸네일·OG·URL·마트편은 유지한다.
 - 배포 근거: [Pages run 44095107320](https://github.com/syjy813/getpasslab/actions/runs/44095107320) **build/deploy success**. [실서버 HTML 검증](docs/audits/2026-11-17-hobyeongbaekma-body-heroes/deployment.json).
 
+## 현재 작업 — 사수골대 교정 원고 Git 보관
+
+- **2026-11-18:** 사용자 `깃에 올려줘` 요청. 기준 `main@bfe206af1b806a81e2b29d97f667ef44f8cdd2e8`, 작업 브랜치 `docs/sasugoldae-proofread-manuscripts-20261118`.
+- ep.0 교정본과 사우나·수영장·골프장·대학교 절망/희망편 **총 9편**을 [원고 목록](docs/drafts/facility/sasugoldae/README.md)에 정리했다. ep.0 기존 원고 1개 갱신, 시설별 2편 묶음 원고 4개 추가. source review·수집 상태는 유지한다.
+- 집필·교정 완료. 오타·띄어쓰기·문장 호응·문단·군더더기 정리, 약 6~10% 축소. 본문 수·문서 구조·업로드 원본 일치 확인. 문서만 변경하므로 별도 제품 Build·브라우저 QA는 미실행하며 PR 자동 CI 상태는 별도로 확인한다.
+- **main 병합·실서버 발행은 미실행.** 공개 ep.0 제품 소스와 신규 8편의 발행 설정·이미지·slug·URL은 변경하지 않는다. 다음 단계는 원고 확정 후 요청 범위에 맞춘 이미지·콘텐츠 반영이다.
+
 ## 최근 완료 — 호병백 본문 상단 대표 이미지 제거
 
 - 사용자 승인: 이번 교체한 호병백 썸네일 대상 글의 본문 상단 대표 이미지를 제거하고 최소 QA 후 Production 배포.
