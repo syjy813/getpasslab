@@ -49,6 +49,14 @@ for (const url of publishedUrls) {
   assert.equal(attr(canonical, 'href'), `https://getpasslab.co.kr${url}`, `${url}: original canonical`);
 }
 
+const episodeOrders = JSON.parse(fs.readFileSync('docs/audits/2026-11-18-series-episode-order/manifest.json')).orders;
+const storyNodes = load('stories/');
+for (const [label, ids] of Object.entries(episodeOrders)) {
+  const group = storyNodes.find(node => node.tagName === 'section' && hasClass(node, 'facility-category-subgroup') && attr(node, 'aria-label') === label);
+  assert(group, `${label}: series group`);
+  assert.deepEqual(cardUrls(walk(group)), ids.map(id => `/facility-management/career/${id}/`), `${label}: ascending episode order, complete and unique`);
+}
+
 const career = load('career/');
 const stories = load('stories/');
 for (const [nodes, labels] of [
