@@ -6,4 +6,11 @@
 
 검증 대상: 렌더링된 두 그룹의 전체 링크19개 순서·누락·중복, 기존32편 IA·링크·SEO 및 공개 콘텐츠. 과거 #297의 카테고리 템플릿 지문은 정확한 승인 변경만 복원해 보존한다. 이전 발행 빌드와 출력 파일을 대조해 정렬 HTML 외 변경이 없는지 확인한다. 레이아웃·자산·개별 카드가 동일하면 앞선 4폭 카드/스크롤 검증을 재사용하고 광범위 재검사를 반복하지 않는다.
 
-상태: 구현·검증 완료. 594페이지 Build, 두 그룹19편의 전체 순서,32편 IA·링크·기존 소스/발행 보호·SEO/공개 콘텐츠 오류0. [출력 대조](output-diff.json): stories HTML1개만 변경, 다른1004파일 동일. 개별 카드의 HTML·스타일·이미지와 페이지 레이아웃은 보존하므로 앞선 4폭 카드/넘침 검증을 재사용한다. Git·배포 결과는 후속 갱신.
+## 완료 상태
+
+- [PR #298](https://github.com/syjy813/getpasslab/pull/298) 병합 `e37759a33695aab38e43019f981ad197bcfe2683`. 검증·병합 tree `4d4c03332f553afafa9b58ea4c6288e86f5181b0` 동일.
+- 594페이지 Build,19편 전체 정렬·32편 IA/링크·기존 소스/발행 보호·SEO/공개 콘텐츠 오류0 PASS.
+- [출력 대조](output-diff.json): stories HTML1개만 변경, 다른1004파일 동일. [카드 대조](card-markup-proof.json):19개 카드 HTML·CSS/자산·두 카드 그룹 밖 HTML 바이트 동일.
+- [검증 증거](validation.json): 원격 SEO/통합/광고 QA success. 공개·비공개 시설 발행 회귀4폭도 success. 영향 없는 자격증·개별 글 등 동일 출력의 이전 검증을 재사용하고 광범위 로컬 브라우저 재검사를 반복하지 않음.
+- [Pages 44296039875](https://github.com/syjy813/getpasslab/actions/runs/44296039875) success. [Production](production.json): stories HTML은 검증한 새 회차 순서와 전체 바이트 일치, 홈 HTML은 이전 최신순과 일치.
+- 확인 범위는 원격 Chromium viewport·실서버 HTTP/HTML이며 실물 모바일·추가 육안 검증과 구분한다. 승인 범위 미완료 없음.

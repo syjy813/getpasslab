@@ -1,0 +1,41 @@
+{
+  "testedCommit": "e32764b0f56bd00aaaa8773dc20f2a2c336c868f",
+  "mergedCommit": "e37759a33695aab38e43019f981ad197bcfe2683",
+  "tree": "4d4c03332f553afafa9b58ea4c6288e86f5181b0",
+  "buildPages": 594,
+  "episodeLinks": 19,
+  "publishedArticles": 32,
+  "seoErrors": 0,
+  "publicContentErrors": 0,
+  "outputs": {
+    "changed": 1,
+    "unchanged": 1004
+  },
+  "currentSuccess": [
+    {
+      "name": "SEO validation",
+      "id": 44295336851,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44295336851"
+    },
+    {
+      "name": "Pending release integration QA",
+      "id": 44295336709,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44295336709"
+    },
+    {
+      "name": "Mobile top advertisement QA",
+      "id": 44295336776,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44295336776"
+    },
+    {
+      "name": "Facility publication QA",
+      "id": 44295336848,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44295336848"
+    }
+  ],
+  "reuse": {
+    "evidence": "../2026-11-18-pending-release/validation.json",
+    "scope": "Unchanged non-stories output: 1004 files byte-identical. All19 card markup, CSS/assets and page markup outside two card permutations byte-identical. Current public/private facility responsive QA also succeeded; no broad local recheck."
+  },
+  "deployRun": 44296039875
+}

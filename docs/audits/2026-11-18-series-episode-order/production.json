@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-18T11:36:49.544607+00:00",
+  "method": "HTTP and full-byte comparison; exact episode order already validated in generated DOM",
+  "results": [
+    {
+      "path": "/facility-management/stories/",
+      "status": 200,
+      "sha256": "4c1b40b7ec6f6dc7244543677421b3481502c22aab5c113f910c2dab5cda68a5",
+      "expectedSha256": "4c1b40b7ec6f6dc7244543677421b3481502c22aab5c113f910c2dab5cda68a5",
+      "match": true
+    },
+    {
+      "path": "/facility-management/",
+      "status": 200,
+      "sha256": "100861cc2482fd563cb78c455440d5c7b7a6c3a729c03ca84c70c4000b46c83b",
+      "expectedSha256": "100861cc2482fd563cb78c455440d5c7b7a6c3a729c03ca84c70c4000b46c83b",
+      "match": true
+    }
+  ],
+  "passed": true
+}

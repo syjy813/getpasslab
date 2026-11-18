@@ -2,11 +2,14 @@
 
 실행 지침은 [AGENTS.md](AGENTS.md). 과거 작업은 Git·PR·[audits](docs/audits/), 이전 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)를 참조한다.
 
-## 현재 작업 — 시리즈 회차 오름차순
+## 최근 완료 — 시리즈 회차 오름차순
 
-- `fix/series-episode-ascending-20261118`, 기준 `main@b0b5b37`. 시설 이야기의 호병백마10·사수골대9편을 회차 숫자로 오름차순 정렬. 공개/비공개 동일.
-- 구현·594페이지 Build·19편 정렬/32편 IA·내부링크·기존 소스/발행 보호·SEO/공개 콘텐츠 검사 PASS. 출력 1005개 중 stories HTML1개만 변경, 나머지1004개 바이트 동일. Git·배포 후속 결과 확인 필요. 본문·URL·이미지·홈 최신순·조회수 정렬 #278은 변경 없음.
-- [검증/재개 기록](docs/audits/2026-11-18-series-episode-order/README.md).
+- **2026-11-18 Production 확인 완료.** [PR #298](https://github.com/syjy813/getpasslab/pull/298) 병합 `e37759a33695aab38e43019f981ad197bcfe2683`, 검증/병합 tree `4d4c03332f553afafa9b58ea4c6288e86f5181b0` 동일.
+- 시설 이야기 목록의 호병백마10·사수골대9편을 `ep.0→1-1→1-2→2-1…` 숫자 회차 오름차순으로 정렬. 본문·제목·URL·이미지·홈 최신순·조회수 정렬 #278은 변경 없음.
+- 594페이지 Build,19편 전체 순서·32편 IA/내부링크·기존 소스/발행 보호·SEO/공개 콘텐츠 오류0 PASS. 출력1005개 중 stories HTML1개만 변경, 다른1004파일 동일. 19개 카드 HTML·CSS/자산·두 목록 밖 HTML도 바이트 동일.
+- 원격 SEO·통합 검사·광고 QA·공개/비공개 시설 4폭 회귀 success. 변경 없는 출력의 이전 검증 재사용 범위는 [validation.json](docs/audits/2026-11-18-series-episode-order/validation.json)에 구분.
+- [Pages 44296039875](https://github.com/syjy813/getpasslab/actions/runs/44296039875) success. [Production](docs/audits/2026-11-18-series-episode-order/production.json): stories의 새19편 순서가 검증 HTML 전체와 일치하고 홈 HTML도 이전과 동일. 추가 육안·실물 모바일 검증으로 확대하지 않는다.
+- 승인 범위 미완료 없음. 제품 기준 `main@e37759a`; 후속 완료 기록은 문서만 변경. [작업 기록](docs/audits/2026-11-18-series-episode-order/README.md).
 
 ## 최근 완료 — 미배포 작업 통합 출시
 
