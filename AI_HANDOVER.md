@@ -22,12 +22,13 @@
 
 ## 최근 완료 — 조회수 분석실 일일 수집 활성화
 
-- 사용자 요청에 따라 매일 **오전 10:00 KST**(`0 1 * * *` UTC)에 전날까지의 GA4 누적 조회수를 수집한다. [PR #290](https://github.com/syjy813/getpasslab/pull/290) 병합 `7f87af5e9ea186df9d331c0450ba9da76b6e1318`. 기존 #278의 운영 사이트 정렬 UI는 병합하지 않았다.
-- 실제 첫 수집 [run 44084504550](https://github.com/syjy813/getpasslab/actions/runs/44084504550) **validate/authenticate-and-query 모두 success**. GitHub 단일 JSON 저장 성공: 수집 `2026-11-17T12:35:25.124Z`, 집계 `2026-07-30~2026-11-16`, 공개글 24개·기록 10개·누적 51회. 제목·발행일·현행 표시 분류도 같은 JSON에 포함한다.
-- 인증은 기존 WIF/300초 analytics.readonly를 재사용한다. 최대 3회 재시도, 불완전 응답·실패 시 기존 파일 유지, main의 승인된 JSON만 갱신. 일일 데이터 갱신은 Pages 배포를 호출하지 않는다. 최초 코드 병합의 [Pages run 44084504647](https://github.com/syjy813/getpasslab/actions/runs/44084504647) success; 공개 화면 소스는 변경하지 않았다.
-- 소유자 전용 [분석실](https://getpasslab-view-insights-2026.resolutebough2.chatgpt.site) **수정·배포 success**, Site 소스 `ad23ae4e3ba03ed4ed1a89e700a601ec05ebbc21`, 배포 `appgdep_6afc4af4c008819196909d56c9946395`. main 데이터만 읽으며 접속·수동 갱신·화면 복귀·표시 중 5분마다 재확인. 집계 종료일·수집/확인 시각·다음 수집 예정·갱신 지연을 구분한다.
-- 검증: GA4 fixture·신규 메타/초안 제외·원자적 실패 보존·전날 경계·main 쓰기 제한 PASS, PR GA4/SEO CI success. 분석실 Node 회귀 PASS. 브라우저 preview에서 실제 원격 JSON 반영(51회, 11-16 종료), 새로고침, 시설 이야기 11개 필터·최신순 정렬 확인. 배포는 Sites native 성공 결과로 확인; 모바일 시각 QA는 미수행.
-- 다음 예약 목표 **2026-11-18 10:00 KST**. 해당 예약 실행 자체는 아직 도래하지 않았다. GitHub 시작 지연·GA4 전날 수치 보정 가능. [운영 경로·검증](docs/audits/2026-11-17-ga4-daily-dashboard/README.md).
+- **2026-11-18 변경 완료:** 사용자 요청에 따라 매일 **오전 09:00 KST**(`0 0 * * *` UTC)로 조정했다. [PR #293](https://github.com/syjy813/getpasslab/pull/293) 병합 `ebbcd31134100e42bb3ae024d2e914f5954e42d2`. 기존 최초 연결은 PR #290이며 #278의 운영 사이트 정렬 UI는 미병합 상태를 유지한다.
+- 오늘 요청한 추가 수집은 승인된 병합의 push 수집 경로로 **1회 성공**: [run 44210365518](https://github.com/syjy813/getpasslab/actions/runs/44210365518). 실제 저장 `2026-11-18T00:45:27.685Z`(09:45 KST), 집계 **2026-07-30~2026-11-17**, 공개글 24개·기록 10개·누적 51회. 조회수는 전회와 같지만 수집일·집계 종료일은 갱신됐다. JSON 예약 시각도 09:00으로 일치한다.
+- 분석실 시간 표시·09시 기준 지연 판단·다음 예정·번들 스냅샷 수정 후 비공개 배포 success: Site 소스 `346d2e732c0214a255ee0f8626254a53aaaa0cf5`, 배포 `appgdep_6afcf57fc9888191b866eb51ca302384`. [분석실](https://getpasslab-view-insights-2026.resolutebough2.chatgpt.site)은 main 데이터만 읽고 표시 중 5분마다 재확인한다.
+- 기존 WIF/읽기 전용 GA4 인증·최대 3회 재시도·불완전 응답 차단·실패 시 기존 JSON 유지·main 단일 파일 갱신 로직을 보존했다. 일일 데이터 갱신은 Pages 배포를 호출하지 않는다. 최초 코드 병합의 Pages [44210365314](https://github.com/syjy813/getpasslab/actions/runs/44210365314) success이며 공개 화면 소스는 변경하지 않았다.
+- 검증: 대상 PR GA4/SEO CI success, 오늘 실제 수집·커밋 success, main 원격 JSON의 11-17 종료/09시 설정 확인, 분석실 Node 09시 경계/로딩/실패/정렬 데이터 회귀 PASS. 시간·문구 수정 범위상 광범위 브라우저/모바일 QA는 실행하지 않았다.
+- 다음 예약 목표 **2026-11-19 09:00 KST**. GitHub 시작 지연·GA4 전날 수치 보정 가능. [운영 경로](docs/audits/2026-11-17-ga4-daily-dashboard/README.md). 이전 10시 설정·최초 수집 증거는 PR #290/과거 Git에 보존한다.
+
 
 ## 최근 완료 — 병원편 목록 썸네일 배포 완료
 
