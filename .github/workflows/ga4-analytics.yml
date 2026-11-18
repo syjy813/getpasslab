@@ -43,6 +43,7 @@ jobs:
       - run: node scripts/test-ga4-auth.mjs
       - run: node scripts/test-ga4-page-views.mjs
       - run: node scripts/test-ga4-collection.mjs
+      - run: node scripts/test-ga4-daily.mjs
   authenticate-and-query:
     needs: validate
     if: github.repository_id == '1292439277' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'

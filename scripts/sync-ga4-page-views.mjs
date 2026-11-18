@@ -1,7 +1,7 @@
 import { mkdir, rename, unlink, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { randomUUID } from 'node:crypto';
-import { buildFacilityViewData, fetchAllPageViews, publishedFacilityArticles } from './lib/facility-page-views.mjs';
+import { buildFacilityViewData, buildDailyFacilityViewData, fetchDailyPageViews, publishedFacilityArticles } from './lib/facility-page-views.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const outputPath = resolve(root, 'src/data/facility-page-views.json');
@@ -11,12 +11,13 @@ const token = process.env.GA4_ACCESS_TOKEN;
 try {
   const metadata = await publishedFacilityArticles(resolve(root, 'src/content/facility'));
   const publishedPaths = metadata.map(a => a.path);
-  const report = await fetchAllPageViews({ propertyId, token });
+  const report = await fetchDailyPageViews({ propertyId, token });
   const snapshot = buildFacilityViewData({ publishedPaths, report, propertyId });
   if (snapshot.recordedArticleCount === 0) {
     throw new Error('GA4 has no matched published facility articles; preserving previous snapshot.');
   }
   for (const { path, ...info } of metadata) Object.assign(snapshot.articles[path], info);
+  snapshot.daily = buildDailyFacilityViewData({ snapshot, report, metadata });
   snapshot.collectionSchedule = { timeZone: 'Asia/Seoul', hour: 9, minute: 0 };
   snapshot.sourceCommit = process.env.GITHUB_SHA || null;
   const nextContent = `${JSON.stringify(snapshot, null, 2)}\n`;

@@ -3,15 +3,15 @@ import { mkdtemp, mkdir, readFile, writeFile, cp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { resolve, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { fetchAllPageViews } from './lib/facility-page-views.mjs';
+import { fetchDailyPageViews } from './lib/facility-page-views.mjs';
 const root = resolve(import.meta.dirname, '..');
 const temp = await mkdtemp(join(tmpdir(), 'ga4-collection-'));
 const path = '/facility-management/career/fixture-new/';
 const token = 'fixture-credential-never-log';
 const response = {
-  dimensionHeaders: [{ name: 'pagePath' }], metricHeaders: [{ name: 'screenPageViews' }],
+  dimensionHeaders: [{ name: 'date' }, { name: 'pagePath' }], metricHeaders: [{ name: 'screenPageViews' }],
   rowCount: 1, totals: [{ metricValues: [{ value: '6' }] }],
-  rows: [{ dimensionValues: [{ value: path }], metricValues: [{ value: '6' }] }],
+  rows: [{ dimensionValues: [{ value: '20261117' }, { value: path }], metricValues: [{ value: '6' }] }],
   metadata: { timeZone: 'Asia/Seoul' },
 };
 try {
@@ -42,6 +42,9 @@ try {
   assert.equal(snapshot.articles[path].views, 6);
   assert.equal(snapshot.collectionSchedule.hour, 9);
   assert.equal(snapshot.sourceCommit, 'fixture-source');
+  assert.equal(snapshot.daily.totals.reduce((a,b)=>a+b,0),6);
+  assert.equal(snapshot.daily.articles[path].at(-1),6);
+  assert.ok(snapshot.daily.articles[path].includes(null));
   assert.ok(!(success.stdout + success.stderr).includes(token));
   console.log('PASS atomic snapshot includes newly published metadata, excludes drafts, preserves navigation category');
   for (const [body, status, accessToken] of [[response, 503, token], [{...response, metadata:{timeZone:'UTC'}}, 200, token], [response, 200, '']]) {
@@ -61,7 +64,7 @@ try {
   }
   console.log('PASS publication writes only the approved snapshot on main and rejects the old development branch');
   const queries=[];
-  await fetchAllPageViews({propertyId:'547805075',token,now:new Date('2026-11-18T00:00:00Z'),fetchReport:async(_url,options)=>{
+  await fetchDailyPageViews({propertyId:'547805075',token,now:new Date('2026-11-18T00:00:00Z'),fetchReport:async(_url,options)=>{
     queries.push(JSON.parse(options.body));return new Response(JSON.stringify(response));
   }});
   assert.equal(queries[0].dateRanges[0].endDate,'2026-11-17');

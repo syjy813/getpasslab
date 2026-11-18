@@ -56,8 +56,8 @@ function assertWholeNumber(value) {
   return number;
 }
 
-function assertReportPage(report, expectedOffset, totalRows) {
-  if (report.dimensionHeaders?.length !== 1 || report.dimensionHeaders[0]?.name !== 'pagePath'
+function assertReportPage(report, expectedOffset, totalRows, dimensions = ['pagePath']) {
+  if (report.dimensionHeaders?.length !== dimensions.length || dimensions.some((name, index) => report.dimensionHeaders[index]?.name !== name)
       || report.metricHeaders?.length !== 1 || report.metricHeaders[0]?.name !== 'screenPageViews'
       || !Number.isSafeInteger(report.rowCount) || report.rowCount < 1
       || (totalRows !== null && report.rowCount !== totalRows)
@@ -71,9 +71,11 @@ function assertReportPage(report, expectedOffset, totalRows) {
   }
 }
 
-export async function fetchAllPageViews({ propertyId, token, fetchReport = fetch, now = new Date() }) {
+export async function fetchAllPageViews({ propertyId, token, fetchReport = fetch, now = new Date(), includeDates = false }) {
   if (!/^\d+$/.test(propertyId ?? '') || !token) throw new Error('GA4 credentials are missing.');
   const endDate = yesterdayInTimeZone('Asia/Seoul', now);
+  const dimensions = includeDates ? ['date', 'pagePath'] : ['pagePath'];
+  const dailyRows = [];
   const seen = new Set();
   const views = new Map();
   let totalRows = null;
@@ -85,13 +87,13 @@ export async function fetchAllPageViews({ propertyId, token, fetchReport = fetch
       headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
         dateRanges: [{ startDate: GA4_START_DATE, endDate }],
-        dimensions: [{ name: 'pagePath' }],
+        dimensions: dimensions.map(name => ({ name })),
         metrics: [{ name: 'screenPageViews' }],
         dimensionFilter: {
           filter: { fieldName: 'hostName', inListFilter: { values: GA4_HOSTS } },
         },
         metricAggregations: ['TOTAL'],
-        orderBys: [{ dimension: { dimensionName: 'pagePath' } }],
+        orderBys: dimensions.map(dimensionName => ({ dimension: { dimensionName } })),
         limit: PAGE_SIZE,
         offset,
       }),
@@ -99,7 +101,7 @@ export async function fetchAllPageViews({ propertyId, token, fetchReport = fetch
     });
     if (!response.ok) throw new Error(`GA4 report request failed (HTTP ${response.status}).`);
     const report = await response.json();
-    assertReportPage(report, offset, totalRows);
+    assertReportPage(report, offset, totalRows, dimensions);
     if (totalRows === null) {
       totalRows = report.rowCount;
       timeZone = report.metadata?.timeZone ?? null;
@@ -108,17 +110,28 @@ export async function fetchAllPageViews({ propertyId, token, fetchReport = fetch
       totalViews = assertWholeNumber(report.totals[0]?.metricValues?.[0]?.value);
     }
     for (const row of report.rows) {
-      const path = row.dimensionValues?.[0]?.value;
-      if (typeof path !== 'string' || seen.has(path)) throw new Error('GA4 page path is invalid or repeated.');
-      seen.add(path);
-      views.set(path, assertWholeNumber(row.metricValues?.[0]?.value));
+      const path = row.dimensionValues?.[includeDates ? 1 : 0]?.value;
+      let date = null;
+      if (includeDates) {
+        const compact = row.dimensionValues?.[0]?.value;
+        if (typeof compact !== 'string' || !/^\d{8}$/.test(compact)) throw new Error('GA4 report date is invalid.');
+        date = `${compact.slice(0, 4)}-${compact.slice(4, 6)}-${compact.slice(6)}`;
+        if (!Number.isFinite(Date.parse(date)) || new Date(date).toISOString().slice(0, 10) !== date
+            || date < GA4_START_DATE || date > endDate) throw new Error('GA4 report date is outside the requested range.');
+      }
+      const key = includeDates ? `${date} ${path}` : path;
+      if (typeof path !== 'string' || seen.has(key)) throw new Error('GA4 page path is invalid or repeated.');
+      seen.add(key);
+      const count = assertWholeNumber(row.metricValues?.[0]?.value);
+      views.set(path, (views.get(path) ?? 0) + count);
+      if (includeDates) dailyRows.push({ date, path, views: count });
     }
   }
   const calculatedTotal = [...views.values()].reduce((sum, n) => sum + n, 0);
   if (!Number.isSafeInteger(calculatedTotal) || calculatedTotal !== totalViews || seen.size !== totalRows) {
     throw new Error('GA4 report totals do not match all retrieved rows.');
   }
-  return { views, totalRows, totalViews, timeZone, endDate };
+  return { views, totalRows, totalViews, timeZone, endDate, ...(includeDates ? { dailyRows } : {}) };
 }
 
 function yesterdayInTimeZone(timeZone, now) {
@@ -167,4 +180,36 @@ export function buildFacilityViewData({ publishedPaths, report, propertyId, now 
     totalArticleViews: matchedViews,
     articles,
   };
+}
+
+
+export function fetchDailyPageViews(options) {
+  return fetchAllPageViews({ ...options, includeDates: true });
+}
+
+export function buildDailyFacilityViewData({ snapshot, report, metadata }) {
+  if (!Array.isArray(report.dailyRows)) throw new Error('GA4 daily report is missing.');
+  const dates = [];
+  for (let at = Date.parse(snapshot.period.startDate); at <= Date.parse(snapshot.period.endDate); at += 86400000)
+    dates.push(new Date(at).toISOString().slice(0, 10));
+  if (!dates.length) throw new Error('GA4 daily date range is invalid.');
+  const indices = new Map(dates.map((date, index) => [date, index]));
+  const totals = dates.map(() => 0);
+  const articles = Object.fromEntries(metadata.map(article => [article.path,
+    dates.map(date => date < article.publishedAt ? null : 0)]));
+  for (const row of report.dailyRows) {
+    const path = canonicalPagePath(row.path);
+    if (!Object.hasOwn(articles, path)) continue;
+    const index = indices.get(row.date);
+    if (index === undefined) throw new Error('GA4 daily date is outside the snapshot.');
+    articles[path][index] = (articles[path][index] ?? 0) + row.views;
+    totals[index] += row.views;
+  }
+  for (const [path, values] of Object.entries(articles)) {
+    if (values.reduce((sum, value) => sum + (value ?? 0), 0) !== snapshot.articles[path].views)
+      throw new Error('GA4 daily article total does not match cumulative views.');
+  }
+  if (totals.reduce((sum, value) => sum + value, 0) !== snapshot.totalArticleViews)
+    throw new Error('GA4 daily total does not match cumulative views.');
+  return { dates, totals, articles };
 }
