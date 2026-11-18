@@ -15,7 +15,9 @@ const output='qa-results/department-store-two-parter';fs.mkdirSync(output,{recur
    const listings=[];
    for(const listing of ['/facility-management/stories/','/facility-management/']){
     assert.equal((await page.goto(base+listing)).status(),200);
-    const card=page.locator('.facility-card[href="'+row.route+'"]');assert.equal(await card.count(),1);
+    const card=page.locator('.facility-card[href="'+row.route+'"]');
+    if(listing==='/facility-management/'){assert.equal(await card.count(),0,'older article retained in category');continue;}
+    assert.equal(await card.count(),1);
     await card.scrollIntoViewIfNeeded();await card.locator('img').evaluate(img=>img.decode());
     const state=await card.evaluate(card=>{const img=card.querySelector('img'),r=img.getBoundingClientRect();return {
      src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],rendered:[r.width,r.height],fit:getComputedStyle(img).objectFit,

@@ -12,8 +12,9 @@ const protectedFiles={
 };
 const out='qa-results/hospital-list-thumbnails';fs.mkdirSync(out,{recursive:true});
 (async()=>{const {beforeBodyHeroRemoval}=await import('./read-hobyeongbaekma-body-heroes.mjs');
+const {beforePendingRelease}=await import('./read-pending-release.mjs');
 for(const [file,expected] of Object.entries(protectedFiles)){
- const bytes=beforeBodyHeroRemoval(file,fs.readFileSync(file)),actual=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
+ const bytes=beforeBodyHeroRemoval(file,beforePendingRelease(file,fs.readFileSync(file))),actual=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
  assert.equal(actual,expected,file+': original article and metadata source');
 }
 const browser=await chromium.launch();const results=[];
@@ -41,8 +42,7 @@ try{
   }
   await page.goto(base+'/facility-management/');
   const home=page.locator('.facility-card[href="/facility-management/career/hobyeongbaekma-hospital-large-university/"] img');
-  assert.equal(await home.count(),1);await home.scrollIntoViewIfNeeded();await home.evaluate(img=>img.decode());
-  assert.equal(await home.getAttribute('src'),'/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-large-university.webp');
+  assert.equal(await home.count(),0,'older hospital card retained in category after new release');
   await page.goto(base+'/facility-management/stories/');
   const hospital=page.locator('.facility-card[href="/facility-management/career/hobyeongbaekma-hospital-large-university/"]');
   await hospital.scrollIntoViewIfNeeded();

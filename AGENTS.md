@@ -40,6 +40,8 @@
 | UI·반응형·접근성·광고 표시 | [UI_UX_GUIDE.md](UI_UX_GUIDE.md) 및 해당 영역의 작업 가이드 |
 | 기존 문제·결정 배경·장기 후보 확인 | [KNOWN_ISSUES.md](KNOWN_ISSUES.md), [DECISION_LOG.md](DECISION_LOG.md), [BACKLOG.md](BACKLOG.md) 등 필요한 항목만 확인. 오래된 상태는 현재 사실로 간주하지 않음 |
 
+보조 운영·카피·디자인·UX 기준과 과거 실측은 [운영 가이드 색인](docs/standards/README.md)에서 필요한 절만 확인한다. 현행 정본·실제 코드가 우선하며 과거 수치를 자동 적용하지 않는다.
+
 ## 구현·데이터 보호
 
 - 기존 Astro 정적 구조·컴포넌트·데이터 정본을 재사용하고 목적이 명확한 작은 단위로 수정한다. 기존 정상 기능, 공개 URL, `slug` / `subject_id` / `question_id`와 데이터 관계를 보호한다. 승인 없는 식별자 변경·생성을 하지 않는다.

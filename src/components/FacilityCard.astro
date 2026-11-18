@@ -8,6 +8,14 @@ const { article, lead = false } = Astro.props;
 // thumbnails override it without changing the article body or social metadata.
 // A future article without a cover remains a text card.
 const covers: Record<string, string> = {
+  'sasugoldae-sauna-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-despair.webp',
+  'sasugoldae-sauna-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-hope.webp',
+  'sasugoldae-swimming-pool-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-pool-despair.webp',
+  'sasugoldae-swimming-pool-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-pool-hope.webp',
+  'sasugoldae-golf-course-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-golf-despair.webp',
+  'sasugoldae-golf-course-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-golf-hope.webp',
+  'sasugoldae-university-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-university-despair.webp',
+  'sasugoldae-university-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-university-hope.webp',
   'sasugoldae': '/images/facility-series/sasugoldae-00/01-sasugoldae-hero.webp',
   'hobyeongbaekma-hospital-large-university': '/images/facility-series/ep2-3-hospital-large/01-hero.webp',
   'hobyeongbaekma-mart-despair': '/images/facility-series/ep4-1-mart-despair/01-hero.webp',
@@ -34,6 +42,7 @@ const covers: Record<string, string> = {
   'boiler-inspection-manager': '/images/facility-drafts/13/01-boiler-manager-hero-v2.webp',
 };
 const listingThumbnails: Record<string, string> = {
+  'sasugoldae': '/images/facility-series/list-thumbnails/sasugoldae-ep0.webp',
   'hobyeongbaekma-mart-despair': '/images/facility-series/list-thumbnails/hobyeongbaekma-mart-despair.webp',
   'hobyeongbaekma-mart-hope': '/images/facility-series/list-thumbnails/hobyeongbaekma-mart-hope.webp',
   'hobyeongbaekma-department-store-despair': '/images/facility-series/list-thumbnails/hobyeongbaekma-department-store-despair.webp',

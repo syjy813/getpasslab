@@ -36,7 +36,7 @@ for(const row of articles){
  const other=articles.find(r=>r.slug!==row.slug);
  assert(nodes(body).some(n=>n.tagName==='a'&&attr(n,'href')===other.route),'counterpart linked in body');
  for(const route of ['/facility-management/','/facility-management/stories/']){
-  const card=load(route).find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);assert(card,route+': department-store article card');
+  const card=load(route).find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);if(route==='/facility-management/'){assert.equal(card,undefined,'older article retained in stories after new release');continue;}assert(card,route+': department-store article card');
   const cover=nodes(card).find(n=>n.tagName==='img'),thumbnail=thumbnailRows.find(item=>item.id===row.slug);
   assert(thumbnail,'approved listing image');assert.equal(attr(cover,'src'),thumbnail.publicFile.replace(/^public/,''));assert.equal(attr(cover,'width'),'1448');assert.equal(attr(cover,'height'),'1086');
  }

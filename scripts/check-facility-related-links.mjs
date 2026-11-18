@@ -1,3 +1,4 @@
+import {seriesRelease} from './read-pending-release.mjs';
 import {sasugoldaeRelease} from './read-sasugoldae-release.mjs';
 import {hotelRelease} from './read-hotel-two-parter-release.mjs';
 const hotelUrls=hotelRelease.articles.map(row=>row.route);
@@ -18,7 +19,7 @@ const martSlugs=martRelease.articles.map(row=>row.slug);
 import {parse} from 'parse5';
 
 const episode00='/facility-management/career/hobyeongbaekma/';
-const eligible=urls=>[...urls,sasugoldaeRelease.route,episode00,...hotelUrls,...hospitalUrls,...hospitalExtraUrls,...departmentStoreUrls,...martUrls];
+const eligible=urls=>[...urls,...seriesRelease.articles.map(r=>r.route),sasugoldaeRelease.route,episode00,...hotelUrls,...hospitalUrls,...hospitalExtraUrls,...departmentStoreUrls,...martUrls];
 const origin='https://getpasslab.co.kr';
 const preview=process.env.FACILITY_DRAFT_PREVIEW === '1';
 const releaseDate='2026-11-03';
@@ -45,7 +46,7 @@ const assertMetadata=(path,expectedRobots)=>{
  return list;
 };
 const published=fs.readdirSync('src/content/facility').filter(file=>file.endsWith('.md')&&/^status:\s*published\s*$/m.test(fs.readFileSync('src/content/facility/'+file,'utf8'))).map(file=>file.slice(0,-3)).sort();
-assert.deepEqual(published,[...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'sasugoldae','hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs,...hospitalExtraSlugs,...departmentStoreSlugs,...martSlugs].sort(),'only reviewed articles in publication candidate');
+assert.deepEqual(published,[...seriesRelease.articles.map(r=>r.slug),...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'sasugoldae','hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs,...hospitalExtraSlugs,...departmentStoreSlugs,...martSlugs].sort(),'only reviewed articles in publication candidate');
 assert(!fs.existsSync('dist/facility-management/career/reading-job-postings/index.html'),'unapproved placeholder must not be built');
 let checked=0;
 for(const path of ['/facility-management/','/facility-management/career/','/facility-management/jobs/',...urls]){
@@ -61,11 +62,9 @@ for(const path of ['/facility-management/','/facility-management/career/','/faci
  if(path==='/facility-management/') {
   const homeUrls=[...new Set(cards.map(card=>attrs(card,'href')))];
   assert(homeUrls.every(url=>eligible(expanded ? [...urls,...draftUrls] : urls).includes(url)),'home only exposes eligible articles');
-  for(const url of hospitalExtraUrls) assert(homeUrls.includes(url),'hospital ep.2-3 visible on home: '+url);
-  assert(homeUrls.includes(sasugoldaeRelease.route),'sasugoldae is visible in the six-card home slice');
-  assert.equal(hospitalUrls.filter(url=>homeUrls.includes(url)).length,0,'older hospital articles remain in category after latest six-card slice advances');
-  for(const url of departmentStoreUrls) assert(homeUrls.includes(url),'new department-store article visible on home: '+url);
-for(const url of martUrls) assert(homeUrls.includes(url),'new mart article visible on home: '+url);
+  const seriesHome=homeUrls.filter(url=>seriesRelease.articles.some(row=>row.route===url));
+  assert.equal(seriesHome.length,6,'six newest series episodes visible on home');
+  assert(!homeUrls.includes(sasugoldaeRelease.route),'ep0 retained in category after newer episodes advance the home slice');
  }
  for(const node of list){
   const href=node.tagName==='a'?attrs(node,'href'):undefined;
