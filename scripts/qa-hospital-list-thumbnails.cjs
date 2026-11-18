@@ -12,8 +12,9 @@ const protectedFiles={
 };
 const out='qa-results/hospital-list-thumbnails';fs.mkdirSync(out,{recursive:true});
 (async()=>{const {beforeBodyHeroRemoval}=await import('./read-hobyeongbaekma-body-heroes.mjs');
+const {beforePendingRelease}=await import('./read-pending-release.mjs');
 for(const [file,expected] of Object.entries(protectedFiles)){
- const bytes=beforeBodyHeroRemoval(file,fs.readFileSync(file)),actual=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
+ const bytes=beforeBodyHeroRemoval(file,beforePendingRelease(file,fs.readFileSync(file))),actual=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
  assert.equal(actual,expected,file+': original article and metadata source');
 }
 const browser=await chromium.launch();const results=[];
