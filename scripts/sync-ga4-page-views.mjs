@@ -17,7 +17,7 @@ try {
     throw new Error('GA4 has no matched published facility articles; preserving previous snapshot.');
   }
   for (const { path, ...info } of metadata) Object.assign(snapshot.articles[path], info);
-  snapshot.collectionSchedule = { timeZone: 'Asia/Seoul', hour: 10, minute: 0 };
+  snapshot.collectionSchedule = { timeZone: 'Asia/Seoul', hour: 9, minute: 0 };
   snapshot.sourceCommit = process.env.GITHUB_SHA || null;
   const nextContent = `${JSON.stringify(snapshot, null, 2)}\n`;
   // Check validity before touching the existing file; incomplete API reports never overwrite it.

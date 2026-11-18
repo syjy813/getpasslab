@@ -15,9 +15,9 @@ on:
       - 'src/config/facility.ts'
       - 'src/content/facility/**'
   workflow_dispatch:
-  # 01:00 UTC = every day at 10:00 Asia/Seoul. GitHub may start later under load.
+  # 00:00 UTC = every day at 09:00 Asia/Seoul. GitHub may start later under load.
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '0 0 * * *'
 
 permissions:
   contents: read

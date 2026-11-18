@@ -40,7 +40,7 @@ try {
   assert.equal(snapshot.articles[path].publishedAt, '2026-11-17');
   assert.equal(snapshot.articles[path].category, 'stories');
   assert.equal(snapshot.articles[path].views, 6);
-  assert.equal(snapshot.collectionSchedule.hour, 10);
+  assert.equal(snapshot.collectionSchedule.hour, 9);
   assert.equal(snapshot.sourceCommit, 'fixture-source');
   assert.ok(!(success.stdout + success.stderr).includes(token));
   console.log('PASS atomic snapshot includes newly published metadata, excludes drafts, preserves navigation category');
@@ -61,9 +61,9 @@ try {
   }
   console.log('PASS publication writes only the approved snapshot on main and rejects the old development branch');
   const queries=[];
-  await fetchAllPageViews({propertyId:'547805075',token,now:new Date('2026-11-17T01:00:00Z'),fetchReport:async(_url,options)=>{
+  await fetchAllPageViews({propertyId:'547805075',token,now:new Date('2026-11-18T00:00:00Z'),fetchReport:async(_url,options)=>{
     queries.push(JSON.parse(options.body));return new Response(JSON.stringify(response));
   }});
-  assert.equal(queries[0].dateRanges[0].endDate,'2026-11-16');
-  console.log('PASS 10:00 KST collection queries through the prior calendar day');
+  assert.equal(queries[0].dateRanges[0].endDate,'2026-11-17');
+  console.log('PASS 09:00 KST collection queries through the prior calendar day');
 } finally { await rm(temp, { recursive: true, force: true }); }
