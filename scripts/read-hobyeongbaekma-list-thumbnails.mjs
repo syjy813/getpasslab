@@ -19,14 +19,16 @@ export const thumbnailRows = [
   {"id":"hobyeongbaekma-hospital-large-university","name":"hobyeongbaekma-hospital-large-university","png":"4ab1c556d8c43c6953c0b2039c4772035f6783cfcd0c363a7d57f9af36b3aff7","webp":"6b9c208a69ca97d1afd00ec589548e8934711035bb5d03bd597418f4b9710cb3","maxBytes":300000},
   {"id":"hobyeongbaekma-department-store-despair","name":"hobyeongbaekma-department-store-despair","png":"bfe7cc5c3aa3cfdf5a07e31b2bccd8ba581bfd535adec46976ada8a65a7b0e9e","webp":"9dac894afb02197def5cc078aaa63d8aa06b12add56a2118aac9708e7d7a181f","maxBytes":200000},
   {"id":"hobyeongbaekma-department-store-hope","name":"hobyeongbaekma-department-store-hope","png":"079701e4c68fd78326a71a28ad85069ee5b05130a4013700043e8c8af5039454","webp":"6c1ba432f74c893111179ce77f2ffbba0003dbaee37837290d2e0aa17ad88e73","maxBytes":200000},
+  {id:'hobyeongbaekma-mart-despair',name:'hobyeongbaekma-mart-despair',png:null,webp:'f7f3e5e8afba6859f72da0bd1d05108846bf2eb9bc0bc07e26b75982e67d8afc',maxBytes:200000},
+  {id:'hobyeongbaekma-mart-hope',name:'hobyeongbaekma-mart-hope',png:null,webp:'91807b39904a29205ea0879b69febc47b13d0e88f11b340634ef04c54154b74a',maxBytes:200000},
 ].map(row=>({
   ...row,
-  master:`facility-assets/hobyeongbaekma-list-thumbnails/${row.name}.png`,
+  master:row.png ? `facility-assets/hobyeongbaekma-list-thumbnails/${row.name}.png` : null,
   publicFile:`public/images/facility-series/list-thumbnails/${row.name}.webp`,
   outputFile:`dist/images/facility-series/list-thumbnails/${row.name}.webp`,
   route:`/facility-management/career/${row.id}/`,
 }));
-export const thumbnailMasterFiles = thumbnailRows.map(row=>row.master);
+export const thumbnailMasterFiles = thumbnailRows.map(row=>row.master).filter(Boolean);
 export const thumbnailPublicFiles = thumbnailRows.map(row=>row.publicFile);
 export const thumbnailOutputFiles = thumbnailRows.map(row=>row.outputFile);
 
@@ -35,7 +37,7 @@ export const thumbnailOutputFiles = thumbnailRows.map(row=>row.outputFile);
 export function beforeHobyeongbaekmaListThumbnails(file, bytes) {
   if (file !== component) return bytes;
   let text=bytes.toString('utf8');
-  // Restore only approved hospital/department-store overrides before the immutable baseline.
+  // Restore only approved hospital/department-store/mart overrides before the immutable baseline.
   for (const row of thumbnailRows.slice(3)) {
     const entry = `  '${row.id}': '${row.publicFile.replace(/^public/,'')}',\n`;
     assert.equal(text.split(entry).length,2,file+': exact approved thumbnail entry');
@@ -69,6 +71,7 @@ export async function assertHobyeongbaekmaListThumbnails() {
   const {default:sharp}=await import('sharp');
   for (const row of thumbnailRows) {
     for (const [file,expected,format] of [[row.master,row.png,'png'],[row.publicFile,row.webp,'webp'],[row.outputFile,row.webp,'webp']]) {
+      if (!file) continue; // Mart originals remain in the user Library; only optimized public WebP is checked here.
       const bytes=fs.readFileSync(file);
       assert.equal(sha(bytes),expected,file+': approved image bytes');
       const meta=await sharp(bytes).metadata();
