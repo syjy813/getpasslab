@@ -2,19 +2,15 @@
 
 실행 지침은 [AGENTS.md](AGENTS.md). 과거 작업은 Git·PR·[audits](docs/audits/), 이전 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)를 참조한다.
 
-## 현재 작업 — 미배포 작업 통합 출시
+## 최근 완료 — 미배포 작업 통합 출시
 
-- 사용자 승인: **조회수 정렬 PR #278을 제외한 전체 미반영 작업의 실서버 배포**. 배포 승인은 유지한다.
-- 브랜치 `release/pending-except-view-sort-20261118`, 기준 `main@bfe206af`에서 #80·#208·#225·#246·#255·#295·#296의 미반영 부분만 통합. 원본 PR의 오래된 제품·설정·검사 수정 전체를 병합하지 않는다.
-- 구현: 사수골대 후속 8편 공개 연결·ep.0 교정·9종 이미지·마트 희망편 수정, 산업안전 모바일 표, 에너지 3챕터, 보조 가이드·템플릿. 공개글 24→32편. 조회수 정렬/수집·예약·분석실 변경 없음.
-- 로컬 594페이지 Build·SEO 오류 0·공개 콘텐츠 오류 0·32편 IA/링크·기존 소스/발행 보호·템플릿 15검사 PASS. 원격 CI·배포·Production은 아직 미완료.
-- 정본 체크포인트: [통합 출시 audit](docs/audits/2026-11-18-pending-release/README.md). 다음: PR CI 확인 → 실패한 검사만 보완 → 승인 범위 병합/Pages/Production 확인.
-
-## 기준 상태
-
-- 갱신: **2026-11-17 KST**. 제품 기준 `main@4bd413481e5821dd89aa351aa30526d0bb3def73` ([PR #291](https://github.com/syjy813/getpasslab/pull/291) squash 병합). 후속 완료 기록은 문서만 변경한다.
-- 최근 제품: **호병백 본문 상단 대표 이미지 8종 제거·Production 확인 완료**. ep.0·호텔 2편·병원 3편·백화점 2편 대상이며 본문 설명 이미지·목록 썸네일·OG·URL·마트편은 유지한다.
-- 배포 근거: [Pages run 44095107320](https://github.com/syjy813/getpasslab/actions/runs/44095107320) **build/deploy success**. [실서버 HTML 검증](docs/audits/2026-11-17-hobyeongbaekma-body-heroes/deployment.json).
+- **2026-11-18 Production 확인 완료.** [PR #297](https://github.com/syjy813/getpasslab/pull/297) squash 병합 `6ecf3ddbe7b27e568fd51ce3b75b55dcacff6f56`. 검증·병합 tree `52cbaaf5850b0399f67dbba4397673be19c3fb42` 동일.
+- 사용자 승인 범위: #80·#208·#225·#246·#255·#295·#296의 미반영 부분 통합. **조회수 정렬 #278은 미병합 유지.** 수집/예약/분석실 코드·기존 URL·문항/정답·카드 1~6·Astro 설정 보존.
+- 사수골대 후속 8편 신규 공개·ep.0 교정, 확정 이미지 9종·마트 희망편 수정. 산업안전 모바일 표, 에너지 3챕터, 자연스러운 집필 기준·보조 운영 가이드·미등록 썸네일 도구 반영.
+- 현행 IA: 입문·용어 1 / 취업·커리어 8 / 시설 이야기 **19** / 법정선임 4 / 실무 0. **공개 32편**, 사수골대 9편(기존 ep.0+신규 8), 기존 24편 URL 보존.
+- 594페이지 Build, 공개/비공개 발행·IA/내부링크·원본 보호 PASS. SEO 오류 0(경고12)·공개 콘텐츠 오류0·템플릿15검사 PASS. 관련 CI 13종 성공 근거 확보; 최종 커밋의 수식·소방 반복 실행은 동일 제품/설정/검사·불변 역사 대상으로 앞선 8f324f3 성공을 재사용. [검증·재사용 근거](docs/audits/2026-11-18-pending-release/validation.json).
+- [Pages 44280125213](https://github.com/syjy813/getpasslab/actions/runs/44280125213) build/deploy success. Production **17개 페이지+11개 자산(28경로)** HTTP200·전체 바이트 SHA256이 검증 빌드와 일치. [실서버 증거](docs/audits/2026-11-18-pending-release/production.json). 4폭 Chromium CI와 HTTP/HTML 대조를 구분하며 실물 모바일·추가 육안 QA 완료로 확대하지 않는다.
+- 승인 범위 미완료 없음. 제품 기준 `main@6ecf3dd`; 후속 완료 기록은 문서만 변경한다. [통합 출시 기록](docs/audits/2026-11-18-pending-release/README.md).
 
 ## 최근 완료 — 호병백 본문 상단 대표 이미지 제거
 
@@ -65,14 +61,14 @@
 - Production 8경로 HTTP 200·canonical PASS. 주요 목록 1/8/11/4편, 기존 jobs 5편, 기존 호병백마 URL·자격증 진입 확인. 사전 비교한 6경로 HTML SHA-256 동일. [검증 기록](docs/audits/2026-11-16-community-operation-guide/deployment.json). 확인 범위는 HTTP/HTML이며 브라우저 육안 QA를 수행한 것으로 확대하지 않는다.
 - **이번 승인 범위 미완료 없음.** 총 지침 복사용 문구는 운영 가이드 §9.1(프로젝트 설정 직접 수정은 미실행). 회원 기능·운영 정책의 실제 적용·실험은 별도 작업이다.
 
-## 현행 IA·변경 범위
+## 이전 IA 개편 기록 — 2026-11-16 (현재 계수는 상단 참조)
 
 - 새 IA: **시설관리 입문·용어 (1) / 취업·커리어 (8) / 시설 이야기 (11) / 법정선임·자격 활용 (4) / 시설관리 실무 (0, 준비 중)**.
 - 취업·커리어는 취업 가이드 4 / 기업·채용 분석 4, 시설 이야기는 호병백마 10 / 사수골대 1로 2차 탐색을 제공한다.
 - 새 목록 `/facility-management/intro/`, `/facility-management/stories/` 추가. 기존 `/jobs/` 목록과 **공개 24개 글의 URL·원고·이미지·canonical** 보존. 상세 브레드크럼·상단 메뉴·푸터·홈 카테고리와 통합 가이드 §4를 일치시켰다.
 - 작업·검증 범위: [IA audit](docs/audits/2026-11-16-facility-ia/README.md). 이전 모바일 피드의 레이아웃과 이미지·기술 설명은 그대로 유지한다.
 
-## 검증 및 남은 단계
+## 이전 IA 검증 및 후속 사항
 
 - 공개/비공개 미리보기 `astro build` PASS. 새 IA 검사 각각 **4개 운영 카테고리, 24개 글 단일 매핑, 기존 URL/canonical 및 /jobs/ 보존 PASS**.
 - 양 모드 시설 발행 검증·관련 링크 검증 PASS. 공개 `check-facility-launch` 소스/이미지 보호 PASS. `check:public-content` 오류 0, `check:seo` 오류 0/기존 경고 5.
@@ -85,4 +81,4 @@
 - 이전 모바일 피드의 상세 검증/Production 기록은 [2026-11-15 audit](docs/audits/2026-11-15-facility-feed/README.md) 및 병합 기준 `398923fd`에서 확인한다.
 - 사수골대 ep.0 원고·배포는 이전 완료 상태를 유지한다. [이전 완료 기록](docs/audits/2026-11-15-sasugoldae-ep00/manifest.json), [PR #277](https://github.com/syjy813/getpasslab/pull/277), [Pages run 43697216589](https://github.com/syjy813/getpasslab/actions/runs/43697216589). 이전 상세 Snapshot은 기준 커밋 `5bca56b9`에 보존.
 - 사수골대 사전 자료 수집은 **부분 완료**. 핵심 후보 71건은 독립 근무후기 71건이 아니다. 집계·접근 제한·시설별 미달은 [source-index](docs/drafts/facility/sasugoldae/source-index.md)가 정본.
-- 사우나 후속편 집필·배포는 이번 목록 UI 작업 범위에 포함하지 않는다.
+- 사우나·수영장·골프장·대학교 후속 8편은 PR #297에서 공개 완료.

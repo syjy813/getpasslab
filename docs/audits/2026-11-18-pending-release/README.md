@@ -16,4 +16,12 @@
 
 manifest는 정확한 현재 해시와 이전 원문을 묶음으로 저장. 기존 불변 감사 자료는 수정하지 않고 해당 승인 변경만 복원한 후 기존 검사를 실행한다. 현재 공개 32편과 신규 8편의 메타·이미지·내부링크는 별도 현행 검사.
 
-상태: 구현 완료, 통합 검증 진행 중. Build·CI·배포·Production 완료는 실제 결과 확인 뒤 갱신한다.
+## 완료 상태
+
+- PR #297 병합 `6ecf3ddbe7b27e568fd51ce3b75b55dcacff6f56`. 최종 검증 tree와 병합 tree `52cbaaf5850b0399f67dbba4397673be19c3fb42` 동일.
+- 594페이지 Build, 공개/비공개 모드 발행·IA·내부링크·불변 소스/출력 보호, 템플릿15검사 PASS. SEO 오류0(경고12), 공개 콘텐츠 오류0.
+- 관련 CI13종 성공 증거는 [validation.json](validation.json). 수식·소방은 동일한 src/public/dependency/config/workflow 및 검사·역사 대상을 검증한 8f324f3 실행을 재사용한다. 후속 변경은 manifest의 관측용 JSON 분리, 홈 최신6개 기대값과 병원 원본 복원 검사뿐이다. 나머지는 최종 736ea21 실행의 success를 사용.
+- [Pages 44280125213](https://github.com/syjy813/getpasslab/actions/runs/44280125213) build/deploy success.
+- [Production 28경로](production.json): 신규8편·ep.0·목록/홈·기존 글·에너지3편 등17페이지와 이미지10개·CSS1개의 HTTP200 및 전체 바이트 SHA256이 검증 빌드와 일치.
+- 네 화면폭 자동화 CI와 Production HTTP/HTML 대조를 구분한다. 실물 모바일·추가 육안 브라우저 QA를 수행했다고 표현하지 않는다.
+- 승인 범위 미완료 없음. #278은 미병합 유지. 기존 원본 PR은 통합 PR로 대체 반영하며 이전 상태로 전체 병합하지 않는다.

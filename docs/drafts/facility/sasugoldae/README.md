@@ -6,11 +6,11 @@
 
 | 구분 | 원고 파일 | 편수 | 현재 상태 |
 |---|---|---:|---|
-| ep.0 — 사수골대란 뭘까? | [ep00-sasugoldae-final.md](ep00-sasugoldae-final.md) | 1 | 교정본 보관, 기존 공개 글에 교정 미반영 |
-| 사우나 절망·희망편 | [ep01-sauna-manuscripts.md](ep01-sauna-manuscripts.md) | 2 | 교정 완료, 미발행 |
-| 수영장 절망·희망편 | [ep02-swimming-pool-manuscripts.md](ep02-swimming-pool-manuscripts.md) | 2 | 교정 완료, 미발행 |
-| 골프장 절망·희망편 | [ep03-golf-course-manuscripts.md](ep03-golf-course-manuscripts.md) | 2 | 교정 완료, 미발행 |
-| 대학교 절망·희망편 | [ep04-university-manuscripts.md](ep04-university-manuscripts.md) | 2 | 교정 완료, 미발행 |
+| ep.0 — 사수골대란 뭘까? | [ep00-sasugoldae-final.md](ep00-sasugoldae-final.md) | 1 | 교정본 공개 반영 완료 |
+| 사우나 절망·희망편 | [ep01-sauna-manuscripts.md](ep01-sauna-manuscripts.md) | 2 | 공개 완료 |
+| 수영장 절망·희망편 | [ep02-swimming-pool-manuscripts.md](ep02-swimming-pool-manuscripts.md) | 2 | 공개 완료 |
+| 골프장 절망·희망편 | [ep03-golf-course-manuscripts.md](ep03-golf-course-manuscripts.md) | 2 | 공개 완료 |
+| 대학교 절망·희망편 | [ep04-university-manuscripts.md](ep04-university-manuscripts.md) | 2 | 공개 완료 |
 
 시설별 파일에는 두 편의 본문과 발행에서 제외할 내부 편집 메모를 담았다. 편집 메모의 작업 상태는 집필·교정 당시의 기록이다. 현재 Git 보관·발행 상태는 이 문서와 실제 제품 소스를 구분해 확인한다.
 
@@ -28,3 +28,7 @@
 - 후기의 개인 진술, 채용 공고의 조건, 집필 판단을 구분한다. 내부 메모를 발행 본문에 복사하지 않는다.
 - ep.0은 이미 공개된 글이지만 이번 교정은 원고 파일에만 반영했다. 나머지 8편은 아직 공개하지 않았다.
 - 사용자 요청은 교정 원고의 Git 업로드다. main 병합과 Production 배포는 이번에 수행하지 않는다.
+
+## 공개 반영 — 2026-11-18
+
+[통합 PR #297](https://github.com/syjy813/getpasslab/pull/297)에서 ep.0 교정과 후속 8편·확정 이미지를 함께 공개했다. [발행·검증 기록](../../../audits/2026-11-18-pending-release/README.md)을 현재 상태의 기준으로 사용한다. 이 폴더의 원고는 편집 기록이며 공개 정본은 `src/content/facility/sasugoldae*.md`이다.

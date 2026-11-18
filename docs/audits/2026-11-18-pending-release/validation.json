@@ -1,0 +1,98 @@
+{
+  "testedHead": "736ea21641e44afda8c19a673224263ccd5792d5",
+  "mergedCommit": "6ecf3ddbe7b27e568fd51ce3b75b55dcacff6f56",
+  "tree": "52cbaaf5850b0399f67dbba4397673be19c3fb42",
+  "productAndWorkflowFingerprint": "0fad8b73e399c35ec064213f7679bf44d3436edbf00662ad7e0a24a0ee1f8f7f",
+  "reuseReason": "8f324f3→736ea21 changes only manifest metadata, two historical home expectations, and a hospital guard's exact predecessor restoration. src/, public/, dependencies, astro configuration and workflows are byte-identical. Formula and fire workflow scripts and immutable history targets are unchanged.",
+  "workflows": {
+    "Pending release integration QA": {
+      "id": 44279365119,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365119"
+    },
+    "GA4 facility article page views": {
+      "id": 44279365223,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365223"
+    },
+    "SEO validation": {
+      "id": 44279365166,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365166"
+    },
+    "Mobile learning UX QA": {
+      "id": 44279365503,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365503"
+    },
+    "Mobile top advertisement QA": {
+      "id": 44279365210,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365210"
+    },
+    "All chapter formula style QA": {
+      "id": 44278277159,
+      "sha": "8f324f388fe4153bbdc826ea5776bc0080fbfee3",
+      "reused": true,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44278277159"
+    },
+    "Sasugoldae publication QA": {
+      "id": 44279365204,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365204"
+    },
+    "Industrial safety chapter splits QA": {
+      "id": 44279365120,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365120"
+    },
+    "All chapter instant practice browser QA": {
+      "id": 44279365229,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365229"
+    },
+    "Certification discovery QA": {
+      "id": 44279365214,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365214"
+    },
+    "Fire safety level 2 launch QA": {
+      "id": 44278276491,
+      "sha": "8f324f388fe4153bbdc826ea5776bc0080fbfee3",
+      "reused": true,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44278276491"
+    },
+    "Hobyeongbaekma publication QA": {
+      "id": 44279365241,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365241"
+    },
+    "Facility publication QA": {
+      "id": 44279365260,
+      "sha": "736ea21641e44afda8c19a673224263ccd5792d5",
+      "reused": false,
+      "url": "https://github.com/syjy813/getpasslab/actions/runs/44279365260"
+    }
+  },
+  "local": {
+    "buildPages": 594,
+    "publishedArticles": 32,
+    "seoErrors": 0,
+    "seoWarnings": 12,
+    "publicContentErrors": 0,
+    "publicationAndPrivatePreview": "PASS",
+    "sourceAndPublicationGuards": "PASS",
+    "templateTests": 15
+  },
+  "deployRun": 44280125213
+}

@@ -1,0 +1,203 @@
+{
+  "checkedAt": "2026-11-18T09:55:09Z",
+  "type": "HTTP/full-byte comparison; no additional visual browser QA",
+  "results": [
+    {
+      "path": "/_astro/_slug_.CAKDi-Nb.css",
+      "status": 200,
+      "sha256": "d76c573f925b0e02efbe23b0800c904e43f7040cc054098699e9e0e438b553bf",
+      "expectedSha256": "d76c573f925b0e02efbe23b0800c904e43f7040cc054098699e9e0e438b553bf",
+      "match": true
+    },
+    {
+      "path": "/certifications/",
+      "status": 200,
+      "sha256": "64d5461b01edf0d37221abd6a7aec7dc6147afdc462e9ff1d2db87efb366b111",
+      "expectedSha256": "64d5461b01edf0d37221abd6a7aec7dc6147afdc462e9ff1d2db87efb366b111",
+      "match": true
+    },
+    {
+      "path": "/energy-management/written/thermal-equipment/boiler-auxiliary-equipment/",
+      "status": 200,
+      "sha256": "db1842c64cbeb0cffd8329beb9927d66d4ccfa6371ea85ee31e4e7bc90d5300d",
+      "expectedSha256": "db1842c64cbeb0cffd8329beb9927d66d4ccfa6371ea85ee31e4e7bc90d5300d",
+      "match": true
+    },
+    {
+      "path": "/energy-management/written/thermal-equipment/boiler-piping-insulation/",
+      "status": 200,
+      "sha256": "823eb4c2cd789e6e07a201f4b30f326942b14fbd4bb7b00f320552b40fffabe2",
+      "expectedSha256": "823eb4c2cd789e6e07a201f4b30f326942b14fbd4bb7b00f320552b40fffabe2",
+      "match": true
+    },
+    {
+      "path": "/energy-management/written/thermal-equipment/heating-systems/",
+      "status": 200,
+      "sha256": "9b8d57a94a506ac6a0ac9e823cd68c569360d4f1708e71639877efe970089cd6",
+      "expectedSha256": "9b8d57a94a506ac6a0ac9e823cd68c569360d4f1708e71639877efe970089cd6",
+      "match": true
+    },
+    {
+      "path": "/facility-management/",
+      "status": 200,
+      "sha256": "100861cc2482fd563cb78c455440d5c7b7a6c3a729c03ca84c70c4000b46c83b",
+      "expectedSha256": "100861cc2482fd563cb78c455440d5c7b7a6c3a729c03ca84c70c4000b46c83b",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/hobyeongbaekma-hotel-hope/",
+      "status": 200,
+      "sha256": "97c3b844d9b03eb4e58af4647033757dc405017fbd9ff8f1169694c38d32b03e",
+      "expectedSha256": "97c3b844d9b03eb4e58af4647033757dc405017fbd9ff8f1169694c38d32b03e",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/hobyeongbaekma-mart-hope/",
+      "status": 200,
+      "sha256": "a1826aef209b0189da38a42d5de585408e693c8739b88d3a20a8ab7636173c2c",
+      "expectedSha256": "a1826aef209b0189da38a42d5de585408e693c8739b88d3a20a8ab7636173c2c",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/sasugoldae-golf-course-despair/",
+      "status": 200,
+      "sha256": "3f71617fec06f355b9755f8b21941c205eea7a64a32ef6bc0d3e9484717440f8",
+      "expectedSha256": "3f71617fec06f355b9755f8b21941c205eea7a64a32ef6bc0d3e9484717440f8",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/sasugoldae-golf-course-hope/",
+      "status": 200,
+      "sha256": "38ca901f34411baf36e5e1e59e787c9f71fa1b0ecdbca667db2dc971817dc513",
+      "expectedSha256": "38ca901f34411baf36e5e1e59e787c9f71fa1b0ecdbca667db2dc971817dc513",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/sasugoldae-sauna-despair/",
+      "status": 200,
+      "sha256": "3870bde3f787cb7349dcdbfe079159ade2ddc74ab13d70bc7a9e2a5104b5c58e",
+      "expectedSha256": "3870bde3f787cb7349dcdbfe079159ade2ddc74ab13d70bc7a9e2a5104b5c58e",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/sasugoldae-sauna-hope/",
+      "status": 200,
+      "sha256": "7da61bb5d02bf79955fca7054b73644e187df1b9c8734f6c287ec39040c9ea29",
+      "expectedSha256": "7da61bb5d02bf79955fca7054b73644e187df1b9c8734f6c287ec39040c9ea29",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/sasugoldae-swimming-pool-despair/",
+      "status": 200,
+      "sha256": "da339d5d14562e821dff6e04b4a33cb99341594a682496781fda447421d84ef9",
+      "expectedSha256": "da339d5d14562e821dff6e04b4a33cb99341594a682496781fda447421d84ef9",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/sasugoldae-swimming-pool-hope/",
+      "status": 200,
+      "sha256": "0ac37fa97e9c33dc7946b615bcd25f68caf9b266dac8c3985f49dc608b121443",
+      "expectedSha256": "0ac37fa97e9c33dc7946b615bcd25f68caf9b266dac8c3985f49dc608b121443",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/sasugoldae-university-despair/",
+      "status": 200,
+      "sha256": "cff184945cfc518ad98cb34b02e0437a311ffd4105d82b3562af29672eb4fdef",
+      "expectedSha256": "cff184945cfc518ad98cb34b02e0437a311ffd4105d82b3562af29672eb4fdef",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/sasugoldae-university-hope/",
+      "status": 200,
+      "sha256": "416cde186ff91ba2edaf7768f5ee8e352e90626cb448a37a7e5a3d53ea7859a8",
+      "expectedSha256": "416cde186ff91ba2edaf7768f5ee8e352e90626cb448a37a7e5a3d53ea7859a8",
+      "match": true
+    },
+    {
+      "path": "/facility-management/career/sasugoldae/",
+      "status": 200,
+      "sha256": "00394a543e0e9765d862874cebe1e20ad300e43a5d9099d43daaf0b12afd6c94",
+      "expectedSha256": "00394a543e0e9765d862874cebe1e20ad300e43a5d9099d43daaf0b12afd6c94",
+      "match": true
+    },
+    {
+      "path": "/facility-management/stories/",
+      "status": 200,
+      "sha256": "52ccabf0bc3a01a4dfa03f5a23cd2e77356cf2e6ee51c81ecc7c8969cfff9c69",
+      "expectedSha256": "52ccabf0bc3a01a4dfa03f5a23cd2e77356cf2e6ee51c81ecc7c8969cfff9c69",
+      "match": true
+    },
+    {
+      "path": "/images/facility-series/list-thumbnails/hobyeongbaekma-mart-hope.webp",
+      "status": 200,
+      "sha256": "c9839b10284ad062e6d3a77c6987c1fe96c170aca5964ab97433bbef1f1ab56a",
+      "expectedSha256": "c9839b10284ad062e6d3a77c6987c1fe96c170aca5964ab97433bbef1f1ab56a",
+      "match": true
+    },
+    {
+      "path": "/images/facility-series/list-thumbnails/sasugoldae-ep0.webp",
+      "status": 200,
+      "sha256": "e9fa554eed56ec07fbe737c52a428244c8105a9190bf890d4eb7ca1e76998043",
+      "expectedSha256": "e9fa554eed56ec07fbe737c52a428244c8105a9190bf890d4eb7ca1e76998043",
+      "match": true
+    },
+    {
+      "path": "/images/facility-series/sasugoldae-episodes/sasugoldae-golf-despair.webp",
+      "status": 200,
+      "sha256": "a28bfd4baf384da1479aba02c9ec5a6902e32b487364fb4f1204dcc082ccab99",
+      "expectedSha256": "a28bfd4baf384da1479aba02c9ec5a6902e32b487364fb4f1204dcc082ccab99",
+      "match": true
+    },
+    {
+      "path": "/images/facility-series/sasugoldae-episodes/sasugoldae-golf-hope.webp",
+      "status": 200,
+      "sha256": "f9002b50f60270fcef11db2e23eba67dec084fa5e479a346d47e7f56f579670f",
+      "expectedSha256": "f9002b50f60270fcef11db2e23eba67dec084fa5e479a346d47e7f56f579670f",
+      "match": true
+    },
+    {
+      "path": "/images/facility-series/sasugoldae-episodes/sasugoldae-pool-despair.webp",
+      "status": 200,
+      "sha256": "9d40f0b9cb4f127044f4acfe393a949870afe392240f4499496a0b1dc46bdeb7",
+      "expectedSha256": "9d40f0b9cb4f127044f4acfe393a949870afe392240f4499496a0b1dc46bdeb7",
+      "match": true
+    },
+    {
+      "path": "/images/facility-series/sasugoldae-episodes/sasugoldae-pool-hope.webp",
+      "status": 200,
+      "sha256": "4f7e3ba1b628d41eb4e64554c257351b496d2727310afedc834d69b4bfb596d2",
+      "expectedSha256": "4f7e3ba1b628d41eb4e64554c257351b496d2727310afedc834d69b4bfb596d2",
+      "match": true
+    },
+    {
+      "path": "/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-despair.webp",
+      "status": 200,
+      "sha256": "28d3f0c525990d9f3dd0cd388a1dc9fa59bfff453d7d406dd137840351554f6e",
+      "expectedSha256": "28d3f0c525990d9f3dd0cd388a1dc9fa59bfff453d7d406dd137840351554f6e",
+      "match": true
+    },
+    {
+      "path": "/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-hope.webp",
+      "status": 200,
+      "sha256": "16e3615f0f8d085e360f472b9cc696d766995e43b4ad5f99670f8a1de925b312",
+      "expectedSha256": "16e3615f0f8d085e360f472b9cc696d766995e43b4ad5f99670f8a1de925b312",
+      "match": true
+    },
+    {
+      "path": "/images/facility-series/sasugoldae-episodes/sasugoldae-university-despair.webp",
+      "status": 200,
+      "sha256": "56df0fabd9de58c0eb56726aa569024e8aa78112a93923c0cf50727f2b1a979a",
+      "expectedSha256": "56df0fabd9de58c0eb56726aa569024e8aa78112a93923c0cf50727f2b1a979a",
+      "match": true
+    },
+    {
+      "path": "/images/facility-series/sasugoldae-episodes/sasugoldae-university-hope.webp",
+      "status": 200,
+      "sha256": "6d25eec38a8cfd1c78ae5945642e4b2488b54d2515ef60a330cc1c9c2756ad57",
+      "expectedSha256": "6d25eec38a8cfd1c78ae5945642e4b2488b54d2515ef60a330cc1c9c2756ad57",
+      "match": true
+    }
+  ],
+  "passed": true
+}
