@@ -2,6 +2,12 @@
 
 실행 지침은 [AGENTS.md](AGENTS.md). 과거 작업은 Git·PR·[audits](docs/audits/), 이전 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)를 참조한다.
 
+## 현재 작업 — 시리즈 회차 오름차순
+
+- `fix/series-episode-ascending-20261118`, 기준 `main@b0b5b37`. 시설 이야기의 호병백마10·사수골대9편을 회차 숫자로 오름차순 정렬. 공개/비공개 동일.
+- 구현·594페이지 Build·19편 정렬/32편 IA·내부링크·기존 소스/발행 보호·SEO/공개 콘텐츠 검사 PASS. 출력 1005개 중 stories HTML1개만 변경, 나머지1004개 바이트 동일. Git·배포 후속 결과 확인 필요. 본문·URL·이미지·홈 최신순·조회수 정렬 #278은 변경 없음.
+- [검증/재개 기록](docs/audits/2026-11-18-series-episode-order/README.md).
+
 ## 최근 완료 — 미배포 작업 통합 출시
 
 - **2026-11-18 Production 확인 완료.** [PR #297](https://github.com/syjy813/getpasslab/pull/297) squash 병합 `6ecf3ddbe7b27e568fd51ce3b75b55dcacff6f56`. 검증·병합 tree `52cbaaf5850b0399f67dbba4397673be19c3fb42` 동일.

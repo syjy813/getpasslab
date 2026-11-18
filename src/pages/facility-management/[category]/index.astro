@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import FacilityLayout from '../../../layouts/FacilityLayout.astro';
 import FacilityCard from '../../../components/FacilityCard.astro';
 import FacilityBreadcrumb from '../../../components/FacilityBreadcrumb.astro';
@@ -29,12 +29,23 @@ const legacyJobs = category.slug === 'jobs';
 const breadcrumbs = [{ name: '시설의 모든 것', path: '/facility-management/' },
   ...(legacyJobs ? [{ name: '취업·커리어', path: facilityCategoryPath('career') }] : []),
   { name: category.name, path: facilityCategoryPath(category.slug) }];
+// Series are read in episode order; the home feed keeps its existing date order.
+const episodeNumber = (title: string): [number, number] => {
+  const match = title.match(/\bep\.\s*(\d+)(?:-(\d+))?/i);
+  return match ? [Number(match[1]), Number(match[2] ?? 0)] : [Number.MAX_SAFE_INTEGER, 0];
+};
+const sortSeriesEpisodes = (entries: CollectionEntry<'facilityArticles'>[]) =>
+  [...entries].sort((a, b) => {
+    const [majorA, minorA] = episodeNumber(a.data.title);
+    const [majorB, minorB] = episodeNumber(b.data.title);
+    return majorA - majorB || minorA - minorB || a.id.localeCompare(b.id);
+  });
 const groups = category.slug === 'career' ? [
   { title: '취업 가이드', articles: articles.filter(article => article.data.category !== 'jobs' || article.id === 'public-sector-comparison') },
   { title: '기업·채용 분석', articles: articles.filter(article => article.data.category === 'jobs' && article.id !== 'public-sector-comparison') },
 ] : category.slug === 'stories' ? [
-  { title: '호병백마 시리즈', articles: articles.filter(article => article.id.startsWith('hobyeongbaekma')) },
-  { title: '사수골대 시리즈', articles: articles.filter(article => article.id.startsWith('sasugoldae')) },
+  { title: '호병백마 시리즈', articles: sortSeriesEpisodes(articles.filter(article => article.id.startsWith('hobyeongbaekma'))) },
+  { title: '사수골대 시리즈', articles: sortSeriesEpisodes(articles.filter(article => article.id.startsWith('sasugoldae'))) },
   { title: '다른 시설 이야기', articles: articles.filter(article => !article.id.startsWith('hobyeongbaekma') && !article.id.startsWith('sasugoldae')) },
 ] : [{ title: '', articles }];
 const structuredData = [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(withBase(item.path), SITE.url).href })) }];

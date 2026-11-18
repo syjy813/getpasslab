@@ -10,7 +10,15 @@ const has=(n,k)=>(attr(n,'class')||'').split(/\s+/).includes(k);
 const text=n=>n.nodeName==='#text'?n.value:(n.childNodes||[]).map(text).join('');
 const preview=process.env.FACILITY_DRAFT_PREVIEW==='1';
 for(const [file,row] of Object.entries(seriesRelease.changes)) assert.equal(hash(beforePendingRelease(file,fs.readFileSync(file))),row.beforeSha256,file);
-for(const [file,sha] of Object.entries(seriesRelease.protected))assert.equal(hash(fs.readFileSync(file)),sha,file+': sorting/analytics unchanged');
+const episodeOrder=JSON.parse(fs.readFileSync('docs/audits/2026-11-18-series-episode-order/manifest.json'));
+for(const [file,sha] of Object.entries(seriesRelease.protected)){
+ let bytes=fs.readFileSync(file);
+ if(file===episodeOrder.file){
+  assert.equal(hash(bytes),episodeOrder.sha256,file+': exact approved episode-order change');
+  bytes=Buffer.from(episodeOrder.before,'base64');
+ }
+ assert.equal(hash(bytes),sha,file+': predecessor protected beyond approved episode ordering');
+}
 const sitemap=fs.readFileSync('dist/sitemap-0.xml','utf8');
 const all=nodes(parse(fs.readFileSync('dist/facility-management/stories/index.html','utf8')));
 for(const row of seriesRelease.articles){
