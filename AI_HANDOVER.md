@@ -20,6 +20,15 @@
 
 - 백화점 목록 썸네일 2종은 현재 main과 Production에서 적용된 상태다. 이번 변경에서도 해당 목록 이미지는 유지했다. 이전 상세 작업 상태와 검증 기록은 [기존 audit](docs/audits/2026-11-17-department-store-list-thumbnails/)와 Git history를 참조한다.
 
+## 최근 완료 — 조회수 분석실 일별 꺾은선 그래프
+
+- **2026-11-18 추가·배포 완료**. [PR #294](https://github.com/syjy813/getpasslab/pull/294) 병합 `97525b8164d21498befbd8f0e07d909a5c4b43ad`. GA4 `date + pagePath` 보고서 1개에서 기존 누적값과 실제 일별 값을 함께 계산한다. 기존 v1 필드 유지, optional `daily` 추가. 오전 9시 예약·인증·필터·재시도·실패 보존·main 단일 JSON 쓰기 유지.
+- 실제 수집 [run 44212093105](https://github.com/syjy813/getpasslab/actions/runs/44212093105) success. 저장 `2026-11-18T00:58:32.090Z`, **2026-07-30~2026-11-17 111일**, 공개글 24개·누적 51회·일별 합계 51회. 모든 글의 일별 합도 누적값과 대조했다. 누적값 차분으로 과거를 추정하지 않았다.
+- [분석실](https://getpasslab-view-insights-2026.resolutebough2.chatgpt.site)에 전체/글별 선택, 7/30/90일·전체 기간, 일별 꺾은선과 날짜별 수치 표, 키보드/포인터 날짜 확인을 제공한다. 미기록 날짜 0, 발행 전 미기록 null/—를 구별하고 평균에서는 null을 제외한다. 최근 GA4 수치 보정 안내 유지.
+- 비공개 Site 소스 `3a2b5d9d7c993bd8ddd61693ce8585a03862a0b1`, 배포 `appgdep_6afcf8dccdb881918fbebe4094e332ee` **success**. 기존 소유자 전용 접근 유지. 운영 사이트 화면·콘텐츠·URL 변경 없음. 최초 코드 병합의 Pages [44212092992](https://github.com/syjy813/getpasslab/actions/runs/44212092992) success.
+- 검증: PR GA4/SEO CI success, 일별 페이지네이션·날짜/중복/합계 오류 차단·canonical 매칭·실패 보존 fixture PASS, Site 누적/일별/0·null·기간 경계 회귀 PASS. preview 브라우저 실제 원격 수집 반영: 30일 전체 51·최고 27, 최근7일 전체6·사수골대3, 전체111일51, 키보드 날짜 확인·날짜별 표 동작 확인. 별도 모바일 브라우저 QA는 미수행.
+- [수집·스키마 검증](docs/audits/2026-11-18-ga4-daily-trend/README.md). 다음 자동 수집 목표 2026-11-19 09:00 KST, 화면은 접속/수동/복귀/표시 중5분 재확인.
+
 ## 최근 완료 — 조회수 분석실 일일 수집 활성화
 
 - **2026-11-18 변경 완료:** 사용자 요청에 따라 매일 **오전 09:00 KST**(`0 0 * * *` UTC)로 조정했다. [PR #293](https://github.com/syjy813/getpasslab/pull/293) 병합 `ebbcd31134100e42bb3ae024d2e914f5954e42d2`. 기존 최초 연결은 PR #290이며 #278의 운영 사이트 정렬 UI는 미병합 상태를 유지한다.
