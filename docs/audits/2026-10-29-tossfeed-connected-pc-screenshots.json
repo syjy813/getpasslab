@@ -1,0 +1,570 @@
+{
+  "capture": "Connected PC Chrome; viewport clips at current document scroll position; no edits",
+  "screenshots": [
+    {
+      "file": "toss-home-1440x900.jpg",
+      "screen": "toss-home",
+      "viewport": [
+        1440,
+        900
+      ],
+      "pixels": [
+        1440,
+        900
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "toss-category-1440x900.jpg",
+      "screen": "toss-category",
+      "viewport": [
+        1440,
+        900
+      ],
+      "pixels": [
+        1440,
+        900
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "toss-article-1440x900.jpg",
+      "screen": "toss-article",
+      "viewport": [
+        1440,
+        900
+      ],
+      "pixels": [
+        1440,
+        900
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-home-1440x900.jpg",
+      "screen": "gp-home",
+      "viewport": [
+        1440,
+        900
+      ],
+      "pixels": [
+        1440,
+        900
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-industrial-1440x900.jpg",
+      "screen": "gp-industrial",
+      "viewport": [
+        1440,
+        900
+      ],
+      "pixels": [
+        1440,
+        900
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-energy-1440x900.jpg",
+      "screen": "gp-energy",
+      "viewport": [
+        1440,
+        900
+      ],
+      "pixels": [
+        1440,
+        900
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-computer-1440x900.jpg",
+      "screen": "gp-computer",
+      "viewport": [
+        1440,
+        900
+      ],
+      "pixels": [
+        1440,
+        900
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-fire-1440x900.jpg",
+      "screen": "gp-fire",
+      "viewport": [
+        1440,
+        900
+      ],
+      "pixels": [
+        1440,
+        900
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "toss-home-390x844.jpg",
+      "screen": "toss-home",
+      "viewport": [
+        390,
+        844
+      ],
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "toss-category-390x844.jpg",
+      "screen": "toss-category",
+      "viewport": [
+        390,
+        844
+      ],
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "toss-article-390x844.jpg",
+      "screen": "toss-article",
+      "viewport": [
+        390,
+        844
+      ],
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-home-390x844.jpg",
+      "screen": "gp-home",
+      "viewport": [
+        390,
+        844
+      ],
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-industrial-390x844.jpg",
+      "screen": "gp-industrial",
+      "viewport": [
+        390,
+        844
+      ],
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-energy-390x844.jpg",
+      "screen": "gp-energy",
+      "viewport": [
+        390,
+        844
+      ],
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-computer-390x844.jpg",
+      "screen": "gp-computer",
+      "viewport": [
+        390,
+        844
+      ],
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-fire-390x844.jpg",
+      "screen": "gp-fire",
+      "viewport": [
+        390,
+        844
+      ],
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "toss-home-320x700.jpg",
+      "screen": "toss-home",
+      "viewport": [
+        320,
+        700
+      ],
+      "pixels": [
+        320,
+        700
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "toss-category-320x700.jpg",
+      "screen": "toss-category",
+      "viewport": [
+        320,
+        700
+      ],
+      "pixels": [
+        320,
+        700
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "toss-article-320x700.jpg",
+      "screen": "toss-article",
+      "viewport": [
+        320,
+        700
+      ],
+      "pixels": [
+        320,
+        700
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-home-320x700.jpg",
+      "screen": "gp-home",
+      "viewport": [
+        320,
+        700
+      ],
+      "pixels": [
+        320,
+        700
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-industrial-320x700.jpg",
+      "screen": "gp-industrial",
+      "viewport": [
+        320,
+        700
+      ],
+      "pixels": [
+        320,
+        700
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-energy-320x700.jpg",
+      "screen": "gp-energy",
+      "viewport": [
+        320,
+        700
+      ],
+      "pixels": [
+        320,
+        700
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-computer-320x700.jpg",
+      "screen": "gp-computer",
+      "viewport": [
+        320,
+        700
+      ],
+      "pixels": [
+        320,
+        700
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "gp-fire-320x700.jpg",
+      "screen": "gp-fire",
+      "viewport": [
+        320,
+        700
+      ],
+      "pixels": [
+        320,
+        700
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": null
+    },
+    {
+      "file": "toss-home-768x1024.jpg",
+      "screen": "toss-home",
+      "viewport": [
+        768,
+        1024
+      ],
+      "pixels": [
+        768,
+        1024
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": "May contain lower unpainted capture area; supplemental tablet evidence"
+    },
+    {
+      "file": "toss-category-768x1024.jpg",
+      "screen": "toss-category",
+      "viewport": [
+        768,
+        1024
+      ],
+      "pixels": [
+        768,
+        1024
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": "May contain lower unpainted capture area; supplemental tablet evidence"
+    },
+    {
+      "file": "toss-article-768x1024.jpg",
+      "screen": "toss-article",
+      "viewport": [
+        768,
+        1024
+      ],
+      "pixels": [
+        768,
+        1024
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": "May contain lower unpainted capture area; supplemental tablet evidence"
+    },
+    {
+      "file": "gp-home-768x1024.jpg",
+      "screen": "gp-home",
+      "viewport": [
+        768,
+        1024
+      ],
+      "pixels": [
+        768,
+        1024
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": "May contain lower unpainted capture area; supplemental tablet evidence"
+    },
+    {
+      "file": "gp-industrial-768x1024.jpg",
+      "screen": "gp-industrial",
+      "viewport": [
+        768,
+        1024
+      ],
+      "pixels": [
+        768,
+        1024
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": "May contain lower unpainted capture area; supplemental tablet evidence"
+    },
+    {
+      "file": "gp-energy-768x1024.jpg",
+      "screen": "gp-energy",
+      "viewport": [
+        768,
+        1024
+      ],
+      "pixels": [
+        768,
+        1024
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": "May contain lower unpainted capture area; supplemental tablet evidence"
+    },
+    {
+      "file": "gp-computer-768x1024.jpg",
+      "screen": "gp-computer",
+      "viewport": [
+        768,
+        1024
+      ],
+      "pixels": [
+        768,
+        1024
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": "May contain lower unpainted capture area; supplemental tablet evidence"
+    },
+    {
+      "file": "gp-fire-768x1024.jpg",
+      "screen": "gp-fire",
+      "viewport": [
+        768,
+        1024
+      ],
+      "pixels": [
+        768,
+        1024
+      ],
+      "format": "JPEG",
+      "type": "baseline",
+      "limitation": "May contain lower unpainted capture area; supplemental tablet evidence"
+    },
+    {
+      "file": "toss-menu-390.jpg",
+      "screen": "toss-menu-390",
+      "pixels": [
+        380,
+        822
+      ],
+      "format": "JPEG",
+      "type": "interaction",
+      "limitation": null
+    },
+    {
+      "file": "gp-fire-menu-390.jpg",
+      "screen": "gp-fire-menu-390",
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "interaction",
+      "limitation": "Background diagram failed first load; use for menu geometry only"
+    },
+    {
+      "file": "gp-computer-dialog-answer-390.jpg",
+      "screen": "gp-computer-dialog-answer-390",
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "interaction",
+      "limitation": null
+    },
+    {
+      "file": "gp-fire-zoom-320.jpg",
+      "screen": "gp-fire-zoom-320",
+      "pixels": [
+        320,
+        700
+      ],
+      "format": "JPEG",
+      "type": "interaction",
+      "limitation": null
+    },
+    {
+      "file": "gp-energy-zoom-320.jpg",
+      "screen": "gp-energy-zoom-320",
+      "pixels": [
+        320,
+        700
+      ],
+      "format": "JPEG",
+      "type": "interaction",
+      "limitation": null
+    },
+    {
+      "file": "gp-fire-practice-result-390.jpg",
+      "screen": "gp-fire-practice-result-390",
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "interaction",
+      "limitation": null
+    },
+    {
+      "file": "gp-computer-dialog-keyboard-390x844.jpg",
+      "screen": "gp-computer-dialog-keyboard",
+      "viewport": [
+        390,
+        844
+      ],
+      "pixels": [
+        390,
+        844
+      ],
+      "format": "JPEG",
+      "type": "interaction",
+      "limitation": "Documents visible question modal keyboard focus; browser toolbar focus not captured"
+    }
+  ],
+  "archive_url": "https://chatgpt.com/library?file_id=libfile_9ef7c097654481918136dcc158952699&account_id=personal",
+  "baseline_count": 32,
+  "interaction_count": 7,
+  "total_count": 39
+}

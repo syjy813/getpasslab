@@ -1,3 +1,4 @@
+import {seriesOutputAdditions,seriesRelease,beforePendingOutput} from './read-pending-release.mjs';
 import {sasugoldaeOutputAdditions} from './read-sasugoldae-release.mjs';
 import {hotelRelease, assertHotelRelease} from './read-hotel-two-parter-release.mjs';
 assertHotelRelease();
@@ -73,7 +74,7 @@ const beforeSeoBreadcrumbs=(file,bytes)=>{
 assert.equal(Object.keys(release.source).length,8);
 assert.deepEqual(Object.keys(release.source).sort(),Object.keys(original.source).sort(),'same eight reviewed article identities');
 assert.deepEqual(release.assets,original.assets,'all forty reviewed image bytes remain unchanged');
-for(const [file,sha] of Object.entries({...release.source,...release.assets}))assert.equal(hash(beforeBulkVisuals(file,fs.readFileSync(file))),sha,file);
+for(const [file,sha] of Object.entries({...release.source,...release.assets}))assert.equal(hash(beforeBulkVisuals(file,beforePendingOutput(file,fs.readFileSync(file)))),sha,file);
 const sitemap=walk('dist').filter(f=>f.endsWith('.xml')).map(f=>fs.readFileSync(f,'utf8')).join('');
 assert.equal(sitemap.includes('<loc>https://getpasslab.co.kr/facility-management/qualifications/</loc>'),!preview,'new populated category is searchable only in publication mode');
 let links=0;
@@ -141,10 +142,11 @@ const addedVisualImages=publicSectorVisuals.images.filter(r=>!r.existing).map(vi
 for(const row of publicSectorVisuals.images)assert.equal(hash(fs.readFileSync(visualOutput(row))),row.sha256,'approved public-sector output: '+row.publicPath);
 // Five-category IA adds two listing URLs; every old article and /jobs/ URL stays.
 const facilityIANewListings = ['dist/facility-management/intro/index.html', 'dist/facility-management/stories/index.html'];
-assert.deepEqual(files,[...thumbnailOutputFiles,...facilityIANewListings,...sasugoldaeOutputAdditions,...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...hospitalOutputAdditions,...departmentStoreOutputAdditions,...martOutputAdditions,...hospitalExtraOutputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same approved routes and images plus two five-category IA listings and three thumbnails');
+assert.deepEqual(files,[...seriesOutputAdditions,...thumbnailOutputFiles,...facilityIANewListings,...sasugoldaeOutputAdditions,...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...hospitalOutputAdditions,...departmentStoreOutputAdditions,...martOutputAdditions,...hospitalExtraOutputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===seriesRelease.compiledStyle.beforePath?seriesRelease.compiledStyle.path:f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same approved routes and images plus two five-category IA listings and three thumbnails');
 let unchanged=0;
 const approvedRenders=new Set([...publicSectorVisuals.images.filter(r=>r.existing).map(visualOutput),...bulkVisuals.images.map(bulkOutput)]);
 for(const [file,sha] of Object.entries(baseline)){
+ if(file===seriesRelease.compiledStyle.beforePath){assert.equal(hash(beforePendingOutput(seriesRelease.compiledStyle.path,fs.readFileSync(seriesRelease.compiledStyle.path))),sha,'approved table CSS predecessor');continue;}
  if(file===headingCSS.previousPath)continue; // Replacement is hash-pinned above.
  if(file==='dist/favicon-approved-v1.png'){
   assert.equal(hash(fs.readFileSync(file)),'b78bfddaa9386745375ae07c5f1f18df6c9312643bd85caad72857c361c3a2c0','approved navy-brand PNG');
@@ -153,7 +155,7 @@ for(const [file,sha] of Object.entries(baseline)){
  // Facility lists/related links and XML reflect the reviewed release. Native
  // guard separately pins old source files and the three PR245 SVG renders.
  if(file.startsWith('dist/facility-management/')||file.endsWith('.xml')||approvedRenders.has(file))continue;
- const protectedBytes=beforeSeoBreadcrumbs(file,beforeSearchBranding(file,beforeBulkVisuals(file,fs.readFileSync(file))));
+ const protectedBytes=beforeSeoBreadcrumbs(file,beforeSearchBranding(file,beforeBulkVisuals(file,beforePendingOutput(file,fs.readFileSync(file)))));
  assert.equal(hash(protectedBytes),sha,file+': existing public bytes protected');unchanged++;
 }
 console.log('[Facility release] PASS',JSON.stringify({articles:8,images:40,links,mode:preview?'private-preview':'publication-candidate',publicFiles:files.length,unchangedPublicFiles:unchanged,date:release.plannedPublicationDate}));

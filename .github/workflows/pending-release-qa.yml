@@ -1,0 +1,41 @@
+name: Pending release integration QA
+on:
+  pull_request:
+    branches: [main]
+    paths: ['src/**', 'scripts/*pending-release*', 'scripts/*thumbnail*', 'scripts/qa-industrial-mobile-table.mjs', 'docs/audits/2026-11-18-pending-release/**', '.github/workflows/pending-release-qa.yml']
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/check-pending-release.mjs
+      - run: node --test scripts/test-facility-thumbnail.mjs scripts/test-facility-thumbnail-fullbleed.mjs
+      - run: npm run check:facility-ia
+      - run: npm run check:seo
+      - run: npm run check:public-content
+      - name: Install browser tools
+        run: |
+          npm install --prefix /tmp/pending-tools --no-package-lock playwright@1.62.1
+          /tmp/pending-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Current responsive checks
+        env:
+          QA_PLAYWRIGHT_MODULE: /tmp/pending-tools/node_modules/playwright
+        run: |
+          python3 -m http.server 4321 --bind 127.0.0.1 --directory dist >/tmp/pending-server.log 2>&1 &
+          for n in $(seq 1 30); do curl -fsS http://127.0.0.1:4321/ >/dev/null && break; sleep 1; done
+          node scripts/qa-pending-release.cjs
+          node scripts/qa-industrial-mobile-table.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pending-release-qa
+          path: qa-results/

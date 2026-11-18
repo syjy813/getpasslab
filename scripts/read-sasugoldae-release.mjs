@@ -1,3 +1,4 @@
+import {beforePendingRelease,seriesRelease} from './read-pending-release.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -14,6 +15,7 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 // Restore only the two approved additions before running immutable older guards.
 // Every other byte continues to be checked against its original release hash.
 export function beforeSasugoldae(file, bytes) {
+  bytes=beforePendingRelease(file, bytes);
   bytes = beforeFacilityListLayout(file, bytes);
   const changes = {
     'src/components/FacilityCard.astro': [
@@ -38,5 +40,5 @@ export function assertSasugoldaeRelease() {
     [sasugoldaeRelease.source, sasugoldaeRelease.sourceSha256],
     [sasugoldaeRelease.hero.master, sasugoldaeRelease.hero.masterSha256],
     [sasugoldaeRelease.hero.publicFile, sasugoldaeRelease.hero.webpSha256],
-  ]) assert.equal(sha(fs.readFileSync(file)), hash, file + ': approved sasugoldae release');
+  ]) assert.equal(sha(beforePendingRelease(file,fs.readFileSync(file))), hash, file + ': approved sasugoldae release');
 }

@@ -2,6 +2,14 @@
 
 실행 지침은 [AGENTS.md](AGENTS.md). 과거 작업은 Git·PR·[audits](docs/audits/), 이전 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)를 참조한다.
 
+## 현재 작업 — 미배포 작업 통합 출시
+
+- 사용자 승인: **조회수 정렬 PR #278을 제외한 전체 미반영 작업의 실서버 배포**. 배포 승인은 유지한다.
+- 브랜치 `release/pending-except-view-sort-20261118`, 기준 `main@bfe206af`에서 #80·#208·#225·#246·#255·#295·#296의 미반영 부분만 통합. 원본 PR의 오래된 제품·설정·검사 수정 전체를 병합하지 않는다.
+- 구현: 사수골대 후속 8편 공개 연결·ep.0 교정·9종 이미지·마트 희망편 수정, 산업안전 모바일 표, 에너지 3챕터, 보조 가이드·템플릿. 공개글 24→32편. 조회수 정렬/수집·예약·분석실 변경 없음.
+- 로컬 594페이지 Build·SEO 오류 0·공개 콘텐츠 오류 0·32편 IA/링크·기존 소스/발행 보호·템플릿 15검사 PASS. 원격 CI·배포·Production은 아직 미완료.
+- 정본 체크포인트: [통합 출시 audit](docs/audits/2026-11-18-pending-release/README.md). 다음: PR CI 확인 → 실패한 검사만 보완 → 승인 범위 병합/Pages/Production 확인.
+
 ## 기준 상태
 
 - 갱신: **2026-11-17 KST**. 제품 기준 `main@4bd413481e5821dd89aa351aa30526d0bb3def73` ([PR #291](https://github.com/syjy813/getpasslab/pull/291) squash 병합). 후속 완료 기록은 문서만 변경한다.

@@ -44,6 +44,5 @@ for(const row of articles){
 }
 const home=load('/facility-management/');
 const homeHospital=articles.filter(row=>home.some(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route));
-assert(homeHospital.some(row=>row.slug==='hobyeongbaekma-hospital-large-university'),'ep.2-3 is visible in six-card home slice');
-assert.equal(homeHospital.filter(row=>row.slug!=='hobyeongbaekma-hospital-large-university').length,0,'older hospital articles remain in category after sasugoldae advances the home slice');
+assert.equal(homeHospital.length,0,'hospital articles retained in category after eight new episodes advance the home slice');
 console.log('Hospital series: 3 pages, images, links, sources visibility, dates, canonical, Article, cards and sitemap PASS ('+(preview?'private preview':'publication')+')');

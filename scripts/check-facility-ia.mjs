@@ -6,7 +6,7 @@ const root = 'dist/facility-management';
 const expected = [
   ['intro', '시설관리 입문·용어', 1],
   ['career', '취업·커리어', 8],
-  ['stories', '시설 이야기', 11],
+  ['stories', '시설 이야기', 19],
   ['qualifications', '법정선임·자격 활용', 4],
 ];
 const walk = node => [node, ...(node.childNodes ?? []).flatMap(walk)];
@@ -41,7 +41,7 @@ const publishedUrls = fs.readdirSync('src/content/facility').filter(file => file
   assert(route, `${file}: route category`);
   return [`/facility-management/${route}/${file.slice(0, -3)}/`];
 });
-assert.equal(publishedUrls.length, 24, 'published article baseline');
+assert.equal(publishedUrls.length, 32, 'published article baseline');
 assert.deepEqual(allCategoryUrls.sort(), publishedUrls.sort(), 'five-category IA covers all published articles once, at their original URLs');
 for (const url of publishedUrls) {
   const nodes = load(url.replace('/facility-management/', ''));
