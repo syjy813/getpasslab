@@ -4,7 +4,7 @@ description: 기계설비유지관리자 경력확인서 작성·직인 기준, 
 category: qualifications
 status: published
 publishedAt: '2026-11-05'
-updatedAt: '2026-11-05'
+updatedAt: '2026-11-19'
 reviewedAt: '2026-11-05'
 featured: false
 summary:
@@ -91,7 +91,7 @@ legalReview: true
 | 위탁관리업체 | 발주자·건물 관리주체 | **발주자와 위탁업체의 계약관계 증빙이 있으면 조건부 인정 가능** |
 | 발주자와 위탁관리업체가 모두 기재 | 발주자 또는 위탁관리업체 | 협회 안내상 어느 한쪽 직인 인정 가능 |
 
-<figure><img src="/images/facility-drafts/12/03-employer-and-stamps.webp" alt="경력확인서 직인 주체: 발주자 소속 보험 사업자명: 발주자, 위탁업체 소속 보험 사업자명: 위탁업체, 위탁업체 소속 직인: 발주자" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
+<figure><img src="/images/facility-drafts/12/03-employer-and-stamps.webp" alt="경력확인서 직인 기준: 보험 사업자명이 발주자면 발주자 직인, 위탁업체면 위탁업체 직인. 위탁업체 소속자가 발주자 직인을 받는 경우 계약관계 증빙 제출 시 조건부 인정" width="1440" height="1036" loading="lazy" decoding="async" /></figure>
 
 *단순히 건물에서 일했다는 이유로 아무 직인을 받아도 되는 것은 아니다. 위 표는 협회 안내에 있는 대표 사례를 단순화한 것이다.*
 
