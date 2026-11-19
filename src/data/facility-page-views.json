@@ -14,7 +14,7 @@
     "requestedEndDate": "yesterday",
     "timeZone": "Asia/Seoul"
   },
-  "fetchedAt": "2026-11-19T02:20:08.316Z",
+  "fetchedAt": "2026-11-19T06:32:47.290Z",
   "articleCount": 32,
   "recordedArticleCount": 10,
   "totalArticleViews": 51,
@@ -4129,5 +4129,5 @@
     "hour": 9,
     "minute": 0
   },
-  "sourceCommit": "e781a4b21878d87aa4d5d19f7083f9a24b4148b4"
+  "sourceCommit": "8829140974b13185cd1258fd0a7b6b42da50efe2"
 }
