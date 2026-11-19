@@ -104,6 +104,7 @@ const facilityIAFiles = new Set([
   'src/pages/facility-management/[category]/index.astro',
   'src/pages/facility-management/index.astro',
   'src/styles/facility.css',
+  'src/styles/facilityDiscovery.css',
 ]);
 const facilityIANewRoutes = new Set([
   'dist/facility-management/intro/index.html',

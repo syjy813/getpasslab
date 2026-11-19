@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { parse } from 'parse5';
+import { discoveryUI, beforeDiscoveryUI } from './read-facility-discovery-ui.mjs';
+
+for (const file of Object.keys(discoveryUI.files)) beforeDiscoveryUI(file, fs.readFileSync(file));
 
 const root = 'dist/facility-management';
 const expected = [
@@ -21,6 +24,7 @@ const categoryNav = home.find(node => node.tagName === 'nav' && hasClass(node, '
 assert(categoryNav, 'home category navigation');
 const mainCategoryLinks = walk(categoryNav).filter(node => node.tagName === 'a' && hasClass(node, 'facility-category-link'));
 assert.deepEqual(mainCategoryLinks.map(node => attr(node, 'href')), expected.map(([slug]) => `/facility-management/${slug}/`));
+assert(home.indexOf(categoryNav) < home.findIndex(node => hasClass(node, 'facility-featured')), 'topic choices precede the introductory article');
 
 const allCategoryUrls = [];
 for (const [slug, label, count] of expected) {
@@ -31,6 +35,18 @@ for (const [slug, label, count] of expected) {
   const urls = cardUrls(nodes);
   assert.equal(urls.length, count, `${slug}: card count`);
   assert.equal(new Set(urls).size, count, `${slug}: no duplicate articles`);
+  const topics = nodes.find(node => node.tagName === 'nav' && hasClass(node, 'facility-browse-topics'));
+  assert(topics, `${slug}: topic navigation before articles`);
+  const links = walk(topics).filter(node => node.tagName === 'a');
+  assert.deepEqual(links.map(node => attr(node, 'href')), expected.map(([item]) => `/facility-management/${item}/`));
+  assert.deepEqual(links.filter(node => attr(node, 'aria-current') === 'page').map(node => attr(node, 'href')), [`/facility-management/${slug}/`], `${slug}: visible current location`);
+  assert(nodes.indexOf(topics) < nodes.findIndex(node => hasClass(node, 'facility-category-list')), `${slug}: navigation is available before the feed`);
+  const jumps = nodes.find(node => hasClass(node, 'facility-group-jumps'));
+  if (jumps) for (const link of walk(jumps).filter(node => node.tagName === 'a')) {
+    const target = nodes.find(node => attr(node, 'id') === attr(link, 'href')?.slice(1));
+    assert(target && hasClass(target, 'facility-category-subgroup'), `${slug}: jump reaches a real group`);
+    assert(content(link).includes(`${cardUrls(walk(target)).length}편`), `${slug}: jump count matches articles`);
+  }
   allCategoryUrls.push(...urls);
 }
 

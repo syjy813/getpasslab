@@ -1,0 +1,35 @@
+{
+  "baseCommit": "292509f9563dd2b6add0e8a520357f3061d2b643",
+  "build": {
+    "pages": 594,
+    "result": "PASS"
+  },
+  "localChecks": [
+    "check-facility-launch",
+    "check-facility-publication",
+    "check-facility-related-links",
+    "check-pending-release",
+    "check-facility-ia",
+    "check-seo: 0 errors / 12 existing warnings",
+    "check-public-content: 0 errors",
+    "git diff --check",
+    "node --check scripts/qa-facility-launch.cjs"
+  ],
+  "browser": {
+    "preview": "build output copied to supported static preview; not Production",
+    "desktop": true,
+    "narrow": {
+      "method": "400% browser zoom",
+      "cssViewport": 340,
+      "documentWidth": 337,
+      "topicLinkFontPx": 14,
+      "topicLinkHeightPx": 44,
+      "keyboardShortcut": "#sasugoldae",
+      "headingTopPx": 160,
+      "gnbBottomPx": 57
+    },
+    "physicalMobileDevice": false
+  },
+  "responsiveCI": "pending PR run: 320/390/768/1440",
+  "production": "not deployed"
+}

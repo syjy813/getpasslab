@@ -2,6 +2,14 @@
 
 실행 지침은 [AGENTS.md](AGENTS.md). 과거 작업은 Git·PR·[audits](docs/audits/), 이전 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)를 참조한다.
 
+## 현재 작업 — 시설 메인·목록 UX/UI 검토안
+
+- **2026-11-19, Production 미반영.** 기준 `main@292509f9563dd2b6add0e8a520357f3061d2b643`, 브랜치 `feat/facility-discovery-ui-20261119`. 사용자 요청: “UX/UI 개편 진행하자”. 구현 승인 범위에서 검토용 변경을 준비하며 이번 개편의 main 병합·실서버 배포 승인은 별도다.
+- 메인: 주제 4개를 입문 소개보다 먼저 배치, 모바일 2열·PC 4열, 입문 소개를 작은 가로 카드로 정리. 목록: 카테고리 이동을 피드 앞으로 옮기고 현재 위치 표시, 시리즈/취업 하위 모음은 실제 편수와 기본 HTML 바로가기 제공.
+- 회차 오름차순·홈 최신순·32편 원고/URL/이미지·자격증·광고·GA4·조회수 정렬 제외 상태 보존. 전용 CSS는 메인·카테고리에서만 로드.
+- 로컬 Build·IA/링크·발행/소스 보호·통합 검사·SEO/공개 콘텐츠 PASS. 브라우저: 데스크톱 및 확대에 따른 340 CSS px에서 주제 배치·넘침·44px 카테고리 링크·사수골대 키보드 이동 검토. 실물 모바일 확인으로 확대하지 않는다. 4폭 회귀 CI는 PR에서 확인 예정.
+- 다음: PR 검증 결과 확인 → 개편 화면 사용자 검토 → 승인 시 main 병합/Pages/Production 확인. 근거·스크린샷: [개편 기록](docs/audits/2026-11-19-facility-discovery-ui/README.md).
+
 ## 최근 완료 — 시리즈 회차 오름차순
 
 - **2026-11-18 Production 확인 완료.** [PR #298](https://github.com/syjy813/getpasslab/pull/298) 병합 `e37759a33695aab38e43019f981ad197bcfe2683`, 검증/병합 tree `4d4c03332f553afafa9b58ea4c6288e86f5181b0` 동일.
