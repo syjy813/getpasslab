@@ -1,0 +1,62 @@
+{
+  "baseCommit": "292509f9563dd2b6add0e8a520357f3061d2b643",
+  "build": {
+    "pages": 594,
+    "result": "PASS"
+  },
+  "localChecks": [
+    "check-facility-launch",
+    "check-facility-publication",
+    "check-facility-related-links",
+    "check-pending-release",
+    "check-facility-ia",
+    "check-seo: 0 errors / 12 existing warnings",
+    "check-public-content: 0 errors",
+    "git diff --check",
+    "node --check scripts/qa-facility-launch.cjs"
+  ],
+  "browser": {
+    "preview": "build output copied to supported static preview; not Production",
+    "desktop": true,
+    "narrow": {
+      "method": "400% browser zoom",
+      "cssViewport": 340,
+      "documentWidth": 337,
+      "topicLinkFontPx": 14,
+      "topicLinkHeightPx": 44,
+      "keyboardShortcut": "#sasugoldae",
+      "headingTopPx": 160,
+      "gnbBottomPx": 57
+    },
+    "physicalMobileDevice": false
+  },
+  "responsiveCI": {
+    "publicFacility": {
+      "run": 44427013857,
+      "job": 135234355466,
+      "result": "success",
+      "widths": [
+        320,
+        390,
+        768,
+        1440
+      ]
+    },
+    "otherSuccessfulRuns": {
+      "SEO": 44427013799,
+      "pendingReleaseIntegration": 44427013786,
+      "certificationDiscovery": 44427013830,
+      "mobileAdvertisement": 44427013911
+    },
+    "privatePreviewCI": "browser-tool installation still in progress when recorded; not reported as success",
+    "privateCoverage": "local 594-page build PASS; all 39 facility body/inline-style/stylesheet bytes identical to public; reuse successful public 4-width layout checks under AGENTS identity rule; private robots verified separately",
+    "additionalCI": "fire/computer-literacy browser runs still in progress; their sources/dependencies and all output bytes are unchanged from validated main"
+  },
+  "production": "not deployed",
+  "testedCommit": "13603363853253ec64a6f5017f26ff7fee34286f",
+  "privateBuild": {
+    "pages": 594,
+    "result": "PASS",
+    "equivalence": "preview-equivalence.json"
+  }
+}

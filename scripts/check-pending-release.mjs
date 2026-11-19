@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
 import {seriesRelease,beforePendingRelease} from './read-pending-release.mjs';
+import {beforeDiscoveryUI} from './read-facility-discovery-ui.mjs';
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const nodes=n=>[n,...(n.childNodes||[]).flatMap(nodes)];
 const attr=(n,k)=>n?.attrs?.find(a=>a.name===k)?.value;
@@ -12,7 +13,7 @@ const preview=process.env.FACILITY_DRAFT_PREVIEW==='1';
 for(const [file,row] of Object.entries(seriesRelease.changes)) assert.equal(hash(beforePendingRelease(file,fs.readFileSync(file))),row.beforeSha256,file);
 const episodeOrder=JSON.parse(fs.readFileSync('docs/audits/2026-11-18-series-episode-order/manifest.json'));
 for(const [file,sha] of Object.entries(seriesRelease.protected)){
- let bytes=fs.readFileSync(file);
+ let bytes=beforeDiscoveryUI(file,fs.readFileSync(file));
  if(file===episodeOrder.file){
   assert.equal(hash(bytes),episodeOrder.sha256,file+': exact approved episode-order change');
   bytes=Buffer.from(episodeOrder.before,'base64');

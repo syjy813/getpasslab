@@ -7,6 +7,7 @@ import FacilityLearningLinks from '../../../components/FacilityLearningLinks.ast
 import { FACILITY_CATEGORIES, facilityCategoryPath, facilityNavigationCategorySlug, sortFacilityArticles } from '../../../config/facility';
 import { withBase } from '../../../config/url';
 import { SITE } from '../../../config/site';
+import '../../../styles/facilityDiscovery.css';
 export async function getStaticPaths() {
   const articles = await getCollection('facilityArticles', article => article.data.status === 'published' || (import.meta.env.FACILITY_DRAFT_PREVIEW === '1' && article.id !== 'reading-job-postings'));
   const primaryCategories = FACILITY_CATEGORIES.map(category => ({
@@ -41,26 +42,33 @@ const sortSeriesEpisodes = (entries: CollectionEntry<'facilityArticles'>[]) =>
     return majorA - majorB || minorA - minorB || a.id.localeCompare(b.id);
   });
 const groups = category.slug === 'career' ? [
-  { title: '취업 가이드', articles: articles.filter(article => article.data.category !== 'jobs' || article.id === 'public-sector-comparison') },
-  { title: '기업·채용 분석', articles: articles.filter(article => article.data.category === 'jobs' && article.id !== 'public-sector-comparison') },
+  { id: 'employment-guides', title: '취업 가이드', articles: articles.filter(article => article.data.category !== 'jobs' || article.id === 'public-sector-comparison') },
+  { id: 'company-analysis', title: '기업·채용 분석', articles: articles.filter(article => article.data.category === 'jobs' && article.id !== 'public-sector-comparison') },
 ] : category.slug === 'stories' ? [
-  { title: '호병백마 시리즈', articles: sortSeriesEpisodes(articles.filter(article => article.id.startsWith('hobyeongbaekma'))) },
-  { title: '사수골대 시리즈', articles: sortSeriesEpisodes(articles.filter(article => article.id.startsWith('sasugoldae'))) },
-  { title: '다른 시설 이야기', articles: articles.filter(article => !article.id.startsWith('hobyeongbaekma') && !article.id.startsWith('sasugoldae')) },
-] : [{ title: '', articles }];
+  { id: 'hobyeongbaekma', title: '호병백마 시리즈', articles: sortSeriesEpisodes(articles.filter(article => article.id.startsWith('hobyeongbaekma'))) },
+  { id: 'sasugoldae', title: '사수골대 시리즈', articles: sortSeriesEpisodes(articles.filter(article => article.id.startsWith('sasugoldae'))) },
+  { id: 'other-stories', title: '다른 시설 이야기', articles: articles.filter(article => !article.id.startsWith('hobyeongbaekma') && !article.id.startsWith('sasugoldae')) },
+] : [{ id: 'articles', title: '', articles }];
+const visibleGroups = groups.filter(group => group.articles.length > 0);
 const structuredData = [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(withBase(item.path), SITE.url).href })) }];
 ---
 <FacilityLayout title={`${category.name} — 시설의 모든 것 | GetPassLab`} description={`${category.description}. 시설의 모든 것에서 공개된 콘텐츠와 근거 자료를 확인하고, 관련 카테고리와 자격증 학습 페이지로 이어서 탐색하세요.`} robots={articles.length ? 'index, follow' : 'noindex, follow'} structuredData={structuredData}>
-  <div class="facility-category-page">
+  <div class="facility-category-page facility-discovery-category">
     <FacilityBreadcrumb items={legacyJobs ? [{ name: '취업·커리어', path: facilityCategoryPath('career') }, { name: category.name }] : [{ name: category.name }]} />
     <header class="facility-intro facility-category-header">
       <h1 class="gpl-h1">{category.name}</h1>
       <p class="gpl-body">{category.description}</p>
       <span class="gpl-caption">공개 콘텐츠 {articles.length}개</span>
     </header>
+    <nav class="facility-browse-topics" aria-label="시설관리 카테고리">
+      <ul class="facility-category-nav">{FACILITY_CATEGORIES.filter(item => availableCategorySlugs.has(item.slug)).map(item => <li><a href={withBase(facilityCategoryPath(item.slug))} aria-current={item.slug === (legacyJobs ? 'career' : category.slug) ? 'page' : undefined}>{item.name}</a></li>)}</ul>
+    </nav>
+    {visibleGroups.length > 1 && <nav class="facility-group-jumps" aria-label={`${category.name} 모음 바로가기`}>
+      {visibleGroups.map(group => <a href={'#' + group.id}><span>{group.title}</span><span class="facility-group-count">{group.articles.length}편 <span aria-hidden="true">↓</span></span></a>)}
+    </nav>}
     <section class="facility-section facility-category-list" aria-label={`${category.name} 콘텐츠`}>
-    {articles.length ? groups.filter(group => group.articles.length > 0).map((group, index) => (
-      <section class:list={['facility-category-subgroup', { 'facility-section': index > 0 }]} aria-label={group.title || `${category.name} 글 목록`}>
+    {articles.length ? visibleGroups.map((group, index) => (
+      <section id={group.id} class:list={['facility-category-subgroup', { 'facility-section': index > 0 }]} aria-label={group.title || `${category.name} 글 목록`}>
         {group.title && <div class="facility-section-head">
           <h2 class="gpl-h2">{group.title}</h2>
           {category.slug === 'career' && group.title === '기업·채용 분석' && (
@@ -71,7 +79,6 @@ const structuredData = [{ '@context': 'https://schema.org', '@type': 'Breadcrumb
       </section>
     )) : <div class="facility-empty"><h2 class="gpl-h3">콘텐츠를 준비하고 있습니다</h2><p>공개된 입문 안내나 관련 자격증 학습을 먼저 살펴보세요.</p><a href={withBase('/facility-management/intro/')}>시설관리 입문 살펴보기 →</a></div>}
   </section>
-  <section class="facility-section" aria-labelledby="related-categories-title"><h2 id="related-categories-title" class="gpl-h2">다른 카테고리 살펴보기</h2><nav aria-label="시설관리 카테고리"><ul class="facility-category-nav">{FACILITY_CATEGORIES.filter(item => availableCategorySlugs.has(item.slug)).map(item => <li><a href={withBase(facilityCategoryPath(item.slug))} aria-current={item.slug === (legacyJobs ? 'career' : category.slug) ? 'page' : undefined}>{item.name}</a></li>)}</ul></nav></section>
   <FacilityLearningLinks />
   </div>
 </FacilityLayout>

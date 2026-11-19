@@ -1,0 +1,54 @@
+/* Discovery surfaces only. Article reading and certification styles stay separate. */
+.facility-page .facility-discovery-home .facility-intro{padding-bottom:var(--space-6);border-bottom:0}
+.facility-discovery-home .facility-intro p{margin-bottom:0}
+.facility-discovery-home .facility-categories{padding-top:var(--space-6)}
+.facility-discovery-home .facility-section-head{margin-bottom:var(--space-4)}
+.facility-page .facility-discovery-home .facility-category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3)}
+.facility-page .facility-discovery-home .facility-category-link{
+  grid-template-columns:minmax(0,1fr) auto;gap:var(--space-3);padding:var(--space-4);
+  border-radius:var(--radius-lg)
+}
+.facility-discovery-home .facility-category-icon{width:32px;height:32px;border-radius:var(--radius-md)}
+.facility-discovery-home .facility-category-icon svg{width:22px;height:22px}
+.facility-discovery-home .facility-category-copy{grid-column:1 / -1;gap:var(--space-2)}
+.facility-discovery-home .facility-category-copy strong{font-size:var(--fs-body);word-break:keep-all;overflow-wrap:anywhere}
+.facility-discovery-home .facility-category-copy>span{display:none}
+.facility-discovery-home .facility-category-arrow{grid-column:2;grid-row:1;align-self:center}
+.facility-page .facility-discovery-home .facility-featured{padding-top:var(--space-8)}
+.facility-page .facility-discovery-home .facility-card--lead{
+  grid-template-columns:80px minmax(0,1fr);align-items:center;gap:var(--space-4);padding:var(--space-4)
+}
+.facility-discovery-home .facility-card--lead .facility-card-cover{border-radius:var(--radius-md)}
+.facility-discovery-home .facility-card--lead .facility-card-content{padding:0}
+.facility-discovery-home .facility-card--lead .facility-card-title{font-size:var(--fs-body);line-height:1.5}
+.facility-discovery-home .facility-card--lead .facility-card-description{display:none}
+.facility-discovery-home .facility-card--lead .facility-card-meta{margin-top:var(--space-2)}
+.facility-browse-topics{margin-top:var(--space-4)}
+.facility-browse-topics .facility-category-nav{margin:0;gap:var(--space-2)}
+.facility-browse-topics .facility-category-nav a{font-size:max(.875rem,var(--fs-caption));padding:8px 12px;min-height:44px}
+.facility-group-jumps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3);margin-top:var(--space-6)}
+.facility-group-jumps a{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-2);
+  min-height:56px;padding:var(--space-3) var(--space-4);border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);color:var(--gray-900);font-size:max(.875rem,var(--fs-caption));
+  font-weight:var(--fw-semibold);text-decoration:none
+}
+.facility-group-count{color:var(--primary-700);white-space:nowrap;font-size:var(--fs-label)}
+.facility-group-count>span{margin-left:var(--space-2)}
+.facility-discovery-category .facility-category-subgroup{scroll-margin-top:calc(var(--gnb-h) + var(--space-6))}
+.facility-group-jumps a:focus-visible{background:var(--primary-50);border-color:var(--primary-500)}
+@media(hover:hover) and (pointer:fine){
+  .facility-group-jumps a:hover{background:var(--primary-50);border-color:var(--primary-500)}
+}
+@media(min-width:640px){
+  .facility-page .facility-discovery-home .facility-category-grid{gap:var(--space-4)}
+  .facility-discovery-home .facility-category-copy>span{display:block}
+  .facility-page .facility-discovery-home .facility-card--lead{grid-template-columns:144px minmax(0,1fr);padding:var(--space-4);gap:var(--space-6)}
+  .facility-discovery-home .facility-card--lead .facility-card-title{font-size:var(--fs-h3)}
+  .facility-discovery-home .facility-card--lead .facility-card-description{display:-webkit-box;-webkit-line-clamp:2;font-size:var(--fs-caption)}
+  .facility-browse-topics .facility-category-nav a{padding-inline:var(--space-4)}
+}
+@media(min-width:1024px){
+  .facility-page .facility-discovery-home .facility-category-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .facility-page .facility-discovery-home .facility-category-link{padding:var(--space-6)}
+}

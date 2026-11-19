@@ -1,0 +1,177 @@
+{
+  "publicBuildPages": 594,
+  "privateBuildPages": 594,
+  "identicalBodyAndStyles": 39,
+  "identicalSharedCssFiles": 6,
+  "privateRobots": "noindex, nofollow on all 39 facility routes",
+  "method": "complete body bytes, inline styles, stylesheet URLs and shared CSS bytes; same source/dependencies/environment",
+  "reusedBrowserQA": {
+    "run": 44427013857,
+    "job": 135234355466,
+    "result": "success",
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ]
+  },
+  "proofs": [
+    {
+      "path": "facility-management/career/employment-types/index.html",
+      "bodySha256": "07a0a117f30cf0398c986f3afbeaeca73dbf2735c3a40f1d3ad3e59a8637510c"
+    },
+    {
+      "path": "facility-management/career/first-job/index.html",
+      "bodySha256": "f660b3ec2f8cd56c084854fce0799476bfc9ac7390055b749688f87b3072ae2f"
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma/index.html",
+      "bodySha256": "101eb5133a22c27c6e23257fc44c82d580a5dc01a94d8de8d2f87fb4d216c483"
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-department-store-despair/index.html",
+      "bodySha256": "df14c9d2b9840116e4a0c3ca21c368b19d699d4432d369ca4299088afea9adc3"
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-department-store-hope/index.html",
+      "bodySha256": "324dec55216025fc699c1c3ee4a89702321553e807a78878dcb6c77dffaa86d6"
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-hospital-despair/index.html",
+      "bodySha256": "785f109bdd597106346ca523915b11a9f0386635d454fd3587ad8bc6b23c60c5"
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-hospital-hope/index.html",
+      "bodySha256": "ece012f7a58a6161b51c90de37ea35ca0bf6eff10d276054d3e4a4fca8b18659"
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-hospital-large-university/index.html",
+      "bodySha256": "c96a2f908acfe73bc3d76a0e0c7c175820a856b71be4c5378d2698ffe995327b"
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-hotel-despair/index.html",
+      "bodySha256": "dda021943f46139ee8cd933b5b3988424ff14eb343fa5b4e1b6ae5822ac06a96"
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-hotel-hope/index.html",
+      "bodySha256": "9dcb39c2e0a0884f2677afba55a6d65c676e60086e9f30cb6497f50336f33167"
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-mart-despair/index.html",
+      "bodySha256": "0aef5678ac3d962a3629229eb1d15a212c59e5134ea94207ab9cd350de9f83bf"
+    },
+    {
+      "path": "facility-management/career/hobyeongbaekma-mart-hope/index.html",
+      "bodySha256": "884f00a163db57a2c4f0ace5b1fa67d29e0cbfdebcc4613014b8c933b6be6ac2"
+    },
+    {
+      "path": "facility-management/career/index.html",
+      "bodySha256": "cadf35f1415e67404c7e8245f1ba0823546c24d5353960109b4c520847f575e9"
+    },
+    {
+      "path": "facility-management/career/sasugoldae/index.html",
+      "bodySha256": "ca8c509b0a2f72e64c7739b62078efef53b453d351cea7f3dd1d27103d9e2edb"
+    },
+    {
+      "path": "facility-management/career/sasugoldae-golf-course-despair/index.html",
+      "bodySha256": "fba30a04ba89b849abe95e3aac71344fe37233501a741bb99bbd7ad3e7ed0481"
+    },
+    {
+      "path": "facility-management/career/sasugoldae-golf-course-hope/index.html",
+      "bodySha256": "dbc528a90f45fe4474ac79d5f3ada929ce7a37211b56a9011793add2ee3da43c"
+    },
+    {
+      "path": "facility-management/career/sasugoldae-sauna-despair/index.html",
+      "bodySha256": "7d836020368195d74be9500ea289300482706edfbe8ec850131a64a8a019b5a6"
+    },
+    {
+      "path": "facility-management/career/sasugoldae-sauna-hope/index.html",
+      "bodySha256": "b94a46315d97fb587139602faaaaca3bfd2b98bf4414703192ab841dd459511a"
+    },
+    {
+      "path": "facility-management/career/sasugoldae-swimming-pool-despair/index.html",
+      "bodySha256": "04cd9b132aaa6ba3676e950cf19787a929d30f9b42dbed41ada3fa6e0ce22c11"
+    },
+    {
+      "path": "facility-management/career/sasugoldae-swimming-pool-hope/index.html",
+      "bodySha256": "16ca417ced529d36ab9c795087c0162c1a9e15b4723808388d72e92223912bfc"
+    },
+    {
+      "path": "facility-management/career/sasugoldae-university-despair/index.html",
+      "bodySha256": "49285e267f175c98af50b1cdd92633507a2ee36d957ced6a1caf358746328cff"
+    },
+    {
+      "path": "facility-management/career/sasugoldae-university-hope/index.html",
+      "bodySha256": "92574670e107a98db2f365a6c00f76eaf00eb4719660d8c7f21cf7395099ecec"
+    },
+    {
+      "path": "facility-management/career/shifts-and-pay/index.html",
+      "bodySha256": "dcd98e4282f3675a068b7a11bdc3434210b1dcf71a00bfe2b13144495f17b944"
+    },
+    {
+      "path": "facility-management/career/what-is-facility-management/index.html",
+      "bodySha256": "2c0d550fddef9b6d71504b97fa56be72e9ef03a20004d75756be0adb35019c64"
+    },
+    {
+      "path": "facility-management/index.html",
+      "bodySha256": "62c352570db11d4b1d4154792d33403c568b9c0fcc582e840df373e4dce2355d"
+    },
+    {
+      "path": "facility-management/intro/index.html",
+      "bodySha256": "1edfcd9382770a33b1c516801d71f7dd6576dd51f38b90a2a5f2465bc5a86a68"
+    },
+    {
+      "path": "facility-management/jobs/hanfms/index.html",
+      "bodySha256": "6694f48e335e905f5dd948f4f676bcd3fa4fd724dd403ed0ad7859e36dbddcdf"
+    },
+    {
+      "path": "facility-management/jobs/index.html",
+      "bodySha256": "1ecd30331d55e8fee83f48eb3350af73728615c367b679fe3cba85b8736c7d14"
+    },
+    {
+      "path": "facility-management/jobs/kamcofmc/index.html",
+      "bodySha256": "b96137599a5b73e57cc7158d9477f062284d76a6418fcee67054a5bd45ebe50c"
+    },
+    {
+      "path": "facility-management/jobs/korailtech/index.html",
+      "bodySha256": "1d39387eb2c39368974f714c1dc0852d6be813f720911bb1f68c2a1e7b7d8cd1"
+    },
+    {
+      "path": "facility-management/jobs/postal-facilities/index.html",
+      "bodySha256": "c5954feea0fe42f45e9045da9fab6777a10b0ce3bbcc04bc06de5aa75626ff36"
+    },
+    {
+      "path": "facility-management/jobs/public-sector-comparison/index.html",
+      "bodySha256": "e9583e8f27edd7726ae72b83db0b68db434ecb098ec8a85c08811caaf032e7be"
+    },
+    {
+      "path": "facility-management/practice/index.html",
+      "bodySha256": "f6ac3e6539c778a5a43b3639d6bb6b75cf6367190a0095c9104112cc06147a3c"
+    },
+    {
+      "path": "facility-management/qualifications/boiler-inspection-manager/index.html",
+      "bodySha256": "ca14ed30cf2e98b8cdc9fa2fe80705041f4e025614ff5c308ba1b10496803f7b"
+    },
+    {
+      "path": "facility-management/qualifications/index.html",
+      "bodySha256": "9e9a696b29689a243bbd9d35ba7471c52426e0d6c83b4dae5e662fee453ee7ee"
+    },
+    {
+      "path": "facility-management/qualifications/mechanical-career-records/index.html",
+      "bodySha256": "b8ca4758564656056d220a468049dbb25912e080a1049ca6507432bac92bbc7a"
+    },
+    {
+      "path": "facility-management/qualifications/mechanical-maintainer-levels/index.html",
+      "bodySha256": "bc45f9debd222409f63a4f6083ff5de5c4a1c4dd63db37e250d129d42427d1e0"
+    },
+    {
+      "path": "facility-management/qualifications/statutory-appointments/index.html",
+      "bodySha256": "f280941b44d23045f3059045f3b6c1dad19aa1b54f68d09c89ca91708067e015"
+    },
+    {
+      "path": "facility-management/stories/index.html",
+      "bodySha256": "8157c0fbc037ac1c1ec1237dc11516a1ce04c6c894ce4740bd43e885bfe5e17f"
+    }
+  ]
+}

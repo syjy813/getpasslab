@@ -44,8 +44,8 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
           }
         }
 
-        // Both service homepages must share the same heading scale, left edge,
-        // intro spacing and section-heading hierarchy at every viewport.
+        // Both homes share typography and alignment. Facility discovery has
+        // its own compact spacing and puts topics before the introductory card.
         if (path === '/facility-management/' || path === '/certifications/') {
           const isFacilityHome = path === '/facility-management/';
           const geometry = await page.evaluate(isFacility => {
@@ -79,8 +79,13 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
           assert.equal(geometry.introPaddingTop,width >= 768 ? '16px' : '8px','compact intro top padding');
           if (isFacilityHome) {
             facilityHomeGeometry = geometry;
+            assert.equal(geometry.introPaddingBottom,'24px','compact discovery intro');
+            assert.equal(geometry.introBorder,'0px','no extra separator before topics');
+            assert.equal(geometry.sectionPaddingTop,'32px','compact lead section');
+            assert.equal(geometry.sectionHeadMarginBottom,'16px','compact discovery heading gap');
           } else {
-            assert.deepEqual(geometry, facilityHomeGeometry, width+': certification homepage matches facility heading hierarchy');
+            const sharedGeometry = value => Object.fromEntries(Object.entries(value).filter(([key]) => !['introPaddingBottom','introBorder','sectionPaddingTop','sectionHeadMarginBottom'].includes(key)));
+            assert.deepEqual(sharedGeometry(geometry), sharedGeometry(facilityHomeGeometry), width+': service homes retain shared typography and alignment');
             assert.equal(await page.locator('.certifications-home-intro h1').innerText(), '자격증의 모든 것');
             assert.equal(await page.locator('.certifications-home-section-head h2').innerText(), '자격증 선택');
             assert.equal(await page.locator('.certifications-home-intro .hero-badge').count(), 0, 'no redundant certification hero badge');
@@ -123,6 +128,15 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(await page.locator('.facility-category-list .facility-card').count(),
               counts[slug], 'existing article cards retained by category');
             if (slug === 'stories') assert.equal(await page.locator('.facility-category-list .facility-card[href="/facility-management/career/hobyeongbaekma-hospital-large-university/"]').count(),1,'hospital ep.2-3 category card');
+            const topicLinks = await page.locator('.facility-browse-topics a').evaluateAll(links => links.map(link => ({height:link.getBoundingClientRect().height,font:parseFloat(getComputedStyle(link).fontSize)})));
+            assert.equal(topicLinks.length,4,'all published topics available before feed');
+            assert(topicLinks.every(link => link.height>=44 && link.font>=14),'readable topic navigation with 44px targets');
+            if (slug === 'stories') {
+              await page.locator('.facility-group-jumps a[href="#sasugoldae"]').press('Enter');
+              const jump = await page.evaluate(() => ({hash:location.hash,top:document.querySelector('#sasugoldae h2').getBoundingClientRect().top,headerBottom:document.querySelector('.gnb').getBoundingClientRect().bottom}));
+              assert.equal(jump.hash,'#sasugoldae','keyboard series shortcut');
+              assert(jump.top>=jump.headerBottom && jump.top<=jump.headerBottom+160,'series heading visible below fixed navigation');
+            }
           }
           if (path === '/facility-management/') {
             assert.equal(await page.locator('.facility-intro .facility-eyebrow').count(),0,'top eyebrow removed');
@@ -131,6 +145,9 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
             assert.equal(await page.locator('.facility-card').count(),17,'one lead and at most six cards from each populated category');
             assert.equal(await page.locator('.facility-category-link').count(),4,'only four populated categories are linked');
+            const discovery = await page.evaluate(() => ({topics:document.querySelector('.facility-categories').getBoundingClientRect().top,lead:document.querySelector('.facility-featured').getBoundingClientRect().top,leadHeight:document.querySelector('.facility-card--lead').getBoundingClientRect().height}));
+            assert(discovery.topics<discovery.lead,'topics appear before introductory article');
+            assert(discovery.leadHeight<=220,'introductory card remains compact');
             const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
             assert.equal(new Set(routes).size,17,'no repeated home articles');
             const leadCover = page.locator('.facility-card--lead img');
