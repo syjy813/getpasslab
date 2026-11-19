@@ -2,6 +2,12 @@
 
 실행 지침은 [AGENTS.md](AGENTS.md). 과거 작업은 Git·PR·[audits](docs/audits/), 이전 인계는 [레거시 문서](docs/archives/AI_HANDOVER.legacy-2026-11-08.md)를 참조한다.
 
+## 현재 작업 — 시설관리 커뮤니티 검색 메타정보
+
+- 2026-11-19, 기준 `main@292509f`, 브랜치 `seo/facility-community-metadata-20261119`. 홈·6개 목록의 제목/설명 및 기존 OG/Twitter 신호 개선. 상세 글·URL·본문·이미지·IA·시리즈 순서·공개 상태 보존.
+- 구현 완료. 공개 빌드594페이지·SEO 오류0/기존 경고12·공개 콘텐츠 오류0·32편 IA/관련 링크/과거 소스 보호/시설 발행 검사 PASS. 출력1005개 중 메타정보를 바꾼7 HTML만 변경, 나머지998개 동일. 검토 모드와 최종 결과는 [작업 기록](docs/audits/2026-11-19-facility-search/README.md) 및 validation 참조.
+- Production 미배포. 현재 요청은 SEO 구현 범위이며 main 병합·배포 요청은 없음. 검색 노출/CTR 개선·색인 완료는 미확인. 다음 행동: PR 검증 결과 확인 후 사용자 배포 승인 범위에 따라 진행.
+
 ## 최근 완료 — 시리즈 회차 오름차순
 
 - **2026-11-18 Production 확인 완료.** [PR #298](https://github.com/syjy813/getpasslab/pull/298) 병합 `e37759a33695aab38e43019f981ad197bcfe2683`, 검증/병합 tree `4d4c03332f553afafa9b58ea4c6288e86f5181b0` 동일.
