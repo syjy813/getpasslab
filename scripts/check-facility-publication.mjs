@@ -27,6 +27,8 @@ assertBulkVisuals();
 await assertHobyeongbaekmaListThumbnails();
 
 const audit='docs/audits/2026-11-05-facility-publication/';
+// The audited 2026-11-19 editorial updates retain the original fact-review dates.
+const approvedEditorialUpdatedAt={kamcofmc:'2026-11-19','mechanical-career-records':'2026-11-19'};
 const release=JSON.parse(fs.readFileSync(audit+'manifest.json'));
 const original=JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/draft-manifest.json'));
 const articles=Object.values(JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/site-article-map.json')));
@@ -81,7 +83,10 @@ let links=0;
 for(const article of articles){
  const source=fs.readFileSync('src/content/facility/'+article.slug+'.md','utf8');
  assert.match(source,/^status: published$/m);
- for(const field of ['publishedAt','updatedAt','reviewedAt'])assert(source.includes(field+": '"+release.plannedPublicationDate+"'"),article.slug+': '+field);
+ for(const field of ['publishedAt','updatedAt','reviewedAt']){
+  const expected=field==='updatedAt'?(approvedEditorialUpdatedAt[article.slug]??release.plannedPublicationDate):release.plannedPublicationDate;
+  assert(source.includes(field+": '"+expected+"'"),article.slug+': '+field);
+ }
  const list=nodes(parse(fs.readFileSync('dist'+article.path+'index.html','utf8')));
  const meta=name=>attr(list.find(n=>n.tagName==='meta'&&attr(n,'name')===name),'content');
  assert.equal(meta('robots'),preview?'noindex, nofollow':'index, follow');
@@ -96,7 +101,7 @@ for(const article of articles){
  for(const image of images)assert(attr(image,'alt')&&attr(image,'width')&&attr(image,'height'));
  const data=list.filter(n=>n.tagName==='script'&&attr(n,'type')==='application/ld+json').flatMap(n=>{const d=JSON.parse(text(n));return Array.isArray(d)?d:[d]}).filter(d=>d['@type']==='Article');
  assert.equal(data.length,preview?0:1);
- if(!preview){assert.equal(data[0].datePublished,release.plannedPublicationDate);assert.equal(data[0].dateModified,release.plannedPublicationDate);assert(data[0].citation.length>0)}
+ if(!preview){assert.equal(data[0].datePublished,release.plannedPublicationDate);assert.equal(data[0].dateModified,approvedEditorialUpdatedAt[article.slug]??release.plannedPublicationDate);assert(data[0].citation.length>0)}
  assert.equal(sitemap.includes('<loc>https://getpasslab.co.kr'+article.path+'</loc>'),!preview);
  for(const n of list){const href=n.tagName==='a'?attr(n,'href'):null;if(href?.startsWith('/facility-management/')){assert(fs.existsSync('dist'+href.replace(/\/$/,'')+'/index.html'),href);links++}}
 }
