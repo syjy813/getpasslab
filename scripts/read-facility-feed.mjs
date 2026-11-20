@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
+import {beforeFacilityCareerThumbnails} from './read-facility-career-thumbnails.mjs';
 
 const delta = JSON.parse(fs.readFileSync('docs/audits/2026-11-15-facility-feed/delta.json'));
 const feedA = JSON.parse(fs.readFileSync('docs/audits/2026-11-20-facility-feed-a/delta.json'));
@@ -25,7 +26,7 @@ export function beforeFacilityFeed(file, bytes) {
 }
 
 export function beforeFacilityFeedA(file, bytes) {
-  return restoreSource(file, bytes, feedA.source[file]);
+  return restoreSource(file, beforeFacilityCareerThumbnails(file, bytes), feedA.source[file]);
 }
 
 export function beforeFacilityFeedCompiled(css) {

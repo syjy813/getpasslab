@@ -20,12 +20,14 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
 import {thumbnailOutputFiles, assertHobyeongbaekmaListThumbnails} from './read-hobyeongbaekma-list-thumbnails.mjs';
+import {careerThumbnailOutputFiles, assertFacilityCareerThumbnails} from './read-facility-career-thumbnails.mjs';
 import {electricOutputAdditions, assertElectricRelease} from './read-electric-release.mjs';
 import {publicSectorVisuals,assertPublicSectorVisuals,visualOutput} from './read-public-sector-visuals.mjs';
 
 assertPublicSectorVisuals();
 assertBulkVisuals();
 await assertHobyeongbaekmaListThumbnails();
+await assertFacilityCareerThumbnails();
 assertElectricRelease();
 
 const audit='docs/audits/2026-11-05-facility-publication/';
@@ -149,7 +151,7 @@ const addedVisualImages=publicSectorVisuals.images.filter(r=>!r.existing).map(vi
 for(const row of publicSectorVisuals.images)assert.equal(hash(fs.readFileSync(visualOutput(row))),row.sha256,'approved public-sector output: '+row.publicPath);
 // Five-category IA adds two listing URLs; every old article and /jobs/ URL stays.
 const facilityIANewListings = ['dist/facility-management/intro/index.html', 'dist/facility-management/stories/index.html'];
-assert.deepEqual(files,[...electricOutputAdditions,...seriesOutputAdditions,...thumbnailOutputFiles,...facilityIANewListings,...sasugoldaeOutputAdditions,...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...hospitalOutputAdditions,...departmentStoreOutputAdditions,...martOutputAdditions,...hospitalExtraOutputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===seriesRelease.compiledStyle.beforePath?seriesRelease.compiledStyle.path:f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same approved routes and images plus two new electric articles/images');
+assert.deepEqual(files,[...electricOutputAdditions,...seriesOutputAdditions,...thumbnailOutputFiles,...careerThumbnailOutputFiles,...facilityIANewListings,...sasugoldaeOutputAdditions,...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...hospitalOutputAdditions,...departmentStoreOutputAdditions,...martOutputAdditions,...hospitalExtraOutputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===seriesRelease.compiledStyle.beforePath?seriesRelease.compiledStyle.path:f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same approved routes and images plus four job analysis thumbnails');
 let unchanged=0;
 const approvedRenders=new Set([...publicSectorVisuals.images.filter(r=>r.existing).map(visualOutput),...bulkVisuals.images.map(bulkOutput)]);
 for(const [file,sha] of Object.entries(baseline)){
