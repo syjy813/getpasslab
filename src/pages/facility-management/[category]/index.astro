@@ -67,7 +67,7 @@ const structuredData = [{ '@context': 'https://schema.org', '@type': 'Breadcrumb
             <a href={withBase(facilityCategoryPath('jobs'))}>채용공고 분석 모음 보기 →</a>
           )}
         </div>}
-        <div class="grid grid-3">{group.articles.map(article => <FacilityCard article={article} />)}</div>
+        <div class="facility-feed">{group.articles.map(article => <FacilityCard article={article} />)}</div>
       </section>
     )) : <div class="facility-empty"><h2 class="gpl-h3">콘텐츠를 준비하고 있습니다</h2><p>공개된 입문 안내나 관련 자격증 학습을 먼저 살펴보세요.</p><a href={withBase('/facility-management/intro/')}>시설 사전 살펴보기 →</a></div>}
   </section>

@@ -154,44 +154,84 @@
   .facility-page .facility-body h2{font-size:var(--fs-h3)}
 }
 
-/* Mobile feeds: original-ratio thumbnail on the left, complete title on the right.
-   The same card serves home, category and related-article lists. */
-.facility-page .facility-card:not(.facility-card--lead):not(.facility-card--text){
-  display:grid;grid-template-columns:88px minmax(0,1fr);
-  align-items:center;gap:var(--space-4)
+/* General article lists share a 3:2 frame. */
+.facility-page .facility-feed > .facility-card{
+  min-height:128px;
+  padding:28px 0
 }
-.facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-content{display:contents}
-.facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-title{
-  grid-column:2;grid-row:1;font-size:var(--fs-h4);font-weight:var(--fw-semibold);line-height:1.5
+.facility-page .facility-feed > .facility-card + .facility-card{border-top:1px solid var(--gray-200)}
+.facility-page .facility-feed > .facility-card:not(.facility-card--text){
+  display:grid;
+  grid-template-columns:88px minmax(0,1fr);
+  align-items:center;
+  gap:var(--space-4)
 }
-.facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-cover{
-  grid-column:1;grid-row:1;align-self:center;border-radius:var(--radius-lg)
+.facility-feed .facility-card-cover{aspect-ratio:3/2}
+.facility-feed .facility-card-cover img{height:100%}
+.facility-feed .facility-card:not(.facility-card--text) .facility-card-content{padding:0}
+.facility-feed .facility-card:not(.facility-card--text) .facility-card-title{
+  font-weight:var(--fw-semibold);
+  line-height:1.5
 }
-.facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-description{
-  display:none
-}
-.facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-meta{
-  grid-column:2;margin-top:0;padding-top:0
-}
+.facility-feed .facility-card-description{display:none}
+.facility-feed .facility-card-meta{margin-top:0;padding-top:var(--space-2)}
 @media(min-width:360px){
-  .facility-page .facility-card:not(.facility-card--lead):not(.facility-card--text){grid-template-columns:96px minmax(0,1fr);gap:20px}
-}
-@media(max-width:639px){
-  .facility-page :is(.facility-story-grid,.grid):has(> .facility-card){row-gap:0}
-  .facility-page .facility-card:not(.facility-card--lead){min-height:128px;padding:28px 0}
-  .facility-page .facility-card:not(.facility-card--lead) + .facility-card{border-top:1px solid var(--gray-200)}
-  .facility-card--text .facility-card-content{padding:0;border:0;background:transparent}
-  .facility-card--text .facility-card-description{display:none}
+  .facility-page .facility-feed > .facility-card:not(.facility-card--text){
+    grid-template-columns:96px minmax(0,1fr);
+    gap:20px
+  }
 }
 @media(min-width:640px){
-  .facility-page .facility-card:not(.facility-card--lead):not(.facility-card--text){display:flex;align-items:stretch;gap:var(--space-3)}
-  .facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-content{display:flex}
-  .facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-title{font-size:var(--fs-h4);font-weight:var(--fw-bold);line-height:1.45}
-  .facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-cover{align-self:auto;border-radius:var(--radius-lg)}
-  .facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-description{display:-webkit-box;margin-top:var(--space-2);-webkit-line-clamp:2}
-  .facility-card:not(.facility-card--lead):not(.facility-card--text) .facility-card-meta{margin-top:auto;padding-top:var(--space-3)}
+  .facility-page .facility-feed > .facility-card:not(.facility-card--text){
+    grid-template-columns:minmax(0,1fr) clamp(144px,22vw,240px);
+    gap:var(--space-8);
+    padding:var(--space-6) 0
+  }
+  .facility-feed .facility-card-content{grid-area:1 / 1}
+  .facility-feed .facility-card-cover{grid-area:1 / 2}
+  .facility-feed .facility-card:not(.facility-card--text) .facility-card-title{
+    font-size:var(--fs-h3);
+    font-weight:var(--fw-bold);
+    line-height:1.45
+  }
+  .facility-feed .facility-card-description{display:-webkit-box}
+}
+@media(min-width:1024px){
+  .facility-page .facility-feed > .facility-card:not(.facility-card--text){
+    grid-template-columns:minmax(0,1fr) 270px
+  }
 }
 
+
+/* Related article links and body checklists retain their existing layouts. */
+.facility-article a.facility-card{gap:var(--space-3)}
+@media(max-width:639px){
+  .facility-article :is(.facility-story-grid,.grid):has(> .facility-card){row-gap:0}
+  .facility-page .facility-article .facility-card{min-height:128px;padding:28px 0}
+  .facility-page .facility-article .facility-card + .facility-card{border-top:1px solid var(--gray-200)}
+  .facility-page .facility-article a.facility-card:not(.facility-card--text){
+    display:grid;
+    grid-template-columns:88px minmax(0,1fr);
+    align-items:center;
+    gap:var(--space-4)
+  }
+  .facility-article a.facility-card:not(.facility-card--text) .facility-card-content{display:contents}
+  .facility-article .facility-card-cover{grid-area:1 / 1}
+  .facility-article a.facility-card:not(.facility-card--text) .facility-card-title{
+    grid-area:1 / 2;
+    font-weight:var(--fw-semibold);
+    line-height:1.5
+  }
+  .facility-article .facility-card-meta{grid-column:2;margin-top:0;padding-top:0}
+  .facility-card--text .facility-card-content{padding:0;border:0;background:transparent}
+  .facility-article .facility-card-description{display:none}
+}
+@media(min-width:360px) and (max-width:639px){
+  .facility-page .facility-article a.facility-card:not(.facility-card--text){
+    grid-template-columns:96px minmax(0,1fr);
+    gap:20px
+  }
+}
 
 /* Category landing headers follow the certification exam index (e.g. "필기 6과목"):
    breadcrumb → gpl-h1 → supporting copy → rule → existing article list. */
@@ -217,8 +257,8 @@
 
 /* Card movement leaves image size and crop untouched. Pointer hover is limited
    to devices with a mouse; keyboard focus receives the same emphasis. */
-.facility-page .facility-card:focus-visible{transform:translateY(-2px)}
-.facility-page .facility-card:focus-visible .facility-card-cover{
+.facility-page :is(.facility-card--lead,.facility-article .facility-card):focus-visible{transform:translateY(-2px)}
+.facility-page :is(.facility-card--lead,.facility-article .facility-card):focus-visible .facility-card-cover{
   border-color:var(--primary-500);box-shadow:var(--shadow-md)
 }
 .facility-page .facility-card:focus-visible .facility-card-title{color:var(--primary-700)}
@@ -226,8 +266,8 @@
   border-color:var(--primary-500);box-shadow:var(--shadow-md)
 }
 @media(hover:hover) and (pointer:fine){
-  .facility-page .facility-card:hover{transform:translateY(-2px)}
-  .facility-page .facility-card:hover .facility-card-cover{
+  .facility-page :is(.facility-card--lead,.facility-article .facility-card):hover{transform:translateY(-2px)}
+  .facility-page :is(.facility-card--lead,.facility-article .facility-card):hover .facility-card-cover{
     border-color:var(--primary-500);box-shadow:var(--shadow-md)
   }
   .facility-page .facility-card:hover .facility-card-title{color:var(--primary-700)}
@@ -237,7 +277,7 @@
 }
 @media(prefers-reduced-motion:reduce){
   .facility-page .facility-card,.facility-card-cover,.facility-card-title{transition:none}
-  .facility-page .facility-card:is(:hover,:focus-visible){transform:none}
+  .facility-page :is(.facility-card--lead,.facility-article .facility-card):is(:hover,:focus-visible){transform:none}
 }
 
 /* Complete comparison sheets reserve the selected artwork ratio before loading. */

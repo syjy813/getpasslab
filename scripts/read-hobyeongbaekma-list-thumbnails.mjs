@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
 import {beforeElectricArticleCard} from './read-electric-release.mjs';
+import {beforeFacilityFeedA} from './read-facility-feed.mjs';
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const component = 'src/components/FacilityCard.astro';
@@ -74,7 +75,7 @@ const attr = (node,name) => node?.attrs?.find(row=>row.name===name)?.value;
 const hasClass = (node,name) => (attr(node,'class')||'').split(/\s+/).includes(name);
 
 export async function assertHobyeongbaekmaListThumbnails() {
-  beforeHobyeongbaekmaListThumbnails(component,fs.readFileSync(component));
+  beforeHobyeongbaekmaListThumbnails(component,beforeFacilityFeedA(component,fs.readFileSync(component)));
   const {default:sharp}=await import('sharp');
   for (const row of thumbnailRows) {
     for (const [file,expected,format] of [[row.master,row.png,'png'],[row.publicFile,row.webp,'webp'],[row.outputFile,row.webp,'webp']]) {

@@ -27,13 +27,13 @@ try{
    const listResponse=await page.goto(base+'/facility-management/stories/');assert.equal(listResponse.status(),200);
    const route='/facility-management/career/'+id+'/',card=page.locator('.facility-card[href="'+route+'"]');
    assert.equal(await card.count(),1);await card.scrollIntoViewIfNeeded();await card.locator('img').evaluate(img=>img.decode());
-   const state=await card.evaluate(card=>{const img=card.querySelector('img'),r=img.getBoundingClientRect(),frame=img.parentElement;return {
+   const state=await card.evaluate(card=>{const img=card.querySelector('img'),frame=img.parentElement,r=frame.getBoundingClientRect();return {
     src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],rendered:[r.width,r.height],
     fit:getComputedStyle(img).objectFit,border:parseFloat(getComputedStyle(frame).borderTopWidth),
     title:card.querySelector('.facility-card-title').textContent.trim(),client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth
    }});
    assert.equal(state.src,'/images/facility-series/list-thumbnails/'+id+'.webp');assert.deepEqual(state.natural,[1448,1086]);
-   assert(state.rendered[0]>0&&Math.abs(state.rendered[0]/state.rendered[1]-4/3)<.01,'full 4:3 composition');
+   assert(state.rendered[0]>0&&Math.abs(state.rendered[0]/state.rendered[1]-3/2)<.01,'3:2 frame for the original composition');
    assert.equal(state.fit,'contain');assert(state.border>=1,'image frame');assert(state.title.length>0,'HTML title');assert(state.scroll<=state.client+1,'no overflow');
    await card.click();await page.waitForURL(base+route);
    assert.equal(await page.locator('.facility-body img').count(),0,'approved body hero removed');
