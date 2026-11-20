@@ -7,9 +7,10 @@ const mode = preview ? 'private-preview' : 'publication';
 const output = `qa-results/facility-launch/${mode}`;
 fs.mkdirSync(output, {recursive: true});
 const bulkImages=JSON.parse(fs.readFileSync('docs/audits/2026-11-06-facility-image-bulk/manifest.json'));
-const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':5};
+const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':5, 'electric-unlimited':1, 'electric-license-appointment-comparison':1};
 for(const [file,row] of Object.entries(bulkImages.source)) {const slug=file.split('/').at(-1).replace('.md','');if(slug in imageCounts)imageCounts[slug]=row.images;}
-const pages = ['/facility-management/', ...['intro','career','stories','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
+const articleCategory = id => id === 'public-sector-comparison' ? 'jobs' : id === 'electric-unlimited' ? 'intro' : id === 'electric-license-appointment-comparison' ? 'qualifications' : 'career';
+const pages = ['/facility-management/', ...['intro','career','stories','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${articleCategory(x)}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
 (async () => {
   const listingThumbnails = (await import('./read-hobyeongbaekma-list-thumbnails.mjs')).thumbnailRows.map(({id,name})=>[id,name]);
   const browser = await chromium.launch();
@@ -119,7 +120,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(categoryHeader.breadcrumbGap,'24px','subject-list breadcrumb spacing');
             assert.equal(categoryHeader.bottomRule,'1px','header separator retained');
             assert.equal(categoryHeader.listGap,'32px','article cards retain a clear 32px gap');
-            const counts = {intro:1,career:8,stories:19,jobs:5,practice:0,qualifications:4};
+            const counts = {intro:2,career:8,stories:19,jobs:5,practice:0,qualifications:5};
             assert.equal(await page.locator('.facility-category-list .facility-card').count(),
               counts[slug], 'existing article cards retained by category');
             if (slug === 'stories') assert.equal(await page.locator('.facility-category-list .facility-card[href="/facility-management/career/hobyeongbaekma-hospital-large-university/"]').count(),1,'hospital ep.2-3 category card');
@@ -129,10 +130,10 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(await page.locator('.facility-featured .facility-section-head .gpl-caption').count(),0,'redundant facility-intro caption removed');
             assert.equal(await page.locator('.facility-learning').count(),0,'home cross-service promotion removed');
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
-            assert.equal(await page.locator('.facility-card').count(),17,'one lead and at most six cards from each populated category');
+            assert.equal(await page.locator('.facility-card').count(),19,'one lead and at most six cards from each populated category');
             assert.equal(await page.locator('.facility-category-link').count(),4,'only four populated categories are linked');
             const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
-            assert.equal(new Set(routes).size,17,'no repeated home articles');
+            assert.equal(new Set(routes).size,19,'no repeated home articles');
             const leadCover = page.locator('.facility-card--lead img');
             await leadCover.evaluate(img => img.decode());
             assert(await leadCover.evaluate(img => img.naturalWidth > 0),'lead uses existing article image');
@@ -208,7 +209,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             }
             assert.equal(await page.locator('.facility-summary h2').evaluate(h=>getComputedStyle(h).color),'rgb(25, 31, 40)',path+': summary title stays neutral');
             assert.equal(await page.locator('.facility-article-meta time').count(),2,'publish and reviewed dates');
-            for (const date of await page.locator('.facility-article-meta time').evaluateAll(elements=>elements.map(el=>el.dateTime))) assert.equal(date,'2026-11-03');
+            for (const date of await page.locator('.facility-article-meta time').evaluateAll(elements=>elements.map(el=>el.dateTime))) assert.equal(date,slug.startsWith('electric-')?'2026-11-20':'2026-11-03');
             assert(!(await page.locator('.facility-article > article').innerText()).includes('검토용 초안'));
             const toc = page.locator('.facility-toc');
             assert.equal(await toc.count(),1,'long article has table of contents');
