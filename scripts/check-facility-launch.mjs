@@ -19,10 +19,12 @@ import { createHash } from 'node:crypto';
 import { facilityReview, beforeFacilityLaunch } from './read-before-facility-launch.mjs';
 import {thumbnailPublicFiles, thumbnailMasterFiles, assertHobyeongbaekmaListThumbnails} from './read-hobyeongbaekma-list-thumbnails.mjs';
 import { publicSectorVisuals, visualDerivativeFiles, beforePublicSectorVisuals, assertPublicSectorVisuals, visualOutput } from './read-public-sector-visuals.mjs';
+import { electricSourceAdditions, electricOutputAdditions, assertElectricRelease } from './read-electric-release.mjs';
 
 assertPublicSectorVisuals();
 assertBulkVisuals();
 await assertHobyeongbaekmaListThumbnails();
+assertElectricRelease();
 
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const gitBlob = bytes => createHash('sha1').update('blob ' + bytes.length + '\0').update(bytes).digest('hex');
@@ -117,7 +119,7 @@ const files = [
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
 // Daily GA4 snapshots are validated by their dedicated analytics workflow, not UI fingerprints.
-].filter(file => !seriesSourceAdditions.includes(file) && !seriesOutputAdditions.includes(file) && file !== 'src/data/facility-page-views.json' && !thumbnailPublicFiles.includes(file) && !facilityIAFiles.has(file) && !facilityIANewRoutes.has(file) && !sasugoldaeSourceAdditions.includes(file) && !sasugoldaeOutputAdditions.includes(file) && !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
+].filter(file => !electricSourceAdditions.includes(file) && !electricOutputAdditions.includes(file) && !seriesSourceAdditions.includes(file) && !seriesOutputAdditions.includes(file) && file !== 'src/data/facility-page-views.json' && !thumbnailPublicFiles.includes(file) && !facilityIAFiles.has(file) && !facilityIANewRoutes.has(file) && !sasugoldaeSourceAdditions.includes(file) && !sasugoldaeOutputAdditions.includes(file) && !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).filter(file => !facilityIAFiles.has(file)).sort(), 'same non-IA source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
