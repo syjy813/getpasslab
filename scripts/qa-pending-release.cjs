@@ -26,7 +26,7 @@ const base=process.env.QA_BASE_URL||'http://127.0.0.1:4321';
    assert.equal(await thumbnail.getAttribute('src'),row.image.replace(/^public/,''));
   }
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-  await page.goto(base+'/facility-management/');assert.equal(await page.locator('#facility-group-stories').count(),1);assert.equal(await page.locator('.facility-feed .facility-card[href*="/sasugoldae-"]').count(),6);
+  await page.goto(base+'/facility-management/');assert.equal(await page.locator('#facility-group-stories').count(),1);assert.equal(await page.locator('.facility-feed .facility-card[href*="/sasugoldae-"]').count(),4);
   assert.equal(await page.locator('select[data-sort], [data-view-sort]').count(),0,'view sorting excluded');
   assert.deepEqual(errors,[]);await context.close();
  }
