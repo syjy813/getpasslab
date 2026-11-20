@@ -40,6 +40,8 @@ const covers: Record<string, string> = {
   'mechanical-maintainer-levels': '/images/facility-drafts/11/01-maintainer-grades-hero.webp',
   'mechanical-career-records': '/images/facility-drafts/12/01-career-reporting-hero.webp',
   'boiler-inspection-manager': '/images/facility-drafts/13/01-boiler-manager-hero-v2.webp',
+  'electric-unlimited': '/images/facility-electric/electric-unlimited.webp',
+  'electric-license-appointment-comparison': '/images/facility-electric/electric-license-appointment-comparison.webp',
 };
 const listingThumbnails: Record<string, string> = {
   'sasugoldae': '/images/facility-series/list-thumbnails/sasugoldae-ep0.webp',
@@ -56,7 +58,9 @@ const listingThumbnails: Record<string, string> = {
 };
 const listingThumbnail = listingThumbnails[article.id];
 const cover = listingThumbnail ?? covers[article.id];
-const coverSize = listingThumbnail ? [1448, 1086] : article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];
+const coverSize = ['electric-unlimited', 'electric-license-appointment-comparison'].includes(article.id)
+  ? [1536, 1024]
+  : listingThumbnail ? [1448, 1086] : article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];
 ---
 <a class:list={['card', 'facility-card', { 'facility-card--lead': lead, 'facility-card--text': !cover }]} href={withBase(facilityArticlePath(article))}>
   {cover && <span class="facility-card-cover"><img src={withBase(cover)} alt="" width={coverSize[0]} height={coverSize[1]} loading={lead ? 'eager' : 'lazy'} decoding="async" /></span>}
