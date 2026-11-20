@@ -4,7 +4,7 @@ import { parse } from 'parse5';
 
 const root = 'dist/facility-management';
 const expected = [
-  ['intro', '시설관리 입문·용어', 1],
+  ['intro', '시설 사전', 1],
   ['career', '취업·커리어', 8],
   ['stories', '시설 이야기', 19],
   ['qualifications', '법정선임·자격 활용', 4],
@@ -70,7 +70,7 @@ for (const [nodes, labels] of [
 assert.equal(cardUrls(load('jobs/')).length, 5, 'legacy /jobs/ listing is retained');
 assert(fs.existsSync(`${root}/practice/index.html`), 'empty practice page is retained');
 for (const [articlePath, categoryPath, categoryName] of [
-  ['career/what-is-facility-management/', '/facility-management/intro/', '시설관리 입문·용어'],
+  ['career/what-is-facility-management/', '/facility-management/intro/', '시설 사전'],
   ['career/hobyeongbaekma/', '/facility-management/stories/', '시설 이야기'],
   ['jobs/hanfms/', '/facility-management/career/', '취업·커리어'],
 ]) {

@@ -1,5 +1,5 @@
 export const FACILITY_CATEGORIES = [
-  { slug: 'intro', name: '시설관리 입문·용어', description: '시설관리의 기본 개념과 현장에서 쓰는 용어를 이해하는 정보', icon: 'start' },
+  { slug: 'intro', name: '시설 사전', description: '시설관리의 기본 개념부터 현장에서 사용하는 용어까지, 알아두면 유용한 정보를 쉽게 정리했습니다', icon: 'start' },
   { slug: 'career', name: '취업·커리어', description: '취업 준비와 근무 조건, 기관별 채용공고를 살펴보는 정보', icon: 'career' },
   { slug: 'stories', name: '시설 이야기', description: '시설별 실제 업무와 근무환경을 다양한 관점에서 살펴보는 이야기', icon: 'stories' },
   { slug: 'qualifications', name: '법정선임·자격 활용', description: '자격증의 쓰임과 선임 요건을 확인하는 정보', icon: 'qualifications' },
