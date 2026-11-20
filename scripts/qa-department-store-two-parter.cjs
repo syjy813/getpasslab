@@ -19,12 +19,12 @@ const output='qa-results/department-store-two-parter';fs.mkdirSync(output,{recur
     if(listing==='/facility-management/'){assert.equal(await card.count(),0,'older article retained in category');continue;}
     assert.equal(await card.count(),1);
     await card.scrollIntoViewIfNeeded();await card.locator('img').evaluate(img=>img.decode());
-    const state=await card.evaluate(card=>{const img=card.querySelector('img'),r=img.getBoundingClientRect();return {
+    const state=await card.evaluate(card=>{const img=card.querySelector('img'),r=img.parentElement.getBoundingClientRect();return {
      src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],rendered:[r.width,r.height],fit:getComputedStyle(img).objectFit,
      border:parseFloat(getComputedStyle(img.parentElement).borderTopWidth),title:card.querySelector('.facility-card-title').textContent.trim(),
      scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth};});
     assert.equal(state.src,'/images/facility-series/list-thumbnails/'+row.slug+'.webp');assert.deepEqual(state.natural,[1448,1086]);
-    assert(state.rendered[0]>0&&Math.abs(state.rendered[0]/state.rendered[1]-4/3)<.01,'uncropped listing 4:3');
+    assert(state.rendered[0]>0&&Math.abs(state.rendered[0]/state.rendered[1]-3/2)<.01,'3:2 frame for the original composition');
     assert.equal(state.fit,'contain');assert(state.border>=1);assert(state.title.length>0);assert(state.scroll<=state.client+1,'listing overflow');
     if(listing.includes('/stories/'))await card.screenshot({path:output+'/'+row.slug+'-card-'+width+'.png'});
     await card.click();await page.waitForURL(base+row.route);listings.push({listing,...state});
