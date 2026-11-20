@@ -130,10 +130,17 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(await page.locator('.facility-featured .facility-section-head .gpl-caption').count(),0,'redundant facility-intro caption removed');
             assert.equal(await page.locator('.facility-learning').count(),0,'home cross-service promotion removed');
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
-            assert.equal(await page.locator('.facility-card').count(),19,'one lead and at most six cards from each populated category');
+            const counts = { intro: 1, career: 4, stories: 4, qualifications: 4 };
+            for (const [category, count] of Object.entries(counts)) {
+              const section = page.locator(`section[aria-labelledby="facility-group-${category}"]`);
+              assert.equal(await section.locator('.facility-feed > .facility-card').count(), count, `${category}: home cards`);
+              assert.equal(await section.locator('.facility-section-head a').getAttribute('href'),
+                `/facility-management/${category}/`, `${category}: link to the full list`);
+            }
+            assert.equal(await page.locator('.facility-card--lead').count(),1,'one featured article');
             assert.equal(await page.locator('.facility-category-link').count(),4,'only four populated categories are linked');
             const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
-            assert.equal(new Set(routes).size,19,'no repeated home articles');
+            assert.equal(new Set(routes).size,routes.length,'no repeated home articles');
             const leadCover = page.locator('.facility-card--lead img');
             await leadCover.evaluate(img => img.decode());
             assert(await leadCover.evaluate(img => img.naturalWidth > 0),'lead uses existing article image');

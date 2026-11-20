@@ -57,7 +57,7 @@ const articleGroups = availableCategories.map(category => ({
         <h2 id={'facility-group-' + category.slug} class="gpl-h2">{category.name}</h2>
         <a href={withBase(facilityCategoryPath(category.slug))}>전체 보기 <span aria-hidden="true">→</span></a>
       </div>
-      <div class="facility-feed">{category.articles.slice(0, 6).map(article => <FacilityCard article={article} />)}</div>
+      <div class="facility-feed">{category.articles.slice(0, 4).map(article => <FacilityCard article={article} />)}</div>
     </section>
   ))}
 
