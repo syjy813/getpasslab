@@ -64,7 +64,7 @@ for(const path of ['/facility-management/','/facility-management/career/','/faci
   const homeUrls=[...new Set(cards.map(card=>attrs(card,'href')))];
   assert(homeUrls.every(url=>eligible(expanded ? [...urls,...draftUrls] : urls).includes(url)),'home only exposes eligible articles');
   const seriesHome=homeUrls.filter(url=>seriesRelease.articles.some(row=>row.route===url));
-  assert.equal(seriesHome.length,6,'six newest series episodes visible on home');
+  assert.equal(seriesHome.length,4,'four newest series episodes visible on home');
   assert(!homeUrls.includes(sasugoldaeRelease.route),'ep0 retained in category after newer episodes advance the home slice');
  }
  for(const node of list){
