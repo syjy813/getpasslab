@@ -17,9 +17,10 @@ const martRelease=JSON.parse(fs.readFileSync('docs/audits/2026-11-12-mart-two-pa
 const martUrls=martRelease.articles.map(row=>row.route);
 const martSlugs=martRelease.articles.map(row=>row.slug);
 import {parse} from 'parse5';
+import {electricArticles} from './read-electric-release.mjs';
 
 const episode00='/facility-management/career/hobyeongbaekma/';
-const eligible=urls=>[...urls,...seriesRelease.articles.map(r=>r.route),sasugoldaeRelease.route,episode00,...hotelUrls,...hospitalUrls,...hospitalExtraUrls,...departmentStoreUrls,...martUrls];
+const eligible=urls=>[...urls,...seriesRelease.articles.map(r=>r.route),sasugoldaeRelease.route,episode00,...hotelUrls,...hospitalUrls,...hospitalExtraUrls,...departmentStoreUrls,...martUrls,...electricArticles.map(row=>row.route)];
 const origin='https://getpasslab.co.kr';
 const preview=process.env.FACILITY_DRAFT_PREVIEW === '1';
 const releaseDate='2026-11-03';
@@ -46,7 +47,7 @@ const assertMetadata=(path,expectedRobots)=>{
  return list;
 };
 const published=fs.readdirSync('src/content/facility').filter(file=>file.endsWith('.md')&&/^status:\s*published\s*$/m.test(fs.readFileSync('src/content/facility/'+file,'utf8'))).map(file=>file.slice(0,-3)).sort();
-assert.deepEqual(published,[...seriesRelease.articles.map(r=>r.slug),...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'sasugoldae','hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs,...hospitalExtraSlugs,...departmentStoreSlugs,...martSlugs].sort(),'only reviewed articles in publication candidate');
+assert.deepEqual(published,[...seriesRelease.articles.map(r=>r.slug),...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'sasugoldae','hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs,...hospitalExtraSlugs,...departmentStoreSlugs,...martSlugs,...electricArticles.map(row=>row.id)].sort(),'only reviewed articles in publication candidate');
 assert(!fs.existsSync('dist/facility-management/career/reading-job-postings/index.html'),'unapproved placeholder must not be built');
 let checked=0;
 for(const path of ['/facility-management/','/facility-management/career/','/facility-management/jobs/',...urls]){
@@ -90,7 +91,7 @@ for(const path of ['/facility-management/','/facility-management/career/','/faci
 for(const category of ['practice','qualifications']){
  const path=`/facility-management/${category}/`;
  const list=assertMetadata(path,publication&&category==='qualifications'?'index, follow':'noindex, follow');
- assert(text(list.find(node=>node.tagName==='main')).includes(expanded && category === 'qualifications' ? '공개 콘텐츠 4개' : '공개 콘텐츠 0개'),path+': category count');
+ assert(text(list.find(node=>node.tagName==='main')).includes(category === 'qualifications' ? '공개 콘텐츠 5개' : '공개 콘텐츠 0개'),path+': category count');
 }
 const sitemap=fs.readdirSync('dist').filter(file=>/^sitemap.*\.xml$/.test(file)).map(file=>fs.readFileSync('dist/'+file,'utf8')).join('');
 for(const path of ['/facility-management/','/facility-management/career/','/facility-management/jobs/',...urls])assert.equal(sitemap.includes(`<loc>${origin+path}</loc>`),!preview,path+': sitemap publication eligibility');

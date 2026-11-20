@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
+import {beforeElectricArticleCard} from './read-electric-release.mjs';
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const component = 'src/components/FacilityCard.astro';
@@ -36,6 +37,7 @@ export const thumbnailOutputFiles = thumbnailRows.map(row=>row.outputFile);
 // Reconstruct the exact pre-thumbnail component before older immutable guards.
 // No older fingerprint or unrelated rule is relaxed.
 export function beforeHobyeongbaekmaListThumbnails(file, bytes) {
+  bytes = beforeElectricArticleCard(file, bytes);
   if (file !== component) return bytes;
   let text=bytes.toString('utf8');
   for (const entry of ["  'sasugoldae-sauna-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-despair.webp',\n", "  'sasugoldae-sauna-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-hope.webp',\n", "  'sasugoldae-swimming-pool-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-pool-despair.webp',\n", "  'sasugoldae-swimming-pool-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-pool-hope.webp',\n", "  'sasugoldae-golf-course-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-golf-despair.webp',\n", "  'sasugoldae-golf-course-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-golf-hope.webp',\n", "  'sasugoldae-university-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-university-despair.webp',\n", "  'sasugoldae-university-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-university-hope.webp',\n"]) {

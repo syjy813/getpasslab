@@ -69,7 +69,7 @@ const structuredData = [{ '@context': 'https://schema.org', '@type': 'Breadcrumb
         </div>}
         <div class="grid grid-3">{group.articles.map(article => <FacilityCard article={article} />)}</div>
       </section>
-    )) : <div class="facility-empty"><h2 class="gpl-h3">콘텐츠를 준비하고 있습니다</h2><p>공개된 입문 안내나 관련 자격증 학습을 먼저 살펴보세요.</p><a href={withBase('/facility-management/intro/')}>시설관리 입문 살펴보기 →</a></div>}
+    )) : <div class="facility-empty"><h2 class="gpl-h3">콘텐츠를 준비하고 있습니다</h2><p>공개된 입문 안내나 관련 자격증 학습을 먼저 살펴보세요.</p><a href={withBase('/facility-management/intro/')}>시설 사전 살펴보기 →</a></div>}
   </section>
   <section class="facility-section" aria-labelledby="related-categories-title"><h2 id="related-categories-title" class="gpl-h2">다른 카테고리 살펴보기</h2><nav aria-label="시설관리 카테고리"><ul class="facility-category-nav">{FACILITY_CATEGORIES.filter(item => availableCategorySlugs.has(item.slug)).map(item => <li><a href={withBase(facilityCategoryPath(item.slug))} aria-current={item.slug === (legacyJobs ? 'career' : category.slug) ? 'page' : undefined}>{item.name}</a></li>)}</ul></nav></section>
   <FacilityLearningLinks />
