@@ -10,14 +10,14 @@
   ],
   "period": {
     "startDate": "2026-07-30",
-    "endDate": "2026-11-19",
+    "endDate": "2026-11-20",
     "requestedEndDate": "yesterday",
     "timeZone": "Asia/Seoul"
   },
-  "fetchedAt": "2026-11-20T06:19:25.093Z",
+  "fetchedAt": "2026-11-21T06:09:08.270Z",
   "articleCount": 34,
-  "recordedArticleCount": 11,
-  "totalArticleViews": 53,
+  "recordedArticleCount": 13,
+  "totalArticleViews": 60,
   "articles": {
     "/facility-management/qualifications/boiler-inspection-manager/": {
       "views": 5,
@@ -27,15 +27,15 @@
       "category": "qualifications"
     },
     "/facility-management/qualifications/electric-license-appointment-comparison/": {
-      "views": 0,
-      "recorded": false,
+      "views": 4,
+      "recorded": true,
       "title": "전기기사 vs 전기산업기사 vs 전기기능사 선임 기준 전격 비교",
       "publishedAt": "2026-11-20",
       "category": "qualifications"
     },
     "/facility-management/intro/electric-unlimited/": {
-      "views": 0,
-      "recorded": false,
+      "views": 3,
+      "recorded": true,
       "title": "전기 무제한이란? 10만 V 기준과 건물별 선임 가능 범위",
       "publishedAt": "2026-11-20",
       "category": "intro"
@@ -372,7 +372,8 @@
       "2026-11-16",
       "2026-11-17",
       "2026-11-18",
-      "2026-11-19"
+      "2026-11-19",
+      "2026-11-20"
     ],
     "totals": [
       0,
@@ -487,7 +488,8 @@
       0,
       0,
       0,
-      2
+      2,
+      7
     ],
     "articles": {
       "/facility-management/qualifications/boiler-inspection-manager/": [
@@ -603,7 +605,8 @@
         0,
         0,
         0,
-        1
+        1,
+        0
       ],
       "/facility-management/qualifications/electric-license-appointment-comparison/": [
         null,
@@ -718,7 +721,8 @@
         null,
         null,
         null,
-        null
+        null,
+        4
       ],
       "/facility-management/intro/electric-unlimited/": [
         null,
@@ -833,7 +837,8 @@
         null,
         null,
         null,
-        null
+        null,
+        3
       ],
       "/facility-management/career/employment-types/": [
         null,
@@ -948,6 +953,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/first-job/": [
@@ -1048,6 +1054,7 @@
         null,
         null,
         4,
+        0,
         0,
         0,
         0,
@@ -1178,6 +1185,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma-department-store-despair/": [
@@ -1287,6 +1295,7 @@
         null,
         null,
         2,
+        0,
         0,
         0,
         0,
@@ -1408,6 +1417,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma-hospital-despair/": [
@@ -1515,6 +1525,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -1638,6 +1649,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma-hospital-large-university/": [
@@ -1753,6 +1765,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma-hotel-despair/": [
@@ -1859,6 +1872,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -1983,6 +1997,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma-mart-despair/": [
@@ -2091,6 +2106,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -2213,6 +2229,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma/": [
@@ -2328,6 +2345,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/jobs/kamcofmc/": [
@@ -2429,6 +2447,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -2558,6 +2577,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/qualifications/mechanical-career-records/": [
@@ -2659,6 +2679,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -2788,7 +2809,8 @@
         0,
         0,
         0,
-        1
+        1,
+        0
       ],
       "/facility-management/jobs/postal-facilities/": [
         null,
@@ -2889,6 +2911,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -3018,6 +3041,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/sasugoldae-golf-course-despair/": [
@@ -3132,6 +3156,7 @@
         null,
         null,
         null,
+        0,
         0,
         0
       ],
@@ -3248,6 +3273,7 @@
         null,
         null,
         0,
+        0,
         0
       ],
       "/facility-management/career/sasugoldae-sauna-despair/": [
@@ -3362,6 +3388,7 @@
         null,
         null,
         null,
+        0,
         0,
         0
       ],
@@ -3478,6 +3505,7 @@
         null,
         null,
         0,
+        0,
         0
       ],
       "/facility-management/career/sasugoldae-swimming-pool-despair/": [
@@ -3592,6 +3620,7 @@
         null,
         null,
         null,
+        0,
         0,
         0
       ],
@@ -3708,6 +3737,7 @@
         null,
         null,
         0,
+        0,
         0
       ],
       "/facility-management/career/sasugoldae-university-despair/": [
@@ -3822,6 +3852,7 @@
         null,
         null,
         null,
+        0,
         0,
         0
       ],
@@ -3938,6 +3969,7 @@
         null,
         null,
         0,
+        0,
         0
       ],
       "/facility-management/career/sasugoldae/": [
@@ -4053,6 +4085,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/shifts-and-pay/": [
@@ -4154,6 +4187,7 @@
         null,
         4,
         1,
+        0,
         0,
         0,
         0,
@@ -4283,6 +4317,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/what-is-facility-management/": [
@@ -4398,6 +4433,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -4407,5 +4443,5 @@
     "hour": 9,
     "minute": 0
   },
-  "sourceCommit": "4de1f4abf516ec2883800fbb25f48d5dfdfdfb26"
+  "sourceCommit": "a5a706f2807ce678390219611e952a8ae4927efd"
 }
