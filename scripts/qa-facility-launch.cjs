@@ -141,9 +141,17 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
               assert((await more.innerText()).includes('전체보기'), `${category}: full-list label`);
               const footerStyle = await section.locator('.facility-group-footer').evaluate(el => ({
                 border: getComputedStyle(el).borderBottomWidth,
+                borderColor: getComputedStyle(el).borderBottomColor,
+                sectionTop: getComputedStyle(el.closest('.facility-home-group')).paddingTop,
                 centered: Math.abs(el.getBoundingClientRect().left + el.clientWidth / 2 - el.querySelector('a').getBoundingClientRect().left - el.querySelector('a').getBoundingClientRect().width / 2) < 1,
               }));
               assert.equal(footerStyle.border, '1px', `${category}: category divider`);
+              assert.equal(footerStyle.borderColor, 'rgb(196, 203, 212)', `${category}: stronger category divider color`);
+              assert.equal(footerStyle.sectionTop, width < 640 ? '64px' : '80px', `${category}: wider section spacing`);
+              if (count > 1) {
+                assert.equal(await section.locator('.facility-feed > .facility-card + .facility-card').first().evaluate(el => getComputedStyle(el).borderTopColor),
+                  'rgb(229, 232, 235)', `${category}: lighter article separators retained`);
+              }
               assert(footerStyle.centered, `${category}: centered CTA`);
               assert((await more.evaluate(el => el.getBoundingClientRect().height)) >= 44, `${category}: touch target`);
             }
