@@ -4,8 +4,8 @@ import { parse } from 'parse5';
 
 const root = 'dist/facility-management';
 const expected = [
-  ['intro', '시설 사전', 3],
-  ['career', '취업·커리어', 9],
+  ['intro', '시설 사전', 2],
+  ['career', '취업·커리어', 8],
   ['stories', '시설 이야기', 19],
   ['qualifications', '법정선임·자격 활용', 5],
 ];
@@ -41,7 +41,7 @@ const publishedUrls = fs.readdirSync('src/content/facility').filter(file => file
   assert(route, `${file}: route category`);
   return [`/facility-management/${route}/${file.slice(0, -3)}/`];
 });
-assert.equal(publishedUrls.length, 36, 'published article count after two additional glossary and career guides');
+assert.equal(publishedUrls.length, 34, 'published article count after electric article launch');
 assert.deepEqual(allCategoryUrls.sort(), publishedUrls.sort(), 'five-category IA covers all published articles once, at their original URLs');
 for (const url of publishedUrls) {
   const nodes = load(url.replace('/facility-management/', ''));
