@@ -14,12 +14,21 @@ const homeFooterSource = `.facility-group-footer{display:flex;justify-content:ce
 .facility-group-more:hover{background:var(--gray-200)}
 `;
 const homeFooterCompiled = '.facility-group-footer{padding:var(--space-6) 0 var(--space-8);border-bottom:1px solid var(--gray-200);justify-content:center;display:flex}.facility-group-more{justify-content:center;align-items:center;gap:var(--space-2);border-radius:var(--radius-md);background:var(--gray-100);min-height:44px;color:var(--gray-800);font-size:var(--fs-caption);font-weight:var(--fw-semibold);text-align:center;padding:10px 16px;line-height:1.4;text-decoration:none;transition:background-color .15s;display:inline-flex}.facility-group-more:hover{background:var(--gray-200)}';
+const refinedFooterSource = '.facility-home-group{--facility-category-divider:#C4CBD4;padding-top:calc(var(--space-16) + var(--space-4))}\n'
+  + homeFooterSource.replace('border-bottom:1px solid var(--gray-200)', 'border-bottom:1px solid var(--facility-category-divider)')
+  + '@media(max-width:639px){.facility-home-group{padding-top:var(--space-16)}}\n';
+const refinedFooterCompiled = '.facility-home-group{--facility-category-divider:#c4cbd4;padding-top:calc(var(--space-16) + var(--space-4))}'
+  + homeFooterCompiled.replace('border-bottom:1px solid var(--gray-200)', 'border-bottom:1px solid var(--facility-category-divider)')
+  + '@media (width<=639px){.facility-home-group{padding-top:var(--space-16)}}';
 function beforeHomeFooter(file, bytes) {
   if (file !== 'src/styles/facility.css') return bytes;
-  assert.equal(sha(bytes), 'a47cc9dbc0ee44d6d2c60db1c6230b27df9c1cdd54688c875c0eeb8c527eefcb', 'approved home footer source');
+  assert.equal(sha(bytes), '3b48a0025f00c2822a966e85d0be35c5a98638dd79dfb0d4aa17784e43306a6c', 'approved home footer refinement');
   const current = bytes.toString('utf8');
-  assert.equal(current.split(homeFooterSource).length, 2, 'unique home footer styles');
-  const previous = current.replace(homeFooterSource, '');
+  assert.equal(current.split(refinedFooterSource).length, 2, 'unique refined home footer styles');
+  const withOriginalFooter = current.replace(refinedFooterSource, homeFooterSource);
+  assert.equal(sha(withOriginalFooter), 'a47cc9dbc0ee44d6d2c60db1c6230b27df9c1cdd54688c875c0eeb8c527eefcb', 'first approved home footer preserved');
+  assert.equal(withOriginalFooter.split(homeFooterSource).length, 2, 'unique original footer styles');
+  const previous = withOriginalFooter.replace(homeFooterSource, '');
   assert.equal(sha(previous), feedA.source[file].afterSha256, 'previous A feed stylesheet restored');
   return Buffer.from(previous);
 }
@@ -46,6 +55,9 @@ export function beforeFacilityFeedA(file, bytes) {
 }
 
 export function beforeFacilityFeedCompiled(css) {
+  assert.equal(sha(css), '5a11a66d4ead4afb69e987decb2381450f6a2076f83f9150b52a6c084a8987cd', 'approved footer spacing compiled CSS');
+  assert.equal(css.split(refinedFooterCompiled).length, 2, 'unique refined footer compiled rules');
+  css = css.replace(refinedFooterCompiled, homeFooterCompiled);
   assert.equal(sha(css), '6e801f8aacaddd3542ad1aed2903c72f5b96f9e216d6f8a53f7619313d4d590d', 'approved home footer compiled CSS');
   assert.equal(css.split(homeFooterCompiled).length, 2, 'unique compiled home footer rules');
   css = css.replace(homeFooterCompiled, '');
