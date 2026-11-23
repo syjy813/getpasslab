@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {gunzipSync} from 'node:zlib';
 import {beforeFacilityCareerThumbnails} from './read-facility-career-thumbnails.mjs';
+import {beforeStoryThumbnails3x2} from './read-story-thumbnails-3x2.mjs';
 
 const delta = JSON.parse(fs.readFileSync('docs/audits/2026-11-15-facility-feed/delta.json'));
 const feedA = JSON.parse(fs.readFileSync('docs/audits/2026-11-20-facility-feed-a/delta.json'));
@@ -67,7 +68,7 @@ export function beforeFacilityFeed(file, bytes) {
 }
 
 export function beforeFacilityFeedA(file, bytes) {
-  return restoreSource(file, beforeFacilityCareerThumbnails(file, beforeHomeFooter(file, beforeCareerJobsCTA(file, bytes))), feedA.source[file]);
+  return restoreSource(file, beforeFacilityCareerThumbnails(file, beforeStoryThumbnails3x2(file, beforeHomeFooter(file, beforeCareerJobsCTA(file, bytes)))), feedA.source[file]);
 }
 
 export function beforeFacilityFeedCompiled(css) {
