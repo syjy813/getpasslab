@@ -32,7 +32,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
         const expected = imageCounts[slug];
         if (path === '/facility-management/stories/') {
           assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails/"]').count(),listingThumbnails.length,'original list thumbnails retained except approved previews');
-          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails-3x2/"]').count(),storyPreviewRows.length,'only two updated 3:2 previews');
+          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails-3x2/"]').count(),storyPreviewRows.length,'all nineteen updated 3:2 story images');
           for (const [id,name] of listingThumbnails) {
             const card=page.locator(`a.facility-card[href="/facility-management/career/${id}/"]`);
             assert.equal(await card.count(),1,id+': existing article link retained');
