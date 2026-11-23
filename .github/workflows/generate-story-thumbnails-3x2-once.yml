@@ -1,0 +1,37 @@
+name: One-time facility story thumbnail 3x2 conversion
+on:
+  push:
+    branches: [feat/story-thumbnails-rest-3x2-20261123]
+    paths:
+      - scripts/generate-story-thumbnails-rest-3x2.mjs
+      - .github/workflows/generate-story-thumbnails-3x2-once.yml
+permissions:
+  contents: write
+jobs:
+  render-and-commit:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Render approved-resize 3:2 WebP files
+        run: node scripts/generate-story-thumbnails-rest-3x2.mjs
+      - name: Commit generated images and asset hashes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/facility-series/list-thumbnails-3x2 docs/audits/2026-11-23-story-thumbnails-rest-3x2/manifest.json
+          git diff --cached --stat
+          if git diff --cached --quiet; then
+            echo "No generated asset changes"
+          else
+            git commit -m "assets: render 17 additional 3:2 facility story thumbnails"
+            git push origin "HEAD:feat/story-thumbnails-rest-3x2-20261123"
+          fi
