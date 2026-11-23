@@ -63,9 +63,6 @@ const structuredData = [{ '@context': 'https://schema.org', '@type': 'Breadcrumb
       <section class:list={['facility-category-subgroup', { 'facility-section': index > 0 }]} aria-label={group.title || `${category.name} 글 목록`}>
         {group.title && <div class="facility-section-head">
           <h2 class="gpl-h2">{group.title}</h2>
-          {category.slug === 'career' && group.title === '기업·채용 분석' && (
-            <a href={withBase(facilityCategoryPath('jobs'))}>채용공고 분석 모음 보기 →</a>
-          )}
         </div>}
         <div class="facility-feed">{group.articles.map(article => <FacilityCard article={article} />)}</div>
       </section>

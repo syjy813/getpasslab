@@ -20,6 +20,22 @@ const refinedFooterSource = '.facility-home-group{--facility-category-divider:#C
 const refinedFooterCompiled = '.facility-home-group{--facility-category-divider:#c4cbd4;padding-top:calc(var(--space-16) + var(--space-4))}'
   + homeFooterCompiled.replace('border-bottom:1px solid var(--gray-200)', 'border-bottom:1px solid var(--facility-category-divider)')
   + '@media (width<=639px){.facility-home-group{padding-top:var(--space-16)}}';
+// Retain the exact old category-page source for historical release checks.
+// The removed link was redundant with the cards already shown in that group.
+function beforeCareerJobsCTA(file, bytes) {
+  if (file !== 'src/pages/facility-management/[category]/index.astro') return bytes;
+  assert.equal(sha(bytes), 'e372fc1c1782c8ad428698a9af73a9d0a2a8416233507d44b11a20ee505ebc0a', 'approved redundant jobs CTA removal');
+  const text = bytes.toString('utf8');
+  const heading = '          <h2 class="gpl-h2">{group.title}</h2>\n';
+  const removedCTA = `          {category.slug === 'career' && group.title === '기업·채용 분석' && (
+            <a href={withBase(facilityCategoryPath('jobs'))}>채용공고 분석 모음 보기 →</a>
+          )}
+`;
+  assert.equal(text.split(heading).length, 2, 'unique company analysis group heading');
+  const restored = text.replace(heading, heading + removedCTA);
+  assert.equal(sha(restored), feedA.source[file].afterSha256, 'previous category-page source restored');
+  return Buffer.from(restored);
+}
 function beforeHomeFooter(file, bytes) {
   if (file !== 'src/styles/facility.css') return bytes;
   assert.equal(sha(bytes), '3b48a0025f00c2822a966e85d0be35c5a98638dd79dfb0d4aa17784e43306a6c', 'approved home footer refinement');
@@ -51,7 +67,7 @@ export function beforeFacilityFeed(file, bytes) {
 }
 
 export function beforeFacilityFeedA(file, bytes) {
-  return restoreSource(file, beforeFacilityCareerThumbnails(file, beforeHomeFooter(file, bytes)), feedA.source[file]);
+  return restoreSource(file, beforeFacilityCareerThumbnails(file, beforeHomeFooter(file, beforeCareerJobsCTA(file, bytes))), feedA.source[file]);
 }
 
 export function beforeFacilityFeedCompiled(css) {

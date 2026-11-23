@@ -59,6 +59,10 @@ for (const [label, ids] of Object.entries(episodeOrders)) {
 
 const career = load('career/');
 const stories = load('stories/');
+const companyAnalysis = career.find(node => node.tagName === 'section' && hasClass(node, 'facility-category-subgroup') && attr(node, 'aria-label') === '기업·채용 분석');
+assert(companyAnalysis, 'company analysis group remains visible');
+assert.equal(cardUrls(walk(companyAnalysis)).length, 4, 'company analysis articles remain listed');
+assert(!walk(companyAnalysis).some(node => node.tagName === 'a' && content(node).includes('채용공고 분석 모음 보기')), 'redundant jobs CTA removed');
 for (const [nodes, labels] of [
   [career, ['취업 가이드', '기업·채용 분석']],
   [stories, ['호병백마 시리즈', '사수골대 시리즈']],
