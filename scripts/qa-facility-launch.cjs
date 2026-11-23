@@ -12,6 +12,8 @@ for(const [file,row] of Object.entries(bulkImages.source)) {const slug=file.spli
 const articleCategory = id => id === 'public-sector-comparison' ? 'jobs' : id === 'electric-unlimited' ? 'intro' : id === 'electric-license-appointment-comparison' ? 'qualifications' : 'career';
 const pages = ['/facility-management/', ...['intro','career','stories','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${articleCategory(x)}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
 (async () => {
+  const { careerThumbnailRows } = await import('./read-facility-career-thumbnails.mjs');
+  const entryRows = careerThumbnailRows.filter(row => row.category);
   const storyPreviewRows = (await import('./read-story-thumbnails-3x2.mjs')).storyThumbnail3x2Rows;
   const replacedStoryIds = new Set(storyPreviewRows.map(row=>row.id));
   const listingThumbnails = (await import('./read-hobyeongbaekma-list-thumbnails.mjs')).thumbnailRows
@@ -24,7 +26,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
       await context.route('**/*', route => new URL(route.request().url()).origin === new URL(base).origin ? route.continue() : route.abort());
       const page = await context.newPage();
       let facilityHomeGeometry = null;
-      for (const path of pages) {
+      for (const path of [...pages, ...entryRows.map(row => row.route)]) {
         const response = await page.goto(base+path);
         assert.equal(response.status(),200,path);
         await page.evaluate(()=>document.fonts.ready);
@@ -138,7 +140,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(categoryHeader.breadcrumbGap,'24px','subject-list breadcrumb spacing');
             assert.equal(categoryHeader.bottomRule,'1px','header separator retained');
             assert.equal(categoryHeader.listGap,'32px','article cards retain a clear 32px gap');
-            const counts = {intro:2,career:8,stories:19,jobs:5,practice:0,qualifications:5};
+            const counts = {intro:3,career:9,stories:19,jobs:5,practice:0,qualifications:5};
             assert.equal(await page.locator('.facility-category-list .facility-card').count(),
               counts[slug], 'existing article cards retained by category');
             if (slug === 'stories') assert.equal(await page.locator('.facility-category-list .facility-card[href="/facility-management/career/hobyeongbaekma-hospital-large-university/"]').count(),1,'hospital ep.2-3 category card');
@@ -148,7 +150,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(await page.locator('.facility-featured .facility-section-head .gpl-caption').count(),0,'redundant facility-intro caption removed');
             assert.equal(await page.locator('.facility-learning').count(),0,'home cross-service promotion removed');
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
-            const counts = { intro: 1, career: 4, stories: 4, qualifications: 4 };
+            const counts = { intro: 2, career: 4, stories: 4, qualifications: 4 };
             for (const [category, count] of Object.entries(counts)) {
               const section = page.locator(`section[aria-labelledby="facility-group-${category}"]`);
               assert.equal(await section.locator('.facility-feed > .facility-card').count(), count, `${category}: home cards`);
