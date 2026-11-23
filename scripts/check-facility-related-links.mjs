@@ -20,8 +20,7 @@ import {parse} from 'parse5';
 import {electricArticles} from './read-electric-release.mjs';
 
 const episode00='/facility-management/career/hobyeongbaekma/';
-const newArticleRoutes=['/facility-management/intro/musugi/','/facility-management/career/facility-career-start/'];
-const eligible=urls=>[...urls,...newArticleRoutes,...seriesRelease.articles.map(r=>r.route),sasugoldaeRelease.route,episode00,...hotelUrls,...hospitalUrls,...hospitalExtraUrls,...departmentStoreUrls,...martUrls,...electricArticles.map(row=>row.route)];
+const eligible=urls=>[...urls,...seriesRelease.articles.map(r=>r.route),sasugoldaeRelease.route,episode00,...hotelUrls,...hospitalUrls,...hospitalExtraUrls,...departmentStoreUrls,...martUrls,...electricArticles.map(row=>row.route)];
 const origin='https://getpasslab.co.kr';
 const preview=process.env.FACILITY_DRAFT_PREVIEW === '1';
 const releaseDate='2026-11-03';
@@ -48,13 +47,7 @@ const assertMetadata=(path,expectedRobots)=>{
  return list;
 };
 const published=fs.readdirSync('src/content/facility').filter(file=>file.endsWith('.md')&&/^status:\s*published\s*$/m.test(fs.readFileSync('src/content/facility/'+file,'utf8'))).map(file=>file.slice(0,-3)).sort();
-assert.deepEqual(published,[...seriesRelease.articles.map(r=>r.slug),...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'sasugoldae','hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs,...hospitalExtraSlugs,...departmentStoreSlugs,...martSlugs,...electricArticles.map(row=>row.id),'musugi','facility-career-start'].sort(),'only reviewed articles in publication candidate');
-for(const path of newArticleRoutes){
- const list=assertMetadata(path,'index, follow');
- assert(text(list.find(node=>node.tagName==='article')).includes('근거 및 참고 자료'),path+': citations shown');
- const html=fs.readFileSync('dist'+path+'index.html','utf8');
- assert(html.includes(path.includes('musugi/')?'/facility-management/career/facility-career-start/':'/facility-management/intro/musugi/'),path+': reciprocal career links');
-}
+assert.deepEqual(published,[...seriesRelease.articles.map(r=>r.slug),...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'sasugoldae','hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs,...hospitalExtraSlugs,...departmentStoreSlugs,...martSlugs,...electricArticles.map(row=>row.id)].sort(),'only reviewed articles in publication candidate');
 assert(!fs.existsSync('dist/facility-management/career/reading-job-postings/index.html'),'unapproved placeholder must not be built');
 let checked=0;
 for(const path of ['/facility-management/','/facility-management/career/','/facility-management/jobs/',...urls]){
