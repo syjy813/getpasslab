@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { parse } from 'parse5';
+import { beforeFacilityEntryThumbnails } from './read-facility-career-thumbnails.mjs';
 
 const sha = value => createHash('sha256').update(value).digest('hex');
 const component = 'src/components/FacilityCard.astro';
@@ -64,7 +65,7 @@ export const storyThumbnail3x2MasterFiles = storyThumbnail3x2Rows.map(row => row
 // predecessor hash; undo those original two to retain all older immutability guards.
 export function beforeStoryThumbnails3x2(file, bytes) {
   if (file !== component) return bytes;
-  let current = bytes.toString('utf8');
+  let current = beforeFacilityEntryThumbnails(file, bytes).toString('utf8');
   for (const row of storyThumbnail3x2Rows.slice(2)) {
     assert.equal(current.split(row.newLine).length, 2, row.id + ': unique new 3:2 mapping');
     current = current.replace(row.newLine, row.oldLine);
