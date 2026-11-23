@@ -134,8 +134,18 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             for (const [category, count] of Object.entries(counts)) {
               const section = page.locator(`section[aria-labelledby="facility-group-${category}"]`);
               assert.equal(await section.locator('.facility-feed > .facility-card').count(), count, `${category}: home cards`);
-              assert.equal(await section.locator('.facility-section-head a').getAttribute('href'),
-                `/facility-management/${category}/`, `${category}: link to the full list`);
+              assert.equal(await section.locator('.facility-section-head a').count(), 0, `${category}: no heading CTA`);
+              const more = section.locator('.facility-group-footer > a.facility-group-more');
+              assert.equal(await more.count(), 1, `${category}: one bottom CTA`);
+              assert.equal(await more.getAttribute('href'), `/facility-management/${category}/`, `${category}: full-list destination`);
+              assert((await more.innerText()).includes('전체보기'), `${category}: full-list label`);
+              const footerStyle = await section.locator('.facility-group-footer').evaluate(el => ({
+                border: getComputedStyle(el).borderBottomWidth,
+                centered: Math.abs(el.getBoundingClientRect().left + el.clientWidth / 2 - el.querySelector('a').getBoundingClientRect().left - el.querySelector('a').getBoundingClientRect().width / 2) < 1,
+              }));
+              assert.equal(footerStyle.border, '1px', `${category}: category divider`);
+              assert(footerStyle.centered, `${category}: centered CTA`);
+              assert((await more.evaluate(el => el.getBoundingClientRect().height)) >= 44, `${category}: touch target`);
             }
             assert.equal(await page.locator('.facility-card--lead').count(),1,'one featured article');
             assert.equal(await page.locator('.facility-category-link').count(),4,'only four populated categories are linked');

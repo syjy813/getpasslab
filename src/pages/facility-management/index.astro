@@ -52,12 +52,16 @@ const articleGroups = availableCategories.map(category => ({
   </section>
 
   {articleGroups.map(category => (
-    <section class="facility-section" aria-labelledby={'facility-group-' + category.slug}>
+    <section class="facility-section facility-home-group" aria-labelledby={'facility-group-' + category.slug}>
       <div class="facility-section-head">
         <h2 id={'facility-group-' + category.slug} class="gpl-h2">{category.name}</h2>
-        <a href={withBase(facilityCategoryPath(category.slug))}>전체 보기 <span aria-hidden="true">→</span></a>
       </div>
       <div class="facility-feed">{category.articles.slice(0, 4).map(article => <FacilityCard article={article} />)}</div>
+      <div class="facility-group-footer">
+        <a class="facility-group-more" href={withBase(facilityCategoryPath(category.slug))}>
+          {category.name} 전체보기 <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </section>
   ))}
 
