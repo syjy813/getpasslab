@@ -6,13 +6,13 @@ import { parse } from 'parse5';
 const component = 'src/components/FacilityCard.astro';
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 
-// 2026-11-20 approved, listing-only job analysis thumbnails. The older
-// publication guards still compare against their original exact source bytes.
+// 2026-11-23 approved contrast refresh of listing-only job analysis thumbnails.
+// The older publication guards still compare against their original exact source bytes.
 export const careerThumbnailRows = [
-  { id: 'hanfms', hash: 'c3d2899923886887a727a029777efb71632abcfe2267a71a459b320c6d56c73a' },
-  { id: 'kamcofmc', hash: '2919514325c6cba5da3b0eba8b52559bf917fe658ef122d9a255f4cf4e5a01d7' },
-  { id: 'korailtech', hash: '2b88ee903612ddd7a16e6d7ccc351b440d24debbc8ad2e180371f3938f105cd7' },
-  { id: 'postal-facilities', hash: '7c7e993cb096c1f0e754a7764262a8cd6d8d46c87260dc6148935a0dc0182db1' },
+  { id: 'hanfms', hash: '06d23f06efdbe503ed8c97963d5d45044fbaa1de6762bc5074d1aeb307ce7cbd' },
+  { id: 'kamcofmc', hash: '51ec2f69c43093d424b607a3b932db9e52a06631b323546b14aaff8fafff80dd' },
+  { id: 'korailtech', hash: 'ae18863c3d7f3f7a52a61b899062a83d6b9bef80809de9f76c3870277a755f76' },
+  { id: 'postal-facilities', hash: '5e88d8dcb28c2818741dc8c3030c3a86dda700dc3a340d5d2577c1f07bc469e6' },
 ].map(row => ({
   ...row,
   publicFile: `public/images/facility-career/list-thumbnails/${row.id}.webp`,
