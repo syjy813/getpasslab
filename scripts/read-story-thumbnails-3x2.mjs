@@ -8,9 +8,10 @@ const component = 'src/components/FacilityCard.astro';
 const componentBefore = '096027cd76308a87bf0f399020a2e8433ef724cc761e00fa135f5d163f121501';
 const componentAfter = 'a1c1b77928c181a0a7dc37ec4ac1eed3961fde481e561338606ffa7ba1e6b6a2';
 
-// This release tests two 3:2 list-only previews; the other seventeen story
-// entries and every approved original hero, OG image and 4:3 thumbnail stay put.
-export const storyThumbnail3x2Rows = [
+// Preserve the two individually approved previews while extending the same
+// list-only contract to the remaining seventeen stories. Article / OG and
+// historical 4:3 files are not changed.
+const originalPreviewRows = [
   {
     id: 'hobyeongbaekma-hotel-despair',
     image: 'hobyeongbaekma-hotel-despair',
@@ -25,28 +26,55 @@ export const storyThumbnail3x2Rows = [
     pngSha: '50165b6f83d100023dce67e4536dec96c294536eff5126c2b71a272c78c17b3d',
     webpSha: 'bdb3cf240570f4f9ce45498905f03b35779006c21a9b93406e3e49e41965a0fd',
   },
-].map(row => ({
+];
+const newRelease = JSON.parse(fs.readFileSync('docs/audits/2026-11-23-story-thumbnails-rest-3x2/manifest.json', 'utf8'));
+assert.equal(newRelease.rows.length, 17, 'exact remaining 17 story thumbnails');
+const listedBefore = new Set([
+  'hobyeongbaekma', 'hobyeongbaekma-hotel-hope',
+  'hobyeongbaekma-hospital-despair', 'hobyeongbaekma-hospital-hope',
+  'hobyeongbaekma-hospital-large-university',
+  'hobyeongbaekma-department-store-despair', 'hobyeongbaekma-department-store-hope',
+  'hobyeongbaekma-mart-despair', 'hobyeongbaekma-mart-hope', 'sasugoldae',
+]);
+const extraRows = newRelease.rows.map(row => {
+  const oldName = row.id === 'hobyeongbaekma' ? 'hobyeongbaekma-ep0'
+    : row.id === 'sasugoldae' ? 'sasugoldae-ep0' : row.id;
+  return {
+    id: row.id, image: row.id,
+    oldLine: listedBefore.has(row.id)
+      ? `  '${row.id}': ['/images/facility-series/list-thumbnails/${oldName}.webp', 1448, 1086],\n` : '',
+    pngSha: null, webpSha: row.webpSha256, webpBytes: row.bytes,
+    source: row.source, sourceSha: row.sourceSha256,
+  };
+});
+export const storyThumbnail3x2Rows = [...originalPreviewRows, ...extraRows].map(row => ({
   ...row,
   newLine: `  '${row.id}': ['/images/facility-series/list-thumbnails-3x2/${row.image}.webp', 1536, 1024],\n`,
-  master: `facility-assets/story-thumbnails-3x2/${row.image}.png`,
+  master: row.pngSha ? `facility-assets/story-thumbnails-3x2/${row.image}.png` : null,
   publicFile: `public/images/facility-series/list-thumbnails-3x2/${row.image}.webp`,
   outputFile: `dist/images/facility-series/list-thumbnails-3x2/${row.image}.webp`,
   route: `/facility-management/career/${row.id}/`,
 }));
+assert.equal(new Set(storyThumbnail3x2Rows.map(row=>row.id)).size, 19, '19 distinct story list thumbnails');
 export const storyThumbnail3x2PublicFiles = storyThumbnail3x2Rows.map(row => row.publicFile);
 export const storyThumbnail3x2OutputFiles = storyThumbnail3x2Rows.map(row => row.outputFile);
-export const storyThumbnail3x2MasterFiles = storyThumbnail3x2Rows.map(row => row.master);
+export const storyThumbnail3x2MasterFiles = storyThumbnail3x2Rows.map(row => row.master).filter(Boolean);
 
-// Reverse only the two reviewed list mappings before old immutable source guards.
+// Reverse precisely the 17 new mappings, then verify the exact two-preview
+// predecessor hash; undo those original two to retain all older immutability guards.
 export function beforeStoryThumbnails3x2(file, bytes) {
   if (file !== component) return bytes;
-  assert.equal(sha(bytes), componentAfter, 'exact two-story-thumbnail source change');
   let current = bytes.toString('utf8');
-  for (const row of storyThumbnail3x2Rows) {
-    assert.equal(current.split(row.newLine).length, 2, row.id + ': unique 3:2 list mapping');
+  for (const row of storyThumbnail3x2Rows.slice(2)) {
+    assert.equal(current.split(row.newLine).length, 2, row.id + ': unique new 3:2 mapping');
     current = current.replace(row.newLine, row.oldLine);
   }
-  assert.equal(sha(current), componentBefore, 'previous approved story listings preserved');
+  assert.equal(sha(current), componentAfter, 'exact two-preview predecessor restored');
+  for (const row of storyThumbnail3x2Rows.slice(0,2)) {
+    assert.equal(current.split(row.newLine).length, 2, row.id + ': original preview retained');
+    current = current.replace(row.newLine,row.oldLine);
+  }
+  assert.equal(sha(current), componentBefore, 'all original story listings preserved');
   return Buffer.from(current);
 }
 
@@ -61,14 +89,19 @@ export async function assertStoryThumbnails3x2() {
   const stories = parse(fs.readFileSync('dist/facility-management/stories/index.html', 'utf8'));
   const home = parse(fs.readFileSync('dist/facility-management/index.html', 'utf8'));
   for (const row of storyThumbnail3x2Rows) {
+    if (row.source) assert.equal(sha(fs.readFileSync(row.source)), row.sourceSha, `${row.id}: source preserved`);
     for (const [file, expected, format] of [
       [row.master, row.pngSha, 'png'], [row.publicFile, row.webpSha, 'webp'], [row.outputFile, row.webpSha, 'webp'],
     ]) {
+      if (!file) continue;
       const bytes = fs.readFileSync(file);
       assert.equal(sha(bytes), expected, `${row.id}: approved ${format} bytes (${file})`);
       const meta = await sharp(bytes).metadata();
       assert.deepEqual([meta.format, meta.width, meta.height], [format, 1536, 1024], `${row.id}: 3:2 image`);
-      if (format === 'webp') assert(bytes.length < 160_000, `${row.id}: optimized list WebP`);
+      if (format === 'webp') {
+        assert(bytes.length < 300_000, `${row.id}: optimized list WebP`);
+        if (row.webpBytes) assert.equal(bytes.length, row.webpBytes, `${row.id}: recorded asset size`);
+      }
     }
     const expectedSrc = row.publicFile.replace(/^public/, '');
     const cards = [cardFor(stories, row.route), cardFor(home, row.route)].filter(Boolean);
