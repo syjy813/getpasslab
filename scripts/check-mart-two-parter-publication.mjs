@@ -37,7 +37,9 @@ for(const row of articles){
  assert(nodes(body).some(n=>n.tagName==='a'&&attr(n,'href')===other.route),'counterpart linked in body');
  for(const route of ['/facility-management/','/facility-management/stories/']){
   const card=load(route).find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);if(route==='/facility-management/'){assert.equal(card,undefined,'older article retained in stories after new release');continue;}assert(card,route+': mart article card');
-  const cover=nodes(card).find(n=>n.tagName==='img');assert.equal(attr(cover,'src'),'/images/facility-series/list-thumbnails/'+row.slug+'.webp');assert.equal(attr(cover,'width'),'1448');assert.equal(attr(cover,'height'),'1086');
+  const cover=nodes(card).find(n=>n.tagName==='img');
+  assert.equal(attr(cover,'src'),'/images/facility-series/list-thumbnails-3x2/'+row.slug+'.webp');
+  assert.equal(attr(cover,'width'),'1536');assert.equal(attr(cover,'height'),'1024');
  }
  for(const n of list.filter(n=>n.tagName==='a')){const href=attr(n,'href');if(href?.startsWith('/facility-management/'))assert(fs.existsSync('dist'+href.replace(/\/$/,'')+'/index.html'),href);}
 }

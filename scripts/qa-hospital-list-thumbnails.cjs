@@ -32,7 +32,7 @@ try{
     fit:getComputedStyle(img).objectFit,border:parseFloat(getComputedStyle(frame).borderTopWidth),
     title:card.querySelector('.facility-card-title').textContent.trim(),client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth
    }});
-   assert.equal(state.src,'/images/facility-series/list-thumbnails/'+id+'.webp');assert.deepEqual(state.natural,[1448,1086]);
+   assert.equal(state.src,'/images/facility-series/list-thumbnails-3x2/'+id+'.webp');assert.deepEqual(state.natural,[1536,1024]);
    assert(state.rendered[0]>0&&Math.abs(state.rendered[0]/state.rendered[1]-3/2)<.01,'3:2 frame for the original composition');
    assert.equal(state.fit,'contain');assert(state.border>=1,'image frame');assert(state.title.length>0,'HTML title');assert(state.scroll<=state.client+1,'no overflow');
    await card.click();await page.waitForURL(base+route);

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {parse} from 'parse5';
 import {createHash} from 'node:crypto';
 import {thumbnailRows} from './read-hobyeongbaekma-list-thumbnails.mjs';
+import {storyThumbnail3x2Rows} from './read-story-thumbnails-3x2.mjs';
 
 const preview=process.env.FACILITY_DRAFT_PREVIEW==='1';
 const origin='https://getpasslab.co.kr';
@@ -38,7 +39,10 @@ for(const row of articles){
  for(const route of ['/facility-management/','/facility-management/stories/']){
   const card=load(route).find(n=>n.tagName==='a'&&hasClass(n,'facility-card')&&attr(n,'href')===row.route);if(route==='/facility-management/'){assert.equal(card,undefined,'older article retained in stories after new release');continue;}assert(card,route+': department-store article card');
   const cover=nodes(card).find(n=>n.tagName==='img'),thumbnail=thumbnailRows.find(item=>item.id===row.slug);
-  assert(thumbnail,'approved listing image');assert.equal(attr(cover,'src'),thumbnail.publicFile.replace(/^public/,''));assert.equal(attr(cover,'width'),'1448');assert.equal(attr(cover,'height'),'1086');
+  assert(thumbnail,'approved original listing image');
+  const updated=storyThumbnail3x2Rows.find(item=>item.id===row.slug);
+  assert.equal(attr(cover,'src'),(updated??thumbnail).publicFile.replace(/^public/,''));
+  assert.equal(attr(cover,'width'),updated?'1536':'1448');assert.equal(attr(cover,'height'),updated?'1024':'1086');
  }
  for(const n of list.filter(n=>n.tagName==='a')){const href=attr(n,'href');if(href?.startsWith('/facility-management/'))assert(fs.existsSync('dist'+href.replace(/\/$/,'')+'/index.html'),href);}
 }
