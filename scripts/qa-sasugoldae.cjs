@@ -20,7 +20,8 @@ for(const width of [320,390,768,1440]){
   const card=page.locator(`a.facility-card[href="${route}"]`).first();
   if(list==='/facility-management/'){assert.equal(await card.count(),0,'ep0 displaced by eight newer episodes');continue;}
   assert.equal(await card.count(),1);
-  const img=card.locator('img');await img.scrollIntoViewIfNeeded();await img.evaluate(im=>im.decode());assert.equal(await img.getAttribute('src'),'/images/facility-series/list-thumbnails/sasugoldae-ep0.webp');
+  const img=card.locator('img');await img.scrollIntoViewIfNeeded();await img.evaluate(im=>im.decode());assert.equal(await img.getAttribute('src'),'/images/facility-series/list-thumbnails-3x2/sasugoldae.webp');
+  assert.deepEqual(await img.evaluate(im=>[im.naturalWidth,im.naturalHeight]),[1536,1024],'ep0 3:2 listing-only thumbnail');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   if(list==='/facility-management/'&&width===390)await page.screenshot({path:`${out}/home-${width}.png`,fullPage:true});
  }

@@ -1,9 +1,7 @@
 const {chromium}=require(process.env.QA_PLAYWRIGHT_MODULE||'playwright');
 const fs=require('node:fs');const assert=require('node:assert/strict');
 const release=JSON.parse(fs.readFileSync('docs/audits/2026-11-18-pending-release/manifest.json'));
-const storyPreview={
- 'sasugoldae-sauna-hope':'/images/facility-series/list-thumbnails-3x2/sasugoldae-sauna-hope.webp',
-};
+const storyPreviewSrc=slug=>'/images/facility-series/list-thumbnails-3x2/'+slug+'.webp';
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4321';
 (async()=>{const browser=await chromium.launch();const results=[];try{
  for(const width of [320,390,768,1440]){
@@ -26,7 +24,7 @@ const base=process.env.QA_BASE_URL||'http://127.0.0.1:4321';
    const thumbnail=card.locator('img');
    await thumbnail.scrollIntoViewIfNeeded();
    await thumbnail.evaluate(image=>image.decode());
-   assert.equal(await thumbnail.getAttribute('src'),storyPreview[row.slug]??row.image.replace(/^public/,''));
+   assert.equal(await thumbnail.getAttribute('src'),storyPreviewSrc(row.slug));
   }
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await page.goto(base+'/facility-management/');assert.equal(await page.locator('#facility-group-stories').count(),1);assert.equal(await page.locator('.facility-feed .facility-card[href*="/sasugoldae-"]').count(),4);
