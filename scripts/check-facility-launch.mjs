@@ -118,12 +118,19 @@ const facilityIANewRoutes = new Set([
 for (const [file, sha] of Object.entries({...draftManifest.source, ...publication?.source, ...draftManifest.assets})) {
   assert.equal(hash(beforeBulkVisuals(file,fs.readFileSync(file))), sha, file + ': pinned reviewed draft');
 }
+const newlyPublishedContent = new Set([
+  'src/content/facility/musugi.md',
+  'src/content/facility/facility-career-start.md',
+  'dist/facility-management/intro/musugi/index.html',
+  'dist/facility-management/career/facility-career-start/index.html',
+]);
+for (const path of newlyPublishedContent) assert(fs.existsSync(path), path + ': new approved content route exists');
 const files = [
   ...walk('src'),
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
 // Daily GA4 snapshots are validated by their dedicated analytics workflow, not UI fingerprints.
-].filter(file => !electricSourceAdditions.includes(file) && !electricOutputAdditions.includes(file) && !seriesSourceAdditions.includes(file) && !seriesOutputAdditions.includes(file) && file !== 'src/data/facility-page-views.json' && !thumbnailPublicFiles.includes(file) && !careerThumbnailPublicFiles.includes(file) && !storyThumbnail3x2PublicFiles.includes(file) && !facilityIAFiles.has(file) && !facilityIANewRoutes.has(file) && !sasugoldaeSourceAdditions.includes(file) && !sasugoldaeOutputAdditions.includes(file) && !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
+].filter(file => !newlyPublishedContent.has(file) && !electricSourceAdditions.includes(file) && !electricOutputAdditions.includes(file) && !seriesSourceAdditions.includes(file) && !seriesOutputAdditions.includes(file) && file !== 'src/data/facility-page-views.json' && !thumbnailPublicFiles.includes(file) && !careerThumbnailPublicFiles.includes(file) && !storyThumbnail3x2PublicFiles.includes(file) && !facilityIAFiles.has(file) && !facilityIANewRoutes.has(file) && !sasugoldaeSourceAdditions.includes(file) && !sasugoldaeOutputAdditions.includes(file) && !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).filter(file => !facilityIAFiles.has(file)).sort(), 'same non-IA source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
