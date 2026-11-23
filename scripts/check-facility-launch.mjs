@@ -19,6 +19,7 @@ import { createHash } from 'node:crypto';
 import { facilityReview, beforeFacilityLaunch } from './read-before-facility-launch.mjs';
 import {thumbnailPublicFiles, thumbnailMasterFiles, assertHobyeongbaekmaListThumbnails} from './read-hobyeongbaekma-list-thumbnails.mjs';
 import {careerThumbnailPublicFiles, assertFacilityCareerThumbnails} from './read-facility-career-thumbnails.mjs';
+import {storyThumbnail3x2PublicFiles, storyThumbnail3x2MasterFiles, assertStoryThumbnails3x2} from './read-story-thumbnails-3x2.mjs';
 import { publicSectorVisuals, visualDerivativeFiles, beforePublicSectorVisuals, assertPublicSectorVisuals, visualOutput } from './read-public-sector-visuals.mjs';
 import { electricSourceAdditions, electricOutputAdditions, assertElectricRelease } from './read-electric-release.mjs';
 
@@ -26,6 +27,7 @@ assertPublicSectorVisuals();
 assertBulkVisuals();
 await assertHobyeongbaekmaListThumbnails();
 await assertFacilityCareerThumbnails();
+await assertStoryThumbnails3x2();
 assertElectricRelease();
 
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -121,7 +123,7 @@ const files = [
   ...walk('public'),
   ...walk('dist').filter(file => /\.(html|xml)$/.test(file)),
 // Daily GA4 snapshots are validated by their dedicated analytics workflow, not UI fingerprints.
-].filter(file => !electricSourceAdditions.includes(file) && !electricOutputAdditions.includes(file) && !seriesSourceAdditions.includes(file) && !seriesOutputAdditions.includes(file) && file !== 'src/data/facility-page-views.json' && !thumbnailPublicFiles.includes(file) && !careerThumbnailPublicFiles.includes(file) && !facilityIAFiles.has(file) && !facilityIANewRoutes.has(file) && !sasugoldaeSourceAdditions.includes(file) && !sasugoldaeOutputAdditions.includes(file) && !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
+].filter(file => !electricSourceAdditions.includes(file) && !electricOutputAdditions.includes(file) && !seriesSourceAdditions.includes(file) && !seriesOutputAdditions.includes(file) && file !== 'src/data/facility-page-views.json' && !thumbnailPublicFiles.includes(file) && !careerThumbnailPublicFiles.includes(file) && !storyThumbnail3x2PublicFiles.includes(file) && !facilityIAFiles.has(file) && !facilityIANewRoutes.has(file) && !sasugoldaeSourceAdditions.includes(file) && !sasugoldaeOutputAdditions.includes(file) && !Object.hasOwn(hotelRelease.additions, file) && !hotelRelease.outputAdditions.includes(file) && !Object.hasOwn(episode00Release.additions, file) && !episode00Release.outputAdditions.includes(file) && !hospitalSourceAdditions.has(file) && !hospitalOutputAdditions.has(file) && !departmentStoreSourceAdditions.has(file) && !departmentStoreOutputAdditions.has(file) && !martSourceAdditions.has(file) && !martOutputAdditions.has(file) && !hospitalExtraSourceAdditions.has(file) && !hospitalExtraOutputAdditions.has(file) && !Object.hasOwn(draftManifest.source, file) && !newArticlePaths.includes(file)).sort();
 assert.deepEqual(files, Object.keys(facilityReview.current).filter(file => !facilityIAFiles.has(file)).sort(), 'same non-IA source and public URL inventory');
 const reviewedEditorialPaths = [];
 let generated = 0;
@@ -175,7 +177,7 @@ const martCovers="  'hobyeongbaekma-mart-despair': '/images/facility-series/ep4-
 }
 assert.deepEqual(reviewedEditorialPaths.sort(), Object.keys(editorialBlobs).filter(file => !facilityIAFiles.has(file)).sort(), 'other reviewed UI and favicon changes preserved');
 
-const assets = walk('facility-assets').filter(file => !thumbnailMasterFiles.includes(file) && !Object.hasOwn(draftManifest.assets, file)).sort();
+const assets = walk('facility-assets').filter(file => !thumbnailMasterFiles.includes(file) && !storyThumbnail3x2MasterFiles.includes(file) && !Object.hasOwn(draftManifest.assets, file)).sort();
 assert.deepEqual(assets, Object.keys(facilityReview.assets).sort(), 'original image inventory');
 for (const file of assets) assert.equal(hash(fs.readFileSync(file)), facilityReview.assets[file], file + ': original image');
 

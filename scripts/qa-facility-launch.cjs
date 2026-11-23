@@ -12,7 +12,10 @@ for(const [file,row] of Object.entries(bulkImages.source)) {const slug=file.spli
 const articleCategory = id => id === 'public-sector-comparison' ? 'jobs' : id === 'electric-unlimited' ? 'intro' : id === 'electric-license-appointment-comparison' ? 'qualifications' : 'career';
 const pages = ['/facility-management/', ...['intro','career','stories','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${articleCategory(x)}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
 (async () => {
-  const listingThumbnails = (await import('./read-hobyeongbaekma-list-thumbnails.mjs')).thumbnailRows.map(({id,name})=>[id,name]);
+  const storyPreviewRows = (await import('./read-story-thumbnails-3x2.mjs')).storyThumbnail3x2Rows;
+  const replacedStoryIds = new Set(storyPreviewRows.map(row=>row.id));
+  const listingThumbnails = (await import('./read-hobyeongbaekma-list-thumbnails.mjs')).thumbnailRows
+    .filter(row=>!replacedStoryIds.has(row.id)).map(({id,name})=>[id,name]);
   const browser = await chromium.launch();
   const results = [];
   try {
@@ -28,7 +31,8 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
         const slug = path.split('/').filter(Boolean).at(-1);
         const expected = imageCounts[slug];
         if (path === '/facility-management/stories/') {
-          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails/"]').count(),listingThumbnails.length,'only the approved listing thumbnails');
+          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails/"]').count(),listingThumbnails.length,'original list thumbnails retained except approved previews');
+          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails-3x2/"]').count(),storyPreviewRows.length,'only two updated 3:2 previews');
           for (const [id,name] of listingThumbnails) {
             const card=page.locator(`a.facility-card[href="/facility-management/career/${id}/"]`);
             assert.equal(await card.count(),1,id+': existing article link retained');
@@ -42,6 +46,20 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.deepEqual(state.natural,[1448,1086],id+': optimized WebP loads');
             assert(Math.abs(state.frameRatio-3/2)<.01,id+': consistent 3:2 frame');
             assert.equal(state.fit,'contain',id+': full image shown');
+          }
+          for (const row of storyPreviewRows) {
+            const card=page.locator(`a.facility-card[href="${row.route}"]`);
+            const image=card.locator('img');
+            assert.equal(await card.count(),1,row.id+': story card retained');
+            assert.equal(await image.getAttribute('src'),row.publicFile.replace(/^public/,''));
+            await image.evaluate(el=>el.decode());
+            const state=await image.evaluate(el=>{
+              const frame=el.parentElement.getBoundingClientRect();
+              return {natural:[el.naturalWidth,el.naturalHeight],frameRatio:frame.width/frame.height,fit:getComputedStyle(el).objectFit};
+            });
+            assert.deepEqual(state.natural,[1536,1024],row.id+': 3:2 optimized WebP loads');
+            assert(Math.abs(state.frameRatio-3/2)<.01,row.id+': matched image and frame ratio');
+            assert.equal(state.fit,'contain',row.id+': no crop');
           }
         }
 

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {storyThumbnail3x2Rows} from './read-story-thumbnails-3x2.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
@@ -57,7 +58,8 @@ for(const row of seriesRelease.articles){
  if(!preview){assert.equal(schema[0].datePublished,'2026-11-18');assert(schema[0].citation.length>0,'source metadata retained');}
  assert.equal(sitemap.includes('<loc>https://getpasslab.co.kr'+row.route+'</loc>'),!preview,'sitemap exposure');
  const card=all.find(n=>n.tagName==='a'&&has(n,'facility-card')&&attr(n,'href')===row.route);assert(card,'story card');
- assert.equal(attr(nodes(card).find(n=>n.tagName==='img'),'src'),row.image.replace(/^public/,''));
+ const updatedThumbnail=storyThumbnail3x2Rows.find(item=>item.id===row.slug);
+ assert.equal(attr(nodes(card).find(n=>n.tagName==='img'),'src'),(updatedThumbnail?.publicFile??row.image).replace(/^public/,''));
  for(const n of dom){const href=n.tagName==='a'?attr(n,'href'):null;if(href?.startsWith('/facility-management/'))assert(fs.existsSync('dist'+href.replace(/\/$/,'')+'/index.html'),'valid link '+href);}
 }
 const {default:sharp}=await import('sharp');

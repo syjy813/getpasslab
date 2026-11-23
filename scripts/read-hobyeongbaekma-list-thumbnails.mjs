@@ -4,6 +4,7 @@ import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
 import {beforeElectricArticleCard} from './read-electric-release.mjs';
 import {beforeFacilityFeedA} from './read-facility-feed.mjs';
+import {storyThumbnail3x2Rows} from './read-story-thumbnails-3x2.mjs';
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const component = 'src/components/FacilityCard.astro';
@@ -89,8 +90,10 @@ export async function assertHobyeongbaekmaListThumbnails() {
   }
   const list=allNodes(parse(fs.readFileSync('dist/facility-management/stories/index.html','utf8')));
   const cards=list.filter(node=>node.tagName==='a'&&hasClass(node,'facility-card'));
-  assert.equal(cards.filter(node=>allNodes(node).some(child=>attr(child,'src')?.includes('/list-thumbnails/'))).length,thumbnailRows.length,'exactly the approved listing overrides');
+  const replacedIds = new Set(storyThumbnail3x2Rows.map(row => row.id));
+  assert.equal(cards.filter(node=>allNodes(node).some(child=>attr(child,'src')?.includes('/list-thumbnails/'))).length,thumbnailRows.filter(row=>!replacedIds.has(row.id)).length,'remaining original listing overrides');
   for (const row of thumbnailRows) {
+    if (replacedIds.has(row.id)) continue; // New image and preserved article checked by the 3:2 preview guard.
     const card=cards.find(node=>attr(node,'href')===row.route);
     assert(card,row.route+': listing card');
     const img=allNodes(card).find(node=>node.tagName==='img');
