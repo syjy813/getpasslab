@@ -2,7 +2,9 @@
 title: "기계설비유지관리자 2027년 특례 종료, 누가 무엇을 준비해야 할까?"
 description: "2027년 4월 17일 종료되는 기계설비유지관리자 선임 특례의 적용 대상과 기한을 정리했습니다. 임시 선임자, 이직·취업 준비자, 건물 관리주체가 각각 확인할 사항을 안내합니다."
 category: qualifications
-status: draft
+status: published
+publishedAt: '2026-11-24'
+updatedAt: '2026-11-24'
 reviewedAt: '2026-11-24'
 summary:
 - "2027년 4월 17일은 기존 건축물의 일부 종사자에게 적용되는 기계설비유지관리자 선임 특례의 마지막 날입니다."
