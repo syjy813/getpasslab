@@ -30,8 +30,6 @@ related:
 certifications: []
 legalReview: false
 ---
-<figure><img src="/images/facility-series/ep4-1-mart-despair/01-hero.webp" alt="마트 영업 종료 후에도 냉장·냉동 설비와 야간 작업에 지친 시설관리자를 표현한 호병백마 ep.4-1 절망편" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" /></figure>
-
 
 ## 문을 닫아도 냉장·냉동은 계속 돌아간다
 

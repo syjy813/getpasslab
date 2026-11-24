@@ -37,8 +37,6 @@ certifications: []
 legalReview: true
 ---
 
-<figure><img src="/images/facility-electric/electric-unlimited.webp" alt="연두색 전기설비와 건물을 배경으로 돋보기로 노란 번개 모양을 확대해 보는 일러스트" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 *전기 무제한의 핵심은 설비용량뿐 아니라 수전전압까지 함께 보는 것이다.*
 
 시설관리 채용공고에서 ‘전기 무제한 선임 가능자’를 찾는다는 문구를 본 적이 있을 것이다. 전기기사를 취득하면 누구나 무제한이 되는 걸까? 전기산업기사로는 대형 건물을 맡을 수 없다는 뜻일까?

@@ -38,8 +38,6 @@ related:
 certifications: []
 ---
 
-<figure><img src="/images/facility-drafts/04/01-shifts-pay-hero.webp" alt="시설관리 주간·격일·교대근무 비교 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 *야간근무가 포함된 공고라면 월급과 근무표를 함께 확인*
 
 ## 월급 50만 원 차이, 정말 더 좋은 직장일까?

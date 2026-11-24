@@ -10,8 +10,9 @@ const audit='docs/audits/2026-11-05-facility-card-icons-center';
 const old=fs.readFileSync(review.source.beforeFile,'utf8'),current=fs.readFileSync(review.source.file,'utf8');
 const withoutImages=s=>s.replace(/!\[[^\]]*\]\([^)]+\)|<img[^>]+>/g,'').replace(/\n{3,}/g,'\n\n');
 assert.equal(withoutImages(current),withoutImages(old),'only image tags/alt changed; article facts, dates, links and text preserved');
+const bodyImages=review.images.filter(row=>row.publicPath!=='/images/facility-drafts/05/01-public-sector-hero.webp');
 const tags=[...current.matchAll(/<img src="([^"]+)" alt="([^"]+)"/g)];
-assert.deepEqual(tags.map(m=>m[1]),review.images.map(r=>r.publicPath),'same old card/hero URLs and one added checklist image');
+assert.deepEqual(tags.map(m=>m[1]),bodyImages.map(r=>r.publicPath),'all review cards remain in the article');
 assert(tags.every(m=>m[2].trim()),'all image alts present');
 for(const row of review.images){
   const meta=await sharp(row.file).metadata();
@@ -33,12 +34,12 @@ const nodes=n=>[n,...(n.childNodes||[]).flatMap(nodes)];
 const attr=(n,k)=>n?.attrs?.find(a=>a.name===k)?.value;
 const article=nodes(parse(fs.readFileSync('dist/facility-management/jobs/public-sector-comparison/index.html','utf8')));
 const body=article.find(n=>(attr(n,'class')||'').split(/\s+/).includes('facility-body'));
-assert.deepEqual(nodes(body).filter(n=>n.tagName==='img').map(n=>attr(n,'src')),review.images.map(r=>r.publicPath),'rendered article images in approved order');
-for(const row of review.images)assert(article.some(n=>n.tagName==='img'&&attr(n,'src')===row.publicPath&&attr(n,'width')&&attr(n,'height')),'reserved layout size: '+row.publicPath);
+assert.deepEqual(nodes(body).filter(n=>n.tagName==='img').map(n=>attr(n,'src')),bodyImages.map(r=>r.publicPath),'rendered article cards in approved order');
+for(const row of bodyImages)assert(article.some(n=>n.tagName==='img'&&attr(n,'src')===row.publicPath&&attr(n,'width')&&attr(n,'height')),'reserved layout size: '+row.publicPath);
 for(const page of ['dist/facility-management/career/index.html','dist/facility-management/jobs/index.html']){
  const all=nodes(parse(fs.readFileSync(page,'utf8')));
  const link=all.find(n=>n.tagName==='a'&&attr(n,'href')==='/facility-management/jobs/public-sector-comparison/'&&(attr(n,'class')||'').includes('facility-card'));
  assert(link,page+': article card exists');
- assert.equal(attr(nodes(link).find(n=>n.tagName==='img'),'src'),review.images[0].publicPath,'same approved hero in list and article');
+ assert.equal(attr(nodes(link).find(n=>n.tagName==='img'),'src'),review.images[0].publicPath,'approved cover stays in the list');
 }
-console.log('[Public-sector visuals] PASS: hero + 4 template cards, exact asset delivery, 6 criteria, article text/URLs, list thumbnails');
+console.log('[Public-sector visuals] PASS: list cover and 4 body cards, exact asset delivery, 6 criteria, article text/URLs, list thumbnails');

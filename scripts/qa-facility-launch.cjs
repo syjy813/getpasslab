@@ -7,6 +7,7 @@ const mode = preview ? 'private-preview' : 'publication';
 const output = `qa-results/facility-launch/${mode}`;
 fs.mkdirSync(output, {recursive: true});
 const bulkImages=JSON.parse(fs.readFileSync('docs/audits/2026-11-06-facility-image-bulk/manifest.json'));
+const bodyThumbnailRemovals = require('../docs/audits/2026-11-24-facility-body-thumbnails.json');
 const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':5, 'electric-unlimited':1, 'electric-license-appointment-comparison':1};
 for(const [file,row] of Object.entries(bulkImages.source)) {const slug=file.split('/').at(-1).replace('.md','');if(slug in imageCounts)imageCounts[slug]=row.images;}
 const articleCategory = id => id === 'public-sector-comparison' ? 'jobs' : id === 'electric-unlimited' ? 'intro' : id === 'electric-license-appointment-comparison' ? 'qualifications' : 'career';
@@ -26,12 +27,12 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
       await context.route('**/*', route => new URL(route.request().url()).origin === new URL(base).origin ? route.continue() : route.abort());
       const page = await context.newPage();
       let facilityHomeGeometry = null;
-      for (const path of [...pages, ...entryRows.map(row => row.route)]) {
+      for (const path of new Set([...pages, ...entryRows.map(row => row.route)])) {
         const response = await page.goto(base+path);
         assert.equal(response.status(),200,path);
         await page.evaluate(()=>document.fonts.ready);
         const slug = path.split('/').filter(Boolean).at(-1);
-        const expected = imageCounts[slug];
+        const expected = Object.hasOwn(imageCounts, slug) ? imageCounts[slug] - Number(Object.hasOwn(bodyThumbnailRemovals, slug)) : undefined;
         if (path === '/facility-management/stories/') {
           assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails/"]').count(),listingThumbnails.length,'original list thumbnails retained except approved previews');
           assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails-3x2/"]').count(),storyPreviewRows.length,'all nineteen updated 3:2 story images');
@@ -281,8 +282,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             const images = page.locator('.facility-body img');
             if(slug==='public-sector-comparison'){
               const visualReview=JSON.parse(fs.readFileSync('docs/audits/2026-11-05-public-sector-visuals/manifest.json'));
-              assert.deepEqual(await images.evaluateAll(imgs=>imgs.map(img=>new URL(img.src).pathname)),visualReview.images.map(row=>row.publicPath),'reviewed hero and four card images in order');
-              assert(!(await images.first().getAttribute('alt')).includes('지원자'),'hero alt describes scene without a person');
+              assert.deepEqual(await images.evaluateAll(imgs=>imgs.map(img=>new URL(img.src).pathname)),visualReview.images.filter(row=>row.publicPath!=='/images/facility-drafts/05/01-public-sector-hero.webp').map(row=>row.publicPath),'four reviewed body cards in order');
               for(const image of await images.all()){
                 await image.evaluate(el=>el.decode());
                 assert.deepEqual(await image.evaluate(el=>[el.naturalWidth,el.naturalHeight]),[1440,1080],'reviewed raster dimensions');

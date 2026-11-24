@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 import {bulkVisuals, assertBulkVisuals} from './scripts/read-facility-bulk-visuals.mjs';
 import { publicSectorVisuals, assertPublicSectorVisuals } from './scripts/read-public-sector-visuals.mjs';
+import { bodyThumbnailRemovals } from './scripts/read-facility-body-thumbnails.mjs';
 
 const facilityDir = './src/content/facility';
 const publishedFacilityCategories = new Set(readdirSync(facilityDir).filter(file => file.endsWith('.md')).map(file => readFileSync(join(facilityDir, file), 'utf8').split('---')[1] || '').filter(front => /^status:\s*['\"]?published['\"]?\s*$/m.test(front)).map(front => front.match(/^category:\s*['\"]?([a-z-]+)['\"]?\s*$/m)?.[1]).filter(Boolean));
@@ -38,7 +39,9 @@ const facilityAssets = {
         if (process.env.FACILITY_DRAFT_PREVIEW !== '1' && !/^status:\s*['"]?published['"]?\s*$/m.test(front)) continue;
         const target = join(fileURLToPath(dir), 'images', 'facility-drafts', number);
         mkdirSync(target, { recursive: true });
-        const references = [...markdown.matchAll(new RegExp(`/images/facility-drafts/${number}/([a-z0-9-]+\\.webp)`, 'g'))].map(match => match[1]);
+        // Keep legacy cover URLs available for list cards and existing image links.
+        const cover = bodyThumbnailRemovals[slug]?.src ?? '';
+        const references = [...`${markdown}\n${cover}`.matchAll(new RegExp(`/images/facility-drafts/${number}/([a-z0-9-]+\\.webp)`, 'g'))].map(match => match[1]);
         for (const asset of new Set(references)) {
           const reviewed = [...bulkVisuals.images, ...publicSectorVisuals.images].find(row => row.publicPath === `/images/facility-drafts/${number}/${asset}`);
           if (reviewed) {

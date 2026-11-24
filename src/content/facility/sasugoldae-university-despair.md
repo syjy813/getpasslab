@@ -40,8 +40,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/sasugoldae-episodes/sasugoldae-university-despair.webp" alt="대학교 시설관리 절망편의 업무 환경을 표현한 일러스트" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 대학교 시설직을 떠올리면 조용한 캠퍼스와 방학을 기대할 수 있습니다.
 
 그런데 시설직이 하루에 무엇을 하는지는 캠퍼스 풍경만으로 알 수 없습니다. 냉난방을 살피고 건물 사이를 이동하는 사람, 연구소의 설비를 운전하는 사람, 보수 공사와 예산 서류를 처리하는 사람이 같은 ‘대학교 시설관리’라는 이름으로 검색됩니다.

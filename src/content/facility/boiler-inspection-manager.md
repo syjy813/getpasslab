@@ -28,8 +28,6 @@ certifications: []
 legalReview: true
 ---
 
-<figure><img src="/images/facility-drafts/13/01-boiler-manager-hero-v2.webp" alt="에너지관리기능사로 보일러 선임이 가능할까? — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 *기능사 자격이 있어도 실제로 관리할 보일러의 검사증과 연료 조건부터 확인해야 한다.*
 
 ## 기능사 자격증을 땄다. 이제 보일러 관리자로 일할 수 있을까?

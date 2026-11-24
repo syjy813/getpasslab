@@ -32,8 +32,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-drafts/08/01-korailtech-hero.webp" alt="코레일테크 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 ## 철도 회사의 ‘시설관리’, 내가 생각한 그 기계실일까?
 
 ‘코레일테크 시설관리’라는 채용공고를 발견하면 이런 생각이 들 수 있다.

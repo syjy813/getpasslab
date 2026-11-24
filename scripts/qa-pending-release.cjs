@@ -9,13 +9,13 @@ const base=process.env.QA_BASE_URL||'http://127.0.0.1:4321';
   await context.route('**/*',r=>new URL(r.request().url()).origin===new URL(base).origin?r.continue():r.abort());
   const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(String(e)));
   for(const row of release.articles){
-   assert.equal((await page.goto(base+row.route)).status(),200);await page.locator('.facility-body img').evaluate(i=>i.decode());
+   assert.equal((await page.goto(base+row.route)).status(),200);assert.equal(await page.locator('.facility-body img').count(),0,'body cover removed');
    assert.equal(await page.locator('h1').textContent(),row.title);assert.equal(await page.locator('.facility-sources').count(),0);
-   const geometry=await page.evaluate(()=>{const im=document.querySelector('.facility-body img'),r=im.getBoundingClientRect();return {w:innerWidth,scroll:document.documentElement.scrollWidth,natural:[im.naturalWidth,im.naturalHeight],ratio:r.width/r.height}});
-   assert(geometry.scroll<=width+1,'article overflow '+row.slug);assert.deepEqual(geometry.natural,[1448,1086]);assert(Math.abs(geometry.ratio-4/3)<.01);
+   const scrollWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
+   assert(scrollWidth<=width+1,'article overflow '+row.slug);
    await page.locator('.facility-toc summary').click();const target=await page.locator('.facility-toc a').first().getAttribute('href');await page.locator('.facility-toc a').first().click();assert.equal(decodeURIComponent(new URL(page.url()).hash),decodeURIComponent(target));
    const other=await page.locator('.facility-section .facility-card').first().getAttribute('href');await page.locator('.facility-section .facility-card').first().click();await page.waitForURL(base+other);assert.equal(await page.locator('h1').count(),1);
-   results.push({width,slug:row.slug,overflow:false,hero:'loaded 4:3',toc:'pass',related:'pass'});
+   results.push({width,slug:row.slug,overflow:false,bodyCover:'removed',toc:'pass',related:'pass'});
   }
   await page.goto(base+'/facility-management/stories/');
   for(const row of release.articles){

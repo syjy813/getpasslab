@@ -4,6 +4,7 @@ const fs=require('node:fs');
 const base=(process.env.QA_BASE_URL||'http://127.0.0.1:4321').replace(/\/$/,'');
 const preview=process.env.QA_FACILITY_PREVIEW==='1';
 const bulkImages=JSON.parse(fs.readFileSync('docs/audits/2026-11-06-facility-image-bulk/manifest.json'));
+const bodyThumbnailRemovals=require('../docs/audits/2026-11-24-facility-body-thumbnails.json');
 const release=fs.existsSync('docs/audits/2026-11-05-facility-publication/manifest.json');
 const available=preview||release;
 const articles=Object.values(JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/site-article-map.json')));
@@ -39,7 +40,8 @@ fs.mkdirSync(output,{recursive:true});
     }
     assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),preview?'noindex, nofollow':'index, follow');
     const images=page.locator('.facility-body img');
-    const expectedImages=bulkImages.source['src/content/facility/'+article.slug+'.md']?.images??5;
+    const approvedImages=bulkImages.source['src/content/facility/'+article.slug+'.md']?.images??5;
+    const expectedImages=approvedImages-Number(Object.hasOwn(bodyThumbnailRemovals,article.slug));
     assert.equal(await images.count(),expectedImages);
     for(const img of await images.all()) {
      await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode());

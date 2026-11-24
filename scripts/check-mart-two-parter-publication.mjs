@@ -26,8 +26,8 @@ for(const row of articles){
  assert(!nodes(body).some(n=>n.tagName==='a'&&/^https?:/.test(attr(n,'href')||'')),'no external body links');
  assert(!/검토용 초안|SOURCE_AUDIT|EDITOR_NOTES/.test(text(list.find(n=>n.tagName==='article'))));
  for(const phrase of row.required) assert(bodyText.includes(phrase),'required editorial phrase: '+phrase);
- const images=nodes(body).filter(n=>n.tagName==='img');assert.equal(images.length,1);
- for(const [key,value] of Object.entries({src:row.hero,alt:row.alt,width:'1440',height:'1080',loading:'eager',fetchpriority:'high'})) assert.equal(attr(images[0],key),value);
+ assert.equal(nodes(body).filter(n=>n.tagName==='img').length,0,'body cover removed');
+ assert.equal(attr(list.find(n=>n.tagName==='meta'&&attr(n,'property')==='og:image'),'content'),origin+'/og-facility.png','social cover retained');
  assert.equal(actualImageHashes[row.slug],row.sha256);
  const schemas=list.filter(n=>n.tagName==='script'&&attr(n,'type')==='application/ld+json').flatMap(n=>{const v=JSON.parse(text(n));return Array.isArray(v)?v:[v]}).filter(n=>n['@type']==='Article');
  assert.equal(schemas.length,preview?0:1);

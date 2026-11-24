@@ -1,3 +1,4 @@
+import { assertBodyThumbnailsRemoved } from './read-facility-body-thumbnails.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -6,9 +7,14 @@ import { parse } from 'parse5';
 const component = 'src/components/FacilityCard.astro';
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 
-// 2026-11-23 approved listing-only thumbnails for job analyses and entry guides.
+// Approved listing-only thumbnails for career, entry, and qualification articles.
 // The older publication guards still compare against their original exact source bytes.
 export const careerThumbnailRows = [
+  { id: 'what-is-facility-management', category: 'career', listingCategory: 'intro', relatedFrom: '/facility-management/career/first-job/', hash: 'a63821cbe49185131975367e468fbd6130c1417cf6c7cb351662649f95669863' },
+  { id: 'boiler-inspection-manager', category: 'qualifications', onHome: false, relatedFrom: '/facility-management/qualifications/statutory-appointment-overlap/', assetDirectory: 'images/facility-qualifications/list-thumbnails', hash: 'c914167830dffb0f7b109160902cac539757c8e1a2c0d887c03a415ab9892340' },
+  { id: 'mechanical-career-records', category: 'qualifications', onHome: false, relatedFrom: '/facility-management/career/facility-career-start/', assetDirectory: 'images/facility-qualifications/list-thumbnails', hash: 'b980500f46f71126b5cb48826a5fcead9c54ce5d2ace51b28def62de37b57bb8' },
+  { id: 'mechanical-maintainer-levels', category: 'qualifications', onHome: false, relatedFrom: '/facility-management/qualifications/mechanical-career-records/', assetDirectory: 'images/facility-qualifications/list-thumbnails', hash: '7255501a6887b73dcf54620e0a5c8241b0982412c93694dc651d8fae6e619e86' },
+  { id: 'statutory-appointments', category: 'qualifications', onHome: false, relatedFrom: '/facility-management/intro/musugi/', assetDirectory: 'images/facility-qualifications/list-thumbnails', hash: 'fee8ae81443c0e881ad8ff2aff2174d243d1e30449ea06121512c74adc627fb4' },
   { id: 'hanfms', hash: '06d23f06efdbe503ed8c97963d5d45044fbaa1de6762bc5074d1aeb307ce7cbd' },
   { id: 'kamcofmc', hash: '51ec2f69c43093d424b607a3b932db9e52a06631b323546b14aaff8fafff80dd' },
   { id: 'korailtech', hash: 'ae18863c3d7f3f7a52a61b899062a83d6b9bef80809de9f76c3870277a755f76' },
@@ -52,6 +58,7 @@ const nodes = node => [node, ...(node.childNodes || []).flatMap(nodes)];
 const attr = (node, name) => node?.attrs?.find(row => row.name === name)?.value;
 
 export async function assertFacilityCareerThumbnails() {
+  assertBodyThumbnailsRemoved();
   const { default: sharp } = await import('sharp');
   const load = path => nodes(parse(fs.readFileSync(`dist${path}index.html`, 'utf8')));
   for (const row of careerThumbnailRows) {
@@ -62,9 +69,9 @@ export async function assertFacilityCareerThumbnails() {
       const meta = await sharp(bytes).metadata();
       assert.deepEqual([meta.format, meta.width, meta.height], ['webp', 1536, 1024], `${row.id}: 3:2 WebP`);
     }
-    const listing = `/facility-management/${row.category ?? 'jobs'}/`;
+    const listing = `/facility-management/${row.listingCategory ?? row.category ?? 'jobs'}/`;
     const pages = [listing];
-    if (row.category) pages.push('/facility-management/');
+    if (row.category && row.onHome !== false) pages.push('/facility-management/');
     if (row.relatedFrom) pages.push(row.relatedFrom);
     for (const page of pages) {
       const card = load(page).find(node => node.tagName === 'a' && attr(node, 'href') === row.route && attr(node, 'class')?.split(' ').includes('facility-card'));

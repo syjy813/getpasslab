@@ -1,3 +1,4 @@
+import { beforeBodyThumbnailRemoval } from './read-facility-body-thumbnails.mjs';
 // Exact approved visual delta. Historical snapshots remain unchanged.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -16,7 +17,9 @@ export const visualOutput = row => 'dist' + row.publicPath;
 const key = file => path.relative(process.cwd(),path.resolve(String(file))).replaceAll('\\','/');
 export function beforePublicSectorVisuals(file,bytes) {
   const row=publicSectorVisuals.source;
-  if(key(file)!==row.file || visualHash(bytes)!==row.afterSHA256)return bytes;
+  if(key(file)!==row.file)return bytes;
+  const restored = beforeBodyThumbnailRemoval(row.file, bytes);
+  if(visualHash(restored)!==row.afterSHA256)return bytes;
   const before=fs.readFileSync(row.beforeFile);
   assert.equal(visualHash(before),row.beforeSHA256,'immutable previous article');
   return before;
@@ -35,7 +38,7 @@ export function assertPublicSectorVisuals(){
   assert.equal(createHash('sha1').update('blob '+previousRenderer.length+'\0').update(previousRenderer).digest('hex'),previousRefinement.template.gitBlob,'previous canonical renderer preserved');
   const previous=fs.readFileSync(historicalVisuals.template.file);
   assert.equal(createHash('sha1').update('blob '+previous.length+'\0').update(previous).digest('hex'),historicalVisuals.template.gitBlob,'historical renderer preserved');
-  assert.equal(visualHash(fs.readFileSync(source.file)),source.afterSHA256,'approved current article');
+  assert.equal(visualHash(beforeBodyThumbnailRemoval(source.file, fs.readFileSync(source.file))),source.afterSHA256,'approved current article');
   assert.equal(visualHash(fs.readFileSync(source.beforeFile)),source.beforeSHA256,'previous article preserved');
   assert.equal(images.length,5,'one hero and four card images');
   assert.equal(new Set(images.map(r=>r.publicPath)).size,5,'unique image identities');

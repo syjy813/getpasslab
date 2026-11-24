@@ -1,0 +1,184 @@
+{
+  "boiler-inspection-manager": {
+    "markup": "<figure><img src=\"/images/facility-drafts/13/01-boiler-manager-hero-v2.webp\" alt=\"에너지관리기능사로 보일러 선임이 가능할까? — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 1711,
+    "src": "/images/facility-drafts/13/01-boiler-manager-hero-v2.webp",
+    "route": "/facility-management/qualifications/boiler-inspection-manager/",
+    "beforeSHA256": "421fdf6bb7d1d2bcfb3475f5a5a9cc1324ba2dc54c216cbe679f0fd73c769ee8"
+  },
+  "electric-license-appointment-comparison": {
+    "markup": "<figure><img src=\"/images/facility-electric/electric-license-appointment-comparison.webp\" alt=\"전기기능사 산업기사 기사라고 적힌 세 개의 높이가 다른 초록색 자격증 기둥을 작은 사람이 비교하는 일러스트\" width=\"1536\" height=\"1024\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 2151,
+    "src": "/images/facility-electric/electric-license-appointment-comparison.webp",
+    "route": "/facility-management/qualifications/electric-license-appointment-comparison/",
+    "beforeSHA256": "379d301f0c6410d4f6b31bac2bffb1362ca7daefd02a4864f0ce618e823d8acd"
+  },
+  "electric-unlimited": {
+    "markup": "<figure><img src=\"/images/facility-electric/electric-unlimited.webp\" alt=\"연두색 전기설비와 건물을 배경으로 돋보기로 노란 번개 모양을 확대해 보는 일러스트\" width=\"1536\" height=\"1024\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 2306,
+    "src": "/images/facility-electric/electric-unlimited.webp",
+    "route": "/facility-management/intro/electric-unlimited/",
+    "beforeSHA256": "b3637dbe5c3123300a49f53b658c0f38cba04c4766dcf8cee5f62d5c0327fac7"
+  },
+  "employment-types": {
+    "markup": "<figure><img src=\"/images/facility-drafts/03/01-employment-types-hero.webp\" alt=\"시설관리 직영·자회사·용역 차이 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 1971,
+    "src": "/images/facility-drafts/03/01-employment-types-hero.webp",
+    "route": "/facility-management/career/employment-types/",
+    "beforeSHA256": "60e9ebff65482e096ecc4b40fa215a56adf2296ee2b27e9c221d12bdc8e791bf"
+  },
+  "first-job": {
+    "markup": "<figure><img src=\"/images/facility-drafts/02/01-first-job-hero.webp\" alt=\"시설관리 첫 면접 질문 5가지 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 1857,
+    "src": "/images/facility-drafts/02/01-first-job-hero.webp",
+    "route": "/facility-management/career/first-job/",
+    "beforeSHA256": "e2bbcc3dc8e35c5afc1a94437fa4d6c603bde6de7b2d345d923e952ca7538666"
+  },
+  "hanfms": {
+    "markup": "<figure><img src=\"/images/facility-drafts/06/01-hanfms-hero.webp\" alt=\"한전FMS 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 2099,
+    "src": "/images/facility-drafts/06/01-hanfms-hero.webp",
+    "route": "/facility-management/jobs/hanfms/",
+    "beforeSHA256": "5311c21d2883efb1ab754799940097616f8352cb15bc40e5e45311d89eacc43f"
+  },
+  "hobyeongbaekma-mart-despair": {
+    "markup": "<figure><img src=\"/images/facility-series/ep4-1-mart-despair/01-hero.webp\" alt=\"마트 영업 종료 후에도 냉장·냉동 설비와 야간 작업에 지친 시설관리자를 표현한 호병백마 ep.4-1 절망편\" width=\"1440\" height=\"1080\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" /></figure>\n\n",
+    "offset": 2486,
+    "src": "/images/facility-series/ep4-1-mart-despair/01-hero.webp",
+    "route": "/facility-management/career/hobyeongbaekma-mart-despair/",
+    "beforeSHA256": "23f6c0b3d58b5ce53b7663f537bf1daceb85822f0e4adc8a7d380364cfef7935"
+  },
+  "hobyeongbaekma-mart-hope": {
+    "markup": "<figure><img src=\"/images/facility-series/ep4-2-mart-hope/01-hero.webp\" alt=\"마트 시설관리의 냉장·냉동 설비 경험과 원격감시·장애 대응·영선 경험을 표현한 호병백마 ep.4-2 희망편\" width=\"1440\" height=\"1080\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" /></figure>\n\n",
+    "offset": 2376,
+    "src": "/images/facility-series/ep4-2-mart-hope/01-hero.webp",
+    "route": "/facility-management/career/hobyeongbaekma-mart-hope/",
+    "beforeSHA256": "d8a80da28bf408d3be6183097bde39c6d19c13fd6ae94b36c58c6fe466c62da7"
+  },
+  "kamcofmc": {
+    "markup": "<figure><img src=\"/images/facility-drafts/09/01-camcofmc-hero.webp\" alt=\"캠코FMC 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 1827,
+    "src": "/images/facility-drafts/09/01-camcofmc-hero.webp",
+    "route": "/facility-management/jobs/kamcofmc/",
+    "beforeSHA256": "8d6e0a570c1811ab504326d592cd3b34eafc9f5439506180b513cb78d222c15e"
+  },
+  "korailtech": {
+    "markup": "<figure><img src=\"/images/facility-drafts/08/01-korailtech-hero.webp\" alt=\"코레일테크 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 1942,
+    "src": "/images/facility-drafts/08/01-korailtech-hero.webp",
+    "route": "/facility-management/jobs/korailtech/",
+    "beforeSHA256": "c64f28d6abdf9ddce363871c3f229fb018128ddd56bcdf4c493e4088a17407f7"
+  },
+  "mechanical-career-records": {
+    "markup": "<figure><img src=\"/images/facility-drafts/12/01-career-reporting-hero.webp\" alt=\"기계설비유지관리자 경력신고·수첩 발급 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 1747,
+    "src": "/images/facility-drafts/12/01-career-reporting-hero.webp",
+    "route": "/facility-management/qualifications/mechanical-career-records/",
+    "beforeSHA256": "b8c5950e4fd772b1a4c66d0106af7b8b11b26c6c77215a732ec9b57275575bab"
+  },
+  "mechanical-maintainer-levels": {
+    "markup": "<figure><img src=\"/images/facility-drafts/11/01-maintainer-grades-hero.webp\" alt=\"기계설비유지관리자 등급 총정리 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 1829,
+    "src": "/images/facility-drafts/11/01-maintainer-grades-hero.webp",
+    "route": "/facility-management/qualifications/mechanical-maintainer-levels/",
+    "beforeSHA256": "18e000dd0aa49dc35b45e82c7ce18949cbe8a02865c7396a438f540a732fb6bc"
+  },
+  "postal-facilities": {
+    "markup": "<figure><img src=\"/images/facility-drafts/07/01-postal-facilities-hero.webp\" alt=\"우체국시설관리단 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 1643,
+    "src": "/images/facility-drafts/07/01-postal-facilities-hero.webp",
+    "route": "/facility-management/jobs/postal-facilities/",
+    "beforeSHA256": "8434510ae4ac1bcdd5369f26fda475cf2549296baa1cf2cb95598b350b94cd96"
+  },
+  "public-sector-comparison": {
+    "markup": "<img src=\"/images/facility-drafts/05/01-public-sector-hero.webp\" alt=\"공공시설과 설비를 배경으로 채용공고 세 개와 비교 체크리스트·계약서를 검토하는 책상 장면\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" />\n\n",
+    "offset": 2801,
+    "src": "/images/facility-drafts/05/01-public-sector-hero.webp",
+    "route": "/facility-management/jobs/public-sector-comparison/",
+    "beforeSHA256": "7f0e08eafd2760a01f1c9bb135040b6b3816dc3617228fc6acbbd1dc3c86bd6e"
+  },
+  "sasugoldae": {
+    "markup": "<figure><img src=\"/images/facility-series/sasugoldae-00/01-sasugoldae-hero.webp\" alt=\"사우나의 탕, 실내 수영장, 골프장과 클럽하우스, 대학 건물을 나란히 배치한 사수골대 0화 대표 이미지\" width=\"1448\" height=\"1086\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 3858,
+    "src": "/images/facility-series/sasugoldae-00/01-sasugoldae-hero.webp",
+    "route": "/facility-management/career/sasugoldae/",
+    "beforeSHA256": "5e4fc94dbfa369139701b0e226be26e4307c4a09658569884e686a8bfd9e3fe2"
+  },
+  "sasugoldae-golf-course-despair": {
+    "markup": "<figure><img src=\"/images/facility-series/sasugoldae-episodes/sasugoldae-golf-despair.webp\" alt=\"골프장 시설관리 절망편의 업무 환경을 표현한 일러스트\" width=\"1448\" height=\"1086\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 3183,
+    "src": "/images/facility-series/sasugoldae-episodes/sasugoldae-golf-despair.webp",
+    "route": "/facility-management/career/sasugoldae-golf-course-despair/",
+    "beforeSHA256": "39f127a73aaecbb563e0e2cade3e9b6efb7a997f9b75b9a9b49e26fb2df54f5d"
+  },
+  "sasugoldae-golf-course-hope": {
+    "markup": "<figure><img src=\"/images/facility-series/sasugoldae-episodes/sasugoldae-golf-hope.webp\" alt=\"골프장 시설관리 희망편의 업무 환경을 표현한 일러스트\" width=\"1448\" height=\"1086\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 3194,
+    "src": "/images/facility-series/sasugoldae-episodes/sasugoldae-golf-hope.webp",
+    "route": "/facility-management/career/sasugoldae-golf-course-hope/",
+    "beforeSHA256": "587ce7905c79232894539d0413c223b1dbc6d599dbe3286b394b2fa73511aec1"
+  },
+  "sasugoldae-sauna-despair": {
+    "markup": "<figure><img src=\"/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-despair.webp\" alt=\"사우나 시설관리 절망편의 업무 환경을 표현한 일러스트\" width=\"1448\" height=\"1086\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 2920,
+    "src": "/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-despair.webp",
+    "route": "/facility-management/career/sasugoldae-sauna-despair/",
+    "beforeSHA256": "027ea2e9c1a45042675d3cab84c5ad954ed4707ab9293e1293af6c02df2ef6ed"
+  },
+  "sasugoldae-sauna-hope": {
+    "markup": "<figure><img src=\"/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-hope.webp\" alt=\"사우나 시설관리 희망편의 업무 환경을 표현한 일러스트\" width=\"1448\" height=\"1086\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 2915,
+    "src": "/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-hope.webp",
+    "route": "/facility-management/career/sasugoldae-sauna-hope/",
+    "beforeSHA256": "621d848e3d9606574368aabd1e3c9e29ec0c365347380e30ce4c366d49f87c6a"
+  },
+  "sasugoldae-swimming-pool-despair": {
+    "markup": "<figure><img src=\"/images/facility-series/sasugoldae-episodes/sasugoldae-pool-despair.webp\" alt=\"수영장 시설관리 절망편의 업무 환경을 표현한 일러스트\" width=\"1448\" height=\"1086\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 3428,
+    "src": "/images/facility-series/sasugoldae-episodes/sasugoldae-pool-despair.webp",
+    "route": "/facility-management/career/sasugoldae-swimming-pool-despair/",
+    "beforeSHA256": "208912dd6bfa28059a8689ec74503a2eb55687c796b813f3c0776551b5916012"
+  },
+  "sasugoldae-swimming-pool-hope": {
+    "markup": "<figure><img src=\"/images/facility-series/sasugoldae-episodes/sasugoldae-pool-hope.webp\" alt=\"수영장 시설관리 희망편의 업무 환경을 표현한 일러스트\" width=\"1448\" height=\"1086\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 3455,
+    "src": "/images/facility-series/sasugoldae-episodes/sasugoldae-pool-hope.webp",
+    "route": "/facility-management/career/sasugoldae-swimming-pool-hope/",
+    "beforeSHA256": "f98bf9c42d2f4e3df864c3dab7f5307811f8c990270bb594c37d8615a529697e"
+  },
+  "sasugoldae-university-despair": {
+    "markup": "<figure><img src=\"/images/facility-series/sasugoldae-episodes/sasugoldae-university-despair.webp\" alt=\"대학교 시설관리 절망편의 업무 환경을 표현한 일러스트\" width=\"1448\" height=\"1086\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 3738,
+    "src": "/images/facility-series/sasugoldae-episodes/sasugoldae-university-despair.webp",
+    "route": "/facility-management/career/sasugoldae-university-despair/",
+    "beforeSHA256": "12aeb5d79b9347e4888af142866853f3228d830c7a9377c73ba37a2a06d2b69e"
+  },
+  "sasugoldae-university-hope": {
+    "markup": "<figure><img src=\"/images/facility-series/sasugoldae-episodes/sasugoldae-university-hope.webp\" alt=\"대학교 시설관리 희망편의 업무 환경을 표현한 일러스트\" width=\"1448\" height=\"1086\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 3745,
+    "src": "/images/facility-series/sasugoldae-episodes/sasugoldae-university-hope.webp",
+    "route": "/facility-management/career/sasugoldae-university-hope/",
+    "beforeSHA256": "79568a75bfbb15c75712ba38a776d04b835e6eda8db048bfa5a5e98a5e361d27"
+  },
+  "shifts-and-pay": {
+    "markup": "<figure><img src=\"/images/facility-drafts/04/01-shifts-pay-hero.webp\" alt=\"시설관리 주간·격일·교대근무 비교 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 2265,
+    "src": "/images/facility-drafts/04/01-shifts-pay-hero.webp",
+    "route": "/facility-management/career/shifts-and-pay/",
+    "beforeSHA256": "7533eb3d4be4107de7333f3d164d7a7d287c69ce0dd261a3f353026b14f7e487"
+  },
+  "statutory-appointments": {
+    "markup": "<figure><img src=\"/images/facility-drafts/10/01-statutory-appointments-hero.webp\" alt=\"시설관리 법정선임 총정리 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 3240,
+    "src": "/images/facility-drafts/10/01-statutory-appointments-hero.webp",
+    "route": "/facility-management/qualifications/statutory-appointments/",
+    "beforeSHA256": "872567a03bcc892019acc789525e5f4445113868fc47ee009beaeff19dbaf8ab"
+  },
+  "what-is-facility-management": {
+    "markup": "<figure><img src=\"/images/facility-drafts/01/01-facility-management-hero.webp\" alt=\"시설관리란? 건물이 멀쩡한 데는 다 이유가 있다 — 관련 설비와 확인 자료를 담은 일러스트\" width=\"1440\" height=\"1080\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\" /></figure>\n\n",
+    "offset": 1434,
+    "src": "/images/facility-drafts/01/01-facility-management-hero.webp",
+    "route": "/facility-management/career/what-is-facility-management/",
+    "beforeSHA256": "d58b30fcbbfc746fd70bf7db08b7d72e0d11d0a86219fc7ed5b8a8e6a2bb8e27"
+  }
+}

@@ -29,8 +29,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-drafts/09/01-camcofmc-hero.webp" alt="캠코FMC 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 ## 과장보다 기사가 월급을 더 받는다고?
 
 시설관리 채용공고를 보다 보면 직함부터 눈에 들어온다.

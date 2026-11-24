@@ -40,8 +40,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/sasugoldae-episodes/sasugoldae-golf-despair.webp" alt="골프장 시설관리 절망편의 업무 환경을 표현한 일러스트" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 입사 전에는 예초를 하지 않아도 된다고 들었습니다. 코스관리팀이 따로 있다는 설명이었습니다. 그런데 입사 뒤 코스팀의 인원이 부족해 지원을 나가기 시작했고, 그 횟수가 잦아졌다는 후기가 있습니다.
 
 눈여겨볼 것은 예초 작업 자체만이 아닙니다. 맡지 않는다고 들었던 일이 반복해서 자신의 일이 됐다는 점입니다.

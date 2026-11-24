@@ -1,3 +1,4 @@
+import { beforeBodyThumbnailRemoval } from './read-facility-body-thumbnails.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -90,7 +91,7 @@ export async function assertStoryThumbnails3x2() {
   const stories = parse(fs.readFileSync('dist/facility-management/stories/index.html', 'utf8'));
   const home = parse(fs.readFileSync('dist/facility-management/index.html', 'utf8'));
   for (const row of storyThumbnail3x2Rows) {
-    if (row.source) assert.equal(sha(fs.readFileSync(row.source)), row.sourceSha, `${row.id}: source preserved`);
+    if (row.source) assert.equal(sha(beforeBodyThumbnailRemoval(row.source, fs.readFileSync(row.source))), row.sourceSha, `${row.id}: source preserved`);
     for (const [file, expected, format] of [
       [row.master, row.pngSha, 'png'], [row.publicFile, row.webpSha, 'webp'], [row.outputFile, row.webpSha, 'webp'],
     ]) {

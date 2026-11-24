@@ -64,7 +64,7 @@ export function assertElectricRelease() {
     assert.equal(hash(fs.readFileSync(row.publicFile.replace(/^public/, 'dist'))), row.imageSha256, row.id + ': served image unchanged');
     const html = fs.readFileSync(`dist${row.route}index.html`, 'utf8');
     assert(html.includes(`https://getpasslab.co.kr${row.route}`), row.id + ': canonical URL');
-    assert(html.includes(`/images/facility-electric/${row.image}`), row.id + ': image in article');
+    assert(html.includes('<meta property="og:image" content="https://getpasslab.co.kr/og-facility.png">'), row.id + ': social image preserved');
     assert(!html.includes('검토용 초안'), row.id + ': no draft badge');
   }
 }

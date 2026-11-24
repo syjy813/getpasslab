@@ -40,8 +40,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/sasugoldae-episodes/sasugoldae-golf-hope.webp" alt="골프장 시설관리 희망편의 업무 환경을 표현한 일러스트" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 골프장 시설관리 후기를 보면 예초와 넓은 업무에 지쳤다는 이야기 옆에, 오래 다니고 있고 자신의 현장은 편하다는 글도 있습니다. 8년 근무했다고 밝힌 한 작성자의 평가가 그렇습니다.
 
 설비와 업무 분장에 대한 설명이 적어 긍정적인 평가의 이유까지는 알 수 없습니다. 그래도 오래 다닐 만하다고 느끼는 종사자가 있다는 사례입니다.

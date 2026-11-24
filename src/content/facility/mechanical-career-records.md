@@ -29,8 +29,6 @@ certifications: []
 legalReview: true
 ---
 
-<figure><img src="/images/facility-drafts/12/01-career-reporting-hero.webp" alt="기계설비유지관리자 경력신고·수첩 발급 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 *경력은 근무하면서 쌓이지만, 경력을 증명하는 서류는 따로 챙겨야 한다.*
 
 ## 회사에서 5년 일했는데, 인정경력도 5년일까?
