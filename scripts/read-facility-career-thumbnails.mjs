@@ -15,10 +15,11 @@ export const careerThumbnailRows = [
   { id: 'postal-facilities', hash: '5e88d8dcb28c2818741dc8c3030c3a86dda700dc3a340d5d2577c1f07bc469e6' },
   { id: 'musugi', category: 'intro', relatedFrom: '/facility-management/career/facility-career-start/', hash: 'cee2416bbdebb87a52d3bf78c928d4e6bf38444cb06dc3c7f702957f7defef59' },
   { id: 'facility-career-start', category: 'career', relatedFrom: '/facility-management/intro/musugi/', hash: '44fa62e219a65406e87723c52b8f88fec906e1a86d292d5e147614951db0e684' },
+  { id: 'mechanical-maintainer-grace-period', category: 'qualifications', assetDirectory: 'images/facility-qualifications/list-thumbnails', hash: '14301d635cb00e930aa90fddca5215f2eea951ea484ab7677ed34b1049da48dc' },
 ].map(row => ({
   ...row,
-  publicFile: `public/images/facility-career/list-thumbnails/${row.id}.webp`,
-  outputFile: `dist/images/facility-career/list-thumbnails/${row.id}.webp`,
+  publicFile: `public/${row.assetDirectory ?? 'images/facility-career/list-thumbnails'}/${row.id}.webp`,
+  outputFile: `dist/${row.assetDirectory ?? 'images/facility-career/list-thumbnails'}/${row.id}.webp`,
   route: `/facility-management/${row.category ?? 'jobs'}/${row.id}/`,
 }));
 export const careerThumbnailPublicFiles = careerThumbnailRows.map(row => row.publicFile);
@@ -60,7 +61,9 @@ export async function assertFacilityCareerThumbnails() {
       assert.deepEqual([meta.format, meta.width, meta.height], ['webp', 1536, 1024], `${row.id}: 3:2 WebP`);
     }
     const listing = `/facility-management/${row.category ?? 'jobs'}/`;
-    const pages = row.category ? [listing, '/facility-management/', row.relatedFrom] : [listing];
+    const pages = [listing];
+    if (row.category) pages.push('/facility-management/');
+    if (row.relatedFrom) pages.push(row.relatedFrom);
     for (const page of pages) {
       const card = load(page).find(node => node.tagName === 'a' && attr(node, 'href') === row.route && attr(node, 'class')?.split(' ').includes('facility-card'));
       assert(card, `${page}: card for ${row.route}`);
@@ -69,8 +72,9 @@ export async function assertFacilityCareerThumbnails() {
       assert.deepEqual([attr(img, 'width'), attr(img, 'height')], ['1536', '1024'], `${row.id}: image aspect reservation`);
     }
     const article = load(row.route);
-    assert(!article.some(node => node.tagName === 'meta' && attr(node, 'property') === 'og:image' && attr(node, 'content')?.includes('/facility-career/list-thumbnails/')), `${row.id}: original social image preserved`);
+    const thumbnailFolder = row.publicFile.slice('public'.length, row.publicFile.lastIndexOf('/') + 1);
+    assert(!article.some(node => node.tagName === 'meta' && attr(node, 'property') === 'og:image' && attr(node, 'content')?.includes(thumbnailFolder)), `${row.id}: original social image preserved`);
     const body = row.category ? nodes(article.find(node => node.tagName === 'article')) : article;
-    assert(!body.some(node => node.tagName === 'img' && attr(node, 'src')?.includes('/facility-career/list-thumbnails/')), `${row.id}: original article images preserved`);
+    assert(!body.some(node => node.tagName === 'img' && attr(node, 'src')?.includes(thumbnailFolder)), `${row.id}: original article images preserved`);
   }
 }

@@ -140,7 +140,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(categoryHeader.breadcrumbGap,'24px','subject-list breadcrumb spacing');
             assert.equal(categoryHeader.bottomRule,'1px','header separator retained');
             assert.equal(categoryHeader.listGap,'32px','article cards retain a clear 32px gap');
-            const counts = {intro:3,career:9,stories:19,jobs:5,practice:0,qualifications:5};
+            const counts = {intro:3,career:9,stories:19,jobs:5,practice:0,qualifications:6};
             assert.equal(await page.locator('.facility-category-list .facility-card').count(),
               counts[slug], 'existing article cards retained by category');
             if (slug === 'stories') assert.equal(await page.locator('.facility-category-list .facility-card[href="/facility-management/career/hobyeongbaekma-hospital-large-university/"]').count(),1,'hospital ep.2-3 category card');
