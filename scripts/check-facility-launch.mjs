@@ -119,6 +119,8 @@ for (const [file, sha] of Object.entries({...draftManifest.source, ...publicatio
   assert.equal(hash(beforeBulkVisuals(file,fs.readFileSync(file))), sha, file + ': pinned reviewed draft');
 }
 const newlyPublishedContent = new Set([
+  'src/content/facility/gaeawigong.md',
+  'dist/facility-management/intro/gaeawigong/index.html',
   'src/content/facility/gamdan-work.md',
   'dist/facility-management/intro/gamdan-work/index.html',
   'src/content/facility/mechanical-maintainer-grace-period.md',
