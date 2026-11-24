@@ -1,3 +1,4 @@
+import { beforeBodyThumbnailRemoval } from './read-facility-body-thumbnails.mjs';
 import fs from 'node:fs';
 import {storyThumbnail3x2Rows} from './read-story-thumbnails-3x2.mjs';
 import assert from 'node:assert/strict';
@@ -43,7 +44,7 @@ for(const [file,sha] of Object.entries(seriesRelease.protected)){
 const sitemap=fs.readFileSync('dist/sitemap-0.xml','utf8');
 const all=nodes(parse(fs.readFileSync('dist/facility-management/stories/index.html','utf8')));
 for(const row of seriesRelease.articles){
- assert.equal(hash(fs.readFileSync(row.source)),row.sourceSha256,row.source);
+ assert.equal(hash(beforeBodyThumbnailRemoval(row.source, fs.readFileSync(row.source))),row.sourceSha256,row.source);
  assert.equal(hash(fs.readFileSync(row.image)),row.imageSha256,row.image);
  assert.equal(hash(fs.readFileSync(row.image.replace(/^public/,'dist'))),row.imageSha256,'built image');
  assert.equal(hash(fs.readFileSync(row.thumbnail)),row.imageSha256,'approved exact thumbnail');

@@ -40,8 +40,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-despair.webp" alt="사우나 시설관리 절망편의 업무 환경을 표현한 일러스트" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 마지막 손님이 나가면 사우나는 조용해집니다. 샤워장에 사람도 없고, 탕 주변을 오가는 발소리도 끊깁니다. 이용객에게는 하루가 끝난 시간입니다.
 
 시설을 맡은 사람에게는 영업이 끝나야 할 수 있는 작업이 남아 있을 수 있습니다. 사용 중에는 손대기 어려웠던 샤워시설을 보수하고, 물을 거르는 설비를 청소하고, 다음 영업을 준비하는 일입니다.

@@ -38,8 +38,6 @@ related:
 certifications: []
 ---
 
-<img src="/images/facility-drafts/05/01-public-sector-hero.webp" alt="공공시설과 설비를 배경으로 채용공고 세 개와 비교 체크리스트·계약서를 검토하는 책상 장면" width="1440" height="1080" loading="eager" decoding="async" />
-
 *공공부문 취업을 알아볼 때는 이름보다 내가 실제로 지원할 공고부터 살펴보자*
 
 ## ‘공공기관 취업’이라고 다 같은 직장일까?

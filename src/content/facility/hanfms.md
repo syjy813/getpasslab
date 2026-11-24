@@ -29,8 +29,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-drafts/06/01-hanfms-hero.webp" alt="한전FMS 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 ## 같은 회사 공고인데, 자격 조건은 왜 이렇게 다를까?
 
 한전FMS 시설관리 채용공고를 처음 보면 회사 이름부터 눈에 들어온다.

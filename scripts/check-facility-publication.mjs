@@ -1,3 +1,4 @@
+import { bodyThumbnailRemovals } from './read-facility-body-thumbnails.mjs';
 import {seriesOutputAdditions,seriesRelease,beforePendingOutput} from './read-pending-release.mjs';
 import {sasugoldaeOutputAdditions} from './read-sasugoldae-release.mjs';
 import {hotelRelease, assertHotelRelease} from './read-hotel-two-parter-release.mjs';
@@ -103,7 +104,8 @@ for(const article of articles){
  assert(!list.some(n=>n.tagName==='del'));
  const body=list.find(n=>(attr(n,'class')||'').split(/\s+/).includes('facility-body'));
  const images=nodes(body).filter(n=>n.tagName==='img'&&attr(n,'src')?.includes('/images/facility-drafts/'));
- assert.equal(images.length,bulkVisuals.source['src/content/facility/'+article.slug+'.md']?.images??5);
+ const approvedImageCount=bulkVisuals.source['src/content/facility/'+article.slug+'.md']?.images??5;
+ assert.equal(images.length,approvedImageCount-Number(Object.hasOwn(bodyThumbnailRemovals,article.slug)));
  for(const image of images)assert(attr(image,'alt')&&attr(image,'width')&&attr(image,'height'));
  const data=list.filter(n=>n.tagName==='script'&&attr(n,'type')==='application/ld+json').flatMap(n=>{const d=JSON.parse(text(n));return Array.isArray(d)?d:[d]}).filter(d=>d['@type']==='Article');
  assert.equal(data.length,preview?0:1);

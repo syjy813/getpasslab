@@ -34,8 +34,6 @@ certifications: []
 legalReview: true
 ---
 
-<figure><img src="/images/facility-electric/electric-license-appointment-comparison.webp" alt="전기기능사 산업기사 기사라고 적힌 세 개의 높이가 다른 초록색 자격증 기둥을 작은 사람이 비교하는 일러스트" width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 *기능사·산업기사·기사는 전기 분야에서 비슷해 보여도 법정 선임 범위가 서로 다르다.*
 
 시설관리 취업을 준비하다 보면 전기기사, 전기산업기사, 전기기능사 중 무엇을 먼저 취득해야 할지 고민하게 된다. 자격증 이름은 비슷하지만 **전기안전관리자로 법적 선임될 수 있는 범위는 분명히 다르다.**

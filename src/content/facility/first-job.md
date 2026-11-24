@@ -29,8 +29,6 @@ related:
 certifications: []
 ---
 
-<figure><img src="/images/facility-drafts/02/01-first-job-hero.webp" alt="시설관리 첫 면접 질문 5가지 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 *시설관리 첫 취업을 앞두고 살펴볼 다섯 가지 기준을 소개하는 일러스트*
 
 ## “궁금한 점 있으세요?”라는 말에 무엇을 물을까?

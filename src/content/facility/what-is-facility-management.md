@@ -27,8 +27,6 @@ related:
 certifications: []
 ---
 
-<figure><img src="/images/facility-drafts/01/01-facility-management-hero.webp" alt="시설관리란? 건물이 멀쩡한 데는 다 이유가 있다 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 ## 건물이 멀쩡하게 돌아가도록 하는 일
 
 여름에는 에어컨이 시원하고, 수도꼭지를 틀면 물이 나온다. 평소에는 당연하지만, 냉방이 멈추거나 정전이 생기면 누군가는 원인을 찾고 대응해야 한다.

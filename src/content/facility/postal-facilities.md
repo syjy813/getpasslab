@@ -26,8 +26,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-drafts/07/01-postal-facilities-hero.webp" alt="우체국시설관리단 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 ## 우체국시설관리단에 입사하면 우체국에서만 일할까?
 
 우체국시설관리단 채용공고를 처음 펼치면 ‘우체국에서 건물 관리하는 일인가 보다’ 싶다.

@@ -40,8 +40,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/sasugoldae-episodes/sasugoldae-pool-hope.webp" alt="수영장 시설관리 희망편의 업무 환경을 표현한 일러스트" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 수영장 후기에 지친 이야기만 있는 것은 아닙니다. 수영장이 있는 체육센터에 지원해도 괜찮겠느냐는 질문에, 자신을 팀장이라고 소개한 한 댓글 작성자는 오랫동안 근무했고 일하면서 공부할 여유도 있다고 답했습니다.
 
 이 댓글만으로 고용주나 업무 여유를 만든 조건까지 알 수는 없습니다.

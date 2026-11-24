@@ -1,3 +1,4 @@
+import { beforeBodyThumbnailRemoval } from './read-facility-body-thumbnails.mjs';
 // Exact, approved November 18 deltas; older audit records remain immutable.
 import fs from 'node:fs';
 import {inflateSync} from 'node:zlib';
@@ -10,6 +11,7 @@ export const seriesOutputAdditions=seriesRelease.articles.flatMap(r=>['dist'+r.r
 export function beforePendingRelease(file,bytes){
  const row=seriesRelease.changes[file];
  if(!row)return bytes;
+ bytes=beforeBodyThumbnailRemoval(file, bytes);
  if(hash(bytes)===row.beforeSha256)return bytes;
  assert.equal(hash(bytes),row.sha256,file+': exact approved pending-release delta');
  const original=Buffer.from(row.before,'base64');

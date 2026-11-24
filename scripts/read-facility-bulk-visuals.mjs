@@ -1,3 +1,4 @@
+import { beforeBodyThumbnailRemoval } from './read-facility-body-thumbnails.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -45,7 +46,7 @@ function removeApprovedEditorialCorrections(file,bytes){
 export const bulkOutput=row=>'dist'+row.publicPath;
 export function beforeBulkVisuals(file,bytes){
  const row=bulkVisuals.source[file];if(!row)return bytes;
- assert.equal(sha(removeApprovedEditorialCorrections(file,bytes)),row.sha256,file+': reviewed image-only article plus approved editorial correction');
+ assert.equal(sha(removeApprovedEditorialCorrections(file,beforeBodyThumbnailRemoval(file,bytes))),row.sha256,file+': reviewed image-only article plus approved editorial correction');
  const previous=fs.readFileSync(row.previous);assert.equal(sha(previous),row.beforeSHA256,file+': preserved source');return previous;
 }
 const withoutImages=s=>s.replace(/<figure><img[^>]*><\/figure>|!\[[^\]]*\]\([^)]*\)/g,'').split('\n').filter(l=>l.trim()).join('\n');

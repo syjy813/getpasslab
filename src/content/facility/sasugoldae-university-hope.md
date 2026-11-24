@@ -40,8 +40,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/sasugoldae-episodes/sasugoldae-university-hope.webp" alt="대학교 시설관리 희망편의 업무 환경을 표현한 일러스트" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 대학 시설팀 근무 경험을 바탕으로 썼다는 한 블로그는 건축·전기·설비·조경·토목의 역할을 나누어 설명합니다. 분야별로 일하면서 공사는 협의해 진행하고, 필요한 작업은 외주에 맡긴다는 이야기입니다.
 
 작성자는 정시 퇴근과 업무 강도를 긍정적으로 평가하면서도 학교 규모와 담당 인원에 따라 다르다고 덧붙였습니다. 대학 전체의 조건으로 일반화할 수는 없는 개인 경험입니다.
