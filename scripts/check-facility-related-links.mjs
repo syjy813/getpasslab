@@ -21,10 +21,11 @@ import {electricArticles} from './read-electric-release.mjs';
 
 const episode00='/facility-management/career/hobyeongbaekma/';
 const gracePeriodRoute='/facility-management/qualifications/mechanical-maintainer-grace-period/';
+const gamdanRoute='/facility-management/intro/gamdan-work/';
 const newArticleRoutes=['/facility-management/intro/musugi/','/facility-management/career/facility-career-start/'];
 const appointmentSlugs=['refrigeration-safety-manager','statutory-appointment-overlap'];
 const appointmentRoutes=appointmentSlugs.map(slug=>`/facility-management/qualifications/${slug}/`);
-const eligible=urls=>[...urls,...newArticleRoutes,gracePeriodRoute,...appointmentRoutes,...seriesRelease.articles.map(r=>r.route),sasugoldaeRelease.route,episode00,...hotelUrls,...hospitalUrls,...hospitalExtraUrls,...departmentStoreUrls,...martUrls,...electricArticles.map(row=>row.route)];
+const eligible=urls=>[...urls,...newArticleRoutes,gamdanRoute,gracePeriodRoute,...appointmentRoutes,...seriesRelease.articles.map(r=>r.route),sasugoldaeRelease.route,episode00,...hotelUrls,...hospitalUrls,...hospitalExtraUrls,...departmentStoreUrls,...martUrls,...electricArticles.map(row=>row.route)];
 const origin='https://getpasslab.co.kr';
 const preview=process.env.FACILITY_DRAFT_PREVIEW === '1';
 const releaseDate='2026-11-03';
@@ -51,7 +52,7 @@ const assertMetadata=(path,expectedRobots)=>{
  return list;
 };
 const published=fs.readdirSync('src/content/facility').filter(file=>file.endsWith('.md')&&/^status:\s*published\s*$/m.test(fs.readFileSync('src/content/facility/'+file,'utf8'))).map(file=>file.slice(0,-3)).sort();
-assert.deepEqual(published,[...seriesRelease.articles.map(r=>r.slug),...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'sasugoldae','hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs,...hospitalExtraSlugs,...departmentStoreSlugs,...martSlugs,...electricArticles.map(row=>row.id),'musugi','facility-career-start','mechanical-maintainer-grace-period',...appointmentSlugs].sort(),'only reviewed articles in publication candidate');
+assert.deepEqual(published,[...seriesRelease.articles.map(r=>r.slug),...routes.map(route=>route.split('/').at(-1)),...(publication?Object.values(drafts).map(row=>row.slug):[]),'sasugoldae','hobyeongbaekma',...hotelRelease.articles.map(row=>row.slug),...hospitalSlugs,...hospitalExtraSlugs,...departmentStoreSlugs,...martSlugs,...electricArticles.map(row=>row.id),'musugi','facility-career-start','mechanical-maintainer-grace-period','gamdan-work',...appointmentSlugs].sort(),'only reviewed articles in publication candidate');
 for(const path of newArticleRoutes){
  const list=assertMetadata(path,'index, follow');
  const article=list.find(node=>node.tagName==='article');
@@ -122,6 +123,22 @@ for(const category of ['practice','qualifications']){
 const sitemap=fs.readdirSync('dist').filter(file=>/^sitemap.*\.xml$/.test(file)).map(file=>fs.readFileSync('dist/'+file,'utf8')).join('');
 for(const path of ['/facility-management/','/facility-management/career/','/facility-management/jobs/',...urls,...appointmentRoutes])assert.equal(sitemap.includes(`<loc>${origin+path}</loc>`),!preview,path+': sitemap publication eligibility');
 assert.equal(sitemap.includes(`<loc>${origin+gracePeriodRoute}</loc>`),!preview,gracePeriodRoute+': sitemap publication eligibility');
+const gamdanPage=assertMetadata(gamdanRoute,'index, follow');
+assert.equal(sitemap.includes(`<loc>${origin+gamdanRoute}</loc>`),!preview,gamdanRoute+': sitemap publication eligibility');
+const gamdanArticle=gamdanPage.find(node=>node.tagName==='article');
+assert(text(gamdanArticle).includes('근거 및 참고 자료'),gamdanRoute+': sources visible');
+const gamdanSchema=gamdanPage.filter(node=>node.tagName==='script'&&attrs(node,'type')==='application/ld+json').flatMap(node=>JSON.parse(text(node))).filter(row=>row['@type']==='Article');
+assert.equal(gamdanSchema.length,preview?0:1,gamdanRoute+': public Article only');
+if(!preview){
+ assert.equal(gamdanSchema[0].mainEntityOfPage,origin+gamdanRoute);
+ assert.equal(gamdanSchema[0].datePublished,'2026-11-24');
+ assert(gamdanSchema[0].citation.length>0);
+}
+for(const target of ['career/shifts-and-pay','career/first-job','intro/musugi']){
+ const path=`/facility-management/${target}/`;
+ assert(gamdanPage.some(node=>node.tagName==='a'&&attrs(node,'href')===path),gamdanRoute+': related link '+path);
+ assert(fs.existsSync(`dist${path}index.html`),path+': related article exists');
+}
 for(const category of (publication&&!preview?['practice']:['practice','qualifications']))assert(!sitemap.includes(`<loc>${origin}/facility-management/${category}/</loc>`),'empty category excluded from sitemap');
 assert(fs.readFileSync('dist/computer-literacy/index.html','utf8').includes(origin+'/og-default.png'),'certificate sharing image preserved');
 for(const excluded of ['01/04-qualifications-vs-appointment.webp','05/03-recruitment-patterns.webp'])assert(!fs.existsSync('dist/images/facility-drafts/'+excluded),'unreferenced figure must not be shipped');
