@@ -121,6 +121,10 @@ for (const [file, sha] of Object.entries({...draftManifest.source, ...publicatio
 const newlyPublishedContent = new Set([
   'src/content/facility/mechanical-maintainer-grace-period.md',
   'dist/facility-management/qualifications/mechanical-maintainer-grace-period/index.html',
+  'src/content/facility/refrigeration-safety-manager.md',
+  'dist/facility-management/qualifications/refrigeration-safety-manager/index.html',
+  'src/content/facility/statutory-appointment-overlap.md',
+  'dist/facility-management/qualifications/statutory-appointment-overlap/index.html',
   'src/content/facility/musugi.md',
   'src/content/facility/facility-career-start.md',
   'dist/facility-management/intro/musugi/index.html',
