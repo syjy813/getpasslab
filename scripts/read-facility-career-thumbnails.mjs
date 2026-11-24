@@ -10,6 +10,7 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 // Approved listing-only thumbnails for career, entry, and qualification articles.
 // The older publication guards still compare against their original exact source bytes.
 export const careerThumbnailRows = [
+  { id: 'gaeawigong', category: 'intro', relatedFrom: '/facility-management/intro/musugi/', hash: '48679a2d8cf8009ec8811add1514eb0a09710c360b90baafc088de978ec2197e' },
   { id: 'gamdan-work', category: 'intro', relatedFrom: '/facility-management/intro/musugi/', hash: 'd857f4b0ad082b23eb3a9e0601af317270814392184d931babd5ff7321ed80a1' },
   { id: 'what-is-facility-management', category: 'career', listingCategory: 'intro', relatedFrom: '/facility-management/career/first-job/', hash: 'a63821cbe49185131975367e468fbd6130c1417cf6c7cb351662649f95669863' },
   { id: 'boiler-inspection-manager', category: 'qualifications', onHome: false, relatedFrom: '/facility-management/qualifications/statutory-appointment-overlap/', assetDirectory: 'images/facility-qualifications/list-thumbnails', hash: 'c914167830dffb0f7b109160902cac539757c8e1a2c0d887c03a415ab9892340' },
