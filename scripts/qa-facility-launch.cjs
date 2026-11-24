@@ -5,6 +5,23 @@ const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/,
 const preview = process.env.QA_FACILITY_PREVIEW === '1';
 const mode = preview ? 'private-preview' : 'publication';
 const output = `qa-results/facility-launch/${mode}`;
+async function decodeVisibleImage(image) {
+  await image.scrollIntoViewIfNeeded();
+  await image.evaluate(async element => {
+    let timer;
+    try {
+      await Promise.race([
+        element.decode(),
+        new Promise((_, reject) => {
+          timer = setTimeout(() => reject(new Error(`Image load timed out: ${element.currentSrc || element.src}`)), 10000);
+        }),
+      ]);
+    } finally {
+      clearTimeout(timer);
+    }
+  });
+}
+
 fs.mkdirSync(output, {recursive: true});
 const bulkImages=JSON.parse(fs.readFileSync('docs/audits/2026-11-06-facility-image-bulk/manifest.json'));
 const bodyThumbnailRemovals = require('../docs/audits/2026-11-24-facility-body-thumbnails.json');
@@ -41,7 +58,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(await card.count(),1,id+': existing article link retained');
             const image=card.locator('img');
             assert.equal(await image.getAttribute('src'),`/images/facility-series/list-thumbnails/${name}.webp`);
-            await image.evaluate(el=>el.decode());
+            await decodeVisibleImage(image);
             const state=await image.evaluate(el=>{
               const frame=el.parentElement.getBoundingClientRect();
               return {natural:[el.naturalWidth,el.naturalHeight],frameRatio:frame.width/frame.height,fit:getComputedStyle(el).objectFit};
@@ -55,7 +72,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             const image=card.locator('img');
             assert.equal(await card.count(),1,row.id+': story card retained');
             assert.equal(await image.getAttribute('src'),row.publicFile.replace(/^public/,''));
-            await image.evaluate(el=>el.decode());
+            await decodeVisibleImage(image);
             const state=await image.evaluate(el=>{
               const frame=el.parentElement.getBoundingClientRect();
               return {natural:[el.naturalWidth,el.naturalHeight],frameRatio:frame.width/frame.height,fit:getComputedStyle(el).objectFit};
@@ -181,7 +198,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
             assert.equal(new Set(routes).size,routes.length,'no repeated home articles');
             const leadCover = page.locator('.facility-card--lead img');
-            await leadCover.evaluate(img => img.decode());
+            await decodeVisibleImage(leadCover);
             assert(await leadCover.evaluate(img => img.naturalWidth > 0),'lead uses existing article image');
           }
           assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), preview ? 'noindex, nofollow' : empty ? 'noindex, follow' : 'index, follow');
@@ -227,8 +244,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
           const borderlessHeroPath='/images/facility-drafts/03/01-employment-types-hero.webp';
           const covers = page.locator('.facility-card-cover img');
           for (const cover of await covers.all()) {
-            await cover.scrollIntoViewIfNeeded();
-            await cover.evaluate(img=>img.decode());
+            await decodeVisibleImage(cover);
             const info=await cover.evaluate(img=>{
               const r=img.getBoundingClientRect(),p=img.parentElement.getBoundingClientRect();
               return {
@@ -284,14 +300,13 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
               const visualReview=JSON.parse(fs.readFileSync('docs/audits/2026-11-05-public-sector-visuals/manifest.json'));
               assert.deepEqual(await images.evaluateAll(imgs=>imgs.map(img=>new URL(img.src).pathname)),visualReview.images.filter(row=>row.publicPath!=='/images/facility-drafts/05/01-public-sector-hero.webp').map(row=>row.publicPath),'four reviewed body cards in order');
               for(const image of await images.all()){
-                await image.evaluate(el=>el.decode());
+                await decodeVisibleImage(image);
                 assert.deepEqual(await image.evaluate(el=>[el.naturalWidth,el.naturalHeight]),[1440,1080],'reviewed raster dimensions');
               }
             }
             for (let i=0;i<expected;i++) {
               const img = images.nth(i);
-              await img.scrollIntoViewIfNeeded();
-              await img.evaluate(el=>el.decode());
+              await decodeVisibleImage(img);
               const info = await img.evaluate(el=>({src:el.getAttribute('src'),alt:el.getAttribute('alt'),complete:el.complete,naturalWidth:el.naturalWidth,renderWidth:el.getBoundingClientRect().width,border:getComputedStyle(el).borderTopWidth,borderStyle:getComputedStyle(el).borderTopStyle,boxSizing:getComputedStyle(el).boxSizing}));
               assert(info.complete && info.naturalWidth>0 && info.alt?.trim(),`${path} image ${i}: load and alt`);
               assert(info.renderWidth>0 && info.renderWidth<=width,`${path} image ${i}: width`);
@@ -420,6 +435,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
       const excluded = await page.request.get(base+'/facility-management/career/reading-job-postings/');
       assert.equal(excluded.status(),404,'unapproved draft is inaccessible');
       await context.close();
+      console.log(`Facility QA: ${mode} at ${width}px PASS`);
     }
     fs.writeFileSync(`${output}/results.json`,JSON.stringify({mode,cases:results.length,results},null,2)+'\n');
     console.log(`Facility QA: ${mode}, ${results.length} page and viewport cases PASS; article imagery and service switching verified at five widths`);
