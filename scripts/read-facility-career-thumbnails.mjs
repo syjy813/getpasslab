@@ -13,7 +13,7 @@ export const careerThumbnailRows = [
   { id: 'kamcofmc', hash: '51ec2f69c43093d424b607a3b932db9e52a06631b323546b14aaff8fafff80dd' },
   { id: 'korailtech', hash: 'ae18863c3d7f3f7a52a61b899062a83d6b9bef80809de9f76c3870277a755f76' },
   { id: 'postal-facilities', hash: '5e88d8dcb28c2818741dc8c3030c3a86dda700dc3a340d5d2577c1f07bc469e6' },
-  { id: 'what-is-facility-management', category: 'intro', routeCategory: 'career', relatedFrom: '/facility-management/career/first-job/', hash: '4d553d4ecea8c9e97f6adf1e1ce16b25fe87cf8b4db3adcd174a57605783ccbe' },
+  { id: 'what-is-facility-management', category: 'intro', routeCategory: 'career', relatedFrom: '/facility-management/career/first-job/', hash: '71887eb9f7675e6fa180e73dd9f90d58f3d54f72e341814f276228441b1674af' },
   { id: 'musugi', category: 'intro', relatedFrom: '/facility-management/career/facility-career-start/', hash: 'cee2416bbdebb87a52d3bf78c928d4e6bf38444cb06dc3c7f702957f7defef59' },
   { id: 'facility-career-start', category: 'career', relatedFrom: '/facility-management/intro/musugi/', hash: '44fa62e219a65406e87723c52b8f88fec906e1a86d292d5e147614951db0e684' },
   { id: 'mechanical-maintainer-grace-period', category: 'qualifications', assetDirectory: 'images/facility-qualifications/list-thumbnails', hash: '14301d635cb00e930aa90fddca5215f2eea951ea484ab7677ed34b1049da48dc' },
