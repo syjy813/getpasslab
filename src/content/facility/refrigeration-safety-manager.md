@@ -2,7 +2,9 @@
 title: "냉동시설 안전관리자 선임 기준｜기능사·산업기사"
 description: "공조냉동기계기능사와 산업기사의 냉동시설 안전관리 책임자 선임 범위를 냉매, 법정 냉동능력, 실무경력 기준으로 정리했다."
 category: qualifications
-status: draft
+status: published
+publishedAt: '2026-11-24'
+updatedAt: '2026-11-24'
 reviewedAt: '2026-11-24'
 summary:
 - "공조냉동기계기능사로 경력 요건 없이 안전관리 책임자 자격을 충족하는 범위는 일반 기준 100톤 이하, 프레온 냉매는 200톤 이하다."
