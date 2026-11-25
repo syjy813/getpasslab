@@ -49,8 +49,35 @@ const groups = category.slug === 'career' ? [
   { title: '다른 시설 이야기', articles: articles.filter(article => !article.id.startsWith('hobyeongbaekma') && !article.id.startsWith('sasugoldae')) },
 ] : [{ title: '', articles }];
 const structuredData = [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(withBase(item.path), SITE.url).href })) }];
+const searchMetadata: Record<string, { title: string; description: string }> = {
+  intro: {
+    title: '시설 사전 | 무수기·감단직·시설관리 용어 | 겟패랩',
+    description: '무수기, 감단직, 가에위공, 전기 무제한처럼 시설관리 채용공고와 현장에서 접하는 말을 실제 업무와 선임 조건에 연결해 설명합니다.',
+  },
+  career: {
+    title: '시설관리 취업·커리어 | 채용공고·근무조건·면접 | 겟패랩',
+    description: '시설관리 첫 취업을 위한 기능사·기사 선택, 면접 질문, 직영·용역 차이와 근무표를 정리했습니다. 한전FMS 등 기관별 채용공고도 비교할 수 있습니다.',
+  },
+  stories: {
+    title: '시설 이야기 | 호병백마·사수골대 시설관리 시리즈 | 겟패랩',
+    description: '호병백마와 사수골대 시리즈를 모았습니다. 호텔·병원·백화점·마트와 사우나·수영장·골프장·대학교에서 맡는 업무와 근무환경을 비교합니다.',
+  },
+  qualifications: {
+    title: '시설관리 법정선임 | 기계설비·냉동·보일러·겸직 | 겟패랩',
+    description: '기계설비유지관리자 등급·경력신고, 보일러·냉동시설·전기 선임 자격, 두 직책을 함께 맡을 때 적용되는 겸직 기준을 확인할 수 있습니다.',
+  },
+  practice: {
+    title: '시설관리 실무 | 설비 점검·운전·기록 기초 | 겟패랩',
+    description: '시설관리 설비의 구조와 점검·운전·기록 업무를 다루는 실무 콘텐츠를 준비하고 있습니다. 현재 공개된 시설관리 입문 안내와 관련 자격증 학습 페이지를 먼저 살펴보세요.',
+  },
+  jobs: {
+    title: '시설관리 채용공고 분석 | 한전FMS·코레일테크·공공부문 | 겟패랩',
+    description: '한전FMS·우체국시설관리단·코레일테크·캠코FMC의 시설관리 채용공고 사례를 분석합니다. 모집 회차와 사업소별 자격·선임요건, 급여·교대근무·정년을 비교하고 공고를 읽는 기준을 확인하세요.',
+  },
+};
+const metadata = searchMetadata[category.slug];
 ---
-<FacilityLayout title={`${category.name} — 시설의 모든 것 | GetPassLab`} description={`${category.description}. 시설의 모든 것에서 공개된 콘텐츠와 근거 자료를 확인하고, 관련 카테고리와 자격증 학습 페이지로 이어서 탐색하세요.`} robots={articles.length ? 'index, follow' : 'noindex, follow'} structuredData={structuredData}>
+<FacilityLayout title={metadata.title} description={metadata.description} robots={articles.length ? 'index, follow' : 'noindex, follow'} structuredData={structuredData}>
   <div class="facility-category-page">
     <FacilityBreadcrumb items={legacyJobs ? [{ name: '취업·커리어', path: facilityCategoryPath('career') }, { name: category.name }] : [{ name: category.name }]} />
     <header class="facility-intro facility-category-header">

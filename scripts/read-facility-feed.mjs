@@ -7,6 +7,7 @@ import {beforeStoryThumbnails3x2} from './read-story-thumbnails-3x2.mjs';
 
 const delta = JSON.parse(fs.readFileSync('docs/audits/2026-11-15-facility-feed/delta.json'));
 const feedA = JSON.parse(fs.readFileSync('docs/audits/2026-11-20-facility-feed-a/delta.json'));
+const searchMetadataSource = JSON.parse(fs.readFileSync('docs/audits/2026-11-25-facility-search/source-delta.json'));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 // The home-only category footer is a reviewed addition to the A-feed layout.
 // Strip precisely this delta before running the immutable historical feed guards.
@@ -68,6 +69,7 @@ export function beforeFacilityFeed(file, bytes) {
 }
 
 export function beforeFacilityFeedA(file, bytes) {
+  bytes = restoreSource(file, bytes, searchMetadataSource[file]);
   return restoreSource(file, beforeFacilityCareerThumbnails(file, beforeStoryThumbnails3x2(file, beforeHomeFooter(file, beforeCareerJobsCTA(file, bytes)))), feedA.source[file]);
 }
 
