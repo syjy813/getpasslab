@@ -23,7 +23,7 @@ const episode00='/facility-management/career/hobyeongbaekma/';
 const gracePeriodRoute='/facility-management/qualifications/mechanical-maintainer-grace-period/';
 const glossaryArticles=[
  {slug:'gamdan-work',date:'2026-11-24',related:['career/shifts-and-pay','career/first-job','intro/musugi']},
- {slug:'gaeawigong',date:'2026-11-24',related:['intro/musugi','career/facility-career-start','qualifications/boiler-inspection-manager','qualifications/refrigeration-safety-manager']},
+ {slug:'gaeawigong',date:'2026-11-24',related:['intro/musugi','career/facility-career-start','qualifications/boiler-inspection-manager','qualifications/refrigeration-safety-manager','qualifications/statutory-appointment-overlap']},
 ].map(row=>({...row,route:`/facility-management/intro/${row.slug}/`}));
 const newArticleRoutes=['/facility-management/intro/musugi/','/facility-management/career/facility-career-start/'];
 const appointmentSlugs=['refrigeration-safety-manager','statutory-appointment-overlap'];
