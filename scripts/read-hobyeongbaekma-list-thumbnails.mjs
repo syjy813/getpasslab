@@ -2,6 +2,9 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
+import {beforeElectricArticleCard} from './read-electric-release.mjs';
+import {beforeFacilityFeedA} from './read-facility-feed.mjs';
+import {storyThumbnail3x2Rows} from './read-story-thumbnails-3x2.mjs';
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const component = 'src/components/FacilityCard.astro';
@@ -36,6 +39,7 @@ export const thumbnailOutputFiles = thumbnailRows.map(row=>row.outputFile);
 // Reconstruct the exact pre-thumbnail component before older immutable guards.
 // No older fingerprint or unrelated rule is relaxed.
 export function beforeHobyeongbaekmaListThumbnails(file, bytes) {
+  bytes = beforeElectricArticleCard(file, bytes);
   if (file !== component) return bytes;
   let text=bytes.toString('utf8');
   for (const entry of ["  'sasugoldae-sauna-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-despair.webp',\n", "  'sasugoldae-sauna-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-hope.webp',\n", "  'sasugoldae-swimming-pool-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-pool-despair.webp',\n", "  'sasugoldae-swimming-pool-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-pool-hope.webp',\n", "  'sasugoldae-golf-course-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-golf-despair.webp',\n", "  'sasugoldae-golf-course-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-golf-hope.webp',\n", "  'sasugoldae-university-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-university-despair.webp',\n", "  'sasugoldae-university-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-university-hope.webp',\n"]) {
@@ -72,7 +76,7 @@ const attr = (node,name) => node?.attrs?.find(row=>row.name===name)?.value;
 const hasClass = (node,name) => (attr(node,'class')||'').split(/\s+/).includes(name);
 
 export async function assertHobyeongbaekmaListThumbnails() {
-  beforeHobyeongbaekmaListThumbnails(component,fs.readFileSync(component));
+  beforeHobyeongbaekmaListThumbnails(component,beforeFacilityFeedA(component,fs.readFileSync(component)));
   const {default:sharp}=await import('sharp');
   for (const row of thumbnailRows) {
     for (const [file,expected,format] of [[row.master,row.png,'png'],[row.publicFile,row.webp,'webp'],[row.outputFile,row.webp,'webp']]) {
@@ -86,8 +90,10 @@ export async function assertHobyeongbaekmaListThumbnails() {
   }
   const list=allNodes(parse(fs.readFileSync('dist/facility-management/stories/index.html','utf8')));
   const cards=list.filter(node=>node.tagName==='a'&&hasClass(node,'facility-card'));
-  assert.equal(cards.filter(node=>allNodes(node).some(child=>attr(child,'src')?.includes('/list-thumbnails/'))).length,thumbnailRows.length,'exactly the approved listing overrides');
+  const replacedIds = new Set(storyThumbnail3x2Rows.map(row => row.id));
+  assert.equal(cards.filter(node=>allNodes(node).some(child=>attr(child,'src')?.includes('/list-thumbnails/'))).length,thumbnailRows.filter(row=>!replacedIds.has(row.id)).length,'remaining original listing overrides');
   for (const row of thumbnailRows) {
+    if (replacedIds.has(row.id)) continue; // New image and preserved article checked by the 3:2 preview guard.
     const card=cards.find(node=>attr(node,'href')===row.route);
     assert(card,row.route+': listing card');
     const img=allNodes(card).find(node=>node.tagName==='img');

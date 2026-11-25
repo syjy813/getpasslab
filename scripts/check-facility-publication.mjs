@@ -1,3 +1,4 @@
+import { bodyThumbnailRemovals } from './read-facility-body-thumbnails.mjs';
 import {seriesOutputAdditions,seriesRelease,beforePendingOutput} from './read-pending-release.mjs';
 import {sasugoldaeOutputAdditions} from './read-sasugoldae-release.mjs';
 import {hotelRelease, assertHotelRelease} from './read-hotel-two-parter-release.mjs';
@@ -20,13 +21,21 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
 import {thumbnailOutputFiles, assertHobyeongbaekmaListThumbnails} from './read-hobyeongbaekma-list-thumbnails.mjs';
+import {careerThumbnailOutputFiles, assertFacilityCareerThumbnails} from './read-facility-career-thumbnails.mjs';
+import {storyThumbnail3x2OutputFiles, assertStoryThumbnails3x2} from './read-story-thumbnails-3x2.mjs';
+import {electricOutputAdditions, assertElectricRelease} from './read-electric-release.mjs';
 import {publicSectorVisuals,assertPublicSectorVisuals,visualOutput} from './read-public-sector-visuals.mjs';
 
 assertPublicSectorVisuals();
 assertBulkVisuals();
 await assertHobyeongbaekmaListThumbnails();
+await assertFacilityCareerThumbnails();
+await assertStoryThumbnails3x2();
+assertElectricRelease();
 
 const audit='docs/audits/2026-11-05-facility-publication/';
+// The audited 2026-11-19 editorial updates retain the original fact-review dates.
+const approvedEditorialUpdatedAt={kamcofmc:'2026-11-19','mechanical-career-records':'2026-11-19'};
 const release=JSON.parse(fs.readFileSync(audit+'manifest.json'));
 const original=JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/draft-manifest.json'));
 const articles=Object.values(JSON.parse(fs.readFileSync('docs/audits/2026-11-04-facility-drafts/site-article-map.json')));
@@ -81,7 +90,10 @@ let links=0;
 for(const article of articles){
  const source=fs.readFileSync('src/content/facility/'+article.slug+'.md','utf8');
  assert.match(source,/^status: published$/m);
- for(const field of ['publishedAt','updatedAt','reviewedAt'])assert(source.includes(field+": '"+release.plannedPublicationDate+"'"),article.slug+': '+field);
+ for(const field of ['publishedAt','updatedAt','reviewedAt']){
+  const expected=field==='updatedAt'?(approvedEditorialUpdatedAt[article.slug]??release.plannedPublicationDate):release.plannedPublicationDate;
+  assert(source.includes(field+": '"+expected+"'"),article.slug+': '+field);
+ }
  const list=nodes(parse(fs.readFileSync('dist'+article.path+'index.html','utf8')));
  const meta=name=>attr(list.find(n=>n.tagName==='meta'&&attr(n,'name')===name),'content');
  assert.equal(meta('robots'),preview?'noindex, nofollow':'index, follow');
@@ -92,11 +104,12 @@ for(const article of articles){
  assert(!list.some(n=>n.tagName==='del'));
  const body=list.find(n=>(attr(n,'class')||'').split(/\s+/).includes('facility-body'));
  const images=nodes(body).filter(n=>n.tagName==='img'&&attr(n,'src')?.includes('/images/facility-drafts/'));
- assert.equal(images.length,bulkVisuals.source['src/content/facility/'+article.slug+'.md']?.images??5);
+ const approvedImageCount=bulkVisuals.source['src/content/facility/'+article.slug+'.md']?.images??5;
+ assert.equal(images.length,approvedImageCount-Number(Object.hasOwn(bodyThumbnailRemovals,article.slug)));
  for(const image of images)assert(attr(image,'alt')&&attr(image,'width')&&attr(image,'height'));
  const data=list.filter(n=>n.tagName==='script'&&attr(n,'type')==='application/ld+json').flatMap(n=>{const d=JSON.parse(text(n));return Array.isArray(d)?d:[d]}).filter(d=>d['@type']==='Article');
  assert.equal(data.length,preview?0:1);
- if(!preview){assert.equal(data[0].datePublished,release.plannedPublicationDate);assert.equal(data[0].dateModified,release.plannedPublicationDate);assert(data[0].citation.length>0)}
+ if(!preview){assert.equal(data[0].datePublished,release.plannedPublicationDate);assert.equal(data[0].dateModified,approvedEditorialUpdatedAt[article.slug]??release.plannedPublicationDate);assert(data[0].citation.length>0)}
  assert.equal(sitemap.includes('<loc>https://getpasslab.co.kr'+article.path+'</loc>'),!preview);
  for(const n of list){const href=n.tagName==='a'?attr(n,'href'):null;if(href?.startsWith('/facility-management/')){assert(fs.existsSync('dist'+href.replace(/\/$/,'')+'/index.html'),href);links++}}
 }
@@ -142,7 +155,7 @@ const addedVisualImages=publicSectorVisuals.images.filter(r=>!r.existing).map(vi
 for(const row of publicSectorVisuals.images)assert.equal(hash(fs.readFileSync(visualOutput(row))),row.sha256,'approved public-sector output: '+row.publicPath);
 // Five-category IA adds two listing URLs; every old article and /jobs/ URL stays.
 const facilityIANewListings = ['dist/facility-management/intro/index.html', 'dist/facility-management/stories/index.html'];
-assert.deepEqual(files,[...seriesOutputAdditions,...thumbnailOutputFiles,...facilityIANewListings,...sasugoldaeOutputAdditions,...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...hospitalOutputAdditions,...departmentStoreOutputAdditions,...martOutputAdditions,...hospitalExtraOutputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===seriesRelease.compiledStyle.beforePath?seriesRelease.compiledStyle.path:f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same approved routes and images plus two five-category IA listings and three thumbnails');
+assert.deepEqual(files,[...electricOutputAdditions,...seriesOutputAdditions,...thumbnailOutputFiles,...careerThumbnailOutputFiles,...storyThumbnail3x2OutputFiles,...facilityIANewListings,...sasugoldaeOutputAdditions,...hotelRelease.outputAdditions,...episode00Release.outputAdditions,...hospitalOutputAdditions,...departmentStoreOutputAdditions,...martOutputAdditions,...hospitalExtraOutputAdditions,...Object.keys(baseline),...articles.map(a=>'dist'+a.path+'index.html'),...['dist/facility-management/intro/gaeawigong/index.html','dist/facility-management/intro/gamdan-work/index.html','dist/facility-management/intro/musugi/index.html','dist/facility-management/career/facility-career-start/index.html','dist/facility-management/qualifications/mechanical-maintainer-grace-period/index.html','dist/facility-management/qualifications/refrigeration-safety-manager/index.html','dist/facility-management/qualifications/statutory-appointment-overlap/index.html'],...addedImages,...addedVisualImages,...bulkVisuals.images.filter(r=>!r.existing).map(bulkOutput)].map(f=>f===seriesRelease.compiledStyle.beforePath?seriesRelease.compiledStyle.path:f===headingCSS.previousPath?currentFacilityCSS:f).sort(),'same approved routes and images plus two 3:2 story previews');
 let unchanged=0;
 const approvedRenders=new Set([...publicSectorVisuals.images.filter(r=>r.existing).map(visualOutput),...bulkVisuals.images.map(bulkOutput)]);
 for(const [file,sha] of Object.entries(baseline)){

@@ -43,7 +43,9 @@ try {
   assert.equal(snapshot.collectionSchedule.hour, 9);
   assert.equal(snapshot.sourceCommit, 'fixture-source');
   assert.equal(snapshot.daily.totals.reduce((a,b)=>a+b,0),6);
-  assert.equal(snapshot.daily.articles[path].at(-1),6);
+  const reportDay=snapshot.daily.dates.indexOf('2026-11-17');
+  assert(reportDay>=0,'fixture report date is present');
+  assert.equal(snapshot.daily.articles[path][reportDay],6);
   assert.ok(snapshot.daily.articles[path].includes(null));
   assert.ok(!(success.stdout + success.stderr).includes(token));
   console.log('PASS atomic snapshot includes newly published metadata, excludes drafts, preserves navigation category');

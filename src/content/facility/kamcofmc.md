@@ -4,7 +4,7 @@ description: 2026년 캠코FMC 하반기 현장직 채용공고를 바탕으로 
 category: jobs
 status: published
 publishedAt: '2026-11-05'
-updatedAt: '2026-11-05'
+updatedAt: '2026-11-19'
 reviewedAt: '2026-11-05'
 featured: false
 summary:
@@ -18,6 +18,9 @@ sources:
 - title: 캠코FMC 2026년 하반기 현장직 2차 공식 공고
   url: https://www.kamcofmc.co.kr/bbs/board.php?bo_table=s4_3&wr_id=248
   note: 2026-08-05 게시·08-19 접수 마감 · 2026-11-05 재대조
+- title: 캠코FMC 2027년 상반기 일반직 및 현장직 채용 공고
+  url: https://www.kamcofmc.co.kr/bbs/board.php?bo_table=s4_3&wr_id=252
+  note: 2026-11-10 게시 · 2026-11-19 확인; 아래 2026년 8월 사례와 별도 회차
 related:
 - first-job
 - shifts-and-pay
@@ -25,8 +28,6 @@ related:
 certifications: []
 legalReview: false
 ---
-
-<figure><img src="/images/facility-drafts/09/01-camcofmc-hero.webp" alt="캠코FMC 시설관리 채용 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
 
 ## 과장보다 기사가 월급을 더 받는다고?
 
@@ -46,6 +47,8 @@ legalReview: false
 캠코FMC 채용에서 먼저 볼 것은 **회사 이름보다 지원할 사업소, 직함보다 실제 담당 업무**다.
 
 *위 금액은 [2026년 8월 5일 ‘하반기 현장직 2차’ 모집공고](https://www.kamcofmc.co.kr/bbs/board.php?bo_table=s4_3&wr_id=248)에 제시된 세전 월 급여 수준으로, 당시 채용 사례다. 이 공고의 접수는 2026년 8월 19일 종료됐다.*
+
+**최신 공고 안내(2026년 11월 19일 확인):** 캠코FMC는 [2027년 상반기 일반직 및 현장직 채용 공고](https://www.kamcofmc.co.kr/bbs/board.php?bo_table=s4_3&wr_id=252)를 별도로 게시했다. 아래의 직급·급여·사업소 사례는 **2026년 8월 종료된 공고 기준**이므로, 신규 공고에 그대로 적용하지 말고 공식 모집표를 확인해야 한다.
 
 ## 캠코FMC 시설직, 같은 회사인데 무슨 일이 다를까?
 

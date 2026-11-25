@@ -40,8 +40,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-hope.webp" alt="사우나 시설관리 희망편의 업무 환경을 표현한 일러스트" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 사우나 시설관리의 단점을 읽고 나면 남는 질문이 있습니다. “그럼 배울 것도 없고, 지원할 이유도 없는 걸까?”
 
 기계설비를 배우려는 사람에게 보일러와 펌프, 급탕·배관이 있는 현장은 관심 대상이 될 수 있습니다. 누가 가르쳐 주고 어디까지 맡는지, 문제가 생기면 어떤 지원을 받는지 들어야 일자리의 모습이 보입니다.

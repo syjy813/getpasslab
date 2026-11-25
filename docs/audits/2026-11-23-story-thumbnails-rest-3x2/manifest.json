@@ -1,0 +1,177 @@
+{
+  "date": "2026-11-23",
+  "goal": "17 remaining published facility-story list-only 3:2 assets; original 4:3, article content and OG preserved",
+  "method": "sharp source-preserving contained foreground + narrow blurred side extensions",
+  "rows": [
+    {
+      "id": "hobyeongbaekma",
+      "source": "public/images/facility-series/list-thumbnails/hobyeongbaekma-ep0.webp",
+      "sourceSha256": "d880566ea4820c762eb753e4e1606f44525506d6e108eff75666a44c6392e770",
+      "webpSha256": "dfdbdecdb672f1a91640307e039dfe7242bbfffbdfd5d7b24d364b185d15d70b",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 107120,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/hobyeongbaekma.webp"
+    },
+    {
+      "id": "hobyeongbaekma-hotel-hope",
+      "source": "public/images/facility-series/list-thumbnails/hobyeongbaekma-hotel-hope.webp",
+      "sourceSha256": "c0c6a8ac16d5480ead0003864ba0b179c12cd38097407b6e872b0a10d21488d5",
+      "webpSha256": "a61eb3f8f4e61228ca7a7cabd58739efe04b3c7e94fbdf8fd9d045f9a4775738",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 66646,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-hotel-hope.webp"
+    },
+    {
+      "id": "hobyeongbaekma-hospital-despair",
+      "source": "public/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-despair.webp",
+      "sourceSha256": "b6710879676824a08e30c55244e25b6cfc618221d3568dc85ce39afb6296c69a",
+      "webpSha256": "ebc404ff734868c7b3a044baad8f4e572e24f56d3c674f7205e1e5ab1a316417",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 95656,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-hospital-despair.webp"
+    },
+    {
+      "id": "hobyeongbaekma-hospital-hope",
+      "source": "public/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-hope.webp",
+      "sourceSha256": "c1fea9913a39fb7f4d0fb16a13c93ce07dfe00224e0aab8c407db207f1d7f7ab",
+      "webpSha256": "e4c3b1a6d2bb83ece4405e2b24e7b043e86344ace3799caec855c4a7bf14e50c",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 86338,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-hospital-hope.webp"
+    },
+    {
+      "id": "hobyeongbaekma-hospital-large-university",
+      "source": "public/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-large-university.webp",
+      "sourceSha256": "6b9c208a69ca97d1afd00ec589548e8934711035bb5d03bd597418f4b9710cb3",
+      "webpSha256": "032b8898843cdd9b7a387bdf2f3dc6d8655e1f7600850a25f81d19122f083eee",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 210504,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-hospital-large-university.webp"
+    },
+    {
+      "id": "hobyeongbaekma-department-store-despair",
+      "source": "public/images/facility-series/list-thumbnails/hobyeongbaekma-department-store-despair.webp",
+      "sourceSha256": "9dac894afb02197def5cc078aaa63d8aa06b12add56a2118aac9708e7d7a181f",
+      "webpSha256": "d8668a4d30a8e0a54e5f73412c8f4674e7577fa69a7ecbbefd16df4007f5d3a4",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 124512,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-department-store-despair.webp"
+    },
+    {
+      "id": "hobyeongbaekma-department-store-hope",
+      "source": "public/images/facility-series/list-thumbnails/hobyeongbaekma-department-store-hope.webp",
+      "sourceSha256": "6c1ba432f74c893111179ce77f2ffbba0003dbaee37837290d2e0aa17ad88e73",
+      "webpSha256": "a602e01833c76b11e202f5495f6473cb3387cdcc5890396bce57e96fab1d2375",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 144914,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-department-store-hope.webp"
+    },
+    {
+      "id": "hobyeongbaekma-mart-despair",
+      "source": "public/images/facility-series/list-thumbnails/hobyeongbaekma-mart-despair.webp",
+      "sourceSha256": "f7f3e5e8afba6859f72da0bd1d05108846bf2eb9bc0bc07e26b75982e67d8afc",
+      "webpSha256": "8c0e72660c02ff030b9950c00ab7d2151526092c8f40803902152a2fa1efb362",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 128872,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-mart-despair.webp"
+    },
+    {
+      "id": "hobyeongbaekma-mart-hope",
+      "source": "public/images/facility-series/list-thumbnails/hobyeongbaekma-mart-hope.webp",
+      "sourceSha256": "c9839b10284ad062e6d3a77c6987c1fe96c170aca5964ab97433bbef1f1ab56a",
+      "webpSha256": "da397e4d052312752ec6ff3618d8e7ac24d976618d18fe41e5d86ccc702f9188",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 137820,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-mart-hope.webp"
+    },
+    {
+      "id": "sasugoldae",
+      "source": "public/images/facility-series/list-thumbnails/sasugoldae-ep0.webp",
+      "sourceSha256": "e9fa554eed56ec07fbe737c52a428244c8105a9190bf890d4eb7ca1e76998043",
+      "webpSha256": "2e49a9fd6cbcc812caa322fc6db1ee6ff70a317e2e2b56c9579f3c37625d6648",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 185736,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/sasugoldae.webp"
+    },
+    {
+      "id": "sasugoldae-sauna-despair",
+      "source": "public/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-despair.webp",
+      "sourceSha256": "28d3f0c525990d9f3dd0cd388a1dc9fa59bfff453d7d406dd137840351554f6e",
+      "webpSha256": "cedc8cce3206c1aa18a0bc49720dea254854eabdba66140bccf49054fd8d1b02",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 114372,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/sasugoldae-sauna-despair.webp"
+    },
+    {
+      "id": "sasugoldae-swimming-pool-despair",
+      "source": "public/images/facility-series/sasugoldae-episodes/sasugoldae-pool-despair.webp",
+      "sourceSha256": "9d40f0b9cb4f127044f4acfe393a949870afe392240f4499496a0b1dc46bdeb7",
+      "webpSha256": "687335abb81733c2189f0c16c0d0b9487196f411e0013e3b2b0f1012f73ed960",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 114456,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/sasugoldae-swimming-pool-despair.webp"
+    },
+    {
+      "id": "sasugoldae-swimming-pool-hope",
+      "source": "public/images/facility-series/sasugoldae-episodes/sasugoldae-pool-hope.webp",
+      "sourceSha256": "4f7e3ba1b628d41eb4e64554c257351b496d2727310afedc834d69b4bfb596d2",
+      "webpSha256": "09490f4a8da2e39f5f2999dcb42cc854701b8a37a759f0f553c5015320098f29",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 133680,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/sasugoldae-swimming-pool-hope.webp"
+    },
+    {
+      "id": "sasugoldae-golf-course-despair",
+      "source": "public/images/facility-series/sasugoldae-episodes/sasugoldae-golf-despair.webp",
+      "sourceSha256": "a28bfd4baf384da1479aba02c9ec5a6902e32b487364fb4f1204dcc082ccab99",
+      "webpSha256": "783b9a1ba32f9459291f7a7c786f42f671476a35795f5051c8e416c40c5666dc",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 199088,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/sasugoldae-golf-course-despair.webp"
+    },
+    {
+      "id": "sasugoldae-golf-course-hope",
+      "source": "public/images/facility-series/sasugoldae-episodes/sasugoldae-golf-hope.webp",
+      "sourceSha256": "f9002b50f60270fcef11db2e23eba67dec084fa5e479a346d47e7f56f579670f",
+      "webpSha256": "85f7eb8b6bcae6ed72d7730b81aa9d9a096ff286f5efb5f92745befea18ec25f",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 162144,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/sasugoldae-golf-course-hope.webp"
+    },
+    {
+      "id": "sasugoldae-university-despair",
+      "source": "public/images/facility-series/sasugoldae-episodes/sasugoldae-university-despair.webp",
+      "sourceSha256": "56df0fabd9de58c0eb56726aa569024e8aa78112a93923c0cf50727f2b1a979a",
+      "webpSha256": "3a278467be2f06095d3172ec04d14866cc7bbdc17356645b91f6c60555ca991f",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 131096,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/sasugoldae-university-despair.webp"
+    },
+    {
+      "id": "sasugoldae-university-hope",
+      "source": "public/images/facility-series/sasugoldae-episodes/sasugoldae-university-hope.webp",
+      "sourceSha256": "6d25eec38a8cfd1c78ae5945642e4b2488b54d2515ef60a330cc1c9c2756ad57",
+      "webpSha256": "ad344171e7ad0d7e61efb9f57dd6d0a1e880fa9f8b322b19572aebb7e6daac04",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 157508,
+      "publicFile": "public/images/facility-series/list-thumbnails-3x2/sasugoldae-university-hope.webp"
+    }
+  ]
+}

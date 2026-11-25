@@ -49,23 +49,22 @@ const groups = category.slug === 'career' ? [
   { title: '다른 시설 이야기', articles: articles.filter(article => !article.id.startsWith('hobyeongbaekma') && !article.id.startsWith('sasugoldae')) },
 ] : [{ title: '', articles }];
 const structuredData = [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(withBase(item.path), SITE.url).href })) }];
-// Search copy describes each collection's published topics; display labels and URLs stay stable.
 const searchMetadata: Record<string, { title: string; description: string }> = {
   intro: {
-    title: '시설관리 입문·용어 | 하는 일과 기계·전기·소방 직무 | 겟패랩',
-    description: '시설관리란 무엇이고 어떤 일을 할까요? 기계·전기·소방·영선 직무, 근무시설과 자격증·법정선임의 기본 개념부터 취업 전 확인할 조건까지 겟패랩에서 알아보세요.',
+    title: '시설 사전 | 무수기·감단직·시설관리 용어 | 겟패랩',
+    description: '무수기, 감단직, 가에위공, 전기 무제한처럼 시설관리 채용공고와 현장에서 접하는 말을 실제 업무와 선임 조건에 연결해 설명합니다.',
   },
   career: {
     title: '시설관리 취업·커리어 | 채용공고·근무조건·면접 | 겟패랩',
-    description: '시설관리 첫 취업과 이직에 필요한 면접 질문, 직영·자회사·용역 차이, 교대근무와 급여 확인 기준을 정리했습니다. 한전FMS·우체국시설관리단·코레일테크·캠코FMC의 채용 사례도 비교해 보세요.',
+    description: '시설관리 첫 취업을 위한 기능사·기사 선택, 면접 질문, 직영·용역 차이와 근무표를 정리했습니다. 한전FMS 등 기관별 채용공고도 비교할 수 있습니다.',
   },
   stories: {
     title: '시설 이야기 | 호병백마·사수골대 시설관리 시리즈 | 겟패랩',
-    description: '호텔·병원·백화점·마트의 호병백마, 사우나·수영장·골프장·대학교의 사수골대 시리즈를 모았습니다. 시설관리의 실제 업무와 근무환경, 지원 전 확인할 조건을 절망편·희망편으로 살펴보세요.',
+    description: '호병백마와 사수골대 시리즈를 모았습니다. 호텔·병원·백화점·마트와 사우나·수영장·골프장·대학교에서 맡는 업무와 근무환경을 비교합니다.',
   },
   qualifications: {
-    title: '시설관리 법정선임·자격 활용 | 보일러·기계설비 경력 | 겟패랩',
-    description: '시설관리 법정선임과 자격증 활용 기준을 알아보세요. 에너지관리기능사의 보일러 선임 범위, 기계설비유지관리자 등급·인정경력과 경력신고·수첩 발급에 필요한 조건과 서류를 정리했습니다.',
+    title: '시설관리 법정선임 | 기계설비·냉동·보일러·겸직 | 겟패랩',
+    description: '기계설비유지관리자 등급·경력신고, 보일러·냉동시설·전기 선임 자격, 두 직책을 함께 맡을 때 적용되는 겸직 기준을 확인할 수 있습니다.',
   },
   practice: {
     title: '시설관리 실무 | 설비 점검·운전·기록 기초 | 겟패랩',
@@ -91,13 +90,10 @@ const metadata = searchMetadata[category.slug];
       <section class:list={['facility-category-subgroup', { 'facility-section': index > 0 }]} aria-label={group.title || `${category.name} 글 목록`}>
         {group.title && <div class="facility-section-head">
           <h2 class="gpl-h2">{group.title}</h2>
-          {category.slug === 'career' && group.title === '기업·채용 분석' && (
-            <a href={withBase(facilityCategoryPath('jobs'))}>채용공고 분석 모음 보기 →</a>
-          )}
         </div>}
-        <div class="grid grid-3">{group.articles.map(article => <FacilityCard article={article} />)}</div>
+        <div class="facility-feed">{group.articles.map(article => <FacilityCard article={article} />)}</div>
       </section>
-    )) : <div class="facility-empty"><h2 class="gpl-h3">콘텐츠를 준비하고 있습니다</h2><p>공개된 입문 안내나 관련 자격증 학습을 먼저 살펴보세요.</p><a href={withBase('/facility-management/intro/')}>시설관리 입문 살펴보기 →</a></div>}
+    )) : <div class="facility-empty"><h2 class="gpl-h3">콘텐츠를 준비하고 있습니다</h2><p>공개된 입문 안내나 관련 자격증 학습을 먼저 살펴보세요.</p><a href={withBase('/facility-management/intro/')}>시설 사전 살펴보기 →</a></div>}
   </section>
   <section class="facility-section" aria-labelledby="related-categories-title"><h2 id="related-categories-title" class="gpl-h2">다른 카테고리 살펴보기</h2><nav aria-label="시설관리 카테고리"><ul class="facility-category-nav">{FACILITY_CATEGORIES.filter(item => availableCategorySlugs.has(item.slug)).map(item => <li><a href={withBase(facilityCategoryPath(item.slug))} aria-current={item.slug === (legacyJobs ? 'career' : category.slug) ? 'page' : undefined}>{item.name}</a></li>)}</ul></nav></section>
   <FacilityLearningLinks />

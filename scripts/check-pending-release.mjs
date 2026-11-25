@@ -1,18 +1,40 @@
+import { beforeBodyThumbnailRemoval } from './read-facility-body-thumbnails.mjs';
 import fs from 'node:fs';
+import {storyThumbnail3x2Rows} from './read-story-thumbnails-3x2.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
-import {seriesRelease,beforePendingRelease,beforeFacilitySearchSource} from './read-pending-release.mjs';
+import {seriesRelease,beforePendingRelease} from './read-pending-release.mjs';
+import {beforeFacilityFeedA} from './read-facility-feed.mjs';
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const nodes=n=>[n,...(n.childNodes||[]).flatMap(nodes)];
 const attr=(n,k)=>n?.attrs?.find(a=>a.name===k)?.value;
 const has=(n,k)=>(attr(n,'class')||'').split(/\s+/).includes(k);
 const text=n=>n.nodeName==='#text'?n.value:(n.childNodes||[]).map(text).join('');
 const preview=process.env.FACILITY_DRAFT_PREVIEW==='1';
+// Restore only the newly approved 2026-11-20 category display copy before
+// comparing immutable November 18 source fingerprints. Routing stays intact.
+const dictionaryCopy = new Map([
+  ['src/config/facility.ts', [
+    "  { slug: 'intro', name: '시설 사전', description: '시설관리의 기본 개념부터 현장에서 사용하는 용어까지, 알아두면 유용한 정보를 쉽게 정리했습니다', icon: 'start' },",
+    "  { slug: 'intro', name: '시설관리 입문·용어', description: '시설관리의 기본 개념과 현장에서 쓰는 용어를 이해하는 정보', icon: 'start' },",
+  ]],
+  ['src/pages/facility-management/[category]/index.astro', [
+    '시설 사전 살펴보기 →',
+    '시설관리 입문 살펴보기 →',
+  ]],
+]);
+const beforeDictionaryCopy = (file, bytes) => {
+  const pair = dictionaryCopy.get(file);
+  if (!pair) return bytes;
+  const content = bytes.toString('utf8');
+  assert.equal(content.split(pair[0]).length, 2, file + ': approved dictionary label appears once');
+  return Buffer.from(content.replace(pair[0], pair[1]));
+};
 for(const [file,row] of Object.entries(seriesRelease.changes)) assert.equal(hash(beforePendingRelease(file,fs.readFileSync(file))),row.beforeSha256,file);
 const episodeOrder=JSON.parse(fs.readFileSync('docs/audits/2026-11-18-series-episode-order/manifest.json'));
 for(const [file,sha] of Object.entries(seriesRelease.protected)){
- let bytes=beforeFacilitySearchSource(file,fs.readFileSync(file));
+ let bytes=beforeDictionaryCopy(file,beforeFacilityFeedA(file,fs.readFileSync(file)));
  if(file===episodeOrder.file){
   assert.equal(hash(bytes),episodeOrder.sha256,file+': exact approved episode-order change');
   bytes=Buffer.from(episodeOrder.before,'base64');
@@ -22,7 +44,7 @@ for(const [file,sha] of Object.entries(seriesRelease.protected)){
 const sitemap=fs.readFileSync('dist/sitemap-0.xml','utf8');
 const all=nodes(parse(fs.readFileSync('dist/facility-management/stories/index.html','utf8')));
 for(const row of seriesRelease.articles){
- assert.equal(hash(fs.readFileSync(row.source)),row.sourceSha256,row.source);
+ assert.equal(hash(beforeBodyThumbnailRemoval(row.source, fs.readFileSync(row.source))),row.sourceSha256,row.source);
  assert.equal(hash(fs.readFileSync(row.image)),row.imageSha256,row.image);
  assert.equal(hash(fs.readFileSync(row.image.replace(/^public/,'dist'))),row.imageSha256,'built image');
  assert.equal(hash(fs.readFileSync(row.thumbnail)),row.imageSha256,'approved exact thumbnail');
@@ -37,9 +59,10 @@ for(const row of seriesRelease.articles){
  if(!preview){assert.equal(schema[0].datePublished,'2026-11-18');assert(schema[0].citation.length>0,'source metadata retained');}
  assert.equal(sitemap.includes('<loc>https://getpasslab.co.kr'+row.route+'</loc>'),!preview,'sitemap exposure');
  const card=all.find(n=>n.tagName==='a'&&has(n,'facility-card')&&attr(n,'href')===row.route);assert(card,'story card');
- assert.equal(attr(nodes(card).find(n=>n.tagName==='img'),'src'),row.image.replace(/^public/,''));
+ const updatedThumbnail=storyThumbnail3x2Rows.find(item=>item.id===row.slug);
+ assert.equal(attr(nodes(card).find(n=>n.tagName==='img'),'src'),(updatedThumbnail?.publicFile??row.image).replace(/^public/,''));
  for(const n of dom){const href=n.tagName==='a'?attr(n,'href'):null;if(href?.startsWith('/facility-management/'))assert(fs.existsSync('dist'+href.replace(/\/$/,'')+'/index.html'),'valid link '+href);}
 }
 const {default:sharp}=await import('sharp');
 for(const row of seriesRelease.articles){const m=await sharp(row.image).metadata();assert.deepEqual([m.width,m.height],[1448,1086]);}
-console.log('Pending release PASS: 8 articles, exact assets, 32-article navigation, metadata, links, preserved analytics/sorting and exact predecessor reconstruction');
+console.log('Pending release PASS: 8 original articles, exact assets, current 34-article navigation, metadata, links, preserved analytics/sorting and exact predecessor reconstruction');

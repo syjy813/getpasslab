@@ -40,8 +40,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/sasugoldae-episodes/sasugoldae-pool-despair.webp" alt="수영장 시설관리 절망편의 업무 환경을 표현한 일러스트" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 레인 위에서는 사람들이 수영하고, 물 밖에서는 강사가 다음 동작을 설명합니다. 시설관리 일을 처음 알아보는 사람에게는 그 뒤편의 기계실이 잘 보이지 않습니다.
 
 하지만 채용공고에 적힌 일은 꽤 많습니다. 수질을 확인하고, 물을 거르는 설비를 관리하고, 펌프와 보일러를 점검합니다. 어떤 공고에는 탈의실 청소도 함께 적혀 있습니다.

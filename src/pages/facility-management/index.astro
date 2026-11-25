@@ -23,7 +23,7 @@ const articleGroups = availableCategories.map(category => ({
   articles: category.articles.filter(article => article.id !== lead?.id),
 })).filter(category => category.articles.length > 0);
 ---
-<FacilityLayout title="겟패랩 시설관리 커뮤니티 | 취업·시설 이야기·법정선임" description="겟패랩(GetPassLab) 시설관리 커뮤니티에서 하는 일과 취업·면접, 채용공고 분석, 법정선임·기계설비 경력을 알아보세요. 호병백마·사수골대 시리즈로 시설별 업무와 근무조건도 비교할 수 있습니다.">
+<FacilityLayout title="시설관리 커뮤니티 | 취업·시설 사전·법정선임 | 겟패랩" description="시설관리 첫 취업과 자격증 선택, 현장 용어, 법정선임 기준을 정리했습니다. 호병백마·사수골대 시리즈에서 시설별 업무와 근무환경도 비교할 수 있습니다.">
   <section class="facility-intro">
     
     <h1 class="gpl-display">시설관리의 모든 것</h1>
@@ -52,12 +52,16 @@ const articleGroups = availableCategories.map(category => ({
   </section>
 
   {articleGroups.map(category => (
-    <section class="facility-section" aria-labelledby={'facility-group-' + category.slug}>
+    <section class="facility-section facility-home-group" aria-labelledby={'facility-group-' + category.slug}>
       <div class="facility-section-head">
         <h2 id={'facility-group-' + category.slug} class="gpl-h2">{category.name}</h2>
-        <a href={withBase(facilityCategoryPath(category.slug))}>전체 보기 <span aria-hidden="true">→</span></a>
       </div>
-      <div class="facility-story-grid">{category.articles.slice(0, 6).map(article => <FacilityCard article={article} />)}</div>
+      <div class="facility-feed">{category.articles.slice(0, 4).map(article => <FacilityCard article={article} />)}</div>
+      <div class="facility-group-footer">
+        <a class="facility-group-more" href={withBase(facilityCategoryPath(category.slug))}>
+          {category.name} 전체보기 <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </section>
   ))}
 

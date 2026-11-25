@@ -30,8 +30,6 @@ related:
 certifications: []
 legalReview: false
 ---
-<figure><img src="/images/facility-series/ep4-2-mart-hope/01-hero.webp" alt="마트 시설관리의 냉장·냉동 설비 경험과 원격감시·장애 대응·영선 경험을 표현한 호병백마 ep.4-2 희망편" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" /></figure>
-
 
 ## 마트는 냉장·냉동을 실제 현장에서 볼 수 있는 상업시설이다
 

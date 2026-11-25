@@ -6,6 +6,7 @@ import { createHash } from 'node:crypto';
 import { parse } from 'parse5';
 import { episode00Release as release, assertEpisode00Release } from './read-hobyeongbaekma-publication.mjs';
 import {thumbnailRows} from './read-hobyeongbaekma-list-thumbnails.mjs';
+import {storyThumbnail3x2Rows} from './read-story-thumbnails-3x2.mjs';
 
 assertEpisode00Release();
 const preview = process.env.FACILITY_DRAFT_PREVIEW === '1';
@@ -69,8 +70,9 @@ assert(!images.some(image=>/-(1|2)\.webp$/.test(attr(image,'src'))),'split image
   assert.equal(cards.length,1,'exactly one episode card: '+storiesRoute);
   const cover=nodes(cards[0]).find(n=>n.tagName==='img');
   const thumbnail=thumbnailRows.find(row=>row.id==='hobyeongbaekma');
-  assert.equal(attr(cover,'src'),thumbnail.publicFile.replace(/^public/,''),'approved listing-only image remains');
-  assert.equal(attr(cover,'width'),'1448');assert.equal(attr(cover,'height'),'1086');
+  const updated=storyThumbnail3x2Rows.find(row=>row.id==='hobyeongbaekma');
+  assert.equal(attr(cover,'src'),(updated??thumbnail).publicFile.replace(/^public/,''),'approved list-only image remains');
+  assert.equal(attr(cover,'width'),updated?'1536':'1448');assert.equal(attr(cover,'height'),updated?'1024':'1086');
   const homeCards=read('/facility-management/').filter(n=>n.tagName==='a'&&attr(n,'href')===release.route);
   assert.equal(homeCards.length,0,'episode 0 is displaced from six-card career home slice by six newer series articles');
 }

@@ -1,0 +1,26 @@
+{
+  "src/pages/facility-management/index.astro": {
+    "beforeSha256": "c5e400b912265091d07c358db979213b9e1b98c479ec763332af0366e432f341",
+    "afterSha256": "7a372b0151239a3e5e4165f9130665027bc0bdc80f3252d9d9676dbb9696ff39",
+    "changes": [
+      {
+        "before": "<FacilityLayout title=\"시설의 모든 것 — 시설관리 입문·취업·실무 | GetPassLab\" description=\"시설관리 입문부터 취업·이직, 자격증·법정선임, 시설관리 실무까지. 공식 자료와 확인 기준일을 함께 제공하는 GetPassLab의 시설관리 정보 서비스입니다.\">\n",
+        "after": "<FacilityLayout title=\"시설관리 커뮤니티 | 취업·시설 사전·법정선임 | 겟패랩\" description=\"시설관리 첫 취업과 자격증 선택, 현장 용어, 법정선임 기준을 정리했습니다. 호병백마·사수골대 시리즈에서 시설별 업무와 근무환경도 비교할 수 있습니다.\">\n"
+      }
+    ]
+  },
+  "src/pages/facility-management/[category]/index.astro": {
+    "beforeSha256": "e372fc1c1782c8ad428698a9af73a9d0a2a8416233507d44b11a20ee505ebc0a",
+    "afterSha256": "2ca9d9a6e7515136c8ab4373cf072106c33049b21af537badcdaf42131c72b04",
+    "changes": [
+      {
+        "before": "",
+        "after": "const searchMetadata: Record<string, { title: string; description: string }> = {\n  intro: {\n    title: '시설 사전 | 무수기·감단직·시설관리 용어 | 겟패랩',\n    description: '무수기, 감단직, 가에위공, 전기 무제한처럼 시설관리 채용공고와 현장에서 접하는 말을 실제 업무와 선임 조건에 연결해 설명합니다.',\n  },\n  career: {\n    title: '시설관리 취업·커리어 | 채용공고·근무조건·면접 | 겟패랩',\n    description: '시설관리 첫 취업을 위한 기능사·기사 선택, 면접 질문, 직영·용역 차이와 근무표를 정리했습니다. 한전FMS 등 기관별 채용공고도 비교할 수 있습니다.',\n  },\n  stories: {\n    title: '시설 이야기 | 호병백마·사수골대 시설관리 시리즈 | 겟패랩',\n    description: '호병백마와 사수골대 시리즈를 모았습니다. 호텔·병원·백화점·마트와 사우나·수영장·골프장·대학교에서 맡는 업무와 근무환경을 비교합니다.',\n  },\n  qualifications: {\n    title: '시설관리 법정선임 | 기계설비·냉동·보일러·겸직 | 겟패랩',\n    description: '기계설비유지관리자 등급·경력신고, 보일러·냉동시설·전기 선임 자격, 두 직책을 함께 맡을 때 적용되는 겸직 기준을 확인할 수 있습니다.',\n  },\n  practice: {\n    title: '시설관리 실무 | 설비 점검·운전·기록 기초 | 겟패랩',\n    description: '시설관리 설비의 구조와 점검·운전·기록 업무를 다루는 실무 콘텐츠를 준비하고 있습니다. 현재 공개된 시설관리 입문 안내와 관련 자격증 학습 페이지를 먼저 살펴보세요.',\n  },\n  jobs: {\n    title: '시설관리 채용공고 분석 | 한전FMS·코레일테크·공공부문 | 겟패랩',\n    description: '한전FMS·우체국시설관리단·코레일테크·캠코FMC의 시설관리 채용공고 사례를 분석합니다. 모집 회차와 사업소별 자격·선임요건, 급여·교대근무·정년을 비교하고 공고를 읽는 기준을 확인하세요.',\n  },\n};\nconst metadata = searchMetadata[category.slug];\n"
+      },
+      {
+        "before": "<FacilityLayout title={`${category.name} — 시설의 모든 것 | GetPassLab`} description={`${category.description}. 시설의 모든 것에서 공개된 콘텐츠와 근거 자료를 확인하고, 관련 카테고리와 자격증 학습 페이지로 이어서 탐색하세요.`} robots={articles.length ? 'index, follow' : 'noindex, follow'} structuredData={structuredData}>\n",
+        "after": "<FacilityLayout title={metadata.title} description={metadata.description} robots={articles.length ? 'index, follow' : 'noindex, follow'} structuredData={structuredData}>\n"
+      }
+    ]
+  }
+}

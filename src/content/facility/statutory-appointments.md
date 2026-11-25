@@ -50,8 +50,6 @@ certifications: []
 legalReview: true
 ---
 
-<figure><img src="/images/facility-drafts/10/01-statutory-appointments-hero.webp" alt="시설관리 법정선임 총정리 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 *건물 하나에도 여러 안전관리 제도가 적용될 수 있다. ‘시설관리자’라는 이름만으로 모든 선임을 설명할 수는 없다.*
 
 ## 자격증을 따면 바로 선임할 수 있을까?

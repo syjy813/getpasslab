@@ -5,42 +5,81 @@ const base = (process.env.QA_BASE_URL || 'http://127.0.0.1:4321').replace(/\/$/,
 const preview = process.env.QA_FACILITY_PREVIEW === '1';
 const mode = preview ? 'private-preview' : 'publication';
 const output = `qa-results/facility-launch/${mode}`;
+async function decodeVisibleImage(image) {
+  await image.scrollIntoViewIfNeeded();
+  await image.evaluate(async element => {
+    let timer;
+    try {
+      await Promise.race([
+        element.decode(),
+        new Promise((_, reject) => {
+          timer = setTimeout(() => reject(new Error(`Image load timed out: ${element.currentSrc || element.src}`)), 10000);
+        }),
+      ]);
+    } finally {
+      clearTimeout(timer);
+    }
+  });
+}
+
 fs.mkdirSync(output, {recursive: true});
 const bulkImages=JSON.parse(fs.readFileSync('docs/audits/2026-11-06-facility-image-bulk/manifest.json'));
-const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':5};
+const bodyThumbnailRemovals = require('../docs/audits/2026-11-24-facility-body-thumbnails.json');
+const imageCounts = {'what-is-facility-management':4, 'first-job':4, 'employment-types':5, 'shifts-and-pay':5, 'public-sector-comparison':5, 'electric-unlimited':1, 'electric-license-appointment-comparison':1};
 for(const [file,row] of Object.entries(bulkImages.source)) {const slug=file.split('/').at(-1).replace('.md','');if(slug in imageCounts)imageCounts[slug]=row.images;}
-const pages = ['/facility-management/', ...['intro','career','stories','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${x === 'public-sector-comparison' ? 'jobs' : 'career'}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
+const articleCategory = id => id === 'public-sector-comparison' ? 'jobs' : id === 'electric-unlimited' ? 'intro' : id === 'electric-license-appointment-comparison' ? 'qualifications' : 'career';
+const pages = ['/facility-management/', ...['intro','career','stories','jobs','practice','qualifications'].map(x=>`/facility-management/${x}/`), ...Object.keys(imageCounts).map(x=>`/facility-management/${articleCategory(x)}/${x}/`), '/certifications/', '/computer-literacy/written/computer-basics/computer-classification/', '/energy-management/', '/energy-management/written/', '/computer-literacy/written/computer-basics/', '/about/'];
 (async () => {
-  const listingThumbnails = (await import('./read-hobyeongbaekma-list-thumbnails.mjs')).thumbnailRows.map(({id,name})=>[id,name]);
+  const { careerThumbnailRows } = await import('./read-facility-career-thumbnails.mjs');
+  const entryRows = careerThumbnailRows.filter(row => row.category);
+  const storyPreviewRows = (await import('./read-story-thumbnails-3x2.mjs')).storyThumbnail3x2Rows;
+  const replacedStoryIds = new Set(storyPreviewRows.map(row=>row.id));
+  const listingThumbnails = (await import('./read-hobyeongbaekma-list-thumbnails.mjs')).thumbnailRows
+    .filter(row=>!replacedStoryIds.has(row.id)).map(({id,name})=>[id,name]);
   const browser = await chromium.launch();
   const results = [];
   try {
-    for (const width of [320,390,768,1440]) {
+    for (const width of [320,390,768,1024,1440]) {
       const context = await browser.newContext({viewport:{width,height:900}});
       await context.route('**/*', route => new URL(route.request().url()).origin === new URL(base).origin ? route.continue() : route.abort());
       const page = await context.newPage();
       let facilityHomeGeometry = null;
-      for (const path of pages) {
+      for (const path of new Set([...pages, ...entryRows.map(row => row.route)])) {
         const response = await page.goto(base+path);
         assert.equal(response.status(),200,path);
         await page.evaluate(()=>document.fonts.ready);
         const slug = path.split('/').filter(Boolean).at(-1);
-        const expected = imageCounts[slug];
+        const expected = Object.hasOwn(imageCounts, slug) ? imageCounts[slug] - Number(Object.hasOwn(bodyThumbnailRemovals, slug)) : undefined;
         if (path === '/facility-management/stories/') {
-          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails/"]').count(),listingThumbnails.length,'only the approved listing thumbnails');
+          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails/"]').count(),listingThumbnails.length,'original list thumbnails retained except approved previews');
+          assert.equal(await page.locator('.facility-card img[src*="/list-thumbnails-3x2/"]').count(),storyPreviewRows.length,'all nineteen updated 3:2 story images');
           for (const [id,name] of listingThumbnails) {
             const card=page.locator(`a.facility-card[href="/facility-management/career/${id}/"]`);
             assert.equal(await card.count(),1,id+': existing article link retained');
             const image=card.locator('img');
             assert.equal(await image.getAttribute('src'),`/images/facility-series/list-thumbnails/${name}.webp`);
-            await image.evaluate(el=>el.decode());
+            await decodeVisibleImage(image);
             const state=await image.evaluate(el=>{
-              const rect=el.getBoundingClientRect();
-              return {natural:[el.naturalWidth,el.naturalHeight],displayRatio:rect.width/rect.height,fit:getComputedStyle(el).objectFit};
+              const frame=el.parentElement.getBoundingClientRect();
+              return {natural:[el.naturalWidth,el.naturalHeight],frameRatio:frame.width/frame.height,fit:getComputedStyle(el).objectFit};
             });
             assert.deepEqual(state.natural,[1448,1086],id+': optimized WebP loads');
-            assert(Math.abs(state.displayRatio-4/3)<.01,id+': no crop or vertical stretching');
+            assert(Math.abs(state.frameRatio-3/2)<.01,id+': consistent 3:2 frame');
             assert.equal(state.fit,'contain',id+': full image shown');
+          }
+          for (const row of storyPreviewRows) {
+            const card=page.locator(`a.facility-card[href="${row.route}"]`);
+            const image=card.locator('img');
+            assert.equal(await card.count(),1,row.id+': story card retained');
+            assert.equal(await image.getAttribute('src'),row.publicFile.replace(/^public/,''));
+            await decodeVisibleImage(image);
+            const state=await image.evaluate(el=>{
+              const frame=el.parentElement.getBoundingClientRect();
+              return {natural:[el.naturalWidth,el.naturalHeight],frameRatio:frame.width/frame.height,fit:getComputedStyle(el).objectFit};
+            });
+            assert.deepEqual(state.natural,[1536,1024],row.id+': 3:2 optimized WebP loads');
+            assert(Math.abs(state.frameRatio-3/2)<.01,row.id+': matched image and frame ratio');
+            assert.equal(state.fit,'contain',row.id+': no crop');
           }
         }
 
@@ -119,7 +158,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(categoryHeader.breadcrumbGap,'24px','subject-list breadcrumb spacing');
             assert.equal(categoryHeader.bottomRule,'1px','header separator retained');
             assert.equal(categoryHeader.listGap,'32px','article cards retain a clear 32px gap');
-            const counts = {intro:1,career:8,stories:19,jobs:5,practice:0,qualifications:4};
+            const counts = {intro:5,career:9,stories:19,jobs:5,practice:0,qualifications:8};
             assert.equal(await page.locator('.facility-category-list .facility-card').count(),
               counts[slug], 'existing article cards retained by category');
             if (slug === 'stories') assert.equal(await page.locator('.facility-category-list .facility-card[href="/facility-management/career/hobyeongbaekma-hospital-large-university/"]').count(),1,'hospital ep.2-3 category card');
@@ -129,57 +168,96 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             assert.equal(await page.locator('.facility-featured .facility-section-head .gpl-caption').count(),0,'redundant facility-intro caption removed');
             assert.equal(await page.locator('.facility-learning').count(),0,'home cross-service promotion removed');
             assert.equal(await page.locator('.facility-intro .facility-actions').count(),0,'hero CTA buttons removed');
-            assert.equal(await page.locator('.facility-card').count(),17,'one lead and at most six cards from each populated category');
+            const counts = { intro: 4, career: 4, stories: 4, qualifications: 4 };
+            for (const [category, count] of Object.entries(counts)) {
+              const section = page.locator(`section[aria-labelledby="facility-group-${category}"]`);
+              assert.equal(await section.locator('.facility-feed > .facility-card').count(), count, `${category}: home cards`);
+              assert.equal(await section.locator('.facility-section-head a').count(), 0, `${category}: no heading CTA`);
+              const more = section.locator('.facility-group-footer > a.facility-group-more');
+              assert.equal(await more.count(), 1, `${category}: one bottom CTA`);
+              assert.equal(await more.getAttribute('href'), `/facility-management/${category}/`, `${category}: full-list destination`);
+              assert((await more.innerText()).includes('전체보기'), `${category}: full-list label`);
+              const footerStyle = await section.locator('.facility-group-footer').evaluate(el => ({
+                border: getComputedStyle(el).borderBottomWidth,
+                borderColor: getComputedStyle(el).borderBottomColor,
+                sectionTop: getComputedStyle(el.closest('.facility-home-group')).paddingTop,
+                centered: Math.abs(el.getBoundingClientRect().left + el.clientWidth / 2 - el.querySelector('a').getBoundingClientRect().left - el.querySelector('a').getBoundingClientRect().width / 2) < 1,
+              }));
+              assert.equal(footerStyle.border, '1px', `${category}: category divider`);
+              assert.equal(footerStyle.borderColor, 'rgb(196, 203, 212)', `${category}: stronger category divider color`);
+              assert.equal(footerStyle.sectionTop, width < 640 ? '64px' : '80px', `${category}: wider section spacing`);
+              if (count > 1) {
+                assert.equal(await section.locator('.facility-feed > .facility-card + .facility-card').first().evaluate(el => getComputedStyle(el).borderTopColor),
+                  'rgb(229, 232, 235)', `${category}: lighter article separators retained`);
+              }
+              assert(footerStyle.centered, `${category}: centered CTA`);
+              assert((await more.evaluate(el => el.getBoundingClientRect().height)) >= 44, `${category}: touch target`);
+            }
+            assert.equal(await page.locator('.facility-card--lead').count(),1,'one featured article');
             assert.equal(await page.locator('.facility-category-link').count(),4,'only four populated categories are linked');
             const routes = await page.locator('.facility-card').evaluateAll(links => links.map(link => new URL(link.href).pathname));
-            assert.equal(new Set(routes).size,17,'no repeated home articles');
+            assert.equal(new Set(routes).size,routes.length,'no repeated home articles');
             const leadCover = page.locator('.facility-card--lead img');
-            await leadCover.evaluate(img => img.decode());
+            await decodeVisibleImage(leadCover);
             assert(await leadCover.evaluate(img => img.naturalWidth > 0),'lead uses existing article image');
           }
           assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), preview ? 'noindex, nofollow' : empty ? 'noindex, follow' : 'index, follow');
           assert.equal(await page.locator('.service-switch [data-service-link="facility"]').getAttribute('aria-current'),'page');
           assert.equal(await page.locator('.facility-card-action').count(),0,'redundant read-more text removed; entire card remains linked');
           assert.equal(await page.locator('.facility-card .card-label, .facility-card time').count(),0,'list badges and publication dates removed');
-          const listCards = await page.locator('.facility-card:not(.facility-card--lead):not(.facility-card--text)').evaluateAll(cards => cards.map(card => {
-            const rect = el => {const r = el.getBoundingClientRect(); return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height};};
-            const title=card.querySelector('.facility-card-title');
-            const previous=card.previousElementSibling;
-            return {card:rect(card),title:rect(title),cover:rect(card.querySelector('.facility-card-cover')),summary:rect(card.querySelector('.facility-card-description')),summaryDisplay:getComputedStyle(card.querySelector('.facility-card-description')).display,display:getComputedStyle(card).display,padding:getComputedStyle(card).paddingTop,border:getComputedStyle(card).borderTopWidth,previous:previous?.classList.contains('facility-card')?rect(previous):null,titleClipped:title.scrollHeight>title.clientHeight+1};
+          const listCards = await page.locator('.facility-feed > .facility-card').evaluateAll(cards => cards.map(card => {
+            const rect = el => el?.getBoundingClientRect().toJSON();
+            const title = card.querySelector('.facility-card-title');
+            const summary = card.querySelector('.facility-card-description');
+            const previous = card.previousElementSibling;
+            return {
+              card: rect(card), title: rect(title), cover: rect(card.querySelector('.facility-card-cover')),
+              summary: rect(summary), summaryDisplay: getComputedStyle(summary).display,
+              padding: getComputedStyle(card).paddingTop, border: getComputedStyle(card).borderTopWidth,
+              previous: previous ? rect(previous) : null,
+              titleClipped: title.scrollHeight > title.clientHeight + 1 || title.scrollWidth > title.clientWidth + 1,
+            };
           }));
           for (const row of listCards) {
+            assert(!row.titleClipped, path+': complete title without clipping');
+            if (row.previous) {
+              assert.equal(row.border, '1px', path+': separator between feed items');
+              assert(Math.abs(row.card.top - row.previous.bottom) < 1, path+': continuous single-column feed');
+            }
             if (width < 640) {
-              assert.equal(row.display,'grid',path+': mobile feed layout');
-              assert.equal(row.summaryDisplay,'none',path+': mobile summary removed');
-              assert(Math.abs(row.cover.width-(width<360?88:96))<1,path+': fixed thumbnail width');
-              assert(Math.abs(row.title.left-row.cover.right-(width<360?16:20))<1,path+': title beside left thumbnail');
-              assert(Math.abs((row.cover.top+row.cover.bottom-row.title.top-row.title.bottom)/2)<1,path+': cover and title vertically centered');
-              assert.equal(row.padding,'28px',path+': consistent vertical padding');
-              assert(row.card.height>=128,path+': minimum row height');
-              assert(!row.titleClipped,path+': complete title without clipping');
-              if(row.previous){
-                assert.equal(row.border,'1px',path+': separator between feed items');
-                assert(Math.abs(row.card.top-row.previous.bottom)<1,path+': no ambiguous grid gap');
+              assert.equal(row.summaryDisplay, 'none', path+': mobile summary hidden');
+              assert.equal(row.padding, '28px', path+': consistent mobile padding');
+              assert(row.card.height >= 128, path+': minimum row height');
+              if (row.cover) {
+                assert(Math.abs(row.cover.width - (width < 360 ? 88 : 96)) < 1, path+': mobile thumbnail width');
+                assert(Math.abs(row.title.left - row.cover.right - (width < 360 ? 16 : 20)) < 1, path+': title beside left thumbnail');
               }
             } else {
-              assert.equal(row.display,'flex',path+': desktop layout retained');
-              assert(row.summaryDisplay!=='none'&&row.summary.width>0&&row.summary.height>0,path+': desktop summary retained');
+              assert(row.summaryDisplay !== 'none' && row.summary.width > 0 && row.summary.height > 0, path+': desktop summary');
+              if (row.cover) {
+                assert(row.title.right < row.cover.left && Math.abs(row.cover.right - row.card.right) < 1, path+': thumbnail at right edge');
+                assert(Math.abs(row.cover.width - (width < 1024 ? width * .22 : 270)) < 1, path+': tablet or desktop thumbnail width');
+              }
             }
+            if (row.cover) assert(Math.abs(row.cover.width / row.cover.height - 3 / 2) < .01, path+': 3:2 thumbnail frame');
           }
           const borderlessHeroPath='/images/facility-drafts/03/01-employment-types-hero.webp';
           const covers = page.locator('.facility-card-cover img');
           for (const cover of await covers.all()) {
-            await cover.scrollIntoViewIfNeeded();
-            await cover.evaluate(img=>img.decode());
+            await decodeVisibleImage(cover);
             const info=await cover.evaluate(img=>{
               const r=img.getBoundingClientRect(),p=img.parentElement.getBoundingClientRect();
               return {
-                natural:img.naturalWidth/img.naturalHeight,render:r.width/r.height,
-                fit:getComputedStyle(img).objectFit,
-                inside:r.left>=p.left-.5&&r.right<=p.right+.5&&r.top>=p.top-.5&&r.bottom<=p.bottom+.5
+                natural: [img.naturalWidth, img.naturalHeight],
+                attributes: [Number(img.getAttribute('width')), Number(img.getAttribute('height'))],
+                inFeed: Boolean(img.closest('.facility-feed')),
+                render: r.width / r.height,
+                fit: getComputedStyle(img).objectFit,
+                inside: r.left >= p.left - .5 && r.right <= p.right + .5 && r.top >= p.top - .5 && r.bottom <= p.bottom + .5,
               };
             });
-            assert(Math.abs(info.natural-info.render)<.01,path+': full thumbnail ratio');
+            assert.deepEqual(info.attributes, info.natural, path+': intrinsic image dimensions');
+            if (!info.inFeed) assert(Math.abs(info.natural[0] / info.natural[1] - info.render) < .01, path+': original featured image ratio');
             assert.equal(info.fit,'contain',path+': no object-fit crop');
             assert(info.inside,path+': thumbnail inside border');
           }
@@ -208,7 +286,7 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             }
             assert.equal(await page.locator('.facility-summary h2').evaluate(h=>getComputedStyle(h).color),'rgb(25, 31, 40)',path+': summary title stays neutral');
             assert.equal(await page.locator('.facility-article-meta time').count(),2,'publish and reviewed dates');
-            for (const date of await page.locator('.facility-article-meta time').evaluateAll(elements=>elements.map(el=>el.dateTime))) assert.equal(date,'2026-11-03');
+            for (const date of await page.locator('.facility-article-meta time').evaluateAll(elements=>elements.map(el=>el.dateTime))) assert.equal(date,slug.startsWith('electric-')?'2026-11-20':'2026-11-03');
             assert(!(await page.locator('.facility-article > article').innerText()).includes('검토용 초안'));
             const toc = page.locator('.facility-toc');
             assert.equal(await toc.count(),1,'long article has table of contents');
@@ -220,17 +298,15 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
             const images = page.locator('.facility-body img');
             if(slug==='public-sector-comparison'){
               const visualReview=JSON.parse(fs.readFileSync('docs/audits/2026-11-05-public-sector-visuals/manifest.json'));
-              assert.deepEqual(await images.evaluateAll(imgs=>imgs.map(img=>new URL(img.src).pathname)),visualReview.images.map(row=>row.publicPath),'reviewed hero and four card images in order');
-              assert(!(await images.first().getAttribute('alt')).includes('지원자'),'hero alt describes scene without a person');
+              assert.deepEqual(await images.evaluateAll(imgs=>imgs.map(img=>new URL(img.src).pathname)),visualReview.images.filter(row=>row.publicPath!=='/images/facility-drafts/05/01-public-sector-hero.webp').map(row=>row.publicPath),'four reviewed body cards in order');
               for(const image of await images.all()){
-                await image.evaluate(el=>el.decode());
+                await decodeVisibleImage(image);
                 assert.deepEqual(await image.evaluate(el=>[el.naturalWidth,el.naturalHeight]),[1440,1080],'reviewed raster dimensions');
               }
             }
             for (let i=0;i<expected;i++) {
               const img = images.nth(i);
-              await img.scrollIntoViewIfNeeded();
-              await img.evaluate(el=>el.decode());
+              await decodeVisibleImage(img);
               const info = await img.evaluate(el=>({src:el.getAttribute('src'),alt:el.getAttribute('alt'),complete:el.complete,naturalWidth:el.naturalWidth,renderWidth:el.getBoundingClientRect().width,border:getComputedStyle(el).borderTopWidth,borderStyle:getComputedStyle(el).borderTopStyle,boxSizing:getComputedStyle(el).boxSizing}));
               assert(info.complete && info.naturalWidth>0 && info.alt?.trim(),`${path} image ${i}: load and alt`);
               assert(info.renderWidth>0 && info.renderWidth<=width,`${path} image ${i}: width`);
@@ -359,8 +435,9 @@ const pages = ['/facility-management/', ...['intro','career','stories','jobs','p
       const excluded = await page.request.get(base+'/facility-management/career/reading-job-postings/');
       assert.equal(excluded.status(),404,'unapproved draft is inaccessible');
       await context.close();
+      console.log(`Facility QA: ${mode} at ${width}px PASS`);
     }
     fs.writeFileSync(`${output}/results.json`,JSON.stringify({mode,cases:results.length,results},null,2)+'\n');
-    console.log(`Facility QA: ${mode}, ${results.length} page and viewport cases PASS; 23 images and service switching verified at four widths`);
+    console.log(`Facility QA: ${mode}, ${results.length} page and viewport cases PASS; article imagery and service switching verified at five widths`);
   } finally { await browser.close(); }
 })().catch(error=>{console.error(error);process.exitCode=1});

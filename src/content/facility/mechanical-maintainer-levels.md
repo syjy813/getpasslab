@@ -29,8 +29,6 @@ certifications: []
 legalReview: true
 ---
 
-<figure><img src="/images/facility-drafts/11/01-maintainer-grades-hero.webp" alt="기계설비유지관리자 등급 총정리 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 *기계설비유지관리자 등급은 자격증의 이름 하나가 아니라 인정경력과 선임 대상까지 연결해서 봐야 한다.*
 
 ## 기사 자격증을 따면 바로 기계설비유지관리자가 될까?

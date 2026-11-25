@@ -32,8 +32,6 @@ related:
 certifications: []
 ---
 
-<figure><img src="/images/facility-drafts/03/01-employment-types-hero.webp" alt="시설관리 직영·자회사·용역 차이 — 관련 설비와 확인 자료를 담은 일러스트" width="1440" height="1080" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 ## 출근하는 건물은 같은데 회사가 다르다고?
 
 어제도 그 건물로 출근했고 오늘도 같은 기계실에서 일한다.

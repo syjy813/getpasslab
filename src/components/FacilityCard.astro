@@ -7,7 +7,7 @@ const { article, lead = false } = Astro.props;
 // Published articles reuse their hero image by default; approved listing-only
 // thumbnails override it without changing the article body or social metadata.
 // A future article without a cover remains a text card.
-const covers: Record<string, string> = {
+const covers: Partial<Record<string, string>> = {
   'sasugoldae-sauna-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-despair.webp',
   'sasugoldae-sauna-hope': '/images/facility-series/sasugoldae-episodes/sasugoldae-sauna-hope.webp',
   'sasugoldae-swimming-pool-despair': '/images/facility-series/sasugoldae-episodes/sasugoldae-pool-despair.webp',
@@ -40,26 +40,54 @@ const covers: Record<string, string> = {
   'mechanical-maintainer-levels': '/images/facility-drafts/11/01-maintainer-grades-hero.webp',
   'mechanical-career-records': '/images/facility-drafts/12/01-career-reporting-hero.webp',
   'boiler-inspection-manager': '/images/facility-drafts/13/01-boiler-manager-hero-v2.webp',
+  'electric-unlimited': '/images/facility-electric/electric-unlimited.webp',
+  'electric-license-appointment-comparison': '/images/facility-electric/electric-license-appointment-comparison.webp',
 };
-const listingThumbnails: Record<string, string> = {
-  'sasugoldae': '/images/facility-series/list-thumbnails/sasugoldae-ep0.webp',
-  'hobyeongbaekma-mart-despair': '/images/facility-series/list-thumbnails/hobyeongbaekma-mart-despair.webp',
-  'hobyeongbaekma-mart-hope': '/images/facility-series/list-thumbnails/hobyeongbaekma-mart-hope.webp',
-  'hobyeongbaekma-department-store-despair': '/images/facility-series/list-thumbnails/hobyeongbaekma-department-store-despair.webp',
-  'hobyeongbaekma-department-store-hope': '/images/facility-series/list-thumbnails/hobyeongbaekma-department-store-hope.webp',
-  'hobyeongbaekma-hospital-despair': '/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-despair.webp',
-  'hobyeongbaekma-hospital-hope': '/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-hope.webp',
-  'hobyeongbaekma-hospital-large-university': '/images/facility-series/list-thumbnails/hobyeongbaekma-hospital-large-university.webp',
-  'hobyeongbaekma': '/images/facility-series/list-thumbnails/hobyeongbaekma-ep0.webp',
-  'hobyeongbaekma-hotel-despair': '/images/facility-series/list-thumbnails/hobyeongbaekma-hotel-despair.webp',
-  'hobyeongbaekma-hotel-hope': '/images/facility-series/list-thumbnails/hobyeongbaekma-hotel-hope.webp',
+type Thumbnail = readonly [src: string, width: number, height: number];
+const listingThumbnails: Partial<Record<string, Thumbnail>> = {
+  'gaeawigong': ['/images/facility-career/list-thumbnails/gaeawigong.webp', 1536, 1024],
+  'gamdan-work': ['/images/facility-career/list-thumbnails/gamdan-work.webp', 1536, 1024],
+  'what-is-facility-management': ['/images/facility-career/list-thumbnails/what-is-facility-management.webp', 1536, 1024],
+  'boiler-inspection-manager': ['/images/facility-qualifications/list-thumbnails/boiler-inspection-manager.webp', 1536, 1024],
+  'mechanical-career-records': ['/images/facility-qualifications/list-thumbnails/mechanical-career-records.webp', 1536, 1024],
+  'mechanical-maintainer-levels': ['/images/facility-qualifications/list-thumbnails/mechanical-maintainer-levels.webp', 1536, 1024],
+  'statutory-appointments': ['/images/facility-qualifications/list-thumbnails/statutory-appointments.webp', 1536, 1024],
+  'mechanical-maintainer-grace-period': ['/images/facility-qualifications/list-thumbnails/mechanical-maintainer-grace-period.webp', 1536, 1024],
+  'refrigeration-safety-manager': ['/images/facility-qualifications/list-thumbnails/refrigeration-safety-manager.webp', 1536, 1024],
+  'statutory-appointment-overlap': ['/images/facility-qualifications/list-thumbnails/statutory-appointment-overlap.webp', 1536, 1024],
+  'musugi': ['/images/facility-career/list-thumbnails/musugi.webp', 1536, 1024],
+  'facility-career-start': ['/images/facility-career/list-thumbnails/facility-career-start.webp', 1536, 1024],
+  'hanfms': ['/images/facility-career/list-thumbnails/hanfms.webp', 1536, 1024],
+  'kamcofmc': ['/images/facility-career/list-thumbnails/kamcofmc.webp', 1536, 1024],
+  'korailtech': ['/images/facility-career/list-thumbnails/korailtech.webp', 1536, 1024],
+  'postal-facilities': ['/images/facility-career/list-thumbnails/postal-facilities.webp', 1536, 1024],
+  'sasugoldae': ['/images/facility-series/list-thumbnails-3x2/sasugoldae.webp', 1536, 1024],
+  'hobyeongbaekma-mart-despair': ['/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-mart-despair.webp', 1536, 1024],
+  'hobyeongbaekma-mart-hope': ['/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-mart-hope.webp', 1536, 1024],
+  'hobyeongbaekma-department-store-despair': ['/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-department-store-despair.webp', 1536, 1024],
+  'hobyeongbaekma-department-store-hope': ['/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-department-store-hope.webp', 1536, 1024],
+  'hobyeongbaekma-hospital-despair': ['/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-hospital-despair.webp', 1536, 1024],
+  'hobyeongbaekma-hospital-hope': ['/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-hospital-hope.webp', 1536, 1024],
+  'hobyeongbaekma-hospital-large-university': ['/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-hospital-large-university.webp', 1536, 1024],
+  'hobyeongbaekma': ['/images/facility-series/list-thumbnails-3x2/hobyeongbaekma.webp', 1536, 1024],
+  'hobyeongbaekma-hotel-despair': ['/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-hotel-despair.webp', 1536, 1024],
+  'hobyeongbaekma-hotel-hope': ['/images/facility-series/list-thumbnails-3x2/hobyeongbaekma-hotel-hope.webp', 1536, 1024],
+  'sasugoldae-sauna-hope': ['/images/facility-series/list-thumbnails-3x2/sasugoldae-sauna-hope.webp', 1536, 1024],
+  'sasugoldae-university-hope': ['/images/facility-series/list-thumbnails-3x2/sasugoldae-university-hope.webp', 1536, 1024],
+  'sasugoldae-university-despair': ['/images/facility-series/list-thumbnails-3x2/sasugoldae-university-despair.webp', 1536, 1024],
+  'sasugoldae-golf-course-hope': ['/images/facility-series/list-thumbnails-3x2/sasugoldae-golf-course-hope.webp', 1536, 1024],
+  'sasugoldae-golf-course-despair': ['/images/facility-series/list-thumbnails-3x2/sasugoldae-golf-course-despair.webp', 1536, 1024],
+  'sasugoldae-swimming-pool-hope': ['/images/facility-series/list-thumbnails-3x2/sasugoldae-swimming-pool-hope.webp', 1536, 1024],
+  'sasugoldae-swimming-pool-despair': ['/images/facility-series/list-thumbnails-3x2/sasugoldae-swimming-pool-despair.webp', 1536, 1024],
+  'sasugoldae-sauna-despair': ['/images/facility-series/list-thumbnails-3x2/sasugoldae-sauna-despair.webp', 1536, 1024],
 };
-const listingThumbnail = listingThumbnails[article.id];
-const cover = listingThumbnail ?? covers[article.id];
-const coverSize = listingThumbnail ? [1448, 1086] : article.id.startsWith('hobyeongbaekma') ? [1440, 1080] : article.id === 'first-job' ? [1447, 1087] : [1448, 1086];
+const defaultCover = covers[article.id];
+const defaultCoverSize: readonly [number, number] = defaultCover?.startsWith('/images/facility-electric/') ? [1536, 1024]
+  : article.id.startsWith('sasugoldae') ? [1448, 1086] : [1440, 1080];
+const [cover, width, height] = listingThumbnails[article.id] ?? [defaultCover, ...defaultCoverSize];
 ---
 <a class:list={['card', 'facility-card', { 'facility-card--lead': lead, 'facility-card--text': !cover }]} href={withBase(facilityArticlePath(article))}>
-  {cover && <span class="facility-card-cover"><img src={withBase(cover)} alt="" width={coverSize[0]} height={coverSize[1]} loading={lead ? 'eager' : 'lazy'} decoding="async" /></span>}
+  {cover && <span class="facility-card-cover"><img src={withBase(cover)} alt="" width={width} height={height} loading={lead ? 'eager' : 'lazy'} decoding="async" /></span>}
   <span class="facility-card-content">
     <span class="facility-card-title">{article.data.title}</span>
     <span class="facility-card-description">{article.data.description}</span>

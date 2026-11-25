@@ -4,10 +4,10 @@ import { parse } from 'parse5';
 
 const root = 'dist/facility-management';
 const expected = [
-  ['intro', '시설관리 입문·용어', 1],
-  ['career', '취업·커리어', 8],
+  ['intro', '시설 사전', 5],
+  ['career', '취업·커리어', 9],
   ['stories', '시설 이야기', 19],
-  ['qualifications', '법정선임·자격 활용', 4],
+  ['qualifications', '법정선임·자격 활용', 8],
 ];
 const walk = node => [node, ...(node.childNodes ?? []).flatMap(walk)];
 const attr = (node, key) => node.attrs?.find(item => item.name === key)?.value;
@@ -37,11 +37,11 @@ for (const [slug, label, count] of expected) {
 const publishedUrls = fs.readdirSync('src/content/facility').filter(file => file.endsWith('.md')).flatMap(file => {
   const markdown = fs.readFileSync(`src/content/facility/${file}`, 'utf8');
   if (!/^status:\s*published\s*$/m.test(markdown)) return [];
-  const route = markdown.match(/^category:\s*(\S+)\s*$/m)?.[1];
+  const route = markdown.match(/^category:\s*['"]?([\w-]+)['"]?\s*$/m)?.[1];
   assert(route, `${file}: route category`);
   return [`/facility-management/${route}/${file.slice(0, -3)}/`];
 });
-assert.equal(publishedUrls.length, 32, 'published article baseline');
+assert.equal(publishedUrls.length, 41, 'approved published article count');
 assert.deepEqual(allCategoryUrls.sort(), publishedUrls.sort(), 'five-category IA covers all published articles once, at their original URLs');
 for (const url of publishedUrls) {
   const nodes = load(url.replace('/facility-management/', ''));
@@ -59,6 +59,10 @@ for (const [label, ids] of Object.entries(episodeOrders)) {
 
 const career = load('career/');
 const stories = load('stories/');
+const companyAnalysis = career.find(node => node.tagName === 'section' && hasClass(node, 'facility-category-subgroup') && attr(node, 'aria-label') === '기업·채용 분석');
+assert(companyAnalysis, 'company analysis group remains visible');
+assert.equal(cardUrls(walk(companyAnalysis)).length, 4, 'company analysis articles remain listed');
+assert(!walk(companyAnalysis).some(node => node.tagName === 'a' && content(node).includes('채용공고 분석 모음 보기')), 'redundant jobs CTA removed');
 for (const [nodes, labels] of [
   [career, ['취업 가이드', '기업·채용 분석']],
   [stories, ['호병백마 시리즈', '사수골대 시리즈']],
@@ -70,7 +74,7 @@ for (const [nodes, labels] of [
 assert.equal(cardUrls(load('jobs/')).length, 5, 'legacy /jobs/ listing is retained');
 assert(fs.existsSync(`${root}/practice/index.html`), 'empty practice page is retained');
 for (const [articlePath, categoryPath, categoryName] of [
-  ['career/what-is-facility-management/', '/facility-management/intro/', '시설관리 입문·용어'],
+  ['career/what-is-facility-management/', '/facility-management/intro/', '시설 사전'],
   ['career/hobyeongbaekma/', '/facility-management/stories/', '시설 이야기'],
   ['jobs/hanfms/', '/facility-management/career/', '취업·커리어'],
 ]) {

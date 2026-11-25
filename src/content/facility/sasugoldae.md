@@ -54,8 +54,6 @@ certifications: []
 legalReview: false
 ---
 
-<figure><img src="/images/facility-series/sasugoldae-00/01-sasugoldae-hero.webp" alt="사우나의 탕, 실내 수영장, 골프장과 클럽하우스, 대학 건물을 나란히 배치한 사수골대 0화 대표 이미지" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high" /></figure>
-
 시설관리 취업 정보를 찾아보다 보면 피하라는 곳이 자꾸 늘어납니다. 호텔·병원·백화점·마트를 묶은 ‘호병백마’를 익혔더니, 이번에는 ‘사수골대’가 나옵니다.
 
 후기를 읽을수록 지원할 곳이 줄어드는 기분이 듭니다. 사우나와 수영장은 그렇다 쳐도, 골프장과 대학교까지 한 묶음이라니. 이 시설들은 왜 함께 기피시설로 불릴까요?
