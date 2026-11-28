@@ -10,14 +10,14 @@
   ],
   "period": {
     "startDate": "2026-07-30",
-    "endDate": "2026-11-26",
+    "endDate": "2026-11-27",
     "requestedEndDate": "yesterday",
     "timeZone": "Asia/Seoul"
   },
-  "fetchedAt": "2026-11-27T07:23:16.344Z",
+  "fetchedAt": "2026-11-28T06:53:55.527Z",
   "articleCount": 41,
   "recordedArticleCount": 15,
-  "totalArticleViews": 70,
+  "totalArticleViews": 72,
   "articles": {
     "/facility-management/qualifications/boiler-inspection-manager/": {
       "views": 5,
@@ -153,7 +153,7 @@
       "category": "stories"
     },
     "/facility-management/jobs/kamcofmc/": {
-      "views": 1,
+      "views": 2,
       "recorded": true,
       "title": "캠코FMC 시설관리 채용｜직위보다 사업소, 월급보다 근무조건",
       "publishedAt": "2026-11-05",
@@ -272,7 +272,7 @@
       "category": "stories"
     },
     "/facility-management/career/sasugoldae/": {
-      "views": 3,
+      "views": 4,
       "recorded": true,
       "title": "[사수골대 ep.0] 사수골대란 뭘까?",
       "publishedAt": "2026-11-15",
@@ -428,7 +428,8 @@
       "2026-11-23",
       "2026-11-24",
       "2026-11-25",
-      "2026-11-26"
+      "2026-11-26",
+      "2026-11-27"
     ],
     "totals": [
       0,
@@ -550,7 +551,8 @@
       5,
       1,
       2,
-      0
+      0,
+      2
     ],
     "articles": {
       "/facility-management/qualifications/boiler-inspection-manager/": [
@@ -667,6 +669,7 @@
         0,
         0,
         1,
+        0,
         0,
         0,
         0,
@@ -795,6 +798,7 @@
         2,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/intro/electric-unlimited/": [
@@ -917,6 +921,7 @@
         0,
         1,
         0,
+        0,
         0
       ],
       "/facility-management/career/employment-types/": [
@@ -1020,6 +1025,7 @@
         0,
         0,
         1,
+        0,
         0,
         0,
         0,
@@ -1161,6 +1167,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/first-job/": [
@@ -1261,6 +1268,7 @@
         null,
         null,
         4,
+        0,
         0,
         0,
         0,
@@ -1405,6 +1413,7 @@
         null,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/intro/gamdan-work/": [
@@ -1527,6 +1536,7 @@
         null,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/jobs/hanfms/": [
@@ -1628,6 +1638,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -1771,6 +1782,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma-department-store-hope/": [
@@ -1893,6 +1905,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma-hospital-despair/": [
@@ -2000,6 +2013,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -2137,6 +2151,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma-hospital-large-university/": [
@@ -2259,6 +2274,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma-hotel-despair/": [
@@ -2365,6 +2381,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -2503,6 +2520,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma-mart-despair/": [
@@ -2611,6 +2629,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -2747,6 +2766,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/hobyeongbaekma/": [
@@ -2852,6 +2872,7 @@
         null,
         2,
         2,
+        0,
         0,
         0,
         0,
@@ -2991,7 +3012,8 @@
         0,
         0,
         0,
-        0
+        0,
+        1
       ],
       "/facility-management/jobs/korailtech/": [
         null,
@@ -3092,6 +3114,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -3235,6 +3258,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/qualifications/mechanical-maintainer-grace-period/": [
@@ -3357,6 +3381,7 @@
         null,
         0,
         1,
+        0,
         0
       ],
       "/facility-management/qualifications/mechanical-maintainer-levels/": [
@@ -3479,6 +3504,7 @@
         3,
         0,
         1,
+        0,
         0
       ],
       "/facility-management/intro/musugi/": [
@@ -3601,6 +3627,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/jobs/postal-facilities/": [
@@ -3702,6 +3729,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -3845,6 +3873,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/qualifications/refrigeration-safety-manager/": [
@@ -3967,6 +3996,7 @@
         null,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/sasugoldae-golf-course-despair/": [
@@ -4081,6 +4111,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -4211,6 +4242,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/sasugoldae-sauna-despair/": [
@@ -4325,6 +4357,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -4455,6 +4488,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/sasugoldae-swimming-pool-despair/": [
@@ -4569,6 +4603,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -4699,6 +4734,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/sasugoldae-university-despair/": [
@@ -4813,6 +4849,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -4943,6 +4980,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/career/sasugoldae/": [
@@ -5065,7 +5103,8 @@
         0,
         0,
         0,
-        0
+        0,
+        1
       ],
       "/facility-management/career/shifts-and-pay/": [
         null,
@@ -5166,6 +5205,7 @@
         null,
         4,
         1,
+        0,
         0,
         0,
         0,
@@ -5309,6 +5349,7 @@
         null,
         0,
         0,
+        0,
         0
       ],
       "/facility-management/qualifications/statutory-appointments/": [
@@ -5410,6 +5451,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -5553,6 +5595,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -5562,5 +5605,5 @@
     "hour": 9,
     "minute": 0
   },
-  "sourceCommit": "ddac67d34ea8c4d5c7522d8b6685dd76fbba61fd"
+  "sourceCommit": "fa2c293dba0c1d571c782c4221ca1f06bfd029f6"
 }
